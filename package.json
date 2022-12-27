@@ -1,0 +1,21 @@
+{
+  "name": "incentives-api",
+  "version": "1.0.0",
+  "description": "A RESTful web API for all the data powering our IRA calculator.",
+  "main": "index.js",
+  "repository": "git@github.com:rewiringamerica/incentives-api.git",
+  "author": "Tom Carden <tomc@rewiringamerica.org>",
+  "license": "None",
+  "private": true,
+  "dependencies": {
+    "csv-parse": "^5.3.3",
+    "fastify": "^4.10.2",
+    "fastify-plugin": "^4.4.0",
+    "lodash": "^4.17.21",
+    "sqlite": "^4.1.2",
+    "sqlite3": "^5.1.4"
+  },
+  "scripts": {
+    "postinstall": "sqlite3 data/incentives-api.db < data/import-csvs.sql"
+  }
+}

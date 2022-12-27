@@ -1,0 +1,73 @@
+//import { FilingStatus, IEstimatedTaxAmountResult } from 'typedefs/ira';
+
+const _filter = require('lodash/filter');
+const _find = require('lodash/find');
+const tax_brackets = require('./data/tax_brackets.json');
+
+module.exports.estimateTaxAmount = function(
+  filing_status, //: FilingStatus,
+  household_income, //: number,
+) { //: IEstimatedTaxAmountResult {
+  // Get the Standard Deduction for filing status
+  // Note: this could be simplified to hardcoded value lookup
+  const standardDeductionResult = _find(tax_brackets, row => {
+    return (
+      filing_status === row.filing_status &&
+      household_income <= row.income_max &&
+      household_income > row.income_min
+    );
+  });
+
+  const standardDeduction = standardDeductionResult.standard_deduction;
+
+  // Step 1: Taxable income is calculated by subtracting standard deduction from household income
+  const taxableIncome =
+    household_income - standardDeduction <= 0 ? 0 : household_income - standardDeduction;
+
+  // Get fixed tax brackets underneath assigned tax bracket to add taxes
+  const fixedBracketResults = _filter(tax_brackets, row => {
+    return filing_status === row.filing_status && row.income_max < household_income;
+  });
+
+  // Step 2: Get the correct bracket for taxable income
+  const taxBracketResult = _find(tax_brackets, row => {
+    return (
+      filing_status === row.filing_status &&
+      household_income <= row.income_max &&
+      household_income > row.income_min
+    );
+  });
+
+  let fixedTaxAmount = 0;
+
+  // Step 3: Add the tax owed for each of the lower brackets
+  fixedBracketResults.forEach(row => {
+    fixedTaxAmount += row.tax_amount;
+  });
+
+  // Step 4: Subtract min of active bracket from taxable income
+  const bracketRemainder = taxableIncome - taxBracketResult.income_min;
+
+  // Step 5: Multiply remainder by tax bracket rate
+  const dynamicTaxAmount = bracketRemainder * taxBracketResult.tax_rate;
+
+  // Step 6: Get tax owed
+  const taxOwed = fixedTaxAmount + dynamicTaxAmount;
+
+  // Step 7: Get effective tax rate
+  const effectiveRate = (taxOwed / household_income) * 100;
+
+  /*console.log('Estimated Tax Amount Proofs');
+  console.log('Step 1: taxable income', taxableIncome);
+  console.log('Step 2: tax bracket result', taxBracketResult);
+  console.log('Step 3: fixed tax amount', fixedTaxAmount);
+  console.log('Step 4: bracket remaining amount', bracketRemainder);
+  console.log('Step 5: dynamic tax amount', dynamicTaxAmount);
+  console.log('Step 6: tax owed', taxOwed);
+  console.log('Step 7: effective rate', effectiveRate);*/
+
+  return {
+    tax_owed: taxOwed,
+    effective_rate: effectiveRate,
+  };
+}
