@@ -2,6 +2,18 @@
 
 Lifts the javascript logic from policy-hub and packages it up with Fastify.
 
-Scripts to import data into a sqlite database.
+Exposes /api/v1/calculator and describes query params and responses using OpenAPI.
 
-Deploy to fly.io.
+Includes scripts to import data into a sqlite database.
+
+## TODO
+ 
+ * Use fastify-sqlite instead of rolling my own
+ * Deploy to fly.io as api-demo.rewiringamerica.org?
+ * verify logic vs firestore precalculated tables
+ * consider if fastify-swagger-ui is the right thing, maybe it's https://rapidocweb.com or a hosted site (developer.rewiringamerica.org?)
+ * add API_KEY support? https://zuplo.com or similar
+ * add batch mode?
+ * should API accept tracts?
+ * make a QA environment that requires VPN or similar (Tailscale?)
+ * add examples to schemas

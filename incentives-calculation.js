@@ -1,20 +1,20 @@
 //import { FilingStatus, HousingTypes, ICalculatedIncentiveResults, OwnerStatus } from 'typedefs/ira';
 
-const _filter = require('lodash/filter');
-const _find = require('lodash/find');
-const _uniqBy = require('lodash/uniqBy');
-const { estimateTaxAmount } = require('./tax-brackets');
-const incentives = require('./data/ira_incentives.json');
-const iraStateSavings = require('./data/ira_state_savings.json');
-const solarPrices = require('./data/solar_prices.json');
-const stateMFIs = require('./data/state_mfi.json');
+import _filter from 'lodash/filter.js';
+import _find from 'lodash/find.js';
+import _uniqBy from 'lodash/uniqBy.js';
+import estimateTaxAmount from './tax-brackets.js';
+import incentives from './data/ira_incentives.json' assert { type: 'json' };
+import iraStateSavings from './data/ira_state_savings.json' assert { type: 'json' };
+import solarPrices from './data/solar_prices.json' assert { type: 'json' };
+import stateMFIs from './data/state_mfi.json' assert { type: 'json' };
 
 const MAX_POS_SAVINGS = 14000;
 
-module.exports.calculateIncentives = function(
-//  zip,// : string,
+export default function calculateIncentives(
+  //  zip,// : string,
   amisForZip,
-  { 
+  {
     owner_status, //: OwnerStatus,
     //housing_type, //: HousingTypes,
     household_income, //: number,

@@ -1,10 +1,10 @@
 //import { FilingStatus, IEstimatedTaxAmountResult } from 'typedefs/ira';
 
-const _filter = require('lodash/filter');
-const _find = require('lodash/find');
-const tax_brackets = require('./data/tax_brackets.json');
+import _filter from 'lodash/filter.js';
+import _find from 'lodash/find.js';
+import tax_brackets from './data/tax_brackets.json' assert { type: 'json' };
 
-module.exports.estimateTaxAmount = function(
+export default function estimateTaxAmount(
   filing_status, //: FilingStatus,
   household_income, //: number,
 ) { //: IEstimatedTaxAmountResult {
