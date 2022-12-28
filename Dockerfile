@@ -14,4 +14,4 @@ COPY . .
 
 ENV PORT=8080
 
-CMD npm start
+CMD yarn start

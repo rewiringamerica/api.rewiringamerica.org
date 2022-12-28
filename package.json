@@ -17,6 +17,7 @@
     "lodash": "^4.17.21"
   },
   "scripts": {
+    "start": "node index.js",
     "build": "sqlite3 data/incentives-api.db < data/import-csvs.sql"
   },
   "type": "module"
