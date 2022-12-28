@@ -8,7 +8,6 @@ Includes scripts to import data into a sqlite database.
 
 ## TODO
  
- * Use fastify-sqlite instead of rolling my own
  * Deploy to fly.io as api-demo.rewiringamerica.org?
  * verify logic vs firestore precalculated tables
  * consider if fastify-swagger-ui is the right thing, maybe it's https://rapidocweb.com or a hosted site (developer.rewiringamerica.org?)

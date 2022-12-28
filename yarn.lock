@@ -446,10 +446,19 @@ fast-uri@^2.0.0, fast-uri@^2.1.0:
   resolved "https://registry.yarnpkg.com/fast-uri/-/fast-uri-2.2.0.tgz#519a0f849bef714aad10e9753d69d8f758f7445a"
   integrity sha512-cIusKBIt/R/oI6z/1nyfe2FvGKVTohVRfvkOhvx0nCEW+xf5NoCXjAHcWp93uOUBchzYcsvPlrapAdX1uW+YGg==
 
-fastify-plugin@^4.0.0, fastify-plugin@^4.4.0:
+fastify-plugin@^4.0.0, fastify-plugin@^4.2.1, fastify-plugin@^4.4.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-4.4.0.tgz#ce9fab1352390199c3d55569fea43779699b58ae"
   integrity sha512-ovwFQG2qNy3jcCROiWpr94Hs0le+c7N/3t7m9aVwbFhkxcR/esp2xu25dP8e617HpQdmeDv+gFX4zagdUhDByw==
+
+fastify-sqlite@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/fastify-sqlite/-/fastify-sqlite-1.1.0.tgz#8ddd4e9b1cd2c3bbfa3ae6cdd2f1017a66c25312"
+  integrity sha512-pb0bFhCGXu11w5QKIa3u5po/TggY8LU9d9DoKw6mm0dknC84PHWElUSqP7lrqt43k2/SUliNw12+xqgUFrLMkw==
+  dependencies:
+    fastify-plugin "^4.2.1"
+    sqlite "^4.1.2"
+    sqlite3 "^5.0.11"
 
 fastify@^4.10.2:
   version "4.10.2"
@@ -1193,7 +1202,7 @@ split2@^4.0.0:
   resolved "https://registry.yarnpkg.com/split2/-/split2-4.1.0.tgz#101907a24370f85bb782f08adaabe4e281ecf809"
   integrity sha512-VBiJxFkxiXRlUIeyMQi8s4hgvKCSjtknJv/LVYbrgALPwf5zSKmEwV9Lst25AkvMDnvxODugjdl6KZgwKM1WYQ==
 
-sqlite3@^5.1.4:
+sqlite3@^5.0.11:
   version "5.1.4"
   resolved "https://registry.yarnpkg.com/sqlite3/-/sqlite3-5.1.4.tgz#35f83d368963168b324ad2f0fffce09f3b8723a7"
   integrity sha512-i0UlWAzPlzX3B5XP2cYuhWQJsTtlMD6obOa1PgeEQ4DHEXUuyJkgv50I3isqZAP5oFc2T8OFvakmDh2W6I+YpA==

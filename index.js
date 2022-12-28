@@ -1,13 +1,20 @@
 import Fastify from "fastify";
 import fp from "fastify-plugin";
-import sqlite3 from "sqlite3";
-import { open } from "sqlite";
 import calculateIncentives from './incentives-calculation.js';
 import swaggerDefault from "@fastify/swagger";
 import swaggerUiDefault from "@fastify/swagger-ui";
+import fastifySqlite from 'fastify-sqlite';
 
 const fastify = Fastify({
   logger: true
+});
+
+await fastify.register(fastifySqlite, {
+  promiseApi: true, // the DB instance supports the Promise API. Default false
+  name: null, // optional decorator name. Default null
+  verbose: false, // log sqlite3 queries as trace. Default false
+  dbFile: './data/incentives-api.db', // select the database file. Default ':memory:'
+  mode: fastifySqlite.sqlite3.OPEN_READONLY // how to connecto to the DB, Default: OPEN_READWRITE | OPEN_CREATE | OPEN_FULLMUTEX
 });
 
 await fastify.register(swaggerDefault, {
@@ -69,16 +76,6 @@ await fastify.register(swaggerUiDefault, {
   transformSpecification: (swaggerObject, request, reply) => { return swaggerObject },
   transformSpecificationClone: true,
 })
-
-await fastify.register(
-  fp(async (fastify) => {
-    const db = await open({
-      filename: "./data/incentives-api.db",
-      driver: sqlite3.Database,
-    });
-    fastify.decorate("db", db);
-  })
-);
 
 fastify.get('/', { schema: { hide: true } }, (_, reply) => {
   reply.redirect('/documentation');
@@ -166,10 +163,10 @@ fastify.get("/api/v1/calculator", {
 
 async function fetchAMIs(zip) {
   // TODO: parallelize?
-  const location = await fastify.db.get(`
+  const location = await fastify.sqlite.get(`
         SELECT * FROM zips WHERE zip = ?
     `, zip);
-  const calculations = await fastify.db.get(`
+  const calculations = await fastify.sqlite.get(`
         SELECT
             MAX(is_urban) AS isUrban,
             MIN(t.mfi) AS lowestMFI,
@@ -180,7 +177,7 @@ async function fetchAMIs(zip) {
             LEFT JOIN tracts t ON t.tract_geoid = zt.tract 
         WHERE zt.zip = ? AND t.mfi != -666666666;
     `, zip);
-  const ami = await fastify.db.get(`
+  const ami = await fastify.sqlite.get(`
         SELECT a.* 
         FROM zip_to_cbsasub zc LEFT JOIN ami a ON a.cbsasub = zc.cbsasub 
         WHERE zc.zipcode = ? AND a.cbsasub IS NOT NULL

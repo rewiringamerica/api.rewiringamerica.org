@@ -13,9 +13,8 @@
     "csv-parse": "^5.3.3",
     "fastify": "^4.10.2",
     "fastify-plugin": "^4.4.0",
-    "lodash": "^4.17.21",
-    "sqlite": "^4.1.2",
-    "sqlite3": "^5.1.4"
+    "fastify-sqlite": "^1.1.0",
+    "lodash": "^4.17.21"
   },
   "scripts": {
     "build": "sqlite3 data/incentives-api.db < data/import-csvs.sql"
