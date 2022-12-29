@@ -6,9 +6,10 @@ Exposes /api/v1/calculator and describes query params and responses using OpenAP
 
 Includes scripts to import data into a sqlite database.
 
+Container is deployable and tested on fly.io and Google Cloud Run.
+
 ## TODO
  
- * Deploy to fly.io as api-demo.rewiringamerica.org?
  * verify logic vs firestore precalculated tables
  * consider if fastify-swagger-ui is the right thing, maybe it's https://rapidocweb.com or a hosted site (developer.rewiringamerica.org?)
  * add API_KEY support? https://zuplo.com or similar
