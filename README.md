@@ -7,6 +7,8 @@ Exposes /api/v1/calculator and describes query params and responses using OpenAP
 Includes scripts to import data into a sqlite database.
 
 Container is deployable and tested on fly.io and Google Cloud Run.
+ - `fly deploy` --> https://bold-sun-1360.fly.dev
+ - `gcloud run deploy incentives-api-dev --source .` --> https://incentives-api-dev-mcifvvqcxa-uc.a.run.app
 
 ## TODO
  
