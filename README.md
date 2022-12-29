@@ -10,10 +10,12 @@ Container is deployable and tested on fly.io and Google Cloud Run.
 
 ## TODO
  
+ * should we use fastify-cli, split out routes? add tests? (yes)
  * verify logic vs firestore precalculated tables
- * consider if fastify-swagger-ui is the right thing, maybe it's https://rapidocweb.com or a hosted site (developer.rewiringamerica.org?)
- * add API_KEY support? https://zuplo.com or similar
- * add batch mode?
- * should API accept tracts?
+ * consider if rapidoc is the right thing, maybe it's swagger-ui or a hosted site (CNAME developer.rewiringamerica.org?)
+ * add API_KEY support? Or outsource to https://zuplo.com or similar?
+ * clean up request/response formats, add batch mode?
+ * use in existing calculator first?
+ * should API accept tracts? address? https://geocoding.geo.census.gov/geocoder/
  * make a QA environment that requires VPN or similar (Tailscale?)
  * add examples to schemas

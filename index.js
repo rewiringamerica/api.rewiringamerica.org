@@ -1,9 +1,9 @@
+import path from "path"
 import Fastify from "fastify";
-import fp from "fastify-plugin";
-import calculateIncentives from './incentives-calculation.js';
 import swaggerDefault from "@fastify/swagger";
-import swaggerUiDefault from "@fastify/swagger-ui";
 import fastifySqlite from 'fastify-sqlite';
+import fastifyStatic from '@fastify/static'
+import calculateIncentives from './incentives-calculation.js';
 
 const fastify = Fastify({
   logger: true
@@ -15,6 +15,11 @@ await fastify.register(fastifySqlite, {
   verbose: false, // log sqlite3 queries as trace. Default false
   dbFile: './data/incentives-api.db', // select the database file. Default ':memory:'
   mode: fastifySqlite.sqlite3.OPEN_READONLY // how to connecto to the DB, Default: OPEN_READWRITE | OPEN_CREATE | OPEN_FULLMUTEX
+});
+
+fastify.register(fastifyStatic, {
+  root: path.join(process.cwd(), 'public'),
+  prefix: '/', // optional: default '/'
 });
 
 await fastify.register(swaggerDefault, {
@@ -61,29 +66,28 @@ fastify.addSchema({
   },
 })
 
-await fastify.register(swaggerUiDefault, {
-  routePrefix: '/documentation',
-  uiConfig: {
-    docExpansion: 'full',
-    deepLinking: false
-  },
-  uiHooks: {
-    onRequest: function (request, reply, next) { next() },
-    preHandler: function (request, reply, next) { next() }
-  },
-  staticCSP: false,
-  transformStaticCSP: (header) => header,
-  transformSpecification: (swaggerObject, request, reply) => { return swaggerObject },
-  transformSpecificationClone: true,
-})
-
 fastify.get('/', { schema: { hide: true } }, (_, reply) => {
-  reply.redirect('/documentation');
+  reply.sendFile('index.html');
 });
 
-fastify.get("/api/v1/calculator", {
+fastify.get('/spec.json', { schema: { hide: true } }, (_, reply) => {
+  const spec = fastify.swagger();
+  reply.status(200)
+    .type('application/json')
+    .send(spec);
+});
+
+fastify.get('/spec.yaml', { schema: { hide: true } }, (_, reply) => {
+  const spec = fastify.swagger({ yaml: true });
+  reply.status(200)
+    .type('text/x-yaml')
+    .send(spec);
+});
+
+fastify.get("/api/v1/ira-calculator", {
   schema: {
     description: 'How much money will you get with the Inflation Reduction Act?',
+    tags: ['ira'],
     querystring: {
       type: "object",
       properties: {
