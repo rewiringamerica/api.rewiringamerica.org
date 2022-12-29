@@ -84,7 +84,8 @@ fastify.get('/spec.yaml', { schema: { hide: true } }, (_, reply) => {
     .send(spec);
 });
 
-fastify.get("/api/v1/ira-calculator", {
+// TODO: maybe /ira-calculator?
+fastify.get("/api/v1/calculator", {
   schema: {
     description: 'How much money will you get with the Inflation Reduction Act?',
     tags: ['ira'],
