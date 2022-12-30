@@ -33,6 +33,11 @@ await fastify.register(swaggerDefault, {
       url: 'https://www.rewiringamerica.org/app/ira-calculator',
       description: 'IRA Savings Calculator'
     },
+  },
+  refResolver: {
+    buildLocalReference(json, baseUri, fragment, i) {
+      return json.$id || `my-fragment-${i}`
+    }
   }
 });
 
@@ -64,10 +69,61 @@ fastify.addSchema({
     note_3: { type: 'string' },
     eligible: { type: 'boolean' },
   },
-})
+});
+
+fastify.addSchema({
+  $id: 'CalculatorQuery',
+  type: "object",
+  properties: {
+    zip: {
+      type: "string",
+      description: "Your zip code helps determine the amount of discounts and tax credits you qualify for.",
+      maxLength: 5,
+      minLength: 5,
+    },
+    owner_status: {
+      type: "string",
+      description: "Homeowners and renters qualify for different incentives.",
+      enum: ['homeowner', 'renter'],
+    },
+    household_income: {
+      type: "integer",
+      description: "Enter your gross income (income before taxes). Include wages and salary plus other forms of income, including pensions, interest, dividends, and rental income. If you are married and file jointly, include your spouse's income.",
+      minimum: 0,
+      maximum: 100000000,
+    },
+    tax_filing: {
+      type: "string",
+      description: "Select \"Head of Household\" if you have a child or relative living with you, and you pay more than half the costs of your home. Select \"Joint\" if you file your taxes as a married couple.",
+      enum: ['single', 'joint', 'hoh'],
+    },
+    household_size: {
+      type: "integer",
+      description: "Include anyone you live with who you claim as a dependent on your taxes, and your spouse or partner if you file taxes together.",
+      minimum: 1,
+      maximum: 8,
+    }
+  },
+  required: ["zip",
+    "owner_status",
+    "household_income",
+    "tax_filing",
+    "household_size"],
+  examples: [{
+    zip: '90210',
+    household_income: 80000,
+    household_size: 2,
+    owner_status: 'homeowner',
+    tax_filing: 'joint'
+  }]
+});
 
 fastify.get('/', { schema: { hide: true } }, (_, reply) => {
-  reply.sendFile('index.html');
+  reply.redirect('/docs');
+});
+
+fastify.get('/docs/*', { schema: { hide: true } }, (_, reply) => {
+  reply.sendFile('docs/index.html');
 });
 
 fastify.get('/spec.json', { schema: { hide: true } }, (_, reply) => {
@@ -88,67 +144,38 @@ fastify.get('/spec.yaml', { schema: { hide: true } }, (_, reply) => {
 fastify.get("/api/v1/calculator", {
   schema: {
     description: 'How much money will you get with the Inflation Reduction Act?',
-    tags: ['ira'],
+    // tags: ['inflation reduction act api'],
     querystring: {
-      type: "object",
-      properties: {
-        zip: {
-          type: "string",
-          description: "Your zip code helps determine the amount of discounts and tax credits you qualify for.",
-          maxLength: 5,
-          minLength: 5
-        },
-        owner_status: {
-          type: "string",
-          description: "Homeowners and renters qualify for different incentives.",
-          enum: ['homeowner', 'renter']
-        },
-        household_income: {
-          type: "integer",
-          description: "Enter your gross income (income before taxes). Include wages and salary plus other forms of income, including pensions, interest, dividends, and rental income. If you are married and file jointly, include your spouse's income.",
-          minimum: 0,
-          maximum: 100000000
-        },
-        tax_filing: {
-          type: "string",
-          description: "Select \"Head of Household\" if you have a child or relative living with you, and you pay more than half the costs of your home. Select \"Joint\" if you file your taxes as a married couple.",
-          enum: ['single', 'joint', 'hoh']
-        },
-        household_size: {
-          type: "integer",
-          description: "Include anyone you live with who you claim as a dependent on your taxes, and your spouse or partner if you file taxes together.",
-          minimum: 1,
-          maximum: 8
-        }
-      },
-      required: ["zip",
-        "owner_status",
-        "household_income",
-        "tax_filing",
-        "household_size"],
+      $ref: 'CalculatorQuery',
     },
     response: {
       200: {
         description: 'Successful response',
-        type: 'object',
-        properties: {
-          is_under_80_ami: { type: 'boolean' },
-          is_under_150_ami: { type: 'boolean' },
-          is_over_150_ami: { type: 'boolean' },
+        content: {
+          "application/json": {
+            schema: {
+              type: 'object',
+              properties: {
+                is_under_80_ami: { type: 'boolean' },
+                is_under_150_ami: { type: 'boolean' },
+                is_over_150_ami: { type: 'boolean' },
 
-          // The max POS savings is $14,000 if you're under 150% ami, otherwise 0
-          pos_savings: { type: 'integer' },
+                // The max POS savings is $14,000 if you're under 150% ami, otherwise 0
+                pos_savings: { type: 'integer' },
 
-          // You can't save more than tax owed. Choose the lesser of tax owed vs tax savings
-          tax_savings: { type: 'integer' },
+                // You can't save more than tax owed. Choose the lesser of tax owed vs tax savings
+                tax_savings: { type: 'integer' },
 
-          // Not prominently displayed
-          performance_rebate_savings: { type: 'integer' },
+                // Not prominently displayed
+                performance_rebate_savings: { type: 'integer' },
 
-          // Annual savings from pregenerated model
-          estimated_annual_savings: { type: 'integer' },
-          pos_rebate_incentives: { type: 'array', items: { $ref: 'Incentive' } },
-          tax_credit_incentives: { type: 'array', items: { $ref: 'Incentive' } },
+                // Annual savings from pregenerated model
+                estimated_annual_savings: { type: 'integer' },
+                pos_rebate_incentives: { type: 'array', items: { $ref: 'Incentive' } },
+                tax_credit_incentives: { type: 'array', items: { $ref: 'Incentive' } },
+              }
+            }
+          }
         }
       },
     },
