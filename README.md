@@ -14,10 +14,15 @@ Container is deployable and tested on fly.io and Google Cloud Run.
  
  * should we use fastify-cli, split out routes? add tests? (yes)
  * verify logic vs firestore precalculated tables
- * consider if rapidoc is the right thing, maybe it's swagger-ui or a hosted site (CNAME developer.rewiringamerica.org?)
  * add API_KEY support? Or outsource to https://zuplo.com or similar?
  * clean up request/response formats, add batch mode?
  * use in existing calculator first?
  * should API accept tracts? address? https://geocoding.geo.census.gov/geocoder/
  * make a QA environment that requires VPN or similar (Tailscale?)
  * add examples to schemas
+
+## Notes
+
+Why fastify? Seems like included schema validation is clean. Was a sqlite example at glitch.com, just ran with it!
+
+Why Stoplight Elements for docs? Seems cleanest. Also tried Rapidocs and Swagger-UI.
