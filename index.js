@@ -17,7 +17,7 @@ await fastify.register(fastifySqlite, {
   mode: fastifySqlite.sqlite3.OPEN_READONLY // how to connecto to the DB, Default: OPEN_READWRITE | OPEN_CREATE | OPEN_FULLMUTEX
 });
 
-fastify.register(fastifyStatic, {
+await fastify.register(fastifyStatic, {
   root: path.join(process.cwd(), 'public'),
   prefix: '/', // optional: default '/'
 });
