@@ -1,7 +1,6 @@
 import path from "path"
 import Fastify from "fastify";
 import FastifySqlite from 'fastify-sqlite';
-import FastifyStatic from '@fastify/static'
 import FastifySwagger from "@fastify/swagger";
 import calculateIncentives from './incentives-calculation.js';
 
@@ -15,11 +14,6 @@ await fastify.register(FastifySqlite, {
   verbose: false, // log sqlite3 queries as trace. Default false
   dbFile: './data/incentives-api.db', // select the database file. Default ':memory:'
   mode: FastifySqlite.sqlite3.OPEN_READONLY // how to connecto to the DB, Default: OPEN_READWRITE | OPEN_CREATE | OPEN_FULLMUTEX
-});
-
-await fastify.register(FastifyStatic, {
-  root: path.join(process.cwd(), 'public'),
-  prefix: '/', // optional: default '/'
 });
 
 await fastify.register(FastifySwagger, {
@@ -121,14 +115,6 @@ fastify.addSchema({
   }]
 });
 
-fastify.get('/', { schema: { hide: true } }, (_, reply) => {
-  reply.redirect('/docs');
-});
-
-fastify.get('/docs/*', { schema: { hide: true } }, (_, reply) => {
-  reply.sendFile('docs/index.html');
-});
-
 fastify.get('/spec.json', { schema: { hide: true } }, (_, reply) => {
   const spec = fastify.swagger();
   reply.status(200)
@@ -143,11 +129,9 @@ fastify.get('/spec.yaml', { schema: { hide: true } }, (_, reply) => {
     .send(spec);
 });
 
-// TODO: maybe /ira-calculator?
 fastify.get("/api/v1/calculator", {
   schema: {
     description: 'How much money will you get with the Inflation Reduction Act?',
-    // tags: ['inflation reduction act api'],
     querystring: {
       $ref: 'CalculatorQuery',
     },
@@ -194,7 +178,7 @@ fastify.get("/api/v1/calculator", {
 });
 
 async function fetchAMIs(zip) {
-  // TODO: parallelize?
+  // TODO: parallelize? materialize?
   const location = await fastify.sqlite.get(`
         SELECT * FROM zips WHERE zip = ?
     `, zip);
