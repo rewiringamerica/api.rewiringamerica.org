@@ -53,6 +53,7 @@ And production:
  * switch to typescript, use fluent apis for json schema etc? https://khalilstemmler.com/blogs/typescript/node-starter-project/
  * cleanup readme.com
  * cleanup fly.io
+ * link to changelog from Zuplo? https://www.rewiringamerica.org/app/changelog
 
 ## Notes
 
