@@ -1,10 +1,28 @@
-# Incentives API Prototype
+# Incentives API
 
 Lifts the javascript logic from policy-hub and packages it up with Fastify.
 
 Exposes /api/v1/calculator and describes query params and responses using OpenAPI.
 
 Includes scripts to import data into a sqlite database.
+
+## Architecture
+
+The node.js file is packaged in a Docker container to allow installing sqlite in Cloud Run.
+
+The Cloud Run services are not intended to be hit directly, we use zuplo.com as an API gateway. Zuplo performs the following functions for us:
+ - documentation generation and hosting at /docs
+ - API key management and authentication (and tracking for leaks)
+ - rate limiting
+ - CORS support for browsers
+
+In production, this app responds to api.rewiringamerica.org via a CNAME that points to Zuplo.
+
+At the moment, @tomc is the only team member with access to Zuplo at https://portal.zuplo.com/ - changes to configurations can also be made via git at https://github.com/rewiringamerica/incentives-api-zuplo
+
+Zuplo authenticates developers using Auth0. @tomc, @derek, @tomm and @chell have access to Auth0.
+
+## Deploys
 
 Container is deployable on Google Cloud Run, in staging:
  - `gcloud config set project rewiring-america-dev`
@@ -21,8 +39,10 @@ And production:
  * finalize path, request, response formats
  * add examples to schemas
  * use in existing calculator and remove calculation logic and data from website repo
+ * set autoscaling rules and capacity rules on Cloud Run in dev and prod
  * document security requirements in openapi schema https://swagger.io/docs/specification/authentication/bearer-authentication/ (or leave this to Zuplo docs?)
  * ensure that our OpenAPI spec is valid and stays valid https://openap.is/validate?url=http%3A%2F%2Fincentives-api-dev-mcifvvqcxa-uc.a.run.app%2Fspec.json
+ * can we make the Cloud Run services private and give Zuplo keys to hit them? https://zuplo.com/docs/policies/upstream-gcp-jwt-inbound
  * what's the right content type for the yaml spec?
  * migrate any other lingering business logic from frontend (work with Derek)
  * think about metrics - what to record per client, where to (amplitude? bigquery) - should be possible from Zuplo
