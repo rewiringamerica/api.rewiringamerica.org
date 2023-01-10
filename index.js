@@ -1,28 +1,28 @@
 import path from "path"
 import Fastify from "fastify";
-import swaggerDefault from "@fastify/swagger";
-import fastifySqlite from 'fastify-sqlite';
-import fastifyStatic from '@fastify/static'
+import FastifySqlite from 'fastify-sqlite';
+import FastifyStatic from '@fastify/static'
+import FastifySwagger from "@fastify/swagger";
 import calculateIncentives from './incentives-calculation.js';
 
 const fastify = Fastify({
   logger: true
 });
 
-await fastify.register(fastifySqlite, {
+await fastify.register(FastifySqlite, {
   promiseApi: true, // the DB instance supports the Promise API. Default false
   name: null, // optional decorator name. Default null
   verbose: false, // log sqlite3 queries as trace. Default false
   dbFile: './data/incentives-api.db', // select the database file. Default ':memory:'
-  mode: fastifySqlite.sqlite3.OPEN_READONLY // how to connecto to the DB, Default: OPEN_READWRITE | OPEN_CREATE | OPEN_FULLMUTEX
+  mode: FastifySqlite.sqlite3.OPEN_READONLY // how to connecto to the DB, Default: OPEN_READWRITE | OPEN_CREATE | OPEN_FULLMUTEX
 });
 
-await fastify.register(fastifyStatic, {
+await fastify.register(FastifyStatic, {
   root: path.join(process.cwd(), 'public'),
   prefix: '/', // optional: default '/'
 });
 
-await fastify.register(swaggerDefault, {
+await fastify.register(FastifySwagger, {
   openapi: {
     info: {
       title: 'Rewiring America Incentives API',
@@ -80,6 +80,7 @@ fastify.addSchema({
       description: "Your zip code helps determine the amount of discounts and tax credits you qualify for.",
       maxLength: 5,
       minLength: 5,
+      examples: ["80212"],
     },
     owner_status: {
       type: "string",
@@ -91,6 +92,7 @@ fastify.addSchema({
       description: "Enter your gross income (income before taxes). Include wages and salary plus other forms of income, including pensions, interest, dividends, and rental income. If you are married and file jointly, include your spouse's income.",
       minimum: 0,
       maximum: 100000000,
+      examples: [80000],
     },
     tax_filing: {
       type: "string",
@@ -102,6 +104,7 @@ fastify.addSchema({
       description: "Include anyone you live with who you claim as a dependent on your taxes, and your spouse or partner if you file taxes together.",
       minimum: 1,
       maximum: 8,
+      examples: [2],
     }
   },
   required: ["zip",
@@ -160,17 +163,14 @@ fastify.get("/api/v1/calculator", {
                 is_under_150_ami: { type: 'boolean' },
                 is_over_150_ami: { type: 'boolean' },
 
-                // The max POS savings is $14,000 if you're under 150% ami, otherwise 0
-                pos_savings: { type: 'integer' },
+                pos_savings: { type: 'integer', description: "The max POS savings is $14,000 if you're under 150% ami, otherwise 0" },
 
-                // You can't save more than tax owed. Choose the lesser of tax owed vs tax savings
-                tax_savings: { type: 'integer' },
+                tax_savings: { type: 'integer', description: "You can't save more than tax owed. Uses the lesser of tax owed vs tax savings." },
 
                 // Not prominently displayed
                 performance_rebate_savings: { type: 'integer' },
 
-                // Annual savings from pregenerated model
-                estimated_annual_savings: { type: 'integer' },
+                estimated_annual_savings: { type: 'integer', description: "Annual savings from pregenerated model" },
                 pos_rebate_incentives: { type: 'array', items: { $ref: 'Incentive' } },
                 tax_credit_incentives: { type: 'array', items: { $ref: 'Incentive' } },
               }
@@ -206,12 +206,12 @@ async function fetchAMIs(zip) {
             MIN(t.poverty_percent) AS lowestPovertyRate,
             MAX(t.poverty_percent) AS highestPovertyRate
         FROM zip_to_tract zt
-            LEFT JOIN tracts t ON t.tract_geoid = zt.tract 
+            LEFT JOIN tracts t ON t.tract_geoid = zt.tract
         WHERE zt.zip = ? AND t.mfi != -666666666;
     `, zip);
   const ami = await fastify.sqlite.get(`
-        SELECT a.* 
-        FROM zip_to_cbsasub zc LEFT JOIN ami a ON a.cbsasub = zc.cbsasub 
+        SELECT a.*
+        FROM zip_to_cbsasub zc LEFT JOIN ami a ON a.cbsasub = zc.cbsasub
         WHERE zc.zipcode = ? AND a.cbsasub IS NOT NULL
     `, zip);
   return { ami, location, calculations };
