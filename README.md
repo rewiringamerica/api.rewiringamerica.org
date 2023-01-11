@@ -43,7 +43,7 @@ See Google's [concurrency guide](https://cloud.google.com/run/docs/about-concurr
  * finalize path, request, response formats
  * add examples to schemas
  * fix owner status field
- * finalize how to handle translations
+ * finalize how to handle translations https://medium.com/@guillaume.viguierjust/building-a-multilingual-restful-api-2678add7febe
  * decide if incentives have ids, do programs have ids?
  * use in existing calculator and remove calculation logic and data from website repo
  * set autoscaling rules and capacity rules on Cloud Run in dev and prod
@@ -73,3 +73,4 @@ Why fastify? Seems like included schema validation is clean. Was a sqlite exampl
  - https://techbeacon.com/app-dev-testing/you-need-api-management-help-11-open-source-tools-consider
  - https://zuplo.com/blog/2022/12/01/api-key-authentication
  - https://blog.readme.com/http-api-faux-pas/
+ - https://medium.com/@guillaume.viguierjust/building-a-multilingual-restful-api-2678add7febe
