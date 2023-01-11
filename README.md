@@ -49,6 +49,7 @@ See Google's [concurrency guide](https://cloud.google.com/run/docs/about-concurr
   * decide if incentives have ids, do programs have ids?
  * add tests for API and port calculation tests from policy-hub
  * use in existing calculator and remove calculation logic and data from website repo
+ * finish continuous deploy setup: https://cloud.google.com/build/docs/deploying-builds/deploy-cloud-run
  * set autoscaling rules and capacity rules on Cloud Run in dev and prod
  * what's the right content type for the yaml spec?
  * migrate any other lingering business logic from frontend (work with Derek)
