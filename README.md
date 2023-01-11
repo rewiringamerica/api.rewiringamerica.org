@@ -26,6 +26,12 @@ Zuplo authenticates developers using Auth0. @tomc, @derek, @tomm and @chell have
 
 Container is deployable on Google Cloud Run with `yarn deploy:dev` or `yarn deploy:production`.
 
+## Scaling
+
+ * `gcloud run services update incentives-api --project rewiring-america --min-instances 1 --max-instances 10 --concurrency 100`
+
+See Google's [concurrency guide](https://cloud.google.com/run/docs/about-concurrency) to learn more.
+
 ## URLs
 
  - Production api.rewiringamerica.org --> Zuplo --> https://incentives-api-w4dlpicepa-uc.a.run.app
@@ -55,6 +61,7 @@ Container is deployable on Google Cloud Run with `yarn deploy:dev` or `yarn depl
  * cleanup readme.com
  * cleanup fly.io
  * link to changelog from Zuplo? https://www.rewiringamerica.org/app/changelog
+ * Do we expand HEEHR in the JSON? Does Hope for Homes have an ID?
 
 ## Notes
 
