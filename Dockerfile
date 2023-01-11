@@ -11,6 +11,7 @@ RUN yarn --production
 # install sqlite and build the database
 RUN apk update && apk add sqlite
 COPY data data
+COPY scripts scripts
 RUN yarn build
 
 # make sure all deps end up in local file system
