@@ -26,9 +26,8 @@ Zuplo authenticates developers using Auth0. @tomc, @derek, @tomm and @chell have
 
 Container is deployable on Google Cloud Run with `yarn deploy:dev` or `yarn deploy:production`.
 
-Pushing to `main` branch will deploy the dev environment automatically. See [cloud build triggers](https://console.cloud.google.com/cloud-build/triggers/edit/d150c176-c16e-42c1-aca4-2000211a674c?project=rewiring-america-dev).
-
-Merging a pull request from `main` to `production` branch will deploy production. See [cloud build triggers](https://console.cloud.google.com/cloud-build/triggers/edit/df82809d-9b8a-410a-881d-5fa33f383830?project=rewiring-america).
+Pushing to `main` branch will build the `rewiring-america-dev` project automatically, but the build does not yet autodeploy.
+Merging a pull request from `main` to `production` branch will build the production project automatically, but the build does not yet autodeploy.
 
 ## Scaling
 
