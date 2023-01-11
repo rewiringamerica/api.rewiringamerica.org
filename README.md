@@ -24,14 +24,12 @@ Zuplo authenticates developers using Auth0. @tomc, @derek, @tomm and @chell have
 
 ## Deploys
 
-Container is deployable on Google Cloud Run, in staging:
- - `gcloud config set project rewiring-america-dev`
- - `gcloud run deploy incentives-api-dev --source .` --> https://incentives-api-dev-mcifvvqcxa-uc.a.run.app
+Container is deployable on Google Cloud Run with `yarn deploy:dev` or `yarn deploy:production`.
 
-And production:
+## URLs
 
- - `gcloud config set project rewiring-america`
- - `gcloud run deploy incentives-api --source .` --> https://incentives-api-w4dlpicepa-uc.a.run.app
+ - Production api.rewiringamerica.org --> Zuplo --> https://incentives-api-w4dlpicepa-uc.a.run.app
+ - Staging Zuplo --> https://incentives-api-dev-mcifvvqcxa-uc.a.run.app
 
 ## TODO
 
