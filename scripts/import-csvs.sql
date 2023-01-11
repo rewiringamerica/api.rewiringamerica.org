@@ -1,12 +1,21 @@
 DROP TABLE IF EXISTS ami;
+
 DROP TABLE IF EXISTS zips;
+
 DROP TABLE IF EXISTS tracts;
+
 DROP TABLE IF EXISTS zip_to_tract;
+
 DROP TABLE IF EXISTS zip_to_cbsasub;
+
 DROP TABLE IF EXISTS ira_incentives;
+
 DROP TABLE IF EXISTS ira_state_savings;
+
 DROP TABLE IF EXISTS solar_prices;
+
 DROP TABLE IF EXISTS state_mfi;
+
 DROP TABLE IF EXISTS tax_brackets;
 
 CREATE TABLE ami(
@@ -98,8 +107,11 @@ CREATE INDEX idx_amicbsasub ON ami(cbsasub);
 CREATE TABLE ira_incentives(
     type TEXT,
     program TEXT,
+    program_es TEXT,
     item TEXT,
+    item_es TEXT,
     more_info_url TEXT,
+    more_info_url_es TEXT,
     amount NUMERIC,
     amount_type TEXT,
     representative_amount INTEGER,
@@ -109,12 +121,7 @@ CREATE TABLE ira_incentives(
     agi_max_limit TEXT,
     filing_status TEXT,
     start_date INTEGER,
-    end_date INTEGER,
-    description TEXT,
-    special_note TEXT,
-    note_1 TEXT,
-    note_2 TEXT,
-    note_3 TEXT
+    end_date INTEGER
 );
 
 INSERT INTO
@@ -122,8 +129,11 @@ INSERT INTO
 SELECT
     JSON_EXTRACT(value, '$.type'),
     JSON_EXTRACT(value, '$.program'),
+    JSON_EXTRACT(value, '$.program_es'),
     JSON_EXTRACT(value, '$.item'),
+    JSON_EXTRACT(value, '$.item_es'),
     JSON_EXTRACT(value, '$.more_info_url'),
+    JSON_EXTRACT(value, '$.more_info_url_es'),
     JSON_EXTRACT(value, '$.amount'),
     JSON_EXTRACT(value, '$.amount_type'),
     JSON_EXTRACT(value, '$.representative_amount'),
@@ -134,12 +144,7 @@ SELECT
     JSON_EXTRACT(value, '$.agi_max_limit'),
     JSON_EXTRACT(value, '$.filing_status'),
     JSON_EXTRACT(value, '$.start_date'),
-    JSON_EXTRACT(value, '$.end_date'),
-    JSON_EXTRACT(value, '$.description'),
-    JSON_EXTRACT(value, '$.special_note'),
-    JSON_EXTRACT(value, '$.note_1'),
-    JSON_EXTRACT(value, '$.note_2'),
-    JSON_EXTRACT(value, '$.note_3')
+    JSON_EXTRACT(value, '$.end_date')
 FROM
     JSON_EACH(READFILE('./data/ira_incentives.json'));
 

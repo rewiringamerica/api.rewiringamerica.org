@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "build": "sqlite3 data/incentives-api.db < data/import-csvs.sql",
+    "build": "sqlite3 incentives-api.db < scripts/import-csvs.sql",
     "gcp-build": "build"
   },
   "type": "module"

@@ -38,6 +38,9 @@ And production:
  * put these TODOs into Asana
  * finalize path, request, response formats
  * add examples to schemas
+ * fix owner status field
+ * finalize how to handle translations
+ * decide if incentives have ids, do programs have ids?
  * use in existing calculator and remove calculation logic and data from website repo
  * set autoscaling rules and capacity rules on Cloud Run in dev and prod
  * document security requirements in openapi schema https://swagger.io/docs/specification/authentication/bearer-authentication/ (or leave this to Zuplo docs?)

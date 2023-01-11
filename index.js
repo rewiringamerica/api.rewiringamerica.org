@@ -1,8 +1,7 @@
-import path from "path"
 import Fastify from "fastify";
 import FastifySqlite from 'fastify-sqlite';
 import FastifySwagger from "@fastify/swagger";
-import calculateIncentives from './incentives-calculation.js';
+import calculateIncentives from './lib/incentives-calculation.js';
 
 const fastify = Fastify({
   logger: true
@@ -12,7 +11,7 @@ await fastify.register(FastifySqlite, {
   promiseApi: true, // the DB instance supports the Promise API. Default false
   name: null, // optional decorator name. Default null
   verbose: false, // log sqlite3 queries as trace. Default false
-  dbFile: './data/incentives-api.db', // select the database file. Default ':memory:'
+  dbFile: './incentives-api.db', // select the database file. Default ':memory:'
   mode: FastifySqlite.sqlite3.OPEN_READONLY // how to connecto to the DB, Default: OPEN_READWRITE | OPEN_CREATE | OPEN_FULLMUTEX
 });
 
@@ -40,12 +39,15 @@ await fastify.register(FastifySwagger, {
 fastify.addSchema({
   $id: 'Incentive',
   type: 'object',
-  required: ['type', 'program', 'item', 'more_info_url', 'amount', 'amount_type', 'item_type', 'owner_status', 'description', 'start_date', 'end_date', 'special_note'],
+  required: ['type', 'program', 'program_es', 'item', 'item_es', 'more_info_url', 'more_info_url_es', 'amount', 'amount_type', 'item_type', 'owner_status', 'description', 'start_date', 'end_date'],
   properties: {
     type: { type: 'string', enum: ['household', 'ev', 'niche'] },
     program: { type: 'string' },
+    program_es: { type: 'string' },
     item: { type: 'string' },
+    item_es: { type: 'string' },
     more_info_url: { type: 'string' },
+    more_info_url_es: { type: 'string' },
     amount: { type: 'number' },
     amount_type: { type: 'string', enum: ['dollar_amount', 'percent'] },
     item_type: { type: 'string', enum: ['performance_rebate', 'pos_rebate', 'tax_credit'] },
@@ -53,14 +55,10 @@ fastify.addSchema({
     description: { type: 'string' },
     start_date: { type: 'number' },
     end_date: { type: 'number' },
-    special_note: { type: 'string' },
     representative_amount: { type: 'number' },
     ami_qualification: { type: 'string', enum: ['less_than_80_ami', 'less_than_150_ami'] },
     agi_max_limit: { type: 'number' },
     filing_status: { type: 'string', enum: ['single', 'joint', 'hoh'] },
-    note_1: { type: 'string' },
-    note_2: { type: 'string' },
-    note_3: { type: 'string' },
     eligible: { type: 'boolean' },
   },
 });
