@@ -1,8 +1,11 @@
+import fs from 'fs';
 import Fastify from "fastify";
 import FastifySqlite from 'fastify-sqlite';
 import FastifySwagger from "@fastify/swagger";
 import calculateIncentives from './lib/incentives-calculation.js';
-import fs from 'fs';
+import IncentiveSchema from './schemas/incentive.json' assert { type: 'json' };
+import CalculatorRequestSchema from './schemas/calculator-request.json' assert { type: 'json' };
+import CalculatorResponseSchema from './schemas/calculator-response.json' assert { type: 'json' };
 
 const fastify = Fastify({
   logger: true
@@ -37,9 +40,9 @@ await fastify.register(FastifySwagger, {
 
 // NOTE: if you call fastify.swagger() before the server is running, $refs will break!
 // these can be used in schemas via $ref and e.g. Incentive will be added to openapi's components when docs are built:
-fastify.addSchema(JSON.parse(fs.readFileSync('./schemas/incentive.json', 'utf8')));
-fastify.addSchema(JSON.parse(fs.readFileSync('./schemas/calculator-request.json', 'utf8')));
-fastify.addSchema(JSON.parse(fs.readFileSync('./schemas/calculator-response.json', 'utf8')));
+fastify.addSchema(IncentiveSchema);
+fastify.addSchema(CalculatorRequestSchema);
+fastify.addSchema(CalculatorResponseSchema);
 
 fastify.get('/spec.json', { schema: { hide: true } }, (_, reply) => {
   const spec = fastify.swagger();
