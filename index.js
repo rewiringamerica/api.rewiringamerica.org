@@ -2,6 +2,7 @@ import Fastify from "fastify";
 import FastifySqlite from 'fastify-sqlite';
 import FastifySwagger from "@fastify/swagger";
 import calculateIncentives from './lib/incentives-calculation.js';
+import fs from 'fs';
 
 const fastify = Fastify({
   logger: true
@@ -35,83 +36,10 @@ await fastify.register(FastifySwagger, {
 });
 
 // NOTE: if you call fastify.swagger() before the server is running, $refs will break!
-// can be used in schemas via $ref and Incentive will be added to openapi's components when docs are built:
-fastify.addSchema({
-  $id: 'Incentive',
-  type: 'object',
-  required: ['type', 'program', 'program_es', 'item', 'item_es', 'more_info_url', 'more_info_url_es', 'amount', 'amount_type', 'item_type', 'owner_status', 'description', 'start_date', 'end_date'],
-  properties: {
-    type: { type: 'string', enum: ['household', 'ev', 'niche'] },
-    program: { type: 'string' },
-    program_es: { type: 'string' },
-    item: { type: 'string' },
-    item_es: { type: 'string' },
-    more_info_url: { type: 'string' },
-    more_info_url_es: { type: 'string' },
-    amount: { type: 'number' },
-    amount_type: { type: 'string', enum: ['dollar_amount', 'percent'] },
-    item_type: { type: 'string', enum: ['performance_rebate', 'pos_rebate', 'tax_credit'] },
-    owner_status: { type: 'string', enum: ['homeowner', 'renter'] },
-    description: { type: 'string' },
-    start_date: { type: 'number' },
-    end_date: { type: 'number' },
-    representative_amount: { type: 'number' },
-    ami_qualification: { type: 'string', enum: ['less_than_80_ami', 'less_than_150_ami'] },
-    agi_max_limit: { type: 'number' },
-    filing_status: { type: 'string', enum: ['single', 'joint', 'hoh'] },
-    eligible: { type: 'boolean' },
-  },
-});
-
-fastify.addSchema({
-  $id: 'CalculatorQuery',
-  type: "object",
-  properties: {
-    zip: {
-      type: "string",
-      description: "Your zip code helps determine the amount of discounts and tax credits you qualify for.",
-      maxLength: 5,
-      minLength: 5,
-      examples: ["80212"],
-    },
-    owner_status: {
-      type: "string",
-      description: "Homeowners and renters qualify for different incentives.",
-      enum: ['homeowner', 'renter'],
-    },
-    household_income: {
-      type: "integer",
-      description: "Enter your gross income (income before taxes). Include wages and salary plus other forms of income, including pensions, interest, dividends, and rental income. If you are married and file jointly, include your spouse's income.",
-      minimum: 0,
-      maximum: 100000000,
-      examples: [80000],
-    },
-    tax_filing: {
-      type: "string",
-      description: "Select \"Head of Household\" if you have a child or relative living with you, and you pay more than half the costs of your home. Select \"Joint\" if you file your taxes as a married couple.",
-      enum: ['single', 'joint', 'hoh'],
-    },
-    household_size: {
-      type: "integer",
-      description: "Include anyone you live with who you claim as a dependent on your taxes, and your spouse or partner if you file taxes together.",
-      minimum: 1,
-      maximum: 8,
-      examples: [2],
-    }
-  },
-  required: ["zip",
-    "owner_status",
-    "household_income",
-    "tax_filing",
-    "household_size"],
-  examples: [{
-    zip: '90210',
-    household_income: 80000,
-    household_size: 2,
-    owner_status: 'homeowner',
-    tax_filing: 'joint'
-  }]
-});
+// these can be used in schemas via $ref and e.g. Incentive will be added to openapi's components when docs are built:
+fastify.addSchema(JSON.parse(fs.readFileSync('./schemas/incentive.json', 'utf8')));
+fastify.addSchema(JSON.parse(fs.readFileSync('./schemas/calculator-request.json', 'utf8')));
+fastify.addSchema(JSON.parse(fs.readFileSync('./schemas/calculator-response.json', 'utf8')));
 
 fastify.get('/spec.json', { schema: { hide: true } }, (_, reply) => {
   const spec = fastify.swagger();
@@ -131,7 +59,7 @@ fastify.get("/api/v1/calculator", {
   schema: {
     description: 'How much money will you get with the Inflation Reduction Act?',
     querystring: {
-      $ref: 'CalculatorQuery',
+      $ref: 'CalculatorRequest',
     },
     response: {
       200: {
@@ -139,23 +67,7 @@ fastify.get("/api/v1/calculator", {
         content: {
           "application/json": {
             schema: {
-              type: 'object',
-              properties: {
-                is_under_80_ami: { type: 'boolean' },
-                is_under_150_ami: { type: 'boolean' },
-                is_over_150_ami: { type: 'boolean' },
-
-                pos_savings: { type: 'integer', description: "The max POS savings is $14,000 if you're under 150% ami, otherwise 0" },
-
-                tax_savings: { type: 'integer', description: "You can't save more than tax owed. Uses the lesser of tax owed vs tax savings." },
-
-                // Not prominently displayed
-                performance_rebate_savings: { type: 'integer' },
-
-                estimated_annual_savings: { type: 'integer', description: "Annual savings from pregenerated model" },
-                pos_rebate_incentives: { type: 'array', items: { $ref: 'Incentive' } },
-                tax_credit_incentives: { type: 'array', items: { $ref: 'Incentive' } },
-              }
+              $ref: 'CalculatorResponse',
             }
           }
         }

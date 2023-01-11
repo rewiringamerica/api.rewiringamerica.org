@@ -1,0 +1,106 @@
+{
+    "$id": "Incentive",
+    "type": "object",
+    "required": [
+        "type",
+        "program",
+        "program_es",
+        "item",
+        "item_es",
+        "more_info_url",
+        "more_info_url_es",
+        "amount",
+        "amount_type",
+        "item_type",
+        "owner_status",
+        "description",
+        "start_date",
+        "end_date"
+    ],
+    "properties": {
+        "type": {
+            "type": "string",
+            "enum": [
+                "household",
+                "ev",
+                "niche"
+            ]
+        },
+        "program": {
+            "type": "string"
+        },
+        "program_es": {
+            "type": "string"
+        },
+        "item": {
+            "type": "string"
+        },
+        "item_es": {
+            "type": "string"
+        },
+        "more_info_url": {
+            "type": "string"
+        },
+        "more_info_url_es": {
+            "type": "string"
+        },
+        "amount": {
+            "type": "number"
+        },
+        "amount_type": {
+            "type": "string",
+            "enum": [
+                "dollar_amount",
+                "percent"
+            ]
+        },
+        "item_type": {
+            "type": "string",
+            "enum": [
+                "performance_rebate",
+                "pos_rebate",
+                "tax_credit"
+            ]
+        },
+        "owner_status": {
+            "type": "string",
+            "enum": [
+                "homeowner",
+                "renter"
+            ]
+        },
+        "description": {
+            "type": "string"
+        },
+        "start_date": {
+            "type": "number"
+        },
+        "end_date": {
+            "type": "number"
+        },
+        "representative_amount": {
+            "type": "number"
+        },
+        "ami_qualification": {
+            "type": "string",
+            "enum": [
+                "less_than_80_ami",
+                "less_than_150_ami"
+            ]
+        },
+        "agi_max_limit": {
+            "type": "number"
+        },
+        "filing_status": {
+            "type": "string",
+            "enum": [
+                "single",
+                "joint",
+                "hoh"
+            ]
+        },
+        "eligible": {
+            "type": "boolean"
+        }
+    }
+}

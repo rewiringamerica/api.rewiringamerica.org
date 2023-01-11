@@ -1,0 +1,53 @@
+{
+    "$id": "CalculatorResponse",
+    "type": "object",
+    "required": [
+        "is_under_80_ami",
+        "is_under_150_ami",
+        "is_over_150_ami",
+        "pos_savings",
+        "tax_savings",
+        "performance_rebate_savings",
+        "estimated_annual_savings",
+        "pos_rebate_incentives",
+        "tax_credit_incentives"
+    ],
+    "properties": {
+        "is_under_80_ami": {
+            "type": "boolean"
+        },
+        "is_under_150_ami": {
+            "type": "boolean"
+        },
+        "is_over_150_ami": {
+            "type": "boolean"
+        },
+        "pos_savings": {
+            "type": "integer",
+            "description": "The max POS savings is $14,000 if you’re under 150% ami, otherwise 0"
+        },
+        "tax_savings": {
+            "type": "integer",
+            "description": "You can’t save more than tax owed. Uses the lesser of tax owed vs tax savings."
+        },
+        "performance_rebate_savings": {
+            "type": "integer"
+        },
+        "estimated_annual_savings": {
+            "type": "integer",
+            "description": "Annual savings from pregenerated model"
+        },
+        "pos_rebate_incentives": {
+            "type": "array",
+            "items": {
+                "$ref": "Incentive"
+            }
+        },
+        "tax_credit_incentives": {
+            "type": "array",
+            "items": {
+                "$ref": "Incentive"
+            }
+        }
+    }
+}
