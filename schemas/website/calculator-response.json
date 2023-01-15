@@ -1,5 +1,5 @@
 {
-    "$id": "CalculatorResponse",
+    "$id": "WebsiteCalculatorResponse",
     "type": "object",
     "required": [
         "is_under_80_ami",
@@ -40,13 +40,13 @@
         "pos_rebate_incentives": {
             "type": "array",
             "items": {
-                "$ref": "Incentive"
+                "$ref": "WebsiteIncentive"
             }
         },
         "tax_credit_incentives": {
             "type": "array",
             "items": {
-                "$ref": "Incentive"
+                "$ref": "WebsiteIncentive"
             }
         }
     },
