@@ -42,26 +42,7 @@ See Google's [concurrency guide](https://cloud.google.com/run/docs/about-concurr
 
 ## TODO
 
- * put these TODOs into Asana
- * finalize path, request, response formats
-  * Do we expand HEEHR in the JSON? Does Hope for Homes have an ID?
-  * finalize how to handle translations https://medium.com/@guillaume.viguierjust/building-a-multilingual-restful-api-2678add7febe
-  * decide if incentives have ids, do programs have ids?
- * add tests for API and port calculation tests from policy-hub
- * use in existing calculator and remove calculation logic and data from website repo
- * finish continuous deploy setup: https://cloud.google.com/build/docs/deploying-builds/deploy-cloud-run
- * set autoscaling rules and capacity rules on Cloud Run in dev and prod
- * what's the right content type for the yaml spec?
- * migrate any other lingering business logic from frontend (work with Derek)
- * think about metrics - what to record per client, where to (amplitude? bigquery) - should be possible from Zuplo
- * cache the openapi json/yaml files (or publish them somewhere at build time?)
- * protect the dev environment with a VPN (Tailscale?) or similar (use gcloud cli to proxy?)
- * should API accept tracts? address? https://geocoding.geo.census.gov/geocoder/
- * switch to typescript, generate types from schema https://www.fastify.io/docs/latest/Reference/TypeScript/
- * can we make the Cloud Run services private and give Zuplo keys to hit them? https://zuplo.com/docs/policies/upstream-gcp-jwt-inbound
- * cleanup readme.com
- * cleanup fly.io
- * link to changelog from Zuplo? https://www.rewiringamerica.org/app/changelog
+https://app.asana.com/0/1203194244067918/1203657186427969/f
 
 ## Notes
 
