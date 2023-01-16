@@ -1,4 +1,4 @@
-ARG VERSION="current"
+ARG VERSION="16.19.0"
 FROM node:$VERSION-alpine
 
 WORKDIR /app
