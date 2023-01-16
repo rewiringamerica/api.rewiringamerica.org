@@ -8,19 +8,24 @@
   "license": "None",
   "private": true,
   "dependencies": {
+    "@fastify/autoload": "^5.7.1",
     "@fastify/static": "^6.6.0",
     "@fastify/swagger": "^8.2.1",
     "csv-parse": "^5.3.3",
     "fastify": "^4.10.2",
+    "fastify-cli": "^5.7.1",
     "fastify-plugin": "^4.4.0",
     "fastify-sqlite": "^1.1.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "tap": "^16.3.4"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "fastify start -l info app.js",
+    "dev": "fastify start -w -l info -P app.js",
     "build": "sqlite3 incentives-api.db < scripts/import-csvs.sql",
     "deploy:dev": "gcloud run deploy incentives-api-dev --project rewiring-america-dev --source .",
-    "deploy:production": "gcloud run deploy incentives-api --project rewiring-america --source ."
+    "deploy:production": "gcloud run deploy incentives-api --project rewiring-america --source .",
+    "test": "tap \"test/**/*.test.js\""
   },
   "type": "module"
 }
