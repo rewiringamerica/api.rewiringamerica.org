@@ -14,7 +14,6 @@
         "amount_type",
         "item_type",
         "owner_status",
-        "description",
         "start_date",
         "end_date"
     ],
@@ -22,9 +21,8 @@
         "type": {
             "type": "string",
             "enum": [
-                "household",
-                "ev",
-                "niche"
+                "pos_rebate",
+                "tax_credit"
             ]
         },
         "program": {
@@ -73,7 +71,8 @@
             "type": "string",
             "enum": [
                 "dollar_amount",
-                "percent"
+                "percent",
+                "solar"
             ]
         },
         "item_type": {
@@ -81,21 +80,20 @@
             "enum": [
                 "performance_rebate",
                 "pos_rebate",
-                "tax_credit"
+                "tax_credit",
+                "solar_tax_credit",
+                "ev_charger_credit"
             ]
         },
         "owner_status": {
-            "type": "string",
-            "enum": [
-                "homeowner",
-                "renter"
-            ]
-        },
-        "description": {
-            "type": "string",
-            "examples": [
-                "This covers installation of a battery in your home to store energy generated from your solar panels."
-            ]
+            "type": "array",
+            "items": {
+                "type": "string",
+                "enum": [
+                    "homeowner",
+                    "renter"
+                ]
+            }
         },
         "start_date": {
             "type": "number",
@@ -123,9 +121,11 @@
         },
         "ami_qualification": {
             "type": "string",
+            "nullable": true,
             "enum": [
                 "less_than_80_ami",
-                "less_than_150_ami"
+                "less_than_150_ami",
+                null
             ]
         },
         "agi_max_limit": {
@@ -137,27 +137,11 @@
         },
         "filing_status": {
             "type": "string",
+            "nullable": true,
             "enum": [
                 "single",
                 "joint",
-                "hoh"
-            ]
-        },
-        "note_1": {
-            "type": "string",
-            "examples": [
-                null
-            ]
-        },
-        "note_2": {
-            "type": "string",
-            "examples": [
-                null
-            ]
-        },
-        "note_3": {
-            "type": "string",
-            "examples": [
+                "hoh",
                 null
             ]
         },
