@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import glob from 'glob';
 import AutoLoad from '@fastify/autoload';
 import { fileURLToPath } from 'url';
 
@@ -12,11 +13,9 @@ export const options = {}
 export default async function (fastify, opts) {
   // Place here your custom code!
 
-  // TODO: glob everything under schemas so we're not hard-coding the website dir:
-  const schemas = fs.readdirSync('./schemas/website');
+  const schemas = glob.sync('./schemas/**/*.json');
   schemas.forEach(file => {
-    const schemaPath = path.join('./schemas/website', file);
-    const schema = JSON.parse(fs.readFileSync(schemaPath, 'utf-8'));
+    const schema = JSON.parse(fs.readFileSync(file, 'utf-8'));
     fastify.addSchema(schema);
   });
 
