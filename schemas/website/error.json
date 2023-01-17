@@ -1,0 +1,37 @@
+{
+    "$id": "Error",
+    "title": "Error",
+    "type": "object",
+    "required": [
+        "statusCode",
+        "error",
+        "message"
+    ],
+    "properties": {
+        "statusCode": {
+            "type": "integer",
+            "examples": [
+                404
+            ]
+        },
+        "error": {
+            "type": "string",
+            "examples": [
+                "Not Found"
+            ]
+        },
+        "message": {
+            "type": "string",
+            "examples": [
+                "Route GET:/ not found"
+            ]
+        }
+    },
+    "examples": [
+        {
+            "message": "Route GET:/ not found",
+            "error": "Not Found",
+            "statusCode": 404
+        }
+    ]
+}
