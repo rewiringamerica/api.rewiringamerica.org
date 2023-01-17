@@ -25,8 +25,8 @@ test('response is valid and correct', async (t) => {
   const calculatorResponse = JSON.parse(res.payload);
 
   // NOTE: path is relative to test command, not this file (apparently)
-  const incentiveSchema = JSON.parse(fs.readFileSync('./schemas/website/incentive.json', 'utf-8'));
-  const responseSchema = JSON.parse(fs.readFileSync('./schemas/website/calculator-response.json', 'utf-8'));
+  const incentiveSchema = JSON.parse(fs.readFileSync('./schemas/v0/incentive.json', 'utf-8'));
+  const responseSchema = JSON.parse(fs.readFileSync('./schemas/v0/calculator-response.json', 'utf-8'));
 
   const ajv = new Ajv({
     schemas: [incentiveSchema, responseSchema],
