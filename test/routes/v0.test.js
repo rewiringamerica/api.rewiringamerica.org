@@ -86,6 +86,8 @@ const BAD_QUERIES = [
 ]
 
 test('bad queries', async (t) => {
+  t.plan(BAD_QUERIES.length * 3, 'expect 3 assertions per bad query');
+
   for (let query of BAD_QUERIES) {
     const res = await getCalculatorResponse(t, query);
     const calculatorResponse = JSON.parse(res.payload);
