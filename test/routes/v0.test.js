@@ -1,4 +1,4 @@
-import { test, beforeEach } from 'tap';
+import { test } from 'tap';
 import { build } from '../helper.js';
 import Ajv from 'ajv';
 import fs from 'fs';
