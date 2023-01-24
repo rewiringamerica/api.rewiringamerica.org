@@ -9,4 +9,7 @@ export default fp(async function (fastify, opts) {
     dbFile: './incentives-api.db', // select the database file. Default ':memory:'
     mode: FastifySqlite.sqlite3.OPEN_READONLY // how to connecto to the DB, Default: OPEN_READWRITE | OPEN_CREATE | OPEN_FULLMUTEX
   });
+
+  console.log(`loading spatialite from ${process.env.SPATIALITE_EXTENSION_PATH}`);
+  await fastify.sqlite.loadExtension(process.env.SPATIALITE_EXTENSION_PATH);
 });

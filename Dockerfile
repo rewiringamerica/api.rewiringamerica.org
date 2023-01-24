@@ -4,7 +4,8 @@ FROM node:$VERSION-alpine
 WORKDIR /app
 
 # install sqlite and build the database
-RUN apk update && apk add sqlite
+RUN apk update && apk add sqlite libspatialite gdal
+ENV SPATIALITE_EXTENSION_PATH=/usr/lib/mod_spatialite.so.7.1.0
 
 # install node dependencies
 COPY package.json .
