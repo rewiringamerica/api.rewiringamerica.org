@@ -22,6 +22,14 @@ At the moment, @tomc is the only team member with access to Zuplo at https://por
 
 Zuplo authenticates developers using Auth0. @tomc, @derek, @tomm and @chell have access to Auth0.
 
+## Local Development
+
+Create a `.env` file containing the following variables:
+
+```
+GEOCODIO_API_KEY= # get from https://dash.geocod.io/apikey or ask @tomc
+```
+
 ## Deploys
 
 Container is deployable on Google Cloud Run with `yarn deploy:dev` or `yarn deploy:production`.

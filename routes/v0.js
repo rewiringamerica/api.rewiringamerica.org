@@ -1,5 +1,5 @@
 import calculateIncentives from '../lib/incentives-calculation.js';
-import fetchAMIs from '../lib/fetch-amis.js';
+import fetchAMIsForZip from '../lib/fetch-amis-for-zip.js';
 
 const CalculatorSchema = {
   "description": "How much money will you get with the Inflation Reduction Act?",
@@ -20,7 +20,8 @@ const CalculatorSchema = {
 
 export default async function (fastify, opts) {
   fastify.get("/api/v0/calculator", { schema: CalculatorSchema }, async (request, reply) => {
-    const amisForZip = await fetchAMIs(fastify.sqlite, request.query.zip);
+    // TODO: refactor as a plugin like fastify.amis.getForZip(zip)?
+    const amisForZip = await fetchAMIsForZip(fastify.sqlite, request.query.zip);
     const result = calculateIncentives(
       amisForZip,
       {
