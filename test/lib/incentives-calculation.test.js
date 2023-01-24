@@ -1,5 +1,5 @@
 import { test, beforeEach } from 'tap';
-import fetchAMIs from '../../lib/fetch-amis.js';
+import fetchAMIsForZip from '../../lib/fetch-amis-for-zip.js';
 import calculateIncentives from '../../lib/incentives-calculation.js';
 import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
@@ -12,7 +12,7 @@ beforeEach(async (t) => {
 });
 
 test('correctly evaluates scenerio "Single w/ $120k Household income"', async (t) => {
-  const amisForZip = await (fetchAMIs(t.context.db, '11211'));
+  const amisForZip = await (fetchAMIsForZip(t.context.db, '11211'));
   const data = await calculateIncentives(amisForZip, {
     zip: '11211',
     owner_status: 'homeowner',
@@ -24,7 +24,7 @@ test('correctly evaluates scenerio "Single w/ $120k Household income"', async (t
 });
 
 test('correctly evaluates scenerio "Joint w/ 5 persons and $60k Household income"', async (t) => {
-  const amisForZip = await (fetchAMIs(t.context.db, '11211'));
+  const amisForZip = await (fetchAMIsForZip(t.context.db, '11211'));
   const data = await calculateIncentives(amisForZip, {
     zip: '11211',
     owner_status: 'homeowner',
@@ -36,7 +36,7 @@ test('correctly evaluates scenerio "Joint w/ 5 persons and $60k Household income
 });
 
 test('correctly evaluates scenerio "Joint w/ $300k Household income"', async (t) => {
-  const amisForZip = await (fetchAMIs(t.context.db, '11211'));
+  const amisForZip = await (fetchAMIsForZip(t.context.db, '11211'));
   const data = await calculateIncentives(amisForZip, {
     zip: '11211',
     owner_status: 'homeowner',
