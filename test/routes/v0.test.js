@@ -3,6 +3,10 @@ import { build } from '../helper.js';
 import Ajv from 'ajv';
 import fs from 'fs';
 
+// NOTE: path is relative to test command, not this file (apparently)
+const incentiveSchema = JSON.parse(fs.readFileSync('./schemas/v0/incentive.json', 'utf-8'));
+const responseSchema = JSON.parse(fs.readFileSync('./schemas/v0/calculator-response.json', 'utf-8'));
+
 async function getCalculatorResponse(t, query) {
   const app = await build(t);
 
@@ -23,10 +27,6 @@ test('response is valid and correct', async (t) => {
     household_size: 4,
   });
   const calculatorResponse = JSON.parse(res.payload);
-
-  // NOTE: path is relative to test command, not this file (apparently)
-  const incentiveSchema = JSON.parse(fs.readFileSync('./schemas/v0/incentive.json', 'utf-8'));
-  const responseSchema = JSON.parse(fs.readFileSync('./schemas/v0/calculator-response.json', 'utf-8'));
 
   const ajv = new Ajv({
     schemas: [incentiveSchema, responseSchema],
@@ -94,5 +94,28 @@ test('bad queries', async (t) => {
     t.equal(res.statusCode, 400, 'response status is 400');
     t.equal(calculatorResponse.statusCode, 400, 'payload statuscode is 400');
     t.equal(calculatorResponse.error, 'Bad Request', 'payload error is Bad Request');
+  }
+});
+
+test('/incentives', async (t) => {
+  const app = await build(t);
+  const res = await app.inject({ url: '/api/v0/incentives' });
+  const incentivesResponse = JSON.parse(res.payload);
+  t.equal(incentivesResponse.incentives.length, 30);
+  t.equal(res.statusCode, 200, 'response status is 200');
+
+  const ajv = new Ajv({
+    schemas: [incentiveSchema],
+    coerceTypes: true,
+    useDefaults: true,
+    removeAdditional: true,
+    allErrors: false
+  });
+
+  const validator = ajv.getSchema('WebsiteIncentive');
+
+  for (var incentive of incentivesResponse.incentives) {
+    await validator(incentive);
+    t.equal(validator.errors, null);
   }
 });
