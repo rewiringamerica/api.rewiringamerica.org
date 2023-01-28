@@ -43,3 +43,8 @@ test('correctly evaluates scenerio: $1,000,000 joint', async (t) => {
   const data = await estimateTaxAmount('joint', 1000000);
   t.equal(data.tax_owed, 289665);
 });
+
+test('correctly evaluates scenerio: $8,000 single', async (t) => {
+  const data = await estimateTaxAmount('single', 8000);
+  t.equal(data.tax_owed, 0);
+});
