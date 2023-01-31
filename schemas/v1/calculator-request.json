@@ -23,6 +23,18 @@
                     ]
                 }
             },
+            "oneOf": [
+                {
+                    "required": [
+                        "zip"
+                    ]
+                },
+                {
+                    "required": [
+                        "address"
+                    ]
+                }
+            ],
             "maxProperties": 1,
             "minProperties": 1
         },
