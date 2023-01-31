@@ -60,7 +60,6 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
   t.equal(data.pos_savings, 14000);
   t.equal(data.tax_savings, 18876);
   t.equal(data.performance_rebate_savings, 4000);
-  t.equal(data.estimated_annual_savings, 1130);
 
   t.equal(data.pos_rebate_incentives.length, 8);
   t.equal(data.tax_credit_incentives.length, 10);
@@ -144,7 +143,6 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
   t.equal(data.pos_savings, 14000);
   t.equal(data.tax_savings, 22672);
   t.equal(data.performance_rebate_savings, 4000);
-  t.equal(data.estimated_annual_savings, 1340);
 
   t.equal(data.pos_rebate_incentives.length, 8);
   t.equal(data.tax_credit_incentives.length, 10);
@@ -228,7 +226,6 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   t.equal(data.pos_savings, 0);
   t.equal(data.tax_savings, 15028.9);
   t.equal(data.performance_rebate_savings, 4000);
-  t.equal(data.estimated_annual_savings, 1450);
 
   t.equal(data.pos_rebate_incentives.length, 8);
   t.equal(data.tax_credit_incentives.length, 10);

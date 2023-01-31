@@ -97,6 +97,22 @@ test('bad queries', async (t) => {
   }
 });
 
+const ESTIMATION_TESTS = [
+  [{ zip: '11211', owner_status: 'homeowner', household_income: 120000, tax_filing: 'single', household_size: 1 }, 1130],
+  [{ zip: '94117', owner_status: 'homeowner', household_income: 250000, tax_filing: 'joint', household_size: 4 }, 1340],
+  [{ zip: '39503', owner_status: 'homeowner', household_income: 500000, tax_filing: 'hoh', household_size: 8 }, 1450],
+];
+
+test('estimated savings', async (t) => {
+  t.plan(ESTIMATION_TESTS.length, 'expect 3 assertions per bad query');
+
+  for (let [query, expected_amount] of ESTIMATION_TESTS) {
+    const res = await getCalculatorResponse(t, query);
+    const calculatorResponse = JSON.parse(res.payload);
+    t.equal(calculatorResponse.estimated_annual_savings, expected_amount);
+  }
+});
+
 test('/incentives', async (t) => {
   const app = await build(t);
   const res = await app.inject({ url: '/api/v0/incentives' });

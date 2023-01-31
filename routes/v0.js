@@ -1,6 +1,7 @@
 import calculateIncentives from '../lib/incentives-calculation.js';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip.js';
 import incentives from '../data/ira_incentives.json' assert { type: 'json' };
+import iraStateSavings from '../data/ira_state_savings.json' assert { type: 'json' };
 
 const CalculatorSchema = {
   "description": "How much money will you get with the Inflation Reduction Act?",
@@ -52,6 +53,13 @@ export default async function (fastify, opts) {
         ...request.query
       }
     );
+
+    // Website Calculator-only:
+    // Annual savings from pregenerated model
+    const estimatedStateSavings = iraStateSavings[amisForZip?.location?.state_id].estimated_savings_heat_pump_ev;
+
+    result.estimated_annual_savings = estimatedStateSavings;
+
     reply.status(200)
       .type('application/json')
       .send(result);
