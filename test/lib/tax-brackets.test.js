@@ -48,3 +48,18 @@ test('correctly evaluates scenerio: $8,000 single', async (t) => {
   const data = await estimateTaxAmount('single', 8000);
   t.equal(data.tax_owed, 0);
 });
+
+test('correctly evaluates income at standard deduction', async (t) => {
+  const data = await estimateTaxAmount('joint', 13850);
+  t.equal(data.tax_owed, 0);
+});
+
+test('correctly evaluates income below standard deduction', async (t) => {
+  const data = await estimateTaxAmount('joint', 5000);
+  t.equal(data.tax_owed, 0);
+});
+
+test('correctly evaluates $0 income', async (t) => {
+  const data = await estimateTaxAmount('single', 0);
+  t.equal(data.tax_owed, 0);
+});
