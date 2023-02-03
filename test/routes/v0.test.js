@@ -69,7 +69,7 @@ const BAD_QUERIES = [
   { zip: '80212', owner_status: 'aaa', household_income: 80000, tax_filing: 'joint', household_size: 4 },
   { zip: '80212', owner_status: -1, household_income: 80000, tax_filing: 'joint', household_size: 4 },
   // bad household_income:
-  { zip: '80212', owner_status: 'homeowner', household_income: 0, tax_filing: 'joint', household_size: 4 },
+  { zip: '80212', owner_status: 'homeowner', household_income: null, tax_filing: 'joint', household_size: 4 }, // null is the JSON encoding of NaN
   { zip: '80212', owner_status: 'homeowner', household_income: -1, tax_filing: 'joint', household_size: 4 },
   { zip: '80212', owner_status: 'homeowner', household_income: 100000001, tax_filing: 'joint', household_size: 4 },
   { zip: '80212', owner_status: 'homeowner', tax_filing: 'joint', household_size: 4 },
