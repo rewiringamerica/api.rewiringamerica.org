@@ -22,11 +22,12 @@ const APICalculatorSchema = {
 export default async function (fastify, opts) {
   async function fetchAMIsForLocation(location) {
     if (location.address) {
+      // TODO: make sure bad addresses are handled here, and don't return anything
       return await fetchAMIsForAddress(fastify.sqlite, location.address);
     } else if (location.zip) {
       return await fetchAMIsForZip(fastify.sqlite, location.zip);
     } else {
-      // FIXME: can this be a 400 BadRequest Error, using Fastify?
+      // NOTE: this should never happen, APICalculatorSchema should block it:
       throw new Error('location.address or location.zip required');
     }
   }

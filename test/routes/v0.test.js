@@ -54,7 +54,10 @@ test('response is valid and correct', async (t) => {
   t.equal(calculatorResponse.pos_rebate_incentives.length, 8);
   t.equal(calculatorResponse.tax_credit_incentives.length, 10);
 
-  // TODO: test incentives contents and values
+  const expectedResponse = JSON.parse(fs.readFileSync('./test/fixtures/v0-80212-homeowner-80000-joint-4.json', 'utf-8'));
+
+  t.same(calculatorResponse.pos_rebate_incentives.length, expectedResponse.pos_rebate_incentives.length);
+  t.same(calculatorResponse.tax_credit_incentives.length, expectedResponse.tax_credit_incentives.length);
 });
 
 const BAD_QUERIES = [
@@ -143,3 +146,4 @@ test('/incentives', async (t) => {
     t.equal(validator.errors, null);
   }
 });
+
