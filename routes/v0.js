@@ -16,6 +16,10 @@ const CalculatorSchema = {
     "400": {
       "description": "Bad request",
       "$ref": "Error"
+    },
+    "404": {
+      "description": "Resource not found",
+      "$ref": "Error"
     }
   }
 };
@@ -35,10 +39,6 @@ const IncentivesSchema = {
           }
         }
       }
-    },
-    "400": {
-      "description": "Bad request",
-      "$ref": "Error"
     }
   }
 };
@@ -47,6 +47,10 @@ export default async function (fastify, opts) {
   fastify.get("/api/v0/calculator", { schema: CalculatorSchema }, async (request, reply) => {
     // TODO: refactor as a plugin like fastify.amis.getForZip(zip)?
     const amisForZip = await fetchAMIsForZip(fastify.sqlite, request.query.zip);
+
+    if (!amisForZip) {
+      throw fastify.httpErrors.notFound();
+    }
 
     const result = calculateIncentives(
       amisForZip,
@@ -57,17 +61,15 @@ export default async function (fastify, opts) {
 
     // Website Calculator-only:
     // Annual savings from pregenerated model
-    const estimatedStateSavings = IRA_STATE_SAVINGS[amisForZip?.location?.state_id].estimated_savings_heat_pump_ev;
+    result.estimated_annual_savings = IRA_STATE_SAVINGS[amisForZip.location.state_id].estimated_savings_heat_pump_ev;
 
-    result.estimated_annual_savings = estimatedStateSavings;
-
-    reply.status(200)
+    return reply.status(200)
       .type('application/json')
       .send(result);
   });
 
   fastify.get("/api/v0/incentives", { schema: IncentivesSchema }, async (request, reply) => {
-    reply.status(200)
+    return reply.status(200)
       .type('application/json')
       .send({ incentives });
   });
