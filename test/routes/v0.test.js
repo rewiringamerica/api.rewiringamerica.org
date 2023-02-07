@@ -92,8 +92,32 @@ test('bad queries', async (t) => {
     const res = await getCalculatorResponse(t, query);
     const calculatorResponse = JSON.parse(res.payload);
     t.equal(res.statusCode, 400, 'response status is 400');
-    t.equal(calculatorResponse.statusCode, 400, 'payload statuscode is 400');
+    t.equal(calculatorResponse.statusCode, 400, 'payload statusCode is 400');
     t.equal(calculatorResponse.error, 'Bad Request', 'payload error is Bad Request');
+  }
+});
+
+test('non-existent zips', async (t) => {
+  const res = await getCalculatorResponse(t, { zip: '80088', owner_status: 'homeowner', household_income: 0, household_size: 1, tax_filing: 'single' });
+  const calculatorResponse = JSON.parse(res.payload);
+  t.equal(res.statusCode, 404, 'response status is 404');
+  t.equal(calculatorResponse.statusCode, 404, 'payload statusCode is 404');
+  t.equal(calculatorResponse.error, 'Not Found', 'payload error is Not Found');
+});
+
+const ESTIMATION_TESTS = [
+  [{ zip: '11211', owner_status: 'homeowner', household_income: 120000, tax_filing: 'single', household_size: 1 }, 1130],
+  [{ zip: '94117', owner_status: 'homeowner', household_income: 250000, tax_filing: 'joint', household_size: 4 }, 1340],
+  [{ zip: '39503', owner_status: 'homeowner', household_income: 500000, tax_filing: 'hoh', household_size: 8 }, 1450],
+];
+
+test('estimated savings', async (t) => {
+  t.plan(ESTIMATION_TESTS.length, 'expect 1 assertion per estimate');
+
+  for (let [query, expected_amount] of ESTIMATION_TESTS) {
+    const res = await getCalculatorResponse(t, query);
+    const calculatorResponse = JSON.parse(res.payload);
+    t.equal(calculatorResponse.estimated_annual_savings, expected_amount);
   }
 });
 
