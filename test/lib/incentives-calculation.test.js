@@ -119,8 +119,8 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
   t.equal(taxCredits['Heat Pump Water Heater'].amount, 2000);
   t.equal(taxCredits['Heat Pump Water Heater'].start_date, 2023);
   t.equal(taxCredits['Rooftop Solar Installation'].eligible, true);
-  // solar comes back as dollars even though it will be displayed as %
-  t.equal(taxCredits['Rooftop Solar Installation'].amount, 4770);
+  t.equal(taxCredits['Rooftop Solar Installation'].amount, 0.3);
+  t.equal(taxCredits['Rooftop Solar Installation'].representative_amount, 4770);
   t.equal(taxCredits['Rooftop Solar Installation'].start_date, 2022);
   t.equal(taxCredits['Weatherization'].eligible, true);
   t.equal(taxCredits['Weatherization'].amount, 1200);
@@ -202,8 +202,8 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
   t.equal(taxCredits['Heat Pump Water Heater'].amount, 2000);
   t.equal(taxCredits['Heat Pump Water Heater'].start_date, 2023);
   t.equal(taxCredits['Rooftop Solar Installation'].eligible, true);
-  // solar comes back as dollars even though it will be displayed as %
-  t.equal(taxCredits['Rooftop Solar Installation'].amount, 4572);
+  t.equal(taxCredits['Rooftop Solar Installation'].amount, 0.3);
+  t.equal(taxCredits['Rooftop Solar Installation'].representative_amount, 4572);
   t.equal(taxCredits['Rooftop Solar Installation'].start_date, 2022);
   t.equal(taxCredits['Weatherization'].eligible, true);
   t.equal(taxCredits['Weatherization'].amount, 1200);
@@ -283,8 +283,8 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   t.equal(taxCredits['Heat Pump Water Heater'].amount, 2000);
   t.equal(taxCredits['Heat Pump Water Heater'].start_date, 2023);
   t.equal(taxCredits['Rooftop Solar Installation'].eligible, true);
-  // solar comes back as dollars even though it will be displayed as %
-  t.equal(taxCredits['Rooftop Solar Installation'].amount, 4428.9);
+  t.equal(taxCredits['Rooftop Solar Installation'].amount, 0.3);
+  t.equal(taxCredits['Rooftop Solar Installation'].representative_amount, 4428.9);
   t.equal(taxCredits['Rooftop Solar Installation'].start_date, 2022);
   t.equal(taxCredits['Weatherization'].eligible, true);
   t.equal(taxCredits['Weatherization'].amount, 1200);

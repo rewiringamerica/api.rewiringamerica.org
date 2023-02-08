@@ -59,9 +59,16 @@ export default async function (fastify, opts) {
       }
     );
 
-    // Website Calculator-only:
-    // Annual savings from pregenerated model
+    // Website Calculator backwards compatiblity from v1 data:
+
+    // 1) Add nnnual savings from pregenerated model
     result.estimated_annual_savings = IRA_STATE_SAVINGS[amisForZip.location.state_id].estimated_savings_heat_pump_ev;
+
+    // 2) Overwrite solar_tax_credit amount with representative_amount:
+    const solarTaxCredit = result.tax_credit_incentives.find(incentive => incentive.item_type == 'solar_tax_credit');
+    solarTaxCredit.amount = solarTaxCredit.representative_amount;
+    solarTaxCredit.amount_type = 'solar';
+    solarTaxCredit.representative_amount = 0;
 
     return reply.status(200)
       .type('application/json')
