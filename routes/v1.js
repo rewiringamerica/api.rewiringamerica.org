@@ -1,6 +1,18 @@
+import INCENTIVES from '../data/ira_incentives.json' assert { type: 'json' };
 import calculateIncentives from '../lib/incentives-calculation.js';
 import fetchAMIsForAddress from '../lib/fetch-amis-for-address.js';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip.js';
+import { t } from '../lib/i18n.js';
+
+function translateIncentives(incentives, language) {
+  return incentives.map((incentive) => {
+    let item = { ...incentive };
+    item.item = t(incentive.item, language);
+    item.program = t(incentive.program, language);
+    item.item_url = t(incentive.item_url, language);
+    return item;
+  });
+}
 
 const APICalculatorSchema = {
   "description": "How much money will your customer get with the Inflation Reduction Act?",
@@ -11,6 +23,43 @@ const APICalculatorSchema = {
     "200": {
       "description": "Successful response",
       "$ref": "APICalculatorResponse"
+    },
+    "400": {
+      "description": "Bad request",
+      "$ref": "Error"
+    }
+  }
+};
+
+const APIIncentivesSchema = {
+  "description": "What are all the incentives from the Inflation Reduction Act?",
+  "querystring": {
+    "type": "object",
+    "properties": {
+      "language": {
+        "type": "string",
+        "description": "Optional choice of language for `item`, `program` and `item_url` properties.",
+        "enum": [
+          "en",
+          "es"
+        ],
+        "default": "en"
+      }
+    }
+  },
+  "response": {
+    "200": {
+      "description": "Successful response",
+      "type": "object",
+      "required": ["incentives"],
+      "properties": {
+        "incentives": {
+          "type": "array",
+          "items": {
+            "$ref": "APIIncentive"
+          }
+        }
+      }
     },
     "400": {
       "description": "Bad request",
@@ -34,21 +83,26 @@ export default async function (fastify, opts) {
 
   fastify.get("/api/v1/calculator", { schema: APICalculatorSchema }, async (request, reply) => {
     const amis = await fetchAMIsForLocation(request.query.location);
+
+    if (!amis) {
+      throw fastify.httpErrors.notFound();
+    }
+
     const result = calculateIncentives(amis, { ...request.query });
 
-    // TODO: URL parameter for this:
-    fastify.i18n.locale('en');
-    const allIncentives = [...result.tax_credit_incentives, ...result.pos_rebate_incentives];
-    allIncentives.forEach(function (item) {
-      let itemName = item.item;
-      item.item = fastify.i18n.t(itemName);
-      item.program = fastify.i18n.t(item.program);
-      item.more_info_url = fastify.i18n.t(itemName);
-    });
-
+    const language = request.query.language;
+    result.tax_credit_incentives = translateIncentives(result.tax_credit_incentives, language)
+    result.pos_rebate_incentives = translateIncentives(result.pos_rebate_incentives, language)
 
     reply.status(200)
       .type('application/json')
       .send(result);
+  });
+
+  fastify.get("/api/v1/incentives", { schema: APIIncentivesSchema }, async (request, reply) => {
+    const incentives = translateIncentives(INCENTIVES, request.query.language);
+    return reply.status(200)
+      .type('application/json')
+      .send({ incentives });
   });
 }
