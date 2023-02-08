@@ -1224,19 +1224,10 @@ fastify-cli@^5.7.1:
     semver "^7.3.5"
     yargs-parser "^21.1.1"
 
-fastify-plugin@^4.0.0, fastify-plugin@^4.2.1, fastify-plugin@^4.5.0:
+fastify-plugin@^4.0.0, fastify-plugin@^4.5.0:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/fastify-plugin/-/fastify-plugin-4.5.0.tgz#8b853923a0bba6ab6921bb8f35b81224e6988d91"
   integrity sha512-79ak0JxddO0utAXAQ5ccKhvs6vX2MGyHHMMsmZkBANrq3hXc1CHzvNPHOcvTsVMEPl5I+NT+RO4YKMGehOfSIg==
-
-fastify-sqlite@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/fastify-sqlite/-/fastify-sqlite-1.1.0.tgz#8ddd4e9b1cd2c3bbfa3ae6cdd2f1017a66c25312"
-  integrity sha512-pb0bFhCGXu11w5QKIa3u5po/TggY8LU9d9DoKw6mm0dknC84PHWElUSqP7lrqt43k2/SUliNw12+xqgUFrLMkw==
-  dependencies:
-    fastify-plugin "^4.2.1"
-    sqlite "^4.1.2"
-    sqlite3 "^5.0.11"
 
 fastify@^4.0.0, fastify@^4.12.0:
   version "4.12.0"
@@ -2724,6 +2715,13 @@ source-map@^0.6.0, source-map@^0.6.1:
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
+spatialite@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/spatialite/-/spatialite-0.1.0.tgz#62fb49568baf961d0e0dfcffa71474cadef09ccd"
+  integrity sha512-msiD3jS4q2Hdal3LygSAHnPWeudZVkd/0aQY0Psj26D3dKsUp9/ArduS4JbXBj5Qo7LtlJrZfvFQKHhIhxZ65w==
+  dependencies:
+    sqlite3 "*"
+
 spawn-wrap@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/spawn-wrap/-/spawn-wrap-2.0.0.tgz#103685b8b8f9b79771318827aa78650a610d457e"
@@ -2753,7 +2751,7 @@ sprintf-js@~1.0.2:
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   integrity sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==
 
-sqlite3@^5.0.11:
+sqlite3@*:
   version "5.1.4"
   resolved "https://registry.yarnpkg.com/sqlite3/-/sqlite3-5.1.4.tgz#35f83d368963168b324ad2f0fffce09f3b8723a7"
   integrity sha512-i0UlWAzPlzX3B5XP2cYuhWQJsTtlMD6obOa1PgeEQ4DHEXUuyJkgv50I3isqZAP5oFc2T8OFvakmDh2W6I+YpA==

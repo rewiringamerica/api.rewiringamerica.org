@@ -1,15 +1,14 @@
-import FastifySqlite from 'fastify-sqlite';
 import fp from 'fastify-plugin'; // the use of fastify-plugin is required to be able to export the decorators to the outer scope
+import spatialite from 'spatialite';
+import { open } from 'sqlite';
 
-export default fp(async function (fastify, opts) {
-  await fastify.register(FastifySqlite, {
-    promiseApi: true, // the DB instance supports the Promise API. Default false
-    name: null, // optional decorator name. Default null
-    verbose: false, // log sqlite3 queries as trace. Default false
-    dbFile: './incentives-api.db', // select the database file. Default ':memory:'
-    mode: FastifySqlite.sqlite3.OPEN_READONLY // how to connecto to the DB, Default: OPEN_READWRITE | OPEN_CREATE | OPEN_FULLMUTEX
+export default fp(async function (fastify, _) {
+  const db = await open({
+    filename: './incentives-api.db',
+    driver: spatialite.Database
   });
+  fastify.decorate('sqlite', db);
 
-  console.log(`loading spatialite from ${process.env.SPATIALITE_EXTENSION_PATH}`);
-  await fastify.sqlite.loadExtension(process.env.SPATIALITE_EXTENSION_PATH);
+  // FIXME: we probably need a .close() here somewhere - check what fastify-sqlite does
+  // TODO: maybe a PR on fastify-sqlite to accept driver as a parameter?
 });
