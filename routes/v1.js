@@ -35,6 +35,18 @@ export default async function (fastify, opts) {
   fastify.get("/api/v1/calculator", { schema: APICalculatorSchema }, async (request, reply) => {
     const amis = await fetchAMIsForLocation(request.query.location);
     const result = calculateIncentives(amis, { ...request.query });
+
+    // TODO: URL parameter for this:
+    fastify.i18n.locale('en');
+    const allIncentives = [...result.tax_credit_incentives, ...result.pos_rebate_incentives];
+    allIncentives.forEach(function (item) {
+      let itemName = item.item;
+      item.item = fastify.i18n.t(itemName);
+      item.program = fastify.i18n.t(item.program);
+      item.more_info_url = fastify.i18n.t(itemName);
+    });
+
+
     reply.status(200)
       .type('application/json')
       .send(result);
