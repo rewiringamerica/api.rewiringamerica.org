@@ -56,8 +56,8 @@ test('response is valid and correct', async (t) => {
 
   const expectedResponse = JSON.parse(fs.readFileSync('./test/fixtures/v0-80212-homeowner-80000-joint-4.json', 'utf-8'));
 
-  t.same(calculatorResponse.pos_rebate_incentives.length, expectedResponse.pos_rebate_incentives.length);
-  t.same(calculatorResponse.tax_credit_incentives.length, expectedResponse.tax_credit_incentives.length);
+  t.same(calculatorResponse.pos_rebate_incentives, expectedResponse.pos_rebate_incentives);
+  t.same(calculatorResponse.tax_credit_incentives, expectedResponse.tax_credit_incentives);
 });
 
 const BAD_QUERIES = [
