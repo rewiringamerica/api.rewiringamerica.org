@@ -141,7 +141,7 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
   t.equal(data.is_over_150_ami, false);
 
   t.equal(data.pos_savings, 14000);
-  t.equal(data.tax_savings, 22672);
+  t.equal(data.tax_savings, 23672);
   t.equal(data.performance_rebate_savings, 4000);
 
   t.equal(data.pos_rebate_incentives.length, 8);
@@ -224,7 +224,7 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   t.equal(data.is_over_150_ami, true);
 
   t.equal(data.pos_savings, 0);
-  t.equal(data.tax_savings, 15028.9);
+  t.equal(data.tax_savings, 16028.9);
   t.equal(data.performance_rebate_savings, 4000);
 
   t.equal(data.pos_rebate_incentives.length, 8);
