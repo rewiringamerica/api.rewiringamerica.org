@@ -26,6 +26,8 @@ test('response is valid and correct', async (t) => {
     tax_filing: 'joint',
     household_size: 4,
   });
+  t.equal(res.statusCode, 200);
+
   const calculatorResponse = JSON.parse(res.payload);
 
   const ajv = new Ajv({

@@ -1,7 +1,26 @@
 import calculateIncentives from '../lib/incentives-calculation.js';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip.js';
-import incentives from '../data/ira_incentives.json' assert { type: 'json' };
+import INCENTIVES from '../data/ira_incentives.json' assert { type: 'json' };
 import IRA_STATE_SAVINGS from '../data/ira_state_savings.json' assert { type: 'json' };
+import { t } from '../lib/i18n.js';
+
+INCENTIVES.forEach(incentive => Object.freeze(incentive));
+
+function translateIncentives(incentives) {
+  return incentives.map((incentive) => {
+    let item = { ...incentive };
+    item.item_es = t(incentive.item, 'es');
+    item.item = t(incentive.item, 'en');
+    item.program_es = t(incentive.program, 'es');
+    item.program = t(incentive.program, 'en');
+    // strip domain from v0 links:
+    item.more_info_url_es = t(incentive.item_url, 'es').replace('https://www.rewiringamerica.org', '');
+    item.more_info_url = t(incentive.item_url, 'en').replace('https://www.rewiringamerica.org', '');
+    // Calculator's v0 schema doesn't care about this:
+    delete item.item_url;
+    return item;
+  });
+}
 
 const CalculatorSchema = {
   "description": "How much money will you get with the Inflation Reduction Act?",
@@ -70,12 +89,17 @@ export default async function (fastify, opts) {
     solarTaxCredit.amount_type = 'solar';
     solarTaxCredit.representative_amount = 0;
 
+    // 3) Populate the expected English and Spanish strings
+    result.pos_rebate_incentives = translateIncentives(result.pos_rebate_incentives);
+    result.tax_credit_incentives = translateIncentives(result.tax_credit_incentives);
+
     return reply.status(200)
       .type('application/json')
       .send(result);
   });
 
   fastify.get("/api/v0/incentives", { schema: IncentivesSchema }, async (request, reply) => {
+    const incentives = translateIncentives(INCENTIVES);
     return reply.status(200)
       .type('application/json')
       .send({ incentives });
