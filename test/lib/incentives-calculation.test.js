@@ -1,19 +1,15 @@
 import { test, beforeEach, afterEach } from 'tap';
 import fetchAMIsForZip from '../../lib/fetch-amis-for-zip.js';
 import calculateIncentives from '../../lib/incentives-calculation.js';
-import spatialite from 'spatialite';
-import { open } from 'sqlite';
+import Database from 'better-sqlite3';
 import _ from 'lodash';
 
 beforeEach(async (t) => {
-  t.context.db = await open({
-    filename: './incentives-api.db',
-    driver: spatialite.Database
-  });
+  t.context.db = new Database('./incentives-api.db', { readonly: true });
 });
 
 afterEach(async (t) => {
-  await t.context.db.close();
+  t.context.db.close();
 })
 
 test('correctly evaluates scenerio "Single w/ $120k Household income"', async (t) => {

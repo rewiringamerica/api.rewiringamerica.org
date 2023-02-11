@@ -14,18 +14,15 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
     - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js 16.x
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 16.x
         cache: 'yarn'
+    - name: Install dependencies
+      run: sudo apt-get install -y --no-install-recommends sqlite3 gdal-bin wget ca-certificates unzip libsqlite3-mod-spatialite
     - run: yarn --frozen-lockfile
     - run: yarn build
     - run: yarn test

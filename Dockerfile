@@ -19,28 +19,32 @@ RUN yarn build
 # 2 --------------- production image can be really trimmed down
 FROM node:16.17.0-bullseye-slim
 
-USER node
+RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends sqlite3 libsqlite3-mod-spatialite
+
+
+#USER node
 WORKDIR /app
 
 # bring over the build products
-COPY --chown=node:node --from=build /app/node_modules /app/node_modules
-COPY --chown=node:node --from=build /app/incentives-api.db /app/incentives-api.db
+COPY --from=build /app/node_modules /app/node_modules
+COPY --from=build /app/incentives-api.db /app/incentives-api.db
 
 # only copy the source folders we need
 # (not using COPY . . because we don't want scripts)
 # (not excluding scripts in .dockerignore because we need it in build)
-COPY --chown=node:node ./package.json /app/package.json
-COPY --chown=node:node ./app.js /app/app.js
-COPY --chown=node:node ./lib /app/lib
-COPY --chown=node:node ./locales /app/locales
-COPY --chown=node:node ./plugins /app/plugins
-COPY --chown=node:node ./routes /app/routes
-COPY --chown=node:node ./schemas /app/schemas
-COPY --chown=node:node ./data /app/data
+COPY ./package.json /app/package.json
+COPY ./app.js /app/app.js
+COPY ./lib /app/lib
+COPY ./locales /app/locales
+COPY ./plugins /app/plugins
+COPY ./routes /app/routes
+COPY ./schemas /app/schemas
+COPY ./data /app/data
 
 # this is what Cloud Run needs:
 ENV PORT 8080
 ENV NODE_ENV production
+ENV SPATIALITE_EXTENSION_PATH "/usr/lib/aarch64-linux-gnu/mod_spatialite.so"
 
 # go!
 CMD yarn start
