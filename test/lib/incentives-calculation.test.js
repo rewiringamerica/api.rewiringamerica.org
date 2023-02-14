@@ -13,7 +13,7 @@ beforeEach(async (t) => {
   t.context.db = await open({
     filename: './incentives-api.db',
     driver: sqlite3.Database
-  })
+  });
 });
 
 afterEach(async (t) => {
@@ -70,7 +70,7 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
   t.equal(data.performance_rebate_savings, 4000);
 
   t.equal(data.pos_rebate_incentives.length, 8);
-  t.equal(data.tax_credit_incentives.length, 10);
+  t.equal(data.tax_credit_incentives.length, 11);
 
   // count the incentives by key used to de-dupe in UI:
   const rebateCounts = _.countBy(i => i.item + i.item_type);
@@ -78,7 +78,7 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
   const taxCreditCounts = _.countBy(i => i.item + i.item_type);
   t.equal(Object.values(taxCreditCounts).every(c => c === 1), true);
 
-  const posRebates = _.keyBy(data.pos_rebate_incentives, 'item');
+  const posRebates = _.keyBy(data.pos_rebate_incentives, (item) => item.item);
   t.equal(posRebates['items.electricPanel'].eligible, true);
   t.equal(posRebates['items.electricPanel'].amount, 4000);
   t.equal(posRebates['items.electricPanel'].start_date, 2023);
@@ -133,10 +133,15 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
   t.equal(taxCredits['items.weatherization'].eligible, true);
   t.equal(taxCredits['items.weatherization'].amount, 1200);
   t.equal(taxCredits['items.weatherization'].start_date, 2023);
-  // everything except used EV should be eligible for tax credit (agi limit is 75k)
+  // used EV should not be eligible for tax credit (agi limit is 75k)
   t.equal(taxCredits['items.usedElectricVehicle'].eligible, false);
   t.equal(taxCredits['items.usedElectricVehicle'].amount, 4000);
   t.equal(taxCredits['items.usedElectricVehicle'].start_date, 2023);
+  // solar_itc should not be eligible:
+  t.equal(taxCredits['items.leasedRooftopSolarInstallation'].eligible, false);
+  t.equal(taxCredits['items.leasedRooftopSolarInstallation'].amount, 0.1);
+  t.equal(taxCredits['items.leasedRooftopSolarInstallation'].representative_amount, 1590);
+  t.equal(taxCredits['items.leasedRooftopSolarInstallation'].start_date, 2023);
 });
 
 test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k Household income in San Francisco"', async (t) => {
@@ -156,7 +161,7 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
   t.equal(data.performance_rebate_savings, 4000);
 
   t.equal(data.pos_rebate_incentives.length, 8);
-  t.equal(data.tax_credit_incentives.length, 10);
+  t.equal(data.tax_credit_incentives.length, 11);
 
   // count the incentives by key used to de-dupe in UI:
   const rebateCounts = _.countBy(i => i.item + i.item_type);
@@ -219,10 +224,15 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
   t.equal(taxCredits['items.weatherization'].eligible, true);
   t.equal(taxCredits['items.weatherization'].amount, 1200);
   t.equal(taxCredits['items.weatherization'].start_date, 2023);
-  // everything except used EV should be eligible for tax credit (agi limit is 75k)
+  // used EV should not be eligible for tax credit (agi limit is 75k)
   t.equal(taxCredits['items.usedElectricVehicle'].eligible, false);
   t.equal(taxCredits['items.usedElectricVehicle'].amount, 4000);
   t.equal(taxCredits['items.usedElectricVehicle'].start_date, 2023);
+  // solar_itc should not be eligible:
+  t.equal(taxCredits['items.leasedRooftopSolarInstallation'].eligible, false);
+  t.equal(taxCredits['items.leasedRooftopSolarInstallation'].amount, 0.1);
+  t.equal(taxCredits['items.leasedRooftopSolarInstallation'].representative_amount, 1524);
+  t.equal(taxCredits['items.leasedRooftopSolarInstallation'].start_date, 2023);
 });
 
 test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in Missisippi"', async (t) => {
@@ -242,7 +252,7 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   t.equal(data.performance_rebate_savings, 4000);
 
   t.equal(data.pos_rebate_incentives.length, 8);
-  t.equal(data.tax_credit_incentives.length, 10);
+  t.equal(data.tax_credit_incentives.length, 11);
 
   // count the incentives by key used to de-dupe in UI:
   const rebateCounts = _.countBy(i => i.item + i.item_type);
@@ -310,4 +320,9 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   t.equal(taxCredits['items.usedElectricVehicle'].eligible, false);
   t.equal(taxCredits['items.usedElectricVehicle'].amount, 4000);
   t.equal(taxCredits['items.usedElectricVehicle'].start_date, 2023);
+  // solar_itc should not be eligible:
+  t.equal(taxCredits['items.leasedRooftopSolarInstallation'].eligible, false);
+  t.equal(taxCredits['items.leasedRooftopSolarInstallation'].amount, 0.1);
+  t.equal(taxCredits['items.leasedRooftopSolarInstallation'].representative_amount, 1476.3);
+  t.equal(taxCredits['items.leasedRooftopSolarInstallation'].start_date, 2023);
 });

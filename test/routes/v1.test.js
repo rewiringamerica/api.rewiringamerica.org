@@ -57,7 +57,11 @@ test('response is valid and correct', async (t) => {
   t.equal(calculatorResponse.performance_rebate_savings, 8000);
 
   t.equal(calculatorResponse.pos_rebate_incentives.length, 8);
-  t.equal(calculatorResponse.tax_credit_incentives.length, 10);
+  t.equal(calculatorResponse.tax_credit_incentives.length, 11);
+
+  // TODO: Solar ITC credit availability should be 'maybe'
+  const solarItcCredit = calculatorResponse.tax_credit_incentives.find(item => item.item_type == 'solar_itc');
+  t.equal(solarItcCredit.eligible, false);
 
   // TODO: once the response format is stable, put a strict fixture here to catch breakage:
   // const expectedResponse = JSON.parse(fs.readFileSync('./test/fixtures/v0-80212-homeowner-80000-joint-4.json', 'utf-8'));
@@ -113,11 +117,58 @@ test('non-existent zips', async (t) => {
   t.equal(calculatorResponse.error, 'Not Found', 'payload error is Not Found');
 });
 
+test('LMI communities', async (t) => {
+  const res = await getCalculatorResponse(t, {
+    // this is an address firmly inside 2010 census tract 08031000201 from Treasury's NMTC excel file
+    location: { address: '4986 Zuni St, Denver, CO 80221' },
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 4,
+  });
+  t.equal(res.statusCode, 200);
+
+  const calculatorResponse = JSON.parse(res.payload);
+
+  const ajv = new Ajv({
+    schemas: [incentiveSchema, responseSchema],
+    coerceTypes: true,
+    useDefaults: true,
+    removeAdditional: true,
+    allErrors: false
+  });
+
+  const responseValidator = ajv.getSchema('APICalculatorResponse');
+
+  // validate the response is an APICalculatorResponse
+  const validation = await responseValidator(calculatorResponse);
+  t.equal(responseValidator.errors, null);
+
+  t.equal(calculatorResponse.is_under_80_ami, true);
+  t.equal(calculatorResponse.is_under_150_ami, true);
+  t.equal(calculatorResponse.is_over_150_ami, false);
+
+  t.equal(calculatorResponse.pos_savings, 14000);
+  t.equal(calculatorResponse.tax_savings, 5836);
+  t.equal(calculatorResponse.performance_rebate_savings, 8000);
+
+  t.equal(calculatorResponse.pos_rebate_incentives.length, 8);
+  t.equal(calculatorResponse.tax_credit_incentives.length, 11);
+
+  const solarItcCredit = calculatorResponse.tax_credit_incentives.find(item => item.item_type == 'solar_itc');
+  t.equal(solarItcCredit.eligible, true);
+
+  // TODO: once the response format is stable, put a strict fixture here to catch breakage:
+  // const expectedResponse = JSON.parse(fs.readFileSync('./test/fixtures/v0-80212-homeowner-80000-joint-4.json', 'utf-8'));
+  // t.same(calculatorResponse.pos_rebate_incentives, expectedResponse.pos_rebate_incentives);
+  // t.same(calculatorResponse.tax_credit_incentives, expectedResponse.tax_credit_incentives);
+});
+
 test('/incentives', async (t) => {
   const app = await build(t);
   const res = await app.inject({ url: '/api/v1/incentives' });
   const incentivesResponse = JSON.parse(res.payload);
-  t.equal(incentivesResponse.incentives.length, 30);
+  t.equal(incentivesResponse.incentives.length, 31);
   t.equal(res.statusCode, 200, 'response status is 200');
 
   const ajv = new Ajv({

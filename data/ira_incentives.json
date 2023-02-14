@@ -463,6 +463,28 @@
     "end_date": 2032
   },
   {
+    "type": "tax_credit",
+    "program": "programs.section48InvestmentTaxCredit",
+    "item": "items.leasedRooftopSolarInstallation",
+    "item_type": "solar_itc",
+    "item_url": "items.rooftopSolarInstallation",
+    "amount": 0.1,
+    "amount_type": "percent",
+    "representative_amount": null,
+    "owner_status": [
+      "homeowner"
+    ],
+    "ami_qualification": null,
+    "agi_max_limit": null,
+    "geographic_qualification": [
+      "nmtc_census_tract",
+      "aiannh"
+    ],
+    "filing_status": null,
+    "start_date": 2023,
+    "end_date": 2032
+  },
+  {
     "type": "pos_rebate",
     "program": "programs.HEEHR",
     "item": "items.weatherization",

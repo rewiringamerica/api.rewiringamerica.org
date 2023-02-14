@@ -8,6 +8,8 @@ DROP TABLE IF EXISTS zip_to_tract;
 
 DROP TABLE IF EXISTS zip_to_cbsasub;
 
+DROP TABLE IF EXISTS nmtc_tracts;
+
 CREATE TABLE ami(
     State_Alpha TEXT,
     fips2010 TEXT,
@@ -77,6 +79,10 @@ CREATE TABLE zip_to_tract(
     tot_ratio REAL
 );
 
+CREATE TABLE nmtc_tracts(
+    tract_geoid TEXT
+);
+
 CREATE TABLE zip_to_cbsasub(zipcode TEXT, cbsasub TEXT);
 
 CREATE INDEX idx_zipzip ON zips(zip);
@@ -89,8 +95,11 @@ CREATE INDEX idx_zipcbsasub ON zip_to_cbsasub(zipcode);
 
 CREATE INDEX idx_amicbsasub ON ami(cbsasub);
 
+CREATE INDEX idx_nmtc ON nmtc_tracts(tract_geoid);
+
 .import --csv --skip 1 ./scripts/data/ami.csv ami
 .import --csv --skip 1 ./scripts/data/zips.csv zips
 .import --csv --skip 1 ./scripts/data/tracts.csv tracts
 .import --csv --skip 1 ./scripts/data/zip-to-tract.csv zip_to_tract
 .import --csv --skip 1 ./scripts/data/zip-to-cbsasub.csv zip_to_cbsasub
+.import --csv --skip 1 ./scripts/data/nmtc_tracts.csv nmtc_tracts

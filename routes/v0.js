@@ -91,7 +91,10 @@ export default async function (fastify, opts) {
     solarTaxCredit.amount_type = 'solar';
     solarTaxCredit.representative_amount = 0;
 
-    // 3) Populate the expected English and Spanish strings
+    // 3) Filter out the solar_itc because v0 clients aren't expecting it:
+    result.tax_credit_incentives = result.tax_credit_incentives.filter(item => item.item_type !== 'solar_itc');
+
+    // 4) Populate the expected English and Spanish strings
     result.pos_rebate_incentives = translateIncentives(result.pos_rebate_incentives);
     result.tax_credit_incentives = translateIncentives(result.tax_credit_incentives);
 
@@ -101,7 +104,11 @@ export default async function (fastify, opts) {
   });
 
   fastify.get("/api/v0/incentives", { schema: IncentivesSchema }, async (request, reply) => {
-    const incentives = translateIncentives(INCENTIVES);
+    // Filter out the solar_itc because v0 clients aren't expecting it:
+    const untranslatedIncentives = INCENTIVES.filter(item => item.item_type !== 'solar_itc');
+
+    const incentives = translateIncentives(untranslatedIncentives);
+
     return reply.status(200)
       .type('application/json')
       .send({ incentives });
