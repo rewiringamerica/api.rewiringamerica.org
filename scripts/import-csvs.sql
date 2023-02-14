@@ -89,8 +89,8 @@ CREATE INDEX idx_zipcbsasub ON zip_to_cbsasub(zipcode);
 
 CREATE INDEX idx_amicbsasub ON ami(cbsasub);
 
-.import --csv ./data/ami.csv ami
-.import --csv ./data/zips.csv zips
-.import --csv ./data/tracts.csv tracts
-.import --csv ./data/zip-to-tract.csv zip_to_tract
-.import --csv ./data/zip-to-cbsasub.csv zip_to_cbsasub
+.import --csv ./scripts/data/ami.csv ami
+.import --csv ./scripts/data/zips.csv zips
+.import --csv ./scripts/data/tracts.csv tracts
+.import --csv ./scripts/data/zip-to-tract.csv zip_to_tract
+.import --csv ./scripts/data/zip-to-cbsasub.csv zip_to_cbsasub
