@@ -1,4 +1,4 @@
-import { test } from 'tap';
+import { test, beforeEach } from 'tap';
 import { build } from '../helper.js';
 import Ajv from 'ajv';
 import fs from 'fs';
@@ -7,6 +7,10 @@ import qs from 'qs';
 // NOTE: path is relative to test command, not this file (apparently)
 const incentiveSchema = JSON.parse(fs.readFileSync('./schemas/v1/incentive.json', 'utf-8'));
 const responseSchema = JSON.parse(fs.readFileSync('./schemas/v1/calculator-response.json', 'utf-8'));
+
+beforeEach((t) => {
+  process.setMaxListeners(100);
+});
 
 async function getCalculatorResponse(t, query) {
   const app = await build(t);

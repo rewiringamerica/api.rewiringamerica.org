@@ -1,9 +1,13 @@
-import { test, beforeEach } from 'tap';
-import fetchAMIsForZip from '../../lib/fetch-amis-for-zip.js';
+import { test, beforeEach, afterEach } from 'tap';
 import calculateIncentives from '../../lib/incentives-calculation.js';
 import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
 import _ from 'lodash';
+import fs from 'fs';
+
+const AMIS_FOR_11211 = JSON.parse(fs.readFileSync('./test/fixtures/amis-for-zip-11211.json', 'utf-8'));
+const AMIS_FOR_94117 = JSON.parse(fs.readFileSync('./test/fixtures/amis-for-zip-94117.json', 'utf-8'));
+const AMIS_FOR_39503 = JSON.parse(fs.readFileSync('./test/fixtures/amis-for-zip-39503.json', 'utf-8'));
 
 beforeEach(async (t) => {
   t.context.db = await open({
@@ -12,9 +16,12 @@ beforeEach(async (t) => {
   })
 });
 
+afterEach(async (t) => {
+  await t.context.db.close();
+});
+
 test('correctly evaluates scenerio "Single w/ $120k Household income"', async (t) => {
-  const amisForZip = await fetchAMIsForZip(t.context.db, '11211');
-  const data = calculateIncentives(amisForZip, {
+  const data = calculateIncentives(AMIS_FOR_11211, {
     zip: '11211',
     owner_status: 'homeowner',
     household_income: 120000,
@@ -25,8 +32,7 @@ test('correctly evaluates scenerio "Single w/ $120k Household income"', async (t
 });
 
 test('correctly evaluates scenerio "Joint w/ 5 persons and $60k Household income"', async (t) => {
-  const amisForZip = await fetchAMIsForZip(t.context.db, '11211');
-  const data = calculateIncentives(amisForZip, {
+  const data = calculateIncentives(AMIS_FOR_11211, {
     zip: '11211',
     owner_status: 'homeowner',
     household_income: 60000,
@@ -37,8 +43,7 @@ test('correctly evaluates scenerio "Joint w/ 5 persons and $60k Household income
 });
 
 test('correctly evaluates scenerio "Joint w/ $300k Household income"', async (t) => {
-  const amisForZip = await fetchAMIsForZip(t.context.db, '11211');
-  const data = calculateIncentives(amisForZip, {
+  const data = calculateIncentives(AMIS_FOR_11211, {
     zip: '11211',
     owner_status: 'homeowner',
     household_income: 300000,
@@ -49,9 +54,12 @@ test('correctly evaluates scenerio "Joint w/ $300k Household income"', async (t)
 });
 
 test('correctly evaluates scenerio "Single w/ $120k Household income in the Bronx"', async (t) => {
-  const amisForZip = await fetchAMIsForZip(t.context.db, '11211');
-
-  const data = calculateIncentives(amisForZip, { owner_status: 'homeowner', household_income: 120000, tax_filing: 'single', household_size: 1 });
+  const data = calculateIncentives(AMIS_FOR_11211, {
+    owner_status: 'homeowner',
+    household_income: 120000,
+    tax_filing: 'single',
+    household_size: 1
+  });
 
   t.equal(data.is_under_80_ami, false);
   t.equal(data.is_under_150_ami, true);
@@ -132,9 +140,12 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
 });
 
 test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k Household income in San Francisco"', async (t) => {
-  const amisForZip = await fetchAMIsForZip(t.context.db, '94117');
-
-  const data = calculateIncentives(amisForZip, { owner_status: 'homeowner', household_income: 250000, tax_filing: 'joint', household_size: 4 });
+  const data = calculateIncentives(AMIS_FOR_94117, {
+    owner_status: 'homeowner',
+    household_income: 250000,
+    tax_filing: 'joint',
+    household_size: 4
+  });
 
   t.equal(data.is_under_80_ami, false);
   t.equal(data.is_under_150_ami, true);
@@ -215,9 +226,12 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
 });
 
 test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in Missisippi"', async (t) => {
-  const amisForZip = await fetchAMIsForZip(t.context.db, '39503');
-
-  const data = calculateIncentives(amisForZip, { owner_status: 'homeowner', household_income: 500000, tax_filing: 'hoh', household_size: 8 });
+  const data = calculateIncentives(AMIS_FOR_39503, {
+    owner_status: 'homeowner',
+    household_income: 500000,
+    tax_filing: 'hoh',
+    household_size: 8
+  });
 
   t.equal(data.is_under_80_ami, false);
   t.equal(data.is_under_150_ami, false);
@@ -289,7 +303,7 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   t.equal(taxCredits['items.weatherization'].eligible, true);
   t.equal(taxCredits['items.weatherization'].amount, 1200);
   t.equal(taxCredits['items.weatherization'].start_date, 2023);
-  // everything except new and used EVs should be eligible:
+  // new and used EVs should not be eligible:
   t.equal(taxCredits['items.newElectricVehicle'].eligible, false);
   t.equal(taxCredits['items.newElectricVehicle'].amount, 7500);
   t.equal(taxCredits['items.newElectricVehicle'].start_date, 2023);
