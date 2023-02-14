@@ -25,3 +25,6 @@ jobs:
     - run: yarn --frozen-lockfile
     - run: yarn build
     - run: yarn test
+
+    env: #
+      GEOCODIO_API_KEY: ${{ secrets.GEOCODIO_API_KEY }}
