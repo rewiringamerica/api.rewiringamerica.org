@@ -1,4 +1,6 @@
-import LMI_GEOCODE_FIXTURE from '../fixtures/lmi-communities-test-address.json' assert { type: 'json' };
+import fs from 'fs';
+
+const LMI_GEOCODE_FIXTURE = JSON.parse(fs.readFileSync('./test/fixtures/lmi-communities-test-address.json', 'utf-8'));
 
 class MockGeocoder {
   geocode(address, fields) {
