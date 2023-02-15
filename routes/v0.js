@@ -1,8 +1,10 @@
+import fs from 'fs';
 import calculateIncentives from '../lib/incentives-calculation.js';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip.js';
-import INCENTIVES from '../data/ira_incentives.json' assert { type: 'json' };
-import IRA_STATE_SAVINGS from '../data/ira_state_savings.json' assert { type: 'json' };
 import { t } from '../lib/i18n.js';
+
+const INCENTIVES = JSON.parse(fs.readFileSync('./data/ira_incentives.json', 'utf-8'));
+const IRA_STATE_SAVINGS = JSON.parse(fs.readFileSync('./data/ira_state_savings.json', 'utf-8'));
 
 INCENTIVES.forEach(incentive => Object.freeze(incentive));
 

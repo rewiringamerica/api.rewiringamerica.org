@@ -1,8 +1,10 @@
-import INCENTIVES from '../data/ira_incentives.json' assert { type: 'json' };
+import fs from 'fs';
 import calculateIncentives from '../lib/incentives-calculation.js';
 import fetchAMIsForAddress from '../lib/fetch-amis-for-address.js';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip.js';
 import { t } from '../lib/i18n.js';
+
+const INCENTIVES = JSON.parse(fs.readFileSync('./data/ira_incentives.json', 'utf-8'));
 
 function translateIncentives(incentives, language) {
   return incentives.map((incentive) => {
