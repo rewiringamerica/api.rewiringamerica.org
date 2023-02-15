@@ -69,8 +69,7 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
   t.equal(data.tax_savings, 18876);
   t.equal(data.performance_rebate_savings, 4000);
 
-  t.equal(data.pos_rebate_incentives.length, 8);
-  t.equal(data.tax_credit_incentives.length, 10);
+  t.equal(data.incentives.length, 18);
 
   // count the incentives by key used to de-dupe in UI:
   const rebateCounts = _.countBy(i => i.item + i.item_type);
@@ -78,7 +77,8 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
   const taxCreditCounts = _.countBy(i => i.item + i.item_type);
   t.equal(Object.values(taxCreditCounts).every(c => c === 1), true);
 
-  const posRebates = _.keyBy(data.pos_rebate_incentives, 'item');
+  const posRebateIncentives = data.incentives.filter(item => item.type == 'pos_rebate');
+  const posRebates = _.keyBy(posRebateIncentives, 'item');
   t.equal(posRebates['items.electricPanel'].eligible, true);
   t.equal(posRebates['items.electricPanel'].amount, 4000);
   t.equal(posRebates['items.electricPanel'].start_date, 2023);
@@ -104,7 +104,8 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
   t.equal(posRebates['items.efficiencyRebates'].amount, 4000);
   t.equal(posRebates['items.efficiencyRebates'].start_date, 2023);
 
-  const taxCredits = _.keyBy(data.tax_credit_incentives, 'item');
+  const taxCreditIncentives = data.incentives.filter(item => item.type == 'tax_credit');
+  const taxCredits = _.keyBy(taxCreditIncentives, 'item');
   t.equal(taxCredits['items.batteryStorageInstallation'].eligible, true);
   t.equal(taxCredits['items.batteryStorageInstallation'].amount, 0.3); // will be displayed as 30%
   t.equal(taxCredits['items.batteryStorageInstallation'].start_date, 2023);
@@ -155,8 +156,7 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
   t.equal(data.tax_savings, 23672);
   t.equal(data.performance_rebate_savings, 4000);
 
-  t.equal(data.pos_rebate_incentives.length, 8);
-  t.equal(data.tax_credit_incentives.length, 10);
+  t.equal(data.incentives.length, 18);
 
   // count the incentives by key used to de-dupe in UI:
   const rebateCounts = _.countBy(i => i.item + i.item_type);
@@ -164,7 +164,8 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
   const taxCreditCounts = _.countBy(i => i.item + i.item_type);
   t.equal(Object.values(taxCreditCounts).every(c => c === 1), true);
 
-  const posRebates = _.keyBy(data.pos_rebate_incentives, 'item');
+  const posRebateIncentives = data.incentives.filter(item => item.type == 'pos_rebate');
+  const posRebates = _.keyBy(posRebateIncentives, 'item');
   t.equal(posRebates['items.electricPanel'].eligible, true);
   t.equal(posRebates['items.electricPanel'].amount, 4000);
   t.equal(posRebates['items.electricPanel'].start_date, 2023);
@@ -190,7 +191,8 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
   t.equal(posRebates['items.efficiencyRebates'].amount, 4000);
   t.equal(posRebates['items.efficiencyRebates'].start_date, 2023);
 
-  const taxCredits = _.keyBy(data.tax_credit_incentives, 'item');
+  const taxCreditIncentives = data.incentives.filter(item => item.type == 'tax_credit');
+  const taxCredits = _.keyBy(taxCreditIncentives, 'item');
   t.equal(taxCredits['items.batteryStorageInstallation'].eligible, true);
   t.equal(taxCredits['items.batteryStorageInstallation'].amount, 0.3); // will be displayed as 30%
   t.equal(taxCredits['items.batteryStorageInstallation'].start_date, 2023);
@@ -241,8 +243,7 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   t.equal(data.tax_savings, 16028.9);
   t.equal(data.performance_rebate_savings, 4000);
 
-  t.equal(data.pos_rebate_incentives.length, 8);
-  t.equal(data.tax_credit_incentives.length, 10);
+  t.equal(data.incentives.length, 18);
 
   // count the incentives by key used to de-dupe in UI:
   const rebateCounts = _.countBy(i => i.item + i.item_type);
@@ -250,7 +251,8 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   const taxCreditCounts = _.countBy(i => i.item + i.item_type);
   t.equal(Object.values(taxCreditCounts).every(c => c === 1), true);
 
-  const posRebates = _.keyBy(data.pos_rebate_incentives, 'item');
+  const posRebateIncentives = data.incentives.filter(item => item.type == 'pos_rebate');
+  const posRebates = _.keyBy(posRebateIncentives, 'item');
   t.equal(posRebates['items.electricPanel'].eligible, false);
   t.equal(posRebates['items.electricPanel'].amount, 4000);
   t.equal(posRebates['items.electricPanel'].start_date, 2023);
@@ -277,7 +279,8 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   t.equal(posRebates['items.efficiencyRebates'].amount, 4000);
   t.equal(posRebates['items.efficiencyRebates'].start_date, 2023);
 
-  const taxCredits = _.keyBy(data.tax_credit_incentives, 'item');
+  const taxCreditIncentives = data.incentives.filter(item => item.type == 'tax_credit');
+  const taxCredits = _.keyBy(taxCreditIncentives, 'item');
   t.equal(taxCredits['items.batteryStorageInstallation'].eligible, true);
   t.equal(taxCredits['items.batteryStorageInstallation'].amount, 0.3); // will be displayed as 30%
   t.equal(taxCredits['items.batteryStorageInstallation'].start_date, 2023);

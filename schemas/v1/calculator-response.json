@@ -8,8 +8,7 @@
     "pos_savings",
     "tax_savings",
     "performance_rebate_savings",
-    "pos_rebate_incentives",
-    "tax_credit_incentives"
+    "incentives"
   ],
   "properties": {
     "is_under_80_ami": {
@@ -32,13 +31,7 @@
     "performance_rebate_savings": {
       "type": "integer"
     },
-    "pos_rebate_incentives": {
-      "type": "array",
-      "items": {
-        "$ref": "APIIncentive"
-      }
-    },
-    "tax_credit_incentives": {
+    "incentives": {
       "type": "array",
       "items": {
         "$ref": "APIIncentive"
@@ -53,7 +46,7 @@
       "pos_savings": 14000,
       "tax_savings": 6081,
       "performance_rebate_savings": 8000,
-      "pos_rebate_incentives": [
+      "incentives": [
         {
           "type": "pos_rebate",
           "program": "HEEHR",
@@ -75,9 +68,7 @@
           "start_date": 2023,
           "end_date": 2032,
           "eligible": true
-        }
-      ],
-      "tax_credit_incentives": [
+        },
         {
           "type": "tax_credit",
           "program": "Residential Clean Energy Credit (25D)",

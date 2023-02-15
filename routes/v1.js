@@ -92,9 +92,7 @@ export default async function (fastify, opts) {
 
     const result = calculateIncentives(amis, { ...request.query });
 
-    const language = request.query.language;
-    result.tax_credit_incentives = translateIncentives(result.tax_credit_incentives, language)
-    result.pos_rebate_incentives = translateIncentives(result.pos_rebate_incentives, language)
+    result.incentives = translateIncentives(result.incentives, request.query.language)
 
     reply.status(200)
       .type('application/json')

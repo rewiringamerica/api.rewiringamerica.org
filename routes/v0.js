@@ -81,19 +81,23 @@ export default async function (fastify, opts) {
     );
 
     // Website Calculator backwards compatiblity from v1 data:
+    // 0) Grab the incentives and split them by type:
+    const posRebateIncentives = result.incentives.filter(item => item.type === 'pos_rebate');
+    const taxCreditIncentives = result.incentives.filter(item => item.type === 'tax_credit');
 
-    // 1) Add nnnual savings from pregenerated model
+    // 1) Add annual savings from pregenerated model
     result.estimated_annual_savings = IRA_STATE_SAVINGS[amisForZip.location.state_id].estimated_savings_heat_pump_ev;
 
     // 2) Overwrite solar_tax_credit amount with representative_amount:
-    const solarTaxCredit = result.tax_credit_incentives.find(incentive => incentive.item_type == 'solar_tax_credit');
+    const solarTaxCredit = taxCreditIncentives.find(incentive => incentive.item_type == 'solar_tax_credit');
     solarTaxCredit.amount = solarTaxCredit.representative_amount;
     solarTaxCredit.amount_type = 'solar';
     solarTaxCredit.representative_amount = 0;
 
-    // 3) Populate the expected English and Spanish strings
-    result.pos_rebate_incentives = translateIncentives(result.pos_rebate_incentives);
-    result.tax_credit_incentives = translateIncentives(result.tax_credit_incentives);
+    // 3) Populate the expected English and Spanish strings and put in the expected response fields
+    result.pos_rebate_incentives = translateIncentives(posRebateIncentives);
+    result.tax_credit_incentives = translateIncentives(taxCreditIncentives);
+    delete result.incentives;
 
     return reply.status(200)
       .type('application/json')
