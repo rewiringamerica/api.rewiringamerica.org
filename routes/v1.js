@@ -2,6 +2,7 @@ import fs from 'fs';
 import calculateIncentives from '../lib/incentives-calculation.js';
 import fetchAMIsForAddress from '../lib/fetch-amis-for-address.js';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip.js';
+import fetchContractorsForZip from '../lib/fetch-contractors-for-zip.js';
 import { t } from '../lib/i18n.js';
 
 const INCENTIVES = JSON.parse(fs.readFileSync('./data/ira_incentives.json', 'utf-8'));
@@ -70,6 +71,24 @@ const APIIncentivesSchema = {
   }
 };
 
+
+const APIContractorSchema = {
+  "description": "Who are the contractors available in my area who can help me implement IRA improvements to my home?",
+  "querystring": {
+    "$ref": "APIContractorRequest"
+  },
+  "response": {
+    "200": {
+      "description": "Successful response",
+      "$ref": "APIContractorResponse"
+    },
+    "400": {
+      "description": "Bad request",
+      "$ref": "Error"
+    }
+  }
+}
+
 export default async function (fastify, opts) {
   async function fetchAMIsForLocation(location) {
     if (location.address) {
@@ -106,5 +125,13 @@ export default async function (fastify, opts) {
     return reply.status(200)
       .type('application/json')
       .send({ incentives });
+  });
+
+  fastify.get("/api/v1/contractors", { schema: APIContractorSchema }, async (request, reply) => {
+    const contractors = fetchContractorsForZip(request.query.zip);
+
+    return reply.status(200)
+      .type('application/json')
+      .send({ contractors });
   });
 }
