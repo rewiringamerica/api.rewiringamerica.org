@@ -2,7 +2,7 @@
 
 Lifts the javascript logic from policy-hub and packages it up with Fastify.
 
-Exposes /api/v1/calculator and describes query params and responses using OpenAPI.
+Exposes `/api/v1/calculator` and describes query params and responses using OpenAPI.
 
 Includes scripts to import data into a sqlite database.
 
@@ -24,11 +24,30 @@ Zuplo authenticates developers using Auth0. @tomc, @derek, @tomm and @chell have
 
 ## Local Development
 
+### Generate Local Database
+Run the sqlite generation command:
+
+```
+sh scripts/build.sh
+```
+
+### Env Vars
 Create a `.env` file containing the following variables:
 
 ```
 GEOCODIO_API_KEY= # get from https://dash.geocod.io/apikey or ask @tomc
 ```
+
+### Google Cloud (for Firestore lookups to contractors collection)
+Make sure the Google Cloud API is installed:
+`brew install --cask google-cloud-sdk`
+
+
+Logged in: 
+`gcloud auth application-default login`
+
+And the project set:
+`gcloud config set project rewiring-america-dev`
 
 ## Deploys
 

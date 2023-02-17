@@ -128,10 +128,12 @@ export default async function (fastify, opts) {
   });
 
   fastify.get("/api/v1/contractors", { schema: APIContractorSchema }, async (request, reply) => {
-    const contractors = fetchContractorsForZip(request.query.zip);
+    const contractor = await fetchContractorsForZip(request.query.zip);
+
+    console.log('contractor', contractor)
 
     return reply.status(200)
       .type('application/json')
-      .send({ contractors });
+      .send({ contractor });
   });
 }

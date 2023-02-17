@@ -1,0 +1,20 @@
+{
+    "$id": "APIContractorRequest",
+    "title": "APICalculatorRequest",
+    "type": "object",
+    "properties": {
+        "zip": {
+            "type": "string",
+            "description": "Your zip code helps us locate contractors in your area",
+            "maxLength": 5,
+            "minLength": 5,
+            "examples": [
+                "80212"
+            ]
+        }           
+    },
+    "required": [
+      "zip"
+    ]
+  }
+  

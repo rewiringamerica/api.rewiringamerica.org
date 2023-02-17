@@ -1,0 +1,28 @@
+{
+    "$id": "APIContractorResponse",
+    "title": "APIContractorResponse",
+    "type": "object",    
+    "properties": {
+        "contractor": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+                "contractorCoverage": {
+                    "type": "boolean"                    
+                },
+                "contractorID": {
+                    "type": "string"
+                }
+            }
+        }      
+    },
+    "examples": [
+      { 
+        "contractor": {
+            "contractorCoverage": true,
+            "contractorID": "rewiringexample"
+        }
+      }
+    ]
+  }
+  
