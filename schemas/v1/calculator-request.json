@@ -1,42 +1,16 @@
 {
-  "$id": "APICalculatorRequest",
-  "title": "APICalculatorRequest",
+  "$id": "CalculatorRequest",
+  "title": "CalculatorRequest",
   "type": "object",
   "properties": {
     "location": {
-      "type": "object",
-      "properties": {
-        "zip": {
-          "type": "string",
-          "description": "Your zip code helps us estimate the amount of discounts and tax credits you qualify for by finding representative census tracts in your area.",
-          "maxLength": 5,
-          "minLength": 5,
-          "examples": [
-            "80212"
-          ]
-        },
-        "address": {
-          "type": "string",
-          "description": "Your address can determine the precise census tract you're in that determines the correct amount of discounts and tax credits you qualify for.",
-          "examples": [
-            "1109 N Highland St, Arlington VA"
-          ]
-        }
-      },
-      "oneOf": [
-        {
-          "required": [
-            "zip"
-          ]
-        },
-        {
-          "required": [
-            "address"
-          ]
-        }
+      "type": "string",
+      "description": "Usually a zip code for simplicity, but can also be a full address to determine the precise AMI for income eligibility, or census tract for geographic eligibility.",
+      "examples": [
+        "80212",
+        "1109 N Highland St, Arlington VA"
       ],
-      "maxProperties": 1,
-      "minProperties": 1
+      "minLength": 5
     },
     "owner_status": {
       "type": "string",

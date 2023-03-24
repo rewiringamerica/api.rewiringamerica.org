@@ -1,60 +1,49 @@
 {
-  "$id": "APICalculatorResponse",
+  "$id": "CalculatorResponse",
+  "title": "CalculatorResponse",
   "type": "object",
   "required": [
-    "is_under_80_ami",
-    "is_under_150_ami",
-    "is_over_150_ami",
-    "pos_savings",
-    "tax_savings",
-    "performance_rebate_savings",
-    "incentives"
+    "incentives",
+    "eligibility_summary",
+    "incentives_summary"
   ],
   "properties": {
-    "is_under_80_ami": {
-      "type": "boolean"
+    "incentives_summary": {
+      "type": "object",
+      "$ref": "IncentivesSummary"
     },
-    "is_under_150_ami": {
-      "type": "boolean"
-    },
-    "is_over_150_ami": {
-      "type": "boolean"
-    },
-    "pos_savings": {
-      "type": "integer",
-      "description": "The max POS savings is $14,000 if you’re under 150% ami, otherwise 0"
-    },
-    "tax_savings": {
-      "type": "integer",
-      "description": "You can’t save more than tax owed. Uses the lesser of tax owed vs tax savings."
-    },
-    "performance_rebate_savings": {
-      "type": "integer"
+    "eligibility_summary": {
+      "type": "object",
+      "$ref": "EligibilitySummary"
     },
     "incentives": {
       "type": "array",
       "items": {
-        "$ref": "APIIncentive"
+        "$ref": "Incentive"
       }
     }
   },
   "examples": [
     {
-      "is_under_80_ami": true,
-      "is_under_150_ami": true,
-      "is_over_150_ami": false,
-      "pos_savings": 14000,
-      "tax_savings": 6081,
-      "performance_rebate_savings": 8000,
+      "incentives_summary": {
+        "pos_rebate_total": 14000,
+        "tax_credit_total": 6081,
+        "performance_rebate_total": 8000
+      },
+      "eligeligibility_summaryibility": {
+        "ami_for_household": 52875,
+        "80_percent_ami_for_household": 42300,
+        "150_percent_ami_for_household": 79313,
+        "ami_cbsa": "METRO33860M33860",
+        "ami_metro": "Montgomery, AL MSA",
+        "ami_qualification": ""
+      },
       "incentives": [
         {
           "type": "pos_rebate",
           "program": "HEEHR",
-          "program_es": "HEEHR",
           "item": "Electric Panel",
-          "item_es": "Cuadro eléctrico",
-          "more_info_url": "/app/ira-calculator/information/electrical-panel",
-          "more_info_url_es": "/app/ira-calculator/information/cuadro-electrico",
+          "more_info_url": "https://www.rewiringamerica.org/app/ira-calculator/information/electrical-panel",
           "amount": 4000,
           "amount_type": "dollar_amount",
           "representative_amount": null,
@@ -62,9 +51,6 @@
           "owner_status": [
             "homeowner"
           ],
-          "ami_qualification": "less_than_80_ami",
-          "agi_max_limit": null,
-          "filing_status": null,
           "start_date": 2023,
           "end_date": 2032,
           "eligible": true
@@ -72,11 +58,8 @@
         {
           "type": "tax_credit",
           "program": "Residential Clean Energy Credit (25D)",
-          "program_es": "Crédito de energía limpia residencial (25D)",
           "item": "Battery Storage Installation",
-          "item_es": "Instalación de baterías",
-          "more_info_url": "/app/ira-calculator/information/battery-storage-installation",
-          "more_info_url_es": "/app/ira-calculator/information/instalacion-de-baterias",
+          "more_info_url": "https://www.rewiringamerica.org/app/ira-calculator/information/battery-storage-installation",
           "amount": 0.3,
           "amount_type": "percent",
           "representative_amount": 4800,
@@ -84,9 +67,6 @@
           "owner_status": [
             "homeowner"
           ],
-          "ami_qualification": null,
-          "agi_max_limit": null,
-          "filing_status": null,
           "start_date": 2023,
           "end_date": 2032,
           "eligible": true

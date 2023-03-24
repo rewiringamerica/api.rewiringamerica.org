@@ -1,0 +1,54 @@
+{
+  "$id": "EligibilitySummary",
+  "title": "EligibilitySummary",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "ami_for_household": {
+      "type": "integer",
+      "nullable": true,
+      "description": "HUD's value for the Area Median Income (AMI) for the given location and household size. Note due to HUD's methodology and discretion this is not a linear extrapolation of 100% AMI."
+    },
+    "80_percent_ami_for_household": {
+      "type": "integer",
+      "nullable": true,
+      "description": "HUD's value for 80% of the Area Median Income (AMI) for the given location and household size."
+    },
+    "150_percent_ami_for_household": {
+      "type": "integer",
+      "nullable": true,
+      "description": "HUD's value for 150% of the Area Median Income (AMI) for the given location and household size. Note due to HUD's methodology and discretion this is not a linear extrapolation of 100% AMI."
+    },
+    "ami_cbsa": {
+      "type": "string",
+      "nullable": true,
+      "description": "The Core-Based Statistical Area (CBSA) identifier used for the HUD AMI values."
+    },
+    "ami_metro": {
+      "type": "string",
+      "nullable": true,
+      "description": "The metro area used for the HUD AMI values."
+    },
+    "ami_qualification": {
+      "type": "string",
+      "nullable": true,
+      "description": "The classification of the provided income into AMI ranges used to evaluate incentive eligibility.",
+      "enum": [
+        "less_than_80_ami",
+        "less_than_150_ami",
+        "more_than_80_ami",
+        null
+      ]
+    }
+  },
+  "examples": [
+    {
+      "ami_for_household": 52875,
+      "80_percent_ami_for_household": 42300,
+      "150_percent_ami_for_household": 79313,
+      "ami_cbsa": "METRO33860M33860",
+      "ami_metro": "Montgomery, AL MSA",
+      "ami_qualification": ""
+    }
+  ]
+}

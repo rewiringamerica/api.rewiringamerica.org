@@ -1,0 +1,31 @@
+{
+  "$id": "IncentivesSummary",
+  "title": "IncentivesSummary",
+  "type": "object",
+  "required": [
+    "pos_rebate_total",
+    "tax_credit_total",
+    "performance_rebate_total"
+  ],
+  "properties": {
+    "pos_rebate_total": {
+      "type": "integer",
+      "description": "The potential benefit if all available point of sale rebates (upfront discounts) are claimed. Efficiency Rebates are not included."
+    },
+    "tax_credit_total": {
+      "type": "integer",
+      "description": "The potential benefit if all available tax credits are claimed. The geothermal tax credit is not included."
+    },
+    "performance_rebate_total": {
+      "type": "integer",
+      "description": "The potential benefit if all available performance rebates are claimed."
+    }
+  },
+  "examples": [
+    {
+      "pos_rebate_total": 14000,
+      "tax_credit_total": 6081,
+      "performance_rebate_total": 8000
+    }
+  ]
+}

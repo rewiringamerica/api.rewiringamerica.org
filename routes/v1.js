@@ -5,6 +5,17 @@ import fetchAMIsForZip from '../lib/fetch-amis-for-zip.js';
 import { t } from '../lib/i18n.js';
 
 const INCENTIVES = JSON.parse(fs.readFileSync('./data/ira_incentives.json', 'utf-8'));
+const ZIP_REGEXP = /^\d\d\d\d\d$/;
+
+// TODO write some tests for this
+// - 4 digit = false
+// - 6 digit = false
+// - alpha text = false
+// - number = false
+// - null = false
+function isZip(location) {
+  return ZIP_REGEXP.test(location);
+}
 
 function translateIncentives(incentives, language) {
   return incentives.map((incentive) => {
@@ -16,15 +27,37 @@ function translateIncentives(incentives, language) {
   });
 }
 
-const APICalculatorSchema = {
+function buildEligibilitySummary(calculation, ami, householdSize) {
+  const ami_qualification = calculation.is_under_80_ami ? 'less_than_80_ami' :
+    calculation.is_under_150_ami ? 'less_than_150_ami' : 'more_than_80_ami';
+  return {
+    "ami_for_household": ami[`l100_${householdSize}`],
+    "80_percent_ami_for_household": ami[`l80_${householdSize}`],
+    "150_percent_ami_for_household": ami[`l150_${householdSize}`],
+    "ami_cbsa": ami.cbsasub,
+    "ami_metro": ami.Metro_Area_Name,
+    "ami_qualification": ami_qualification
+  }
+}
+
+// TODO: update incentives-calculation to make this mapping easier, and do backcompat stuff in v0 instead
+function buildIncentivesSummary(calculation) {
+  return {
+    pos_rebate_total: calculation.pos_savings,
+    tax_credit_total: calculation.tax_savings,
+    performance_rebate_total: calculation.performance_rebate_savings
+  };
+}
+
+const CalculatorSchema = {
   "description": "How much money will your customer get with the Inflation Reduction Act?",
   "querystring": {
-    "$ref": "APICalculatorRequest"
+    "$ref": "CalculatorRequest"
   },
   "response": {
     "200": {
       "description": "Successful response",
-      "$ref": "APICalculatorResponse"
+      "$ref": "CalculatorResponse"
     },
     "400": {
       "description": "Bad request",
@@ -33,7 +66,7 @@ const APICalculatorSchema = {
   }
 };
 
-const APIIncentivesSchema = {
+const IncentivesSchema = {
   "description": "What are all the incentives from the Inflation Reduction Act?",
   "querystring": {
     "type": "object",
@@ -58,7 +91,7 @@ const APIIncentivesSchema = {
         "incentives": {
           "type": "array",
           "items": {
-            "$ref": "APIIncentive"
+            "$ref": "Incentive"
           }
         }
       }
@@ -72,18 +105,16 @@ const APIIncentivesSchema = {
 
 export default async function (fastify, opts) {
   async function fetchAMIsForLocation(location) {
-    if (location.address) {
-      // TODO: make sure bad addresses are handled here, and don't return anything
-      return await fetchAMIsForAddress(fastify.sqlite, location.address);
-    } else if (location.zip) {
-      return await fetchAMIsForZip(fastify.sqlite, location.zip);
+    if (isZip(location)) {
+      // TODO: make sure missing zips are handled and don't return anything
+      return await fetchAMIsForZip(fastify.sqlite, location);
     } else {
-      // NOTE: this should never happen, APICalculatorSchema should block it:
-      throw new Error('location.address or location.zip required');
+      // TODO: make sure bad addresses are handled here, and don't return anything
+      return await fetchAMIsForAddress(fastify.sqlite, location);
     }
   }
 
-  fastify.get("/api/v1/calculator", { schema: APICalculatorSchema }, async (request, reply) => {
+  fastify.get("/api/v1/calculator", { schema: CalculatorSchema }, async (request, reply) => {
     const amis = await fetchAMIsForLocation(request.query.location);
 
     if (!amis) {
@@ -92,14 +123,20 @@ export default async function (fastify, opts) {
 
     const result = calculateIncentives(amis, { ...request.query });
 
-    result.incentives = translateIncentives(result.incentives, request.query.language)
+    const incentives = translateIncentives(result.incentives, request.query.language)
+    const incentivesSummary = buildIncentivesSummary(result);
+    const eligibilitySummary = buildEligibilitySummary(result, amis.ami, request.query.household_size);
 
     reply.status(200)
       .type('application/json')
-      .send(result);
+      .send({
+        incentives,
+        "incentives_summary": incentivesSummary,
+        "eligibility_summary": eligibilitySummary
+      });
   });
 
-  fastify.get("/api/v1/incentives", { schema: APIIncentivesSchema }, async (request, reply) => {
+  fastify.get("/api/v1/incentives", { schema: IncentivesSchema }, async (request, reply) => {
     const incentives = translateIncentives(INCENTIVES, request.query.language);
     return reply.status(200)
       .type('application/json')

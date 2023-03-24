@@ -4,8 +4,8 @@ import Ajv from 'ajv';
 import fs from 'fs';
 
 // NOTE: path is relative to test command, not this file (apparently)
-const incentiveSchema = JSON.parse(fs.readFileSync('./schemas/v0/incentive.json', 'utf-8'));
-const responseSchema = JSON.parse(fs.readFileSync('./schemas/v0/calculator-response.json', 'utf-8'));
+const incentiveSchema = JSON.parse(fs.readFileSync('./schemas/v0/website-incentive.json', 'utf-8'));
+const responseSchema = JSON.parse(fs.readFileSync('./schemas/v0/website-calculator-response.json', 'utf-8'));
 
 beforeEach((t) => {
   process.setMaxListeners(100);
@@ -17,9 +17,7 @@ async function getCalculatorResponse(t, query) {
   const searchParams = new URLSearchParams(query);
   const url = `/api/v0/calculator?${searchParams}`;
 
-  const res = await app.inject({ url });
-
-  return res;
+  return app.inject({ url });
 }
 
 test('response is valid and correct', async (t) => {

@@ -16,9 +16,11 @@ export const options = {
 export default async function (fastify, opts) {
   // Place here your custom code!
 
+  // This is for loading all of our request/response schemas automatically:
   const schemas = glob.sync('./schemas/**/*.json');
   schemas.forEach(file => {
-    const schema = JSON.parse(fs.readFileSync(file, 'utf-8'));
+    const data = fs.readFileSync(file, 'utf-8');
+    const schema = JSON.parse(data);
     fastify.addSchema(schema);
   });
 
