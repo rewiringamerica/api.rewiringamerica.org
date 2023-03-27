@@ -9,6 +9,7 @@ Includes scripts to import data into a sqlite database.
 ## Architecture
 
 The node.js file is packaged in a Docker container to allow installing sqlite in Cloud Run.
+[Here's a system diagram.](https://docs.google.com/drawings/d/1nJBKFGSKcLmIPO4sz3ncZBii8HQw7YOF3kjKgyPblm4/edit)
 
 The Cloud Run services are not intended to be hit directly, we use zuplo.com as an API gateway. Zuplo performs the following functions for us:
  - documentation generation and hosting at /docs
@@ -29,6 +30,10 @@ Create a `.env` file containing the following variables:
 ```
 GEOCODIO_API_KEY= # get from https://dash.geocod.io/apikey or ask @tomc
 ```
+
+- `yarn` to install dependences
+- `yarn build` to build schema
+- `yarn dev` to run the api, then open `http://0.0.0.0:3000/api/v0/calculator?zip=80125&owner_status=renter&household_income=80000&tax_filing=joint&household_size=1`
 
 ## Deploys
 
