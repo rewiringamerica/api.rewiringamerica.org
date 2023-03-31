@@ -1,6 +1,6 @@
 import fs from 'fs';
 import calculateIncentives from '../lib/incentives-calculation.js';
-import ErrorWrapper from '../lib/ErrorWrapper.js';
+import APIError from '../lib/APIError.js';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip.js';
 import { t } from '../lib/i18n.js';
 
@@ -71,7 +71,7 @@ export default async function (fastify, opts) {
     try {
       const amisForZip = await fetchAMIsForZip(fastify.sqlite, request.query.zip);
       if (!amisForZip) {
-        throw new ErrorWrapper("Zip code doesn't exist.", {
+        throw new APIError("Zip code doesn't exist.", {
           status: 404,
           field: "zip"
         });
