@@ -1,6 +1,5 @@
 import fs from 'fs';
 import calculateIncentives from '../lib/incentives-calculation.js';
-import APIError from '../lib/APIError.js';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip.js';
 import { t } from '../lib/i18n.js';
 
@@ -68,14 +67,15 @@ const IncentivesSchema = {
 export default async function (fastify, opts) {
   fastify.get("/api/v0/calculator", { schema: CalculatorSchema }, async (request, reply) => {
     // TODO: refactor as a plugin like fastify.amis.getForZip(zip)?
+    const amisForZip = await fetchAMIsForZip(fastify.sqlite, request.query.zip);
+    if (!amisForZip) {
+      throw fastify.httpErrors.createError(404, "Zip code doesn't exist.", { field: "zip" });
+    }
+    if (!amisForZip.location.state_id || !amisForZip.ami || !amisForZip.calculations) {
+      throw fastify.httpErrors.createError(404, "Geographic eligibility information required.", { field: "zip" });
+    }
+
     try {
-      const amisForZip = await fetchAMIsForZip(fastify.sqlite, request.query.zip);
-      if (!amisForZip) {
-        throw new APIError("Zip code doesn't exist.", {
-          status: 404,
-          field: "zip"
-        });
-      }
 
       const result = calculateIncentives(
         amisForZip,
