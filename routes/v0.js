@@ -1,5 +1,6 @@
 import fs from 'fs';
-import calculateIncentives, { IncentivesException } from '../lib/incentives-calculation.js';
+import calculateIncentives from '../lib/incentives-calculation.js';
+import ErrorWrapper from '../lib/ErrorWrapper.js';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip.js';
 import { t } from '../lib/i18n.js';
 
@@ -100,7 +101,7 @@ export default async function (fastify, opts) {
         .type('application/json')
         .send(result);
     } catch (e) {
-      if (e instanceof IncentivesException) {
+      if (e instanceof ErrorWrapper) {
         return reply.status(e.status)
           .type('application/json')
           .send(e);
