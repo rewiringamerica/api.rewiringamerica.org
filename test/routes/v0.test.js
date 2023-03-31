@@ -113,6 +113,7 @@ test('non-existent zips', async (t) => {
   t.equal(calculatorResponse.statusCode, 404, 'payload statusCode is 404');
   t.equal(calculatorResponse.error, 'Not Found', 'payload error is Not Found');
   t.equal(calculatorResponse.message, 'Zip code doesn\'t exist.');
+  t.equal(calculatorResponse.field, 'zip');
 });
 
 test('existing zips without data', async (t) => {
@@ -120,6 +121,7 @@ test('existing zips without data', async (t) => {
   const calculatorResponse = JSON.parse(res.payload);
   t.equal(res.statusCode, 404, 'response status is 404');
   t.equal(calculatorResponse.message, 'Geographic eligibility information required.');
+  t.equal(calculatorResponse.field, 'zip');
 });
 
 const ESTIMATION_TESTS = [
