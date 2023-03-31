@@ -68,13 +68,15 @@ const IncentivesSchema = {
 export default async function (fastify, opts) {
   fastify.get("/api/v0/calculator", { schema: CalculatorSchema }, async (request, reply) => {
     // TODO: refactor as a plugin like fastify.amis.getForZip(zip)?
-    const amisForZip = await fetchAMIsForZip(fastify.sqlite, request.query.zip);
-
-    if (!amisForZip) {
-      throw fastify.httpErrors.notFound("Zip code doesn't exist.");
-    }
-
     try {
+      const amisForZip = await fetchAMIsForZip(fastify.sqlite, request.query.zip);
+      if (!amisForZip) {
+        throw new ErrorWrapper("Zip code doesn't exist.", {
+          status: 404,
+          field: "zip"
+        });
+      }
+
       const result = calculateIncentives(
         amisForZip,
         {
@@ -101,11 +103,7 @@ export default async function (fastify, opts) {
         .type('application/json')
         .send(result);
     } catch (e) {
-      if (e instanceof ErrorWrapper) {
-        return reply.status(e.status)
-          .type('application/json')
-          .send(e);
-      }
+      throw fastify.httpErrors.createError(e);
     }
   });
 
