@@ -75,36 +75,31 @@ export default async function (fastify, opts) {
       throw fastify.httpErrors.createError(404, "Geographic eligibility information required.", { field: "zip" });
     }
 
-    try {
+    const result = calculateIncentives(
+      amisForZip,
+      {
+        ...request.query
+      }
+    );
 
-      const result = calculateIncentives(
-        amisForZip,
-        {
-          ...request.query
-        }
-      );
-  
-      // Website Calculator backwards compatiblity from v1 data:
-  
-      // 1) Add nnnual savings from pregenerated model
-      result.estimated_annual_savings = IRA_STATE_SAVINGS[amisForZip.location.state_id].estimated_savings_heat_pump_ev;
-  
-      // 2) Overwrite solar_tax_credit amount with representative_amount:
-      const solarTaxCredit = result.tax_credit_incentives.find(incentive => incentive.item_type == 'solar_tax_credit');
-      solarTaxCredit.amount = solarTaxCredit.representative_amount;
-      solarTaxCredit.amount_type = 'solar';
-      solarTaxCredit.representative_amount = 0;
-  
-      // 3) Populate the expected English and Spanish strings
-      result.pos_rebate_incentives = translateIncentives(result.pos_rebate_incentives);
-      result.tax_credit_incentives = translateIncentives(result.tax_credit_incentives);
-  
-      return reply.status(200)
-        .type('application/json')
-        .send(result);
-    } catch (e) {
-      throw fastify.httpErrors.createError(e);
-    }
+    // Website Calculator backwards compatiblity from v1 data:
+
+    // 1) Add nnnual savings from pregenerated model
+    result.estimated_annual_savings = IRA_STATE_SAVINGS[amisForZip.location.state_id].estimated_savings_heat_pump_ev;
+
+    // 2) Overwrite solar_tax_credit amount with representative_amount:
+    const solarTaxCredit = result.tax_credit_incentives.find(incentive => incentive.item_type == 'solar_tax_credit');
+    solarTaxCredit.amount = solarTaxCredit.representative_amount;
+    solarTaxCredit.amount_type = 'solar';
+    solarTaxCredit.representative_amount = 0;
+
+    // 3) Populate the expected English and Spanish strings
+    result.pos_rebate_incentives = translateIncentives(result.pos_rebate_incentives);
+    result.tax_credit_incentives = translateIncentives(result.tax_credit_incentives);
+
+    return reply.status(200)
+      .type('application/json')
+      .send(result);
   });
 
   fastify.get("/api/v0/incentives", { schema: IncentivesSchema }, async (request, reply) => {
