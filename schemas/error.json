@@ -29,11 +29,10 @@
         },
         "field": {
             "type": "string",
-            "description": "If it's a 4xx error, check field to see which input was invalid.",
+            "description": "If the error was related to a specific field in the request, it will be specified here.",
             "examples": [
                 "zip",
-                "owner_status",
-                "generic"
+                "owner_status"
             ]
         }
     },
