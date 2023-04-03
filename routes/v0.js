@@ -72,7 +72,7 @@ export default async function (fastify, opts) {
       throw fastify.httpErrors.createError(404, "Zip code doesn't exist.", { field: "zip" });
     }
     if (!amisForZip.location.state_id || !amisForZip.ami || !amisForZip.calculations) {
-      throw fastify.httpErrors.createError(404, "Geographic eligibility information required.", { field: "zip" });
+      throw fastify.httpErrors.createError(404, "We currently don't have data for this location.", { field: "zip" });
     }
 
     const result = calculateIncentives(
