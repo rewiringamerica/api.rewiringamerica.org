@@ -6,6 +6,19 @@ Exposes /api/v1/calculator and describes query params and responses using OpenAP
 
 Includes scripts to import data into a sqlite database.
 
+## Getting Started
+
+Create a `.env` file containing the following variables:
+
+```
+GEOCODIO_API_KEY= # get from https://dash.geocod.io/apikey or ask @tomc
+```
+
+- `yarn` to install dependences
+- `yarn build` to build schema
+- `yarn dev` to run the api, then open `http://0.0.0.0:3000/api/v0/calculator?zip=80125&owner_status=renter&household_income=80000&tax_filing=joint&household_size=1`
+
+
 ## Architecture
 
 The node.js file is packaged in a Docker container to allow installing sqlite in Cloud Run.
@@ -23,24 +36,15 @@ At the moment, @tomc is the only team member with access to Zuplo at https://por
 
 Zuplo authenticates developers using Auth0. @tomc, @derek, @tomm and @chell have access to Auth0.
 
-## Local Development
+## Branching & Deploying
 
-Create a `.env` file containing the following variables:
+### Branching
+When working on a new change, branch off of and merge PRs into `main`. Pushing to `main` will build the `rewiring-america-dev` project automatically, but the build does not yet autodeploy.
 
-```
-GEOCODIO_API_KEY= # get from https://dash.geocod.io/apikey or ask @tomc
-```
+### Deploying
+Merging a pull request from `main` to `production` branch will build the production project automatically, but the build does not yet autodeploy. The container is deployable on Google Cloud Run with `yarn deploy:dev` or `yarn deploy:production`.
 
-- `yarn` to install dependences
-- `yarn build` to build schema
-- `yarn dev` to run the api, then open `http://0.0.0.0:3000/api/v0/calculator?zip=80125&owner_status=renter&household_income=80000&tax_filing=joint&household_size=1`
-
-## Deploys
-
-Container is deployable on Google Cloud Run with `yarn deploy:dev` or `yarn deploy:production`.
-
-Pushing to `main` branch will build the `rewiring-america-dev` project automatically, but the build does not yet autodeploy.
-Merging a pull request from `main` to `production` branch will build the production project automatically, but the build does not yet autodeploy.
+If any content changes affect the calculator we should update the website changelog (Contentful), and if the API changes might affect callers we should update the changelog in docs and consider emailing people with active keys. In the future, we probably need a mailing list to manage this, but for now we'll bcc and email from api@.
 
 ## Scaling
 
