@@ -26,6 +26,14 @@
             "examples": [
                 "Route GET:/ not found"
             ]
+        },
+        "field": {
+            "type": "string",
+            "description": "If the error was related to a specific field in the request, it will be specified here.",
+            "examples": [
+                "zip",
+                "owner_status"
+            ]
         }
     },
     "examples": [
