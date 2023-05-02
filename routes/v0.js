@@ -2,6 +2,7 @@ import fs from 'fs';
 import calculateIncentives from '../lib/incentives-calculation.js';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip.js';
 import { t } from '../lib/i18n.js';
+import _ from 'lodash';
 
 const INCENTIVES = JSON.parse(fs.readFileSync('./data/ira_incentives.json', 'utf-8'));
 const IRA_STATE_SAVINGS = JSON.parse(fs.readFileSync('./data/ira_state_savings.json', 'utf-8'));
@@ -87,11 +88,19 @@ export default async function (fastify, opts) {
     // 1) Add nnnual savings from pregenerated model
     result.estimated_annual_savings = IRA_STATE_SAVINGS[amisForZip.location.state_id].estimated_savings_heat_pump_ev;
 
-    // 2) Overwrite solar_tax_credit amount with representative_amount:
+    // 2.1) Overwrite solar_tax_credit amount with representative_amount:
     const solarTaxCredit = result.tax_credit_incentives.find(incentive => incentive.item_type == 'solar_tax_credit');
     solarTaxCredit.amount = solarTaxCredit.representative_amount;
-    solarTaxCredit.amount_type = 'solar';
     solarTaxCredit.representative_amount = 0;
+
+    // 2.2) Re-sort incentives per https://app.asana.com/0/0/1204275945510481/f
+    // HACK: temporarily override the amount_type as dollars:
+    solarTaxCredit.amount_type = 'dollar_amount';
+    result.tax_credit_incentives = _.orderBy(result.tax_credit_incentives, ['amount_type', 'amount'], ['desc', 'desc']);
+
+    // 2.3)
+    // set the amount_type to what the calculator would expect:
+    solarTaxCredit.amount_type = 'solar';
 
     // 3) Populate the expected English and Spanish strings
     result.pos_rebate_incentives = translateIncentives(result.pos_rebate_incentives);
