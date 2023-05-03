@@ -311,3 +311,26 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   t.equal(taxCredits['items.usedElectricVehicle'].amount, 4000);
   t.equal(taxCredits['items.usedElectricVehicle'].start_date, 2023);
 });
+
+test('correctly sorts incentives"', async (t) => {
+  const data = calculateIncentives(AMIS_FOR_11211, {
+    zip: '11211',
+    owner_status: 'homeowner',
+    household_income: 120000,
+    tax_filing: 'single',
+    household_size: 1
+  });
+  for (let incentives of [data.pos_rebate_incentives, data.tax_credit_incentives]) {
+    let prevIncentive = incentives[0];
+    incentives.slice(1).forEach((incentive, i) => {
+      if (prevIncentive.amount_type === incentive.amount_type) {
+        t.ok(prevIncentive.amount >= incentive.amount);
+      } else {
+        t.equal(prevIncentive.amount_type, 'percent');
+        t.equal(incentive.amount_type, 'dollar_amount');
+      }
+      prevIncentive = incentive;
+    });
+  }
+});
+
