@@ -39,10 +39,14 @@ Zuplo authenticates developers using Auth0. @tomc, @derek, @tomm and @chell have
 ## Branching & Deploying
 
 ### Branching
-When working on a new change, branch off of and merge PRs into `main`. Pushing to `main` will build the `rewiring-america-dev` project automatically, but the build does not yet autodeploy.
+
+When working on a new change, branch off of and merge PRs into `main`. Pushing to `main` will build and deploy the `rewiring-america-dev` project automatically.
 
 ### Deploying
-Merging a pull request from `main` to `production` branch will build the production project automatically, but the build does not yet autodeploy. The container is deployable on Google Cloud Run with `yarn deploy:dev` or `yarn deploy:production`.
+
+Merging a pull request from `main` to `production` branch will build and deploy the production project automatically. The build/deploy steps are in [cloudbuild.yaml](cloudbuild.yaml).
+
+Manual deploys to Google Cloud Run can be done with `yarn deploy:dev` or `yarn deploy:production`.
 
 If any content changes affect the calculator we should update the website changelog (Contentful), and if the API changes might affect callers we should update the changelog in docs and consider emailing people with active keys. In the future, we probably need a mailing list to manage this, but for now we'll bcc and email from api@.
 
