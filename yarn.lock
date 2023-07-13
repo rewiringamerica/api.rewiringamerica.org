@@ -10,6 +10,20 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
+"@augment-vir/common@^13.3.0":
+  version "13.5.0"
+  resolved "https://registry.yarnpkg.com/@augment-vir/common/-/common-13.5.0.tgz#d2a42e606609708f5f96ddacf7ff36b91ccabdfa"
+  integrity sha512-kOnAOShZTaOJ8glYyi2K3hfiYV5zQyjpfc4jmHm5lySAFNMpOjKA7pZxpl8n3RCIHAt+nFP64vuxtSI6jSWOZw==
+  dependencies:
+    type-fest "^3.8.0"
+
+"@augment-vir/common@^15.3.0":
+  version "15.3.0"
+  resolved "https://registry.yarnpkg.com/@augment-vir/common/-/common-15.3.0.tgz#03ff0ae64a33989fad734e3e54f1eb3ea1df371c"
+  integrity sha512-V9ksJcSw3Ikxw9QaoWbyKYYS/s9ysc6xwq7Xms7fui6oWaCt7+SMv9B1K5Qot+tuM0+LK0/vtD8Ms+/rCnlYqQ==
+  dependencies:
+    type-fest "^3.12.0"
+
 "@babel/code-frame@^7.18.6":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.18.6.tgz#3b25d38c89600baa2dcc219edfa88a74eb2c427a"
@@ -2340,6 +2354,19 @@ pkg-up@^3.1.0:
   dependencies:
     find-up "^3.0.0"
 
+prettier-plugin-multiline-arrays@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-multiline-arrays/-/prettier-plugin-multiline-arrays-2.0.0.tgz#c2f16e49c8316229fe8f0eff2e55bda12015abe2"
+  integrity sha512-EFdtxNqEKSehtSZN2rHUtsA7dqV6fu1iJ4WU8fgR23Scfcf6mcVb3leOWmAkhhHEpwsNKPdSNN9pBX8Xx8AsCg==
+  dependencies:
+    "@augment-vir/common" "^15.3.0"
+    proxy-vir "^0.0.1"
+
+prettier@^2.8.8:
+  version "2.8.8"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.8.8.tgz#e8c5d7e98a4305ffe3de2e1fc4aca1a71c28b1da"
+  integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
+
 process-on-spawn@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/process-on-spawn/-/process-on-spawn-1.0.0.tgz#95b05a23073d30a17acfdc92a440efd2baefdc93"
@@ -2377,6 +2404,13 @@ proxy-addr@^2.0.7:
   dependencies:
     forwarded "0.2.0"
     ipaddr.js "1.9.1"
+
+proxy-vir@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/proxy-vir/-/proxy-vir-0.0.1.tgz#81ebaee86b40d3931a1917f6f03ff0754ef0ddb0"
+  integrity sha512-K3sv2I9kigOqt17hMhvWjSiwx90hpxxD3rN+meVQhrGKoxhVbt82ulkm3i1KlenVIMS1KFskt/vltMlGHVQrMw==
+  dependencies:
+    "@augment-vir/common" "^13.3.0"
 
 pump@^3.0.0:
   version "3.0.0"
@@ -2950,6 +2984,11 @@ type-fest@^0.8.0:
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
+
+type-fest@^3.12.0, type-fest@^3.8.0:
+  version "3.13.0"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-3.13.0.tgz#b088347ae73779a750c461694b264340c4c8c0d7"
+  integrity sha512-Gur3yQGM9qiLNs0KPP7LPgeRbio2QTt4xXouobMCarR0/wyW3F+F/+OWwshg3NG0Adon7uQfSZBpB46NfhoF1A==
 
 type-is@^1.6.18:
   version "1.6.18"

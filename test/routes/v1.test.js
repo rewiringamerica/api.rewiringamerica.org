@@ -5,10 +5,14 @@ import fs from 'fs';
 import qs from 'qs';
 
 // NOTE: path is relative to test command, not this file (apparently)
-const incentiveSchema = JSON.parse(fs.readFileSync('./schemas/v1/incentive.json', 'utf-8'));
-const responseSchema = JSON.parse(fs.readFileSync('./schemas/v1/calculator-response.json', 'utf-8'));
+const incentiveSchema = JSON.parse(
+  fs.readFileSync('./schemas/v1/incentive.json', 'utf-8'),
+);
+const responseSchema = JSON.parse(
+  fs.readFileSync('./schemas/v1/calculator-response.json', 'utf-8'),
+);
 
-beforeEach((t) => {
+beforeEach(t => {
   process.setMaxListeners(100);
 });
 
@@ -22,7 +26,7 @@ async function getCalculatorResponse(t, query) {
   return res;
 }
 
-test('response is valid and correct', async (t) => {
+test('response is valid and correct', async t => {
   const res = await getCalculatorResponse(t, {
     location: { zip: '80212' },
     owner_status: 'homeowner',
@@ -39,7 +43,7 @@ test('response is valid and correct', async (t) => {
     coerceTypes: true,
     useDefaults: true,
     removeAdditional: true,
-    allErrors: false
+    allErrors: false,
   });
 
   const responseValidator = ajv.getSchema('APICalculatorResponse');
@@ -67,33 +71,148 @@ test('response is valid and correct', async (t) => {
 
 const BAD_QUERIES = [
   // bad location:
-  { owner_status: 'homeowner', household_income: 80000, tax_filing: 'joint', household_size: 4 },
-  { zip: '80212', owner_status: 'homeowner', household_income: 80000, tax_filing: 'joint', household_size: 4 },
-  { location: null, owner_status: 'homeowner', household_income: 80000, tax_filing: 'joint', household_size: 4 },
-  { location: {}, owner_status: 'homeowner', household_income: 80000, tax_filing: 'joint', household_size: 4 },
+  {
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 4,
+  },
+  {
+    zip: '80212',
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 4,
+  },
+  {
+    location: null,
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 4,
+  },
+  {
+    location: {},
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 4,
+  },
   // bad owner_status:
-  { location: { zip: '80212' }, household_income: 80000, tax_filing: 'joint', household_size: 4 },
-  { location: { zip: '80212' }, owner_status: '', household_income: 80000, tax_filing: 'joint', household_size: 4 },
-  { location: { zip: '80212' }, owner_status: 'aaa', household_income: 80000, tax_filing: 'joint', household_size: 4 },
-  { location: { zip: '80212' }, owner_status: -1, household_income: 80000, tax_filing: 'joint', household_size: 4 },
+  {
+    location: { zip: '80212' },
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 4,
+  },
+  {
+    location: { zip: '80212' },
+    owner_status: '',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 4,
+  },
+  {
+    location: { zip: '80212' },
+    owner_status: 'aaa',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 4,
+  },
+  {
+    location: { zip: '80212' },
+    owner_status: -1,
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 4,
+  },
   // bad household_income:
-  { location: { zip: '80212' }, owner_status: 'homeowner', household_income: null, tax_filing: 'joint', household_size: 4 }, // null is the JSON encoding of NaN
-  { location: { zip: '80212' }, owner_status: 'homeowner', household_income: -1, tax_filing: 'joint', household_size: 4 },
-  { location: { zip: '80212' }, owner_status: 'homeowner', household_income: 100000001, tax_filing: 'joint', household_size: 4 },
-  { location: { zip: '80212' }, owner_status: 'homeowner', tax_filing: 'joint', household_size: 4 },
+  {
+    location: { zip: '80212' },
+    owner_status: 'homeowner',
+    household_income: null,
+    tax_filing: 'joint',
+    household_size: 4,
+  }, // null is the JSON encoding of NaN
+  {
+    location: { zip: '80212' },
+    owner_status: 'homeowner',
+    household_income: -1,
+    tax_filing: 'joint',
+    household_size: 4,
+  },
+  {
+    location: { zip: '80212' },
+    owner_status: 'homeowner',
+    household_income: 100000001,
+    tax_filing: 'joint',
+    household_size: 4,
+  },
+  {
+    location: { zip: '80212' },
+    owner_status: 'homeowner',
+    tax_filing: 'joint',
+    household_size: 4,
+  },
   // bad tax_filing:
-  { location: { zip: '80212' }, owner_status: 'homeowner', household_income: 80000, household_size: 4 },
-  { location: { zip: '80212' }, owner_status: 'homeowner', household_income: 80000, tax_filing: '', household_size: 4 },
-  { location: { zip: '80212' }, owner_status: 'homeowner', household_income: 80000, tax_filing: 'foo', household_size: 4 },
-  { location: { zip: '80212' }, owner_status: 'homeowner', household_income: 80000, tax_filing: null, household_size: 4 },
+  {
+    location: { zip: '80212' },
+    owner_status: 'homeowner',
+    household_income: 80000,
+    household_size: 4,
+  },
+  {
+    location: { zip: '80212' },
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: '',
+    household_size: 4,
+  },
+  {
+    location: { zip: '80212' },
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'foo',
+    household_size: 4,
+  },
+  {
+    location: { zip: '80212' },
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: null,
+    household_size: 4,
+  },
   // bad household_size:
-  { location: { zip: '80212' }, owner_status: 'homeowner', household_income: 80000, tax_filing: 'joint' },
-  { location: { zip: '80212' }, owner_status: 'homeowner', household_income: 80000, tax_filing: 'joint', household_size: 0 },
-  { location: { zip: '80212' }, owner_status: 'homeowner', household_income: 80000, tax_filing: 'joint', household_size: 'a' },
-  { location: { zip: '80212' }, owner_status: 'homeowner', household_income: 80000, tax_filing: 'joint', household_size: 9 },
-]
+  {
+    location: { zip: '80212' },
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'joint',
+  },
+  {
+    location: { zip: '80212' },
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 0,
+  },
+  {
+    location: { zip: '80212' },
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 'a',
+  },
+  {
+    location: { zip: '80212' },
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 9,
+  },
+];
 
-test('bad queries', async (t) => {
+test('bad queries', async t => {
   t.plan(BAD_QUERIES.length * 3, 'expect 3 assertions per bad query');
 
   for (let query of BAD_QUERIES) {
@@ -101,19 +220,29 @@ test('bad queries', async (t) => {
     const calculatorResponse = JSON.parse(res.payload);
     t.equal(res.statusCode, 400, 'response status is 400');
     t.equal(calculatorResponse.statusCode, 400, 'payload statusCode is 400');
-    t.equal(calculatorResponse.error, 'Bad Request', 'payload error is Bad Request');
+    t.equal(
+      calculatorResponse.error,
+      'Bad Request',
+      'payload error is Bad Request',
+    );
   }
 });
 
-test('non-existent zips', async (t) => {
-  const res = await getCalculatorResponse(t, { location: { zip: '80088' }, owner_status: 'homeowner', household_income: 0, household_size: 1, tax_filing: 'single' });
+test('non-existent zips', async t => {
+  const res = await getCalculatorResponse(t, {
+    location: { zip: '80088' },
+    owner_status: 'homeowner',
+    household_income: 0,
+    household_size: 1,
+    tax_filing: 'single',
+  });
   const calculatorResponse = JSON.parse(res.payload);
   t.equal(res.statusCode, 404, 'response status is 404');
   t.equal(calculatorResponse.statusCode, 404, 'payload statusCode is 404');
   t.equal(calculatorResponse.error, 'Not Found', 'payload error is Not Found');
 });
 
-test('/incentives', async (t) => {
+test('/incentives', async t => {
   const app = await build(t);
   const res = await app.inject({ url: '/api/v1/incentives' });
   const incentivesResponse = JSON.parse(res.payload);
@@ -125,7 +254,7 @@ test('/incentives', async (t) => {
     coerceTypes: true,
     useDefaults: true,
     removeAdditional: true,
-    allErrors: false
+    allErrors: false,
   });
 
   const validator = ajv.getSchema('APIIncentive');

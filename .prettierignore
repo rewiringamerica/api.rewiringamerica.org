@@ -1,0 +1,43 @@
+# https://prettier.io/docs/en/ignore.html
+
+# dependencies
+/node_modules
+package-lock.json
+
+# testing
+/coverage
+
+# next.js
+*/.next/
+*/out/
+*/package.json
+
+# tap
+.nyc_output
+
+# production
+*/build
+
+# misc
+.DS_Store
+.github/pull_request_template.md
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+
+# editors
+.vscode
+
+*.hbs
+
+# ENV files
+.env
