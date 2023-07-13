@@ -5,60 +5,66 @@ import { open } from 'sqlite';
 import _ from 'lodash';
 import fs from 'fs';
 
-const AMIS_FOR_11211 = JSON.parse(fs.readFileSync('./test/fixtures/amis-for-zip-11211.json', 'utf-8'));
-const AMIS_FOR_94117 = JSON.parse(fs.readFileSync('./test/fixtures/amis-for-zip-94117.json', 'utf-8'));
-const AMIS_FOR_39503 = JSON.parse(fs.readFileSync('./test/fixtures/amis-for-zip-39503.json', 'utf-8'));
+const AMIS_FOR_11211 = JSON.parse(
+  fs.readFileSync('./test/fixtures/amis-for-zip-11211.json', 'utf-8'),
+);
+const AMIS_FOR_94117 = JSON.parse(
+  fs.readFileSync('./test/fixtures/amis-for-zip-94117.json', 'utf-8'),
+);
+const AMIS_FOR_39503 = JSON.parse(
+  fs.readFileSync('./test/fixtures/amis-for-zip-39503.json', 'utf-8'),
+);
 
-beforeEach(async (t) => {
+beforeEach(async t => {
   t.context.db = await open({
     filename: './incentives-api.db',
-    driver: sqlite3.Database
-  })
+    driver: sqlite3.Database,
+  });
 });
 
-afterEach(async (t) => {
+afterEach(async t => {
   await t.context.db.close();
 });
 
-test('correctly evaluates scenerio "Single w/ $120k Household income"', async (t) => {
+test('correctly evaluates scenerio "Single w/ $120k Household income"', async t => {
   const data = calculateIncentives(AMIS_FOR_11211, {
     zip: '11211',
     owner_status: 'homeowner',
     household_income: 120000,
     tax_filing: 'single',
-    household_size: 1
+    household_size: 1,
   });
   t.ok(data);
 });
 
-test('correctly evaluates scenerio "Joint w/ 5 persons and $60k Household income"', async (t) => {
+test('correctly evaluates scenerio "Joint w/ 5 persons and $60k Household income"', async t => {
   const data = calculateIncentives(AMIS_FOR_11211, {
     zip: '11211',
     owner_status: 'homeowner',
     household_income: 60000,
     tax_filing: 'joint',
-    household_size: 5
+    household_size: 5,
   });
   t.ok(data);
 });
 
-test('correctly evaluates scenerio "Joint w/ $300k Household income"', async (t) => {
+test('correctly evaluates scenerio "Joint w/ $300k Household income"', async t => {
   const data = calculateIncentives(AMIS_FOR_11211, {
     zip: '11211',
     owner_status: 'homeowner',
     household_income: 300000,
     tax_filing: 'joint',
-    household_size: 4
+    household_size: 4,
   });
   t.ok(data);
 });
 
-test('correctly evaluates scenerio "Single w/ $120k Household income in the Bronx"', async (t) => {
+test('correctly evaluates scenerio "Single w/ $120k Household income in the Bronx"', async t => {
   const data = calculateIncentives(AMIS_FOR_11211, {
     owner_status: 'homeowner',
     household_income: 120000,
     tax_filing: 'single',
-    household_size: 1
+    household_size: 1,
   });
 
   t.equal(data.is_under_80_ami, false);
@@ -74,9 +80,15 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
 
   // count the incentives by key used to de-dupe in UI:
   const rebateCounts = _.countBy(i => i.item + i.item_type);
-  t.equal(Object.values(rebateCounts).every(c => c === 1), true);
+  t.equal(
+    Object.values(rebateCounts).every(c => c === 1),
+    true,
+  );
   const taxCreditCounts = _.countBy(i => i.item + i.item_type);
-  t.equal(Object.values(taxCreditCounts).every(c => c === 1), true);
+  t.equal(
+    Object.values(taxCreditCounts).every(c => c === 1),
+    true,
+  );
 
   const posRebates = _.keyBy(data.pos_rebate_incentives, 'item');
   t.equal(posRebates['items.electricPanel'].eligible, true);
@@ -128,7 +140,10 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
   t.equal(taxCredits['items.heatPumpWaterHeater'].start_date, 2023);
   t.equal(taxCredits['items.rooftopSolarInstallation'].eligible, true);
   t.equal(taxCredits['items.rooftopSolarInstallation'].amount, 0.3);
-  t.equal(taxCredits['items.rooftopSolarInstallation'].representative_amount, 4770);
+  t.equal(
+    taxCredits['items.rooftopSolarInstallation'].representative_amount,
+    4770,
+  );
   t.equal(taxCredits['items.rooftopSolarInstallation'].start_date, 2022);
   t.equal(taxCredits['items.weatherization'].eligible, true);
   t.equal(taxCredits['items.weatherization'].amount, 1200);
@@ -139,12 +154,12 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
   t.equal(taxCredits['items.usedElectricVehicle'].start_date, 2023);
 });
 
-test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k Household income in San Francisco"', async (t) => {
+test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k Household income in San Francisco"', async t => {
   const data = calculateIncentives(AMIS_FOR_94117, {
     owner_status: 'homeowner',
     household_income: 250000,
     tax_filing: 'joint',
-    household_size: 4
+    household_size: 4,
   });
 
   t.equal(data.is_under_80_ami, false);
@@ -160,9 +175,15 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
 
   // count the incentives by key used to de-dupe in UI:
   const rebateCounts = _.countBy(i => i.item + i.item_type);
-  t.equal(Object.values(rebateCounts).every(c => c === 1), true);
+  t.equal(
+    Object.values(rebateCounts).every(c => c === 1),
+    true,
+  );
   const taxCreditCounts = _.countBy(i => i.item + i.item_type);
-  t.equal(Object.values(taxCreditCounts).every(c => c === 1), true);
+  t.equal(
+    Object.values(taxCreditCounts).every(c => c === 1),
+    true,
+  );
 
   const posRebates = _.keyBy(data.pos_rebate_incentives, 'item');
   t.equal(posRebates['items.electricPanel'].eligible, true);
@@ -214,7 +235,10 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
   t.equal(taxCredits['items.heatPumpWaterHeater'].start_date, 2023);
   t.equal(taxCredits['items.rooftopSolarInstallation'].eligible, true);
   t.equal(taxCredits['items.rooftopSolarInstallation'].amount, 0.3);
-  t.equal(taxCredits['items.rooftopSolarInstallation'].representative_amount, 4572);
+  t.equal(
+    taxCredits['items.rooftopSolarInstallation'].representative_amount,
+    4572,
+  );
   t.equal(taxCredits['items.rooftopSolarInstallation'].start_date, 2022);
   t.equal(taxCredits['items.weatherization'].eligible, true);
   t.equal(taxCredits['items.weatherization'].amount, 1200);
@@ -225,12 +249,12 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
   t.equal(taxCredits['items.usedElectricVehicle'].start_date, 2023);
 });
 
-test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in Missisippi"', async (t) => {
+test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in Missisippi"', async t => {
   const data = calculateIncentives(AMIS_FOR_39503, {
     owner_status: 'homeowner',
     household_income: 500000,
     tax_filing: 'hoh',
-    household_size: 8
+    household_size: 8,
   });
 
   t.equal(data.is_under_80_ami, false);
@@ -246,9 +270,15 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
 
   // count the incentives by key used to de-dupe in UI:
   const rebateCounts = _.countBy(i => i.item + i.item_type);
-  t.equal(Object.values(rebateCounts).every(c => c === 1), true);
+  t.equal(
+    Object.values(rebateCounts).every(c => c === 1),
+    true,
+  );
   const taxCreditCounts = _.countBy(i => i.item + i.item_type);
-  t.equal(Object.values(taxCreditCounts).every(c => c === 1), true);
+  t.equal(
+    Object.values(taxCreditCounts).every(c => c === 1),
+    true,
+  );
 
   const posRebates = _.keyBy(data.pos_rebate_incentives, 'item');
   t.equal(posRebates['items.electricPanel'].eligible, false);
@@ -298,7 +328,10 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   t.equal(taxCredits['items.heatPumpWaterHeater'].start_date, 2023);
   t.equal(taxCredits['items.rooftopSolarInstallation'].eligible, true);
   t.equal(taxCredits['items.rooftopSolarInstallation'].amount, 0.3);
-  t.equal(taxCredits['items.rooftopSolarInstallation'].representative_amount, 4428.9);
+  t.equal(
+    taxCredits['items.rooftopSolarInstallation'].representative_amount,
+    4428.9,
+  );
   t.equal(taxCredits['items.rooftopSolarInstallation'].start_date, 2022);
   t.equal(taxCredits['items.weatherization'].eligible, true);
   t.equal(taxCredits['items.weatherization'].amount, 1200);
@@ -312,15 +345,18 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   t.equal(taxCredits['items.usedElectricVehicle'].start_date, 2023);
 });
 
-test('correctly sorts incentives"', async (t) => {
+test('correctly sorts incentives"', async t => {
   const data = calculateIncentives(AMIS_FOR_11211, {
     zip: '11211',
     owner_status: 'homeowner',
     household_income: 120000,
     tax_filing: 'single',
-    household_size: 1
+    household_size: 1,
   });
-  for (let incentives of [data.pos_rebate_incentives, data.tax_credit_incentives]) {
+  for (let incentives of [
+    data.pos_rebate_incentives,
+    data.tax_credit_incentives,
+  ]) {
     let prevIncentive = incentives[0];
     incentives.slice(1).forEach((incentive, i) => {
       if (prevIncentive.amount_type === incentive.amount_type) {
@@ -333,4 +369,3 @@ test('correctly sorts incentives"', async (t) => {
     });
   }
 });
-

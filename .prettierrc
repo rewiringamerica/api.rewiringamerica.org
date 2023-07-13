@@ -1,0 +1,15 @@
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "arrowParens": "avoid",
+  "printWidth": 80,
+  "plugins": ["prettier-plugin-multiline-arrays"],
+  "overrides": [
+    {
+      "files": ["data/*.json", "schemas/**/*.json", "test/fixtures/*.json"],
+      "options": {
+        "multilineArraysWrapThreshold": 0
+      }
+    }
+  ]
+}
