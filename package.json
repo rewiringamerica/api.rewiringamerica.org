@@ -21,19 +21,27 @@
     "qs": "^6.11.1"
   },
   "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/lodash": "^4.14.195",
+    "@types/node": "16.18.38",
+    "@types/qs": "^6.9.7",
+    "@types/tap": "^15.0.8",
     "dotenv": "^16.0.3",
     "dotenv-cli": "^7.2.1",
+    "fastify-tsconfig": "^1.0.1",
     "prettier": "^2.8.8",
     "prettier-plugin-multiline-arrays": "^2.0.0",
-    "tap": "^16.3.4"
+    "tap": "^16.3.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
   },
   "scripts": {
-    "start": "fastify start -l info -a 0.0.0.0 src/app.js --options",
-    "dev": "fastify start -w -l info -P src/app.js --options",
+    "start": "fastify start -l info -a 0.0.0.0 build/app.js --options",
+    "dev": "NODE_OPTIONS=\"--no-warnings --loader=ts-node/esm\" fastify start -w -l info -P src/app.ts --options",
     "build": "./scripts/build.sh",
     "deploy:dev": "gcloud run deploy incentives-api-dev --project rewiring-america-dev --source .",
     "deploy:production": "gcloud run deploy incentives-api --project rewiring-america --source .",
-    "test": "prettier --check . && dotenv -- tap \"test/**/*.test.js\""
+    "test": "prettier --check . && dotenv -- tap --node-arg=--no-warnings --node-arg=--loader=ts-node/esm \"test/**/*.test.{js,ts}\""
   },
   "type": "module"
 }
