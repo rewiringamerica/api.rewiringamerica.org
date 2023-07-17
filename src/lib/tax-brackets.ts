@@ -1,11 +1,29 @@
 import _ from 'lodash';
 import fs from 'fs';
 
-const TAX_BRACKETS = JSON.parse(
+export enum FilingStatus {
+  Single = 'single',
+  Joint = 'joint',
+  HoH = 'hoh',
+}
+
+type TaxBracket = {
+  filing_status: FilingStatus;
+  income_min: number;
+  income_max: number;
+  tax_rate: number;
+  tax_amount: number;
+  standard_deduction: number;
+};
+
+const TAX_BRACKETS: TaxBracket[] = JSON.parse(
   fs.readFileSync('./data/tax_brackets.json', 'utf-8'),
 );
 
-export default function estimateTaxAmount(filing_status, household_income) {
+export default function estimateTaxAmount(
+  filing_status: FilingStatus,
+  household_income: number,
+): { tax_owed: number; effective_rate: number } {
   // Note: this could be simplified to hardcoded value lookup
   const tax_brackets = TAX_BRACKETS.filter(
     row => filing_status === row.filing_status,
@@ -16,7 +34,7 @@ export default function estimateTaxAmount(filing_status, household_income) {
     return (
       household_income <= row.income_max && household_income >= row.income_min
     );
-  });
+  })!;
 
   const standardDeduction = standardDeductionResult.standard_deduction;
 
@@ -31,7 +49,7 @@ export default function estimateTaxAmount(filing_status, household_income) {
   // Step 2: Get the correct bracket for taxable income
   const taxBracketResult = tax_brackets.find(row => {
     return taxableIncome <= row.income_max && taxableIncome >= row.income_min;
-  });
+  })!;
 
   // Step 3: Add the tax owed for each of the lower brackets
   const fixedTaxAmount = _.sumBy(fixedBracketResults, 'tax_amount');
