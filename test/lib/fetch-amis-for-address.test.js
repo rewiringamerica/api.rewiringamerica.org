@@ -1,8 +1,8 @@
 import { test, beforeEach, afterEach } from 'tap';
 import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
-import fetchAMIsForAddress from '../../lib/fetch-amis-for-address.js';
-import { geocoder } from '../../lib/geocoder.js';
+import fetchAMIsForAddress from '../../src/lib/fetch-amis-for-address.js';
+import { geocoder } from '../../src/lib/geocoder.js';
 import { geocoder as mockGeocoder } from '../mocks/geocoder.js';
 
 beforeEach(async t => {

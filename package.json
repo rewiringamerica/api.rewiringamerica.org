@@ -28,8 +28,8 @@
     "tap": "^16.3.4"
   },
   "scripts": {
-    "start": "fastify start -l info -a 0.0.0.0 app.js --options",
-    "dev": "fastify start -w -l info -P app.js --options",
+    "start": "fastify start -l info -a 0.0.0.0 src/app.js --options",
+    "dev": "fastify start -w -l info -P src/app.js --options",
     "build": "./scripts/build.sh",
     "deploy:dev": "gcloud run deploy incentives-api-dev --project rewiring-america-dev --source .",
     "deploy:production": "gcloud run deploy incentives-api --project rewiring-america --source .",
