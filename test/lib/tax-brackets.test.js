@@ -1,4 +1,4 @@
-import estimateTaxAmount from '../../lib/tax-brackets.js';
+import estimateTaxAmount from '../../src/lib/tax-brackets.js';
 import { test } from 'tap';
 
 /**
