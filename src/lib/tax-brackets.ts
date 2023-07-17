@@ -1,7 +1,12 @@
 import _ from 'lodash';
 import fs from 'fs';
 
-type FilingStatus = 'single' | 'joint' | 'hoh';
+export enum FilingStatus {
+  Single = 'single',
+  Joint = 'joint',
+  HoH = 'hoh',
+}
+
 type TaxBracket = {
   filing_status: FilingStatus;
   income_min: number;
