@@ -1,0 +1,27 @@
+{
+  "$id": "APIUtilitiesResponse",
+  "title": "APIUtilitiesResponse",
+  "type": "object",
+  "properties": {
+    "utilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "examples": [
+              "rhode-island-energy"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "examples": [
+              "Rhode Island Energy"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

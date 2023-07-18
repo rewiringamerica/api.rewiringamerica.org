@@ -4,6 +4,7 @@
   "type": "object",
   "required": [
     "type",
+    "authority_type",
     "program",
     "item",
     "item_url",
@@ -20,6 +21,20 @@
       "enum": [
         "pos_rebate",
         "tax_credit"
+      ]
+    },
+    "authority_type": {
+      "type": "string",
+      "enum": [
+        "federal",
+        "state",
+        "utility"
+      ]
+    },
+    "authority": {
+      "type": "string",
+      "examples": [
+        "Rhode Island Office of Energy Resources"
       ]
     },
     "program": {
