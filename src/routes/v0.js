@@ -1,4 +1,3 @@
-import fs from 'fs';
 import calculateIncentives from '../lib/incentives-calculation.js';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip.js';
 import { t } from '../lib/i18n.js';
@@ -70,7 +69,7 @@ const IncentivesSchema = {
   },
 };
 
-export default async function (fastify, opts) {
+export default async function (fastify) {
   fastify.get(
     '/api/v0/calculator',
     { schema: CalculatorSchema },
@@ -111,7 +110,7 @@ export default async function (fastify, opts) {
 
       // 2.1) Overwrite solar_tax_credit amount with representative_amount:
       const solarTaxCredit = result.tax_credit_incentives.find(
-        incentive => incentive.item_type == 'solar_tax_credit',
+        incentive => incentive.item_type === 'solar_tax_credit',
       );
       solarTaxCredit.amount = solarTaxCredit.representative_amount;
       solarTaxCredit.representative_amount = 0;

@@ -12,7 +12,7 @@ const responseSchema = JSON.parse(
   fs.readFileSync('./schemas/v1/calculator-response.json', 'utf-8'),
 );
 
-beforeEach(t => {
+beforeEach(() => {
   process.setMaxListeners(100);
 });
 
@@ -49,7 +49,7 @@ test('response is valid and correct', async t => {
   const responseValidator = ajv.getSchema('APICalculatorResponse');
 
   // validate the response is an APICalculatorResponse
-  const validation = await responseValidator(calculatorResponse);
+  await responseValidator(calculatorResponse);
   t.equal(responseValidator.errors, null);
 
   t.equal(calculatorResponse.is_under_80_ami, true);

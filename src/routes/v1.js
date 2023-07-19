@@ -1,4 +1,3 @@
-import fs from 'fs';
 import calculateIncentives from '../lib/incentives-calculation.js';
 import fetchAMIsForAddress from '../lib/fetch-amis-for-address.js';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip.js';
@@ -68,7 +67,7 @@ const APIIncentivesSchema = {
   },
 };
 
-export default async function (fastify, opts) {
+export default async function (fastify) {
   async function fetchAMIsForLocation(location) {
     if (location.address) {
       // TODO: make sure bad addresses are handled here, and don't return anything

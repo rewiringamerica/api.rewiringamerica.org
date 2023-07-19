@@ -358,7 +358,7 @@ test('correctly sorts incentives"', async t => {
     data.tax_credit_incentives,
   ]) {
     let prevIncentive = incentives[0];
-    incentives.slice(1).forEach((incentive, i) => {
+    incentives.slice(1).forEach(incentive => {
       if (prevIncentive.amount_type === incentive.amount_type) {
         t.ok(prevIncentive.amount >= incentive.amount);
       } else {
