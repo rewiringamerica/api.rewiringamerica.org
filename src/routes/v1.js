@@ -3,10 +3,7 @@ import calculateIncentives from '../lib/incentives-calculation.js';
 import fetchAMIsForAddress from '../lib/fetch-amis-for-address.js';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip.js';
 import { t } from '../lib/i18n.js';
-
-const INCENTIVES = JSON.parse(
-  fs.readFileSync('./data/ira_incentives.json', 'utf-8'),
-);
+import { IRA_INCENTIVES } from '../data/ira_incentives.js';
 
 function translateIncentives(incentives, language) {
   return incentives.map(incentive => {
@@ -115,7 +112,7 @@ export default async function (fastify, opts) {
     { schema: APIIncentivesSchema },
     async (request, reply) => {
       const incentives = translateIncentives(
-        INCENTIVES,
+        IRA_INCENTIVES,
         request.query.language,
       );
       return reply.status(200).type('application/json').send({ incentives });
