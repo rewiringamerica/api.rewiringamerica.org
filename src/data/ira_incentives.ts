@@ -12,6 +12,7 @@ export enum AmiQualification {
 export enum AmountType {
   DollarAmount = 'dollar_amount',
   Percent = 'percent',
+  PerUnit = 'dollars_per_unit',
 }
 
 export enum AmountUnit {
@@ -33,8 +34,8 @@ export enum AmountUnit {
  * - percent. Number is between 0 and 1. May also have "maximum" and
  *   "representative". Must not have "unit".
  *
- * - per_unit. Number is dollars per unit. "unit" is required. May also have
- *   "maximum" and "representative".
+ * - dollars_per_unit. Number is dollars per unit. "unit" is required. May also
+ *   have "maximum" and "representative".
  */
 export interface Amount {
   type: AmountType;

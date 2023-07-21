@@ -21,7 +21,14 @@ import {
   SCHEMA as AUTHORITIES_SCHEMA,
   AUTHORITIES_BY_STATE,
 } from '../../src/data/authorities.js';
+import {
+  RI_INCENTIVES,
+  RI_INCENTIVES_SCHEMA,
+  StateIncentive,
+} from '../../src/data/state_incentives.js';
+
 import Ajv from 'ajv';
+import { SomeJSONSchema } from 'ajv/dist/types/json-schema.js';
 
 const TESTS = [
   [I_SCHEMA, IRA_INCENTIVES],
@@ -43,5 +50,64 @@ test('static JSON files match schema', async tap => {
     if (!tap.ok(ajv.validate(schema, data))) {
       console.error(ajv.errors);
     }
+  });
+});
+
+const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
+  ['RI', RI_INCENTIVES_SCHEMA, RI_INCENTIVES],
+];
+
+/**
+ * Checks some invariants of incentives that aren't expressible in schemas.
+ */
+function isIncentiveAmountValid<T extends StateIncentive>(
+  incentive: T,
+): boolean {
+  // Validate the amount has the right properties given its type.
+  const { amount } = incentive;
+  switch (amount.type) {
+    case 'dollar_amount':
+      // Exactly one of "number" and "maximum" must be defined.
+      return (
+        (amount.number === undefined) !== (amount.maximum === undefined) &&
+        !amount.unit &&
+        !amount.representative
+      );
+    case 'percent':
+      return (
+        amount.number !== undefined &&
+        amount.number >= 0 &&
+        amount.number <= 1 &&
+        !amount.unit
+      );
+    case 'dollars_per_unit':
+      return amount.number !== undefined && amount.unit !== undefined;
+    default:
+      return false;
+  }
+}
+
+test('state incentives JSON files match schemas', async tap => {
+  const ajv = new Ajv.default();
+
+  STATE_INCENTIVE_TESTS.forEach(([stateId, schema, data]) => {
+    const authorities = AUTHORITIES_BY_STATE[stateId as string];
+
+    if (!tap.ok(ajv.validate(schema, data))) {
+      console.error(ajv.errors);
+    }
+
+    // Check some constraints that aren't expressed in JSON schema
+    data.forEach((incentive, index) => {
+      tap.ok(
+        isIncentiveAmountValid(incentive),
+        `amount is invalid (${stateId}, index ${index})`,
+      );
+      tap.hasProp(
+        authorities[incentive.authority_type],
+        incentive.authority,
+        `nonexistent authority (${stateId}, index ${index})`,
+      );
+    });
   });
 });

@@ -1,0 +1,263 @@
+[
+  {
+    "authority_type": "utility",
+    "authority": "ri-pascoag-utility-district",
+    "type": "pos_rebate",
+    "item": "heatPumpAirConditionerHeater",
+    "item_type": "pos_rebate",
+    "program": "ri_hvacAndWaterHeaterIncentives",
+    "amount": {
+      "type": "dollars_per_unit",
+      "unit": "ton",
+      "number": 350,
+      "representative": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ]
+  },
+  {
+    "authority_type": "utility",
+    "authority": "ri-pascoag-utility-district",
+    "type": "pos_rebate",
+    "item": "heatPumpWaterHeater",
+    "item_type": "pos_rebate",
+    "program": "ri_hvacAndWaterHeaterIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "maximum": 450
+    },
+    "owner_status": [
+      "homeowner"
+    ]
+  },
+  {
+    "authority_type": "utility",
+    "authority": "ri-pascoag-utility-district",
+    "type": "pos_rebate",
+    "item": "heatPumpClothesDryer",
+    "item_type": "pos_rebate",
+    "program": "ri_residentialEnergyStarOfferings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner"
+    ]
+  },
+  {
+    "authority_type": "utility",
+    "authority": "ri-pascoag-utility-district",
+    "type": "pos_rebate",
+    "item": "weatherization",
+    "item_type": "pos_rebate",
+    "program": "ri_residentialEnergyAuditWeatherization",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 2250,
+      "representative": 2250
+    },
+    "owner_status": [
+      "homeowner"
+    ]
+  },
+  {
+    "authority_type": "utility",
+    "authority": "ri-block-island-power-company",
+    "type": "pos_rebate",
+    "item": "heatPumpAirConditionerHeater",
+    "item_type": "pos_rebate",
+    "program": "ri_blockIslandEnergyEfficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "unit": "ton",
+      "number": 250,
+      "maximum": 750,
+      "representative": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ]
+  },
+  {
+    "authority_type": "utility",
+    "authority": "ri-block-island-power-company",
+    "type": "pos_rebate",
+    "item": "heatPumpWaterHeater",
+    "item_type": "pos_rebate",
+    "program": "ri_blockIslandEnergyEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ]
+  },
+  {
+    "authority_type": "utility",
+    "authority": "ri-block-island-power-company",
+    "type": "pos_rebate",
+    "item": "weatherization",
+    "item_type": "pos_rebate",
+    "program": "ri_blockIslandEnergyEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "maximum": 2000
+    },
+    "bonus_available": true,
+    "owner_status": [
+      "homeowner"
+    ]
+  },
+  {
+    "authority_type": "state",
+    "authority": "ri-oer",
+    "type": "pos_rebate",
+    "item": "newElectricVehicle",
+    "item_type": "pos_rebate",
+    "program": "ri_drive",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ]
+  },
+  {
+    "authority_type": "state",
+    "authority": "ri-oer",
+    "type": "pos_rebate",
+    "item": "usedElectricVehicle",
+    "item_type": "pos_rebate",
+    "program": "ri_drive",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ]
+  },
+  {
+    "authority_type": "utility",
+    "authority": "ri-rhode-island-energy",
+    "type": "pos_rebate",
+    "item": "heatPumpClothesDryer",
+    "item_type": "pos_rebate",
+    "program": "ri_energyStarClothesDryer",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ]
+  },
+  {
+    "authority_type": "utility",
+    "authority": "ri-rhode-island-energy",
+    "type": "pos_rebate",
+    "item": "heatPumpWaterHeater",
+    "item_type": "pos_rebate",
+    "program": "ri_residentialHeatPumpWaterHeater",
+    "amount": {
+      "type": "dollar_amount",
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ]
+  },
+  {
+    "authority_type": "state",
+    "authority": "ri-commerce-corp",
+    "type": "pos_rebate",
+    "item": "rooftopSolarInstallation",
+    "item_type": "pos_rebate",
+    "program": "ri_smallScaleSolar",
+    "amount": {
+      "type": "dollars_per_unit",
+      "unit": "watt",
+      "number": 0.65,
+      "maximum": 5000,
+      "representative": 3000
+    },
+    "bonus_available": true,
+    "owner_status": [
+      "homeowner"
+    ]
+  },
+  {
+    "authority_type": "utility",
+    "authority": "ri-rhode-island-energy",
+    "type": "pos_rebate",
+    "item": "heatPumpAirConditionerHeater",
+    "item_type": "pos_rebate",
+    "program": "ri_electricHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "unit": "ton",
+      "number": 350,
+      "representative": 700
+    },
+    "bonus_available": true,
+    "owner_status": [
+      "homeowner"
+    ]
+  },
+  {
+    "authority_type": "state",
+    "authority": "ri-oer",
+    "type": "pos_rebate",
+    "item": "heatPumpAirConditionerHeater",
+    "item_type": "pos_rebate",
+    "program": "ri_highEfficiencyHeatPumpProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "unit": "ton",
+      "number": 1250,
+      "representative": 2500
+    },
+    "owner_status": [
+      "homeowner"
+    ]
+  },
+  {
+    "authority_type": "state",
+    "authority": "ri-oer",
+    "type": "pos_rebate",
+    "item": "heatPumpWaterHeater",
+    "item_type": "pos_rebate",
+    "program": "ri_highEfficiencyHeatPumpProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ]
+  },
+  {
+    "authority_type": "utility",
+    "authority": "ri-rhode-island-energy",
+    "type": "pos_rebate",
+    "item": "weatherization",
+    "item_type": "pos_rebate",
+    "program": "ri_incomeEligibleEnergySavings",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "low_income": true
+  }
+]

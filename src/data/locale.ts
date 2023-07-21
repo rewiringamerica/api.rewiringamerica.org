@@ -7,6 +7,7 @@ export type Items = {
 };
 
 const programsSchema = {
+  // IRA
   alternativeFuelVehicleRefuelingPropertyCredit: { type: 'string' },
   cleanVehicleCredit: { type: 'string' },
   creditForPreviouslyOwnedCleanVehicles: { type: 'string' },
@@ -14,6 +15,23 @@ const programsSchema = {
   HEEHR: { type: 'string' },
   hopeForHomes: { type: 'string' },
   residentialCleanEnergyCredit: { type: 'string' },
+
+  // RI
+  // State: OER, Commerce RI
+  ri_drive: { type: 'string' },
+  ri_smallScaleSolar: { type: 'string' },
+  ri_highEfficiencyHeatPumpProgram: { type: 'string' },
+  // Pascoag
+  ri_hvacAndWaterHeaterIncentives: { type: 'string' },
+  ri_residentialEnergyStarOfferings: { type: 'string' },
+  ri_residentialEnergyAuditWeatherization: { type: 'string' },
+  // Block Island
+  ri_blockIslandEnergyEfficiency: { type: 'string' },
+  // Rhode Island Energy
+  ri_energyStarClothesDryer: { type: 'string' },
+  ri_residentialHeatPumpWaterHeater: { type: 'string' },
+  ri_electricHeatingAndCoolingRebates: { type: 'string' },
+  ri_incomeEligibleEnergySavings: { type: 'string' },
 } as const;
 const allPrograms = Object.keys(
   programsSchema,
