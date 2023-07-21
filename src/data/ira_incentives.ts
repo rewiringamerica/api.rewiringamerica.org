@@ -12,6 +12,7 @@ export enum AmiQualification {
 export enum AmountType {
   DollarAmount = 'dollar_amount',
   Percent = 'percent',
+  PerUnit = 'dollars_per_unit',
 }
 
 export enum AmountUnit {
@@ -20,25 +21,25 @@ export enum AmountUnit {
 }
 
 /**
- * There are three types of amount, with the following rules:
+ * There are four types of amount, with the following rules:
  *
- * - dollar_amount. This must specify EXACTLY ONE of "number" or "maximum". If
- *   "number" is specified, the incentive is for that exact number of dollars.
- *   If "maximum" is specified, the incentive is some more complex structure
- *   that isn't a percentage or per-unit, up to a specific maximum number of
- *   dollars. An example is tiered flat amounts based on equipment specs or
- *   some other input we're not capturing. Must not have "representative" or
- *   "unit".
+ * - dollar_amount. This must specify "number" as the exact or maximum number
+ *   of dollars the incentive is for. Must not have "unit" or "representative".
+ *
+ *   TODO some also specify "maximum". For now this is just a marker that there
+ *   is more to the incentive; it may be tiered flat amounts depending on
+ *   equipment specs or some input we're not capturing, or something more
+ *   complex.
  *
  * - percent. Number is between 0 and 1. May also have "maximum" and
  *   "representative". Must not have "unit".
  *
- * - per_unit. Number is dollars per unit. "unit" is required. May also have
- *   "maximum" and "representative".
+ * - dollars_per_unit. Number is dollars per unit. "unit" is required. May also
+ *   have "maximum" and "representative".
  */
 export interface Amount {
   type: AmountType;
-  number?: number;
+  number: number;
   unit?: AmountUnit;
   maximum?: number;
   representative?: number;
@@ -87,12 +88,12 @@ const amountSchema: JSONSchemaType<Amount> = {
   type: 'object',
   properties: {
     type: { type: 'string', enum: Object.values(AmountType) },
-    number: { type: 'number', nullable: true },
+    number: { type: 'number' },
     unit: { type: 'string', enum: Object.values(AmountUnit), nullable: true },
     maximum: { type: 'number', nullable: true },
     representative: { type: 'number', nullable: true },
   },
-  required: ['type'],
+  required: ['type', 'number'],
 } as const;
 
 export const SCHEMA: JSONSchemaType<Incentive[]> = {
