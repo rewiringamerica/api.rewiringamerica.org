@@ -1,22 +1,14 @@
 import _ from 'lodash';
 import estimateTaxAmount from './tax-brackets.js';
-import fs from 'fs';
-
-const INCENTIVES = JSON.parse(
-  fs.readFileSync('./data/ira_incentives.json', 'utf-8'),
-);
-const SOLAR_PRICES = JSON.parse(
-  fs.readFileSync('./data/solar_prices.json', 'utf-8'),
-);
-const STATE_MFIS = JSON.parse(
-  fs.readFileSync('./data/state_mfi.json', 'utf-8'),
-);
+import { IRA_INCENTIVES } from '../data/ira_incentives.js';
+import { SOLAR_PRICES } from '../data/solar_prices.js';
+import { STATE_MFIS } from '../data/state_mfi.js';
 
 const MAX_POS_SAVINGS = 14000;
 const OWNER_STATUSES = new Set(['homeowner', 'renter']);
 const TAX_FILINGS = new Set(['single', 'joint', 'hoh']);
 
-INCENTIVES.forEach(incentive => Object.freeze(incentive));
+IRA_INCENTIVES.forEach(incentive => Object.freeze(incentive));
 
 function roundCents(dollars) {
   return Math.round(dollars * 100) / 100;
@@ -68,7 +60,7 @@ export default function calculateIncentives(
     household_income >= Number(ami[`l150_${household_size}`]);
 
   // Loop through each of the incentives, running several tests to see if visitor is eligible
-  for (const item of INCENTIVES) {
+  for (const item of IRA_INCENTIVES) {
     let eligible = true;
     let representative_amount = item.representative_amount;
 

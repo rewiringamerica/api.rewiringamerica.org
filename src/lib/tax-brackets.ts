@@ -1,24 +1,5 @@
 import _ from 'lodash';
-import fs from 'fs';
-
-export enum FilingStatus {
-  Single = 'single',
-  Joint = 'joint',
-  HoH = 'hoh',
-}
-
-type TaxBracket = {
-  filing_status: FilingStatus;
-  income_min: number;
-  income_max: number;
-  tax_rate: number;
-  tax_amount: number;
-  standard_deduction: number;
-};
-
-const TAX_BRACKETS: TaxBracket[] = JSON.parse(
-  fs.readFileSync('./data/tax_brackets.json', 'utf-8'),
-);
+import { TAX_BRACKETS, FilingStatus } from '../data/tax_brackets.js';
 
 export default function estimateTaxAmount(
   filing_status: FilingStatus,

@@ -3,15 +3,10 @@ import calculateIncentives from '../lib/incentives-calculation.js';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip.js';
 import { t } from '../lib/i18n.js';
 import _ from 'lodash';
+import { IRA_INCENTIVES } from '../data/ira_incentives.js';
+import { IRA_STATE_SAVINGS } from '../data/ira_state_savings.js';
 
-const INCENTIVES = JSON.parse(
-  fs.readFileSync('./data/ira_incentives.json', 'utf-8'),
-);
-const IRA_STATE_SAVINGS = JSON.parse(
-  fs.readFileSync('./data/ira_state_savings.json', 'utf-8'),
-);
-
-INCENTIVES.forEach(incentive => Object.freeze(incentive));
+IRA_INCENTIVES.forEach(incentive => Object.freeze(incentive));
 
 function translateIncentives(incentives) {
   return incentives.map(incentive => {
@@ -150,7 +145,7 @@ export default async function (fastify, opts) {
     '/api/v0/incentives',
     { schema: IncentivesSchema },
     async (request, reply) => {
-      const incentives = translateIncentives(INCENTIVES);
+      const incentives = translateIncentives(IRA_INCENTIVES);
       return reply.status(200).type('application/json').send({ incentives });
     },
   );
