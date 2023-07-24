@@ -7,9 +7,9 @@ import { IRA_INCENTIVES } from '../data/ira_incentives.js';
 function translateIncentives(incentives, language) {
   return incentives.map(incentive => {
     let item = { ...incentive };
-    item.item = t(incentive.item, language);
-    item.program = t(incentive.program, language);
-    item.item_url = t(incentive.item_url, language);
+    item.item = t('items', incentive.item, language);
+    item.program = t('programs', incentive.program, language);
+    item.item_url = t('urls', incentive.item, language);
     return item;
   });
 }

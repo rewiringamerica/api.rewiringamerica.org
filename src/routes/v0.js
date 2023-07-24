@@ -10,21 +10,19 @@ IRA_INCENTIVES.forEach(incentive => Object.freeze(incentive));
 function translateIncentives(incentives) {
   return incentives.map(incentive => {
     let item = { ...incentive };
-    item.item_es = t(incentive.item, 'es');
-    item.item = t(incentive.item, 'en');
-    item.program_es = t(incentive.program, 'es');
-    item.program = t(incentive.program, 'en');
+    item.item_es = t('items', incentive.item, 'es');
+    item.item = t('items', incentive.item, 'en');
+    item.program_es = t('programs', incentive.program, 'es');
+    item.program = t('programs', incentive.program, 'en');
     // strip domain from v0 links:
-    item.more_info_url_es = t(incentive.item_url, 'es').replace(
+    item.more_info_url_es = t('urls', incentive.item, 'es').replace(
       'https://www.rewiringamerica.org',
       '',
     );
-    item.more_info_url = t(incentive.item_url, 'en').replace(
+    item.more_info_url = t('urls', incentive.item, 'en').replace(
       'https://www.rewiringamerica.org',
       '',
     );
-    // Calculator's v0 schema doesn't care about this:
-    delete item.item_url;
     return item;
   });
 }
