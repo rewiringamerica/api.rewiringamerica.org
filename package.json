@@ -29,9 +29,12 @@
     "@types/node": "16.18.38",
     "@types/qs": "^6.9.7",
     "@types/tap": "^15.0.8",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
     "ajv": "^8.11.0",
     "dotenv": "^16.0.3",
     "dotenv-cli": "^7.2.1",
+    "eslint": "^8.45.0",
     "fastify-tsconfig": "^1.0.1",
     "prettier": "^2.8.8",
     "prettier-plugin-multiline-arrays": "^2.0.0",
@@ -43,9 +46,10 @@
     "start": "fastify start -l info -a 0.0.0.0 build/app.js --options",
     "dev": "NODE_OPTIONS=\"--no-warnings --loader=ts-node/esm\" fastify start -w -l info -P src/app.ts --options",
     "build": "./scripts/build.sh",
+    "lint": "prettier --check . && eslint .",
     "deploy:dev": "gcloud run deploy incentives-api-dev --project rewiring-america-dev --source .",
     "deploy:production": "gcloud run deploy incentives-api --project rewiring-america --source .",
-    "test": "prettier --check . && dotenv -- tap --node-arg=--no-warnings --node-arg=--loader=ts-node/esm \"test/**/*.test.{js,ts}\""
+    "test": "yarn lint && dotenv -- tap --node-arg=--no-warnings --node-arg=--loader=ts-node/esm \"test/**/*.test.{js,ts}\""
   },
   "type": "module"
 }

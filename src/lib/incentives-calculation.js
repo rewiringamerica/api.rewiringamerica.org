@@ -181,7 +181,7 @@ export default function calculateIncentives(
       }
     } else if (item.type === 'tax_credit') {
       // if this is a dollar amount, just add it up:
-      if (item.amount_type == 'dollar_amount') {
+      if (item.amount_type === 'dollar_amount') {
         tax_savings += item.amount;
       } else if (item.representative_amount) {
         // otherwise, it's a percentage. If there's a representative amount, use that:

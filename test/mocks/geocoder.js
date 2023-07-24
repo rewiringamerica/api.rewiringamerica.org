@@ -7,11 +7,11 @@ const LMI_GEOCODE_FIXTURE = JSON.parse(
 class MockGeocoder {
   geocode(address, fields) {
     if (
-      address == '4986 Zuni St, Denver, CO 80221' &&
-      fields.length == 1 &&
-      fields[0] == 'census2010'
+      address === '4986 Zuni St, Denver, CO 80221' &&
+      fields.length === 1 &&
+      fields[0] === 'census2010'
     ) {
-      return new Promise((resolve, _) => {
+      return new Promise(resolve => {
         return resolve(LMI_GEOCODE_FIXTURE);
       });
     } else {

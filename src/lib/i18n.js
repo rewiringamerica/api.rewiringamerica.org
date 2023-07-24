@@ -4,7 +4,7 @@ import { LOCALES } from '../data/locale.js';
 // looked at fastify-polyglot but it didn't have good docs on switching locale
 
 export function walk(object, [key, ...rest]) {
-  if (rest.length == 0) {
+  if (rest.length === 0) {
     return object[key];
   } else {
     return walk(object[key], rest);
