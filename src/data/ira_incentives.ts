@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { JSONSchemaType } from 'ajv';
 import { FilingStatus } from './tax_brackets.js';
+import { ALL_ITEMS } from './items.js';
 
 export enum AmiQualification {
   LessThan150_Ami = 'less_than_150_ami',
@@ -40,7 +41,6 @@ export interface Incentive {
   filing_status: FilingStatus | null;
   item: string;
   item_type: ItemType;
-  item_url: string;
   owner_status: OwnerStatus[];
   program: string;
   representative_amount: number | null;
@@ -62,9 +62,8 @@ export const SCHEMA: JSONSchemaType<Incentive[]> = {
     properties: {
       type: { type: 'string', enum: Object.values(Type) },
       program: { type: 'string' },
-      item: { type: 'string' },
+      item: { type: 'string', enum: ALL_ITEMS },
       item_type: { type: 'string', enum: Object.values(ItemType) },
-      item_url: { type: 'string' },
       amount: { type: 'number' },
       amount_type: { type: 'string', enum: Object.values(AmountType) },
       representative_amount: nullable({ type: 'number' }),
@@ -95,7 +94,6 @@ export const SCHEMA: JSONSchemaType<Incentive[]> = {
       'filing_status',
       'item',
       'item_type',
-      'item_url',
       'owner_status',
       'program',
       'representative_amount',

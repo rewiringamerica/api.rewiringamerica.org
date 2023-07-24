@@ -1,28 +1,9 @@
 import fs from 'fs';
 import { JSONSchemaType } from 'ajv';
-
-const itemsSchema = {
-  batteryStorageInstallation: { type: 'string' },
-  efficiencyRebates: { type: 'string' },
-  electricPanel: { type: 'string' },
-  electricStove: { type: 'string' },
-  electricVehicleCharger: { type: 'string' },
-  electricWiring: { type: 'string' },
-  geothermalHeatingInstallation: { type: 'string' },
-  heatPumpAirConditionerHeater: { type: 'string' },
-  heatPumpClothesDryer: { type: 'string' },
-  heatPumpWaterHeater: { type: 'string' },
-  newElectricVehicle: { type: 'string' },
-  rooftopSolarInstallation: { type: 'string' },
-  usedElectricVehicle: { type: 'string' },
-  weatherization: { type: 'string' },
-} as const;
-const allItems = Object.keys(
-  itemsSchema,
-) as unknown as (keyof typeof itemsSchema)[];
+import { ALL_ITEMS, ITEMS_SCHEMA } from './items.js';
 
 export type Items = {
-  [k in keyof typeof itemsSchema]: string;
+  [k in keyof typeof ITEMS_SCHEMA]: string;
 };
 
 const programsSchema = {
@@ -53,8 +34,8 @@ export const SCHEMA: JSONSchemaType<Locale> = {
   properties: {
     items: {
       type: 'object',
-      properties: itemsSchema,
-      required: allItems,
+      properties: ITEMS_SCHEMA,
+      required: ALL_ITEMS,
     },
     programs: {
       type: 'object',
@@ -63,8 +44,8 @@ export const SCHEMA: JSONSchemaType<Locale> = {
     },
     urls: {
       type: 'object',
-      properties: itemsSchema,
-      required: allItems,
+      properties: ITEMS_SCHEMA,
+      required: ALL_ITEMS,
     },
   },
   required: ['items', 'programs', 'urls'],
