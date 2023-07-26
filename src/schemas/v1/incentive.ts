@@ -136,6 +136,7 @@ export const API_INCENTIVE_SCHEMA = {
       type: 'boolean',
     },
   },
+  additionalProperties: false,
   examples: [
     {
       type: 'pos_rebate',

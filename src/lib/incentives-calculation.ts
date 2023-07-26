@@ -1,8 +1,18 @@
 import _ from 'lodash';
 import estimateTaxAmount from './tax-brackets.js';
-import { IRA_INCENTIVES } from '../data/ira_incentives.js';
+import {
+  IRA_INCENTIVES,
+  Incentive,
+  OwnerStatus,
+} from '../data/ira_incentives.js';
 import { SOLAR_PRICES } from '../data/solar_prices.js';
 import { STATE_MFIS } from '../data/state_mfi.js';
+import {
+  APICalculatorRequest,
+  APICalculatorResponse,
+} from '../schemas/v1/calculator-endpoint.js';
+import { IncomeInfo } from './income-info.js';
+import { FilingStatus } from '../data/tax_brackets.js';
 
 const MAX_POS_SAVINGS = 14000;
 const OWNER_STATUSES = new Set(['homeowner', 'renter']);
@@ -10,19 +20,44 @@ const TAX_FILINGS = new Set(['single', 'joint', 'hoh']);
 
 IRA_INCENTIVES.forEach(incentive => Object.freeze(incentive));
 
-function roundCents(dollars) {
+function roundCents(dollars: number): number {
   return Math.round(dollars * 100) / 100;
 }
 
+/**
+ * An incentive (i.e. as stored in static JSON), plus the eligibility flag.
+ * This is what gets returned from calculateIncentives(). The caller will
+ * transform the incentives into the API-output format.
+ */
+type IncentiveWithEligible = Incentive & { eligible: boolean };
+
+/**
+ * calculateIncentives() returns something that is almost the API response
+ * object, but with incentives in a format closer to the static JSON format.
+ * Replace the types of the two properties containing them.
+ */
+type CalculatedIncentives = Omit<
+  APICalculatorResponse,
+  'pos_rebate_incentives' | 'tax_credit_incentives'
+> & {
+  pos_rebate_incentives: IncentiveWithEligible[];
+  tax_credit_incentives: IncentiveWithEligible[];
+};
+
 export default function calculateIncentives(
-  { location: { state_id }, ami, calculations },
-  { owner_status, household_income, tax_filing, household_size },
-) {
+  { location: { state_id }, ami, calculations }: IncomeInfo,
+  {
+    owner_status,
+    household_income,
+    tax_filing,
+    household_size,
+  }: APICalculatorRequest,
+): CalculatedIncentives {
   let pos_savings = 0;
   let tax_savings = 0;
   let performance_rebate_total = 0;
-  const eligibleIncentives = [];
-  const ineligibleIncentives = [];
+  const eligibleIncentives: IncentiveWithEligible[] = [];
+  const ineligibleIncentives: IncentiveWithEligible[] = [];
 
   if (!OWNER_STATUSES.has(owner_status)) {
     throw new Error('Unknown owner_status');
@@ -67,7 +102,7 @@ export default function calculateIncentives(
     //
     // 1) Verify that the selected homeowner status qualifies
     //
-    if (!item.owner_status.includes(owner_status)) {
+    if (!item.owner_status.includes(owner_status as OwnerStatus)) {
       eligible = false;
     }
 
@@ -193,7 +228,7 @@ export default function calculateIncentives(
   }
 
   // Get tax owed to determine max potiental tax savings
-  const tax = estimateTaxAmount(tax_filing, household_income);
+  const tax = estimateTaxAmount(tax_filing as FilingStatus, household_income);
 
   // Sort incentives https://app.asana.com/0/0/1204275945510481/f
   // put "percent" items first, then "dollar_amount", then sort by amount with highest first
