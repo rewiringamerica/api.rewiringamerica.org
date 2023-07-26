@@ -1,16 +1,9 @@
 import { test, beforeEach } from 'tap';
 import { build } from '../helper.js';
+import { API_INCENTIVE_SCHEMA } from '../../src/schemas/v1/incentive.js';
+import { API_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v1/calculator-endpoint.js';
 import Ajv from 'ajv';
-import fs from 'fs';
 import qs from 'qs';
-
-// NOTE: path is relative to test command, not this file (apparently)
-const incentiveSchema = JSON.parse(
-  fs.readFileSync('./schemas/v1/incentive.json', 'utf-8'),
-);
-const responseSchema = JSON.parse(
-  fs.readFileSync('./schemas/v1/calculator-response.json', 'utf-8'),
-);
 
 beforeEach(() => {
   process.setMaxListeners(100);
@@ -39,7 +32,7 @@ test('response is valid and correct', async t => {
   const calculatorResponse = JSON.parse(res.payload);
 
   const ajv = new Ajv({
-    schemas: [incentiveSchema, responseSchema],
+    schemas: [API_CALCULATOR_RESPONSE_SCHEMA],
     coerceTypes: true,
     useDefaults: true,
     removeAdditional: true,
@@ -250,7 +243,7 @@ test('/incentives', async t => {
   t.equal(res.statusCode, 200, 'response status is 200');
 
   const ajv = new Ajv({
-    schemas: [incentiveSchema],
+    schemas: [{ ...API_INCENTIVE_SCHEMA, $id: 'APIIncentive' }],
     coerceTypes: true,
     useDefaults: true,
     removeAdditional: true,
