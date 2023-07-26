@@ -3,6 +3,7 @@ import { build } from '../helper.js';
 import { API_INCENTIVE_SCHEMA } from '../../src/schemas/v1/incentive.js';
 import { API_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v1/calculator-endpoint.js';
 import Ajv from 'ajv';
+import fs from 'fs';
 import qs from 'qs';
 
 beforeEach(() => {
@@ -45,21 +46,14 @@ test('response is valid and correct', async t => {
   await responseValidator(calculatorResponse);
   t.equal(responseValidator.errors, null);
 
-  t.equal(calculatorResponse.is_under_80_ami, true);
-  t.equal(calculatorResponse.is_under_150_ami, true);
-  t.equal(calculatorResponse.is_over_150_ami, false);
-
-  t.equal(calculatorResponse.pos_savings, 14000);
-  t.equal(calculatorResponse.tax_savings, 5836);
-  t.equal(calculatorResponse.performance_rebate_savings, 8000);
-
-  t.equal(calculatorResponse.pos_rebate_incentives.length, 8);
-  t.equal(calculatorResponse.tax_credit_incentives.length, 10);
-
-  // TODO: once the response format is stable, put a strict fixture here to catch breakage:
-  // const expectedResponse = JSON.parse(fs.readFileSync('./test/fixtures/v0-80212-homeowner-80000-joint-4.json', 'utf-8'));
-  // t.same(calculatorResponse.pos_rebate_incentives, expectedResponse.pos_rebate_incentives);
-  // t.same(calculatorResponse.tax_credit_incentives, expectedResponse.tax_credit_incentives);
+  // Verify the specific content of the response
+  const expectedResponse = JSON.parse(
+    fs.readFileSync(
+      './test/fixtures/v1-80212-homeowner-80000-joint-4.json',
+      'utf-8',
+    ),
+  );
+  t.same(calculatorResponse, expectedResponse);
 });
 
 const BAD_QUERIES = [
