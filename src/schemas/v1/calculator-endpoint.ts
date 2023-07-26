@@ -128,9 +128,10 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
           item_es: 'Cuadro eléctrico',
           more_info_url: '/app/ira-calculator/information/electrical-panel',
           more_info_url_es: '/app/ira-calculator/information/cuadro-electrico',
-          amount: 4000,
-          amount_type: 'dollar_amount',
-          representative_amount: null,
+          amount: {
+            type: 'dollar_amount',
+            number: 4000,
+          },
           item_type: 'pos_rebate',
           owner_status: [
             'homeowner',
@@ -154,9 +155,11 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
             '/app/ira-calculator/information/battery-storage-installation',
           more_info_url_es:
             '/app/ira-calculator/information/instalacion-de-baterias',
-          amount: 0.3,
-          amount_type: 'percent',
-          representative_amount: 4800,
+          amount: {
+            type: 'percent',
+            number: 0.3,
+            representative: 4800,
+          },
           item_type: 'tax_credit',
           owner_status: [
             'homeowner',

@@ -9,7 +9,6 @@ export const API_INCENTIVE_SCHEMA = {
     'item_url',
     'item_type',
     'amount',
-    'amount_type',
     'owner_status',
     'start_date',
     'end_date',
@@ -41,16 +40,30 @@ export const API_INCENTIVE_SCHEMA = {
       ],
     },
     amount: {
-      type: 'number',
-      examples: [
-        4800,
-      ],
-    },
-    amount_type: {
-      type: 'string',
-      enum: [
-        'dollar_amount',
-        'percent',
+      type: 'object',
+      properties: {
+        type: {
+          type: 'string',
+          enum: [
+            'dollar_amount',
+            'percent',
+            'dollars_per_unit',
+          ],
+        },
+        number: { type: 'number' },
+        maximum: { type: 'number' },
+        representative: { type: 'number' },
+        unit: {
+          type: 'string',
+          enum: [
+            'ton',
+            'watt',
+          ],
+        },
+      },
+      required: [
+        'type',
+        'number',
       ],
     },
     item_type: {
@@ -89,13 +102,6 @@ export const API_INCENTIVE_SCHEMA = {
       type: 'string',
       examples: [
         null,
-      ],
-    },
-    representative_amount: {
-      type: 'number',
-      nullable: true,
-      examples: [
-        4800,
       ],
     },
     ami_qualification: {
@@ -137,9 +143,13 @@ export const API_INCENTIVE_SCHEMA = {
       item: 'Electric Panel',
       item_url:
         'https://rewiringamerica.org/app/ira-calculator/information/electrical-panel',
-      amount: 4000,
-      amount_type: 'dollar_amount',
-      representative_amount: null,
+      amount: {
+        type: 'dollars_per_unit',
+        number: 0.65,
+        unit: 'watt',
+        maximum: 5000,
+        representative: 3000,
+      },
       item_type: 'pos_rebate',
       owner_status: [
         'homeowner',
