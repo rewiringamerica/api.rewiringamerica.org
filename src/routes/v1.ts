@@ -10,6 +10,8 @@ import { API_INCENTIVES_SCHEMA } from '../schemas/v1/incentives-endpoint.js';
 import { APIIncentive } from '../schemas/v1/incentive.js';
 import { APILocation } from '../schemas/v1/location.js';
 import { LOCALES } from '../data/locale.js';
+import { Database } from 'sqlite';
+import { IncomeInfo } from '../lib/income-info.js';
 
 function transformIncentives(
   incentives: Incentive[],
@@ -35,8 +37,12 @@ function transformIncentives(
   }));
 }
 
-export default async function (fastify: FastifyInstance & { sqlite: unknown }) {
-  async function fetchAMIsForLocation(location: APILocation) {
+export default async function (
+  fastify: FastifyInstance & { sqlite: Database },
+) {
+  async function fetchAMIsForLocation(
+    location: APILocation,
+  ): Promise<IncomeInfo | null> {
     if (location.address) {
       // TODO: make sure bad addresses are handled here, and don't return anything
       return await fetchAMIsForAddress(fastify.sqlite, location.address);

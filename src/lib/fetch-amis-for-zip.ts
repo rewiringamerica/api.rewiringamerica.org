@@ -1,5 +1,11 @@
-export default async function fetchAMIsForZip(db, zip) {
-  const location = await db.get(
+import { Database } from 'sqlite';
+import { AMI, ZipInfo, IncomeInfo, MFI } from './income-info.js';
+
+export default async function fetchAMIsForZip(
+  db: Database,
+  zip: string,
+): Promise<IncomeInfo | null> {
+  const location = await db.get<ZipInfo>(
     `
     SELECT * FROM zips WHERE zip = ?
   `,
@@ -9,7 +15,7 @@ export default async function fetchAMIsForZip(db, zip) {
     return null;
   }
 
-  const calculations = await db.get(
+  const calculations = (await db.get<MFI>(
     `
     SELECT
         MAX(is_urban) AS isUrban,
@@ -22,16 +28,16 @@ export default async function fetchAMIsForZip(db, zip) {
     WHERE zt.zip = ? AND t.mfi != -666666666;
   `,
     zip,
-  );
+  ))!;
 
-  const ami = await db.get(
+  const ami = (await db.get<AMI>(
     `
     SELECT a.*
     FROM zip_to_cbsasub zc LEFT JOIN ami a ON a.cbsasub = zc.cbsasub
     WHERE zc.zipcode = ? AND a.cbsasub IS NOT NULL
   `,
     zip,
-  );
+  ))!;
 
   return { ami, location, calculations };
 }
