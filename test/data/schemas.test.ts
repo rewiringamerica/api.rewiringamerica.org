@@ -17,6 +17,10 @@ import {
   SCHEMA as TB_SCHEMA,
   TAX_BRACKETS,
 } from '../../src/data/tax_brackets.js';
+import {
+  SCHEMA as AUTHORITIES_SCHEMA,
+  AUTHORITIES_BY_STATE,
+} from '../../src/data/authorities.js';
 import Ajv from 'ajv';
 
 const TESTS = [
@@ -27,6 +31,7 @@ const TESTS = [
   [SP_SCHEMA, SOLAR_PRICES],
   [SMFI_SCHEMA, STATE_MFIS],
   [TB_SCHEMA, TAX_BRACKETS],
+  [AUTHORITIES_SCHEMA, AUTHORITIES_BY_STATE],
 ];
 
 test('static JSON files match schema', async tap => {

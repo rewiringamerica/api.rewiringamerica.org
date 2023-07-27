@@ -12,6 +12,8 @@ import { APILocation } from '../schemas/v1/location.js';
 import { LOCALES } from '../data/locale.js';
 import { Database } from 'sqlite';
 import { IncomeInfo } from '../lib/income-info.js';
+import { API_UTILITIES_SCHEMA } from '../schemas/v1/utilities-endpoint.js';
+import { AUTHORITIES_BY_STATE } from '../data/authorities.js';
 
 function transformIncentives(
   incentives: Incentive[],
@@ -37,30 +39,34 @@ function transformIncentives(
   }));
 }
 
+async function fetchAMIsForLocation(
+  sqlite: Database,
+  location: APILocation,
+): Promise<IncomeInfo | null> {
+  if (location.address) {
+    // TODO: make sure bad addresses are handled here, and don't return anything
+    return await fetchAMIsForAddress(sqlite, location.address);
+  } else if (location.zip) {
+    return await fetchAMIsForZip(sqlite, location.zip);
+  } else {
+    // NOTE: this should never happen, APICalculatorSchema should block it:
+    throw new Error('location.address or location.zip required');
+  }
+}
+
 export default async function (
   fastify: FastifyInstance & { sqlite: Database },
 ) {
-  async function fetchAMIsForLocation(
-    location: APILocation,
-  ): Promise<IncomeInfo | null> {
-    if (location.address) {
-      // TODO: make sure bad addresses are handled here, and don't return anything
-      return await fetchAMIsForAddress(fastify.sqlite, location.address);
-    } else if (location.zip) {
-      return await fetchAMIsForZip(fastify.sqlite, location.zip);
-    } else {
-      // NOTE: this should never happen, APICalculatorSchema should block it:
-      throw new Error('location.address or location.zip required');
-    }
-  }
-
   const server = fastify.withTypeProvider<JsonSchemaToTsProvider>();
 
   server.get(
     '/api/v1/calculator',
     { schema: API_CALCULATOR_SCHEMA },
     async (request, reply) => {
-      const amis = await fetchAMIsForLocation(request.query.location);
+      const amis = await fetchAMIsForLocation(
+        fastify.sqlite,
+        request.query.location,
+      );
 
       if (!amis) {
         throw fastify.httpErrors.notFound();
@@ -93,6 +99,37 @@ export default async function (
         request.query.language ?? 'en',
       );
       return reply.status(200).type('application/json').send({ incentives });
+    },
+  );
+
+  //
+  // This endpoint currently just returns all utilities in the state of the
+  // given location. We could be smarter about it.
+  //
+  server.get(
+    '/api/v1/utilities',
+    { schema: API_UTILITIES_SCHEMA },
+    async (request, reply) => {
+      const stateId = (
+        await fetchAMIsForLocation(fastify.sqlite, request.query.location)
+      )?.location?.state_id;
+
+      if (!stateId) {
+        throw fastify.httpErrors.createError(404, "Zip code doesn't exist.", {
+          field: 'location',
+        });
+      }
+
+      const authorities = AUTHORITIES_BY_STATE[stateId];
+      if (!authorities) {
+        throw fastify.httpErrors.createError(
+          404,
+          'We currently do not have coverage for that location.',
+          { field: 'location' },
+        );
+      }
+
+      reply.status(200).type('application/json').send(authorities.utility);
     },
   );
 }
