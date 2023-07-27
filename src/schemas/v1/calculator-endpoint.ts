@@ -1,3 +1,4 @@
+import { FromSchema } from 'json-schema-to-ts';
 import { ERROR_SCHEMA } from '../error.js';
 import { API_INCENTIVE_SCHEMA } from './incentive.js';
 import { API_LOCATION_SCHEMA } from './location.js';
@@ -111,6 +112,7 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
       items: API_INCENTIVE_SCHEMA,
     },
   },
+  additionalProperties: false,
   examples: [
     {
       is_under_80_ami: true,
@@ -191,3 +193,10 @@ export const API_CALCULATOR_SCHEMA = {
     },
   },
 } as const;
+
+export type APICalculatorRequest = FromSchema<
+  typeof API_CALCULATOR_REQUEST_SCHEMA
+>;
+export type APICalculatorResponse = FromSchema<
+  typeof API_CALCULATOR_RESPONSE_SCHEMA
+>;
