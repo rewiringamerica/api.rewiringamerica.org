@@ -2,6 +2,8 @@ import { test, beforeEach } from 'tap';
 import { build } from '../helper.js';
 import { API_INCENTIVE_SCHEMA } from '../../src/schemas/v1/incentive.js';
 import { API_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v1/calculator-endpoint.js';
+import { API_UTILITIES_RESPONSE_SCHEMA } from '../../src/schemas/v1/utilities-endpoint.js';
+import { AUTHORITIES_BY_STATE } from '../../src/data/authorities.js';
 import Ajv from 'ajv';
 import fs from 'fs';
 import qs from 'qs';
@@ -250,4 +252,29 @@ test('/incentives', async t => {
     await validator(incentive);
     t.equal(validator.errors, null);
   }
+});
+
+test('/utilities', async t => {
+  const app = await build(t);
+  const searchParams = qs.stringify(
+    { location: { zip: '02807' } },
+    { encodeValuesOnly: true },
+  );
+  const res = await app.inject({ url: `/api/v1/utilities?${searchParams}` });
+  t.equal(res.statusCode, 200);
+
+  const utilitiesResponse = JSON.parse(res.payload);
+
+  const ajv = new Ajv({
+    schemas: [API_UTILITIES_RESPONSE_SCHEMA],
+    coerceTypes: true,
+    useDefaults: true,
+    removeAdditional: true,
+    allErrors: false,
+  });
+  const validator = ajv.getSchema('APIUtilitiesResponse');
+  await validator(utilitiesResponse);
+  t.equal(validator.errors, null);
+
+  t.same(utilitiesResponse, AUTHORITIES_BY_STATE['RI']['utility']);
 });
