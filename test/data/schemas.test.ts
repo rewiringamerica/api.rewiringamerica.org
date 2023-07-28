@@ -22,6 +22,10 @@ import {
   AUTHORITIES_BY_STATE,
 } from '../../src/data/authorities.js';
 import {
+  SCHEMA as RI_LOW_INCOME_THRESHOLDS_SCHEMA,
+  RI_LOW_INCOME_THRESHOLDS,
+} from '../../src/data/RI/low_income_thresholds.js';
+import {
   RI_INCENTIVES,
   RI_INCENTIVES_SCHEMA,
   StateIncentive,
@@ -39,6 +43,7 @@ const TESTS = [
   [SMFI_SCHEMA, STATE_MFIS],
   [TB_SCHEMA, TAX_BRACKETS],
   [AUTHORITIES_SCHEMA, AUTHORITIES_BY_STATE],
+  [RI_LOW_INCOME_THRESHOLDS_SCHEMA, RI_LOW_INCOME_THRESHOLDS],
 ];
 
 test('static JSON files match schema', async tap => {
