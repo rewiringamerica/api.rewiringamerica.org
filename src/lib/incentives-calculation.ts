@@ -6,12 +6,12 @@ import {
   OwnerStatus,
 } from '../data/ira_incentives.js';
 import { SOLAR_PRICES } from '../data/solar_prices.js';
-import { STATE_MFIS } from '../data/state_mfi.js';
+import { STATE_MFIS, StateMFI } from '../data/state_mfi.js';
 import {
   APICalculatorRequest,
   APICalculatorResponse,
 } from '../schemas/v1/calculator-endpoint.js';
-import { IncomeInfo } from './income-info.js';
+import { AMI, IncomeInfo, MFI } from './income-info.js';
 import { FilingStatus } from '../data/tax_brackets.js';
 
 const MAX_POS_SAVINGS = 14000;
@@ -44,55 +44,23 @@ type CalculatedIncentives = Omit<
   tax_credit_incentives: IncentiveWithEligible[];
 };
 
-export default function calculateIncentives(
-  { location: { state_id }, ami, calculations }: IncomeInfo,
-  {
-    owner_status,
-    household_income,
-    tax_filing,
-    household_size,
-  }: APICalculatorRequest,
-): CalculatedIncentives {
-  let pos_savings = 0;
-  let tax_savings = 0;
-  let performance_rebate_total = 0;
+function calculateFederalIncentivesAndSavings(
+  ami: AMI,
+  calculations: MFI,
+  stateMFI: StateMFI,
+  solarSystemCost: number,
+  tax_filing: FilingStatus,
+  owner_status: OwnerStatus,
+  household_income: number,
+  household_size: number,
+): {
+  federalIncentives: IncentiveWithEligible[];
+  pos_savings: number;
+  performance_rebate_savings: number;
+  tax_savings: number;
+} {
   const eligibleIncentives: IncentiveWithEligible[] = [];
   const ineligibleIncentives: IncentiveWithEligible[] = [];
-
-  if (!OWNER_STATUSES.has(owner_status)) {
-    throw new Error('Unknown owner_status');
-  }
-
-  if (!TAX_FILINGS.has(tax_filing)) {
-    throw new Error('Unknown tax_filing.');
-  }
-
-  if (
-    isNaN(household_income) ||
-    household_income < 0 ||
-    household_income > 100000000
-  ) {
-    throw new Error('Invalid household_income. Must be >= 0 and <= 100000000');
-  }
-
-  if (isNaN(household_size) || household_size < 1 || household_size > 8) {
-    throw new Error(
-      'Invalid household_size. Must be a number between 1 and 8.',
-    );
-  }
-
-  const solarSystemCost = SOLAR_PRICES[state_id]?.system_cost;
-  const stateMFI = STATE_MFIS[state_id];
-
-  if (isNaN(solarSystemCost) || isNaN(stateMFI?.TOTAL)) {
-    throw new Error('Invalid state id provided. Must be US state code or DC.');
-  }
-
-  const isUnder80Ami = household_income < Number(ami[`l80_${household_size}`]);
-  const isUnder150Ami =
-    household_income < Number(ami[`l150_${household_size}`]);
-  const isOver150Ami =
-    household_income >= Number(ami[`l150_${household_size}`]);
 
   // Loop through each of the incentives, running several tests to see if visitor is eligible
   for (const item of IRA_INCENTIVES) {
@@ -206,11 +174,14 @@ export default function calculateIncentives(
   //
   // Loop through every eligible incentive and add any with an "immediate" dollar value
   //
+  let performance_rebate_savings = 0;
+  let pos_savings = 0;
+  let tax_savings = 0;
   for (const item of eligibleIncentives) {
     if (item.type === 'pos_rebate') {
       // count performance rebates separately
       if (item.item_type === 'performance_rebate') {
-        performance_rebate_total += item.amount.number!;
+        performance_rebate_savings += item.amount.number!;
       } else {
         pos_savings += item.amount.number!;
       }
@@ -227,13 +198,88 @@ export default function calculateIncentives(
     }
   }
 
+  // The max POS savings is $14,000 if you're under 150% ami, otherwise 0
+  pos_savings =
+    household_income < Number(ami[`l150_${household_size}`]) &&
+    owner_status !== 'renter'
+      ? MAX_POS_SAVINGS
+      : pos_savings;
+
+  return {
+    federalIncentives: calculatedIncentives,
+    performance_rebate_savings,
+    tax_savings,
+    pos_savings,
+  };
+}
+
+export default function calculateIncentives(
+  { location: { state_id }, ami, calculations }: IncomeInfo,
+  {
+    owner_status,
+    household_income,
+    tax_filing,
+    household_size,
+  }: APICalculatorRequest,
+): CalculatedIncentives {
+  if (!OWNER_STATUSES.has(owner_status)) {
+    throw new Error('Unknown owner_status');
+  }
+
+  if (!TAX_FILINGS.has(tax_filing)) {
+    throw new Error('Unknown tax_filing.');
+  }
+
+  if (
+    isNaN(household_income) ||
+    household_income < 0 ||
+    household_income > 100000000
+  ) {
+    throw new Error('Invalid household_income. Must be >= 0 and <= 100000000');
+  }
+
+  if (isNaN(household_size) || household_size < 1 || household_size > 8) {
+    throw new Error(
+      'Invalid household_size. Must be a number between 1 and 8.',
+    );
+  }
+
+  const solarSystemCost = SOLAR_PRICES[state_id]?.system_cost;
+  const stateMFI = STATE_MFIS[state_id];
+
+  if (isNaN(solarSystemCost) || isNaN(stateMFI?.TOTAL)) {
+    throw new Error('Invalid state id provided. Must be US state code or DC.');
+  }
+
+  const isUnder80Ami = household_income < Number(ami[`l80_${household_size}`]);
+  const isUnder150Ami =
+    household_income < Number(ami[`l150_${household_size}`]);
+  const isOver150Ami =
+    household_income >= Number(ami[`l150_${household_size}`]);
+
+  const {
+    federalIncentives,
+    tax_savings,
+    pos_savings,
+    performance_rebate_savings,
+  } = calculateFederalIncentivesAndSavings(
+    ami,
+    calculations,
+    stateMFI,
+    solarSystemCost,
+    tax_filing as FilingStatus,
+    owner_status as OwnerStatus,
+    household_income,
+    household_size,
+  );
+
   // Get tax owed to determine max potiental tax savings
   const tax = estimateTaxAmount(tax_filing as FilingStatus, household_income);
 
   // Sort incentives https://app.asana.com/0/0/1204275945510481/f
   // put "percent" items first, then "dollar_amount", then sort by amount with highest first
   const sortedIncentives = _.orderBy(
-    calculatedIncentives,
+    federalIncentives,
     [i => i.amount.type, i => i.amount.number],
     ['desc', 'desc'],
   );
@@ -243,17 +289,13 @@ export default function calculateIncentives(
     is_under_150_ami: isUnder150Ami,
     is_over_150_ami: isOver150Ami,
 
-    // The max POS savings is $14,000 if you're under 150% ami, otherwise 0
-    pos_savings:
-      isUnder150Ami && owner_status !== 'renter'
-        ? MAX_POS_SAVINGS
-        : pos_savings,
+    pos_savings,
 
     // You can't save more than tax owed. Choose the lesser of tax owed vs tax savings
     tax_savings: tax.tax_owed < tax_savings ? tax.tax_owed : tax_savings,
 
     // Not prominently displayed
-    performance_rebate_savings: performance_rebate_total,
+    performance_rebate_savings,
 
     pos_rebate_incentives: sortedIncentives.filter(
       item => item.type === 'pos_rebate',

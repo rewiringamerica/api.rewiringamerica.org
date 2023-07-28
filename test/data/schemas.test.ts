@@ -109,7 +109,7 @@ test('state incentives JSON files match schemas', async tap => {
         `amount is invalid (${stateId}, index ${index})`,
       );
       tap.hasProp(
-        authorities[incentive.authority_type],
+        authorities[incentive.authority_type as 'state' | 'utility'],
         incentive.authority,
         `nonexistent authority (${stateId}, index ${index})`,
       );

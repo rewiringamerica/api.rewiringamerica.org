@@ -11,6 +11,7 @@ import {
 import { ALL_ITEMS } from './items.js';
 
 export enum AuthorityType {
+  Federal = 'federal',
   State = 'state',
   Utility = 'utility',
 }
