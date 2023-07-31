@@ -14,6 +14,36 @@ export enum AmountType {
   Percent = 'percent',
 }
 
+export enum AmountUnit {
+  Ton = 'ton',
+  Watt = 'watt',
+}
+
+/**
+ * There are three types of amount, with the following rules:
+ *
+ * - dollar_amount. This must specify EXACTLY ONE of "number" or "maximum". If
+ *   "number" is specified, the incentive is for that exact number of dollars.
+ *   If "maximum" is specified, the incentive is some more complex structure
+ *   that isn't a percentage or per-unit, up to a specific maximum number of
+ *   dollars. An example is tiered flat amounts based on equipment specs or
+ *   some other input we're not capturing. Must not have "representative" or
+ *   "unit".
+ *
+ * - percent. Number is between 0 and 1. May also have "maximum" and
+ *   "representative". Must not have "unit".
+ *
+ * - per_unit. Number is dollars per unit. "unit" is required. May also have
+ *   "maximum" and "representative".
+ */
+export interface Amount {
+  type: AmountType;
+  number?: number;
+  unit?: AmountUnit;
+  maximum?: number;
+  representative?: number;
+}
+
 export enum ItemType {
   EvChargerCredit = 'ev_charger_credit',
   PerformanceRebate = 'performance_rebate',
@@ -35,15 +65,13 @@ export enum OwnerStatus {
 export interface Incentive {
   agi_max_limit: number | null;
   ami_qualification: AmiQualification | null;
-  amount: number;
-  amount_type: AmountType;
+  amount: Amount;
   end_date: number;
   filing_status: FilingStatus | null;
   item: string;
   item_type: ItemType;
   owner_status: OwnerStatus[];
   program: string;
-  representative_amount: number | null;
   start_date: number;
   type: Type;
 }
@@ -55,6 +83,18 @@ const nullable = <T>(input: T): T => {
   return { anyOf: [input, { type: 'null' }] } as T;
 };
 
+const amountSchema: JSONSchemaType<Amount> = {
+  type: 'object',
+  properties: {
+    type: { type: 'string', enum: Object.values(AmountType) },
+    number: { type: 'number', nullable: true },
+    unit: { type: 'string', enum: Object.values(AmountUnit), nullable: true },
+    maximum: { type: 'number', nullable: true },
+    representative: { type: 'number', nullable: true },
+  },
+  required: ['type'],
+} as const;
+
 export const SCHEMA: JSONSchemaType<Incentive[]> = {
   type: 'array',
   items: {
@@ -64,9 +104,7 @@ export const SCHEMA: JSONSchemaType<Incentive[]> = {
       program: { type: 'string' },
       item: { type: 'string', enum: ALL_ITEMS },
       item_type: { type: 'string', enum: Object.values(ItemType) },
-      amount: { type: 'number' },
-      amount_type: { type: 'string', enum: Object.values(AmountType) },
-      representative_amount: nullable({ type: 'number' }),
+      amount: amountSchema,
       owner_status: {
         type: 'array',
         items: { type: 'string', enum: Object.values(OwnerStatus) },
@@ -89,14 +127,12 @@ export const SCHEMA: JSONSchemaType<Incentive[]> = {
       'agi_max_limit',
       'ami_qualification',
       'amount',
-      'amount_type',
       'end_date',
       'filing_status',
       'item',
       'item_type',
       'owner_status',
       'program',
-      'representative_amount',
       'start_date',
       'type',
     ],
