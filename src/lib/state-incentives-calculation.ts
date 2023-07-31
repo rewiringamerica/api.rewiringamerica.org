@@ -14,6 +14,10 @@ export function calculateStateIncentivesAndSavings(
   performance_rebate_savings: number;
 } {
   // TODO not like this
+  if (stateId !== 'RI') {
+    throw new Error("We don't have coverage in that state yet.");
+  }
+
   const incentives = RI_INCENTIVES;
 
   const eligibleIncentives = [];
@@ -45,28 +49,36 @@ export function calculateStateIncentivesAndSavings(
       eligible = false;
     }
 
-    let agi_max_limit = null;
     if (
       item.low_income &&
       request.household_income >
         RI_LOW_INCOME_THRESHOLDS[request.household_size]
     ) {
-      agi_max_limit = RI_LOW_INCOME_THRESHOLDS[request.household_size];
       eligible = false;
     }
 
     const authority_name =
       item.authority_type === 'state'
-        ? AUTHORITIES_BY_STATE[stateId].state[item.authority]
+        ? AUTHORITIES_BY_STATE[stateId].state[item.authority].name
         : item.authority_type === 'utility'
-        ? AUTHORITIES_BY_STATE[stateId].utility[item.authority]
+        ? AUTHORITIES_BY_STATE[stateId].utility[item.authority].name
         : null;
 
     const transformedItem = {
       ...item,
       authority_name,
-      agi_max_limit,
       eligible,
+
+      // Fill in fields expected for IRA incentive.
+      // TODO: don't require these on Incentive
+      agi_max_limit: null,
+      ami_qualification: null,
+      filing_status: null,
+
+      // TODO: unclear whether state/utility incentives always have defined
+      // end dates.
+      start_date: 2023,
+      end_date: 2024,
     };
     if (eligible) {
       eligibleIncentives.push(transformedItem);
@@ -90,7 +102,7 @@ export function calculateStateIncentivesAndSavings(
   });
 
   return {
-    stateIncentives: [],
+    stateIncentives,
     tax_savings: 0,
     pos_savings: savings,
     performance_rebate_savings: 0,
