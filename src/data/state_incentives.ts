@@ -9,12 +9,7 @@ import {
   Type,
 } from './ira_incentives.js';
 import { ALL_ITEMS } from './items.js';
-
-export enum AuthorityType {
-  Federal = 'federal',
-  State = 'state',
-  Utility = 'utility',
-}
+import { AuthorityType } from './authorities.js';
 
 export type StateIncentive = {
   authority_type: AuthorityType;

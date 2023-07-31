@@ -2,7 +2,7 @@ import { FromSchema } from 'json-schema-to-ts';
 import { ERROR_SCHEMA } from '../error.js';
 import { API_INCENTIVE_SCHEMA } from './incentive.js';
 import { API_LOCATION_SCHEMA } from './location.js';
-import { AuthorityType } from '../../data/state_incentives.js';
+import { AuthorityType } from '../../data/authorities.js';
 
 const API_CALCULATOR_REQUEST_SCHEMA = {
   $id: 'APICalculatorRequest',

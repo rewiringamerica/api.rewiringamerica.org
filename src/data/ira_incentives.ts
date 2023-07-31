@@ -2,6 +2,7 @@ import fs from 'fs';
 import { JSONSchemaType } from 'ajv';
 import { FilingStatus } from './tax_brackets.js';
 import { ALL_ITEMS } from './items.js';
+import { AuthorityType } from './authorities.js';
 
 export enum AmiQualification {
   LessThan150_Ami = 'less_than_150_ami',
@@ -67,6 +68,8 @@ export interface Incentive {
   agi_max_limit: number | null;
   ami_qualification: AmiQualification | null;
   amount: Amount;
+  authority_name: string | null;
+  authority_type: AuthorityType;
   end_date: number;
   filing_status: FilingStatus | null;
   item: string;
@@ -103,6 +106,8 @@ export const SCHEMA: JSONSchemaType<Incentive[]> = {
     properties: {
       type: { type: 'string', enum: Object.values(Type) },
       program: { type: 'string' },
+      authority_type: { type: 'string', enum: Object.values(AuthorityType) },
+      authority_name: nullable({ type: 'string' }),
       item: { type: 'string', enum: ALL_ITEMS },
       item_type: { type: 'string', enum: Object.values(ItemType) },
       amount: amountSchema,
@@ -128,6 +133,7 @@ export const SCHEMA: JSONSchemaType<Incentive[]> = {
       'agi_max_limit',
       'ami_qualification',
       'amount',
+      'authority_type',
       'end_date',
       'filing_status',
       'item',
