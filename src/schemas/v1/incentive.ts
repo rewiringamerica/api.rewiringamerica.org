@@ -4,6 +4,7 @@ export const API_INCENTIVE_SCHEMA = {
   type: 'object',
   required: [
     'type',
+    'authority_type',
     'program',
     'item',
     'item_url',
@@ -20,6 +21,14 @@ export const API_INCENTIVE_SCHEMA = {
         'pos_rebate',
         'tax_credit',
       ],
+    },
+    authority_type: {
+      type: 'string',
+      enum: ['federal', 'state', 'utility'],
+    },
+    authority_name: {
+      type: 'string',
+      nullable: true,
     },
     program: {
       type: 'string',
@@ -140,6 +149,7 @@ export const API_INCENTIVE_SCHEMA = {
   examples: [
     {
       type: 'pos_rebate',
+      authority_type: 'federal',
       program: 'Energy Efficient Home Improvement Credit (25C)',
       item: 'Electric Panel',
       item_url:
@@ -166,3 +176,9 @@ export const API_INCENTIVE_SCHEMA = {
 } as const;
 
 export type APIIncentive = FromSchema<typeof API_INCENTIVE_SCHEMA>;
+
+/**
+ * This is used internally, as an intermediate form between incentive
+ * calculation and external API.
+ */
+export type APIIncentiveMinusItemUrl = Omit<APIIncentive, 'item_url'>;

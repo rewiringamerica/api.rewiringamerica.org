@@ -1,10 +1,6 @@
 import _ from 'lodash';
 import estimateTaxAmount from './tax-brackets.js';
-import {
-  IRA_INCENTIVES,
-  Incentive,
-  OwnerStatus,
-} from '../data/ira_incentives.js';
+import { IRA_INCENTIVES, OwnerStatus } from '../data/ira_incentives.js';
 import { SOLAR_PRICES } from '../data/solar_prices.js';
 import { STATE_MFIS, StateMFI } from '../data/state_mfi.js';
 import {
@@ -13,6 +9,8 @@ import {
 } from '../schemas/v1/calculator-endpoint.js';
 import { AMI, IncomeInfo, MFI } from './income-info.js';
 import { FilingStatus } from '../data/tax_brackets.js';
+import { APIIncentiveMinusItemUrl } from '../schemas/v1/incentive.js';
+import { AuthorityType } from '../data/authorities.js';
 
 const MAX_POS_SAVINGS = 14000;
 const OWNER_STATUSES = new Set(['homeowner', 'renter']);
@@ -25,13 +23,6 @@ function roundCents(dollars: number): number {
 }
 
 /**
- * An incentive (i.e. as stored in static JSON), plus the eligibility flag.
- * This is what gets returned from calculateIncentives(). The caller will
- * transform the incentives into the API-output format.
- */
-type IncentiveWithEligible = Incentive & { eligible: boolean };
-
-/**
  * calculateIncentives() returns something that is almost the API response
  * object, but with incentives in a format closer to the static JSON format.
  * Replace the types of the two properties containing them.
@@ -40,8 +31,8 @@ type CalculatedIncentives = Omit<
   APICalculatorResponse,
   'pos_rebate_incentives' | 'tax_credit_incentives'
 > & {
-  pos_rebate_incentives: IncentiveWithEligible[];
-  tax_credit_incentives: IncentiveWithEligible[];
+  pos_rebate_incentives: APIIncentiveMinusItemUrl[];
+  tax_credit_incentives: APIIncentiveMinusItemUrl[];
 };
 
 function calculateFederalIncentivesAndSavings(
@@ -54,13 +45,13 @@ function calculateFederalIncentivesAndSavings(
   household_income: number,
   household_size: number,
 ): {
-  federalIncentives: IncentiveWithEligible[];
+  federalIncentives: APIIncentiveMinusItemUrl[];
   pos_savings: number;
   performance_rebate_savings: number;
   tax_savings: number;
 } {
-  const eligibleIncentives: IncentiveWithEligible[] = [];
-  const ineligibleIncentives: IncentiveWithEligible[] = [];
+  const eligibleIncentives: APIIncentiveMinusItemUrl[] = [];
+  const ineligibleIncentives: APIIncentiveMinusItemUrl[] = [];
 
   // Loop through each of the incentives, running several tests to see if visitor is eligible
   for (const item of IRA_INCENTIVES) {
@@ -149,10 +140,17 @@ function calculateFederalIncentivesAndSavings(
       }
     }
 
+    const newItem = {
+      ...item,
+      amount,
+      eligible,
+      authority_type: AuthorityType.Federal,
+      authority_name: null,
+    };
     if (eligible) {
-      eligibleIncentives.push({ ...item, amount, eligible });
+      eligibleIncentives.push(newItem);
     } else {
-      ineligibleIncentives.push({ ...item, amount, eligible });
+      ineligibleIncentives.push(newItem);
     }
   }
 
