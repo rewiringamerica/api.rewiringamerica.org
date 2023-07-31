@@ -10,7 +10,8 @@ import {
 import { AMI, IncomeInfo, MFI } from './income-info.js';
 import { FilingStatus } from '../data/tax_brackets.js';
 import { APIIncentiveMinusItemUrl } from '../schemas/v1/incentive.js';
-import { AuthorityType } from '../data/authorities.js';
+import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities.js';
+import { calculateStateIncentivesAndSavings } from './state-incentives-calculation.js';
 
 const MAX_POS_SAVINGS = 14000;
 const OWNER_STATUSES = new Set(['homeowner', 'renter']);
@@ -213,13 +214,12 @@ function calculateFederalIncentivesAndSavings(
 
 export default function calculateIncentives(
   { location: { state_id }, ami, calculations }: IncomeInfo,
-  {
-    owner_status,
-    household_income,
-    tax_filing,
-    household_size,
-  }: APICalculatorRequest,
+  request: APICalculatorRequest,
 ): CalculatedIncentives {
+  const authorityTypes = request.authority_types ?? [AuthorityType.Federal];
+  const { owner_status, household_income, tax_filing, household_size } =
+    request;
+
   if (!OWNER_STATUSES.has(owner_status)) {
     throw new Error('Unknown owner_status');
   }
@@ -242,6 +242,17 @@ export default function calculateIncentives(
     );
   }
 
+  if (authorityTypes.includes(AuthorityType.Utility)) {
+    if (!request.utility) {
+      throw new Error(
+        'Must include the "utility" field when requesting utility incentives.',
+      );
+    }
+    if (!AUTHORITIES_BY_STATE[state_id].utility[request.utility]) {
+      throw new Error(`Invalid utility: "${request.utility}".`);
+    }
+  }
+
   const solarSystemCost = SOLAR_PRICES[state_id]?.system_cost;
   const stateMFI = STATE_MFIS[state_id];
 
@@ -255,21 +266,38 @@ export default function calculateIncentives(
   const isOver150Ami =
     household_income >= Number(ami[`l150_${household_size}`]);
 
-  const {
-    federalIncentives,
-    tax_savings,
-    pos_savings,
-    performance_rebate_savings,
-  } = calculateFederalIncentivesAndSavings(
-    ami,
-    calculations,
-    stateMFI,
-    solarSystemCost,
-    tax_filing as FilingStatus,
-    owner_status as OwnerStatus,
-    household_income,
-    household_size,
-  );
+  const incentives: APIIncentiveMinusItemUrl[] = [];
+  let tax_savings = 0;
+  let pos_savings = 0;
+  let performance_rebate_savings = 0;
+
+  if (authorityTypes.includes(AuthorityType.Federal)) {
+    const federal = calculateFederalIncentivesAndSavings(
+      ami,
+      calculations,
+      stateMFI,
+      solarSystemCost,
+      tax_filing as FilingStatus,
+      owner_status as OwnerStatus,
+      household_income,
+      household_size,
+    );
+    incentives.push(...federal.federalIncentives);
+    tax_savings += federal.tax_savings;
+    pos_savings += federal.pos_savings;
+    performance_rebate_savings += federal.performance_rebate_savings;
+  }
+
+  if (
+    authorityTypes.includes(AuthorityType.State) ||
+    authorityTypes.includes(AuthorityType.Utility)
+  ) {
+    const state = calculateStateIncentivesAndSavings(state_id, request);
+    incentives.push(...state.stateIncentives);
+    tax_savings += state.tax_savings;
+    pos_savings += state.pos_savings;
+    performance_rebate_savings += state.performance_rebate_savings;
+  }
 
   // Get tax owed to determine max potiental tax savings
   const tax = estimateTaxAmount(tax_filing as FilingStatus, household_income);
@@ -277,7 +305,7 @@ export default function calculateIncentives(
   // Sort incentives https://app.asana.com/0/0/1204275945510481/f
   // put "percent" items first, then "dollar_amount", then sort by amount with highest first
   const sortedIncentives = _.orderBy(
-    federalIncentives,
+    incentives,
     [i => i.amount.type, i => i.amount.number],
     ['desc', 'desc'],
   );

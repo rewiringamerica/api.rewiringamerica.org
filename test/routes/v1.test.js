@@ -58,6 +58,45 @@ test('response is valid and correct', async t => {
   t.same(calculatorResponse, expectedResponse);
 });
 
+test('response with state and utility is valid and correct', async t => {
+  const res = await getCalculatorResponse(t, {
+    location: { zip: '02903' },
+    owner_status: 'homeowner',
+    // Qualifies as low-income in RI
+    household_size: 4,
+    household_income: 65000,
+    tax_filing: 'joint',
+    authority_types: ['state', 'utility'],
+    utility: 'ri-rhode-island-energy',
+  });
+  t.equal(res.statusCode, 200, res.payload);
+
+  const calculatorResponse = JSON.parse(res.payload);
+
+  const ajv = new Ajv({
+    schemas: [API_CALCULATOR_RESPONSE_SCHEMA],
+    coerceTypes: true,
+    useDefaults: true,
+    removeAdditional: true,
+    allErrors: false,
+  });
+
+  const responseValidator = ajv.getSchema('APICalculatorResponse');
+
+  // validate the response is an APICalculatorResponse
+  await responseValidator(calculatorResponse);
+  t.equal(responseValidator.errors, null);
+
+  // Verify the specific content of the response
+  const expectedResponse = JSON.parse(
+    fs.readFileSync(
+      './test/fixtures/v1-02903-state-utility-lowincome.json',
+      'utf-8',
+    ),
+  );
+  t.same(calculatorResponse, expectedResponse);
+});
+
 const BAD_QUERIES = [
   // bad location:
   {

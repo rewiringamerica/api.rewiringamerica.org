@@ -2,6 +2,7 @@ import { FromSchema } from 'json-schema-to-ts';
 import { ERROR_SCHEMA } from '../error.js';
 import { API_INCENTIVE_SCHEMA } from './incentive.js';
 import { API_LOCATION_SCHEMA } from './location.js';
+import { AuthorityType } from '../../data/authorities.js';
 
 const API_CALCULATOR_REQUEST_SCHEMA = {
   $id: 'APICalculatorRequest',
@@ -9,6 +10,23 @@ const API_CALCULATOR_REQUEST_SCHEMA = {
   type: 'object',
   properties: {
     location: API_LOCATION_SCHEMA,
+    authority_types: {
+      type: 'array',
+      description:
+        'Which types of authority to fetch incentives for: "federal", "state", or "utility".',
+      items: {
+        type: 'string',
+        enum: Object.values(AuthorityType),
+      },
+      minItems: 1,
+      uniqueItems: true,
+    },
+    utility: {
+      type: 'string',
+      description:
+        'The ID of your utility company, as returned from /utilities. ' +
+        'Required if authority_types includes "utility".',
+    },
     owner_status: {
       type: 'string',
       description: 'Homeowners and renters qualify for different incentives.',
