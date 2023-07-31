@@ -23,6 +23,11 @@ function translateIncentives(incentives) {
       'https://www.rewiringamerica.org',
       '',
     );
+
+    // Transform amounts from v1 to v0 format
+    item.amount = incentive.amount.number;
+    item.amount_type = incentive.amount.type;
+    item.representative_amount = incentive.amount.representative ?? null;
     return item;
   });
 }
@@ -110,21 +115,21 @@ export default async function (fastify) {
       const solarTaxCredit = result.tax_credit_incentives.find(
         incentive => incentive.item_type === 'solar_tax_credit',
       );
-      solarTaxCredit.amount = solarTaxCredit.representative_amount;
-      solarTaxCredit.representative_amount = 0;
+      solarTaxCredit.amount.number = solarTaxCredit.amount.representative;
+      delete solarTaxCredit.amount.representative;
 
       // 2.2) Re-sort incentives per https://app.asana.com/0/0/1204275945510481/f
       // HACK: temporarily override the amount_type as dollars:
-      solarTaxCredit.amount_type = 'dollar_amount';
+      solarTaxCredit.amount.type = 'dollar_amount';
       result.tax_credit_incentives = _.orderBy(
         result.tax_credit_incentives,
-        ['amount_type', 'amount'],
+        [i => i.amount.type, i => i.amount.number],
         ['desc', 'desc'],
       );
 
       // 2.3)
       // set the amount_type to what the calculator would expect:
-      solarTaxCredit.amount_type = 'solar';
+      solarTaxCredit.amount.type = 'solar';
 
       // 3) Populate the expected English and Spanish strings
       result.pos_rebate_incentives = translateIncentives(

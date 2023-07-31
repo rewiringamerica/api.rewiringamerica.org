@@ -22,16 +22,6 @@ function transformIncentives(
   return incentives.map(incentive => ({
     ...incentive,
 
-    // Transform amount from separate fields into single object
-    amount: {
-      type: incentive.amount_type,
-      number: incentive.amount,
-      // If representative_amount is null, don't include it in output
-      representative: incentive.representative_amount ?? undefined,
-    },
-    amount_type: undefined,
-    representative_amount: undefined,
-
     // Localize localizable fields
     item: t('items', incentive.item, language),
     program: t('programs', incentive.program, language),

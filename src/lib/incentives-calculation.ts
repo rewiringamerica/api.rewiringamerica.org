@@ -97,7 +97,6 @@ export default function calculateIncentives(
   // Loop through each of the incentives, running several tests to see if visitor is eligible
   for (const item of IRA_INCENTIVES) {
     let eligible = true;
-    let representative_amount = item.representative_amount;
 
     //
     // 1) Verify that the selected homeowner status qualifies
@@ -145,8 +144,9 @@ export default function calculateIncentives(
     // 5) Add the Rooftop Solar Credit amount
     // @TODO: use example prices and percent amounts, not pre-computed 30% values here
     //
+    const amount = { ...item.amount };
     if (item.item_type === 'solar_tax_credit') {
-      representative_amount = roundCents(solarSystemCost * item.amount);
+      amount.representative = roundCents(solarSystemCost * amount.number!);
     }
 
     if (item.item_type === 'ev_charger_credit') {
@@ -182,9 +182,9 @@ export default function calculateIncentives(
     }
 
     if (eligible) {
-      eligibleIncentives.push({ ...item, representative_amount, eligible });
+      eligibleIncentives.push({ ...item, amount, eligible });
     } else {
-      ineligibleIncentives.push({ ...item, representative_amount, eligible });
+      ineligibleIncentives.push({ ...item, amount, eligible });
     }
   }
 
@@ -210,17 +210,17 @@ export default function calculateIncentives(
     if (item.type === 'pos_rebate') {
       // count performance rebates separately
       if (item.item_type === 'performance_rebate') {
-        performance_rebate_total += item.amount;
+        performance_rebate_total += item.amount.number!;
       } else {
-        pos_savings += item.amount;
+        pos_savings += item.amount.number!;
       }
     } else if (item.type === 'tax_credit') {
       // if this is a dollar amount, just add it up:
-      if (item.amount_type === 'dollar_amount') {
-        tax_savings += item.amount;
-      } else if (item.representative_amount) {
+      if (item.amount.type === 'dollar_amount') {
+        tax_savings += item.amount.number!;
+      } else if (item.amount.representative) {
         // otherwise, it's a percentage. If there's a representative amount, use that:
-        tax_savings += item.representative_amount;
+        tax_savings += item.amount.representative;
       }
     } else {
       throw new Error(`Unknown item_type: ${item.type}`);
@@ -234,7 +234,7 @@ export default function calculateIncentives(
   // put "percent" items first, then "dollar_amount", then sort by amount with highest first
   const sortedIncentives = _.orderBy(
     calculatedIncentives,
-    ['amount_type', 'amount'],
+    [i => i.amount.type, i => i.amount.number],
     ['desc', 'desc'],
   );
 
