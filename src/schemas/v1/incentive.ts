@@ -73,6 +73,7 @@ export const API_INCENTIVE_SCHEMA = {
       additionalProperties: false,
       required: [
         'type',
+        'number',
       ],
     },
     item_type: {
