@@ -2,21 +2,24 @@ import calculateIncentives from '../lib/incentives-calculation.js';
 import fetchAMIsForAddress from '../lib/fetch-amis-for-address.js';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip.js';
 import { t } from '../lib/i18n.js';
-import { IRA_INCENTIVES, Incentive } from '../data/ira_incentives.js';
+import { IRA_INCENTIVES } from '../data/ira_incentives.js';
 import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts';
 import { FastifyInstance } from 'fastify';
 import { API_CALCULATOR_SCHEMA } from '../schemas/v1/calculator-endpoint.js';
 import { API_INCENTIVES_SCHEMA } from '../schemas/v1/incentives-endpoint.js';
-import { APIIncentive } from '../schemas/v1/incentive.js';
+import {
+  APIIncentive,
+  APIIncentiveMinusItemUrl,
+} from '../schemas/v1/incentive.js';
 import { APILocation } from '../schemas/v1/location.js';
 import { LOCALES } from '../data/locale.js';
 import { Database } from 'sqlite';
 import { IncomeInfo } from '../lib/income-info.js';
 import { API_UTILITIES_SCHEMA } from '../schemas/v1/utilities-endpoint.js';
-import { AUTHORITIES_BY_STATE } from '../data/authorities.js';
+import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities.js';
 
 function transformIncentives(
-  incentives: Incentive[],
+  incentives: APIIncentiveMinusItemUrl[],
   language: keyof typeof LOCALES,
 ): APIIncentive[] {
   return incentives.map(incentive => ({
@@ -81,7 +84,11 @@ export default async function (
     { schema: API_INCENTIVES_SCHEMA },
     async (request, reply) => {
       const incentives = transformIncentives(
-        IRA_INCENTIVES,
+        IRA_INCENTIVES.map(incentive => ({
+          ...incentive,
+          authority_type: AuthorityType.Federal,
+          authority_name: null,
+        })),
         request.query.language ?? 'en',
       );
       return reply.status(200).type('application/json').send({ incentives });

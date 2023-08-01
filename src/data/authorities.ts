@@ -10,6 +10,12 @@ export type Authority = {
   name: string;
 };
 
+export enum AuthorityType {
+  Federal = 'federal',
+  State = 'state',
+  Utility = 'utility',
+}
+
 export type StateAuthorities = {
   state: { [authId: string]: Authority };
   utility: { [authId: string]: Authority };
