@@ -16,7 +16,7 @@ export default fp(async function (fastify) {
     },
     refResolver: {
       buildLocalReference(json, baseUri, fragment, i) {
-        return json.$id || `my-fragment-${i}`;
+        return (json.$id as string) || `my-fragment-${i}`;
       },
     },
   });
