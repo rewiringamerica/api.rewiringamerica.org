@@ -38,9 +38,9 @@ You can run the API server as a Docker container, without setting up a developme
 - The container listens for HTTP requests on port 8080.
 - If you have a [Geocodio](https://geocod.io) API key, put it in the environment variable `GEOCODIO_API_KEY` to enable the API server to accept addresses as well as ZIP codes.
 
-- The server does not deal with access control (e.g. API keys), CORS support, or rate limiting. Rewiring America's public API instance uses [Zuplo](https://zuplo.com) to handle those concerns.
+- The server does not deal with access control (e.g. API keys) or rate limiting. Rewiring America's public API instance uses [Zuplo](https://zuplo.com) to handle those concerns.
 
-  If you run your own API server and want to hit it directly from code in a browser, you'll want to add the [Fastify CORS plugin](https://github.com/fastify/fastify-cors).
+  There is also a Fastify plugin to handle CORS, but it's enabled only when `NODE_ENV !== 'production'`, because RA's public API instance also uses Zuplo to handle CORS.
 
 ## API versions
 
