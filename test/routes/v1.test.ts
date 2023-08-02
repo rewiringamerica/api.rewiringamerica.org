@@ -12,7 +12,10 @@ beforeEach(() => {
   process.setMaxListeners(100);
 });
 
-async function getCalculatorResponse(t, query) {
+async function getCalculatorResponse(
+  t: Tap.Test,
+  query: Record<string, unknown>,
+) {
   const app = await build(t);
 
   const searchParams = qs.stringify(query, { encodeValuesOnly: true });
@@ -34,7 +37,7 @@ test('response is valid and correct', async t => {
 
   const calculatorResponse = JSON.parse(res.payload);
 
-  const ajv = new Ajv({
+  const ajv = new Ajv.default({
     schemas: [API_CALCULATOR_RESPONSE_SCHEMA],
     coerceTypes: true,
     useDefaults: true,
@@ -42,7 +45,7 @@ test('response is valid and correct', async t => {
     allErrors: false,
   });
 
-  const responseValidator = ajv.getSchema('APICalculatorResponse');
+  const responseValidator = ajv.getSchema('APICalculatorResponse')!;
 
   // validate the response is an APICalculatorResponse
   await responseValidator(calculatorResponse);
@@ -73,7 +76,7 @@ test('response with state and utility is valid and correct', async t => {
 
   const calculatorResponse = JSON.parse(res.payload);
 
-  const ajv = new Ajv({
+  const ajv = new Ajv.default({
     schemas: [API_CALCULATOR_RESPONSE_SCHEMA],
     coerceTypes: true,
     useDefaults: true,
@@ -81,7 +84,7 @@ test('response with state and utility is valid and correct', async t => {
     allErrors: false,
   });
 
-  const responseValidator = ajv.getSchema('APICalculatorResponse');
+  const responseValidator = ajv.getSchema('APICalculatorResponse')!;
 
   // validate the response is an APICalculatorResponse
   await responseValidator(calculatorResponse);
@@ -243,7 +246,7 @@ const BAD_QUERIES = [
 test('bad queries', async t => {
   t.plan(BAD_QUERIES.length * 3, 'expect 3 assertions per bad query');
 
-  for (let query of BAD_QUERIES) {
+  for (const query of BAD_QUERIES) {
     const res = await getCalculatorResponse(t, query);
     const calculatorResponse = JSON.parse(res.payload);
     t.equal(res.statusCode, 400, 'response status is 400');
@@ -277,7 +280,7 @@ test('/incentives', async t => {
   t.equal(incentivesResponse.incentives.length, 30);
   t.equal(res.statusCode, 200, 'response status is 200');
 
-  const ajv = new Ajv({
+  const ajv = new Ajv.default({
     schemas: [{ ...API_INCENTIVE_SCHEMA, $id: 'APIIncentive' }],
     coerceTypes: true,
     useDefaults: true,
@@ -285,9 +288,9 @@ test('/incentives', async t => {
     allErrors: false,
   });
 
-  const validator = ajv.getSchema('APIIncentive');
+  const validator = ajv.getSchema('APIIncentive')!;
 
-  for (var incentive of incentivesResponse.incentives) {
+  for (const incentive of incentivesResponse.incentives) {
     await validator(incentive);
     t.equal(validator.errors, null);
   }
@@ -304,14 +307,14 @@ test('/utilities', async t => {
 
   const utilitiesResponse = JSON.parse(res.payload);
 
-  const ajv = new Ajv({
+  const ajv = new Ajv.default({
     schemas: [API_UTILITIES_RESPONSE_SCHEMA],
     coerceTypes: true,
     useDefaults: true,
     removeAdditional: true,
     allErrors: false,
   });
-  const validator = ajv.getSchema('APIUtilitiesResponse');
+  const validator = ajv.getSchema('APIUtilitiesResponse')!;
   await validator(utilitiesResponse);
   t.equal(validator.errors, null);
 

@@ -2,6 +2,7 @@ import { test, beforeEach } from 'tap';
 import { build } from '../helper.js';
 import Ajv from 'ajv';
 import fs from 'fs';
+import qs from 'qs';
 
 // NOTE: path is relative to test command, not this file (apparently)
 const incentiveSchema = JSON.parse(
@@ -15,10 +16,13 @@ beforeEach(() => {
   process.setMaxListeners(100);
 });
 
-async function getCalculatorResponse(t, query) {
+async function getCalculatorResponse(
+  t: Tap.Test,
+  query: Record<string, unknown>,
+) {
   const app = await build(t);
 
-  const searchParams = new URLSearchParams(query);
+  const searchParams = qs.stringify(query, { encodeValuesOnly: true });
   const url = `/api/v0/calculator?${searchParams}`;
 
   const res = await app.inject({ url });
@@ -38,7 +42,7 @@ test('response is valid and correct', async t => {
 
   const calculatorResponse = JSON.parse(res.payload);
 
-  const ajv = new Ajv({
+  const ajv = new Ajv.default({
     schemas: [incentiveSchema, responseSchema],
     coerceTypes: true,
     useDefaults: true,
@@ -46,7 +50,7 @@ test('response is valid and correct', async t => {
     allErrors: false,
   });
 
-  const responseValidator = ajv.getSchema('WebsiteCalculatorResponse');
+  const responseValidator = ajv.getSchema('WebsiteCalculatorResponse')!;
 
   // validate the response is a WebsiteCalculatorResponse
   await responseValidator(calculatorResponse);
@@ -227,7 +231,7 @@ const BAD_QUERIES = [
 test('bad queries', async t => {
   t.plan(BAD_QUERIES.length * 3, 'expect 3 assertions per bad query');
 
-  for (let query of BAD_QUERIES) {
+  for (const query of BAD_QUERIES) {
     const res = await getCalculatorResponse(t, query);
     const calculatorResponse = JSON.parse(res.payload);
     t.equal(res.statusCode, 400, 'response status is 400');
@@ -306,12 +310,12 @@ const ESTIMATION_TESTS = [
     },
     1450,
   ],
-];
+] as const;
 
 test('estimated savings', async t => {
   t.plan(ESTIMATION_TESTS.length, 'expect 1 assertion per estimate');
 
-  for (let [query, expected_amount] of ESTIMATION_TESTS) {
+  for (const [query, expected_amount] of ESTIMATION_TESTS) {
     const res = await getCalculatorResponse(t, query);
     const calculatorResponse = JSON.parse(res.payload);
     t.equal(calculatorResponse.estimated_annual_savings, expected_amount);
@@ -325,7 +329,7 @@ test('/incentives', async t => {
   t.equal(incentivesResponse.incentives.length, 30);
   t.equal(res.statusCode, 200, 'response status is 200');
 
-  const ajv = new Ajv({
+  const ajv = new Ajv.default({
     schemas: [incentiveSchema],
     coerceTypes: true,
     useDefaults: true,
@@ -333,9 +337,9 @@ test('/incentives', async t => {
     allErrors: false,
   });
 
-  const validator = ajv.getSchema('WebsiteIncentive');
+  const validator = ajv.getSchema('WebsiteIncentive')!;
 
-  for (var incentive of incentivesResponse.incentives) {
+  for (const incentive of incentivesResponse.incentives) {
     await validator(incentive);
     t.equal(validator.errors, null);
   }

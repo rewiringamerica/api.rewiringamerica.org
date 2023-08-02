@@ -11,7 +11,7 @@ beforeEach(async t => {
     driver: sqlite3.Database,
   });
   t.context.oldGeocode = geocoder.geocode;
-  geocoder.geocode = function (query, fields) {
+  geocoder.geocode = function (query: string, fields: string[]) {
     return mockGeocoder.geocode(query, fields);
   };
 });
