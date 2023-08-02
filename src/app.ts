@@ -37,6 +37,7 @@ export default async function (
   // through your application
   fastify.register(AutoLoad, {
     dir: path.join(__dirname, 'plugins'),
+    forceESM: true,
     options: Object.assign({}, opts),
   });
 
