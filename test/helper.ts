@@ -16,7 +16,7 @@ function config() {
 }
 
 // automatically build and tear down our instance
-async function build(t) {
+async function build(t: Tap.Test) {
   // you can set all the options supported by the fastify CLI command
   const argv = [AppPath, '--options'];
 
