@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { JSONSchemaType } from 'ajv';
 import { FilingStatus } from './tax_brackets.js';
-import { ALL_ITEMS } from './items.js';
+import { ALL_ITEMS, Item } from './items.js';
 
 export enum AmiQualification {
   LessThan150_Ami = 'less_than_150_ami',
@@ -69,7 +69,7 @@ export interface Incentive {
   amount: Amount;
   end_date: number;
   filing_status: FilingStatus | null;
-  item: string;
+  item: Item;
   item_type: ItemType;
   owner_status: OwnerStatus[];
   program: string;

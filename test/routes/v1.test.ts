@@ -25,14 +25,12 @@ async function getCalculatorResponse(
   return res;
 }
 
-test('response is valid and correct', async t => {
-  const res = await getCalculatorResponse(t, {
-    location: { zip: '80212' },
-    owner_status: 'homeowner',
-    household_income: 80000,
-    tax_filing: 'joint',
-    household_size: 4,
-  });
+async function validateResponse(
+  t: Tap.Test,
+  query: Record<string, unknown>,
+  fixtureFile: string,
+) {
+  const res = await getCalculatorResponse(t, query);
   t.equal(res.statusCode, 200);
 
   const calculatorResponse = JSON.parse(res.payload);
@@ -52,52 +50,55 @@ test('response is valid and correct', async t => {
   t.equal(responseValidator.errors, null);
 
   // Verify the specific content of the response
-  const expectedResponse = JSON.parse(
-    fs.readFileSync(
-      './test/fixtures/v1-80212-homeowner-80000-joint-4.json',
-      'utf-8',
-    ),
-  );
+  const expectedResponse = JSON.parse(fs.readFileSync(fixtureFile, 'utf-8'));
   t.same(calculatorResponse, expectedResponse);
+}
+
+test('response is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '80212' },
+      owner_status: 'homeowner',
+      household_income: 80000,
+      tax_filing: 'joint',
+      household_size: 4,
+    },
+    './test/fixtures/v1-80212-homeowner-80000-joint-4.json',
+  );
 });
 
 test('response with state and utility is valid and correct', async t => {
-  const res = await getCalculatorResponse(t, {
-    location: { zip: '02903' },
-    owner_status: 'homeowner',
-    // Qualifies as low-income in RI
-    household_size: 4,
-    household_income: 65000,
-    tax_filing: 'joint',
-    authority_types: ['state', 'utility'],
-    utility: 'ri-rhode-island-energy',
-  });
-  t.equal(res.statusCode, 200, res.payload);
-
-  const calculatorResponse = JSON.parse(res.payload);
-
-  const ajv = new Ajv.default({
-    schemas: [API_CALCULATOR_RESPONSE_SCHEMA],
-    coerceTypes: true,
-    useDefaults: true,
-    removeAdditional: true,
-    allErrors: false,
-  });
-
-  const responseValidator = ajv.getSchema('APICalculatorResponse')!;
-
-  // validate the response is an APICalculatorResponse
-  await responseValidator(calculatorResponse);
-  t.equal(responseValidator.errors, null);
-
-  // Verify the specific content of the response
-  const expectedResponse = JSON.parse(
-    fs.readFileSync(
-      './test/fixtures/v1-02903-state-utility-lowincome.json',
-      'utf-8',
-    ),
+  await validateResponse(
+    t,
+    {
+      location: { zip: '02903' },
+      owner_status: 'homeowner',
+      // Qualifies as low-income in RI
+      household_size: 4,
+      household_income: 65000,
+      tax_filing: 'joint',
+      authority_types: ['state', 'utility'],
+      utility: 'ri-rhode-island-energy',
+    },
+    './test/fixtures/v1-02903-state-utility-lowincome.json',
   );
-  t.same(calculatorResponse, expectedResponse);
+});
+
+test('response with state and item filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '02807' },
+      owner_status: 'homeowner',
+      household_size: 4,
+      household_income: 65000,
+      tax_filing: 'joint',
+      authority_types: ['federal', 'state'],
+      items: ['heatPumpAirConditionerHeater', 'newElectricVehicle'],
+    },
+    './test/fixtures/v1-02807-state-items.json',
+  );
 });
 
 const BAD_QUERIES = [

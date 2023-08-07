@@ -25,6 +25,12 @@ export function calculateStateIncentivesAndSavings(
   const ineligibleIncentives = [];
 
   for (const item of incentives) {
+    if (request.items && !request.items.includes(item.item)) {
+      // Don't include an incentive at all if the query is filtering by item and
+      // this doesn't match.
+      continue;
+    }
+
     if (
       item.authority_type === AuthorityType.State &&
       !request.authority_types?.includes(AuthorityType.State)

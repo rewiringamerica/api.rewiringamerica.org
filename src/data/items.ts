@@ -19,6 +19,6 @@ export const ITEMS_SCHEMA = {
   weatherization: { type: 'string' },
 } as const;
 
-export const ALL_ITEMS = Object.keys(
-  ITEMS_SCHEMA,
-) as unknown as (keyof typeof ITEMS_SCHEMA)[];
+export type Item = keyof typeof ITEMS_SCHEMA;
+
+export const ALL_ITEMS = Object.keys(ITEMS_SCHEMA) as unknown as Item[];
