@@ -12,6 +12,7 @@ import { FilingStatus } from '../data/tax_brackets.js';
 import { APIIncentiveMinusItemUrl } from '../schemas/v1/incentive.js';
 import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities.js';
 import { calculateStateIncentivesAndSavings } from './state-incentives-calculation.js';
+import { Item } from '../data/items.js';
 
 const MAX_POS_SAVINGS = 14000;
 const OWNER_STATUSES = new Set(['homeowner', 'renter']);
@@ -45,6 +46,7 @@ function calculateFederalIncentivesAndSavings(
   owner_status: OwnerStatus,
   household_income: number,
   household_size: number,
+  items: Item[] | undefined,
 ): {
   federalIncentives: APIIncentiveMinusItemUrl[];
   pos_savings: number;
@@ -57,6 +59,12 @@ function calculateFederalIncentivesAndSavings(
   // Loop through each of the incentives, running several tests to see if visitor is eligible
   for (const item of IRA_INCENTIVES) {
     let eligible = true;
+
+    // Don't include an incentive at all if the query is filtering by item and
+    // this doesn't match.
+    if (items && !items.includes(item.item)) {
+      continue;
+    }
 
     //
     // 1) Verify that the selected homeowner status qualifies
@@ -217,7 +225,7 @@ export default function calculateIncentives(
   request: APICalculatorRequest,
 ): CalculatedIncentives {
   const authorityTypes = request.authority_types ?? [AuthorityType.Federal];
-  const { owner_status, household_income, tax_filing, household_size } =
+  const { owner_status, household_income, tax_filing, household_size, items } =
     request;
 
   if (!OWNER_STATUSES.has(owner_status)) {
@@ -281,6 +289,7 @@ export default function calculateIncentives(
       owner_status as OwnerStatus,
       household_income,
       household_size,
+      items,
     );
     incentives.push(...federal.federalIncentives);
     tax_savings += federal.tax_savings;

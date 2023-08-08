@@ -3,6 +3,7 @@ import { ERROR_SCHEMA } from '../error.js';
 import { API_INCENTIVE_SCHEMA } from './incentive.js';
 import { API_LOCATION_SCHEMA } from './location.js';
 import { AuthorityType } from '../../data/authorities.js';
+import { ALL_ITEMS } from '../../data/items.js';
 
 const API_CALCULATOR_REQUEST_SCHEMA = {
   $id: 'APICalculatorRequest',
@@ -26,6 +27,17 @@ const API_CALCULATOR_REQUEST_SCHEMA = {
       description:
         'The ID of your utility company, as returned from /utilities. ' +
         'Required if authority_types includes "utility".',
+    },
+    items: {
+      type: 'array',
+      description:
+        'Which types of product or project to fetch incentives for. If absent, include all products/projects.',
+      items: {
+        type: 'string',
+        enum: ALL_ITEMS,
+      },
+      minItems: 1,
+      uniqueItems: true,
     },
     owner_status: {
       type: 'string',

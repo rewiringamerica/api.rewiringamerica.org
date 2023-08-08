@@ -8,14 +8,14 @@ import {
   OwnerStatus,
   Type,
 } from './ira_incentives.js';
-import { ALL_ITEMS } from './items.js';
+import { ALL_ITEMS, Item } from './items.js';
 import { AuthorityType } from './authorities.js';
 
 export type StateIncentive = {
   authority_type: AuthorityType;
   authority: string;
   type: Type;
-  item: string;
+  item: Item;
   item_type: ItemType;
   program: string;
   amount: Amount;
