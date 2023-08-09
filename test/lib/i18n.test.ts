@@ -3,15 +3,15 @@ import { test } from 'tap';
 
 test('t finds the right string', async tap => {
   tap.equal(
-    t('items', 'batteryStorageInstallation'),
+    t('items', 'battery_storage_installation'),
     'Battery Storage Installation',
   );
   tap.equal(
-    t('items', 'batteryStorageInstallation', 'en'),
+    t('items', 'battery_storage_installation', 'en'),
     'Battery Storage Installation',
   );
   tap.equal(
-    t('items', 'batteryStorageInstallation', 'es'),
+    t('items', 'battery_storage_installation', 'es'),
     'Instalación de baterías',
   );
   tap.equal(t('programs', 'hopeForHomes'), 'Hope for Homes (HOMES)');

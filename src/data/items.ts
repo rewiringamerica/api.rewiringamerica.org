@@ -3,19 +3,19 @@
  * these are the possible products/upgrades.
  */
 export const ITEMS_SCHEMA = {
-  batteryStorageInstallation: { type: 'string' },
-  efficiencyRebates: { type: 'string' },
-  electricPanel: { type: 'string' },
-  electricStove: { type: 'string' },
-  electricVehicleCharger: { type: 'string' },
-  electricWiring: { type: 'string' },
-  geothermalHeatingInstallation: { type: 'string' },
-  heatPumpAirConditionerHeater: { type: 'string' },
-  heatPumpClothesDryer: { type: 'string' },
-  heatPumpWaterHeater: { type: 'string' },
-  newElectricVehicle: { type: 'string' },
-  rooftopSolarInstallation: { type: 'string' },
-  usedElectricVehicle: { type: 'string' },
+  battery_storage_installation: { type: 'string' },
+  efficiency_rebates: { type: 'string' },
+  electric_panel: { type: 'string' },
+  electric_stove: { type: 'string' },
+  electric_vehicle_charger: { type: 'string' },
+  electric_wiring: { type: 'string' },
+  geothermal_heating_installation: { type: 'string' },
+  heat_pump_air_conditioner_heater: { type: 'string' },
+  heat_pump_clothes_dryer: { type: 'string' },
+  heat_pump_water_heater: { type: 'string' },
+  new_electric_vehicle: { type: 'string' },
+  rooftop_solar_installation: { type: 'string' },
+  used_electric_vehicle: { type: 'string' },
   weatherization: { type: 'string' },
 } as const;
 

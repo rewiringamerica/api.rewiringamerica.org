@@ -95,7 +95,7 @@ test('response with state and item filtering is valid and correct', async t => {
       household_income: 65000,
       tax_filing: 'joint',
       authority_types: ['federal', 'state'],
-      items: ['heatPumpAirConditionerHeater', 'newElectricVehicle'],
+      items: ['heat_pump_air_conditioner_heater', 'new_electric_vehicle'],
     },
     './test/fixtures/v1-02807-state-items.json',
   );
