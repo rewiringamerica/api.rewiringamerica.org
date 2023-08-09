@@ -61,21 +61,25 @@ export default async function (
         throw fastify.httpErrors.notFound();
       }
 
-      const result = calculateIncentives(amis, { ...request.query });
-      const language = request.query.language ?? 'en';
-      const translated = {
-        ...result,
-        tax_credit_incentives: transformIncentives(
-          result.tax_credit_incentives,
-          language,
-        ),
-        pos_rebate_incentives: transformIncentives(
-          result.pos_rebate_incentives,
-          language,
-        ),
-      };
+      try {
+        const result = calculateIncentives(amis, { ...request.query });
+        const language = request.query.language ?? 'en';
+        const translated = {
+          ...result,
+          tax_credit_incentives: transformIncentives(
+            result.tax_credit_incentives,
+            language,
+          ),
+          pos_rebate_incentives: transformIncentives(
+            result.pos_rebate_incentives,
+            language,
+          ),
+        };
 
-      reply.status(200).type('application/json').send(translated);
+        reply.status(200).type('application/json').send(translated);
+      } catch (error) {
+        throw fastify.httpErrors.badRequest((error as Error).message);
+      }
     },
   );
 

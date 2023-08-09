@@ -242,6 +242,24 @@ const BAD_QUERIES = [
     tax_filing: 'joint',
     household_size: 9,
   },
+  {
+    location: { zip: '80212' },
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 4,
+    // Must pass utility field if authority_types includes "utility"
+    authority_types: ['utility'],
+  },
+  {
+    location: { zip: '80212' },
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 4,
+    authority_types: ['utility'],
+    utility: 'nonexistent-utility',
+  },
 ];
 
 test('bad queries', async t => {
