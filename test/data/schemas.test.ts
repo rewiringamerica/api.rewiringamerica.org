@@ -35,15 +35,15 @@ import Ajv from 'ajv';
 import { SomeJSONSchema } from 'ajv/dist/types/json-schema.js';
 
 const TESTS = [
-  [I_SCHEMA, IRA_INCENTIVES],
-  [ISS_SCHEMA, IRA_STATE_SAVINGS],
-  [L_SCHEMA, LOCALES.en],
-  [L_SCHEMA, LOCALES.es],
-  [SP_SCHEMA, SOLAR_PRICES],
-  [SMFI_SCHEMA, STATE_MFIS],
-  [TB_SCHEMA, TAX_BRACKETS],
-  [AUTHORITIES_SCHEMA, AUTHORITIES_BY_STATE],
-  [RI_LOW_INCOME_THRESHOLDS_SCHEMA, RI_LOW_INCOME_THRESHOLDS],
+  [I_SCHEMA, IRA_INCENTIVES, 'ira_incentives'],
+  [ISS_SCHEMA, IRA_STATE_SAVINGS, 'ira_state_savings'],
+  [L_SCHEMA, LOCALES.en, 'en locale'],
+  [L_SCHEMA, LOCALES.es, 'es locale'],
+  [SP_SCHEMA, SOLAR_PRICES, 'solar_prices'],
+  [SMFI_SCHEMA, STATE_MFIS, 'state_mfis'],
+  [TB_SCHEMA, TAX_BRACKETS, 'tax_brackets'],
+  [AUTHORITIES_SCHEMA, AUTHORITIES_BY_STATE, 'authorities'],
+  [RI_LOW_INCOME_THRESHOLDS_SCHEMA, RI_LOW_INCOME_THRESHOLDS, 'RI low income'],
 ];
 
 test('static JSON files match schema', async tap => {
@@ -51,9 +51,9 @@ test('static JSON files match schema', async tap => {
   // Workaround for https://github.com/ajv-validator/ajv/issues/2047
   const ajv = new Ajv.default();
 
-  TESTS.forEach(([schema, data]) => {
+  TESTS.forEach(([schema, data, label]) => {
     if (!tap.ok(ajv.validate(schema, data))) {
-      console.error(ajv.errors);
+      console.error(label, ajv.errors);
     }
   });
 });
