@@ -4,6 +4,7 @@ import { t } from '../lib/i18n.js';
 import _ from 'lodash';
 import { IRA_INCENTIVES } from '../data/ira_incentives.js';
 import { IRA_STATE_SAVINGS } from '../data/ira_state_savings.js';
+import { InvalidInputError } from '../lib/error.js';
 
 IRA_INCENTIVES.forEach(incentive => Object.freeze(incentive));
 
@@ -99,47 +100,57 @@ export default async function (fastify) {
         );
       }
 
-      const result = calculateIncentives(amisForZip, {
-        ...request.query,
-      });
+      try {
+        const result = calculateIncentives(amisForZip, {
+          ...request.query,
+        });
 
-      // Website Calculator backwards compatiblity from v1 data:
+        // Website Calculator backwards compatiblity from v1 data:
 
-      // 1) Add nnnual savings from pregenerated model
-      result.estimated_annual_savings =
-        IRA_STATE_SAVINGS[
-          amisForZip.location.state_id
-        ].estimated_savings_heat_pump_ev;
+        // 1) Add nnnual savings from pregenerated model
+        result.estimated_annual_savings =
+          IRA_STATE_SAVINGS[
+            amisForZip.location.state_id
+          ].estimated_savings_heat_pump_ev;
 
-      // 2.1) Overwrite solar_tax_credit amount with representative_amount:
-      const solarTaxCredit = result.tax_credit_incentives.find(
-        incentive => incentive.item_type === 'solar_tax_credit',
-      );
-      solarTaxCredit.amount.number = solarTaxCredit.amount.representative;
-      delete solarTaxCredit.amount.representative;
+        // 2.1) Overwrite solar_tax_credit amount with representative_amount:
+        const solarTaxCredit = result.tax_credit_incentives.find(
+          incentive => incentive.item_type === 'solar_tax_credit',
+        );
+        solarTaxCredit.amount.number = solarTaxCredit.amount.representative;
+        delete solarTaxCredit.amount.representative;
 
-      // 2.2) Re-sort incentives per https://app.asana.com/0/0/1204275945510481/f
-      // HACK: temporarily override the amount_type as dollars:
-      solarTaxCredit.amount.type = 'dollar_amount';
-      result.tax_credit_incentives = _.orderBy(
-        result.tax_credit_incentives,
-        [i => i.amount.type, i => i.amount.number],
-        ['desc', 'desc'],
-      );
+        // 2.2) Re-sort incentives per https://app.asana.com/0/0/1204275945510481/f
+        // HACK: temporarily override the amount_type as dollars:
+        solarTaxCredit.amount.type = 'dollar_amount';
+        result.tax_credit_incentives = _.orderBy(
+          result.tax_credit_incentives,
+          [i => i.amount.type, i => i.amount.number],
+          ['desc', 'desc'],
+        );
 
-      // 2.3)
-      // set the amount_type to what the calculator would expect:
-      solarTaxCredit.amount.type = 'solar';
+        // 2.3)
+        // set the amount_type to what the calculator would expect:
+        solarTaxCredit.amount.type = 'solar';
 
-      // 3) Populate the expected English and Spanish strings
-      result.pos_rebate_incentives = translateIncentives(
-        result.pos_rebate_incentives,
-      );
-      result.tax_credit_incentives = translateIncentives(
-        result.tax_credit_incentives,
-      );
+        // 3) Populate the expected English and Spanish strings
+        result.pos_rebate_incentives = translateIncentives(
+          result.pos_rebate_incentives,
+        );
+        result.tax_credit_incentives = translateIncentives(
+          result.tax_credit_incentives,
+        );
 
-      return reply.status(200).type('application/json').send(result);
+        return reply.status(200).type('application/json').send(result);
+      } catch (error) {
+        if (error instanceof InvalidInputError) {
+          throw fastify.httpErrors.createError(400, error.message, {
+            field: error.field,
+          });
+        } else {
+          throw error;
+        }
+      }
     },
   );
 

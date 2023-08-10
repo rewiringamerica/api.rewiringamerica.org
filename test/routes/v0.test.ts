@@ -226,6 +226,14 @@ const BAD_QUERIES = [
     tax_filing: 'joint',
     household_size: 9,
   },
+  {
+    // Puerto Rico; no MFI coverage
+    zip: '00907',
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 4,
+  },
 ];
 
 test('bad queries', async t => {

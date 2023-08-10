@@ -242,6 +242,33 @@ const BAD_QUERIES = [
     tax_filing: 'joint',
     household_size: 9,
   },
+  {
+    location: { zip: '80212' },
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 4,
+    // Must pass utility field if authority_types includes "utility"
+    authority_types: ['utility'],
+  },
+  {
+    location: { zip: '80212' },
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 4,
+    authority_types: ['utility'],
+    utility: 'nonexistent-utility',
+  },
+  {
+    // No state-level coverage in this state yet (CO)
+    location: { zip: '80212' },
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 4,
+    authority_types: ['state'],
+  },
 ];
 
 test('bad queries', async t => {
@@ -250,12 +277,20 @@ test('bad queries', async t => {
   for (const query of BAD_QUERIES) {
     const res = await getCalculatorResponse(t, query);
     const calculatorResponse = JSON.parse(res.payload);
-    t.equal(res.statusCode, 400, 'response status is 400');
-    t.equal(calculatorResponse.statusCode, 400, 'payload statusCode is 400');
+    t.equal(
+      res.statusCode,
+      400,
+      `response status is 400 for ${JSON.stringify(query)}`,
+    );
+    t.equal(
+      calculatorResponse.statusCode,
+      400,
+      `payload statusCode is 400 for ${JSON.stringify(query)}`,
+    );
     t.equal(
       calculatorResponse.error,
       'Bad Request',
-      'payload error is Bad Request',
+      `payload error is Bad Request for ${JSON.stringify(query)}`,
     );
   }
 });

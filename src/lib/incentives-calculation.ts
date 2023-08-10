@@ -13,6 +13,7 @@ import { APIIncentiveMinusItemUrl } from '../schemas/v1/incentive.js';
 import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities.js';
 import { calculateStateIncentivesAndSavings } from './state-incentives-calculation.js';
 import { Item } from '../data/items.js';
+import { InvalidInputError, UnexpectedInputError } from './error.js';
 
 const MAX_POS_SAVINGS = 14000;
 const OWNER_STATUSES = new Set(['homeowner', 'renter']);
@@ -201,7 +202,7 @@ function calculateFederalIncentivesAndSavings(
         tax_savings += item.amount.representative;
       }
     } else {
-      throw new Error(`Unknown item_type: ${item.type}`);
+      throw new UnexpectedInputError(`Unknown item_type: ${item.type}`);
     }
   }
 
@@ -229,11 +230,11 @@ export default function calculateIncentives(
     request;
 
   if (!OWNER_STATUSES.has(owner_status)) {
-    throw new Error('Unknown owner_status');
+    throw new UnexpectedInputError('Unknown owner_status');
   }
 
   if (!TAX_FILINGS.has(tax_filing)) {
-    throw new Error('Unknown tax_filing.');
+    throw new UnexpectedInputError('Unknown tax_filing.');
   }
 
   if (
@@ -241,31 +242,50 @@ export default function calculateIncentives(
     household_income < 0 ||
     household_income > 100000000
   ) {
-    throw new Error('Invalid household_income. Must be >= 0 and <= 100000000');
-  }
-
-  if (isNaN(household_size) || household_size < 1 || household_size > 8) {
-    throw new Error(
-      'Invalid household_size. Must be a number between 1 and 8.',
+    throw new UnexpectedInputError(
+      'Invalid household_income. Must be >= 0 and <= 100000000',
     );
   }
 
-  if (authorityTypes.includes(AuthorityType.Utility)) {
-    if (!request.utility) {
-      throw new Error(
-        'Must include the "utility" field when requesting utility incentives.',
-      );
-    }
-    if (!AUTHORITIES_BY_STATE[state_id].utility[request.utility]) {
-      throw new Error(`Invalid utility: "${request.utility}".`);
-    }
+  if (isNaN(household_size) || household_size < 1 || household_size > 8) {
+    throw new UnexpectedInputError(
+      'Invalid household_size. Must be a number between 1 and 8.',
+    );
   }
 
   const solarSystemCost = SOLAR_PRICES[state_id]?.system_cost;
   const stateMFI = STATE_MFIS[state_id];
 
   if (isNaN(solarSystemCost) || isNaN(stateMFI?.TOTAL)) {
-    throw new Error('Invalid state id provided. Must be US state code or DC.');
+    throw new InvalidInputError(
+      'Invalid state id provided. Must be US state code or DC.',
+    );
+  }
+
+  const stateAuthorities = AUTHORITIES_BY_STATE[state_id];
+  if (
+    !stateAuthorities &&
+    (authorityTypes.includes(AuthorityType.State) ||
+      authorityTypes.includes(AuthorityType.Utility))
+  ) {
+    throw new InvalidInputError(
+      `We do not yet have state-level coverage in ${state_id}.`,
+    );
+  }
+
+  if (authorityTypes.includes(AuthorityType.Utility)) {
+    if (!request.utility) {
+      throw new InvalidInputError(
+        'Must include the "utility" field when requesting utility incentives.',
+        'utility',
+      );
+    }
+    if (!stateAuthorities.utility[request.utility]) {
+      throw new InvalidInputError(
+        `Invalid utility: "${request.utility}".`,
+        'utility',
+      );
+    }
   }
 
   const isUnder80Ami = household_income < Number(ami[`l80_${household_size}`]);

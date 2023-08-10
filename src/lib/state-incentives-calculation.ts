@@ -4,6 +4,7 @@ import { AmountType, OwnerStatus, Type } from '../data/ira_incentives.js';
 import { RI_INCENTIVES } from '../data/state_incentives.js';
 import { APICalculatorRequest } from '../schemas/v1/calculator-endpoint.js';
 import { APIIncentiveMinusItemUrl } from '../schemas/v1/incentive.js';
+import { UnexpectedInputError } from './error.js';
 
 export function calculateStateIncentivesAndSavings(
   stateId: string,
@@ -14,9 +15,9 @@ export function calculateStateIncentivesAndSavings(
   pos_savings: number;
   performance_rebate_savings: number;
 } {
-  // TODO not like this
+  // TODO condition based on existence of incentives data, not hardcoding RI.
   if (stateId !== 'RI') {
-    throw new Error("We don't have coverage in that state yet.");
+    throw new UnexpectedInputError("We don't have coverage in that state yet.");
   }
 
   const incentives = RI_INCENTIVES;
