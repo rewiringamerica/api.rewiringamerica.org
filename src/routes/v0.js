@@ -4,6 +4,7 @@ import { t } from '../lib/i18n.js';
 import _ from 'lodash';
 import { IRA_INCENTIVES } from '../data/ira_incentives.js';
 import { IRA_STATE_SAVINGS } from '../data/ira_state_savings.js';
+import { InvalidInputError } from '../lib/error.js';
 
 IRA_INCENTIVES.forEach(incentive => Object.freeze(incentive));
 
@@ -142,7 +143,11 @@ export default async function (fastify) {
 
         return reply.status(200).type('application/json').send(result);
       } catch (error) {
-        throw new fastify.httpErrors.badRequest(error.message);
+        if (error instanceof InvalidInputError) {
+          throw new fastify.httpErrors.badRequest(error.message);
+        } else {
+          throw error;
+        }
       }
     },
   );

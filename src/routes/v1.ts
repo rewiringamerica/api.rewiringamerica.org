@@ -17,6 +17,7 @@ import { Database } from 'sqlite';
 import { IncomeInfo } from '../lib/income-info.js';
 import { API_UTILITIES_SCHEMA } from '../schemas/v1/utilities-endpoint.js';
 import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities.js';
+import { InvalidInputError, UnexpectedInputError } from '../lib/error.js';
 
 function transformIncentives(
   incentives: APIIncentiveMinusItemUrl[],
@@ -45,7 +46,9 @@ export default async function (
       return await fetchAMIsForZip(fastify.sqlite, location.zip);
     } else {
       // NOTE: this should never happen, APICalculatorSchema should block it:
-      throw new Error('location.address or location.zip required');
+      throw new UnexpectedInputError(
+        'location.address or location.zip required',
+      );
     }
   }
 
@@ -78,7 +81,11 @@ export default async function (
 
         reply.status(200).type('application/json').send(translated);
       } catch (error) {
-        throw fastify.httpErrors.badRequest((error as Error).message);
+        if (error instanceof InvalidInputError) {
+          throw fastify.httpErrors.badRequest(error.message);
+        } else {
+          throw error;
+        }
       }
     },
   );
