@@ -1,6 +1,7 @@
 import { FromSchema } from 'json-schema-to-ts';
 
 export const API_INCENTIVE_SCHEMA = {
+  $id: 'APIIncentive',
   type: 'object',
   required: [
     'type',
