@@ -277,10 +277,14 @@ export default function calculateIncentives(
     if (!request.utility) {
       throw new InvalidInputError(
         'Must include the "utility" field when requesting utility incentives.',
+        'utility',
       );
     }
     if (!stateAuthorities.utility[request.utility]) {
-      throw new InvalidInputError(`Invalid utility: "${request.utility}".`);
+      throw new InvalidInputError(
+        `Invalid utility: "${request.utility}".`,
+        'utility',
+      );
     }
   }
 

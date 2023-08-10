@@ -82,7 +82,9 @@ export default async function (
         reply.status(200).type('application/json').send(translated);
       } catch (error) {
         if (error instanceof InvalidInputError) {
-          throw fastify.httpErrors.badRequest(error.message);
+          throw fastify.httpErrors.createError(400, error.message, {
+            field: error.field,
+          });
         } else {
           throw error;
         }

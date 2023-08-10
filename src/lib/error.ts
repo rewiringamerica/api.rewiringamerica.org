@@ -9,4 +9,8 @@ export class UnexpectedInputError extends Error {}
  * Thrown from incentive calculation upon seeing input that is not what the API
  * requires, and that is NOT expected to be caught upstream.
  */
-export class InvalidInputError extends Error {}
+export class InvalidInputError extends Error {
+  constructor(message: string, readonly field?: string) {
+    super(message);
+  }
+}
