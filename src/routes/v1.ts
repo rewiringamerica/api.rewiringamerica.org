@@ -14,7 +14,7 @@ import {
 import { APILocation } from '../schemas/v1/location.js';
 import { LOCALES } from '../data/locale.js';
 import { Database } from 'sqlite';
-import { IncomeInfo } from '../lib/income-info.js';
+import { IncomeInfo, isCompleteIncomeInfo } from '../lib/income-info.js';
 import { API_UTILITIES_SCHEMA } from '../schemas/v1/utilities-endpoint.js';
 import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities.js';
 import { InvalidInputError, UnexpectedInputError } from '../lib/error.js';
@@ -58,14 +58,26 @@ export default async function (
     '/api/v1/calculator',
     { schema: API_CALCULATOR_SCHEMA },
     async (request, reply) => {
-      const amis = await fetchAMIsForLocation(request.query.location);
+      const incomeInfo = await fetchAMIsForLocation(request.query.location);
 
-      if (!amis) {
-        throw fastify.httpErrors.notFound();
+      if (!incomeInfo) {
+        throw fastify.httpErrors.createError(
+          404,
+          'Cannot find location of this address.',
+          { field: 'location' },
+        );
+      }
+
+      if (!isCompleteIncomeInfo(incomeInfo)) {
+        throw fastify.httpErrors.createError(
+          404,
+          "We currently don't have data for this location.",
+          { field: 'location' },
+        );
       }
 
       try {
-        const result = calculateIncentives(amis, { ...request.query });
+        const result = calculateIncentives(incomeInfo, { ...request.query });
         const language = request.query.language ?? 'en';
         const translated = {
           ...result,

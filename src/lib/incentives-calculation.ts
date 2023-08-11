@@ -7,7 +7,7 @@ import {
   APICalculatorRequest,
   APICalculatorResponse,
 } from '../schemas/v1/calculator-endpoint.js';
-import { AMI, IncomeInfo, MFI } from './income-info.js';
+import { AMI, CompleteIncomeInfo, MFI } from './income-info.js';
 import { FilingStatus } from '../data/tax_brackets.js';
 import { APIIncentiveMinusItemUrl } from '../schemas/v1/incentive.js';
 import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities.js';
@@ -222,7 +222,7 @@ function calculateFederalIncentivesAndSavings(
 }
 
 export default function calculateIncentives(
-  { location: { state_id }, ami, calculations }: IncomeInfo,
+  { location: { state_id }, ami, calculations }: CompleteIncomeInfo,
   request: APICalculatorRequest,
 ): CalculatedIncentives {
   const authorityTypes = request.authority_types ?? [AuthorityType.Federal];

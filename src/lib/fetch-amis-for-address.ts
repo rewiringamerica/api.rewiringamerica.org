@@ -1,6 +1,6 @@
 import { Database } from 'sqlite';
 import { geocoder } from './geocoder.js';
-import { AMI, IncomeInfo, MFI, ZipInfo } from './income-info.js';
+import { AMI, IncomeInfo, MFI } from './income-info.js';
 
 export default async function fetchAMIsForAddress(
   db: Database,
@@ -25,7 +25,7 @@ export default async function fetchAMIsForAddress(
 
   const tractGeoid = `${censusInfo.county_fips}${censusInfo.tract_code}`;
 
-  const calculations = (await db.get<MFI>(
+  const calculations = await db.get<MFI>(
     `
     SELECT
         is_urban AS isUrban,
@@ -37,25 +37,18 @@ export default async function fetchAMIsForAddress(
     WHERE tract_geoid = ? AND mfi != -666666666;
   `,
     tractGeoid,
-  ))!;
+  );
 
-  // FIXME: now that we have finer-grained geographic info we don't need to approximate with zips. Use Fair_Market_Rents etc.
+  const location = { state_id: result.address_components.state };
 
-  const location = (await db.get<ZipInfo>(
-    `
-    SELECT * FROM zips WHERE zip = ?
-  `,
-    zip,
-  ))!;
-
-  const ami = (await db.get<AMI>(
+  const ami = await db.get<AMI>(
     `
     SELECT a.*
     FROM zip_to_cbsasub zc LEFT JOIN ami a ON a.cbsasub = zc.cbsasub
     WHERE zc.zipcode = ? AND a.cbsasub IS NOT NULL
   `,
     zip,
-  ))!;
+  );
 
   return { ami, location, calculations };
 }

@@ -5,6 +5,7 @@ import _ from 'lodash';
 import { IRA_INCENTIVES } from '../data/ira_incentives.js';
 import { IRA_STATE_SAVINGS } from '../data/ira_state_savings.js';
 import { InvalidInputError } from '../lib/error.js';
+import { isCompleteIncomeInfo } from '../lib/income-info.js';
 
 IRA_INCENTIVES.forEach(incentive => Object.freeze(incentive));
 
@@ -79,20 +80,16 @@ export default async function (fastify) {
     { schema: CalculatorSchema },
     async (request, reply) => {
       // TODO: refactor as a plugin like fastify.amis.getForZip(zip)?
-      const amisForZip = await fetchAMIsForZip(
+      const incomeInfo = await fetchAMIsForZip(
         fastify.sqlite,
         request.query.zip,
       );
-      if (!amisForZip) {
+      if (!incomeInfo) {
         throw fastify.httpErrors.createError(404, "Zip code doesn't exist.", {
           field: 'zip',
         });
       }
-      if (
-        !amisForZip.location.state_id ||
-        !amisForZip.ami ||
-        !amisForZip.calculations
-      ) {
+      if (!isCompleteIncomeInfo(incomeInfo)) {
         throw fastify.httpErrors.createError(
           404,
           "We currently don't have data for this location.",
@@ -101,7 +98,7 @@ export default async function (fastify) {
       }
 
       try {
-        const result = calculateIncentives(amisForZip, {
+        const result = calculateIncentives(incomeInfo, {
           ...request.query,
         });
 
@@ -110,7 +107,7 @@ export default async function (fastify) {
         // 1) Add nnnual savings from pregenerated model
         result.estimated_annual_savings =
           IRA_STATE_SAVINGS[
-            amisForZip.location.state_id
+            incomeInfo.location.state_id
           ].estimated_savings_heat_pump_ev;
 
         // 2.1) Overwrite solar_tax_credit amount with representative_amount:

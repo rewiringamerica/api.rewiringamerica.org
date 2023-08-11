@@ -31,6 +31,17 @@ export type MFI = {
 
 export type IncomeInfo = {
   location: ZipInfo;
+  ami: AMI | undefined;
+  calculations: MFI | undefined;
+};
+
+export type CompleteIncomeInfo = {
+  location: ZipInfo;
   ami: AMI;
   calculations: MFI;
 };
+
+export const isCompleteIncomeInfo = (
+  info: IncomeInfo,
+): info is CompleteIncomeInfo =>
+  !!info.location.state_id && !!info.ami && !!info.calculations;

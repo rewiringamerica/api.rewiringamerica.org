@@ -295,18 +295,33 @@ test('bad queries', async t => {
   }
 });
 
+const BAD_ZIPS = [
+  // Exists, but is not a ZCTA and has no AMI data
+  '02117',
+  // Does not exist
+  '80088',
+];
+
 test('non-existent zips', async t => {
-  const res = await getCalculatorResponse(t, {
-    location: { zip: '80088' },
-    owner_status: 'homeowner',
-    household_income: 0,
-    household_size: 1,
-    tax_filing: 'single',
-  });
-  const calculatorResponse = JSON.parse(res.payload);
-  t.equal(res.statusCode, 404, 'response status is 404');
-  t.equal(calculatorResponse.statusCode, 404, 'payload statusCode is 404');
-  t.equal(calculatorResponse.error, 'Not Found', 'payload error is Not Found');
+  t.plan(BAD_ZIPS.length * 3);
+
+  for (const zip of BAD_ZIPS) {
+    const res = await getCalculatorResponse(t, {
+      location: { zip },
+      owner_status: 'homeowner',
+      household_income: 0,
+      household_size: 1,
+      tax_filing: 'single',
+    });
+    const calculatorResponse = JSON.parse(res.payload);
+    t.equal(res.statusCode, 404, 'response status is 404');
+    t.equal(calculatorResponse.statusCode, 404, 'payload statusCode is 404');
+    t.equal(
+      calculatorResponse.error,
+      'Not Found',
+      'payload error is Not Found',
+    );
+  }
 });
 
 test('/incentives', async t => {

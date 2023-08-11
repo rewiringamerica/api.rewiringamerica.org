@@ -15,7 +15,7 @@ export default async function fetchAMIsForZip(
     return null;
   }
 
-  const calculations = (await db.get<MFI>(
+  const calculations = await db.get<MFI>(
     `
     SELECT
         MAX(is_urban) AS isUrban,
@@ -28,16 +28,16 @@ export default async function fetchAMIsForZip(
     WHERE zt.zip = ? AND t.mfi != -666666666;
   `,
     zip,
-  ))!;
+  );
 
-  const ami = (await db.get<AMI>(
+  const ami = await db.get<AMI>(
     `
     SELECT a.*
     FROM zip_to_cbsasub zc LEFT JOIN ami a ON a.cbsasub = zc.cbsasub
     WHERE zc.zipcode = ? AND a.cbsasub IS NOT NULL
   `,
     zip,
-  ))!;
+  );
 
   return { ami, location, calculations };
 }
