@@ -3,14 +3,8 @@ import { build } from '../helper.js';
 import Ajv from 'ajv';
 import fs from 'fs';
 import qs from 'qs';
-
-// NOTE: path is relative to test command, not this file (apparently)
-const incentiveSchema = JSON.parse(
-  fs.readFileSync('./schemas/v0/incentive.json', 'utf-8'),
-);
-const responseSchema = JSON.parse(
-  fs.readFileSync('./schemas/v0/calculator-response.json', 'utf-8'),
-);
+import { WEBSITE_INCENTIVE_SCHEMA } from '../../src/schemas/v0/incentive.js';
+import { WEBSITE_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v0/calculator-response.js';
 
 beforeEach(() => {
   process.setMaxListeners(100);
@@ -43,7 +37,7 @@ test('response is valid and correct', async t => {
   const calculatorResponse = JSON.parse(res.payload);
 
   const ajv = new Ajv.default({
-    schemas: [incentiveSchema, responseSchema],
+    schemas: [WEBSITE_INCENTIVE_SCHEMA, WEBSITE_CALCULATOR_RESPONSE_SCHEMA],
     coerceTypes: true,
     useDefaults: true,
     removeAdditional: true,
@@ -338,7 +332,7 @@ test('/incentives', async t => {
   t.equal(res.statusCode, 200, 'response status is 200');
 
   const ajv = new Ajv.default({
-    schemas: [incentiveSchema],
+    schemas: [WEBSITE_INCENTIVE_SCHEMA],
     coerceTypes: true,
     useDefaults: true,
     removeAdditional: true,
