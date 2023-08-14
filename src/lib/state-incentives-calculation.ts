@@ -2,13 +2,13 @@ import { RI_LOW_INCOME_THRESHOLDS } from '../data/RI/low_income_thresholds.js';
 import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities.js';
 import { AmountType, OwnerStatus, Type } from '../data/ira_incentives.js';
 import { RI_INCENTIVES } from '../data/state_incentives.js';
-import { APICalculatorRequest } from '../schemas/v1/calculator-endpoint.js';
 import { APIIncentiveMinusItemUrl } from '../schemas/v1/incentive.js';
 import { UnexpectedInputError } from './error.js';
+import { CalculateParams } from './incentives-calculation.js';
 
 export function calculateStateIncentivesAndSavings(
   stateId: string,
-  request: APICalculatorRequest,
+  request: CalculateParams,
 ): {
   stateIncentives: APIIncentiveMinusItemUrl[];
   tax_savings: number;

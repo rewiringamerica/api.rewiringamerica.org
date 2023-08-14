@@ -12,7 +12,6 @@ import { FilingStatus } from '../data/tax_brackets.js';
 import { APIIncentiveMinusItemUrl } from '../schemas/v1/incentive.js';
 import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities.js';
 import { calculateStateIncentivesAndSavings } from './state-incentives-calculation.js';
-import { Item } from '../data/items.js';
 import { InvalidInputError, UnexpectedInputError } from './error.js';
 
 const MAX_POS_SAVINGS = 14000;
@@ -38,16 +37,20 @@ type CalculatedIncentives = Omit<
   tax_credit_incentives: APIIncentiveMinusItemUrl[];
 };
 
+export type CalculateParams = Omit<APICalculatorRequest, 'location'>;
+
 function calculateFederalIncentivesAndSavings(
   ami: AMI,
   calculations: MFI,
   stateMFI: StateMFI,
   solarSystemCost: number,
-  tax_filing: FilingStatus,
-  owner_status: OwnerStatus,
-  household_income: number,
-  household_size: number,
-  items: Item[] | undefined,
+  {
+    tax_filing,
+    owner_status,
+    household_income,
+    household_size,
+    items,
+  }: CalculateParams,
 ): {
   federalIncentives: APIIncentiveMinusItemUrl[];
   pos_savings: number;
@@ -223,10 +226,10 @@ function calculateFederalIncentivesAndSavings(
 
 export default function calculateIncentives(
   { location: { state_id }, ami, calculations }: CompleteIncomeInfo,
-  request: APICalculatorRequest,
+  request: CalculateParams,
 ): CalculatedIncentives {
   const authorityTypes = request.authority_types ?? [AuthorityType.Federal];
-  const { owner_status, household_income, tax_filing, household_size, items } =
+  const { owner_status, household_income, tax_filing, household_size } =
     request;
 
   if (!OWNER_STATUSES.has(owner_status)) {
@@ -305,11 +308,7 @@ export default function calculateIncentives(
       calculations,
       stateMFI,
       solarSystemCost,
-      tax_filing as FilingStatus,
-      owner_status as OwnerStatus,
-      household_income,
-      household_size,
-      items,
+      request,
     );
     incentives.push(...federal.federalIncentives);
     tax_savings += federal.tax_savings;

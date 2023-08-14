@@ -87,6 +87,7 @@ export const API_CALCULATOR_REQUEST_SCHEMA = {
       default: 'en',
     },
   },
+  additionalProperties: false,
   required: [
     'location',
     'owner_status',

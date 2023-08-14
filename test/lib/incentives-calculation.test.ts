@@ -28,7 +28,6 @@ afterEach(async t => {
 
 test('correctly evaluates scenerio "Single w/ $120k Household income"', async t => {
   const data = calculateIncentives(AMIS_FOR_11211, {
-    location: { zip: '11211' },
     owner_status: 'homeowner',
     household_income: 120000,
     tax_filing: 'single',
@@ -39,7 +38,6 @@ test('correctly evaluates scenerio "Single w/ $120k Household income"', async t 
 
 test('correctly evaluates scenerio "Joint w/ 5 persons and $60k Household income"', async t => {
   const data = calculateIncentives(AMIS_FOR_11211, {
-    location: { zip: '11211' },
     owner_status: 'homeowner',
     household_income: 60000,
     tax_filing: 'joint',
@@ -50,7 +48,6 @@ test('correctly evaluates scenerio "Joint w/ 5 persons and $60k Household income
 
 test('correctly evaluates scenerio "Joint w/ $300k Household income"', async t => {
   const data = calculateIncentives(AMIS_FOR_11211, {
-    location: { zip: '11211' },
     owner_status: 'homeowner',
     household_income: 300000,
     tax_filing: 'joint',
@@ -61,7 +58,6 @@ test('correctly evaluates scenerio "Joint w/ $300k Household income"', async t =
 
 test('correctly evaluates scenerio "Single w/ $120k Household income in the Bronx"', async t => {
   const data = calculateIncentives(AMIS_FOR_11211, {
-    location: { zip: '11211' },
     owner_status: 'homeowner',
     household_income: 120000,
     tax_filing: 'single',
@@ -160,7 +156,6 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
 
 test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k Household income in San Francisco"', async t => {
   const data = calculateIncentives(AMIS_FOR_94117, {
-    location: { zip: '94117' },
     owner_status: 'homeowner',
     household_income: 250000,
     tax_filing: 'joint',
@@ -259,7 +254,6 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
 
 test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in Missisippi"', async t => {
   const data = calculateIncentives(AMIS_FOR_39503, {
-    location: { zip: '39503' },
     owner_status: 'homeowner',
     household_income: 500000,
     tax_filing: 'hoh',
@@ -362,7 +356,6 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
 
 test('correctly sorts incentives"', async t => {
   const data = calculateIncentives(AMIS_FOR_11211, {
-    location: { zip: '11211' },
     owner_status: 'homeowner',
     household_income: 120000,
     tax_filing: 'single',

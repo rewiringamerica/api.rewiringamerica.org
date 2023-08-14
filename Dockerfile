@@ -36,7 +36,6 @@ COPY --from=builder /app/incentives-api.db .
 # Copy static data
 COPY data data
 COPY locales locales
-COPY schemas schemas
 
 # go!
 ENV PORT=8080

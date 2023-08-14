@@ -1,6 +1,4 @@
-import fs from 'fs';
 import path from 'path';
-import glob from 'glob';
 import AutoLoad from '@fastify/autoload';
 import { fileURLToPath } from 'url';
 import qs from 'qs';
@@ -15,6 +13,9 @@ import {
 } from './schemas/v1/calculator-endpoint.js';
 import { API_INCENTIVE_SCHEMA } from './schemas/v1/incentive.js';
 import { ERROR_SCHEMA } from './schemas/error.js';
+import { WEBSITE_CALCULATOR_REQUEST_SCHEMA } from './schemas/v0/calculator-request.js';
+import { WEBSITE_CALCULATOR_RESPONSE_SCHEMA } from './schemas/v0/calculator-response.js';
+import { WEBSITE_INCENTIVE_SCHEMA } from './schemas/v0/incentive.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -30,14 +31,11 @@ export default async function (
 ) {
   // Place here your custom code!
 
-  const schemas = glob.sync('./schemas/**/*.json');
-  schemas.forEach(file => {
-    const schema = JSON.parse(fs.readFileSync(file, 'utf-8'));
-    fastify.addSchema(schema);
-  });
-
   // Add any schemas that are referred to by $id
   fastify.addSchema(ERROR_SCHEMA);
+  fastify.addSchema(WEBSITE_INCENTIVE_SCHEMA);
+  fastify.addSchema(WEBSITE_CALCULATOR_REQUEST_SCHEMA);
+  fastify.addSchema(WEBSITE_CALCULATOR_RESPONSE_SCHEMA);
   fastify.addSchema(API_INCENTIVE_SCHEMA);
   fastify.addSchema(API_CALCULATOR_REQUEST_SCHEMA);
   fastify.addSchema(API_CALCULATOR_RESPONSE_SCHEMA);
