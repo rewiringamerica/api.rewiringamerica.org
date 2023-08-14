@@ -1,18 +1,18 @@
 import _ from 'lodash';
-import estimateTaxAmount from './tax-brackets.js';
-import { IRA_INCENTIVES, OwnerStatus } from '../data/ira_incentives.js';
-import { SOLAR_PRICES } from '../data/solar_prices.js';
-import { STATE_MFIS, StateMFI } from '../data/state_mfi.js';
+import estimateTaxAmount from './tax-brackets';
+import { IRA_INCENTIVES, OwnerStatus } from '../data/ira_incentives';
+import { SOLAR_PRICES } from '../data/solar_prices';
+import { STATE_MFIS, StateMFI } from '../data/state_mfi';
 import {
   APICalculatorRequest,
   APICalculatorResponse,
-} from '../schemas/v1/calculator-endpoint.js';
-import { AMI, CompleteIncomeInfo, MFI } from './income-info.js';
-import { FilingStatus } from '../data/tax_brackets.js';
-import { APIIncentiveMinusItemUrl } from '../schemas/v1/incentive.js';
-import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities.js';
-import { calculateStateIncentivesAndSavings } from './state-incentives-calculation.js';
-import { InvalidInputError, UnexpectedInputError } from './error.js';
+} from '../schemas/v1/calculator-endpoint';
+import { AMI, CompleteIncomeInfo, MFI } from './income-info';
+import { FilingStatus } from '../data/tax_brackets';
+import { APIIncentiveMinusItemUrl } from '../schemas/v1/incentive';
+import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities';
+import { calculateStateIncentivesAndSavings } from './state-incentives-calculation';
+import { InvalidInputError, UnexpectedInputError } from './error';
 
 const MAX_POS_SAVINGS = 14000;
 const OWNER_STATUSES = new Set(['homeowner', 'renter']);

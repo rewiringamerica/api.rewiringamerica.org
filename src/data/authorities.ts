@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { JSONSchemaType } from 'ajv';
-import { STATES_PLUS_DC } from './states.js';
+import { STATES_PLUS_DC } from './states';
 
 /**
  * An authority is a government agency, utility, or other organization that

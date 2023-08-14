@@ -2,37 +2,31 @@ import { test } from 'tap';
 import {
   SCHEMA as I_SCHEMA,
   IRA_INCENTIVES,
-} from '../../src/data/ira_incentives.js';
+} from '../../src/data/ira_incentives';
 import {
   SCHEMA as ISS_SCHEMA,
   IRA_STATE_SAVINGS,
-} from '../../src/data/ira_state_savings.js';
-import { SCHEMA as L_SCHEMA, LOCALES } from '../../src/data/locale.js';
-import {
-  SCHEMA as SP_SCHEMA,
-  SOLAR_PRICES,
-} from '../../src/data/solar_prices.js';
-import { SCHEMA as SMFI_SCHEMA, STATE_MFIS } from '../../src/data/state_mfi.js';
-import {
-  SCHEMA as TB_SCHEMA,
-  TAX_BRACKETS,
-} from '../../src/data/tax_brackets.js';
+} from '../../src/data/ira_state_savings';
+import { SCHEMA as L_SCHEMA, LOCALES } from '../../src/data/locale';
+import { SCHEMA as SP_SCHEMA, SOLAR_PRICES } from '../../src/data/solar_prices';
+import { SCHEMA as SMFI_SCHEMA, STATE_MFIS } from '../../src/data/state_mfi';
+import { SCHEMA as TB_SCHEMA, TAX_BRACKETS } from '../../src/data/tax_brackets';
 import {
   SCHEMA as AUTHORITIES_SCHEMA,
   AUTHORITIES_BY_STATE,
-} from '../../src/data/authorities.js';
+} from '../../src/data/authorities';
 import {
   SCHEMA as RI_LOW_INCOME_THRESHOLDS_SCHEMA,
   RI_LOW_INCOME_THRESHOLDS,
-} from '../../src/data/RI/low_income_thresholds.js';
+} from '../../src/data/RI/low_income_thresholds';
 import {
   RI_INCENTIVES,
   RI_INCENTIVES_SCHEMA,
   StateIncentive,
-} from '../../src/data/state_incentives.js';
+} from '../../src/data/state_incentives';
 
 import Ajv from 'ajv';
-import { SomeJSONSchema } from 'ajv/dist/types/json-schema.js';
+import { SomeJSONSchema } from 'ajv/dist/types/json-schema';
 
 const TESTS = [
   [I_SCHEMA, IRA_INCENTIVES, 'ira_incentives'],
@@ -48,8 +42,7 @@ const TESTS = [
 
 test('static JSON files match schema', async tap => {
   tap.plan(TESTS.length);
-  // Workaround for https://github.com/ajv-validator/ajv/issues/2047
-  const ajv = new Ajv.default();
+  const ajv = new Ajv();
 
   TESTS.forEach(([schema, data, label]) => {
     if (!tap.ok(ajv.validate(schema, data))) {
@@ -83,7 +76,7 @@ function isIncentiveAmountValid<T extends StateIncentive>(
 }
 
 test('state incentives JSON files match schemas', async tap => {
-  const ajv = new Ajv.default();
+  const ajv = new Ajv();
 
   STATE_INCENTIVE_TESTS.forEach(([stateId, schema, data]) => {
     const authorities = AUTHORITIES_BY_STATE[stateId as string];

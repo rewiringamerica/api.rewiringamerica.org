@@ -1,8 +1,8 @@
 import { FromSchema } from 'json-schema-to-ts';
-import { API_INCENTIVE_SCHEMA } from './incentive.js';
-import { API_LOCATION_SCHEMA } from './location.js';
-import { AuthorityType } from '../../data/authorities.js';
-import { ALL_ITEMS } from '../../data/items.js';
+import { API_INCENTIVE_SCHEMA } from './incentive';
+import { API_LOCATION_SCHEMA } from './location';
+import { AuthorityType } from '../../data/authorities';
+import { ALL_ITEMS } from '../../data/items';
 
 export const API_CALCULATOR_REQUEST_SCHEMA = {
   $id: 'APICalculatorRequest',

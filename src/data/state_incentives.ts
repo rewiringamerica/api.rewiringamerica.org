@@ -7,9 +7,9 @@ import {
   ItemType,
   OwnerStatus,
   Type,
-} from './ira_incentives.js';
-import { ALL_ITEMS, Item } from './items.js';
-import { AuthorityType } from './authorities.js';
+} from './ira_incentives';
+import { ALL_ITEMS, Item } from './items';
+import { AuthorityType } from './authorities';
 
 export type StateIncentive = {
   authority_type: AuthorityType;
