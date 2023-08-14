@@ -1,6 +1,3 @@
-import { ERROR_SCHEMA } from '../error.js';
-import { API_INCENTIVE_SCHEMA } from './incentive.js';
-
 export const API_INCENTIVES_SCHEMA = {
   description: 'What are all the incentives from the Inflation Reduction Act?',
   querystring: {
@@ -23,13 +20,13 @@ export const API_INCENTIVES_SCHEMA = {
       properties: {
         incentives: {
           type: 'array',
-          items: API_INCENTIVE_SCHEMA,
+          items: { $ref: 'APIIncentive' },
         },
       },
     },
     400: {
       description: 'Bad request',
-      ...ERROR_SCHEMA,
+      $ref: 'Error',
     },
   },
 } as const;

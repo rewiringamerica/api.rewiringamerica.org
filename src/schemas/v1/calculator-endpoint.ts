@@ -1,11 +1,10 @@
 import { FromSchema } from 'json-schema-to-ts';
-import { ERROR_SCHEMA } from '../error.js';
 import { API_INCENTIVE_SCHEMA } from './incentive.js';
 import { API_LOCATION_SCHEMA } from './location.js';
 import { AuthorityType } from '../../data/authorities.js';
 import { ALL_ITEMS } from '../../data/items.js';
 
-const API_CALCULATOR_REQUEST_SCHEMA = {
+export const API_CALCULATOR_REQUEST_SCHEMA = {
   $id: 'APICalculatorRequest',
   title: 'APICalculatorRequest',
   type: 'object',
@@ -135,11 +134,11 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
     },
     pos_rebate_incentives: {
       type: 'array',
-      items: API_INCENTIVE_SCHEMA,
+      items: { $ref: 'APIIncentive' },
     },
     tax_credit_incentives: {
       type: 'array',
-      items: API_INCENTIVE_SCHEMA,
+      items: { $ref: 'APIIncentive' },
     },
   },
   additionalProperties: false,
@@ -211,15 +210,17 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
 export const API_CALCULATOR_SCHEMA = {
   description:
     'How much money will your customer get with the Inflation Reduction Act?',
-  querystring: API_CALCULATOR_REQUEST_SCHEMA,
+  querystring: {
+    $ref: 'APICalculatorRequest',
+  },
   response: {
     200: {
       description: 'Successful response',
-      ...API_CALCULATOR_RESPONSE_SCHEMA,
+      $ref: 'APICalculatorResponse',
     },
     400: {
       description: 'Bad request',
-      ...ERROR_SCHEMA,
+      $ref: 'Error',
     },
   },
 } as const;
@@ -228,5 +229,6 @@ export type APICalculatorRequest = FromSchema<
   typeof API_CALCULATOR_REQUEST_SCHEMA
 >;
 export type APICalculatorResponse = FromSchema<
-  typeof API_CALCULATOR_RESPONSE_SCHEMA
+  typeof API_CALCULATOR_RESPONSE_SCHEMA,
+  { references: [typeof API_INCENTIVE_SCHEMA] }
 >;

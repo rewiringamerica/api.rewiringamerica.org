@@ -5,11 +5,16 @@ import { t } from '../lib/i18n.js';
 import { IRA_INCENTIVES } from '../data/ira_incentives.js';
 import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts';
 import { FastifyInstance } from 'fastify';
-import { API_CALCULATOR_SCHEMA } from '../schemas/v1/calculator-endpoint.js';
+import {
+  API_CALCULATOR_REQUEST_SCHEMA,
+  API_CALCULATOR_RESPONSE_SCHEMA,
+  API_CALCULATOR_SCHEMA,
+} from '../schemas/v1/calculator-endpoint.js';
 import { API_INCENTIVES_SCHEMA } from '../schemas/v1/incentives-endpoint.js';
 import {
   APIIncentive,
   APIIncentiveMinusItemUrl,
+  API_INCENTIVE_SCHEMA,
 } from '../schemas/v1/incentive.js';
 import { APILocation } from '../schemas/v1/location.js';
 import { LOCALES } from '../data/locale.js';
@@ -18,6 +23,7 @@ import { IncomeInfo, isCompleteIncomeInfo } from '../lib/income-info.js';
 import { API_UTILITIES_SCHEMA } from '../schemas/v1/utilities-endpoint.js';
 import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities.js';
 import { InvalidInputError, UnexpectedInputError } from '../lib/error.js';
+import { ERROR_SCHEMA } from '../schemas/error.js';
 
 function transformIncentives(
   incentives: APIIncentiveMinusItemUrl[],
@@ -52,7 +58,17 @@ export default async function (
     }
   }
 
-  const server = fastify.withTypeProvider<JsonSchemaToTsProvider>();
+  // Add any schemas that are referred to by $id
+  const server = fastify.withTypeProvider<
+    JsonSchemaToTsProvider<{
+      references: [
+        typeof ERROR_SCHEMA,
+        typeof API_INCENTIVE_SCHEMA,
+        typeof API_CALCULATOR_REQUEST_SCHEMA,
+        typeof API_CALCULATOR_RESPONSE_SCHEMA,
+      ];
+    }>
+  >();
 
   server.get(
     '/api/v1/calculator',

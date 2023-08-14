@@ -36,7 +36,7 @@ async function validateResponse(
   const calculatorResponse = JSON.parse(res.payload);
 
   const ajv = new Ajv.default({
-    schemas: [API_CALCULATOR_RESPONSE_SCHEMA],
+    schemas: [API_INCENTIVE_SCHEMA, API_CALCULATOR_RESPONSE_SCHEMA],
     coerceTypes: true,
     useDefaults: true,
     removeAdditional: true,

@@ -1,4 +1,3 @@
-import { ERROR_SCHEMA } from '../error.js';
 import { API_LOCATION_SCHEMA } from './location.js';
 
 export const API_UTILITIES_RESPONSE_SCHEMA = {
@@ -28,7 +27,7 @@ export const API_UTILITIES_SCHEMA = {
     },
     400: {
       description: 'Bad request',
-      ...ERROR_SCHEMA,
+      $ref: 'Error',
     },
   },
 } as const;
