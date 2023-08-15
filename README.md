@@ -32,7 +32,7 @@ The Cloud Run services are not intended to be hit directly, we use zuplo.com as 
 
 In production, this app responds to api.rewiringamerica.org via a CNAME that points to Zuplo.
 
-At the moment, @tomc is the only team member with access to Zuplo at https://portal.zuplo.com/ - changes to configurations can also be made via git at https://github.com/rewiringamerica/incentives-api-zuplo
+The Zuplo config lives in the [Zuplo portal](https://portal.zuplo.com); ask @tomc for access if necessary. The Zuplo config is version-controlled at https://github.com/rewiringamerica/api-zuplo; it can be edited there and synced to Zuplo via the portal.
 
 Zuplo authenticates developers using Auth0. @tomc, @derek, @tomm and @chell have access to Auth0.
 
@@ -40,11 +40,11 @@ Zuplo authenticates developers using Auth0. @tomc, @derek, @tomm and @chell have
 
 ### Branching
 
-When working on a new change, branch off of and merge PRs into `main`. Pushing to `main` will build and deploy the `rewiring-america-dev` project automatically.
+When working on a new change, branch off of and merge PRs into `main`. Pushing to `main` will build and deploy the `incentives-api-dev` Cloud Run service in the `rewiring-america-dev` GCP project.
 
 ### Deploying
 
-Merging a pull request from `main` to `production` branch will build and deploy the production project automatically. The build/deploy steps are in [cloudbuild.yaml](cloudbuild.yaml).
+Pushing to the `production` branch will automatically build and deploy `incentives-api` Cloud Run service in the `rewiring-america` (prod) GCP project. The build/deploy steps are in [cloudbuild.yaml](cloudbuild.yaml).
 
 Manual deploys to Google Cloud Run can be done with `yarn deploy:dev` or `yarn deploy:production`.
 
@@ -59,7 +59,7 @@ See Google's [concurrency guide](https://cloud.google.com/run/docs/about-concurr
 ## URLs
 
 - Production api.rewiringamerica.org --> Zuplo --> https://incentives-api-w4dlpicepa-uc.a.run.app
-- Staging Zuplo --> https://incentives-api-dev-mcifvvqcxa-uc.a.run.app
+- Zuplo working copy https://api-main-4ba10f3.d2.zuplo.dev --> https://incentives-api-dev-mcifvvqcxa-uc.a.run.app
 
 ## TODO
 
