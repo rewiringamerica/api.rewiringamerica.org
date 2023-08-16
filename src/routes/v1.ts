@@ -124,6 +124,9 @@ export default async function (
     '/api/v1/incentives',
     { schema: API_INCENTIVES_SCHEMA },
     async (request, reply) => {
+      // TODO remove this after debugging Zuplo -> GCP auth
+      request.log.info({ authHeader: request.headers.authorization ?? null });
+
       const incentives = transformIncentives(
         IRA_INCENTIVES.map(incentive => ({
           ...incentive,
