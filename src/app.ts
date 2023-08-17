@@ -1,6 +1,5 @@
 import path from 'path';
 import AutoLoad from '@fastify/autoload';
-import { fileURLToPath } from 'url';
 import qs from 'qs';
 import {
   FastifyInstance,
@@ -10,15 +9,12 @@ import {
 import {
   API_CALCULATOR_REQUEST_SCHEMA,
   API_CALCULATOR_RESPONSE_SCHEMA,
-} from './schemas/v1/calculator-endpoint.js';
-import { API_INCENTIVE_SCHEMA } from './schemas/v1/incentive.js';
-import { ERROR_SCHEMA } from './schemas/error.js';
-import { WEBSITE_CALCULATOR_REQUEST_SCHEMA } from './schemas/v0/calculator-request.js';
-import { WEBSITE_CALCULATOR_RESPONSE_SCHEMA } from './schemas/v0/calculator-response.js';
-import { WEBSITE_INCENTIVE_SCHEMA } from './schemas/v0/incentive.js';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+} from './schemas/v1/calculator-endpoint';
+import { API_INCENTIVE_SCHEMA } from './schemas/v1/incentive';
+import { ERROR_SCHEMA } from './schemas/error';
+import { WEBSITE_CALCULATOR_REQUEST_SCHEMA } from './schemas/v0/calculator-request';
+import { WEBSITE_CALCULATOR_RESPONSE_SCHEMA } from './schemas/v0/calculator-response';
+import { WEBSITE_INCENTIVE_SCHEMA } from './schemas/v0/incentive';
 
 // Pass --options via CLI arguments in command to enable these options.
 export const options = {
@@ -47,7 +43,6 @@ export default async function (
   // through your application
   fastify.register(AutoLoad, {
     dir: path.join(__dirname, 'plugins'),
-    forceESM: true,
     options: Object.assign({}, opts),
   });
 
@@ -55,7 +50,6 @@ export default async function (
   // define your routes in one of these
   fastify.register(AutoLoad, {
     dir: path.join(__dirname, 'routes'),
-    forceESM: true,
     options: Object.assign({}, opts),
   });
 }

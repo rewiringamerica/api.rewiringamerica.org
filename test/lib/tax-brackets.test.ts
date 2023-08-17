@@ -1,5 +1,5 @@
-import estimateTaxAmount from '../../src/lib/tax-brackets.js';
-import { FilingStatus } from '../../src/data/tax_brackets.js';
+import estimateTaxAmount from '../../src/lib/tax-brackets';
+import { FilingStatus } from '../../src/data/tax_brackets';
 import { test } from 'tap';
 
 /**

@@ -1,5 +1,5 @@
 import { FromSchema } from 'json-schema-to-ts';
-import { WEBSITE_INCENTIVE_SCHEMA } from './incentive.js';
+import { WEBSITE_INCENTIVE_SCHEMA } from './incentive';
 
 export const WEBSITE_CALCULATOR_RESPONSE_SCHEMA = {
   $id: 'WebsiteCalculatorResponse',

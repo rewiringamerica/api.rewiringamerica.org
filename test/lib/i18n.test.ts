@@ -1,4 +1,4 @@
-import { t } from '../../src/lib/i18n.js';
+import { t } from '../../src/lib/i18n';
 import { test } from 'tap';
 
 test('t finds the right string', async tap => {

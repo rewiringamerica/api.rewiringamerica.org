@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { JSONSchemaType } from 'ajv';
-import { STATES_PLUS_DC } from './states.js';
+import { STATES_PLUS_DC } from './states';
 
 const propertySchema = {
   METRO: { type: 'number' },

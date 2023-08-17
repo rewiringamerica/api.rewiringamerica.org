@@ -1,9 +1,9 @@
 import { test, beforeEach } from 'tap';
-import { build } from '../helper.js';
-import { API_INCENTIVE_SCHEMA } from '../../src/schemas/v1/incentive.js';
-import { API_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v1/calculator-endpoint.js';
-import { API_UTILITIES_RESPONSE_SCHEMA } from '../../src/schemas/v1/utilities-endpoint.js';
-import { AUTHORITIES_BY_STATE } from '../../src/data/authorities.js';
+import { build } from '../helper';
+import { API_INCENTIVE_SCHEMA } from '../../src/schemas/v1/incentive';
+import { API_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v1/calculator-endpoint';
+import { API_UTILITIES_RESPONSE_SCHEMA } from '../../src/schemas/v1/utilities-endpoint';
+import { AUTHORITIES_BY_STATE } from '../../src/data/authorities';
 import Ajv from 'ajv';
 import fs from 'fs';
 import qs from 'qs';
@@ -35,7 +35,7 @@ async function validateResponse(
 
   const calculatorResponse = JSON.parse(res.payload);
 
-  const ajv = new Ajv.default({
+  const ajv = new Ajv({
     schemas: [API_INCENTIVE_SCHEMA, API_CALCULATOR_RESPONSE_SCHEMA],
     coerceTypes: true,
     useDefaults: true,
@@ -331,7 +331,7 @@ test('/incentives', async t => {
   t.equal(incentivesResponse.incentives.length, 30);
   t.equal(res.statusCode, 200, 'response status is 200');
 
-  const ajv = new Ajv.default({
+  const ajv = new Ajv({
     schemas: [{ ...API_INCENTIVE_SCHEMA, $id: 'APIIncentive' }],
     coerceTypes: true,
     useDefaults: true,
@@ -358,7 +358,7 @@ test('/utilities', async t => {
 
   const utilitiesResponse = JSON.parse(res.payload);
 
-  const ajv = new Ajv.default({
+  const ajv = new Ajv({
     schemas: [API_UTILITIES_RESPONSE_SCHEMA],
     coerceTypes: true,
     useDefaults: true,

@@ -1,4 +1,4 @@
-import { Locale, LOCALES } from '../data/locale.js';
+import { Locale, LOCALES } from '../data/locale';
 
 // FIXME: if we get tempted to start optimizing this, use a real i18n library
 // looked at fastify-polyglot but it didn't have good docs on switching locale

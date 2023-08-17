@@ -1,6 +1,6 @@
 import { Database } from 'sqlite';
-import { geocoder } from './geocoder.js';
-import { AMI, IncomeInfo, MFI } from './income-info.js';
+import { geocoder } from './geocoder';
+import { AMI, IncomeInfo, MFI } from './income-info';
 
 export default async function fetchAMIsForAddress(
   db: Database,

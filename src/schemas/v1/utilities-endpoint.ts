@@ -1,4 +1,4 @@
-import { API_LOCATION_SCHEMA } from './location.js';
+import { API_LOCATION_SCHEMA } from './location';
 
 export const API_UTILITIES_RESPONSE_SCHEMA = {
   $id: 'APIUtilitiesResponse',

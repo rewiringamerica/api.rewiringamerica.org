@@ -47,12 +47,11 @@
   },
   "scripts": {
     "start": "fastify start -l info -a 0.0.0.0 build/app.js --options",
-    "dev": "NODE_OPTIONS=\"--no-warnings --loader=ts-node/esm\" fastify start -w -l info -P src/app.ts --options",
+    "dev": "fastify start -r ts-node/register -w -l info -P src/app.ts --options",
     "build": "./scripts/build.sh",
     "lint": "prettier --check . && eslint .",
     "deploy:dev": "gcloud run deploy incentives-api-dev --project rewiring-america-dev --source .",
     "deploy:production": "gcloud run deploy incentives-api --project rewiring-america --source .",
-    "test": "yarn lint && dotenv -- tap --node-arg=--no-warnings --node-arg=--loader=ts-node/esm \"test/**/*.test.ts\""
-  },
-  "type": "module"
+    "test": "yarn lint && dotenv -- tap --no-check-coverage --ts \"test/**/*.test.ts\""
+  }
 }

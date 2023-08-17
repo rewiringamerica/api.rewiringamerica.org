@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { JSONSchemaType } from 'ajv';
-import { FilingStatus } from './tax_brackets.js';
-import { ALL_ITEMS, Item } from './items.js';
+import { FilingStatus } from './tax_brackets';
+import { ALL_ITEMS, Item } from './items';
 
 export enum AmiQualification {
   LessThan150_Ami = 'less_than_150_ami',

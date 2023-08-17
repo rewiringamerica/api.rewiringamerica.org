@@ -1,5 +1,5 @@
 import { test, beforeEach, afterEach } from 'tap';
-import calculateIncentives from '../../src/lib/incentives-calculation.js';
+import calculateIncentives from '../../src/lib/incentives-calculation';
 import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
 import _ from 'lodash';

@@ -1,10 +1,10 @@
 import { test, beforeEach } from 'tap';
-import { build } from '../helper.js';
+import { build } from '../helper';
 import Ajv from 'ajv';
 import fs from 'fs';
 import qs from 'qs';
-import { WEBSITE_INCENTIVE_SCHEMA } from '../../src/schemas/v0/incentive.js';
-import { WEBSITE_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v0/calculator-response.js';
+import { WEBSITE_INCENTIVE_SCHEMA } from '../../src/schemas/v0/incentive';
+import { WEBSITE_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v0/calculator-response';
 
 beforeEach(() => {
   process.setMaxListeners(100);
@@ -36,7 +36,7 @@ test('response is valid and correct', async t => {
 
   const calculatorResponse = JSON.parse(res.payload);
 
-  const ajv = new Ajv.default({
+  const ajv = new Ajv({
     schemas: [WEBSITE_INCENTIVE_SCHEMA, WEBSITE_CALCULATOR_RESPONSE_SCHEMA],
     coerceTypes: true,
     useDefaults: true,
@@ -331,7 +331,7 @@ test('/incentives', async t => {
   t.equal(incentivesResponse.incentives.length, 30);
   t.equal(res.statusCode, 200, 'response status is 200');
 
-  const ajv = new Ajv.default({
+  const ajv = new Ajv({
     schemas: [WEBSITE_INCENTIVE_SCHEMA],
     coerceTypes: true,
     useDefaults: true,
