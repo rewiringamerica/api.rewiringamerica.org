@@ -1,15 +1,10 @@
 import { JSONSchemaType } from 'ajv';
 import fs from 'fs';
 import { AuthorityType } from './authorities';
-import {
-  Amount,
-  AmountType,
-  AmountUnit,
-  ItemType,
-  OwnerStatus,
-  Type,
-} from './ira_incentives';
-import { ALL_ITEMS, Item } from './items';
+import { Amount, AmountType, AmountUnit } from './types/amount';
+import { ItemType, Type } from './types/incentive-types';
+import { ALL_ITEMS, Item } from './types/items';
+import { OwnerStatus } from './types/owner-status';
 
 export type StateIncentive = {
   authority_type: AuthorityType;

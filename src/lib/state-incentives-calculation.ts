@@ -1,7 +1,9 @@
 import { RI_LOW_INCOME_THRESHOLDS } from '../data/RI/low_income_thresholds';
 import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities';
-import { AmountType, OwnerStatus, Type } from '../data/ira_incentives';
 import { RI_INCENTIVES } from '../data/state_incentives';
+import { AmountType } from '../data/types/amount';
+import { Type } from '../data/types/incentive-types';
+import { OwnerStatus } from '../data/types/owner-status';
 import { APIIncentiveMinusItemUrl } from '../schemas/v1/incentive';
 import { UnexpectedInputError } from './error';
 import { CalculateParams } from './incentives-calculation';

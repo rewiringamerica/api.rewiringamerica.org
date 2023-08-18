@@ -1,6 +1,6 @@
 import { JSONSchemaType } from 'ajv';
 import fs from 'fs';
-import { ALL_ITEMS, ITEMS_SCHEMA } from './items';
+import { ALL_ITEMS, ITEMS_SCHEMA } from './types/items';
 
 export type Items = {
   [k in keyof typeof ITEMS_SCHEMA]: string;

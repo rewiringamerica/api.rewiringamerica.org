@@ -1,6 +1,6 @@
 import { FromSchema } from 'json-schema-to-ts';
 import { AuthorityType } from '../../data/authorities';
-import { ALL_ITEMS } from '../../data/items';
+import { ALL_ITEMS } from '../../data/types/items';
 import { API_INCENTIVE_SCHEMA } from './incentive';
 import { API_LOCATION_SCHEMA } from './location';
 
