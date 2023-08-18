@@ -1,18 +1,18 @@
 import _ from 'lodash';
-import estimateTaxAmount from './tax-brackets';
+import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities';
 import { IRA_INCENTIVES, OwnerStatus } from '../data/ira_incentives';
 import { SOLAR_PRICES } from '../data/solar_prices';
 import { STATE_MFIS, StateMFI } from '../data/state_mfi';
+import { FilingStatus } from '../data/tax_brackets';
 import {
   APICalculatorRequest,
   APICalculatorResponse,
 } from '../schemas/v1/calculator-endpoint';
-import { AMI, CompleteIncomeInfo, MFI } from './income-info';
-import { FilingStatus } from '../data/tax_brackets';
 import { APIIncentiveMinusItemUrl } from '../schemas/v1/incentive';
-import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities';
-import { calculateStateIncentivesAndSavings } from './state-incentives-calculation';
 import { InvalidInputError, UnexpectedInputError } from './error';
+import { AMI, CompleteIncomeInfo, MFI } from './income-info';
+import { calculateStateIncentivesAndSavings } from './state-incentives-calculation';
+import estimateTaxAmount from './tax-brackets';
 
 const MAX_POS_SAVINGS = 14000;
 const OWNER_STATUSES = new Set(['homeowner', 'renter']);

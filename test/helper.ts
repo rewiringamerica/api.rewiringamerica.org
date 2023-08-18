@@ -28,4 +28,4 @@ async function build(t: Tap.Test) {
   return app;
 }
 
-export { config, build };
+export { build, config };

@@ -1,9 +1,9 @@
-import { test, beforeEach, afterEach } from 'tap';
-import calculateIncentives from '../../src/lib/incentives-calculation';
-import sqlite3 from 'sqlite3';
-import { open } from 'sqlite';
-import _ from 'lodash';
 import fs from 'fs';
+import _ from 'lodash';
+import { open } from 'sqlite';
+import sqlite3 from 'sqlite3';
+import { afterEach, beforeEach, test } from 'tap';
+import calculateIncentives from '../../src/lib/incentives-calculation';
 
 const AMIS_FOR_11211 = JSON.parse(
   fs.readFileSync('./test/fixtures/amis-for-zip-11211.json', 'utf-8'),

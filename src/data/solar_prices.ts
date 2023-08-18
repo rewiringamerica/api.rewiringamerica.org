@@ -1,5 +1,5 @@
-import fs from 'fs';
 import { JSONSchemaType } from 'ajv';
+import fs from 'fs';
 import { STATES_PLUS_DC } from './states';
 
 const propertySchema = {

@@ -1,25 +1,25 @@
-import calculateIncentives from '../lib/incentives-calculation';
-import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
-import { t } from '../lib/i18n';
+import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts';
+import { FastifyInstance } from 'fastify';
 import _ from 'lodash';
+import { Database } from 'sqlite';
+import { AuthorityType } from '../data/authorities';
 import { IRA_INCENTIVES } from '../data/ira_incentives';
 import { IRA_STATE_SAVINGS } from '../data/ira_state_savings';
 import { InvalidInputError } from '../lib/error';
-import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts';
-import { FastifyInstance } from 'fastify';
-import { Database } from 'sqlite';
-import {
-  WEBSITE_INCENTIVE_SCHEMA,
-  WebsiteIncentive,
-} from '../schemas/v0/incentive';
+import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
+import { t } from '../lib/i18n';
+import calculateIncentives from '../lib/incentives-calculation';
+import { isCompleteIncomeInfo } from '../lib/income-info';
 import { WEBSITE_CALCULATOR_REQUEST_SCHEMA } from '../schemas/v0/calculator-request';
 import {
   WEBSITE_CALCULATOR_RESPONSE_SCHEMA,
   WebsiteCalculatorResponse,
 } from '../schemas/v0/calculator-response';
+import {
+  WEBSITE_INCENTIVE_SCHEMA,
+  WebsiteIncentive,
+} from '../schemas/v0/incentive';
 import { APIIncentiveMinusItemUrl } from '../schemas/v1/incentive';
-import { AuthorityType } from '../data/authorities';
-import { isCompleteIncomeInfo } from '../lib/income-info';
 
 IRA_INCENTIVES.forEach(incentive => Object.freeze(incentive));
 

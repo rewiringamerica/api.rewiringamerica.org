@@ -1,6 +1,6 @@
-import estimateTaxAmount from '../../src/lib/tax-brackets';
-import { FilingStatus } from '../../src/data/tax_brackets';
 import { test } from 'tap';
+import { FilingStatus } from '../../src/data/tax_brackets';
+import estimateTaxAmount from '../../src/lib/tax-brackets';
 
 /**
  * Uses 2023 IRS tax brackets and std deductions

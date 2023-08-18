@@ -1,5 +1,5 @@
-import fs from 'fs';
 import { JSONSchemaType } from 'ajv';
+import fs from 'fs';
 
 export type TaxBracket = {
   filing_status: FilingStatus;
