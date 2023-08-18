@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { TAX_BRACKETS, FilingStatus } from '../data/tax_brackets';
+import { FilingStatus, TAX_BRACKETS } from '../data/tax_brackets';
 
 export default function estimateTaxAmount(
   filing_status: FilingStatus,

@@ -1,12 +1,12 @@
-import { test, beforeEach } from 'tap';
-import { build } from '../helper';
-import { API_INCENTIVE_SCHEMA } from '../../src/schemas/v1/incentive';
-import { API_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v1/calculator-endpoint';
-import { API_UTILITIES_RESPONSE_SCHEMA } from '../../src/schemas/v1/utilities-endpoint';
-import { AUTHORITIES_BY_STATE } from '../../src/data/authorities';
 import Ajv from 'ajv';
 import fs from 'fs';
 import qs from 'qs';
+import { beforeEach, test } from 'tap';
+import { AUTHORITIES_BY_STATE } from '../../src/data/authorities';
+import { API_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v1/calculator-endpoint';
+import { API_INCENTIVE_SCHEMA } from '../../src/schemas/v1/incentive';
+import { API_UTILITIES_RESPONSE_SCHEMA } from '../../src/schemas/v1/utilities-endpoint';
+import { build } from '../helper';
 
 beforeEach(() => {
   process.setMaxListeners(100);

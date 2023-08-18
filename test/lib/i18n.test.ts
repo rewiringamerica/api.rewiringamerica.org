@@ -1,5 +1,5 @@
-import { t } from '../../src/lib/i18n';
 import { test } from 'tap';
+import { t } from '../../src/lib/i18n';
 
 test('t finds the right string', async tap => {
   tap.equal(

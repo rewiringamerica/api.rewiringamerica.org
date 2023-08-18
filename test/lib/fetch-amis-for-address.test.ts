@@ -1,6 +1,6 @@
-import { test, beforeEach, afterEach } from 'tap';
-import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
+import sqlite3 from 'sqlite3';
+import { afterEach, beforeEach, test } from 'tap';
 import fetchAMIsForAddress from '../../src/lib/fetch-amis-for-address';
 import { geocoder } from '../../src/lib/geocoder';
 import { geocoder as mockGeocoder } from '../mocks/geocoder';

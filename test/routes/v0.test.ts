@@ -1,10 +1,10 @@
-import { test, beforeEach } from 'tap';
-import { build } from '../helper';
 import Ajv from 'ajv';
 import fs from 'fs';
 import qs from 'qs';
-import { WEBSITE_INCENTIVE_SCHEMA } from '../../src/schemas/v0/incentive';
+import { beforeEach, test } from 'tap';
 import { WEBSITE_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v0/calculator-response';
+import { WEBSITE_INCENTIVE_SCHEMA } from '../../src/schemas/v0/incentive';
+import { build } from '../helper';
 
 beforeEach(() => {
   process.setMaxListeners(100);

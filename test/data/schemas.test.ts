@@ -1,29 +1,29 @@
 import { test } from 'tap';
 import {
-  SCHEMA as I_SCHEMA,
-  IRA_INCENTIVES,
-} from '../../src/data/ira_incentives';
+  RI_LOW_INCOME_THRESHOLDS,
+  SCHEMA as RI_LOW_INCOME_THRESHOLDS_SCHEMA,
+} from '../../src/data/RI/low_income_thresholds';
 import {
-  SCHEMA as ISS_SCHEMA,
-  IRA_STATE_SAVINGS,
-} from '../../src/data/ira_state_savings';
-import { SCHEMA as L_SCHEMA, LOCALES } from '../../src/data/locale';
-import { SCHEMA as SP_SCHEMA, SOLAR_PRICES } from '../../src/data/solar_prices';
-import { SCHEMA as SMFI_SCHEMA, STATE_MFIS } from '../../src/data/state_mfi';
-import { SCHEMA as TB_SCHEMA, TAX_BRACKETS } from '../../src/data/tax_brackets';
-import {
-  SCHEMA as AUTHORITIES_SCHEMA,
   AUTHORITIES_BY_STATE,
+  SCHEMA as AUTHORITIES_SCHEMA,
 } from '../../src/data/authorities';
 import {
-  SCHEMA as RI_LOW_INCOME_THRESHOLDS_SCHEMA,
-  RI_LOW_INCOME_THRESHOLDS,
-} from '../../src/data/RI/low_income_thresholds';
+  IRA_INCENTIVES,
+  SCHEMA as I_SCHEMA,
+} from '../../src/data/ira_incentives';
+import {
+  IRA_STATE_SAVINGS,
+  SCHEMA as ISS_SCHEMA,
+} from '../../src/data/ira_state_savings';
+import { LOCALES, SCHEMA as L_SCHEMA } from '../../src/data/locale';
+import { SOLAR_PRICES, SCHEMA as SP_SCHEMA } from '../../src/data/solar_prices';
 import {
   RI_INCENTIVES,
   RI_INCENTIVES_SCHEMA,
   StateIncentive,
 } from '../../src/data/state_incentives';
+import { SCHEMA as SMFI_SCHEMA, STATE_MFIS } from '../../src/data/state_mfi';
+import { TAX_BRACKETS, SCHEMA as TB_SCHEMA } from '../../src/data/tax_brackets';
 
 import Ajv from 'ajv';
 import { SomeJSONSchema } from 'ajv/dist/types/json-schema';

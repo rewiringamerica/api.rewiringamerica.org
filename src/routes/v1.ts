@@ -1,29 +1,29 @@
-import calculateIncentives from '../lib/incentives-calculation';
+import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts';
+import { FastifyInstance } from 'fastify';
+import { Database } from 'sqlite';
+import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities';
+import { IRA_INCENTIVES } from '../data/ira_incentives';
+import { LOCALES } from '../data/locale';
+import { InvalidInputError, UnexpectedInputError } from '../lib/error';
 import fetchAMIsForAddress from '../lib/fetch-amis-for-address';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
 import { t } from '../lib/i18n';
-import { IRA_INCENTIVES } from '../data/ira_incentives';
-import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts';
-import { FastifyInstance } from 'fastify';
+import calculateIncentives from '../lib/incentives-calculation';
+import { IncomeInfo, isCompleteIncomeInfo } from '../lib/income-info';
+import { ERROR_SCHEMA } from '../schemas/error';
 import {
   API_CALCULATOR_REQUEST_SCHEMA,
   API_CALCULATOR_RESPONSE_SCHEMA,
   API_CALCULATOR_SCHEMA,
 } from '../schemas/v1/calculator-endpoint';
-import { API_INCENTIVES_SCHEMA } from '../schemas/v1/incentives-endpoint';
 import {
   APIIncentive,
   APIIncentiveMinusItemUrl,
   API_INCENTIVE_SCHEMA,
 } from '../schemas/v1/incentive';
+import { API_INCENTIVES_SCHEMA } from '../schemas/v1/incentives-endpoint';
 import { APILocation } from '../schemas/v1/location';
-import { LOCALES } from '../data/locale';
-import { Database } from 'sqlite';
-import { IncomeInfo, isCompleteIncomeInfo } from '../lib/income-info';
 import { API_UTILITIES_SCHEMA } from '../schemas/v1/utilities-endpoint';
-import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities';
-import { InvalidInputError, UnexpectedInputError } from '../lib/error';
-import { ERROR_SCHEMA } from '../schemas/error';
 
 function transformIncentives(
   incentives: APIIncentiveMinusItemUrl[],

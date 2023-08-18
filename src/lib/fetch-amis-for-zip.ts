@@ -1,5 +1,5 @@
 import { Database } from 'sqlite';
-import { AMI, ZipInfo, IncomeInfo, MFI } from './income-info';
+import { AMI, IncomeInfo, MFI, ZipInfo } from './income-info';
 
 export default async function fetchAMIsForZip(
   db: Database,

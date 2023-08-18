@@ -1,5 +1,5 @@
-import fs from 'fs';
 import { JSONSchemaType } from 'ajv';
+import fs from 'fs';
 import { ALL_ITEMS, ITEMS_SCHEMA } from './items';
 
 export type Items = {
