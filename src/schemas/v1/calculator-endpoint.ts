@@ -1,6 +1,8 @@
 import { FromSchema } from 'json-schema-to-ts';
 import { AuthorityType } from '../../data/authorities';
+import { FilingStatus } from '../../data/tax_brackets';
 import { ALL_ITEMS } from '../../data/types/items';
+import { OwnerStatus } from '../../data/types/owner-status';
 import { API_INCENTIVE_SCHEMA } from './incentive';
 import { API_LOCATION_SCHEMA } from './location';
 
@@ -41,10 +43,7 @@ export const API_CALCULATOR_REQUEST_SCHEMA = {
     owner_status: {
       type: 'string',
       description: 'Homeowners and renters qualify for different incentives.',
-      enum: [
-        'homeowner',
-        'renter',
-      ],
+      enum: Object.values(OwnerStatus),
     },
     household_income: {
       type: 'integer',
@@ -60,11 +59,7 @@ export const API_CALCULATOR_REQUEST_SCHEMA = {
       type: 'string',
       description:
         'Select "Head of Household" if you have a child or relative living with you, and you pay more than half the costs of your home. Select "Joint" if you file your taxes as a married couple.',
-      enum: [
-        'single',
-        'joint',
-        'hoh',
-      ],
+      enum: Object.values(FilingStatus),
     },
     household_size: {
       type: 'integer',

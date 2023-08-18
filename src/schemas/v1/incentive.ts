@@ -1,4 +1,10 @@
 import { FromSchema } from 'json-schema-to-ts';
+import { AuthorityType } from '../../data/authorities';
+import { AmiQualification } from '../../data/ira_incentives';
+import { FilingStatus } from '../../data/tax_brackets';
+import { AmountType, AmountUnit } from '../../data/types/amount';
+import { ItemType, Type } from '../../data/types/incentive-types';
+import { OwnerStatus } from '../../data/types/owner-status';
 
 export const API_INCENTIVE_SCHEMA = {
   $id: 'APIIncentive',
@@ -18,14 +24,11 @@ export const API_INCENTIVE_SCHEMA = {
   properties: {
     type: {
       type: 'string',
-      enum: [
-        'pos_rebate',
-        'tax_credit',
-      ],
+      enum: Object.values(Type),
     },
     authority_type: {
       type: 'string',
-      enum: ['federal', 'state', 'utility'],
+      enum: Object.values(AuthorityType),
     },
     authority_name: {
       type: 'string',
@@ -54,21 +57,14 @@ export const API_INCENTIVE_SCHEMA = {
       properties: {
         type: {
           type: 'string',
-          enum: [
-            'dollar_amount',
-            'percent',
-            'dollars_per_unit',
-          ],
+          enum: Object.values(AmountType),
         },
         number: { type: 'number' },
         maximum: { type: 'number' },
         representative: { type: 'number' },
         unit: {
           type: 'string',
-          enum: [
-            'ton',
-            'watt',
-          ],
+          enum: Object.values(AmountUnit),
         },
       },
       additionalProperties: false,
@@ -79,22 +75,13 @@ export const API_INCENTIVE_SCHEMA = {
     },
     item_type: {
       type: 'string',
-      enum: [
-        'performance_rebate',
-        'pos_rebate',
-        'tax_credit',
-        'solar_tax_credit',
-        'ev_charger_credit',
-      ],
+      enum: Object.values(ItemType),
     },
     owner_status: {
       type: 'array',
       items: {
         type: 'string',
-        enum: [
-          'homeowner',
-          'renter',
-        ],
+        enum: Object.values(OwnerStatus),
       },
     },
     start_date: {
@@ -118,12 +105,7 @@ export const API_INCENTIVE_SCHEMA = {
     ami_qualification: {
       type: 'string',
       nullable: true,
-      enum: [
-        'less_than_80_ami',
-        'less_than_150_ami',
-        'more_than_80_ami',
-        null,
-      ],
+      enum: [...Object.values(AmiQualification), null],
     },
     agi_max_limit: {
       type: 'number',
@@ -136,12 +118,7 @@ export const API_INCENTIVE_SCHEMA = {
     filing_status: {
       type: 'string',
       nullable: true,
-      enum: [
-        'single',
-        'joint',
-        'hoh',
-        null,
-      ],
+      enum: [...Object.values(FilingStatus), null],
     },
     eligible: {
       type: 'boolean',

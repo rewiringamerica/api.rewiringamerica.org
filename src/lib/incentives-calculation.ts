@@ -16,8 +16,8 @@ import { calculateStateIncentivesAndSavings } from './state-incentives-calculati
 import estimateTaxAmount from './tax-brackets';
 
 const MAX_POS_SAVINGS = 14000;
-const OWNER_STATUSES = new Set(['homeowner', 'renter']);
-const TAX_FILINGS = new Set(['single', 'joint', 'hoh']);
+const OWNER_STATUSES = new Set(Object.values(OwnerStatus));
+const TAX_FILINGS = new Set(Object.values(FilingStatus));
 
 IRA_INCENTIVES.forEach(incentive => Object.freeze(incentive));
 
