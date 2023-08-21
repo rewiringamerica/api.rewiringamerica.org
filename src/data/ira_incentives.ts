@@ -1,66 +1,15 @@
 import { JSONSchemaType } from 'ajv';
 import fs from 'fs';
-import { ALL_ITEMS, Item } from './items';
 import { FilingStatus } from './tax_brackets';
+import { Amount, AmountType, AmountUnit } from './types/amount';
+import { ItemType, Type } from './types/incentive-types';
+import { ALL_ITEMS, Item } from './types/items';
+import { OwnerStatus } from './types/owner-status';
 
 export enum AmiQualification {
   LessThan150_Ami = 'less_than_150_ami',
   LessThan80_Ami = 'less_than_80_ami',
   MoreThan80_Ami = 'more_than_80_ami',
-}
-
-export enum AmountType {
-  DollarAmount = 'dollar_amount',
-  Percent = 'percent',
-  PerUnit = 'dollars_per_unit',
-}
-
-export enum AmountUnit {
-  Ton = 'ton',
-  Watt = 'watt',
-}
-
-/**
- * There are four types of amount, with the following rules:
- *
- * - dollar_amount. This must specify "number" as the exact or maximum number
- *   of dollars the incentive is for. Must not have "unit" or "representative".
- *
- *   TODO some also specify "maximum". For now this is just a marker that there
- *   is more to the incentive; it may be tiered flat amounts depending on
- *   equipment specs or some input we're not capturing, or something more
- *   complex.
- *
- * - percent. Number is between 0 and 1. May also have "maximum" and
- *   "representative". Must not have "unit".
- *
- * - dollars_per_unit. Number is dollars per unit. "unit" is required. May also
- *   have "maximum" and "representative".
- */
-export interface Amount {
-  type: AmountType;
-  number: number;
-  unit?: AmountUnit;
-  maximum?: number;
-  representative?: number;
-}
-
-export enum ItemType {
-  EvChargerCredit = 'ev_charger_credit',
-  PerformanceRebate = 'performance_rebate',
-  PosRebate = 'pos_rebate',
-  SolarTaxCredit = 'solar_tax_credit',
-  TaxCredit = 'tax_credit',
-}
-
-export enum Type {
-  PosRebate = 'pos_rebate',
-  TaxCredit = 'tax_credit',
-}
-
-export enum OwnerStatus {
-  Homeowner = 'homeowner',
-  Renter = 'renter',
 }
 
 export interface Incentive {

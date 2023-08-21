@@ -1,9 +1,10 @@
 import _ from 'lodash';
 import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities';
-import { IRA_INCENTIVES, OwnerStatus } from '../data/ira_incentives';
+import { IRA_INCENTIVES } from '../data/ira_incentives';
 import { SOLAR_PRICES } from '../data/solar_prices';
 import { STATE_MFIS, StateMFI } from '../data/state_mfi';
 import { FilingStatus } from '../data/tax_brackets';
+import { OwnerStatus } from '../data/types/owner-status';
 import {
   APICalculatorRequest,
   APICalculatorResponse,
