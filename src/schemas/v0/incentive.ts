@@ -1,4 +1,8 @@
 import { FromSchema } from 'json-schema-to-ts';
+import { AmiQualification } from '../../data/ira_incentives';
+import { FilingStatus } from '../../data/tax_brackets';
+import { ItemType, Type } from '../../data/types/incentive-types';
+import { OwnerStatus } from '../../data/types/owner-status';
 
 export const WEBSITE_INCENTIVE_SCHEMA = {
   $id: 'WebsiteIncentive',
@@ -22,10 +26,7 @@ export const WEBSITE_INCENTIVE_SCHEMA = {
   properties: {
     type: {
       type: 'string',
-      enum: [
-        'pos_rebate',
-        'tax_credit',
-      ],
+      enum: Object.values(Type),
     },
     program: {
       type: 'string',
@@ -79,22 +80,13 @@ export const WEBSITE_INCENTIVE_SCHEMA = {
     },
     item_type: {
       type: 'string',
-      enum: [
-        'performance_rebate',
-        'pos_rebate',
-        'tax_credit',
-        'solar_tax_credit',
-        'ev_charger_credit',
-      ],
+      enum: Object.values(ItemType),
     },
     owner_status: {
       type: 'array',
       items: {
         type: 'string',
-        enum: [
-          'homeowner',
-          'renter',
-        ],
+        enum: Object.values(OwnerStatus),
       },
     },
     start_date: {
@@ -124,12 +116,7 @@ export const WEBSITE_INCENTIVE_SCHEMA = {
     ami_qualification: {
       type: 'string',
       nullable: true,
-      enum: [
-        'less_than_80_ami',
-        'less_than_150_ami',
-        'more_than_80_ami',
-        null,
-      ],
+      enum: [...Object.values(AmiQualification), null],
     },
     agi_max_limit: {
       type: 'number',
@@ -141,12 +128,7 @@ export const WEBSITE_INCENTIVE_SCHEMA = {
     filing_status: {
       type: 'string',
       nullable: true,
-      enum: [
-        'single',
-        'joint',
-        'hoh',
-        null,
-      ],
+      enum: [...Object.values(FilingStatus), null],
     },
     eligible: {
       type: 'boolean',
