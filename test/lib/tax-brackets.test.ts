@@ -5,7 +5,7 @@ import estimateTaxAmount from '../../src/lib/tax-brackets';
 
 /**
  * Uses 2023 IRS tax brackets and std deductions
- * Data source: https://turbotax.intuit.com/tax-tips/irs-tax-return/current-federal-tax-rate-schedules/L7Bjs1EAD
+ * Data source: https://www.irs.gov/pub/irs-drop/rp-22-38.pdf
  *
  * Formula to calculate tax owed to write tests:
  * * Choose an amount and filing status (single, joint, hoh)
