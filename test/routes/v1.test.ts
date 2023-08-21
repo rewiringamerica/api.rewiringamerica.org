@@ -328,7 +328,7 @@ test('/incentives', async t => {
   const app = await build(t);
   const res = await app.inject({ url: '/api/v1/incentives' });
   const incentivesResponse = JSON.parse(res.payload);
-  t.equal(incentivesResponse.incentives.length, 30);
+  t.equal(incentivesResponse.incentives.length, 32);
   t.equal(res.statusCode, 200, 'response status is 200');
 
   const ajv = new Ajv({

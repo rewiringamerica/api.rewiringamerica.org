@@ -13,6 +13,7 @@ export type TaxBracket = {
 export enum FilingStatus {
   HoH = 'hoh',
   Joint = 'joint',
+  MarriedFilingSeparately = 'married_filing_separately',
   Single = 'single',
 }
 

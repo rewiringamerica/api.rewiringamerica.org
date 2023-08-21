@@ -179,6 +179,22 @@
       "renter"
     ],
     "ami_qualification": null,
+    "agi_max_limit": 150000,
+    "filing_status": "married_filing_separately",
+    "start_date": 2023,
+    "end_date": 2032
+  },
+  {
+    "type": "tax_credit",
+    "program": "cleanVehicleCredit",
+    "item": "new_electric_vehicle",
+    "item_type": "tax_credit",
+    "amount": { "type": "dollar_amount", "number": 7500 },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "ami_qualification": null,
     "agi_max_limit": 225000,
     "filing_status": "hoh",
     "start_date": 2023,
@@ -213,6 +229,22 @@
     "ami_qualification": null,
     "agi_max_limit": 75000,
     "filing_status": "single",
+    "start_date": 2023,
+    "end_date": 2032
+  },
+  {
+    "type": "tax_credit",
+    "program": "creditForPreviouslyOwnedCleanVehicles",
+    "item": "used_electric_vehicle",
+    "item_type": "tax_credit",
+    "amount": { "type": "dollar_amount", "number": 4000 },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "ami_qualification": null,
+    "agi_max_limit": 75000,
+    "filing_status": "married_filing_separately",
     "start_date": 2023,
     "end_date": 2032
   },

@@ -58,6 +58,16 @@ test('correctly evaluates scenerio "Joint w/ $300k Household income"', async t =
   t.ok(data);
 });
 
+test('correctly evaluates scenario "MFS w/ $100k Household income"', async t => {
+  const data = calculateIncentives(AMIS_FOR_11211, {
+    owner_status: OwnerStatus.Homeowner,
+    household_income: 100000,
+    tax_filing: FilingStatus.MarriedFilingSeparately,
+    household_size: 4,
+  });
+  t.ok(data);
+});
+
 test('correctly evaluates scenerio "Single w/ $120k Household income in the Bronx"', async t => {
   const data = calculateIncentives(AMIS_FOR_11211, {
     owner_status: OwnerStatus.Homeowner,
