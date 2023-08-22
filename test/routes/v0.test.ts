@@ -307,6 +307,16 @@ const ESTIMATION_TESTS = [
       zip: '39503',
       owner_status: 'homeowner',
       household_income: 500000,
+      tax_filing: 'married_filing_separately',
+      household_size: 8,
+    },
+    1450,
+  ],
+  [
+    {
+      zip: '39503',
+      owner_status: 'homeowner',
+      household_income: 500000,
       tax_filing: 'hoh',
       household_size: 8,
     },
@@ -328,7 +338,7 @@ test('/incentives', async t => {
   const app = await build(t);
   const res = await app.inject({ url: '/api/v0/incentives' });
   const incentivesResponse = JSON.parse(res.payload);
-  t.equal(incentivesResponse.incentives.length, 30);
+  t.equal(incentivesResponse.incentives.length, 32);
   t.equal(res.statusCode, 200, 'response status is 200');
 
   const ajv = new Ajv({

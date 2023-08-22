@@ -1,6 +1,10 @@
 import _ from 'lodash';
 import { FilingStatus, TAX_BRACKETS } from '../data/tax_brackets';
 
+function roundCents(dollars: number): number {
+  return Math.round(dollars * 100) / 100;
+}
+
 export default function estimateTaxAmount(
   filing_status: FilingStatus,
   household_income: number,
@@ -33,7 +37,11 @@ export default function estimateTaxAmount(
   })!;
 
   // Step 3: Add the tax owed for each of the lower brackets
-  const fixedTaxAmount = _.sumBy(fixedBracketResults, 'tax_amount');
+  const fixedTaxAmount = _.sumBy(fixedBracketResults, tb => {
+    // Adjustment for calculating width of the lowest bracket
+    const incomeMin = tb.income_min === 0 ? 1 : tb.income_min;
+    return roundCents((tb.income_max - incomeMin + 1) * tb.tax_rate);
+  });
 
   // Step 4: Subtract min of active bracket from taxable income
   const bracketRemainder = taxableIncome - taxBracketResult.income_min;

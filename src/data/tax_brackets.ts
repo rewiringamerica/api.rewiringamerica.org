@@ -6,13 +6,13 @@ export type TaxBracket = {
   income_max: number;
   income_min: number;
   standard_deduction: number;
-  tax_amount: number;
   tax_rate: number;
 };
 
 export enum FilingStatus {
   HoH = 'hoh',
   Joint = 'joint',
+  MarriedFilingSeparately = 'married_filing_separately',
   Single = 'single',
 }
 
@@ -21,7 +21,6 @@ const propertySchema = {
   income_max: { type: 'number' },
   income_min: { type: 'number' },
   standard_deduction: { type: 'number' },
-  tax_amount: { type: 'number' },
   tax_rate: { type: 'number' },
 } as const;
 
@@ -35,6 +34,7 @@ export const SCHEMA: JSONSchemaType<TaxBracket[]> = {
     type: 'object',
     properties: propertySchema,
     required: allProperties,
+    additionalProperties: false,
   },
 };
 
