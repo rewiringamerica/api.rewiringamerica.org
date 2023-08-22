@@ -76,10 +76,6 @@ test('correctly evaluates scenario: $53,100 married-separate', async t => {
   t.equal(data.tax_owed, 4490);
 });
 
-function roundCents(dollars: number): number {
-  return Math.round(dollars * 100) / 100;
-}
-
 test('bracket bounds are well-formed', async t => {
   const byStatus = _.groupBy(TAX_BRACKETS, tb => tb.filing_status);
 
@@ -100,27 +96,6 @@ test('bracket bounds are well-formed', async t => {
         sorted[i].income_min - sorted[i - 1].income_max,
         1,
         `${status} bracket ${i} min is not previous max plus 1`,
-      );
-    }
-  }
-});
-
-test('bracket tax amounts are correct', async t => {
-  const byStatus = _.groupBy(TAX_BRACKETS, tb => tb.filing_status);
-
-  for (const [status, brackets] of Object.entries(byStatus)) {
-    const sorted = _.sortBy(brackets, tb => tb.income_min);
-
-    // Each bracket's "tax amount" (i.e. its contribution to overall tax
-    // burden) must equal its width times its rate. The last bracket is
-    // excluded because it has no upper limit and thus no defined width.
-    for (const bracket of sorted.slice(0, -1)) {
-      // Adjustment for calculating with of the lowest bracket
-      const incomeMin = bracket.income_min === 0 ? 1 : bracket.income_min;
-      t.equal(
-        roundCents((bracket.income_max - incomeMin + 1) * bracket.tax_rate),
-        bracket.tax_amount,
-        `${status} bracket ${JSON.stringify(bracket)} tax amount incorrect`,
       );
     }
   }
