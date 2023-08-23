@@ -5,6 +5,7 @@ import { Amount, AmountType, AmountUnit } from './types/amount';
 import { ItemType, Type } from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
 import { OwnerStatus } from './types/owner-status';
+import { ALL_PROGRAMS } from './types/programs';
 
 export type StateIncentive = {
   authority_type: AuthorityType;
@@ -36,7 +37,7 @@ const incentivePropertySchema = {
   type: { type: 'string', enum: Object.values(Type) },
   item: { type: 'string', enum: ALL_ITEMS },
   item_type: { type: 'string', enum: Object.values(ItemType) },
-  program: { type: 'string' },
+  program: { type: 'string', enum: ALL_PROGRAMS },
   amount: amountSchema,
   bonus_available: { type: 'boolean', nullable: true },
   owner_status: {
