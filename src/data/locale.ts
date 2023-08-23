@@ -1,44 +1,14 @@
 import { JSONSchemaType } from 'ajv';
 import fs from 'fs';
 import { ALL_ITEMS, ITEMS_SCHEMA } from './types/items';
+import { ALL_PROGRAMS, PROGRAMS_SCHEMA } from './types/programs';
 
 export type Items = {
   [k in keyof typeof ITEMS_SCHEMA]: string;
 };
 
-const programsSchema = {
-  // IRA
-  alternativeFuelVehicleRefuelingPropertyCredit: { type: 'string' },
-  cleanVehicleCredit: { type: 'string' },
-  creditForPreviouslyOwnedCleanVehicles: { type: 'string' },
-  energyEfficientHomeImprovementCredit: { type: 'string' },
-  HEEHR: { type: 'string' },
-  hopeForHomes: { type: 'string' },
-  residentialCleanEnergyCredit: { type: 'string' },
-
-  // RI
-  // State: OER, Commerce RI
-  ri_drive: { type: 'string' },
-  ri_smallScaleSolar: { type: 'string' },
-  ri_highEfficiencyHeatPumpProgram: { type: 'string' },
-  // Pascoag
-  ri_hvacAndWaterHeaterIncentives: { type: 'string' },
-  ri_residentialEnergyStarOfferings: { type: 'string' },
-  ri_residentialEnergyAuditWeatherization: { type: 'string' },
-  // Block Island
-  ri_blockIslandEnergyEfficiency: { type: 'string' },
-  // Rhode Island Energy
-  ri_energyStarClothesDryer: { type: 'string' },
-  ri_residentialHeatPumpWaterHeater: { type: 'string' },
-  ri_electricHeatingAndCoolingRebates: { type: 'string' },
-  ri_incomeEligibleEnergySavings: { type: 'string' },
-} as const;
-const allPrograms = Object.keys(
-  programsSchema,
-) as unknown as (keyof typeof programsSchema)[];
-
 export type Programs = {
-  [k in keyof typeof programsSchema]: string;
+  [k in keyof typeof PROGRAMS_SCHEMA]: string;
 };
 
 export interface Locale {
@@ -57,8 +27,8 @@ export const SCHEMA: JSONSchemaType<Locale> = {
     },
     programs: {
       type: 'object',
-      properties: programsSchema,
-      required: allPrograms,
+      properties: PROGRAMS_SCHEMA,
+      required: ALL_PROGRAMS,
     },
     urls: {
       type: 'object',

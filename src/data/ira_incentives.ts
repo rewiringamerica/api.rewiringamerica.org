@@ -5,6 +5,7 @@ import { Amount, AmountType, AmountUnit } from './types/amount';
 import { ItemType, Type } from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
 import { OwnerStatus } from './types/owner-status';
+import { ALL_PROGRAMS } from './types/programs';
 
 export enum AmiQualification {
   LessThan150_Ami = 'less_than_150_ami',
@@ -51,7 +52,7 @@ export const SCHEMA: JSONSchemaType<Incentive[]> = {
     type: 'object',
     properties: {
       type: { type: 'string', enum: Object.values(Type) },
-      program: { type: 'string' },
+      program: { type: 'string', enum: ALL_PROGRAMS },
       item: { type: 'string', enum: ALL_ITEMS },
       item_type: { type: 'string', enum: Object.values(ItemType) },
       amount: amountSchema,
