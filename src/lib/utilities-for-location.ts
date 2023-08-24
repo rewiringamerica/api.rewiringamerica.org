@@ -23,12 +23,17 @@ export function getUtilitiesForLocation(location: ZipInfo): {
   }
 
   let ids: string[];
+
+  // Source: https://catalog.data.gov/dataset/u-s-electric-utility-companies-and-rates-look-up-by-zipcode-2021
+  // According to that dataset, 02839 is not served by Pascoag, but in a meeting
+  // with them they mentioned it, so it's included here.
   switch (location.zip) {
     case '02807':
       ids = ['ri-block-island-power-company'];
       break;
     case '02814':
     case '02830':
+    case '02839':
     case '02859':
       ids = ['ri-rhode-island-energy', 'ri-pascoag-utility-district'];
       break;
