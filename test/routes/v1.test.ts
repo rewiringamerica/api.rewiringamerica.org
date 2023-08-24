@@ -2,7 +2,6 @@ import Ajv from 'ajv';
 import fs from 'fs';
 import qs from 'qs';
 import { beforeEach, test } from 'tap';
-import { AUTHORITIES_BY_STATE } from '../../src/data/authorities';
 import { API_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v1/calculator-endpoint';
 import { API_INCENTIVE_SCHEMA } from '../../src/schemas/v1/incentive';
 import { API_UTILITIES_RESPONSE_SCHEMA } from '../../src/schemas/v1/utilities-endpoint';
@@ -347,17 +346,26 @@ test('/incentives', async t => {
   }
 });
 
+const UTILITIES = [
+  [
+    '02807',
+    { 'ri-block-island-power-company': { name: 'Block Island Power Company' } },
+  ],
+  [
+    '02814',
+    {
+      'ri-rhode-island-energy': { name: 'Rhode Island Energy' },
+      'ri-pascoag-utility-district': { name: 'Pascoag Utility District' },
+    },
+  ],
+  [
+    '02905',
+    { 'ri-rhode-island-energy': { name: 'Rhode Island Energy' } },
+  ],
+];
+
 test('/utilities', async t => {
   const app = await build(t);
-  const searchParams = qs.stringify(
-    { location: { zip: '02807' } },
-    { encodeValuesOnly: true },
-  );
-  const res = await app.inject({ url: `/api/v1/utilities?${searchParams}` });
-  t.equal(res.statusCode, 200);
-
-  const utilitiesResponse = JSON.parse(res.payload);
-
   const ajv = new Ajv({
     schemas: [API_UTILITIES_RESPONSE_SCHEMA],
     coerceTypes: true,
@@ -366,8 +374,20 @@ test('/utilities', async t => {
     allErrors: false,
   });
   const validator = ajv.getSchema('APIUtilitiesResponse')!;
-  await validator(utilitiesResponse);
-  t.equal(validator.errors, null);
 
-  t.same(utilitiesResponse, AUTHORITIES_BY_STATE['RI']['utility']);
+  for (const [zip, expectedResponse] of UTILITIES) {
+    const searchParams = qs.stringify(
+      { location: { zip } },
+      { encodeValuesOnly: true },
+    );
+    const res = await app.inject({ url: `/api/v1/utilities?${searchParams}` });
+    t.equal(res.statusCode, 200);
+
+    const utilitiesResponse = JSON.parse(res.payload);
+
+    await validator(utilitiesResponse);
+    t.equal(validator.errors, null);
+
+    t.same(utilitiesResponse, expectedResponse);
+  }
 });

@@ -41,7 +41,7 @@ export default async function fetchAMIsForAddress(
 
   // FIXME: now that we have finer-grained geographic info we don't need to approximate with zips. Use Fair_Market_Rents etc.
 
-  const location = { state_id: result.address_components.state };
+  const location = { state_id: result.address_components.state, zip };
 
   const ami = await db.get<AMI>(
     `
