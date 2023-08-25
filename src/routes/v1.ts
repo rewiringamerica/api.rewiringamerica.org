@@ -1,7 +1,7 @@
 import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts';
 import { FastifyInstance } from 'fastify';
 import { Database } from 'sqlite';
-import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities';
+import { AuthorityType } from '../data/authorities';
 import { IRA_INCENTIVES } from '../data/ira_incentives';
 import { LOCALES } from '../data/locale';
 import { InvalidInputError, UnexpectedInputError } from '../lib/error';
@@ -10,6 +10,7 @@ import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
 import { t } from '../lib/i18n';
 import calculateIncentives from '../lib/incentives-calculation';
 import { IncomeInfo, isCompleteIncomeInfo } from '../lib/income-info';
+import { getUtilitiesForLocation } from '../lib/utilities-for-location';
 import { ERROR_SCHEMA } from '../schemas/error';
 import {
   API_CALCULATOR_REQUEST_SCHEMA,
@@ -144,25 +145,29 @@ export default async function (
     '/api/v1/utilities',
     { schema: API_UTILITIES_SCHEMA },
     async (request, reply) => {
-      const stateId = (await fetchAMIsForLocation(request.query.location))
-        ?.location?.state_id;
+      const location = (await fetchAMIsForLocation(request.query.location))
+        ?.location;
 
-      if (!stateId) {
+      if (!location) {
         throw fastify.httpErrors.createError(404, "Zip code doesn't exist.", {
           field: 'location',
         });
       }
 
-      const authorities = AUTHORITIES_BY_STATE[stateId];
-      if (!authorities) {
-        throw fastify.httpErrors.createError(
-          404,
-          'We currently do not have coverage for that location.',
-          { field: 'location' },
-        );
+      try {
+        reply
+          .status(200)
+          .type('application/json')
+          .send(getUtilitiesForLocation(location));
+      } catch (error) {
+        if (error instanceof InvalidInputError) {
+          throw fastify.httpErrors.createError(400, error.message, {
+            field: error.field,
+          });
+        } else {
+          throw error;
+        }
       }
-
-      reply.status(200).type('application/json').send(authorities.utility);
     },
   );
 }

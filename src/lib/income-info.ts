@@ -4,6 +4,7 @@
  */
 export type ZipInfo = {
   state_id: string;
+  zip: string;
 };
 
 /**
