@@ -11,8 +11,11 @@
       "authority_type": "utility",
       "authority_name": "Rhode Island Energy",
       "program": "Income Eligible Energy Savings Program",
-      "item": "Weatherization",
-      "item_url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
       "amount": {
         "type": "percent",
         "number": 1
@@ -33,8 +36,11 @@
       "authority_type": "state",
       "authority_name": "Rhode Island Office of Energy Resources",
       "program": "Clean Heat RI",
-      "item": "Heat Pump Air Conditioner/Heater",
-      "item_url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
       "amount": {
         "type": "dollars_per_unit",
         "number": 1250,
@@ -57,8 +63,11 @@
       "authority_type": "utility",
       "authority_name": "Rhode Island Energy",
       "program": "Residential electric heating and cooling rebates",
-      "item": "Heat Pump Air Conditioner/Heater",
-      "item_url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
       "amount": {
         "type": "dollars_per_unit",
         "number": 350,
@@ -81,8 +90,11 @@
       "authority_type": "state",
       "authority_name": "Rhode Island Commerce Corporation",
       "program": "Small Scale Solar Program",
-      "item": "Rooftop Solar Installation",
-      "item_url": "https://www.rewiringamerica.org/app/ira-calculator/information/rooftop-solar-installation",
+      "item": {
+        "type": "rooftop_solar_installation",
+        "name": "Rooftop Solar Installation",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/rooftop-solar-installation"
+      },
       "amount": {
         "type": "dollars_per_unit",
         "number": 0.65,
@@ -106,8 +118,11 @@
       "authority_type": "state",
       "authority_name": "Rhode Island Office of Energy Resources",
       "program": "DRIVE",
-      "item": "New Electric Vehicle",
-      "item_url": "https://www.rewiringamerica.org/app/ira-calculator/information/electric-vehicles",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/electric-vehicles"
+      },
       "amount": {
         "type": "dollar_amount",
         "number": 2500
@@ -129,8 +144,11 @@
       "authority_type": "state",
       "authority_name": "Rhode Island Office of Energy Resources",
       "program": "DRIVE",
-      "item": "Used Electric Vehicle",
-      "item_url": "https://www.rewiringamerica.org/app/ira-calculator/information/electric-vehicles",
+      "item": {
+        "type": "used_electric_vehicle",
+        "name": "Used Electric Vehicle",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/electric-vehicles"
+      },
       "amount": {
         "type": "dollar_amount",
         "number": 1500
@@ -152,8 +170,11 @@
       "authority_type": "state",
       "authority_name": "Rhode Island Office of Energy Resources",
       "program": "Clean Heat RI",
-      "item": "Heat Pump Water Heater",
-      "item_url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-water-heater",
+      "item": {
+        "type": "heat_pump_water_heater",
+        "name": "Heat Pump Water Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-water-heater"
+      },
       "amount": {
         "type": "dollar_amount",
         "number": 750
@@ -174,8 +195,11 @@
       "authority_type": "utility",
       "authority_name": "Rhode Island Energy",
       "program": "Residential heat pump water heater rebates",
-      "item": "Heat Pump Water Heater",
-      "item_url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-water-heater",
+      "item": {
+        "type": "heat_pump_water_heater",
+        "name": "Heat Pump Water Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-water-heater"
+      },
       "amount": {
         "type": "dollar_amount",
         "number": 600,
@@ -197,8 +221,11 @@
       "authority_type": "utility",
       "authority_name": "Rhode Island Energy",
       "program": "Rhode Island ENERGY STAR®  Certified Electric Clothes Dryer Rebate",
-      "item": "Heat Pump Clothes Dryer",
-      "item_url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-clothes-dryer",
+      "item": {
+        "type": "heat_pump_clothes_dryer",
+        "name": "Heat Pump Clothes Dryer",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-clothes-dryer"
+      },
       "amount": {
         "type": "dollar_amount",
         "number": 50

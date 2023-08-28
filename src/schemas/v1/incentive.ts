@@ -4,6 +4,7 @@ import { AmiQualification } from '../../data/ira_incentives';
 import { FilingStatus } from '../../data/tax_brackets';
 import { AmountType, AmountUnit } from '../../data/types/amount';
 import { ItemType, Type } from '../../data/types/incentive-types';
+import { ALL_ITEMS, Item } from '../../data/types/items';
 import { OwnerStatus } from '../../data/types/owner-status';
 
 export const API_INCENTIVE_SCHEMA = {
@@ -14,7 +15,6 @@ export const API_INCENTIVE_SCHEMA = {
     'authority_type',
     'program',
     'item',
-    'item_url',
     'item_type',
     'amount',
     'owner_status',
@@ -41,16 +41,27 @@ export const API_INCENTIVE_SCHEMA = {
       ],
     },
     item: {
-      type: 'string',
-      examples: [
-        'Battery Storage Installation',
-      ],
-    },
-    item_url: {
-      type: 'string',
-      examples: [
-        'https://www.rewiringamerica.org/app/ira-calculator/information/battery-storage-installation',
-      ],
+      type: 'object',
+      properties: {
+        type: {
+          type: 'string',
+          enum: ALL_ITEMS,
+        },
+        name: {
+          type: 'string',
+          examples: [
+            'Battery Storage Installation',
+          ],
+        },
+        url: {
+          type: 'string',
+          examples: [
+            'https://www.rewiringamerica.org/app/ira-calculator/information/battery-storage-installation',
+          ],
+        },
+      },
+      required: ['type', 'name', 'url'],
+      additionalProperties: false,
     },
     amount: {
       type: 'object',
@@ -160,4 +171,6 @@ export type APIIncentive = FromSchema<typeof API_INCENTIVE_SCHEMA>;
  * This is used internally, as an intermediate form between incentive
  * calculation and external API.
  */
-export type APIIncentiveMinusItemUrl = Omit<APIIncentive, 'item_url'>;
+export type APIIncentiveNonLocalized = Omit<APIIncentive, 'item'> & {
+  item: Item;
+};
