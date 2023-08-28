@@ -19,7 +19,7 @@ import {
 } from '../schemas/v1/calculator-endpoint';
 import {
   APIIncentive,
-  APIIncentiveMinusItemUrl,
+  APIIncentiveNonLocalized,
   API_INCENTIVE_SCHEMA,
 } from '../schemas/v1/incentive';
 import { API_INCENTIVES_SCHEMA } from '../schemas/v1/incentives-endpoint';
@@ -27,16 +27,19 @@ import { APILocation } from '../schemas/v1/location';
 import { API_UTILITIES_SCHEMA } from '../schemas/v1/utilities-endpoint';
 
 function transformIncentives(
-  incentives: APIIncentiveMinusItemUrl[],
+  incentives: APIIncentiveNonLocalized[],
   language: keyof typeof LOCALES,
 ): APIIncentive[] {
   return incentives.map(incentive => ({
     ...incentive,
 
     // Localize localizable fields
-    item: t('items', incentive.item, language),
+    item: {
+      type: incentive.item,
+      name: t('items', incentive.item, language),
+      url: t('urls', incentive.item, language),
+    },
     program: t('programs', incentive.program, language),
-    item_url: t('urls', incentive.item, language),
   }));
 }
 

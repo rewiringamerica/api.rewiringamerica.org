@@ -4,7 +4,7 @@ import { RI_INCENTIVES } from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
 import { Type } from '../data/types/incentive-types';
 import { OwnerStatus } from '../data/types/owner-status';
-import { APIIncentiveMinusItemUrl } from '../schemas/v1/incentive';
+import { APIIncentiveNonLocalized } from '../schemas/v1/incentive';
 import { UnexpectedInputError } from './error';
 import { CalculateParams } from './incentives-calculation';
 
@@ -12,7 +12,7 @@ export function calculateStateIncentivesAndSavings(
   stateId: string,
   request: CalculateParams,
 ): {
-  stateIncentives: APIIncentiveMinusItemUrl[];
+  stateIncentives: APIIncentiveNonLocalized[];
   tax_savings: number;
   pos_savings: number;
   performance_rebate_savings: number;

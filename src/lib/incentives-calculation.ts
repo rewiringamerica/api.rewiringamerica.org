@@ -9,7 +9,7 @@ import {
   APICalculatorRequest,
   APICalculatorResponse,
 } from '../schemas/v1/calculator-endpoint';
-import { APIIncentiveMinusItemUrl } from '../schemas/v1/incentive';
+import { APIIncentiveNonLocalized } from '../schemas/v1/incentive';
 import { InvalidInputError, UnexpectedInputError } from './error';
 import { AMI, CompleteIncomeInfo, MFI } from './income-info';
 import { calculateStateIncentivesAndSavings } from './state-incentives-calculation';
@@ -34,8 +34,8 @@ type CalculatedIncentives = Omit<
   APICalculatorResponse,
   'pos_rebate_incentives' | 'tax_credit_incentives'
 > & {
-  pos_rebate_incentives: APIIncentiveMinusItemUrl[];
-  tax_credit_incentives: APIIncentiveMinusItemUrl[];
+  pos_rebate_incentives: APIIncentiveNonLocalized[];
+  tax_credit_incentives: APIIncentiveNonLocalized[];
 };
 
 export type CalculateParams = Omit<APICalculatorRequest, 'location'>;
@@ -53,13 +53,13 @@ function calculateFederalIncentivesAndSavings(
     items,
   }: CalculateParams,
 ): {
-  federalIncentives: APIIncentiveMinusItemUrl[];
+  federalIncentives: APIIncentiveNonLocalized[];
   pos_savings: number;
   performance_rebate_savings: number;
   tax_savings: number;
 } {
-  const eligibleIncentives: APIIncentiveMinusItemUrl[] = [];
-  const ineligibleIncentives: APIIncentiveMinusItemUrl[] = [];
+  const eligibleIncentives: APIIncentiveNonLocalized[] = [];
+  const ineligibleIncentives: APIIncentiveNonLocalized[] = [];
 
   // Loop through each of the incentives, running several tests to see if visitor is eligible
   for (const item of IRA_INCENTIVES) {
@@ -298,7 +298,7 @@ export default function calculateIncentives(
   const isOver150Ami =
     household_income >= Number(ami[`l150_${household_size}`]);
 
-  const incentives: APIIncentiveMinusItemUrl[] = [];
+  const incentives: APIIncentiveNonLocalized[] = [];
   let tax_savings = 0;
   let pos_savings = 0;
   let performance_rebate_savings = 0;

@@ -19,12 +19,12 @@ import {
   WEBSITE_INCENTIVE_SCHEMA,
   WebsiteIncentive,
 } from '../schemas/v0/incentive';
-import { APIIncentiveMinusItemUrl } from '../schemas/v1/incentive';
+import { APIIncentiveNonLocalized } from '../schemas/v1/incentive';
 
 IRA_INCENTIVES.forEach(incentive => Object.freeze(incentive));
 
 function translateIncentives(
-  incentives: APIIncentiveMinusItemUrl[],
+  incentives: APIIncentiveNonLocalized[],
 ): WebsiteIncentive[] {
   return incentives.map(incentive => ({
     ...incentive,
