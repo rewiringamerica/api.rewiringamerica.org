@@ -50,7 +50,11 @@ async function validateResponse(
 
   // Verify the specific content of the response
   const expectedResponse = JSON.parse(fs.readFileSync(fixtureFile, 'utf-8'));
-  t.same(calculatorResponse, expectedResponse);
+  t.same(
+    calculatorResponse,
+    expectedResponse,
+    `response does not match ${fixtureFile}`,
+  );
 }
 
 test('response is valid and correct', async t => {

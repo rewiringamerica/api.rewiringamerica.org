@@ -14,10 +14,16 @@ test('t finds the right string', async tap => {
     t('items', 'battery_storage_installation', 'es'),
     'Instalación de baterías',
   );
-  tap.equal(t('programs', 'hopeForHomes'), 'Hope for Homes (HOMES)');
-  tap.equal(t('programs', 'hopeForHomes', 'en'), 'Hope for Homes (HOMES)');
+  tap.equal(
+    t('programs', 'hopeForHomes'),
+    'Federal Home Efficiency Rebates (HOMES)',
+  );
+  tap.equal(
+    t('programs', 'hopeForHomes', 'en'),
+    'Federal Home Efficiency Rebates (HOMES)',
+  );
   tap.equal(
     t('programs', 'hopeForHomes', 'es'),
-    'Esperanza para los hogares (HOMES)',
+    'Reembolsos de Eficiencia en el Consumo de Energía en el Hogar (HOMES)',
   );
 });
