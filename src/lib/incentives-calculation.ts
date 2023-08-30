@@ -118,7 +118,7 @@ function calculateFederalIncentivesAndSavings(
     // @TODO: use example prices and percent amounts, not pre-computed 30% values here
     //
     const amount = { ...item.amount };
-    if (item.item_type === 'solar_tax_credit') {
+    if (item.item === 'rooftop_solar_installation') {
       amount.representative = roundCents(solarSystemCost * amount.number!);
     }
 
