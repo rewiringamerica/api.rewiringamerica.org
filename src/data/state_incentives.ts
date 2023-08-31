@@ -44,6 +44,7 @@ const incentivePropertySchema = {
     type: 'array',
     items: { type: 'string', enum: Object.values(OwnerStatus) },
   },
+  short_description: { type: 'string', maxLength: 150 },
 } as const;
 const requiredProperties = [
   'authority',
