@@ -4,7 +4,11 @@
     "program": "residentialCleanEnergyCredit",
     "item": "battery_storage_installation",
     "item_type": "tax_credit",
-    "amount": { "type": "percent", "number": 0.3, "representative": 4800 },
+    "amount": {
+      "type": "percent",
+      "number": 0.3,
+      "representative": 4800
+    },
     "owner_status": [
       "homeowner"
     ],
@@ -12,14 +16,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "30% tax credit (uncapped) for battery storage systems, worth $4800 on average."
   },
   {
     "type": "tax_credit",
     "program": "residentialCleanEnergyCredit",
     "item": "geothermal_heating_installation",
     "item_type": "tax_credit",
-    "amount": { "type": "percent", "number": 0.3 },
+    "amount": {
+      "type": "percent",
+      "number": 0.3
+    },
     "owner_status": [
       "homeowner"
     ],
@@ -27,14 +35,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2022,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "30% tax credit (uncapped) for geothermal install. Worth $7200 on average."
   },
   {
     "type": "tax_credit",
     "program": "energyEfficientHomeImprovementCredit",
     "item": "electric_panel",
     "item_type": "tax_credit",
-    "amount": { "type": "dollar_amount", "number": 600 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
     "owner_status": [
       "homeowner"
     ],
@@ -42,14 +54,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "30% tax credit (up to $600/yr) for electrical panel upgrade when done with another 25C or 25D upgrade. Yearly reset."
   },
   {
     "type": "pos_rebate",
     "program": "HEEHR",
     "item": "electric_panel",
     "item_type": "pos_rebate",
-    "amount": { "type": "dollar_amount", "number": 4000 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000
+    },
     "owner_status": [
       "homeowner"
     ],
@@ -57,14 +73,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Rebate up to $4000 for electrical panel costs. Low-income households receive 100%. Moderate-income households receive 50%. "
   },
   {
     "type": "pos_rebate",
     "program": "HEEHR",
     "item": "electric_panel",
     "item_type": "pos_rebate",
-    "amount": { "type": "dollar_amount", "number": 4000 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000
+    },
     "owner_status": [
       "homeowner"
     ],
@@ -72,14 +92,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Rebate up to $4000 for electrical panel costs. Low-income households receive 100%. Moderate-income households receive 50%. "
   },
   {
     "type": "pos_rebate",
     "program": "HEEHR",
     "item": "electric_stove",
     "item_type": "pos_rebate",
-    "amount": { "type": "dollar_amount", "number": 840 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 840
+    },
     "owner_status": [
       "homeowner",
       "renter"
@@ -88,14 +112,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Electrification rebates for electric and induction stoves. Low-income: 100% coverage up to $840. Moderate-income: 50% up to $840."
   },
   {
     "type": "pos_rebate",
     "program": "HEEHR",
     "item": "electric_stove",
     "item_type": "pos_rebate",
-    "amount": { "type": "dollar_amount", "number": 840 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 840
+    },
     "owner_status": [
       "homeowner",
       "renter"
@@ -104,14 +132,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Electrification rebates for electric and induction stoves. Low-income: 100% coverage up to $840. Moderate-income: 50% up to $840."
   },
   {
     "type": "pos_rebate",
     "program": "HEEHR",
     "item": "electric_wiring",
     "item_type": "pos_rebate",
-    "amount": { "type": "dollar_amount", "number": 2500 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500
+    },
     "owner_status": [
       "homeowner"
     ],
@@ -119,14 +151,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Electrification rebates for electric wiring. Low-income: 100% coverage up to $2500. Moderate-income: 50% up to $2500."
   },
   {
     "type": "pos_rebate",
     "program": "HEEHR",
     "item": "electric_wiring",
     "item_type": "pos_rebate",
-    "amount": { "type": "dollar_amount", "number": 2500 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500
+    },
     "owner_status": [
       "homeowner"
     ],
@@ -134,14 +170,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Electrification rebates for electric wiring. Low-income: 100% coverage up to $2500. Moderate-income: 50% up to $2500."
   },
   {
     "type": "tax_credit",
     "program": "alternativeFuelVehicleRefuelingPropertyCredit",
     "item": "electric_vehicle_charger",
     "item_type": "ev_charger_credit",
-    "amount": { "type": "dollar_amount", "number": 1000 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
     "owner_status": [
       "homeowner",
       "renter"
@@ -150,14 +190,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Tax credit (up to $1000) for EV chargers. Available in rural or low-income communities."
   },
   {
     "type": "tax_credit",
     "program": "cleanVehicleCredit",
     "item": "new_electric_vehicle",
     "item_type": "tax_credit",
-    "amount": { "type": "dollar_amount", "number": 7500 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 7500
+    },
     "owner_status": [
       "homeowner",
       "renter"
@@ -166,14 +210,18 @@
     "agi_max_limit": 150000,
     "filing_status": "single",
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Tax credit (up to $7500) for new EVs with a maximum MSRP of $55000."
   },
   {
     "type": "tax_credit",
     "program": "cleanVehicleCredit",
     "item": "new_electric_vehicle",
     "item_type": "tax_credit",
-    "amount": { "type": "dollar_amount", "number": 7500 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 7500
+    },
     "owner_status": [
       "homeowner",
       "renter"
@@ -182,14 +230,18 @@
     "agi_max_limit": 150000,
     "filing_status": "married_filing_separately",
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Tax credit (up to $7500) for new EVs with a maximum MSRP of $55000."
   },
   {
     "type": "tax_credit",
     "program": "cleanVehicleCredit",
     "item": "new_electric_vehicle",
     "item_type": "tax_credit",
-    "amount": { "type": "dollar_amount", "number": 7500 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 7500
+    },
     "owner_status": [
       "homeowner",
       "renter"
@@ -198,14 +250,18 @@
     "agi_max_limit": 225000,
     "filing_status": "hoh",
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Tax credit (up to $7500) for new EVs with a maximum MSRP of $55000."
   },
   {
     "type": "tax_credit",
     "program": "cleanVehicleCredit",
     "item": "new_electric_vehicle",
     "item_type": "tax_credit",
-    "amount": { "type": "dollar_amount", "number": 7500 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 7500
+    },
     "owner_status": [
       "homeowner",
       "renter"
@@ -214,14 +270,18 @@
     "agi_max_limit": 300000,
     "filing_status": "joint",
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Tax credit (up to $7500) for new EVs with a maximum MSRP of $55000."
   },
   {
     "type": "tax_credit",
     "program": "creditForPreviouslyOwnedCleanVehicles",
     "item": "used_electric_vehicle",
     "item_type": "tax_credit",
-    "amount": { "type": "dollar_amount", "number": 4000 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000
+    },
     "owner_status": [
       "homeowner",
       "renter"
@@ -230,14 +290,18 @@
     "agi_max_limit": 75000,
     "filing_status": "single",
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Used EV credit: 30% up to $4000. MSRP max $25,000, <14000 lbs. Income limits apply."
   },
   {
     "type": "tax_credit",
     "program": "creditForPreviouslyOwnedCleanVehicles",
     "item": "used_electric_vehicle",
     "item_type": "tax_credit",
-    "amount": { "type": "dollar_amount", "number": 4000 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000
+    },
     "owner_status": [
       "homeowner",
       "renter"
@@ -246,14 +310,18 @@
     "agi_max_limit": 75000,
     "filing_status": "married_filing_separately",
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Used EV credit: 30% up to $4000. MSRP max $25,000, <14000 lbs. Income limits apply."
   },
   {
     "type": "tax_credit",
     "program": "creditForPreviouslyOwnedCleanVehicles",
     "item": "used_electric_vehicle",
     "item_type": "tax_credit",
-    "amount": { "type": "dollar_amount", "number": 4000 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000
+    },
     "owner_status": [
       "homeowner",
       "renter"
@@ -262,14 +330,18 @@
     "agi_max_limit": 150000,
     "filing_status": "joint",
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Used EV credit: 30% up to $4000. MSRP max $25,000, <14000 lbs. Income limits apply."
   },
   {
     "type": "tax_credit",
     "program": "creditForPreviouslyOwnedCleanVehicles",
     "item": "used_electric_vehicle",
     "item_type": "tax_credit",
-    "amount": { "type": "dollar_amount", "number": 4000 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000
+    },
     "owner_status": [
       "homeowner",
       "renter"
@@ -278,14 +350,18 @@
     "agi_max_limit": 112500,
     "filing_status": "hoh",
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Used EV credit: 30% up to $4000. MSRP max $25,000, <14000 lbs. Income limits apply."
   },
   {
     "type": "tax_credit",
     "program": "energyEfficientHomeImprovementCredit",
     "item": "heat_pump_air_conditioner_heater",
     "item_type": "tax_credit",
-    "amount": { "type": "dollar_amount", "number": 2000 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
     "owner_status": [
       "homeowner"
     ],
@@ -293,14 +369,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "30% tax credit (up to $2000) for heat pumps and heat pump water heaters. Yearly reset."
   },
   {
     "type": "tax_credit",
     "program": "energyEfficientHomeImprovementCredit",
     "item": "heat_pump_water_heater",
     "item_type": "tax_credit",
-    "amount": { "type": "dollar_amount", "number": 2000 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
     "owner_status": [
       "homeowner"
     ],
@@ -308,14 +388,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "30% tax credit (up to $2000) for heat pumps and heat pump water heaters. Yearly reset."
   },
   {
     "type": "pos_rebate",
     "program": "HEEHR",
     "item": "heat_pump_water_heater",
     "item_type": "pos_rebate",
-    "amount": { "type": "dollar_amount", "number": 1750 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1750
+    },
     "owner_status": [
       "homeowner"
     ],
@@ -323,14 +407,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Rebate up to $1750 for heat pump water heaters: 100% for low-income households, 50% for moderate-income households."
   },
   {
     "type": "pos_rebate",
     "program": "HEEHR",
     "item": "heat_pump_air_conditioner_heater",
     "item_type": "pos_rebate",
-    "amount": { "type": "dollar_amount", "number": 8000 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 8000
+    },
     "owner_status": [
       "homeowner",
       "renter"
@@ -339,14 +427,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Low-income households get a 100% rebate on heat pumps up to $8,000; moderate-income households get 50% up to $8000."
   },
   {
     "type": "pos_rebate",
     "program": "HEEHR",
     "item": "heat_pump_clothes_dryer",
     "item_type": "pos_rebate",
-    "amount": { "type": "dollar_amount", "number": 840 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 840
+    },
     "owner_status": [
       "homeowner",
       "renter"
@@ -355,14 +447,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Rebate up to $840 for heat pump dryers. Low-income households: 100% rebate, Moderate-income: 50% rebate."
   },
   {
     "type": "pos_rebate",
     "program": "HEEHR",
     "item": "heat_pump_water_heater",
     "item_type": "pos_rebate",
-    "amount": { "type": "dollar_amount", "number": 1750 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1750
+    },
     "owner_status": [
       "homeowner"
     ],
@@ -370,14 +466,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Rebate up to $1750 for heat pump water heaters: 100% for low-income households, 50% for moderate-income households."
   },
   {
     "type": "pos_rebate",
     "program": "HEEHR",
     "item": "heat_pump_air_conditioner_heater",
     "item_type": "pos_rebate",
-    "amount": { "type": "dollar_amount", "number": 8000 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 8000
+    },
     "owner_status": [
       "homeowner",
       "renter"
@@ -386,14 +486,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Low-income households get a 100% rebate on heat pumps up to $8,000; moderate-income households get 50% up to $8000."
   },
   {
     "type": "pos_rebate",
     "program": "HEEHR",
     "item": "heat_pump_clothes_dryer",
     "item_type": "pos_rebate",
-    "amount": { "type": "dollar_amount", "number": 840 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 840
+    },
     "owner_status": [
       "homeowner",
       "renter"
@@ -402,14 +506,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Rebate up to $840 for heat pump dryers. Low-income households: 100% rebate, Moderate-income: 50% rebate."
   },
   {
     "type": "tax_credit",
     "program": "residentialCleanEnergyCredit",
     "item": "rooftop_solar_installation",
     "item_type": "solar_tax_credit",
-    "amount": { "type": "percent", "number": 0.3 },
+    "amount": {
+      "type": "percent",
+      "number": 0.3
+    },
     "owner_status": [
       "homeowner"
     ],
@@ -417,14 +525,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2022,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "30% tax credit for rooftop solar (uncapped, $4600 avg.); panel upgrade too. Community/leased solar may get 10-20% bonuses for low-income areas."
   },
   {
     "type": "pos_rebate",
     "program": "HEEHR",
     "item": "weatherization",
     "item_type": "pos_rebate",
-    "amount": { "type": "dollar_amount", "number": 1600 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1600
+    },
     "owner_status": [
       "homeowner"
     ],
@@ -432,14 +544,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Weatherization electrification rebates cover insulation, air sealing, ventilation. Low-income: 100% up to $1600. Moderate-income: 50% up to $1600. "
   },
   {
     "type": "tax_credit",
     "program": "energyEfficientHomeImprovementCredit",
     "item": "weatherization",
     "item_type": "tax_credit",
-    "amount": { "type": "dollar_amount", "number": 1200 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200
+    },
     "owner_status": [
       "homeowner"
     ],
@@ -447,14 +563,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "30% tax credit (up to $1200/year) for weatherization projects: insulation, air sealing, doors, windows, and energy audits. "
   },
   {
     "type": "pos_rebate",
     "program": "HEEHR",
     "item": "weatherization",
     "item_type": "pos_rebate",
-    "amount": { "type": "dollar_amount", "number": 1600 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1600
+    },
     "owner_status": [
       "homeowner"
     ],
@@ -462,14 +582,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Weatherization electrification rebates cover insulation, air sealing, ventilation. Low-income: 100% up to $1600. Moderate-income: 50% up to $1600. "
   },
   {
     "type": "pos_rebate",
     "program": "hopeForHomes",
     "item": "efficiency_rebates",
     "item_type": "performance_rebate",
-    "amount": { "type": "dollar_amount", "number": 8000 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 8000
+    },
     "owner_status": [
       "homeowner"
     ],
@@ -477,14 +601,18 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Rebate up to $8000 for energy efficiency retrofits. Amount based on percent energy savings."
   },
   {
     "type": "pos_rebate",
     "program": "hopeForHomes",
     "item": "efficiency_rebates",
     "item_type": "performance_rebate",
-    "amount": { "type": "dollar_amount", "number": 4000 },
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000
+    },
     "owner_status": [
       "homeowner"
     ],
@@ -492,6 +620,7 @@
     "agi_max_limit": null,
     "filing_status": null,
     "start_date": 2023,
-    "end_date": 2032
+    "end_date": 2032,
+    "short_description": "Rebate up to $4000 for energy efficiency retrofits. Amount based on percent energy savings."
   }
 ]

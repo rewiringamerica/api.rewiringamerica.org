@@ -25,6 +25,7 @@ export interface Incentive {
   program: string;
   start_date: number;
   type: Type;
+  short_description?: string;
 }
 
 // Work around https://github.com/ajv-validator/ajv/issues/1664
@@ -73,6 +74,7 @@ export const SCHEMA: JSONSchemaType<Incentive[]> = {
       }),
       start_date: { type: 'number' },
       end_date: { type: 'number' },
+      short_description: { type: 'string', nullable: true, maxLength: 150 },
     },
     required: [
       'agi_max_limit',
