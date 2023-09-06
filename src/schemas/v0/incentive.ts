@@ -166,7 +166,6 @@ export const WEBSITE_INCENTIVE_SCHEMA = {
       start_date: 2023,
       end_date: 2032,
       eligible: true,
-      short_description: 'Testing',
     },
   ],
 } as const;
