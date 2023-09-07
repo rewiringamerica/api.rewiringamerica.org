@@ -80,7 +80,7 @@ export const WEBSITE_INCENTIVE_SCHEMA = {
     },
     item_type: {
       type: 'string',
-      enum: Object.values(ItemType),
+      enum: [...Object.values(ItemType), 'solar_tax_credit'],
     },
     owner_status: {
       type: 'array',

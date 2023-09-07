@@ -115,7 +115,6 @@ function calculateFederalIncentivesAndSavings(
 
     //
     // 5) Add the Rooftop Solar Credit amount
-    // @TODO: use example prices and percent amounts, not pre-computed 30% values here
     //
     const amount = { ...item.amount };
     if (item.item === 'rooftop_solar_installation') {

@@ -6,6 +6,7 @@ import { AuthorityType } from '../data/authorities';
 import { IRA_INCENTIVES } from '../data/ira_incentives';
 import { IRA_STATE_SAVINGS } from '../data/ira_state_savings';
 import { AmountType } from '../data/types/amount';
+import { ItemType } from '../data/types/incentive-types';
 import { InvalidInputError } from '../lib/error';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
 import { t } from '../lib/i18n';
@@ -155,8 +156,9 @@ export default async function (
           );
 
           // 1.3)
-          // set the amount_type to what the calculator would expect:
+          // set the amount_type and item_type to what the calculator expects:
           solarTaxCredit.amount.type = 'solar' as AmountType;
+          solarTaxCredit.item_type = 'solar_tax_credit' as ItemType;
         }
 
         const translated: WebsiteCalculatorResponse = {
