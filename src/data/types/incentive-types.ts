@@ -2,6 +2,7 @@
 export enum Type {
   PosRebate = 'pos_rebate',
   TaxCredit = 'tax_credit',
+  FreeProducts = 'free_products',
 }
 
 /**
@@ -14,4 +15,5 @@ export enum ItemType {
   PosRebate = 'pos_rebate',
   SolarTaxCredit = 'solar_tax_credit',
   TaxCredit = 'tax_credit',
+  FreeProducts = 'free_products',
 }
