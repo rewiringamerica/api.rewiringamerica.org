@@ -30,12 +30,8 @@ function roundCents(dollars: number): number {
  * object, but with incentives in a format closer to the static JSON format.
  * Replace the types of the two properties containing them.
  */
-type CalculatedIncentives = Omit<
-  APICalculatorResponse,
-  'pos_rebate_incentives' | 'tax_credit_incentives'
-> & {
-  pos_rebate_incentives: APIIncentiveNonLocalized[];
-  tax_credit_incentives: APIIncentiveNonLocalized[];
+type CalculatedIncentives = Omit<APICalculatorResponse, 'incentives'> & {
+  incentives: APIIncentiveNonLocalized[];
 };
 
 export type CalculateParams = Omit<APICalculatorRequest, 'location'>;
@@ -334,8 +330,8 @@ export default function calculateIncentives(
   // put "percent" items first, then "dollar_amount", then sort by amount with highest first
   const sortedIncentives = _.orderBy(
     incentives,
-    [i => i.amount.type, i => i.amount.number],
-    ['desc', 'desc'],
+    [i => i.type, i => i.amount.type, i => i.amount.number],
+    ['asc', 'desc', 'desc'],
   );
 
   return {
@@ -343,19 +339,16 @@ export default function calculateIncentives(
     is_under_150_ami: isUnder150Ami,
     is_over_150_ami: isOver150Ami,
 
-    pos_savings,
+    savings: {
+      pos_rebate: pos_savings,
 
-    // You can't save more than tax owed. Choose the lesser of tax owed vs tax savings
-    tax_savings: tax.tax_owed < tax_savings ? tax.tax_owed : tax_savings,
+      // You can't save more than tax owed. Choose the lesser of tax owed vs tax savings
+      tax_credit: tax.tax_owed < tax_savings ? tax.tax_owed : tax_savings,
 
-    // Not prominently displayed
-    performance_rebate_savings,
+      // Not prominently displayed
+      performance_rebate: performance_rebate_savings,
+    },
 
-    pos_rebate_incentives: sortedIncentives.filter(
-      item => item.type === 'pos_rebate',
-    ),
-    tax_credit_incentives: sortedIncentives.filter(
-      item => item.type === 'tax_credit',
-    ),
+    incentives: sortedIncentives,
   };
 }

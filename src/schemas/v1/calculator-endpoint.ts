@@ -99,11 +99,8 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
     'is_under_80_ami',
     'is_under_150_ami',
     'is_over_150_ami',
-    'pos_savings',
-    'tax_savings',
-    'performance_rebate_savings',
-    'pos_rebate_incentives',
-    'tax_credit_incentives',
+    'savings',
+    'incentives',
   ],
   properties: {
     is_under_80_ami: {
@@ -115,24 +112,25 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
     is_over_150_ami: {
       type: 'boolean',
     },
-    pos_savings: {
-      type: 'integer',
-      description:
-        'The max POS savings is $14,000 if you’re under 150% ami, otherwise 0',
+    savings: {
+      type: 'object',
+      properties: {
+        pos_rebate: {
+          type: 'integer',
+        },
+        tax_credit: {
+          type: 'integer',
+          description:
+            'You can’t save more than tax owed. Uses the lesser of tax owed vs tax savings.',
+        },
+        performance_rebate: {
+          type: 'integer',
+        },
+      },
+      required: ['pos_rebate', 'tax_credit', 'performance_rebate'],
+      additionalProperties: false,
     },
-    tax_savings: {
-      type: 'integer',
-      description:
-        'You can’t save more than tax owed. Uses the lesser of tax owed vs tax savings.',
-    },
-    performance_rebate_savings: {
-      type: 'integer',
-    },
-    pos_rebate_incentives: {
-      type: 'array',
-      items: { $ref: 'APIIncentive' },
-    },
-    tax_credit_incentives: {
+    incentives: {
       type: 'array',
       items: { $ref: 'APIIncentive' },
     },
@@ -143,10 +141,12 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
       is_under_80_ami: true,
       is_under_150_ami: true,
       is_over_150_ami: false,
-      pos_savings: 14000,
-      tax_savings: 6081,
-      performance_rebate_savings: 8000,
-      pos_rebate_incentives: [
+      savings: {
+        pos_rebate: 14000,
+        tax_credit: 6081,
+        performance_rebate: 8000,
+      },
+      incentives: [
         {
           type: 'pos_rebate',
           program: 'HEEHR',
@@ -170,8 +170,6 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
           end_date: 2032,
           eligible: true,
         },
-      ],
-      tax_credit_incentives: [
         {
           type: 'tax_credit',
           program: 'Residential Clean Energy Credit (25D)',

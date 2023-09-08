@@ -2,10 +2,12 @@
   "is_under_80_ami": true,
   "is_under_150_ami": true,
   "is_over_150_ami": false,
-  "pos_savings": 10600,
-  "tax_savings": 0,
-  "performance_rebate_savings": 0,
-  "pos_rebate_incentives": [
+  "savings": {
+    "pos_rebate": 10600,
+    "tax_credit": 0,
+    "performance_rebate": 0
+  },
+  "incentives": [
     {
       "type": "pos_rebate",
       "authority_type": "utility",
@@ -251,6 +253,5 @@
       "eligible": true,
       "short_description": "$50 towards an ENERGY STAR® certified electric clothes dryer purchased in 2023. Rebate requests must be completed within 90 days of purchase."
     }
-  ],
-  "tax_credit_incentives": []
+  ]
 }

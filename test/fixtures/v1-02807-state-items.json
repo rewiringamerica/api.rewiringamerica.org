@@ -2,10 +2,12 @@
   "is_under_80_ami": true,
   "is_under_150_ami": true,
   "is_over_150_ami": false,
-  "pos_savings": 18500,
-  "tax_savings": 4036,
-  "performance_rebate_savings": 0,
-  "pos_rebate_incentives": [
+  "savings": {
+    "pos_rebate": 18500,
+    "tax_credit": 4036,
+    "performance_rebate": 0
+  },
+  "incentives": [
     {
       "type": "pos_rebate",
       "authority_type": "state",
@@ -87,9 +89,7 @@
       "filing_status": null,
       "eligible": true,
       "short_description": "Up to $2,000 towards purchase or lease of a new EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served."
-    }
-  ],
-  "tax_credit_incentives": [
+    },
     {
       "type": "tax_credit",
       "authority_type": "federal",

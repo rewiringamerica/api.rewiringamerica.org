@@ -101,14 +101,7 @@ export default async function (
         const language = request.query.language ?? 'en';
         const translated = {
           ...result,
-          tax_credit_incentives: transformIncentives(
-            result.tax_credit_incentives,
-            language,
-          ),
-          pos_rebate_incentives: transformIncentives(
-            result.pos_rebate_incentives,
-            language,
-          ),
+          incentives: transformIncentives(result.incentives, language),
         };
 
         reply.status(200).type('application/json').send(translated);
