@@ -14,8 +14,16 @@ export const API_SAVINGS_SCHEMA = {
     performance_rebate: {
       type: 'integer',
     },
+    account_credit: { type: 'integer' },
+    rebate: { type: 'integer' },
   },
-  required: ['pos_rebate', 'tax_credit', 'performance_rebate'],
+  required: [
+    'pos_rebate',
+    'tax_credit',
+    'performance_rebate',
+    'account_credit',
+    'rebate',
+  ],
   additionalProperties: false,
 } as const;
 

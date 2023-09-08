@@ -297,6 +297,8 @@ export default function calculateIncentives(
   let tax_savings = 0;
   let pos_savings = 0;
   let performance_rebate_savings = 0;
+  let account_credit_savings = 0;
+  let rebate_savings = 0;
 
   if (authorityTypes.includes(AuthorityType.Federal)) {
     const federal = calculateFederalIncentivesAndSavings(
@@ -318,9 +320,11 @@ export default function calculateIncentives(
   ) {
     const state = calculateStateIncentivesAndSavings(state_id, request);
     incentives.push(...state.stateIncentives);
-    tax_savings += state.tax_savings;
-    pos_savings += state.pos_savings;
-    performance_rebate_savings += state.performance_rebate_savings;
+    tax_savings += state.savings.tax_credit;
+    pos_savings += state.savings.pos_rebate;
+    performance_rebate_savings += state.savings.performance_rebate;
+    account_credit_savings += state.savings.account_credit;
+    rebate_savings += state.savings.rebate;
   }
 
   // Get tax owed to determine max potiental tax savings
@@ -347,6 +351,9 @@ export default function calculateIncentives(
 
       // Not prominently displayed
       performance_rebate: performance_rebate_savings,
+
+      account_credit: account_credit_savings,
+      rebate: rebate_savings,
     },
 
     incentives: sortedIncentives,
