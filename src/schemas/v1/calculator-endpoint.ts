@@ -5,6 +5,7 @@ import { ALL_ITEMS } from '../../data/types/items';
 import { OwnerStatus } from '../../data/types/owner-status';
 import { API_INCENTIVE_SCHEMA } from './incentive';
 import { API_LOCATION_SCHEMA } from './location';
+import { API_SAVINGS_SCHEMA } from './savings';
 
 export const API_CALCULATOR_REQUEST_SCHEMA = {
   $id: 'APICalculatorRequest',
@@ -112,24 +113,7 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
     is_over_150_ami: {
       type: 'boolean',
     },
-    savings: {
-      type: 'object',
-      properties: {
-        pos_rebate: {
-          type: 'integer',
-        },
-        tax_credit: {
-          type: 'integer',
-          description:
-            'You can’t save more than tax owed. Uses the lesser of tax owed vs tax savings.',
-        },
-        performance_rebate: {
-          type: 'integer',
-        },
-      },
-      required: ['pos_rebate', 'tax_credit', 'performance_rebate'],
-      additionalProperties: false,
-    },
+    savings: API_SAVINGS_SCHEMA,
     incentives: {
       type: 'array',
       items: { $ref: 'APIIncentive' },
