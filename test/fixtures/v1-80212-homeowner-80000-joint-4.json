@@ -2,10 +2,12 @@
   "is_under_80_ami": true,
   "is_under_150_ami": true,
   "is_over_150_ami": false,
-  "pos_savings": 14000,
-  "tax_savings": 5836,
-  "performance_rebate_savings": 8000,
-  "pos_rebate_incentives": [
+  "savings": {
+    "pos_rebate": 14000,
+    "tax_credit": 5836,
+    "performance_rebate": 8000
+  },
+  "incentives": [
     {
       "type": "pos_rebate",
       "authority_type": "federal",
@@ -216,9 +218,7 @@
       "filing_status": null,
       "eligible": true,
       "short_description": "Rebate up to $840 for heat pump dryers. Low-income households: 100% rebate, Moderate-income: 50% rebate."
-    }
-  ],
-  "tax_credit_incentives": [
+    },
     {
       "type": "tax_credit",
       "authority_type": "federal",

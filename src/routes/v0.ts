@@ -6,7 +6,7 @@ import { AuthorityType } from '../data/authorities';
 import { IRA_INCENTIVES } from '../data/ira_incentives';
 import { IRA_STATE_SAVINGS } from '../data/ira_state_savings';
 import { AmountType } from '../data/types/amount';
-import { ItemType } from '../data/types/incentive-types';
+import { ItemType, Type } from '../data/types/incentive-types';
 import { InvalidInputError } from '../lib/error';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
 import { t } from '../lib/i18n';
@@ -135,10 +135,17 @@ export default async function (
           ...request.query,
         });
 
+        const pos_rebate_incentives = result.incentives.filter(
+          i => i.type === Type.PosRebate,
+        );
+        let tax_credit_incentives = result.incentives.filter(
+          i => i.type === Type.TaxCredit,
+        );
+
         // Website Calculator backwards compatiblity from v1 data:
 
         // 1.1) Overwrite solar tax credit amount with representative_amount:
-        const solarTaxCredit = result.tax_credit_incentives.find(
+        const solarTaxCredit = tax_credit_incentives.find(
           incentive => incentive.item === 'rooftop_solar_installation',
         );
 
@@ -149,8 +156,8 @@ export default async function (
           // 1.2) Re-sort incentives per https://app.asana.com/0/0/1204275945510481/f
           // HACK: temporarily override the amount_type as dollars:
           solarTaxCredit.amount.type = AmountType.DollarAmount;
-          result.tax_credit_incentives = _.orderBy(
-            result.tax_credit_incentives,
+          tax_credit_incentives = _.orderBy(
+            tax_credit_incentives,
             [i => i.amount.type, i => i.amount.number],
             ['desc', 'desc'],
           );
@@ -164,18 +171,18 @@ export default async function (
         const translated: WebsiteCalculatorResponse = {
           ...result,
 
+          pos_savings: result.savings.pos_rebate,
+          tax_savings: result.savings.tax_credit,
+          performance_rebate_savings: result.savings.performance_rebate,
+
           // 2) Add annual savings from pregenerated model
           estimated_annual_savings:
             IRA_STATE_SAVINGS[incomeInfo.location.state_id]
               .estimated_savings_heat_pump_ev,
 
           // 3) Populate the expected English and Spanish strings
-          pos_rebate_incentives: translateIncentives(
-            result.pos_rebate_incentives,
-          ),
-          tax_credit_incentives: translateIncentives(
-            result.tax_credit_incentives,
-          ),
+          pos_rebate_incentives: translateIncentives(pos_rebate_incentives),
+          tax_credit_incentives: translateIncentives(tax_credit_incentives),
         };
 
         return reply.status(200).type('application/json').send(translated);
