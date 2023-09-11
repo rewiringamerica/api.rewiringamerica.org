@@ -5,6 +5,8 @@ import { Database } from 'sqlite';
 import { AuthorityType } from '../data/authorities';
 import { IRA_INCENTIVES } from '../data/ira_incentives';
 import { IRA_STATE_SAVINGS } from '../data/ira_state_savings';
+import { AmountType } from '../data/types/amount';
+import { ItemType } from '../data/types/incentive-types';
 import { InvalidInputError } from '../lib/error';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
 import { t } from '../lib/i18n';
@@ -133,17 +135,41 @@ export default async function (
           ...request.query,
         });
 
+        // Website Calculator backwards compatiblity from v1 data:
+
+        // 1.1) Overwrite solar tax credit amount with representative_amount:
+        const solarTaxCredit = result.tax_credit_incentives.find(
+          incentive => incentive.item === 'rooftop_solar_installation',
+        );
+
+        if (solarTaxCredit) {
+          solarTaxCredit.amount.number = solarTaxCredit.amount.representative!;
+          delete solarTaxCredit.amount.representative;
+
+          // 1.2) Re-sort incentives per https://app.asana.com/0/0/1204275945510481/f
+          // HACK: temporarily override the amount_type as dollars:
+          solarTaxCredit.amount.type = AmountType.DollarAmount;
+          result.tax_credit_incentives = _.orderBy(
+            result.tax_credit_incentives,
+            [i => i.amount.type, i => i.amount.number],
+            ['desc', 'desc'],
+          );
+
+          // 1.3)
+          // set the amount_type and item_type to what the calculator expects:
+          solarTaxCredit.amount.type = 'solar' as AmountType;
+          solarTaxCredit.item_type = 'solar_tax_credit' as ItemType;
+        }
+
         const translated: WebsiteCalculatorResponse = {
           ...result,
 
-          // Website Calculator backwards compatiblity from v1 data:
-
-          // 1) Add annual savings from pregenerated model
+          // 2) Add annual savings from pregenerated model
           estimated_annual_savings:
             IRA_STATE_SAVINGS[incomeInfo.location.state_id]
               .estimated_savings_heat_pump_ev,
 
-          // 2) Populate the expected English and Spanish strings
+          // 3) Populate the expected English and Spanish strings
           pos_rebate_incentives: translateIncentives(
             result.pos_rebate_incentives,
           ),
@@ -151,29 +177,6 @@ export default async function (
             result.tax_credit_incentives,
           ),
         };
-
-        // 3.1) Overwrite solar_tax_credit amount with representative_amount:
-        const solarTaxCredit = translated.tax_credit_incentives.find(
-          incentive => incentive.item_type === 'solar_tax_credit',
-        );
-
-        if (solarTaxCredit) {
-          solarTaxCredit.amount = solarTaxCredit.representative_amount!;
-          solarTaxCredit.representative_amount = 0;
-
-          // 3.2) Re-sort incentives per https://app.asana.com/0/0/1204275945510481/f
-          // HACK: temporarily override the amount_type as dollars:
-          solarTaxCredit.amount_type = 'dollar_amount';
-          translated.tax_credit_incentives = _.orderBy(
-            translated.tax_credit_incentives,
-            [i => i.amount_type, i => i.amount],
-            ['desc', 'desc'],
-          );
-
-          // 3.3)
-          // set the amount_type to what the calculator would expect:
-          solarTaxCredit.amount_type = 'solar';
-        }
 
         return reply.status(200).type('application/json').send(translated);
       } catch (error) {

@@ -80,7 +80,7 @@ export const WEBSITE_INCENTIVE_SCHEMA = {
     },
     item_type: {
       type: 'string',
-      enum: Object.values(ItemType),
+      enum: [...Object.values(ItemType), 'solar_tax_credit'],
     },
     owner_status: {
       type: 'array',
@@ -132,6 +132,12 @@ export const WEBSITE_INCENTIVE_SCHEMA = {
     },
     eligible: {
       type: 'boolean',
+    },
+    short_description: {
+      type: 'string',
+      examples: [
+        'A 150 character (or shorter) display description for the incentive.',
+      ],
     },
   },
   additionalProperties: false,

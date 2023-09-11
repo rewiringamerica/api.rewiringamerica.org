@@ -13,7 +13,6 @@ export enum ItemType {
   EvChargerCredit = 'ev_charger_credit',
   PerformanceRebate = 'performance_rebate',
   PosRebate = 'pos_rebate',
-  SolarTaxCredit = 'solar_tax_credit',
   TaxCredit = 'tax_credit',
   FreeProducts = 'free_products',
 }
