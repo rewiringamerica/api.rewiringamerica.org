@@ -10,6 +10,7 @@ import {
   APICalculatorResponse,
 } from '../schemas/v1/calculator-endpoint';
 import { APIIncentiveNonLocalized } from '../schemas/v1/incentive';
+import { APISavings, addSavings, zeroSavings } from '../schemas/v1/savings';
 import { InvalidInputError, UnexpectedInputError } from './error';
 import { AMI, CompleteIncomeInfo, MFI } from './income-info';
 import { calculateStateIncentivesAndSavings } from './state-incentives-calculation';
@@ -50,9 +51,7 @@ function calculateFederalIncentivesAndSavings(
   }: CalculateParams,
 ): {
   federalIncentives: APIIncentiveNonLocalized[];
-  pos_savings: number;
-  performance_rebate_savings: number;
-  tax_savings: number;
+  savings: APISavings;
 } {
   const eligibleIncentives: APIIncentiveNonLocalized[] = [];
   const ineligibleIncentives: APIIncentiveNonLocalized[] = [];
@@ -181,24 +180,23 @@ function calculateFederalIncentivesAndSavings(
   //
   // Loop through every eligible incentive and add any with an "immediate" dollar value
   //
-  let performance_rebate_savings = 0;
-  let pos_savings = 0;
-  let tax_savings = 0;
+  const savings: APISavings = zeroSavings();
+
   for (const item of eligibleIncentives) {
     if (item.type === 'pos_rebate') {
       // count performance rebates separately
       if (item.item_type === 'performance_rebate') {
-        performance_rebate_savings += item.amount.number!;
+        savings.performance_rebate += item.amount.number!;
       } else {
-        pos_savings += item.amount.number!;
+        savings.pos_rebate += item.amount.number!;
       }
     } else if (item.type === 'tax_credit') {
       // if this is a dollar amount, just add it up:
       if (item.amount.type === 'dollar_amount') {
-        tax_savings += item.amount.number!;
+        savings.tax_credit += item.amount.number!;
       } else if (item.amount.representative) {
         // otherwise, it's a percentage. If there's a representative amount, use that:
-        tax_savings += item.amount.representative;
+        savings.tax_credit += item.amount.representative;
       }
     } else {
       throw new UnexpectedInputError(`Unknown item_type: ${item.type}`);
@@ -206,17 +204,15 @@ function calculateFederalIncentivesAndSavings(
   }
 
   // The max POS savings is $14,000 if you're under 150% ami, otherwise 0
-  pos_savings =
+  savings.pos_rebate =
     household_income < Number(ami[`l150_${household_size}`]) &&
     owner_status !== 'renter'
       ? MAX_POS_SAVINGS
-      : pos_savings;
+      : 0;
 
   return {
     federalIncentives: calculatedIncentives,
-    performance_rebate_savings,
-    tax_savings,
-    pos_savings,
+    savings,
   };
 }
 
@@ -294,11 +290,7 @@ export default function calculateIncentives(
     household_income >= Number(ami[`l150_${household_size}`]);
 
   const incentives: APIIncentiveNonLocalized[] = [];
-  let tax_savings = 0;
-  let pos_savings = 0;
-  let performance_rebate_savings = 0;
-  let account_credit_savings = 0;
-  let rebate_savings = 0;
+  let savings: APISavings = zeroSavings();
 
   if (authorityTypes.includes(AuthorityType.Federal)) {
     const federal = calculateFederalIncentivesAndSavings(
@@ -309,9 +301,7 @@ export default function calculateIncentives(
       request,
     );
     incentives.push(...federal.federalIncentives);
-    tax_savings += federal.tax_savings;
-    pos_savings += federal.pos_savings;
-    performance_rebate_savings += federal.performance_rebate_savings;
+    savings = addSavings(savings, federal.savings);
   }
 
   if (
@@ -320,15 +310,16 @@ export default function calculateIncentives(
   ) {
     const state = calculateStateIncentivesAndSavings(state_id, request);
     incentives.push(...state.stateIncentives);
-    tax_savings += state.savings.tax_credit;
-    pos_savings += state.savings.pos_rebate;
-    performance_rebate_savings += state.savings.performance_rebate;
-    account_credit_savings += state.savings.account_credit;
-    rebate_savings += state.savings.rebate;
+    savings = addSavings(savings, state.savings);
   }
 
-  // Get tax owed to determine max potiental tax savings
+  // Get tax owed to determine max potential tax savings
   const tax = estimateTaxAmount(tax_filing as FilingStatus, household_income);
+
+  // You can't save more than tax owed. Choose the lesser of tax owed vs tax savings
+  if (savings.tax_credit > tax.tax_owed) {
+    savings.tax_credit = tax.tax_owed;
+  }
 
   // Sort incentives https://app.asana.com/0/0/1204275945510481/f
   // put "percent" items first, then "dollar_amount", then sort by amount with highest first
@@ -342,20 +333,7 @@ export default function calculateIncentives(
     is_under_80_ami: isUnder80Ami,
     is_under_150_ami: isUnder150Ami,
     is_over_150_ami: isOver150Ami,
-
-    savings: {
-      pos_rebate: pos_savings,
-
-      // You can't save more than tax owed. Choose the lesser of tax owed vs tax savings
-      tax_credit: tax.tax_owed < tax_savings ? tax.tax_owed : tax_savings,
-
-      // Not prominently displayed
-      performance_rebate: performance_rebate_savings,
-
-      account_credit: account_credit_savings,
-      rebate: rebate_savings,
-    },
-
+    savings,
     incentives: sortedIncentives,
   };
 }

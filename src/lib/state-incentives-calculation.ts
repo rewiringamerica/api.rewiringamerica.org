@@ -4,7 +4,7 @@ import { RI_INCENTIVES } from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
 import { OwnerStatus } from '../data/types/owner-status';
 import { APIIncentiveNonLocalized } from '../schemas/v1/incentive';
-import { APISavings } from '../schemas/v1/savings';
+import { APISavings, zeroSavings } from '../schemas/v1/savings';
 import { UnexpectedInputError } from './error';
 import { CalculateParams } from './incentives-calculation';
 
@@ -97,13 +97,7 @@ export function calculateStateIncentivesAndSavings(
 
   const stateIncentives = [...eligibleIncentives, ...ineligibleIncentives];
 
-  const savings: APISavings = {
-    pos_rebate: 0,
-    tax_credit: 0,
-    performance_rebate: 0,
-    account_credit: 0,
-    rebate: 0,
-  };
+  const savings: APISavings = zeroSavings();
 
   stateIncentives.forEach(item => {
     const amount = item.amount.representative
