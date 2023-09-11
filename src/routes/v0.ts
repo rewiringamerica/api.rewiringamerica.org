@@ -6,7 +6,7 @@ import { AuthorityType } from '../data/authorities';
 import { IRA_INCENTIVES } from '../data/ira_incentives';
 import { IRA_STATE_SAVINGS } from '../data/ira_state_savings';
 import { AmountType } from '../data/types/amount';
-import { ItemType, Type } from '../data/types/incentive-types';
+import { ItemType, Type, TypeV0 } from '../data/types/incentive-types';
 import { InvalidInputError } from '../lib/error';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
 import { t } from '../lib/i18n';
@@ -43,6 +43,8 @@ function translateIncentives(
       'https://www.rewiringamerica.org',
       '',
     ),
+
+    type: incentive.type as TypeV0,
 
     // Transform amounts from v1 to v0 format
     amount: incentive.amount.number,

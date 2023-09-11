@@ -3,9 +3,11 @@
   "is_under_150_ami": true,
   "is_over_150_ami": false,
   "savings": {
-    "pos_rebate": 18500,
+    "pos_rebate": 16500,
     "tax_credit": 4036,
-    "performance_rebate": 0
+    "performance_rebate": 0,
+    "account_credit": 0,
+    "rebate": 2000
   },
   "incentives": [
     {
@@ -64,7 +66,7 @@
       "short_description": "Low-income households get a 100% rebate on heat pumps up to $8,000; moderate-income households get 50% up to $8,000."
     },
     {
-      "type": "pos_rebate",
+      "type": "rebate",
       "authority_type": "state",
       "authority_name": "Rhode Island Office of Energy Resources",
       "program": "RI Office of Energy Resources DRIVE EV",
@@ -77,7 +79,7 @@
         "type": "dollar_amount",
         "number": 2000
       },
-      "item_type": "pos_rebate",
+      "item_type": "rebate",
       "owner_status": [
         "homeowner",
         "renter"

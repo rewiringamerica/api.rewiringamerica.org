@@ -2,9 +2,9 @@ import { RI_LOW_INCOME_THRESHOLDS } from '../data/RI/low_income_thresholds';
 import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities';
 import { RI_INCENTIVES } from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
-import { Type } from '../data/types/incentive-types';
 import { OwnerStatus } from '../data/types/owner-status';
 import { APIIncentiveNonLocalized } from '../schemas/v1/incentive';
+import { APISavings, zeroSavings } from '../schemas/v1/savings';
 import { UnexpectedInputError } from './error';
 import { CalculateParams } from './incentives-calculation';
 
@@ -13,9 +13,7 @@ export function calculateStateIncentivesAndSavings(
   request: CalculateParams,
 ): {
   stateIncentives: APIIncentiveNonLocalized[];
-  tax_savings: number;
-  pos_savings: number;
-  performance_rebate_savings: number;
+  savings: APISavings;
 } {
   // TODO condition based on existence of incentives data, not hardcoding RI.
   if (stateId !== 'RI') {
@@ -99,22 +97,20 @@ export function calculateStateIncentivesAndSavings(
 
   const stateIncentives = [...eligibleIncentives, ...ineligibleIncentives];
 
-  let savings = 0;
+  const savings: APISavings = zeroSavings();
 
   stateIncentives.forEach(item => {
-    if (item.type === Type.PosRebate) {
-      if (item.amount.representative) {
-        savings += item.amount.representative;
-      } else if (item.amount.type === AmountType.DollarAmount) {
-        savings += item.amount.number;
-      }
-    }
+    const amount = item.amount.representative
+      ? item.amount.representative
+      : item.amount.type === AmountType.DollarAmount
+      ? item.amount.number
+      : 0;
+
+    savings[item.type] += amount;
   });
 
   return {
     stateIncentives,
-    tax_savings: 0,
-    pos_savings: savings,
-    performance_rebate_savings: 0,
+    savings,
   };
 }
