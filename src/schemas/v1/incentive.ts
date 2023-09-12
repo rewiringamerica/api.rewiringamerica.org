@@ -40,6 +40,9 @@ export const API_INCENTIVE_SCHEMA = {
         'Residential Clean Energy Credit (25D)',
       ],
     },
+    program_url: {
+      type: 'string',
+    },
     item: {
       type: 'object',
       properties: {
