@@ -40,6 +40,7 @@ function transformIncentives(
       url: t('urls', incentive.item, language),
     },
     program: t('programs', incentive.program, language),
+    program_url: t('program_urls', incentive.program, language),
   }));
 }
 
