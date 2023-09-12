@@ -99,3 +99,23 @@ test('state incentives JSON files match schemas', async tap => {
     });
   });
 });
+
+const isURLValid = (url: string): boolean => {
+  try {
+    new URL(url);
+    return true;
+  } catch (_) {
+    return false;
+  }
+};
+
+test('locale URLs are valid', async tap => {
+  for (const [lang, locale] of Object.entries(LOCALES)) {
+    for (const [key, url] of Object.entries(locale.urls)) {
+      tap.ok(isURLValid(url), `${lang}.urls.${key} invalid`);
+    }
+    for (const [key, url] of Object.entries(locale.program_urls)) {
+      tap.ok(isURLValid(url), `${lang}.program_urls.${key} invalid`);
+    }
+  }
+});

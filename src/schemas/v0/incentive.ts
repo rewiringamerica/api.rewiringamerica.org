@@ -26,7 +26,7 @@ export const WEBSITE_INCENTIVE_SCHEMA = {
   properties: {
     type: {
       type: 'string',
-      enum: Object.values(Type),
+      enum: [Type.PosRebate, Type.TaxCredit],
     },
     program: {
       type: 'string',

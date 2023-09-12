@@ -2,7 +2,7 @@ import { JSONSchemaType } from 'ajv';
 import fs from 'fs';
 import { FilingStatus } from './tax_brackets';
 import { Amount, AmountType, AmountUnit } from './types/amount';
-import { ItemType, Type } from './types/incentive-types';
+import { ItemType, Type, TypeV0 } from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
 import { OwnerStatus } from './types/owner-status';
 import { ALL_PROGRAMS } from './types/programs';
@@ -24,7 +24,7 @@ export interface Incentive {
   owner_status: OwnerStatus[];
   program: string;
   start_date: number;
-  type: Type;
+  type: TypeV0;
   short_description?: string;
 }
 
@@ -52,7 +52,7 @@ export const SCHEMA: JSONSchemaType<Incentive[]> = {
   items: {
     type: 'object',
     properties: {
-      type: { type: 'string', enum: Object.values(Type) },
+      type: { type: 'string', enum: [Type.PosRebate, Type.TaxCredit] },
       program: { type: 'string', enum: ALL_PROGRAMS },
       item: { type: 'string', enum: ALL_ITEMS },
       item_type: { type: 'string', enum: Object.values(ItemType) },

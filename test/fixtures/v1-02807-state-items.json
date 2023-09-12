@@ -2,38 +2,14 @@
   "is_under_80_ami": true,
   "is_under_150_ami": true,
   "is_over_150_ami": false,
-  "pos_savings": 18500,
-  "tax_savings": 4036,
-  "performance_rebate_savings": 0,
-  "pos_rebate_incentives": [
-    {
-      "type": "pos_rebate",
-      "authority_type": "state",
-      "authority_name": "Rhode Island Office of Energy Resources",
-      "program": "RI Office of Energy Resources Clean Heat RI",
-      "item": {
-        "type": "heat_pump_air_conditioner_heater",
-        "name": "Heat Pump Air Conditioner/Heater",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
-      },
-      "amount": {
-        "type": "dollars_per_unit",
-        "number": 1250,
-        "representative": 2500,
-        "unit": "ton"
-      },
-      "item_type": "pos_rebate",
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": 2023,
-      "end_date": 2024,
-      "ami_qualification": null,
-      "agi_max_limit": null,
-      "filing_status": null,
-      "eligible": true,
-      "short_description": "Up to $1,250/ton to install qualifying heat pumps. Limited time offer subject to funding availability."
-    },
+  "savings": {
+    "pos_rebate": 14000,
+    "tax_credit": 4036,
+    "performance_rebate": 0,
+    "account_credit": 0,
+    "rebate": 4500
+  },
+  "incentives": [
     {
       "type": "pos_rebate",
       "authority_type": "federal",
@@ -62,10 +38,40 @@
       "short_description": "Low-income households get a 100% rebate on heat pumps up to $8,000; moderate-income households get 50% up to $8,000."
     },
     {
-      "type": "pos_rebate",
+      "type": "rebate",
+      "authority_type": "state",
+      "authority_name": "Rhode Island Office of Energy Resources",
+      "program": "RI Office of Energy Resources Clean Heat RI",
+      "program_url": "https://cleanheatri.com/",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 1250,
+        "representative": 2500,
+        "unit": "ton"
+      },
+      "item_type": "rebate",
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "agi_max_limit": null,
+      "filing_status": null,
+      "eligible": true,
+      "short_description": "Up to $1,250/ton to install qualifying heat pumps. Limited time offer subject to funding availability."
+    },
+    {
+      "type": "rebate",
       "authority_type": "state",
       "authority_name": "Rhode Island Office of Energy Resources",
       "program": "RI Office of Energy Resources DRIVE EV",
+      "program_url": "https://drive.ri.gov/ev-programs/drive-ev",
       "item": {
         "type": "new_electric_vehicle",
         "name": "New Electric Vehicle",
@@ -75,7 +81,7 @@
         "type": "dollar_amount",
         "number": 2000
       },
-      "item_type": "pos_rebate",
+      "item_type": "rebate",
       "owner_status": [
         "homeowner",
         "renter"
@@ -87,9 +93,7 @@
       "filing_status": null,
       "eligible": true,
       "short_description": "Up to $2,000 towards purchase or lease of a new EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served."
-    }
-  ],
-  "tax_credit_incentives": [
+    },
     {
       "type": "tax_credit",
       "authority_type": "federal",
