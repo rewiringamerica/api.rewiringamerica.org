@@ -3,7 +3,7 @@ import { FastifyInstance } from 'fastify';
 import _ from 'lodash';
 import { Database } from 'sqlite';
 import { AuthorityType } from '../data/authorities';
-import { IRA_INCENTIVES } from '../data/ira_incentives';
+import { IRA_INCENTIVES, IRAIncentive } from '../data/ira_incentives';
 import { IRA_STATE_SAVINGS } from '../data/ira_state_savings';
 import { AmountType } from '../data/types/amount';
 import { ItemType, Type, TypeV0 } from '../data/types/incentive-types';
@@ -21,13 +21,10 @@ import {
   WEBSITE_INCENTIVE_SCHEMA,
   WebsiteIncentive,
 } from '../schemas/v0/incentive';
-import { APIIncentiveNonLocalized } from '../schemas/v1/incentive';
 
 IRA_INCENTIVES.forEach(incentive => Object.freeze(incentive));
 
-function translateIncentives(
-  incentives: APIIncentiveNonLocalized[],
-): WebsiteIncentive[] {
+function translateIncentives(incentives: IRAIncentive[]): WebsiteIncentive[] {
   return incentives.map(incentive => ({
     ...incentive,
     item_es: t('items', incentive.item, 'es'),
@@ -139,10 +136,10 @@ export default async function (
 
         const pos_rebate_incentives = result.incentives.filter(
           i => i.type === Type.PosRebate,
-        );
+        ) as IRAIncentive[];
         let tax_credit_incentives = result.incentives.filter(
           i => i.type === Type.TaxCredit,
-        );
+        ) as IRAIncentive[];
 
         // Website Calculator backwards compatiblity from v1 data:
 

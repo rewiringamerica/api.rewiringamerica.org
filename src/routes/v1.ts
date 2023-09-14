@@ -1,14 +1,15 @@
 import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts';
 import { FastifyInstance } from 'fastify';
 import { Database } from 'sqlite';
-import { AuthorityType } from '../data/authorities';
 import { IRA_INCENTIVES } from '../data/ira_incentives';
 import { LOCALES } from '../data/locale';
 import { InvalidInputError, UnexpectedInputError } from '../lib/error';
 import fetchAMIsForAddress from '../lib/fetch-amis-for-address';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
 import { t } from '../lib/i18n';
-import calculateIncentives from '../lib/incentives-calculation';
+import calculateIncentives, {
+  CalculatedIncentive,
+} from '../lib/incentives-calculation';
 import { IncomeInfo, isCompleteIncomeInfo } from '../lib/income-info';
 import { getUtilitiesForLocation } from '../lib/utilities-for-location';
 import { ERROR_SCHEMA } from '../schemas/error';
@@ -17,17 +18,13 @@ import {
   API_CALCULATOR_RESPONSE_SCHEMA,
   API_CALCULATOR_SCHEMA,
 } from '../schemas/v1/calculator-endpoint';
-import {
-  APIIncentive,
-  APIIncentiveNonLocalized,
-  API_INCENTIVE_SCHEMA,
-} from '../schemas/v1/incentive';
+import { APIIncentive, API_INCENTIVE_SCHEMA } from '../schemas/v1/incentive';
 import { API_INCENTIVES_SCHEMA } from '../schemas/v1/incentives-endpoint';
 import { APILocation } from '../schemas/v1/location';
 import { API_UTILITIES_SCHEMA } from '../schemas/v1/utilities-endpoint';
 
 function transformIncentives(
-  incentives: APIIncentiveNonLocalized[],
+  incentives: CalculatedIncentive[],
   language: keyof typeof LOCALES,
 ): APIIncentive[] {
   return incentives.map(incentive => ({
@@ -123,11 +120,7 @@ export default async function (
     { schema: API_INCENTIVES_SCHEMA },
     async (request, reply) => {
       const incentives = transformIncentives(
-        IRA_INCENTIVES.map(incentive => ({
-          ...incentive,
-          authority_type: AuthorityType.Federal,
-          authority_name: null,
-        })),
+        IRA_INCENTIVES,
         request.query.language ?? 'en',
       );
       return reply.status(200).type('application/json').send({ incentives });
