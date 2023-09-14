@@ -9,10 +9,11 @@ export const PROGRAMS_SCHEMA = {
   residentialCleanEnergyCredit: { type: 'string' },
 
   // RI
-  // State: OER, Commerce RI
+  // State: OER, Commerce RI, RI DHS
   ri_drive: { type: 'string' },
   ri_smallScaleSolar: { type: 'string' },
   ri_highEfficiencyHeatPumpProgram: { type: 'string' },
+  ri_dhsWeatherizationAssistanceProgram: { type: 'string' },
   // Pascoag
   ri_hvacAndWaterHeaterIncentives: { type: 'string' },
   ri_residentialEnergyStarOfferings: { type: 'string' },

@@ -16,6 +16,11 @@ export const API_SAVINGS_SCHEMA = {
     },
     account_credit: { type: 'integer' },
     rebate: { type: 'integer' },
+    assistance_program: {
+      type: 'integer',
+      description:
+        'This may represent no-cost products or services rather than a monetary value.',
+    },
   },
   required: [
     'pos_rebate',
