@@ -30,9 +30,8 @@ export const API_INCENTIVE_SCHEMA = {
       type: 'string',
       enum: Object.values(AuthorityType),
     },
-    authority_name: {
+    authority: {
       type: 'string',
-      nullable: true,
     },
     program: {
       type: 'string',
