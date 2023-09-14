@@ -3,16 +3,15 @@ import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities';
 import { RI_INCENTIVES } from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
 import { OwnerStatus } from '../data/types/owner-status';
-import { APIIncentiveNonLocalized } from '../schemas/v1/incentive';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
 import { UnexpectedInputError } from './error';
-import { CalculateParams } from './incentives-calculation';
+import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
 
 export function calculateStateIncentivesAndSavings(
   stateId: string,
   request: CalculateParams,
 ): {
-  stateIncentives: APIIncentiveNonLocalized[];
+  stateIncentives: CalculatedIncentive[];
   savings: APISavings;
 } {
   // TODO condition based on existence of incentives data, not hardcoding RI.

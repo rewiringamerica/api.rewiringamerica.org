@@ -1,5 +1,6 @@
 import { JSONSchemaType } from 'ajv';
 import fs from 'fs';
+import { AuthorityType } from './authorities';
 import { FilingStatus } from './tax_brackets';
 import { Amount, AmountType, AmountUnit } from './types/amount';
 import { ItemType, Type, TypeV0 } from './types/incentive-types';
@@ -13,10 +14,11 @@ export enum AmiQualification {
   MoreThan80_Ami = 'more_than_80_ami',
 }
 
-export interface Incentive {
+export interface IRAIncentive {
   agi_max_limit: number | null;
   ami_qualification: AmiQualification | null;
   amount: Amount;
+  authority_type: AuthorityType.Federal;
   end_date: number;
   filing_status: FilingStatus | null;
   item: Item;
@@ -47,13 +49,14 @@ const amountSchema: JSONSchemaType<Amount> = {
   required: ['type', 'number'],
 } as const;
 
-export const SCHEMA: JSONSchemaType<Incentive[]> = {
+export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
   type: 'array',
   items: {
     type: 'object',
     properties: {
       type: { type: 'string', enum: [Type.PosRebate, Type.TaxCredit] },
       program: { type: 'string', enum: ALL_PROGRAMS },
+      authority_type: { type: 'string', const: AuthorityType.Federal },
       item: { type: 'string', enum: ALL_ITEMS },
       item_type: { type: 'string', enum: Object.values(ItemType) },
       amount: amountSchema,
@@ -80,6 +83,7 @@ export const SCHEMA: JSONSchemaType<Incentive[]> = {
       'agi_max_limit',
       'ami_qualification',
       'amount',
+      'authority_type',
       'end_date',
       'filing_status',
       'item',
@@ -92,6 +96,6 @@ export const SCHEMA: JSONSchemaType<Incentive[]> = {
   },
 };
 
-export const IRA_INCENTIVES: Incentive[] = JSON.parse(
+export const IRA_INCENTIVES: IRAIncentive[] = JSON.parse(
   fs.readFileSync('./data/ira_incentives.json', 'utf-8'),
 );

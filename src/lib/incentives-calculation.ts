@@ -1,7 +1,8 @@
 import _ from 'lodash';
 import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities';
-import { IRA_INCENTIVES } from '../data/ira_incentives';
+import { IRAIncentive, IRA_INCENTIVES } from '../data/ira_incentives';
 import { SOLAR_PRICES } from '../data/solar_prices';
+import { RIIncentive } from '../data/state_incentives';
 import { STATE_MFIS, StateMFI } from '../data/state_mfi';
 import { FilingStatus } from '../data/tax_brackets';
 import { OwnerStatus } from '../data/types/owner-status';
@@ -9,7 +10,6 @@ import {
   APICalculatorRequest,
   APICalculatorResponse,
 } from '../schemas/v1/calculator-endpoint';
-import { APIIncentiveNonLocalized } from '../schemas/v1/incentive';
 import { APISavings, addSavings, zeroSavings } from '../schemas/v1/savings';
 import { InvalidInputError, UnexpectedInputError } from './error';
 import { AMI, CompleteIncomeInfo, MFI } from './income-info';
@@ -26,13 +26,17 @@ function roundCents(dollars: number): number {
   return Math.round(dollars * 100) / 100;
 }
 
+export type CalculatedIncentive = (IRAIncentive | RIIncentive) & {
+  eligible?: boolean;
+};
+
 /**
  * calculateIncentives() returns something that is almost the API response
  * object, but with incentives in a format closer to the static JSON format.
- * Replace the types of the two properties containing them.
+ * Replace the type of the "incentives" property.
  */
 type CalculatedIncentives = Omit<APICalculatorResponse, 'incentives'> & {
-  incentives: APIIncentiveNonLocalized[];
+  incentives: CalculatedIncentive[];
 };
 
 export type CalculateParams = Omit<APICalculatorRequest, 'location'>;
@@ -50,11 +54,11 @@ function calculateFederalIncentivesAndSavings(
     items,
   }: CalculateParams,
 ): {
-  federalIncentives: APIIncentiveNonLocalized[];
+  federalIncentives: CalculatedIncentive[];
   savings: APISavings;
 } {
-  const eligibleIncentives: APIIncentiveNonLocalized[] = [];
-  const ineligibleIncentives: APIIncentiveNonLocalized[] = [];
+  const eligibleIncentives: CalculatedIncentive[] = [];
+  const ineligibleIncentives: CalculatedIncentive[] = [];
 
   // Loop through each of the incentives, running several tests to see if visitor is eligible
   for (const item of IRA_INCENTIVES) {
@@ -152,7 +156,6 @@ function calculateFederalIncentivesAndSavings(
       ...item,
       amount,
       eligible,
-      authority_type: AuthorityType.Federal,
       authority_name: null,
     };
     if (eligible) {
@@ -289,7 +292,7 @@ export default function calculateIncentives(
   const isOver150Ami =
     household_income >= Number(ami[`l150_${household_size}`]);
 
-  const incentives: APIIncentiveNonLocalized[] = [];
+  const incentives: CalculatedIncentive[] = [];
   let savings: APISavings = zeroSavings();
 
   if (authorityTypes.includes(AuthorityType.Federal)) {
