@@ -17,6 +17,8 @@ export type StateIncentive = {
   amount: Amount;
   bonus_available?: boolean;
   owner_status: OwnerStatus[];
+  start_date: number;
+  end_date: number;
 };
 
 const amountSchema: JSONSchemaType<Amount> = {
@@ -43,6 +45,12 @@ const incentivePropertySchema = {
   owner_status: {
     type: 'array',
     items: { type: 'string', enum: Object.values(OwnerStatus) },
+  },
+  start_date: {
+    type: 'number',
+  },
+  end_date: {
+    type: 'number',
   },
   short_description: { type: 'string', maxLength: 150 },
 } as const;

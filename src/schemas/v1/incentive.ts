@@ -4,7 +4,7 @@ import { AmiQualification } from '../../data/ira_incentives';
 import { FilingStatus } from '../../data/tax_brackets';
 import { AmountType, AmountUnit } from '../../data/types/amount';
 import { ItemType, Type } from '../../data/types/incentive-types';
-import { ALL_ITEMS, Item } from '../../data/types/items';
+import { ALL_ITEMS } from '../../data/types/items';
 import { OwnerStatus } from '../../data/types/owner-status';
 
 export const API_INCENTIVE_SCHEMA = {
@@ -175,11 +175,3 @@ export const API_INCENTIVE_SCHEMA = {
 } as const;
 
 export type APIIncentive = FromSchema<typeof API_INCENTIVE_SCHEMA>;
-
-/**
- * This is used internally, as an intermediate form between incentive
- * calculation and external API.
- */
-export type APIIncentiveNonLocalized = Omit<APIIncentive, 'item'> & {
-  item: Item;
-};
