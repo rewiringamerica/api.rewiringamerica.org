@@ -223,9 +223,13 @@ export default function calculateIncentives(
   { location: { state_id }, ami, calculations }: CompleteIncomeInfo,
   request: CalculateParams,
 ): CalculatedIncentives {
-  const authorityTypes = request.authority_types ?? [AuthorityType.Federal];
-  const { owner_status, household_income, tax_filing, household_size } =
-    request;
+  const {
+    owner_status,
+    household_income,
+    tax_filing,
+    household_size,
+    authority_types,
+  } = request;
 
   if (!OWNER_STATUSES.has(owner_status)) {
     throw new UnexpectedInputError('Unknown owner_status');
@@ -260,24 +264,28 @@ export default function calculateIncentives(
     );
   }
 
-  const stateAuthorities = AUTHORITIES_BY_STATE[state_id];
+  // Throw an error if the request specifically asks for utility incentives and
+  // doesn't include a utility.
   if (
-    !stateAuthorities &&
-    (authorityTypes.includes(AuthorityType.State) ||
-      authorityTypes.includes(AuthorityType.Utility))
+    authority_types &&
+    authority_types.includes(AuthorityType.Utility) &&
+    !request.utility
   ) {
     throw new InvalidInputError(
-      `We do not yet have state-level coverage in ${state_id}.`,
+      'Must include the "utility" field when requesting utility incentives.',
+      'utility',
     );
   }
 
-  if (authorityTypes.includes(AuthorityType.Utility)) {
-    if (!request.utility) {
+  if (request.utility) {
+    const stateAuthorities = AUTHORITIES_BY_STATE[state_id];
+    if (!stateAuthorities) {
       throw new InvalidInputError(
-        'Must include the "utility" field when requesting utility incentives.',
+        `We do not yet have information about the utilities in ${state_id}.`,
         'utility',
       );
     }
+
     if (!stateAuthorities.utility[request.utility]) {
       throw new InvalidInputError(
         `Invalid utility: "${request.utility}".`,
@@ -295,7 +303,7 @@ export default function calculateIncentives(
   const incentives: CalculatedIncentive[] = [];
   let savings: APISavings = zeroSavings();
 
-  if (authorityTypes.includes(AuthorityType.Federal)) {
+  if (!authority_types || authority_types.includes(AuthorityType.Federal)) {
     const federal = calculateFederalIncentivesAndSavings(
       ami,
       calculations,
@@ -308,8 +316,9 @@ export default function calculateIncentives(
   }
 
   if (
-    authorityTypes.includes(AuthorityType.State) ||
-    authorityTypes.includes(AuthorityType.Utility)
+    !authority_types ||
+    authority_types.includes(AuthorityType.State) ||
+    authority_types.includes(AuthorityType.Utility)
   ) {
     const state = calculateStateIncentivesAndSavings(state_id, request);
     incentives.push(...state.stateIncentives);
