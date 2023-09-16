@@ -349,6 +349,7 @@ export default function calculateIncentives(
     incentives.forEach(i => {
       if (
         'authority' in i &&
+        i.authority &&
         (i.authority_type === 'state' || i.authority_type === 'utility')
       ) {
         authorities[i.authority] =
