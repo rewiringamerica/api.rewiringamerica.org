@@ -9,6 +9,7 @@ import { SOLAR_PRICES } from '../data/solar_prices';
 import { RIIncentive } from '../data/state_incentives';
 import { STATE_MFIS, StateMFI } from '../data/state_mfi';
 import { FilingStatus } from '../data/tax_brackets';
+import { APICoverage } from '../data/types/coverage';
 import { OwnerStatus } from '../data/types/owner-status';
 import {
   APICalculatorRequest,
@@ -305,6 +306,10 @@ export default function calculateIncentives(
 
   const incentives: CalculatedIncentive[] = [];
   let savings: APISavings = zeroSavings();
+  let coverage: APICoverage = {
+    state: null,
+    utility: null,
+  };
 
   if (!authority_types || authority_types.includes(AuthorityType.Federal)) {
     const federal = calculateFederalIncentivesAndSavings(
@@ -326,6 +331,7 @@ export default function calculateIncentives(
     const state = calculateStateIncentivesAndSavings(state_id, request);
     incentives.push(...state.stateIncentives);
     savings = addSavings(savings, state.savings);
+    coverage = state.coverage;
   }
 
   // Get tax owed to determine max potential tax savings
@@ -363,6 +369,7 @@ export default function calculateIncentives(
     is_under_150_ami: isUnder150Ami,
     is_over_150_ami: isOver150Ami,
     authorities,
+    coverage,
     savings,
     incentives: sortedIncentives,
   };

@@ -2,6 +2,7 @@ import { RI_LOW_INCOME_THRESHOLDS } from '../data/RI/low_income_thresholds';
 import { AuthorityType } from '../data/authorities';
 import { RI_INCENTIVES } from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
+import { APICoverage } from '../data/types/coverage';
 import { OwnerStatus } from '../data/types/owner-status';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
 import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
@@ -12,10 +13,15 @@ export function calculateStateIncentivesAndSavings(
 ): {
   stateIncentives: CalculatedIncentive[];
   savings: APISavings;
+  coverage: APICoverage;
 } {
   // TODO condition based on existence of incentives data, not hardcoding RI.
   if (stateId !== 'RI') {
-    return { stateIncentives: [], savings: zeroSavings() };
+    return {
+      stateIncentives: [],
+      savings: zeroSavings(),
+      coverage: { state: null, utility: null },
+    };
   }
 
   const incentives = RI_INCENTIVES;
@@ -104,5 +110,9 @@ export function calculateStateIncentivesAndSavings(
   return {
     stateIncentives,
     savings,
+    coverage: {
+      state: stateId,
+      utility: request.utility ?? null,
+    },
   };
 }
