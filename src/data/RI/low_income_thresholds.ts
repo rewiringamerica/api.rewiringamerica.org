@@ -9,9 +9,7 @@ export type RILowIncomeThresholdsList = {
   [authorityName: string]: RILowIncomeThresholds;
 };
 
-export type RILowIncomeThresholds = {
-  [hhSize: string]: number;
-};
+export type RILowIncomeThresholds = { [hhSize: string]: number };
 
 export type AuthorityThresholds = {
   type: 'object';
