@@ -1,4 +1,4 @@
-import { RI_LOW_INCOME_THRESHOLDS } from '../data/RI/low_income_thresholds';
+import { RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/RI/low_income_thresholds';
 import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities';
 import { RI_INCENTIVES } from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
@@ -56,10 +56,14 @@ export function calculateStateIncentivesAndSavings(
       eligible = false;
     }
 
+    let authority_thresholds =
+      RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY[item.authority];
+    if (authority_thresholds === undefined) {
+      authority_thresholds = RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY['default'];
+    }
     if (
       item.low_income &&
-      request.household_income >
-        RI_LOW_INCOME_THRESHOLDS[request.household_size]
+      request.household_income > authority_thresholds[request.household_size]
     ) {
       eligible = false;
     }

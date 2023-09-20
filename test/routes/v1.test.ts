@@ -77,7 +77,7 @@ test('response with state and utility is valid and correct', async t => {
     {
       location: { zip: '02903' },
       owner_status: 'homeowner',
-      // Qualifies as low-income in RI
+      // Qualifies as low-income for RI DHS but not Rhode Island Energy.
       household_size: 4,
       household_income: 65000,
       tax_filing: 'joint',
