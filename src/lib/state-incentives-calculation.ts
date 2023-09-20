@@ -4,7 +4,6 @@ import { RI_INCENTIVES } from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
 import { OwnerStatus } from '../data/types/owner-status';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
-import { UnexpectedInputError } from './error';
 import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
 
 export function calculateStateIncentivesAndSavings(
@@ -16,10 +15,16 @@ export function calculateStateIncentivesAndSavings(
 } {
   // TODO condition based on existence of incentives data, not hardcoding RI.
   if (stateId !== 'RI') {
-    throw new UnexpectedInputError("We don't have coverage in that state yet.");
+    return { stateIncentives: [], savings: zeroSavings() };
   }
 
   const incentives = RI_INCENTIVES;
+  const includeState =
+    !request.authority_types ||
+    request.authority_types.includes(AuthorityType.State);
+  const includeUtility =
+    !request.authority_types ||
+    request.authority_types.includes(AuthorityType.Utility);
 
   const eligibleIncentives = [];
   const ineligibleIncentives = [];
@@ -31,10 +36,7 @@ export function calculateStateIncentivesAndSavings(
       continue;
     }
 
-    if (
-      item.authority_type === AuthorityType.State &&
-      !request.authority_types?.includes(AuthorityType.State)
-    ) {
+    if (item.authority_type === AuthorityType.State && !includeState) {
       // Don't include state incentives at all if they weren't requested, not
       // even as "ineligible" incentives.
       continue;
@@ -42,8 +44,7 @@ export function calculateStateIncentivesAndSavings(
 
     if (
       item.authority_type === AuthorityType.Utility &&
-      (!request.authority_types?.includes(AuthorityType.Utility) ||
-        item.authority !== request.utility)
+      (!includeUtility || item.authority !== request.utility)
     ) {
       // Don't include utility incentives at all if they weren't requested, or
       // if they're for the wrong utility.

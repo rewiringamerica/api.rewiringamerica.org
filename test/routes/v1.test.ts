@@ -255,22 +255,22 @@ const BAD_QUERIES = [
     authority_types: ['utility'],
   },
   {
-    location: { zip: '80212' },
+    location: { zip: '02861' },
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: 'joint',
     household_size: 4,
-    authority_types: ['utility'],
+    // If you pass a utility, it must exist in the state "location" is in
     utility: 'nonexistent-utility',
   },
   {
-    // No state-level coverage in this state yet (CO)
     location: { zip: '80212' },
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: 'joint',
     household_size: 4,
-    authority_types: ['state'],
+    // We don't have coverage in 80212 (Colorado)
+    utility: 'ri-rhode-island-energy',
   },
 ];
 
