@@ -11,6 +11,7 @@ export const PROGRAMS_SCHEMA = {
   // RI
   // State: OER, Commerce RI, RI DHS
   ri_drive: { type: 'string' },
+  ri_drive_plus: { type: 'string' },
   ri_smallScaleSolar: { type: 'string' },
   ri_highEfficiencyHeatPumpProgram: { type: 'string' },
   ri_dhsWeatherizationAssistanceProgram: { type: 'string' },
