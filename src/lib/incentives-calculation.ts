@@ -1,5 +1,9 @@
 import _ from 'lodash';
-import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities';
+import {
+  AUTHORITIES_BY_STATE,
+  AuthoritiesById,
+  AuthorityType,
+} from '../data/authorities';
 import { IRAIncentive, IRA_INCENTIVES } from '../data/ira_incentives';
 import { SOLAR_PRICES } from '../data/solar_prices';
 import { RIIncentive } from '../data/state_incentives';
@@ -156,7 +160,6 @@ function calculateFederalIncentivesAndSavings(
       ...item,
       amount,
       eligible,
-      authority_name: null,
     };
     if (eligible) {
       eligibleIncentives.push(newItem);
@@ -277,8 +280,8 @@ export default function calculateIncentives(
     );
   }
 
+  const stateAuthorities = AUTHORITIES_BY_STATE[state_id];
   if (request.utility) {
-    const stateAuthorities = AUTHORITIES_BY_STATE[state_id];
     if (!stateAuthorities) {
       throw new InvalidInputError(
         `We do not yet have information about the utilities in ${state_id}.`,
@@ -341,10 +344,25 @@ export default function calculateIncentives(
     ['asc', 'desc', 'desc'],
   );
 
+  const authorities: AuthoritiesById = {};
+  if (stateAuthorities) {
+    incentives.forEach(i => {
+      if (
+        'authority' in i &&
+        i.authority &&
+        (i.authority_type === 'state' || i.authority_type === 'utility')
+      ) {
+        authorities[i.authority] =
+          stateAuthorities[i.authority_type][i.authority];
+      }
+    });
+  }
+
   return {
     is_under_80_ami: isUnder80Ami,
     is_under_150_ami: isUnder150Ami,
     is_over_150_ami: isOver150Ami,
+    authorities,
     savings,
     incentives: sortedIncentives,
   };

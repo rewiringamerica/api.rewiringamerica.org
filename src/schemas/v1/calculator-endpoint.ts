@@ -1,5 +1,5 @@
 import { FromSchema } from 'json-schema-to-ts';
-import { AuthorityType } from '../../data/authorities';
+import { API_AUTHORITY_SCHEMA, AuthorityType } from '../../data/authorities';
 import { FilingStatus } from '../../data/tax_brackets';
 import { ALL_ITEMS } from '../../data/types/items';
 import { OwnerStatus } from '../../data/types/owner-status';
@@ -100,6 +100,7 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
     'is_under_80_ami',
     'is_under_150_ami',
     'is_over_150_ami',
+    'authorities',
     'savings',
     'incentives',
   ],
@@ -112,6 +113,10 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
     },
     is_over_150_ami: {
       type: 'boolean',
+    },
+    authorities: {
+      type: 'object',
+      additionalProperties: API_AUTHORITY_SCHEMA,
     },
     savings: API_SAVINGS_SCHEMA,
     incentives: {

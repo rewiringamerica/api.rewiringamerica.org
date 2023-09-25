@@ -2,6 +2,11 @@
   "is_under_80_ami": true,
   "is_under_150_ami": true,
   "is_over_150_ami": false,
+  "authorities": {
+    "ri-oer": {
+      "name": "Rhode Island Office of Energy Resources"
+    }
+  },
   "savings": {
     "pos_rebate": 14000,
     "tax_credit": 4036,
@@ -13,7 +18,6 @@
     {
       "type": "pos_rebate",
       "authority_type": "federal",
-      "authority_name": null,
       "program": "Federal Home Electrification and Appliance Rebates (HEEHR)",
       "item": {
         "type": "heat_pump_air_conditioner_heater",
@@ -40,7 +44,7 @@
     {
       "type": "rebate",
       "authority_type": "state",
-      "authority_name": "Rhode Island Office of Energy Resources",
+      "authority": "ri-oer",
       "program": "RI Office of Energy Resources Clean Heat RI",
       "program_url": "https://cleanheatri.com/",
       "item": {
@@ -69,7 +73,7 @@
     {
       "type": "rebate",
       "authority_type": "state",
-      "authority_name": "Rhode Island Office of Energy Resources",
+      "authority": "ri-oer",
       "program": "RI Office of Energy Resources DRIVE EV",
       "program_url": "https://drive.ri.gov/ev-programs/drive-ev",
       "item": {
@@ -97,7 +101,6 @@
     {
       "type": "tax_credit",
       "authority_type": "federal",
-      "authority_name": null,
       "program": "Federal Clean Vehicle Credit (30D)",
       "item": {
         "type": "new_electric_vehicle",
@@ -124,7 +127,6 @@
     {
       "type": "tax_credit",
       "authority_type": "federal",
-      "authority_name": null,
       "program": "Federal Energy Efficient Home Improvement Credit (25C)",
       "item": {
         "type": "heat_pump_air_conditioner_heater",
