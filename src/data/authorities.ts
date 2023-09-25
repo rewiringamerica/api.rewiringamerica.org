@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { FromSchema } from 'json-schema-to-ts';
+import { API_IMAGE_SCHEMA } from '../schemas/v1/image';
 import { STATES_PLUS_DC } from './types/states';
 
 /**
@@ -26,6 +27,7 @@ export const API_AUTHORITY_SCHEMA = {
   type: 'object',
   properties: {
     name: { type: 'string' },
+    logo: API_IMAGE_SCHEMA,
   },
   required: ['name'],
   additionalProperties: false,
