@@ -1,10 +1,11 @@
+import { AuthorityType } from '../data/authorities';
 import { RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/RI/low_income_thresholds';
-import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities';
 import { RI_INCENTIVES } from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
+import { APICoverage } from '../data/types/coverage';
 import { OwnerStatus } from '../data/types/owner-status';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
-import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
+import { CalculatedIncentive, CalculateParams } from './incentives-calculation';
 
 export function calculateStateIncentivesAndSavings(
   stateId: string,
@@ -12,10 +13,15 @@ export function calculateStateIncentivesAndSavings(
 ): {
   stateIncentives: CalculatedIncentive[];
   savings: APISavings;
+  coverage: APICoverage;
 } {
   // TODO condition based on existence of incentives data, not hardcoding RI.
   if (stateId !== 'RI') {
-    return { stateIncentives: [], savings: zeroSavings() };
+    return {
+      stateIncentives: [],
+      savings: zeroSavings(),
+      coverage: { state: null, utility: null },
+    };
   }
 
   const incentives = RI_INCENTIVES;
@@ -69,16 +75,8 @@ export function calculateStateIncentivesAndSavings(
       eligible = false;
     }
 
-    const authority_name =
-      item.authority_type === AuthorityType.State
-        ? AUTHORITIES_BY_STATE[stateId].state[item.authority].name
-        : item.authority_type === AuthorityType.Utility
-        ? AUTHORITIES_BY_STATE[stateId].utility[item.authority].name
-        : null;
-
     const transformedItem = {
       ...item,
-      authority_name,
       eligible,
 
       // Fill in fields expected for IRA incentive.
@@ -116,5 +114,9 @@ export function calculateStateIncentivesAndSavings(
   return {
     stateIncentives,
     savings,
+    coverage: {
+      state: stateId,
+      utility: request.utility ?? null,
+    },
   };
 }
