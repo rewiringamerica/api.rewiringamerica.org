@@ -2,7 +2,6 @@ import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts
 import { FastifyInstance } from 'fastify';
 import _ from 'lodash';
 import { Database } from 'sqlite';
-import { AuthorityType } from '../data/authorities';
 import { IRA_INCENTIVES, IRAIncentive } from '../data/ira_incentives';
 import { IRA_STATE_SAVINGS } from '../data/ira_state_savings';
 import { AmountType } from '../data/types/amount';
@@ -201,13 +200,7 @@ export default async function (
     '/api/v0/incentives',
     { schema: IncentivesSchema },
     async (request, reply) => {
-      const incentives = translateIncentives(
-        IRA_INCENTIVES.map(incentive => ({
-          ...incentive,
-          authority_type: AuthorityType.Federal,
-          authority_name: null,
-        })),
-      );
+      const incentives = translateIncentives(IRA_INCENTIVES);
       return reply.status(200).type('application/json').send({ incentives });
     },
   );

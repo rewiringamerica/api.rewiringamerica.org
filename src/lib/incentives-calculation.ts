@@ -1,10 +1,15 @@
 import _ from 'lodash';
-import { AUTHORITIES_BY_STATE, AuthorityType } from '../data/authorities';
+import {
+  AUTHORITIES_BY_STATE,
+  AuthoritiesById,
+  AuthorityType,
+} from '../data/authorities';
 import { IRAIncentive, IRA_INCENTIVES } from '../data/ira_incentives';
 import { SOLAR_PRICES } from '../data/solar_prices';
 import { RIIncentive } from '../data/state_incentives';
 import { STATE_MFIS, StateMFI } from '../data/state_mfi';
 import { FilingStatus } from '../data/tax_brackets';
+import { APICoverage } from '../data/types/coverage';
 import { OwnerStatus } from '../data/types/owner-status';
 import {
   APICalculatorRequest,
@@ -156,7 +161,6 @@ function calculateFederalIncentivesAndSavings(
       ...item,
       amount,
       eligible,
-      authority_name: null,
     };
     if (eligible) {
       eligibleIncentives.push(newItem);
@@ -277,8 +281,8 @@ export default function calculateIncentives(
     );
   }
 
+  const stateAuthorities = AUTHORITIES_BY_STATE[state_id];
   if (request.utility) {
-    const stateAuthorities = AUTHORITIES_BY_STATE[state_id];
     if (!stateAuthorities) {
       throw new InvalidInputError(
         `We do not yet have information about the utilities in ${state_id}.`,
@@ -302,6 +306,10 @@ export default function calculateIncentives(
 
   const incentives: CalculatedIncentive[] = [];
   let savings: APISavings = zeroSavings();
+  let coverage: APICoverage = {
+    state: null,
+    utility: null,
+  };
 
   if (!authority_types || authority_types.includes(AuthorityType.Federal)) {
     const federal = calculateFederalIncentivesAndSavings(
@@ -323,6 +331,7 @@ export default function calculateIncentives(
     const state = calculateStateIncentivesAndSavings(state_id, request);
     incentives.push(...state.stateIncentives);
     savings = addSavings(savings, state.savings);
+    coverage = state.coverage;
   }
 
   // Get tax owed to determine max potential tax savings
@@ -341,10 +350,26 @@ export default function calculateIncentives(
     ['asc', 'desc', 'desc'],
   );
 
+  const authorities: AuthoritiesById = {};
+  if (stateAuthorities) {
+    incentives.forEach(i => {
+      if (
+        'authority' in i &&
+        i.authority &&
+        (i.authority_type === 'state' || i.authority_type === 'utility')
+      ) {
+        authorities[i.authority] =
+          stateAuthorities[i.authority_type][i.authority];
+      }
+    });
+  }
+
   return {
     is_under_80_ami: isUnder80Ami,
     is_under_150_ami: isUnder150Ami,
     is_over_150_ami: isOver150Ami,
+    authorities,
+    coverage,
     savings,
     incentives: sortedIncentives,
   };
