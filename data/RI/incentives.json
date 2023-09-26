@@ -143,6 +143,24 @@
     "authority_type": "state",
     "authority": "ri-oer",
     "type": "rebate",
+    "item": "new_electric_vehicle",
+    "item_type": "rebate",
+    "program": "ri_drive_plus",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "low_income": true,
+    "short_description": "Additional $1,500 towards a new EV from a licensed Rhode Island or qualified out-of-state dealership for LIHEAP-qualifiers. First-come, first-served."
+  },
+  {
+    "authority_type": "state",
+    "authority": "ri-oer",
+    "type": "rebate",
     "item": "used_electric_vehicle",
     "item_type": "rebate",
     "program": "ri_drive",
@@ -155,6 +173,24 @@
       "renter"
     ],
     "short_description": "Up to $1,000 towards purchase or lease of a used EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served."
+  },
+  {
+    "authority_type": "state",
+    "authority": "ri-oer",
+    "type": "rebate",
+    "item": "used_electric_vehicle",
+    "item_type": "rebate",
+    "program": "ri_drive_plus",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "low_income": true,
+    "short_description": "Additional $1,500 towards a used EV from a licensed Rhode Island or qualified out-of-state dealership for LIHEAP-qualifiers. First-come, first-served."
   },
   {
     "authority_type": "utility",
