@@ -63,11 +63,9 @@ export function calculateStateIncentivesAndSavings(
       eligible = false;
     }
 
-    let authority_thresholds =
-      RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY[item.authority];
-    if (authority_thresholds === undefined) {
-      authority_thresholds = RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY['default'];
-    }
+    const authority_thresholds =
+      RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY[item.authority] ??
+      RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY.default;
     if (
       item.low_income &&
       request.household_income > authority_thresholds[request.household_size]
