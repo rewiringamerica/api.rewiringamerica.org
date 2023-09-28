@@ -1,6 +1,6 @@
 import { test } from 'tap';
 import {
-  RI_LOW_INCOME_THRESHOLDS,
+  RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
   SCHEMA as RI_LOW_INCOME_THRESHOLDS_SCHEMA,
 } from '../../src/data/RI/low_income_thresholds';
 import {
@@ -37,7 +37,11 @@ const TESTS = [
   [SMFI_SCHEMA, STATE_MFIS, 'state_mfis'],
   [TB_SCHEMA, TAX_BRACKETS, 'tax_brackets'],
   [AUTHORITIES_SCHEMA, AUTHORITIES_BY_STATE, 'authorities'],
-  [RI_LOW_INCOME_THRESHOLDS_SCHEMA, RI_LOW_INCOME_THRESHOLDS, 'RI low income'],
+  [
+    RI_LOW_INCOME_THRESHOLDS_SCHEMA,
+    RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
+    'RI low income',
+  ],
 ];
 
 test('static JSON files match schema', async tap => {

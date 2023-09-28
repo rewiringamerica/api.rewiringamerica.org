@@ -1,11 +1,11 @@
-import { RI_LOW_INCOME_THRESHOLDS } from '../data/RI/low_income_thresholds';
 import { AuthorityType } from '../data/authorities';
+import { RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/RI/low_income_thresholds';
 import { RI_INCENTIVES } from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
 import { APICoverage } from '../data/types/coverage';
 import { OwnerStatus } from '../data/types/owner-status';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
-import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
+import { CalculatedIncentive, CalculateParams } from './incentives-calculation';
 
 export function calculateStateIncentivesAndSavings(
   stateId: string,
@@ -63,10 +63,12 @@ export function calculateStateIncentivesAndSavings(
       eligible = false;
     }
 
+    const authority_thresholds =
+      RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY[item.authority] ??
+      RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY.default;
     if (
       item.low_income &&
-      request.household_income >
-        RI_LOW_INCOME_THRESHOLDS[request.household_size]
+      request.household_income > authority_thresholds[request.household_size]
     ) {
       eligible = false;
     }
