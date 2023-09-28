@@ -20,9 +20,7 @@ export const AUTHORITY_THRESHOLDS_SCHEMA: JSONSchemaType<RILowIncomeThresholds> 
     },
   } as const;
 
-export const SCHEMA: JSONSchemaType<{
-  [authorityName: string]: RILowIncomeThresholds;
-}> = {
+export const SCHEMA: JSONSchemaType<RILowIncomeThresholdsMap> = {
   type: 'object',
   required: ['default', 'ri-dhs', 'ri-rhode-island-energy'],
   additionalProperties: AUTHORITY_THRESHOLDS_SCHEMA,
