@@ -1,6 +1,6 @@
 import { FromSchema } from 'json-schema-to-ts';
 
-export const API_LOCATION_SCHEMA = {
+export const API_REQUEST_LOCATION_SCHEMA = {
   type: 'object',
   properties: {
     zip: {
@@ -38,4 +38,4 @@ export const API_LOCATION_SCHEMA = {
   minProperties: 1,
 } as const;
 
-export type APILocation = FromSchema<typeof API_LOCATION_SCHEMA>;
+export type APIRequestLocation = FromSchema<typeof API_REQUEST_LOCATION_SCHEMA>;
