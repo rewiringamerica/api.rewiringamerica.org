@@ -1,6 +1,10 @@
 import { FromSchema } from 'json-schema-to-ts';
 
-export const API_LOCATION_SCHEMA = {
+/**
+ * The format of the location given to us by the calculator user. It can be
+ * either a ZIP code, or an address string that we pass to Geocodio.
+ */
+export const API_REQUEST_LOCATION_SCHEMA = {
   type: 'object',
   properties: {
     zip: {
@@ -38,4 +42,28 @@ export const API_LOCATION_SCHEMA = {
   minProperties: 1,
 } as const;
 
-export type APILocation = FromSchema<typeof API_LOCATION_SCHEMA>;
+/**
+ * During incentive calculation, we compute some information about the user's
+ * location (as given in the request). This structure lets us reflect some of
+ * that in the response.
+ *
+ * We can add to this as necessary. Eventually we'll need city or county, and
+ * maybe even census tracts.
+ */
+export const API_RESPONSE_LOCATION_SCHEMA = {
+  type: 'object',
+  properties: {
+    state: {
+      type: 'string',
+      description:
+        'The two-letter abbreviation for the state, district, or territory of the location submitted in the request.',
+    },
+  },
+  required: ['state'],
+  additionalProperties: false,
+} as const;
+
+export type APIRequestLocation = FromSchema<typeof API_REQUEST_LOCATION_SCHEMA>;
+export type APIResponseLocation = FromSchema<
+  typeof API_RESPONSE_LOCATION_SCHEMA
+>;

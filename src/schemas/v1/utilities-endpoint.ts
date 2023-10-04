@@ -1,4 +1,4 @@
-import { API_LOCATION_SCHEMA } from './location';
+import { API_REQUEST_LOCATION_SCHEMA } from './location';
 
 export const API_UTILITIES_RESPONSE_SCHEMA = {
   $id: 'APIUtilitiesResponse',
@@ -16,7 +16,7 @@ export const API_UTILITIES_SCHEMA = {
   querystring: {
     type: 'object',
     properties: {
-      location: API_LOCATION_SCHEMA,
+      location: API_REQUEST_LOCATION_SCHEMA,
     },
     required: ['location'],
   },
