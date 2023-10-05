@@ -134,7 +134,10 @@ export default async function (
         reply
           .status(200)
           .type('application/json')
-          .send(getUtilitiesForLocation(location));
+          .send({
+            location: { state: location.state_id },
+            utilities: getUtilitiesForLocation(location),
+          });
       } catch (error) {
         if (error instanceof InvalidInputError) {
           throw fastify.httpErrors.createError(400, error.message, {

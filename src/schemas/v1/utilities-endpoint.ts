@@ -1,14 +1,25 @@
-import { API_REQUEST_LOCATION_SCHEMA } from './location';
+import {
+  API_REQUEST_LOCATION_SCHEMA,
+  API_RESPONSE_LOCATION_SCHEMA,
+} from './location';
 
 export const API_UTILITIES_RESPONSE_SCHEMA = {
   $id: 'APIUtilitiesResponse',
   type: 'object',
-  additionalProperties: {
-    type: 'object',
-    properties: {
-      name: { type: 'string' },
+  properties: {
+    location: API_RESPONSE_LOCATION_SCHEMA,
+    utilities: {
+      type: 'object',
+      additionalProperties: {
+        type: 'object',
+        properties: {
+          name: { type: 'string' },
+        },
+      },
     },
   },
+  required: ['location', 'utilities'],
+  additionalProperties: false,
 };
 
 export const API_UTILITIES_SCHEMA = {

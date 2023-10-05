@@ -330,18 +330,29 @@ test('non-existent zips', async t => {
 const UTILITIES = [
   [
     '02807',
-    { 'ri-block-island-power-company': { name: 'Block Island Power Company' } },
+    {
+      location: { state: 'RI' },
+      utilities: {
+        'ri-block-island-power-company': { name: 'Block Island Power Company' },
+      },
+    },
   ],
   [
     '02814',
     {
-      'ri-rhode-island-energy': { name: 'Rhode Island Energy' },
-      'ri-pascoag-utility-district': { name: 'Pascoag Utility District' },
+      location: { state: 'RI' },
+      utilities: {
+        'ri-rhode-island-energy': { name: 'Rhode Island Energy' },
+        'ri-pascoag-utility-district': { name: 'Pascoag Utility District' },
+      },
     },
   ],
   [
     '02905',
-    { 'ri-rhode-island-energy': { name: 'Rhode Island Energy' } },
+    {
+      location: { state: 'RI' },
+      utilities: { 'ri-rhode-island-energy': { name: 'Rhode Island Energy' } },
+    },
   ],
 ];
 
