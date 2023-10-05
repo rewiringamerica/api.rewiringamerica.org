@@ -8,6 +8,18 @@ export const PROGRAMS_SCHEMA = {
   hopeForHomes: { type: 'string' },
   residentialCleanEnergyCredit: { type: 'string' },
 
+  // CT
+  // Energize CT
+  ct_energizeCtHomeEnergySolutions: { type: 'string' },
+  // Groton Utilities
+  ct_atticInsulationRebate: { type: 'string' },
+  ct_residentialHeatPumpWaterHeaterRebate: { type: 'string' },
+  // Norwich Public Utilities
+  ct_electricApplianceRebateProgram: { type: 'string' },
+  ct_wallOrAtticInsulationProgram: { type: 'string' },
+  ct_coolChoiceProgram: { type: 'string' },
+  ct_coolingAndHeatingIncentivePilotProgram: { type: 'string' },
+
   // RI
   // State: OER, Commerce RI, RI DHS
   ri_drive: { type: 'string' },
