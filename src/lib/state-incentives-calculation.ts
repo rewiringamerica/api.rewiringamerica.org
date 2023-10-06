@@ -1,6 +1,6 @@
 import { AuthorityType } from '../data/authorities';
 import { RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/RI/low_income_thresholds';
-import { RI_INCENTIVES } from '../data/state_incentives';
+import { STATE_INCENTIVES_BY_STATE } from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
 import { APICoverage } from '../data/types/coverage';
 import { OwnerStatus } from '../data/types/owner-status';
@@ -24,7 +24,7 @@ export function calculateStateIncentivesAndSavings(
     };
   }
 
-  const incentives = RI_INCENTIVES;
+  const incentives = STATE_INCENTIVES_BY_STATE[stateId];
   const includeState =
     !request.authority_types ||
     request.authority_types.includes(AuthorityType.State);

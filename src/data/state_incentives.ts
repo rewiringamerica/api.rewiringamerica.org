@@ -19,6 +19,11 @@ export type StateIncentive = {
   owner_status: OwnerStatus[];
   start_date: number;
   end_date: number;
+  low_income?: boolean;
+};
+
+export type StateIncentivesMap = {
+  [stateId: string]: StateIncentive[];
 };
 
 const amountSchema: JSONSchemaType<Amount> = {
@@ -69,11 +74,7 @@ const requiredProperties = [
 /* State-specific types/schemas                                               */
 /******************************************************************************/
 
-export type RIIncentive = StateIncentive & {
-  low_income?: boolean;
-};
-
-export const RI_INCENTIVES_SCHEMA: JSONSchemaType<RIIncentive[]> = {
+export const RI_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
   type: 'array',
   items: {
     type: 'object',
@@ -85,6 +86,10 @@ export const RI_INCENTIVES_SCHEMA: JSONSchemaType<RIIncentive[]> = {
   },
 } as const;
 
-export const RI_INCENTIVES: RIIncentive[] = JSON.parse(
+export const RI_INCENTIVES: StateIncentive[] = JSON.parse(
   fs.readFileSync('./data/RI/incentives.json', 'utf-8'),
 );
+
+export const STATE_INCENTIVES_BY_STATE: StateIncentivesMap = {
+  RI: RI_INCENTIVES,
+};
