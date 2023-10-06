@@ -51,3 +51,12 @@ export const STATES_PLUS_DC = [
   'WY',
   'DC',
 ] as const;
+
+export const BETA_STATES = [
+  'CT',
+  'RI',
+];
+
+export const LAUNCHED_STATES = [
+  'RI',
+];
