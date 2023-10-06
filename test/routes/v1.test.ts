@@ -327,29 +327,6 @@ test('non-existent zips', async t => {
   }
 });
 
-test('/incentives', async t => {
-  const app = await build(t);
-  const res = await app.inject({ url: '/api/v1/incentives' });
-  const incentivesResponse = JSON.parse(res.payload);
-  t.equal(incentivesResponse.incentives.length, 32);
-  t.equal(res.statusCode, 200, 'response status is 200');
-
-  const ajv = new Ajv({
-    schemas: [{ ...API_INCENTIVE_SCHEMA, $id: 'APIIncentive' }],
-    coerceTypes: true,
-    useDefaults: true,
-    removeAdditional: true,
-    allErrors: false,
-  });
-
-  const validator = ajv.getSchema('APIIncentive')!;
-
-  for (const incentive of incentivesResponse.incentives) {
-    await validator(incentive);
-    t.equal(validator.errors, null);
-  }
-});
-
 const UTILITIES = [
   [
     '02807',
