@@ -6,7 +6,7 @@ import {
 } from '../data/authorities';
 import { IRAIncentive, IRA_INCENTIVES } from '../data/ira_incentives';
 import { SOLAR_PRICES } from '../data/solar_prices';
-import { RIIncentive } from '../data/state_incentives';
+import { StateIncentive } from '../data/state_incentives';
 import { STATE_MFIS, StateMFI } from '../data/state_mfi';
 import { FilingStatus } from '../data/tax_brackets';
 import { APICoverage } from '../data/types/coverage';
@@ -31,7 +31,7 @@ function roundCents(dollars: number): number {
   return Math.round(dollars * 100) / 100;
 }
 
-export type CalculatedIncentive = (IRAIncentive | RIIncentive) & {
+export type CalculatedIncentive = (IRAIncentive | StateIncentive) & {
   eligible?: boolean;
 };
 
