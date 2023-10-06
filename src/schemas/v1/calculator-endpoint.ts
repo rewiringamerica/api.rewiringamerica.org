@@ -5,7 +5,10 @@ import { API_COVERAGE_SCHEMA } from '../../data/types/coverage';
 import { ALL_ITEMS } from '../../data/types/items';
 import { OwnerStatus } from '../../data/types/owner-status';
 import { API_INCENTIVE_SCHEMA } from './incentive';
-import { API_LOCATION_SCHEMA } from './location';
+import {
+  API_REQUEST_LOCATION_SCHEMA,
+  API_RESPONSE_LOCATION_SCHEMA,
+} from './location';
 import { API_SAVINGS_SCHEMA } from './savings';
 
 export const API_CALCULATOR_REQUEST_SCHEMA = {
@@ -13,7 +16,7 @@ export const API_CALCULATOR_REQUEST_SCHEMA = {
   title: 'APICalculatorRequest',
   type: 'object',
   properties: {
-    location: API_LOCATION_SCHEMA,
+    location: API_REQUEST_LOCATION_SCHEMA,
     authority_types: {
       type: 'array',
       description:
@@ -103,6 +106,7 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
     'is_over_150_ami',
     'authorities',
     'coverage',
+    'location',
     'savings',
     'incentives',
   ],
@@ -121,6 +125,7 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
       additionalProperties: API_AUTHORITY_SCHEMA,
     },
     coverage: API_COVERAGE_SCHEMA,
+    location: API_RESPONSE_LOCATION_SCHEMA,
     savings: API_SAVINGS_SCHEMA,
     incentives: {
       type: 'array',

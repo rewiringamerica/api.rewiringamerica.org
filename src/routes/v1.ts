@@ -18,7 +18,7 @@ import {
   API_CALCULATOR_SCHEMA,
 } from '../schemas/v1/calculator-endpoint';
 import { APIIncentive, API_INCENTIVE_SCHEMA } from '../schemas/v1/incentive';
-import { APILocation } from '../schemas/v1/location';
+import { APIRequestLocation } from '../schemas/v1/location';
 import { API_UTILITIES_SCHEMA } from '../schemas/v1/utilities-endpoint';
 
 function transformIncentives(
@@ -43,7 +43,7 @@ export default async function (
   fastify: FastifyInstance & { sqlite: Database },
 ) {
   async function fetchAMIsForLocation(
-    location: APILocation,
+    location: APIRequestLocation,
   ): Promise<IncomeInfo | null> {
     if (location.address) {
       // TODO: make sure bad addresses are handled here, and don't return anything
@@ -134,7 +134,10 @@ export default async function (
         reply
           .status(200)
           .type('application/json')
-          .send(getUtilitiesForLocation(location));
+          .send({
+            location: { state: location.state_id },
+            utilities: getUtilitiesForLocation(location),
+          });
       } catch (error) {
         if (error instanceof InvalidInputError) {
           throw fastify.httpErrors.createError(400, error.message, {
