@@ -52,7 +52,7 @@ test('beta states and launched states are disjoint', async t => {
   t.equal(data.length, 0);
 });
 
-test('correctly evaluates state incentives only for launched states', async t => {
+test('correctly evaluates state incentives for launched states', async t => {
   // RI is launched so should get state incentives even if include_beta_states = false.
   const data = calculateIncentives(AMIS_FOR_02861, {
     owner_status: OwnerStatus.Homeowner,
@@ -66,19 +66,34 @@ test('correctly evaluates state incentives only for launched states', async t =>
   t.not(data.incentives.length, 0);
 });
 
-test('correctly evaluates state incentives only for launched states', async t => {
+test('correctly excludes state incentives for beta states', async t => {
   // CT is not launched so will not get state incentives.
   const data = calculateIncentives(AMIS_FOR_06002, {
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
     tax_filing: FilingStatus.Single,
     household_size: 1,
-    authority_types: [AuthorityType.State],
+    authority_types: [AuthorityType.State, AuthorityType.Utility],
+    utility: 'ct-norwich-public-utilities',
     include_beta_states: false,
   });
   t.ok(data);
-  // TODO: Update this when CT JSON data is checked in.
   t.equal(data.incentives.length, 0);
+});
+
+test('correctly evaluates state incentives for beta states', async t => {
+  // CT is in beta so we should get incentives for it when beta is requested.
+  const data = calculateIncentives(AMIS_FOR_06002, {
+    owner_status: OwnerStatus.Homeowner,
+    household_income: 120000,
+    tax_filing: FilingStatus.Single,
+    household_size: 1,
+    authority_types: [AuthorityType.State, AuthorityType.Utility],
+    utility: 'ct-norwich-public-utilities',
+    include_beta_states: true,
+  });
+  t.ok(data);
+  t.not(data.incentives.length, 0);
 });
 
 test('correctly evaluates scenerio "Joint w/ 5 persons and $60k Household income"', async t => {
