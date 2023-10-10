@@ -364,12 +364,17 @@ export default function calculateIncentives(
     });
   }
 
+  const location = {
+    state: state_id,
+  };
+
   return {
     is_under_80_ami: isUnder80Ami,
     is_under_150_ami: isUnder150Ami,
     is_over_150_ami: isOver150Ami,
     authorities,
     coverage,
+    location,
     savings,
     incentives: sortedIncentives,
   };

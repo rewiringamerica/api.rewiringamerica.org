@@ -1,5 +1,4 @@
 import { AUTHORITIES_BY_STATE, Authority } from '../data/authorities';
-import { InvalidInputError } from './error';
 import { ZipInfo } from './income-info';
 
 /**
@@ -16,10 +15,7 @@ export function getUtilitiesForLocation(location: ZipInfo): {
   const stateUtilities = AUTHORITIES_BY_STATE[location.state_id]?.utility;
 
   if (!stateUtilities) {
-    throw new InvalidInputError(
-      'We currently do not have coverage for that location',
-      'location',
-    );
+    return {};
   }
 
   let ids: string[];

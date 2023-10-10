@@ -1,7 +1,6 @@
 import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts';
 import { FastifyInstance } from 'fastify';
 import { Database } from 'sqlite';
-import { IRA_INCENTIVES } from '../data/ira_incentives';
 import { LOCALES } from '../data/locale';
 import { InvalidInputError, UnexpectedInputError } from '../lib/error';
 import fetchAMIsForAddress from '../lib/fetch-amis-for-address';
@@ -19,8 +18,7 @@ import {
   API_CALCULATOR_SCHEMA,
 } from '../schemas/v1/calculator-endpoint';
 import { APIIncentive, API_INCENTIVE_SCHEMA } from '../schemas/v1/incentive';
-import { API_INCENTIVES_SCHEMA } from '../schemas/v1/incentives-endpoint';
-import { APILocation } from '../schemas/v1/location';
+import { APIRequestLocation } from '../schemas/v1/location';
 import { API_UTILITIES_SCHEMA } from '../schemas/v1/utilities-endpoint';
 
 function transformIncentives(
@@ -45,7 +43,7 @@ export default async function (
   fastify: FastifyInstance & { sqlite: Database },
 ) {
   async function fetchAMIsForLocation(
-    location: APILocation,
+    location: APIRequestLocation,
   ): Promise<IncomeInfo | null> {
     if (location.address) {
       // TODO: make sure bad addresses are handled here, and don't return anything
@@ -115,18 +113,6 @@ export default async function (
     },
   );
 
-  server.get(
-    '/api/v1/incentives',
-    { schema: API_INCENTIVES_SCHEMA },
-    async (request, reply) => {
-      const incentives = transformIncentives(
-        IRA_INCENTIVES,
-        request.query.language ?? 'en',
-      );
-      return reply.status(200).type('application/json').send({ incentives });
-    },
-  );
-
   //
   // This endpoint currently just returns all utilities in the state of the
   // given location. We could be smarter about it.
@@ -148,7 +134,10 @@ export default async function (
         reply
           .status(200)
           .type('application/json')
-          .send(getUtilitiesForLocation(location));
+          .send({
+            location: { state: location.state_id },
+            utilities: getUtilitiesForLocation(location),
+          });
       } catch (error) {
         if (error instanceof InvalidInputError) {
           throw fastify.httpErrors.createError(400, error.message, {

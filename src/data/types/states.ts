@@ -52,11 +52,10 @@ export const STATES_PLUS_DC = [
   'DC',
 ] as const;
 
-export const BETA_STATES = [
+export const BETA_STATES: string[] = [
   'CT',
-  'RI',
 ];
 
-export const LAUNCHED_STATES = [
+export const LAUNCHED_STATES: string[] = [
   'RI',
 ];
