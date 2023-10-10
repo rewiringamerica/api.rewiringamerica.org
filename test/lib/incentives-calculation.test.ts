@@ -7,6 +7,7 @@ import { AuthorityType } from '../../src/data/authorities';
 import { FilingStatus } from '../../src/data/tax_brackets';
 import { Type } from '../../src/data/types/incentive-types';
 import { OwnerStatus } from '../../src/data/types/owner-status';
+import { BETA_STATES, LAUNCHED_STATES } from '../../src/data/types/states';
 import calculateIncentives from '../../src/lib/incentives-calculation';
 
 const AMIS_FOR_11211 = JSON.parse(
@@ -44,6 +45,11 @@ test('correctly evaluates scenerio "Single w/ $120k Household income"', async t 
     household_size: 1,
   });
   t.ok(data);
+});
+
+test('beta states and launched states are disjoint', async t => {
+  const data = LAUNCHED_STATES.filter(s => BETA_STATES.includes(s));
+  t.equal(data.length, 0);
 });
 
 test('correctly evaluates state incentives only for launched states', async t => {
