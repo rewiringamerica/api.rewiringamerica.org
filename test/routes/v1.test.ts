@@ -354,6 +354,13 @@ const UTILITIES = [
       utilities: { 'ri-rhode-island-energy': { name: 'Rhode Island Energy' } },
     },
   ],
+  [
+    '80212',
+    {
+      location: { state: 'CO' },
+      utilities: {},
+    },
+  ],
 ];
 
 test('/utilities', async t => {
