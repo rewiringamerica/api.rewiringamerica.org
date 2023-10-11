@@ -1,24 +1,6 @@
 [
   {
     "authority_type": "utility",
-    "authority": "ct-connecticut-light-and-power",
-    "type": "assistance_program",
-    "item": "weatherization",
-    "item_type": "assistance_program",
-    "program": "ct_energizeCtHomeEnergySolutions",
-    "amount": {
-      "type": "percent",
-      "number": 1
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "low_income": true,
-    "short_description": "The Home Energy Solutions program provides income-eligible households with no-cost energy assessments and incentives for weatherization services."
-  },
-  {
-    "authority_type": "utility",
     "authority": "ct-eversource",
     "type": "assistance_program",
     "item": "weatherization",
@@ -127,9 +109,9 @@
       "maximum": 2000
     },
     "owner_status": [
-      "renter"
+      "homeowner"
     ],
-    "short_description": "Attic insulation rebate up to $2,000 for apartments with electric heating and A/C. Requires a home energy inspection and a licensed contractor.",
+    "short_description": "Attic insulation rebate up to $2,000 for condos/apartments with electric heating and A/C. Requires a home energy inspection and a licensed contractor.",
     "start_date": 2022,
     "end_date": 2023
   },
@@ -142,8 +124,7 @@
     "program": "ct_residentialHeatPumpWaterHeaterRebate",
     "amount": {
       "type": "dollar_amount",
-      "number": 2500,
-      "maximum": 2500
+      "number": 2500
     },
     "owner_status": [
       "homeowner"
@@ -177,8 +158,7 @@
     "program": "ct_electricApplianceRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 500
     },
     "owner_status": [
       "homeowner"
@@ -265,25 +245,6 @@
       "homeowner"
     ],
     "short_description": "Rebate of $1,200 / ton toward the purchase and installation of a heat pump that replaces oil or gas. Obtain pre-approval from NPU before installation.",
-    "start_date": 2023,
-    "end_date": 2023
-  },
-  {
-    "authority_type": "utility",
-    "authority": "ct-norwich-public-utilities",
-    "type": "rebate",
-    "item": "heat_pump_water_heater",
-    "item_type": "rebate",
-    "program": "ct_coolingAndHeatingIncentivePilotProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1100,
-      "maximum": 20000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": "Rebate of $1,100 toward a qualifying heat pump water heater that replaces oil or gas. Obtain pre-approval from NPU before installation.",
     "start_date": 2023,
     "end_date": 2023
   }
