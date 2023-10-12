@@ -52,7 +52,7 @@ If any content changes affect the calculator we should update the website change
 
 ## Scaling
 
-- `gcloud run services update incentives-api --project rewiring-america --min-instances 1 --max-instances 10 --concurrency 100`
+If necessary, we can raise the max number of Cloud Run instances, and the max concurrent requests per instance. This can be done by updating the definition of the Cloud Run service in Terraform.
 
 See Google's [concurrency guide](https://cloud.google.com/run/docs/about-concurrency) to learn more.
 
