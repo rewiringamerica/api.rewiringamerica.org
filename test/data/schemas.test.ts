@@ -92,6 +92,9 @@ test('state incentives JSON files match schemas', async tap => {
       console.error(ajv.errors);
     }
 
+    // Validate that each incentive has a unique ID.
+    const incentiveIds = new Set<string>();
+
     // Check some constraints that aren't expressed in JSON schema
     data.forEach((incentive, index) => {
       tap.ok(
@@ -103,6 +106,9 @@ test('state incentives JSON files match schemas', async tap => {
         incentive.authority,
         `nonexistent authority (${stateId}, index ${index})`,
       );
+
+      tap.equal(incentiveIds.has(incentive.id), false);
+      incentiveIds.add(incentive.id);
     });
   });
 });

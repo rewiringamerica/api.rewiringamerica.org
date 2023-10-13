@@ -8,6 +8,7 @@ import { OwnerStatus } from './types/owner-status';
 import { ALL_PROGRAMS } from './types/programs';
 
 export type StateIncentive = {
+  id: string;
   authority_type: AuthorityType;
   authority: string;
   type: Type;
@@ -39,6 +40,7 @@ const amountSchema: JSONSchemaType<Amount> = {
 } as const;
 
 const incentivePropertySchema = {
+  id: { type: 'string' },
   authority_type: { type: 'string', enum: Object.values(AuthorityType) },
   authority: { type: 'string' },
   type: { type: 'string', enum: Object.values(Type) },
@@ -61,6 +63,7 @@ const incentivePropertySchema = {
   low_income: { type: 'boolean', nullable: true },
 } as const;
 const requiredProperties = [
+  'id',
   'authority',
   'authority_type',
   'type',
