@@ -51,8 +51,6 @@
     "dev": "fastify start -r ts-node/register -w --ignore-watch test -l info -P src/app.ts --options",
     "build": "./scripts/build.sh",
     "lint": "prettier --check . && eslint .",
-    "deploy:dev": "gcloud run deploy incentives-api --project rewiring-america-dev --source .",
-    "deploy:production": "gcloud run deploy incentives-api --project rewiring-america --source .",
     "test": "yarn lint && dotenv -- tap --no-check-coverage --ts \"test/**/*.test.ts\""
   }
 }
