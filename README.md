@@ -40,13 +40,27 @@ Zuplo authenticates developers using Auth0. @tomc, @derek, @tomm and @chell have
 
 ### Branching
 
-When working on a new change, branch off of and merge PRs into `main`. Pushing to `main` will build and deploy the `incentives-api-dev` Cloud Run service in the `rewiring-america-dev` GCP project.
+When working on a new change, branch off of and merge PRs into `main`. Pushing to `main` will build and deploy the `incentives-api` Cloud Run service in the `public-api-dev` GCP project, which is essentially the staging environment. The build and deploy commands are in [cloudbuild.yaml](cloudbuild.yaml).
+
+Deploys to production are not automatic, but anything merged to `main` should be ready to go to production at any time.
 
 ### Deploying
 
-Pushing to the `production` branch will automatically build and deploy `incentives-api` Cloud Run service in the `rewiring-america` (prod) GCP project. The build/deploy steps are in [cloudbuild.yaml](cloudbuild.yaml).
+Pushing to the `production` branch will automatically build and deploy the `incentives-api` Cloud Run service in the `public-api-prod` GCP project. The process uses the same [cloudbuild.yaml](cloudbuild.yaml) as dev, with a different GCP project name substituted in.
 
-Manual deploys to Google Cloud Run can be done with `yarn deploy:dev` or `yarn deploy:production`.
+We use the convention of _fast-forwarding_ the `production` branch to `main`. The Github UI doesn't let you do this, so here's the procedure:
+
+1. Manually open a PR to "merge" `main` into `production`. That is: click "New pull request", set "base" to `production` and "compare" to `main`.
+
+2. Make sure the commits listed are what you expect. Title the PR "deploy to prod" or similar (this won't appear in commit history, but it will appear in PR history on Github). Create the PR, but **don't merge it from the UI**.
+
+3. _On your local command line_:
+
+   1. `git checkout production` -- if you don't have a local branch called `production`, this will automatically create one that tracks the remote branch `origin/production`.
+   2. `git merge main` -- make sure this says "fast-forward".
+   3. `git push origin production` -- GitHub should accept this push because there's an open PR to do the same thing.
+
+4. The PR you created should be automatically closed out.
 
 If any content changes affect the calculator we should update the website changelog (Contentful), and if the API changes might affect callers we should update the changelog in docs and consider emailing people with active keys. In the future, we probably need a mailing list to manage this, but for now we'll bcc and email from api@.
 
@@ -58,8 +72,8 @@ See Google's [concurrency guide](https://cloud.google.com/run/docs/about-concurr
 
 ## URLs
 
-- Production api.rewiringamerica.org --> Zuplo --> https://incentives-api-w4dlpicepa-uc.a.run.app
-- Zuplo working copy https://api-main-4ba10f3.d2.zuplo.dev --> https://incentives-api-mcifvvqcxa-uc.a.run.app
+- Production api.rewiringamerica.org --> Zuplo --> https://incentives-api-cll5a6ivcq-uc.a.run.app
+- Zuplo working copy https://api-main-4ba10f3.d2.zuplo.dev --> https://incentives-api-yc6a7ekqjq-uc.a.run.app
 
 ## TODO
 
