@@ -52,7 +52,7 @@ We use the convention of _fast-forwarding_ the `production` branch to `main`. Th
 
 1. Manually open a PR to "merge" `main` into `production`. That is: click "New pull request", set "base" to `production` and "compare" to `main`.
 
-2. Title the PR "deploy to prod" or similar, make sure the commits it contains are what you expect, and create the PR. **Don't merge it from the UI**.
+2. Make sure the commits listed are what you expect. Title the PR "deploy to prod" or similar (this won't appear in commit history, but it will appear in PR history on Github). Create the PR, but **don't merge it from the UI**.
 
 3. _On your local command line_:
 
