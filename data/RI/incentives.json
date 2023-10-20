@@ -343,7 +343,7 @@
     "authority_type": "state",
     "authority": "ri-oer",
     "type": "rebate",
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "geothermal_heating_installation",
     "item_type": "rebate",
     "program": "ri_cleanHeat",
     "amount": {
@@ -387,8 +387,8 @@
     "item_type": "rebate",
     "program": "ri_cleanHeat",
     "amount": {
-      "type": "percent",
-      "number": 1
+      "type": "dollar_amount",
+      "number": 750
     },
     "owner_status": [
       "homeowner",
@@ -407,7 +407,8 @@
     "program": "ri_cleanHeat",
     "amount": {
       "type": "percent",
-      "number": 1
+      "number": 1,
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner",
@@ -426,7 +427,8 @@
     "program": "ri_cleanHeat",
     "amount": {
       "type": "percent",
-      "number": 1
+      "number": 1,
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner",
