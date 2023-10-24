@@ -8,6 +8,16 @@ export const PROGRAMS_SCHEMA = {
   hopeForHomes: { type: 'string' },
   residentialCleanEnergyCredit: { type: 'string' },
 
+  // NY
+  // State or State + Utility:
+  ny_cleanHeatIncentives: { type: 'string' },
+  ny_nyStateResidentialTaxCredit: { type: 'string' },
+  ny_nyStateDriveCleanProgram: { type: 'string' },
+  // ConEdison
+  ny_consolidatedEdisonRebates: { type: 'string' },
+  // PSEG Long Island
+  ny_allElectricHomesProgram: { type: 'string' },
+
   // RI
   // State: OER, Commerce RI, RI DHS
   ri_drive: { type: 'string' },
