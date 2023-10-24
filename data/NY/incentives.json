@@ -1,0 +1,413 @@
+[
+  {
+    "id": "NY-1",
+    "authority_type": "utility",
+    "authority": "ny-central-hudson-gas-and-electric",
+    "type": "pos_rebate",
+    "item": "heat_pump_water_heater",
+    "item_type": "pos_rebate",
+    "program": "ny_cleanHeatIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "Instant or mail-in rebate for $1,000 off an Energy Star certified heat pump water heater."
+  },
+  {
+    "id": "NY-2",
+    "authority_type": "utility",
+    "authority": "ny-central-hudson-gas-and-electric",
+    "type": "rebate",
+    "item": "geothermal_heating_installation",
+    "item_type": "rebate",
+    "program": "ny_cleanHeatIncentives",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2000,
+      "unit": "btuh10k",
+      "representative": 9000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "Rebate up to $2,000 per 10,000 Btuh for a ground source heat pump when installed by a certified clean heat contractor."
+  },
+  {
+    "id": "NY-3",
+    "authority_type": "utility",
+    "authority": "ny-central-hudson-gas-and-electric",
+    "type": "rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "rebate",
+    "program": "ny_cleanHeatIncentives",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "btuh10k",
+      "representative": 6250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "Rebate up to $1,000 per 10,000 Btuh for an air source heat pump that replaces fossil fuel heating when installed by a certified clean heat contractor."
+  },
+  {
+    "id": "NY-4",
+    "authority_type": "utility",
+    "authority": "ny-consolidated-edison",
+    "type": "pos_rebate",
+    "item": "geothermal_heating_installation",
+    "item_type": "pos_rebate",
+    "program": "ny_consolidatedEdisonRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25000,
+      "minimum": 25000,
+      "maximum": 35000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "$25,000 off a ground source heat pump system when you work with an eligible contractor, or $35,000 if your home is in a disadvantaged community."
+  },
+  {
+    "id": "NY-5",
+    "authority_type": "utility",
+    "authority": "ny-consolidated-edison",
+    "type": "pos_rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "pos_rebate",
+    "program": "ny_consolidatedEdisonRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 8000,
+      "minimum": 2500,
+      "maximum": 8000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "$8,000 off an air source heat pump replacing fossil fuel heat when installed by an eligible contractor. $2,500 if the existing system is not removed."
+  },
+  {
+    "id": "NY-6",
+    "authority_type": "utility",
+    "authority": "ny-consolidated-edison",
+    "type": "pos_rebate",
+    "item": "heat_pump_water_heater",
+    "item_type": "pos_rebate",
+    "program": "ny_consolidatedEdisonRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "Instant rebate for $1,000 off an eligible Energy Star certified heat pump water heater when purchased at a participating retailer."
+  },
+  {
+    "id": "NY-7",
+    "authority_type": "utility",
+    "authority": "ny-consolidated-edison",
+    "type": "assistance_program",
+    "item": "weatherization",
+    "item_type": "assistance_program",
+    "program": "ny_consolidatedEdisonRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "Up to $5,000 off the cost of weatherization services for a single-family home."
+  },
+  {
+    "id": "NY-10",
+    "authority_type": "utility",
+    "authority": "ny-pseg-long-island",
+    "type": "pos_rebate",
+    "item": "heat_pump_water_heater",
+    "item_type": "pos_rebate",
+    "program": "ny_allElectricHomesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "Instant rebate for $1,000 off an eligible Energy Star certified heat pump water heater when purchased at a participating retailer."
+  },
+  {
+    "id": "NY-11",
+    "authority_type": "utility",
+    "authority": "ny-pseg-long-island",
+    "type": "pos_rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "pos_rebate",
+    "program": "ny_allElectricHomesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "minimum": 450,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "Up to $600 off an Energy Star certified air source heat pump when installed by an eligible contractor."
+  },
+  {
+    "id": "NY-12",
+    "authority_type": "utility",
+    "authority": "ny-pseg-long-island",
+    "type": "pos_rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "pos_rebate",
+    "program": "ny_allElectricHomesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 240
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "Up to $240 off an Energy Star certified ductless mini-split heat pump system when installed by a participating contractor."
+  },
+  {
+    "id": "NY-13",
+    "authority_type": "utility",
+    "authority": "ny-pseg-long-island",
+    "type": "pos_rebate",
+    "item": "heat_pump_water_heater",
+    "item_type": "pos_rebate",
+    "program": "ny_allElectricHomesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "$600 off an Energy Star certified heat pump water heater when installed by a participating contractor."
+  },
+  {
+    "id": "NY-14",
+    "authority_type": "utility",
+    "authority": "ny-pseg-long-island",
+    "type": "pos_rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "pos_rebate",
+    "program": "ny_allElectricHomesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "$600 off an eligible high efficiency cold climate ducted heat pump system, when installed by a participating contractor."
+  },
+  {
+    "id": "NY-15",
+    "authority_type": "utility",
+    "authority": "ny-pseg-long-island",
+    "type": "assistance_program",
+    "item": "weatherization",
+    "item_type": "assistance_program",
+    "program": "ny_allElectricHomesProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 7500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "Up to $7,500 in weatherization and health and safety services for income eligible households."
+  },
+  {
+    "id": "NY-16",
+    "authority_type": "state",
+    "authority": "ny-state-of-ny",
+    "type": "tax_credit",
+    "item": "geothermal_heating_installation",
+    "item_type": "tax_credit",
+    "program": "ny_nyStateResidentialTaxCredit",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "Tax credit for 25% of the cost for a qualifying geothermal energy system, including installation costs, up to $5,000."
+  },
+  {
+    "id": "NY-17",
+    "authority_type": "state",
+    "authority": "ny-state-of-ny",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "item_type": "pos_rebate",
+    "program": "ny_nyStateDriveCleanProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "minimum": 500,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": "Instant rebate for $500-$2,000 off a new electric vehicle when purchased from a participating dealer. Can be combined with the federal tax credit."
+  },
+  {
+    "id": "NY-18",
+    "authority_type": "utility",
+    "authority": "ny-national-grid",
+    "type": "rebate",
+    "item": "geothermal_heating_installation",
+    "item_type": "rebate",
+    "program": "ny_cleanHeatIncentives",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1500,
+      "unit": "btuh10k"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "Rebate up to $1,500 per 10,000 Btuh for a ground source heat pump when installed by a certified clean heat contractor."
+  },
+  {
+    "id": "NY-19",
+    "authority_type": "utility",
+    "authority": "ny-nys-electric-and-gas",
+    "type": "rebate",
+    "item": "geothermal_heating_installation",
+    "item_type": "rebate",
+    "program": "ny_cleanHeatIncentives",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1500,
+      "unit": "btuh10k"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "Rebate up to $1,500 per 10,000 Btuh for a ground source heat pump when installed by a certified clean heat contractor."
+  },
+  {
+    "id": "NY-24",
+    "authority_type": "utility",
+    "authority": "ny-rochester-gas-and-electric",
+    "type": "rebate",
+    "item": "geothermal_heating_installation",
+    "item_type": "rebate",
+    "program": "ny_cleanHeatIncentives",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1500,
+      "unit": "btuh10k"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "Rebate up to $1,500 per 10,000 Btuh for a ground source heat pump when installed by a certified clean heat contractor."
+  },
+  {
+    "id": "NY-20",
+    "authority_type": "utility",
+    "authority": "ny-orange-and-rockland",
+    "type": "rebate",
+    "item": "geothermal_heating_installation",
+    "item_type": "rebate",
+    "program": "ny_cleanHeatIncentives",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2000,
+      "unit": "btuh10k"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "Rebate up to $2,000 per 10,000 Btuh for a ground source heat pump when installed by a certified clean heat contractor."
+  },
+  {
+    "id": "NY-21",
+    "authority_type": "utility",
+    "authority": "ny-national-grid",
+    "type": "pos_rebate",
+    "item": "heat_pump_water_heater",
+    "item_type": "pos_rebate",
+    "program": "ny_cleanHeatIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "Receive up to $700 off on a qualifying electric heat pump water heater when installed by a participating contractor."
+  },
+  {
+    "id": "NY-22",
+    "authority_type": "utility",
+    "authority": "ny-nys-electric-and-gas",
+    "type": "rebate",
+    "item": "heat_pump_water_heater",
+    "item_type": "rebate",
+    "program": "ny_cleanHeatIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "Purchase a qualifying heat pump water heater and save $700 when installed by a participating contractor."
+  },
+  {
+    "id": "NY-23",
+    "authority_type": "utility",
+    "authority": "ny-rochester-gas-and-electric",
+    "type": "rebate",
+    "item": "heat_pump_water_heater",
+    "item_type": "rebate",
+    "program": "ny_cleanHeatIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "Purchase a qualifying heat pump water heater and save $700 when installed by a participating contractor."
+  },
+  {
+    "id": "NY-25",
+    "authority_type": "utility",
+    "authority": "ny-orange-and-rockland",
+    "type": "pos_rebate",
+    "item": "heat_pump_water_heater",
+    "item_type": "pos_rebate",
+    "program": "ny_cleanHeatIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": "Receive up to $1000 off on a qualifying electric heat pump water heater when installed by a participating contractor."
+  }
+]
