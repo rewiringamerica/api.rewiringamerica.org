@@ -13,7 +13,7 @@ export const PROGRAMS_SCHEMA = {
   ri_drive: { type: 'string' },
   ri_drive_plus: { type: 'string' },
   ri_smallScaleSolar: { type: 'string' },
-  ri_highEfficiencyHeatPumpProgram: { type: 'string' },
+  ri_cleanHeat: { type: 'string' },
   ri_dhsWeatherizationAssistanceProgram: { type: 'string' },
   // Pascoag
   ri_hvacAndWaterHeaterIncentives: { type: 'string' },

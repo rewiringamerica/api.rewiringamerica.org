@@ -4,6 +4,7 @@ import { STATE_INCENTIVES_BY_STATE } from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
 import { APICoverage } from '../data/types/coverage';
 import { OwnerStatus } from '../data/types/owner-status';
+import { BETA_STATES, LAUNCHED_STATES } from '../data/types/states';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
 import { CalculatedIncentive, CalculateParams } from './incentives-calculation';
 
@@ -15,8 +16,11 @@ export function calculateStateIncentivesAndSavings(
   savings: APISavings;
   coverage: APICoverage;
 } {
-  // TODO condition based on existence of incentives data, not hardcoding RI.
-  if (stateId !== 'RI') {
+  // Only process incentives for launched states, or beta states if beta was requested.
+  if (
+    !LAUNCHED_STATES.includes(stateId) &&
+    (!request.include_beta_states || !BETA_STATES.includes(stateId))
+  ) {
     return {
       stateIncentives: [],
       savings: zeroSavings(),

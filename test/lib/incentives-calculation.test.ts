@@ -3,9 +3,11 @@ import _ from 'lodash';
 import { open } from 'sqlite';
 import sqlite3 from 'sqlite3';
 import { afterEach, beforeEach, test } from 'tap';
+import { AuthorityType } from '../../src/data/authorities';
 import { FilingStatus } from '../../src/data/tax_brackets';
 import { Type } from '../../src/data/types/incentive-types';
 import { OwnerStatus } from '../../src/data/types/owner-status';
+import { BETA_STATES, LAUNCHED_STATES } from '../../src/data/types/states';
 import calculateIncentives from '../../src/lib/incentives-calculation';
 
 const AMIS_FOR_11211 = JSON.parse(
@@ -16,6 +18,12 @@ const AMIS_FOR_94117 = JSON.parse(
 );
 const AMIS_FOR_39503 = JSON.parse(
   fs.readFileSync('./test/fixtures/amis-for-zip-39503.json', 'utf-8'),
+);
+const AMIS_FOR_02861 = JSON.parse(
+  fs.readFileSync('./test/fixtures/amis-for-zip-02861.json', 'utf-8'),
+);
+const AMIS_FOR_06002 = JSON.parse(
+  fs.readFileSync('./test/fixtures/amis-for-zip-06002.json', 'utf-8'),
 );
 
 beforeEach(async t => {
@@ -37,6 +45,40 @@ test('correctly evaluates scenerio "Single w/ $120k Household income"', async t 
     household_size: 1,
   });
   t.ok(data);
+});
+
+test('beta states and launched states are disjoint', async t => {
+  const data = LAUNCHED_STATES.filter(s => BETA_STATES.includes(s));
+  t.equal(data.length, 0);
+});
+
+test('correctly evaluates state incentives only for launched states', async t => {
+  // RI is launched so should get state incentives even if include_beta_states = false.
+  const data = calculateIncentives(AMIS_FOR_02861, {
+    owner_status: OwnerStatus.Homeowner,
+    household_income: 120000,
+    tax_filing: FilingStatus.Single,
+    household_size: 1,
+    authority_types: [AuthorityType.State],
+    include_beta_states: false,
+  });
+  t.ok(data);
+  t.not(data.incentives.length, 0);
+});
+
+test('correctly evaluates state incentives only for launched states', async t => {
+  // CT is not launched so will not get state incentives.
+  const data = calculateIncentives(AMIS_FOR_06002, {
+    owner_status: OwnerStatus.Homeowner,
+    household_income: 120000,
+    tax_filing: FilingStatus.Single,
+    household_size: 1,
+    authority_types: [AuthorityType.State],
+    include_beta_states: false,
+  });
+  t.ok(data);
+  // TODO: Update this when CT JSON data is checked in.
+  t.equal(data.incentives.length, 0);
 });
 
 test('correctly evaluates scenerio "Joint w/ 5 persons and $60k Household income"', async t => {
