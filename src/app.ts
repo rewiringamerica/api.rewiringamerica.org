@@ -16,9 +16,11 @@ import {
 } from './schemas/v1/calculator-endpoint';
 import { API_INCENTIVE_SCHEMA } from './schemas/v1/incentive';
 
-// Pass --options via CLI arguments in command to enable these options.
+// These are the options described here:
+// https://fastify.dev/docs/latest/Reference/Server
 export const options = {
   querystringParser: (str: string) => qs.parse(str, { allowDots: true }),
+  disableRequestLogging: true,
 };
 
 export default async function (
@@ -35,6 +37,30 @@ export default async function (
   fastify.addSchema(API_INCENTIVE_SCHEMA);
   fastify.addSchema(API_CALCULATOR_REQUEST_SCHEMA);
   fastify.addSchema(API_CALCULATOR_RESPONSE_SCHEMA);
+
+  // Replace Fastify's default request-start logging, to include more structured
+  // info about the request, including the API consumer's identity
+  fastify.addHook('onRequest', (req, reply, done) => {
+    req.log.info(
+      {
+        consumer: req.headers['x-zuplo-consumer'],
+        origin: req.headers.origin,
+        params: req.query,
+        path: req.routeOptions.url,
+      },
+      'incoming request',
+    );
+    done();
+  });
+
+  // Equivalent to Fastify's default request-end logging
+  fastify.addHook('onResponse', (req, reply, done) => {
+    req.log.info(
+      { res: reply, responseTime: reply.getResponseTime() },
+      'request completed',
+    );
+    done();
+  });
 
   // Do not touch the following lines
 
