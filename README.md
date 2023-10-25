@@ -83,6 +83,10 @@ Source data for state and utility incentives is currently managed in spreadsheet
 
 This script pulls the ids and descriptions from the spreadsheet and applies them to the RI JSON as needed. Does not edit by default. Use `--write` argument to apply edits.
 
+### `./scripts/update-fixtures.sh`
+
+This script requires the development server to be running, and lets you update the fixtures that prevent regressions against expected responses.
+
 ## TODO
 
 https://app.asana.com/0/1203194244067918/1203657186427969/f
