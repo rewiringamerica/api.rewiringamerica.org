@@ -1,8 +1,8 @@
 import fs from 'fs';
+import fetch from 'make-fetch-happen';
 import path from 'path';
 
 (async function () {
-  // @ts-ignore (sorry, gross: fetch isn't known to ts-node but it is there!)
   const response = await fetch(
     'https://docs.google.com/spreadsheets/d/e/2PACX-1vSoBQdIvYNb9fRkFggllmLZmz9nwL6SYxM7cdsiTPDU90C0HXtFh2r1qlYKdfbTzzxiPZ0o4NpOva__/pub?gid=30198531&single=true&output=tsv',
   );
