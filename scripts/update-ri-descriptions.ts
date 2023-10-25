@@ -12,13 +12,14 @@ import path from 'path';
   const lines: string[] = body.split('\n');
 
   // First row is a header of headers, so ignore it:
-  const [_, headers, ...rows] = lines.map(line => line.split('\t'));
+  lines.shift();
+  const [headers, ...rows] = lines.map(line => line.split('\t'));
 
   // We only care about these columns at the moment:
-  var columnsWeWant = ['ID', 'Program Description (style guide)'];
+  const columnsWeWant = ['ID', 'Program Description (style guide)'];
 
   // Get an array of the indexes for those columns:
-  var indexesWeWant = headers
+  const indexesWeWant = headers
     .map((header, index) => {
       return {
         header,
@@ -43,9 +44,12 @@ import path from 'path';
   };
 
   // loop over all known RI incentives and apply edits if needed, logging either way:
-  const riData: Incentive[] = require('../data/RI/incentives.json');
+  const incentivePath = path.join(__dirname, '../data/RI/incentives.json');
+  const incentives: Incentive[] = JSON.parse(
+    fs.readFileSync(incentivePath, 'utf-8'),
+  );
 
-  riData.forEach(incentive => {
+  incentives.forEach(incentive => {
     if (descriptionsById.has(incentive.id)) {
       const spreadsheetDescription = descriptionsById.get(incentive.id)!;
       if (incentive.short_description !== spreadsheetDescription) {
@@ -63,7 +67,10 @@ import path from 'path';
 
   // if requested, write that file back out:
   if (process.argv.includes('--write')) {
-    const incentivePath = path.join(__dirname, '../data/RI/incentives.json');
-    fs.writeFileSync(incentivePath, JSON.stringify(riData, null, 2), 'utf-8');
+    fs.writeFileSync(
+      incentivePath,
+      JSON.stringify(incentives, null, 2),
+      'utf-8',
+    );
   }
 })();
