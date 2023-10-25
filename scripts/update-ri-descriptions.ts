@@ -69,7 +69,7 @@ import path from 'path';
   if (process.argv.includes('--write')) {
     fs.writeFileSync(
       incentivePath,
-      JSON.stringify(incentives, null, 2),
+      JSON.stringify(incentives, null, 2) + '\n', // include newline to satisfy prettier
       'utf-8',
     );
   }
