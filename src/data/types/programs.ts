@@ -13,6 +13,7 @@ export const PROGRAMS_SCHEMA = {
   ny_cleanHeatIncentives: { type: 'string' },
   ny_nyStateResidentialTaxCredit: { type: 'string' },
   ny_nyStateDriveCleanProgram: { type: 'string' },
+  ny_comfortHomeProgram: { type: 'string' },
   // ConEdison
   ny_consolidatedEdisonRebates: { type: 'string' },
   // PSEG Long Island
