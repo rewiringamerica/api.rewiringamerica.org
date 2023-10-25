@@ -18,6 +18,8 @@ import {
 import { LOCALES, SCHEMA as L_SCHEMA } from '../../src/data/locale';
 import { SOLAR_PRICES, SCHEMA as SP_SCHEMA } from '../../src/data/solar_prices';
 import {
+  NY_INCENTIVES,
+  NY_INCENTIVES_SCHEMA,
   RI_INCENTIVES,
   RI_INCENTIVES_SCHEMA,
   StateIncentive,
@@ -56,6 +58,7 @@ test('static JSON files match schema', async tap => {
 });
 
 const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
+  ['NY', NY_INCENTIVES_SCHEMA, NY_INCENTIVES],
   ['RI', RI_INCENTIVES_SCHEMA, RI_INCENTIVES],
 ];
 

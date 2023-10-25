@@ -77,6 +77,22 @@ const requiredProperties = [
 /* State-specific types/schemas                                               */
 /******************************************************************************/
 
+export const NY_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
+  type: 'array',
+  items: {
+    type: 'object',
+    properties: {
+      ...incentivePropertySchema,
+      low_income: { type: 'boolean', nullable: true },
+    },
+    required: requiredProperties,
+  },
+} as const;
+
+export const NY_INCENTIVES: StateIncentive[] = JSON.parse(
+  fs.readFileSync('./data/NY/incentives.json', 'utf-8'),
+);
+
 export const RI_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
   type: 'array',
   items: {
@@ -94,5 +110,6 @@ export const RI_INCENTIVES: StateIncentive[] = JSON.parse(
 );
 
 export const STATE_INCENTIVES_BY_STATE: StateIncentivesMap = {
+  NY: NY_INCENTIVES,
   RI: RI_INCENTIVES,
 };
