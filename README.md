@@ -75,6 +75,14 @@ See Google's [concurrency guide](https://cloud.google.com/run/docs/about-concurr
 - Production api.rewiringamerica.org --> Zuplo --> https://incentives-api-cll5a6ivcq-uc.a.run.app
 - Zuplo working copy https://api-main-4ba10f3.d2.zuplo.dev --> https://incentives-api-yc6a7ekqjq-uc.a.run.app
 
+## Maintenance scripts
+
+Source data for state and utility incentives is currently managed in spreadsheets. Some scripts are provided to help reconcile the data:
+
+### `yarn update-ri-descriptions`
+
+This script pulls the ids and descriptions from the spreadsheet and applies them to the RI JSON as needed. Does not edit by default. Use `--write` argument to apply edits.
+
 ## TODO
 
 https://app.asana.com/0/1203194244067918/1203657186427969/f

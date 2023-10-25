@@ -50,6 +50,7 @@
     "dev": "fastify start -r ts-node/register -w --ignore-watch test -l info -P src/app.ts --options",
     "build": "./scripts/build.sh",
     "lint": "prettier --check . && eslint .",
-    "test": "yarn lint && dotenv -- tap --no-check-coverage --ts \"test/**/*.test.ts\""
+    "test": "yarn lint && dotenv -- tap --no-check-coverage --ts \"test/**/*.test.ts\"",
+    "update-ri-descriptions": "ts-node scripts/update-ri-descriptions"
   }
 }
