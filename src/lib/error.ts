@@ -10,7 +10,10 @@ export class UnexpectedInputError extends Error {}
  * requires, and that is NOT expected to be caught upstream.
  */
 export class InvalidInputError extends Error {
-  constructor(message: string, readonly field?: string) {
+  constructor(
+    message: string,
+    readonly field?: string,
+  ) {
     super(message);
   }
 }

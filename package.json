@@ -27,6 +27,7 @@
     "@fastify/type-provider-json-schema-to-ts": "^2.2.2",
     "@types/glob": "^8.1.0",
     "@types/lodash": "^4.14.200",
+    "@types/make-fetch-happen": "^10.0.3",
     "@types/node": "16.18.38",
     "@types/qs": "^6.9.8",
     "@types/tap": "^15.0.8",
@@ -38,10 +39,11 @@
     "eslint": "^8.52.0",
     "fastify-tsconfig": "^1.0.1",
     "json-schema-to-ts": "^2.0.0",
-    "prettier": "^2.8.8",
-    "prettier-plugin-multiline-arrays": "^2.0.0",
+    "make-fetch-happen": "^13.0.0",
+    "prettier": "^3.0.3",
+    "prettier-plugin-multiline-arrays": "^3.0.0",
     "prettier-plugin-organize-imports": "^3.2.3",
-    "tap": "^16.3.4",
+    "tap": "^18.5.2",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6"
   },
@@ -49,7 +51,12 @@
     "start": "fastify start -l info -a 0.0.0.0 build/app.js --options",
     "dev": "fastify start -r ts-node/register -w --ignore-watch test -l info -P src/app.ts --options",
     "build": "./scripts/build.sh",
-    "lint": "prettier --check . && eslint .",
-    "test": "yarn lint && dotenv -- tap --no-check-coverage --ts \"test/**/*.test.ts\""
+    "lint": "prettier --check . --ignore-path=.prettierignore && eslint .",
+    "test": "yarn lint && dotenv -- tap -- --ts \"test/**/*.test.ts\"",
+    "update-ri-descriptions": "ts-node scripts/update-ri-descriptions"
+  },
+  "tap": {
+    "disable-coverage": true,
+    "allow-empty-coverage": true
   }
 }
