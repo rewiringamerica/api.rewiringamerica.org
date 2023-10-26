@@ -27,6 +27,7 @@
     "@fastify/type-provider-json-schema-to-ts": "^2.2.2",
     "@types/glob": "^8.1.0",
     "@types/lodash": "^4.14.200",
+    "@types/make-fetch-happen": "^10.0.3",
     "@types/node": "16.18.38",
     "@types/qs": "^6.9.8",
     "@types/tap": "^15.0.8",
@@ -38,6 +39,7 @@
     "eslint": "^8.52.0",
     "fastify-tsconfig": "^1.0.1",
     "json-schema-to-ts": "^2.0.0",
+    "make-fetch-happen": "^13.0.0",
     "prettier": "^2.8.8",
     "prettier-plugin-multiline-arrays": "^2.0.0",
     "prettier-plugin-organize-imports": "^3.2.3",
@@ -50,6 +52,7 @@
     "dev": "fastify start -r ts-node/register -w --ignore-watch test -l info -P src/app.ts --options",
     "build": "./scripts/build.sh",
     "lint": "prettier --check . && eslint .",
-    "test": "yarn lint && dotenv -- tap --no-check-coverage --ts \"test/**/*.test.ts\""
+    "test": "yarn lint && dotenv -- tap --no-check-coverage --ts \"test/**/*.test.ts\"",
+    "update-ri-descriptions": "ts-node scripts/update-ri-descriptions"
   }
 }
