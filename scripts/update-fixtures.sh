@@ -46,21 +46,6 @@ curl \
 &utility=ri-rhode-island-energy" \
   | jq . > test/fixtures/v1-02903-state-utility-lowincome.json
 
-<<<<<<< HEAD
-# TODO: Remove &include_beta_states when NY is launched.
-curl \
-  "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=11557\
-&owner_status=homeowner\
-&household_income=50000\
-&tax_filing=joint\
-&household_size=1\
-&authority_types=state\
-&authority_types=utility\
-&utility=ny-pseg-long-island\
-&include_beta_states=true" \
-  | jq . > test/fixtures/v1-ny-11557-state-utility-lowincome.json
-=======
 # TODO: Remove beta states argument when CT is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
@@ -74,4 +59,17 @@ curl \
 &authority_types=utility\
 &utility=ct-eversource" \
   | jq . > test/fixtures/v1-ct-06002-state-utility-lowincome.json
->>>>>>> main
+
+# TODO: Remove &include_beta_states when NY is launched.
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?location\[zip\]=11557\
+&owner_status=homeowner\
+&household_income=50000\
+&tax_filing=joint\
+&household_size=1\
+&authority_types=state\
+&authority_types=utility\
+&utility=ny-pseg-long-island\
+&include_beta_states=true" \
+  | jq . > test/fixtures/v1-ny-11557-state-utility-lowincome.json
