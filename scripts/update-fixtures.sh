@@ -45,3 +45,17 @@ curl \
 &authority_types=utility\
 &utility=ri-rhode-island-energy" \
   | jq . > test/fixtures/v1-02903-state-utility-lowincome.json
+
+# TODO: Remove beta states argument when CT is fully launched.
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?location\[zip\]=06002\
+&include_beta_states=true\
+&owner_status=homeowner\
+&household_income=35000\
+&tax_filing=joint\
+&household_size=4\
+&authority_types=state\
+&authority_types=utility\
+&utility=ct-eversource" \
+  | jq . > test/fixtures/v1-ct-06002-state-utility-lowincome.json
