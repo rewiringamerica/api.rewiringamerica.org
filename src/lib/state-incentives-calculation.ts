@@ -1,4 +1,5 @@
 import { AuthorityType } from '../data/authorities';
+import { CT_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/CT/low_income_thresholds';
 import { RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/RI/low_income_thresholds';
 import { STATE_INCENTIVES_BY_STATE } from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
@@ -67,14 +68,29 @@ export function calculateStateIncentivesAndSavings(
       eligible = false;
     }
 
-    const authority_thresholds =
-      RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY[item.authority] ??
-      RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY.default;
-    if (
-      item.low_income &&
-      request.household_income > authority_thresholds[request.household_size]
-    ) {
-      eligible = false;
+    // TODO: Replace per-state logic with an index into income thresholds map.
+    // See https://app.asana.com/0/1204738794846444/1205784001056408/f
+    let thresholds_map;
+    switch (stateId) {
+      case 'RI':
+        thresholds_map = RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY;
+        break;
+      case 'CT':
+        thresholds_map = CT_LOW_INCOME_THRESHOLDS_BY_AUTHORITY;
+        break;
+      default:
+        console.log('No income thresholds defined for ', stateId);
+    }
+
+    if (typeof thresholds_map !== 'undefined') {
+      const authority_thresholds =
+        thresholds_map[item.authority] ?? thresholds_map.default;
+      if (
+        item.low_income &&
+        request.household_income > authority_thresholds[request.household_size]
+      ) {
+        eligible = false;
+      }
     }
 
     const transformedItem = {
