@@ -1,5 +1,9 @@
 import { test } from 'tap';
 import {
+  CT_LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
+  SCHEMA as CT_LOW_INCOME_THRESHOLDS_SCHEMA,
+} from '../../src/data/CT/low_income_thresholds';
+import {
   RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
   SCHEMA as RI_LOW_INCOME_THRESHOLDS_SCHEMA,
 } from '../../src/data/RI/low_income_thresholds';
@@ -41,6 +45,11 @@ const TESTS = [
   [SMFI_SCHEMA, STATE_MFIS, 'state_mfis'],
   [TB_SCHEMA, TAX_BRACKETS, 'tax_brackets'],
   [AUTHORITIES_SCHEMA, AUTHORITIES_BY_STATE, 'authorities'],
+  [
+    CT_LOW_INCOME_THRESHOLDS_SCHEMA,
+    CT_LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
+    'CT low income',
+  ],
   [
     RI_LOW_INCOME_THRESHOLDS_SCHEMA,
     RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
