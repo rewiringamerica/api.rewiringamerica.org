@@ -53,6 +53,7 @@ export const STATES_PLUS_DC = [
 ] as const;
 
 export const BETA_STATES: string[] = [
+  'CT',
   'NY',
 ];
 
