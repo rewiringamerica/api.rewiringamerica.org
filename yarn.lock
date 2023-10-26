@@ -22,12 +22,13 @@
   dependencies:
     type-fest "^3.8.0"
 
-"@augment-vir/common@^15.3.0":
-  version "15.3.0"
-  resolved "https://registry.yarnpkg.com/@augment-vir/common/-/common-15.3.0.tgz#03ff0ae64a33989fad734e3e54f1eb3ea1df371c"
-  integrity sha512-V9ksJcSw3Ikxw9QaoWbyKYYS/s9ysc6xwq7Xms7fui6oWaCt7+SMv9B1K5Qot+tuM0+LK0/vtD8Ms+/rCnlYqQ==
+"@augment-vir/common@^21.3.6":
+  version "21.3.6"
+  resolved "https://registry.yarnpkg.com/@augment-vir/common/-/common-21.3.6.tgz#a752b1b45b9c40b0c8b743f789e98813fcd61c66"
+  integrity sha512-4mXYHGBrLk2M7AVjXxT5qp+gCbGS77/xqRZLZDlZiTxRdrjGcRfHVWUOYjdu2GC8aqQ34qbtiSNSnl+fCY3byA==
   dependencies:
-    type-fest "^3.12.0"
+    browser-or-node "^2.1.1"
+    type-fest "^4.4.0"
 
 "@babel/code-frame@^7.18.6":
   version "7.18.6"
@@ -1155,6 +1156,11 @@ braces@^3.0.2, braces@~3.0.2:
   integrity sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==
   dependencies:
     fill-range "^7.0.1"
+
+browser-or-node@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/browser-or-node/-/browser-or-node-2.1.1.tgz#738790b3a86a8fc020193fa581273fbe65eaea0f"
+  integrity sha512-8CVjaLJGuSKMVTxJ2DpBl5XnlNDiT4cQFeuCJJrvJmts9YrTZDizTX7PjC2s6W4x+MBGZeEY6dGMrF04/6Hgqg==
 
 browserslist@^4.21.3:
   version "4.21.4"
@@ -3301,12 +3307,12 @@ prelude-ls@^1.2.1:
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
-prettier-plugin-multiline-arrays@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/prettier-plugin-multiline-arrays/-/prettier-plugin-multiline-arrays-2.0.0.tgz#c2f16e49c8316229fe8f0eff2e55bda12015abe2"
-  integrity sha512-EFdtxNqEKSehtSZN2rHUtsA7dqV6fu1iJ4WU8fgR23Scfcf6mcVb3leOWmAkhhHEpwsNKPdSNN9pBX8Xx8AsCg==
+prettier-plugin-multiline-arrays@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-multiline-arrays/-/prettier-plugin-multiline-arrays-3.0.0.tgz#9af0a59a72d38548b039a6a94b7e1637ac9bdfda"
+  integrity sha512-qEfctOpCfnTztyLRoVkKvYpOLeTiG1Sq29Guk9zMs5YeZeoRZXO6JDdWj9OJyswJHmIrOEuPCmpdS7yxkyIatw==
   dependencies:
-    "@augment-vir/common" "^15.3.0"
+    "@augment-vir/common" "^21.3.6"
     proxy-vir "^0.0.1"
 
 prettier-plugin-organize-imports@^3.2.3:
@@ -4047,10 +4053,15 @@ type-fest@^0.8.0:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
 
-type-fest@^3.12.0, type-fest@^3.8.0:
+type-fest@^3.8.0:
   version "3.13.0"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-3.13.0.tgz#b088347ae73779a750c461694b264340c4c8c0d7"
   integrity sha512-Gur3yQGM9qiLNs0KPP7LPgeRbio2QTt4xXouobMCarR0/wyW3F+F/+OWwshg3NG0Adon7uQfSZBpB46NfhoF1A==
+
+type-fest@^4.4.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-4.6.0.tgz#9c575f7e20530defef4f9cdc5e2c85d6e4ea0fc9"
+  integrity sha512-rLjWJzQFOq4xw7MgJrCZ6T1jIOvvYElXT12r+y0CC6u67hegDHaxcPqb2fZHOGlqxugGQPNB1EnTezjBetkwkw==
 
 type-is@^1.6.18:
   version "1.6.18"
