@@ -99,7 +99,6 @@ export const NY_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
     type: 'object',
     properties: {
       ...incentivePropertySchema,
-      low_income: { type: 'boolean', nullable: true },
     },
     required: requiredProperties,
   },

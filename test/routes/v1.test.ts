@@ -104,6 +104,25 @@ test('response with state and item filtering is valid and correct', async t => {
   );
 });
 
+// NY low income test.
+test('NY response with state and utility is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '11557' },
+      owner_status: 'homeowner',
+      // Qualifies as low-income for NY PSEG Long Island utility.
+      household_size: 1,
+      household_income: 50000,
+      tax_filing: 'joint',
+      authority_types: ['state', 'utility'],
+      utility: 'ny-pseg-long-island',
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-ny-11557-state-utility-lowincome.json',
+  );
+});
+
 const BAD_QUERIES = [
   // bad location:
   {

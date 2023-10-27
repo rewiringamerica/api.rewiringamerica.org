@@ -1,5 +1,6 @@
 import { AuthorityType } from '../data/authorities';
 import { CT_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/CT/low_income_thresholds';
+import { NY_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/NY/low_income_thresholds';
 import { RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/RI/low_income_thresholds';
 import { STATE_INCENTIVES_BY_STATE } from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
@@ -72,11 +73,14 @@ export function calculateStateIncentivesAndSavings(
     // See https://app.asana.com/0/1204738794846444/1205784001056408/f
     let thresholds_map;
     switch (stateId) {
-      case 'RI':
-        thresholds_map = RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY;
-        break;
       case 'CT':
         thresholds_map = CT_LOW_INCOME_THRESHOLDS_BY_AUTHORITY;
+        break;
+      case 'NY':
+        thresholds_map = NY_LOW_INCOME_THRESHOLDS_BY_AUTHORITY;
+        break;
+      case 'RI':
+        thresholds_map = RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY;
         break;
       default:
         console.log('No income thresholds defined for ', stateId);
