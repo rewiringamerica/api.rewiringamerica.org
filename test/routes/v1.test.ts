@@ -105,7 +105,7 @@ test('response with state and item filtering is valid and correct', async t => {
 });
 
 // CT low income test
-test('CT low income response with state and item filtering is valid and correct', async t => {
+test('CT low income response with state and utility filtering is valid and correct', async t => {
   await validateResponse(
     t,
     {
