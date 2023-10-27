@@ -54,7 +54,7 @@ curl \
 &owner_status=homeowner\
 &household_income=35000\
 &tax_filing=joint\
-&household_size=4\
+&household_size=1\
 &authority_types=state\
 &authority_types=utility\
 &utility=ct-eversource" \
