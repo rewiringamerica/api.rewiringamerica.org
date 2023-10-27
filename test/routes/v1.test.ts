@@ -104,6 +104,25 @@ test('response with state and item filtering is valid and correct', async t => {
   );
 });
 
+// CT low income test
+test('CT low income response with state and item filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '06002' },
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 35000,
+      tax_filing: 'joint',
+      authority_types: ['state', 'utility'],
+      utility: 'ct-eversource',
+      // TODO: Remove when CT is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-ct-06002-state-utility-lowincome.json',
+  );
+});
+
 const BAD_QUERIES = [
   // bad location:
   {
