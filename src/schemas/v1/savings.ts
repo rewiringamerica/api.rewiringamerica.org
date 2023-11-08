@@ -21,6 +21,11 @@ export const API_SAVINGS_SCHEMA = {
       description:
         'This may represent no-cost products or services rather than a monetary value.',
     },
+    bonus: {
+      type: 'integer',
+      description:
+        'This represents a bonus incentive amount that can only be claimed if some other prerequisite incentive is claimed as well.',
+    },
   },
   required: [
     'pos_rebate',
@@ -28,6 +33,7 @@ export const API_SAVINGS_SCHEMA = {
     'performance_rebate',
     'account_credit',
     'rebate',
+    'bonus',
   ],
   additionalProperties: false,
 } as const;
@@ -40,6 +46,7 @@ export const zeroSavings = (): APISavings => ({
   performance_rebate: 0,
   rebate: 0,
   account_credit: 0,
+  bonus: 0,
 });
 
 export const addSavings = (a: APISavings, b: APISavings): APISavings => ({
@@ -48,4 +55,5 @@ export const addSavings = (a: APISavings, b: APISavings): APISavings => ({
   performance_rebate: a.performance_rebate + b.performance_rebate,
   rebate: a.rebate + b.rebate,
   account_credit: a.account_credit + b.account_credit,
+  bonus: a.bonus + b.bonus,
 });

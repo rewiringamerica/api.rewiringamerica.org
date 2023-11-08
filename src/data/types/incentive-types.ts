@@ -5,6 +5,7 @@ export enum Type {
   TaxCredit = 'tax_credit',
   AccountCredit = 'account_credit',
   AssistanceProgram = 'assistance_program',
+  Bonus = 'bonus',
 }
 
 export type TypeV0 = Extract<Type, Type.PosRebate | Type.TaxCredit>;
@@ -23,4 +24,5 @@ export enum ItemType {
   TaxCredit = 'tax_credit',
   AccountCredit = 'account_credit',
   AssistanceProgram = 'assistance_program',
+  Bonus = 'bonus',
 }
