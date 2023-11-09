@@ -1,7 +1,7 @@
 import Ajv from 'ajv';
 import fs from 'fs';
 import qs from 'qs';
-import { beforeEach, test } from 'tap';
+import { beforeEach, test, Test } from 'tap';
 import { API_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v1/calculator-endpoint';
 import { API_INCENTIVE_SCHEMA } from '../../src/schemas/v1/incentive';
 import { API_UTILITIES_RESPONSE_SCHEMA } from '../../src/schemas/v1/utilities-endpoint';
@@ -11,10 +11,7 @@ beforeEach(() => {
   process.setMaxListeners(100);
 });
 
-async function getCalculatorResponse(
-  t: Tap.Test,
-  query: Record<string, unknown>,
-) {
+async function getCalculatorResponse(t: Test, query: Record<string, unknown>) {
   const app = await build(t);
 
   const searchParams = qs.stringify(query, { encodeValuesOnly: true });
@@ -25,7 +22,7 @@ async function getCalculatorResponse(
 }
 
 async function validateResponse(
-  t: Tap.Test,
+  t: Test,
   query: Record<string, unknown>,
   fixtureFile: string,
 ) {
