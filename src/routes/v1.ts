@@ -2,10 +2,11 @@ import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts
 import { FastifyInstance } from 'fastify';
 import { Database } from 'sqlite';
 import { LOCALES } from '../data/locale';
+import { PROGRAMS } from '../data/programs';
 import { InvalidInputError, UnexpectedInputError } from '../lib/error';
 import fetchAMIsForAddress from '../lib/fetch-amis-for-address';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
-import { t } from '../lib/i18n';
+import { t, tr } from '../lib/i18n';
 import calculateIncentives, {
   CalculatedIncentive,
 } from '../lib/incentives-calculation';
@@ -34,8 +35,10 @@ function transformIncentives(
       name: t('items', incentive.item, language),
       url: t('urls', incentive.item, language),
     },
-    program: t('programs', incentive.program, language),
-    program_url: t('program_urls', incentive.program, language),
+    program: tr(PROGRAMS[incentive.program].name, language),
+    program_url: PROGRAMS[incentive.program].url
+      ? tr(PROGRAMS[incentive.program].url!, language)
+      : undefined,
   }));
 }
 

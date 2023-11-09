@@ -1,11 +1,11 @@
 import { JSONSchemaType } from 'ajv';
 import fs from 'fs';
 import { AuthorityType } from './authorities';
+import { ALL_PROGRAMS } from './programs';
 import { Amount, AmountType, AmountUnit } from './types/amount';
 import { ItemType, Type } from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
 import { OwnerStatus } from './types/owner-status';
-import { ALL_PROGRAMS } from './types/programs';
 
 export type StateIncentive = {
   id: string;
