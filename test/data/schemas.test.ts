@@ -8,6 +8,10 @@ import {
   SCHEMA as RI_LOW_INCOME_THRESHOLDS_SCHEMA,
 } from '../../src/data/RI/low_income_thresholds';
 import {
+  VA_LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
+  SCHEMA as VA_LOW_INCOME_THRESHOLDS_SCHEMA,
+} from '../../src/data/VA/low_income_thresholds';
+import {
   AUTHORITIES_BY_STATE,
   SCHEMA as AUTHORITIES_SCHEMA,
 } from '../../src/data/authorities';
@@ -29,6 +33,8 @@ import {
   RI_INCENTIVES,
   RI_INCENTIVES_SCHEMA,
   StateIncentive,
+  VA_INCENTIVES,
+  VA_INCENTIVES_SCHEMA,
 } from '../../src/data/state_incentives';
 import { SCHEMA as SMFI_SCHEMA, STATE_MFIS } from '../../src/data/state_mfi';
 import { TAX_BRACKETS, SCHEMA as TB_SCHEMA } from '../../src/data/tax_brackets';
@@ -62,6 +68,11 @@ const TESTS = [
     RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
     'RI low income',
   ],
+  [
+    VA_LOW_INCOME_THRESHOLDS_SCHEMA,
+    VA_LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
+    'VA low income',
+  ],
 ];
 
 test('static JSON files match schema', async tap => {
@@ -79,6 +90,7 @@ const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
   ['CT', CT_INCENTIVES_SCHEMA, CT_INCENTIVES],
   ['NY', NY_INCENTIVES_SCHEMA, NY_INCENTIVES],
   ['RI', RI_INCENTIVES_SCHEMA, RI_INCENTIVES],
+  ['VA', VA_INCENTIVES_SCHEMA, VA_INCENTIVES],
 ];
 
 /**

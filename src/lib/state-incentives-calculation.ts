@@ -1,14 +1,15 @@
-import { AuthorityType } from '../data/authorities';
 import { CT_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/CT/low_income_thresholds';
 import { NY_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/NY/low_income_thresholds';
 import { RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/RI/low_income_thresholds';
+import { VA_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/VA/low_income_thresholds';
+import { AuthorityType } from '../data/authorities';
 import { STATE_INCENTIVES_BY_STATE } from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
 import { APICoverage } from '../data/types/coverage';
 import { OwnerStatus } from '../data/types/owner-status';
 import { BETA_STATES, LAUNCHED_STATES } from '../data/types/states';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
-import { CalculatedIncentive, CalculateParams } from './incentives-calculation';
+import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
 
 export function calculateStateIncentivesAndSavings(
   stateId: string,
@@ -81,6 +82,9 @@ export function calculateStateIncentivesAndSavings(
         break;
       case 'RI':
         thresholds_map = RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY;
+        break;
+      case 'VA':
+        thresholds_map = VA_LOW_INCOME_THRESHOLDS_BY_AUTHORITY;
         break;
       default:
         console.log('No income thresholds defined for ', stateId);
