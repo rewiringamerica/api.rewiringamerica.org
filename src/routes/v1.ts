@@ -39,6 +39,7 @@ function transformIncentives(
     program_url: PROGRAMS[incentive.program].url
       ? tr(PROGRAMS[incentive.program].url!, language)
       : undefined,
+    short_description: tr(incentive.short_description, language),
   }));
 }
 

@@ -5,6 +5,7 @@ import { ALL_PROGRAMS } from './programs';
 import { Amount, AmountType, AmountUnit } from './types/amount';
 import { ItemType, Type } from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
+import { LocalizableString } from './types/localizable-string';
 import { OwnerStatus } from './types/owner-status';
 
 export type StateIncentive = {
@@ -20,6 +21,7 @@ export type StateIncentive = {
   owner_status: OwnerStatus[];
   start_date: number;
   end_date: number;
+  short_description: LocalizableString;
   low_income?: boolean;
 };
 
@@ -59,7 +61,7 @@ const incentivePropertySchema = {
   end_date: {
     type: 'number',
   },
-  short_description: { type: 'string', maxLength: 150 },
+  short_description: { $ref: 'LocalizableString' },
   low_income: { type: 'boolean', nullable: true },
 } as const;
 const requiredProperties = [
@@ -72,6 +74,7 @@ const requiredProperties = [
   'program',
   'amount',
   'owner_status',
+  'short_description',
 ] as const;
 
 /******************************************************************************/

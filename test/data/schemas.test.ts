@@ -114,7 +114,7 @@ function isIncentiveAmountValid<T extends StateIncentive>(
 }
 
 test('state incentives JSON files match schemas', async tap => {
-  const ajv = new Ajv();
+  const ajv = new Ajv({ schemas: [LOCALIZABLE_STRING_SCHEMA] });
 
   STATE_INCENTIVE_TESTS.forEach(([stateId, schema, data]) => {
     const authorities = AUTHORITIES_BY_STATE[stateId as string];
@@ -128,6 +128,20 @@ test('state incentives JSON files match schemas', async tap => {
 
     // Check some constraints that aren't expressed in JSON schema
     data.forEach((incentive, index) => {
+      tap.ok(
+        incentive.short_description.en.length <= 150,
+        `${stateId} English description too long ` +
+          `(${incentive.short_description.en.length}), index ${index}`,
+      );
+
+      // We let Spanish descriptions be a little longer
+      if (incentive.short_description.es) {
+        tap.ok(
+          incentive.short_description.es.length <= 160,
+          `${stateId} Spanish description too long ` +
+            `(${incentive.short_description.en.length}), index ${index}`,
+        );
+      }
       tap.ok(
         isIncentiveAmountValid(incentive),
         `amount is invalid (${stateId}, index ${index})`,
