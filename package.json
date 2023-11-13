@@ -55,7 +55,7 @@
     "build": "./scripts/build.sh",
     "lint": "prettier --check . --ignore-path=.prettierignore && eslint .",
     "test": "yarn lint && dotenv -- tap -- --ts \"test/**/*.test.ts\"",
-    "update-ri-descriptions": "ts-node scripts/update-ri-descriptions"
+    "update-descriptions": "ts-node scripts/update-descriptions"
   },
   "tap": {
     "disable-coverage": true,
