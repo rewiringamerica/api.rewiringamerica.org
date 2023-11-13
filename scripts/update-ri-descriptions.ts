@@ -40,7 +40,10 @@ import path from 'path';
 
   type Incentive = {
     id: string;
-    short_description: string;
+    short_description: {
+      en: string;
+      es?: string;
+    };
   };
 
   // loop over all known RI incentives and apply edits if needed, logging either way:
@@ -52,11 +55,11 @@ import path from 'path';
   incentives.forEach(incentive => {
     if (descriptionsById.has(incentive.id)) {
       const spreadsheetDescription = descriptionsById.get(incentive.id)!;
-      if (incentive.short_description !== spreadsheetDescription) {
+      if (incentive.short_description.en !== spreadsheetDescription) {
         console.log(
-          `✏️ ${incentive.id}: "${incentive.short_description}" --> "${spreadsheetDescription}"`,
+          `✏️ ${incentive.id}: "${incentive.short_description.en}" --> "${spreadsheetDescription}"`,
         );
-        incentive.short_description = spreadsheetDescription;
+        incentive.short_description.en = spreadsheetDescription;
       } else {
         console.log(`✔ ${incentive.id}: no edits needed.`);
       }
