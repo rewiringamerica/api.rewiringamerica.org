@@ -1,12 +1,12 @@
 import { JSONSchemaType } from 'ajv';
 import fs from 'fs';
 import { AuthorityType } from './authorities';
+import { ALL_PROGRAMS } from './programs';
 import { FilingStatus } from './tax_brackets';
 import { Amount, AmountType, AmountUnit } from './types/amount';
 import { ItemType, Type, TypeV0 } from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
 import { OwnerStatus } from './types/owner-status';
-import { ALL_PROGRAMS } from './types/programs';
 
 export enum AmiQualification {
   LessThan150_Ami = 'less_than_150_ami',

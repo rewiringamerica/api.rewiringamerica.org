@@ -35,6 +35,12 @@ import { TAX_BRACKETS, SCHEMA as TB_SCHEMA } from '../../src/data/tax_brackets';
 
 import Ajv from 'ajv';
 import { SomeJSONSchema } from 'ajv/dist/types/json-schema';
+import {
+  ALL_PROGRAMS,
+  PROGRAMS,
+  PROGRAMS_SCHEMA,
+} from '../../src/data/programs';
+import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
 
 const TESTS = [
   [I_SCHEMA, IRA_INCENTIVES, 'ira_incentives'],
@@ -45,6 +51,7 @@ const TESTS = [
   [SMFI_SCHEMA, STATE_MFIS, 'state_mfis'],
   [TB_SCHEMA, TAX_BRACKETS, 'tax_brackets'],
   [AUTHORITIES_SCHEMA, AUTHORITIES_BY_STATE, 'authorities'],
+  [PROGRAMS_SCHEMA, PROGRAMS, 'programs'],
   [
     CT_LOW_INCOME_THRESHOLDS_SCHEMA,
     CT_LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
@@ -59,7 +66,7 @@ const TESTS = [
 
 test('static JSON files match schema', async tap => {
   tap.plan(TESTS.length);
-  const ajv = new Ajv();
+  const ajv = new Ajv({ schemas: [LOCALIZABLE_STRING_SCHEMA] });
 
   TESTS.forEach(([schema, data, label]) => {
     if (!tap.ok(ajv.validate(schema, data))) {
@@ -125,6 +132,10 @@ test('state incentives JSON files match schemas', async tap => {
   });
 });
 
+test('programs in data are exactly those in code', async tap => {
+  tap.same(Object.keys(PROGRAMS).sort(), Array.from(ALL_PROGRAMS).sort());
+});
+
 const isURLValid = (url: string): boolean => {
   try {
     new URL(url);
@@ -133,14 +144,18 @@ const isURLValid = (url: string): boolean => {
     return false;
   }
 };
+test('all programs have valid URLs', async tap => {
+  for (const [programId, data] of Object.entries(PROGRAMS)) {
+    for (const url of Object.values(data.url ?? [])) {
+      tap.ok(isURLValid(url), `${programId} has invalid URL`);
+    }
+  }
+});
 
 test('locale URLs are valid', async tap => {
   for (const [lang, locale] of Object.entries(LOCALES)) {
     for (const [key, url] of Object.entries(locale.urls)) {
       tap.ok(isURLValid(url), `${lang}.urls.${key} invalid`);
-    }
-    for (const [key, url] of Object.entries(locale.program_urls)) {
-      tap.ok(isURLValid(url), `${lang}.program_urls.${key} invalid`);
     }
   }
 });
