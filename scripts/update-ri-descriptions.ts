@@ -1,66 +1,91 @@
+import { parse } from 'csv-parse/sync';
 import fs from 'fs';
 import fetch from 'make-fetch-happen';
-import path from 'path';
+import minimist from 'minimist';
 
-(async function () {
-  const response = await fetch(
-    'https://docs.google.com/spreadsheets/d/e/2PACX-1vSoBQdIvYNb9fRkFggllmLZmz9nwL6SYxM7cdsiTPDU90C0HXtFh2r1qlYKdfbTzzxiPZ0o4NpOva__/pub?gid=30198531&single=true&output=tsv',
-  );
-  const body = await response.text();
+type LocalizableString = {
+  en: string;
+  es?: string;
+};
 
-  // TODO: probably use a real CSV parser here:
-  const lines: string[] = body.split('\n');
+type Incentive = {
+  id: string;
+  short_description: LocalizableString;
+};
 
-  // First row is a header of headers, so ignore it:
-  lines.shift();
-  const [headers, ...rows] = lines.map(line => line.split('\t'));
+type IncentiveFile = {
+  filepath: string;
+  sheetUrl: string;
+  idHeader: string;
+  enHeader: string;
+  esHeader?: string;
+  headerRowNumber?: number;
+};
 
-  // We only care about these columns at the moment:
-  const columnsWeWant = ['ID', 'Program Description (style guide)'];
+const FILES: { [ident: string]: IncentiveFile } = {
+  IRA: {
+    filepath: 'data/ira_incentives.json',
+    sheetUrl:
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vTt1X34nGvUZu8Z71S-P9voD_zL6zvNapDJcL-RbH8SohQYAKOMN7ZeAA4Ti130PFAjei4uHImyV6dg/pub?gid=0&single=true&output=csv',
+    idHeader: 'ID',
+    enHeader: 'Short Description (150 characters max)',
+    esHeader: 'Short Description-Spanish',
+  },
+  RI: {
+    filepath: 'data/RI/incentives.json',
+    sheetUrl:
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vSoBQdIvYNb9fRkFggllmLZmz9nwL6SYxM7cdsiTPDU90C0HXtFh2r1qlYKdfbTzzxiPZ0o4NpOva__/pub?gid=30198531&single=true&output=csv',
+    headerRowNumber: 2,
+    idHeader: 'ID',
+    enHeader: 'Program Description (style guide)',
+  },
+};
 
-  // Get an array of the indexes for those columns:
-  const indexesWeWant = headers
-    .map((header, index) => {
-      return {
-        header,
-        index,
-      };
-    })
-    .filter(({ header }) => columnsWeWant.includes(header))
-    .map(item => item.index);
+async function edit(file: IncentiveFile, write: boolean) {
+  const response = await fetch(file.sheetUrl);
+  const csvContent = await response.text();
+  const rows = parse(csvContent, {
+    columns: true,
+    from_line: file.headerRowNumber ?? 1,
+  });
 
-  // build a map from ID => description:
-  const descriptionsById = new Map<string, string>();
-  rows.forEach(row => {
-    const [id, description] = indexesWeWant.map(index => row[index]);
-    if (description.trim()) {
-      descriptionsById.set(id, description.trim());
+  const descriptionsById = new Map<string, LocalizableString>();
+
+  rows.forEach((row: Record<string, string>) => {
+    const id = row[file.idHeader];
+    if (!descriptionsById.has(id)) {
+      descriptionsById.set(id, { en: '' });
+    }
+
+    descriptionsById.get(id)!.en = row[file.enHeader].trim();
+    if (file.esHeader) {
+      descriptionsById.get(id)!.es = row[file.esHeader].trim();
     }
   });
 
-  type Incentive = {
-    id: string;
-    short_description: {
-      en: string;
-      es?: string;
-    };
-  };
-
-  // loop over all known RI incentives and apply edits if needed, logging either way:
-  const incentivePath = path.join(__dirname, '../data/RI/incentives.json');
   const incentives: Incentive[] = JSON.parse(
-    fs.readFileSync(incentivePath, 'utf-8'),
+    fs.readFileSync(file.filepath, 'utf-8'),
   );
 
   incentives.forEach(incentive => {
     if (descriptionsById.has(incentive.id)) {
       const spreadsheetDescription = descriptionsById.get(incentive.id)!;
-      if (incentive.short_description.en !== spreadsheetDescription) {
+      let edits = false;
+      if (incentive.short_description.en !== spreadsheetDescription.en) {
         console.log(
-          `✏️ ${incentive.id}: "${incentive.short_description.en}" --> "${spreadsheetDescription}"`,
+          `✏️ ${incentive.id}: "${incentive.short_description.en}" --> "${spreadsheetDescription.en}"`,
         );
-        incentive.short_description.en = spreadsheetDescription;
-      } else {
+        incentive.short_description.en = spreadsheetDescription.en;
+        edits = true;
+      }
+      if (incentive.short_description.es !== spreadsheetDescription.es) {
+        console.log(
+          `✏️ ${incentive.id}: "${incentive.short_description.es}" --> "${spreadsheetDescription.es}"`,
+        );
+        incentive.short_description.es = spreadsheetDescription.es;
+        edits = true;
+      }
+      if (!edits) {
         console.log(`✔ ${incentive.id}: no edits needed.`);
       }
     } else {
@@ -69,11 +94,27 @@ import path from 'path';
   });
 
   // if requested, write that file back out:
-  if (process.argv.includes('--write')) {
+  if (write) {
     fs.writeFileSync(
-      incentivePath,
+      file.filepath,
       JSON.stringify(incentives, null, 2) + '\n', // include newline to satisfy prettier
       'utf-8',
     );
   }
+}
+
+(async function () {
+  const args = minimist(process.argv.slice(2), { boolean: ['write'] });
+
+  const bad = args._.filter(f => !(f in FILES));
+  if (bad.length) {
+    console.error(
+      `${bad.join(', ')} not valid (choices: ${Object.keys(FILES).join(', ')})`,
+    );
+    process.exit(1);
+  }
+
+  args._.forEach(async fileIdent => {
+    await edit(FILES[fileIdent], args.write);
+  });
 })();
