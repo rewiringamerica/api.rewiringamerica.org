@@ -133,12 +133,6 @@ export const WEBSITE_INCENTIVE_SCHEMA = {
     eligible: {
       type: 'boolean',
     },
-    short_description: {
-      type: 'string',
-      examples: [
-        'A 150 character (or shorter) display description for the incentive.',
-      ],
-    },
   },
   additionalProperties: false,
   examples: [
