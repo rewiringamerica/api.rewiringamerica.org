@@ -6,6 +6,7 @@ import { FilingStatus } from './tax_brackets';
 import { Amount, AmountType, AmountUnit } from './types/amount';
 import { ItemType, Type, TypeV0 } from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
+import { LocalizableString } from './types/localizable-string';
 import { OwnerStatus } from './types/owner-status';
 
 export enum AmiQualification {
@@ -15,6 +16,7 @@ export enum AmiQualification {
 }
 
 export interface IRAIncentive {
+  id: string;
   agi_max_limit: number | null;
   ami_qualification: AmiQualification | null;
   amount: Amount;
@@ -27,7 +29,7 @@ export interface IRAIncentive {
   program: string;
   start_date: number;
   type: TypeV0;
-  short_description?: string;
+  short_description: LocalizableString;
 }
 
 // Work around https://github.com/ajv-validator/ajv/issues/1664
@@ -54,6 +56,7 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
   items: {
     type: 'object',
     properties: {
+      id: { type: 'string' },
       type: { type: 'string', enum: [Type.PosRebate, Type.TaxCredit] },
       program: { type: 'string', enum: ALL_PROGRAMS },
       authority_type: { type: 'string', const: AuthorityType.Federal },
@@ -77,9 +80,12 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
       }),
       start_date: { type: 'number' },
       end_date: { type: 'number' },
-      short_description: { type: 'string', nullable: true, maxLength: 150 },
+      short_description: {
+        $ref: 'LocalizableString',
+      },
     },
     required: [
+      'id',
       'agi_max_limit',
       'ami_qualification',
       'amount',
@@ -92,6 +98,7 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
       'program',
       'start_date',
       'type',
+      'short_description',
     ],
   },
 };

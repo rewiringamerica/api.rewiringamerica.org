@@ -40,6 +40,7 @@ function translateIncentives(incentives: IRAIncentive[]): WebsiteIncentive[] {
       'https://www.rewiringamerica.org',
       '',
     ),
+    short_description: tr(incentive.short_description, 'en'),
 
     type: incentive.type as TypeV0,
 
