@@ -5,10 +5,17 @@ import fs from 'fs';
 // https://homeenergy.pseg.com/homeweatherization
 
 export type NYLowIncomeThresholdsMap = {
-  [authorityName: string]: NYLowIncomeThresholds;
+  [authority_name: string]: NYLowIncomeThresholdsAuthority;
 };
 
-export type NYLowIncomeThresholds = { [hhSize: string]: number };
+export type NYLowIncomeThresholdsAuthority = {
+  source_url: string;
+  thresholds: NYLowIncomeThresholds;
+};
+
+export type NYLowIncomeThresholds = {
+  [hhSize: string]: number;
+};
 
 export const AUTHORITY_THRESHOLDS_SCHEMA: JSONSchemaType<NYLowIncomeThresholds> =
   {
@@ -19,10 +26,20 @@ export const AUTHORITY_THRESHOLDS_SCHEMA: JSONSchemaType<NYLowIncomeThresholds> 
     },
   } as const;
 
+export const AUTHORITY_INFO_SCHEMA: JSONSchemaType<NYLowIncomeThresholdsAuthority> =
+  {
+    type: 'object',
+    properties: {
+      source_url: { type: 'string' },
+      thresholds: AUTHORITY_THRESHOLDS_SCHEMA,
+    },
+    required: ['source_url', 'thresholds'],
+  } as const;
+
 export const SCHEMA: JSONSchemaType<NYLowIncomeThresholdsMap> = {
   type: 'object',
   required: ['default'],
-  additionalProperties: AUTHORITY_THRESHOLDS_SCHEMA,
+  additionalProperties: AUTHORITY_INFO_SCHEMA,
 };
 
 export const NY_LOW_INCOME_THRESHOLDS_BY_AUTHORITY: NYLowIncomeThresholdsMap =
