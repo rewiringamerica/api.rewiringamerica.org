@@ -91,7 +91,8 @@ export function calculateStateIncentivesAndSavings(
         thresholds_map[item.authority] ?? thresholds_map.default;
       if (
         item.low_income &&
-        request.household_income > authority_thresholds[request.household_size]
+        request.household_income >
+          authority_thresholds.thresholds[request.household_size]
       ) {
         eligible = false;
       }
