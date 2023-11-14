@@ -16,7 +16,9 @@
     ],
     "short_description": {
       "en": "Receive a $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer."
-    }
+    },
+    "start_date": 2022,
+    "end_date": 2026
   },
   {
     "id": "VA-2",
@@ -36,7 +38,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Receive up to $100 rebate per 1,000 SF of attic insulation for no AC/heat pump installed by a qualified contractor for an electrically heated home."
+      "en": "Receive up to $100 rebate per 1,000 SF of attic insulation for a heat pump installed by a qualified contractor for an electrically heated home with no AC."
     }
   },
   {
@@ -48,10 +50,8 @@
     "item_type": "rebate",
     "program": "va_takeChargeVirginiaEfficientProductsProgram",
     "amount": {
-      "type": "dollars_per_unit",
-      "unit": "square_foot",
-      "number": 0.1,
-      "maximum": 1500
+      "type": "dollar_amount",
+      "number": 100
     },
     "owner_status": [
       "homeowner"
@@ -80,7 +80,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$125 rebate per 1,000 SF of attic insulation for AC/ heat pump installed by a qualified contractor for an electrically heated home."
+      "en": "$125 rebate per 1,000 SF of attic insulation for a heat pump installed by a qualified contractor for an electrically heated home with AC."
     }
   },
   {
@@ -175,7 +175,7 @@
       "type": "dollars_per_unit",
       "unit": "square_foot",
       "number": 0.55,
-      "maximum": 550
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner"
@@ -193,8 +193,9 @@
     "item_type": "assistance_program",
     "program": "va_takeChargeVirginiaHomePerformanceProgram",
     "amount": {
-      "type": "dollar_amount",
-      "number": 1500
+      "type": "percent",
+      "number": 1,
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner"
@@ -212,8 +213,9 @@
     "item_type": "assistance_program",
     "program": "va_takeChargeVirginiaHomePerformanceProgram",
     "amount": {
-      "type": "dollar_amount",
-      "number": 600
+      "type": "percent",
+      "number": 1,
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner"
