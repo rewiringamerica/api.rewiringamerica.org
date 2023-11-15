@@ -4,6 +4,10 @@ import fs from 'fs';
 // Source of this data:
 // https://energizect.com/energy-evaluations/income-eligible-options
 
+export enum CTLowIncomeAuthority {
+  DEFAULT = 'default',
+}
+
 export type CTLowIncomeThresholdsMap = {
   [authority_name: string]: CTLowIncomeThresholdsAuthority;
 };
@@ -38,7 +42,7 @@ export const AUTHORITY_INFO_SCHEMA: JSONSchemaType<CTLowIncomeThresholdsAuthorit
 
 export const SCHEMA: JSONSchemaType<CTLowIncomeThresholdsMap> = {
   type: 'object',
-  required: ['default'],
+  required: Object.values(CTLowIncomeAuthority),
   additionalProperties: AUTHORITY_INFO_SCHEMA,
 };
 

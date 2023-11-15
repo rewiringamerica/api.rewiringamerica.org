@@ -5,6 +5,12 @@ import fs from 'fs';
 // https://dhs.ri.gov/programs-and-services/energy-and-water-assistance-programs/ffy-2023-low-income-guidelines
 // https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Income-Eligible-Services#qualify
 
+export enum RILowIncomeAuthority {
+  DEFAULT = 'default',
+  RIDHS = 'ri-dhs',
+  RIENERGY = 'ri-rhode-island-energy',
+}
+
 export type RILowIncomeThresholdsMap = {
   [authority_name: string]: RILowIncomeThresholdsAuthority;
 };
@@ -39,7 +45,7 @@ export const AUTHORITY_INFO_SCHEMA: JSONSchemaType<RILowIncomeThresholdsAuthorit
 
 export const SCHEMA: JSONSchemaType<RILowIncomeThresholdsMap> = {
   type: 'object',
-  required: ['default', 'ri-dhs', 'ri-rhode-island-energy'],
+  required: Object.values(RILowIncomeAuthority),
   additionalProperties: AUTHORITY_INFO_SCHEMA,
 };
 

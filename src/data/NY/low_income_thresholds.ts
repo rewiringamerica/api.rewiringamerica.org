@@ -4,6 +4,10 @@ import fs from 'fs';
 // Source of this data:
 // https://homeenergy.pseg.com/homeweatherization
 
+export enum NYLowIncomeAuthority {
+  DEFAULT = 'default',
+}
+
 export type NYLowIncomeThresholdsMap = {
   [authority_name: string]: NYLowIncomeThresholdsAuthority;
 };
@@ -38,7 +42,7 @@ export const AUTHORITY_INFO_SCHEMA: JSONSchemaType<NYLowIncomeThresholdsAuthorit
 
 export const SCHEMA: JSONSchemaType<NYLowIncomeThresholdsMap> = {
   type: 'object',
-  required: ['default'],
+  required: Object.values(NYLowIncomeAuthority),
   additionalProperties: AUTHORITY_INFO_SCHEMA,
 };
 
