@@ -1,9 +1,7 @@
 import { JSONSchemaType } from 'ajv';
 import fs from 'fs';
-import { CTLowIncomeAuthority } from './CT/low_income_thresholds';
-import { NYLowIncomeAuthority } from './NY/low_income_thresholds';
-import { RILowIncomeAuthority } from './RI/low_income_thresholds';
 import { AuthorityType } from './authorities';
+import { RILowIncomeAuthority } from './low_income_thresholds';
 import { ALL_PROGRAMS } from './programs';
 import { Amount, AmountType, AmountUnit } from './types/amount';
 import { ItemType, Type } from './types/incentive-types';
@@ -11,10 +9,7 @@ import { ALL_ITEMS, Item } from './types/items';
 import { LocalizableString } from './types/localizable-string';
 import { OwnerStatus } from './types/owner-status';
 
-export type LowIncomeAuthority =
-  | CTLowIncomeAuthority
-  | NYLowIncomeAuthority
-  | RILowIncomeAuthority;
+export type LowIncomeAuthority = 'default' | RILowIncomeAuthority;
 
 export type StateIncentive = {
   id: string;

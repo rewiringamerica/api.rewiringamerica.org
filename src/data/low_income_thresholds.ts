@@ -19,7 +19,7 @@ export type LowIncomeThresholds = {
 };
 
 // Add custom state low income authorities here
-export enum RIIncomeAuthority {
+export enum RILowIncomeAuthority {
   DHS = 'ri-dhs',
   ENERGY = 'ri-rhode-island-energy',
 }
@@ -49,7 +49,7 @@ export const STATE_THRESHOLDS_SCHEMA: JSONSchemaType<StateLowIncomeThresholds> =
     required: ['default'],
     dependentSchemas: {
       RI: {
-        required: Object.values(RIIncomeAuthority),
+        required: Object.values(RILowIncomeAuthority),
       },
     },
     additionalProperties: AUTHORITY_INFO_SCHEMA,
