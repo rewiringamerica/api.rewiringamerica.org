@@ -79,9 +79,11 @@ See Google's [concurrency guide](https://cloud.google.com/run/docs/about-concurr
 
 Source data for state and utility incentives is currently managed in spreadsheets. Some scripts are provided to help reconcile the data:
 
-### `yarn update-ri-descriptions`
+### `yarn update-descriptions`
 
-This script pulls the ids and descriptions from the spreadsheet and applies them to the RI JSON as needed. Does not edit by default. Use `--write` argument to apply edits.
+This script pulls the ids and descriptions from the spreadsheet and applies them to the JSON files as needed. Pass state codes, or `IRA`, as arguments, to update those files. Update `scripts/update-descriptions.ts` when new states are added.
+
+Does not modify the files by default. Use `--write` argument to apply edits.
 
 ### `./scripts/update-fixtures.sh`
 

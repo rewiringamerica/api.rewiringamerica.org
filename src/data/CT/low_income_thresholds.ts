@@ -5,10 +5,17 @@ import fs from 'fs';
 // https://energizect.com/energy-evaluations/income-eligible-options
 
 export type CTLowIncomeThresholdsMap = {
-  [authorityName: string]: CTLowIncomeThresholds;
+  [authority_name: string]: CTLowIncomeThresholdsAuthority;
 };
 
-export type CTLowIncomeThresholds = { [hhSize: string]: number };
+export type CTLowIncomeThresholdsAuthority = {
+  source_url: string;
+  thresholds: CTLowIncomeThresholds;
+};
+
+export type CTLowIncomeThresholds = {
+  [hhSize: string]: number;
+};
 
 export const AUTHORITY_THRESHOLDS_SCHEMA: JSONSchemaType<CTLowIncomeThresholds> =
   {
@@ -19,10 +26,20 @@ export const AUTHORITY_THRESHOLDS_SCHEMA: JSONSchemaType<CTLowIncomeThresholds> 
     },
   } as const;
 
+export const AUTHORITY_INFO_SCHEMA: JSONSchemaType<CTLowIncomeThresholdsAuthority> =
+  {
+    type: 'object',
+    properties: {
+      source_url: { type: 'string' },
+      thresholds: AUTHORITY_THRESHOLDS_SCHEMA,
+    },
+    required: ['source_url', 'thresholds'],
+  } as const;
+
 export const SCHEMA: JSONSchemaType<CTLowIncomeThresholdsMap> = {
   type: 'object',
   required: ['default'],
-  additionalProperties: AUTHORITY_THRESHOLDS_SCHEMA,
+  additionalProperties: AUTHORITY_INFO_SCHEMA,
 };
 
 export const CT_LOW_INCOME_THRESHOLDS_BY_AUTHORITY: CTLowIncomeThresholdsMap =

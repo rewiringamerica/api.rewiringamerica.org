@@ -16,6 +16,7 @@ export enum AmiQualification {
 }
 
 export interface IRAIncentive {
+  id: string;
   agi_max_limit: number | null;
   ami_qualification: AmiQualification | null;
   amount: Amount;
@@ -55,6 +56,7 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
   items: {
     type: 'object',
     properties: {
+      id: { type: 'string' },
       type: { type: 'string', enum: [Type.PosRebate, Type.TaxCredit] },
       program: { type: 'string', enum: ALL_PROGRAMS },
       authority_type: { type: 'string', const: AuthorityType.Federal },
@@ -83,6 +85,7 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
       },
     },
     required: [
+      'id',
       'agi_max_limit',
       'ami_qualification',
       'amount',

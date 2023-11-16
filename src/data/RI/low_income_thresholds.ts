@@ -6,10 +6,17 @@ import fs from 'fs';
 // https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Income-Eligible-Services#qualify
 
 export type RILowIncomeThresholdsMap = {
-  [authorityName: string]: RILowIncomeThresholds;
+  [authority_name: string]: RILowIncomeThresholdsAuthority;
 };
 
-export type RILowIncomeThresholds = { [hhSize: string]: number };
+export type RILowIncomeThresholdsAuthority = {
+  source_url: string;
+  thresholds: RILowIncomeThresholds;
+};
+
+export type RILowIncomeThresholds = {
+  [hhSize: string]: number;
+};
 
 export const AUTHORITY_THRESHOLDS_SCHEMA: JSONSchemaType<RILowIncomeThresholds> =
   {
@@ -20,10 +27,20 @@ export const AUTHORITY_THRESHOLDS_SCHEMA: JSONSchemaType<RILowIncomeThresholds> 
     },
   } as const;
 
+export const AUTHORITY_INFO_SCHEMA: JSONSchemaType<RILowIncomeThresholdsAuthority> =
+  {
+    type: 'object',
+    properties: {
+      source_url: { type: 'string' },
+      thresholds: AUTHORITY_THRESHOLDS_SCHEMA,
+    },
+    required: ['source_url', 'thresholds'],
+  } as const;
+
 export const SCHEMA: JSONSchemaType<RILowIncomeThresholdsMap> = {
   type: 'object',
   required: ['default', 'ri-dhs', 'ri-rhode-island-energy'],
-  additionalProperties: AUTHORITY_THRESHOLDS_SCHEMA,
+  additionalProperties: AUTHORITY_INFO_SCHEMA,
 };
 
 export const RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY: RILowIncomeThresholdsMap =
