@@ -1,12 +1,15 @@
 import { JSONSchemaType } from 'ajv';
 import fs from 'fs';
 import { AuthorityType } from './authorities';
+import { RILowIncomeAuthority } from './low_income_thresholds';
 import { ALL_PROGRAMS } from './programs';
 import { Amount, AmountType, AmountUnit } from './types/amount';
 import { ItemType, Type } from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
 import { LocalizableString } from './types/localizable-string';
 import { OwnerStatus } from './types/owner-status';
+
+export type LowIncomeAuthority = 'default' | RILowIncomeAuthority;
 
 export type StateIncentive = {
   id: string;
@@ -22,7 +25,7 @@ export type StateIncentive = {
   start_date: number;
   end_date: number;
   short_description: LocalizableString;
-  low_income?: boolean;
+  low_income?: LowIncomeAuthority;
 };
 
 export type StateIncentivesMap = {
@@ -62,7 +65,7 @@ const incentivePropertySchema = {
     type: 'number',
   },
   short_description: { $ref: 'LocalizableString' },
-  low_income: { type: 'boolean', nullable: true },
+  low_income: { type: 'string', nullable: true },
 } as const;
 const requiredProperties = [
   'id',

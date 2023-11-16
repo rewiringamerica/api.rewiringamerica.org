@@ -1,13 +1,5 @@
 import { test } from 'tap';
 import {
-  CT_LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
-  SCHEMA as CT_LOW_INCOME_THRESHOLDS_SCHEMA,
-} from '../../src/data/CT/low_income_thresholds';
-import {
-  RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
-  SCHEMA as RI_LOW_INCOME_THRESHOLDS_SCHEMA,
-} from '../../src/data/RI/low_income_thresholds';
-import {
   AUTHORITIES_BY_STATE,
   SCHEMA as AUTHORITIES_SCHEMA,
 } from '../../src/data/authorities';
@@ -20,6 +12,10 @@ import {
   SCHEMA as ISS_SCHEMA,
 } from '../../src/data/ira_state_savings';
 import { LOCALES, SCHEMA as L_SCHEMA } from '../../src/data/locale';
+import {
+  LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
+  SCHEMA as LOW_INCOME_THRESHOLDS_SCHEMA,
+} from '../../src/data/low_income_thresholds';
 import { SOLAR_PRICES, SCHEMA as SP_SCHEMA } from '../../src/data/solar_prices';
 import {
   CT_INCENTIVES,
@@ -33,7 +29,7 @@ import {
 import { SCHEMA as SMFI_SCHEMA, STATE_MFIS } from '../../src/data/state_mfi';
 import { TAX_BRACKETS, SCHEMA as TB_SCHEMA } from '../../src/data/tax_brackets';
 
-import Ajv from 'ajv';
+import Ajv from 'ajv/dist/2020';
 import { SomeJSONSchema } from 'ajv/dist/types/json-schema';
 import {
   ALL_PROGRAMS,
@@ -53,14 +49,9 @@ const TESTS = [
   [AUTHORITIES_SCHEMA, AUTHORITIES_BY_STATE, 'authorities'],
   [PROGRAMS_SCHEMA, PROGRAMS, 'programs'],
   [
-    CT_LOW_INCOME_THRESHOLDS_SCHEMA,
-    CT_LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
-    'CT low income',
-  ],
-  [
-    RI_LOW_INCOME_THRESHOLDS_SCHEMA,
-    RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
-    'RI low income',
+    LOW_INCOME_THRESHOLDS_SCHEMA,
+    LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
+    'State low income',
   ],
 ];
 
