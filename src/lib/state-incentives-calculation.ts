@@ -1,14 +1,21 @@
-import { AuthorityType } from '../data/authorities';
 import { CT_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/CT/low_income_thresholds';
 import { NY_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/NY/low_income_thresholds';
 import { RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/RI/low_income_thresholds';
-import { STATE_INCENTIVES_BY_STATE } from '../data/state_incentives';
+import { AuthorityType } from '../data/authorities';
+import {
+  INCENTIVE_RELATIONSHIPS_BY_STATE,
+  StateIncentiveRelationships,
+} from '../data/state_incentive_relationships';
+import {
+  STATE_INCENTIVES_BY_STATE,
+  StateIncentive,
+} from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
 import { APICoverage } from '../data/types/coverage';
 import { OwnerStatus } from '../data/types/owner-status';
 import { BETA_STATES, LAUNCHED_STATES } from '../data/types/states';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
-import { CalculatedIncentive, CalculateParams } from './incentives-calculation';
+import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
 
 export function calculateStateIncentivesAndSavings(
   stateId: string,
@@ -38,8 +45,8 @@ export function calculateStateIncentivesAndSavings(
     !request.authority_types ||
     request.authority_types.includes(AuthorityType.Utility);
 
-  const eligibleIncentives = [];
-  const ineligibleIncentives = [];
+  const eligibleIncentives = new Map<string, StateIncentive>();
+  const ineligibleIncentives = new Map<string, StateIncentive>();
 
   for (const item of incentives) {
     if (request.items && !request.items.includes(item.item)) {
@@ -96,30 +103,31 @@ export function calculateStateIncentivesAndSavings(
         eligible = false;
       }
     }
-
-    const transformedItem = {
-      ...item,
-      eligible,
-
-      // Fill in fields expected for IRA incentive.
-      // TODO: don't require these on APIIncentive
-      agi_max_limit: null,
-      ami_qualification: null,
-      filing_status: null,
-
-      // TODO: unclear whether state/utility incentives always have defined
-      // end dates.
-      start_date: 2023,
-      end_date: 2024,
-    };
     if (eligible) {
-      eligibleIncentives.push(transformedItem);
+      eligibleIncentives.set(item.id, item);
     } else {
-      ineligibleIncentives.push(transformedItem);
+      ineligibleIncentives.set(item.id, item);
     }
   }
 
-  const stateIncentives = [...eligibleIncentives, ...ineligibleIncentives];
+  const prerequisiteMaps = buildPrerequisiteMaps(
+    INCENTIVE_RELATIONSHIPS_BY_STATE[stateId],
+  );
+
+  // Use relationship maps to update incentive eligibility.
+  for (const prereqRelationship of prerequisiteMaps.requiresMap) {
+    checkPrerequisites(
+      prereqRelationship[0],
+      prereqRelationship[1],
+      eligibleIncentives,
+      ineligibleIncentives,
+      prerequisiteMaps.requiredByMap,
+    );
+  }
+
+  const eligibleTransformed = transformItems(eligibleIncentives, true);
+  const ineligibleTransformed = transformItems(ineligibleIncentives, false);
+  const stateIncentives = [...eligibleTransformed, ...ineligibleTransformed];
 
   const savings: APISavings = zeroSavings();
 
@@ -141,4 +149,113 @@ export function calculateStateIncentivesAndSavings(
       utility: request.utility ?? null,
     },
   };
+}
+
+/* Uses relationships object to build two maps:
+- one from incentive ID to an array of IDs of incentives it requires (requiresMap),
+- one from incentive ID to an array of IDs of incentives that require it (requiredByMap)
+*/
+function buildPrerequisiteMaps(
+  incentiveRelationships: StateIncentiveRelationships,
+) {
+  const requiresMap = new Map<string, string[]>();
+  const requiredByMap = new Map<string, string[]>();
+  if (
+    incentiveRelationships != undefined &&
+    incentiveRelationships.prerequisites != undefined
+  ) {
+    for (const relationship of incentiveRelationships.prerequisites) {
+      const requiredIncentives = relationship.requires;
+      requiresMap.set(relationship.id, requiredIncentives);
+
+      for (const requiredIncentiveId of requiredIncentives) {
+        const existingDependencies = requiredByMap.get(requiredIncentiveId);
+        if (existingDependencies != undefined) {
+          existingDependencies.push(relationship.id);
+        } else {
+          requiredByMap.set(requiredIncentiveId, [relationship.id]);
+        }
+      }
+    }
+  }
+  return { requiresMap, requiredByMap };
+}
+
+function checkPrerequisites(
+  incentiveId: string,
+  prerequisiteIds: string[],
+  eligibleIncentives: Map<string, StateIncentive>,
+  ineligibleIncentives: Map<string, StateIncentive>,
+  dependencyMap: Map<string, string[]>,
+) {
+  for (const prerequisiteId of prerequisiteIds) {
+    if (
+      eligibleIncentives.has(incentiveId) &&
+      !eligibleIncentives.has(prerequisiteId)
+    ) {
+      const incentive = eligibleIncentives.get(incentiveId);
+      if (incentive != undefined) {
+        eligibleIncentives.delete(incentiveId);
+        ineligibleIncentives.set(incentiveId, incentive);
+        checkDependencies(
+          incentiveId,
+          dependencyMap,
+          eligibleIncentives,
+          ineligibleIncentives,
+        );
+        // TODO: also need to check supersedes map when mutual exclusion relationships are implemented.
+      }
+    }
+  }
+}
+
+function checkDependencies(
+  incentiveId: string,
+  dependencyMap: Map<string, string[]>,
+  eligibleIncentives: Map<string, StateIncentive>,
+  ineligibleIncentives: Map<string, StateIncentive>,
+) {
+  const dependencyIds = dependencyMap.get(incentiveId);
+  if (dependencyIds != undefined) {
+    for (const dependencyId of dependencyIds) {
+      console.log(dependencyId);
+      const dependency = eligibleIncentives.get(dependencyId);
+      if (dependency != undefined) {
+        eligibleIncentives.delete(dependencyId);
+        ineligibleIncentives.set(dependencyId, dependency);
+        checkDependencies(
+          dependencyId,
+          dependencyMap,
+          eligibleIncentives,
+          ineligibleIncentives,
+        );
+      }
+    }
+  }
+}
+
+function transformItems(
+  incentives: Map<string, StateIncentive>,
+  eligible: boolean,
+) {
+  const transformed = [];
+  for (const item of incentives.values()) {
+    const transformedItem = {
+      ...item,
+      eligible,
+
+      // Fill in fields expected for IRA incentive.
+      // TODO: don't require these on APIIncentive
+      agi_max_limit: null,
+      ami_qualification: null,
+      filing_status: null,
+
+      // TODO: unclear whether state/utility incentives always have defined
+      // end dates.
+      start_date: 2023,
+      end_date: 2024,
+    };
+    transformed.push(transformedItem);
+  }
+  return transformed;
 }
