@@ -57,7 +57,7 @@ export const STATE_THRESHOLDS_SCHEMA: JSONSchemaType<StateLowIncomeThresholds> =
 
 export const SCHEMA: JSONSchemaType<LowIncomeThresholdsMap> = {
   type: 'object',
-  required: ['CT', 'NY', 'RI'],
+  required: ['CT', 'NY', 'RI', 'VA'],
   additionalProperties: STATE_THRESHOLDS_SCHEMA,
 };
 
