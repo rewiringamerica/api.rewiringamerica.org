@@ -118,14 +118,18 @@ export default async function (
         request.query.zip,
       );
       if (!incomeInfo) {
-        throw fastify.httpErrors.createError(404, "Zip code doesn't exist.", {
-          field: 'zip',
-        });
+        throw fastify.httpErrors.createError(
+          404,
+          t('errors', 'zip_code_doesnt_exist'),
+          {
+            field: 'zip',
+          },
+        );
       }
       if (!isCompleteIncomeInfo(incomeInfo)) {
         throw fastify.httpErrors.createError(
           404,
-          "We currently don't have data for this location.",
+          t('errors', 'no_data_for_location'),
           { field: 'zip' },
         );
       }

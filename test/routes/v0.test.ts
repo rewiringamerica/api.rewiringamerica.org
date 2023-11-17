@@ -255,7 +255,7 @@ test('non-existent zips', async t => {
   t.equal(res.statusCode, 404, 'response status is 404');
   t.equal(calculatorResponse.statusCode, 404, 'payload statusCode is 404');
   t.equal(calculatorResponse.error, 'Not Found', 'payload error is Not Found');
-  t.equal(calculatorResponse.message, "Zip code doesn't exist.");
+  t.equal(calculatorResponse.message, "That ZIP code doesn't exist.");
   t.equal(calculatorResponse.field, 'zip');
 });
 
@@ -273,7 +273,7 @@ test('existing zips without data', async t => {
   t.equal(calculatorResponse.error, 'Not Found', 'payload error is Not Found');
   t.equal(
     calculatorResponse.message,
-    "We currently don't have data for this location.",
+    "We currently don't have data for that location.",
   );
   t.equal(calculatorResponse.field, 'zip');
 });
