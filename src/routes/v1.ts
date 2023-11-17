@@ -134,7 +134,9 @@ export default async function (
       if (!location) {
         throw fastify.httpErrors.createError(
           404,
-          t('errors', 'cannot_locate_address', language),
+          request.query.location.zip
+            ? t('errors', 'zip_code_doesnt_exist', language)
+            : t('errors', 'cannot_locate_address', language),
           {
             field: 'location',
           },
