@@ -139,6 +139,25 @@ test('NY response with state and utility is valid and correct', async t => {
   );
 });
 
+// VA low income test
+test('VA low income response with state and utility filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '22030' },
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 40000,
+      tax_filing: 'joint',
+      authority_types: ['state', 'utility'],
+      utility: 'va-dominion-virginia-power',
+      // TODO: Remove when VA is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-va-22030-state-utility-lowincome.json',
+  );
+});
+
 const BAD_QUERIES = [
   // bad location:
   {
