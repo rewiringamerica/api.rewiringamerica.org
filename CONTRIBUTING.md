@@ -1,0 +1,73 @@
+# Developer Guide
+
+This is a guide to contributing to this codebase. It's intended both for Rewiring America engineers and external contributors.
+
+## Getting started
+
+First, read the [README](README.md), especially the section on [API versions](README.md#api-versions).
+
+Look at the [public API docs](https://api.rewiringamerica.org/docs) to understand the general shape of the API.
+
+## For external contributors
+
+### Incentive data
+
+As stated in [the README](README.md#contributing), we're not currently set up for external contributions of incentive data. Gathering and maintaining a dataset of electrification incentives all across the US is a significant undertaking, and we're still early in that undertaking.
+
+Our tools and processes for dealing with this data are nascent and quickly changing. We aim to open them up to external contributors eventually, but we're not there yet.
+
+### Code
+
+Code changes in this project are driven almost entirely by the needs of our nationwide incentive data gathering project. As such, we don't have a list of PR-ready tasks that are independent of incentive data.
+
+We aren't categorically ruling out external code contributions, but we advise [contacting us](README.md#contact) before sending in a PR.
+
+## Codebase overview
+
+All the code is TypeScript, and is required to typecheck without errors.
+
+### Server
+
+- The server uses [Fastify](https://fastify.io), with a minimal set of plugins, defined in `src/plugins`.
+
+- All API endpoints return JSON, which conforms to the JSON Schemas in `src/schemas`. We use [json-schema-to-ts](https://github.com/ThomasAribart/json-schema-to-ts) to generate TypeScript types from these schemas.
+
+- The API entry points are defined in `src/routes`.
+
+- The calculation of incentive eligibility is implemented in `src/lib/incentives-calculation.ts` and `src/lib/state-incentives-calculation.ts`.
+
+### Data
+
+- Incentives are stored in JSON files in the directory `data`. The federal incentives are in `data/ira_incentives.json` and the state/utility incentives are in the subdirectories of `data` named with two-letter state codes.
+
+  - There is a concept of "beta" states, whose incentives are not included in API responses unless the `include_beta_states` query param is set. The sets of launched and beta states are defined in `src/data/types/states.ts`.
+
+- There are several other JSON data files in `data`, containing ancillary information such as tax brackets, low-income thresholds as defined by various authorities, and more.
+
+- All JSON data files are validated against a JSON Schema. The schemas are in TypeScript files in `src/data`, mostly named to correspond to the relevant data file. We use a mix of [Ajv](https://github.com/ajv-validator/ajv) and [json-schema-to-ts](https://github.com/ThomasAribart/json-schema-to-ts) to have TypeScript types that match these schemas.
+
+- There is some geographic data, in CSV format, in `scripts/data`. This is loaded into a SQLite database as a build step, and the SQLite file is deployed as part of the server image. This data allows mapping ZIP codes to census tracts, and census tracts to Area Median Income (AMI); this is used to compute incentive eligibility.
+
+### Automated description updates
+
+The script `scripts/update-descriptions.ts` fetches short descriptions for incentives from our internal spreadsheets, and writes them to the corresponding JSON files. Spreadsheet rows and JSON incentives are correlated by ID. Update the script whenever new states/spreadsheets are added. (We aim to eventually generate entire incentives JSON files like this, not just the `short_description` field.)
+
+The script is also runnable as `yarn update-descriptions`. Pass two-letter state codes, or `IRA`, as arguments to the script. By default, the script only shows a diff and does not modify the files; pass `--write` to apply edits.
+
+## Branching
+
+- All PRs should be branches off of `main`.
+- PRs should be landed by "squash and merge". We don't like merge commits or cluttered history.
+- There should not be long-lived feature branches.
+- Anything landed on `main` **may be deployed to production at any time**.
+
+## Tests
+
+Automated tests are run for every PR, and we require all tests to pass before any PR can land.
+
+The codebase has fairly comprehensive test coverage, and we expect all changes to be well-covered. There are:
+
+- End-to-end tests of the API endpoints, in `test/routes`. These compare live output against fixtures in `test/fixtures`.
+  - There's a script to update the fixtures to match the output of a local instance of the server, in `scripts/update-fixtures.sh`. If you add a new fixture, make sure to add it to the script.
+- Unit tests of various business logic modules, in `test/lib`.
+- Unit tests that validate the static data files against JSON Schema, in `test/data`.
