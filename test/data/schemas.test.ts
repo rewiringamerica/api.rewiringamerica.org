@@ -22,6 +22,11 @@ import {
 import { LOCALES, SCHEMA as L_SCHEMA } from '../../src/data/locale';
 import { SOLAR_PRICES, SCHEMA as SP_SCHEMA } from '../../src/data/solar_prices';
 import {
+  CT_RELATIONSHIPS,
+  INCENTIVE_RELATIONSHIPS_SCHEMA,
+  IncentiveRelationships,
+} from '../../src/data/state_incentive_relationships';
+import {
   CT_INCENTIVES,
   CT_INCENTIVES_SCHEMA,
   NY_INCENTIVES,
@@ -72,6 +77,14 @@ const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
   ['CT', CT_INCENTIVES_SCHEMA, CT_INCENTIVES],
   ['NY', NY_INCENTIVES_SCHEMA, NY_INCENTIVES],
   ['RI', RI_INCENTIVES_SCHEMA, RI_INCENTIVES],
+];
+
+const STATE_INCENTIVE_RELATIONSHIP_TESTS: [
+  string,
+  IncentiveRelationships,
+  IncentiveRelationships,
+][] = [
+  ['CT', INCENTIVE_RELATIONSHIPS_SCHEMA, CT_RELATIONSHIPS],
 ];
 
 /**
@@ -143,4 +156,97 @@ test('locale URLs are valid', async tap => {
       tap.ok(isURLValid(url), `${lang}.program_urls.${key} invalid`);
     }
   }
+});
+
+// Builds a graph of incentive relationships, represented as pairs of incentive
+// ID and the set of IDs of incentives that are dependent on that incentive.
+function buildRelationshipGraph(data: IncentiveRelationships) {
+  const edges = new Map<string, Set<string>>();
+  // For exclusion relationships, the superseding incentive is the "source."
+  if (data.exclusions) {
+    for (const relationship of data.exclusions) {
+      edges.set(relationship.id, new Set(relationship.supersedes));
+    }
+  }
+  // For prerequisite relationships, the required incentive is the "source."
+  if (data.prerequisites) {
+    for (const relationship of data.prerequisites) {
+      const targetId = relationship.id;
+      for (const sourceId of relationship.requires) {
+        let existingTargetIds = edges.get(sourceId);
+        if (existingTargetIds != undefined) {
+          existingTargetIds.add(targetId);
+        } else {
+          existingTargetIds = new Set<string>([targetId]);
+          edges.set(sourceId, existingTargetIds);
+        }
+      }
+    }
+  }
+  return edges;
+}
+
+// Helper to check for circular dependencies in the incentive relationships.
+function checkForCycle(
+  incentiveId: string,
+  seen: Set<string>,
+  finished: Set<string>,
+  edges: Map<string, Set<string>>,
+) {
+  if (finished.has(incentiveId)) {
+    // We've already finished checking this incentive.
+    return false;
+  }
+  if (seen.has(incentiveId)) {
+    // We haven't finished checking this incentive's dependencies but are
+    // visiting it for the second time. This is a cycle.
+    return true;
+  }
+  seen.add(incentiveId);
+  const dependencies = edges.get(incentiveId);
+  if (dependencies != undefined) {
+    for (const id of dependencies) {
+      if (checkForCycle(id, seen, finished, edges)) {
+        return true;
+      }
+    }
+  }
+  finished.add(incentiveId);
+  return false;
+}
+
+test('state incentive relationships JSON files match schemas', async tap => {
+  const ajv = new Ajv();
+
+  STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([stateId, schema, data]) => {
+    if (
+      !tap.ok(
+        ajv.validate(schema, data),
+        `${stateId} incentive relationships invalid`,
+      )
+    ) {
+      console.error(ajv.errors);
+    }
+
+    // Check that there are no circular dependencies in the relationships.
+    const relationshipGraph = buildRelationshipGraph(data);
+    const seen = new Set<string>();
+    const finished = new Set<string>();
+    const toCheck = Array.from(relationshipGraph.keys());
+    let hasCycle = false;
+    if (toCheck != undefined) {
+      for (const incentiveId of toCheck) {
+        hasCycle = checkForCycle(
+          incentiveId,
+          seen,
+          finished,
+          relationshipGraph,
+        );
+        if (hasCycle) {
+          break;
+        }
+      }
+    }
+    tap.equal(hasCycle, false);
+  });
 });

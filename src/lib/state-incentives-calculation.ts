@@ -4,7 +4,7 @@ import { RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/RI/low_income_thr
 import { AuthorityType } from '../data/authorities';
 import {
   INCENTIVE_RELATIONSHIPS_BY_STATE,
-  StateIncentiveRelationships,
+  IncentiveRelationships,
 } from '../data/state_incentive_relationships';
 import {
   STATE_INCENTIVES_BY_STATE,
@@ -155,9 +155,7 @@ export function calculateStateIncentivesAndSavings(
 - one from incentive ID to an array of IDs of incentives it requires (requiresMap),
 - one from incentive ID to an array of IDs of incentives that require it (requiredByMap)
 */
-function buildPrerequisiteMaps(
-  incentiveRelationships: StateIncentiveRelationships,
-) {
+function buildPrerequisiteMaps(incentiveRelationships: IncentiveRelationships) {
   const requiresMap = new Map<string, string[]>();
   const requiredByMap = new Map<string, string[]>();
   if (
