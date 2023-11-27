@@ -1,10 +1,9 @@
 ---
 name: Incorrect incentive information
-about: "/calculator returned an incentive with incorrect info"
+about: '/calculator returned an incentive with incorrect info'
 title: ''
 labels: ''
 assignees: ''
-
 ---
 
 **Which incentive(s)?**

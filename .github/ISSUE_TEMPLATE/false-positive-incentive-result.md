@@ -4,7 +4,6 @@ about: "/calculator said you're eligible for an incentive, but you're not"
 title: ''
 labels: ''
 assignees: ''
-
 ---
 
 **Which incentive(s)?**
