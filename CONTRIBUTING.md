@@ -61,6 +61,12 @@ The script is also runnable as `yarn update-descriptions`. Pass two-letter state
 - There should not be long-lived feature branches.
 - Anything landed on `main` **may be deployed to production at any time**.
 
+## Code review
+
+All PRs are code-reviewed and require at least one approval from a repo committer (which currently includes RA staff only) before merging. PR authors merge their own PRs once they're approved and tests are passing.
+
+To speed things up, we sometimes "approve with comments": approving but pointing out minor things that we trust the author to fix before merging, or that we leave up to the author's discretion. After fixing (or not fixing) such things, the author is free to merge without further review. (However, they can request another review if they want.)
+
 ## Tests
 
 Automated tests are run for every PR, and we require all tests to pass before any PR can land.
