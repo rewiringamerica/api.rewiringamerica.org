@@ -23,8 +23,8 @@ test('basic test for supplying test incentive data to calculation logic', async 
     TEST_INCENTIVES,
   );
   t.ok(data);
-  // Currently the test data only includes RI-1, so that is the only incentive
-  // that should be included in the results.
-  t.equal(data.stateIncentives[0].id, 'RI-1');
+  // Currently the test data only includes incentive A, so that is the only
+  // incentive that should be included in the results.
+  t.equal(data.stateIncentives[0].id, 'A');
   t.equal(data.stateIncentives[0].eligible, true);
 });
