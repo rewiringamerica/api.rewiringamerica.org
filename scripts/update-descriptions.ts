@@ -38,6 +38,7 @@ const FILES: { [ident: string]: IncentiveFile } = {
     headerRowNumber: 2,
     idHeader: 'ID',
     enHeader: 'Program Description (style guide)',
+    esHeader: 'Program Description (Spanish)',
   },
 };
 

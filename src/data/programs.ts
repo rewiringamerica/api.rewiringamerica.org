@@ -56,6 +56,17 @@ export const ALL_PROGRAMS = [
   'ri_residentialHeatPumpWaterHeater',
   'ri_electricHeatingAndCoolingRebates',
   'ri_incomeEligibleEnergySavings',
+
+  //  VA
+  // Appalachain Power
+  'va_takeChargeVirginiaEfficientProductsProgram',
+  'va_takeChargeVirginiaHomePerformanceProgram',
+  // Dominion Virginia Energy
+  'va_energyStarRebates',
+  'va_waterEnergySavingsProgram',
+  'va_evChargerRewards',
+  'va_incomeAndAgeQualifyingEnergyEfficiencyProgram',
+  'va_controlYourHeatingAndCoolingProgram',
 ] as const;
 
 export const PROGRAMS_SCHEMA = {

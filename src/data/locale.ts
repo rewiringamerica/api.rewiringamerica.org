@@ -1,5 +1,9 @@
 import fs from 'fs';
 import { FromSchema } from 'json-schema-to-ts';
+import {
+  ALL_ERROR_MESSAGES,
+  ERROR_MESSAGES_SCHEMA,
+} from './types/error-message';
 import { ALL_ITEMS, ITEMS_SCHEMA } from './types/items';
 
 export const SCHEMA = {
@@ -17,8 +21,14 @@ export const SCHEMA = {
       required: ALL_ITEMS,
       additionalProperties: false,
     },
+    errors: {
+      type: 'object',
+      properties: ERROR_MESSAGES_SCHEMA,
+      required: ALL_ERROR_MESSAGES,
+      additionalProperties: false,
+    },
   },
-  required: ['items', 'urls'],
+  required: ['items', 'urls', 'errors'],
   additionalProperties: false,
 } as const;
 
