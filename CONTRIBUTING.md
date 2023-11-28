@@ -16,11 +16,15 @@ As stated in [the README](README.md#contributing), we're not currently set up fo
 
 Our tools and processes for dealing with this data are nascent and quickly changing. We aim to open them up to external contributors eventually, but we're not there yet.
 
+That said, we welcome reports of inaccuracies in our existing incentive data, and especially of the API incorrectly saying you're eligible for an incentive. Please file issues in those situations.
+
 ### Code
 
 Code changes in this project are driven almost entirely by the needs of our nationwide incentive data gathering project. As such, we don't have a list of PR-ready tasks that are independent of incentive data.
 
 We aren't categorically ruling out external code contributions, but we advise [contacting us](README.md#contact) before sending in a PR.
+
+We welcome reports of bugs that don't pertain to incentive data, like unexpected errors from the API; please file issues for those.
 
 ## Codebase overview
 
@@ -70,6 +74,8 @@ To speed things up, we sometimes "approve with comments": approving but pointing
 ## Tests
 
 Automated tests are run for every PR, and we require all tests to pass before any PR can land.
+
+We use Prettier and ESLint; both are run for every PR and are required to report no issues. We recommend setting up your editor to run Prettier automatically on save.
 
 The codebase has fairly comprehensive test coverage, and we expect all changes to be well-covered. There are:
 
