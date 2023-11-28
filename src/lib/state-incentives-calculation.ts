@@ -1,6 +1,9 @@
 import { AuthorityType } from '../data/authorities';
 import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/low_income_thresholds';
-import { STATE_INCENTIVES_BY_STATE } from '../data/state_incentives';
+import {
+  STATE_INCENTIVES_BY_STATE,
+  StateIncentive,
+} from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
 import { APICoverage } from '../data/types/coverage';
 import { OwnerStatus } from '../data/types/owner-status';
@@ -11,6 +14,7 @@ import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
 export function calculateStateIncentivesAndSavings(
   stateId: string,
   request: CalculateParams,
+  testIncentives?: StateIncentive[],
 ): {
   stateIncentives: CalculatedIncentive[];
   savings: APISavings;
@@ -28,7 +32,10 @@ export function calculateStateIncentivesAndSavings(
     };
   }
 
-  const incentives = STATE_INCENTIVES_BY_STATE[stateId];
+  // If test incentives were supplied, use those instead of the real ones.
+  const incentives = testIncentives
+    ? testIncentives
+    : STATE_INCENTIVES_BY_STATE[stateId];
   const includeState =
     !request.authority_types ||
     request.authority_types.includes(AuthorityType.State);
