@@ -12,5 +12,5 @@ The exact JSON of the incentive returned from `/calculator` with incorrect data.
 **What input?**
 The exact query parameters you gave to the `/calculator` endpoint to get this result.
 
-**Why is this a false positive?**
+**How is our information incorrect?**
 Include a link to an official source (the government agency or utility that offers the incentive) that has the full details of the incentive, and explain how the `/calculator` output doesn't match those details.
