@@ -6,10 +6,7 @@ import {
 } from '../data/authorities';
 import { IRAIncentive, IRA_INCENTIVES } from '../data/ira_incentives';
 import { SOLAR_PRICES } from '../data/solar_prices';
-import {
-  STATE_INCENTIVES_BY_STATE,
-  StateIncentive,
-} from '../data/state_incentives';
+import { StateIncentive } from '../data/state_incentives';
 import { STATE_MFIS, StateMFI } from '../data/state_mfi';
 import { FilingStatus } from '../data/tax_brackets';
 import { APICoverage } from '../data/types/coverage';
@@ -21,7 +18,10 @@ import {
 import { APISavings, addSavings, zeroSavings } from '../schemas/v1/savings';
 import { InvalidInputError, UnexpectedInputError } from './error';
 import { AMI, CompleteIncomeInfo, MFI } from './income-info';
-import { calculateStateIncentivesAndSavings } from './state-incentives-calculation';
+import {
+  calculateStateIncentivesAndSavings,
+  getAllStateIncentives,
+} from './state-incentives-calculation';
 import estimateTaxAmount from './tax-brackets';
 
 const MAX_POS_SAVINGS = 14000;
@@ -331,10 +331,11 @@ export default function calculateIncentives(
     authority_types.includes(AuthorityType.State) ||
     authority_types.includes(AuthorityType.Utility)
   ) {
+    const allStateIncentives = getAllStateIncentives(state_id, request);
     const state = calculateStateIncentivesAndSavings(
       state_id,
       request,
-      STATE_INCENTIVES_BY_STATE[state_id],
+      allStateIncentives,
     );
     incentives.push(...state.stateIncentives);
     savings = addSavings(savings, state.savings);
