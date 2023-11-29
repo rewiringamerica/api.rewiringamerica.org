@@ -6,7 +6,10 @@ import {
 } from '../data/authorities';
 import { IRAIncentive, IRA_INCENTIVES } from '../data/ira_incentives';
 import { SOLAR_PRICES } from '../data/solar_prices';
-import { StateIncentive } from '../data/state_incentives';
+import {
+  STATE_INCENTIVES_BY_STATE,
+  StateIncentive,
+} from '../data/state_incentives';
 import { STATE_MFIS, StateMFI } from '../data/state_mfi';
 import { FilingStatus } from '../data/tax_brackets';
 import { APICoverage } from '../data/types/coverage';
@@ -328,7 +331,11 @@ export default function calculateIncentives(
     authority_types.includes(AuthorityType.State) ||
     authority_types.includes(AuthorityType.Utility)
   ) {
-    const state = calculateStateIncentivesAndSavings(state_id, request);
+    const state = calculateStateIncentivesAndSavings(
+      state_id,
+      request,
+      STATE_INCENTIVES_BY_STATE[state_id],
+    );
     incentives.push(...state.stateIncentives);
     savings = addSavings(savings, state.savings);
     coverage = state.coverage;

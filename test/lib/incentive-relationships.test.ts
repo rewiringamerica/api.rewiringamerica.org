@@ -28,3 +28,40 @@ test('basic test for supplying test incentive data to calculation logic', async 
   t.equal(data.stateIncentives[0].id, 'A');
   t.equal(data.stateIncentives[0].eligible, true);
 });
+
+test('test calculation with no incentives', async t => {
+  const data = calculateStateIncentivesAndSavings(
+    'RI',
+    {
+      owner_status: OwnerStatus.Homeowner,
+      household_income: 120000,
+      tax_filing: FilingStatus.Single,
+      household_size: 1,
+      authority_types: [AuthorityType.Utility],
+      utility: 'ri-pascoag-utility-district',
+      include_beta_states: true,
+    },
+    [],
+  );
+  t.ok(data);
+  t.equal(data.stateIncentives.length, 0);
+});
+
+// If we provide test incentives but a state code that we haven't launched, no
+// incentives should be returned.
+test('test calculation with unlaunched state', async t => {
+  const data = calculateStateIncentivesAndSavings(
+    'AA',
+    {
+      owner_status: OwnerStatus.Homeowner,
+      household_income: 120000,
+      tax_filing: FilingStatus.Single,
+      household_size: 1,
+      authority_types: [AuthorityType.State],
+      include_beta_states: true,
+    },
+    TEST_INCENTIVES,
+  );
+  t.ok(data);
+  t.equal(data.stateIncentives.length, 0);
+});
