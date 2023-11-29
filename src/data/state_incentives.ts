@@ -1,11 +1,15 @@
 import { JSONSchemaType } from 'ajv';
 import fs from 'fs';
 import { AuthorityType } from './authorities';
+import { RILowIncomeAuthority } from './low_income_thresholds';
+import { ALL_PROGRAMS } from './programs';
 import { Amount, AmountType, AmountUnit } from './types/amount';
 import { ItemType, Type } from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
+import { LocalizableString } from './types/localizable-string';
 import { OwnerStatus } from './types/owner-status';
-import { ALL_PROGRAMS } from './types/programs';
+
+export type LowIncomeAuthority = 'default' | RILowIncomeAuthority;
 
 export type StateIncentive = {
   id: string;
@@ -20,7 +24,8 @@ export type StateIncentive = {
   owner_status: OwnerStatus[];
   start_date: number;
   end_date: number;
-  low_income?: boolean;
+  short_description: LocalizableString;
+  low_income?: LowIncomeAuthority;
 };
 
 export type StateIncentivesMap = {
@@ -59,8 +64,8 @@ const incentivePropertySchema = {
   end_date: {
     type: 'number',
   },
-  short_description: { type: 'string', maxLength: 150 },
-  low_income: { type: 'boolean', nullable: true },
+  short_description: { $ref: 'LocalizableString' },
+  low_income: { type: 'string', nullable: true },
 } as const;
 const requiredProperties = [
   'id',
@@ -72,6 +77,7 @@ const requiredProperties = [
   'program',
   'amount',
   'owner_status',
+  'short_description',
 ] as const;
 
 /******************************************************************************/
@@ -122,9 +128,24 @@ export const RI_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
 export const RI_INCENTIVES: StateIncentive[] = JSON.parse(
   fs.readFileSync('./data/RI/incentives.json', 'utf-8'),
 );
+export const VA_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
+  type: 'array',
+  items: {
+    type: 'object',
+    properties: {
+      ...incentivePropertySchema,
+    },
+    required: requiredProperties,
+  },
+} as const;
+
+export const VA_INCENTIVES: StateIncentive[] = JSON.parse(
+  fs.readFileSync('./data/VA/incentives.json', 'utf-8'),
+);
 
 export const STATE_INCENTIVES_BY_STATE: StateIncentivesMap = {
   CT: CT_INCENTIVES,
   NY: NY_INCENTIVES,
   RI: RI_INCENTIVES,
+  VA: VA_INCENTIVES,
 };

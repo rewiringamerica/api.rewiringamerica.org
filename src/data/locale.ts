@@ -1,7 +1,10 @@
 import fs from 'fs';
 import { FromSchema } from 'json-schema-to-ts';
+import {
+  ALL_ERROR_MESSAGES,
+  ERROR_MESSAGES_SCHEMA,
+} from './types/error-message';
 import { ALL_ITEMS, ITEMS_SCHEMA } from './types/items';
-import { ALL_PROGRAMS, PROGRAMS_SCHEMA } from './types/programs';
 
 export const SCHEMA = {
   type: 'object',
@@ -12,26 +15,20 @@ export const SCHEMA = {
       required: ALL_ITEMS,
       additionalProperties: false,
     },
-    programs: {
-      type: 'object',
-      properties: PROGRAMS_SCHEMA,
-      required: ALL_PROGRAMS,
-      additionalProperties: false,
-    },
     urls: {
       type: 'object',
       properties: ITEMS_SCHEMA,
       required: ALL_ITEMS,
       additionalProperties: false,
     },
-    program_urls: {
+    errors: {
       type: 'object',
-      properties: PROGRAMS_SCHEMA,
-      required: [],
+      properties: ERROR_MESSAGES_SCHEMA,
+      required: ALL_ERROR_MESSAGES,
       additionalProperties: false,
     },
   },
-  required: ['items', 'programs', 'urls', 'program_urls'],
+  required: ['items', 'urls', 'errors'],
   additionalProperties: false,
 } as const;
 

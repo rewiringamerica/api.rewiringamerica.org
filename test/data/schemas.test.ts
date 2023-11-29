@@ -1,13 +1,5 @@
 import { test } from 'tap';
 import {
-  CT_LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
-  SCHEMA as CT_LOW_INCOME_THRESHOLDS_SCHEMA,
-} from '../../src/data/CT/low_income_thresholds';
-import {
-  RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
-  SCHEMA as RI_LOW_INCOME_THRESHOLDS_SCHEMA,
-} from '../../src/data/RI/low_income_thresholds';
-import {
   AUTHORITIES_BY_STATE,
   SCHEMA as AUTHORITIES_SCHEMA,
 } from '../../src/data/authorities';
@@ -20,6 +12,10 @@ import {
   SCHEMA as ISS_SCHEMA,
 } from '../../src/data/ira_state_savings';
 import { LOCALES, SCHEMA as L_SCHEMA } from '../../src/data/locale';
+import {
+  LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
+  SCHEMA as LOW_INCOME_THRESHOLDS_SCHEMA,
+} from '../../src/data/low_income_thresholds';
 import { SOLAR_PRICES, SCHEMA as SP_SCHEMA } from '../../src/data/solar_prices';
 import {
   CT_RELATIONSHIPS,
@@ -34,12 +30,20 @@ import {
   RI_INCENTIVES,
   RI_INCENTIVES_SCHEMA,
   StateIncentive,
+  VA_INCENTIVES,
+  VA_INCENTIVES_SCHEMA,
 } from '../../src/data/state_incentives';
 import { SCHEMA as SMFI_SCHEMA, STATE_MFIS } from '../../src/data/state_mfi';
 import { TAX_BRACKETS, SCHEMA as TB_SCHEMA } from '../../src/data/tax_brackets';
 
-import Ajv from 'ajv';
+import Ajv from 'ajv/dist/2020';
 import { SomeJSONSchema } from 'ajv/dist/types/json-schema';
+import {
+  ALL_PROGRAMS,
+  PROGRAMS,
+  PROGRAMS_SCHEMA,
+} from '../../src/data/programs';
+import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
 
 const TESTS = [
   [I_SCHEMA, IRA_INCENTIVES, 'ira_incentives'],
@@ -50,21 +54,17 @@ const TESTS = [
   [SMFI_SCHEMA, STATE_MFIS, 'state_mfis'],
   [TB_SCHEMA, TAX_BRACKETS, 'tax_brackets'],
   [AUTHORITIES_SCHEMA, AUTHORITIES_BY_STATE, 'authorities'],
+  [PROGRAMS_SCHEMA, PROGRAMS, 'programs'],
   [
-    CT_LOW_INCOME_THRESHOLDS_SCHEMA,
-    CT_LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
-    'CT low income',
-  ],
-  [
-    RI_LOW_INCOME_THRESHOLDS_SCHEMA,
-    RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
-    'RI low income',
+    LOW_INCOME_THRESHOLDS_SCHEMA,
+    LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
+    'State low income',
   ],
 ];
 
 test('static JSON files match schema', async tap => {
   tap.plan(TESTS.length);
-  const ajv = new Ajv();
+  const ajv = new Ajv({ schemas: [LOCALIZABLE_STRING_SCHEMA] });
 
   TESTS.forEach(([schema, data, label]) => {
     if (!tap.ok(ajv.validate(schema, data))) {
@@ -77,6 +77,7 @@ const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
   ['CT', CT_INCENTIVES_SCHEMA, CT_INCENTIVES],
   ['NY', NY_INCENTIVES_SCHEMA, NY_INCENTIVES],
   ['RI', RI_INCENTIVES_SCHEMA, RI_INCENTIVES],
+  ['VA', VA_INCENTIVES_SCHEMA, VA_INCENTIVES],
 ];
 
 const STATE_INCENTIVE_RELATIONSHIP_TESTS: [
@@ -108,7 +109,7 @@ function isIncentiveAmountValid<T extends StateIncentive>(
 }
 
 test('state incentives JSON files match schemas', async tap => {
-  const ajv = new Ajv();
+  const ajv = new Ajv({ schemas: [LOCALIZABLE_STRING_SCHEMA] });
 
   STATE_INCENTIVE_TESTS.forEach(([stateId, schema, data]) => {
     const authorities = AUTHORITIES_BY_STATE[stateId as string];
@@ -122,6 +123,20 @@ test('state incentives JSON files match schemas', async tap => {
 
     // Check some constraints that aren't expressed in JSON schema
     data.forEach((incentive, index) => {
+      tap.ok(
+        incentive.short_description.en.length <= 150,
+        `${stateId} English description too long ` +
+          `(${incentive.short_description.en.length}), index ${index}`,
+      );
+
+      // We let Spanish descriptions be a little longer
+      if (incentive.short_description.es) {
+        tap.ok(
+          incentive.short_description.es.length <= 160,
+          `${stateId} Spanish description too long ` +
+            `(${incentive.short_description.en.length}), index ${index}`,
+        );
+      }
       tap.ok(
         isIncentiveAmountValid(incentive),
         `amount is invalid (${stateId}, index ${index})`,
@@ -138,6 +153,10 @@ test('state incentives JSON files match schemas', async tap => {
   });
 });
 
+test('programs in data are exactly those in code', async tap => {
+  tap.same(Object.keys(PROGRAMS).sort(), Array.from(ALL_PROGRAMS).sort());
+});
+
 const isURLValid = (url: string): boolean => {
   try {
     new URL(url);
@@ -146,14 +165,18 @@ const isURLValid = (url: string): boolean => {
     return false;
   }
 };
+test('all programs have valid URLs', async tap => {
+  for (const [programId, data] of Object.entries(PROGRAMS)) {
+    for (const url of Object.values(data.url ?? [])) {
+      tap.ok(isURLValid(url), `${programId} has invalid URL`);
+    }
+  }
+});
 
 test('locale URLs are valid', async tap => {
   for (const [lang, locale] of Object.entries(LOCALES)) {
     for (const [key, url] of Object.entries(locale.urls)) {
       tap.ok(isURLValid(url), `${lang}.urls.${key} invalid`);
-    }
-    for (const [key, url] of Object.entries(locale.program_urls)) {
-      tap.ok(isURLValid(url), `${lang}.program_urls.${key} invalid`);
     }
   }
 });

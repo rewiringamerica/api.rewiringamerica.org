@@ -2,10 +2,11 @@ import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts
 import { FastifyInstance } from 'fastify';
 import { Database } from 'sqlite';
 import { LOCALES } from '../data/locale';
+import { PROGRAMS } from '../data/programs';
 import { InvalidInputError, UnexpectedInputError } from '../lib/error';
 import fetchAMIsForAddress from '../lib/fetch-amis-for-address';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
-import { t } from '../lib/i18n';
+import { t, tr } from '../lib/i18n';
 import calculateIncentives, {
   CalculatedIncentive,
 } from '../lib/incentives-calculation';
@@ -34,8 +35,11 @@ function transformIncentives(
       name: t('items', incentive.item, language),
       url: t('urls', incentive.item, language),
     },
-    program: t('programs', incentive.program, language),
-    program_url: t('program_urls', incentive.program, language),
+    program: tr(PROGRAMS[incentive.program].name, language),
+    program_url: PROGRAMS[incentive.program].url
+      ? tr(PROGRAMS[incentive.program].url!, language)
+      : undefined,
+    short_description: tr(incentive.short_description, language),
   }));
 }
 
@@ -74,12 +78,15 @@ export default async function (
     '/api/v1/calculator',
     { schema: API_CALCULATOR_SCHEMA },
     async (request, reply) => {
+      const language = request.query.language ?? 'en';
       const incomeInfo = await fetchAMIsForLocation(request.query.location);
 
       if (!incomeInfo) {
         throw fastify.httpErrors.createError(
           404,
-          'Cannot find location of this address.',
+          request.query.location.zip
+            ? t('errors', 'zip_code_doesnt_exist', language)
+            : t('errors', 'cannot_locate_address', language),
           { field: 'location' },
         );
       }
@@ -87,14 +94,13 @@ export default async function (
       if (!isCompleteIncomeInfo(incomeInfo)) {
         throw fastify.httpErrors.createError(
           404,
-          "We currently don't have data for this location.",
+          t('errors', 'no_data_for_location', language),
           { field: 'location' },
         );
       }
 
       try {
         const result = calculateIncentives(incomeInfo, { ...request.query });
-        const language = request.query.language ?? 'en';
         const translated = {
           ...result,
           incentives: transformIncentives(result.incentives, language),
@@ -121,13 +127,20 @@ export default async function (
     '/api/v1/utilities',
     { schema: API_UTILITIES_SCHEMA },
     async (request, reply) => {
+      const language = request.query.language ?? 'en';
       const location = (await fetchAMIsForLocation(request.query.location))
         ?.location;
 
       if (!location) {
-        throw fastify.httpErrors.createError(404, "Zip code doesn't exist.", {
-          field: 'location',
-        });
+        throw fastify.httpErrors.createError(
+          404,
+          request.query.location.zip
+            ? t('errors', 'zip_code_doesnt_exist', language)
+            : t('errors', 'cannot_locate_address', language),
+          {
+            field: 'location',
+          },
+        );
       }
 
       try {

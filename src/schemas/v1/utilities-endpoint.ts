@@ -28,6 +28,15 @@ export const API_UTILITIES_SCHEMA = {
     type: 'object',
     properties: {
       location: API_REQUEST_LOCATION_SCHEMA,
+      language: {
+        type: 'string',
+        description: 'Optional choice of language for user-visible strings.',
+        enum: [
+          'en',
+          'es',
+        ],
+        default: 'en',
+      },
     },
     required: ['location'],
   },

@@ -1,7 +1,7 @@
 import Ajv from 'ajv';
 import fs from 'fs';
 import qs from 'qs';
-import { beforeEach, test } from 'tap';
+import { beforeEach, test, Test } from 'tap';
 import { WEBSITE_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v0/calculator-response';
 import { WEBSITE_INCENTIVE_SCHEMA } from '../../src/schemas/v0/incentive';
 import { build } from '../helper';
@@ -10,10 +10,7 @@ beforeEach(() => {
   process.setMaxListeners(100);
 });
 
-async function getCalculatorResponse(
-  t: Tap.Test,
-  query: Record<string, unknown>,
-) {
+async function getCalculatorResponse(t: Test, query: Record<string, unknown>) {
   const app = await build(t);
 
   const searchParams = qs.stringify(query, { encodeValuesOnly: true });
@@ -258,7 +255,7 @@ test('non-existent zips', async t => {
   t.equal(res.statusCode, 404, 'response status is 404');
   t.equal(calculatorResponse.statusCode, 404, 'payload statusCode is 404');
   t.equal(calculatorResponse.error, 'Not Found', 'payload error is Not Found');
-  t.equal(calculatorResponse.message, "Zip code doesn't exist.");
+  t.equal(calculatorResponse.message, "That ZIP code doesn't exist.");
   t.equal(calculatorResponse.field, 'zip');
 });
 
@@ -276,7 +273,7 @@ test('existing zips without data', async t => {
   t.equal(calculatorResponse.error, 'Not Found', 'payload error is Not Found');
   t.equal(
     calculatorResponse.message,
-    "We currently don't have data for this location.",
+    "We currently don't have data for that location.",
   );
   t.equal(calculatorResponse.field, 'zip');
 });

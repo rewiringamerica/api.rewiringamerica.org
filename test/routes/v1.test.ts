@@ -1,7 +1,7 @@
 import Ajv from 'ajv';
 import fs from 'fs';
 import qs from 'qs';
-import { beforeEach, test } from 'tap';
+import { beforeEach, test, Test } from 'tap';
 import { API_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v1/calculator-endpoint';
 import { API_INCENTIVE_SCHEMA } from '../../src/schemas/v1/incentive';
 import { API_UTILITIES_RESPONSE_SCHEMA } from '../../src/schemas/v1/utilities-endpoint';
@@ -11,10 +11,7 @@ beforeEach(() => {
   process.setMaxListeners(100);
 });
 
-async function getCalculatorResponse(
-  t: Tap.Test,
-  query: Record<string, unknown>,
-) {
+async function getCalculatorResponse(t: Test, query: Record<string, unknown>) {
   const app = await build(t);
 
   const searchParams = qs.stringify(query, { encodeValuesOnly: true });
@@ -25,7 +22,7 @@ async function getCalculatorResponse(
 }
 
 async function validateResponse(
-  t: Tap.Test,
+  t: Test,
   query: Record<string, unknown>,
   fixtureFile: string,
 ) {
@@ -139,6 +136,25 @@ test('NY response with state and utility is valid and correct', async t => {
       include_beta_states: true,
     },
     './test/fixtures/v1-ny-11557-state-utility-lowincome.json',
+  );
+});
+
+// VA low income test
+test('VA low income response with state and utility filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '22030' },
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 40000,
+      tax_filing: 'joint',
+      authority_types: ['state', 'utility'],
+      utility: 'va-dominion-virginia-power',
+      // TODO: Remove when VA is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-va-22030-state-utility-lowincome.json',
   );
 });
 

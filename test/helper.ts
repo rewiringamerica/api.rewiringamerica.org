@@ -3,6 +3,7 @@
 
 import helper from 'fastify-cli/helper.js';
 import path from 'path';
+import { Test } from 'tap';
 
 const AppPath = path.join(__dirname, '..', 'src', 'app.ts');
 
@@ -13,7 +14,7 @@ function config() {
 }
 
 // automatically build and tear down our instance
-async function build(t: Tap.Test) {
+async function build(t: Test) {
   // you can set all the options supported by the fastify CLI command
   const argv = [AppPath, '--options'];
 

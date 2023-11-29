@@ -4,11 +4,12 @@ import _ from 'lodash';
 import { Database } from 'sqlite';
 import { IRA_INCENTIVES, IRAIncentive } from '../data/ira_incentives';
 import { IRA_STATE_SAVINGS } from '../data/ira_state_savings';
+import { PROGRAMS } from '../data/programs';
 import { AmountType } from '../data/types/amount';
 import { ItemType, Type, TypeV0 } from '../data/types/incentive-types';
 import { InvalidInputError } from '../lib/error';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
-import { t } from '../lib/i18n';
+import { t, tr } from '../lib/i18n';
 import calculateIncentives from '../lib/incentives-calculation';
 import { isCompleteIncomeInfo } from '../lib/income-info';
 import { WEBSITE_CALCULATOR_REQUEST_SCHEMA } from '../schemas/v0/calculator-request';
@@ -28,8 +29,8 @@ function translateIncentives(incentives: IRAIncentive[]): WebsiteIncentive[] {
     ...incentive,
     item_es: t('items', incentive.item, 'es'),
     item: t('items', incentive.item, 'en'),
-    program_es: t('programs', incentive.program, 'es'),
-    program: t('programs', incentive.program, 'en'),
+    program_es: tr(PROGRAMS[incentive.program].name, 'es'),
+    program: tr(PROGRAMS[incentive.program].name, 'en'),
     // strip domain from v0 links:
     more_info_url_es: t('urls', incentive.item, 'es').replace(
       'https://www.rewiringamerica.org',
@@ -39,6 +40,7 @@ function translateIncentives(incentives: IRAIncentive[]): WebsiteIncentive[] {
       'https://www.rewiringamerica.org',
       '',
     ),
+    short_description: tr(incentive.short_description, 'en'),
 
     type: incentive.type as TypeV0,
 
@@ -116,14 +118,18 @@ export default async function (
         request.query.zip,
       );
       if (!incomeInfo) {
-        throw fastify.httpErrors.createError(404, "Zip code doesn't exist.", {
-          field: 'zip',
-        });
+        throw fastify.httpErrors.createError(
+          404,
+          t('errors', 'zip_code_doesnt_exist'),
+          {
+            field: 'zip',
+          },
+        );
       }
       if (!isCompleteIncomeInfo(incomeInfo)) {
         throw fastify.httpErrors.createError(
           404,
-          "We currently don't have data for this location.",
+          t('errors', 'no_data_for_location'),
           { field: 'zip' },
         );
       }

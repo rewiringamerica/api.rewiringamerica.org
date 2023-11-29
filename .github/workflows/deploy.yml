@@ -1,0 +1,48 @@
+name: Deploy API backend
+
+on:
+  push:
+    branches: main
+  release:
+    types: released
+
+jobs:
+  test:
+    uses: ./.github/workflows/test.yml
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Auth to GCP
+        id: auth
+        uses: google-github-actions/auth@v1
+        with:
+          # A push to "main" should be deployed to the dev project. If it's
+          # not a push to main, it must be a release; deploy to prod.
+          credentials_json: ${{ github.ref_name != 'main' && secrets.GCP_SERVICE_ACCOUNT_KEY_PROD || secrets.GCP_SERVICE_ACCOUNT_KEY_DEV }}
+          token_format: access_token
+
+      - name: Auth to Artifact Registry
+        uses: docker/login-action@v3
+        with:
+          registry: us-central1-docker.pkg.dev
+          username: oauth2accesstoken
+          password: ${{ steps.auth.outputs.access_token }}
+
+      - name: Build and push image
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          tags: |
+            us-central1-docker.pkg.dev/${{ steps.auth.outputs.project_id }}/incentives-api/incentives-api:${{ github.sha }}
+            us-central1-docker.pkg.dev/${{ steps.auth.outputs.project_id }}/incentives-api/incentives-api:${{ github.ref_name }}
+
+      - name: Deploy to Cloud Run
+        uses: google-github-actions/deploy-cloudrun@v1
+        with:
+          service: incentives-api
+          image: us-central1-docker.pkg.dev/${{ steps.auth.outputs.project_id }}/incentives-api/incentives-api:${{ github.sha }}

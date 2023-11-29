@@ -1,7 +1,5 @@
-import { CT_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/CT/low_income_thresholds';
-import { NY_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/NY/low_income_thresholds';
-import { RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/RI/low_income_thresholds';
 import { AuthorityType } from '../data/authorities';
+import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/low_income_thresholds';
 import {
   INCENTIVE_RELATIONSHIPS_BY_STATE,
   IncentiveRelationships,
@@ -17,19 +15,30 @@ import { BETA_STATES, LAUNCHED_STATES } from '../data/types/states';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
 import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
 
-export function calculateStateIncentivesAndSavings(
+export function getAllStateIncentives(
   stateId: string,
   request: CalculateParams,
-): {
-  stateIncentives: CalculatedIncentive[];
-  savings: APISavings;
-  coverage: APICoverage;
-} {
+) {
   // Only process incentives for launched states, or beta states if beta was requested.
   if (
     !LAUNCHED_STATES.includes(stateId) &&
     (!request.include_beta_states || !BETA_STATES.includes(stateId))
   ) {
+    return [];
+  }
+  return STATE_INCENTIVES_BY_STATE[stateId];
+}
+
+export function calculateStateIncentivesAndSavings(
+  stateId: string,
+  request: CalculateParams,
+  incentives: StateIncentive[],
+): {
+  stateIncentives: CalculatedIncentive[];
+  savings: APISavings;
+  coverage: APICoverage;
+} {
+  if (incentives.length == 0) {
     return {
       stateIncentives: [],
       savings: zeroSavings(),
@@ -37,7 +46,6 @@ export function calculateStateIncentivesAndSavings(
     };
   }
 
-  const incentives = STATE_INCENTIVES_BY_STATE[stateId];
   const includeState =
     !request.authority_types ||
     request.authority_types.includes(AuthorityType.State);
@@ -76,33 +84,24 @@ export function calculateStateIncentivesAndSavings(
       eligible = false;
     }
 
-    // TODO: Replace per-state logic with an index into income thresholds map.
-    // See https://app.asana.com/0/1204738794846444/1205784001056408/f
-    let thresholds_map;
-    switch (stateId) {
-      case 'CT':
-        thresholds_map = CT_LOW_INCOME_THRESHOLDS_BY_AUTHORITY;
-        break;
-      case 'NY':
-        thresholds_map = NY_LOW_INCOME_THRESHOLDS_BY_AUTHORITY;
-        break;
-      case 'RI':
-        thresholds_map = RI_LOW_INCOME_THRESHOLDS_BY_AUTHORITY;
-        break;
-      default:
-        console.log('No income thresholds defined for ', stateId);
+    if (!LOW_INCOME_THRESHOLDS_BY_AUTHORITY[stateId]) {
+      console.log('No income thresholds defined for ', stateId);
     }
+    const thresholds_map = LOW_INCOME_THRESHOLDS_BY_AUTHORITY[stateId];
 
     if (typeof thresholds_map !== 'undefined') {
-      const authority_thresholds =
-        thresholds_map[item.authority] ?? thresholds_map.default;
-      if (
-        item.low_income &&
-        request.household_income > authority_thresholds[request.household_size]
-      ) {
-        eligible = false;
+      if (item.low_income) {
+        const authorities =
+          thresholds_map[item.low_income] ?? thresholds_map.default;
+        if (
+          request.household_income >
+          authorities.thresholds[request.household_size]
+        ) {
+          eligible = false;
+        }
       }
     }
+
     if (eligible) {
       eligibleIncentives.set(item.id, item);
     } else {
