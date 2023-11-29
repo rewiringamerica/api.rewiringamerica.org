@@ -29,10 +29,15 @@ export function getAllStateIncentives(
   return STATE_INCENTIVES_BY_STATE[stateId];
 }
 
+export function getStateIncentiveRelationships(stateId: string) {
+  return INCENTIVE_RELATIONSHIPS_BY_STATE[stateId];
+}
+
 export function calculateStateIncentivesAndSavings(
   stateId: string,
   request: CalculateParams,
   incentives: StateIncentive[],
+  inceniveRelationships?: IncentiveRelationships,
 ): {
   stateIncentives: CalculatedIncentive[];
   savings: APISavings;
@@ -109,19 +114,19 @@ export function calculateStateIncentivesAndSavings(
     }
   }
 
-  const prerequisiteMaps = buildPrerequisiteMaps(
-    INCENTIVE_RELATIONSHIPS_BY_STATE[stateId],
-  );
+  if (inceniveRelationships !== undefined) {
+    const prerequisiteMaps = buildPrerequisiteMaps(inceniveRelationships);
 
-  // Use relationship maps to update incentive eligibility.
-  for (const prereqRelationship of prerequisiteMaps.requiresMap) {
-    checkPrerequisites(
-      prereqRelationship[0],
-      prereqRelationship[1],
-      eligibleIncentives,
-      ineligibleIncentives,
-      prerequisiteMaps.requiredByMap,
-    );
+    // Use relationship maps to update incentive eligibility.
+    for (const prereqRelationship of prerequisiteMaps.requiresMap) {
+      checkPrerequisites(
+        prereqRelationship[0],
+        prereqRelationship[1],
+        eligibleIncentives,
+        ineligibleIncentives,
+        prerequisiteMaps.requiredByMap,
+      );
+    }
   }
 
   const eligibleTransformed = transformItems(eligibleIncentives, true);
