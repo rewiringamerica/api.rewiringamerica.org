@@ -1,6 +1,9 @@
 import { AuthorityType } from '../data/authorities';
 import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/low_income_thresholds';
-import { STATE_INCENTIVES_BY_STATE } from '../data/state_incentives';
+import {
+  STATE_INCENTIVES_BY_STATE,
+  StateIncentive,
+} from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
 import { APICoverage } from '../data/types/coverage';
 import { OwnerStatus } from '../data/types/owner-status';
@@ -8,19 +11,30 @@ import { BETA_STATES, LAUNCHED_STATES } from '../data/types/states';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
 import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
 
-export function calculateStateIncentivesAndSavings(
+export function getAllStateIncentives(
   stateId: string,
   request: CalculateParams,
-): {
-  stateIncentives: CalculatedIncentive[];
-  savings: APISavings;
-  coverage: APICoverage;
-} {
+) {
   // Only process incentives for launched states, or beta states if beta was requested.
   if (
     !LAUNCHED_STATES.includes(stateId) &&
     (!request.include_beta_states || !BETA_STATES.includes(stateId))
   ) {
+    return [];
+  }
+  return STATE_INCENTIVES_BY_STATE[stateId];
+}
+
+export function calculateStateIncentivesAndSavings(
+  stateId: string,
+  request: CalculateParams,
+  incentives: StateIncentive[],
+): {
+  stateIncentives: CalculatedIncentive[];
+  savings: APISavings;
+  coverage: APICoverage;
+} {
+  if (incentives.length == 0) {
     return {
       stateIncentives: [],
       savings: zeroSavings(),
@@ -28,7 +42,6 @@ export function calculateStateIncentivesAndSavings(
     };
   }
 
-  const incentives = STATE_INCENTIVES_BY_STATE[stateId];
   const includeState =
     !request.authority_types ||
     request.authority_types.includes(AuthorityType.State);
