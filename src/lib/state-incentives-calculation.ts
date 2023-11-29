@@ -34,7 +34,7 @@ export function calculateStateIncentivesAndSavings(
   savings: APISavings;
   coverage: APICoverage;
 } {
-  if (incentives.length == 0) {
+  if (incentives.length === 0) {
     return {
       stateIncentives: [],
       savings: zeroSavings(),
