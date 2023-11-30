@@ -163,8 +163,8 @@ function buildPrerequisiteMaps(incentiveRelationships: IncentiveRelationships) {
   const requiresMap = new Map<string, string[]>();
   const requiredByMap = new Map<string, string[]>();
   if (
-    incentiveRelationships != undefined &&
-    incentiveRelationships.prerequisites != undefined
+    incentiveRelationships !== undefined &&
+    incentiveRelationships.prerequisites !== undefined
   ) {
     for (const relationship of incentiveRelationships.prerequisites) {
       const requiredIncentives = relationship.requires;
@@ -172,7 +172,7 @@ function buildPrerequisiteMaps(incentiveRelationships: IncentiveRelationships) {
 
       for (const requiredIncentiveId of requiredIncentives) {
         const existingDependencies = requiredByMap.get(requiredIncentiveId);
-        if (existingDependencies != undefined) {
+        if (existingDependencies !== undefined) {
           existingDependencies.push(relationship.id);
         } else {
           requiredByMap.set(requiredIncentiveId, [relationship.id]);
@@ -183,6 +183,12 @@ function buildPrerequisiteMaps(incentiveRelationships: IncentiveRelationships) {
   return { requiresMap, requiredByMap };
 }
 
+/* Checks the prerequisites for a single incentive and updates its eligibility
+   accordingly.
+   If the user is not eligible for a prerequisite incentive, this incentive is
+   removed from the eligible incentives, and then we check any incentives that
+   require this one.
+*/
 function checkPrerequisites(
   incentiveId: string,
   prerequisiteIds: string[],
@@ -196,19 +202,34 @@ function checkPrerequisites(
       !eligibleIncentives.has(prerequisiteId)
     ) {
       const incentive = eligibleIncentives.get(incentiveId);
-      if (incentive != undefined) {
-        eligibleIncentives.delete(incentiveId);
-        ineligibleIncentives.set(incentiveId, incentive);
-        checkDependencies(
-          incentiveId,
-          dependencyMap,
+      if (incentive !== undefined) {
+        updateEligibility(
+          incentive,
           eligibleIncentives,
           ineligibleIncentives,
+          dependencyMap,
         );
-        // TODO: also need to check supersedes map when mutual exclusion relationships are implemented.
       }
     }
   }
+}
+
+// Switches an intencive from eligible to ineligible and checks dependencies.
+function updateEligibility(
+  incentive: StateIncentive,
+  eligibleIncentives: Map<string, StateIncentive>,
+  ineligibleIncentives: Map<string, StateIncentive>,
+  dependencyMap: Map<string, string[]>,
+) {
+  eligibleIncentives.delete(incentive.id);
+  ineligibleIncentives.set(incentive.id, incentive);
+  checkDependencies(
+    incentive.id,
+    dependencyMap,
+    eligibleIncentives,
+    ineligibleIncentives,
+  );
+  // TODO: also need to check supersedes map when mutual exclusion relationships are implemented.
 }
 
 function checkDependencies(
@@ -218,18 +239,16 @@ function checkDependencies(
   ineligibleIncentives: Map<string, StateIncentive>,
 ) {
   const dependencyIds = dependencyMap.get(incentiveId);
-  if (dependencyIds != undefined) {
+  if (dependencyIds !== undefined) {
     for (const dependencyId of dependencyIds) {
       console.log(dependencyId);
       const dependency = eligibleIncentives.get(dependencyId);
-      if (dependency != undefined) {
-        eligibleIncentives.delete(dependencyId);
-        ineligibleIncentives.set(dependencyId, dependency);
-        checkDependencies(
-          dependencyId,
-          dependencyMap,
+      if (dependency !== undefined) {
+        updateEligibility(
+          dependency,
           eligibleIncentives,
           ineligibleIncentives,
+          dependencyMap,
         );
       }
     }

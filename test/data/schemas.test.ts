@@ -212,7 +212,7 @@ export function buildRelationshipGraph(data: IncentiveRelationships) {
       const targetId = relationship.id;
       for (const sourceId of relationship.requires) {
         let existingTargetIds = edges.get(sourceId);
-        if (existingTargetIds != undefined) {
+        if (existingTargetIds !== undefined) {
           existingTargetIds.add(targetId);
         } else {
           existingTargetIds = new Set<string>([targetId]);
@@ -242,7 +242,7 @@ export function checkForCycle(
   }
   seen.add(incentiveId);
   const dependencies = edges.get(incentiveId);
-  if (dependencies != undefined) {
+  if (dependencies !== undefined) {
     for (const id of dependencies) {
       if (checkForCycle(id, seen, finished, edges)) {
         return true;
@@ -260,7 +260,7 @@ export function incentiveRelationshipsContainCycle(
   const finished = new Set<string>();
   const toCheck = Array.from(relationshipGraph.keys());
   let hasCycle = false;
-  if (toCheck != undefined) {
+  if (toCheck !== undefined) {
     for (const incentiveId of toCheck) {
       hasCycle = checkForCycle(incentiveId, seen, finished, relationshipGraph);
       if (hasCycle) {
