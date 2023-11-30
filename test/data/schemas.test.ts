@@ -181,9 +181,24 @@ test('locale URLs are valid', async tap => {
   }
 });
 
+test('state incentive relationships JSON files match schemas', async tap => {
+  const ajv = new Ajv();
+
+  STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([stateId, schema, data]) => {
+    if (
+      !tap.ok(
+        ajv.validate(schema, data),
+        `${stateId} incentive relationships invalid`,
+      )
+    ) {
+      console.error(ajv.errors);
+    }
+  });
+});
+
 // Builds a graph of incentive relationships, represented as pairs of incentive
 // ID and the set of IDs of incentives that are dependent on that incentive.
-function buildRelationshipGraph(data: IncentiveRelationships) {
+export function buildRelationshipGraph(data: IncentiveRelationships) {
   const edges = new Map<string, Set<string>>();
   // For exclusion relationships, the superseding incentive is the "source."
   if (data.exclusions) {
@@ -210,7 +225,7 @@ function buildRelationshipGraph(data: IncentiveRelationships) {
 }
 
 // Helper to check for circular dependencies in the incentive relationships.
-function checkForCycle(
+export function checkForCycle(
   incentiveId: string,
   seen: Set<string>,
   finished: Set<string>,
@@ -238,38 +253,28 @@ function checkForCycle(
   return false;
 }
 
-test('state incentive relationships JSON files match schemas', async tap => {
-  const ajv = new Ajv();
-
-  STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([stateId, schema, data]) => {
-    if (
-      !tap.ok(
-        ajv.validate(schema, data),
-        `${stateId} incentive relationships invalid`,
-      )
-    ) {
-      console.error(ajv.errors);
-    }
-
-    // Check that there are no circular dependencies in the relationships.
-    const relationshipGraph = buildRelationshipGraph(data);
-    const seen = new Set<string>();
-    const finished = new Set<string>();
-    const toCheck = Array.from(relationshipGraph.keys());
-    let hasCycle = false;
-    if (toCheck != undefined) {
-      for (const incentiveId of toCheck) {
-        hasCycle = checkForCycle(
-          incentiveId,
-          seen,
-          finished,
-          relationshipGraph,
-        );
-        if (hasCycle) {
-          break;
-        }
+export function incentiveRelationshipsContainCycle(
+  relationshipGraph: Map<string, Set<string>>,
+) {
+  const seen = new Set<string>();
+  const finished = new Set<string>();
+  const toCheck = Array.from(relationshipGraph.keys());
+  let hasCycle = false;
+  if (toCheck != undefined) {
+    for (const incentiveId of toCheck) {
+      hasCycle = checkForCycle(incentiveId, seen, finished, relationshipGraph);
+      if (hasCycle) {
+        break;
       }
     }
-    tap.equal(hasCycle, false);
+  }
+  return hasCycle;
+}
+
+test('state incentive relationships contain no circular dependencies', async tap => {
+  STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([, , data]) => {
+    // Check that there are no circular dependencies in the relationships.
+    const relationshipGraph = buildRelationshipGraph(data);
+    tap.equal(incentiveRelationshipsContainCycle(relationshipGraph), false);
   });
 });

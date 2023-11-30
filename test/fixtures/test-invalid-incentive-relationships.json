@@ -1,0 +1,14 @@
+{
+  "prerequisites": [
+    { "id": "A", "requires": [
+        "B",
+        "C"
+      ] },
+    { "id": "C", "requires": [
+        "D"
+      ] }
+  ],
+  "exclusions": [
+    { "id": "A", "supersedes": "D" }],
+  "combinations": []
+}

@@ -3,7 +3,14 @@ import { AuthorityType } from '../../src/data/authorities';
 import { FilingStatus } from '../../src/data/tax_brackets';
 import { OwnerStatus } from '../../src/data/types/owner-status';
 import { calculateStateIncentivesAndSavings } from '../../src/lib/state-incentives-calculation';
-import { TEST_INCENTIVE_RELATIONSHIPS } from '../mocks/state-incentive-relationships';
+import {
+  buildRelationshipGraph,
+  incentiveRelationshipsContainCycle,
+} from '../data/schemas.test';
+import {
+  TEST_INCENTIVE_RELATIONSHIPS,
+  TEST_INVALID_INCENTIVE_RELATIONSHIPS,
+} from '../mocks/state-incentive-relationships';
 import { TEST_INCENTIVES } from '../mocks/state-incentives';
 
 // This is a basic test to set up supplying test data to the calculator logic.
@@ -78,4 +85,21 @@ test('test incentive prerequisite logic', async t => {
       t.equal(incentive.eligible, false);
     }
   }
+});
+
+test('test incentive relationships contain no circular dependencies', async tap => {
+  // Check that there are no circular dependencies in the relationships.
+  const relationshipGraph = buildRelationshipGraph(
+    TEST_INCENTIVE_RELATIONSHIPS,
+  );
+  tap.equal(incentiveRelationshipsContainCycle(relationshipGraph), false);
+});
+
+test('test cycle detection in invalid incentive relationships', async tap => {
+  // Check that the circular dependency in the invalid relationships is
+  // detected.
+  const relationshipGraph = buildRelationshipGraph(
+    TEST_INVALID_INCENTIVE_RELATIONSHIPS,
+  );
+  tap.equal(incentiveRelationshipsContainCycle(relationshipGraph), true);
 });
