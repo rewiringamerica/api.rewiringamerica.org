@@ -22,9 +22,6 @@ const AMIS_FOR_39503 = JSON.parse(
 const AMIS_FOR_02861 = JSON.parse(
   fs.readFileSync('./test/fixtures/amis-for-zip-02861.json', 'utf-8'),
 );
-const AMIS_FOR_06002 = JSON.parse(
-  fs.readFileSync('./test/fixtures/amis-for-zip-06002.json', 'utf-8'),
-);
 
 beforeEach(async t => {
   t.context.db = await open({
@@ -67,14 +64,14 @@ test('correctly evaluates state incentives for launched states', async t => {
 });
 
 test('correctly excludes state incentives for beta states', async t => {
-  // CT is not launched so will not get state incentives.
-  const data = calculateIncentives(AMIS_FOR_06002, {
+  // NY is not launched so will not get state incentives.
+  const data = calculateIncentives(AMIS_FOR_11211, {
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
     tax_filing: FilingStatus.Single,
-    household_size: 1,
     authority_types: [AuthorityType.State, AuthorityType.Utility],
-    utility: 'ct-norwich-public-utilities',
+    utility: 'ny-pseg-long-island',
+    household_size: 1,
     include_beta_states: false,
   });
   t.ok(data);
@@ -82,14 +79,14 @@ test('correctly excludes state incentives for beta states', async t => {
 });
 
 test('correctly evaluates state incentives for beta states', async t => {
-  // CT is in beta so we should get incentives for it when beta is requested.
-  const data = calculateIncentives(AMIS_FOR_06002, {
+  // NY is in beta so we should get incentives for it when beta is requested.
+  const data = calculateIncentives(AMIS_FOR_11211, {
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
     tax_filing: FilingStatus.Single,
-    household_size: 1,
     authority_types: [AuthorityType.State, AuthorityType.Utility],
-    utility: 'ct-norwich-public-utilities',
+    utility: 'ny-pseg-long-island',
+    household_size: 1,
     include_beta_states: true,
   });
   t.ok(data);
