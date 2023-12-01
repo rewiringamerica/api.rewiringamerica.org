@@ -37,7 +37,7 @@ export function calculateStateIncentivesAndSavings(
   stateId: string,
   request: CalculateParams,
   incentives: StateIncentive[],
-  inceniveRelationships?: IncentiveRelationships,
+  incentiveRelationships?: IncentiveRelationships,
 ): {
   stateIncentives: CalculatedIncentive[];
   savings: APISavings;
@@ -114,8 +114,8 @@ export function calculateStateIncentivesAndSavings(
     }
   }
 
-  if (inceniveRelationships !== undefined) {
-    const prerequisiteMaps = buildPrerequisiteMaps(inceniveRelationships);
+  if (incentiveRelationships !== undefined) {
+    const prerequisiteMaps = buildPrerequisiteMaps(incentiveRelationships);
 
     // Use relationship maps to update incentive eligibility.
     for (const prereqRelationship of prerequisiteMaps.requiresMap) {
