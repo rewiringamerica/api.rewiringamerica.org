@@ -93,18 +93,16 @@
     "item_type": "rebate",
     "program": "ri_blockIslandEnergyEfficiency",
     "amount": {
-      "type": "dollars_per_unit",
-      "unit": "ton",
-      "number": 250,
-      "maximum": 750,
-      "representative": 750
+      "type": "dollar_amount",
+      "number": 750,
+      "maximum": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $750 back after purchase and installation of qualifying heat pumps and mini-splits.",
-      "es": "Reembolsos hasta $750 después de la compra e instalación de bombas de calor y mini-splits calificados."
+      "en": "Up to $750 back after purchase and installation of qualifying heat pumps and mini-splits, depending on size.",
+      "es": "Reembolsos hasta $750 después de la compra e instalación de bombas de calor y mini-splits calificados, según el tamaño."
     }
   },
   {
@@ -137,8 +135,8 @@
     "item_type": "rebate",
     "program": "ri_blockIslandEnergyEfficiency",
     "amount": {
-      "type": "dollar_amount",
-      "number": 2000,
+      "type": "percent",
+      "number": 1,
       "maximum": 2000
     },
     "bonus_available": true,
@@ -146,8 +144,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $800 back after air/duct sealing work, plus 40% back on additional weatherization, up to $2,000 in total weatherization costs.",
-      "es": "Reembolsos hasta $800 después del trabajo de sellado de aire/ductos. Además, un reembolso de 40% por la impermeabilización, hasta $2,000 en costos totales."
+      "en": "100% of weatherization costs, including air/duct sealing and insulation, up to $2,000.",
+      "es": "El total de los costos de la impermeabilización, hasta $2000, incluyendo el sellado de conductos de aire y el aislamiento."
     }
   },
   {
