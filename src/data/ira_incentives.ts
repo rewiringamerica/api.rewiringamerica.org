@@ -4,7 +4,7 @@ import { AuthorityType } from './authorities';
 import { ALL_PROGRAMS } from './programs';
 import { FilingStatus } from './tax_brackets';
 import { Amount, AmountType, AmountUnit } from './types/amount';
-import { ItemType, Type, TypeV0 } from './types/incentive-types';
+import { PaymentMethod, Type, TypeV0 } from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
 import { LocalizableString } from './types/localizable-string';
 import { OwnerStatus } from './types/owner-status';
@@ -24,7 +24,8 @@ export interface IRAIncentive {
   end_date: number;
   filing_status: FilingStatus | null;
   item: Item;
-  item_type: ItemType;
+  item_type: PaymentMethod;
+  payment_methods: PaymentMethod[];
   owner_status: OwnerStatus[];
   program: string;
   start_date: number;
@@ -61,7 +62,8 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
       program: { type: 'string', enum: ALL_PROGRAMS },
       authority_type: { type: 'string', const: AuthorityType.Federal },
       item: { type: 'string', enum: ALL_ITEMS },
-      item_type: { type: 'string', enum: Object.values(ItemType) },
+      item_type: { type: 'string', enum: Object.values(PaymentMethod) },
+      payment_methods: { type: 'array', items: { type: 'string', enum: Object.values(PaymentMethod) } },
       amount: amountSchema,
       owner_status: {
         type: 'array',
@@ -94,6 +96,7 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
       'filing_status',
       'item',
       'item_type',
+      'payment_methods',
       'owner_status',
       'program',
       'start_date',

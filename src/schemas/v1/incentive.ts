@@ -3,7 +3,7 @@ import { AuthorityType } from '../../data/authorities';
 import { AmiQualification } from '../../data/ira_incentives';
 import { FilingStatus } from '../../data/tax_brackets';
 import { AmountType, AmountUnit } from '../../data/types/amount';
-import { ItemType, Type } from '../../data/types/incentive-types';
+import { PaymentMethod, Type } from '../../data/types/incentive-types';
 import { ALL_ITEMS } from '../../data/types/items';
 import { OwnerStatus } from '../../data/types/owner-status';
 
@@ -16,6 +16,7 @@ export const API_INCENTIVE_SCHEMA = {
     'program',
     'item',
     'item_type',
+    'payment_methods',
     'amount',
     'owner_status',
     'start_date',
@@ -88,7 +89,14 @@ export const API_INCENTIVE_SCHEMA = {
     },
     item_type: {
       type: 'string',
-      enum: Object.values(ItemType),
+      enum: Object.values(PaymentMethod),
+    },
+    payment_methods: {
+      type: 'array',
+      items: {
+        type: 'string',
+        enum: Object.values(PaymentMethod),
+      }
     },
     owner_status: {
       type: 'array',
@@ -160,6 +168,9 @@ export const API_INCENTIVE_SCHEMA = {
         representative: 3000,
       },
       item_type: 'pos_rebate',
+      payment_methods: [
+        'pos_rebate'
+      ],
       owner_status: [
         'homeowner',
       ],

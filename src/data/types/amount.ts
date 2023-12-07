@@ -5,10 +5,11 @@ export enum AmountType {
 }
 
 export enum AmountUnit {
+  Btuh10k = 'btuh10k',
+  Kilowatt = 'kilowatt',
+  SquareFoot = 'square_foot',
   Ton = 'ton',
   Watt = 'watt',
-  Btuh10k = 'btuh10k',
-  SquareFoot = 'square_foot',
 }
 
 /**

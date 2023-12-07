@@ -4,7 +4,7 @@ import { AuthorityType } from './authorities';
 import { RILowIncomeAuthority } from './low_income_thresholds';
 import { ALL_PROGRAMS } from './programs';
 import { Amount, AmountType, AmountUnit } from './types/amount';
-import { ItemType, Type } from './types/incentive-types';
+import { PaymentMethod, Type } from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
 import { LocalizableString } from './types/localizable-string';
 import { OwnerStatus } from './types/owner-status';
@@ -17,7 +17,8 @@ export type StateIncentive = {
   authority: string;
   type: Type;
   item: Item;
-  item_type: ItemType;
+  item_type: PaymentMethod; // Deprecated; we are switching to use payment_methods instead
+  payment_methods: PaymentMethod[]
   program: string;
   amount: Amount;
   bonus_available?: boolean;
@@ -50,7 +51,8 @@ const incentivePropertySchema = {
   authority: { type: 'string' },
   type: { type: 'string', enum: Object.values(Type) },
   item: { type: 'string', enum: ALL_ITEMS },
-  item_type: { type: 'string', enum: Object.values(ItemType) },
+  item_type: { type: 'string', enum: Object.values(PaymentMethod) },
+  payment_methods: { type: 'array', items: { type: 'string', enum: Object.values(PaymentMethod) } },
   program: { type: 'string', enum: ALL_PROGRAMS },
   amount: amountSchema,
   bonus_available: { type: 'boolean', nullable: true },
@@ -74,6 +76,7 @@ const requiredProperties = [
   'type',
   'item',
   'item_type',
+  'payment_methods',
   'program',
   'amount',
   'owner_status',

@@ -13,7 +13,7 @@ export type TypeV0 = Extract<Type, Type.PosRebate | Type.TaxCredit>;
  * A more specific version of the above. This gates specific logic around
  * eligibility, totaling up savings, or estimating the amount of an incentive.
  */
-export enum ItemType {
+export enum PaymentMethod {
   // TODO this should go away
   EvChargerCredit = 'ev_charger_credit',
 
