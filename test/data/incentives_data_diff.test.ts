@@ -23,7 +23,7 @@ const TESTS = [
 const GOLDEN_DIR = 'test/fixtures/incentive_goldens';
 const STATE_INCENTIVE_DIR = 'data';
 const TEST_FILE_SUFFIX = '.json';
-const UPDATE_COMMAND = `'tsc && node build/test/data/incentives_data_diff.test.js --write'`;
+const UPDATE_COMMAND = `'yarn tsc && node build/test/data/incentives_data_diff.test.js --write'`;
 const args = minimist(process.argv.slice(2), { boolean: ['write'] });
 
 /*
