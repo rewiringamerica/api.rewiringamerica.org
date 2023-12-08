@@ -37,7 +37,7 @@
     ],
     "short_description": "Income-eligible Vermonters can get a $500 bonus rebate if you work with an Efficiency Excellence Network contractor to install your air-to-water heat pump.",
     "low_income": "default-moderate"
-  },  
+  },
   {
     "id": "VT-3",
     "authority_type": "utility",
@@ -259,7 +259,6 @@
     "authority_type": "utility",
     "authority": "vt-vermont-electric-coop",
     "type": "account_credit",
-    // Collapsed from ducted heat pump
     "item": "heat_pump_air_conditioner_heater",
     "item_type": "account_credit",
     "program": "vt_vermontElectricCoopThermalEfficiencyBillCreditDuctedHeatPumpBonusProgram",
@@ -465,7 +464,6 @@
     ],
     "short_description": "Receive a one-time $150 bill credit per unit installed for a qualifying ductless heat pump."
   },
-  // needs to support multiple types and tax filing status on state incentives 
   {
     "id": "VT-27",
     "authority_type": "state",
@@ -480,7 +478,8 @@
       "maximum": 5000
     },
     "owner_status": [
-      "homeowner", "renter"
+      "homeowner",
+      "renter"
     ],
     "short_description": "Incentive up to $5000 for a new electric vehicle or up to $3000 for a new plug-in hybrid vehicle. Incentive amount dependent upon tax filing status and income."
   },
@@ -499,11 +498,11 @@
     },
     "low_income": "default",
     "owner_status": [
-      "homeowner", "renter"
+      "homeowner",
+      "renter"
     ],
     "short_description": "The State of Vermont has partnered with Capstone to offer the MileageSmart program. This offers low and moderate income car buyers an incentive covering 25% of the upfront cost of a used high efficiency vehicle, up to $5,000."
   },
-  // requires tax filing and AGI
   {
     "id": "VT-29",
     "authority_type": "state",
@@ -518,7 +517,8 @@
       "maximum": 5000
     },
     "owner_status": [
-      "homeowner", "renter"
+      "homeowner",
+      "renter"
     ],
     "start_date": 2022,
     "short_description": "The State of Vermont is offering a limited-time incentive program to consumers for the scrapping of their old Internal Combustion Engine (ICE) vehicle. The incentive amount for scrapping an eligible ICE vehicle is either $2,500 or $5,000, depending on the applicant’s income."
@@ -538,7 +538,8 @@
     },
     "low_income": "vt-state-of-vermont",
     "owner_status": [
-      "homeowner", "renter"
+      "homeowner",
+      "renter"
     ],
     "start_date": 2022,
     "short_description": "The State of Vermont is offering a limited-time incentive program to consumers for the scrapping of their old Internal Combustion Engine (ICE) vehicle. The incentive amount for scrapping an eligible ICE vehicle is $5,000 based on income eligibility."
@@ -613,7 +614,8 @@
     },
     "start_date": 2018,
     "owner_status": [
-      "homeowner", "renter"
+      "homeowner",
+      "renter"
     ],
     "short_description": "Free level 2 charging equipment with electric vehicle purchase (not including installation). Charger must be internet connected and part of GMP program to reduce demand during peak times. Compatible equipment can receive discounted off-peak rates for charging."
   },
@@ -631,7 +633,8 @@
     },
     "start_date": 2018,
     "owner_status": [
-      "homeowner", "renter"
+      "homeowner",
+      "renter"
     ],
     "short_description": "Members who participate in PowerShift receive Level 2 charging equipment and $500 Efficiency Vermont rebate once their charger has been installed and connected to Wi-Fi with a schedule set. Members are only responsible for the cost of installation and any required update costs of service entrance and transformer."
   },
@@ -649,7 +652,8 @@
     },
     "start_date": 2018,
     "owner_status": [
-      "homeowner", "renter"
+      "homeowner",
+      "renter"
     ],
     "short_description": "Members who participate in PowerShift receive Level 2 charging equipment and $500 Efficiency Vermont rebate once their charger has been installed and connected to Wi-Fi with a schedule set. Members are only responsible for the cost of installation and any required update costs of service entrance and transformer."
   },
