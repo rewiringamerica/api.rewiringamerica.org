@@ -61,3 +61,10 @@ export const BETA_STATES: string[] = [
 export const LAUNCHED_STATES: string[] = [
   'RI',
 ];
+
+export const isStateIncluded = (
+  stateId: string,
+  includeBeta: boolean,
+): boolean =>
+  LAUNCHED_STATES.includes(stateId) ||
+  (includeBeta && BETA_STATES.includes(stateId));
