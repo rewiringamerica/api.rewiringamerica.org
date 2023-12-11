@@ -149,7 +149,10 @@ export default async function (
           .type('application/json')
           .send({
             location: { state: location.state_id },
-            utilities: getUtilitiesForLocation(location),
+            utilities: getUtilitiesForLocation(
+              location,
+              request.query.include_beta_states ?? false,
+            ),
           });
       } catch (error) {
         if (error instanceof InvalidInputError) {

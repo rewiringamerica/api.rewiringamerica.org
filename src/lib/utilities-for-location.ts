@@ -1,4 +1,5 @@
 import { AUTHORITIES_BY_STATE, Authority } from '../data/authorities';
+import { isStateIncluded } from '../data/types/states';
 import { ZipInfo } from './income-info';
 
 /**
@@ -12,12 +13,15 @@ import { ZipInfo } from './income-info';
  *
  * TODO this is very not scalable to nationwide coverage!
  */
-export function getUtilitiesForLocation(location: ZipInfo): {
+export function getUtilitiesForLocation(
+  location: ZipInfo,
+  includeBeta: boolean,
+): {
   [id: string]: Authority;
 } {
   const stateUtilities = AUTHORITIES_BY_STATE[location.state_id]?.utility;
 
-  if (!stateUtilities) {
+  if (!stateUtilities || !isStateIncluded(location.state_id, includeBeta)) {
     return {};
   }
 
