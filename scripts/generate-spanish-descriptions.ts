@@ -114,10 +114,7 @@ async function queryGpt(
   }
 }
 
-async function logTranslations(
-  file: IncentiveFile,
-  model_family: string,
-) {
+async function logTranslations(file: IncentiveFile, model_family: string) {
   const incentives: Incentive[] = JSON.parse(
     fs.readFileSync(file.filepath, 'utf-8'),
   );
