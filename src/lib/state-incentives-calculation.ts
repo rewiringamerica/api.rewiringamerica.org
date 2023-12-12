@@ -37,7 +37,7 @@ export function calculateStateIncentivesAndSavings(
   stateId: string,
   request: CalculateParams,
   incentives: StateIncentive[],
-  incentiveRelationships?: IncentiveRelationships,
+  incentiveRelationships: IncentiveRelationships,
 ): {
   stateIncentives: CalculatedIncentive[];
   savings: APISavings;
@@ -118,10 +118,10 @@ export function calculateStateIncentivesAndSavings(
     const prerequisiteMaps = buildPrerequisiteMaps(incentiveRelationships);
 
     // Use relationship maps to update incentive eligibility.
-    for (const prereqRelationship of prerequisiteMaps.requiresMap) {
+    for (const [incentiveId, prerequisiteIds] of prerequisiteMaps.requiresMap) {
       checkPrerequisites(
-        prereqRelationship[0],
-        prereqRelationship[1],
+        incentiveId,
+        prerequisiteIds,
         eligibleIncentives,
         ineligibleIncentives,
         prerequisiteMaps.requiredByMap,
@@ -156,31 +156,61 @@ export function calculateStateIncentivesAndSavings(
 }
 
 /* Uses relationships object to build two maps:
-- one from incentive ID to an array of IDs of incentives it requires (requiresMap),
-- one from incentive ID to an array of IDs of incentives that require it (requiredByMap)
+- one from incentive ID to a set of IDs of incentives it requires (requiresMap),
+- one from incentive ID to a set of IDs of incentives that require it (requiredByMap)
 */
-function buildPrerequisiteMaps(incentiveRelationships: IncentiveRelationships) {
-  const requiresMap = new Map<string, string[]>();
-  const requiredByMap = new Map<string, string[]>();
-  if (
-    incentiveRelationships !== undefined &&
-    incentiveRelationships.prerequisites !== undefined
-  ) {
-    for (const relationship of incentiveRelationships.prerequisites) {
-      const requiredIncentives = relationship.requires;
-      requiresMap.set(relationship.id, requiredIncentives);
+export function buildPrerequisiteMaps(
+  incentiveRelationships: IncentiveRelationships,
+) {
+  const requiresMap = new Map<string, Set<string>>();
+  const requiredByMap = new Map<string, Set<string>>();
+  if (incentiveRelationships.prerequisites !== undefined) {
+    for (const [incentiveId, prerequisiteIds] of Object.entries(
+      incentiveRelationships.prerequisites,
+    )) {
+      requiresMap.set(incentiveId, new Set(prerequisiteIds));
 
-      for (const requiredIncentiveId of requiredIncentives) {
-        const existingDependencies = requiredByMap.get(requiredIncentiveId);
+      for (const prerequisiteId of prerequisiteIds) {
+        const existingDependencies = requiredByMap.get(prerequisiteId);
         if (existingDependencies !== undefined) {
-          existingDependencies.push(relationship.id);
+          existingDependencies.add(incentiveId);
         } else {
-          requiredByMap.set(requiredIncentiveId, [relationship.id]);
+          requiredByMap.set(prerequisiteId, new Set(incentiveId));
         }
       }
     }
   }
   return { requiresMap, requiredByMap };
+}
+
+// Builds a graph of incentive relationships, represented as pairs of incentive
+// ID and the set of IDs of incentives that are dependent on that incentive.
+export function buildRelationshipGraph(data: IncentiveRelationships) {
+  const edges = new Map<string, Set<string>>();
+  // For exclusion relationships, the superseding incentive is the "source."
+  if (data.exclusions !== undefined) {
+    for (const [incentiveId, supersededIds] of Object.entries(
+      data.exclusions,
+    )) {
+      edges.set(incentiveId, new Set(supersededIds));
+    }
+  }
+
+  // For prerequisite relationships, the required incentive is the "source."
+  if (data.prerequisites !== undefined) {
+    for (const [incentiveId, requiredByIds] of buildPrerequisiteMaps(data)
+      .requiredByMap) {
+      const existingRelationships = edges.get(incentiveId);
+      if (existingRelationships !== undefined) {
+        for (const requiredById of requiredByIds) {
+          existingRelationships.add(requiredById);
+        }
+      } else {
+        edges.set(incentiveId, new Set(requiredByIds));
+      }
+    }
+  }
+  return edges;
 }
 
 /* Checks the prerequisites for a single incentive and updates its eligibility
@@ -191,68 +221,50 @@ function buildPrerequisiteMaps(incentiveRelationships: IncentiveRelationships) {
 */
 function checkPrerequisites(
   incentiveId: string,
-  prerequisiteIds: string[],
+  prerequisiteIds: Set<string>,
   eligibleIncentives: Map<string, StateIncentive>,
   ineligibleIncentives: Map<string, StateIncentive>,
-  dependencyMap: Map<string, string[]>,
+  dependentsMap: Map<string, Set<string>>,
 ) {
   for (const prerequisiteId of prerequisiteIds) {
     if (
       eligibleIncentives.has(incentiveId) &&
       !eligibleIncentives.has(prerequisiteId)
     ) {
-      const incentive = eligibleIncentives.get(incentiveId);
-      if (incentive !== undefined) {
-        updateEligibility(
-          incentive,
-          eligibleIncentives,
-          ineligibleIncentives,
-          dependencyMap,
-        );
-      }
+      makeIneligible(
+        eligibleIncentives.get(incentiveId)!,
+        eligibleIncentives,
+        ineligibleIncentives,
+        dependentsMap,
+      );
     }
   }
 }
 
-// Switches an intencive from eligible to ineligible and checks dependencies.
-function updateEligibility(
+// Switches an incentive from eligible to ineligible and checks dependencies.
+function makeIneligible(
   incentive: StateIncentive,
   eligibleIncentives: Map<string, StateIncentive>,
   ineligibleIncentives: Map<string, StateIncentive>,
-  dependencyMap: Map<string, string[]>,
+  dependentsMap: Map<string, Set<string>>,
 ) {
   eligibleIncentives.delete(incentive.id);
   ineligibleIncentives.set(incentive.id, incentive);
-  checkDependencies(
-    incentive.id,
-    dependencyMap,
-    eligibleIncentives,
-    ineligibleIncentives,
-  );
-  // TODO: also need to check supersedes map when mutual exclusion relationships are implemented.
-}
-
-function checkDependencies(
-  incentiveId: string,
-  dependencyMap: Map<string, string[]>,
-  eligibleIncentives: Map<string, StateIncentive>,
-  ineligibleIncentives: Map<string, StateIncentive>,
-) {
-  const dependencyIds = dependencyMap.get(incentiveId);
-  if (dependencyIds !== undefined) {
-    for (const dependencyId of dependencyIds) {
-      console.log(dependencyId);
-      const dependency = eligibleIncentives.get(dependencyId);
-      if (dependency !== undefined) {
-        updateEligibility(
-          dependency,
+  const dependentIds = dependentsMap.get(incentive.id);
+  if (dependentIds !== undefined) {
+    for (const dependentId of dependentIds) {
+      const dependent = eligibleIncentives.get(dependentId);
+      if (dependent !== undefined) {
+        makeIneligible(
+          dependent,
           eligibleIncentives,
           ineligibleIncentives,
-          dependencyMap,
+          dependentsMap,
         );
       }
     }
   }
+  // TODO: also need to check supersedes map when mutual exclusion relationships are implemented.
 }
 
 function transformItems(

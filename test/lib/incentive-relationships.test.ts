@@ -2,11 +2,11 @@ import { test } from 'tap';
 import { AuthorityType } from '../../src/data/authorities';
 import { FilingStatus } from '../../src/data/tax_brackets';
 import { OwnerStatus } from '../../src/data/types/owner-status';
-import { calculateStateIncentivesAndSavings } from '../../src/lib/state-incentives-calculation';
 import {
   buildRelationshipGraph,
-  incentiveRelationshipsContainCycle,
-} from '../data/schemas.test';
+  calculateStateIncentivesAndSavings,
+} from '../../src/lib/state-incentives-calculation';
+import { incentiveRelationshipsContainCycle } from '../data/schemas.test';
 import {
   TEST_INCENTIVE_RELATIONSHIPS,
   TEST_INVALID_INCENTIVE_RELATIONSHIPS,
@@ -29,6 +29,7 @@ test('basic test for supplying test incentive data to calculation logic', async 
       include_beta_states: false,
     },
     TEST_INCENTIVES,
+    TEST_INCENTIVE_RELATIONSHIPS,
   );
   t.ok(data);
   // There are 4 test incentives and this user is eligible for all of them.
@@ -51,6 +52,7 @@ test('test calculation with no incentives', async t => {
       include_beta_states: true,
     },
     [],
+    TEST_INCENTIVE_RELATIONSHIPS,
   );
   t.ok(data);
   t.equal(data.stateIncentives.length, 0);

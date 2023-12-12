@@ -44,6 +44,7 @@ import {
   PROGRAMS_SCHEMA,
 } from '../../src/data/programs';
 import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
+import { buildRelationshipGraph } from '../../src/lib/state-incentives-calculation';
 
 const TESTS = [
   [I_SCHEMA, IRA_INCENTIVES, 'ira_incentives'],
@@ -80,12 +81,8 @@ const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
   ['VA', VA_INCENTIVES_SCHEMA, VA_INCENTIVES],
 ];
 
-const STATE_INCENTIVE_RELATIONSHIP_TESTS: [
-  string,
-  IncentiveRelationships,
-  IncentiveRelationships,
-][] = [
-  ['CT', INCENTIVE_RELATIONSHIPS_SCHEMA, CT_RELATIONSHIPS],
+const STATE_INCENTIVE_RELATIONSHIP_TESTS: [string, IncentiveRelationships][] = [
+  ['CT', CT_RELATIONSHIPS],
 ];
 
 /**
@@ -184,10 +181,10 @@ test('locale URLs are valid', async tap => {
 test('state incentive relationships JSON files match schemas', async tap => {
   const ajv = new Ajv();
 
-  STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([stateId, schema, data]) => {
+  STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([stateId, data]) => {
     if (
       !tap.ok(
-        ajv.validate(schema, data),
+        ajv.validate(INCENTIVE_RELATIONSHIPS_SCHEMA, data),
         `${stateId} incentive relationships invalid`,
       )
     ) {
@@ -195,34 +192,6 @@ test('state incentive relationships JSON files match schemas', async tap => {
     }
   });
 });
-
-// Builds a graph of incentive relationships, represented as pairs of incentive
-// ID and the set of IDs of incentives that are dependent on that incentive.
-export function buildRelationshipGraph(data: IncentiveRelationships) {
-  const edges = new Map<string, Set<string>>();
-  // For exclusion relationships, the superseding incentive is the "source."
-  if (data.exclusions) {
-    for (const relationship of data.exclusions) {
-      edges.set(relationship.id, new Set(relationship.supersedes));
-    }
-  }
-  // For prerequisite relationships, the required incentive is the "source."
-  if (data.prerequisites) {
-    for (const relationship of data.prerequisites) {
-      const targetId = relationship.id;
-      for (const sourceId of relationship.requires) {
-        let existingTargetIds = edges.get(sourceId);
-        if (existingTargetIds !== undefined) {
-          existingTargetIds.add(targetId);
-        } else {
-          existingTargetIds = new Set<string>([targetId]);
-          edges.set(sourceId, existingTargetIds);
-        }
-      }
-    }
-  }
-  return edges;
-}
 
 // Helper to check for circular dependencies in the incentive relationships.
 export function checkForCycle(
@@ -272,9 +241,59 @@ export function incentiveRelationshipsContainCycle(
 }
 
 test('state incentive relationships contain no circular dependencies', async tap => {
-  STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([, , data]) => {
+  STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([, data]) => {
     // Check that there are no circular dependencies in the relationships.
     const relationshipGraph = buildRelationshipGraph(data);
     tap.equal(incentiveRelationshipsContainCycle(relationshipGraph), false);
+  });
+});
+
+test('state incentive relationships only reference real IDs', async tap => {
+  // Collect all the incentive IDs we know about.
+  const incentiveIds = new Map<string, Set<string>>();
+  STATE_INCENTIVE_TESTS.forEach(([stateId, , data]) => {
+    // Check some constraints that aren't expressed in JSON schema
+    const ids = new Set<string>();
+    data.forEach(incentive => {
+      ids.add(incentive.id);
+    });
+    incentiveIds.set(stateId, ids);
+  });
+
+  // Check that all of the incentive relationships reference IDs that exist.
+  STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([stateId, data]) => {
+    // Must have incentives for this state in order to have relationships.
+    tap.equal(incentiveIds.has(stateId), true);
+
+    const incentivesForState = incentiveIds.get(stateId);
+    if (incentivesForState !== undefined) {
+      if (data.prerequisites !== undefined) {
+        for (const [incentiveId, prerequisiteIds] of Object.entries(
+          data.prerequisites,
+        )) {
+          tap.equal(incentivesForState.has(incentiveId), true);
+          for (const id of prerequisiteIds) {
+            tap.equal(incentivesForState.has(id), true);
+          }
+        }
+      }
+      if (data.exclusions !== undefined) {
+        for (const [incentiveId, supersededIds] of Object.entries(
+          data.exclusions,
+        )) {
+          tap.equal(incentivesForState.has(incentiveId), true);
+          for (const id of supersededIds) {
+            tap.equal(incentivesForState.has(id), true);
+          }
+        }
+      }
+      if (data.combinations !== undefined) {
+        for (const relationship of data.combinations) {
+          for (const id of relationship.ids) {
+            tap.equal(incentivesForState.has(id), true);
+          }
+        }
+      }
+    }
   });
 });

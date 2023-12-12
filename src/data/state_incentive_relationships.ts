@@ -1,35 +1,25 @@
 import fs from 'fs';
 import { FromSchema } from 'json-schema-to-ts';
 
+const prerequisiteSchema = {
+  type: 'array',
+  items: { type: 'string' },
+} as const;
+
+const exclusionSchema = {
+  type: 'array',
+  items: { type: 'string' },
+} as const;
+
 export const INCENTIVE_RELATIONSHIPS_SCHEMA = {
   type: 'object',
   properties: {
     // Prerequisite relationships are represented by a mapping of incentive ID
     // to an array of IDs of incentives that this incentive requires.
-    prerequisites: {
-      type: 'array',
-      items: {
-        type: 'object',
-        properties: {
-          id: { type: 'string' },
-          requires: { type: 'array', items: { type: 'string' } },
-        },
-        required: ['id', 'requires'],
-      },
-    },
+    prerequisites: { type: 'object', additionalProperties: prerequisiteSchema },
     // Exclusion relationships are represented by a mapping of incentive ID
     // to an array of IDs that are superseded by this incentive.
-    exclusions: {
-      type: 'array',
-      items: {
-        type: 'object',
-        properties: {
-          id: { type: 'string' },
-          supersedes: { type: 'array', items: { type: 'string' } },
-        },
-        required: ['id', 'supersedes'],
-      },
-    },
+    exclusions: { type: 'object', additionalProperties: exclusionSchema },
     // Combination relationships are represented by an array of incentive IDs
     // and the max value of the savings offered by that group of incentives.
     combinations: {
