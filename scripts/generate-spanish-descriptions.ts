@@ -123,36 +123,32 @@ async function logTranslations(
     fs.readFileSync(file.filepath, 'utf-8'),
   );
 
-  const engs: string[] = [];
-  for (const incentive of incentives) {
-    engs.push(incentive.short_description.en);
-  }
-
-  let esps: string[] = [];
-
+  let translations: string[] = [];
   let batch = 0;
-  while (batch * BATCH_SIZE < engs.length) {
-    const batch_engs = engs.slice(batch * BATCH_SIZE, (batch + 1) * BATCH_SIZE);
-    const prompt = createPrompt(batch_engs, SYSTEM_PROMPT, [
+  while (batch * BATCH_SIZE < incentives.length) {
+    const english = incentives
+      .slice(batch * BATCH_SIZE, (batch + 1) * BATCH_SIZE)
+      .map(incentive => incentive.short_description.en);
+    const prompt = createPrompt(english, SYSTEM_PROMPT, [
       [EXAMPLE_USER, EXAMPLE_RESPONSE],
     ]);
     const resp = await queryGpt(prompt, model_family);
     if (resp === undefined)
       throw new Error('Undefined response received from GPT');
-    const batch_esps = resp.split('\n');
-    if (batch_esps.length !== batch_engs.length) {
+    const spanish = resp.split('\n');
+    if (spanish.length !== english.length) {
       throw new Error(
-        `Mismatched lengths for translation inputs (${batch_engs.length}) and outputs (${batch_esps.length})`,
+        `Mismatched lengths for translation inputs (${english.length}) and outputs (${spanish.length})`,
       );
     }
-    esps = esps.concat(batch_esps);
+    translations = translations.concat(spanish);
     batch += 1;
   }
 
   console.log(`Translations for ${file.filepath}`);
   console.log('Copy these into the corresponding spreadsheet.');
   console.log('If necessary, filter to records that exist in the JSON file.');
-  console.log(esps.join('\n'));
+  console.log(translations.join('\n'));
 }
 
 (async function () {
