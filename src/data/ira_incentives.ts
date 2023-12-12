@@ -4,7 +4,11 @@ import { AuthorityType } from './authorities';
 import { ALL_PROGRAMS } from './programs';
 import { FilingStatus } from './tax_brackets';
 import { Amount, AmountType, AmountUnit } from './types/amount';
-import { PaymentMethod, Type, TypeV0 } from './types/incentive-types';
+import {
+  ItemType,
+  PaymentMethod,
+  PaymentMethodV0,
+} from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
 import { LocalizableString } from './types/localizable-string';
 import { OwnerStatus } from './types/owner-status';
@@ -24,12 +28,12 @@ export interface IRAIncentive {
   end_date: number;
   filing_status: FilingStatus | null;
   item: Item;
-  item_type: PaymentMethod;
+  item_type: ItemType;
   payment_methods: PaymentMethod[];
   owner_status: OwnerStatus[];
   program: string;
   start_date: number;
-  type: TypeV0;
+  type: PaymentMethodV0;
   short_description: LocalizableString;
 }
 
@@ -58,11 +62,14 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
     type: 'object',
     properties: {
       id: { type: 'string' },
-      type: { type: 'string', enum: [Type.PosRebate, Type.TaxCredit] },
+      type: {
+        type: 'string',
+        enum: [PaymentMethod.PosRebate, PaymentMethod.TaxCredit],
+      },
       program: { type: 'string', enum: ALL_PROGRAMS },
       authority_type: { type: 'string', const: AuthorityType.Federal },
       item: { type: 'string', enum: ALL_ITEMS },
-      item_type: { type: 'string', enum: Object.values(PaymentMethod) },
+      item_type: { type: 'string', enum: Object.values(ItemType) },
       payment_methods: {
         type: 'array',
         items: { type: 'string', enum: Object.values(PaymentMethod) },

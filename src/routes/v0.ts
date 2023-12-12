@@ -6,7 +6,11 @@ import { IRA_INCENTIVES, IRAIncentive } from '../data/ira_incentives';
 import { IRA_STATE_SAVINGS } from '../data/ira_state_savings';
 import { PROGRAMS } from '../data/programs';
 import { AmountType } from '../data/types/amount';
-import { PaymentMethod, Type, TypeV0 } from '../data/types/incentive-types';
+import {
+  ItemType,
+  PaymentMethod,
+  PaymentMethodV0,
+} from '../data/types/incentive-types';
 import { InvalidInputError } from '../lib/error';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
 import { t, tr } from '../lib/i18n';
@@ -42,7 +46,7 @@ function translateIncentives(incentives: IRAIncentive[]): WebsiteIncentive[] {
     ),
     short_description: tr(incentive.short_description, 'en'),
 
-    type: incentive.type as TypeV0,
+    type: incentive.type as PaymentMethodV0,
 
     // Transform amounts from v1 to v0 format
     amount: incentive.amount.number,
@@ -140,10 +144,10 @@ export default async function (
         });
 
         const pos_rebate_incentives = result.incentives.filter(
-          i => i.type === Type.PosRebate,
+          i => i.type === PaymentMethod.PosRebate,
         ) as IRAIncentive[];
         let tax_credit_incentives = result.incentives.filter(
-          i => i.type === Type.TaxCredit,
+          i => i.type === PaymentMethod.TaxCredit,
         ) as IRAIncentive[];
 
         // Website Calculator backwards compatiblity from v1 data:
@@ -169,7 +173,7 @@ export default async function (
           // 1.3)
           // set the amount_type and item_type to what the calculator expects:
           solarTaxCredit.amount.type = 'solar' as AmountType;
-          solarTaxCredit.item_type = 'solar_tax_credit' as PaymentMethod;
+          solarTaxCredit.item_type = 'solar_tax_credit' as ItemType;
         }
 
         const translated: WebsiteCalculatorResponse = {

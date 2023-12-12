@@ -3,7 +3,7 @@ import { AuthorityType } from '../../data/authorities';
 import { AmiQualification } from '../../data/ira_incentives';
 import { FilingStatus } from '../../data/tax_brackets';
 import { AmountType, AmountUnit } from '../../data/types/amount';
-import { PaymentMethod, Type } from '../../data/types/incentive-types';
+import { ItemType, PaymentMethod } from '../../data/types/incentive-types';
 import { ALL_ITEMS } from '../../data/types/items';
 import { OwnerStatus } from '../../data/types/owner-status';
 
@@ -25,7 +25,7 @@ export const API_INCENTIVE_SCHEMA = {
   properties: {
     type: {
       type: 'string',
-      enum: Object.values(Type),
+      enum: Object.values(PaymentMethod),
     },
     authority_type: {
       type: 'string',
@@ -89,7 +89,7 @@ export const API_INCENTIVE_SCHEMA = {
     },
     item_type: {
       type: 'string',
-      enum: Object.values(PaymentMethod),
+      enum: Object.values(ItemType),
     },
     payment_methods: {
       type: 'array',

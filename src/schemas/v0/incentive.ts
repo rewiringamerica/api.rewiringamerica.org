@@ -1,7 +1,7 @@
 import { FromSchema } from 'json-schema-to-ts';
 import { AmiQualification } from '../../data/ira_incentives';
 import { FilingStatus } from '../../data/tax_brackets';
-import { PaymentMethod, Type } from '../../data/types/incentive-types';
+import { ItemType, PaymentMethod } from '../../data/types/incentive-types';
 import { OwnerStatus } from '../../data/types/owner-status';
 
 export const WEBSITE_INCENTIVE_SCHEMA = {
@@ -26,7 +26,7 @@ export const WEBSITE_INCENTIVE_SCHEMA = {
   properties: {
     type: {
       type: 'string',
-      enum: [Type.PosRebate, Type.TaxCredit],
+      enum: [PaymentMethod.PosRebate, PaymentMethod.TaxCredit],
     },
     program: {
       type: 'string',
@@ -80,7 +80,7 @@ export const WEBSITE_INCENTIVE_SCHEMA = {
     },
     item_type: {
       type: 'string',
-      enum: [...Object.values(PaymentMethod), 'solar_tax_credit'],
+      enum: [...Object.values(ItemType), 'solar_tax_credit'],
     },
     owner_status: {
       type: 'array',

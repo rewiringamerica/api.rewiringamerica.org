@@ -4,7 +4,7 @@ import { AuthorityType } from './authorities';
 import { RILowIncomeAuthority } from './low_income_thresholds';
 import { ALL_PROGRAMS } from './programs';
 import { Amount, AmountType, AmountUnit } from './types/amount';
-import { PaymentMethod, Type } from './types/incentive-types';
+import { ItemType, PaymentMethod } from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
 import { LocalizableString } from './types/localizable-string';
 import { OwnerStatus } from './types/owner-status';
@@ -15,9 +15,9 @@ export type StateIncentive = {
   id: string;
   authority_type: AuthorityType;
   authority: string;
-  type: Type;
+  type: PaymentMethod; // Deprecated; we are switching to use payment_methods instead
   item: Item;
-  item_type: PaymentMethod; // Deprecated; we are switching to use payment_methods instead
+  item_type: ItemType;
   payment_methods: PaymentMethod[];
   program: string;
   amount: Amount;
@@ -49,9 +49,9 @@ const incentivePropertySchema = {
   id: { type: 'string' },
   authority_type: { type: 'string', enum: Object.values(AuthorityType) },
   authority: { type: 'string' },
-  type: { type: 'string', enum: Object.values(Type) },
+  type: { type: 'string', enum: Object.values(PaymentMethod) },
   item: { type: 'string', enum: ALL_ITEMS },
-  item_type: { type: 'string', enum: Object.values(PaymentMethod) },
+  item_type: { type: 'string', enum: Object.values(ItemType) },
   payment_methods: {
     type: 'array',
     items: { type: 'string', enum: Object.values(PaymentMethod) },
