@@ -96,7 +96,7 @@ export const API_INCENTIVE_SCHEMA = {
       items: {
         type: 'string',
         enum: Object.values(PaymentMethod),
-      }
+      },
     },
     owner_status: {
       type: 'array',
@@ -169,7 +169,7 @@ export const API_INCENTIVE_SCHEMA = {
       },
       item_type: 'pos_rebate',
       payment_methods: [
-        'pos_rebate'
+        'pos_rebate',
       ],
       owner_status: [
         'homeowner',

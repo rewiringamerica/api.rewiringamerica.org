@@ -18,7 +18,7 @@ export type StateIncentive = {
   type: Type;
   item: Item;
   item_type: PaymentMethod; // Deprecated; we are switching to use payment_methods instead
-  payment_methods: PaymentMethod[]
+  payment_methods: PaymentMethod[];
   program: string;
   amount: Amount;
   bonus_available?: boolean;
@@ -52,7 +52,10 @@ const incentivePropertySchema = {
   type: { type: 'string', enum: Object.values(Type) },
   item: { type: 'string', enum: ALL_ITEMS },
   item_type: { type: 'string', enum: Object.values(PaymentMethod) },
-  payment_methods: { type: 'array', items: { type: 'string', enum: Object.values(PaymentMethod) } },
+  payment_methods: {
+    type: 'array',
+    items: { type: 'string', enum: Object.values(PaymentMethod) },
+  },
   program: { type: 'string', enum: ALL_PROGRAMS },
   amount: amountSchema,
   bonus_available: { type: 'boolean', nullable: true },

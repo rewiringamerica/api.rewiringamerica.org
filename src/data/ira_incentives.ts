@@ -63,7 +63,10 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
       authority_type: { type: 'string', const: AuthorityType.Federal },
       item: { type: 'string', enum: ALL_ITEMS },
       item_type: { type: 'string', enum: Object.values(PaymentMethod) },
-      payment_methods: { type: 'array', items: { type: 'string', enum: Object.values(PaymentMethod) } },
+      payment_methods: {
+        type: 'array',
+        items: { type: 'string', enum: Object.values(PaymentMethod) },
+      },
       amount: amountSchema,
       owner_status: {
         type: 'array',
