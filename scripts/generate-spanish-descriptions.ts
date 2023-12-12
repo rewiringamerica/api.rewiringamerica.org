@@ -116,7 +116,6 @@ async function queryGpt(
 
 async function logTranslations(
   file: IncentiveFile,
-  write: boolean,
   model_family: string,
 ) {
   const incentives: Incentive[] = JSON.parse(
@@ -152,7 +151,7 @@ async function logTranslations(
 }
 
 (async function () {
-  const args = minimist(process.argv.slice(2), { boolean: ['write'] });
+  const args = minimist(process.argv.slice(2));
 
   const bad = args._.filter(f => !(f in FILES));
   if (bad.length) {
@@ -163,6 +162,6 @@ async function logTranslations(
   }
 
   args._.forEach(async fileIdent => {
-    await logTranslations(FILES[fileIdent], args.write, GPT_MODEL);
+    await logTranslations(FILES[fileIdent], GPT_MODEL);
   });
 })();
