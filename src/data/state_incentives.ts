@@ -16,9 +16,9 @@ export type StateIncentive = {
   authority_type: AuthorityType;
   authority: string;
   type: PaymentMethod; // Deprecated; we are switching to use payment_methods instead
+  payment_methods: PaymentMethod[];
   item: Item;
   item_type: ItemType;
-  payment_methods: PaymentMethod[];
   program: string;
   amount: Amount;
   bonus_available?: boolean;
@@ -50,12 +50,12 @@ const incentivePropertySchema = {
   authority_type: { type: 'string', enum: Object.values(AuthorityType) },
   authority: { type: 'string' },
   type: { type: 'string', enum: Object.values(PaymentMethod) },
-  item: { type: 'string', enum: ALL_ITEMS },
-  item_type: { type: 'string', enum: Object.values(ItemType) },
   payment_methods: {
     type: 'array',
     items: { type: 'string', enum: Object.values(PaymentMethod) },
   },
+  item: { type: 'string', enum: ALL_ITEMS },
+  item_type: { type: 'string', enum: Object.values(ItemType) },
   program: { type: 'string', enum: ALL_PROGRAMS },
   amount: amountSchema,
   bonus_available: { type: 'boolean', nullable: true },
@@ -77,9 +77,9 @@ const requiredProperties = [
   'authority',
   'authority_type',
   'type',
+  'payment_methods',
   'item',
   'item_type',
-  'payment_methods',
   'program',
   'amount',
   'owner_status',

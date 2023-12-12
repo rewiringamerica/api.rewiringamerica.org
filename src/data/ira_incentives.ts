@@ -29,11 +29,11 @@ export interface IRAIncentive {
   filing_status: FilingStatus | null;
   item: Item;
   item_type: ItemType;
-  payment_methods: PaymentMethod[];
   owner_status: OwnerStatus[];
   program: string;
   start_date: number;
   type: PaymentMethodV0;
+  payment_methods: PaymentMethod[];
   short_description: LocalizableString;
 }
 
@@ -66,14 +66,14 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
         type: 'string',
         enum: [PaymentMethod.PosRebate, PaymentMethod.TaxCredit],
       },
-      program: { type: 'string', enum: ALL_PROGRAMS },
-      authority_type: { type: 'string', const: AuthorityType.Federal },
-      item: { type: 'string', enum: ALL_ITEMS },
-      item_type: { type: 'string', enum: Object.values(ItemType) },
       payment_methods: {
         type: 'array',
         items: { type: 'string', enum: Object.values(PaymentMethod) },
       },
+      program: { type: 'string', enum: ALL_PROGRAMS },
+      authority_type: { type: 'string', const: AuthorityType.Federal },
+      item: { type: 'string', enum: ALL_ITEMS },
+      item_type: { type: 'string', enum: Object.values(ItemType) },
       amount: amountSchema,
       owner_status: {
         type: 'array',
@@ -106,11 +106,11 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
       'filing_status',
       'item',
       'item_type',
-      'payment_methods',
       'owner_status',
       'program',
       'start_date',
       'type',
+      'payment_methods',
       'short_description',
     ],
   },

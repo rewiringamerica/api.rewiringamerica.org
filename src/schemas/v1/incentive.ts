@@ -12,11 +12,11 @@ export const API_INCENTIVE_SCHEMA = {
   type: 'object',
   required: [
     'type',
+    'payment_methods',
     'authority_type',
     'program',
     'item',
     'item_type',
-    'payment_methods',
     'amount',
     'owner_status',
     'start_date',
@@ -26,6 +26,13 @@ export const API_INCENTIVE_SCHEMA = {
     type: {
       type: 'string',
       enum: Object.values(PaymentMethod),
+    },
+    payment_methods: {
+      type: 'array',
+      items: {
+        type: 'string',
+        enum: Object.values(PaymentMethod),
+      },
     },
     authority_type: {
       type: 'string',
@@ -91,13 +98,6 @@ export const API_INCENTIVE_SCHEMA = {
       type: 'string',
       enum: Object.values(ItemType),
     },
-    payment_methods: {
-      type: 'array',
-      items: {
-        type: 'string',
-        enum: Object.values(PaymentMethod),
-      },
-    },
     owner_status: {
       type: 'array',
       items: {
@@ -155,6 +155,9 @@ export const API_INCENTIVE_SCHEMA = {
   examples: [
     {
       type: 'pos_rebate',
+      payment_methods: [
+        'pos_rebate',
+      ],
       authority_type: 'federal',
       program: 'Energy Efficient Home Improvement Credit (25C)',
       item: 'Electric Panel',
@@ -168,9 +171,6 @@ export const API_INCENTIVE_SCHEMA = {
         representative: 3000,
       },
       item_type: 'pos_rebate',
-      payment_methods: [
-        'pos_rebate',
-      ],
       owner_status: [
         'homeowner',
       ],
