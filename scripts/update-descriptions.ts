@@ -71,6 +71,11 @@ async function edit(file: IncentiveFile, write: boolean) {
   incentives.forEach(incentive => {
     if (descriptionsById.has(incentive.id)) {
       const spreadsheetDescription = descriptionsById.get(incentive.id)!;
+      if (spreadsheetDescription.es === '') {
+        // Don't include blank Spanish strings
+        delete spreadsheetDescription.es;
+      }
+
       let edits = false;
       if (incentive.short_description.en !== spreadsheetDescription.en) {
         console.log(

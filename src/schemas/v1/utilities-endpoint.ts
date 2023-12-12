@@ -37,6 +37,12 @@ export const API_UTILITIES_SCHEMA = {
         ],
         default: 'en',
       },
+      include_beta_states: {
+        type: 'boolean',
+        description:
+          'Option to include states which are in development and not fully launched.',
+        default: 'false',
+      },
     },
     required: ['location'],
   },

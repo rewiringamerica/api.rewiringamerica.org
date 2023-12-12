@@ -58,7 +58,7 @@ export const ALL_PROGRAMS = [
   'ri_incomeEligibleEnergySavings',
 
   //  VA
-  // Appalachain Power
+  // Appalachian Power
   'va_takeChargeVirginiaEfficientProductsProgram',
   'va_takeChargeVirginiaHomePerformanceProgram',
   // Dominion Virginia Energy
