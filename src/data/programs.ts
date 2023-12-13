@@ -67,6 +67,29 @@ export const ALL_PROGRAMS = [
   'va_evChargerRewards',
   'va_incomeAndAgeQualifyingEnergyEfficiencyProgram',
   'va_controlYourHeatingAndCoolingProgram',
+
+  // AZ
+  // Mohave Electric Cooperative
+  'az_mohaveElectricCooperativemohaveChargedRebates',
+  'az_mohaveElectricCooperativemohaveHeatPumpRebate',
+  'az_mohaveElectricCooperativesunWattsRenewableEnergyAndRebateProgram',
+  'az_mohaveElectricCooperativemohaveHeatBatteryRebate',
+  // Salt River Project
+  'az_saltRiverProjectinsulationRebate',
+  'az_saltRiverProjectheatPumpWaterHeaterRebate',
+  'az_saltRiverProjecthomeElectricVehicle(EV)ChargerRebate',
+  'az_saltRiverProjecthomeElectricVehicleChargerRebate',
+  // Sulphur Springs Valley Electric Cooperative
+  'az_sulphurSpringsValleyElectricCooperativehotWaterHeaterRebate',
+  'az_sulphurSpringsValleyElectricCooperativeheatPumpRebates',
+  // Tucson Electric Power
+  'az_tucsonElectricPowerefficientHomeProgram',
+  'az_tucsonElectricPowerweatherizationAssistance',
+  'az_tucsonElectricPowerefficientHomeWaterHeating',
+  'az_tucsonElectricPowereVChargerRebates',
+  // UniSource Energy Services
+  'az_uniSourceEnergyServicesweatherizationAssistance',
+  'az_uniSourceEnergyServicesefficientHomeProgram',
 ] as const;
 
 export const PROGRAMS_SCHEMA = {

@@ -56,6 +56,7 @@ export const BETA_STATES: string[] = [
   'CT',
   'NY',
   'VA',
+  'AZ',
 ];
 
 export const LAUNCHED_STATES: string[] = [

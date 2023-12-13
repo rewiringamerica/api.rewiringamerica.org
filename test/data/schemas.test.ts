@@ -18,6 +18,8 @@ import {
 } from '../../src/data/low_income_thresholds';
 import { SOLAR_PRICES, SCHEMA as SP_SCHEMA } from '../../src/data/solar_prices';
 import {
+  AZ_INCENTIVES,
+  AZ_INCENTIVES_SCHEMA,
   CT_INCENTIVES,
   CT_INCENTIVES_SCHEMA,
   NY_INCENTIVES,
@@ -73,6 +75,7 @@ const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
   ['NY', NY_INCENTIVES_SCHEMA, NY_INCENTIVES],
   ['RI', RI_INCENTIVES_SCHEMA, RI_INCENTIVES],
   ['VA', VA_INCENTIVES_SCHEMA, VA_INCENTIVES],
+  ['AZ', AZ_INCENTIVES_SCHEMA, AZ_INCENTIVES],
 ];
 
 /**

@@ -87,3 +87,17 @@ curl \
 &authority_types=utility\
 &utility=va-dominion-virginia-power" \
   | jq . > test/fixtures/v1-va-22030-state-utility-lowincome.json
+
+# TODO: Remove beta states argument when AZ is fully launched.
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?location\[zip\]=85701\
+&include_beta_states=true\
+&owner_status=homeowner\
+&household_income=28000\
+&tax_filing=joint\
+&household_size=1\
+&authority_types=state\
+&authority_types=utility\
+&utility=az-tucson-electric-power" \
+  | jq . > test/fixtures/v1-az-85701-state-utility-lowincome.json
