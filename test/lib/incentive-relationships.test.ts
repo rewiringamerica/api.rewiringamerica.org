@@ -2,10 +2,8 @@ import { test } from 'tap';
 import { AuthorityType } from '../../src/data/authorities';
 import { FilingStatus } from '../../src/data/tax_brackets';
 import { OwnerStatus } from '../../src/data/types/owner-status';
-import {
-  buildRelationshipGraph,
-  calculateStateIncentivesAndSavings,
-} from '../../src/lib/state-incentives-calculation';
+import { buildRelationshipGraph } from '../../src/lib/incentive-relationship-calculation';
+import { calculateStateIncentivesAndSavings } from '../../src/lib/state-incentives-calculation';
 import { incentiveRelationshipsContainCycle } from '../data/schemas.test';
 import {
   TEST_INCENTIVE_RELATIONSHIPS,

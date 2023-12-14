@@ -44,7 +44,7 @@ import {
   PROGRAMS_SCHEMA,
 } from '../../src/data/programs';
 import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
-import { buildRelationshipGraph } from '../../src/lib/state-incentives-calculation';
+import { buildRelationshipGraph } from '../../src/lib/incentive-relationship-calculation';
 
 const TESTS = [
   [I_SCHEMA, IRA_INCENTIVES, 'ira_incentives'],
