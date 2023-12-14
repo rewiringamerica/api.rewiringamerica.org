@@ -3,7 +3,7 @@ import { AuthorityType } from '../../data/authorities';
 import { AmiQualification } from '../../data/ira_incentives';
 import { FilingStatus } from '../../data/tax_brackets';
 import { AmountType, AmountUnit } from '../../data/types/amount';
-import { ItemType, Type } from '../../data/types/incentive-types';
+import { ItemType, PaymentMethod } from '../../data/types/incentive-types';
 import { ALL_ITEMS } from '../../data/types/items';
 import { OwnerStatus } from '../../data/types/owner-status';
 
@@ -12,6 +12,7 @@ export const API_INCENTIVE_SCHEMA = {
   type: 'object',
   required: [
     'type',
+    'payment_methods',
     'authority_type',
     'program',
     'item',
@@ -24,7 +25,14 @@ export const API_INCENTIVE_SCHEMA = {
   properties: {
     type: {
       type: 'string',
-      enum: Object.values(Type),
+      enum: Object.values(PaymentMethod),
+    },
+    payment_methods: {
+      type: 'array',
+      items: {
+        type: 'string',
+        enum: Object.values(PaymentMethod),
+      },
     },
     authority_type: {
       type: 'string',
@@ -147,6 +155,9 @@ export const API_INCENTIVE_SCHEMA = {
   examples: [
     {
       type: 'pos_rebate',
+      payment_methods: [
+        'pos_rebate',
+      ],
       authority_type: 'federal',
       program: 'Energy Efficient Home Improvement Credit (25C)',
       item: 'Electric Panel',
