@@ -1,6 +1,10 @@
 import { AuthorityType } from '../data/authorities';
 import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/low_income_thresholds';
 import {
+  INCENTIVE_RELATIONSHIPS_BY_STATE,
+  IncentiveRelationships,
+} from '../data/state_incentive_relationships';
+import {
   STATE_INCENTIVES_BY_STATE,
   StateIncentive,
 } from '../data/state_incentives';
@@ -9,6 +13,10 @@ import { APICoverage } from '../data/types/coverage';
 import { OwnerStatus } from '../data/types/owner-status';
 import { isStateIncluded } from '../data/types/states';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
+import {
+  buildPrerequisiteMaps,
+  checkPrerequisites,
+} from './incentive-relationship-calculation';
 import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
 
 export function getAllStateIncentives(
@@ -22,10 +30,15 @@ export function getAllStateIncentives(
   return STATE_INCENTIVES_BY_STATE[stateId];
 }
 
+export function getStateIncentiveRelationships(stateId: string) {
+  return INCENTIVE_RELATIONSHIPS_BY_STATE[stateId] ?? {};
+}
+
 export function calculateStateIncentivesAndSavings(
   stateId: string,
   request: CalculateParams,
   incentives: StateIncentive[],
+  incentiveRelationships: IncentiveRelationships,
 ): {
   stateIncentives: CalculatedIncentive[];
   savings: APISavings;
@@ -46,8 +59,8 @@ export function calculateStateIncentivesAndSavings(
     !request.authority_types ||
     request.authority_types.includes(AuthorityType.Utility);
 
-  const eligibleIncentives = [];
-  const ineligibleIncentives = [];
+  const eligibleIncentives = new Map<string, StateIncentive>();
+  const ineligibleIncentives = new Map<string, StateIncentive>();
 
   for (const item of incentives) {
     if (request.items && !request.items.includes(item.item)) {
@@ -95,29 +108,31 @@ export function calculateStateIncentivesAndSavings(
       }
     }
 
-    const transformedItem = {
-      ...item,
-      eligible,
-
-      // Fill in fields expected for IRA incentive.
-      // TODO: don't require these on APIIncentive
-      agi_max_limit: null,
-      ami_qualification: null,
-      filing_status: null,
-
-      // TODO: unclear whether state/utility incentives always have defined
-      // end dates.
-      start_date: 2023,
-      end_date: 2024,
-    };
     if (eligible) {
-      eligibleIncentives.push(transformedItem);
+      eligibleIncentives.set(item.id, item);
     } else {
-      ineligibleIncentives.push(transformedItem);
+      ineligibleIncentives.set(item.id, item);
     }
   }
 
-  const stateIncentives = [...eligibleIncentives, ...ineligibleIncentives];
+  if (incentiveRelationships !== undefined) {
+    const prerequisiteMaps = buildPrerequisiteMaps(incentiveRelationships);
+
+    // Use relationship maps to update incentive eligibility.
+    for (const [incentiveId, prerequisiteIds] of prerequisiteMaps.requiresMap) {
+      checkPrerequisites(
+        incentiveId,
+        prerequisiteIds,
+        eligibleIncentives,
+        ineligibleIncentives,
+        prerequisiteMaps.requiredByMap,
+      );
+    }
+  }
+
+  const eligibleTransformed = transformItems(eligibleIncentives, true);
+  const ineligibleTransformed = transformItems(ineligibleIncentives, false);
+  const stateIncentives = [...eligibleTransformed, ...ineligibleTransformed];
 
   const savings: APISavings = zeroSavings();
 
@@ -139,4 +154,30 @@ export function calculateStateIncentivesAndSavings(
       utility: request.utility ?? null,
     },
   };
+}
+
+function transformItems(
+  incentives: Map<string, StateIncentive>,
+  eligible: boolean,
+) {
+  const transformed = [];
+  for (const item of incentives.values()) {
+    const transformedItem = {
+      ...item,
+      eligible,
+
+      // Fill in fields expected for IRA incentive.
+      // TODO: don't require these on APIIncentive
+      agi_max_limit: null,
+      ami_qualification: null,
+      filing_status: null,
+
+      // TODO: unclear whether state/utility incentives always have defined
+      // end dates.
+      start_date: 2023,
+      end_date: 2024,
+    };
+    transformed.push(transformedItem);
+  }
+  return transformed;
 }
