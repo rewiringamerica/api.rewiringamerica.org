@@ -18,6 +18,7 @@ import {
   buildExclusionMaps,
   buildPrerequisiteMaps,
   isExcluded,
+  makeIneligible,
   meetsPrerequisites,
 } from './incentive-relationship-calculation';
 import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
@@ -134,12 +135,16 @@ export function calculateStateIncentivesAndSavings(
     for (const [
       incentiveId,
     ] of prerequisiteMaps.requiresMap) {
-      meetsPrerequisites(incentiveId, maps);
+      if (!meetsPrerequisites(incentiveId, maps)) {
+        makeIneligible(incentiveId, maps);
+      }
     }
     for (const [
       incentiveId,
     ] of exclusionMaps.supersededByMap) {
-      isExcluded(incentiveId, maps);
+      if (isExcluded(incentiveId, maps)) {
+        makeIneligible(incentiveId, maps);
+      }
     }
   }
 

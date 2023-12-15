@@ -86,9 +86,7 @@ export function buildRelationshipGraph(data: IncentiveRelationships) {
   return edges;
 }
 
-// Checks the prerequisites for a single incentive and updates its eligibility accordingly.
-// If the user is not eligible for a prerequisite incentive, this incentive is removed
-// from the eligible incentives, and then we check any incentives that require this one.
+// Checks the prerequisites for a single incentive.
 export function meetsPrerequisites(
   incentiveId: string,
   maps: RelationshipMaps,
@@ -100,7 +98,6 @@ export function meetsPrerequisites(
         !maps.eligibleIncentives.has(prerequisiteId) &&
         maps.eligibleIncentives.has(incentiveId)
       ) {
-        makeIneligible(incentiveId, maps);
         return false;
       }
     }
@@ -108,9 +105,7 @@ export function meetsPrerequisites(
   return true;
 }
 
-// Checks the mutual exclusion relationships for a single incentive and updates its
-// eligibility accordingly. If the user is eligible for any superseding incentives, this
-// incentive is removed from the eligible incentives and then we check its dependents.
+// Checks the mutual exclusion relationships for a single incentive.
 export function isExcluded(incentiveId: string, maps: RelationshipMaps) {
   const supersedingIds = maps.supersededByMap.get(incentiveId);
   if (supersedingIds !== undefined) {
@@ -119,7 +114,6 @@ export function isExcluded(incentiveId: string, maps: RelationshipMaps) {
         maps.eligibleIncentives.has(supersedingId) &&
         maps.eligibleIncentives.has(incentiveId)
       ) {
-        makeIneligible(incentiveId, maps);
         return true;
       }
     }
@@ -128,7 +122,7 @@ export function isExcluded(incentiveId: string, maps: RelationshipMaps) {
 }
 
 // Switches an incentive from eligible to ineligible and checks dependents.
-function makeIneligible(incentiveId: string, maps: RelationshipMaps) {
+export function makeIneligible(incentiveId: string, maps: RelationshipMaps) {
   const incentive = maps.eligibleIncentives.get(incentiveId);
   if (incentive === undefined) {
     return;
@@ -158,7 +152,7 @@ function makeIneligible(incentiveId: string, maps: RelationshipMaps) {
 }
 
 // Switches an incentive from ineligible to eligible and checks dependents.
-function makeEligible(incentiveId: string, maps: RelationshipMaps) {
+export function makeEligible(incentiveId: string, maps: RelationshipMaps) {
   const incentive = maps.ineligibleIncentives.get(incentiveId);
   if (incentive === undefined) {
     return;
