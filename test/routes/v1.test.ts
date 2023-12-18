@@ -159,7 +159,7 @@ test('VA low income response with state and utility filtering is valid and corre
 });
 
 // VT low income test
-test('VA low income response with state and utility filtering is valid and correct', async t => {
+test('VT low income response with state and utility filtering is valid and correct', async t => {
   await validateResponse(
     t,
     {
