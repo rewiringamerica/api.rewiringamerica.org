@@ -1,0 +1,1221 @@
+[
+  {
+    "id": "VT-1",
+    "authority_type": "state",
+    "authority": "vt-ev",
+    "type": "rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_efficiencyVtAirToWaterHeatPumpRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "unit": "ton",
+      "number": 1000,
+      "maximum": 6000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Work with an Efficiency Excellence Network contractor to install your air-to-water heat pump and get up to $6,000 back."
+    },
+    "start_date": 2020
+  },
+  {
+    "id": "VT-2",
+    "authority_type": "state",
+    "authority": "vt-ev",
+    "type": "rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_efficiencyVtHeatPumpRebateIncomeBonusProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Income-eligible Vermonters can get a $500 bonus rebate if you work with an Efficiency Excellence Network contractor to install air-to-water heat pump."
+    },
+    "low_income": "default-moderate"
+  },
+  {
+    "id": "VT-3",
+    "authority_type": "utility",
+    "authority": "vt-burlington-electric-department",
+    "type": "rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_burlingtonElectricAirToWaterHeatPumpRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "unit": "ton",
+      "number": 2000,
+      "maximum": 12000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "BED customers may receive a post purchase rebate up to $12,000 when you install an air-to-water heat pump."
+    },
+    "start_date": 2021,
+    "end_date": 2023
+  },
+  {
+    "id": "VT-4",
+    "authority_type": "utility",
+    "authority": "vt-burlington-electric-department",
+    "type": "rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_burlingtonElectricHeatPumpIncomeBonusRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Income-eligible Vermonters/BED customers are eligible for an additional enhanced rebate of $400 when you install a qualified air-to-water heat pump."
+    },
+    "low_income": "vt-burlington-electric-department",
+    "start_date": 2021,
+    "end_date": 2023
+  },
+  {
+    "id": "VT-5",
+    "authority_type": "utility",
+    "authority": "vt-washington-electric-coop",
+    "type": "rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_buttonUpWECAirToWaterHeatPumpProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "WEC members receive a flat $500 bonus rebate for an air-to-water heat pump."
+    },
+    "start_date": 2023,
+    "end_date": 2023
+  },
+  {
+    "id": "VT-6",
+    "authority_type": "utility",
+    "authority": "vt-burlington-electric-department",
+    "type": "pos_rebate",
+    "item": "heat_pump_clothes_dryer",
+    "item_type": "pos_rebate",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "program": "vt_efficiencyVtClothesDryerRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive up to $400 cash back on qualifying ENERGY STAR® electric clothes dryer models."
+    },
+    "start_date": 2019
+  },
+  {
+    "id": "VT-7",
+    "authority_type": "state",
+    "authority": "vt-ev",
+    "type": "pos_rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "pos_rebate",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "program": "vt_efficiencyVtDuctedHeatPumpRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Work with a contractor to install your ducted heat pump and get a $1,000-$2,000 instant discount."
+    },
+    "start_date": 2021
+  },
+  {
+    "id": "VT-8",
+    "authority_type": "state",
+    "authority": "vt-ev",
+    "type": "rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_efficiencyVtHeatPumpRebateIncomeBonusProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "low_income": "default-moderate",
+    "short_description": {
+      "en": "Vermonters whose household income is at or below the moderate income guidelines qualify for a $200-$800 bonus rebate on a ducted heat pump."
+    }
+  },
+  {
+    "id": "VT-9",
+    "authority_type": "utility",
+    "authority": "vt-green-mountain-power",
+    "type": "pos_rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "pos_rebate",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "program": "vt_greenMountainPowerDuctedHeatPumpRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "GMP customers receive a $400 point of purchase discount on ducted heat pump."
+    }
+  },
+  {
+    "id": "VT-10",
+    "authority_type": "utility",
+    "authority": "vt-green-mountain-power",
+    "type": "rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_greenMountainPowerIncomeBonusRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "low_income": "default",
+    "short_description": {
+      "en": "Income-eligible Vermonters qualify for a $300-$600 bonus rebate on a ducted heat pump, depending on their utility."
+    }
+  },
+  {
+    "id": "VT-11",
+    "authority_type": "utility",
+    "authority": "vt-vppsa",
+    "type": "rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_vppsaHeatPumpIncomeBonusRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "low_income": "default-moderate",
+    "short_description": {
+      "en": "Income-eligible Vermonters can receive $1,000 rebate on a ducted heat pump."
+    }
+  },
+  {
+    "id": "VT-12",
+    "authority_type": "utility",
+    "authority": "vt-burlington-electric-department",
+    "type": "rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_burlingtonElectricDuctedHeatPumpRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": 8750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $8,750 on heat pump installation."
+    },
+    "start_date": 2023,
+    "end_date": 2023
+  },
+  {
+    "id": "VT-13",
+    "authority_type": "utility",
+    "authority": "vt-burlington-electric-department",
+    "type": "rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_burlingtonElectricHeatPumpIncomeBonusRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "low_income": "vt-burlington-electric-department",
+    "short_description": {
+      "en": "Income-eligible Vermonters who are BED customers are eligible for an additional enhanced rebate of $400 when you install a qualified ducted heat pump."
+    },
+    "start_date": 2023,
+    "end_date": 2023
+  },
+  {
+    "id": "VT-16",
+    "authority_type": "utility",
+    "authority": "vt-vermont-electric-coop",
+    "type": "account_credit",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "account_credit",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "program": "vt_vermontElectricCoopThermalEfficiencyBillCreditDuctedHeatPumpBonusProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive a one-time $150 bill credit per unit installed for a qualifying ducted heat pump."
+    },
+    "start_date": 2021
+  },
+  {
+    "id": "VT-17",
+    "authority_type": "utility",
+    "authority": "vt-washington-electric-coop",
+    "type": "rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_buttonUpWECDuctedHeatPumpProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "WEC members receive a flat $100 bonus rebate for a ducted heat pump."
+    }
+  },
+  {
+    "id": "VT-18",
+    "authority_type": "state",
+    "authority": "vt-ev",
+    "type": "pos_rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "pos_rebate",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "program": "vt_efficiencyVtDuctlessHeatPumpRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "maximum": 450
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Hire a contractor and get a $350-$450 instant discount on qualifying models of ductless heat pumps at a participating distributor."
+    },
+    "start_date": 2021
+  },
+  {
+    "id": "VT-19",
+    "authority_type": "utility",
+    "authority": "vt-green-mountain-power",
+    "type": "pos_rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "pos_rebate",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "program": "vt_greenMountainPowerDuctlessHeatPumpRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "GMP customers receive a $400 point of purchase discount on ductless heat pump."
+    }
+  },
+  {
+    "id": "VT-20",
+    "authority_type": "utility",
+    "authority": "vt-green-mountain-power",
+    "type": "rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_greenMountainPowerIncomeBonusRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "low_income": "default",
+    "short_description": {
+      "en": "Income-eligible customers can save more with GMP's low to moderate income rebate for ductless heat pumps."
+    },
+    "start_date": 2021
+  },
+  {
+    "id": "VT-21",
+    "authority_type": "state",
+    "authority": "vt-ev",
+    "type": "rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_efficiencyVtHeatPumpRebateIncomeBonusProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "low_income": "default-moderate",
+    "short_description": {
+      "en": "Income-eligible Vermonters qualify for a $200-$1,000 bonus rebate on a ductless heat pump, depending on their utility."
+    }
+  },
+  {
+    "id": "VT-22",
+    "authority_type": "utility",
+    "authority": "vt-washington-electric-coop",
+    "type": "rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_buttonUpWECDuctlessHeatPumpProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "WEC members receive a flat $100 bonus rebate for a ductless heat pump."
+    }
+  },
+  {
+    "id": "VT-23",
+    "authority_type": "utility",
+    "authority": "vt-burlington-electric-department",
+    "type": "rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_burlingtonElectricDuctlessHeatPumpRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "start_date": 2022,
+    "end_date": 2023,
+    "short_description": {
+      "en": "BED customers may receive a rebate up to $2,500 on qualifiying HPs."
+    }
+  },
+  {
+    "id": "VT-24",
+    "authority_type": "utility",
+    "authority": "vt-burlington-electric-department",
+    "type": "rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_burlingtonElectricDuctlessHeatPumpRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "start_date": 2022,
+    "end_date": 2023,
+    "short_description": {
+      "en": "BED customers may receive an additional $500 rebate for a second ductless HP."
+    }
+  },
+  {
+    "id": "VT-25",
+    "authority_type": "utility",
+    "authority": "vt-burlington-electric-department",
+    "type": "rebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_burlingtonElectricHeatPumpIncomeBonusRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "start_date": 2022,
+    "end_date": 2023,
+    "low_income": "vt-burlington-electric-department",
+    "short_description": {
+      "en": "Income-eligible BED customers qualify for a $400 enhanced rebate for a ductless HP."
+    }
+  },
+  {
+    "id": "VT-26",
+    "authority_type": "utility",
+    "authority": "vt-vermont-electric-coop",
+    "type": "account_credit",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "account_credit",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "program": "vt_vermontElectricCoopThermalEfficiencyBillCreditDuctlessHeatPumpBonusProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive a one-time $150 bill credit per unit installed for a qualifying ductless heat pump."
+    }
+  },
+  {
+    "id": "VT-27",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "item_type": "pos_rebate",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "program": "vt_stateOfVermontIncentivesForNewElectricVehiclesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $5000 for a new electric vehicle or up to $3000 for a new plug-in hybrid vehicle. Incentive amount dependent upon tax filing status and income."
+    }
+  },
+  {
+    "id": "VT-28",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "used_electric_vehicle",
+    "item_type": "pos_rebate",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "program": "vt_stateOfVermontMileageSmartUsedElectricVehiclesProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 5000
+    },
+    "low_income": "default",
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "The MileageSmart program covers 25% of the upfront cost of a used high efficiency vehicle, up to $5,000, for low/moderate income car buyers."
+    }
+  },
+  {
+    "id": "VT-29",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "item_type": "pos_rebate",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "program": "vt_stateOfVermontReplaceYourRideProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "start_date": 2022,
+    "short_description": {
+      "en": "The incentive for scrapping an eligible Internal Combustion Engine (ICE) vehicle is either $2,500 or $5,000, depending on the applicant’s income."
+    }
+  },
+  {
+    "id": "VT-30",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "used_electric_vehicle",
+    "item_type": "pos_rebate",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "program": "vt_stateOfVermontReplaceYourRideProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 5000,
+      "maximum": 5000
+    },
+    "low_income": "vt-state-of-vermont",
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "start_date": 2022,
+    "short_description": {
+      "en": "The incentive amount for scrapping an eligible Internal Combustion Engine (ICE) vehicle is $5,000 based on income eligibility."
+    }
+  },
+  {
+    "id": "VT-31",
+    "authority_type": "utility",
+    "authority": "vt-burlington-electric-department",
+    "type": "rebate",
+    "item": "electric_vehicle_charger",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_burlingtonElectricResidentialEVChargerRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "end_date": 2023,
+    "short_description": {
+      "en": "Up to $900 back on qualifying level 2 charger purchased within 60 days of vehicle purchase or lease."
+    }
+  },
+  {
+    "id": "VT-32",
+    "authority_type": "utility",
+    "authority": "vt-vermont-electric-coop",
+    "type": "assistance_program",
+    "item": "electric_vehicle_charger",
+    "item_type": "assistance_program",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "program": "vt_vermontElectricCoopFreeLevel2EVChargerProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "VEC offers level 2 EV chargers to members at no charge or offers a $250 incentive if you purchases your own level 2 charger."
+    }
+  },
+  {
+    "id": "VT-33",
+    "authority_type": "utility",
+    "authority": "vt-vermont-electric-coop",
+    "type": "account_credit",
+    "item": "electric_vehicle_charger",
+    "item_type": "account_credit",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "program": "vt_vermontElectricCoopBillCredtLevel2EVChargerProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "start_date": 2018,
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 bill credit for qualifying level 2 home charging equipment when avoiding charging between 5:00-9:00pm."
+    }
+  },
+  {
+    "id": "VT-34",
+    "authority_type": "utility",
+    "authority": "vt-green-mountain-power",
+    "type": "assistance_program",
+    "item": "electric_vehicle_charger",
+    "item_type": "assistance_program",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "program": "vt_greenMountainPowerFreeLevel2EVChargerProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1.0
+    },
+    "start_date": 2018,
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free level 2 charging equipment with electric vehicle purchase (not including installation)."
+    }
+  },
+  {
+    "id": "VT-35",
+    "authority_type": "utility",
+    "authority": "vt-washington-electric-coop",
+    "type": "assistance_program",
+    "item": "electric_vehicle_charger",
+    "item_type": "assistance_program",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "program": "vt_efficiencyVtPowerShiftProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1.0
+    },
+    "start_date": 2018,
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Participating PowerShift members receive Level 2 charging equipment once their charger has been installed and connected to Wi-Fi with a schedule set."
+    }
+  },
+  {
+    "id": "VT-36",
+    "authority_type": "utility",
+    "authority": "vt-vppsa",
+    "type": "assistance_program",
+    "item": "electric_vehicle_charger",
+    "item_type": "assistance_program",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "program": "vt_efficiencyVtPowerShiftProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1.0
+    },
+    "start_date": 2018,
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Participating PowerShift members receive Level 2 charging equipment once their charger has been installed and connected to Wi-Fi with a schedule set."
+    }
+  },
+  {
+    "id": "VT-37",
+    "authority_type": "state",
+    "authority": "vt-ev",
+    "type": "rebate",
+    "item": "geothermal_heating_installation",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_efficiencyVtGroundSourceHeatPumpRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "unit": "ton",
+      "number": 2100,
+      "maximum": 50000
+    },
+    "start_date": 2021,
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Hire a participating contractor and get up to $2,100 cash back per ton on qualifying equipment for a Ground Source HP."
+    }
+  },
+  {
+    "id": "VT-38",
+    "authority_type": "state",
+    "authority": "vt-ev",
+    "type": "rebate",
+    "item": "geothermal_heating_installation",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_efficiencyVtHeatPumpRebateIncomeBonusProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "start_date": 2021,
+    "owner_status": [
+      "homeowner"
+    ],
+    "low_income": "default-moderate",
+    "short_description": {
+      "en": "Income-eligible Vermonters qualify for a $500 bonus rebate on eligible Ground Source HP."
+    }
+  },
+  {
+    "id": "VT-39",
+    "authority_type": "utility",
+    "authority": "vt-washington-electric-coop",
+    "type": "rebate",
+    "item": "geothermal_heating_installation",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_buttonUpWECGroundSourceHeatPumpProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 2000
+    },
+    "start_date": 2023,
+    "end_date": 2023,
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "WEC members may receive a bonus rebate up to $2000 for a ground source heat pump based on the capacity."
+    }
+  },
+  {
+    "id": "VT-40",
+    "authority_type": "utility",
+    "authority": "vt-burlington-electric-department",
+    "type": "rebate",
+    "item": "geothermal_heating_installation",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_burlingtonElectricGroundSourcePumpRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "unit": "ton",
+      "number": 1500,
+      "maximum": 250000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "BED customers may receive a rebate up to $2,500 on qualifiying GSHPs, plus an additional $500 for a second GSHP"
+    }
+  },
+  {
+    "id": "VT-41",
+    "authority_type": "state",
+    "authority": "vt-ev",
+    "type": "pos_rebate",
+    "item": "heat_pump_water_heater",
+    "item_type": "pos_rebate",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "program": "vt_efficiencyVtHeatPumpWaterHeaterRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "start_date": 2020,
+    "short_description": {
+      "en": "Hire a contractor and get a $300-$600 discount from your utility or Efficiency Vermont."
+    }
+  },
+  {
+    "id": "VT-42",
+    "authority_type": "state",
+    "authority": "vt-ev",
+    "type": "rebate",
+    "item": "heat_pump_water_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_efficiencyVtHeatPumpRebateIncomeBonusProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "low_income": "default-moderate",
+    "start_date": 2020,
+    "short_description": {
+      "en": "Income-eligible Vermonters may qualify for a $200 bonus rebate on HPWH."
+    }
+  },
+  {
+    "id": "VT-43",
+    "authority_type": "utility",
+    "authority": "vt-burlington-electric-department",
+    "type": "rebate",
+    "item": "heat_pump_water_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_burlingtonHeatPumpWaterHeaterRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "start_date": 2022,
+    "end_date": 2023,
+    "short_description": {
+      "en": "BED customers may receive up to $800 rebate for a HPWH."
+    }
+  },
+  {
+    "id": "VT-45",
+    "authority_type": "utility",
+    "authority": "vt-washington-electric-coop",
+    "type": "rebate",
+    "item": "heat_pump_water_heater",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_buttonUpWECHeatPumpWaterHeaterProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "start_date": 2023,
+    "end_date": 2023,
+    "short_description": {
+      "en": "WEC members may receive $100 for replacing a fossil-fired hot water system."
+    }
+  },
+  {
+    "id": "VT-49",
+    "authority_type": "state",
+    "authority": "vt-ev",
+    "type": "rebate",
+    "item": "weatherization",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_efficiencyVtWeatherizationProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "start_date": 2019,
+    "short_description": {
+      "en": "Get cash back on materials for three elgibile DIY projects including weather-stripping, insulation, and air sealing."
+    }
+  },
+  {
+    "id": "VT-50",
+    "authority_type": "state",
+    "authority": "vt-ev",
+    "type": "rebate",
+    "item": "weatherization",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_efficiencyVtHomePerformanceEnergyStarProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "start_date": 2023,
+    "short_description": {
+      "en": "Work with an Efficiency Excellence Network contractor to improve your home's insulation and air sealing and get 75% off project cost up to $4,000."
+    }
+  },
+  {
+    "id": "VT-51",
+    "authority_type": "state",
+    "authority": "vt-ev",
+    "type": "rebate",
+    "item": "weatherization",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_efficiencyVtHomePerformanceEnergyStarIncomeBonusProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": 9500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "start_date": 2023,
+    "low_income": "default-moderate",
+    "short_description": {
+      "en": "Work with an Efficiency Excellence Network contractor to improve your home's insulation and air sealing and get 75% off project costs up to $9,500."
+    }
+  },
+  {
+    "id": "VT-52",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "assistance_program",
+    "item": "weatherization",
+    "item_type": "assistance_program",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "program": "vt_stateOfVermontWeatherizationIncomeBonusProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "low_income": "default",
+    "short_description": {
+      "en": "The Weatherization Assistance Program offers free services including energy audits, insulation and air sealing for eligible income based households."
+    }
+  },
+  {
+    "id": "VT-53",
+    "authority_type": "utility",
+    "authority": "vt-washington-electric-coop",
+    "type": "rebate",
+    "item": "weatherization",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_efficiencyVTwithWECWeatherizationProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "WEC members receive 75% of project costs back, up to $2000."
+    }
+  },
+  {
+    "id": "VT-54",
+    "authority_type": "utility",
+    "authority": "vt-washington-electric-coop",
+    "type": "rebate",
+    "item": "weatherization",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_efficiencyVTwithWECWeatherizationIncomeBonusProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "low_income": "default-moderate",
+    "short_description": {
+      "en": "Vermont residents whose annual household income falls at or below moderate income thresholds are eligible for 75% of project costs back, up to $5,000."
+    }
+  },
+  {
+    "id": "VT-55",
+    "authority_type": "utility",
+    "authority": "vt-vermont-gas-service",
+    "type": "rebate",
+    "item": "weatherization",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_vermontGasServiceWeatherizationProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": 3500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "end_date": 2023,
+    "short_description": {
+      "en": "VGS offers qualifying single-family homeowners an incentive to cover 75% of comprehensive weatherization project costs up to $3,500."
+    }
+  },
+  {
+    "id": "VT-56",
+    "authority_type": "utility",
+    "authority": "vt-vermont-gas-service",
+    "type": "rebate",
+    "item": "weatherization",
+    "item_type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "program": "vt_vermontGasServiceWeatherizationIncomeBonusProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "low_income": "vt-vermont-gas-service",
+    "short_description": {
+      "en": "VGS offers qualifying single-family homeowners an incentive to cover 75% of comprehensive weatherization project costs up to $5,000."
+    }
+  }
+]
