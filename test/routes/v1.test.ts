@@ -158,6 +158,25 @@ test('VA low income response with state and utility filtering is valid and corre
   );
 });
 
+// VT low income test
+test('VA low income response with state and utility filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '05401' },
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 40000,
+      tax_filing: 'joint',
+      authority_types: ['state', 'utility'],
+      utility: 'vt-burlington-electric-department',
+      // TODO: Remove when VT is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-vt-05401-state-utility-lowincome.json',
+  );
+});
+
 const BAD_QUERIES = [
   // bad location:
   {
