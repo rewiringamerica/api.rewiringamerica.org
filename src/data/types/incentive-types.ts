@@ -1,5 +1,5 @@
 /** The general mechanism through which you receive an incentive. */
-export enum Type {
+export enum PaymentMethod {
   Rebate = 'rebate',
   PosRebate = 'pos_rebate',
   TaxCredit = 'tax_credit',
@@ -7,7 +7,10 @@ export enum Type {
   AssistanceProgram = 'assistance_program',
 }
 
-export type TypeV0 = Extract<Type, Type.PosRebate | Type.TaxCredit>;
+export type PaymentMethodV0 = Extract<
+  PaymentMethod,
+  PaymentMethod.PosRebate | PaymentMethod.TaxCredit
+>;
 
 /**
  * A more specific version of the above. This gates specific logic around

@@ -5,7 +5,7 @@ import sqlite3 from 'sqlite3';
 import { afterEach, beforeEach, test } from 'tap';
 import { AuthorityType } from '../../src/data/authorities';
 import { FilingStatus } from '../../src/data/tax_brackets';
-import { Type } from '../../src/data/types/incentive-types';
+import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { OwnerStatus } from '../../src/data/types/owner-status';
 import { BETA_STATES, LAUNCHED_STATES } from '../../src/data/types/states';
 import calculateIncentives from '../../src/lib/incentives-calculation';
@@ -143,10 +143,10 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
   t.equal(data.savings.performance_rebate, 4000);
 
   const pos_rebate_incentives = data.incentives.filter(
-    i => i.type === Type.PosRebate,
+    i => i.type === PaymentMethod.PosRebate,
   );
   const tax_credit_incentives = data.incentives.filter(
-    i => i.type === Type.TaxCredit,
+    i => i.type === PaymentMethod.TaxCredit,
   );
 
   t.equal(pos_rebate_incentives.length, 8);
@@ -248,10 +248,10 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
   t.equal(data.savings.performance_rebate, 4000);
 
   const pos_rebate_incentives = data.incentives.filter(
-    i => i.type === Type.PosRebate,
+    i => i.type === PaymentMethod.PosRebate,
   );
   const tax_credit_incentives = data.incentives.filter(
-    i => i.type === Type.TaxCredit,
+    i => i.type === PaymentMethod.TaxCredit,
   );
 
   t.equal(pos_rebate_incentives.length, 8);
@@ -353,10 +353,10 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   t.equal(data.savings.performance_rebate, 4000);
 
   const pos_rebate_incentives = data.incentives.filter(
-    i => i.type === Type.PosRebate,
+    i => i.type === PaymentMethod.PosRebate,
   );
   const tax_credit_incentives = data.incentives.filter(
-    i => i.type === Type.TaxCredit,
+    i => i.type === PaymentMethod.TaxCredit,
   );
 
   t.equal(pos_rebate_incentives.length, 8);

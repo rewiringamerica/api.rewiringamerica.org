@@ -4,6 +4,9 @@
     "authority_type": "utility",
     "authority": "ct-eversource",
     "type": "assistance_program",
+    "payment_methods": [
+      "assistance_program"
+    ],
     "item": "weatherization",
     "item_type": "assistance_program",
     "program": "ct_energizeCtHomeEnergySolutions",
@@ -25,6 +28,9 @@
     "authority_type": "utility",
     "authority": "ct-eversource",
     "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
     "item": "geothermal_heating_installation",
     "item_type": "rebate",
     "program": "ct_residentialGroundSourceHeatPumpIncentive",
@@ -48,6 +54,9 @@
     "authority_type": "utility",
     "authority": "ct-eversource",
     "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
     "item": "heat_pump_water_heater",
     "item_type": "rebate",
     "program": "ct_residentialHeatPumpWaterHeaterIncentive",
@@ -69,6 +78,9 @@
     "authority_type": "utility",
     "authority": "ct-united-illuminating-company",
     "type": "assistance_program",
+    "payment_methods": [
+      "assistance_program"
+    ],
     "item": "weatherization",
     "item_type": "assistance_program",
     "program": "ct_energizeCtHomeEnergySolutions",
@@ -90,6 +102,9 @@
     "authority_type": "utility",
     "authority": "ct-groton-utilities",
     "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
     "item": "weatherization",
     "item_type": "rebate",
     "program": "ct_atticInsulationRebate",
@@ -114,6 +129,9 @@
     "authority_type": "utility",
     "authority": "ct-groton-utilities",
     "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
     "item": "heat_pump_water_heater",
     "item_type": "rebate",
     "program": "ct_residentialHeatPumpWaterHeaterRebate",
@@ -135,6 +153,9 @@
     "authority_type": "utility",
     "authority": "ct-groton-utilities",
     "type": "assistance_program",
+    "payment_methods": [
+      "assistance_program"
+    ],
     "item": "weatherization",
     "item_type": "assistance_program",
     "program": "ct_residentialHomeEnergySavingsProgram",
@@ -154,6 +175,9 @@
     "authority_type": "utility",
     "authority": "ct-norwich-public-utilities",
     "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
     "item": "heat_pump_clothes_dryer",
     "item_type": "rebate",
     "program": "ct_electricApplianceRebateProgram",
@@ -175,6 +199,9 @@
     "authority_type": "utility",
     "authority": "ct-norwich-public-utilities",
     "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
     "item": "weatherization",
     "item_type": "rebate",
     "program": "ct_wallOrAtticInsulationProgram",
@@ -199,6 +226,9 @@
     "authority_type": "utility",
     "authority": "ct-norwich-public-utilities",
     "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
     "item": "heat_pump_air_conditioner_heater",
     "item_type": "rebate",
     "program": "ct_coolChoiceProgram",
@@ -222,6 +252,9 @@
     "authority_type": "utility",
     "authority": "ct-norwich-public-utilities",
     "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
     "item": "heat_pump_air_conditioner_heater",
     "item_type": "rebate",
     "program": "ct_coolingAndHeatingIncentivePilotProgram",
@@ -241,10 +274,37 @@
     "end_date": 2023
   },
   {
+    "id": "CT-13",
+    "authority_type": "utility",
+    "authority": "ct-norwich-public-utilities",
+    "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "item_type": "rebate",
+    "program": "ct_coolingAndHeatingIncentivePilotProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate of $1,100 toward a qualifying heat pump water heater if installed during heat pump HVAC installation."
+    },
+    "start_date": 2023,
+    "end_date": 2023
+  },
+  {
     "id": "CT-16",
     "authority_type": "utility",
     "authority": "ct-united-illuminating-company",
     "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
     "item": "geothermal_heating_installation",
     "item_type": "rebate",
     "program": "ct_residentialGroundSourceHeatPumpIncentive",
@@ -268,6 +328,9 @@
     "authority_type": "utility",
     "authority": "ct-united-illuminating-company",
     "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
     "item": "heat_pump_water_heater",
     "item_type": "rebate",
     "program": "ct_residentialHeatPumpWaterHeaterIncentive",
@@ -289,6 +352,9 @@
     "authority_type": "utility",
     "authority": "ct-norwich-public-utilities",
     "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
     "item": "geothermal_heating_installation",
     "item_type": "rebate",
     "program": "ct_coolingAndHeatingIncentivePilotProgram",

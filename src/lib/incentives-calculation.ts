@@ -21,6 +21,7 @@ import { AMI, CompleteIncomeInfo, MFI } from './income-info';
 import {
   calculateStateIncentivesAndSavings,
   getAllStateIncentives,
+  getStateIncentiveRelationships,
 } from './state-incentives-calculation';
 import estimateTaxAmount from './tax-brackets';
 
@@ -332,10 +333,13 @@ export default function calculateIncentives(
     authority_types.includes(AuthorityType.Utility)
   ) {
     const allStateIncentives = getAllStateIncentives(state_id, request);
+    const stateIncentiveRelationships =
+      getStateIncentiveRelationships(state_id);
     const state = calculateStateIncentivesAndSavings(
       state_id,
       request,
       allStateIncentives,
+      stateIncentiveRelationships,
     );
     incentives.push(...state.stateIncentives);
     savings = addSavings(savings, state.savings);

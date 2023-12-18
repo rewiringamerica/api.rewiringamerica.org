@@ -18,6 +18,11 @@ import {
 } from '../../src/data/low_income_thresholds';
 import { SOLAR_PRICES, SCHEMA as SP_SCHEMA } from '../../src/data/solar_prices';
 import {
+  CT_RELATIONSHIPS,
+  INCENTIVE_RELATIONSHIPS_SCHEMA,
+  IncentiveRelationships,
+} from '../../src/data/state_incentive_relationships';
+import {
   CT_INCENTIVES,
   CT_INCENTIVES_SCHEMA,
   NY_INCENTIVES,
@@ -39,6 +44,7 @@ import {
   PROGRAMS_SCHEMA,
 } from '../../src/data/programs';
 import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
+import { buildRelationshipGraph } from '../../src/lib/incentive-relationship-calculation';
 
 const TESTS = [
   [I_SCHEMA, IRA_INCENTIVES, 'ira_incentives'],
@@ -73,6 +79,10 @@ const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
   ['NY', NY_INCENTIVES_SCHEMA, NY_INCENTIVES],
   ['RI', RI_INCENTIVES_SCHEMA, RI_INCENTIVES],
   ['VA', VA_INCENTIVES_SCHEMA, VA_INCENTIVES],
+];
+
+const STATE_INCENTIVE_RELATIONSHIP_TESTS: [string, IncentiveRelationships][] = [
+  ['CT', CT_RELATIONSHIPS],
 ];
 
 /**
@@ -166,4 +176,124 @@ test('locale URLs are valid', async tap => {
       tap.ok(isURLValid(url), `${lang}.urls.${key} invalid`);
     }
   }
+});
+
+test('state incentive relationships JSON files match schemas', async tap => {
+  const ajv = new Ajv();
+
+  STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([stateId, data]) => {
+    if (
+      !tap.ok(
+        ajv.validate(INCENTIVE_RELATIONSHIPS_SCHEMA, data),
+        `${stateId} incentive relationships invalid`,
+      )
+    ) {
+      console.error(ajv.errors);
+    }
+  });
+});
+
+// Helper to check for circular dependencies in the incentive relationships.
+export function checkForCycle(
+  incentiveId: string,
+  seen: Set<string>,
+  finished: Set<string>,
+  edges: Map<string, Set<string>>,
+) {
+  if (finished.has(incentiveId)) {
+    // We've already finished checking this incentive.
+    return false;
+  }
+  if (seen.has(incentiveId)) {
+    // We haven't finished checking this incentive's dependencies but are
+    // visiting it for the second time. This is a cycle.
+    return true;
+  }
+  seen.add(incentiveId);
+  const dependencies = edges.get(incentiveId);
+  if (dependencies !== undefined) {
+    for (const id of dependencies) {
+      if (checkForCycle(id, seen, finished, edges)) {
+        return true;
+      }
+    }
+  }
+  finished.add(incentiveId);
+  return false;
+}
+
+export function incentiveRelationshipsContainCycle(
+  relationshipGraph: Map<string, Set<string>>,
+) {
+  const seen = new Set<string>();
+  const finished = new Set<string>();
+  const toCheck = Array.from(relationshipGraph.keys());
+  let hasCycle = false;
+  if (toCheck !== undefined) {
+    for (const incentiveId of toCheck) {
+      hasCycle = checkForCycle(incentiveId, seen, finished, relationshipGraph);
+      if (hasCycle) {
+        break;
+      }
+    }
+  }
+  return hasCycle;
+}
+
+test('state incentive relationships contain no circular dependencies', async tap => {
+  STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([, data]) => {
+    // Check that there are no circular dependencies in the relationships.
+    const relationshipGraph = buildRelationshipGraph(data);
+    tap.equal(incentiveRelationshipsContainCycle(relationshipGraph), false);
+  });
+});
+
+test('state incentive relationships only reference real IDs', async tap => {
+  // Collect all the incentive IDs we know about.
+  const incentiveIds = new Map<string, Set<string>>();
+  STATE_INCENTIVE_TESTS.forEach(([stateId, , data]) => {
+    // Check some constraints that aren't expressed in JSON schema
+    const ids = new Set<string>();
+    data.forEach(incentive => {
+      ids.add(incentive.id);
+    });
+    incentiveIds.set(stateId, ids);
+  });
+
+  // Check that all of the incentive relationships reference IDs that exist.
+  STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([stateId, data]) => {
+    // Must have incentives for this state in order to have relationships.
+    tap.equal(incentiveIds.has(stateId), true);
+
+    const incentivesForState = incentiveIds.get(stateId);
+    if (incentivesForState !== undefined) {
+      if (data.prerequisites !== undefined) {
+        for (const [incentiveId, prerequisiteIds] of Object.entries(
+          data.prerequisites,
+        )) {
+          tap.equal(incentivesForState.has(incentiveId), true);
+          for (const id of prerequisiteIds) {
+            tap.equal(incentivesForState.has(id), true);
+          }
+        }
+      }
+      if (data.exclusions !== undefined) {
+        for (const [incentiveId, supersededIds] of Object.entries(
+          data.exclusions,
+        )) {
+          tap.equal(incentivesForState.has(incentiveId), true);
+          for (const id of supersededIds) {
+            tap.equal(incentivesForState.has(id), true);
+          }
+        }
+      }
+      if (data.combinations !== undefined) {
+        for (const relationship of data.combinations) {
+          for (const id of relationship.ids) {
+            tap.equal(incentivesForState.has(id), true);
+          }
+        }
+      }
+    }
+  });
 });

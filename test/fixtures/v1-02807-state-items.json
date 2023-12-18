@@ -29,6 +29,9 @@
   "incentives": [
     {
       "type": "pos_rebate",
+      "payment_methods": [
+        "pos_rebate"
+      ],
       "authority_type": "federal",
       "program": "Federal Home Electrification and Appliance Rebates (HEEHR)",
       "item": {
@@ -55,6 +58,9 @@
     },
     {
       "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
       "authority_type": "state",
       "authority": "ri-oer",
       "program": "RI Office of Energy Resources Clean Heat RI",
@@ -66,8 +72,7 @@
       },
       "amount": {
         "type": "percent",
-        "number": 1,
-        "maximum": 3000
+        "number": 1
       },
       "item_type": "rebate",
       "owner_status": [
@@ -83,6 +88,9 @@
     },
     {
       "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
       "authority_type": "state",
       "authority": "ri-oer",
       "program": "RI Office of Energy Resources Clean Heat RI",
@@ -112,6 +120,9 @@
     },
     {
       "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
       "authority_type": "state",
       "authority": "ri-oer",
       "program": "RI Office of Energy Resources DRIVE EV",
@@ -140,6 +151,9 @@
     },
     {
       "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
       "authority_type": "state",
       "authority": "ri-oer",
       "program": "RI Office of Energy Resources DRIVE+",
@@ -168,6 +182,9 @@
     },
     {
       "type": "tax_credit",
+      "payment_methods": [
+        "tax_credit"
+      ],
       "authority_type": "federal",
       "program": "Federal Clean Vehicle Credit (30D)",
       "item": {
@@ -194,6 +211,9 @@
     },
     {
       "type": "tax_credit",
+      "payment_methods": [
+        "tax_credit"
+      ],
       "authority_type": "federal",
       "program": "Federal Energy Efficient Home Improvement Credit (25C)",
       "item": {

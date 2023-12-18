@@ -384,6 +384,7 @@ test('non-existent zips', async t => {
 const UTILITIES = [
   [
     '02807',
+    false,
     {
       location: { state: 'RI' },
       utilities: {
@@ -393,6 +394,7 @@ const UTILITIES = [
   ],
   [
     '02814',
+    false,
     {
       location: { state: 'RI' },
       utilities: {
@@ -403,13 +405,37 @@ const UTILITIES = [
   ],
   [
     '02905',
+    false,
     {
       location: { state: 'RI' },
       utilities: { 'ri-rhode-island-energy': { name: 'Rhode Island Energy' } },
     },
   ],
   [
+    '06033',
+    true,
+    {
+      location: { state: 'CT' },
+      utilities: {
+        'ct-eversource': {
+          name: 'Eversource',
+        },
+        'ct-united-illuminating-company': {
+          name: 'The United Illuminating Company',
+        },
+        'ct-groton-utilities': {
+          name: 'Groton Utilities',
+        },
+        'ct-norwich-public-utilities': {
+          name: 'Norwich Public Utilities',
+        },
+      },
+    },
+  ],
+  ['06033', false, { location: { state: 'CT' }, utilities: {} }],
+  [
     '80212',
+    false,
     {
       location: { state: 'CO' },
       utilities: {},
@@ -428,9 +454,9 @@ test('/utilities', async t => {
   });
   const validator = ajv.getSchema('APIUtilitiesResponse')!;
 
-  for (const [zip, expectedResponse] of UTILITIES) {
+  for (const [zip, beta, expectedResponse] of UTILITIES) {
     const searchParams = qs.stringify(
-      { location: { zip } },
+      { location: { zip }, include_beta_states: beta },
       { encodeValuesOnly: true },
     );
     const res = await app.inject({ url: `/api/v1/utilities?${searchParams}` });
