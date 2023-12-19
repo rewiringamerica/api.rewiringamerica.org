@@ -176,6 +176,15 @@ export default async function (
           solarTaxCredit.item_type = 'solar_tax_credit' as ItemType;
         }
 
+        // 1.4)
+        // set the item_type of the EV charger credit
+        const evChargerCredit = tax_credit_incentives.find(
+          incentive => incentive.item === 'electric_vehicle_charger',
+        );
+        if (evChargerCredit) {
+          evChargerCredit.item_type = 'ev_charger_credit' as ItemType;
+        }
+
         const translated: WebsiteCalculatorResponse = {
           ...result,
 
