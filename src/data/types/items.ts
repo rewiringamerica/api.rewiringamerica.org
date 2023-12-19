@@ -4,7 +4,9 @@
  */
 export const ITEMS_SCHEMA = {
   battery_storage_installation: { type: 'string' },
+  ebike: { type: 'string' },
   efficiency_rebates: { type: 'string' },
+  electric_outdoor_equipment: { type: 'string' },
   electric_panel: { type: 'string' },
   electric_stove: { type: 'string' },
   electric_vehicle_charger: { type: 'string' },
@@ -15,6 +17,7 @@ export const ITEMS_SCHEMA = {
   heat_pump_water_heater: { type: 'string' },
   new_electric_vehicle: { type: 'string' },
   rooftop_solar_installation: { type: 'string' },
+  smart_thermostat: { type: 'string' },
   used_electric_vehicle: { type: 'string' },
   weatherization: { type: 'string' },
 } as const;

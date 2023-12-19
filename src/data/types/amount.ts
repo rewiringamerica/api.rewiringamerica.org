@@ -6,6 +6,7 @@ export enum AmountType {
 
 export enum AmountUnit {
   Ton = 'ton',
+  Kilowatt = "kilowatt",
   Watt = 'watt',
   Btuh10k = 'btuh10k',
   SquareFoot = 'square_foot',

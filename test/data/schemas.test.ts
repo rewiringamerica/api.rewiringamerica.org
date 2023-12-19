@@ -26,6 +26,8 @@ import {
 import {
   AZ_INCENTIVES,
   AZ_INCENTIVES_SCHEMA,
+  CO_INCENTIVES,
+  CO_INCENTIVES_SCHEMA,
   CT_INCENTIVES,
   CT_INCENTIVES_SCHEMA,
   NY_INCENTIVES,
@@ -81,6 +83,7 @@ test('static JSON files match schema', async tap => {
 
 const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
   ['AZ', AZ_INCENTIVES_SCHEMA, AZ_INCENTIVES],
+  ['CO', CO_INCENTIVES_SCHEMA, CO_INCENTIVES],
   ['CT', CT_INCENTIVES_SCHEMA, CT_INCENTIVES],
   ['NY', NY_INCENTIVES_SCHEMA, NY_INCENTIVES],
   ['RI', RI_INCENTIVES_SCHEMA, RI_INCENTIVES],
@@ -131,7 +134,7 @@ test('state incentives JSON files match schemas', async tap => {
       tap.ok(
         incentive.short_description.en.length <= 150,
         `${stateId} English description too long ` +
-          `(${incentive.short_description.en.length}), id ${incentive.id}, index ${index}`,
+        `(${incentive.short_description.en.length}), id ${incentive.id}, index ${index}`,
       );
 
       // We let Spanish descriptions be a little longer
@@ -139,7 +142,7 @@ test('state incentives JSON files match schemas', async tap => {
         tap.ok(
           incentive.short_description.es.length <= 160,
           `${stateId} Spanish description too long ` +
-            `(${incentive.short_description.en.length}), id ${incentive.id}, index ${index}`,
+          `(${incentive.short_description.en.length}), id ${incentive.id}, index ${index}`,
         );
       }
       tap.ok(
