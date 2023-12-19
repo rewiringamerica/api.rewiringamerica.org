@@ -64,7 +64,11 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
       id: { type: 'string' },
       type: {
         type: 'string',
-        enum: [PaymentMethod.PosRebate, PaymentMethod.TaxCredit],
+        enum: [
+          PaymentMethod.PosRebate,
+          PaymentMethod.TaxCredit,
+          PaymentMethod.PerformanceRebate,
+        ],
       },
       payment_methods: {
         type: 'array',

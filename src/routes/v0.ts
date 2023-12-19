@@ -6,11 +6,7 @@ import { IRA_INCENTIVES, IRAIncentive } from '../data/ira_incentives';
 import { IRA_STATE_SAVINGS } from '../data/ira_state_savings';
 import { PROGRAMS } from '../data/programs';
 import { AmountType } from '../data/types/amount';
-import {
-  ItemType,
-  PaymentMethod,
-  PaymentMethodV0,
-} from '../data/types/incentive-types';
+import { ItemType, PaymentMethod, TypeV0 } from '../data/types/incentive-types';
 import { InvalidInputError } from '../lib/error';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
 import { t, tr } from '../lib/i18n';
@@ -46,7 +42,10 @@ function translateIncentives(incentives: IRAIncentive[]): WebsiteIncentive[] {
     ),
     short_description: tr(incentive.short_description, 'en'),
 
-    type: incentive.type as PaymentMethodV0,
+    type:
+      incentive.type === PaymentMethod.PerformanceRebate
+        ? PaymentMethod.PosRebate
+        : (incentive.type as TypeV0),
 
     // Transform amounts from v1 to v0 format
     amount: incentive.amount.number,
@@ -144,7 +143,9 @@ export default async function (
         });
 
         const pos_rebate_incentives = result.incentives.filter(
-          i => i.type === PaymentMethod.PosRebate,
+          i =>
+            i.type === PaymentMethod.PosRebate ||
+            i.type === PaymentMethod.PerformanceRebate,
         ) as IRAIncentive[];
         let tax_credit_incentives = result.incentives.filter(
           i => i.type === PaymentMethod.TaxCredit,
