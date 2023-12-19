@@ -129,7 +129,8 @@ function calculateFederalIncentivesAndSavings(
       amount.representative = roundCents(solarSystemCost * amount.number!);
     }
 
-    if (item.item_type === 'ev_charger_credit') {
+    // EV charger credit has some special eligibility rules
+    if (item.item === 'electric_vehicle_charger') {
       // console.log(
       //   'EV Charger Qualifications:',
       //   '\nIs Rural?',
