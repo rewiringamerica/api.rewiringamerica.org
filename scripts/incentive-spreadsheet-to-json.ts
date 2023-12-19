@@ -100,7 +100,7 @@ function findPaymentMethods(input: string): string[] {
   }
   const methods: string[] = []
   for (const method of input.split(",")) {
-    methods.push(coerceToEnum(method, Object.values(PaymentMethod)))
+    methods.push(coerceToEnum(method, Object.values(PaymentMethod), EnumMaps.payment_methods))
   }
   return methods;
 }
@@ -152,7 +152,6 @@ function recordToJson(
   state: string,
   record: Record<string, string>,
 ): Record<string, string | number | object | boolean> {
-  console.log(record)
   const output: Record<string, string | number | object | boolean> = {
     id: record.id,
     authority_type: coerceToEnum(

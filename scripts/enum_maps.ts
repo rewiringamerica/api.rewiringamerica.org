@@ -1,4 +1,16 @@
 export const EnumMaps = {
+  payment_methods: {
+    'Rebate (post purchase)': 'rebate',
+    'Point of sale rebate': 'pos_rebate',
+    'Account credit': 'account_credit',
+    'Tax Credit': 'tax_credit',
+    'Assistance program': 'assistance_program',
+    Bonus: 'other',
+    Multiple: 'other',
+    Other: 'other',
+    Unknown: 'other',
+    Financing: 'other',
+  },
   type: {
     'Rebate (post purchase)': 'rebate',
     'Point of sale rebate': 'pos_rebate',
@@ -41,9 +53,9 @@ export const EnumMaps = {
     'Weatherization (insulation and air sealing)': 'weatherization',
     'Electric wiring': 'weatherization',
     'Electric panel': 'electric_panel',
-    'Electric lawn equipment(mower, edger, leaf blower, weedwhacker)': 'other',
-    'Smart Thermostat': 'other',
-    'E - Bike': 'other',
+    'Electric lawn equipment (mower, edger, leaf blower, weedwhacker)': 'electric_outdoor_equipment',
+    'Smart Thermostat': 'smart_thermostat',
+    'E-Bike': 'ebike',
     'Induction Cooktop': 'electric_stove',
     Other: 'other',
   },
@@ -53,6 +65,6 @@ export const EnumMaps = {
     'dollar amount with a cap': 'dollar_amount',
   },
   authority_type: {
-    Local: 'utility', // TODO: not sure if this is right
+    Local: 'local',
   },
 };
