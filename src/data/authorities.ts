@@ -21,6 +21,7 @@ export enum AuthorityType {
   Federal = 'federal',
   State = 'state',
   Utility = 'utility',
+  Local = 'local',
 }
 
 export const API_AUTHORITY_SCHEMA = {
@@ -54,6 +55,7 @@ export const SCHEMA = {
     properties: {
       state: authoritiesMapSchema,
       utility: authoritiesMapSchema,
+      local: authoritiesMapSchema,
     },
     required: ['state', 'utility'],
     additionalProperties: false,
