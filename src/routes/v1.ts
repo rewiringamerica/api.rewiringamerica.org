@@ -14,7 +14,6 @@ import { IncomeInfo, isCompleteIncomeInfo } from '../lib/income-info';
 import { getUtilitiesForLocation } from '../lib/utilities-for-location';
 import { ERROR_SCHEMA } from '../schemas/error';
 import {
-  API_CALCULATOR_REQUEST_SCHEMA,
   API_CALCULATOR_RESPONSE_SCHEMA,
   API_CALCULATOR_SCHEMA,
 } from '../schemas/v1/calculator-endpoint';
@@ -68,7 +67,6 @@ export default async function (
       references: [
         typeof ERROR_SCHEMA,
         typeof API_INCENTIVE_SCHEMA,
-        typeof API_CALCULATOR_REQUEST_SCHEMA,
         typeof API_CALCULATOR_RESPONSE_SCHEMA,
       ];
     }>

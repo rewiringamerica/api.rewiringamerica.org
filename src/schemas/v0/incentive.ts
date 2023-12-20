@@ -30,48 +30,40 @@ export const WEBSITE_INCENTIVE_SCHEMA = {
     },
     program: {
       type: 'string',
-      examples: [
-        'Residential Clean Energy Credit (25D)',
-      ],
+      description: 'The name of the incentive program, in English.',
     },
     program_es: {
       type: 'string',
-      examples: [
-        'Crédito de energía limpia residencial (25D)',
-      ],
+      description: 'The name of the incentive program, in Spanish.',
     },
     item: {
       type: 'string',
-      examples: [
-        'Battery Storage Installation',
-      ],
+      description:
+        'The equipment or project that this incentive is for, in English.',
     },
     item_es: {
       type: 'string',
-      examples: [
-        'Instalación de baterías',
-      ],
+      description:
+        'The equipment or project that this incentive is for, in Spanish.',
     },
     more_info_url: {
       type: 'string',
-      examples: [
-        'https://www.rewiringamerica.org/app/ira-calculator/information/battery-storage-installation',
-      ],
+      description:
+        'A URL to more information, in English, about the equipment or project.',
     },
     more_info_url_es: {
       type: 'string',
-      examples: [
-        'https://www.rewiringamerica.org/app/ira-calculator/information/instalacion-de-baterias',
-      ],
+      description:
+        'A URL to more information, in Spanish, about the equipment or project.',
     },
     amount: {
       type: 'number',
-      examples: [
-        4800,
-      ],
+      description:
+        'Depending on `amount_type`, either a dollar amount, or a number between 0 and 1 indicating a percentage.',
     },
     amount_type: {
       type: 'string',
+      description: 'The significance of the `amount` field.',
       enum: [
         'dollar_amount',
         'percent',
@@ -95,42 +87,37 @@ export const WEBSITE_INCENTIVE_SCHEMA = {
     },
     start_date: {
       type: 'number',
-      examples: [
-        2023,
-      ],
+      description:
+        'The four-digit year in which the incentive begins, or began, to be available.',
     },
     end_date: {
       type: 'number',
-      examples: [
-        2032,
-      ],
+      description:
+        'The four-digit year in which the incentive stops, or stopped, being available.',
     },
     special_note: {
       type: 'string',
-      examples: [
-        null,
-      ],
+      description: 'Not used.',
     },
     representative_amount: {
       type: 'number',
-      examples: [
-        4800,
-      ],
+      description: 'A dollar amount that this incentive is typically worth.',
     },
     ami_qualification: {
       type: 'string',
+      description:
+        'The income level required for this incentive, expressed as a percentage of Area Median Income (AMI).',
       nullable: true,
       enum: [...Object.values(AmiQualification), null],
     },
     agi_max_limit: {
       type: 'number',
-      examples: [
-        null,
-        150000,
-      ],
+      description:
+        'The maximum Adjusted Gross Income (AGI) to be eligible for this incentive.',
     },
     filing_status: {
       type: 'string',
+      description: 'Which tax filing statuses are eligible for this incentive.',
       nullable: true,
       enum: [...Object.values(FilingStatus), null],
     },
@@ -139,39 +126,11 @@ export const WEBSITE_INCENTIVE_SCHEMA = {
     },
     short_description: {
       type: 'string',
-      examples: [
+      description:
         'A 150 character (or shorter) display description for the incentive.',
-      ],
     },
   },
   additionalProperties: false,
-  examples: [
-    {
-      type: 'pos_rebate',
-      program: 'Energy Efficient Home Improvement Credit (25C)',
-      program_es:
-        'Crédito para la mejora de la eficiencia energética en el hogar (25C)',
-      item: 'Electric Panel',
-      item_es: 'Cuadro eléctrico',
-      more_info_url:
-        'https://rewiringamerica.org/app/ira-calculator/information/electrical-panel',
-      more_info_url_es:
-        'https://rewiringamerica.org/app/ira-calculator/information/cuadro-electrico',
-      amount: 4000,
-      amount_type: 'dollar_amount',
-      representative_amount: null,
-      item_type: 'pos_rebate',
-      owner_status: [
-        'homeowner',
-      ],
-      ami_qualification: 'less_than_80_ami',
-      agi_max_limit: null,
-      filing_status: null,
-      start_date: 2023,
-      end_date: 2032,
-      eligible: true,
-    },
-  ],
 } as const;
 
 export type WebsiteIncentive = FromSchema<typeof WEBSITE_INCENTIVE_SCHEMA>;

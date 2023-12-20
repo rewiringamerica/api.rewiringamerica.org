@@ -13,17 +13,11 @@ export const API_REQUEST_LOCATION_SCHEMA = {
         'Your zip code helps us estimate the amount of discounts and tax credits you qualify for by finding representative census tracts in your area.',
       maxLength: 5,
       minLength: 5,
-      examples: [
-        '80212',
-      ],
     },
     address: {
       type: 'string',
       description:
         "Your address can determine the precise census tract you're in that determines the correct amount of discounts and tax credits you qualify for.",
-      examples: [
-        '1109 N Highland St, Arlington VA',
-      ],
     },
   },
   oneOf: [
