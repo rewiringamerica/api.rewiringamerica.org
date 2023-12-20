@@ -117,7 +117,7 @@ test('AZ low income response with state and utility filtering is valid and corre
       include_beta_states: true,
     },
     './test/fixtures/v1-az-85701-state-utility-lowincome.json',
-    );
+  );
 });
 
 // CT low income test

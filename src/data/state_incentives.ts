@@ -103,7 +103,7 @@ export const AZ_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
 
 export const AZ_INCENTIVES: StateIncentive[] = JSON.parse(
   fs.readFileSync('./data/AZ/incentives.json', 'utf-8'),
- );
+);
 
 export const CT_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
   type: 'array',
@@ -166,7 +166,7 @@ export const VA_INCENTIVES: StateIncentive[] = JSON.parse(
 );
 
 export const VT_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
-   type: 'array',
+  type: 'array',
   items: {
     type: 'object',
     properties: {
