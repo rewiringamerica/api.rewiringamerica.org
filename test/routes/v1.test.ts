@@ -101,6 +101,25 @@ test('response with state and item filtering is valid and correct', async t => {
   );
 });
 
+// AZ low income test
+test('AZ low income response with state and utility filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '85701' },
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 28000,
+      tax_filing: 'joint',
+      authority_types: ['state', 'utility'],
+      utility: 'az-tucson-electric-power',
+      // TODO: Remove when AZ is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-az-85701-state-utility-lowincome.json',
+    );
+});
+
 // CT low income test
 test('CT low income response with state and utility filtering is valid and correct', async t => {
   await validateResponse(
@@ -158,22 +177,22 @@ test('VA low income response with state and utility filtering is valid and corre
   );
 });
 
-// AZ low income test
-test('AZ low income response with state and utility filtering is valid and correct', async t => {
+// VT low income test
+test('VT low income response with state and utility filtering is valid and correct', async t => {
   await validateResponse(
     t,
     {
-      location: { zip: '85701' },
+      location: { zip: '05401' },
       owner_status: 'homeowner',
       household_size: 1,
-      household_income: 28000,
+      household_income: 40000,
       tax_filing: 'joint',
       authority_types: ['state', 'utility'],
-      utility: 'az-tucson-electric-power',
-      // TODO: Remove when AZ is fully launched.
+      utility: 'vt-burlington-electric-department',
+      // TODO: Remove when VT is fully launched.
       include_beta_states: true,
     },
-    './test/fixtures/v1-az-85701-state-utility-lowincome.json',
+    './test/fixtures/v1-vt-05401-state-utility-lowincome.json',
   );
 });
 

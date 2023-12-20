@@ -101,3 +101,16 @@ curl \
 &authority_types=utility\
 &utility=va-dominion-virginia-power" \
   | jq . > test/fixtures/v1-va-22030-state-utility-lowincome.json
+
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?location\[zip\]=05401\
+&include_beta_states=true\
+&owner_status=homeowner\
+&household_income=40000\
+&tax_filing=joint\
+&household_size=1\
+&authority_types=state\
+&authority_types=utility\
+&utility=vt-burlington-electric-department" \
+  | jq . > test/fixtures/v1-vt-05401-state-utility-lowincome.json

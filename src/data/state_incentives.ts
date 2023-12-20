@@ -90,6 +90,21 @@ const requiredProperties = [
 /* State-specific types/schemas                                               */
 /******************************************************************************/
 
+export const AZ_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
+  type: 'array',
+  items: {
+    type: 'object',
+    properties: {
+      ...incentivePropertySchema,
+    },
+    required: requiredProperties,
+  },
+} as const;
+
+export const AZ_INCENTIVES: StateIncentive[] = JSON.parse(
+  fs.readFileSync('./data/AZ/incentives.json', 'utf-8'),
+ );
+
 export const CT_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
   type: 'array',
   items: {
@@ -134,6 +149,7 @@ export const RI_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
 export const RI_INCENTIVES: StateIncentive[] = JSON.parse(
   fs.readFileSync('./data/RI/incentives.json', 'utf-8'),
 );
+
 export const VA_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
   type: 'array',
   items: {
@@ -149,8 +165,8 @@ export const VA_INCENTIVES: StateIncentive[] = JSON.parse(
   fs.readFileSync('./data/VA/incentives.json', 'utf-8'),
 );
 
-export const AZ_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
-  type: 'array',
+export const VT_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
+   type: 'array',
   items: {
     type: 'object',
     properties: {
@@ -160,14 +176,15 @@ export const AZ_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
   },
 } as const;
 
-export const AZ_INCENTIVES: StateIncentive[] = JSON.parse(
-  fs.readFileSync('./data/AZ/incentives.json', 'utf-8'),
+export const VT_INCENTIVES: StateIncentive[] = JSON.parse(
+  fs.readFileSync('./data/VT/incentives.json', 'utf-8'),
 );
 
 export const STATE_INCENTIVES_BY_STATE: StateIncentivesMap = {
+  AZ: AZ_INCENTIVES,
   CT: CT_INCENTIVES,
   NY: NY_INCENTIVES,
   RI: RI_INCENTIVES,
   VA: VA_INCENTIVES,
-  AZ: AZ_INCENTIVES,
+  VT: VT_INCENTIVES,
 };
