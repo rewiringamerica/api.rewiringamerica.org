@@ -7,15 +7,3 @@ export enum PaymentMethod {
   AssistanceProgram = 'assistance_program',
   PerformanceRebate = 'performance_rebate',
 }
-
-/**
- * Deprecated. TODO: remove
- */
-export enum ItemType {
-  Rebate = 'rebate',
-  PerformanceRebate = 'performance_rebate',
-  PosRebate = 'pos_rebate',
-  TaxCredit = 'tax_credit',
-  AccountCredit = 'account_credit',
-  AssistanceProgram = 'assistance_program',
-}
