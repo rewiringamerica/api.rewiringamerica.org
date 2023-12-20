@@ -6,7 +6,7 @@ import { IRA_INCENTIVES, IRAIncentive } from '../data/ira_incentives';
 import { IRA_STATE_SAVINGS } from '../data/ira_state_savings';
 import { PROGRAMS } from '../data/programs';
 import { AmountType } from '../data/types/amount';
-import { ItemType, PaymentMethod } from '../data/types/incentive-types';
+import { PaymentMethod } from '../data/types/incentive-types';
 import { InvalidInputError } from '../lib/error';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
 import { t, tr } from '../lib/i18n';
@@ -45,6 +45,14 @@ function translateIncentives(incentives: IRAIncentive[]): WebsiteIncentive[] {
     type:
       incentive.type === PaymentMethod.PerformanceRebate
         ? PaymentMethod.PosRebate
+        : incentive.type,
+
+    // Reconstruct item_type
+    item_type:
+      incentive.item === 'rooftop_solar_installation'
+        ? 'solar_tax_credit'
+        : incentive.item === 'electric_vehicle_charger'
+        ? 'ev_charger_credit'
         : incentive.type,
 
     // Transform amounts from v1 to v0 format
@@ -172,18 +180,8 @@ export default async function (
           );
 
           // 1.3)
-          // set the amount_type and item_type to what the calculator expects:
+          // set the amount_type to what the calculator expects:
           solarTaxCredit.amount.type = 'solar' as AmountType;
-          solarTaxCredit.item_type = 'solar_tax_credit' as ItemType;
-        }
-
-        // 1.4)
-        // set the item_type of the EV charger credit
-        const evChargerCredit = tax_credit_incentives.find(
-          incentive => incentive.item === 'electric_vehicle_charger',
-        );
-        if (evChargerCredit) {
-          evChargerCredit.item_type = 'ev_charger_credit' as ItemType;
         }
 
         const translated: WebsiteCalculatorResponse = {
