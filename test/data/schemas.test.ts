@@ -77,11 +77,11 @@ test('static JSON files match schema', async tap => {
 });
 
 const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
+  ['AZ', AZ_INCENTIVES_SCHEMA, AZ_INCENTIVES],
   ['CT', CT_INCENTIVES_SCHEMA, CT_INCENTIVES],
   ['NY', NY_INCENTIVES_SCHEMA, NY_INCENTIVES],
   ['RI', RI_INCENTIVES_SCHEMA, RI_INCENTIVES],
   ['VA', VA_INCENTIVES_SCHEMA, VA_INCENTIVES],
-  ['AZ', AZ_INCENTIVES_SCHEMA, AZ_INCENTIVES],
 ];
 
 const STATE_INCENTIVE_RELATIONSHIP_TESTS: [string, IncentiveRelationships][] = [
