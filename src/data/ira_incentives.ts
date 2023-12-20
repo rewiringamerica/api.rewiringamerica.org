@@ -4,11 +4,7 @@ import { AuthorityType } from './authorities';
 import { ALL_PROGRAMS } from './programs';
 import { FilingStatus } from './tax_brackets';
 import { Amount, AmountType, AmountUnit } from './types/amount';
-import {
-  ItemType,
-  PaymentMethod,
-  PaymentMethodV0,
-} from './types/incentive-types';
+import { ItemType, PaymentMethod } from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
 import { LocalizableString } from './types/localizable-string';
 import { OwnerStatus } from './types/owner-status';
@@ -32,7 +28,10 @@ export interface IRAIncentive {
   owner_status: OwnerStatus[];
   program: string;
   start_date: number;
-  type: PaymentMethodV0;
+  type:
+    | PaymentMethod.PosRebate
+    | PaymentMethod.TaxCredit
+    | PaymentMethod.PerformanceRebate;
   payment_methods: PaymentMethod[];
   short_description: LocalizableString;
 }
@@ -64,7 +63,11 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
       id: { type: 'string' },
       type: {
         type: 'string',
-        enum: [PaymentMethod.PosRebate, PaymentMethod.TaxCredit],
+        enum: [
+          PaymentMethod.PosRebate,
+          PaymentMethod.TaxCredit,
+          PaymentMethod.PerformanceRebate,
+        ],
       },
       payment_methods: {
         type: 'array',

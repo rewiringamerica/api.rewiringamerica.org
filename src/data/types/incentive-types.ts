@@ -5,16 +5,11 @@ export enum PaymentMethod {
   TaxCredit = 'tax_credit',
   AccountCredit = 'account_credit',
   AssistanceProgram = 'assistance_program',
+  PerformanceRebate = 'performance_rebate',
 }
 
-export type PaymentMethodV0 = Extract<
-  PaymentMethod,
-  PaymentMethod.PosRebate | PaymentMethod.TaxCredit
->;
-
 /**
- * A more specific version of the above. This gates specific logic around
- * eligibility, totaling up savings, or estimating the amount of an incentive.
+ * Deprecated. TODO: remove
  */
 export enum ItemType {
   Rebate = 'rebate',

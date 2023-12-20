@@ -148,22 +148,23 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
   const tax_credit_incentives = data.incentives.filter(
     i => i.type === PaymentMethod.TaxCredit,
   );
+  const performance_rebate_incentives = data.incentives.filter(
+    i => i.type === PaymentMethod.PerformanceRebate,
+  );
 
-  t.equal(pos_rebate_incentives.length, 8);
+  t.equal(pos_rebate_incentives.length, 7);
   t.equal(tax_credit_incentives.length, 10);
+  t.equal(performance_rebate_incentives.length, 1);
 
   // count the incentives by key used to de-dupe in UI:
-  const rebateCounts = _.countBy(
-    pos_rebate_incentives,
-    i => i.item + i.item_type,
-  );
+  const rebateCounts = _.countBy(pos_rebate_incentives, i => i.item + i.type);
   t.equal(
     Object.values(rebateCounts).every(c => c === 1),
     true,
   );
   const taxCreditCounts = _.countBy(
     tax_credit_incentives,
-    i => i.item + i.item_type,
+    i => i.item + i.type,
   );
   t.equal(
     Object.values(taxCreditCounts).every(c => c === 1),
@@ -192,9 +193,10 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
   t.equal(posRebates['weatherization'].eligible, true);
   t.equal(posRebates['weatherization'].amount.number, 1600);
   t.equal(posRebates['weatherization'].start_date, 2023);
-  t.equal(posRebates['efficiency_rebates'].eligible, true);
-  t.equal(posRebates['efficiency_rebates'].amount.number, 4000);
-  t.equal(posRebates['efficiency_rebates'].start_date, 2023);
+
+  t.equal(performance_rebate_incentives[0].eligible, true);
+  t.equal(performance_rebate_incentives[0].amount.number, 4000);
+  t.equal(performance_rebate_incentives[0].start_date, 2023);
 
   const taxCredits = _.keyBy(tax_credit_incentives, 'item');
   t.equal(taxCredits['battery_storage_installation'].eligible, true);
@@ -253,22 +255,23 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
   const tax_credit_incentives = data.incentives.filter(
     i => i.type === PaymentMethod.TaxCredit,
   );
+  const performance_rebate_incentives = data.incentives.filter(
+    i => i.type === PaymentMethod.PerformanceRebate,
+  );
 
-  t.equal(pos_rebate_incentives.length, 8);
+  t.equal(pos_rebate_incentives.length, 7);
   t.equal(tax_credit_incentives.length, 10);
+  t.equal(performance_rebate_incentives.length, 1);
 
   // count the incentives by key used to de-dupe in UI:
-  const rebateCounts = _.countBy(
-    pos_rebate_incentives,
-    i => i.item + i.item_type,
-  );
+  const rebateCounts = _.countBy(pos_rebate_incentives, i => i.item + i.type);
   t.equal(
     Object.values(rebateCounts).every(c => c === 1),
     true,
   );
   const taxCreditCounts = _.countBy(
     tax_credit_incentives,
-    i => i.item + i.item_type,
+    i => i.item + i.type,
   );
   t.equal(
     Object.values(taxCreditCounts).every(c => c === 1),
@@ -297,9 +300,10 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
   t.equal(posRebates['weatherization'].eligible, true);
   t.equal(posRebates['weatherization'].amount.number, 1600);
   t.equal(posRebates['weatherization'].start_date, 2023);
-  t.equal(posRebates['efficiency_rebates'].eligible, true);
-  t.equal(posRebates['efficiency_rebates'].amount.number, 4000);
-  t.equal(posRebates['efficiency_rebates'].start_date, 2023);
+
+  t.equal(performance_rebate_incentives[0].eligible, true);
+  t.equal(performance_rebate_incentives[0].amount.number, 4000);
+  t.equal(performance_rebate_incentives[0].start_date, 2023);
 
   const taxCredits = _.keyBy(tax_credit_incentives, 'item');
   t.equal(taxCredits['battery_storage_installation'].eligible, true);
@@ -358,22 +362,23 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   const tax_credit_incentives = data.incentives.filter(
     i => i.type === PaymentMethod.TaxCredit,
   );
+  const performance_rebate_incentives = data.incentives.filter(
+    i => i.type === PaymentMethod.PerformanceRebate,
+  );
 
-  t.equal(pos_rebate_incentives.length, 8);
+  t.equal(pos_rebate_incentives.length, 7);
   t.equal(tax_credit_incentives.length, 10);
+  t.equal(performance_rebate_incentives.length, 1);
 
   // count the incentives by key used to de-dupe in UI:
-  const rebateCounts = _.countBy(
-    pos_rebate_incentives,
-    i => i.item + i.item_type,
-  );
+  const rebateCounts = _.countBy(pos_rebate_incentives, i => i.item + i.type);
   t.equal(
     Object.values(rebateCounts).every(c => c === 1),
     true,
   );
   const taxCreditCounts = _.countBy(
     tax_credit_incentives,
-    i => i.item + i.item_type,
+    i => i.item + i.type,
   );
   t.equal(
     Object.values(taxCreditCounts).every(c => c === 1),
@@ -402,10 +407,11 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   t.equal(posRebates['weatherization'].eligible, false);
   t.equal(posRebates['weatherization'].amount.number, 1600);
   t.equal(posRebates['weatherization'].start_date, 2023);
+
   // only items.efficiency_rebates are eligible here:
-  t.equal(posRebates['efficiency_rebates'].eligible, true);
-  t.equal(posRebates['efficiency_rebates'].amount.number, 4000);
-  t.equal(posRebates['efficiency_rebates'].start_date, 2023);
+  t.equal(performance_rebate_incentives[0].eligible, true);
+  t.equal(performance_rebate_incentives[0].amount.number, 4000);
+  t.equal(performance_rebate_incentives[0].start_date, 2023);
 
   const taxCredits = _.keyBy(tax_credit_incentives, 'item');
   t.equal(taxCredits['battery_storage_installation'].eligible, true);
@@ -462,8 +468,10 @@ test('correctly sorts incentives"', async t => {
         t.equal(incentive.amount.type, 'dollar_amount');
       }
     } else {
-      t.equal(prevIncentive.type, 'pos_rebate');
-      t.equal(incentive.type, 'tax_credit');
+      // Tax credits must all be sorted at the end. Rebate types can be mixed.
+      if (prevIncentive.type === 'tax_credit') {
+        t.equal(incentive.type, 'tax_credit');
+      }
     }
     prevIncentive = incentive;
   });
