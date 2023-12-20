@@ -54,8 +54,8 @@
     "start": "fastify start -l info -a 0.0.0.0 build/app.js --options",
     "dev": "fastify start -r ts-node/register -w --ignore-watch test -l info -P src/app.ts --options",
     "build": "./scripts/build.sh",
-    "lint": "prettier --check . --ignore-path=.prettierignore && eslint .",
-    "test": "yarn lint && dotenv -- tap -- --ts \"test/**/*.test.ts\"",
+    "lint": "tsc --noEmit && prettier --check . --ignore-path=.prettierignore && eslint .",
+    "test": "dotenv -- tap -- --ts \"test/**/*.test.ts\"",
     "update-descriptions": "ts-node scripts/update-descriptions"
   },
   "tap": {
