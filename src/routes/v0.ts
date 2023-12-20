@@ -6,7 +6,7 @@ import { IRA_INCENTIVES, IRAIncentive } from '../data/ira_incentives';
 import { IRA_STATE_SAVINGS } from '../data/ira_state_savings';
 import { PROGRAMS } from '../data/programs';
 import { AmountType } from '../data/types/amount';
-import { ItemType, PaymentMethod, TypeV0 } from '../data/types/incentive-types';
+import { ItemType, PaymentMethod } from '../data/types/incentive-types';
 import { InvalidInputError } from '../lib/error';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
 import { t, tr } from '../lib/i18n';
@@ -45,7 +45,7 @@ function translateIncentives(incentives: IRAIncentive[]): WebsiteIncentive[] {
     type:
       incentive.type === PaymentMethod.PerformanceRebate
         ? PaymentMethod.PosRebate
-        : (incentive.type as TypeV0),
+        : incentive.type,
 
     // Transform amounts from v1 to v0 format
     amount: incentive.amount.number,
