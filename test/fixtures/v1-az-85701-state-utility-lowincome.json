@@ -1,0 +1,86 @@
+{
+  "is_under_80_ami": true,
+  "is_under_150_ami": true,
+  "is_over_150_ami": false,
+  "authorities": {
+    "az-tucson-electric-power": {
+      "name": "Tucson Electric Power"
+    }
+  },
+  "coverage": {
+    "state": "AZ",
+    "utility": "az-tucson-electric-power"
+  },
+  "location": {
+    "state": "AZ"
+  },
+  "savings": {
+    "pos_rebate": 0,
+    "tax_credit": 0,
+    "performance_rebate": 0,
+    "account_credit": 0,
+    "rebate": 400
+  },
+  "incentives": [
+    {
+      "type": "assistance_program",
+      "payment_methods": [
+        "assistance_program"
+      ],
+      "authority_type": "utility",
+      "authority": "az-tucson-electric-power",
+      "program": "Weatherization assistance",
+      "program_url": "https://www.tep.com/weatherization-assistance/",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 1
+      },
+      "item_type": "assistance_program",
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "agi_max_limit": null,
+      "filing_status": null,
+      "eligible": true,
+      "short_description": "Weatherization improvements for homes for limited-income customers."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "az-tucson-electric-power",
+      "program": "Efficient Home Water Heating",
+      "program_url": "https://www.tep.com/efficient-home-water-heating/",
+      "item": {
+        "type": "heat_pump_water_heater",
+        "name": "Heat Pump Water Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-water-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 400
+      },
+      "item_type": "rebate",
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "agi_max_limit": null,
+      "filing_status": null,
+      "eligible": true,
+      "short_description": "$400 rebate for TEP residential customers who purchase and installation of an Energy Star HPWH equipped with a wireless, programmable controller."
+    }
+  ]
+}

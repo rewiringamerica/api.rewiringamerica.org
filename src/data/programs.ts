@@ -11,6 +11,28 @@ export const ALL_PROGRAMS = [
   'hopeForHomes',
   'residentialCleanEnergyCredit',
 
+  // AZ
+  // Mohave Electric Cooperative
+  'az_mohaveElectricCooperativeMohaveChargedRebates',
+  'az_mohaveElectricCooperativeMohaveHeatPumpRebate',
+  'az_mohaveElectricCooperativesunWattsRenewableEnergyAndRebateProgram',
+  'az_mohaveElectricCooperativeMohaveHeatBatteryRebate',
+  // Salt River Project
+  'az_saltRiverProjectInsulationRebate',
+  'az_saltRiverProjectHeatPumpWaterHeaterRebate',
+  'az_saltRiverProjectHomeElectricVehicleChargerRebate',
+  // Sulphur Springs Valley Electric Cooperative
+  'az_sulphurSpringsValleyElectricCooperativeHotWaterHeaterRebate',
+  'az_sulphurSpringsValleyElectricCooperativeHeatPumpRebates',
+  // Tucson Electric Power
+  'az_tucsonElectricPowerEfficientHomeProgram',
+  'az_tucsonElectricPowerWeatherizationAssistance',
+  'az_tucsonElectricPowerEfficientHomeWaterHeating',
+  'az_tucsonElectricPowerEVChargerRebates',
+  // UniSource Energy Services
+  'az_uniSourceEnergyServicesWeatherizationAssistance',
+  'az_uniSourceEnergyServicesEfficientHomeProgram',
+
   // CT
   // Energize CT
   'ct_energizeCtHomeEnergySolutions',

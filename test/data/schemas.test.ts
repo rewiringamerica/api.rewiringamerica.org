@@ -23,6 +23,8 @@ import {
   IncentiveRelationships,
 } from '../../src/data/state_incentive_relationships';
 import {
+  AZ_INCENTIVES,
+  AZ_INCENTIVES_SCHEMA,
   CT_INCENTIVES,
   CT_INCENTIVES_SCHEMA,
   NY_INCENTIVES,
@@ -77,6 +79,7 @@ test('static JSON files match schema', async tap => {
 });
 
 const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
+  ['AZ', AZ_INCENTIVES_SCHEMA, AZ_INCENTIVES],
   ['CT', CT_INCENTIVES_SCHEMA, CT_INCENTIVES],
   ['NY', NY_INCENTIVES_SCHEMA, NY_INCENTIVES],
   ['RI', RI_INCENTIVES_SCHEMA, RI_INCENTIVES],
