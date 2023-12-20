@@ -113,8 +113,6 @@ test('CT low income response with state and utility filtering is valid and corre
       tax_filing: 'joint',
       authority_types: ['state', 'utility'],
       utility: 'ct-eversource',
-      // TODO: Remove when CT is fully launched.
-      include_beta_states: true,
     },
     './test/fixtures/v1-ct-06002-state-utility-lowincome.json',
   );
