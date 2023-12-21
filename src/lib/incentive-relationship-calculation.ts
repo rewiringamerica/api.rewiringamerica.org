@@ -66,6 +66,7 @@ export function buildExclusionMaps(
 
 // Builds a graph of incentive relationships, represented as pairs of incentive
 // ID and the set of IDs of incentives that are dependent on that incentive.
+// This is only used for cycle detection when we validate the relationships.
 export function buildRelationshipGraph(data: IncentiveRelationships) {
   const edges = buildExclusionMaps(data).supersedesMap;
 
