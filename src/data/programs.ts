@@ -11,6 +11,28 @@ export const ALL_PROGRAMS = [
   'hopeForHomes',
   'residentialCleanEnergyCredit',
 
+  // AZ
+  // Mohave Electric Cooperative
+  'az_mohaveElectricCooperativeMohaveChargedRebates',
+  'az_mohaveElectricCooperativeMohaveHeatPumpRebate',
+  'az_mohaveElectricCooperativesunWattsRenewableEnergyAndRebateProgram',
+  'az_mohaveElectricCooperativeMohaveHeatBatteryRebate',
+  // Salt River Project
+  'az_saltRiverProjectInsulationRebate',
+  'az_saltRiverProjectHeatPumpWaterHeaterRebate',
+  'az_saltRiverProjectHomeElectricVehicleChargerRebate',
+  // Sulphur Springs Valley Electric Cooperative
+  'az_sulphurSpringsValleyElectricCooperativeHotWaterHeaterRebate',
+  'az_sulphurSpringsValleyElectricCooperativeHeatPumpRebates',
+  // Tucson Electric Power
+  'az_tucsonElectricPowerEfficientHomeProgram',
+  'az_tucsonElectricPowerWeatherizationAssistance',
+  'az_tucsonElectricPowerEfficientHomeWaterHeating',
+  'az_tucsonElectricPowerEVChargerRebates',
+  // UniSource Energy Services
+  'az_uniSourceEnergyServicesWeatherizationAssistance',
+  'az_uniSourceEnergyServicesEfficientHomeProgram',
+
   // CT
   // Energize CT
   'ct_energizeCtHomeEnergySolutions',
@@ -67,6 +89,56 @@ export const ALL_PROGRAMS = [
   'va_evChargerRewards',
   'va_incomeAndAgeQualifyingEnergyEfficiencyProgram',
   'va_controlYourHeatingAndCoolingProgram',
+
+  //  VT
+  // Efficiency Vermont
+  'vt_efficiencyVtAirToWaterHeatPumpRebateProgram',
+  'vt_efficiencyVtClothesDryerRebateProgram',
+  'vt_efficiencyVtDuctedHeatPumpRebateProgram',
+  'vt_efficiencyVtDuctlessHeatPumpRebateProgram',
+  'vt_efficiencyVtGroundSourceHeatPumpRebateProgram',
+  'vt_efficiencyVtHeatPumpWaterHeaterRebateProgram',
+  'vt_efficiencyVtHeatPumpRebateIncomeBonusProgram',
+  'vt_efficiencyVtPowerShiftProgram',
+  'vt_efficiencyVtWeatherizationProgram',
+  'vt_efficiencyVtHomePerformanceEnergyStarProgram',
+  'vt_efficiencyVtHomePerformanceEnergyStarIncomeBonusProgram',
+  'vt_efficiencyVTwithWECWeatherizationProgram',
+  'vt_efficiencyVTwithWECWeatherizationIncomeBonusProgram',
+  // Burlington Electric Department
+  'vt_burlingtonElectricAirToWaterHeatPumpRebateProgram',
+  'vt_burlingtonElectricDuctedHeatPumpRebateProgram',
+  'vt_burlingtonElectricDuctlessHeatPumpRebateProgram',
+  'vt_burlingtonElectricGroundSourcePumpRebateProgram',
+  'vt_burlingtonHeatPumpWaterHeaterRebateProgram',
+  'vt_burlingtonElectricHeatPumpIncomeBonusRebateProgram',
+  'vt_burlingtonElectricResidentialEVChargerRebateProgram',
+  // Washington Electric Co-op
+  'vt_buttonUpWECAirToWaterHeatPumpProgram',
+  'vt_buttonUpWECDuctedHeatPumpProgram',
+  'vt_buttonUpWECDuctlessHeatPumpProgram',
+  'vt_buttonUpWECGroundSourceHeatPumpProgram',
+  'vt_buttonUpWECHeatPumpWaterHeaterProgram',
+  // Green Mountain Power
+  'vt_greenMountainPowerDuctedHeatPumpRebateProgram',
+  'vt_greenMountainPowerDuctlessHeatPumpRebateProgram',
+  'vt_greenMountainPowerIncomeBonusRebateProgram',
+  'vt_greenMountainPowerFreeLevel2EVChargerProgram',
+  // VPPSA
+  'vt_vppsaHeatPumpIncomeBonusRebateProgram',
+  // Vermont Electric Co-Op
+  'vt_vermontElectricCoopThermalEfficiencyBillCreditDuctedHeatPumpBonusProgram',
+  'vt_vermontElectricCoopThermalEfficiencyBillCreditDuctlessHeatPumpBonusProgram',
+  'vt_vermontElectricCoopFreeLevel2EVChargerProgram',
+  'vt_vermontElectricCoopBillCredtLevel2EVChargerProgram',
+  // State of Vermont
+  'vt_stateOfVermontIncentivesForNewElectricVehiclesProgram',
+  'vt_stateOfVermontMileageSmartUsedElectricVehiclesProgram',
+  'vt_stateOfVermontReplaceYourRideProgram',
+  'vt_stateOfVermontWeatherizationIncomeBonusProgram',
+  // VGS
+  'vt_vermontGasServiceWeatherizationProgram',
+  'vt_vermontGasServiceWeatherizationIncomeBonusProgram',
 ] as const;
 
 export const PROGRAMS_SCHEMA = {

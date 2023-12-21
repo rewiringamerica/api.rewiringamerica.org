@@ -10,6 +10,7 @@ import { StateIncentive } from '../data/state_incentives';
 import { STATE_MFIS, StateMFI } from '../data/state_mfi';
 import { FilingStatus } from '../data/tax_brackets';
 import { APICoverage } from '../data/types/coverage';
+import { PaymentMethod } from '../data/types/incentive-types';
 import { OwnerStatus } from '../data/types/owner-status';
 import {
   APICalculatorRequest,
@@ -129,7 +130,8 @@ function calculateFederalIncentivesAndSavings(
       amount.representative = roundCents(solarSystemCost * amount.number!);
     }
 
-    if (item.item_type === 'ev_charger_credit') {
+    // EV charger credit has some special eligibility rules
+    if (item.item === 'electric_vehicle_charger') {
       // console.log(
       //   'EV Charger Qualifications:',
       //   '\nIs Rural?',
@@ -177,10 +179,10 @@ function calculateFederalIncentivesAndSavings(
   const dedupedIneligibleIncentives = _.uniqBy(
     ineligibleIncentives.filter(item => {
       // Note: using _ here because it finds by matching properties, not by equality
-      const key = { item: item.item, item_type: item.item_type };
+      const key = { item: item.item, type: item.type };
       return _.find(eligibleIncentives, key) === undefined;
     }),
-    item => item.item + item.item_type,
+    item => item.item + item.type,
   );
 
   const calculatedIncentives = [
@@ -195,12 +197,9 @@ function calculateFederalIncentivesAndSavings(
 
   for (const item of eligibleIncentives) {
     if (item.type === 'pos_rebate') {
-      // count performance rebates separately
-      if (item.item_type === 'performance_rebate') {
-        savings.performance_rebate += item.amount.number!;
-      } else {
-        savings.pos_rebate += item.amount.number!;
-      }
+      savings.pos_rebate += item.amount.number!;
+    } else if (item.type === 'performance_rebate') {
+      savings.performance_rebate += item.amount.number!;
     } else if (item.type === 'tax_credit') {
       // if this is a dollar amount, just add it up:
       if (item.amount.type === 'dollar_amount') {
@@ -355,10 +354,17 @@ export default function calculateIncentives(
   }
 
   // Sort incentives https://app.asana.com/0/0/1204275945510481/f
-  // put "percent" items first, then "dollar_amount", then sort by amount with highest first
+  // Sort by payment method first, treating "performance_rebate" the same as
+  // "pos_rebate" for backward compatibility.
+  // Within each of those categories, put "percent" items first, then
+  // "dollar_amount", then sort by amount with highest first.
+  const adjustedType = (i: CalculatedIncentive) =>
+    i.type === PaymentMethod.PerformanceRebate
+      ? PaymentMethod.PosRebate
+      : i.type;
   const sortedIncentives = _.orderBy(
     incentives,
-    [i => i.type, i => i.amount.type, i => i.amount.number],
+    [adjustedType, i => i.amount.type, i => i.amount.number],
     ['asc', 'desc', 'desc'],
   );
 

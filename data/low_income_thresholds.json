@@ -1,4 +1,19 @@
 {
+  "AZ": {
+    "default": {
+      "source_url": "https://www.tep.com/weatherization-assistance",
+      "thresholds": {
+        "1": 29160,
+        "2": 39440,
+        "3": 49720,
+        "4": 60000,
+        "5": 70280,
+        "6": 80560,
+        "7": 90840,
+        "8": 101120
+      }
+    }
+  },
   "CT": {
     "default": {
       "source_url": "https://energizect.com/energy-evaluations/income-eligible-options",
@@ -96,6 +111,73 @@
         "10": 121680,
         "11": 131960,
         "12": 142240
+      }
+    }
+  },
+  "VT": {
+    "default": {
+      "source_url": "https://www.efficiencyvermont.com/services/income-based-assistance/energy-bill-reduction",
+      "thresholds": {
+        "1": 55050,
+        "2": 62900,
+        "3": 70750,
+        "4": 78600,
+        "5": 84900,
+        "6": 91200,
+        "7": 97500,
+        "8": 103800
+      }
+    },
+    "default-moderate": {
+      "source_url": "https://www.efficiencyvermont.com/rebates/list/centrally-ducted-heat-pumps",
+      "thresholds": {
+        "1": 82400,
+        "2": 94200,
+        "3": 106000,
+        "4": 117800,
+        "5": 127400,
+        "6": 140800,
+        "7": 146200,
+        "8": 155600
+      }
+    },
+    "vt-burlington-electric-department": {
+      "source_url": "https://www.burlingtonelectric.com/rebate-form",
+      "thresholds": {
+        "1": 63600,
+        "2": 72700,
+        "3": 81800,
+        "4": 90850,
+        "5": 98150,
+        "6": 105400,
+        "7": 112700,
+        "8": 119950
+      }
+    },
+    "vt-state-of-vermont": {
+      "source_url": "https://www.driveelectricvt.com/Media/Default/docs/ryr/vermont-replace-your-ride-program-guidelines.pdf?refresh",
+      "thresholds": {
+        "1": 51968,
+        "2": 59392,
+        "3": 66816,
+        "4": 74240,
+        "5": 80179,
+        "6": 86118,
+        "7": 92057,
+        "8": 97996
+      }
+    },
+    "vt-vermont-gas-service": {
+      "source_url": "https://vgsvt.com/wp-content/uploads/2023/03/2023-Income-Verification-Form.pdf",
+      "thresholds": {
+        "1": 78700,
+        "2": 89900,
+        "3": 101200,
+        "4": 112300,
+        "5": 121320,
+        "6": 130300,
+        "7": 130300,
+        "8": 130300
       }
     }
   }
