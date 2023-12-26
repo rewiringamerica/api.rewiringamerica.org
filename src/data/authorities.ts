@@ -19,9 +19,9 @@ import { STATES_PLUS_DC } from './types/states';
  */
 export enum AuthorityType {
   Federal = 'federal',
+  Local = 'local',
   State = 'state',
   Utility = 'utility',
-  Local = 'local',
 }
 
 export const API_AUTHORITY_SCHEMA = {
