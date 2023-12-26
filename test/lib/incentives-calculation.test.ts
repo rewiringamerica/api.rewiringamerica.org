@@ -7,7 +7,7 @@ import { AuthorityType } from '../../src/data/authorities';
 import { StateIncentive } from '../../src/data/state_incentives';
 import { FilingStatus } from '../../src/data/tax_brackets';
 import { AmountType } from '../../src/data/types/amount';
-import { ItemType, PaymentMethod } from '../../src/data/types/incentive-types';
+import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { OwnerStatus } from '../../src/data/types/owner-status';
 import { BETA_STATES, LAUNCHED_STATES } from '../../src/data/types/states';
 import calculateIncentives from '../../src/lib/incentives-calculation';
@@ -485,7 +485,6 @@ test('ignores local incentives even if requested', async t => {
     id: 'test',
     authority_type: AuthorityType.Local,
     authority: 'ri-pascoag-utility-district',
-    item_type: ItemType.AccountCredit,
     start_date: 2023,
     end_date: 2024,
     type: PaymentMethod.AccountCredit,
