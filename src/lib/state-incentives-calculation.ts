@@ -84,6 +84,13 @@ export function calculateStateIncentivesAndSavings(
       continue;
     }
 
+    if (item.authority_type === AuthorityType.Local) {
+      // TODO: support serving Local incentives
+      // This allows keeping them in our JSON datasets, but for now
+      // we always ignore them.
+      continue;
+    }
+
     let eligible = true;
 
     if (!item.owner_status.includes(request.owner_status as OwnerStatus)) {
