@@ -5,9 +5,19 @@ export default async function fetchAMIsForZip(
   db: Database,
   zip: string,
 ): Promise<IncomeInfo | null> {
+  // Some ZIPs don't correspond to physical land areas. Usually these represent
+  // a set of PO boxes, or a single high-volume postal customer. In these cases,
+  // there is usually a "parent ZCTA" defined: a ZIP that does correspond to a
+  // physical area, roughly where mail to the first ZIP is actually delivered.
+  //
+  // Such ZIPs don't contain residential addresses, so this shouldn't be an
+  // issue for users who enter their actual residential ZIPs. Still, to avoid
+  // confusion, use parent_zcta if it's non-blank.
   const location = await db.get<ZipInfo>(
     `
-    SELECT * FROM zips WHERE zip = ?
+    SELECT COALESCE(NULLIF(parent_zcta, ''), zip) as zip, state_id
+    FROM zips
+    WHERE zip = ?
   `,
     zip,
   );
@@ -27,7 +37,7 @@ export default async function fetchAMIsForZip(
         LEFT JOIN tracts t ON t.tract_geoid = zt.tract
     WHERE zt.zip = ? AND t.mfi != -666666666;
   `,
-    zip,
+    location.zip,
   );
 
   const ami = await db.get<AMI>(
@@ -36,7 +46,7 @@ export default async function fetchAMIsForZip(
     FROM zip_to_cbsasub zc LEFT JOIN ami a ON a.cbsasub = zc.cbsasub
     WHERE zc.zipcode = ? AND a.cbsasub IS NOT NULL
   `,
-    zip,
+    location.zip,
   );
 
   return { ami, location, calculations };

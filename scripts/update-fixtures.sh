@@ -114,3 +114,12 @@ curl \
 &authority_types=utility\
 &utility=vt-burlington-electric-department" \
   | jq . > test/fixtures/v1-vt-05401-state-utility-lowincome.json
+
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?location\[zip\]=15289\
+&owner_status=homeowner\
+&household_income=80000\
+&tax_filing=joint\
+&household_size=4" \
+  | jq . > test/fixtures/v1-15289-homeowner-80000-joint-4.json
