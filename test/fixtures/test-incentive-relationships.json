@@ -6,5 +6,24 @@
     "C": [
       "D"
     ]
-  }
+  },
+  "exclusions": {
+    "A": [
+      "E"
+    ],
+    "C": [
+      "F"
+    ]
+  },
+  "combinations": [
+    { "ids": [
+        "A",
+        "B",
+        "C"
+      ], "max_value": 200 },
+    { "ids": [
+        "D",
+        "E"
+      ], "max_value": 100 }
+  ]
 }

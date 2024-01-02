@@ -7,6 +7,7 @@ import { calculateStateIncentivesAndSavings } from '../../src/lib/state-incentiv
 import { incentiveRelationshipsContainCycle } from '../data/schemas.test';
 import {
   TEST_INCENTIVE_RELATIONSHIPS,
+  TEST_INCENTIVE_RELATIONSHIPS_3,
   TEST_INVALID_INCENTIVE_RELATIONSHIPS,
 } from '../mocks/state-incentive-relationships';
 import { TEST_INCENTIVES } from '../mocks/state-incentives';
@@ -30,8 +31,9 @@ test('basic test for supplying test incentive data to calculation logic', async 
     TEST_INCENTIVE_RELATIONSHIPS,
   );
   t.ok(data);
-  // There are 4 test incentives and this user is eligible for all of them.
+  // This user is eligible for all of the incentives.
   t.equal(data.stateIncentives.length, 4);
+  t.equal(data.savings.account_credit, 300);
   for (const incentive of data.stateIncentives) {
     t.equal(incentive.eligible, true);
   }
@@ -81,17 +83,124 @@ test('test incentive prerequisite logic', async t => {
     if (incentive.id === 'A' || incentive.id === 'B') {
       t.equal(incentive.eligible, true);
     }
-    if (incentive.id === 'C' || incentive.id === 'D') {
+    if (['C', 'D', 'E'].includes(incentive.id)) {
       t.equal(incentive.eligible, false);
     }
   }
 });
 
+// This user is a renter. Based on this, they are eligible for incentives
+// A, B, C, E, and F.
+// However, eligibility for several incentives is affected by relationships:
+// 1) Since E and C are mutually exclusive and E supersedes C, they are not
+//    eligible for C after checking relationships.
+// 2) Since C is a prerequisite for A and they are not eligible for C, they are
+//    not eligible for A either.
+// 3) A and B and mutually exclusive and A supersedes B, but since the user is
+//    not eligible for A, they can still be eligible for B.
+// 4) F is not affected by the relationships, so they are eligible for F.
+test('test incentive relationship logic', async t => {
+  const data = calculateStateIncentivesAndSavings(
+    'RI',
+    {
+      owner_status: OwnerStatus.Renter,
+      household_income: 120000,
+      tax_filing: FilingStatus.Single,
+      household_size: 1,
+      authority_types: [AuthorityType.Utility],
+      utility: 'ri-pascoag-utility-district',
+      include_beta_states: true,
+    },
+    TEST_INCENTIVES,
+    TEST_INCENTIVE_RELATIONSHIPS_3,
+  );
+  t.ok(data);
+  t.equal(data.stateIncentives.length, 6);
+  // There is a combined max value of $200 for A, B, C, D, E, and F.
+  t.equal(data.savings.account_credit, 200);
+  for (const incentive of data.stateIncentives) {
+    if (['B', 'E', 'F'].includes(incentive.id)) {
+      t.equal(incentive.eligible, true);
+    }
+    if (['A', 'C'].includes(incentive.id)) {
+      t.equal(incentive.eligible, false);
+    }
+  }
+});
+
+// This user is a renter. Based on this, they are eligible for incentives
+// A, B, C, E, and F.
+// However, eligibility for several incentives is affected by relationships:
+// 1) D is a prereq for C, so they are not eligible for C.
+// 2) C is a prereq for B, so they are not eligible for B.
+// 3) B is a prereq for A, so they are not eligible for A.
+// 4) A supersedes E, so they are still eligible for E.
+// 5) E supersedes F, so they are not eligible for F.
+// TODO: add this back when we add back the second set of test incentives.
+/*test('test more complex incentive relationship logic', async t => {
+  const data = calculateStateIncentivesAndSavings(
+    'RI',
+    {
+      owner_status: OwnerStatus.Renter,
+      household_income: 120000,
+      tax_filing: FilingStatus.Single,
+      household_size: 1,
+      authority_types: [AuthorityType.Utility],
+      utility: 'ri-pascoag-utility-district',
+      include_beta_states: true,
+    },
+    TEST_INCENTIVES,
+    TEST_INCENTIVE_RELATIONSHIPS_2,
+  );
+  t.ok(data);
+  t.equal(data.stateIncentives.length, 6);
+  t.equal(data.savings.account_credit, 100);
+  // Check that the user is only eligible for E.
+  for (const incentive of data.stateIncentives) {
+    if (['E'].includes(incentive.id)) {
+      t.equal(incentive.eligible, true);
+    }
+    if (['A', 'B', 'C', 'D', 'F'].includes(incentive.id)) {
+      t.equal(incentive.eligible, false);
+    }
+  }
+});*/
+
+// This user is eligible for incentives B, E, and F. These incentives are each
+// worth $100 and belong to a group with a maximum value of $200, so the final
+// savings value is $200.
+test('test combined maximum savings logic', async t => {
+  const data = calculateStateIncentivesAndSavings(
+    'RI',
+    {
+      owner_status: OwnerStatus.Renter,
+      household_income: 120000,
+      tax_filing: FilingStatus.Single,
+      household_size: 1,
+      authority_types: [AuthorityType.Utility],
+      utility: 'ri-pascoag-utility-district',
+      include_beta_states: true,
+    },
+    TEST_INCENTIVES,
+    TEST_INCENTIVE_RELATIONSHIPS_3,
+  );
+  t.ok(data);
+  // Check that the user is eligible for A, B, and F.
+  for (const incentive of data.stateIncentives) {
+    if (['B', 'E', 'F'].includes(incentive.id)) {
+      t.equal(incentive.eligible, true);
+    }
+  }
+
+  // There is a combined max value of $200 for A, B, C, D, E, and F.
+  t.equal(data.savings.account_credit, 200);
+});
+
 test('test incentive relationships contain no circular dependencies', async tap => {
   // Check that there are no circular dependencies in the relationships.
-  const relationshipGraph = buildRelationshipGraph(
-    TEST_INCENTIVE_RELATIONSHIPS,
-  );
+  let relationshipGraph = buildRelationshipGraph(TEST_INCENTIVE_RELATIONSHIPS);
+  tap.equal(incentiveRelationshipsContainCycle(relationshipGraph), false);
+  relationshipGraph = buildRelationshipGraph(TEST_INCENTIVE_RELATIONSHIPS_3);
   tap.equal(incentiveRelationshipsContainCycle(relationshipGraph), false);
 });
 

@@ -53,6 +53,36 @@
       "short_description": "The Home Energy Solutions program provides income-eligible households with no-cost energy assessments and incentives for weatherization services."
     },
     {
+      "type": "pos_rebate",
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ct-eversource",
+      "program": "Energize CT Residential Air Source Heat Pump Incentive",
+      "program_url": "https://energizect.com/rebates-incentives/heating-cooling/heat-pumps/residential-air-source",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 250,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "agi_max_limit": null,
+      "filing_status": null,
+      "eligible": true,
+      "short_description": "$250 per ton instant rebate for qualifying air source heat pumps."
+    },
+    {
       "type": "rebate",
       "payment_methods": [
         "rebate"
@@ -82,6 +112,36 @@
       "filing_status": null,
       "eligible": true,
       "short_description": "$2,000 per ton after-purchase rebate for qualifying ground source heat pumps, up to $15,000."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ct-eversource",
+      "program": "Energize CT Residential Air Source Heat Pump Incentive",
+      "program_url": "https://energizect.com/rebates-incentives/heating-cooling/heat-pumps/residential-air-source",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 1000,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "agi_max_limit": null,
+      "filing_status": null,
+      "eligible": true,
+      "short_description": "$1,000 per ton after-purchase rebate for qualifying air source heat pumps."
     },
     {
       "type": "rebate",

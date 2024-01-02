@@ -7,6 +7,13 @@ import { IncentiveRelationships } from '../../src/data/state_incentive_relations
 export const TEST_INCENTIVE_RELATIONSHIPS: IncentiveRelationships = JSON.parse(
   fs.readFileSync('./test/fixtures/test-incentive-relationships.json', 'utf-8'),
 );
+export const TEST_INCENTIVE_RELATIONSHIPS_3: IncentiveRelationships =
+  JSON.parse(
+    fs.readFileSync(
+      './test/fixtures/test-incentive-relationships-3.json',
+      'utf-8',
+    ),
+  );
 
 // These are model incentive relationships created for the purpose of checking
 // that the schema tests can detect a circular dependency in incentive

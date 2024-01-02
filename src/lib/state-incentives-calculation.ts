@@ -1,3 +1,4 @@
+import { min } from 'lodash';
 import { AuthorityType } from '../data/authorities';
 import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/low_income_thresholds';
 import {
@@ -14,8 +15,11 @@ import { OwnerStatus } from '../data/types/owner-status';
 import { isStateIncluded } from '../data/types/states';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
 import {
+  CombinedValue,
+  RelationshipMaps,
   buildPrerequisiteMaps,
-  checkPrerequisites,
+  getCombinedMaximums,
+  hasPrerequisites,
 } from './incentive-relationship-calculation';
 import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
 
@@ -122,19 +126,28 @@ export function calculateStateIncentivesAndSavings(
     }
   }
 
+  let groupedIncentives = new Map<string, Set<CombinedValue>>();
   if (incentiveRelationships !== undefined) {
     const prerequisiteMaps = buildPrerequisiteMaps(incentiveRelationships);
 
+    const maps: RelationshipMaps = {
+      eligibleIncentives: eligibleIncentives,
+      ineligibleIncentives: ineligibleIncentives,
+      requiresMap: prerequisiteMaps.requiresMap,
+      requiredByMap: prerequisiteMaps.requiredByMap,
+      supersedesMap: new Map<string, Set<string>>(),
+      supersededByMap: new Map<string, Set<string>>(),
+    };
+
     // Use relationship maps to update incentive eligibility.
-    for (const [incentiveId, prerequisiteIds] of prerequisiteMaps.requiresMap) {
-      checkPrerequisites(
-        incentiveId,
-        prerequisiteIds,
-        eligibleIncentives,
-        ineligibleIncentives,
-        prerequisiteMaps.requiredByMap,
-      );
+    for (const [
+      incentiveId,
+    ] of prerequisiteMaps.requiresMap) {
+      hasPrerequisites(incentiveId, maps);
     }
+
+    // Now that we know final eligibility, enforce combined maximum values.
+    groupedIncentives = getCombinedMaximums(incentiveRelationships);
   }
 
   const eligibleTransformed = transformItems(eligibleIncentives, true);
@@ -142,13 +155,29 @@ export function calculateStateIncentivesAndSavings(
   const stateIncentives = [...eligibleTransformed, ...ineligibleTransformed];
 
   const savings: APISavings = zeroSavings();
-
-  stateIncentives.forEach(item => {
-    const amount = item.amount.representative
+  eligibleTransformed.forEach(item => {
+    let amount = item.amount.representative
       ? item.amount.representative
       : item.amount.type === AmountType.DollarAmount
       ? item.amount.number
       : 0;
+    // Check any incentive groupings for this item to make sure it has remaining eligible value.
+    // TODO: this needs to be checked for counterexamples!
+    // What happens if amount gets changed multiple times? Make sure we are settling on the correct
+    // final minimum value before doing the subtraction everywhere.
+    // if an incentive amount is claimed, need to subtract that value from all groupings' remaining values
+    // the amount available for an incentive should be min(incentive full value, min of the remaining values for its groupings)
+    // this would mean we get different values depending on the order we evaluate the incentives in, so I think we would ideally
+    // evaluate the largest value ones first. BUT, that means we have to sort them all first and then this becomes a whole big thing
+    // for simplicity, we could allow each incentive to only be a part of one grouping which would solve this much more easily and
+    // probably reflects reality anyway. should check and see if that is an ok constraint to put on the data
+    if (groupedIncentives.has(item.id)) {
+      for (const combinedValue of groupedIncentives.get(item.id)!) {
+        const amountToAdd = min([amount, combinedValue.remainingValue]);
+        amount = amountToAdd ? amountToAdd : 0;
+        combinedValue.remainingValue -= amount;
+      }
+    }
 
     savings[item.type] += amount;
   });
