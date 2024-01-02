@@ -4,11 +4,14 @@ import { open } from 'sqlite';
 import sqlite3 from 'sqlite3';
 import { afterEach, beforeEach, test } from 'tap';
 import { AuthorityType } from '../../src/data/authorities';
+import { StateIncentive } from '../../src/data/state_incentives';
 import { FilingStatus } from '../../src/data/tax_brackets';
+import { AmountType } from '../../src/data/types/amount';
 import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { OwnerStatus } from '../../src/data/types/owner-status';
 import { BETA_STATES, LAUNCHED_STATES } from '../../src/data/types/states';
 import calculateIncentives from '../../src/lib/incentives-calculation';
+import { calculateStateIncentivesAndSavings } from '../../src/lib/state-incentives-calculation';
 
 const AMIS_FOR_11211 = JSON.parse(
   fs.readFileSync('./test/fixtures/amis-for-zip-11211.json', 'utf-8'),
@@ -451,7 +454,7 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   t.equal(taxCredits['used_electric_vehicle'].start_date, 2023);
 });
 
-test('correctly sorts incentives"', async t => {
+test('correctly sorts incentives', async t => {
   const data = calculateIncentives(AMIS_FOR_11211, {
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
@@ -475,4 +478,44 @@ test('correctly sorts incentives"', async t => {
     }
     prevIncentive = incentive;
   });
+});
+
+test('ignores local incentives even if requested', async t => {
+  const incentive: StateIncentive = {
+    id: 'test',
+    authority_type: AuthorityType.Local,
+    authority: 'ri-pascoag-utility-district',
+    start_date: 2023,
+    end_date: 2024,
+    type: PaymentMethod.AccountCredit,
+    payment_methods: [PaymentMethod.AccountCredit],
+    item: 'heat_pump_air_conditioner_heater',
+    program: 'ri_hvacAndWaterHeaterIncentives',
+    amount: {
+      type: AmountType.DollarAmount,
+      number: 100,
+    },
+    owner_status: [
+      OwnerStatus.Homeowner,
+    ],
+    short_description: {
+      en: 'This is a model incentive only to be used for testing.',
+    },
+  };
+
+  const data = calculateStateIncentivesAndSavings(
+    'RI',
+    {
+      owner_status: OwnerStatus.Homeowner,
+      household_income: 120000,
+      tax_filing: FilingStatus.Single,
+      household_size: 1,
+      authority_types: [AuthorityType.Local],
+      include_beta_states: true,
+    },
+    [incentive],
+    {},
+  );
+  t.ok(data);
+  t.equal(data.stateIncentives.length, 0);
 });

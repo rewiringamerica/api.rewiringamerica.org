@@ -129,7 +129,7 @@ test('state incentives JSON files match schemas', async tap => {
       tap.ok(
         incentive.short_description.en.length <= 150,
         `${stateId} English description too long ` +
-          `(${incentive.short_description.en.length}), index ${index}`,
+          `(${incentive.short_description.en.length}), id ${incentive.id}, index ${index}`,
       );
 
       // We let Spanish descriptions be a little longer
@@ -137,17 +137,17 @@ test('state incentives JSON files match schemas', async tap => {
         tap.ok(
           incentive.short_description.es.length <= 160,
           `${stateId} Spanish description too long ` +
-            `(${incentive.short_description.en.length}), index ${index}`,
+            `(${incentive.short_description.en.length}), id ${incentive.id}, index ${index}`,
         );
       }
       tap.ok(
         isIncentiveAmountValid(incentive),
-        `amount is invalid (${stateId}, index ${index})`,
+        `amount is invalid (${stateId}, id ${incentive.id}, index ${index})`,
       );
       tap.hasProp(
-        authorities[incentive.authority_type as 'state' | 'utility'],
+        authorities[incentive.authority_type as 'state' | 'utility' | 'local']!,
         incentive.authority,
-        `nonexistent authority (${stateId}, index ${index})`,
+        `nonexistent authority (${stateId}, id ${incentive.id}, index ${index})`,
       );
 
       tap.equal(incentiveIds.has(incentive.id), false);
