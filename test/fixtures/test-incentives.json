@@ -75,6 +75,46 @@
       "homeowner"
     ],
     "short_description": {
+      "en": "This is a model incentive only to be used for testing. It is not available to renters."
+    }
+  },
+  {
+    "id": "E",
+    "authority_type": "utility",
+    "authority": "ri-pascoag-utility-district",
+    "type": "account_credit",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "account_credit",
+    "program": "ri_hvacAndWaterHeaterIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "This is a model incentive only to be used for testing."
+    }
+  },
+  {
+    "id": "F",
+    "authority_type": "utility",
+    "authority": "ri-pascoag-utility-district",
+    "type": "account_credit",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "account_credit",
+    "program": "ri_hvacAndWaterHeaterIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
       "en": "This is a model incentive only to be used for testing."
     }
   }

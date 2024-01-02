@@ -14,8 +14,12 @@ import { OwnerStatus } from '../data/types/owner-status';
 import { isStateIncluded } from '../data/types/states';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
 import {
+  RelationshipMaps,
+  buildExclusionMaps,
   buildPrerequisiteMaps,
-  checkPrerequisites,
+  isExcluded,
+  makeIneligible,
+  meetsPrerequisites,
 } from './incentive-relationship-calculation';
 import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
 
@@ -124,16 +128,26 @@ export function calculateStateIncentivesAndSavings(
 
   if (incentiveRelationships !== undefined) {
     const prerequisiteMaps = buildPrerequisiteMaps(incentiveRelationships);
+    const exclusionMaps = buildExclusionMaps(incentiveRelationships);
+    const maps: RelationshipMaps = {
+      eligibleIncentives: eligibleIncentives,
+      ineligibleIncentives: ineligibleIncentives,
+      requiresMap: prerequisiteMaps.requiresMap,
+      requiredByMap: prerequisiteMaps.requiredByMap,
+      supersedesMap: exclusionMaps.supersedesMap,
+      supersededByMap: exclusionMaps.supersededByMap,
+    };
 
     // Use relationship maps to update incentive eligibility.
-    for (const [incentiveId, prerequisiteIds] of prerequisiteMaps.requiresMap) {
-      checkPrerequisites(
-        incentiveId,
-        prerequisiteIds,
-        eligibleIncentives,
-        ineligibleIncentives,
-        prerequisiteMaps.requiredByMap,
-      );
+    for (const [incentiveId] of prerequisiteMaps.requiresMap) {
+      if (!meetsPrerequisites(incentiveId, maps)) {
+        makeIneligible(incentiveId, maps);
+      }
+    }
+    for (const [incentiveId] of exclusionMaps.supersededByMap) {
+      if (isExcluded(incentiveId, maps)) {
+        makeIneligible(incentiveId, maps);
+      }
     }
   }
 
