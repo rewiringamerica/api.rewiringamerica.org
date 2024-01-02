@@ -189,10 +189,9 @@ export function makeEligible(incentiveId: string, maps: RelationshipMaps) {
 }
 
 // Evaluates the incentive combinations and returns a map from incentive ID to
-// a set of CombinedValue objects, which store the remaining value for a group
-// of incentives.
+// a CombinedValue object, which stores the remaining value for a group of incentives.
 export function getCombinedMaximums(relationships: IncentiveRelationships) {
-  const groupedIncentives = new Map<string, Set<CombinedValue>>();
+  const groupedIncentives = new Map<string, CombinedValue>();
 
   if (relationships.combinations !== undefined) {
     for (const combination of relationships.combinations) {
@@ -200,12 +199,7 @@ export function getCombinedMaximums(relationships: IncentiveRelationships) {
         remainingValue: combination.max_value,
       };
       for (const incentiveId of combination.ids) {
-        const combinedValuesForIncentive = groupedIncentives.get(incentiveId);
-        if (combinedValuesForIncentive !== undefined) {
-          combinedValuesForIncentive.add(combinedValue);
-        } else {
-          groupedIncentives.set(incentiveId, new Set([combinedValue]));
-        }
+        groupedIncentives.set(incentiveId, combinedValue);
       }
     }
   }

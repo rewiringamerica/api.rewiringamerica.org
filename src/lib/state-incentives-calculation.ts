@@ -129,7 +129,7 @@ export function calculateStateIncentivesAndSavings(
     }
   }
 
-  let groupedIncentives = new Map<string, Set<CombinedValue>>();
+  let groupedIncentives = new Map<string, CombinedValue>();
   if (incentiveRelationships !== undefined) {
     const prerequisiteMaps = buildPrerequisiteMaps(incentiveRelationships);
     const exclusionMaps = buildExclusionMaps(incentiveRelationships);
@@ -171,11 +171,10 @@ export function calculateStateIncentivesAndSavings(
       : 0;
     // Check any incentive groupings for this item to make sure it has remaining eligible value.
     if (groupedIncentives.has(item.id)) {
-      for (const combinedValue of groupedIncentives.get(item.id)!) {
-        const amountToAdd = min([amount, combinedValue.remainingValue]);
-        amount = amountToAdd ? amountToAdd : 0;
-        combinedValue.remainingValue -= amount;
-      }
+      const combinedValue = groupedIncentives.get(item.id)!;
+      const amountToAdd = min([amount, combinedValue.remainingValue]);
+      amount = amountToAdd ? amountToAdd : 0;
+      combinedValue.remainingValue -= amount;
     }
 
     savings[item.type] += amount;
