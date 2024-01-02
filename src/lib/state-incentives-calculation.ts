@@ -17,9 +17,12 @@ import { APISavings, zeroSavings } from '../schemas/v1/savings';
 import {
   CombinedValue,
   RelationshipMaps,
+  buildExclusionMaps,
   buildPrerequisiteMaps,
   getCombinedMaximums,
-  hasPrerequisites,
+  isExcluded,
+  makeIneligible,
+  meetsPrerequisites,
 } from './incentive-relationship-calculation';
 import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
 
@@ -129,21 +132,26 @@ export function calculateStateIncentivesAndSavings(
   let groupedIncentives = new Map<string, Set<CombinedValue>>();
   if (incentiveRelationships !== undefined) {
     const prerequisiteMaps = buildPrerequisiteMaps(incentiveRelationships);
-
+    const exclusionMaps = buildExclusionMaps(incentiveRelationships);
     const maps: RelationshipMaps = {
       eligibleIncentives: eligibleIncentives,
       ineligibleIncentives: ineligibleIncentives,
       requiresMap: prerequisiteMaps.requiresMap,
       requiredByMap: prerequisiteMaps.requiredByMap,
-      supersedesMap: new Map<string, Set<string>>(),
-      supersededByMap: new Map<string, Set<string>>(),
+      supersedesMap: exclusionMaps.supersedesMap,
+      supersededByMap: exclusionMaps.supersededByMap,
     };
 
     // Use relationship maps to update incentive eligibility.
-    for (const [
-      incentiveId,
-    ] of prerequisiteMaps.requiresMap) {
-      hasPrerequisites(incentiveId, maps);
+    for (const [incentiveId] of prerequisiteMaps.requiresMap) {
+      if (!meetsPrerequisites(incentiveId, maps)) {
+        makeIneligible(incentiveId, maps);
+      }
+    }
+    for (const [incentiveId] of exclusionMaps.supersededByMap) {
+      if (isExcluded(incentiveId, maps)) {
+        makeIneligible(incentiveId, maps);
+      }
     }
 
     // Now that we know final eligibility, enforce combined maximum values.
@@ -162,15 +170,6 @@ export function calculateStateIncentivesAndSavings(
       ? item.amount.number
       : 0;
     // Check any incentive groupings for this item to make sure it has remaining eligible value.
-    // TODO: this needs to be checked for counterexamples!
-    // What happens if amount gets changed multiple times? Make sure we are settling on the correct
-    // final minimum value before doing the subtraction everywhere.
-    // if an incentive amount is claimed, need to subtract that value from all groupings' remaining values
-    // the amount available for an incentive should be min(incentive full value, min of the remaining values for its groupings)
-    // this would mean we get different values depending on the order we evaluate the incentives in, so I think we would ideally
-    // evaluate the largest value ones first. BUT, that means we have to sort them all first and then this becomes a whole big thing
-    // for simplicity, we could allow each incentive to only be a part of one grouping which would solve this much more easily and
-    // probably reflects reality anyway. should check and see if that is an ok constraint to put on the data
     if (groupedIncentives.has(item.id)) {
       for (const combinedValue of groupedIncentives.get(item.id)!) {
         const amountToAdd = min([amount, combinedValue.remainingValue]);
