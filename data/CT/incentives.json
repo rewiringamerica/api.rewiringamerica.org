@@ -310,30 +310,6 @@
     "end_date": 2023
   },
   {
-    "id": "CT-14",
-    "authority_type": "utility",
-    "authority": "ct-united-illuminating-company",
-    "type": "pos_rebate",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "ct_residentialAirSourceHeatPumpIncentive",
-    "amount": {
-      "type": "dollars_per_unit",
-      "unit": "ton",
-      "number": 250
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$250 per ton instant rebate for qualifying air source heat pumps."
-    },
-    "start_date": 2023,
-    "end_date": 2023
-  },
-  {
     "id": "CT-15",
     "authority_type": "utility",
     "authority": "ct-united-illuminating-company",
@@ -346,7 +322,8 @@
     "amount": {
       "type": "dollars_per_unit",
       "unit": "ton",
-      "number": 750
+      "number": 750,
+      "maximum": 15000
     },
     "owner_status": [
       "homeowner"
@@ -406,30 +383,6 @@
     "end_date": 2024
   },
   {
-    "id": "CT-19",
-    "authority_type": "utility",
-    "authority": "ct-eversource",
-    "type": "pos_rebate",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "ct_residentialAirSourceHeatPumpIncentive",
-    "amount": {
-      "type": "dollars_per_unit",
-      "unit": "ton",
-      "number": 250
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$250 per ton instant rebate for qualifying air source heat pumps."
-    },
-    "start_date": 2023,
-    "end_date": 2023
-  },
-  {
     "id": "CT-20",
     "authority_type": "utility",
     "authority": "ct-eversource",
@@ -442,7 +395,8 @@
     "amount": {
       "type": "dollars_per_unit",
       "unit": "ton",
-      "number": 750
+      "number": 750,
+      "maximum": 15000
     },
     "owner_status": [
       "homeowner"
