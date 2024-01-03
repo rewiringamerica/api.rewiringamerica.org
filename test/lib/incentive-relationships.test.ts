@@ -190,7 +190,7 @@ test('test combined maximum savings logic', async t => {
     TEST_INCENTIVE_RELATIONSHIPS_3,
   );
   t.ok(data);
-  // Check that the user is eligible for A, B, and F.
+  // Check that the user is eligible for B, E, and F.
   for (const incentive of data.stateIncentives) {
     if (['B', 'E', 'F'].includes(incentive.id)) {
       t.equal(incentive.eligible, true);

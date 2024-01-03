@@ -129,7 +129,10 @@ export function calculateStateIncentivesAndSavings(
     }
   }
 
+  // We'll create a map from incentive ID to an object storing the remaining
+  // value for its incentive grouping (if it has one).
   let groupedIncentives = new Map<string, CombinedValue>();
+
   if (incentiveRelationships !== undefined) {
     const prerequisiteMaps = buildPrerequisiteMaps(incentiveRelationships);
     const exclusionMaps = buildExclusionMaps(incentiveRelationships);
@@ -172,8 +175,7 @@ export function calculateStateIncentivesAndSavings(
     // Check any incentive groupings for this item to make sure it has remaining eligible value.
     if (groupedIncentives.has(item.id)) {
       const combinedValue = groupedIncentives.get(item.id)!;
-      const amountToAdd = min([amount, combinedValue.remainingValue]);
-      amount = amountToAdd ? amountToAdd : 0;
+      amount = min([amount, combinedValue.remainingValue])!;
       combinedValue.remainingValue -= amount;
     }
 
