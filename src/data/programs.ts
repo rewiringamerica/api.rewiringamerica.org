@@ -36,6 +36,7 @@ export const ALL_PROGRAMS = [
   // CT
   // Energize CT
   'ct_energizeCtHomeEnergySolutions',
+  'ct_residentialAirSourceHeatPumpIncentive',
   // Eversource
   'ct_residentialGroundSourceHeatPumpIncentive',
   'ct_residentialHeatPumpWaterHeaterIncentive',

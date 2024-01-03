@@ -303,3 +303,20 @@ test('state incentive relationships only reference real IDs', async tap => {
     }
   });
 });
+
+// For simplicity, an incentive can only be included in one max value grouping. Otherwise,
+// the order of evaluation could affect the total eligible savings.
+// Also, enforce that a single incentive ID is not included twice within the same grouping.
+test('incentive combined value groupings contain no duplicate IDs', async tap => {
+  STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([, data]) => {
+    if (data.combinations !== undefined) {
+      const incentiveIds = new Set<string>();
+      for (const relationship of data.combinations) {
+        for (const id of relationship.ids) {
+          tap.equal(incentiveIds.has(id), false);
+          incentiveIds.add(id);
+        }
+      }
+    }
+  });
+});

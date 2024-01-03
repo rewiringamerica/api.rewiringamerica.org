@@ -10,6 +10,12 @@ export interface RelationshipMaps {
   supersededByMap: Map<string, Set<string>>;
 }
 
+// Represents a set of incentives that have a combined max savings amount and
+// the amount of eligible savings remaining for the given user.
+export interface CombinedValue {
+  remainingValue: number;
+}
+
 // Uses relationships object to build two maps:
 // - one from incentive ID to a set of IDs of incentives it requires (requiresMap),
 // - one from incentive ID to a set of IDs of incentives that require it (requiredByMap)
@@ -180,4 +186,22 @@ export function makeEligible(incentiveId: string, maps: RelationshipMaps) {
       makeIneligible(dependentId, maps);
     }
   }
+}
+
+// Evaluates the incentive combinations and returns a map from incentive ID to
+// a CombinedValue object, which stores the remaining value for a group of incentives.
+export function getCombinedMaximums(relationships: IncentiveRelationships) {
+  const groupedIncentives = new Map<string, CombinedValue>();
+
+  if (relationships.combinations !== undefined) {
+    for (const combination of relationships.combinations) {
+      const combinedValue: CombinedValue = {
+        remainingValue: combination.max_value,
+      };
+      for (const incentiveId of combination.ids) {
+        groupedIncentives.set(incentiveId, combinedValue);
+      }
+    }
+  }
+  return groupedIncentives;
 }

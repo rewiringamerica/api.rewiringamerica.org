@@ -1,3 +1,4 @@
+import { min } from 'lodash';
 import { AuthorityType } from '../data/authorities';
 import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/low_income_thresholds';
 import {
@@ -14,9 +15,11 @@ import { OwnerStatus } from '../data/types/owner-status';
 import { isStateIncluded } from '../data/types/states';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
 import {
+  CombinedValue,
   RelationshipMaps,
   buildExclusionMaps,
   buildPrerequisiteMaps,
+  getCombinedMaximums,
   isExcluded,
   makeIneligible,
   meetsPrerequisites,
@@ -126,6 +129,10 @@ export function calculateStateIncentivesAndSavings(
     }
   }
 
+  // We'll create a map from incentive ID to an object storing the remaining
+  // value for its incentive grouping (if it has one).
+  let groupedIncentives = new Map<string, CombinedValue>();
+
   if (incentiveRelationships !== undefined) {
     const prerequisiteMaps = buildPrerequisiteMaps(incentiveRelationships);
     const exclusionMaps = buildExclusionMaps(incentiveRelationships);
@@ -149,6 +156,9 @@ export function calculateStateIncentivesAndSavings(
         makeIneligible(incentiveId, maps);
       }
     }
+
+    // Now that we know final eligibility, enforce combined maximum values.
+    groupedIncentives = getCombinedMaximums(incentiveRelationships);
   }
 
   const eligibleTransformed = transformItems(eligibleIncentives, true);
@@ -156,13 +166,18 @@ export function calculateStateIncentivesAndSavings(
   const stateIncentives = [...eligibleTransformed, ...ineligibleTransformed];
 
   const savings: APISavings = zeroSavings();
-
-  stateIncentives.forEach(item => {
-    const amount = item.amount.representative
+  eligibleTransformed.forEach(item => {
+    let amount = item.amount.representative
       ? item.amount.representative
       : item.amount.type === AmountType.DollarAmount
       ? item.amount.number
       : 0;
+    // Check any incentive groupings for this item to make sure it has remaining eligible value.
+    if (groupedIncentives.has(item.id)) {
+      const combinedValue = groupedIncentives.get(item.id)!;
+      amount = min([amount, combinedValue.remainingValue])!;
+      combinedValue.remainingValue -= amount;
+    }
 
     savings[item.type] += amount;
   });
