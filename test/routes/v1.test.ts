@@ -68,6 +68,22 @@ test('response is valid and correct', async t => {
   );
 });
 
+test('parent ZCTA is used', async t => {
+  await validateResponse(
+    t,
+    {
+      // This does not correspond to physical land area, but its parent ZCTA
+      // is 15213, which does.
+      location: { zip: '15289' },
+      owner_status: 'homeowner',
+      household_income: 80000,
+      tax_filing: 'joint',
+      household_size: 4,
+    },
+    './test/fixtures/v1-15289-homeowner-80000-joint-4.json',
+  );
+});
+
 test('response with state and utility is valid and correct', async t => {
   await validateResponse(
     t,
@@ -391,8 +407,8 @@ test('bad queries', async t => {
 });
 
 const BAD_ZIPS = [
-  // Exists, but is not a ZCTA and has no AMI data
-  '02117',
+  // Exists, but is not a ZCTA and has no parent ZCTA
+  '96669',
   // Does not exist
   '80088',
 ];
