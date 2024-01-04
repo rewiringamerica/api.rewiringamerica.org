@@ -49,7 +49,8 @@ export function createAuthorityName(
   state: string,
   authorityName: string,
 ): string {
-  if (authorityName === undefined) throw new Error("Undefined authority: check input file")
+  if (authorityName === undefined)
+    throw new Error('Undefined authority: check input file');
   return (
     state.toLowerCase() + '-' + kebabCase(authorityName.replaceAll('.', ''))
   );
@@ -60,8 +61,10 @@ export function createProgramName(
   authorityName: string,
   programName: string,
 ): string {
-  if (authorityName === undefined) throw new Error("Undefined authority: check input file")
-  if (programName === undefined) throw new Error("Undefined program title: check input file")
+  if (authorityName === undefined)
+    throw new Error('Undefined authority: check input file');
+  if (programName === undefined)
+    throw new Error('Undefined program title: check input file');
   return (
     state.toLowerCase() +
     '_' +
@@ -120,9 +123,9 @@ export class AuthorityAndProgramManager {
     } else {
       if (
         this.authorityMap[authority_short].programs[program_short].name !==
-        program ||
+          program ||
         this.authorityMap[authority_short].programs[program_short].url !==
-        row.program_url
+          row.program_url
       ) {
         throw new Error(
           `Program name collision in row ${row.id}: ${program_short}. In ${authority}, ${program_short}: Existing: {name: ${this.authorityMap[authority_short].programs[program_short].name}, url: ${this.authorityMap[authority_short].programs[program_short].url}}; new: {name: ${program}, url: ${row.program_url}}`,
@@ -143,12 +146,15 @@ export class AuthorityAndProgramManager {
     for (const [authorityShort, authority] of Object.entries(
       this.authorityMap,
     )) {
-      if (json[stateUpper][authority.authority_type.toLowerCase()] === undefined) {
+      if (
+        json[stateUpper][authority.authority_type.toLowerCase()] === undefined
+      ) {
         json[stateUpper][authority.authority_type.toLowerCase()] = {};
       }
-      json[stateUpper][authority.authority_type.toLowerCase()][authorityShort] = {
-        name: authority.name,
-      };
+      json[stateUpper][authority.authority_type.toLowerCase()][authorityShort] =
+        {
+          name: authority.name,
+        };
     }
     fs.writeFileSync(
       AUTHORITIES_JSON_FILE,

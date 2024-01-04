@@ -3,7 +3,7 @@ import fs from 'fs';
 import fetch from 'make-fetch-happen';
 import minimist from 'minimist';
 
-import { FILES, IncentiveFile } from './incentive-spreadsheets-registry';
+import { FILES, IncentiveFile } from './incentive-spreadsheet-registry';
 import { Incentive, LocalizableString } from './translation-types';
 
 async function edit(file: IncentiveFile, write: boolean) {

@@ -1,4 +1,37 @@
-export const EnumMaps = {
+export const FIELD_MAPPINGS: { [index: string]: string[] } = {
+  id: ['ID'],
+  data_urls: ['Data Source URL(s)'],
+  authority_level: ['Authority Level *'],
+  authority_name: ['Authority (Name) *'],
+  program_title: ['Program Title *'],
+  program_url: ['Program URL'],
+  technology: ['Technology *'],
+  technology_if_selected_other: ["Technology (If selected 'Other')"],
+  program_description: ['Program Description (guideline)'],
+  program_status: ['Program Status'],
+  program_start: ['Program Start', 'Program Start (mm/dd/yyyy)'],
+  program_end: ['Program End', 'Program End (mm/dd/yyyy)'],
+  rebate_type: ['Rebate Type'],
+  rebate_value: ['Rebate Value *'],
+  amount_type: ['Amount Type *'],
+  number: ['Number *'],
+  unit: ['Unit'],
+  amount_minimum: ['Amount Minimum'],
+  amount_maximum: ['Amount Maximum'],
+  amount_representative: ['Amount Representative (only for average values)'],
+  bonus_description: ['Bonus Description'],
+  equipment_standards_restrictions: ['Equipment Standards Restrictions'],
+  equipment_capacity_restrictions: ['Equipment Capacity Restrictions'],
+  contractor_restrictions: ['Contractor Restrictions'],
+  income_restrictions: ['Income Restrictions'],
+  tax_filing_status_restrictions: ['Tax - filing Status Restrictions'],
+  owner_status: ['Homeowner / Renter'],
+  other_restrictions: ['Other Restrictions'],
+  stacking_details: ['Stacking Details'],
+  financing_details: ['Financing Details'],
+};
+
+export const VALUE_MAPPINGS = {
   payment_methods: {
     'Rebate (post purchase)': 'rebate',
     'Point of sale rebate': 'pos_rebate',
@@ -9,30 +42,6 @@ export const EnumMaps = {
     Multiple: 'other',
     Other: 'other',
     Unknown: 'unknown',
-    Financing: 'other',
-  },
-  type: {
-    'Rebate (post purchase)': 'rebate',
-    'Point of sale rebate': 'pos_rebate',
-    'Account credit': 'account_credit',
-    'Tax Credit': 'tax_credit',
-    'Assistance program': 'assistance_program',
-    Bonus: 'other',
-    Multiple: 'other',
-    Other: 'other',
-    Unknown: 'unknown',
-    Financing: 'other',
-  },
-  item_type: {
-    'Rebate (post purchase)': 'rebate',
-    'Point of sale rebate': 'pos_rebate',
-    'Account credit': 'account_credit',
-    'Tax Credit': 'tax_credit',
-    'Assistance program': 'assistance_program',
-    Bonus: 'other',
-    Multiple: 'other',
-    Other: 'other',
-    Unknown: 'other',
     Financing: 'other',
   },
   item: {
@@ -53,7 +62,8 @@ export const EnumMaps = {
     'Weatherization (insulation and air sealing)': 'weatherization',
     'Electric wiring': 'weatherization',
     'Electric panel': 'electric_panel',
-    'Electric lawn equipment (mower, edger, leaf blower, weedwhacker)': 'electric_outdoor_equipment',
+    'Electric lawn equipment (mower, edger, leaf blower, weedwhacker)':
+      'electric_outdoor_equipment',
     'Smart Thermostat': 'smart_thermostat',
     'E-Bike': 'ebike',
     'Induction Cooktop': 'electric_stove',
@@ -65,9 +75,6 @@ export const EnumMaps = {
     'dollar amount with a cap': 'dollar_amount',
   },
   amount_unit: {
-    'kW': "kilowatt"
-  },
-  authority_type: {
-    Local: 'local',
+    kW: 'kilowatt',
   },
 };

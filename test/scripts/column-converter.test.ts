@@ -1,5 +1,6 @@
 import { test } from 'tap';
-import { ColumnConverter, FIELD_MAPPINGS } from './column-converter';
+import { ColumnConverter } from '../../scripts/lib/column-converter';
+import { FIELD_MAPPINGS } from '../../scripts/lib/spreadsheet-mappings';
 
 test('correctly rename columns in strict mode', tap => {
   let converter = new ColumnConverter({ new_name: ['old_name'] }, true);
