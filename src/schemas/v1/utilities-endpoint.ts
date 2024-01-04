@@ -48,11 +48,9 @@ export const API_UTILITIES_SCHEMA = {
   },
   response: {
     200: {
-      description: 'Successful response',
       ...API_UTILITIES_RESPONSE_SCHEMA,
     },
     400: {
-      description: 'Bad request',
       $ref: 'Error',
     },
   },

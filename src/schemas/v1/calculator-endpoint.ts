@@ -11,8 +11,7 @@ import {
 } from './location';
 import { API_SAVINGS_SCHEMA } from './savings';
 
-export const API_CALCULATOR_REQUEST_SCHEMA = {
-  $id: 'APICalculatorRequest',
+const API_CALCULATOR_REQUEST_SCHEMA = {
   title: 'APICalculatorRequest',
   type: 'object',
   properties: {
@@ -139,84 +138,17 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
     },
   },
   additionalProperties: false,
-  examples: [
-    {
-      is_under_80_ami: true,
-      is_under_150_ami: true,
-      is_over_150_ami: false,
-      savings: {
-        pos_rebate: 14000,
-        tax_credit: 6081,
-        performance_rebate: 8000,
-      },
-      incentives: [
-        {
-          type: 'pos_rebate',
-          program: 'HEEHR',
-          program_es: 'HEEHR',
-          item: 'Electric Panel',
-          item_es: 'Cuadro eléctrico',
-          more_info_url: '/app/ira-calculator/information/electrical-panel',
-          more_info_url_es: '/app/ira-calculator/information/cuadro-electrico',
-          amount: {
-            type: 'dollar_amount',
-            number: 4000,
-          },
-          item_type: 'pos_rebate',
-          owner_status: [
-            'homeowner',
-          ],
-          ami_qualification: 'less_than_80_ami',
-          agi_max_limit: null,
-          filing_status: null,
-          start_date: 2023,
-          end_date: 2032,
-          eligible: true,
-        },
-        {
-          type: 'tax_credit',
-          program: 'Residential Clean Energy Credit (25D)',
-          program_es: 'Crédito de energía limpia residencial (25D)',
-          item: 'Battery Storage Installation',
-          item_es: 'Instalación de baterías',
-          more_info_url:
-            '/app/ira-calculator/information/battery-storage-installation',
-          more_info_url_es:
-            '/app/ira-calculator/information/instalacion-de-baterias',
-          amount: {
-            type: 'percent',
-            number: 0.3,
-            representative: 4800,
-          },
-          item_type: 'tax_credit',
-          owner_status: [
-            'homeowner',
-          ],
-          ami_qualification: null,
-          agi_max_limit: null,
-          filing_status: null,
-          start_date: 2023,
-          end_date: 2032,
-          eligible: true,
-        },
-      ],
-    },
-  ],
 } as const;
 
 export const API_CALCULATOR_SCHEMA = {
   description:
     'How much money will your customer get with the Inflation Reduction Act?',
-  querystring: {
-    $ref: 'APICalculatorRequest',
-  },
+  querystring: API_CALCULATOR_REQUEST_SCHEMA,
   response: {
     200: {
-      description: 'Successful response',
       $ref: 'APICalculatorResponse',
     },
     400: {
-      description: 'Bad request',
       $ref: 'Error',
     },
   },
