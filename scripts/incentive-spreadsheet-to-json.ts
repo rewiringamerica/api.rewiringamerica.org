@@ -7,7 +7,7 @@ import minimist from 'minimist';
 import { AuthorityType } from '../src/data/authorities';
 import { STATE_SCHEMA, StateIncentive } from '../src/data/state_incentives';
 import { AmountType, AmountUnit } from '../src/data/types/amount';
-import { ItemType, PaymentMethod } from '../src/data/types/incentive-types';
+import { PaymentMethod } from '../src/data/types/incentive-types';
 import { ITEMS_SCHEMA, Item } from '../src/data/types/items';
 import { LOCALIZABLE_STRING_SCHEMA } from '../src/data/types/localizable-string';
 import { OwnerStatus } from '../src/data/types/owner-status';
@@ -66,7 +66,6 @@ type enumsOfInterest = (
   | AmountUnit
   | AuthorityType
   | Item
-  | ItemType
   | PaymentMethod
 )[];
 
@@ -143,7 +142,7 @@ function createAmount(
     amount.maximum = +cleanDollars(input.amount_maximum);
   }
   if (input.unit !== undefined && input.unit !== '') {
-    amount.unit = coerceToEnum(input.unit, Object.values(AmountUnit));
+    amount.unit = coerceToEnum(input.unit, Object.values(AmountUnit), EnumMaps.amount_unit);
   }
   return amount;
 }
@@ -160,14 +159,9 @@ function recordToJson(
       EnumMaps.authority_type,
     ),
     authority: createAuthorityName(state, record.authority_name),
-    type: coerceToEnum(record.rebate_type, Object.values(PaymentMethod), EnumMaps.type),
+    type: coerceToEnum(record.rebate_type.split(",")[0], Object.values(PaymentMethod), EnumMaps.type),
     payment_methods: findPaymentMethods(record.rebate_type),
     item: findItem(record.technology, EnumMaps.item),
-    item_type: coerceToEnum(
-      record.rebate_type,
-      Object.values(ItemType),
-      EnumMaps.item_type,
-    ),
     program: createProgramName(
       state,
       record.authority_name,

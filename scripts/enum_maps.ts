@@ -2,13 +2,13 @@ export const EnumMaps = {
   payment_methods: {
     'Rebate (post purchase)': 'rebate',
     'Point of sale rebate': 'pos_rebate',
-    'Account credit': 'account_credit',
+    'Account Credit': 'account_credit',
     'Tax Credit': 'tax_credit',
     'Assistance program': 'assistance_program',
     Bonus: 'other',
     Multiple: 'other',
     Other: 'other',
-    Unknown: 'other',
+    Unknown: 'unknown',
     Financing: 'other',
   },
   type: {
@@ -20,7 +20,7 @@ export const EnumMaps = {
     Bonus: 'other',
     Multiple: 'other',
     Other: 'other',
-    Unknown: 'other',
+    Unknown: 'unknown',
     Financing: 'other',
   },
   item_type: {
@@ -63,6 +63,9 @@ export const EnumMaps = {
     'dollar per unit': 'dollars_per_unit',
     'percent with a cap': 'percent',
     'dollar amount with a cap': 'dollar_amount',
+  },
+  amount_unit: {
+    'kW': "kilowatt"
   },
   authority_type: {
     Local: 'local',
