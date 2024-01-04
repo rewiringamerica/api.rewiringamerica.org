@@ -1,12 +1,7 @@
 /* 
-See README for usage.
+See Scripts README for usage.
 
-This script covers:
-data/authorities.json
-data/programs.ts
-src/data/programs.ts
 
-Though you may need to edit these files to put states in alphabetical order.
 
 Follow-up script to create JSON:
 data/<state_id>/incentives.json (run incentive-spreadsheet-to-json.ts)
@@ -28,7 +23,10 @@ async function generate(state: string, file: IncentiveFile) {
     from_line: file.headerRowNumber ?? 1,
   });
 
-  const converter = new ColumnConverter(FIELD_MAPPINGS, true);
+  // For now this is always on since we need to ID this columns
+  // accurately to do the rest of the work. 
+  const strict_mode = true
+  const converter = new ColumnConverter(FIELD_MAPPINGS, strict_mode);
 
   const authorityProgramManager = new AuthorityAndProgramManager(state);
   rows.forEach((row: Record<string, string>) => {

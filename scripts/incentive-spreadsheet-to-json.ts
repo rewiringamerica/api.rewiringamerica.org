@@ -17,7 +17,7 @@ const validate = ajv.addSchema(LOCALIZABLE_STRING_SCHEMA).compile(STATE_SCHEMA);
 async function convertToJson(
   state: string,
   file: IncentiveFile,
-  write: boolean,
+  strict: boolean,
 ) {
   const response = await fetch(file.sheetUrl);
   const csvContent = await response.text();
@@ -26,7 +26,7 @@ async function convertToJson(
     from_line: file.headerRowNumber ?? 1,
   });
 
-  const converter = new ColumnConverter(FIELD_MAPPINGS, true);
+  const converter = new ColumnConverter(FIELD_MAPPINGS, strict);
   const invalids: Record<string, string | number | boolean | object>[] = [];
   const jsons: StateIncentive[] = [];
   rows.forEach((row: Record<string, string>) => {
@@ -42,22 +42,20 @@ async function convertToJson(
     }
   });
 
-  if (write) {
-    fs.writeFileSync(
-      file.filepath,
-      JSON.stringify(jsons, null, 2) + '\n', // include newline to satisfy prettier
-      'utf-8',
-    );
-    fs.writeFileSync(
-      file.filepath.replace('.json', '_invalid.json'),
-      JSON.stringify(invalids, null, 2) + '\n', // include newline to satisfy prettier
-      'utf-8',
-    );
-  }
+  fs.writeFileSync(
+    file.filepath,
+    JSON.stringify(jsons, null, 2) + '\n', // include newline to satisfy prettier
+    'utf-8',
+  );
+  fs.writeFileSync(
+    file.filepath.replace('.json', '_invalid.json'),
+    JSON.stringify(invalids, null, 2) + '\n', // include newline to satisfy prettier
+    'utf-8',
+  );
 }
 
 (async function () {
-  const args = minimist(process.argv.slice(2), { boolean: ['write'] });
+  const args = minimist(process.argv.slice(2), { boolean: ['strict'] });
 
   const bad = args._.filter(f => !(f in FILES));
   if (bad.length) {
@@ -68,6 +66,6 @@ async function convertToJson(
   }
 
   args._.forEach(async fileIdent => {
-    await convertToJson(fileIdent, FILES[fileIdent], args.write);
+    await convertToJson(fileIdent, FILES[fileIdent], args.strict);
   });
 })();
