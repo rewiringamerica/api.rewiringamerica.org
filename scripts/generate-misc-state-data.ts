@@ -1,13 +1,3 @@
-/* 
-See Scripts README for usage.
-
-
-
-Follow-up script to create JSON:
-data/<state_id>/incentives.json (run incentive-spreadsheet-to-json.ts)
-Everything else you should create manually by following a recent CL example.
-Ex: https://github.com/rewiringamerica/api.rewiringamerica.org/pull/209/files
-*/
 import { parse } from 'csv-parse/sync';
 import minimist from 'minimist';
 import { FILES, IncentiveFile } from './incentive-spreadsheet-registry';

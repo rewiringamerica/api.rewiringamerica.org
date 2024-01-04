@@ -48,3 +48,6 @@ Usage:
 `--strict` is recommended since it will throw an error for any misnamed columns. You can correct these or errors in cell values by remapping them: use the [spreadsheet-mappings](lib/spreadsheet-mappings.ts) file.
 
 All valid records according to our schema will be written to the location you specified in the [incentive-spreadsheet-registry.ts](incentive-spreadsheet-registry.ts). Invalid records will be in an adjacent file with the suffix `_invalid.json`. There should be a rationale for the invalidation in the `errors` key to help you fix it. It may require multiple passes to get all JSON records produced.
+
+Note that even after running these, there are still files you must edit manually to get the JSON in. Follow a recent CL example.
+Eg: https://github.com/rewiringamerica/api.rewiringamerica.org/pull/209/files
