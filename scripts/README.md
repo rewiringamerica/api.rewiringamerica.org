@@ -12,10 +12,12 @@ This script uses the OpenAI API to create a first pass at translations of short_
 
 Use once the final English version is already available in a JSON file in `/data` and registered in [incentive-spreadsheet-registry.ts](incentive-spreadsheet-registry.ts). See pre-work in the script, which includes getting an API key.
 
-Usage: 
+Usage:
+
 ```
 node build/scripts/generate-spanish-descriptions.js <state_id>
 ```
+
 This will print translations to the console.
 
 ## Spreadsheet to JSON
@@ -41,7 +43,7 @@ Usage:
 Make a state directory under `/data` to store the JSON if not already done, then:
 
 Usage:
-`node build/scripts/incentive-spreadsheet-to-json.js --strict CO` 
+`node build/scripts/incentive-spreadsheet-to-json.js --strict CO`
 
 `--strict` is recommended since it will throw an error for any misnamed columns. You can correct these or errors in cell values by remapping them: use the [spreadsheet-mappings](lib/spreadsheet-mappings.ts) file.
 

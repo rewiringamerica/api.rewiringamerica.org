@@ -24,8 +24,8 @@ async function generate(state: string, file: IncentiveFile) {
   });
 
   // For now this is always on since we need to ID this columns
-  // accurately to do the rest of the work. 
-  const strict_mode = true
+  // accurately to do the rest of the work.
+  const strict_mode = true;
   const converter = new ColumnConverter(FIELD_MAPPINGS, strict_mode);
 
   const authorityProgramManager = new AuthorityAndProgramManager(state);
