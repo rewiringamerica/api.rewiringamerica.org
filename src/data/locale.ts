@@ -5,8 +5,8 @@ import {
   ERROR_MESSAGES_SCHEMA,
 } from './types/error-message';
 import {
-  // ALL_ITEMS, 
-  ITEMS_SCHEMA
+  // ALL_ITEMS,
+  ITEMS_SCHEMA,
 } from './types/items';
 
 export const SCHEMA = {

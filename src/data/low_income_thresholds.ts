@@ -24,7 +24,7 @@ export enum COLowIncomeAuthority {
   ENERGY_OUTREACH = 'co-energy-outreach-colorado',
   ENERGY_OFFICE = 'co-colorado-energy-office',
   BOULDER = 'co-city-of-boulder',
-  WALKING_MOUNTAINS = 'co-walking-mountains'
+  WALKING_MOUNTAINS = 'co-walking-mountains',
 }
 
 export enum RILowIncomeAuthority {
@@ -52,19 +52,19 @@ export const AUTHORITY_INFO_SCHEMA: JSONSchemaType<LowIncomeThresholdsAuthority>
   } as const;
 
 export const STATE_THRESHOLDS_SCHEMA: JSONSchemaType<StateLowIncomeThresholds> =
-{
-  type: 'object',
-  required: ['default'],
-  dependentSchemas: {
-    RI: {
-      required: Object.values(RILowIncomeAuthority)
+  {
+    type: 'object',
+    required: ['default'],
+    dependentSchemas: {
+      RI: {
+        required: Object.values(RILowIncomeAuthority),
+      },
+      CO: {
+        required: Object.values(COLowIncomeAuthority),
+      },
     },
-    CO: {
-      required: Object.values(COLowIncomeAuthority)
-    }
-  },
-  additionalProperties: AUTHORITY_INFO_SCHEMA,
-};
+    additionalProperties: AUTHORITY_INFO_SCHEMA,
+  };
 
 // Keep states in alphabetic order.
 export const SCHEMA: JSONSchemaType<LowIncomeThresholdsMap> = {
