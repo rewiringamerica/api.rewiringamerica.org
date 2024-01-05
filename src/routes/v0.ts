@@ -67,20 +67,15 @@ function translateIncentives(incentives: IRAIncentive[]): WebsiteIncentive[] {
 
 const CalculatorSchema = {
   description: 'How much money will you get with the Inflation Reduction Act?',
-  querystring: {
-    $ref: 'WebsiteCalculatorRequest',
-  },
+  querystring: WEBSITE_CALCULATOR_REQUEST_SCHEMA,
   response: {
     200: {
-      description: 'Successful response',
       $ref: 'WebsiteCalculatorResponse',
     },
     400: {
-      description: 'Bad request',
       $ref: 'Error',
     },
     404: {
-      description: 'Resource not found',
       $ref: 'Error',
     },
   },
@@ -113,7 +108,6 @@ export default async function (
     JsonSchemaToTsProvider<{
       references: [
         typeof WEBSITE_INCENTIVE_SCHEMA,
-        typeof WEBSITE_CALCULATOR_REQUEST_SCHEMA,
         typeof WEBSITE_CALCULATOR_RESPONSE_SCHEMA,
       ];
     }>
