@@ -10,6 +10,7 @@ export enum AmountUnit {
   Watt = 'watt',
   Btuh10k = 'btuh10k',
   SquareFoot = 'square_foot',
+  KilowattHour = 'kilowatt_hour',
 }
 
 /**
