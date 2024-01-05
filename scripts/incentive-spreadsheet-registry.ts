@@ -25,13 +25,4 @@ export const FILES: { [ident: string]: IncentiveFile } = {
     enHeader: 'Program Description (style guide)',
     esHeader: 'Program Description (Spanish)',
   },
-  CO: {
-    filepath: 'data/CO/incentives.json',
-    sheetUrl:
-      'https://docs.google.com/spreadsheets/d/1nITjSNRWJjSusB0fWuSS63fqynm_4Co7KEeuo9Cm7fU/pub?gid=30198531&single=true&output=csv',
-    headerRowNumber: 2,
-    idHeader: 'ID',
-    enHeader: 'Program Description (guideline)',
-    esHeader: 'Program Description (Spanish)',
-  },
 };

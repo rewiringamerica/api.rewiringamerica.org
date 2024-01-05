@@ -68,7 +68,7 @@ export const VALUE_MAPPINGS = {
     'Smart Thermostat': 'smart_thermostat',
     'E-Bike': 'ebike',
     'Induction Cooktop': 'electric_stove',
-    'Other': 'other',
+    Other: 'other',
   },
   amount_type: {
     'dollar per unit': 'dollars_per_unit',
@@ -76,8 +76,8 @@ export const VALUE_MAPPINGS = {
     'dollar amount with a cap': 'dollar_amount',
   },
   amount_unit: {
-    'kW': 'kilowatt',
-    'kWh': 'kilowatt_hour',
+    kW: 'kilowatt',
+    kWh: 'kilowatt_hour',
     'kilowatt-hour': 'kilowatt_hour',
   },
 };
