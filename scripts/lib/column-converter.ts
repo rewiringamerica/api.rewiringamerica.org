@@ -72,7 +72,7 @@ function coerceToStandardValue(
       return 'TODO: undefined';
     }
   }
-  let copy = input.replaceAll('\n', '');
+  let copy = input.replaceAll('\n', '').trim();
   if (copy in mapping) {
     copy = mapping[copy];
   }

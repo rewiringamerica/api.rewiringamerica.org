@@ -58,6 +58,7 @@ export const VALUE_MAPPINGS = {
     'Rooftop Solar': 'rooftop_solar_installation',
     'Battery Storage': 'battery_storage_installation',
     'Heat Pump Dryers / Clothes Dryer': 'heat_pump_clothes_dryer',
+    'Heat Pump Dryers / clothes dryer': 'heat_pump_clothes_dryer',
     'Electric Stove': 'electric_stove',
     'Weatherization (insulation and air sealing)': 'weatherization',
     'Electric wiring': 'weatherization',
@@ -67,7 +68,7 @@ export const VALUE_MAPPINGS = {
     'Smart Thermostat': 'smart_thermostat',
     'E-Bike': 'ebike',
     'Induction Cooktop': 'electric_stove',
-    Other: 'other',
+    'Other': 'other',
   },
   amount_type: {
     'dollar per unit': 'dollars_per_unit',
@@ -75,6 +76,8 @@ export const VALUE_MAPPINGS = {
     'dollar amount with a cap': 'dollar_amount',
   },
   amount_unit: {
-    kW: 'kilowatt',
+    'kW': 'kilowatt',
+    'kWh': 'kilowatt_hour',
+    'kilowatt-hour': 'kilowatt_hour',
   },
 };
