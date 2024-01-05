@@ -52,6 +52,7 @@ import {
   PROGRAMS_SCHEMA,
 } from '../../src/data/programs';
 import { PaymentMethod } from '../../src/data/types/incentive-types';
+import { BETA_ITEMS } from '../../src/data/types/items';
 import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
 import { LAUNCHED_STATES } from '../../src/data/types/states';
 import { buildRelationshipGraph } from '../../src/lib/incentive-relationship-calculation';
@@ -168,6 +169,23 @@ test('state incentives JSON files match schemas', async tap => {
   });
 });
 
+test("launched states do not have any values that we don't support in the frontend", async tap => {
+  STATE_INCENTIVE_TESTS.forEach(([state, , data]) => {
+    if (LAUNCHED_STATES.includes(state)) {
+      for (const incentive of data) {
+        tap.not(incentive.authority_type, AuthorityType.Local);
+
+        tap.notOk(
+          BETA_ITEMS.includes(incentive.item),
+          `${incentive.item} not a launched technology in ${incentive.id} and cannot be used in state: ${state}`,
+        );
+
+        tap.notOk(incentive.payment_methods.includes(PaymentMethod.Unknown));
+      }
+    }
+  });
+});
+
 test('programs in data are exactly those in code', async tap => {
   tap.same(Object.keys(PROGRAMS).sort(), Array.from(ALL_PROGRAMS).sort());
 });
@@ -207,20 +225,6 @@ test('state incentive relationships JSON files match schemas', async tap => {
       )
     ) {
       console.error(ajv.errors);
-    }
-  });
-});
-
-test("launched states do not have any values that we don't support in the frontend", async tap => {
-  STATE_INCENTIVE_TESTS.forEach(([state, , data]) => {
-    if (LAUNCHED_STATES.includes(state)) {
-      for (const incentive of data) {
-        tap.not(incentive.authority_type, AuthorityType.Local);
-
-        for (const payment_method of incentive.payment_methods) {
-          tap.not(payment_method, PaymentMethod.Unknown);
-        }
-      }
     }
   });
 });
