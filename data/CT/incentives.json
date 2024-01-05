@@ -35,17 +35,17 @@
     "amount": {
       "type": "dollars_per_unit",
       "unit": "ton",
-      "number": 2000,
+      "number": 1500,
       "maximum": 15000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,000 per ton after-purchase rebate for qualifying ground source heat pumps, up to $15,000."
+      "en": "$1,500 per ton after-purchase rebate for qualifying ground source heat pumps, up to $15,000."
     },
     "start_date": 2023,
-    "end_date": 2023
+    "end_date": 2024
   },
   {
     "id": "CT-3",
@@ -59,16 +59,16 @@
     "program": "ct_residentialHeatPumpWaterHeaterIncentive",
     "amount": {
       "type": "dollar_amount",
-      "number": 750
+      "number": 650
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$750 off eligible Energy Star certified Heat Pump Water Heaters."
+      "en": "$650 off eligible Energy Star certified Heat Pump Water Heaters."
     },
     "start_date": 2023,
-    "end_date": 2023
+    "end_date": 2024
   },
   {
     "id": "CT-4",
@@ -310,30 +310,6 @@
     "end_date": 2023
   },
   {
-    "id": "CT-14",
-    "authority_type": "utility",
-    "authority": "ct-united-illuminating-company",
-    "type": "pos_rebate",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "ct_residentialAirSourceHeatPumpIncentive",
-    "amount": {
-      "type": "dollars_per_unit",
-      "unit": "ton",
-      "number": 250
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$250 per ton instant rebate for qualifying air source heat pumps."
-    },
-    "start_date": 2023,
-    "end_date": 2023
-  },
-  {
     "id": "CT-15",
     "authority_type": "utility",
     "authority": "ct-united-illuminating-company",
@@ -346,13 +322,14 @@
     "amount": {
       "type": "dollars_per_unit",
       "unit": "ton",
-      "number": 1000
+      "number": 750,
+      "maximum": 15000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,000 per ton after-purchase rebate for qualifying air source heat pumps."
+      "en": "$750 per ton after-purchase rebate for qualifying air source heat pumps."
     },
     "start_date": 2023,
     "end_date": 2023
@@ -370,17 +347,17 @@
     "amount": {
       "type": "dollars_per_unit",
       "unit": "ton",
-      "number": 2000,
+      "number": 1500,
       "maximum": 15000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,000 per ton after-purchase rebate for qualifying ground source heat pumps, up to $15,000."
+      "en": "$1,500 per ton after-purchase rebate for qualifying ground source heat pumps, up to $15,000."
     },
     "start_date": 2023,
-    "end_date": 2023
+    "end_date": 2024
   },
   {
     "id": "CT-17",
@@ -394,40 +371,16 @@
     "program": "ct_residentialHeatPumpWaterHeaterIncentive",
     "amount": {
       "type": "dollar_amount",
-      "number": 750
+      "number": 650
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$750 off eligible Energy Star certified Heat Pump Water Heaters."
+      "en": "$650 off eligible Energy Star certified Heat Pump Water Heaters."
     },
     "start_date": 2023,
-    "end_date": 2023
-  },
-  {
-    "id": "CT-19",
-    "authority_type": "utility",
-    "authority": "ct-eversource",
-    "type": "pos_rebate",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "ct_residentialAirSourceHeatPumpIncentive",
-    "amount": {
-      "type": "dollars_per_unit",
-      "unit": "ton",
-      "number": 250
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$250 per ton instant rebate for qualifying air source heat pumps."
-    },
-    "start_date": 2023,
-    "end_date": 2023
+    "end_date": 2024
   },
   {
     "id": "CT-20",
@@ -442,16 +395,17 @@
     "amount": {
       "type": "dollars_per_unit",
       "unit": "ton",
-      "number": 1000
+      "number": 750,
+      "maximum": 15000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,000 per ton after-purchase rebate for qualifying air source heat pumps."
+      "en": "$750 per ton after-purchase rebate for qualifying air source heat pumps."
     },
     "start_date": 2023,
-    "end_date": 2023
+    "end_date": 2024
   },
   {
     "id": "CT-24",
@@ -477,5 +431,97 @@
     },
     "start_date": 2023,
     "end_date": 2023
+  },
+  {
+    "id": "CT-25",
+    "authority_type": "utility",
+    "authority": "ct-eversource",
+    "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "geothermal_heating_installation",
+    "program": "ct_residentialGroundSourceHeatPumpIncentive",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Bonus $500 off ground source heat pump installation if insulation was installed through Energize CT Home Energy Solutions within the prior 12 months."
+    },
+    "start_date": 2023,
+    "end_date": 2024
+  },
+  {
+    "id": "CT-26",
+    "authority_type": "utility",
+    "authority": "ct-eversource",
+    "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ct_residentialAirSourceHeatPumpIncentive",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Bonus $500 off air source heat pump installation if insulation was installed through Energize CT Home Energy Solutions within the prior 12 months."
+    },
+    "start_date": 2023,
+    "end_date": 2024
+  },
+  {
+    "id": "CT-27",
+    "authority_type": "utility",
+    "authority": "ct-united-illuminating-company",
+    "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ct_residentialAirSourceHeatPumpIncentive",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Bonus $500 off air source heat pump installation if insulation was installed through Energize CT Home Energy Solutions within the prior 12 months."
+    },
+    "start_date": 2023,
+    "end_date": 2024
+  },
+  {
+    "id": "CT-28",
+    "authority_type": "utility",
+    "authority": "ct-united-illuminating-company",
+    "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "geothermal_heating_installation",
+    "program": "ct_residentialGroundSourceHeatPumpIncentive",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Bonus $500 off ground source heat pump installation if insulation was installed through Energize CT Home Energy Solutions within the prior 12 months."
+    },
+    "start_date": 2023,
+    "end_date": 2024
   }
 ]
