@@ -16,6 +16,7 @@ export const ITEMS_SCHEMA = {
   heat_pump_clothes_dryer: { type: 'string' },
   heat_pump_water_heater: { type: 'string' },
   new_electric_vehicle: { type: 'string' },
+  other: { type: 'string' },
   rooftop_solar_installation: { type: 'string' },
   smart_thermostat: { type: 'string' },
   used_electric_vehicle: { type: 'string' },

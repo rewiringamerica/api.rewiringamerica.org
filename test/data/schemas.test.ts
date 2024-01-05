@@ -2,6 +2,7 @@ import { test } from 'tap';
 import {
   AUTHORITIES_BY_STATE,
   SCHEMA as AUTHORITIES_SCHEMA,
+  AuthorityType,
 } from '../../src/data/authorities';
 import {
   IRA_INCENTIVES,
@@ -52,6 +53,8 @@ import {
 } from '../../src/data/programs';
 import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
 import { buildRelationshipGraph } from '../../src/lib/incentive-relationship-calculation';
+import { LAUNCHED_STATES } from '../../src/data/types/states';
+import { PaymentMethod } from '../../src/data/types/incentive-types';
 
 const TESTS = [
   [I_SCHEMA, IRA_INCENTIVES, 'ira_incentives'],
@@ -207,6 +210,21 @@ test('state incentive relationships JSON files match schemas', async tap => {
     }
   });
 });
+
+test("launched states do not have any values that we don't support in the frontend", async tap => {
+  STATE_INCENTIVE_TESTS.forEach(([state, , data]) => {
+    if (LAUNCHED_STATES.includes(state)) {
+      for (const incentive of data) {
+        tap.not(incentive.authority_type, AuthorityType.Local)
+
+        for (const payment_method of incentive.payment_methods) {
+          tap.not(payment_method, PaymentMethod.Unknown)
+        }
+      }
+    }
+  });
+});
+
 
 // Helper to check for circular dependencies in the incentive relationships.
 export function checkForCycle(
