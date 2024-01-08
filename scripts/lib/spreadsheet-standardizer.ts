@@ -158,7 +158,7 @@ function cleanDollars(input: string): string {
   return input.replaceAll('$', '').replaceAll(',', '');
 }
 
-// Given a set of possible values (e.g. from an Enum), try to
+// Given a set of possible values (e.g. from an enum), try to
 // coerce a string input to one of those values. If no suitable
 // value can be found, throw an error or return a TODO version
 // of the value.
@@ -225,7 +225,7 @@ function findOwnerStatus(input: string): OwnerStatus[] {
 
 // This is an unfortunate workaround to make it easy to retrieve
 // the (string) keys of string enums. Unfortunately, you have to
-// add any new Enums to the enumsOfInterest type below.
+// add any new enums to the enumsOfInterest type below.
 function getEnumValues(enums: enumsOfInterest): Set<string> {
   return new Set(enums.filter(value => typeof value === 'string'));
 }
