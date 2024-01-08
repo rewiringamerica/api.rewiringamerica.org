@@ -52,11 +52,9 @@ All the code is TypeScript, and is required to typecheck without errors.
 
 - There is some geographic data, in CSV format, in `scripts/data`. This is loaded into a SQLite database as a build step, and the SQLite file is deployed as part of the server image. This data allows mapping ZIP codes to census tracts, and census tracts to Area Median Income (AMI); this is used to compute incentive eligibility.
 
-### Automated description updates
+### Scripts
 
-The script `scripts/update-descriptions.ts` fetches short descriptions for incentives from our internal spreadsheets, and writes them to the corresponding JSON files. Spreadsheet rows and JSON incentives are correlated by ID. Update the script whenever new states/spreadsheets are added. (We aim to eventually generate entire incentives JSON files like this, not just the `short_description` field.)
-
-The script is also runnable as `yarn update-descriptions`. Pass two-letter state codes, or `IRA`, as arguments to the script. By default, the script only shows a diff and does not modify the files; pass `--write` to apply edits.
+A variety of scripts have been created to automate or reduce manual effort for some workflows. See the [Scripts README](scripts/README.md) for details.
 
 ## Branching
 
