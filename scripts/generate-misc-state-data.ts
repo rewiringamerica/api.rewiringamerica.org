@@ -1,9 +1,9 @@
 import { parse } from 'csv-parse/sync';
 import minimist from 'minimist';
 import { FILES, IncentiveFile } from './incentive-spreadsheet-registry';
-import { ColumnConverter } from './lib/column-converter';
-import { AuthorityAndProgramManager } from './lib/programs_updater';
+import { AuthorityAndProgramUpdater } from './lib/authority-and-program-updater';
 import { FIELD_MAPPINGS } from './lib/spreadsheet-mappings';
+import { SpreadsheetStandardizer } from './lib/spreadsheet-standardizer';
 
 async function generate(state: string, file: IncentiveFile) {
   const response = await fetch(file.sheetUrl);
@@ -16,9 +16,9 @@ async function generate(state: string, file: IncentiveFile) {
   // For now this is always on since we need to ID this columns
   // accurately to do the rest of the work.
   const strict_mode = true;
-  const converter = new ColumnConverter(FIELD_MAPPINGS, strict_mode);
+  const converter = new SpreadsheetStandardizer(FIELD_MAPPINGS, strict_mode);
 
-  const authorityProgramManager = new AuthorityAndProgramManager(state);
+  const authorityProgramManager = new AuthorityAndProgramUpdater(state);
   rows.forEach((row: Record<string, string>) => {
     const renamed = converter.convertFieldNames(row);
     authorityProgramManager.addRow(renamed);

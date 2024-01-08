@@ -7,8 +7,8 @@ import minimist from 'minimist';
 import { STATE_SCHEMA, StateIncentive } from '../src/data/state_incentives';
 import { LOCALIZABLE_STRING_SCHEMA } from '../src/data/types/localizable-string';
 import { FILES, IncentiveFile } from './incentive-spreadsheet-registry';
-import { ColumnConverter } from './lib/column-converter';
 import { FIELD_MAPPINGS } from './lib/spreadsheet-mappings';
+import { SpreadsheetStandardizer } from './lib/spreadsheet-standardizer';
 
 const ajv = new Ajv({ allErrors: true });
 
@@ -26,7 +26,7 @@ async function convertToJson(
     from_line: file.headerRowNumber ?? 1,
   });
 
-  const converter = new ColumnConverter(FIELD_MAPPINGS, strict);
+  const converter = new SpreadsheetStandardizer(FIELD_MAPPINGS, strict);
   const invalids: Record<string, string | number | boolean | object>[] = [];
   const jsons: StateIncentive[] = [];
   rows.forEach((row: Record<string, string>) => {

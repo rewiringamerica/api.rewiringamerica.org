@@ -1,16 +1,16 @@
 import { test } from 'tap';
-import { ColumnConverter } from '../../scripts/lib/column-converter';
 import { FIELD_MAPPINGS } from '../../scripts/lib/spreadsheet-mappings';
+import { SpreadsheetStandardizer } from '../../scripts/lib/spreadsheet-standardizer';
 
 test('correctly rename columns in strict mode', tap => {
-  let converter = new ColumnConverter({ new_name: ['old_name'] }, true);
+  let converter = new SpreadsheetStandardizer({ new_name: ['old_name'] }, true);
   tap.matchOnly(
     converter.convertFieldNames({ old_name: 'foo' }),
     { new_name: 'foo' },
     'standard rename',
   );
 
-  converter = new ColumnConverter({ new_name: ['old_name'] }, true);
+  converter = new SpreadsheetStandardizer({ new_name: ['old_name'] }, true);
   tap.throws(() => {
     converter.convertFieldNames({ old_name: 'foo', unrelated_name: 'bar' });
   }, 'Error on field not in map in strict mode');
@@ -19,14 +19,17 @@ test('correctly rename columns in strict mode', tap => {
 });
 
 test('correctly rename columns in non-strict mode', tap => {
-  let converter = new ColumnConverter({ new_name: ['old_name'] }, false);
+  let converter = new SpreadsheetStandardizer(
+    { new_name: ['old_name'] },
+    false,
+  );
   tap.matchOnly(
     converter.convertFieldNames({ old_name: 'foo' }),
     { new_name: 'foo' },
     'standard rename',
   );
 
-  converter = new ColumnConverter({ new_name: ['old_name'] }, false);
+  converter = new SpreadsheetStandardizer({ new_name: ['old_name'] }, false);
   tap.matchOnly(
     converter.convertFieldNames({ old_name: 'foo', unrelated_name: 'bar' }),
     { new_name: 'foo', unrelated_name: 'bar' },
@@ -37,7 +40,7 @@ test('correctly rename columns in non-strict mode', tap => {
 });
 
 test('representative example', tap => {
-  const converter = new ColumnConverter(FIELD_MAPPINGS, true);
+  const converter = new SpreadsheetStandardizer(FIELD_MAPPINGS, true);
 
   const input = {
     ID: 'VA-1',

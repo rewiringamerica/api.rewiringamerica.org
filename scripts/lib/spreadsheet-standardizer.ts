@@ -3,9 +3,105 @@ import { AmountType, AmountUnit } from '../../src/data/types/amount';
 import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { ITEMS_SCHEMA, Item } from '../../src/data/types/items';
 import { OwnerStatus } from '../../src/data/types/owner-status';
-import { createAuthorityName, createProgramName } from './programs_updater';
+import {
+  createAuthorityName,
+  createProgramName,
+} from './authority-and-program-updater';
 import { FIELD_MAPPINGS, VALUE_MAPPINGS } from './spreadsheet-mappings';
 
+// Standardize column names or values in an incentive spreadsheet.
+export class SpreadsheetStandardizer {
+  private fieldMap: { [index: string]: string };
+  private strict: boolean;
+
+  /**
+   * @param fieldMap: a map from canonical name to all of the aliases it might appear as in the Google spreadsheets
+   * @param strict: whether to throw an error on aliases that aren't found
+   */
+  constructor(
+    fieldMap: { [index: string]: string[] } = FIELD_MAPPINGS,
+    strict: boolean = true,
+  ) {
+    // We reverse the input map for easier runtime use, since
+    // we need to go from alias back to canonical name.
+    this.fieldMap = reverseMap(fieldMap);
+    this.strict = strict;
+  }
+
+  // Convert a row with possible column aliases to a canonical column name.
+  convertFieldNames(input: Record<string, string>): Record<string, string> {
+    const output: Record<string, string> = {};
+    for (const key in input) {
+      const cleaned = cleanFieldName(key);
+      if (this.fieldMap[cleaned] === undefined) {
+        if (this.strict) {
+          throw new Error(`Invalid column found: ${cleaned}; original: ${key}`);
+        }
+        output[key] = input[key];
+        continue;
+      }
+
+      const newCol = this.fieldMap[cleaned];
+      output[newCol] = input[key];
+    }
+    return output;
+  }
+
+  // Try to convert a row with non-standard values to standard ones.
+  // Failure means the row will still fail a2j schema validation later.
+  recordToStandardValues(
+    state: string,
+    record: Record<string, string>,
+  ): Record<string, string | number | object | boolean> {
+    const output: Record<string, string | number | object | boolean> = {
+      id: record.id,
+      authority_type: coerceToStandardValue(
+        record.authority_level,
+        getEnumValues(Object.values(AuthorityType)),
+      ),
+      authority: createAuthorityName(state, record.authority_name),
+      type: coerceToStandardValue(
+        record.rebate_type.split(',')[0],
+        getEnumValues(Object.values(PaymentMethod)),
+        VALUE_MAPPINGS.payment_methods,
+      ),
+      payment_methods: findPaymentMethods(record.rebate_type),
+      item: coerceToStandardValue(
+        record.technology,
+        new Set(Object.keys(ITEMS_SCHEMA)),
+        VALUE_MAPPINGS.item,
+      ),
+      program: createProgramName(
+        state,
+        record.authority_name,
+        record.program_title,
+      ),
+      amount: createAmount(record),
+      owner_status: findOwnerStatus(record.owner_status),
+      short_description: {
+        en: record.program_description,
+      },
+    };
+    if (record.program_start !== undefined && record.program_start !== '') {
+      output.start_date = +parseDateToYear(record.program_start);
+    }
+    if (record.program_end !== undefined && record.program_end !== '') {
+      output.end_date = +parseDateToYear(record.program_end);
+    }
+    if (
+      record.bonus_description !== undefined &&
+      record.bonus_description !== ''
+    ) {
+      output.bonus_description = true;
+    }
+
+    return output;
+  }
+}
+
+///////////
+//  Helpers
+///////////
 const wordSeparators =
   /[\s\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]+/;
 
@@ -18,6 +114,10 @@ function cleanFieldName(field: string): string {
     .toLowerCase();
 }
 
+// Take an input map from string -> string[] and reverse it,
+// which also implicitly flattens it. The input format is better
+// for validation and manual data entry; the latter is better for
+// runtime use.
 function reverseMap(map: { [index: string]: string[] }): {
   [index: string]: string;
 } {
@@ -58,12 +158,15 @@ function cleanDollars(input: string): string {
   return input.replaceAll('$', '').replaceAll(',', '');
 }
 
-const strict = false;
-
+// Given a set of possible values (e.g. from an Enum), try to
+// coerce a string input to one of those values. If no suitable
+// value can be found, throw an error or return a TODO version
+// of the value.
 function coerceToStandardValue(
   input: string,
   allowed: Set<string>,
   mapping: Record<string, string> = {},
+  strict: boolean = false,
 ): string {
   if (input === undefined) {
     if (strict) {
@@ -120,6 +223,12 @@ function findOwnerStatus(input: string): OwnerStatus[] {
   return [];
 }
 
+// This is an unfortunate workaround to make it easy to retrieve
+// the (string) keys of string enums. Unfortunately, you have to
+// add any new Enums to the enumsOfInterest type below.
+function getEnumValues(enums: enumsOfInterest): Set<string> {
+  return new Set(enums.filter(value => typeof value === 'string'));
+}
 type enumsOfInterest = (
   | AmountType
   | AmountUnit
@@ -127,10 +236,6 @@ type enumsOfInterest = (
   | Item
   | PaymentMethod
 )[];
-
-function getEnumValues(enums: enumsOfInterest): Set<string> {
-  return new Set(enums.filter(value => typeof value === 'string'));
-}
 
 function createAmount(
   input: Record<string, string>,
@@ -163,84 +268,4 @@ function createAmount(
     );
   }
   return amount;
-}
-
-export class ColumnConverter {
-  private fieldMap: { [index: string]: string };
-  private strict: boolean;
-
-  constructor(
-    fieldMap: { [index: string]: string[] } = FIELD_MAPPINGS,
-    strict: boolean = true,
-  ) {
-    this.fieldMap = reverseMap(fieldMap);
-    this.strict = strict;
-  }
-
-  convertFieldNames(input: Record<string, string>): Record<string, string> {
-    const output: Record<string, string> = {};
-    for (const key in input) {
-      const cleaned = cleanFieldName(key);
-      if (this.fieldMap[cleaned] === undefined) {
-        if (this.strict) {
-          throw new Error(`Invalid column found: ${cleaned}; original: ${key}`);
-        }
-        output[key] = input[key];
-        continue;
-      }
-
-      const newCol = this.fieldMap[cleaned];
-      output[newCol] = input[key];
-    }
-    return output;
-  }
-
-  recordToStandardValues(
-    state: string,
-    record: Record<string, string>,
-  ): Record<string, string | number | object | boolean> {
-    const output: Record<string, string | number | object | boolean> = {
-      id: record.id,
-      authority_type: coerceToStandardValue(
-        record.authority_level,
-        getEnumValues(Object.values(AuthorityType)),
-      ),
-      authority: createAuthorityName(state, record.authority_name),
-      type: coerceToStandardValue(
-        record.rebate_type.split(',')[0],
-        getEnumValues(Object.values(PaymentMethod)),
-        VALUE_MAPPINGS.payment_methods,
-      ),
-      payment_methods: findPaymentMethods(record.rebate_type),
-      item: coerceToStandardValue(
-        record.technology,
-        new Set(Object.keys(ITEMS_SCHEMA)),
-        VALUE_MAPPINGS.item,
-      ),
-      program: createProgramName(
-        state,
-        record.authority_name,
-        record.program_title,
-      ),
-      amount: createAmount(record),
-      owner_status: findOwnerStatus(record.owner_status),
-      short_description: {
-        en: record.program_description,
-      },
-    };
-    if (record.program_start !== undefined && record.program_start !== '') {
-      output.start_date = +parseDateToYear(record.program_start);
-    }
-    if (record.program_end !== undefined && record.program_end !== '') {
-      output.end_date = +parseDateToYear(record.program_end);
-    }
-    if (
-      record.bonus_description !== undefined &&
-      record.bonus_description !== ''
-    ) {
-      output.bonus_description = true;
-    }
-
-    return output;
-  }
 }

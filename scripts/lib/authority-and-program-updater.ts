@@ -89,7 +89,7 @@ type AuthorityMap = {
   [index: AuthorityKey]: Authority;
 };
 
-export class AuthorityAndProgramManager {
+export class AuthorityAndProgramUpdater {
   authorityMap: AuthorityMap = {};
   state: string;
 

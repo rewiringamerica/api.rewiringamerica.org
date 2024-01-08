@@ -1,3 +1,4 @@
+// Map from canonical column name to possible aliases in spreadsheets.
 export const FIELD_MAPPINGS: { [index: string]: string[] } = {
   id: ['ID'],
   data_urls: ['Data Source URL(s)'],
@@ -31,6 +32,9 @@ export const FIELD_MAPPINGS: { [index: string]: string[] } = {
   financing_details: ['Financing Details'],
 };
 
+// Note: this is from alias to canonical name, which is the reverse of
+// FIELD_MAPPINGS above.
+// TODO: make this more consistent.
 export const VALUE_MAPPINGS = {
   payment_methods: {
     'Rebate (post purchase)': 'rebate',

@@ -1,6 +1,6 @@
 import { test } from 'tap';
-import { ColumnConverter } from '../../scripts/lib/column-converter';
 import { FIELD_MAPPINGS } from '../../scripts/lib/spreadsheet-mappings';
+import { SpreadsheetStandardizer } from '../../scripts/lib/spreadsheet-standardizer';
 
 test('correct row to record transformation', async tap => {
   const testCases: {
@@ -23,7 +23,7 @@ test('correct row to record transformation', async tap => {
         'Program Status': 'Active',
         'Program Start (MM/DD/YYYY)': '1/1/2022',
         'Program End (MM/DD/YYYY)': '12/31/2026',
-        'Rebate Type': 'Rebate',
+        'Rebate Type': 'Rebate (post purchase)',
         'Rebate Value*': '$50',
         'Amount Type*': 'dollar amount',
         'Number*': '50',
@@ -68,7 +68,7 @@ test('correct row to record transformation', async tap => {
     },
   ];
 
-  const columnConverter = new ColumnConverter(FIELD_MAPPINGS);
+  const columnConverter = new SpreadsheetStandardizer(FIELD_MAPPINGS);
   for (const tc of testCases) {
     const renamed = columnConverter.convertFieldNames(tc.input);
     tap.matchOnly(
