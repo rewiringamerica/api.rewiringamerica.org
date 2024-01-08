@@ -19,6 +19,7 @@ import { STATES_PLUS_DC } from './types/states';
  */
 export enum AuthorityType {
   Federal = 'federal',
+  Local = 'local',
   State = 'state',
   Utility = 'utility',
 }
@@ -54,6 +55,7 @@ export const SCHEMA = {
     properties: {
       state: authoritiesMapSchema,
       utility: authoritiesMapSchema,
+      local: authoritiesMapSchema,
     },
     required: ['state', 'utility'],
     additionalProperties: false,

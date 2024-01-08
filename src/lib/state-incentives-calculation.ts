@@ -1,3 +1,4 @@
+import { min } from 'lodash';
 import { AuthorityType } from '../data/authorities';
 import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/low_income_thresholds';
 import {
@@ -14,8 +15,14 @@ import { OwnerStatus } from '../data/types/owner-status';
 import { isStateIncluded } from '../data/types/states';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
 import {
+  CombinedValue,
+  RelationshipMaps,
+  buildExclusionMaps,
   buildPrerequisiteMaps,
-  checkPrerequisites,
+  getCombinedMaximums,
+  isExcluded,
+  makeIneligible,
+  meetsPrerequisites,
 } from './incentive-relationship-calculation';
 import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
 
@@ -84,6 +91,13 @@ export function calculateStateIncentivesAndSavings(
       continue;
     }
 
+    if (item.authority_type === AuthorityType.Local) {
+      // TODO: support serving Local incentives
+      // This allows keeping them in our JSON datasets, but for now
+      // we always ignore them.
+      continue;
+    }
+
     let eligible = true;
 
     if (!item.owner_status.includes(request.owner_status as OwnerStatus)) {
@@ -115,19 +129,36 @@ export function calculateStateIncentivesAndSavings(
     }
   }
 
+  // We'll create a map from incentive ID to an object storing the remaining
+  // value for its incentive grouping (if it has one).
+  let groupedIncentives = new Map<string, CombinedValue>();
+
   if (incentiveRelationships !== undefined) {
     const prerequisiteMaps = buildPrerequisiteMaps(incentiveRelationships);
+    const exclusionMaps = buildExclusionMaps(incentiveRelationships);
+    const maps: RelationshipMaps = {
+      eligibleIncentives: eligibleIncentives,
+      ineligibleIncentives: ineligibleIncentives,
+      requiresMap: prerequisiteMaps.requiresMap,
+      requiredByMap: prerequisiteMaps.requiredByMap,
+      supersedesMap: exclusionMaps.supersedesMap,
+      supersededByMap: exclusionMaps.supersededByMap,
+    };
 
     // Use relationship maps to update incentive eligibility.
-    for (const [incentiveId, prerequisiteIds] of prerequisiteMaps.requiresMap) {
-      checkPrerequisites(
-        incentiveId,
-        prerequisiteIds,
-        eligibleIncentives,
-        ineligibleIncentives,
-        prerequisiteMaps.requiredByMap,
-      );
+    for (const [incentiveId] of prerequisiteMaps.requiresMap) {
+      if (!meetsPrerequisites(incentiveId, maps)) {
+        makeIneligible(incentiveId, maps);
+      }
     }
+    for (const [incentiveId] of exclusionMaps.supersededByMap) {
+      if (isExcluded(incentiveId, maps)) {
+        makeIneligible(incentiveId, maps);
+      }
+    }
+
+    // Now that we know final eligibility, enforce combined maximum values.
+    groupedIncentives = getCombinedMaximums(incentiveRelationships);
   }
 
   const eligibleTransformed = transformItems(eligibleIncentives, true);
@@ -135,13 +166,18 @@ export function calculateStateIncentivesAndSavings(
   const stateIncentives = [...eligibleTransformed, ...ineligibleTransformed];
 
   const savings: APISavings = zeroSavings();
-
-  stateIncentives.forEach(item => {
-    const amount = item.amount.representative
+  eligibleTransformed.forEach(item => {
+    let amount = item.amount.representative
       ? item.amount.representative
       : item.amount.type === AmountType.DollarAmount
       ? item.amount.number
       : 0;
+    // Check any incentive groupings for this item to make sure it has remaining eligible value.
+    if (groupedIncentives.has(item.id)) {
+      const combinedValue = groupedIncentives.get(item.id)!;
+      amount = min([amount, combinedValue.remainingValue])!;
+      combinedValue.remainingValue -= amount;
+    }
 
     savings[item.type] += amount;
   });

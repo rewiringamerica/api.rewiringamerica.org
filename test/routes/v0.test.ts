@@ -259,8 +259,10 @@ test('non-existent zips', async t => {
   t.equal(calculatorResponse.field, 'zip');
 });
 
-test('existing zips without data', async t => {
+test('zips with parent ZCTA', async t => {
   const res = await getCalculatorResponse(t, {
+    // This ZIP doesn't correspond to physical land area, but its parent ZCTA
+    // is 85014, which does.
     zip: '85011',
     owner_status: 'homeowner',
     household_income: 0,
@@ -268,14 +270,9 @@ test('existing zips without data', async t => {
     tax_filing: 'single',
   });
   const calculatorResponse = JSON.parse(res.payload);
-  t.equal(res.statusCode, 404, 'response status is 404');
-  t.equal(calculatorResponse.statusCode, 404, 'payload statusCode is 404');
-  t.equal(calculatorResponse.error, 'Not Found', 'payload error is Not Found');
-  t.equal(
-    calculatorResponse.message,
-    "We currently don't have data for that location.",
-  );
-  t.equal(calculatorResponse.field, 'zip');
+  t.equal(res.statusCode, 200, 'response status is 200');
+  t.equal(calculatorResponse.pos_rebate_incentives.length, 8);
+  t.equal(calculatorResponse.tax_credit_incentives.length, 10);
 });
 
 const ESTIMATION_TESTS = [

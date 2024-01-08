@@ -2,7 +2,6 @@ import { FilingStatus } from '../../data/tax_brackets';
 import { OwnerStatus } from '../../data/types/owner-status';
 
 export const WEBSITE_CALCULATOR_REQUEST_SCHEMA = {
-  $id: 'WebsiteCalculatorRequest',
   title: 'WebsiteCalculatorRequest',
   type: 'object',
   properties: {
