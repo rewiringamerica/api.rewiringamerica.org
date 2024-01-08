@@ -117,6 +117,11 @@ export const WEBSITE_INCENTIVE_SCHEMA = {
       description:
         'The maximum Adjusted Gross Income (AGI) to be eligible for this incentive.',
     },
+    agi_min_limit: {
+      type: 'number',
+      description:
+        'The minimum Adjusted Gross Income (AGI) to be eligible for this incentive.',
+    },
     filing_status: {
       type: 'string',
       description: 'Which tax filing statuses are eligible for this incentive.',

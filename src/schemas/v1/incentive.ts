@@ -109,6 +109,10 @@ export const API_INCENTIVE_SCHEMA = {
       type: 'number',
       nullable: true,
     },
+    agi_min_limit: {
+      type: 'number',
+      nullable: true,
+    },
     filing_status: {
       type: 'string',
       nullable: true,

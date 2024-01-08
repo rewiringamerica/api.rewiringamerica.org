@@ -14,6 +14,7 @@ export enum FilingStatus {
   Joint = 'joint',
   MarriedFilingSeparately = 'married_filing_separately',
   Single = 'single',
+  QualifyingWidower = 'qualifying_widower_with_dependent_child',
 }
 
 const propertySchema = {

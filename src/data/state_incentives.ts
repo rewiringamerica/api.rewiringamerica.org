@@ -3,6 +3,7 @@ import fs from 'fs';
 import { AuthorityType } from './authorities';
 import { RILowIncomeAuthority } from './low_income_thresholds';
 import { ALL_PROGRAMS } from './programs';
+import { FilingStatus } from './tax_brackets';
 import { Amount, AmountType, AmountUnit } from './types/amount';
 import { PaymentMethod } from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
@@ -13,6 +14,8 @@ export type LowIncomeAuthority = 'default' | RILowIncomeAuthority;
 
 export type StateIncentive = {
   id: string;
+  agi_max_limit: number | null;
+  agi_min_limit: number | null;
   authority_type: AuthorityType;
   authority: string;
   type: PaymentMethod; // Deprecated; we are switching to use payment_methods instead
@@ -26,6 +29,7 @@ export type StateIncentive = {
   end_date: number;
   short_description: LocalizableString;
   low_income?: LowIncomeAuthority;
+  filing_status: FilingStatus | null;
 };
 
 export type StateIncentivesMap = {
@@ -46,6 +50,8 @@ const amountSchema: JSONSchemaType<Amount> = {
 
 const incentivePropertySchema = {
   id: { type: 'string' },
+  agi_max_limit: { type: 'integer', nullable: true },
+  agi_min_limit: { type: 'integer', nullable: true },
   authority_type: { type: 'string', enum: Object.values(AuthorityType) },
   authority: { type: 'string' },
   type: { type: 'string', enum: Object.values(PaymentMethod) },
@@ -69,6 +75,11 @@ const incentivePropertySchema = {
   },
   short_description: { $ref: 'LocalizableString' },
   low_income: { type: 'string', nullable: true },
+  filing_status: {
+    type: 'string',
+    enum: Object.values(FilingStatus),
+    nullable: true,
+  },
 } as const;
 const requiredProperties = [
   'id',

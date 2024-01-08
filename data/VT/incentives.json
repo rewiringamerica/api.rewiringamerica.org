@@ -573,15 +573,256 @@
     "program": "vt_stateOfVermontIncentivesForNewElectricVehiclesProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 2500,
+      "number": 3000,
       "maximum": 5000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
+    "filing_status": "single",
+    "agi_max_limit": 60001,
     "short_description": {
-      "en": "Up to $5000 for a new electric vehicle or up to $3000 for a new plug-in hybrid vehicle. Incentive amount dependent upon tax filing status and income."
+      "en": "$5000 for a new electric vehicle or $3000 for a new plug-in hybrid vehicle."
+    }
+  },
+  {
+    "id": "VT-27",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "program": "vt_stateOfVermontIncentivesForNewElectricVehiclesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "filing_status": "single",
+    "agi_min_limit": 60001,
+    "agi_max_limit": 100001,
+    "short_description": {
+      "en": "$2500 for a new electric vehicle or $1500 for a new plug-in hybrid vehicle."
+    }
+  },
+  {
+    "id": "VT-27",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "program": "vt_stateOfVermontIncentivesForNewElectricVehiclesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "filing_status": "hoh",
+    "agi_max_limit": 75001,
+    "short_description": {
+      "en": "$5000 for a new electric vehicle or $3000 for a new plug-in hybrid vehicle."
+    }
+  },
+  {
+    "id": "VT-27",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "program": "vt_stateOfVermontIncentivesForNewElectricVehiclesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "filing_status": "hoh",
+    "agi_min_limit": 75001,
+    "agi_max_limit": 125001,
+    "short_description": {
+      "en": "$2500 for a new electric vehicle or $1500 for a new plug-in hybrid vehicle."
+    }
+  },
+  {
+    "id": "VT-27",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "program": "vt_stateOfVermontIncentivesForNewElectricVehiclesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "filing_status": "qualifying_widower_with_dependent_child",
+    "agi_max_limit": 90001,
+    "short_description": {
+      "en": "$5000 for a new electric vehicle or $3000 for a new plug-in hybrid vehicle."
+    }
+  },
+  {
+    "id": "VT-27",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "program": "vt_stateOfVermontIncentivesForNewElectricVehiclesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "filing_status": "qualifying_widower_with_dependent_child",
+    "agi_min_limit": 90001,
+    "agi_max_limit": 150001,
+    "short_description": {
+      "en": "$2500 for a new electric vehicle or $1500 for a new plug-in hybrid vehicle."
+    }
+  },
+  {
+    "id": "VT-27",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "program": "vt_stateOfVermontIncentivesForNewElectricVehiclesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "filing_status": "joint",
+    "agi_max_limit": 90001,
+    "short_description": {
+      "en": "$5000 for a new electric vehicle or $3000 for a new plug-in hybrid vehicle."
+    }
+  },
+  {
+    "id": "VT-27",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "program": "vt_stateOfVermontIncentivesForNewElectricVehiclesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "filing_status": "joint",
+    "agi_min_limit": 90001,
+    "agi_max_limit": 150001,
+    "short_description": {
+      "en": "$2500 for a new electric vehicle or $1500 for a new plug-in hybrid vehicle."
+    }
+  },
+  {
+    "id": "VT-27",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "program": "vt_stateOfVermontIncentivesForNewElectricVehiclesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "filing_status": "married_filing_separately",
+    "agi_max_limit": 60001,
+    "short_description": {
+      "en": "$5000 for a new electric vehicle or $3000 for a new plug-in hybrid vehicle."
+    }
+  },
+  {
+    "id": "VT-27",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "program": "vt_stateOfVermontIncentivesForNewElectricVehiclesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "filing_status": "married_filing_separately",
+    "agi_min_limit": 60001,
+    "agi_max_limit": 100001,
+    "short_description": {
+      "en": "$2500 for a new electric vehicle or $1500 for a new plug-in hybrid vehicle."
     }
   },
   {
@@ -620,7 +861,7 @@
     "program": "vt_stateOfVermontReplaceYourRideProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 2500,
+      "number": 5000,
       "maximum": 5000
     },
     "owner_status": [
@@ -628,8 +869,249 @@
       "renter"
     ],
     "start_date": 2022,
+    "filing_status": "single",
+    "agi_max_limit": 60001,
     "short_description": {
-      "en": "The incentive for scrapping an eligible Internal Combustion Engine (ICE) vehicle is either $2,500 or $5,000, depending on the applicant’s income."
+      "en": "The incentive for scrapping an eligible Internal Combustion Engine (ICE) vehicle is $5,000."
+    }
+  },
+  {
+    "id": "VT-29",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "program": "vt_stateOfVermontReplaceYourRideProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "start_date": 2022,
+    "filing_status": "single",
+    "agi_min_limit": 60001,
+    "agi_max_limit": 100001,
+    "short_description": {
+      "en": "The incentive for scrapping an eligible Internal Combustion Engine (ICE) vehicle is $2,500."
+    }
+  },
+  {
+    "id": "VT-29",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "program": "vt_stateOfVermontReplaceYourRideProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 5000,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "start_date": 2022,
+    "filing_status": "hoh",
+    "agi_max_limit": 75001,
+    "short_description": {
+      "en": "The incentive for scrapping an eligible Internal Combustion Engine (ICE) vehicle is $5,000."
+    }
+  },
+  {
+    "id": "VT-29",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "program": "vt_stateOfVermontReplaceYourRideProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "start_date": 2022,
+    "filing_status": "hoh",
+    "agi_min_limit": 75001,
+    "agi_max_limit": 125001,
+    "short_description": {
+      "en": "The incentive for scrapping an eligible Internal Combustion Engine (ICE) vehicle is $2,500."
+    }
+  },
+  {
+    "id": "VT-29",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "program": "vt_stateOfVermontReplaceYourRideProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 5000,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "start_date": 2022,
+    "filing_status": "qualifying_widower_with_dependent_child",
+    "agi_max_limit": 90001,
+    "short_description": {
+      "en": "The incentive for scrapping an eligible Internal Combustion Engine (ICE) vehicle is $5,000."
+    }
+  },
+  {
+    "id": "VT-29",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "program": "vt_stateOfVermontReplaceYourRideProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "start_date": 2022,
+    "filing_status": "qualifying_widower_with_dependent_child",
+    "agi_min_limit": 90001,
+    "agi_max_limit": 150001,
+    "short_description": {
+      "en": "The incentive for scrapping an eligible Internal Combustion Engine (ICE) vehicle is $2,500."
+    }
+  },
+  {
+    "id": "VT-29",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "program": "vt_stateOfVermontReplaceYourRideProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 5000,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "start_date": 2022,
+    "filing_status": "joint",
+    "agi_max_limit": 90001,
+    "short_description": {
+      "en": "The incentive for scrapping an eligible Internal Combustion Engine (ICE) vehicle is $5,000."
+    }
+  },
+  {
+    "id": "VT-29",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "program": "vt_stateOfVermontReplaceYourRideProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "start_date": 2022,
+    "filing_status": "joint",
+    "agi_min_limit": 90001,
+    "agi_max_limit": 150001,
+    "short_description": {
+      "en": "The incentive for scrapping an eligible Internal Combustion Engine (ICE) vehicle is $2,500."
+    }
+  },
+  {
+    "id": "VT-29",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "program": "vt_stateOfVermontReplaceYourRideProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 5000,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "start_date": 2022,
+    "filing_status": "married_filing_separately",
+    "agi_max_limit": 60001,
+    "short_description": {
+      "en": "The incentive for scrapping an eligible Internal Combustion Engine (ICE) vehicle is $5,000."
+    }
+  },
+  {
+    "id": "VT-29",
+    "authority_type": "state",
+    "authority": "vt-state-of-vermont",
+    "type": "pos_rebate",
+    "item": "new_electric_vehicle",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "program": "vt_stateOfVermontReplaceYourRideProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "start_date": 2022,
+    "filing_status": "married_filing_separately",
+    "agi_min_limit": 60001,
+    "agi_max_limit": 100001,
+    "short_description": {
+      "en": "The incentive for scrapping an eligible Internal Combustion Engine (ICE) vehicle is $2,500."
     }
   },
   {

@@ -21,6 +21,7 @@ import {
   CT_RELATIONSHIPS,
   INCENTIVE_RELATIONSHIPS_SCHEMA,
   IncentiveRelationships,
+  VT_RELATIONSHIPS,
 } from '../../src/data/state_incentive_relationships';
 import {
   AZ_INCENTIVES,
@@ -38,7 +39,11 @@ import {
   VT_INCENTIVES_SCHEMA,
 } from '../../src/data/state_incentives';
 import { SCHEMA as SMFI_SCHEMA, STATE_MFIS } from '../../src/data/state_mfi';
-import { TAX_BRACKETS, SCHEMA as TB_SCHEMA } from '../../src/data/tax_brackets';
+import {
+  FilingStatus,
+  TAX_BRACKETS,
+  SCHEMA as TB_SCHEMA,
+} from '../../src/data/tax_brackets';
 
 import Ajv from 'ajv/dist/2020';
 import { SomeJSONSchema } from 'ajv/dist/types/json-schema';
@@ -89,6 +94,7 @@ const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
 
 const STATE_INCENTIVE_RELATIONSHIP_TESTS: [string, IncentiveRelationships][] = [
   ['CT', CT_RELATIONSHIPS],
+  ['VT', VT_RELATIONSHIPS],
 ];
 
 /**
@@ -123,6 +129,7 @@ test('state incentives JSON files match schemas', async tap => {
 
     // Validate that each incentive has a unique ID.
     const incentiveIds = new Set<string>();
+    const incentiveToTaxFiling = new Map<string, Set<FilingStatus>>();
 
     // Check some constraints that aren't expressed in JSON schema
     data.forEach((incentive, index) => {
@@ -150,7 +157,11 @@ test('state incentives JSON files match schemas', async tap => {
         `nonexistent authority (${stateId}, id ${incentive.id}, index ${index})`,
       );
 
-      tap.equal(incentiveIds.has(incentive.id), false);
+      // Allow duplicate incentive IDs if we split one incentive into multiple due
+      // to tax filing status
+      if (incentive.filing_status === null) {
+        tap.equal(incentiveIds.has(incentive.id), false);
+      }
       incentiveIds.add(incentive.id);
     });
   });

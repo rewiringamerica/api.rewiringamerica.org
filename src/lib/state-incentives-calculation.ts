@@ -122,6 +122,32 @@ export function calculateStateIncentivesAndSavings(
       }
     }
 
+    if (item.agi_max_limit) {
+      if (item.agi_min_limit) {
+        if (
+          Number(request.household_income) < item.agi_min_limit ||
+          Number(request.household_income) >= item.agi_max_limit
+        ) {
+          eligible = false;
+        }
+      }
+      if (Number(request.household_income) >= Number(item.agi_max_limit)) {
+        eligible = false;
+      }
+    }
+
+    if (item.agi_min_limit) {
+      if (Number(request.household_income) < item.agi_min_limit) {
+        eligible = false;
+      }
+    }
+
+    if (item.filing_status) {
+      if (item.filing_status !== request.tax_filing) {
+        eligible = false;
+      }
+    }
+
     if (eligible) {
       eligibleIncentives.set(item.id, item);
     } else {
@@ -204,9 +230,9 @@ function transformItems(
 
       // Fill in fields expected for IRA incentive.
       // TODO: don't require these on APIIncentive
-      agi_max_limit: null,
+      agi_max_limit: item.agi_max_limit ?? null,
       ami_qualification: null,
-      filing_status: null,
+      filing_status: item.filing_status ?? null,
 
       // TODO: unclear whether state/utility incentives always have defined
       // end dates.
