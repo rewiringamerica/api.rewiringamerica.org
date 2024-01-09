@@ -39,11 +39,7 @@ import {
   VT_INCENTIVES_SCHEMA,
 } from '../../src/data/state_incentives';
 import { SCHEMA as SMFI_SCHEMA, STATE_MFIS } from '../../src/data/state_mfi';
-import {
-  FilingStatus,
-  TAX_BRACKETS,
-  SCHEMA as TB_SCHEMA,
-} from '../../src/data/tax_brackets';
+import { TAX_BRACKETS, SCHEMA as TB_SCHEMA } from '../../src/data/tax_brackets';
 
 import Ajv from 'ajv/dist/2020';
 import { SomeJSONSchema } from 'ajv/dist/types/json-schema';
@@ -129,7 +125,6 @@ test('state incentives JSON files match schemas', async tap => {
 
     // Validate that each incentive has a unique ID.
     const incentiveIds = new Set<string>();
-    const incentiveToTaxFiling = new Map<string, Set<FilingStatus>>();
 
     // Check some constraints that aren't expressed in JSON schema
     data.forEach((incentive, index) => {

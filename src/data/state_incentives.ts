@@ -14,8 +14,8 @@ export type LowIncomeAuthority = 'default' | RILowIncomeAuthority;
 
 export type StateIncentive = {
   id: string;
-  agi_max_limit: number | null;
-  agi_min_limit: number | null;
+  agi_max_limit?: number;
+  agi_min_limit?: number;
   authority_type: AuthorityType;
   authority: string;
   type: PaymentMethod; // Deprecated; we are switching to use payment_methods instead
@@ -29,7 +29,7 @@ export type StateIncentive = {
   end_date: number;
   short_description: LocalizableString;
   low_income?: LowIncomeAuthority;
-  filing_status: FilingStatus | null;
+  filing_status?: FilingStatus;
 };
 
 export type StateIncentivesMap = {
