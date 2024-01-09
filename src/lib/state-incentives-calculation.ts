@@ -230,9 +230,7 @@ function transformItems(
 
       // Fill in fields expected for IRA incentive.
       // TODO: don't require these on APIIncentive
-      agi_max_limit: item.agi_max_limit ?? null,
       ami_qualification: null,
-      filing_status: item.filing_status ?? null,
 
       // TODO: unclear whether state/utility incentives always have defined
       // end dates.
