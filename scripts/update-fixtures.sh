@@ -108,6 +108,12 @@ curl \
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=40000\
+&tax_filing=joint\
+&household_size=1\
+&authority_types=state\
+&authority_types=utility\
+&utility=vt-burlington-electric-department" \
+  | jq . > test/fixtures/v1-vt-05401-state-utility-lowincome.json
 
 # TODO: Remove beta states argument when CO is fully launched.
 curl \
@@ -120,8 +126,8 @@ curl \
 &household_size=1\
 &authority_types=state\
 &authority_types=utility\
-&utility=vt-burlington-electric-department" \
-  | jq . > test/fixtures/v1-vt-05401-state-utility-lowincome.json
+&utility=co-walking-mountains" \
+  | jq . > test/fixtures/v1-co-81657-state-utility-lowincome.json
 
 curl \
   "http://localhost:3000/api/v1/calculator\
@@ -131,5 +137,3 @@ curl \
 &tax_filing=joint\
 &household_size=4" \
   | jq . > test/fixtures/v1-15289-homeowner-80000-joint-4.json
-&utility=co-walking-mountains" \
-  | jq . > test/fixtures/v1-co-81657-state-utility-lowincome.json
