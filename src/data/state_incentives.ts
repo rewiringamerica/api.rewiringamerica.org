@@ -94,6 +94,14 @@ const requiredProperties = [
   'short_description',
 ] as const;
 
+export const STATE_SCHEMA: JSONSchemaType<StateIncentive> = {
+  type: 'object',
+  properties: {
+    ...incentivePropertySchema,
+  },
+  required: requiredProperties,
+} as const;
+
 /******************************************************************************/
 /* State-specific types/schemas                                               */
 /******************************************************************************/
