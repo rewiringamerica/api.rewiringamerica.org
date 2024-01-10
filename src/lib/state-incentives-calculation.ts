@@ -122,24 +122,17 @@ export function calculateStateIncentivesAndSavings(
       }
     }
 
-    if (item.agi_max_limit) {
-      if (item.agi_min_limit) {
-        if (
-          Number(request.household_income) < item.agi_min_limit ||
-          Number(request.household_income) >= item.agi_max_limit
-        ) {
-          eligible = false;
-        }
-      }
-      if (Number(request.household_income) >= Number(item.agi_max_limit)) {
-        eligible = false;
-      }
+    if (
+      item.agi_max_limit &&
+      Number(request.household_income) >= item.agi_max_limit
+    ) {
+      eligible = false;
     }
-
-    if (item.agi_min_limit) {
-      if (Number(request.household_income) < item.agi_min_limit) {
-        eligible = false;
-      }
+    if (
+      item.agi_min_limit &&
+      Number(request.household_income) < item.agi_min_limit
+    ) {
+      eligible = false;
     }
 
     if (item.filing_status) {
