@@ -5,7 +5,7 @@ import { SpreadsheetStandardizer } from '../../scripts/lib/spreadsheet-standardi
 test('correct row to record transformation', async tap => {
   const testCases: {
     input: Record<string, string>;
-    want: Record<string, string | number | object>;
+    want: Record<string, string | number | object | boolean>;
   }[] = [
     {
       input: {
@@ -19,7 +19,7 @@ test('correct row to record transformation', async tap => {
         'Technology*': 'Heat Pump Dryers / Clothes Dryer',
         "Technology (If selected 'Other')": '',
         'Program Description (guideline)':
-          'Receive a $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',
+          'Receive a $50 rebate for an Energy Star certified electric ventless\n or vented clothes dryer from an approved retailer',
         'Program Status': 'Active',
         'Program Start (MM/DD/YYYY)': '1/1/2022',
         'Program End (MM/DD/YYYY)': '12/31/2026',
@@ -31,7 +31,7 @@ test('correct row to record transformation', async tap => {
         'Amount Minimum': '',
         'Amount Maximum': '',
         'Amount Representative (only for average values)': '',
-        'Bonus Description': '',
+        'Bonus Description': 'Here is some bonus information',
         'Equipment Standards Restrictions': 'Must be ENERGY STAR certified.',
         'Equipment Capacity Restrictions': '',
         'Contractor Restrictions': '',
@@ -51,7 +51,7 @@ test('correct row to record transformation', async tap => {
         item: 'heat_pump_clothes_dryer',
         payment_methods: ['rebate'],
         program:
-          'va_appalachianPowertakeChargeVirginiaEfficientProductsProgram',
+          'va_appalachianPower_takeChargeVirginiaEfficientProductsProgram',
         amount: {
           type: 'dollar_amount',
           number: 50,
@@ -64,6 +64,7 @@ test('correct row to record transformation', async tap => {
         },
         start_date: 2022,
         end_date: 2026,
+        bonus_available: true,
       },
     },
   ];

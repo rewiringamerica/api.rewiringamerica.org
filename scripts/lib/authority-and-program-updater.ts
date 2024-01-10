@@ -69,6 +69,7 @@ export function createProgramName(
     state.toLowerCase() +
     '_' +
     lowerCamelCase(authorityName.replaceAll('.', '')) +
+    '_' +
     lowerCamelCase(programName.replaceAll('.', ''))
   );
 }
