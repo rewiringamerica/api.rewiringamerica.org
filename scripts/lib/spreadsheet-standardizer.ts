@@ -1,4 +1,5 @@
 import { AuthorityType } from '../../src/data/authorities';
+import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../../src/data/low_income_thresholds';
 import { AmountType, AmountUnit } from '../../src/data/types/amount';
 import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { ITEMS_SCHEMA, Item } from '../../src/data/types/items';
@@ -53,13 +54,14 @@ export class SpreadsheetStandardizer {
     state: string,
     record: Record<string, string>,
   ): Record<string, string | number | object | boolean> {
+    const authorityName = createAuthorityName(state, record.authority_name);
     const output: Record<string, string | number | object | boolean> = {
       id: record.id,
       authority_type: coerceToStandardValue(
         record.authority_level,
         getEnumValues(Object.values(AuthorityType)),
       ),
-      authority: createAuthorityName(state, record.authority_name),
+      authority: authorityName,
       type: coerceToStandardValue(
         record.rebate_type.split(',')[0],
         getEnumValues(Object.values(PaymentMethod)),
@@ -94,6 +96,16 @@ export class SpreadsheetStandardizer {
     ) {
       output.bonus_available = true;
     }
+    if (isPlausibleLowIncomeRow(record)) {
+      const low_income_program = retrieveLowIncomeProgram(authorityName, state);
+      if (low_income_program === undefined) {
+        console.log(
+          `Warning: no low-income thresholds found for ${record.id} despite references to income eligiblity in description or income restrictions columns. This either means: 1) it should use the 'default' thresholds, or 2) you need to define thresholds for it, or 3) it's not a low-income row and no action is necessary.`,
+        );
+      } else {
+        output.low_income = authorityName;
+      }
+    }
 
     return output;
   }
@@ -120,6 +132,29 @@ function standardizeDescription(desc: string): string {
     desc = desc + '.';
   }
   return desc;
+}
+
+function isPlausibleLowIncomeRow(record: Record<string, string>) {
+  if (
+    record.income_restrictions !== undefined &&
+    record.income_restrictions !== ''
+  ) {
+    return true;
+  }
+  if (
+    record.short_description !== undefined &&
+    record.short_description.toLowerCase().includes('income')
+  ) {
+    return true;
+  }
+  return false;
+}
+
+function retrieveLowIncomeProgram(authority: string, state: string) {
+  if (LOW_INCOME_THRESHOLDS_BY_AUTHORITY[state] === undefined) {
+    throw new Error(`${state} does not have income thresholds defined`);
+  }
+  return authority in LOW_INCOME_THRESHOLDS_BY_AUTHORITY[state];
 }
 
 // Take an input map from string -> string[] and reverse it,
