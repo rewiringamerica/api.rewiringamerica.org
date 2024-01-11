@@ -4,6 +4,7 @@ import fs from 'fs';
 import fetch from 'make-fetch-happen';
 import minimist from 'minimist';
 
+import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../src/data/low_income_thresholds';
 import { STATE_SCHEMA, StateIncentive } from '../src/data/state_incentives';
 import { LOCALIZABLE_STRING_SCHEMA } from '../src/data/types/localizable-string';
 import { FILES, IncentiveFile } from './incentive-spreadsheet-registry';
@@ -19,6 +20,11 @@ async function convertToJson(
   file: IncentiveFile,
   strict: boolean,
 ) {
+  if (strict && !(state in LOW_INCOME_THRESHOLDS_BY_AUTHORITY)) {
+    throw new Error(
+      `No low-income thresholds defined for ${state} - define them or turn off strict mode.`,
+    );
+  }
   const response = await fetch(file.sheetUrl);
   const csvContent = await response.text();
   const rows = parse(csvContent, {

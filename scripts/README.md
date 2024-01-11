@@ -33,10 +33,12 @@ data/authorities.json
 data/programs.ts
 src/data/programs.ts
 
-After running, you may need to edit these files to put states in alphabetical order. Note that running this script twice will paste the same values twice.
-
 Usage:
 `node build/scripts/generate-misc-state-data.js <state_id>`
+
+After running, you may need to edit these files to put states in alphabetical order. Note that running this script twice will paste the same values twice.
+
+It's recommended to also define low-income thresholds in `data/low_income_thresholds.json` for your state to save time in the next step.
 
 1. `incentive-spreadsheet-to-json.js` reads the spreadsheet and tries to convert it to JSON. This can be a messy process – spreadsheets may not have the correct column names or values. The script tries to handle small string discrepancies itself because making edits to Google sheets has a 5-minute delay before changes are reflected, but ultimately even with the script's help, this may be a painstaking process.
 

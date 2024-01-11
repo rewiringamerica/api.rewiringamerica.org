@@ -1,5 +1,8 @@
 import { AuthorityType } from '../../src/data/authorities';
-import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../../src/data/low_income_thresholds';
+import {
+  LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
+  LowIncomeThresholdsMap,
+} from '../../src/data/low_income_thresholds';
 import { AmountType, AmountUnit } from '../../src/data/types/amount';
 import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { ITEMS_SCHEMA, Item } from '../../src/data/types/items';
@@ -14,19 +17,23 @@ import { FIELD_MAPPINGS, VALUE_MAPPINGS } from './spreadsheet-mappings';
 export class SpreadsheetStandardizer {
   private fieldMap: { [index: string]: string };
   private strict: boolean;
+  private lowIncomeThresholds: LowIncomeThresholdsMap;
 
   /**
    * @param fieldMap: a map from canonical name to all of the aliases it might appear as in the Google spreadsheets
    * @param strict: whether to throw an error on aliases that aren't found
+   * @param lowIncomeThresholds: state-segmented income thresholds
    */
   constructor(
     fieldMap: { [index: string]: string[] } = FIELD_MAPPINGS,
     strict: boolean = true,
+    lowIncomeThresholds: LowIncomeThresholdsMap = LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
   ) {
     // We reverse the input map for easier runtime use, since
     // we need to go from alias back to canonical name.
     this.fieldMap = reverseMap(fieldMap);
     this.strict = strict;
+    this.lowIncomeThresholds = lowIncomeThresholds;
   }
 
   // Convert a row with possible column aliases to a canonical column name.
@@ -97,17 +104,30 @@ export class SpreadsheetStandardizer {
       output.bonus_available = true;
     }
     if (isPlausibleLowIncomeRow(record)) {
-      const low_income_program = retrieveLowIncomeProgram(authorityName, state);
-      if (low_income_program === undefined) {
+      const low_income_program = this.retrieveLowIncomeProgram(
+        authorityName,
+        state,
+      );
+      if (low_income_program) {
+        output.low_income = authorityName;
+      } else if (low_income_program === undefined) {
+        // This is checked up front by the caller rather than
+        // at the row level to avoid spamming error messages.
+      } else {
         console.log(
           `Warning: no low-income thresholds found for ${record.id} despite references to income eligiblity in description or income restrictions columns. This either means: 1) it should use the 'default' thresholds, or 2) you need to define thresholds for it, or 3) it's not a low-income row and no action is necessary.`,
         );
-      } else {
-        output.low_income = authorityName;
       }
     }
 
     return output;
+  }
+
+  retrieveLowIncomeProgram(authority: string, state: string) {
+    if (this.lowIncomeThresholds[state] === undefined) {
+      return undefined;
+    }
+    return authority in this.lowIncomeThresholds[state];
   }
 }
 
@@ -148,13 +168,6 @@ function isPlausibleLowIncomeRow(record: Record<string, string>) {
     return true;
   }
   return false;
-}
-
-function retrieveLowIncomeProgram(authority: string, state: string) {
-  if (LOW_INCOME_THRESHOLDS_BY_AUTHORITY[state] === undefined) {
-    throw new Error(`${state} does not have income thresholds defined`);
-  }
-  return authority in LOW_INCOME_THRESHOLDS_BY_AUTHORITY[state];
 }
 
 // Take an input map from string -> string[] and reverse it,
