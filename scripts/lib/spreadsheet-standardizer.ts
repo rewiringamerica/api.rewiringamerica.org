@@ -79,7 +79,7 @@ export class SpreadsheetStandardizer {
       amount: createAmount(record),
       owner_status: findOwnerStatus(record.owner_status),
       short_description: {
-        en: record.program_description,
+        en: standardizeDescription(record.program_description),
       },
     };
     if (record.program_start !== undefined && record.program_start !== '') {
@@ -92,7 +92,7 @@ export class SpreadsheetStandardizer {
       record.bonus_description !== undefined &&
       record.bonus_description !== ''
     ) {
-      output.bonus_description = true;
+      output.bonus_available = true;
     }
 
     return output;
@@ -112,6 +112,14 @@ function cleanFieldName(field: string): string {
     .replace(wordSeparators, '')
     .trim()
     .toLowerCase();
+}
+
+function standardizeDescription(desc: string): string {
+  desc = desc.replace('\n', '').trim();
+  if (!desc.endsWith('.')) {
+    desc = desc + '.';
+  }
+  return desc;
 }
 
 // Take an input map from string -> string[] and reverse it,

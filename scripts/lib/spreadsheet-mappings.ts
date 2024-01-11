@@ -65,7 +65,7 @@ export const VALUE_MAPPINGS = {
     'Heat Pump Dryers / clothes dryer': 'heat_pump_clothes_dryer',
     'Electric Stove': 'electric_stove',
     'Weatherization (insulation and air sealing)': 'weatherization',
-    'Electric wiring': 'weatherization',
+    'Electric wiring': 'electric_panel',
     'Electric panel': 'electric_panel',
     'Electric lawn equipment (mower, edger, leaf blower, weedwhacker)':
       'electric_outdoor_equipment',
