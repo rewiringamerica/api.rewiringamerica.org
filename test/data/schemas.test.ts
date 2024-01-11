@@ -21,6 +21,7 @@ import {
   CT_RELATIONSHIPS,
   INCENTIVE_RELATIONSHIPS_SCHEMA,
   IncentiveRelationships,
+  VT_RELATIONSHIPS,
 } from '../../src/data/state_incentive_relationships';
 import {
   AZ_INCENTIVES,
@@ -89,6 +90,7 @@ const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
 
 const STATE_INCENTIVE_RELATIONSHIP_TESTS: [string, IncentiveRelationships][] = [
   ['CT', CT_RELATIONSHIPS],
+  ['VT', VT_RELATIONSHIPS],
 ];
 
 /**
@@ -150,7 +152,11 @@ test('state incentives JSON files match schemas', async tap => {
         `nonexistent authority (${stateId}, id ${incentive.id}, index ${index})`,
       );
 
-      tap.equal(incentiveIds.has(incentive.id), false);
+      // Allow duplicate incentive IDs if we split one incentive into multiple due
+      // to tax filing status
+      if (incentive.filing_status === null) {
+        tap.equal(incentiveIds.has(incentive.id), false);
+      }
       incentiveIds.add(incentive.id);
     });
   });

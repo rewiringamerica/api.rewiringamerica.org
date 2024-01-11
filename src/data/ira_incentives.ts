@@ -17,12 +17,12 @@ export enum AmiQualification {
 
 export interface IRAIncentive {
   id: string;
-  agi_max_limit: number | null;
+  agi_max_limit?: number;
   ami_qualification: AmiQualification | null;
   amount: Amount;
   authority_type: AuthorityType.Federal;
   end_date: number;
-  filing_status: FilingStatus | null;
+  filing_status?: FilingStatus;
   item: Item;
   owner_status: OwnerStatus[];
   program: string;
@@ -86,11 +86,12 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
         type: 'string',
         enum: Object.values(AmiQualification),
       }),
-      agi_max_limit: nullable({ type: 'integer' }),
-      filing_status: nullable({
+      agi_max_limit: { type: 'integer', nullable: true },
+      filing_status: {
         type: 'string',
         enum: Object.values(FilingStatus),
-      }),
+        nullable: true,
+      },
       start_date: { type: 'number' },
       end_date: { type: 'number' },
       short_description: {
@@ -99,12 +100,10 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
     },
     required: [
       'id',
-      'agi_max_limit',
       'ami_qualification',
       'amount',
       'authority_type',
       'end_date',
-      'filing_status',
       'item',
       'owner_status',
       'program',
