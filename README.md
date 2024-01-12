@@ -67,12 +67,14 @@ As of November 2023, our highest priority efforts are:
 
 ### Scope of Incentives data collected
 
-Aligning to our mission, the scope of the incentive data we have collected so far is representative of the following household types and technologies. 
+Aligning to our mission, the scope of the incentive data we have collected so far is representative of the following household types and technologies.
 
 **In Scope Household Type:**
+
 - Only Residential and Single-family households
 
 **Technology (Appliances / Product):**
+
 - Heat pumps (heating and cooling) HVAC (includes all types of heat pumps such as Air-to-water heat pumps, Ductless heat pumps, Ducted heat pumps, Air source heat pumps, Mini-split heat pumps)
 - Geothermal / Ground Source Heat Pump
 - Heat Pump Water Heater (HPWH)
