@@ -1,8 +1,5 @@
 import { AuthorityType } from '../../src/data/authorities';
-import {
-  LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
-  LowIncomeThresholdsMap,
-} from '../../src/data/low_income_thresholds';
+import { LowIncomeThresholdsMap } from '../../src/data/low_income_thresholds';
 import { AmountType, AmountUnit } from '../../src/data/types/amount';
 import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { ITEMS_SCHEMA, Item } from '../../src/data/types/items';
@@ -17,17 +14,17 @@ import { FIELD_MAPPINGS, VALUE_MAPPINGS } from './spreadsheet-mappings';
 export class SpreadsheetStandardizer {
   private fieldMap: { [index: string]: string };
   private strict: boolean;
-  private lowIncomeThresholds: LowIncomeThresholdsMap;
+  private lowIncomeThresholds: LowIncomeThresholdsMap | null;
 
   /**
    * @param fieldMap: a map from canonical name to all of the aliases it might appear as in the Google spreadsheets
    * @param strict: whether to throw an error on aliases that aren't found
-   * @param lowIncomeThresholds: state-segmented income thresholds
+   * @param lowIncomeThresholds: state-segmented income thresholds. If empty, the script won't try to associate records with low-income programs.
    */
   constructor(
     fieldMap: { [index: string]: string[] } = FIELD_MAPPINGS,
     strict: boolean = true,
-    lowIncomeThresholds: LowIncomeThresholdsMap = LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
+    lowIncomeThresholds: LowIncomeThresholdsMap | null = null,
   ) {
     // We reverse the input map for easier runtime use, since
     // we need to go from alias back to canonical name.
@@ -103,7 +100,7 @@ export class SpreadsheetStandardizer {
     ) {
       output.bonus_available = true;
     }
-    if (isPlausibleLowIncomeRow(record)) {
+    if (this.lowIncomeThresholds && isPlausibleLowIncomeRow(record)) {
       const low_income_program = this.retrieveLowIncomeProgram(
         authorityName,
         state,
@@ -124,10 +121,10 @@ export class SpreadsheetStandardizer {
   }
 
   retrieveLowIncomeProgram(authority: string, state: string) {
-    if (this.lowIncomeThresholds[state] === undefined) {
+    if (this.lowIncomeThresholds![state] === undefined) {
       return undefined;
     }
-    return authority in this.lowIncomeThresholds[state];
+    return authority in this.lowIncomeThresholds![state];
   }
 }
 

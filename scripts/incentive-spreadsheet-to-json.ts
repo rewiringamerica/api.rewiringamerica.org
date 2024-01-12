@@ -19,8 +19,9 @@ async function convertToJson(
   state: string,
   file: IncentiveFile,
   strict: boolean,
+  lowIncome: boolean,
 ) {
-  if (strict && !(state in LOW_INCOME_THRESHOLDS_BY_AUTHORITY)) {
+  if (lowIncome && !(state in LOW_INCOME_THRESHOLDS_BY_AUTHORITY)) {
     throw new Error(
       `No low-income thresholds defined for ${state} - define them or turn off strict mode.`,
     );
@@ -32,7 +33,11 @@ async function convertToJson(
     from_line: file.headerRowNumber ?? 1,
   });
 
-  const converter = new SpreadsheetStandardizer(FIELD_MAPPINGS, strict);
+  const converter = new SpreadsheetStandardizer(
+    FIELD_MAPPINGS,
+    strict,
+    lowIncome ? LOW_INCOME_THRESHOLDS_BY_AUTHORITY : null,
+  );
   const invalids: Record<string, string | number | boolean | object>[] = [];
   const jsons: StateIncentive[] = [];
   rows.forEach((row: Record<string, string>) => {
@@ -61,7 +66,9 @@ async function convertToJson(
 }
 
 (async function () {
-  const args = minimist(process.argv.slice(2), { boolean: ['strict'] });
+  const args = minimist(process.argv.slice(2), {
+    boolean: ['strict', 'skip_low_income'],
+  });
 
   const bad = args._.filter(f => !(f in FILES));
   if (bad.length) {
@@ -71,7 +78,12 @@ async function convertToJson(
     process.exit(1);
   }
 
+  // Flip boolean so we can have low-income be the default
+  // command-line arg, but then pass around a more intuitive
+  // boolean after that.
+  const lowIncome = args.skip_low_income ? false : true;
+
   args._.forEach(async fileIdent => {
-    await convertToJson(fileIdent, FILES[fileIdent], args.strict);
+    await convertToJson(fileIdent, FILES[fileIdent], args.strict, lowIncome);
   });
 })();
