@@ -63,6 +63,8 @@ As of November 2023, our highest priority efforts are:
 - Using those processes to expand coverage of state, local, and utility incentives nationwide.
 - Adapting our representation of incentives to be able to capture all the various details and nuances of incentives, in a structured way. This includes income limits, time limits, stacking and mutual exclusion, and so on.
 
+## Data
+
 ## Contributing
 
 :construction: **Our capacity to accept contributions is limited.** We're not currently set up for external contributions of new incentive data, though we're working towards it.
