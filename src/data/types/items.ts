@@ -23,8 +23,13 @@ export const LAUNCHED_ITEMS_SCHEMA = {
 export const BETA_ITEMS_SCHEMA = {
   ebike: { type: 'string' },
   electric_outdoor_equipment: { type: 'string' },
+  electric_thermal_storage_and_slab: { type: 'string' },
+  evaporative_cooler: { type: 'string' },
+  non_heat_pump_clothes_dryer: { type: 'string' },
+  non_heat_pump_water_heater: { type: 'string' },
   other: { type: 'string' },
   smart_thermostat: { type: 'string' },
+  whole_house_fan: { type: 'string' },
 } as const;
 
 export const ITEMS_SCHEMA = { ...LAUNCHED_ITEMS_SCHEMA, ...BETA_ITEMS_SCHEMA };
