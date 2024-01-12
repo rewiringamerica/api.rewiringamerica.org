@@ -69,7 +69,7 @@ As of November 2023, our highest priority efforts are:
 
 Aligning to our mission, the scope of the incentive data we have collected so far is representative of the following household types and technologies.
 
-**In Scope Household Type:**
+**Household Type:**
 
 - Only Residential and Single-family households
 
