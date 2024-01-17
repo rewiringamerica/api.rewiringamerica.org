@@ -30,6 +30,7 @@ export const FIELD_MAPPINGS: { [index: string]: string[] } = {
   other_restrictions: ['Other Restrictions'],
   stacking_details: ['Stacking Details'],
   financing_details: ['Financing Details'],
+  editorial_notes: ['Editorial Notes'],
 };
 
 // Note: this is from alias to canonical name, which is the reverse of

@@ -3,6 +3,7 @@ import { parse } from 'csv-parse/sync';
 import fs from 'fs';
 import fetch from 'make-fetch-happen';
 import minimist from 'minimist';
+import path from 'path';
 
 import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../src/data/low_income_thresholds';
 import { STATE_SCHEMA, StateIncentive } from '../src/data/state_incentives';
@@ -53,16 +54,26 @@ async function convertToJson(
     }
   });
 
+  const dir = path.dirname(file.filepath);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir);
   fs.writeFileSync(
     file.filepath,
     JSON.stringify(jsons, null, 2) + '\n', // include newline to satisfy prettier
     'utf-8',
   );
-  fs.writeFileSync(
-    file.filepath.replace('.json', '_invalid.json'),
-    JSON.stringify(invalids, null, 2) + '\n', // include newline to satisfy prettier
-    'utf-8',
-  );
+  const invalidsFilePath = file.filepath.replace('.json', '_invalid.json');
+  if (invalids.length === 0) {
+    if (fs.existsSync(invalidsFilePath)) {
+      // Clear any previous versions if we have no invalid records.
+      fs.unlinkSync(invalidsFilePath);
+    }
+  } else {
+    fs.writeFileSync(
+      invalidsFilePath,
+      JSON.stringify(invalids, null, 2) + '\n', // include newline to satisfy prettier
+      'utf-8',
+    );
+  }
 }
 
 (async function () {
