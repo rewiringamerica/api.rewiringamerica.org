@@ -56,7 +56,7 @@ export const ALL_PROGRAMS = [
   // Platte River Power Authority
   'co_platteRiverPowerAuthority_efficiencyWorks',
   // Empire Electric Association and Tri-State Generation and Transmission Association, Inc.
-  'co_empireElectricAssociationAndTri-StateGenerationAndTransmissionAssociation,Inc_eNERGYEFFICIENCYPRODUCTSPROGRAM',
+  'co_empireElectricAssociationAndTri-StateGenerationAndTransmissionAssociation,Inc_energyEfficiencyProductsProgram',
   // Energy Outreach Colorado
   'co_energyOutreachColorado_weatherizationAssistanceProgram',
   // Gunnison County Electric
