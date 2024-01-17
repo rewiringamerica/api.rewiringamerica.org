@@ -72,6 +72,11 @@ export const VALUE_MAPPINGS = {
     'Smart Thermostat': 'smart_thermostat',
     'E-Bike': 'ebike',
     'Induction Cooktop': 'electric_stove',
+    'Electric Thermal Storage/Slab': 'electric_thermal_storage_and_slab',
+    'Evaporative Cooler': 'evaporative_cooler',
+    'Non-Heat Pump Clothes Dryer': 'non_heat_pump_clothes_dryer',
+    'Non-Heat Pump Water Heater': 'non_heat_pump_water_heater',
+    'Whole House Fan': 'whole_house_fan',
     Other: 'other',
   },
   amount_type: {
