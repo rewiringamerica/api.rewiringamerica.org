@@ -19,7 +19,7 @@ test('correct row to record transformation', async tap => {
         'Technology*': 'Heat Pump Dryers / Clothes Dryer',
         "Technology (If selected 'Other')": '',
         'Program Description (guideline)':
-          'Receive a $50 rebate for an Energy Star certified electric ventless\n or vented clothes dryer from an approved retailer',
+          'Receive a $50 rebate for an Energy Star certified electric ventless\nor vented\nclothes dryer from an approved retailer',
         'Program Status': 'Active',
         'Program Start (MM/DD/YYYY)': '1/1/2022',
         'Program End (MM/DD/YYYY)': '12/31/2026',
