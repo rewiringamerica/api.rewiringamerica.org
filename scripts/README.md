@@ -42,8 +42,6 @@ It's recommended to also define low-income thresholds in `data/low_income_thresh
 
 1. `incentive-spreadsheet-to-json.js` reads the spreadsheet and tries to convert it to JSON. This can be a messy process – spreadsheets may not have the correct column names or values. The script tries to handle small string discrepancies itself because making edits to Google sheets has a 5-minute delay before changes are reflected, but ultimately even with the script's help, this may be a painstaking process.
 
-Make a state directory under `/data` to store the JSON if not already done, then:
-
 Usage:
 `node build/scripts/incentive-spreadsheet-to-json.js --strict CO`
 
