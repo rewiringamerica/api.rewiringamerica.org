@@ -112,7 +112,7 @@ export class SpreadsheetStandardizer {
         // at the row level to avoid spamming error messages.
       } else {
         console.log(
-          `Warning: no low-income thresholds found for ${record.id} despite references to income eligiblity in description or income restrictions columns. This either means: 1) it should use the 'default' thresholds, or 2) you need to define thresholds for it, or 3) it's not a low-income row and no action is necessary.`,
+          `Warning: no low-income thresholds found for ${record.id} despite references to income eligiblity in description or income restrictions columns. This either means: 1) manually set this field in the JSON to 'default' to use a state's default thresholds (must be defined), or 2) you need to define program-specific thresholds for it, or 3) it's not actually a low-income row and no action is necessary.`,
         );
       }
     }
@@ -144,7 +144,7 @@ function cleanFieldName(field: string): string {
 }
 
 function standardizeDescription(desc: string): string {
-  desc = desc.replace('\n', '').trim();
+  desc = desc.replaceAll('\n', ' ').trim();
   if (!desc.endsWith('.')) {
     desc = desc + '.';
   }
