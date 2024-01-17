@@ -30,6 +30,9 @@ export const FIELD_MAPPINGS: { [index: string]: string[] } = {
   other_restrictions: ['Other Restrictions'],
   stacking_details: ['Stacking Details'],
   financing_details: ['Financing Details'],
+  // This contains notes about why we might not serve a record in the API.
+  // It may not appear in all spreadsheets.
+  editorial_notes: ['Editorial Notes'],
 };
 
 // Note: this is from alias to canonical name, which is the reverse of
