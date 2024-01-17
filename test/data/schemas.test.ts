@@ -19,6 +19,7 @@ import {
 } from '../../src/data/low_income_thresholds';
 import { SOLAR_PRICES, SCHEMA as SP_SCHEMA } from '../../src/data/solar_prices';
 import {
+  CO_RELATIONSHIPS,
   CT_RELATIONSHIPS,
   INCENTIVE_RELATIONSHIPS_SCHEMA,
   IncentiveRelationships,
@@ -96,6 +97,7 @@ const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
 ];
 
 const STATE_INCENTIVE_RELATIONSHIP_TESTS: [string, IncentiveRelationships][] = [
+  ['CO', CO_RELATIONSHIPS],
   ['CT', CT_RELATIONSHIPS],
   ['VT', VT_RELATIONSHIPS],
 ];
