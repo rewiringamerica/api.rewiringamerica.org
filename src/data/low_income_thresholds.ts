@@ -19,6 +19,14 @@ export type LowIncomeThresholds = {
 };
 
 // Add custom state low income authorities here
+export enum COLowIncomeAuthority {
+  DENVER = 'co-city-and-county-of-denver',
+  ENERGY_OUTREACH = 'co-energy-outreach-colorado',
+  ENERGY_OFFICE = 'co-colorado-energy-office',
+  BOULDER = 'co-city-of-boulder',
+  WALKING_MOUNTAINS = 'co-walking-mountains',
+}
+
 export enum RILowIncomeAuthority {
   DHS = 'ri-dhs',
   ENERGY = 'ri-rhode-island-energy',
@@ -51,6 +59,9 @@ export const STATE_THRESHOLDS_SCHEMA: JSONSchemaType<StateLowIncomeThresholds> =
       RI: {
         required: Object.values(RILowIncomeAuthority),
       },
+      CO: {
+        required: Object.values(COLowIncomeAuthority),
+      },
     },
     additionalProperties: AUTHORITY_INFO_SCHEMA,
   };
@@ -58,7 +69,7 @@ export const STATE_THRESHOLDS_SCHEMA: JSONSchemaType<StateLowIncomeThresholds> =
 // Keep states in alphabetic order.
 export const SCHEMA: JSONSchemaType<LowIncomeThresholdsMap> = {
   type: 'object',
-  required: ['AZ', 'CT', 'NY', 'RI', 'VA', 'VT'],
+  required: ['AZ', 'CO', 'CT', 'NY', 'RI', 'VA', 'VT'],
   additionalProperties: STATE_THRESHOLDS_SCHEMA,
 };
 

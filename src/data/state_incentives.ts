@@ -1,7 +1,10 @@
 import { JSONSchemaType } from 'ajv';
 import fs from 'fs';
 import { AuthorityType } from './authorities';
-import { RILowIncomeAuthority } from './low_income_thresholds';
+import {
+  COLowIncomeAuthority,
+  RILowIncomeAuthority,
+} from './low_income_thresholds';
 import { ALL_PROGRAMS } from './programs';
 import { FilingStatus } from './tax_brackets';
 import { Amount, AmountType, AmountUnit } from './types/amount';
@@ -10,7 +13,10 @@ import { ALL_ITEMS, Item } from './types/items';
 import { LocalizableString } from './types/localizable-string';
 import { OwnerStatus } from './types/owner-status';
 
-export type LowIncomeAuthority = 'default' | RILowIncomeAuthority;
+export type LowIncomeAuthority =
+  | 'default'
+  | RILowIncomeAuthority
+  | COLowIncomeAuthority;
 
 export type StateIncentive = {
   id: string;
@@ -121,6 +127,21 @@ export const AZ_INCENTIVES: StateIncentive[] = JSON.parse(
   fs.readFileSync('./data/AZ/incentives.json', 'utf-8'),
 );
 
+export const CO_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
+  type: 'array',
+  items: {
+    type: 'object',
+    properties: {
+      ...incentivePropertySchema,
+    },
+    required: requiredProperties,
+  },
+} as const;
+
+export const CO_INCENTIVES: StateIncentive[] = JSON.parse(
+  fs.readFileSync('./data/CO/incentives.json', 'utf-8'),
+);
+
 export const CT_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
   type: 'array',
   items: {
@@ -203,6 +224,7 @@ export const VT_INCENTIVES: StateIncentive[] = JSON.parse(
 
 export const STATE_INCENTIVES_BY_STATE: StateIncentivesMap = {
   AZ: AZ_INCENTIVES,
+  CO: CO_INCENTIVES,
   CT: CT_INCENTIVES,
   NY: NY_INCENTIVES,
   RI: RI_INCENTIVES,

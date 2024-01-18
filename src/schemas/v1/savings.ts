@@ -21,6 +21,11 @@ export const API_SAVINGS_SCHEMA = {
       description:
         'This may represent no-cost products or services rather than a monetary value.',
     },
+    unknown: {
+      type: 'integer',
+      description:
+        'For rebate types where we were not able to determine the method of payment.',
+    },
   },
   required: [
     'pos_rebate',
