@@ -38,6 +38,32 @@ export type StateIncentive = {
   filing_status?: FilingStatus;
 };
 
+type additionalCollectedFields = {
+  data_urls: string;
+  program_title: string;
+  program_url: string;
+  technology_if_selected_other?: string;
+  program_status: string;
+  program_start_raw?: string;
+  program_end_raw?: string;
+  rebate_value: string;
+  amount_minimum?: number;
+  bonus_description?: string;
+  equipment_standards_restrictions?: string;
+  equipment_capacity_restrictions?: string;
+  contractor_restrictions?: string;
+  income_restrictions?: string;
+  tax_filing_status_restrictions?: string;
+  other_restrictions?: string;
+  stacking_details?: string;
+  financing_details?: string;
+  editorial_notes?: string;
+  serve_in_api?: boolean;
+};
+
+export type CollectedStateIncentive = StateIncentive &
+  additionalCollectedFields;
+
 export type StateIncentivesMap = {
   [stateId: string]: StateIncentive[];
 };
@@ -99,6 +125,46 @@ const requiredProperties = [
   'owner_status',
   'short_description',
 ] as const;
+
+const additionalCollectedFieldsJson = {
+  data_urls: { type: 'string' },
+  program_title: { type: 'string' },
+  program_url: { type: 'string' },
+  technology_if_selected_other: { type: 'string', nullable: true },
+  program_status: { type: 'string' },
+  program_start_raw: { type: 'string', nullable: true },
+  program_end_raw: { type: 'string', nullable: true },
+  rebate_value: { type: 'string' },
+  amount_minimum: { type: 'number', nullable: true },
+  bonus_description: { type: 'string', nullable: true },
+  equipment_standards_restrictions: { type: 'string', nullable: true },
+  equipment_capacity_restrictions: { type: 'string', nullable: true },
+  contractor_restrictions: { type: 'string', nullable: true },
+  income_restrictions: { type: 'string', nullable: true },
+  tax_filing_status_restrictions: { type: 'string', nullable: true },
+  other_restrictions: { type: 'string', nullable: true },
+  stacking_details: { type: 'string', nullable: true },
+  financing_details: { type: 'string', nullable: true },
+  editorial_notes: { type: 'string', nullable: true },
+  serve_in_api: { type: 'boolean', nullable: true },
+} as const;
+const requiredCollectedProperties = [
+  'data_urls',
+  'program_title',
+  'program_url',
+  'program_status',
+  'rebate_value',
+] as const;
+// Remove properties that are generated later and not needed at initial collection.
+const requiredForCollection = requiredProperties.filter(
+  x => !['authority', 'program', 'type'].includes(x),
+);
+
+export const COLLECTED_SCHEMA: JSONSchemaType<CollectedStateIncentive> = {
+  type: 'object',
+  properties: { ...incentivePropertySchema, ...additionalCollectedFieldsJson },
+  required: [...requiredForCollection, ...requiredCollectedProperties],
+} as const;
 
 export const STATE_SCHEMA: JSONSchemaType<StateIncentive> = {
   type: 'object',
