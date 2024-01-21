@@ -33,6 +33,98 @@ export const ALL_PROGRAMS = [
   'az_uniSourceEnergyServicesWeatherizationAssistance',
   'az_uniSourceEnergyServicesEfficientHomeProgram',
 
+  // CO
+  // Black Hills Energy
+  'co_blackHillsEnergy_coloradoElectricResidentialRebates',
+  'co_blackHillsEnergy_electrificationPilotProgram',
+  'co_blackHillsEnergy_readyEVProgram',
+  // Colorado Springs Utilities
+  'co_coloradoSpringsUtilities_residentialEfficiencyRebateProgram',
+  // City and County of Denver
+  'co_cityAndCountyOfDenver_denverClimateActionRebateProgram-HomeEnergyRebates',
+  'co_cityAndCountyOfDenver_denverClimateActionRebateProgram-E-BikeAndE-CargoBikeRebateVouchers',
+  // Fort Collins Utilities
+  'co_fortCollinsUtilities_efficiencyWorks',
+  'co_fortCollinsUtilities_solarRebates',
+  'co_fortCollinsUtilities_solarRebates-ResidentialBatteryStorageProgram',
+  // Longmont Power and Communications
+  'co_longmontPowerAndCommunications_efficiencyWorks',
+  // Estes Park Power and Communications
+  'co_estesParkPowerAndCommunications_efficiencyWorks',
+  // Loveland Water and Power
+  'co_lovelandWaterAndPower_efficiencyWorks',
+  // Platte River Power Authority
+  'co_platteRiverPowerAuthority_efficiencyWorks',
+  // Empire Electric Association and Tri-State Generation and Transmission Association, Inc.
+  'co_empireElectricAssociationAndTri-StateGenerationAndTransmissionAssociation,Inc_energyEfficiencyProductsProgram',
+  // Energy Outreach Colorado
+  'co_energyOutreachColorado_weatherizationAssistanceProgram',
+  // Gunnison County Electric
+  'co_gunnisonCountyElectric_rebates',
+  // Holy Cross Energy
+  'co_holyCrossEnergy_residentialRebates',
+  // La Plata Electric Association
+  'co_laPlataElectricAssociation_electrifyAndSave',
+  // Morgan County REA
+  'co_morganCountyREA_tri-StateG&T',
+  // Mountain View Electric Association
+  'co_mountainViewElectricAssociation_rebates',
+  // Poudre Valley REA
+  'co_poudreValleyREA_rebatesForResidentialCustomers',
+  // San Isabel Electric
+  'co_sanIsabelElectric_sanIsabelElectric',
+  // San Miguel Power Association
+  'co_sanMiguelPowerAssociation_residentialAndCommercialRebates',
+  // Southeast Colorado Power Association
+  'co_southeastColoradoPowerAssociation_tri-StateG&T',
+  // Tri-State G&T
+  'co_tri-StateG&T_tri-StateG&T',
+  // United Power
+  'co_unitedPower_tri-StateG&T',
+  // Xcel Energy
+  'co_xcelEnergy_heatPumpRebates',
+  // Colorado Energy Office
+  'co_coloradoEnergyOffice_electricVehicleTaxCredits',
+  'co_coloradoEnergyOffice_vehicleExchangeColorado(VXC)Program',
+  // State of Colorado
+  'co_stateOfColorado_coloradoHeatPumpIncentives',
+  'co_stateOfColorado_taxCredits',
+  // City of Boulder
+  'co_cityOfBoulder_residentialRebates',
+  'co_cityOfBoulder_solarTaxRebates',
+  // Boulder County
+  'co_boulderCounty_energySmart',
+  'co_boulderCounty_energySmartManufacturedHomesRebates',
+  // Glenwood Springs Electric
+  'co_glenwoodSpringsElectric_sustainabilityProgram2023ElectricRebates',
+  // Highline Electric Association
+  'co_highlineElectricAssociation_rebateProgram',
+  // K.C. Electric Association
+  'co_kCElectricAssociation_rebates',
+  // Mountain Parks Electric
+  'co_mountainParksElectric_rebates',
+  // San Luis Valley REC
+  'co_sanLuisValleyREC_energyEfficiencyRebateProgram',
+  // Sangre de Cristo Electric Association
+  'co_sangreDeCristoElectricAssociation_rebates',
+  // Town of Avon
+  'co_townOfAvon_energyEfficiencyProgram',
+  // Town of Eagle
+  'co_townOfEagle_energyEfficiencyProgram',
+  // Town of Erie
+  'co_townOfErie_rebates',
+  // Town of Vail
+  'co_townOfVail_energyEfficiencyProgram',
+  // Unincorporated Eagle County
+  'co_unincorporatedEagleCounty_energyEfficiencyProgram',
+  // Walking Mountains
+  'co_walkingMountains_low-ModerateIncomeProgram',
+  'co_walkingMountains_rebates&Incentives',
+  // White River Electric Association
+  'co_whiteRiverElectricAssociation_rebates',
+  // YW Electric Association
+  'co_yWElectricAssociation_rebateProgram',
+
   // CT
   // Energize CT
   'ct_energizeCtHomeEnergySolutions',

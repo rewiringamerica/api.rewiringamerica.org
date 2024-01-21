@@ -6,4 +6,5 @@ export enum PaymentMethod {
   AccountCredit = 'account_credit',
   AssistanceProgram = 'assistance_program',
   PerformanceRebate = 'performance_rebate',
+  Unknown = 'unknown',
 }

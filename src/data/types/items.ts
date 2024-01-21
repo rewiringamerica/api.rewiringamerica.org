@@ -2,7 +2,8 @@
  * Each incentive pertains to a specific product or upgrade you can get;
  * these are the possible products/upgrades.
  */
-export const ITEMS_SCHEMA = {
+
+export const LAUNCHED_ITEMS_SCHEMA = {
   battery_storage_installation: { type: 'string' },
   efficiency_rebates: { type: 'string' },
   electric_panel: { type: 'string' },
@@ -19,6 +20,24 @@ export const ITEMS_SCHEMA = {
   weatherization: { type: 'string' },
 } as const;
 
+export const BETA_ITEMS_SCHEMA = {
+  ebike: { type: 'string' },
+  electric_outdoor_equipment: { type: 'string' },
+  electric_thermal_storage_and_slab: { type: 'string' },
+  evaporative_cooler: { type: 'string' },
+  non_heat_pump_clothes_dryer: { type: 'string' },
+  non_heat_pump_water_heater: { type: 'string' },
+  other: { type: 'string' },
+  smart_thermostat: { type: 'string' },
+  whole_house_fan: { type: 'string' },
+} as const;
+
+export const ITEMS_SCHEMA = { ...LAUNCHED_ITEMS_SCHEMA, ...BETA_ITEMS_SCHEMA };
+
 export type Item = keyof typeof ITEMS_SCHEMA;
 
 export const ALL_ITEMS = Object.keys(ITEMS_SCHEMA) as unknown as Item[];
+export const LAUNCHED_ITEMS = Object.keys(
+  LAUNCHED_ITEMS_SCHEMA,
+) as unknown as Item[];
+export const BETA_ITEMS = Object.keys(BETA_ITEMS_SCHEMA) as unknown as Item[];
