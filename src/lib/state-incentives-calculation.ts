@@ -160,6 +160,7 @@ export function calculateStateIncentivesAndSavings(
       ineligibleIncentives: ineligibleIncentives,
       requiresMap: prerequisiteMaps.requiresMap,
       requiredByMap: prerequisiteMaps.requiredByMap,
+      structuredPrerequisitesMap: prerequisiteMaps.structuredPrerequisitesMap,
       supersedesMap: exclusionMaps.supersedesMap,
       supersededByMap: exclusionMaps.supersededByMap,
     };
@@ -170,6 +171,7 @@ export function calculateStateIncentivesAndSavings(
         makeIneligible(incentiveId, maps);
       }
     }
+
     for (const [incentiveId] of exclusionMaps.supersededByMap) {
       if (isExcluded(incentiveId, maps)) {
         makeIneligible(incentiveId, maps);

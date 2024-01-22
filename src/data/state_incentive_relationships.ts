@@ -1,9 +1,27 @@
 import fs from 'fs';
 import { FromSchema } from 'json-schema-to-ts';
 
-const prerequisiteSchema = {
+export const anyOrAllSchema = {
   type: 'array',
-  items: { type: 'string' },
+  items: { $ref: 'prerequisiteSchema' },
+} as const;
+
+export const prerequisiteSchema = {
+  oneOf: [
+    { type: 'string' },
+    {
+      type: 'object',
+      properties: { anyOf: anyOrAllSchema },
+      required: ['anyOf'],
+      additionalProperties: false,
+    },
+    {
+      type: 'object',
+      properties: { allOf: anyOrAllSchema },
+      required: ['allOf'],
+      additionalProperties: false,
+    },
+  ],
 } as const;
 
 const exclusionSchema = {
@@ -35,6 +53,8 @@ export const INCENTIVE_RELATIONSHIPS_SCHEMA = {
     },
   },
 } as const;
+
+export type IncentivePrerequisites = FromSchema<typeof prerequisiteSchema>;
 
 export type IncentiveRelationships = FromSchema<
   typeof INCENTIVE_RELATIONSHIPS_SCHEMA

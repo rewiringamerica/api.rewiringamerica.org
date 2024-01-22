@@ -20,6 +20,7 @@ import { SOLAR_PRICES, SCHEMA as SP_SCHEMA } from '../../src/data/solar_prices';
 import {
   CT_RELATIONSHIPS,
   INCENTIVE_RELATIONSHIPS_SCHEMA,
+  IncentivePrerequisites,
   IncentiveRelationships,
   VT_RELATIONSHIPS,
 } from '../../src/data/state_incentive_relationships';
@@ -260,6 +261,23 @@ test('state incentive relationships contain no circular dependencies', async tap
   });
 });
 
+function extractPrerequisiteIds(
+  prerequisite: IncentivePrerequisites,
+  ids: Set<string>,
+) {
+  if (typeof prerequisite === 'string') {
+    ids.add(prerequisite);
+  } else if ('anyOf' in prerequisite) {
+    for (const child of prerequisite.anyOf) {
+      extractPrerequisiteIds(child, ids);
+    }
+  } else if ('allOf' in prerequisite) {
+    for (const child of prerequisite.allOf) {
+      extractPrerequisiteIds(child, ids);
+    }
+  }
+}
+
 test('state incentive relationships only reference real IDs', async tap => {
   // Collect all the incentive IDs we know about.
   const incentiveIds = new Map<string, Set<string>>();
@@ -280,10 +298,12 @@ test('state incentive relationships only reference real IDs', async tap => {
     const incentivesForState = incentiveIds.get(stateId);
     if (incentivesForState !== undefined) {
       if (data.prerequisites !== undefined) {
-        for (const [incentiveId, prerequisiteIds] of Object.entries(
+        for (const [incentiveId, prerequisites] of Object.entries(
           data.prerequisites,
         )) {
           tap.equal(incentivesForState.has(incentiveId), true);
+          const prerequisiteIds = new Set<string>();
+          extractPrerequisiteIds(prerequisites, prerequisiteIds);
           for (const id of prerequisiteIds) {
             tap.equal(incentivesForState.has(id), true);
           }

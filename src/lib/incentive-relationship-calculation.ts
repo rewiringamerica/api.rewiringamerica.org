@@ -1,4 +1,7 @@
-import { IncentiveRelationships } from '../data/state_incentive_relationships';
+import {
+  IncentivePrerequisites,
+  IncentiveRelationships,
+} from '../data/state_incentive_relationships';
 import { StateIncentive } from '../data/state_incentives';
 
 export interface RelationshipMaps {
@@ -6,6 +9,7 @@ export interface RelationshipMaps {
   ineligibleIncentives: Map<string, StateIncentive>;
   requiresMap: Map<string, Set<string>>;
   requiredByMap: Map<string, Set<string>>;
+  structuredPrerequisitesMap: Map<string, IncentivePrerequisites>;
   supersedesMap: Map<string, Set<string>>;
   supersededByMap: Map<string, Set<string>>;
 }
@@ -16,18 +20,44 @@ export interface CombinedValue {
   remainingValue: number;
 }
 
-// Uses relationships object to build two maps:
+// Helper to traverse nested prerequisites and add them to the set of prereqs
+// for a single incentive.
+function addPrerequisites(
+  prerequisites: IncentivePrerequisites,
+  prerequisitesSet: Set<string>,
+) {
+  if (typeof prerequisites === 'string') {
+    prerequisitesSet.add(prerequisites as string);
+  } else if ('anyOf' in prerequisites) {
+    for (const prerequisite of prerequisites.anyOf) {
+      addPrerequisites(prerequisite, prerequisitesSet);
+    }
+  } else if ('allOf' in prerequisites) {
+    for (const prerequisite of prerequisites.allOf) {
+      addPrerequisites(prerequisite, prerequisitesSet);
+    }
+  }
+}
+
+// TODO: update comment. Want to represent this as an OR of ANDs.
+// Uses relationships object to build three maps:
 // - one from incentive ID to a set of IDs of incentives it requires (requiresMap),
-// - one from incentive ID to a set of IDs of incentives that require it (requiredByMap)
+// - one from incentive ID to a set of IDs of incentives that require it (requiredByMap),
+// - one from incentive ID to the format that preserves any nesting of prerequisites.
 export function buildPrerequisiteMaps(
   incentiveRelationships: IncentiveRelationships,
 ) {
   const requiresMap = new Map<string, Set<string>>();
   const requiredByMap = new Map<string, Set<string>>();
+  const structuredPrerequisitesMap = new Map<string, IncentivePrerequisites>();
   if (incentiveRelationships.prerequisites !== undefined) {
-    for (const [incentiveId, prerequisiteIds] of Object.entries(
+    for (const [incentiveId, prerequisites] of Object.entries(
       incentiveRelationships.prerequisites,
     )) {
+      structuredPrerequisitesMap.set(incentiveId, prerequisites);
+
+      const prerequisiteIds = new Set<string>();
+      addPrerequisites(prerequisites, prerequisiteIds);
       requiresMap.set(incentiveId, new Set(prerequisiteIds));
 
       for (const prerequisiteId of prerequisiteIds) {
@@ -40,7 +70,7 @@ export function buildPrerequisiteMaps(
       }
     }
   }
-  return { requiresMap, requiredByMap };
+  return { requiresMap, requiredByMap, structuredPrerequisitesMap };
 }
 
 // Uses relationships object to build two maps:
@@ -93,21 +123,46 @@ export function buildRelationshipGraph(data: IncentiveRelationships) {
   return edges;
 }
 
+// Helper to traverse nested prerequisites and check whether they are met for
+// the given incentive.
+function meetsSinglePrerequisite(
+  incentiveId: string,
+  prerequisite: IncentivePrerequisites,
+  maps: RelationshipMaps,
+) {
+  if (typeof prerequisite === 'string') {
+    if (
+      !maps.eligibleIncentives.has(prerequisite) &&
+      maps.eligibleIncentives.has(incentiveId)
+    ) {
+      return false;
+    }
+  } else if ('anyOf' in prerequisite) {
+    for (const child of prerequisite.anyOf) {
+      if (meetsSinglePrerequisite(incentiveId, child, maps)) {
+        return true;
+      }
+    }
+    return false;
+  } else if ('allOf' in prerequisite) {
+    for (const child of prerequisite.allOf) {
+      if (!meetsSinglePrerequisite(incentiveId, child, maps)) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+
 // Checks the prerequisites for a single incentive.
 export function meetsPrerequisites(
   incentiveId: string,
   maps: RelationshipMaps,
 ) {
-  const prerequisiteIds = maps.requiresMap.get(incentiveId);
-  if (prerequisiteIds !== undefined) {
-    for (const prerequisiteId of prerequisiteIds) {
-      if (
-        !maps.eligibleIncentives.has(prerequisiteId) &&
-        maps.eligibleIncentives.has(incentiveId)
-      ) {
-        return false;
-      }
-    }
+  const structuredPrerequisites =
+    maps.structuredPrerequisitesMap.get(incentiveId);
+  if (structuredPrerequisites !== undefined) {
+    return meetsSinglePrerequisite(incentiveId, structuredPrerequisites, maps);
   }
   return true;
 }
@@ -137,10 +192,15 @@ export function makeIneligible(incentiveId: string, maps: RelationshipMaps) {
   maps.eligibleIncentives.delete(incentiveId);
   maps.ineligibleIncentives.set(incentiveId, incentive);
 
-  // When an incentive becomes ineligible, things that require it also become ineligible.
+  // When an incentive becomes ineligible, things that require it also may become ineligible.
   if (maps.requiredByMap.has(incentiveId)) {
     for (const dependentId of maps.requiredByMap.get(incentiveId)!) {
-      makeIneligible(dependentId, maps);
+      if (
+        maps.eligibleIncentives.has(dependentId) &&
+        !meetsPrerequisites(dependentId, maps)
+      ) {
+        makeIneligible(dependentId, maps);
+      }
     }
   }
 
