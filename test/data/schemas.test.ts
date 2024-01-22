@@ -22,7 +22,6 @@ import {
   CO_RELATIONSHIPS,
   CT_RELATIONSHIPS,
   INCENTIVE_RELATIONSHIPS_SCHEMA,
-  IncentivePrerequisites,
   IncentiveRelationships,
   VT_RELATIONSHIPS,
 } from '../../src/data/state_incentive_relationships';
@@ -57,7 +56,10 @@ import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { BETA_ITEMS } from '../../src/data/types/items';
 import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
 import { LAUNCHED_STATES } from '../../src/data/types/states';
-import { addPrerequisites, buildRelationshipGraph } from '../../src/lib/incentive-relationship-calculation';
+import {
+  addPrerequisites,
+  buildRelationshipGraph,
+} from '../../src/lib/incentive-relationship-calculation';
 
 const TESTS = [
   [I_SCHEMA, IRA_INCENTIVES, 'ira_incentives'],
