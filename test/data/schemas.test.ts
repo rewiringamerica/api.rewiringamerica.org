@@ -57,7 +57,7 @@ import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { BETA_ITEMS } from '../../src/data/types/items';
 import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
 import { LAUNCHED_STATES } from '../../src/data/types/states';
-import { buildRelationshipGraph } from '../../src/lib/incentive-relationship-calculation';
+import { addPrerequisites, buildRelationshipGraph } from '../../src/lib/incentive-relationship-calculation';
 
 const TESTS = [
   [I_SCHEMA, IRA_INCENTIVES, 'ira_incentives'],
@@ -287,23 +287,6 @@ test('state incentive relationships contain no circular dependencies', async tap
   });
 });
 
-function extractPrerequisiteIds(
-  prerequisite: IncentivePrerequisites,
-  ids: Set<string>,
-) {
-  if (typeof prerequisite === 'string') {
-    ids.add(prerequisite);
-  } else if ('anyOf' in prerequisite) {
-    for (const child of prerequisite.anyOf) {
-      extractPrerequisiteIds(child, ids);
-    }
-  } else if ('allOf' in prerequisite) {
-    for (const child of prerequisite.allOf) {
-      extractPrerequisiteIds(child, ids);
-    }
-  }
-}
-
 test('state incentive relationships only reference real IDs', async tap => {
   // Collect all the incentive IDs we know about.
   const incentiveIds = new Map<string, Set<string>>();
@@ -329,7 +312,7 @@ test('state incentive relationships only reference real IDs', async tap => {
         )) {
           tap.equal(incentivesForState.has(incentiveId), true);
           const prerequisiteIds = new Set<string>();
-          extractPrerequisiteIds(prerequisites, prerequisiteIds);
+          addPrerequisites(prerequisites, prerequisiteIds);
           for (const id of prerequisiteIds) {
             tap.equal(incentivesForState.has(id), true);
           }

@@ -22,7 +22,7 @@ export interface CombinedValue {
 
 // Helper to traverse nested prerequisites and add them to the set of prereqs
 // for a single incentive.
-function addPrerequisites(
+export function addPrerequisites(
   prerequisites: IncentivePrerequisites,
   prerequisitesSet: Set<string>,
 ) {
@@ -39,7 +39,6 @@ function addPrerequisites(
   }
 }
 
-// TODO: update comment. Want to represent this as an OR of ANDs.
 // Uses relationships object to build three maps:
 // - one from incentive ID to a set of IDs of incentives it requires (requiresMap),
 // - one from incentive ID to a set of IDs of incentives that require it (requiredByMap),
