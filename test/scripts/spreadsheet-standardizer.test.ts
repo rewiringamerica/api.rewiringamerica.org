@@ -39,6 +39,21 @@ test('correctly rename columns in non-strict mode', tap => {
   tap.end();
 });
 
+test('Rename columns using punctuation characters and unusual spacing', tap => {
+  const converter = new SpreadsheetStandardizer(
+    { new_name: ['unclean original name with weird chars'] },
+    true,
+  );
+  tap.matchOnly(
+    converter.convertFieldNames({
+      'Unclean  original(name  with weird chars    )': 'Column Value',
+    }),
+    { new_name: 'Column Value' },
+    'standard rename',
+  );
+  tap.end();
+});
+
 test('representative example', tap => {
   const converter = new SpreadsheetStandardizer(FIELD_MAPPINGS, true);
 
