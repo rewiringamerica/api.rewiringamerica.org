@@ -4,6 +4,7 @@ import { StateIncentive } from '../data/state_incentives';
 export interface RelationshipMaps {
   eligibleIncentives: Map<string, StateIncentive>;
   ineligibleIncentives: Map<string, StateIncentive>;
+  permanentlyIneligibleIncentives: Set<string>;
   requiresMap: Map<string, Set<string>>;
   requiredByMap: Map<string, Set<string>>;
   supersedesMap: Map<string, Set<string>>;
@@ -149,6 +150,7 @@ export function makeIneligible(incentiveId: string, maps: RelationshipMaps) {
     for (const dependentId of maps.supersedesMap.get(incentiveId)!) {
       if (
         maps.ineligibleIncentives.has(dependentId) &&
+        !maps.permanentlyIneligibleIncentives.has(dependentId) &&
         !isExcluded(dependentId, maps) &&
         meetsPrerequisites(dependentId, maps)
       ) {
@@ -172,6 +174,7 @@ export function makeEligible(incentiveId: string, maps: RelationshipMaps) {
     for (const dependentId of maps.requiredByMap.get(incentiveId)!) {
       if (
         maps.ineligibleIncentives.has(dependentId) &&
+        !maps.permanentlyIneligibleIncentives.has(dependentId) &&
         !isExcluded(dependentId, maps) &&
         meetsPrerequisites(dependentId, maps)
       ) {

@@ -158,6 +158,9 @@ export function calculateStateIncentivesAndSavings(
     const maps: RelationshipMaps = {
       eligibleIncentives: eligibleIncentives,
       ineligibleIncentives: ineligibleIncentives,
+      // Any incentives which were ineligible before checking relationships
+      // must remain ineligible.
+      permanentlyIneligibleIncentives: new Set(ineligibleIncentives.keys()),
       requiresMap: prerequisiteMaps.requiresMap,
       requiredByMap: prerequisiteMaps.requiredByMap,
       supersedesMap: exclusionMaps.supersedesMap,
