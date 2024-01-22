@@ -16,6 +16,15 @@ export const FILES: { [ident: string]: IncentiveFile } = {
     enHeader: 'Short Description (150 characters max)',
     esHeader: 'Short Description-Spanish',
   },
+  CO: {
+    filepath: 'data/CO/incentives.json',
+    sheetUrl:
+      'https://docs.google.com/spreadsheets/d/1nITjSNRWJjSusB0fWuSS63fqynm_4Co7KEeuo9Cm7fU/pub?gid=30198531&single=true&output=csv',
+    headerRowNumber: 2,
+    idHeader: 'ID',
+    enHeader: 'Program Description (guideline)',
+    esHeader: 'Program Description (Spanish)',
+  },
   RI: {
     filepath: 'data/RI/incentives.json',
     sheetUrl:

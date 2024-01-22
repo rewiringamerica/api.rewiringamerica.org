@@ -19,7 +19,7 @@ test('correct row to record transformation', async tap => {
         'Technology*': 'Heat Pump Dryers / Clothes Dryer',
         "Technology (If selected 'Other')": '',
         'Program Description (guideline)':
-          'Receive a $50 rebate for an Energy Star certified electric ventless\n or vented clothes dryer from an approved retailer',
+          'Receive a $50 rebate for an Energy Star certified electric ventless\nor vented\nclothes dryer from an approved retailer',
         'Program Status': 'Active',
         'Program Start (MM/DD/YYYY)': '1/1/2022',
         'Program End (MM/DD/YYYY)': '12/31/2026',
@@ -35,7 +35,8 @@ test('correct row to record transformation', async tap => {
         'Equipment Standards Restrictions': 'Must be ENERGY STAR certified.',
         'Equipment Capacity Restrictions': '',
         'Contractor Restrictions': '',
-        'Income Restrictions': '',
+        'Income Restrictions':
+          'Must have income according to some table linked elsewhere',
         'Tax-filing Status Restrictions': '',
         'Homeowner/ Renter': 'Homeowner',
         'Other Restrictions':
@@ -65,11 +66,24 @@ test('correct row to record transformation', async tap => {
         start_date: 2022,
         end_date: 2026,
         bonus_available: true,
+        low_income: 'va-appalachian-power',
       },
     },
   ];
 
-  const columnConverter = new SpreadsheetStandardizer(FIELD_MAPPINGS);
+  const fakeIncomeThresholds = {
+    va: {
+      'va-appalachian-power': {
+        source_url: 'url',
+        thresholds: {},
+      },
+    },
+  };
+  const columnConverter = new SpreadsheetStandardizer(
+    FIELD_MAPPINGS,
+    true,
+    fakeIncomeThresholds,
+  );
   for (const tc of testCases) {
     const renamed = columnConverter.convertFieldNames(tc.input);
     tap.matchOnly(

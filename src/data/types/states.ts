@@ -54,6 +54,7 @@ export const STATES_PLUS_DC = [
 
 export const BETA_STATES: string[] = [
   'AZ',
+  'CO',
   'CT',
   'NY',
   'VA',

@@ -1,4 +1,5 @@
 import { AuthorityType } from '../../src/data/authorities';
+import { LowIncomeThresholdsMap } from '../../src/data/low_income_thresholds';
 import { AmountType, AmountUnit } from '../../src/data/types/amount';
 import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { ITEMS_SCHEMA, Item } from '../../src/data/types/items';
@@ -13,19 +14,23 @@ import { FIELD_MAPPINGS, VALUE_MAPPINGS } from './spreadsheet-mappings';
 export class SpreadsheetStandardizer {
   private fieldMap: { [index: string]: string };
   private strict: boolean;
+  private lowIncomeThresholds: LowIncomeThresholdsMap | null;
 
   /**
    * @param fieldMap: a map from canonical name to all of the aliases it might appear as in the Google spreadsheets
    * @param strict: whether to throw an error on aliases that aren't found
+   * @param lowIncomeThresholds: state-segmented income thresholds. If empty, the script won't try to associate records with low-income programs.
    */
   constructor(
     fieldMap: { [index: string]: string[] } = FIELD_MAPPINGS,
     strict: boolean = true,
+    lowIncomeThresholds: LowIncomeThresholdsMap | null = null,
   ) {
     // We reverse the input map for easier runtime use, since
     // we need to go from alias back to canonical name.
     this.fieldMap = reverseMap(fieldMap);
     this.strict = strict;
+    this.lowIncomeThresholds = lowIncomeThresholds;
   }
 
   // Convert a row with possible column aliases to a canonical column name.
@@ -53,13 +58,14 @@ export class SpreadsheetStandardizer {
     state: string,
     record: Record<string, string>,
   ): Record<string, string | number | object | boolean> {
+    const authorityName = createAuthorityName(state, record.authority_name);
     const output: Record<string, string | number | object | boolean> = {
       id: record.id,
       authority_type: coerceToStandardValue(
         record.authority_level,
         getEnumValues(Object.values(AuthorityType)),
       ),
-      authority: createAuthorityName(state, record.authority_name),
+      authority: authorityName,
       type: coerceToStandardValue(
         record.rebate_type.split(',')[0],
         getEnumValues(Object.values(PaymentMethod)),
@@ -94,8 +100,31 @@ export class SpreadsheetStandardizer {
     ) {
       output.bonus_available = true;
     }
+    if (this.lowIncomeThresholds && isPlausibleLowIncomeRow(record)) {
+      const low_income_program = this.retrieveLowIncomeProgram(
+        authorityName,
+        state,
+      );
+      if (low_income_program) {
+        output.low_income = authorityName;
+      } else if (low_income_program === undefined) {
+        // This is checked up front by the caller rather than
+        // at the row level to avoid spamming error messages.
+      } else {
+        console.log(
+          `Warning: no low-income thresholds found for ${record.id} despite references to income eligiblity in description or income restrictions columns. This either means: 1) manually set this field in the JSON to 'default' to use a state's default thresholds (must be defined), or 2) you need to define program-specific thresholds for it, or 3) it's not actually a low-income row and no action is necessary.`,
+        );
+      }
+    }
 
     return output;
+  }
+
+  retrieveLowIncomeProgram(authority: string, state: string) {
+    if (this.lowIncomeThresholds![state] === undefined) {
+      return undefined;
+    }
+    return authority in this.lowIncomeThresholds![state];
   }
 }
 
@@ -115,11 +144,27 @@ function cleanFieldName(field: string): string {
 }
 
 function standardizeDescription(desc: string): string {
-  desc = desc.replace('\n', '').trim();
+  desc = desc.replaceAll('\n', ' ').trim();
   if (!desc.endsWith('.')) {
     desc = desc + '.';
   }
   return desc;
+}
+
+function isPlausibleLowIncomeRow(record: Record<string, string>) {
+  if (
+    record.income_restrictions !== undefined &&
+    record.income_restrictions !== ''
+  ) {
+    return true;
+  }
+  if (
+    record.short_description !== undefined &&
+    record.short_description.toLowerCase().includes('income')
+  ) {
+    return true;
+  }
+  return false;
 }
 
 // Take an input map from string -> string[] and reverse it,
