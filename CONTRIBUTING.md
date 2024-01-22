@@ -12,8 +12,8 @@ Look at the [public API docs](https://api.rewiringamerica.org/docs) to understan
 
 ### Incentive data
 
-- **Start here if you want to help us collect incentives data**: [Guidelines for Incentive Data Collection](https://docs.google.com/document/d/11jHmz7tc2F6JsPw7vF3dC7BLGf5_XP4joMeCcjM0rVk/edit#heading=h.sdsaz8v9ipkd) provides a detailed overview of our approach for incentive data collection using volunteers.  
- 
+- **Start here if you want to help us collect incentives data**: [Guidelines for Incentive Data Collection](https://docs.google.com/document/d/11jHmz7tc2F6JsPw7vF3dC7BLGf5_XP4joMeCcjM0rVk/edit#heading=h.sdsaz8v9ipkd) provides a detailed overview of our approach for incentive data collection using volunteers.
+
 - **To understand the structure of data we capture in spreadsheet format, see**: [Incentives Data Model_Baseline & Template](https://docs.google.com/spreadsheets/d/1JTeTk9lhBxgCvpNDsU80upaxgp1XPROUpFwfK4UHVbI/edit#gid=995688950).
 
 - **Please contact us at api@rewiringamerica.org if you plan to start collecting new data for a state we don’t already have.** One of our goals with open sourcing this project is to avoid duplicated effort across organizations and companies, we would be happy to work together.
