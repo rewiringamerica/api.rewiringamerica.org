@@ -3,10 +3,11 @@ import { FromSchema } from 'json-schema-to-ts';
 
 export const anyOrAllSchema = {
   type: 'array',
-  items: { $ref: 'prerequisiteSchema' },
+  items: { $ref: 'IncentivePrerequisites' },
 } as const;
 
 export const prerequisiteSchema = {
+  $id: 'IncentivePrerequisites',
   oneOf: [
     { type: 'string' },
     {
