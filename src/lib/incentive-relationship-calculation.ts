@@ -124,33 +124,35 @@ export function buildRelationshipGraph(data: IncentiveRelationships) {
 
 // Helper to traverse nested prerequisites and check whether they are met for
 // the given incentive.
-function meetsSinglePrerequisite(
+function MeetsNestedPrerequisites(
   incentiveId: string,
   prerequisite: IncentivePrerequisites,
   maps: RelationshipMaps,
 ) {
   if (typeof prerequisite === 'string') {
-    if (
-      !maps.eligibleIncentives.has(prerequisite) &&
-      maps.eligibleIncentives.has(incentiveId)
-    ) {
-      return false;
+    if (maps.eligibleIncentives.has(incentiveId)) {
+      if (!maps.eligibleIncentives.has(prerequisite)) {
+        return false;
+      }
+      return true;
     }
+    return false;
   } else if ('anyOf' in prerequisite) {
     for (const child of prerequisite.anyOf) {
-      if (meetsSinglePrerequisite(incentiveId, child, maps)) {
+      if (MeetsNestedPrerequisites(incentiveId, child, maps)) {
         return true;
       }
     }
     return false;
   } else if ('allOf' in prerequisite) {
     for (const child of prerequisite.allOf) {
-      if (!meetsSinglePrerequisite(incentiveId, child, maps)) {
+      if (!MeetsNestedPrerequisites(incentiveId, child, maps)) {
         return false;
       }
     }
+    return true;
   }
-  return true;
+  return false;
 }
 
 // Checks the prerequisites for a single incentive.
@@ -161,7 +163,7 @@ export function meetsPrerequisites(
   const structuredPrerequisites =
     maps.structuredPrerequisitesMap.get(incentiveId);
   if (structuredPrerequisites !== undefined) {
-    return meetsSinglePrerequisite(incentiveId, structuredPrerequisites, maps);
+    return MeetsNestedPrerequisites(incentiveId, structuredPrerequisites, maps);
   }
   return true;
 }
@@ -169,12 +171,12 @@ export function meetsPrerequisites(
 // Checks the mutual exclusion relationships for a single incentive.
 export function isExcluded(incentiveId: string, maps: RelationshipMaps) {
   const supersedingIds = maps.supersededByMap.get(incentiveId);
-  if (supersedingIds !== undefined) {
+  if (
+    maps.eligibleIncentives.has(incentiveId) &&
+    supersedingIds !== undefined
+  ) {
     for (const supersedingId of supersedingIds) {
-      if (
-        maps.eligibleIncentives.has(supersedingId) &&
-        maps.eligibleIncentives.has(incentiveId)
-      ) {
+      if (maps.eligibleIncentives.has(supersedingId)) {
         return true;
       }
     }
