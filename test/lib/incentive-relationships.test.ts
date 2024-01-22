@@ -10,7 +10,7 @@ import {
   TEST_INCENTIVE_RELATIONSHIPS_2,
   TEST_INCENTIVE_RELATIONSHIPS_3,
   TEST_INVALID_INCENTIVE_RELATIONSHIPS,
-  TEST_NESTED_INCENTIVE_RELATIONSHIPS
+  TEST_NESTED_INCENTIVE_RELATIONSHIPS,
 } from '../mocks/state-incentive-relationships';
 import { TEST_INCENTIVES } from '../mocks/state-incentives';
 
@@ -245,7 +245,9 @@ test('test incentive relationships contain no circular dependencies', async tap 
   tap.equal(incentiveRelationshipsContainCycle(relationshipGraph), false);
   relationshipGraph = buildRelationshipGraph(TEST_INCENTIVE_RELATIONSHIPS_3);
   tap.equal(incentiveRelationshipsContainCycle(relationshipGraph), false);
-  relationshipGraph = buildRelationshipGraph(TEST_NESTED_INCENTIVE_RELATIONSHIPS);
+  relationshipGraph = buildRelationshipGraph(
+    TEST_NESTED_INCENTIVE_RELATIONSHIPS,
+  );
   tap.equal(incentiveRelationshipsContainCycle(relationshipGraph), false);
 });
 
