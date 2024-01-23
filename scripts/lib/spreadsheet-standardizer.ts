@@ -131,14 +131,16 @@ export class SpreadsheetStandardizer {
 ///////////
 //  Helpers
 ///////////
-const wordSeparators =
-  /[\s\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]+/;
+const punctuationSeparators =
+  /[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]+/g;
+const spaceSeparators = /\s+/g;
 
 function cleanFieldName(field: string): string {
   return field
-    .replace('\n', '')
-    .replace('*', '')
-    .replace(wordSeparators, '')
+    .replace('\n', ' ')
+    .replace('*', ' ')
+    .replace(punctuationSeparators, ' ')
+    .replace(spaceSeparators, ' ')
     .trim()
     .toLowerCase();
 }
