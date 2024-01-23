@@ -124,7 +124,7 @@ export function buildRelationshipGraph(data: IncentiveRelationships) {
 
 // Helper to traverse nested prerequisites and check whether they are met for
 // the given incentive.
-function MeetsNestedPrerequisites(
+function meetsNestedPrerequisites(
   incentiveId: string,
   prerequisite: IncentivePrerequisites,
   maps: RelationshipMaps,
@@ -133,14 +133,14 @@ function MeetsNestedPrerequisites(
     return maps.eligibleIncentives.has(prerequisite);
   } else if ('anyOf' in prerequisite) {
     for (const child of prerequisite.anyOf) {
-      if (MeetsNestedPrerequisites(incentiveId, child, maps)) {
+      if (meetsNestedPrerequisites(incentiveId, child, maps)) {
         return true;
       }
     }
     return false;
   } else if ('allOf' in prerequisite) {
     for (const child of prerequisite.allOf) {
-      if (!MeetsNestedPrerequisites(incentiveId, child, maps)) {
+      if (!meetsNestedPrerequisites(incentiveId, child, maps)) {
         return false;
       }
     }
@@ -157,7 +157,7 @@ export function meetsPrerequisites(
   const structuredPrerequisites =
     maps.structuredPrerequisitesMap.get(incentiveId);
   if (structuredPrerequisites !== undefined) {
-    return MeetsNestedPrerequisites(incentiveId, structuredPrerequisites, maps);
+    return meetsNestedPrerequisites(incentiveId, structuredPrerequisites, maps);
   }
   return true;
 }
