@@ -130,13 +130,7 @@ function MeetsNestedPrerequisites(
   maps: RelationshipMaps,
 ) {
   if (typeof prerequisite === 'string') {
-    if (maps.eligibleIncentives.has(incentiveId)) {
-      if (!maps.eligibleIncentives.has(prerequisite)) {
-        return false;
-      }
-      return true;
-    }
-    return false;
+    return maps.eligibleIncentives.has(prerequisite);
   } else if ('anyOf' in prerequisite) {
     for (const child of prerequisite.anyOf) {
       if (MeetsNestedPrerequisites(incentiveId, child, maps)) {
@@ -171,10 +165,7 @@ export function meetsPrerequisites(
 // Checks the mutual exclusion relationships for a single incentive.
 export function isExcluded(incentiveId: string, maps: RelationshipMaps) {
   const supersedingIds = maps.supersededByMap.get(incentiveId);
-  if (
-    maps.eligibleIncentives.has(incentiveId) &&
-    supersedingIds !== undefined
-  ) {
+  if (supersedingIds !== undefined) {
     for (const supersedingId of supersedingIds) {
       if (maps.eligibleIncentives.has(supersedingId)) {
         return true;

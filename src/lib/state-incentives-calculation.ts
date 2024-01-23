@@ -167,12 +167,12 @@ export function calculateStateIncentivesAndSavings(
 
     // Use relationship maps to update incentive eligibility.
     for (const [incentiveId] of prerequisiteMaps.requiresMap) {
-      if (!meetsPrerequisites(incentiveId, maps)) {
+      if (eligibleIncentives.has(incentiveId) && !meetsPrerequisites(incentiveId, maps)) {
         makeIneligible(incentiveId, maps);
       }
     }
     for (const [incentiveId] of exclusionMaps.supersededByMap) {
-      if (isExcluded(incentiveId, maps)) {
+      if (eligibleIncentives.has(incentiveId) && isExcluded(incentiveId, maps)) {
         makeIneligible(incentiveId, maps);
       }
     }
