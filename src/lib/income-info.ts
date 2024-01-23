@@ -1,10 +1,11 @@
 /**
- * Corresponds to the "zips" table in sqlite. There are other columns, but
- * state_id is the only one we need.
+ * Corresponds to the "zips" table in sqlite.
  */
 export type ZipInfo = {
   state_id: string;
   zip: string;
+  city?: string;
+  county?: string;
 };
 
 /**

@@ -3,7 +3,7 @@ import _ from 'lodash';
 import { open } from 'sqlite';
 import sqlite3 from 'sqlite3';
 import { afterEach, beforeEach, test } from 'tap';
-import { AuthorityType } from '../../src/data/authorities';
+import { AuthoritiesByType, AuthorityType } from '../../src/data/authorities';
 import { StateIncentive } from '../../src/data/state_incentives';
 import { FilingStatus } from '../../src/data/tax_brackets';
 import { AmountType } from '../../src/data/types/amount';
@@ -480,11 +480,11 @@ test('correctly sorts incentives', async t => {
   });
 });
 
-test('ignores local incentives even if requested', async t => {
+test('correct filtering of county incentives', async t => {
   const incentive: StateIncentive = {
-    id: 'test',
-    authority_type: AuthorityType.Local,
-    authority: 'ri-pascoag-utility-district',
+    id: 'CO',
+    authority_type: AuthorityType.County,
+    authority: 'mock-county-authority',
     start_date: 2023,
     end_date: 2024,
     type: PaymentMethod.AccountCredit,
@@ -503,19 +503,116 @@ test('ignores local incentives even if requested', async t => {
     },
   };
 
-  const data = calculateStateIncentivesAndSavings(
-    'RI',
-    {
-      owner_status: OwnerStatus.Homeowner,
-      household_income: 120000,
-      tax_filing: FilingStatus.Single,
-      household_size: 1,
-      authority_types: [AuthorityType.Local],
-      include_beta_states: true,
+  const authorities: AuthoritiesByType = {
+    state: {},
+    utility: {},
+    county: {
+      'mock-county-authority': {
+        name: 'The Mock Authority Company',
+        county: 'Cook',
+      },
     },
+  };
+
+  const request = {
+    owner_status: OwnerStatus.Homeowner,
+    household_income: 120000,
+    tax_filing: FilingStatus.Single,
+    household_size: 1,
+    authority_types: [AuthorityType.County],
+    include_beta_states: true,
+  };
+  const shouldFind = calculateStateIncentivesAndSavings(
+    { state_id: 'CO', county: 'Cook' },
+    request,
     [incentive],
     {},
+    authorities,
   );
-  t.ok(data);
-  t.equal(data.stateIncentives.length, 0);
+  t.ok(shouldFind);
+  t.equal(shouldFind.stateIncentives.length, 1);
+
+  const shouldNotFind = calculateStateIncentivesAndSavings(
+    { state_id: 'CO', county: 'Nomatch' },
+    request,
+    [incentive],
+    {},
+    authorities,
+  );
+  t.ok(shouldNotFind);
+  t.equal(shouldNotFind.stateIncentives.length, 0);
+});
+
+test('correct filtering of city incentives', async t => {
+  const incentive: StateIncentive = {
+    id: 'CO',
+    authority_type: AuthorityType.City,
+    authority: 'mock-city-authority',
+    start_date: 2023,
+    end_date: 2024,
+    type: PaymentMethod.AccountCredit,
+    payment_methods: [PaymentMethod.AccountCredit],
+    item: 'heat_pump_air_conditioner_heater',
+    program: 'ri_hvacAndWaterHeaterIncentives',
+    amount: {
+      type: AmountType.DollarAmount,
+      number: 100,
+    },
+    owner_status: [
+      OwnerStatus.Homeowner,
+    ],
+    short_description: {
+      en: 'This is a model incentive only to be used for testing.',
+    },
+  };
+
+  const authorities: AuthoritiesByType = {
+    state: {},
+    utility: {},
+    city: {
+      'mock-city-authority': {
+        name: 'The Mock Authority Company',
+        city: 'New York',
+        county: 'Cook',
+      },
+    },
+  };
+
+  const request = {
+    owner_status: OwnerStatus.Homeowner,
+    household_income: 120000,
+    tax_filing: FilingStatus.Single,
+    household_size: 1,
+    authority_types: [AuthorityType.City],
+    include_beta_states: true,
+  };
+  const shouldFind = calculateStateIncentivesAndSavings(
+    { state_id: 'CO', city: 'New York', county: 'Cook' },
+    request,
+    [incentive],
+    {},
+    authorities,
+  );
+  t.ok(shouldFind);
+  t.equal(shouldFind.stateIncentives.length, 1);
+
+  const shouldNotFindWithoutCounty = calculateStateIncentivesAndSavings(
+    { state_id: 'CO', city: 'New York' },
+    request,
+    [incentive],
+    {},
+    authorities,
+  );
+  t.ok(shouldNotFindWithoutCounty);
+  t.equal(shouldNotFindWithoutCounty.stateIncentives.length, 0);
+
+  const shouldNotFindWithPartialMatch = calculateStateIncentivesAndSavings(
+    { state_id: 'CO', city: 'New York', county: 'NoMatch' },
+    request,
+    [incentive],
+    {},
+    authorities,
+  );
+  t.ok(shouldNotFindWithPartialMatch);
+  t.equal(shouldNotFindWithPartialMatch.stateIncentives.length, 0);
 });

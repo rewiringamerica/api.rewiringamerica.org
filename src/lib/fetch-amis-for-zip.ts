@@ -15,7 +15,11 @@ export default async function fetchAMIsForZip(
   // confusion, use parent_zcta if it's non-blank.
   const location = await db.get<ZipInfo>(
     `
-    SELECT COALESCE(NULLIF(parent_zcta, ''), zip) as zip, state_id
+    SELECT 
+        COALESCE(NULLIF(parent_zcta, ''), zip) as zip, 
+        state_id, 
+        city, 
+        county_name as county
     FROM zips
     WHERE zip = ?
   `,

@@ -159,10 +159,31 @@ test('state incentives JSON files match schemas', async tap => {
         `amount is invalid (${stateId}, id ${incentive.id}, index ${index})`,
       );
       tap.hasProp(
-        authorities[incentive.authority_type as 'state' | 'utility' | 'local']!,
+        authorities[
+          incentive.authority_type as 'state' | 'utility' | 'county' | 'city'
+        ]!,
         incentive.authority,
         `nonexistent authority (${stateId}, id ${incentive.id}, index ${index})`,
       );
+      if (incentive.authority_type === AuthorityType.County) {
+        tap.hasProp(
+          authorities[incentive.authority_type]![incentive.authority],
+          'county',
+          'must define county attribute on corresponding authority for incentives with county authority type',
+        );
+      }
+      if (incentive.authority_type === AuthorityType.City) {
+        tap.hasProp(
+          authorities[incentive.authority_type]![incentive.authority],
+          'county',
+          'must define county attribute on corresponding authority for incentives with city authority type (county is used for matching)',
+        );
+        tap.hasProp(
+          authorities[incentive.authority_type]![incentive.authority],
+          'city',
+          'must define city attribute on corresponding authority for incentives with city authority type',
+        );
+      }
 
       // Allow duplicate incentive IDs if we split one incentive into multiple due
       // to tax filing status
@@ -178,7 +199,8 @@ test("launched states do not have any values that we don't support in the fronte
   STATE_INCENTIVE_TESTS.forEach(([state, , data]) => {
     if (LAUNCHED_STATES.includes(state)) {
       for (const incentive of data) {
-        tap.not(incentive.authority_type, AuthorityType.Local);
+        tap.not(incentive.authority_type, AuthorityType.City);
+        tap.not(incentive.authority_type, AuthorityType.County);
 
         tap.notOk(
           BETA_ITEMS.includes(incentive.item),

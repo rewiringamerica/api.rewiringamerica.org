@@ -1,6 +1,6 @@
 import { Database } from 'sqlite';
 import { geocoder } from './geocoder';
-import { AMI, IncomeInfo, MFI } from './income-info';
+import { AMI, IncomeInfo, MFI, ZipInfo } from './income-info';
 
 export default async function fetchAMIsForAddress(
   db: Database,
@@ -16,6 +16,25 @@ export default async function fetchAMIsForAddress(
   }
 
   const zip = result.address_components.zip;
+
+  // We pull these from our database (vs geocoder) to ensure a match
+  // when computing whether local incentives are eligible.
+  const supplemental = await db.get<ZipInfo>(
+    `
+    SELECT 
+        city, 
+        county_name as county
+    FROM zips
+    WHERE zip = ?
+  `,
+    zip,
+  );
+  let city: string | undefined;
+  let county: string | undefined;
+  if (supplemental !== undefined) {
+    city = supplemental.city;
+    county = supplemental.county;
+  }
 
   const censusInfo = result.fields?.census['2010'];
 
@@ -41,7 +60,12 @@ export default async function fetchAMIsForAddress(
 
   // FIXME: now that we have finer-grained geographic info we don't need to approximate with zips. Use Fair_Market_Rents etc.
 
-  const location = { state_id: result.address_components.state, zip };
+  const location = {
+    state_id: result.address_components.state,
+    zip,
+    city,
+    county,
+  };
 
   const ami = await db.get<AMI>(
     `
