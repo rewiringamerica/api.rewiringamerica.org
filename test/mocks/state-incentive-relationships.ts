@@ -28,6 +28,15 @@ export const TEST_INCENTIVE_RELATIONSHIPS_3: IncentiveRelationships =
     ),
   );
 
+// Model incentive relationships intended for testing nested relationships.
+export const TEST_NESTED_INCENTIVE_RELATIONSHIPS: IncentiveRelationships =
+  JSON.parse(
+    fs.readFileSync(
+      './test/fixtures/test-incentive-relationships-nested.json',
+      'utf-8',
+    ),
+  );
+
 // These are model incentive relationships created for the purpose of checking
 // that the schema tests can detect a circular dependency in incentive
 // relationships.
