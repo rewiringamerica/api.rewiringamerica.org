@@ -24,14 +24,24 @@ This will print translations to the console.
 
 This workflow takes a Google spreadsheet where initial spreadsheet data has been collected and converts it to the JSON format we use for our incentives.
 
-There are two scripts involved. Before you use either, register the state in [incentive-spreadsheet-registry.ts](incentive-spreadsheet-registry.ts).
+There are two scripts involved. Before you use either, register the state in [`incentive-spreadsheet-registry.ts`](incentive-spreadsheet-registry.ts).
 
-1. `generate-misc-state-data.ts` adds values to ancillary files to reflect the programs and authorities that will be needed for the JSON. This needs to happen first because our data schemas actually require an incentive's program/authority to be one of the listed members, and if that's not the case, the incentive will fail validation.
+Filling out an entry for `incentive-spreadsheet-registry.ts` consists of creating a new key with the state abbreviation, and then:
+
+- Creating a filepath where incentive data will be written in `filepath`
+- Exporting and sharing a sheet URL in `sheetUrl`
+  - To do this for a Google sheet, click File -> Share -> Publish to web and under `Link`, select the Incentives data tab and change the `Web page` default to `Comma separated values (.csv)`. The link that appears is what should be copied into the value.
+- Optionally declaring the header row number, if not the top row of the spreadsheet, in `headerRowNumber`
+- Declaring what the name of the ID column is in `idHeader`
+- Recording the english and spanish program description column names, in `enHeader` and `esHeader`
+
+[`generate-misc-state-data.ts`](generate-misc-state-data.ts) adds values to ancillary files to reflect the programs and authorities that will be needed for the JSON. This needs to happen first because our data schemas actually require an incentive's program/authority to be one of the listed members, and if that's not the case, the incentive will fail validation.
 
 This script covers:
-data/authorities.json
-data/programs.ts
-src/data/programs.ts
+
+- data/authorities.json
+- data/programs.ts
+- src/data/programs.ts
 
 Usage:
 `node build/scripts/generate-misc-state-data.js <state_id>`
@@ -40,7 +50,7 @@ After running, you may need to edit these files to put states in alphabetical or
 
 It's recommended to also define low-income thresholds in `data/low_income_thresholds.json` for your state to save time in the next step.
 
-1. `incentive-spreadsheet-to-json.js` reads the spreadsheet and tries to convert it to JSON. This can be a messy process – spreadsheets may not have the correct column names or values. The script tries to handle small string discrepancies itself because making edits to Google sheets has a 5-minute delay before changes are reflected, but ultimately even with the script's help, this may be a painstaking process.
+1. [`incentive-spreadsheet-to-json.ts`](incentive-spreadsheet-to-json.ts) reads the spreadsheet and tries to convert it to JSON. This can be a messy process – spreadsheets may not have the correct column names or values. The script tries to handle small string discrepancies itself because making edits to Google sheets has a 5-minute delay before changes are reflected, but ultimately even with the script's help, this may be a painstaking process.
 
 Usage:
 `node build/scripts/incentive-spreadsheet-to-json.js --strict CO`
