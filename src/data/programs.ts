@@ -126,7 +126,7 @@ export const ALL_PROGRAMS = [
   'co_yWElectricAssociation_rebateProgram',
 
   // CT
-  // State
+  // State: DEEP
   'ct_cheapr',
   // Energize CT
   'ct_energizeCtHomeEnergySolutions',
