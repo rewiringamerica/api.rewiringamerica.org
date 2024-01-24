@@ -64,6 +64,48 @@
     }
   },
   {
+    "id": "AZ-5",
+    "authority_type": "utility",
+    "authority": "az-mohave-electric-cooperative",
+    "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "rooftop_solar_installation",
+    "item_type": "rebate",
+    "program": "az_mohaveElectricCooperativeSunWattsRenewableEnergyAndRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "unit": "watt",
+      "number": 0.05,
+      "maximum": 2500
+    },
+    "owner_status": ["homeowner"],
+    "short_description": {
+      "en": "Rebate up to $2500 for residential photovoltaic and wind system installation."
+    }
+  },
+  {
+    "id": "AZ-6",
+    "authority_type": "utility",
+    "authority": "az-mohave-electric-cooperative",
+    "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "battery_storage",
+    "item_type": "rebate",
+    "program": "az_mohaveElectricCooperativeMohaveHeatBatteryRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": ["homeowner"],
+    "short_description": {
+      "en": "Rebate of $500 for each minimum usable capacity battery unit of 5 kWh, installed on or after Jan 9, 2022."
+    }
+  },
+  {
     "id": "AZ-7",
     "authority_type": "utility",
     "authority": "az-salt-river-project",
@@ -226,5 +268,66 @@
     },
     "start_date": 2023,
     "end_date": 2023
+  },
+  {
+    "id": "AZ-21",
+    "authority_type": "utility",
+    "authority": "az-uni-source-energy-services",
+    "type": "pos_rebate",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "weatherization",
+    "item_type": "assistance_program",
+    "program": "az_uniSourceEnergyServicesWeatherizationAssistance",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": ["homeowner"],
+    "short_description": {
+      "en": "Assistance available for energy efficient retrofitting to homes of income-qualifying customers."
+    },
+    "low_income": "default"
+  },
+  {
+    "id": "AZ-22",
+    "authority_type": "utility",
+    "authority": "az-uni-source-energy-services",
+    "type": "pos_rebate",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "pos_rebate",
+    "program": "az_uniSourceEnergyServicesEfficientHomeProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900
+    },
+    "owner_status": ["homeowner"],
+    "short_description": {
+      "en": "Up to $900 rebate for retiring an existing, qualified system and installing an Energy Star heat pump/AC purchase via a qualified contractor."
+    }
+  },
+  {
+    "id": "AZ-23",
+    "authority_type": "utility",
+    "authority": "az-uni-source-energy-services",
+    "type": "pos_rebate",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "item_type": "pos_rebate",
+    "program": "az_uniSourceEnergyServicesEfficientHomeProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 650
+    },
+    "owner_status": ["homeowner"],
+    "short_description": {
+      "en": "Up to $650 rebate for an Energy Star heat pump/AC purchase and installation through a qualified contractor."
+    }
   }
 ]
