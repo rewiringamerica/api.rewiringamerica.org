@@ -1,0 +1,897 @@
+{
+  "is_under_80_ami": false,
+  "is_under_150_ami": true,
+  "is_over_150_ami": false,
+  "authorities": {
+    "co-colorado-energy-office": {
+      "name": "Colorado Energy Office"
+    },
+    "co-state-of-colorado": {
+      "name": "State of Colorado"
+    },
+    "co-walking-mountains": {
+      "name": "Walking Mountains"
+    },
+    "co-energy-outreach-colorado": {
+      "name": "Energy Outreach Colorado"
+    }
+  },
+  "coverage": {
+    "state": "CO",
+    "utility": "co-walking-mountains"
+  },
+  "location": {
+    "state": "CO"
+  },
+  "savings": {
+    "pos_rebate": 0,
+    "tax_credit": 7500,
+    "performance_rebate": 0,
+    "account_credit": 0,
+    "rebate": 0
+  },
+  "incentives": [
+    {
+      "type": "assistance_program",
+      "payment_methods": [
+        "assistance_program"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Low-Moderate Income Program",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 1
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Free Home Energy Assessment for households with income at 150% of Area Median Income or less."
+    },
+    {
+      "type": "assistance_program",
+      "payment_methods": [
+        "assistance_program"
+      ],
+      "authority_type": "state",
+      "authority": "co-energy-outreach-colorado",
+      "program": "Weatherization Assistance Program",
+      "program_url": "https://socgov02.my.site.com/ceoweatherization/s/",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 1
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "Weatherization is free for qualifying low-income households. Includes a professional home audit to determine necessary energy-conserving updates."
+    },
+    {
+      "type": "pos_rebate",
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "co-colorado-energy-office",
+      "program": "Vehicle Exchange Colorado (VXC) Program",
+      "program_url": "https://energyoffice.colorado.gov/vehicle-exchange-colorado",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/electric-vehicles"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 6000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "Income-qualified Coloradans can receive a $6,000 rebate to replace old or high-emitting vehicles with a new EV or PHEV."
+    },
+    {
+      "type": "pos_rebate",
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "co-colorado-energy-office",
+      "program": "Vehicle Exchange Colorado (VXC) Program",
+      "program_url": "https://energyoffice.colorado.gov/vehicle-exchange-colorado",
+      "item": {
+        "type": "used_electric_vehicle",
+        "name": "Used Electric Vehicle",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/electric-vehicles"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 4000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "Income-qualified Coloradans can receive a $4,000 rebate to replace old or high-emitting vehicles with a used EV or PHEV."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.5,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 50% of project costs for weatherization projects such as air/duct sealing, insulation, and more for income-qualitying households."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.5,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 50% of project costs for qualifying cold climate air source heat pumps for income-qualitying households."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.5,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 50% of project costs for qualifying cold climate air to water heat pumps for income-qualitying households."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.5,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 50% of project costs for qualifying cold climate ground source heat pumps for income-qualitying households."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.5,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 50% of project costs for qualifying ductless heat pumps for income-qualitying households."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "heat_pump_water_heater",
+        "name": "Heat Pump Water Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-water-heater"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.5,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 50% of project costs for heat pump water heaters for income-qualitying households."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "heat_pump_clothes_dryer",
+        "name": "Heat Pump Clothes Dryer",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-clothes-dryer"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.5,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 50% of project costs for heat pump clothes dryer for income-qualitying households."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "electric_panel",
+        "name": "Electric Panel",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/electrical-panel"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.5,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 50% of project costs for wiring projects related to electrification for income-qualitying households."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "electric_panel",
+        "name": "Electric Panel",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/electrical-panel"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.5,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 50% of project costs for panel upgrades related to electrification for income-qualitying households."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "smart_thermostat"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.5,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 50% of project costs for WiFi-enabled smart thermostats or programmable thermostats for income-qualitying households."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "electric_stove",
+        "name": "Electric/Induction Stove",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/electric-stove-induction-stove"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.5,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 50% of project costs for induction cooktops and stoves for income-qualitying households."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.25,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 25% of project costs for weatherization projects such as air/duct sealing, insulation, and more, capped annually at $3,000."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.25,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 25% of project costs for qualifying cold climate air source heat pumps, capped annually at $3,000."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.25,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 25% of project costs for qualifying cold climate air to water heat pumps, capped annually at $3,000."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.25,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 25% of project costs for qualifying cold climate ground source heat pumps, capped annually at $3,000."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.25,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 25% of project costs for qualifying ductless heat pumps, capped annually at $3,000."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "heat_pump_water_heater",
+        "name": "Heat Pump Water Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-water-heater"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.25,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 25% of project costs for heat pump water heaters, capped annually at $3,000."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "heat_pump_clothes_dryer",
+        "name": "Heat Pump Clothes Dryer",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-clothes-dryer"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.25,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 25% of project costs for heat pump clothes dryer, capped annually at $3,000."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "electric_panel",
+        "name": "Electric Panel",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/electrical-panel"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.25,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 25% of project costs for wiring projects related to electrification, capped annually at $3,000."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "electric_panel",
+        "name": "Electric Panel",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/electrical-panel"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.25,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 25% of project costs for panel upgrades related to electrification, capped annually at $3,000."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "smart_thermostat"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.25,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 25% of project costs for WiFi-enabled smart thermostats or programmable thermostats, capped annually at $3,000."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "electric_stove",
+        "name": "Electric/Induction Stove",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/electric-stove-induction-stove"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.25,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates of up to 25% of project costs for induction cooktops and stoves, capped annually at $3,000."
+    },
+    {
+      "type": "rebate",
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-walking-mountains",
+      "program": "Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "item": {
+        "type": "rooftop_solar_installation",
+        "name": "Rooftop Solar Installation",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/rooftop-solar-installation"
+      },
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 100,
+        "maximum": 3400,
+        "unit": "kilowatt"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebates for solar photovoltaic installation: $250/kW from 0-6 kW, and $100/kW from 6-25 kW."
+    },
+    {
+      "type": "tax_credit",
+      "payment_methods": [
+        "tax_credit"
+      ],
+      "authority_type": "state",
+      "authority": "co-state-of-colorado",
+      "program": "Colorado Heat Pump Incentives",
+      "program_url": "https://energysmartcolorado.org/tax-credits-incentives/",
+      "item": {
+        "type": "other"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.129
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "12.9% discount on the equipment price of heat pumps and heat pump water heaters, through Colorado State tax credit and sales tax exemption."
+    },
+    {
+      "type": "tax_credit",
+      "payment_methods": [
+        "tax_credit"
+      ],
+      "authority_type": "state",
+      "authority": "co-state-of-colorado",
+      "program": "Tax Credits",
+      "program_url": "https://energysmartcolorado.org/tax-credits-incentives/",
+      "item": {
+        "type": "battery_storage_installation",
+        "name": "Battery Storage Installation",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/battery-storage-installation"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.129
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "12.9% discount on battery storage systems through Colorado State tax credit and sales tax exemption."
+    },
+    {
+      "type": "tax_credit",
+      "payment_methods": [
+        "tax_credit"
+      ],
+      "authority_type": "state",
+      "authority": "co-colorado-energy-office",
+      "program": "Electric Vehicle Tax Credits",
+      "program_url": "https://energyoffice.colorado.gov/transportation/grants-incentives/electric-vehicle-tax-credits",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/electric-vehicles"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 5000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "State tax credit of $5,000 for the purchase or lease of a new EV (max MSRP: $80,000)."
+    },
+    {
+      "type": "tax_credit",
+      "payment_methods": [
+        "tax_credit"
+      ],
+      "authority_type": "state",
+      "authority": "co-colorado-energy-office",
+      "program": "Electric Vehicle Tax Credits",
+      "program_url": "https://energyoffice.colorado.gov/transportation/grants-incentives/electric-vehicle-tax-credits",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/electric-vehicles"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Additional state tax credit of $2,500 for Coloradans purchasing or leasing an EV with a max MSRP of $35,000."
+    }
+  ]
+}
