@@ -256,7 +256,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate off a qualifying heat pump system, dependent on size. Typical heat pump installations will receive approximately $900."
+      "en": "Rebate for a qualifying heat pump system, dependent on size. Typical heat pump installations will receive approximately $900."
     },
     "start_date": 2023,
     "end_date": 2023
@@ -281,7 +281,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Size dependent rebate off the installation of a heat pump replacing oil or gas, up to $20,000. Obtain pre-approval from NPU before installation."
+      "en": "Size dependent rebate for installation of an air source heat pump replacing oil or gas, up to $20,000. Obtain pre-approval from NPU beforehand."
     },
     "start_date": 2023,
     "end_date": 2023
@@ -427,7 +427,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,200 per ton off qualifying ground source heat pumps, up to $20,000."
+      "en": "Size dependent rebate for qualifying ground source heat pumps, up to $20,000."
     },
     "start_date": 2023,
     "end_date": 2023
@@ -523,5 +523,145 @@
     },
     "start_date": 2023,
     "end_date": 2024
+  },
+  {
+    "id": "CT-29",
+    "authority_type": "utility",
+    "authority": "ct-norwich-public-utilities",
+    "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "new_electric_vehicle",
+    "program": "ct_electricVehicleAndChargingRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate up to $1,500 for purchasing a new EV (model year 2020 or newer). Can be combined with federal, state, or manufacturer incentives."
+    },
+    "start_date": 2024,
+    "end_date": 2024
+  },
+  {
+    "id": "CT-30",
+    "authority_type": "utility",
+    "authority": "ct-norwich-public-utilities",
+    "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "used_electric_vehicle",
+    "program": "ct_electricVehicleAndChargingRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate up to $1,000 for purchasing a used EV (model year 2019 or newer). Can be combined with federal, state, or manufacturer incentives."
+    },
+    "start_date": 2024,
+    "end_date": 2024
+  },
+  {
+    "id": "CT-31",
+    "authority_type": "utility",
+    "authority": "ct-norwich-public-utilities",
+    "type": "rebate",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_vehicle_charger",
+    "program": "ct_electricVehicleAndChargingRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for purchasing a residential use Level 2 EVSE. Must apply within 60 days of installation."
+    },
+    "start_date": 2024,
+    "end_date": 2024
+  },
+  {
+    "id": "CT-32",
+    "authority_type": "state",
+    "authority": "ct-deep",
+    "type": "pos_rebate",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "new_electric_vehicle",
+    "program": "ct_cheapr",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$2,250 rebate for a qualifying new electric vehicle."
+    }
+  },
+  {
+    "id": "CT-33",
+    "authority_type": "state",
+    "authority": "ct-deep",
+    "type": "pos_rebate",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "new_electric_vehicle",
+    "program": "ct_cheapr",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "low_income": "ct-cheapr",
+    "short_description": {
+      "en": "Bonus $2,000 off a qualifying new electric vehicle for income-eligible individuals."
+    }
+  },
+  {
+    "id": "CT-34",
+    "authority_type": "state",
+    "authority": "ct-deep",
+    "type": "pos_rebate",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "item": "used_electric_vehicle",
+    "program": "ct_cheapr",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "low_income": "ct-cheapr",
+    "short_description": {
+      "en": "$3,000 rebate for a qualifying used electric vehicle for income-qualifying individuals."
+    }
   }
 ]

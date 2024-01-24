@@ -166,7 +166,49 @@ test('test incentive relationship and combined max value logic', async t => {
     if (['B', 'E', 'F'].includes(incentive.id)) {
       t.equal(incentive.eligible, true);
     }
-    if (['A', 'C'].includes(incentive.id)) {
+    if (['A', 'C', 'D'].includes(incentive.id)) {
+      t.equal(incentive.eligible, false);
+    }
+  }
+});
+
+// Same as above except for income.
+// This user is a renter with an income of 140k. Based on this, they are
+// eligible for incentives A, C, E, and F (their income is too high for B).
+// However, eligibility for several incentives is affected by relationships:
+// 1) Since E and C are mutually exclusive and E supersedes C, they are not
+//    eligible for C after checking relationships.
+// 2) Since C is a prerequisite for A and they are not eligible for C, they are
+//    not eligible for A either.
+// 3) A and B and mutually exclusive and A supersedes B, but the user is not
+//    eligible for A. However, despite this, they cannot become eligible for B
+//    because their income was too high.
+// 4) F is not affected by the relationships, so they are eligible for F.
+test('test incentive relationship and permanent ineligibility criteria', async t => {
+  const data = calculateStateIncentivesAndSavings(
+    'RI',
+    {
+      owner_status: OwnerStatus.Renter,
+      household_income: 140000,
+      tax_filing: FilingStatus.Single,
+      household_size: 1,
+      authority_types: [AuthorityType.Utility],
+      utility: 'ri-pascoag-utility-district',
+      include_beta_states: true,
+    },
+    TEST_INCENTIVES,
+    TEST_INCENTIVE_RELATIONSHIPS_3,
+  );
+
+  t.ok(data);
+  t.equal(data.stateIncentives.length, 6);
+  // There is a combined max value of $200 for A, B, C, D, E, and F.
+  t.equal(data.savings.account_credit, 200);
+  for (const incentive of data.stateIncentives) {
+    if (['E', 'F'].includes(incentive.id)) {
+      t.equal(incentive.eligible, true);
+    }
+    if (['A', 'B', 'C', 'D'].includes(incentive.id)) {
       t.equal(incentive.eligible, false);
     }
   }

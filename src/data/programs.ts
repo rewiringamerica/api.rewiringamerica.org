@@ -15,7 +15,7 @@ export const ALL_PROGRAMS = [
   // Mohave Electric Cooperative
   'az_mohaveElectricCooperativeMohaveChargedRebates',
   'az_mohaveElectricCooperativeMohaveHeatPumpRebate',
-  'az_mohaveElectricCooperativesunWattsRenewableEnergyAndRebateProgram',
+  'az_mohaveElectricCooperativeSunWattsRenewableEnergyAndRebateProgram',
   'az_mohaveElectricCooperativeMohaveHeatBatteryRebate',
   // Salt River Project
   'az_saltRiverProjectInsulationRebate',
@@ -126,6 +126,8 @@ export const ALL_PROGRAMS = [
   'co_yWElectricAssociation_rebateProgram',
 
   // CT
+  // State: DEEP
+  'ct_cheapr',
   // Energize CT
   'ct_energizeCtHomeEnergySolutions',
   'ct_residentialAirSourceHeatPumpIncentive',
@@ -141,6 +143,7 @@ export const ALL_PROGRAMS = [
   'ct_wallOrAtticInsulationProgram',
   'ct_coolChoiceProgram',
   'ct_coolingAndHeatingIncentivePilotProgram',
+  'ct_electricVehicleAndChargingRebateProgram',
 
   // NY
   // State or State + Utility:
