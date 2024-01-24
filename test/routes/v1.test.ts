@@ -117,7 +117,7 @@ test('response with state and item filtering is valid and correct', async t => {
   );
 });
 
-// AZ low income test
+// AZ low income test for Tuscon Electric utility.
 test('AZ low income response with state and utility filtering is valid and correct', async t => {
   await validateResponse(
     t,
@@ -136,6 +136,24 @@ test('AZ low income response with state and utility filtering is valid and corre
   );
 });
 
+// AZ low income test for UniSource utility.
+test('AZ low income response with state and utility filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '85702' },
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 28000,
+      tax_filing: 'joint',
+      authority_types: ['state', 'utility'],
+      utility: 'az-uni-source-energy-services',
+      // TODO: Remove when AZ is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-az-85702-state-utility-lowincome.json',
+  );
+});
 // CT low income test
 test('CT low income response with state and utility filtering is valid and correct', async t => {
   await validateResponse(

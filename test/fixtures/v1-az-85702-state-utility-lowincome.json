@@ -1,0 +1,107 @@
+{
+  "is_under_80_ami": true,
+  "is_under_150_ami": true,
+  "is_over_150_ami": false,
+  "authorities": {
+    "az-uni-source-energy-services": {
+      "name": "UniSource Energy Services"
+    }
+  },
+  "coverage": {
+    "state": "AZ",
+    "utility": "az-uni-source-energy-services"
+  },
+  "location": {
+    "state": "AZ"
+  },
+  "savings": {
+    "pos_rebate": 1550,
+    "tax_credit": 0,
+    "performance_rebate": 0,
+    "account_credit": 0,
+    "rebate": 0
+  },
+  "incentives": [
+    {
+      "type": "pos_rebate",
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "az-uni-source-energy-services",
+      "program": "Weatherization assistance",
+      "program_url": "https://www.uesaz.com/weatherization-assistance/",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 1
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Assistance available for energy efficient retrofitting to homes of income-qualifying customers."
+    },
+    {
+      "type": "pos_rebate",
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "az-uni-source-energy-services",
+      "program": "Efficient Home Program",
+      "program_url": "https://www.uesaz.com/efficient-home-program/",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 900
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Up to $900 rebate for retiring an existing, qualified system and installing an Energy Star heat pump/AC purchase via a qualified contractor."
+    },
+    {
+      "type": "pos_rebate",
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "az-uni-source-energy-services",
+      "program": "Efficient Home Program",
+      "program_url": "https://www.uesaz.com/efficient-home-program/",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 650
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Up to $650 rebate for an Energy Star heat pump/AC purchase and installation through a qualified contractor."
+    }
+  ]
+}
