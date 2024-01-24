@@ -1,12 +1,10 @@
 {
   "prerequisites": {
-    "A": [
-      "B",
-      "C"
-    ],
-    "C": [
-      "D"
-    ]
+    "A": { "allOf": [
+        "B",
+        "C"
+      ] },
+    "C": "D"
   },
   "exclusions": { "A": [
       "D"

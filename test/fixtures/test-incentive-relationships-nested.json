@@ -1,0 +1,23 @@
+{
+  "prerequisites": {
+    "A": { "anyOf": [
+        "C",
+        "D"
+      ] },
+    "B": { "allOf": [
+        "C",
+        "D"
+      ] },
+    "E": {
+      "anyOf": [
+        { "allOf": [
+            "A",
+            "C"
+          ] },
+        { "allOf": [
+            "B",
+            "D"
+          ] }]
+    }
+  }
+}
