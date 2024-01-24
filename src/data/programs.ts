@@ -15,7 +15,7 @@ export const ALL_PROGRAMS = [
   // Mohave Electric Cooperative
   'az_mohaveElectricCooperativeMohaveChargedRebates',
   'az_mohaveElectricCooperativeMohaveHeatPumpRebate',
-  'az_mohaveElectricCooperativesunWattsRenewableEnergyAndRebateProgram',
+  'az_mohaveElectricCooperativeSunWattsRenewableEnergyAndRebateProgram',
   'az_mohaveElectricCooperativeMohaveHeatBatteryRebate',
   // Salt River Project
   'az_saltRiverProjectInsulationRebate',
