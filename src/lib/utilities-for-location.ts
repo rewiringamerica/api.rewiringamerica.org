@@ -1,6 +1,6 @@
 import { AUTHORITIES_BY_STATE, Authority } from '../data/authorities';
 import { isStateIncluded } from '../data/types/states';
-import { ZipInfo } from './income-info';
+import { GeoInfo } from './income-info';
 
 /**
  * Find the utilities that may serve the given location. False positives are
@@ -14,7 +14,7 @@ import { ZipInfo } from './income-info';
  * TODO this is very not scalable to nationwide coverage!
  */
 export function getUtilitiesForLocation(
-  location: ZipInfo,
+  location: GeoInfo,
   includeBeta: boolean,
 ): {
   [id: string]: Authority;

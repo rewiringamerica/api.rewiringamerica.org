@@ -169,19 +169,19 @@ test('state incentives JSON files match schemas', async tap => {
         tap.hasProp(
           authorities[incentive.authority_type]![incentive.authority],
           'county',
-          'must define county attribute on corresponding authority for incentives with county authority type',
+          `must define county attribute on corresponding authority ${incentive.authority} for incentives with county authority type`,
         );
       }
       if (incentive.authority_type === AuthorityType.City) {
         tap.hasProp(
           authorities[incentive.authority_type]![incentive.authority],
           'county',
-          'must define county attribute on corresponding authority for incentives with city authority type (county is used for matching)',
+          `must define county attribute on corresponding authority ${incentive.authority} for incentives with city authority type (county is used for matching)`,
         );
         tap.hasProp(
           authorities[incentive.authority_type]![incentive.authority],
           'city',
-          'must define city attribute on corresponding authority for incentives with city authority type',
+          `must define city attribute on corresponding authority ${incentive.authority} for incentives with city authority type`,
         );
       }
 
@@ -199,6 +199,7 @@ test("launched states do not have any values that we don't support in the fronte
   STATE_INCENTIVE_TESTS.forEach(([state, , data]) => {
     if (LAUNCHED_STATES.includes(state)) {
       for (const incentive of data) {
+        // TODO: remove once City/County incentives have been beta-tested.
         tap.not(incentive.authority_type, AuthorityType.City);
         tap.not(incentive.authority_type, AuthorityType.County);
 

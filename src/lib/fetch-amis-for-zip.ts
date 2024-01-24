@@ -1,5 +1,5 @@
 import { Database } from 'sqlite';
-import { AMI, IncomeInfo, MFI, ZipInfo } from './income-info';
+import { AMI, GeoInfo, IncomeInfo, MFI } from './income-info';
 
 export default async function fetchAMIsForZip(
   db: Database,
@@ -13,7 +13,7 @@ export default async function fetchAMIsForZip(
   // Such ZIPs don't contain residential addresses, so this shouldn't be an
   // issue for users who enter their actual residential ZIPs. Still, to avoid
   // confusion, use parent_zcta if it's non-blank.
-  const location = await db.get<ZipInfo>(
+  const location = await db.get<GeoInfo>(
     `
     SELECT 
         COALESCE(NULLIF(parent_zcta, ''), zip) as zip, 

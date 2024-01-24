@@ -1,6 +1,6 @@
 import { Database } from 'sqlite';
 import { geocoder } from './geocoder';
-import { AMI, IncomeInfo, MFI, ZipInfo } from './income-info';
+import { AMI, GeoInfo, IncomeInfo, MFI } from './income-info';
 
 export default async function fetchAMIsForAddress(
   db: Database,
@@ -19,7 +19,7 @@ export default async function fetchAMIsForAddress(
 
   // We pull these from our database (vs geocoder) to ensure a match
   // when computing whether local incentives are eligible.
-  const supplemental = await db.get<ZipInfo>(
+  const supplemental = await db.get<GeoInfo>(
     `
     SELECT 
         city, 

@@ -18,7 +18,7 @@ import {
 } from '../schemas/v1/calculator-endpoint';
 import { APISavings, addSavings, zeroSavings } from '../schemas/v1/savings';
 import { InvalidInputError, UnexpectedInputError } from './error';
-import { AMI, CompleteIncomeInfo, MFI, ZipInfo } from './income-info';
+import { AMI, CompleteIncomeInfo, GeoInfo, MFI } from './income-info';
 import {
   calculateStateIncentivesAndSavings,
   getAllStateIncentives,
@@ -50,7 +50,7 @@ type CalculatedIncentives = Omit<APICalculatorResponse, 'incentives'> & {
 };
 
 export type CalculateParams = Omit<APICalculatorRequest, 'location'>;
-export type LocationParams = Omit<ZipInfo, 'zip'>;
+export type LocationParams = Omit<GeoInfo, 'zip'>;
 
 function calculateFederalIncentivesAndSavings(
   ami: AMI,
@@ -395,7 +395,7 @@ export default function calculateIncentives(
     authorities,
     coverage,
     location: {
-      state: location.state_id,
+      state: state_id,
       city: location.city,
       county: location.county,
     },

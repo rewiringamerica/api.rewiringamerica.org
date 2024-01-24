@@ -1,7 +1,7 @@
 /**
  * Corresponds to the "zips" table in sqlite.
  */
-export type ZipInfo = {
+export type GeoInfo = {
   state_id: string;
   zip: string;
   city?: string;
@@ -32,13 +32,13 @@ export type MFI = {
 };
 
 export type IncomeInfo = {
-  location: ZipInfo;
+  location: GeoInfo;
   ami: AMI | undefined;
   calculations: MFI | undefined;
 };
 
 export type CompleteIncomeInfo = {
-  location: ZipInfo;
+  location: GeoInfo;
   ami: AMI;
   calculations: MFI;
 };

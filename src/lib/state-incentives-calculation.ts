@@ -190,7 +190,7 @@ export function calculateStateIncentivesAndSavings(
     stateIncentives,
     savings,
     coverage: {
-      state: location.state_id,
+      state: stateId,
       utility: request.utility ?? null,
     },
   };
