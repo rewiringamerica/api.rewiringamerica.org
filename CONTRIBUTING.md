@@ -42,7 +42,7 @@ All the code is TypeScript, and is required to typecheck without errors.
 
 ### Data
 
-- Incentives are stored in JSON files in the directory `data`. The federal incentives are in `data/ira_incentives.json` and the state/utility incentives are in the subdirectories of `data` named with two-letter state codes.
+- Incentives are stored in JSON files in the directory `data`. The federal incentives are in `data/ira_incentives.json` and the state/utility incentives are in the subdirectories of `data` named with two-letter state codes. The data about how a state's incentives interact with each other will be in `incentive_relationships.json` in the state subdirectory (see the [Relationships README](/src/relationships-README.md) for more info about how incentive relationships work).
 
   - There is a concept of "beta" states, whose incentives are not included in API responses unless the `include_beta_states` query param is set. The sets of launched and beta states are defined in `src/data/types/states.ts`.
 
