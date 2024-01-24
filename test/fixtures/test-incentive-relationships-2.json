@@ -1,15 +1,16 @@
 {
-  "prerequisites": { "A": [
-      "B"
-    ], "B": [
-      "C"
-    ], "C": [
-      "D"
-    ] },
-  "exclusions": { "A": [
+  "prerequisites": {
+    "A": "B",
+    "B": "C",
+    "C": "D"
+  },
+  "exclusions": {
+    "A": [
       "E"
-    ], "E": [
+    ],
+    "E": [
       "F"
-    ] },
+    ]
+  },
   "combinations": []
 }

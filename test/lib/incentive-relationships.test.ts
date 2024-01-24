@@ -10,6 +10,7 @@ import {
   TEST_INCENTIVE_RELATIONSHIPS_2,
   TEST_INCENTIVE_RELATIONSHIPS_3,
   TEST_INVALID_INCENTIVE_RELATIONSHIPS,
+  TEST_NESTED_INCENTIVE_RELATIONSHIPS,
 } from '../mocks/state-incentive-relationships';
 import { TEST_INCENTIVES } from '../mocks/state-incentives';
 
@@ -171,6 +172,41 @@ test('test incentive relationship and combined max value logic', async t => {
   }
 });
 
+// This user is a renter. Based on this, they are eligible for incentives
+// A, B, C, E, and F.
+// However, eligibility for several incentives is affected by relationships:
+// 1) Since A requires either C or D and the user is eligible for C, they are
+//    also eligible for A.
+// 2) Since B requires BOTH C and D and the user is not eligible for D, they
+//    are not eligible for B.
+// 3) E requires either A and C or B and D. Since the user is eligible for both
+//    A and C, they will remain eligible for E.
+test('test nested incentive relationship logic', async t => {
+  const data = calculateStateIncentivesAndSavings(
+    'RI',
+    {
+      owner_status: OwnerStatus.Renter,
+      household_income: 120000,
+      tax_filing: FilingStatus.Single,
+      household_size: 1,
+      authority_types: [AuthorityType.Utility],
+      utility: 'ri-pascoag-utility-district',
+      include_beta_states: true,
+    },
+    TEST_INCENTIVES,
+    TEST_NESTED_INCENTIVE_RELATIONSHIPS,
+  );
+  t.ok(data);
+  for (const incentive of data.stateIncentives) {
+    if (['A', 'C', 'E', 'F'].includes(incentive.id)) {
+      t.equal(incentive.eligible, true);
+    }
+    if (['B', 'D'].includes(incentive.id)) {
+      t.equal(incentive.eligible, false);
+    }
+  }
+});
+
 // This user is eligible for incentives B, E, and F. These incentives are each
 // worth $100 and belong to a group with a maximum value of $200, so the final
 // savings value is $200.
@@ -208,6 +244,10 @@ test('test incentive relationships contain no circular dependencies', async tap 
   relationshipGraph = buildRelationshipGraph(TEST_INCENTIVE_RELATIONSHIPS_2);
   tap.equal(incentiveRelationshipsContainCycle(relationshipGraph), false);
   relationshipGraph = buildRelationshipGraph(TEST_INCENTIVE_RELATIONSHIPS_3);
+  tap.equal(incentiveRelationshipsContainCycle(relationshipGraph), false);
+  relationshipGraph = buildRelationshipGraph(
+    TEST_NESTED_INCENTIVE_RELATIONSHIPS,
+  );
   tap.equal(incentiveRelationshipsContainCycle(relationshipGraph), false);
 });
 

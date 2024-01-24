@@ -56,7 +56,10 @@ import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { BETA_ITEMS } from '../../src/data/types/items';
 import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
 import { LAUNCHED_STATES } from '../../src/data/types/states';
-import { buildRelationshipGraph } from '../../src/lib/incentive-relationship-calculation';
+import {
+  addPrerequisites,
+  buildRelationshipGraph,
+} from '../../src/lib/incentive-relationship-calculation';
 
 const TESTS = [
   [I_SCHEMA, IRA_INCENTIVES, 'ira_incentives'],
@@ -306,10 +309,12 @@ test('state incentive relationships only reference real IDs', async tap => {
     const incentivesForState = incentiveIds.get(stateId);
     if (incentivesForState !== undefined) {
       if (data.prerequisites !== undefined) {
-        for (const [incentiveId, prerequisiteIds] of Object.entries(
+        for (const [incentiveId, prerequisites] of Object.entries(
           data.prerequisites,
         )) {
           tap.equal(incentivesForState.has(incentiveId), true);
+          const prerequisiteIds = new Set<string>();
+          addPrerequisites(prerequisites, prerequisiteIds);
           for (const id of prerequisiteIds) {
             tap.equal(incentivesForState.has(id), true);
           }
