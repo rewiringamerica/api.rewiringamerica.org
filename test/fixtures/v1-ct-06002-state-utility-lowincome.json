@@ -5,6 +5,9 @@
   "authorities": {
     "ct-eversource": {
       "name": "Eversource"
+    },
+    "ct-deep": {
+      "name": "CT Department of Energy & Environmental Protection"
     }
   },
   "coverage": {
@@ -15,7 +18,7 @@
     "state": "CT"
   },
   "savings": {
-    "pos_rebate": 0,
+    "pos_rebate": 7250,
     "tax_credit": 0,
     "performance_rebate": 0,
     "account_credit": 0,
@@ -49,6 +52,91 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "The Home Energy Solutions program provides income-eligible households with no-cost energy assessments and incentives for weatherization services."
+    },
+    {
+      "type": "pos_rebate",
+      "payment_methods": [
+        "pos_rebate",
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "ct-deep",
+      "program": "Connecticut Hydrogen and Electric Automobile Purchase Rebate",
+      "program_url": "https://portal.ct.gov/DEEP/Air/Mobile-Sources/CHEAPR/CHEAPR---Home",
+      "item": {
+        "type": "used_electric_vehicle",
+        "name": "Used Electric Vehicle",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/electric-vehicles"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 3000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$3,000 rebate for a qualifying used electric vehicle for income-qualifying individuals."
+    },
+    {
+      "type": "pos_rebate",
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "ct-deep",
+      "program": "Connecticut Hydrogen and Electric Automobile Purchase Rebate",
+      "program_url": "https://portal.ct.gov/DEEP/Air/Mobile-Sources/CHEAPR/CHEAPR---Home",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/electric-vehicles"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2250
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$2,250 rebate for a qualifying new electric vehicle."
+    },
+    {
+      "type": "pos_rebate",
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "ct-deep",
+      "program": "Connecticut Hydrogen and Electric Automobile Purchase Rebate",
+      "program_url": "https://portal.ct.gov/DEEP/Air/Mobile-Sources/CHEAPR/CHEAPR---Home",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/electric-vehicles"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Bonus $2,000 off a qualifying new electric vehicle for income-eligible individuals."
     },
     {
       "type": "rebate",
