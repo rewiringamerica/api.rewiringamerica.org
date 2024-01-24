@@ -7,6 +7,7 @@ import { StateIncentive } from '../data/state_incentives';
 export interface RelationshipMaps {
   eligibleIncentives: Map<string, StateIncentive>;
   ineligibleIncentives: Map<string, StateIncentive>;
+  permanentlyIneligibleIncentives: Set<string>;
   requiresMap: Map<string, Set<string>>;
   requiredByMap: Map<string, Set<string>>;
   structuredPrerequisitesMap: Map<string, IncentivePrerequisites>;
@@ -212,6 +213,9 @@ export function makeIneligible(incentiveId: string, maps: RelationshipMaps) {
 
 // Switches an incentive from ineligible to eligible and checks dependents.
 export function makeEligible(incentiveId: string, maps: RelationshipMaps) {
+  if (maps.permanentlyIneligibleIncentives.has(incentiveId)) {
+    return;
+  }
   const incentive = maps.ineligibleIncentives.get(incentiveId);
   if (incentive === undefined) {
     return;
