@@ -60,7 +60,7 @@ export const API_INCENTIVE_SCHEMA = {
           type: 'string',
         },
       },
-      required: ['type', 'name', 'url'],
+      required: ['type'],
       additionalProperties: false,
     },
     amount: {
