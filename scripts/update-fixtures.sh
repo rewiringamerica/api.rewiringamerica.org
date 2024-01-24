@@ -63,7 +63,7 @@ curl \
 # TODO: Remove beta states argument when AZ is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=85701\
+?location\[zip\]=85702\
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=28000\
