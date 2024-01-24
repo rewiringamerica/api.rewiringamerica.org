@@ -118,7 +118,7 @@ test('response with state and item filtering is valid and correct', async t => {
 });
 
 // AZ low income test for Tuscon Electric utility.
-test('AZ low income response with state and utility filtering is valid and correct', async t => {
+test('AZ low income response with state and utility filtering for Tuscon Electric is valid and correct', async t => {
   await validateResponse(
     t,
     {
@@ -137,7 +137,7 @@ test('AZ low income response with state and utility filtering is valid and corre
 });
 
 // AZ low income test for UniSource utility.
-test('AZ low income response with state and utility filtering is valid and correct', async t => {
+test('AZ low income response with state and utility filtering for UniSource is valid and correct', async t => {
   await validateResponse(
     t,
     {
