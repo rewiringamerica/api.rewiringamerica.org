@@ -19,15 +19,15 @@ test('t finds the right string', async tap => {
 
 test('tr finds the right string', async tap => {
   tap.equal(
-    tr(PROGRAMS['hopeForHomes'].name),
-    'Federal Home Efficiency Rebates (HOMES)',
+    tr(PROGRAMS['homeEfficiencyRebates'].name),
+    'Federal Home Efficiency Rebates (HER)',
   );
   tap.equal(
-    tr(PROGRAMS['hopeForHomes'].name, 'en'),
-    'Federal Home Efficiency Rebates (HOMES)',
+    tr(PROGRAMS['homeEfficiencyRebates'].name, 'en'),
+    'Federal Home Efficiency Rebates (HER)',
   );
   tap.equal(
-    tr(PROGRAMS['hopeForHomes'].name, 'es'),
-    'Reembolsos de Eficiencia en el Consumo de Energía en el Hogar (HOMES)',
+    tr(PROGRAMS['homeEfficiencyRebates'].name, 'es'),
+    'Reembolsos de Eficiencia en el Consumo de Energía en el Hogar (HER)',
   );
 });
