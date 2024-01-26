@@ -191,7 +191,7 @@ test('test incentive relationship and combined max value logic', async t => {
 // 4) F is not affected by the relationships, so they are eligible for F.
 test('test incentive relationship and permanent ineligibility criteria', async t => {
   const data = calculateStateIncentivesAndSavings(
-    'RI',
+    { state_id: 'RI' },
     {
       owner_status: OwnerStatus.Renter,
       household_income: 140000,
@@ -203,6 +203,7 @@ test('test incentive relationship and permanent ineligibility criteria', async t
     },
     TEST_INCENTIVES,
     TEST_INCENTIVE_RELATIONSHIPS_3,
+    {},
   );
 
   t.ok(data);
