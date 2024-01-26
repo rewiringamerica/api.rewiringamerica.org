@@ -52,6 +52,16 @@ export const API_RESPONSE_LOCATION_SCHEMA = {
       description:
         'The two-letter abbreviation for the state, district, or territory of the location submitted in the request.',
     },
+    city: {
+      type: 'string',
+      description:
+        'The city name as determined by looking up the zip code in our database.',
+    },
+    county: {
+      type: 'string',
+      description:
+        'The county name as determined by looking up the zip code in our database.',
+    },
   },
   required: ['state'],
   additionalProperties: false,

@@ -19,7 +19,8 @@ import { STATES_PLUS_DC } from './types/states';
  */
 export enum AuthorityType {
   Federal = 'federal',
-  Local = 'local',
+  City = 'city',
+  County = 'county',
   State = 'state',
   Utility = 'utility',
 }
@@ -29,6 +30,8 @@ export const API_AUTHORITY_SCHEMA = {
   properties: {
     name: { type: 'string' },
     logo: API_IMAGE_SCHEMA,
+    city: { type: 'string' },
+    county: { type: 'string' },
   },
   required: ['name'],
   additionalProperties: false,
@@ -55,7 +58,8 @@ export const SCHEMA = {
     properties: {
       state: authoritiesMapSchema,
       utility: authoritiesMapSchema,
-      local: authoritiesMapSchema,
+      city: authoritiesMapSchema,
+      county: authoritiesMapSchema,
     },
     required: ['state', 'utility'],
     additionalProperties: false,
@@ -63,6 +67,7 @@ export const SCHEMA = {
   required: [],
 } as const;
 
+export type AuthoritiesByType = { [index: string]: AuthoritiesById };
 export type AuthoritiesByState = FromSchema<typeof SCHEMA>;
 
 export const AUTHORITIES_BY_STATE: AuthoritiesByState = JSON.parse(

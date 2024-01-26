@@ -109,30 +109,45 @@
         "name": "YW Electric Association"
       }
     },
-    "local": {
-      "co-city-and-county-of-denver": {
-        "name": "City and County of Denver"
-      },
+    "city": {
       "co-city-of-boulder": {
-        "name": "City of Boulder"
-      },
-      "co-boulder-county": {
-        "name": "Boulder County"
+        "name": "City of Boulder",
+        "city": "Boulder",
+        "county": "Boulder"
       },
       "co-town-of-avon": {
-        "name": "Town of Avon"
+        "name": "Town of Avon",
+        "city": "Avon",
+        "county": "Eagle"
       },
       "co-town-of-eagle": {
-        "name": "Town of Eagle"
+        "name": "Town of Eagle",
+        "city": "Eagle",
+        "county": "Eagle"
       },
       "co-town-of-erie": {
-        "name": "Town of Erie"
+        "name": "Town of Erie",
+        "city": "Erie",
+        "county": "Weld"
       },
       "co-town-of-vail": {
-        "name": "Town of Vail"
+        "name": "Town of Vail",
+        "city": "Vail",
+        "county": "Eagle"
+      }
+    },
+    "county": {
+      "co-city-and-county-of-denver": {
+        "name": "City and County of Denver",
+        "county": "Denver"
+      },
+      "co-boulder-county": {
+        "name": "Boulder County",
+        "county": "Boulder"
       },
       "co-unincorporated-eagle-county": {
-        "name": "Unincorporated Eagle County"
+        "name": "Unincorporated Eagle County",
+        "county": "Eagle"
       }
     },
     "state": {
@@ -153,7 +168,6 @@
         "name": "CT Department of Energy & Environmental Protection"
       }
     },
-    "local": {},
     "utility": {
       "ct-eversource": {
         "name": "Eversource"
@@ -170,7 +184,6 @@
     }
   },
   "NY": {
-    "local": {},
     "state": {
       "ny-state-of-ny": {
         "name": "State of NY"
@@ -204,7 +217,6 @@
     }
   },
   "RI": {
-    "local": {},
     "state": {
       "ri-oer": {
         "name": "Rhode Island Office of Energy Resources",
@@ -249,7 +261,6 @@
     }
   },
   "VA": {
-    "local": {},
     "state": {},
     "utility": {
       "va-appalachian-power": {

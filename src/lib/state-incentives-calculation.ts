@@ -1,5 +1,5 @@
 import { min } from 'lodash';
-import { AuthorityType } from '../data/authorities';
+import { AuthoritiesByType, AuthorityType } from '../data/authorities';
 import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/low_income_thresholds';
 import {
   INCENTIVE_RELATIONSHIPS_BY_STATE,
@@ -24,7 +24,11 @@ import {
   makeIneligible,
   meetsPrerequisites,
 } from './incentive-relationship-calculation';
-import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
+import {
+  CalculateParams,
+  CalculatedIncentive,
+  LocationParams,
+} from './incentives-calculation';
 
 export function getAllStateIncentives(
   stateId: string,
@@ -42,10 +46,11 @@ export function getStateIncentiveRelationships(stateId: string) {
 }
 
 export function calculateStateIncentivesAndSavings(
-  stateId: string,
+  location: LocationParams,
   request: CalculateParams,
   incentives: StateIncentive[],
   incentiveRelationships: IncentiveRelationships,
+  stateAuthorities: AuthoritiesByType,
 ): {
   stateIncentives: CalculatedIncentive[];
   savings: APISavings;
@@ -59,42 +64,12 @@ export function calculateStateIncentivesAndSavings(
     };
   }
 
-  const includeState =
-    !request.authority_types ||
-    request.authority_types.includes(AuthorityType.State);
-  const includeUtility =
-    !request.authority_types ||
-    request.authority_types.includes(AuthorityType.Utility);
-
+  const stateId = location.state_id;
   const eligibleIncentives = new Map<string, StateIncentive>();
   const ineligibleIncentives = new Map<string, StateIncentive>();
 
   for (const item of incentives) {
-    if (request.items && !request.items.includes(item.item)) {
-      // Don't include an incentive at all if the query is filtering by item and
-      // this doesn't match.
-      continue;
-    }
-
-    if (item.authority_type === AuthorityType.State && !includeState) {
-      // Don't include state incentives at all if they weren't requested, not
-      // even as "ineligible" incentives.
-      continue;
-    }
-
-    if (
-      item.authority_type === AuthorityType.Utility &&
-      (!includeUtility || item.authority !== request.utility)
-    ) {
-      // Don't include utility incentives at all if they weren't requested, or
-      // if they're for the wrong utility.
-      continue;
-    }
-
-    if (item.authority_type === AuthorityType.Local) {
-      // TODO: support serving Local incentives
-      // This allows keeping them in our JSON datasets, but for now
-      // we always ignore them.
+    if (skipBasedOnRequestParams(item, request, location, stateAuthorities)) {
       continue;
     }
 
@@ -243,4 +218,71 @@ function transformItems(
     transformed.push(transformedItem);
   }
   return transformed;
+}
+
+function skipBasedOnRequestParams(
+  item: StateIncentive,
+  request: CalculateParams,
+  location: LocationParams,
+  stateAuthorities: AuthoritiesByType,
+) {
+  if (
+    request.authority_types &&
+    !request.authority_types.includes(item.authority_type)
+  ) {
+    // Skip all utilities that are not of the requested authority type(s).
+    return true;
+  }
+
+  if (request.items && !request.items.includes(item.item)) {
+    // Don't include an incentive at all if the query is filtering by item and
+    // this doesn't match.
+    return true;
+  }
+
+  if (
+    item.authority_type === AuthorityType.Utility &&
+    item.authority !== request.utility
+  ) {
+    // Don't include utility incentives at all if they weren't requested, or
+    // if they're for the wrong utility.
+    return true;
+  }
+
+  // County and City incentives are approximate and prone to
+  // false positives, since zip codes to not map 1:1 to counties
+  // and cities.
+  // https://app.asana.com/0/1204738794846444/1206454407609847
+  // tracks long-term work in this space.
+  if (item.authority_type === AuthorityType.County) {
+    // Skip if we didn't get location data.
+    if (location.county === undefined) return true;
+
+    // We have tests to ensure county authorities are registered.
+    const authorityDetails = stateAuthorities.county![item.authority];
+    if (authorityDetails.county !== location.county) {
+      return true;
+    }
+  }
+
+  if (item.authority_type === AuthorityType.City) {
+    // We have to match on both city and county since more than one
+    // municipalities can have the same name within the same state.
+
+    // Skip if we didn't get location data.
+    if (location.city === undefined || location.county === undefined) {
+      return true;
+    }
+
+    // We have tests to ensure city authorities are registered.
+    const authorityDetails = stateAuthorities.city![item.authority];
+
+    if (
+      authorityDetails.city !== location.city ||
+      authorityDetails.county !== location.county
+    ) {
+      return true;
+    }
+  }
+  return false;
 }
