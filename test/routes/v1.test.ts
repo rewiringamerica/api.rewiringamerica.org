@@ -203,7 +203,7 @@ test('VA low income response with state and utility filtering is valid and corre
       household_income: 40000,
       tax_filing: 'joint',
       authority_types: ['state', 'utility'],
-      utility: 'va-dominion-virginia-power',
+      utility: 'va-dominion-energy',
       // TODO: Remove when VA is fully launched.
       include_beta_states: true,
     },
