@@ -7,8 +7,8 @@ export const ALL_PROGRAMS = [
   'cleanVehicleCredit',
   'creditForPreviouslyOwnedCleanVehicles',
   'energyEfficientHomeImprovementCredit',
-  'HEEHR',
-  'hopeForHomes',
+  'homeElectrificationAndApplianceRebates',
+  'homeEfficiencyRebates',
   'residentialCleanEnergyCredit',
 
   // AZ
