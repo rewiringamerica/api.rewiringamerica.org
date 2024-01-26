@@ -249,6 +249,11 @@ function skipBasedOnRequestParams(
     return true;
   }
 
+  // County and City incentives are approximate and prone to
+  // false positives, since zip codes to not map 1:1 to counties
+  // and cities.
+  // https://app.asana.com/0/1204738794846444/1206454407609847
+  // tracks long-term work in this space.
   if (item.authority_type === AuthorityType.County) {
     // Skip if we didn't get location data.
     if (location.county === undefined) return true;

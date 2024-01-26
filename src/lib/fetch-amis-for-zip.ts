@@ -13,6 +13,12 @@ export default async function fetchAMIsForZip(
   // Such ZIPs don't contain residential addresses, so this shouldn't be an
   // issue for users who enter their actual residential ZIPs. Still, to avoid
   // confusion, use parent_zcta if it's non-blank.
+
+  // city and county are approximate, as zips can span county/city lines.
+  // We should communicate that clearly in API documentation and
+  // in frontends.
+  // https://app.asana.com/0/1204738794846444/1206454407609847
+  // tracks longer-term work in this space.
   const location = await db.get<GeoInfo>(
     `
     SELECT 

@@ -19,6 +19,11 @@ export default async function fetchAMIsForAddress(
 
   // We pull these from our database (vs geocoder) to ensure a match
   // when computing whether local incentives are eligible.
+  // This data is approximate, as zips can span county/city lines.
+  // We should communicate that clearly in API documentation and
+  // in frontends.
+  // https://app.asana.com/0/1204738794846444/1206454407609847
+  // tracks longer-term work in this space.
   const supplemental = await db.get<GeoInfo>(
     `
     SELECT 
@@ -29,12 +34,6 @@ export default async function fetchAMIsForAddress(
   `,
     zip,
   );
-  let city: string | undefined;
-  let county: string | undefined;
-  if (supplemental !== undefined) {
-    city = supplemental.city;
-    county = supplemental.county;
-  }
 
   const censusInfo = result.fields?.census['2010'];
 
@@ -63,8 +62,8 @@ export default async function fetchAMIsForAddress(
   const location = {
     state_id: result.address_components.state,
     zip,
-    city,
-    county,
+    city: supplemental?.city,
+    county: supplemental?.county,
   };
 
   const ami = await db.get<AMI>(
