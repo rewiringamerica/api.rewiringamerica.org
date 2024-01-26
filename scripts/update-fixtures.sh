@@ -113,7 +113,7 @@ curl \
 &household_size=1\
 &authority_types=state\
 &authority_types=utility\
-&utility=va-dominion-virginia-power" \
+&utility=va-dominion-energy" \
   | jq . > test/fixtures/v1-va-22030-state-utility-lowincome.json
 
 curl \
