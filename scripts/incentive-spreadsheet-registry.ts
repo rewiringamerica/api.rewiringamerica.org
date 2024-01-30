@@ -36,7 +36,8 @@ export const FILES: { [ident: string]: IncentiveFile } = {
   },
   AZ: {
     filepath: 'data/AZ/incentives.json',
-    sheetUrl: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQEGP5ZcMknLdHAqBAeCUtdkNPtS0CiFzQzoM4bdbLWYqC_30j1lHLeJhMSKElFRuwRdrgcd46Gl54j/pub?gid=995688950&single=true&output=csv',
+    sheetUrl:
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vQEGP5ZcMknLdHAqBAeCUtdkNPtS0CiFzQzoM4bdbLWYqC_30j1lHLeJhMSKElFRuwRdrgcd46Gl54j/pub?gid=995688950&single=true&output=csv',
     headerRowNumber: 2,
     idHeader: 'ID',
     enHeader: 'Program Description (style guide)',

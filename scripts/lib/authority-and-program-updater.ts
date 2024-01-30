@@ -17,10 +17,59 @@ const wordSeparators =
 const capital_plus_lower = /[A-ZÀ-Ý\u00C0-\u00D6\u00D9-\u00DD][a-zà-ÿ]/g;
 const capitals = /[A-ZÀ-Ý\u00C0-\u00D6\u00D9-\u00DD]+/g;
 
-const stateAbbreviationArray: readonly string[] = ['AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT',
- 'DE', 'DC', 'FL', 'GA', 'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD', 'MA',
- 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ', 'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 
- 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY'];
+const stateAbbreviationArray: readonly string[] = [
+  'AL',
+  'AK',
+  'AZ',
+  'AR',
+  'CA',
+  'CO',
+  'CT',
+  'DE',
+  'DC',
+  'FL',
+  'GA',
+  'HI',
+  'ID',
+  'IL',
+  'IN',
+  'IA',
+  'KS',
+  'KY',
+  'LA',
+  'ME',
+  'MD',
+  'MA',
+  'MI',
+  'MN',
+  'MS',
+  'MO',
+  'MT',
+  'NE',
+  'NV',
+  'NH',
+  'NJ',
+  'NM',
+  'NY',
+  'NC',
+  'ND',
+  'OH',
+  'OK',
+  'OR',
+  'PA',
+  'RI',
+  'SC',
+  'SD',
+  'TN',
+  'TX',
+  'UT',
+  'VT',
+  'VA',
+  'WA',
+  'WV',
+  'WI',
+  'WY',
+];
 
 function kebabCase(str: string) {
   // replace word starts with space + lower case equivalent for later parsing
@@ -163,23 +212,19 @@ export class AuthorityAndProgramUpdater {
         };
     }
 
-    // Reset file first. 
-    fs.writeFileSync(
-      AUTHORITIES_JSON_FILE,
-      "",
-      'utf-8',
-    );
+    // Reset file first.
+    fs.writeFileSync(AUTHORITIES_JSON_FILE, '', 'utf-8');
     // Go through list of state abbreviations and then write them, if entries exist.
     for (const entry_state of stateAbbreviationArray) {
       if (json[entry_state] !== undefined) {
-        let obj: any = {};
+        const obj: AuthorityMap = {};
         obj[entry_state] = json[entry_state];
         fs.appendFileSync(
           AUTHORITIES_JSON_FILE,
           JSON.stringify(obj, null, 2),
           'utf-8',
         );
-        }
+      }
     }
   }
 
