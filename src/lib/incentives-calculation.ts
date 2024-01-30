@@ -18,7 +18,7 @@ import {
 } from '../schemas/v1/calculator-endpoint';
 import { APISavings, addSavings, zeroSavings } from '../schemas/v1/savings';
 import { InvalidInputError, UnexpectedInputError } from './error';
-import { AMI, CompleteIncomeInfo, MFI } from './income-info';
+import { AMI, CompleteIncomeInfo, GeoInfo, MFI } from './income-info';
 import {
   calculateStateIncentivesAndSavings,
   getAllStateIncentives,
@@ -50,6 +50,7 @@ type CalculatedIncentives = Omit<APICalculatorResponse, 'incentives'> & {
 };
 
 export type CalculateParams = Omit<APICalculatorRequest, 'location'>;
+export type LocationParams = Omit<GeoInfo, 'zip'>;
 
 function calculateFederalIncentivesAndSavings(
   ami: AMI,
@@ -227,7 +228,7 @@ function calculateFederalIncentivesAndSavings(
 }
 
 export default function calculateIncentives(
-  { location: { state_id }, ami, calculations }: CompleteIncomeInfo,
+  { location, ami, calculations }: CompleteIncomeInfo,
   request: CalculateParams,
 ): CalculatedIncentives {
   const {
@@ -237,6 +238,8 @@ export default function calculateIncentives(
     household_size,
     authority_types,
   } = request;
+
+  const state_id = location.state_id;
 
   if (!OWNER_STATUSES.has(owner_status)) {
     throw new UnexpectedInputError('Unknown owner_status');
@@ -329,16 +332,19 @@ export default function calculateIncentives(
   if (
     !authority_types ||
     authority_types.includes(AuthorityType.State) ||
-    authority_types.includes(AuthorityType.Utility)
+    authority_types.includes(AuthorityType.Utility) ||
+    authority_types.includes(AuthorityType.County) ||
+    authority_types.includes(AuthorityType.City)
   ) {
     const allStateIncentives = getAllStateIncentives(state_id, request);
     const stateIncentiveRelationships =
       getStateIncentiveRelationships(state_id);
     const state = calculateStateIncentivesAndSavings(
-      state_id,
+      location,
       request,
       allStateIncentives,
       stateIncentiveRelationships,
+      stateAuthorities,
     );
     incentives.push(...state.stateIncentives);
     savings = addSavings(savings, state.savings);
@@ -382,17 +388,17 @@ export default function calculateIncentives(
     });
   }
 
-  const location = {
-    state: state_id,
-  };
-
   return {
     is_under_80_ami: isUnder80Ami,
     is_under_150_ami: isUnder150Ami,
     is_over_150_ami: isOver150Ami,
     authorities,
     coverage,
-    location,
+    location: {
+      state: state_id,
+      city: location.city,
+      county: location.county,
+    },
     savings,
     incentives: sortedIncentives,
   };

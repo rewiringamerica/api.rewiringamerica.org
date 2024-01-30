@@ -18,7 +18,7 @@ import { TEST_INCENTIVES } from '../mocks/state-incentives';
 // This checks incentive eligibility with no relationship logic included.
 test('basic test for supplying test incentive data to calculation logic', async t => {
   const data = calculateStateIncentivesAndSavings(
-    'RI',
+    { state_id: 'RI' },
     {
       owner_status: OwnerStatus.Homeowner,
       household_income: 120000,
@@ -29,6 +29,7 @@ test('basic test for supplying test incentive data to calculation logic', async 
       include_beta_states: false,
     },
     TEST_INCENTIVES,
+    {},
     {},
   );
   t.ok(data);
@@ -42,7 +43,7 @@ test('basic test for supplying test incentive data to calculation logic', async 
 
 test('test calculation with no incentives', async t => {
   const data = calculateStateIncentivesAndSavings(
-    'RI',
+    { state_id: 'RI' },
     {
       owner_status: OwnerStatus.Homeowner,
       household_income: 120000,
@@ -54,6 +55,7 @@ test('test calculation with no incentives', async t => {
     },
     [],
     TEST_INCENTIVE_RELATIONSHIPS,
+    {},
   );
   t.ok(data);
   t.equal(data.stateIncentives.length, 0);
@@ -70,7 +72,7 @@ test('test calculation with no incentives', async t => {
 //    not eligible for C, they can still be eligible for F.
 test('test incentive relationship logic', async t => {
   const data = calculateStateIncentivesAndSavings(
-    'RI',
+    { state_id: 'RI' },
     {
       owner_status: OwnerStatus.Renter,
       household_income: 120000,
@@ -82,6 +84,7 @@ test('test incentive relationship logic', async t => {
     },
     TEST_INCENTIVES,
     TEST_INCENTIVE_RELATIONSHIPS,
+    {},
   );
   t.ok(data);
   t.equal(data.stateIncentives.length, 6);
@@ -106,7 +109,7 @@ test('test incentive relationship logic', async t => {
 // 5) E supersedes F, so they are not eligible for F.
 test('test more complex incentive relationship logic', async t => {
   const data = calculateStateIncentivesAndSavings(
-    'RI',
+    { state_id: 'RI' },
     {
       owner_status: OwnerStatus.Renter,
       household_income: 120000,
@@ -118,6 +121,7 @@ test('test more complex incentive relationship logic', async t => {
     },
     TEST_INCENTIVES,
     TEST_INCENTIVE_RELATIONSHIPS_2,
+    {},
   );
   t.ok(data);
   t.equal(data.stateIncentives.length, 6);
@@ -145,7 +149,7 @@ test('test more complex incentive relationship logic', async t => {
 // 4) F is not affected by the relationships, so they are eligible for F.
 test('test incentive relationship and combined max value logic', async t => {
   const data = calculateStateIncentivesAndSavings(
-    'RI',
+    { state_id: 'RI' },
     {
       owner_status: OwnerStatus.Renter,
       household_income: 120000,
@@ -157,6 +161,7 @@ test('test incentive relationship and combined max value logic', async t => {
     },
     TEST_INCENTIVES,
     TEST_INCENTIVE_RELATIONSHIPS_3,
+    {},
   );
   t.ok(data);
   t.equal(data.stateIncentives.length, 6);
@@ -186,7 +191,7 @@ test('test incentive relationship and combined max value logic', async t => {
 // 4) F is not affected by the relationships, so they are eligible for F.
 test('test incentive relationship and permanent ineligibility criteria', async t => {
   const data = calculateStateIncentivesAndSavings(
-    'RI',
+    { state_id: 'RI' },
     {
       owner_status: OwnerStatus.Renter,
       household_income: 140000,
@@ -198,6 +203,7 @@ test('test incentive relationship and permanent ineligibility criteria', async t
     },
     TEST_INCENTIVES,
     TEST_INCENTIVE_RELATIONSHIPS_3,
+    {},
   );
 
   t.ok(data);
@@ -225,7 +231,7 @@ test('test incentive relationship and permanent ineligibility criteria', async t
 //    A and C, they will remain eligible for E.
 test('test nested incentive relationship logic', async t => {
   const data = calculateStateIncentivesAndSavings(
-    'RI',
+    { state_id: 'RI' },
     {
       owner_status: OwnerStatus.Renter,
       household_income: 120000,
@@ -237,6 +243,7 @@ test('test nested incentive relationship logic', async t => {
     },
     TEST_INCENTIVES,
     TEST_NESTED_INCENTIVE_RELATIONSHIPS,
+    {},
   );
   t.ok(data);
   for (const incentive of data.stateIncentives) {
@@ -254,7 +261,7 @@ test('test nested incentive relationship logic', async t => {
 // savings value is $200.
 test('test combined maximum savings logic', async t => {
   const data = calculateStateIncentivesAndSavings(
-    'RI',
+    { state_id: 'RI' },
     {
       owner_status: OwnerStatus.Renter,
       household_income: 120000,
@@ -266,6 +273,7 @@ test('test combined maximum savings logic', async t => {
     },
     TEST_INCENTIVES,
     TEST_INCENTIVE_RELATIONSHIPS_3,
+    {},
   );
   t.ok(data);
   // Check that the user is eligible for B, E, and F.
