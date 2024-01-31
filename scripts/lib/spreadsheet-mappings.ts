@@ -20,7 +20,7 @@ export const FIELD_MAPPINGS: { [index: string]: string[] } = {
   amount_minimum: ['Amount Minimum'],
   amount_maximum: ['Amount Maximum'],
   amount_representative: ['Amount Representative (only for average values)'],
-  bonus_description: ['Bonus Description'],
+  bonus_description: ['Bonus Description', 'Bonus Details'],
   equipment_standards_restrictions: ['Equipment Standards Restrictions'],
   equipment_capacity_restrictions: ['Equipment Capacity Restrictions'],
   contractor_restrictions: ['Contractor Restrictions'],
@@ -33,6 +33,7 @@ export const FIELD_MAPPINGS: { [index: string]: string[] } = {
   // This contains notes about why we might not serve a record in the API.
   // It may not appear in all spreadsheets.
   editorial_notes: ['Editorial Notes'],
+  questions: ['Questions'],
 };
 
 // Note: this is from alias to canonical name, which is the reverse of
