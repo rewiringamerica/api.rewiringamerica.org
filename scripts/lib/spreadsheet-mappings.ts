@@ -33,8 +33,6 @@ export const FIELD_MAPPINGS: { [index: string]: string[] } = {
   // This contains notes about why we might not serve a record in the API.
   // It may not appear in all spreadsheets.
   editorial_notes: ['Editorial Notes'],
-  bonus_details: ['Bonus Details'],
-  questions: ['Questions'],
 };
 
 // Note: this is from alias to canonical name, which is the reverse of
