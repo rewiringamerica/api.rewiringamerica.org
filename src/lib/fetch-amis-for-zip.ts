@@ -1,5 +1,12 @@
 import { Database } from 'sqlite';
-import { AMI, GeoInfo, IncomeInfo, MFI } from './income-info';
+import {
+  AMI,
+  CountySubInfo,
+  GeoInfo,
+  IncomeInfo,
+  MFI,
+  PlaceInfo,
+} from './income-info';
 
 export default async function fetchAMIsForZip(
   db: Database,
@@ -19,6 +26,7 @@ export default async function fetchAMIsForZip(
   // in frontends.
   // https://app.asana.com/0/1204738794846444/1206454407609847
   // tracks longer-term work in this space.
+
   const location = await db.get<GeoInfo>(
     `
     SELECT 
@@ -34,6 +42,104 @@ export default async function fetchAMIsForZip(
   if (!location) {
     return null;
   }
+
+  // SUBSTRING is 1-indexed oh the horror
+  const placeMatches = await db.all<PlaceInfo[]>(
+    `
+    SELECT 
+        SUBSTRING(geoid_place_20, 1, 2) as state_fips, 
+        namelsad_place_20 as name 
+    FROM zcta_to_place
+    WHERE geoid_zcta5_20 = ?
+  `,
+    location.zip, // actually ZCTA if available
+  );
+  const countySubMatches = await db.all<CountySubInfo[]>(
+    `
+    SELECT 
+        SUBSTRING(geoid_cousub_20, 1, 2) as state_fips, 
+        namelsad_cousub_20 as name 
+    FROM zcta_to_countysub
+    WHERE geoid_zcta5_20 = ?
+  `,
+    location.zip, // actually ZCTA if available
+  );
+
+  const stateFips: { [index: string]: string } = {
+    '01': 'AL',
+    '02': 'AK',
+    '04': 'AZ',
+    '05': 'AR',
+    '06': 'CA',
+    '08': 'CO',
+    '09': 'CT',
+    '10': 'DE',
+    '11': 'DC',
+    '12': 'FL',
+    '13': 'GA',
+    '15': 'HI',
+    '16': 'ID',
+    '17': 'IL',
+    '18': 'IN',
+    '19': 'IA',
+    '20': 'KS',
+    '21': 'KY',
+    '22': 'LA',
+    '23': 'ME',
+    '24': 'MD',
+    '25': 'MA',
+    '26': 'MI',
+    '27': 'MN',
+    '28': 'MS',
+    '29': 'MO',
+    '30': 'MT',
+    '31': 'NE',
+    '32': 'NV',
+    '33': 'NH',
+    '34': 'NJ',
+    '35': 'NM',
+    '36': 'NY',
+    '37': 'NC',
+    '38': 'ND',
+    '39': 'OH',
+    '40': 'OK',
+    '41': 'OR',
+    '42': 'PA',
+    '44': 'RI',
+    '45': 'SC',
+    '46': 'SD',
+    '47': 'TN',
+    '48': 'TX',
+    '49': 'UT',
+    '50': 'VT',
+    '51': 'VA',
+    '53': 'WA',
+    '54': 'WV',
+    '55': 'WI',
+    '56': 'WY',
+  };
+  const places: PlaceInfo[] = [];
+
+  placeMatches.forEach(match => {
+    if (stateFips[match.state_fips] !== undefined)
+      places.push({
+        zcta: location.zip,
+        state_fips: match.state_fips,
+        state_id: stateFips[match.state_fips],
+        name: match.name,
+      });
+  });
+
+  const countysubs: CountySubInfo[] = [];
+  countySubMatches.forEach(match => {
+    if (stateFips[match.state_fips] !== undefined)
+      countysubs.push({
+        zcta: location.zip,
+        state_fips: match.state_fips,
+        state_id: stateFips[match.state_fips],
+        name: match.name,
+      });
+  });
 
   const calculations = await db.get<MFI>(
     `
@@ -59,5 +165,5 @@ export default async function fetchAMIsForZip(
     location.zip,
   );
 
-  return { ami, location, calculations };
+  return { ami, location, calculations, places, countysubs };
 }

@@ -9,6 +9,26 @@ export type GeoInfo = {
 };
 
 /**
+ * Corresponds to the "zcta_to_place" table in sqlite.
+ */
+export type PlaceInfo = {
+  zcta?: string;
+  state_fips: string;
+  state_id?: string;
+  name: string;
+};
+
+/**
+ * Corresponds to the "zcta_to_countysub" table in sqlite.
+ */
+export type CountySubInfo = {
+  zcta?: string;
+  state_fips: string;
+  state_id?: string;
+  name: string;
+};
+
+/**
  * Corresponds to the "ami" table in sqlite. There are a bunch of columns that
  * we don't need to look at, and some that we look at using constructed keys
  * (e.g. `l80_${household_size}`).
@@ -35,6 +55,8 @@ export type IncomeInfo = {
   location: GeoInfo;
   ami: AMI | undefined;
   calculations: MFI | undefined;
+  places?: PlaceInfo[];
+  countysubs?: CountySubInfo[];
 };
 
 export type CompleteIncomeInfo = {

@@ -8,6 +8,10 @@ DROP TABLE IF EXISTS zip_to_tract;
 
 DROP TABLE IF EXISTS zip_to_cbsasub;
 
+DROP TABLE IF EXISTS zcta_to_place;
+
+DROP TABLE IF EXISTS zcta_to_countysub;
+
 CREATE TABLE ami(
     State_Alpha TEXT,
     fips2010 TEXT,
@@ -79,6 +83,49 @@ CREATE TABLE zip_to_tract(
 
 CREATE TABLE zip_to_cbsasub(zipcode TEXT, cbsasub TEXT);
 
+CREATE TABLE zcta_to_place(
+  oid_zcta5_20 TEXT,
+  geoid_zcta5_20 TEXT,
+  namelsad_zcta5_20 TEXT,
+  arealand_zcta5_20 TEXT,
+  areawater_zcta5_20 TEXT,
+  mtfcc_zcta5_20 TEXT,
+  classfp_zcta5_20 TEXT,
+  funcstat_zcta5_20 TEXT,
+  oid_place_20 TEXT,
+  geoid_place_20 TEXT,
+  namelsad_place_20 TEXT,
+  arealand_place_20 TEXT,
+  areawater_place_20 TEXT,
+  mtfcc_place_20 TEXT,
+  classfp_place_20 TEXT,
+  funcstat_place_20 TEXT,
+  arealand_part TEXT,
+  areawater_part TEXT
+);
+
+CREATE TABLE zcta_to_countysub(
+  oid_zcta5_20 TEXT,
+  geoid_zcta5_20 TEXT,
+  namelsad_zcta5_20 TEXT,
+  arealand_zcta5_20 TEXT,
+  areawater_zcta5_20 TEXT,
+  mtfcc_zcta5_20 TEXT,
+  classfp_zcta5_20 TEXT,
+  funcstat_zcta5_20 TEXT,
+  oid_cousub_20 TEXT,
+  geoid_cousub_20 TEXT,
+  namelsad_cousub_20 TEXT,
+  arealand_cousub_20 TEXT,
+  areawater_cousub_20 TEXT,
+  mtfcc_cousub_20 TEXT,
+  classfp_cousub_20 TEXT,
+  funcstat_cousub_20 TEXT,
+  arealand_part TEXT,
+  areawater_part TEXT
+);
+
+
 CREATE INDEX idx_zipzip ON zips(zip);
 
 CREATE INDEX idx_tractgeoid ON tracts(tract_geoid);
@@ -89,8 +136,14 @@ CREATE INDEX idx_zipcbsasub ON zip_to_cbsasub(zipcode);
 
 CREATE INDEX idx_amicbsasub ON ami(cbsasub);
 
+CREATE INDEX idx_zctaplace ON zcta_to_place(geoid_zcta5_20);
+
+CREATE INDEX idx_zctacountysub ON zcta_to_countysub(geoid_zcta5_20);
+
 .import --csv --skip 1 ./scripts/data/ami.csv ami
 .import --csv --skip 1 ./scripts/data/zips.csv zips
 .import --csv --skip 1 ./scripts/data/tracts.csv tracts
 .import --csv --skip 1 ./scripts/data/zip-to-tract.csv zip_to_tract
 .import --csv --skip 1 ./scripts/data/zip-to-cbsasub.csv zip_to_cbsasub
+.import --skip 1 ./scripts/data/zcta_to_place.txt zcta_to_place
+.import --skip 1 ./scripts/data/zcta_to_countysub.txt zcta_to_countysub
