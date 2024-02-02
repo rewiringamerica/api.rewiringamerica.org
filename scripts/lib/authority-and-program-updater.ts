@@ -74,8 +74,21 @@ export function createProgramName(
   );
 }
 
+export function sortJsonAlphabeticallyByStateKey(
+  json: StateToAuthorityTypeMap,
+) {
+  const ordered = Object.keys(json)
+    .sort()
+    .reduce((obj, key) => {
+      obj[key] = json[key];
+      return obj;
+    }, {} as StateToAuthorityTypeMap);
+  return ordered;
+}
+
 type AuthorityKey = string;
 type ProgramKey = string;
+type StateKey = string;
 type Authority = {
   name: string;
   authority_type: string;
@@ -88,6 +101,18 @@ type ProgramMap = {
 
 type AuthorityMap = {
   [index: AuthorityKey]: Authority;
+};
+
+// These types encapsulate how we parse and then re-write JSON to the data/authorities.json file.
+type JsonAuthorities = {
+  [index: AuthorityKey]: { name: string };
+};
+type AuthorityType = string;
+type AuthorityTypeMap = {
+  [index: AuthorityType]: JsonAuthorities;
+};
+export type StateToAuthorityTypeMap = {
+  [index: StateKey]: AuthorityTypeMap;
 };
 
 export class AuthorityAndProgramUpdater {
@@ -136,7 +161,9 @@ export class AuthorityAndProgramUpdater {
   }
 
   updateAuthoritiesJson() {
-    const json = JSON.parse(fs.readFileSync(AUTHORITIES_JSON_FILE, 'utf-8'));
+    const json: StateToAuthorityTypeMap = JSON.parse(
+      fs.readFileSync(AUTHORITIES_JSON_FILE, 'utf-8'),
+    );
     const stateUpper = this.state.toUpperCase();
     if (stateUpper in json) {
       throw new Error(
@@ -157,9 +184,12 @@ export class AuthorityAndProgramUpdater {
           name: authority.name,
         };
     }
+
+    const ordered_json = sortJsonAlphabeticallyByStateKey(json);
+
     fs.writeFileSync(
       AUTHORITIES_JSON_FILE,
-      JSON.stringify(json, null, 2),
+      JSON.stringify(ordered_json, null, 2),
       'utf-8',
     );
   }

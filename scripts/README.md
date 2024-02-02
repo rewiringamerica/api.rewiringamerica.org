@@ -46,7 +46,7 @@ This script covers:
 Usage:
 `node build/scripts/generate-misc-state-data.js <state_id>`
 
-After running, you may need to edit these files to put states in alphabetical order. Note that running this script twice will paste the same values twice.
+After running, you may need to edit the program files to put states in alphabetical order. The authorities file is already alphabetically sorted. Note that running this script twice will paste the same values twice.
 
 It's recommended to also define low-income thresholds in `data/low_income_thresholds.json` for your state to save time in the next step.
 
