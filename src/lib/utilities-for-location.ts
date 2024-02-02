@@ -1,6 +1,14 @@
+import { Database } from 'sqlite';
 import { AUTHORITIES_BY_STATE, Authority } from '../data/authorities';
 import { isStateIncluded } from '../data/types/states';
 import { GeoInfo } from './income-info';
+
+/** Models the zip_to_utility table in sqlite. */
+type ZipToUtility = {
+  zip: string;
+  utility_id: string;
+  predominant: number;
+};
 
 /**
  * Find the utilities that may serve the given location. False positives are
@@ -10,46 +18,31 @@ import { GeoInfo } from './income-info';
  *
  * Returns a map of utility IDs to utility info, suitable for the response
  * from /api/v1/utilities.
- *
- * TODO this is very not scalable to nationwide coverage!
  */
-export function getUtilitiesForLocation(
+export async function getUtilitiesForLocation(
+  db: Database,
   location: GeoInfo,
   includeBeta: boolean,
-): {
+): Promise<{
   [id: string]: Authority;
-} {
+}> {
   const stateUtilities = AUTHORITIES_BY_STATE[location.state_id]?.utility;
 
   if (!stateUtilities || !isStateIncluded(location.state_id, includeBeta)) {
     return {};
   }
 
-  let ids: string[];
+  // Put the predominant utility first
+  const rows = await db.all<ZipToUtility[]>(
+    'SELECT * FROM zip_to_utility WHERE zip = ? ORDER BY predominant DESC',
+    location.zip,
+  );
 
-  // If we know details about where the state's utilities operate, we can
-  // encode that here.
-  if (location.state_id === 'RI') {
-    // Source: https://catalog.data.gov/dataset/u-s-electric-utility-companies-and-rates-look-up-by-zipcode-2021
-    // According to that dataset, 02839 is not served by Pascoag, but in a meeting
-    // with them they mentioned it, so it's included here.
-    switch (location.zip) {
-      case '02807':
-        ids = ['ri-block-island-power-company'];
-        break;
-      case '02814':
-      case '02830':
-      case '02839':
-      case '02859':
-        ids = ['ri-rhode-island-energy', 'ri-pascoag-utility-district'];
-        break;
-      default:
-        ids = ['ri-rhode-island-energy'];
-    }
-  } else {
-    // Fall back to returning all the state's utilities, regardless of location.
-    return stateUtilities;
-  }
-
-  return Object.fromEntries(ids.map(id => [id, stateUtilities[id]]));
+  // For now, only return utilities that are also reflected in authorities.json,
+  // as those are the ones we've done data collection for.
+  return Object.fromEntries(
+    rows
+      .filter(row => row.utility_id in stateUtilities)
+      .map(row => [row.utility_id, stateUtilities[row.utility_id]]),
+  );
 }

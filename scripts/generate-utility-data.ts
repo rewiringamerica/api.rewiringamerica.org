@@ -1,0 +1,253 @@
+/**
+ * Generates a CSV file, ready to be loaded into the runtime SQLite database,
+ * from ENERGY STAR's dataset mapping zip codes to utilities.
+ *
+ * Usage:
+ *   generate-utility-data.ts [--file utilities.xlsx]
+ *
+ * Pass --file to read a local file instead of downloading from the Internet.
+ */
+
+import { stringify } from 'csv-stringify';
+import fs from 'fs';
+import _ from 'lodash';
+import fetch from 'make-fetch-happen';
+import minimist from 'minimist';
+import path from 'path';
+import { promisify } from 'util';
+import xlsx from 'xlsx';
+
+/**
+ * Utility codes (number) or utility names (string) to exclude from
+ * consideration. These must be exactly as they appear in the spreadsheet.
+ */
+const EXCLUSIONS: Set<string | number> = new Set([
+  // AZ
+  25060, // Wellton-Mohawk; no electric
+  60772, // Buckeye; no electric
+  62264, // Hohokam; no electric
+  78679, // Ocotillo; no electric
+
+  // CO
+  6752, // Town of Frederick; now served by United Power
+
+  // CT
+  9734, // City of Jewett City; no electric
+
+  // VA
+  8198, // City of Harrisonburg; no electric
+]);
+
+/**
+ * Map from utility codes (numbers) or utility names (string) to replacement
+ * names. The keys must be exactly as they appear in the spreadsheet. The
+ * replacement names will be treated as if they were the name in the sheet.
+ */
+const OVERRIDES = new Map<string | number, string>([
+  // AZ
+  [1241, 'DixiePower'],
+  [15048, 'Electrical District No 2 Pinal County'],
+  [30518, 'Electrical District No 3 Pinal County'],
+  [15049, 'Electrical District No 4 Pinal County'],
+  [18280, 'Sulphur Springs Valley Electric Cooperative'],
+  [19728, 'UniSource Energy Services'],
+  [40165, 'DixiePower'],
+  [62683, "Tohono O'odham Utility Authority"],
+  [606953, 'UniSource Energy Services'],
+
+  // CO
+  [5997, 'Estes Park Power and Communications'],
+  [7300, 'Glenwood Springs Electric'],
+  [10066, 'K.C. Electric Association'],
+  [11256, 'Loveland Water and Power'],
+  [12860, 'Morgan County REA'],
+  [15257, 'Poudre Valley REA'],
+  [16603, 'San Luis Valley REC'],
+  [16616, 'San Isabel Electric'],
+
+  // CT
+  [7716, 'Groton Utilities'],
+  [13831, 'Norwich Public Utilities'],
+  [17569, 'South Norwalk Electric and Water'],
+
+  // NY
+  [1036, 'Con Edison'],
+  [1115, 'NYSEG'],
+  [1117, 'National Grid'], // Niagara Mohawk
+  [3249, 'Central Hudson Gas & Electric'],
+  [4226, 'Con Edison'],
+  [11811, 'Massena Electric'],
+  [13511, 'NYSEG'],
+  [14154, 'Orange & Rockland'],
+  [16183, 'Rochester Gas & Electric'],
+  [16549, 'Salamanca Board of Public Utilities'],
+
+  // RI
+  [1857, 'Block Island Power Company'],
+
+  // VA
+  [1186, 'Dominion Energy'],
+  [2248, 'BVU Authority'],
+  [4794, 'Danville Utilities'],
+  [6715, 'Franklin Municipal Power and Light'],
+  [13640, 'NOVEC'],
+  [15619, 'Radford Electric Department'],
+  [19876, 'Dominion Energy'],
+  [60762, 'BVU Authority'],
+  ['Virginia Electric & Power Co', 'Dominion Energy'],
+
+  // VT
+  [1061, 'Green Mountain Power'],
+  [7601, 'Green Mountain Power'],
+  [19791, 'Vermont Electric Coop'],
+  [27316, 'Stowe Electric Department'],
+]);
+
+/**
+ * A best-effort attempt to convert the name from the spreadsheet into a
+ * utility ID and a user-facing name, as we've done manually.
+ */
+function convertName(
+  name: string,
+  state: string,
+): { id: string; name: string } {
+  let cleaned = name;
+
+  // Remove the " - (XX)" suffix (state codes)
+  cleaned = cleaned.replace(/-? *\([A-Z]{2}\)$/, '').trim();
+  // Remove square-bracketed parts, which are parent companies not used as the
+  // customer-facing brand
+  cleaned = cleaned.replace(/\[.*\]/, '').trim();
+  // Remove "Inc" or "Co" suffix
+  cleaned = cleaned.replace(/,? *(I(nc)?|Co)\.?$/, '').trim();
+  // Remove "(for __ reporting)" parenthetical
+  cleaned = cleaned.replace(/\(.*reporting.*\)/i, '').trim();
+  // Spell out "Pwr", "Assn", "Elec", and "Coop"
+  // The dataset is inconsistent about this
+  cleaned = cleaned.replaceAll(/\bPwr\b/g, 'Power');
+  cleaned = cleaned.replaceAll(/\bAssn\b/g, 'Association');
+  cleaned = cleaned.replaceAll(/\bElec\b/g, 'Electric');
+  cleaned = cleaned.replaceAll(/\bCo-?op\b/g, 'Cooperative');
+
+  // Generate the ID: replace & with "and", remove all parentheticals,
+  // spaces into hyphens
+  const id =
+    state.toLowerCase() +
+    '-' +
+    cleaned
+      .toLowerCase()
+      .replaceAll(/\s*&\s*/g, ' and ')
+      .replaceAll(/\([^)]*\)/g, '')
+      .replaceAll('.', '')
+      .replaceAll(' ', '-');
+
+  return { id, name: cleaned };
+}
+
+// These must be in the same order as in the spreadsheet
+enum Col {
+  Zip = 'Zip Code',
+  State = 'State',
+  UtilityName = 'Utility Name',
+  UtilityCode = 'Utility Code',
+  Predominant = 'Predominant Utility?',
+  Electric = 'Electric?',
+  Gas = 'Gas?',
+  Steam = 'Steam?',
+  Water = 'Water?',
+  DataType = 'Data Type',
+  AggregateWholeBuilding = 'Aggregate Whole-Building Data?',
+  Multifamily = 'Multifamily Included?',
+  Contact = 'Contact Person',
+  Phone = 'Contact Phone',
+  Email = 'Contact Email',
+  Website = 'Website',
+}
+
+(async () => {
+  const args = minimist(process.argv.slice(2), {
+    string: ['file'],
+  });
+
+  const rawSheet = args.file
+    ? await promisify(fs.readFile)(args.file)
+    : await fetch(
+        'https://downloads.energystar.gov/bi/portfolio-manager/Public_Utility_Map_en_US.xlsx',
+      ).then(response => response.buffer());
+
+  const sheet = xlsx.read(rawSheet, {
+    sheets: 0,
+    dense: true,
+    cellHTML: false,
+    cellText: false,
+  }).Sheets['Public Utility Map'];
+
+  type Cell = { v: string };
+  const header = sheet[2].map((c: Cell) => c.v);
+
+  if (!_.isEqual(header, Object.values(Col))) {
+    console.error('Header row is not as expected:', header);
+    return;
+  }
+
+  const zipToUtilityOut = stringify({
+    header: true,
+    columns: ['zip', 'utility_id', 'predominant'],
+  });
+  zipToUtilityOut.pipe(
+    fs.createWriteStream(path.join(__dirname, 'data/zip-to-utility.csv')),
+  );
+
+  // For deduplication by utility ID and zip.
+  const seen = new Set<string>();
+  const names = new Map<string, string>();
+
+  for (const sheetRow of sheet.slice(3)) {
+    const row: { [c in keyof typeof Col]: string } = Object.fromEntries(
+      _.zip(
+        Object.keys(Col),
+        sheetRow.map((c: Cell) => c.v),
+      ),
+    );
+
+    // Yes = they provide electricity, No = they don't, Not Available = maybe
+    if (row.Electric === 'No') {
+      continue;
+    }
+
+    if (
+      EXCLUSIONS.has(parseInt(row.UtilityCode)) ||
+      EXCLUSIONS.has(row.UtilityName)
+    ) {
+      continue;
+    }
+
+    const sheetName =
+      OVERRIDES.get(parseInt(row.UtilityCode)) ??
+      OVERRIDES.get(row.UtilityName) ??
+      row.UtilityName;
+    const { id, name } = convertName(sheetName, row.State);
+
+    if (seen.has(row.Zip + id)) {
+      continue;
+    }
+    seen.add(row.Zip + id);
+
+    names.set(id, name);
+    zipToUtilityOut.write({
+      zip: row.Zip,
+      utility_id: id,
+      predominant: row.Predominant === 'Yes' ? 1 : 0,
+    });
+  }
+
+  const utilitiesOut = stringify({
+    header: true,
+    columns: ['utility_id', 'name'],
+  });
+  utilitiesOut.pipe(
+    fs.createWriteStream(path.join(__dirname, 'data/utilities.csv')),
+  );
+
+  names.forEach((name, utility_id) => utilitiesOut.write({ utility_id, name }));
+})();
