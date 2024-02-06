@@ -63,6 +63,40 @@ As of November 2023, our highest priority efforts are:
 - Using those processes to expand coverage of state, local, and utility incentives nationwide.
 - Adapting our representation of incentives to be able to capture all the various details and nuances of incentives, in a structured way. This includes income limits, time limits, stacking and mutual exclusion, and so on.
 
+## Data
+
+### Scope of Incentives data collected
+
+Aligning to our mission, the scope of the incentive data we have collected so far is representative of the following household types and technologies.
+
+**Household Type:**
+
+- Only Residential and Single-family households
+
+**Technology (Appliances / Product):**
+
+- Heat pumps (heating and cooling) HVAC (includes all types of heat pumps such as Air-to-water heat pumps, Ductless heat pumps, Ducted heat pumps, Air source heat pumps, Mini-split heat pumps)
+- Geothermal / Ground Source Heat Pump
+- Heat Pump Water Heater (HPWH)
+- Electric Stoves / Induction Cooktop
+- Heat Pump Dryers / Electric Clothes Dryer
+- Electric Vehicles (new and used)
+- Electric Vehicle chargers
+- Rooftop Solar
+- Battery Storage
+- Weatherization (includes insulation, windows, and air sealing etc)
+- Electric wiring (electric upgrades / retrofits)
+- Electric panel (electric upgrades / retrofits)
+- Electric lawn equipment (mower, edger, leaf blower, weed whacker)
+- Smart Thermostat
+- E-Bike
+
+### Structure of the Incentives data
+
+Refer to the [Incentive data model definition](https://docs.google.com/spreadsheets/d/1JTeTk9lhBxgCvpNDsU80upaxgp1XPROUpFwfK4UHVbI/edit?pli=1#gid=894925043) to understand our approach to standardize the incentive data structure across all 50 states.
+
+This data model is undergoing continuous refinement as we gather more comprehensive information about nationwide incentive programs. Our goal is to iteratively enhance the model by incorporating additional data points that complement the current broad survey of incentive data, typically derived from the market needs.
+
 ## Contributing
 
 :construction: **Our capacity to accept contributions is limited.** We're not currently set up for external contributions of new incentive data, though we're working towards it.
@@ -83,3 +117,5 @@ For further information, including guidance on working on code, see [CONTRIBUTIN
 See the [Contributing](#contributing) section for specific situations where we'd like you to file an issue.
 
 For other matters, you can email us at `api@rewiringamerica.org`.
+
+For FAQs, refer to the [IRA Calculator FAQ page](https://www.rewiringamerica.org/app/ira-calculator/faqs).

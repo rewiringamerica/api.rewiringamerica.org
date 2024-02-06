@@ -12,11 +12,15 @@ Look at the [public API docs](https://api.rewiringamerica.org/docs) to understan
 
 ### Incentive data
 
-As stated in [the README](README.md#contributing), we're not currently set up for external contributions of incentive data. Gathering and maintaining a dataset of electrification incentives all across the US is a significant undertaking, and we're still early in that undertaking.
+- **Please [contact us](README.md#contact) if you plan to start collecting new data for a state we don’t already have.** One of our goals with open sourcing this project is to avoid duplicated effort across organizations and companies, we would be happy to work together and connect you with other contributors interested in the same areas.
 
-Our tools and processes for dealing with this data are nascent and quickly changing. We aim to open them up to external contributors eventually, but we're not there yet.
+- **Start here if you want to help us collect incentives data**: [Guidelines for Incentive Data Collection](https://docs.google.com/document/d/11jHmz7tc2F6JsPw7vF3dC7BLGf5_XP4joMeCcjM0rVk/edit#heading=h.sdsaz8v9ipkd) provides a detailed overview of our approach for incentive data collection using volunteers.
 
-That said, we welcome reports of inaccuracies in our existing incentive data, and especially of the API incorrectly saying you're eligible for an incentive. Please file issues in those situations.
+- **To understand the structure of data we capture in spreadsheet format, see**: [Incentives Data Model_Baseline & Template](https://docs.google.com/spreadsheets/d/1JTeTk9lhBxgCvpNDsU80upaxgp1XPROUpFwfK4UHVbI/edit#gid=995688950).
+
+- **Get involved in [NODE Collective](https://www.nodecollective.org)**. If you would like to help evolve these standards and datasets in future, please sign up to help!
+
+We also welcome reports of inaccuracies in our existing incentive data, and especially of the API incorrectly saying you're eligible for an incentive. Please file issues in those situations.
 
 ### Code
 
