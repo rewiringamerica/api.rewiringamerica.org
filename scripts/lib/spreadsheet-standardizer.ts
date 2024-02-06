@@ -8,29 +8,58 @@ import {
   createAuthorityName,
   createProgramName,
 } from './authority-and-program-updater';
-import { FIELD_MAPPINGS, VALUE_MAPPINGS } from './spreadsheet-mappings';
+import {
+  AliasMap,
+  FIELD_MAPPINGS,
+  FlatAliasMap,
+  VALUE_MAPPINGS,
+} from './spreadsheet-mappings';
+
+const ARRAY_FIELDS = ['payment_methods', 'owner_status'];
 
 // Standardize column names or values in an incentive spreadsheet.
 export class SpreadsheetStandardizer {
-  private fieldMap: { [index: string]: string };
+  private fieldMap: FlatAliasMap;
+  private valueMap: { [index: string]: FlatAliasMap };
   private strict: boolean;
   private lowIncomeThresholds: LowIncomeThresholdsMap | null;
 
   /**
-   * @param fieldMap: a map from canonical name to all of the aliases it might appear as in the Google spreadsheets
+   * @param fieldMap: a map from canonical column name to all of the aliases it might appear as in the Google spreadsheets
+   * @param valueMap: a map from canonical value name to all of the aliases it might appear as in the Google spreadsheets
    * @param strict: whether to throw an error on aliases that aren't found
    * @param lowIncomeThresholds: state-segmented income thresholds. If empty, the script won't try to associate records with low-income programs.
    */
   constructor(
-    fieldMap: { [index: string]: string[] } = FIELD_MAPPINGS,
+    fieldMap: AliasMap = FIELD_MAPPINGS,
+    valueMap: { [index: string]: AliasMap } = VALUE_MAPPINGS,
     strict: boolean = true,
     lowIncomeThresholds: LowIncomeThresholdsMap | null = null,
   ) {
     // We reverse the input map for easier runtime use, since
     // we need to go from alias back to canonical name.
     this.fieldMap = reverseMap(fieldMap);
+    this.valueMap = reverseValueMap(valueMap);
     this.strict = strict;
     this.lowIncomeThresholds = lowIncomeThresholds;
+  }
+
+  convertToCanonical(val: string, colName: string): string {
+    const components: string[] = ARRAY_FIELDS.includes(colName)
+      ? val.split(',').map(x => x.trim())
+      : [val];
+
+    return components
+      .map((component: string) => {
+        if (
+          this.valueMap[colName] !== undefined &&
+          this.valueMap[colName][cleanFieldName(component)] !== undefined
+        ) {
+          component = this.valueMap[colName][cleanFieldName(component)];
+        }
+        return component;
+      })
+      .join(',');
   }
 
   // Convert a row with possible column aliases to a canonical column name.
@@ -47,7 +76,8 @@ export class SpreadsheetStandardizer {
       }
 
       const newCol = this.fieldMap[cleaned];
-      output[newCol] = input[key];
+      const val = this.convertToCanonical(input[key], newCol);
+      output[newCol] = val;
     }
     return output;
   }
@@ -62,37 +92,40 @@ export class SpreadsheetStandardizer {
     const output: Record<string, string | number | object | boolean> = {
       id: record.id,
       authority_type: coerceToStandardValue(
-        record.authority_level,
+        record.authority_type,
         getEnumValues(Object.values(AuthorityType)),
       ),
       authority: authorityName,
       type: coerceToStandardValue(
-        record.rebate_type.split(',')[0],
+        record.payment_methods.split(',')[0],
         getEnumValues(Object.values(PaymentMethod)),
-        VALUE_MAPPINGS.payment_methods,
+        this.valueMap.payment_methods,
       ),
-      payment_methods: findPaymentMethods(record.rebate_type),
+      payment_methods: this.findPaymentMethods(record.payment_methods),
       item: coerceToStandardValue(
-        record.technology,
+        record.item,
         new Set(Object.keys(ITEMS_SCHEMA)),
-        VALUE_MAPPINGS.item,
+        this.valueMap.item,
       ),
       program: createProgramName(
         state,
         record.authority_name,
         record.program_title,
       ),
-      amount: createAmount(record),
+      amount: this.createAmount(record),
       owner_status: findOwnerStatus(record.owner_status),
       short_description: {
-        en: standardizeDescription(record.program_description),
+        en: standardizeDescription(record['short_description.en']),
       },
     };
-    if (record.program_start !== undefined && record.program_start !== '') {
-      output.start_date = +parseDateToYear(record.program_start);
+    if (
+      record.program_start_raw !== undefined &&
+      record.program_start_raw !== ''
+    ) {
+      output.start_date = +parseDateToYear(record.program_start_raw);
     }
-    if (record.program_end !== undefined && record.program_end !== '') {
-      output.end_date = +parseDateToYear(record.program_end);
+    if (record.program_end_raw !== undefined && record.program_end_raw !== '') {
+      output.end_date = +parseDateToYear(record.program_end_raw);
     }
     if (
       record.bonus_description !== undefined &&
@@ -125,6 +158,60 @@ export class SpreadsheetStandardizer {
       return undefined;
     }
     return authority in this.lowIncomeThresholds![state];
+  }
+
+  findPaymentMethods(input: string): string[] {
+    if (input === undefined || input === '') {
+      return [];
+    }
+    const methods: string[] = [];
+    for (const method of input.split(',')) {
+      methods.push(
+        coerceToStandardValue(
+          method,
+          getEnumValues(Object.values(PaymentMethod)),
+          this.valueMap.payment_methods,
+        ),
+      );
+    }
+    return methods;
+  }
+
+  createAmount(input: Record<string, string>): Record<string, number | string> {
+    const amount: Record<string, number | string> = {
+      type: coerceToStandardValue(
+        input['amount.type'],
+        getEnumValues(Object.values(AmountType)),
+        this.valueMap['amount.type'],
+      ),
+      number: +cleanDollars(input['amount.number']),
+    };
+    if (
+      input['amount.representative'] !== undefined &&
+      input['amount.representative'] !== ''
+    ) {
+      amount.representative = +cleanDollars(input['amount.representative']);
+    }
+    if (
+      input['amount.minimum'] !== undefined &&
+      input['amount.minimum'] !== ''
+    ) {
+      amount.minimum = +cleanDollars(input['amount.minimum']);
+    }
+    if (
+      input['amount.maximum'] !== undefined &&
+      input['amount.maximum'] !== ''
+    ) {
+      amount.maximum = +cleanDollars(input['amount.maximum']);
+    }
+    if (input['amount.unit'] !== undefined && input['amount.unit'] !== '') {
+      amount.unit = coerceToStandardValue(
+        input['amount.unit'],
+        getEnumValues(Object.values(AmountUnit)),
+        this.valueMap['amount.unit'],
+      );
+    }
+    return amount;
   }
 }
 
@@ -173,10 +260,8 @@ function isPlausibleLowIncomeRow(record: Record<string, string>) {
 // which also implicitly flattens it. The input format is better
 // for validation and manual data entry; the latter is better for
 // runtime use.
-function reverseMap(map: { [index: string]: string[] }): {
-  [index: string]: string;
-} {
-  const reversed: { [index: string]: string } = {};
+function reverseMap(map: AliasMap): FlatAliasMap {
+  const reversed: FlatAliasMap = {};
   for (const [fieldName, aliases] of Object.entries(map)) {
     for (const alias of aliases) {
       const cleaned = cleanFieldName(alias);
@@ -189,6 +274,18 @@ function reverseMap(map: { [index: string]: string[] }): {
     }
   }
   return reversed;
+}
+
+function reverseValueMap(map: { [index: string]: AliasMap }): {
+  [index: string]: FlatAliasMap;
+} {
+  const output: {
+    [index: string]: FlatAliasMap;
+  } = {};
+  for (const [key, val] of Object.entries(map)) {
+    output[key] = reverseMap(val);
+  }
+  return output;
 }
 
 function parseDateToYear(input: string): string {
@@ -247,23 +344,6 @@ function coerceToStandardValue(
   }
 }
 
-function findPaymentMethods(input: string): string[] {
-  if (input === undefined || input === '') {
-    return [];
-  }
-  const methods: string[] = [];
-  for (const method of input.split(',')) {
-    methods.push(
-      coerceToStandardValue(
-        method,
-        getEnumValues(Object.values(PaymentMethod)),
-        VALUE_MAPPINGS.payment_methods,
-      ),
-    );
-  }
-  return methods;
-}
-
 function findOwnerStatus(input: string): OwnerStatus[] {
   if (input === undefined || input === '') {
     return [];
@@ -291,36 +371,3 @@ type enumsOfInterest = (
   | Item
   | PaymentMethod
 )[];
-
-function createAmount(
-  input: Record<string, string>,
-): Record<string, number | string> {
-  const amount: Record<string, number | string> = {
-    type: coerceToStandardValue(
-      input.amount_type,
-      getEnumValues(Object.values(AmountType)),
-      VALUE_MAPPINGS.amount_type,
-    ),
-    number: +cleanDollars(input.number),
-  };
-  if (
-    input.amount_representative !== undefined &&
-    input.amount_representative !== ''
-  ) {
-    amount.representative = +cleanDollars(input.amount_representative);
-  }
-  if (input.amount_minimum !== undefined && input.amount_minimum !== '') {
-    amount.minimum = +cleanDollars(input.amount_minimum);
-  }
-  if (input.amount_maximum !== undefined && input.amount_maximum !== '') {
-    amount.maximum = +cleanDollars(input.amount_maximum);
-  }
-  if (input.unit !== undefined && input.unit !== '') {
-    amount.unit = coerceToStandardValue(
-      input.unit,
-      getEnumValues(Object.values(AmountUnit)),
-      VALUE_MAPPINGS.amount_unit,
-    );
-  }
-  return amount;
-}

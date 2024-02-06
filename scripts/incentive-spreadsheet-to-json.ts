@@ -9,7 +9,7 @@ import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../src/data/low_income_thres
 import { STATE_SCHEMA, StateIncentive } from '../src/data/state_incentives';
 import { LOCALIZABLE_STRING_SCHEMA } from '../src/data/types/localizable-string';
 import { FILES, IncentiveFile } from './incentive-spreadsheet-registry';
-import { FIELD_MAPPINGS } from './lib/spreadsheet-mappings';
+import { FIELD_MAPPINGS, VALUE_MAPPINGS } from './lib/spreadsheet-mappings';
 import { SpreadsheetStandardizer } from './lib/spreadsheet-standardizer';
 
 const ajv = new Ajv({ allErrors: true });
@@ -36,6 +36,7 @@ async function convertToJson(
 
   const converter = new SpreadsheetStandardizer(
     FIELD_MAPPINGS,
+    VALUE_MAPPINGS,
     strict,
     lowIncome ? LOW_INCOME_THRESHOLDS_BY_AUTHORITY : null,
   );

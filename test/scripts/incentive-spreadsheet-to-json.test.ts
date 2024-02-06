@@ -1,5 +1,8 @@
 import { test } from 'tap';
-import { FIELD_MAPPINGS } from '../../scripts/lib/spreadsheet-mappings';
+import {
+  FIELD_MAPPINGS,
+  VALUE_MAPPINGS,
+} from '../../scripts/lib/spreadsheet-mappings';
 import { SpreadsheetStandardizer } from '../../scripts/lib/spreadsheet-standardizer';
 
 test('correct row to record transformation', async tap => {
@@ -81,6 +84,7 @@ test('correct row to record transformation', async tap => {
   };
   const columnConverter = new SpreadsheetStandardizer(
     FIELD_MAPPINGS,
+    VALUE_MAPPINGS,
     true,
     fakeIncomeThresholds,
   );
