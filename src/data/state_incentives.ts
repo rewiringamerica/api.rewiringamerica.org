@@ -48,7 +48,6 @@ type additionalCollectedFields = {
   program_start_raw?: string;
   program_end_raw?: string;
   rebate_value: string;
-  amount_minimum?: number;
   bonus_description?: string;
   equipment_standards_restrictions?: string;
   equipment_capacity_restrictions?: string;
@@ -75,6 +74,7 @@ const amountSchema: JSONSchemaType<Amount> = {
     type: { type: 'string', enum: Object.values(AmountType) },
     number: { type: 'number' },
     unit: { type: 'string', enum: Object.values(AmountUnit), nullable: true },
+    minimum: { type: 'number', nullable: true },
     maximum: { type: 'number', nullable: true },
     representative: { type: 'number', nullable: true },
   },
@@ -137,7 +137,6 @@ const additionalCollectedFieldsJson = {
   program_start_raw: { type: 'string', nullable: true },
   program_end_raw: { type: 'string', nullable: true },
   rebate_value: { type: 'string' },
-  amount_minimum: { type: 'number', nullable: true },
   bonus_description: { type: 'string', nullable: true },
   equipment_standards_restrictions: { type: 'string', nullable: true },
   equipment_capacity_restrictions: { type: 'string', nullable: true },

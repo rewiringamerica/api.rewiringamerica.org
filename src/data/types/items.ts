@@ -30,6 +30,9 @@ export const BETA_ITEMS_SCHEMA = {
   other: { type: 'string' },
   smart_thermostat: { type: 'string' },
   whole_house_fan: { type: 'string' },
+  heat_pump_air_to_water: { type: 'string' },
+  heat_pump_ductless: { type: 'string' },
+  heat_pump_ducted: { type: 'string' },
 } as const;
 
 export const ITEMS_SCHEMA = { ...LAUNCHED_ITEMS_SCHEMA, ...BETA_ITEMS_SCHEMA };

@@ -11,6 +11,8 @@ import {
   VALUE_MAPPINGS,
 } from './spreadsheet-mappings';
 
+const ARRAY_FIELDS = ['payment_methods', 'owner_status'];
+
 const DOLLAR_FIELDS = [
   'amount.number',
   'amount.minimum',
@@ -32,7 +34,7 @@ export class SpreadsheetStandardizer {
    * @param lowIncomeThresholds: state-segmented income thresholds. If empty, the script won't try to associate records with low-income programs.
    */
   constructor(
-    fieldMap: { [index: string]: string[] } = FIELD_MAPPINGS,
+    fieldMap: AliasMap = FIELD_MAPPINGS,
     valueMap: { [index: string]: AliasMap } = VALUE_MAPPINGS,
     strict: boolean = true,
     lowIncomeThresholds: LowIncomeThresholdsMap | null = null,
@@ -43,6 +45,24 @@ export class SpreadsheetStandardizer {
     this.valueMap = reverseValueMap(valueMap);
     this.strict = strict;
     this.lowIncomeThresholds = lowIncomeThresholds;
+  }
+
+  convertToCanonical(val: string, colName: string): string {
+    const components: string[] = ARRAY_FIELDS.includes(colName)
+      ? val.split(',').map(x => x.trim())
+      : [val];
+
+    return components
+      .map((component: string) => {
+        if (
+          this.valueMap[colName] !== undefined &&
+          this.valueMap[colName][cleanFieldName(component)] !== undefined
+        ) {
+          component = this.valueMap[colName][cleanFieldName(component)];
+        }
+        return component;
+      })
+      .join(',');
   }
 
   // Convert a row with possible column aliases to a canonical column name.
@@ -59,18 +79,19 @@ export class SpreadsheetStandardizer {
       }
 
       const newCol = this.fieldMap[cleaned];
-      let val = input[key];
-      if (
-        this.valueMap[newCol] !== undefined &&
-        this.valueMap[newCol][cleanFieldName(val)] !== undefined
-      ) {
-        val = this.valueMap[newCol][cleanFieldName(val)];
-      }
+      let val = this.convertToCanonical(input[key], newCol);
+
       // Special case cleaning fields – eventually this can be
       // more principled.
       if (DOLLAR_FIELDS.includes(newCol)) {
         val = cleanDollars(val);
       }
+      // We've allowed Both as a owner_status when it's really multiple
+      // statuses, so hard to cover with our existing renaming schemes.
+      if (newCol === 'owner_status' && val === 'Both') {
+        val = 'homeowner, renter';
+      }
+
       output[newCol] = val;
     }
     return output;

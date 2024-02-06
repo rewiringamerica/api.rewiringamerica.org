@@ -46,7 +46,9 @@ async function convertToJson(
     lowIncome ? LOW_INCOME_THRESHOLDS_BY_AUTHORITY : null,
   );
 
-  const renamed = rows.map(converter.convertFieldNames);
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  const renamed = rows.map((row: any) => converter.convertFieldNames(row));
+  /* eslint-enable @typescript-eslint/no-explicit-any */
 
   const [valids, invalids] = csvToJsonData(renamed);
   if (invalids.length > 0) {

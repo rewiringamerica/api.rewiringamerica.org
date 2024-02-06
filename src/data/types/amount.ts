@@ -34,6 +34,7 @@ export interface Amount {
   type: AmountType;
   number: number;
   unit?: AmountUnit;
+  minimum?: number;
   maximum?: number;
   representative?: number;
 }

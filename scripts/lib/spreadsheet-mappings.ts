@@ -122,6 +122,10 @@ export const VALUE_MAPPINGS: { [index: string]: AliasMap } = {
   'amount.unit': {
     kilowatt: ['kW'],
     kilowatt_hour: ['kilowatt-hour', 'kWh'],
+    ton: ['ton'],
+    watt: ['watt'],
+    btuh10k: ['btuh10k'],
+    square_foot: ['square_foot'],
   },
   owner_status: {
     homeowner: ['Homeowner'],

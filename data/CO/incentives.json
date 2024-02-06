@@ -36,8 +36,8 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 0.5,
-      "maximum": 500,
-      "unit": "square_foot"
+      "unit": "square_foot",
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
@@ -61,8 +61,8 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 1,
-      "maximum": 750,
-      "unit": "square_foot"
+      "unit": "square_foot",
+      "maximum": 750
     },
     "owner_status": [
       "homeowner"
@@ -86,8 +86,8 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 0.5,
-      "maximum": 250,
-      "unit": "square_foot"
+      "unit": "square_foot",
+      "maximum": 250
     },
     "owner_status": [
       "homeowner"
@@ -111,8 +111,8 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 0.5,
-      "maximum": 250,
-      "unit": "square_foot"
+      "unit": "square_foot",
+      "maximum": 250
     },
     "owner_status": [
       "homeowner"
@@ -136,8 +136,8 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 0.5,
-      "maximum": 250,
-      "unit": "square_foot"
+      "unit": "square_foot",
+      "maximum": 250
     },
     "owner_status": [
       "homeowner"
@@ -378,7 +378,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_blackHillsEnergy_coloradoElectricResidentialRebates",
     "amount": {
       "type": "dollar_amount",
@@ -477,7 +477,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_blackHillsEnergy_electrificationPilotProgram",
     "amount": {
       "type": "dollar_amount",
@@ -815,7 +815,7 @@
     "payment_methods": [
       "pos_rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_cityAndCountyOfDenver_denverClimateActionRebateProgram-HomeEnergyRebates",
     "amount": {
       "type": "percent",
@@ -838,7 +838,7 @@
     "payment_methods": [
       "pos_rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_cityAndCountyOfDenver_denverClimateActionRebateProgram-HomeEnergyRebates",
     "amount": {
       "type": "percent",
@@ -1208,7 +1208,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_fortCollinsUtilities_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
@@ -1391,7 +1391,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_longmontPowerAndCommunications_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
@@ -1574,7 +1574,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_estesParkPowerAndCommunications_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
@@ -1757,7 +1757,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_lovelandWaterAndPower_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
@@ -1940,7 +1940,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_platteRiverPowerAuthority_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
@@ -2424,8 +2424,8 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 200,
-      "maximum": 1000,
-      "unit": "kilowatt"
+      "unit": "kilowatt",
+      "maximum": 1000
     },
     "owner_status": [
       "homeowner"
@@ -2447,8 +2447,8 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 100,
-      "maximum": 1500,
-      "unit": "kilowatt_hour"
+      "unit": "kilowatt_hour",
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner"
@@ -3245,7 +3245,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ducted",
     "program": "co_holyCrossEnergy_residentialRebates",
     "amount": {
       "type": "percent",
@@ -3266,7 +3266,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_holyCrossEnergy_residentialRebates",
     "amount": {
       "type": "percent",
@@ -3570,7 +3570,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_air_to_water",
     "program": "co_laPlataElectricAssociation_electrifyAndSave",
     "amount": {
       "type": "percent",
@@ -5882,7 +5882,7 @@
     "payment_methods": [
       "account_credit"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_air_to_water",
     "program": "co_sanMiguelPowerAssociation_residentialAndCommercialRebates",
     "amount": {
       "type": "percent",
@@ -6571,7 +6571,7 @@
     "payment_methods": [
       "unknown"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_air_to_water",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
     "amount": {
       "type": "dollar_amount",
@@ -7169,7 +7169,7 @@
       "account_credit",
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_xcelEnergy_heatPumpRebates",
     "amount": {
       "type": "dollar_amount",
@@ -7192,7 +7192,7 @@
       "account_credit",
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_xcelEnergy_heatPumpRebates",
     "amount": {
       "type": "dollar_amount",
@@ -7805,7 +7805,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ducted",
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
@@ -7830,7 +7830,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
@@ -7904,7 +7904,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ducted",
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
@@ -7929,7 +7929,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
@@ -8078,7 +8078,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ducted",
     "program": "co_boulderCounty_energySmartManufacturedHomesRebates",
     "amount": {
       "type": "percent",
@@ -8103,7 +8103,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_boulderCounty_energySmartManufacturedHomesRebates",
     "amount": {
       "type": "percent",
@@ -8152,7 +8152,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ducted",
     "program": "co_boulderCounty_energySmartManufacturedHomesRebates",
     "amount": {
       "type": "percent",
@@ -8177,7 +8177,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_boulderCounty_energySmartManufacturedHomesRebates",
     "amount": {
       "type": "percent",
@@ -8560,7 +8560,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_glenwoodSpringsElectric_sustainabilityProgram2023ElectricRebates",
     "amount": {
       "type": "percent",
@@ -10494,7 +10494,7 @@
     "payment_methods": [
       "account_credit"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_air_to_water",
     "program": "co_sangreDeCristoElectricAssociation_rebates",
     "amount": {
       "type": "dollar_amount",
@@ -10783,7 +10783,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ducted",
     "program": "co_townOfAvon_energyEfficiencyProgram",
     "amount": {
       "type": "dollar_amount",
@@ -10888,7 +10888,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_townOfErie_rebates",
     "amount": {
       "type": "dollar_amount",
@@ -10930,7 +10930,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_townOfErie_rebates",
     "amount": {
       "type": "dollar_amount",
@@ -11254,8 +11254,8 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 100,
-      "maximum": 3400,
-      "unit": "kilowatt"
+      "unit": "kilowatt",
+      "maximum": 3400
     },
     "owner_status": [
       "homeowner"
@@ -11338,7 +11338,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_air_to_water",
     "program": "co_walkingMountains_rebates&Incentives",
     "amount": {
       "type": "percent",
@@ -11360,7 +11360,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ducted",
     "program": "co_walkingMountains_rebates&Incentives",
     "amount": {
       "type": "percent",
@@ -11382,7 +11382,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_walkingMountains_rebates&Incentives",
     "amount": {
       "type": "percent",
@@ -11582,7 +11582,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_air_to_water",
     "program": "co_walkingMountains_rebates&Incentives",
     "amount": {
       "type": "percent",
@@ -11605,7 +11605,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ducted",
     "program": "co_walkingMountains_rebates&Incentives",
     "amount": {
       "type": "percent",
@@ -11628,7 +11628,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_ductless",
     "program": "co_walkingMountains_rebates&Incentives",
     "amount": {
       "type": "percent",
@@ -11794,8 +11794,8 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 100,
-      "maximum": 3400,
-      "unit": "kilowatt"
+      "unit": "kilowatt",
+      "maximum": 3400
     },
     "owner_status": [
       "homeowner"
@@ -12099,7 +12099,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "heat_pump_air_to_water",
     "program": "co_whiteRiverElectricAssociation_rebates",
     "amount": {
       "type": "dollar_amount",
@@ -12169,8 +12169,8 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "representative": 2100,
-      "minimum": 675
+      "minimum": 675,
+      "representative": 2100
     },
     "owner_status": [
       "homeowner"
@@ -12192,8 +12192,8 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "representative": 2700,
-      "minimum": 1000
+      "minimum": 1000,
+      "representative": 2700
     },
     "owner_status": [
       "homeowner"
