@@ -6,10 +6,15 @@ import minimist from 'minimist';
 import path from 'path';
 
 import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../src/data/low_income_thresholds';
-import { STATE_SCHEMA, StateIncentive } from '../src/data/state_incentives';
+import {
+  CollectedStateIncentive,
+  STATE_SCHEMA,
+  StateIncentive,
+} from '../src/data/state_incentives';
 import { LOCALIZABLE_STRING_SCHEMA } from '../src/data/types/localizable-string';
 import { FILES, IncentiveFile } from './incentive-spreadsheet-registry';
-import { FIELD_MAPPINGS } from './lib/spreadsheet-mappings';
+import { csvToJsonData } from './lib/format-converter';
+import { FIELD_MAPPINGS, VALUE_MAPPINGS } from './lib/spreadsheet-mappings';
 import { SpreadsheetStandardizer } from './lib/spreadsheet-standardizer';
 
 const ajv = new Ajv({ allErrors: true });
@@ -36,19 +41,51 @@ async function convertToJson(
 
   const converter = new SpreadsheetStandardizer(
     FIELD_MAPPINGS,
+    VALUE_MAPPINGS,
     strict,
     lowIncome ? LOW_INCOME_THRESHOLDS_BY_AUTHORITY : null,
   );
-  const invalids: Record<string, string | number | boolean | object>[] = [];
+
+  const renamed = rows.map(converter.convertFieldNames);
+
+  const [valids, invalids] = csvToJsonData(renamed);
+  if (invalids.length > 0) {
+    const validPath = file.filepath.replace('.json', '_raw.json');
+    const invalidPath = file.filepath.replace('.json', '_raw_invalid.json');
+    const dir = path.dirname(file.filepath);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir);
+    fs.writeFileSync(
+      validPath,
+      JSON.stringify(valids, null, 2) + '\n', // include newline to satisfy prettier
+      'utf-8',
+    );
+    if (invalids.length === 0) {
+      if (fs.existsSync(invalidPath)) {
+        // Clear any previous versions if we have no invalid records.
+        fs.unlinkSync(invalidPath);
+      }
+    } else {
+      fs.writeFileSync(
+        invalidPath,
+        JSON.stringify(invalids, null, 2) + '\n', // include newline to satisfy prettier
+        'utf-8',
+      );
+    }
+    throw new Error(
+      'Invalid spreadsheet records found. See raw.json and raw_invalid.json files to debug before converting to API-friendly JSON.',
+    );
+  }
+
+  const invalid_jsons: Record<string, string | number | boolean | object>[] =
+    [];
   const jsons: StateIncentive[] = [];
-  rows.forEach((row: Record<string, string>) => {
-    const renamed = converter.convertFieldNames(row);
-    const standardized = converter.recordToStandardValues(state, renamed);
+  valids.forEach((row: CollectedStateIncentive) => {
+    const standardized = converter.recordToStandardValues(state, row);
     if (!validate(standardized)) {
       if (validate.errors !== undefined && validate.errors !== null) {
         standardized.errors = validate.errors;
       }
-      invalids.push(standardized);
+      invalid_jsons.push(standardized);
     } else {
       jsons.push(standardized);
     }
@@ -62,7 +99,7 @@ async function convertToJson(
     'utf-8',
   );
   const invalidsFilePath = file.filepath.replace('.json', '_invalid.json');
-  if (invalids.length === 0) {
+  if (invalid_jsons.length === 0) {
     if (fs.existsSync(invalidsFilePath)) {
       // Clear any previous versions if we have no invalid records.
       fs.unlinkSync(invalidsFilePath);
@@ -70,7 +107,7 @@ async function convertToJson(
   } else {
     fs.writeFileSync(
       invalidsFilePath,
-      JSON.stringify(invalids, null, 2) + '\n', // include newline to satisfy prettier
+      JSON.stringify(invalid_jsons, null, 2) + '\n', // include newline to satisfy prettier
       'utf-8',
     );
   }

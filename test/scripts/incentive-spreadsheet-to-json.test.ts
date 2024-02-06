@@ -1,5 +1,9 @@
 import { test } from 'tap';
-import { FIELD_MAPPINGS } from '../../scripts/lib/spreadsheet-mappings';
+import { csvToJsonData } from '../../scripts/lib/format-converter';
+import {
+  FIELD_MAPPINGS,
+  VALUE_MAPPINGS,
+} from '../../scripts/lib/spreadsheet-mappings';
 import { SpreadsheetStandardizer } from '../../scripts/lib/spreadsheet-standardizer';
 
 test('correct row to record transformation', async tap => {
@@ -12,7 +16,7 @@ test('correct row to record transformation', async tap => {
         ID: 'VA-1',
         'Data Source URL(s)': 'https://takechargeva.com/programs/for-your-home',
         'Authority Level*': 'Utility',
-        'Authority (Name)*': 'Appalachian Power',
+        'Authority (Name) *': 'Appalachian Power',
         'Program Title*': 'Take Charge Virginia Efficient Products Program',
         'Program URL':
           'https://takechargeva.com/programs/for-your-home/efficient-products-program-appliances',
@@ -26,7 +30,7 @@ test('correct row to record transformation', async tap => {
         'Rebate Type': 'Rebate (post purchase)',
         'Rebate Value*': '$50',
         'Amount Type*': 'dollar amount',
-        'Number*': '50',
+        'Number*': '$50',
         Unit: '',
         'Amount Minimum': '',
         'Amount Maximum': '',
@@ -81,13 +85,17 @@ test('correct row to record transformation', async tap => {
   };
   const columnConverter = new SpreadsheetStandardizer(
     FIELD_MAPPINGS,
+    VALUE_MAPPINGS,
     true,
     fakeIncomeThresholds,
   );
   for (const tc of testCases) {
     const renamed = columnConverter.convertFieldNames(tc.input);
+    const [valids, invalids] = csvToJsonData([renamed]);
+    if (invalids.length !== 0) console.log(invalids[0]);
+    tap.equal(invalids.length, 0);
     tap.matchOnly(
-      columnConverter.recordToStandardValues('va', renamed),
+      columnConverter.recordToStandardValues('va', valids[0]),
       tc.want,
     );
   }

@@ -110,7 +110,7 @@ export class AuthorityAndProgramUpdater {
     if (this.authorityMap[authority_short] === undefined) {
       this.authorityMap[authority_short] = {
         name: authority,
-        authority_type: row.authority_level,
+        authority_type: row.authority_type,
         programs: {},
       };
     }

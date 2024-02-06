@@ -40,6 +40,7 @@ export type StateIncentive = {
 
 type additionalCollectedFields = {
   data_urls: string;
+  authority_name: string;
   program_title: string;
   program_url: string;
   technology_if_selected_other?: string;
@@ -128,6 +129,7 @@ const requiredProperties = [
 
 const additionalCollectedFieldsJson = {
   data_urls: { type: 'string' },
+  authority_name: { type: 'string' },
   program_title: { type: 'string' },
   program_url: { type: 'string' },
   technology_if_selected_other: { type: 'string', nullable: true },
@@ -150,6 +152,7 @@ const additionalCollectedFieldsJson = {
 } as const;
 const requiredCollectedProperties = [
   'data_urls',
+  'authority_name',
   'program_title',
   'program_url',
   'program_status',
