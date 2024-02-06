@@ -1,9 +1,4 @@
-import { AuthorityType } from '../../src/data/authorities';
 import { LowIncomeThresholdsMap } from '../../src/data/low_income_thresholds';
-import { AmountType, AmountUnit } from '../../src/data/types/amount';
-import { PaymentMethod } from '../../src/data/types/incentive-types';
-import { ITEMS_SCHEMA, Item } from '../../src/data/types/items';
-import { OwnerStatus } from '../../src/data/types/owner-status';
 import {
   createAuthorityName,
   createProgramName,
@@ -16,6 +11,12 @@ import {
 } from './spreadsheet-mappings';
 
 const ARRAY_FIELDS = ['payment_methods', 'owner_status'];
+const DOLLAR_FIELDS = [
+  'amount.number',
+  'amount.minimum',
+  'amount.maximum',
+  'amount.representative',
+];
 
 // Standardize column names or values in an incentive spreadsheet.
 export class SpreadsheetStandardizer {
@@ -76,7 +77,19 @@ export class SpreadsheetStandardizer {
       }
 
       const newCol = this.fieldMap[cleaned];
-      const val = this.convertToCanonical(input[key], newCol);
+      let val = this.convertToCanonical(input[key], newCol);
+
+      // Special case cleaning fields – eventually this can be
+      // more principled.
+      if (DOLLAR_FIELDS.includes(newCol)) {
+        val = cleanDollars(val);
+      }
+      // We've allowed Both as a owner_status when it's really multiple
+      // statuses, so hard to cover with our existing renaming schemes.
+      if (newCol === 'owner_status' && val === 'Both') {
+        val = 'homeowner, renter';
+      }
+
       output[newCol] = val;
     }
     return output;
@@ -91,29 +104,18 @@ export class SpreadsheetStandardizer {
     const authorityName = createAuthorityName(state, record.authority_name);
     const output: Record<string, string | number | object | boolean> = {
       id: record.id,
-      authority_type: coerceToStandardValue(
-        record.authority_type,
-        getEnumValues(Object.values(AuthorityType)),
-      ),
+      authority_type: record.authority_type,
       authority: authorityName,
-      type: coerceToStandardValue(
-        record.payment_methods.split(',')[0],
-        getEnumValues(Object.values(PaymentMethod)),
-        this.valueMap.payment_methods,
-      ),
-      payment_methods: this.findPaymentMethods(record.payment_methods),
-      item: coerceToStandardValue(
-        record.item,
-        new Set(Object.keys(ITEMS_SCHEMA)),
-        this.valueMap.item,
-      ),
+      type: record.payment_methods.split(',')[0],
+      payment_methods: record.payment_methods.split(',').map(x => x.trim()),
+      item: record.item,
       program: createProgramName(
         state,
         record.authority_name,
         record.program_title,
       ),
       amount: this.createAmount(record),
-      owner_status: findOwnerStatus(record.owner_status),
+      owner_status: record.owner_status.split(',').map(x => x.trim()),
       short_description: {
         en: standardizeDescription(record['short_description.en']),
       },
@@ -160,30 +162,9 @@ export class SpreadsheetStandardizer {
     return authority in this.lowIncomeThresholds![state];
   }
 
-  findPaymentMethods(input: string): string[] {
-    if (input === undefined || input === '') {
-      return [];
-    }
-    const methods: string[] = [];
-    for (const method of input.split(',')) {
-      methods.push(
-        coerceToStandardValue(
-          method,
-          getEnumValues(Object.values(PaymentMethod)),
-          this.valueMap.payment_methods,
-        ),
-      );
-    }
-    return methods;
-  }
-
   createAmount(input: Record<string, string>): Record<string, number | string> {
     const amount: Record<string, number | string> = {
-      type: coerceToStandardValue(
-        input['amount.type'],
-        getEnumValues(Object.values(AmountType)),
-        this.valueMap['amount.type'],
-      ),
+      type: input['amount.type'],
       number: +cleanDollars(input['amount.number']),
     };
     if (
@@ -205,11 +186,7 @@ export class SpreadsheetStandardizer {
       amount.maximum = +cleanDollars(input['amount.maximum']);
     }
     if (input['amount.unit'] !== undefined && input['amount.unit'] !== '') {
-      amount.unit = coerceToStandardValue(
-        input['amount.unit'],
-        getEnumValues(Object.values(AmountUnit)),
-        this.valueMap['amount.unit'],
-      );
+      amount.unit = input['amount.unit'];
     }
     return amount;
   }
@@ -309,65 +286,3 @@ function parseDateToYear(input: string): string {
 function cleanDollars(input: string): string {
   return input.replaceAll('$', '').replaceAll(',', '');
 }
-
-// Given a set of possible values (e.g. from an enum), try to
-// coerce a string input to one of those values. If no suitable
-// value can be found, throw an error or return a TODO version
-// of the value.
-function coerceToStandardValue(
-  input: string,
-  allowed: Set<string>,
-  mapping: Record<string, string> = {},
-  strict: boolean = false,
-): string {
-  if (input === undefined) {
-    if (strict) {
-      throw new Error('Undefined input');
-    } else {
-      return 'TODO: undefined';
-    }
-  }
-  let copy = input.replaceAll('\n', '').trim();
-  if (copy in mapping) {
-    copy = mapping[copy];
-  }
-  const snakeCase = copy.toLowerCase().replaceAll(' ', '_');
-  if (allowed.has(snakeCase)) {
-    return snakeCase;
-  }
-  if (strict) {
-    throw new Error(
-      `Could not coerce ${input} (mapped to ${copy}) to possible value ${allowed}`,
-    );
-  } else {
-    return `TODO: ${input}`;
-  }
-}
-
-function findOwnerStatus(input: string): OwnerStatus[] {
-  if (input === undefined || input === '') {
-    return [];
-  }
-  if (input.toLowerCase() === 'both' || input.includes(',')) {
-    return [OwnerStatus.Homeowner, OwnerStatus.Renter];
-  } else if (input.toLowerCase() === 'renter') {
-    return [OwnerStatus.Renter];
-  } else if (input.toLowerCase() === 'homeowner') {
-    return [OwnerStatus.Homeowner];
-  }
-  return [];
-}
-
-// This is an unfortunate workaround to make it easy to retrieve
-// the (string) keys of string enums. Unfortunately, you have to
-// add any new enums to the enumsOfInterest type below.
-function getEnumValues(enums: enumsOfInterest): Set<string> {
-  return new Set(enums.filter(value => typeof value === 'string'));
-}
-type enumsOfInterest = (
-  | AmountType
-  | AmountUnit
-  | AuthorityType
-  | Item
-  | PaymentMethod
-)[];

@@ -131,7 +131,7 @@ test('representative example', tap => {
     'amount.number': '',
     'amount.unit': '',
     'amount.minimum': '',
-    'amount.maximum': '$50',
+    'amount.maximum': '50',
     'amount.representative': '',
     bonus_description: '',
     equipment_standards_restrictions: 'Must be ENERGY STAR certified.',
