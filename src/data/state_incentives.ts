@@ -48,10 +48,12 @@ const amountSchema: JSONSchemaType<Amount> = {
     type: { type: 'string', enum: Object.values(AmountType) },
     number: { type: 'number' },
     unit: { type: 'string', enum: Object.values(AmountUnit), nullable: true },
+    minimum: { type: 'number', nullable: true },
     maximum: { type: 'number', nullable: true },
     representative: { type: 'number', nullable: true },
   },
   required: ['type', 'number'],
+  additionalProperties: false,
 } as const;
 
 const incentivePropertySchema = {
@@ -120,6 +122,7 @@ export const AZ_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
       ...incentivePropertySchema,
     },
     required: requiredProperties,
+    additionalProperties: false,
   },
 } as const;
 
@@ -135,6 +138,7 @@ export const CO_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
       ...incentivePropertySchema,
     },
     required: requiredProperties,
+    additionalProperties: false,
   },
 } as const;
 
