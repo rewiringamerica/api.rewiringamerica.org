@@ -210,7 +210,7 @@ function calculateFederalIncentivesAndSavings(
         savings.tax_credit += item.amount.representative;
       }
     } else {
-      throw new UnexpectedInputError(`Unknown item_type: ${item.type}`);
+      throw new UnexpectedInputError(`Unknown item type: ${item.type}`);
     }
   }
 
