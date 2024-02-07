@@ -67,6 +67,39 @@ test('Rename columns using punctuation characters and unusual spacing', tap => {
   tap.end();
 });
 
+test('Rename values', tap => {
+  const converter = new SpreadsheetStandardizer(
+    {},
+    {
+      column: { canonical_value: ['possible_alias'] },
+      column_with_cleaning: {
+        canonical_value: ['Alias With Spaces and Chars'],
+      },
+    },
+    false,
+  );
+  tap.matchOnly(
+    converter.convertFieldNames({
+      column: 'possible_alias',
+      column_with_cleaning: 'Alias With Spaces * and Chars *',
+    }),
+    { column: 'canonical_value', column_with_cleaning: 'canonical_value' },
+  );
+  tap.end();
+});
+
+test('Cleans dollars and deals with owner_status Both', tap => {
+  const converter = new SpreadsheetStandardizer({}, {}, false);
+  tap.matchOnly(
+    converter.convertFieldNames({
+      'amount.number': '$50',
+      owner_status: 'Both',
+    }),
+    { 'amount.number': '50', owner_status: 'homeowner, renter' },
+  );
+  tap.end();
+});
+
 test('representative example', tap => {
   const converter = new SpreadsheetStandardizer(
     FIELD_MAPPINGS,

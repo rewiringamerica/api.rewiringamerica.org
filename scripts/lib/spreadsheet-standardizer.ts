@@ -68,15 +68,11 @@ export class SpreadsheetStandardizer {
     const output: Record<string, string> = {};
     for (const key in input) {
       const cleaned = cleanFieldName(key);
-      if (this.fieldMap[cleaned] === undefined) {
-        if (this.strict) {
-          throw new Error(`Invalid column found: ${cleaned}; original: ${key}`);
-        }
-        output[key] = input[key];
-        continue;
+      if (this.fieldMap[cleaned] === undefined && this.strict) {
+        throw new Error(`Invalid column found: ${cleaned}; original: ${key}`);
       }
 
-      const newCol = this.fieldMap[cleaned];
+      const newCol = this.fieldMap[cleaned] || key;
       let val = this.convertToCanonical(input[key], newCol);
 
       // Special case cleaning fields – eventually this can be
