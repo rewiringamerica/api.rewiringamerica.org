@@ -63,6 +63,19 @@ export class SpreadsheetStandardizer {
       .join(',');
   }
 
+  // Special case cleaning for bespoke fields
+  handleSpecialCases(val: string, colName: string): string {
+    if (DOLLAR_FIELDS.includes(colName)) {
+      val = cleanDollars(val);
+    }
+    // We've allowed Both as a owner_status when it's really multiple
+    // statuses, so hard to cover with our existing renaming schemes.
+    if (colName === 'owner_status' && val === 'Both') {
+      val = 'homeowner, renter';
+    }
+    return val;
+  }
+
   // Convert a row with possible column aliases to a canonical column name.
   convertFieldNames(input: Record<string, string>): Record<string, string> {
     const output: Record<string, string> = {};
@@ -73,20 +86,9 @@ export class SpreadsheetStandardizer {
       }
 
       const newCol = this.fieldMap[cleaned] || key;
-      let val = this.convertToCanonical(input[key], newCol);
+      const val = this.convertToCanonical(input[key], newCol);
 
-      // Special case cleaning fields – eventually this can be
-      // more principled.
-      if (DOLLAR_FIELDS.includes(newCol)) {
-        val = cleanDollars(val);
-      }
-      // We've allowed Both as a owner_status when it's really multiple
-      // statuses, so hard to cover with our existing renaming schemes.
-      if (newCol === 'owner_status' && val === 'Both') {
-        val = 'homeowner, renter';
-      }
-
-      output[newCol] = val;
+      output[newCol] = this.handleSpecialCases(val, newCol);
     }
     return output;
   }
