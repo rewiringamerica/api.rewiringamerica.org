@@ -1,16 +1,23 @@
 import { test } from 'tap';
-import { FIELD_MAPPINGS } from '../../scripts/lib/spreadsheet-mappings';
+import {
+  FIELD_MAPPINGS,
+  VALUE_MAPPINGS,
+} from '../../scripts/lib/spreadsheet-mappings';
 import { SpreadsheetStandardizer } from '../../scripts/lib/spreadsheet-standardizer';
 
 test('correctly rename columns in strict mode', tap => {
-  let converter = new SpreadsheetStandardizer({ new_name: ['old_name'] }, true);
+  let converter = new SpreadsheetStandardizer(
+    { new_name: ['old_name'] },
+    {},
+    true,
+  );
   tap.matchOnly(
     converter.convertFieldNames({ old_name: 'foo' }),
     { new_name: 'foo' },
     'standard rename',
   );
 
-  converter = new SpreadsheetStandardizer({ new_name: ['old_name'] }, true);
+  converter = new SpreadsheetStandardizer({ new_name: ['old_name'] }, {}, true);
   tap.throws(() => {
     converter.convertFieldNames({ old_name: 'foo', unrelated_name: 'bar' });
   }, 'Error on field not in map in strict mode');
@@ -21,6 +28,7 @@ test('correctly rename columns in strict mode', tap => {
 test('correctly rename columns in non-strict mode', tap => {
   let converter = new SpreadsheetStandardizer(
     { new_name: ['old_name'] },
+    {},
     false,
   );
   tap.matchOnly(
@@ -29,7 +37,11 @@ test('correctly rename columns in non-strict mode', tap => {
     'standard rename',
   );
 
-  converter = new SpreadsheetStandardizer({ new_name: ['old_name'] }, false);
+  converter = new SpreadsheetStandardizer(
+    { new_name: ['old_name'] },
+    {},
+    false,
+  );
   tap.matchOnly(
     converter.convertFieldNames({ old_name: 'foo', unrelated_name: 'bar' }),
     { new_name: 'foo', unrelated_name: 'bar' },
@@ -42,6 +54,7 @@ test('correctly rename columns in non-strict mode', tap => {
 test('Rename columns using punctuation characters and unusual spacing', tap => {
   const converter = new SpreadsheetStandardizer(
     { new_name: ['unclean original name with weird chars'] },
+    {},
     true,
   );
   tap.matchOnly(
@@ -54,8 +67,45 @@ test('Rename columns using punctuation characters and unusual spacing', tap => {
   tap.end();
 });
 
+test('Rename values', tap => {
+  const converter = new SpreadsheetStandardizer(
+    {},
+    {
+      column: { canonical_value: ['possible_alias'] },
+      column_with_cleaning: {
+        canonical_value: ['Alias With Spaces and Chars'],
+      },
+    },
+    false,
+  );
+  tap.matchOnly(
+    converter.convertFieldNames({
+      column: 'possible_alias',
+      column_with_cleaning: 'Alias With Spaces * and Chars *',
+    }),
+    { column: 'canonical_value', column_with_cleaning: 'canonical_value' },
+  );
+  tap.end();
+});
+
+test('Cleans dollars and deals with owner_status Both', tap => {
+  const converter = new SpreadsheetStandardizer({}, {}, false);
+  tap.matchOnly(
+    converter.convertFieldNames({
+      'amount.number': '$50',
+      owner_status: 'Both',
+    }),
+    { 'amount.number': '50', owner_status: 'homeowner, renter' },
+  );
+  tap.end();
+});
+
 test('representative example', tap => {
-  const converter = new SpreadsheetStandardizer(FIELD_MAPPINGS, true);
+  const converter = new SpreadsheetStandardizer(
+    FIELD_MAPPINGS,
+    VALUE_MAPPINGS,
+    true,
+  );
 
   const input = {
     ID: 'VA-1',
@@ -96,26 +146,26 @@ test('representative example', tap => {
   tap.matchOnly(converter.convertFieldNames(input), {
     id: 'VA-1',
     data_urls: 'https://takechargeva.com/programs/for-your-home',
-    authority_level: 'Utility',
+    authority_type: 'utility',
     authority_name: 'Appalachian Power',
     program_title: 'Take Charge Virginia Efficient Products Program',
     program_url:
       'https://takechargeva.com/programs/for-your-home/efficient-products-program-appliances',
-    technology: 'Heat Pump Dryers / Clothes Dryer',
-    technology_if_selected_other: '',
-    program_description:
+    item: 'heat_pump_clothes_dryer',
+    item_if_selected_other: '',
+    'short_description.en':
       'Receive up to $50 rebate for an Energy Start certified electric ventless or vented clothes dryer from an approved retailer.',
-    program_status: 'Active',
-    program_start: '1/1/2022',
-    program_end: '12/31/2026',
-    rebate_type: 'Rebate',
+    program_status: 'active',
+    program_start_raw: '1/1/2022',
+    program_end_raw: '12/31/2026',
+    payment_methods: 'Rebate',
     rebate_value: '$50',
-    amount_type: 'dollar amount',
-    number: '',
-    unit: '',
-    amount_minimum: '',
-    amount_maximum: '$50',
-    amount_representative: '',
+    'amount.type': 'dollar_amount',
+    'amount.number': '',
+    'amount.unit': '',
+    'amount.minimum': '',
+    'amount.maximum': '50',
+    'amount.representative': '',
     bonus_description: '',
     equipment_standards_restrictions: 'Must be ENERGY STAR certified.',
     equipment_capacity_restrictions: '',
