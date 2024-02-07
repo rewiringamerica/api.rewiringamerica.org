@@ -7,8 +7,10 @@ import {
   RILowIncomeAuthority,
 } from './low_income_thresholds';
 import { ALL_PROGRAMS } from './programs';
+import { AMOUNT_SCHEMA } from './shared_schemas';
 import { FilingStatus } from './tax_brackets';
-import { Amount, AmountType, AmountUnit } from './types/amount';
+
+import { Amount } from './types/amount';
 import { PaymentMethod } from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
 import { LocalizableString } from './types/localizable-string';
@@ -19,23 +21,10 @@ export type LowIncomeAuthority =
   | RILowIncomeAuthority
   | COLowIncomeAuthority;
 
-const amountSchema: JSONSchemaType<Amount> = {
-  type: 'object',
-  properties: {
-    type: { type: 'string', enum: Object.values(AmountType) },
-    number: { type: 'number' },
-    unit: { type: 'string', enum: Object.values(AmountUnit), nullable: true },
-    minimum: { type: 'number', nullable: true },
-    maximum: { type: 'number', nullable: true },
-    representative: { type: 'number', nullable: true },
-  },
-  required: ['type', 'number'],
-  additionalProperties: false,
-} as const;
-
-// This represents the data that lives in raw collected form
-// e.g. spreadsheets. It should match column-for-column to our
-// spreadsheet format except for column renames/aliases.
+// CollectedFields and its JSON schema represent the data that lives in raw
+// collected form, e.g. spreadsheets. It should match column-for-column to our
+// spreadsheet format aside from nested fields like amount and column
+// renames/aliases.
 export type CollectedFields = {
   id: string;
   data_urls: string[];
@@ -85,7 +74,7 @@ const collectedIncentivePropertySchema = {
     items: { type: 'string', enum: Object.values(PaymentMethod) },
   },
   rebate_value: { type: 'string' },
-  amount: amountSchema,
+  amount: AMOUNT_SCHEMA,
   bonus_description: { type: 'string', nullable: true },
   equipment_standards_restrictions: { type: 'string', nullable: true },
   equipment_capacity_restrictions: { type: 'string', nullable: true },
@@ -108,13 +97,12 @@ const collectedIncentivePropertySchema = {
   serve_in_api: { type: 'boolean', nullable: true },
 } as const;
 
-// These are additional fields that are derived from collected data,
-// or otherwise not collected in the main spreadsheets. They may have
-// a close relationship with collected fields (e.g. see derived field
-// authority as compared with collected field authority_name), but if
-// the value is anything other than pass-through with minor formatting
-// such as fitting to an enum or converting from string to number, it
-// should have a separate collected and derived version.
+// DerivedFields and its schema are associated with data not directly collected
+// in the main spreadsheets. They may have a close relationship with collected
+// fields (for example, program_start_raw and program_start). Generally, if
+// what's in the spreadsheet requires more than just fitting to an enum or
+// converting from string to number with minor cleanup, it should have a
+// separate collected and derived version.
 export type DerivedFields = {
   agi_max_limit?: number;
   agi_min_limit?: number;
@@ -139,6 +127,7 @@ const derivedIncentivePropertySchema = {
   low_income: { type: 'string', nullable: true },
 } as const;
 
+// Collected fields that pass-through directly to our StateIncentives schema.
 const passThroughFields = [
   'id',
   'authority_type',
@@ -151,6 +140,11 @@ const passThroughFields = [
 ] as const;
 type PassThroughField = (typeof passThroughFields)[number];
 
+const passThroughCollectedProperties = _.pick(
+  collectedIncentivePropertySchema,
+  passThroughFields,
+);
+
 export type StateIncentive = Pick<CollectedFields, PassThroughField> &
   DerivedFields;
 
@@ -158,13 +152,8 @@ export type StateIncentivesMap = {
   [stateId: string]: StateIncentive[];
 };
 
-const passThroughCollected = _.pick(
-  collectedIncentivePropertySchema,
-  passThroughFields,
-);
-
 const incentivePropertySchema = {
-  ...passThroughCollected,
+  ...passThroughCollectedProperties,
   ...derivedIncentivePropertySchema,
 };
 
