@@ -1,5 +1,6 @@
 import { JSONSchemaType } from 'ajv';
 import fs from 'fs';
+import _ from 'lodash';
 import { AuthorityType } from './authorities';
 import {
   COLowIncomeAuthority,
@@ -18,30 +19,6 @@ export type LowIncomeAuthority =
   | RILowIncomeAuthority
   | COLowIncomeAuthority;
 
-export type StateIncentive = {
-  id: string;
-  agi_max_limit?: number;
-  agi_min_limit?: number;
-  authority_type: AuthorityType;
-  authority: string;
-  type: PaymentMethod; // Deprecated; we are switching to use payment_methods instead
-  payment_methods: PaymentMethod[];
-  item: Item;
-  program: string;
-  amount: Amount;
-  bonus_available?: boolean;
-  owner_status: OwnerStatus[];
-  start_date: number;
-  end_date: number;
-  short_description: LocalizableString;
-  low_income?: LowIncomeAuthority;
-  filing_status?: FilingStatus;
-};
-
-export type StateIncentivesMap = {
-  [stateId: string]: StateIncentive[];
-};
-
 const amountSchema: JSONSchemaType<Amount> = {
   type: 'object',
   properties: {
@@ -56,39 +33,141 @@ const amountSchema: JSONSchemaType<Amount> = {
   additionalProperties: false,
 } as const;
 
-const incentivePropertySchema = {
+// This represents the data that lives in raw collected form
+// e.g. spreadsheets. It should match column-for-column to our
+// spreadsheet format except for column renames/aliases.
+export type CollectedFields = {
+  id: string;
+  data_urls: string[];
+  authority_type: AuthorityType;
+  authority_name: string;
+  program_title: string;
+  program_url: string;
+  item: Item;
+  item_if_selected_other?: string;
+  short_description: LocalizableString;
+  program_status: string;
+  program_start_raw?: string;
+  program_end_raw?: string;
+  payment_methods: PaymentMethod[];
+  rebate_value: string;
+  amount: Amount;
+  bonus_description?: string;
+  equipment_standards_restrictions?: string;
+  equipment_capacity_restrictions?: string;
+  contractor_restrictions?: string;
+  income_restrictions?: string;
+  filing_status?: FilingStatus;
+  owner_status: OwnerStatus[];
+  other_restrictions?: string;
+  stacking_details?: string;
+  financing_details?: string;
+  editorial_notes?: string;
+  questions?: string;
+  serve_in_api?: boolean;
+};
+
+const collectedIncentivePropertySchema = {
   id: { type: 'string' },
-  agi_max_limit: { type: 'integer', nullable: true },
-  agi_min_limit: { type: 'integer', nullable: true },
+  data_urls: { type: 'string' },
   authority_type: { type: 'string', enum: Object.values(AuthorityType) },
-  authority: { type: 'string' },
-  type: { type: 'string', enum: Object.values(PaymentMethod) },
+  authority_name: { type: 'string' },
+  program_title: { type: 'string' },
+  program_url: { type: 'string' },
+  item: { type: 'string', enum: ALL_ITEMS },
+  item_if_selected_other: { type: 'string', nullable: true },
+  short_description: { $ref: 'LocalizableString' },
+  program_status: { type: 'string' },
+  program_start_raw: { type: 'string', nullable: true },
+  program_end_raw: { type: 'string', nullable: true },
   payment_methods: {
     type: 'array',
     items: { type: 'string', enum: Object.values(PaymentMethod) },
   },
-  item: { type: 'string', enum: ALL_ITEMS },
-  program: { type: 'string', enum: ALL_PROGRAMS },
+  rebate_value: { type: 'string' },
   amount: amountSchema,
-  bonus_available: { type: 'boolean', nullable: true },
-  owner_status: {
-    type: 'array',
-    items: { type: 'string', enum: Object.values(OwnerStatus) },
-  },
-  start_date: {
-    type: 'number',
-  },
-  end_date: {
-    type: 'number',
-  },
-  short_description: { $ref: 'LocalizableString' },
-  low_income: { type: 'string', nullable: true },
+  bonus_description: { type: 'string', nullable: true },
+  equipment_standards_restrictions: { type: 'string', nullable: true },
+  equipment_capacity_restrictions: { type: 'string', nullable: true },
+  contractor_restrictions: { type: 'string', nullable: true },
+  income_restrictions: { type: 'string', nullable: true },
   filing_status: {
     type: 'string',
     enum: Object.values(FilingStatus),
     nullable: true,
   },
+  owner_status: {
+    type: 'array',
+    items: { type: 'string', enum: Object.values(OwnerStatus) },
+  },
+  other_restrictions: { type: 'string', nullable: true },
+  stacking_details: { type: 'string', nullable: true },
+  financing_details: { type: 'string', nullable: true },
+  editorial_notes: { type: 'string', nullable: true },
+  questions: { type: 'string', nullable: true },
+  serve_in_api: { type: 'boolean', nullable: true },
 } as const;
+
+// These are additional fields that are derived from collected data,
+// or otherwise not collected in the main spreadsheets. They may have
+// a close relationship with collected fields (e.g. see derived field
+// authority as compared with collected field authority_name), but if
+// the value is anything other than pass-through with minor formatting
+// such as fitting to an enum or converting from string to number, it
+// should have a separate collected and derived version.
+export type DerivedFields = {
+  agi_max_limit?: number;
+  agi_min_limit?: number;
+  authority: string;
+  type: PaymentMethod; // Deprecated; we are switching to use payment_methods instead
+  program: string;
+  bonus_available?: boolean;
+  start_date: number;
+  end_date: number;
+  low_income?: LowIncomeAuthority;
+};
+
+const derivedIncentivePropertySchema = {
+  agi_max_limit: { type: 'integer', nullable: true },
+  agi_min_limit: { type: 'integer', nullable: true },
+  authority: { type: 'string' },
+  type: { type: 'string', enum: Object.values(PaymentMethod) },
+  program: { type: 'string', enum: ALL_PROGRAMS },
+  bonus_available: { type: 'boolean', nullable: true },
+  start_date: { type: 'number' },
+  end_date: { type: 'number' },
+  low_income: { type: 'string', nullable: true },
+} as const;
+
+const passThroughFields = [
+  'id',
+  'authority_type',
+  'payment_methods',
+  'item',
+  'amount',
+  'owner_status',
+  'short_description',
+  'filing_status',
+] as const;
+type PassThroughField = (typeof passThroughFields)[number];
+
+export type StateIncentive = Pick<CollectedFields, PassThroughField> &
+  DerivedFields;
+
+export type StateIncentivesMap = {
+  [stateId: string]: StateIncentive[];
+};
+
+const passThroughCollected = _.pick(
+  collectedIncentivePropertySchema,
+  passThroughFields,
+);
+
+const incentivePropertySchema = {
+  ...passThroughCollected,
+  ...derivedIncentivePropertySchema,
+};
+
 const requiredProperties = [
   'id',
   'authority',
