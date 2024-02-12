@@ -9,7 +9,6 @@ import {
   API_REQUEST_LOCATION_SCHEMA,
   API_RESPONSE_LOCATION_SCHEMA,
 } from './location';
-import { API_SAVINGS_SCHEMA } from './savings';
 
 const API_CALCULATOR_REQUEST_SCHEMA = {
   title: 'APICalculatorRequest',
@@ -112,7 +111,6 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
     'authorities',
     'coverage',
     'location',
-    'savings',
     'incentives',
   ],
   properties: {
@@ -131,7 +129,6 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
     },
     coverage: API_COVERAGE_SCHEMA,
     location: API_RESPONSE_LOCATION_SCHEMA,
-    savings: API_SAVINGS_SCHEMA,
     incentives: {
       type: 'array',
       items: { $ref: 'APIIncentive' },

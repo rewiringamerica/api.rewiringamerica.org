@@ -47,6 +47,7 @@ export type CalculatedIncentive = (IRAIncentive | StateIncentive) & {
  */
 type CalculatedIncentives = Omit<APICalculatorResponse, 'incentives'> & {
   incentives: CalculatedIncentive[];
+  savings: APISavings;
 };
 
 export type CalculateParams = Omit<APICalculatorRequest, 'location'>;
