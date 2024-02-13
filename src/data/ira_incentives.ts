@@ -3,7 +3,7 @@ import fs from 'fs';
 import { AuthorityType } from './authorities';
 import { ALL_PROGRAMS } from './programs';
 import { FilingStatus } from './tax_brackets';
-import { Amount, AmountType, AmountUnit } from './types/amount';
+import { AMOUNT_SCHEMA, Amount } from './types/amount';
 import { PaymentMethod } from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
 import { LocalizableString } from './types/localizable-string';
@@ -42,20 +42,6 @@ const nullable = <T>(input: T): T => {
   return { anyOf: [input, { type: 'null' }] } as T;
 };
 
-const amountSchema: JSONSchemaType<Amount> = {
-  type: 'object',
-  properties: {
-    type: { type: 'string', enum: Object.values(AmountType) },
-    number: { type: 'number' },
-    unit: { type: 'string', enum: Object.values(AmountUnit), nullable: true },
-    minimum: { type: 'number', nullable: true },
-    maximum: { type: 'number', nullable: true },
-    representative: { type: 'number', nullable: true },
-  },
-  required: ['type', 'number'],
-  additionalProperties: false,
-} as const;
-
 export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
   type: 'array',
   items: {
@@ -77,7 +63,7 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
       program: { type: 'string', enum: ALL_PROGRAMS },
       authority_type: { type: 'string', const: AuthorityType.Federal },
       item: { type: 'string', enum: ALL_ITEMS },
-      amount: amountSchema,
+      amount: AMOUNT_SCHEMA,
       owner_status: {
         type: 'array',
         items: { type: 'string', enum: Object.values(OwnerStatus) },
