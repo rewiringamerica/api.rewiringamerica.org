@@ -7,8 +7,8 @@ import {
   RILowIncomeAuthority,
 } from './low_income_thresholds';
 import { ALL_PROGRAMS } from './programs';
-import { AMOUNT_SCHEMA } from './shared_schemas';
 import { FilingStatus } from './tax_brackets';
+import { AMOUNT_SCHEMA } from './types/amount';
 
 import { Amount } from './types/amount';
 import { PaymentMethod } from './types/incentive-types';
