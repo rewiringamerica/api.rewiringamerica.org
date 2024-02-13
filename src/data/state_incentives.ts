@@ -72,6 +72,7 @@ const collectedIncentivePropertySchema = {
   payment_methods: {
     type: 'array',
     items: { type: 'string', enum: Object.values(PaymentMethod) },
+    minItems: 1,
   },
   rebate_value: { type: 'string' },
   amount: AMOUNT_SCHEMA,
@@ -88,6 +89,7 @@ const collectedIncentivePropertySchema = {
   owner_status: {
     type: 'array',
     items: { type: 'string', enum: Object.values(OwnerStatus) },
+    minItems: 1,
   },
   other_restrictions: { type: 'string', nullable: true },
   stacking_details: { type: 'string', nullable: true },

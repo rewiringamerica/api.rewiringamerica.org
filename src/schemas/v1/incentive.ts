@@ -27,6 +27,7 @@ export const API_INCENTIVE_SCHEMA = {
         type: 'string',
         enum: Object.values(PaymentMethod),
       },
+      minItems: 1,
     },
     authority_type: {
       type: 'string',
@@ -85,6 +86,7 @@ export const API_INCENTIVE_SCHEMA = {
         type: 'string',
         enum: Object.values(OwnerStatus),
       },
+      minItems: 1,
     },
     start_date: {
       type: 'number',
