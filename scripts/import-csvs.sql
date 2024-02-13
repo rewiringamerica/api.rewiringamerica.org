@@ -71,7 +71,7 @@ CREATE TABLE tracts(
 );
 
 CREATE TABLE utilities(
-    utility_id TEXT,
+    utility_id TEXT PRIMARY KEY,
     name TEXT
 ) STRICT;
 
@@ -97,8 +97,6 @@ CREATE TABLE zip_to_utility(
 CREATE INDEX idx_zipzip ON zips(zip);
 
 CREATE INDEX idx_tractgeoid ON tracts(tract_geoid);
-
-CREATE INDEX idx_utilityid ON utilities(utility_id);
 
 CREATE INDEX idx_ziptract ON zip_to_tract(zip);
 
