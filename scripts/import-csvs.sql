@@ -91,7 +91,8 @@ CREATE TABLE zip_to_cbsasub(zipcode TEXT, cbsasub TEXT);
 CREATE TABLE zip_to_utility(
     zip TEXT,
     utility_id TEXT,
-    predominant INTEGER
+    predominant INTEGER,
+    UNIQUE (zip, utility_id)
 ) STRICT;
 
 CREATE INDEX idx_zipzip ON zips(zip);
@@ -103,8 +104,6 @@ CREATE INDEX idx_ziptract ON zip_to_tract(zip);
 CREATE INDEX idx_zipcbsasub ON zip_to_cbsasub(zipcode);
 
 CREATE INDEX idx_amicbsasub ON ami(cbsasub);
-
-CREATE INDEX idx_ziputilities ON zip_to_utility(zip);
 
 .import --csv --skip 1 ./scripts/data/ami.csv ami
 .import --csv --skip 1 ./scripts/data/zips.csv zips
