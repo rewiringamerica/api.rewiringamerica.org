@@ -143,7 +143,7 @@ const derivedIncentivePropertySchema = {
 } as const;
 
 // Collected fields that pass-through directly to our StateIncentives schema.
-const passThroughFields = [
+export const PASS_THROUGH_FIELDS = [
   'id',
   'authority_type',
   'payment_methods',
@@ -153,11 +153,11 @@ const passThroughFields = [
   'short_description',
   'filing_status',
 ] as const;
-type PassThroughField = (typeof passThroughFields)[number];
+type PassThroughField = (typeof PASS_THROUGH_FIELDS)[number];
 
 const passThroughCollectedProperties = _.pick(
   collectedIncentivePropertySchema,
-  passThroughFields,
+  PASS_THROUGH_FIELDS,
 );
 
 export type StateIncentive = Pick<CollectedFields, PassThroughField> &
