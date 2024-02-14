@@ -147,7 +147,7 @@ test('AZ low income response with state and utility filtering for UniSource is v
       household_income: 28000,
       tax_filing: 'joint',
       authority_types: ['state', 'utility'],
-      utility: 'az-unisource-energy-services',
+      utility: 'az-uni-source-energy-services',
       // TODO: Remove when AZ is fully launched.
       include_beta_states: true,
     },

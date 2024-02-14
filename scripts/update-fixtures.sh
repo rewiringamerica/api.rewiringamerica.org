@@ -71,7 +71,7 @@ curl \
 &household_size=1\
 &authority_types=state\
 &authority_types=utility\
-&utility=az-unisource-energy-services" \
+&utility=az-uni-source-energy-services" \
   | jq . > test/fixtures/v1-az-85702-state-utility-lowincome.json
 
 # TODO: Remove beta states argument when CT is fully launched.

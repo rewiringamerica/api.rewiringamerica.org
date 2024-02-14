@@ -16,6 +16,7 @@ import minimist from 'minimist';
 import path from 'path';
 import { promisify } from 'util';
 import xlsx from 'xlsx';
+import { createAuthorityName } from './lib/authority-and-program-updater';
 
 /**
  * Utility codes (number) or utility names (string) to exclude from
@@ -48,7 +49,8 @@ const EXCLUSIONS: Set<string | number> = new Set([
  * municipal utilities as "Town of XYZ", but often those utilities use the
  * branding "XYZ Public Utilities" or similar. In some cases it's also to deal
  * with unusual abbreviations, or a complete name change that the dataset hasn't
- * picked up on yet.
+ * picked up on yet, or the dataset referring to the same utility with different
+ * abbreviations (e.g. "XYZ Rural Electric Cooperative" and "XYZ R E C").
  */
 const OVERRIDES = new Map<string | number, string>([
   // AZ
@@ -136,19 +138,7 @@ function convertName(
   cleaned = cleaned.replaceAll(/\bElec\b/g, 'Electric');
   cleaned = cleaned.replaceAll(/\bCo-?op\b/g, 'Cooperative');
 
-  // Generate the ID: replace & with "and", remove all parentheticals,
-  // spaces into hyphens
-  const id =
-    state.toLowerCase() +
-    '-' +
-    cleaned
-      .toLowerCase()
-      .replaceAll(/\s*&\s*/g, ' and ')
-      .replaceAll(/\([^)]*\)/g, '')
-      .replaceAll('.', '')
-      .replaceAll(' ', '-');
-
-  return { id, name: cleaned };
+  return { id: createAuthorityName(state, cleaned), name: cleaned };
 }
 
 // These must be in the same order as in the spreadsheet

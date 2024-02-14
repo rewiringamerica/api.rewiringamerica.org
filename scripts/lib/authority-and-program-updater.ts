@@ -29,6 +29,9 @@ function kebabCase(str: string) {
     // match is a series of caps
     return ' ' + match.toLowerCase();
   });
+  // 3) replace & with the word "and"
+  str = str.replace('&', ' and ');
+
   return str
     .trim()
     .split(wordSeparators)
