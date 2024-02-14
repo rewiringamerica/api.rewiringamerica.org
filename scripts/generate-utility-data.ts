@@ -128,15 +128,15 @@ function convertName(
   // customer-facing brand
   cleaned = cleaned.replace(/\[.*\]/, '').trim();
   // Remove "Inc" or "Co" suffix
-  cleaned = cleaned.replace(/,? *(I(nc)?|Co)\.?$/, '').trim();
+  cleaned = cleaned.replace(/\b,?\s+(I(nc)?|Co)\.?$/i, '').trim();
   // Remove "(for __ reporting)" parenthetical
   cleaned = cleaned.replace(/\(.*reporting.*\)/i, '').trim();
   // Spell out "Pwr", "Assn", "Elec", and "Coop"
   // The dataset is inconsistent about this
-  cleaned = cleaned.replaceAll(/\bPwr\b/g, 'Power');
-  cleaned = cleaned.replaceAll(/\bAssn\b/g, 'Association');
-  cleaned = cleaned.replaceAll(/\bElec\b/g, 'Electric');
-  cleaned = cleaned.replaceAll(/\bCo-?op\b/g, 'Cooperative');
+  cleaned = cleaned.replaceAll(/\bPwr\b/gi, 'Power');
+  cleaned = cleaned.replaceAll(/\bAssn\b/gi, 'Association');
+  cleaned = cleaned.replaceAll(/\bElec\b/gi, 'Electric');
+  cleaned = cleaned.replaceAll(/\bCo-?op\b/gi, 'Cooperative');
 
   return { id: createAuthorityName(state, cleaned), name: cleaned };
 }
