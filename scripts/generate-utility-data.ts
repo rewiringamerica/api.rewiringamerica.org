@@ -42,6 +42,13 @@ const EXCLUSIONS: Set<string | number> = new Set([
  * Map from utility codes (numbers) or utility names (string) to replacement
  * names. The keys must be exactly as they appear in the spreadsheet. The
  * replacement names will be treated as if they were the name in the sheet.
+ *
+ * The aim of these replacements is to identify a utility by the name most
+ * recognizable to its customers. For example, the dataset commonly lists
+ * municipal utilities as "Town of XYZ", but often those utilities use the
+ * branding "XYZ Public Utilities" or similar. In some cases it's also to deal
+ * with unusual abbreviations, or a complete name change that the dataset hasn't
+ * picked up on yet.
  */
 const OVERRIDES = new Map<string | number, string>([
   // AZ
