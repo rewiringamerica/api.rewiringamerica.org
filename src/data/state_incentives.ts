@@ -198,6 +198,7 @@ export const STATE_SCHEMA: JSONSchemaType<StateIncentive> = {
     ...incentivePropertySchema,
   },
   required: requiredProperties,
+  additionalProperties: false,
 } as const;
 
 /******************************************************************************/
