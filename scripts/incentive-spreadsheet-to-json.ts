@@ -18,25 +18,31 @@ import { FIELD_MAPPINGS, VALUE_MAPPINGS } from './lib/spreadsheet-mappings';
 import { SpreadsheetStandardizer } from './lib/spreadsheet-standardizer';
 
 const ajv = new Ajv({ allErrors: true });
-
 const validate = ajv.addSchema(LOCALIZABLE_STRING_SCHEMA).compile(STATE_SCHEMA);
 
-function writeJson(
-  valid: string,
-  validPath: string,
-  invalid: string,
-  invalidPath: string,
-) {
-  const dir = path.dirname(validPath);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir);
-  fs.writeFileSync(validPath, valid, 'utf-8');
-  if (invalid.length === 0) {
-    if (fs.existsSync(invalidPath)) {
-      // Clear any previous versions if we have no invalid records.
-      fs.unlinkSync(invalidPath);
+type StateIncentivesWithErrors = Partial<StateIncentive> & {
+  errors: object[];
+};
+
+function safeDeleteFiles(...filepaths: string[]) {
+  for (const filepath of filepaths) {
+    if (fs.existsSync(filepath)) {
+      fs.unlinkSync(filepath);
     }
+  }
+}
+
+function updateJsonFiles(records: object[], filepath: string) {
+  const dir = path.dirname(filepath);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir);
+  if (records.length === 0) {
+    safeDeleteFiles(filepath);
   } else {
-    fs.writeFileSync(invalidPath, invalid, 'utf-8');
+    fs.writeFileSync(
+      filepath,
+      JSON.stringify(records, null, 2) + '\n',
+      'utf-8',
+    );
   }
 }
 
@@ -57,6 +63,9 @@ async function convertToJson(
     columns: true,
     from_line: file.headerRowNumber ?? 1,
   });
+  const invalidPath = file.filepath.replace('.json', '_invalid.json');
+  const rawValidPath = file.filepath.replace('.json', '_raw.json');
+  const rawInvalidPath = file.filepath.replace('.json', '_raw_invalid.json');
 
   const standardizer = new SpreadsheetStandardizer(
     FIELD_MAPPINGS,
@@ -66,26 +75,20 @@ async function convertToJson(
   );
 
   const standardized = rows.map(standardizer.standardize.bind(standardizer));
-
   const [valids, invalids] = flatToNestedValidate(standardized);
   if (invalids.length > 0) {
-    writeJson(
-      JSON.stringify(valids, null, 2) + '\n',
-      file.filepath.replace('.json', '_raw.json'),
-      JSON.stringify(invalids, null, 2) + '\n',
-      file.filepath.replace('.json', '_raw_invalid.json'),
-    );
+    updateJsonFiles(valids, rawValidPath);
+    updateJsonFiles(invalids, rawInvalidPath);
     throw new Error(
       'Invalid spreadsheet records found. See raw.json and raw_invalid.json files to debug before converting to API-friendly JSON.',
     );
+  } else {
+    // Clear existing raw files since all were valid in this run.
+    safeDeleteFiles(rawValidPath, rawInvalidPath);
   }
 
-  type StateIncentivesWithErrors = Partial<StateIncentive> & {
-    errors: object[];
-  };
   const invalid_jsons: StateIncentivesWithErrors[] = [];
   const jsons: StateIncentive[] = [];
-
   valids.forEach((row: CollectedFields) => {
     const refined = standardizer.refineCollectedData(state, row);
     if (!validate(refined)) {
@@ -98,13 +101,8 @@ async function convertToJson(
       jsons.push(refined);
     }
   });
-
-  writeJson(
-    JSON.stringify(jsons, null, 2) + '\n',
-    file.filepath,
-    JSON.stringify(invalid_jsons, null, 2) + '\n',
-    file.filepath.replace('.json', '_invalid.json'),
-  );
+  updateJsonFiles(jsons, file.filepath);
+  updateJsonFiles(invalid_jsons, invalidPath);
 }
 
 (async function () {
