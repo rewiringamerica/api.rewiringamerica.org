@@ -58,7 +58,7 @@ export type CollectedFields = {
 
 const collectedIncentivePropertySchema = {
   id: { type: 'string' },
-  data_urls: { type: 'string' },
+  data_urls: { type: 'array', items: { type: 'string' } },
   authority_type: { type: 'string', enum: Object.values(AuthorityType) },
   authority_name: { type: 'string' },
   program_title: { type: 'string' },
@@ -98,6 +98,21 @@ const collectedIncentivePropertySchema = {
   questions: { type: 'string', nullable: true },
   serve_in_api: { type: 'boolean', nullable: true },
 } as const;
+const requiredCollectedFields = [
+  'id',
+  'data_urls',
+  'authority_type',
+  'authority_name',
+  'program_title',
+  'program_url',
+  'item',
+  'short_description',
+  'program_status',
+  'payment_methods',
+  'rebate_value',
+  'amount',
+  'owner_status',
+] as const;
 
 // DerivedFields and its schema are associated with data not directly collected
 // in the main spreadsheets. They may have a close relationship with collected
@@ -168,6 +183,15 @@ const requiredProperties = [
   'owner_status',
   'short_description',
 ] as const;
+
+export const COLLECTED_DATA_SCHEMA: JSONSchemaType<CollectedFields> = {
+  type: 'object',
+  properties: {
+    ...collectedIncentivePropertySchema,
+  },
+  required: requiredCollectedFields,
+  additionalProperties: false,
+} as const;
 
 export const STATE_SCHEMA: JSONSchemaType<StateIncentive> = {
   type: 'object',
