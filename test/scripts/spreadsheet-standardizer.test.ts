@@ -12,14 +12,14 @@ test('correctly rename columns in strict mode', tap => {
     true,
   );
   tap.matchOnly(
-    converter.convertFieldNames({ old_name: 'foo' }),
+    converter.standardize({ old_name: 'foo' }),
     { new_name: 'foo' },
     'standard rename',
   );
 
   converter = new SpreadsheetStandardizer({ new_name: ['old_name'] }, {}, true);
   tap.throws(() => {
-    converter.convertFieldNames({ old_name: 'foo', unrelated_name: 'bar' });
+    converter.standardize({ old_name: 'foo', unrelated_name: 'bar' });
   }, 'Error on field not in map in strict mode');
 
   tap.end();
@@ -32,7 +32,7 @@ test('correctly rename columns in non-strict mode', tap => {
     false,
   );
   tap.matchOnly(
-    converter.convertFieldNames({ old_name: 'foo' }),
+    converter.standardize({ old_name: 'foo' }),
     { new_name: 'foo' },
     'standard rename',
   );
@@ -43,7 +43,7 @@ test('correctly rename columns in non-strict mode', tap => {
     false,
   );
   tap.matchOnly(
-    converter.convertFieldNames({ old_name: 'foo', unrelated_name: 'bar' }),
+    converter.standardize({ old_name: 'foo', unrelated_name: 'bar' }),
     { new_name: 'foo', unrelated_name: 'bar' },
     'preserves extraneous column in non-strict mode',
   );
@@ -58,7 +58,7 @@ test('Rename columns using punctuation characters and unusual spacing', tap => {
     true,
   );
   tap.matchOnly(
-    converter.convertFieldNames({
+    converter.standardize({
       'Unclean  original(name  with weird chars    )': 'Column Value',
     }),
     { new_name: 'Column Value' },
@@ -79,7 +79,7 @@ test('Rename values', tap => {
     false,
   );
   tap.matchOnly(
-    converter.convertFieldNames({
+    converter.standardize({
       column: 'possible_alias',
       column_with_cleaning: 'Alias With Spaces * and Chars *',
     }),
@@ -91,7 +91,7 @@ test('Rename values', tap => {
 test('Cleans dollars and deals with owner_status Both', tap => {
   const converter = new SpreadsheetStandardizer({}, {}, false);
   tap.matchOnly(
-    converter.convertFieldNames({
+    converter.standardize({
       'amount.number': '$50',
       owner_status: 'Both',
     }),
@@ -143,7 +143,7 @@ test('representative example', tap => {
     'Financing Details': '',
   };
 
-  tap.matchOnly(converter.convertFieldNames(input), {
+  tap.matchOnly(converter.standardize(input), {
     id: 'VA-1',
     data_urls: 'https://takechargeva.com/programs/for-your-home',
     authority_type: 'utility',

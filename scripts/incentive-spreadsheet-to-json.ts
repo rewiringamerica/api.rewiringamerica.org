@@ -43,8 +43,8 @@ async function convertToJson(
   const invalids: Record<string, string | number | boolean | object>[] = [];
   const jsons: StateIncentive[] = [];
   rows.forEach((row: Record<string, string>) => {
-    const renamed = converter.convertFieldNames(row);
-    const standardized = converter.recordToStandardValues(state, renamed);
+    const renamed = converter.standardize(row);
+    const standardized = converter.refineCollectedData(state, renamed);
     if (!validate(standardized)) {
       if (validate.errors !== undefined && validate.errors !== null) {
         standardized.errors = validate.errors;

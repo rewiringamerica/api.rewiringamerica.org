@@ -89,10 +89,7 @@ test('correct row to record transformation', async tap => {
     fakeIncomeThresholds,
   );
   for (const tc of testCases) {
-    const renamed = columnConverter.convertFieldNames(tc.input);
-    tap.matchOnly(
-      columnConverter.recordToStandardValues('va', renamed),
-      tc.want,
-    );
+    const renamed = columnConverter.standardize(tc.input);
+    tap.matchOnly(columnConverter.refineCollectedData('va', renamed), tc.want);
   }
 });

@@ -77,7 +77,7 @@ export class SpreadsheetStandardizer {
   }
 
   // Convert a row with possible column aliases to a canonical column name.
-  convertFieldNames(input: Record<string, string>): Record<string, string> {
+  standardize(input: Record<string, string>): Record<string, string> {
     const output: Record<string, string> = {};
     for (const key in input) {
       const cleaned = cleanFieldName(key);
@@ -93,9 +93,10 @@ export class SpreadsheetStandardizer {
     return output;
   }
 
-  // Try to convert a row with non-standard values to standard ones.
-  // Failure means the row will still fail a2j schema validation later.
-  recordToStandardValues(
+  // Take a collected data record, filter to a subset of fields, do some
+  // additional processing/derivation, and return a refined record.
+  // That record may still fail ajv schema validation later.
+  refineCollectedData(
     state: string,
     record: Record<string, string>,
   ): Record<string, string | number | object | boolean> {

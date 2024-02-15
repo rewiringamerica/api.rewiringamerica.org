@@ -24,7 +24,7 @@ async function generate(state: string, file: IncentiveFile) {
 
   const authorityProgramManager = new AuthorityAndProgramUpdater(state);
   rows.forEach((row: Record<string, string>) => {
-    const renamed = converter.convertFieldNames(row);
+    const renamed = converter.standardize(row);
     authorityProgramManager.addRow(renamed);
   });
 
