@@ -7,17 +7,22 @@ import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-stri
 
 const ajv = new Ajv({ allErrors: true, coerceTypes: 'array' });
 
-// Could be generated from CollectedFields, filtering to array types.
+// TODO: consolidate with spreadsheet-standardizer.ts constant
+// and generate both directly from CollectedFields schema.
 const ARRAY_FIELDS = ['data_urls', 'payment_methods', 'owner_status'];
 
 const validate = ajv
   .addSchema(LOCALIZABLE_STRING_SCHEMA)
   .compile(COLLECTED_DATA_SCHEMA);
 
-// Call this function to perform validation on the json.
-// This returns a tuple of valid and invalid records.
-// To convert without validation, call csvToJson directly.
-export function csvToJsonValidate(
+/**
+ * Call this function to perform validation on the collected records.
+ * To convert without validation, call flatToNested instead.
+ * @param rows the result of csv-parse.
+ * @param arrayCols any column names that should be treated as comma-delimited arrays
+ * @returns a tuple of valid and invalid records.
+ */
+export function flatToNestedValidate(
   /* eslint-disable @typescript-eslint/no-explicit-any */
   rows: any[],
   /* eslint-enable @typescript-eslint/no-explicit-any */
@@ -25,7 +30,7 @@ export function csvToJsonValidate(
 ): [CollectedFields[], Record<string, string | object>[]] {
   const valids: CollectedFields[] = [];
   const invalids: Record<string, string | object>[] = [];
-  for (const json of csvToJson(rows, arrayCols)) {
+  for (const json of flatToNested(rows, arrayCols)) {
     if (!validate(json)) {
       if (validate.errors !== undefined && validate.errors !== null) {
         json.errors = validate.errors;
@@ -38,23 +43,28 @@ export function csvToJsonValidate(
   return [valids, invalids];
 }
 
-// Converts records from csv to json format without validation.
-// Nesting is possible using dot-syntax in the column name.
-//
-// segmented.column.name with value val becomes:
-// {
-//   segmented: {
-//     column: {
-//       name: val
-//     {
-//   }
-// }
-export function csvToJson(
+/**
+ * Converts records from flat to nested objects without validation.
+ * The input should be the result of csv-parse.
+ * Nesting is possible using dot-syntax in the column name.
+ *
+ * segmented.column.name with value val becomes:
+ * {
+ *   segmented: {
+ *     column: {
+ *       name: val
+ *     {
+ *   }
+ * }
+ * @param rows the result of csv-parse.
+ * @param arrayCols any column names that should be treated as comma-delimited arrays
+ */
+export function flatToNested(
   // lint disable required for the output of csv-parse.
   /* eslint-disable @typescript-eslint/no-explicit-any */
   rows: any[],
   /* eslint-enable @typescript-eslint/no-explicit-any */
-  arrayCols: string[] = ARRAY_FIELDS,
+  arrayCols: string[] = [],
 ): Record<string, string | string[] | object>[] {
   type NestedKeyVal = { [index: string]: NestedKeyVal };
 

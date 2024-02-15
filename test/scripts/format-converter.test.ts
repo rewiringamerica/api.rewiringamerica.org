@@ -1,8 +1,8 @@
 import _ from 'lodash';
 import { test } from 'tap';
 import {
-  csvToJson,
-  csvToJsonValidate,
+  flatToNested,
+  flatToNestedValidate,
 } from '../../scripts/lib/format-converter';
 
 test('empty fields are removed', tap => {
@@ -12,7 +12,7 @@ test('empty fields are removed', tap => {
       removedProperty: '',
     },
   ];
-  tap.matchOnly(csvToJson(objs), [
+  tap.matchOnly(flatToNested(objs), [
     { basicProperty: 'foo' },
   ]);
   tap.end();
@@ -25,7 +25,7 @@ test('array fields are split up', tap => {
       arrayProperty: 'bar,baz',
     },
   ];
-  tap.matchOnly(csvToJson(objs, ['arrayProperty']), [
+  tap.matchOnly(flatToNested(objs, ['arrayProperty']), [
     { basicProperty: 'foo', arrayProperty: ['bar', 'baz'] },
   ]);
   tap.end();
@@ -40,7 +40,7 @@ test('nested columns properly expanded', tap => {
       'deeply.nested.flat': 'quux',
     },
   ];
-  tap.matchOnly(csvToJson(objs, ['nested.array']), [
+  tap.matchOnly(flatToNested(objs, ['nested.array']), [
     {
       unnested: 'foo',
       nested: {
@@ -92,7 +92,7 @@ test('validation work', tap => {
   // Take a valid record; make an invalid copy by removing a field.
   // Then verify that one record is valid and one is not.
   const partialInput: Partial<typeof fullInput> = _.omit(fullInput, 'id');
-  const [valid, invalid] = csvToJsonValidate([fullInput, partialInput]);
+  const [valid, invalid] = flatToNestedValidate([fullInput, partialInput]);
   tap.equal(valid.length, 1);
   tap.equal(invalid.length, 1);
   tap.end();
