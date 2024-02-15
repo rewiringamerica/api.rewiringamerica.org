@@ -89,6 +89,8 @@ test('validation work', tap => {
     stacking_details: '',
     financing_details: '',
   };
+  // Take a valid record; make an invalid copy by removing a field.
+  // Then verify that one record is valid and one is not.
   const partialInput: Partial<typeof fullInput> = _.omit(fullInput, 'id');
   const [valid, invalid] = csvToJsonValidate([fullInput, partialInput]);
   tap.equal(valid.length, 1);
