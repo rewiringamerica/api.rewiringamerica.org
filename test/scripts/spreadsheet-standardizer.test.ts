@@ -6,44 +6,48 @@ import {
 import { SpreadsheetStandardizer } from '../../scripts/lib/spreadsheet-standardizer';
 
 test('correctly rename columns in strict mode', tap => {
-  let converter = new SpreadsheetStandardizer(
+  let standardizer = new SpreadsheetStandardizer(
     { new_name: ['old_name'] },
     {},
     true,
   );
   tap.matchOnly(
-    converter.convertFieldNames({ old_name: 'foo' }),
+    standardizer.standardize({ old_name: 'foo' }),
     { new_name: 'foo' },
     'standard rename',
   );
 
-  converter = new SpreadsheetStandardizer({ new_name: ['old_name'] }, {}, true);
+  standardizer = new SpreadsheetStandardizer(
+    { new_name: ['old_name'] },
+    {},
+    true,
+  );
   tap.throws(() => {
-    converter.convertFieldNames({ old_name: 'foo', unrelated_name: 'bar' });
+    standardizer.standardize({ old_name: 'foo', unrelated_name: 'bar' });
   }, 'Error on field not in map in strict mode');
 
   tap.end();
 });
 
 test('correctly rename columns in non-strict mode', tap => {
-  let converter = new SpreadsheetStandardizer(
+  let standardizer = new SpreadsheetStandardizer(
     { new_name: ['old_name'] },
     {},
     false,
   );
   tap.matchOnly(
-    converter.convertFieldNames({ old_name: 'foo' }),
+    standardizer.standardize({ old_name: 'foo' }),
     { new_name: 'foo' },
     'standard rename',
   );
 
-  converter = new SpreadsheetStandardizer(
+  standardizer = new SpreadsheetStandardizer(
     { new_name: ['old_name'] },
     {},
     false,
   );
   tap.matchOnly(
-    converter.convertFieldNames({ old_name: 'foo', unrelated_name: 'bar' }),
+    standardizer.standardize({ old_name: 'foo', unrelated_name: 'bar' }),
     { new_name: 'foo', unrelated_name: 'bar' },
     'preserves extraneous column in non-strict mode',
   );
@@ -52,13 +56,13 @@ test('correctly rename columns in non-strict mode', tap => {
 });
 
 test('Rename columns using punctuation characters and unusual spacing', tap => {
-  const converter = new SpreadsheetStandardizer(
+  const standardizer = new SpreadsheetStandardizer(
     { new_name: ['unclean original name with weird chars'] },
     {},
     true,
   );
   tap.matchOnly(
-    converter.convertFieldNames({
+    standardizer.standardize({
       'Unclean  original(name  with weird chars    )': 'Column Value',
     }),
     { new_name: 'Column Value' },
@@ -68,7 +72,7 @@ test('Rename columns using punctuation characters and unusual spacing', tap => {
 });
 
 test('Rename values', tap => {
-  const converter = new SpreadsheetStandardizer(
+  const standardizer = new SpreadsheetStandardizer(
     {},
     {
       column: { canonical_value: ['possible_alias'] },
@@ -79,7 +83,7 @@ test('Rename values', tap => {
     false,
   );
   tap.matchOnly(
-    converter.convertFieldNames({
+    standardizer.standardize({
       column: 'possible_alias',
       column_with_cleaning: 'Alias With Spaces * and Chars *',
     }),
@@ -89,9 +93,9 @@ test('Rename values', tap => {
 });
 
 test('Cleans dollars and deals with owner_status Both', tap => {
-  const converter = new SpreadsheetStandardizer({}, {}, false);
+  const standardizer = new SpreadsheetStandardizer({}, {}, false);
   tap.matchOnly(
-    converter.convertFieldNames({
+    standardizer.standardize({
       'amount.number': '$50',
       owner_status: 'Both',
     }),
@@ -101,7 +105,7 @@ test('Cleans dollars and deals with owner_status Both', tap => {
 });
 
 test('representative example', tap => {
-  const converter = new SpreadsheetStandardizer(
+  const standardizer = new SpreadsheetStandardizer(
     FIELD_MAPPINGS,
     VALUE_MAPPINGS,
     true,
@@ -143,7 +147,7 @@ test('representative example', tap => {
     'Financing Details': '',
   };
 
-  tap.matchOnly(converter.convertFieldNames(input), {
+  tap.matchOnly(standardizer.standardize(input), {
     id: 'VA-1',
     data_urls: 'https://takechargeva.com/programs/for-your-home',
     authority_type: 'utility',

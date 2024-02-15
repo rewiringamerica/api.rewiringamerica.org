@@ -16,7 +16,7 @@ async function generate(state: string, file: IncentiveFile) {
   // For now this is always on since we need to ID this columns
   // accurately to do the rest of the work.
   const strict_mode = true;
-  const converter = new SpreadsheetStandardizer(
+  const standardizer = new SpreadsheetStandardizer(
     FIELD_MAPPINGS,
     {},
     strict_mode,
@@ -24,8 +24,8 @@ async function generate(state: string, file: IncentiveFile) {
 
   const authorityProgramManager = new AuthorityAndProgramUpdater(state);
   rows.forEach((row: Record<string, string>) => {
-    const renamed = converter.convertFieldNames(row);
-    authorityProgramManager.addRow(renamed);
+    const standardized = standardizer.standardize(row);
+    authorityProgramManager.addRow(standardized);
   });
 
   authorityProgramManager.updateProgramsTs();
