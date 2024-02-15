@@ -86,6 +86,8 @@ async function convertToJson(
 (async function () {
   const args = minimist(process.argv.slice(2), {
     boolean: ['strict', 'skip_low_income'],
+    // Comma-delimited string of column names that should be ignored
+    // while processing.
     string: ['ignore_cols'],
   });
 
