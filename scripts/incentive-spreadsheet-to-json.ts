@@ -21,16 +21,22 @@ async function convertToJson(
   file: IncentiveFile,
   strict: boolean,
   lowIncome: boolean,
+  ignore_cols: string[],
 ) {
   if (lowIncome && !(state in LOW_INCOME_THRESHOLDS_BY_AUTHORITY)) {
     throw new Error(
       `No low-income thresholds defined for ${state} - define them or turn off strict mode.`,
     );
   }
+
   const response = await fetch(file.sheetUrl);
   const csvContent = await response.text();
   const rows = parse(csvContent, {
-    columns: true,
+    // Returning undefined drops a column.
+    columns: header =>
+      header.map((column: string) =>
+        ignore_cols.includes(column) ? undefined : column,
+      ),
     from_line: file.headerRowNumber ?? 1,
   });
 
@@ -80,6 +86,7 @@ async function convertToJson(
 (async function () {
   const args = minimist(process.argv.slice(2), {
     boolean: ['strict', 'skip_low_income'],
+    string: ['ignore_cols'],
   });
 
   const bad = args._.filter(f => !(f in FILES));
@@ -95,7 +102,17 @@ async function convertToJson(
   // boolean after that.
   const lowIncome = args.skip_low_income ? false : true;
 
+  const ignoreCols = args.ignore_cols
+    ? args.ignore_cols.split(',').map((x: string) => x.trim())
+    : [];
+
   args._.forEach(async fileIdent => {
-    await convertToJson(fileIdent, FILES[fileIdent], args.strict, lowIncome);
+    await convertToJson(
+      fileIdent,
+      FILES[fileIdent],
+      args.strict,
+      lowIncome,
+      ignoreCols,
+    );
   });
 })();
