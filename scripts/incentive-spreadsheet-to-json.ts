@@ -34,7 +34,7 @@ async function convertToJson(
     from_line: file.headerRowNumber ?? 1,
   });
 
-  const converter = new SpreadsheetStandardizer(
+  const standardizer = new SpreadsheetStandardizer(
     FIELD_MAPPINGS,
     VALUE_MAPPINGS,
     strict,
@@ -43,15 +43,15 @@ async function convertToJson(
   const invalids: Record<string, string | number | boolean | object>[] = [];
   const jsons: StateIncentive[] = [];
   rows.forEach((row: Record<string, string>) => {
-    const renamed = converter.standardize(row);
-    const standardized = converter.refineCollectedData(state, renamed);
-    if (!validate(standardized)) {
+    const standardized = standardizer.standardize(row);
+    const refined = standardizer.refineCollectedData(state, standardized);
+    if (!validate(refined)) {
       if (validate.errors !== undefined && validate.errors !== null) {
-        standardized.errors = validate.errors;
+        refined.errors = validate.errors;
       }
-      invalids.push(standardized);
+      invalids.push(refined);
     } else {
-      jsons.push(standardized);
+      jsons.push(refined);
     }
   });
 
