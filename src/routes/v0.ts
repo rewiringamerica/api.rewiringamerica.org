@@ -146,11 +146,11 @@ export default async function (
 
         const pos_rebate_incentives = result.incentives.filter(
           i =>
-            i.type === PaymentMethod.PosRebate ||
-            i.type === PaymentMethod.PerformanceRebate,
+            i.payment_methods[0] === PaymentMethod.PosRebate ||
+            i.payment_methods[0] === PaymentMethod.PerformanceRebate,
         ) as IRAIncentive[];
         let tax_credit_incentives = result.incentives.filter(
-          i => i.type === PaymentMethod.TaxCredit,
+          i => i.payment_methods[0] === PaymentMethod.TaxCredit,
         ) as IRAIncentive[];
 
         // Website Calculator backwards compatiblity from v1 data:

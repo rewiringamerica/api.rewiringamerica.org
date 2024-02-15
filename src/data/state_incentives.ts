@@ -72,6 +72,7 @@ const collectedIncentivePropertySchema = {
   payment_methods: {
     type: 'array',
     items: { type: 'string', enum: Object.values(PaymentMethod) },
+    minItems: 1,
   },
   rebate_value: { type: 'string' },
   amount: AMOUNT_SCHEMA,
@@ -88,6 +89,7 @@ const collectedIncentivePropertySchema = {
   owner_status: {
     type: 'array',
     items: { type: 'string', enum: Object.values(OwnerStatus) },
+    minItems: 1,
   },
   other_restrictions: { type: 'string', nullable: true },
   stacking_details: { type: 'string', nullable: true },
@@ -107,7 +109,6 @@ export type DerivedFields = {
   agi_max_limit?: number;
   agi_min_limit?: number;
   authority: string;
-  type: PaymentMethod; // Deprecated; we are switching to use payment_methods instead
   program: string;
   bonus_available?: boolean;
   start_date: number;
@@ -119,7 +120,6 @@ const derivedIncentivePropertySchema = {
   agi_max_limit: { type: 'integer', nullable: true },
   agi_min_limit: { type: 'integer', nullable: true },
   authority: { type: 'string' },
-  type: { type: 'string', enum: Object.values(PaymentMethod) },
   program: { type: 'string', enum: ALL_PROGRAMS },
   bonus_available: { type: 'boolean', nullable: true },
   start_date: { type: 'number' },
@@ -161,7 +161,6 @@ const requiredProperties = [
   'id',
   'authority',
   'authority_type',
-  'type',
   'payment_methods',
   'item',
   'program',
