@@ -190,7 +190,6 @@ export const COLLECTED_DATA_SCHEMA: JSONSchemaType<CollectedFields> = {
     ...collectedIncentivePropertySchema,
   },
   required: requiredCollectedFields,
-  additionalProperties: false,
 } as const;
 
 export const STATE_SCHEMA: JSONSchemaType<StateIncentive> = {
