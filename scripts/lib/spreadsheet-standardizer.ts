@@ -2,6 +2,7 @@ import _ from 'lodash';
 import { LowIncomeThresholdsMap } from '../../src/data/low_income_thresholds';
 import {
   CollectedFields,
+  FIELD_ORDER,
   LowIncomeAuthority,
   PASS_THROUGH_FIELDS,
   StateIncentive,
@@ -144,7 +145,13 @@ export class SpreadsheetStandardizer {
       }
     }
 
-    return output;
+    // Enforce a specific property order on the output for better debugging.
+    return Object.fromEntries(
+      FIELD_ORDER.map((key: string) => [
+        key,
+        key in output ? output[key as keyof typeof output] : undefined,
+      ]).filter(([, val]) => val !== undefined),
+    );
   }
 
   retrieveLowIncomeProgram(
