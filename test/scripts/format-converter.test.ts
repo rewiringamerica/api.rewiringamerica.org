@@ -65,7 +65,7 @@ test('validation work', tap => {
     item: 'heat_pump_clothes_dryer',
     item_if_selected_other: '',
     'short_description.en':
-      'Receive up to $50 rebate for an Energy Start certified electric ventless or vented clothes dryer from an approved retailer.',
+      'Receive up to $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',
     program_status: 'Active',
     program_start_raw: '1/1/2022',
     program_end_raw: '12/31/2026',

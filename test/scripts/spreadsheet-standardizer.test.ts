@@ -122,7 +122,7 @@ test('representative example', tap => {
     'Technology*': 'Heat Pump Dryers / Clothes Dryer',
     "Technology (If selected 'Other')": '',
     'Program Description (guideline)':
-      'Receive up to $50 rebate for an Energy Start certified electric ventless or vented clothes dryer from an approved retailer.',
+      'Receive up to $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',
     'Program Status': 'Active',
     'Program Start (MM/DD/YYYY)': '1/1/2022',
     'Program End (MM/DD/YYYY)': '12/31/2026',
@@ -158,7 +158,7 @@ test('representative example', tap => {
     item: 'heat_pump_clothes_dryer',
     item_if_selected_other: '',
     'short_description.en':
-      'Receive up to $50 rebate for an Energy Start certified electric ventless or vented clothes dryer from an approved retailer.',
+      'Receive up to $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',
     program_status: 'active',
     program_start_raw: '1/1/2022',
     program_end_raw: '12/31/2026',

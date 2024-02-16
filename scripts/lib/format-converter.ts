@@ -15,6 +15,8 @@ const validate = ajv
   .addSchema(LOCALIZABLE_STRING_SCHEMA)
   .compile(COLLECTED_DATA_SCHEMA);
 
+type NestedKeyVal = { [index: string]: NestedKeyVal };
+
 /**
  * Call this function to perform validation on the collected records.
  * To convert without validation, call flatToNested instead.
@@ -66,11 +68,9 @@ export function flatToNested(
   /* eslint-enable @typescript-eslint/no-explicit-any */
   arrayCols: string[] = [],
 ): Record<string, string | string[] | object>[] {
-  type NestedKeyVal = { [index: string]: NestedKeyVal };
-
   const objs: Record<string, string | string[] | object>[] = [];
   for (const row of rows) {
-    const data: NestedKeyVal = {};
+    const output: NestedKeyVal = {};
     for (const columnName in row) {
       let val = row[columnName];
       if (val === '') continue;
@@ -80,7 +80,10 @@ export function flatToNested(
       }
 
       const chunks = columnName.split('.');
-      let dest = data;
+      // dest is basically a pointer to a particular object or subobject in
+      // the output structure. It starts at the root output for each key but
+      // advances into sub-objects to allow nesting.
+      let dest = output;
       if (chunks.length === 1) {
         dest[chunks[0]] = val;
       } else {
@@ -94,7 +97,7 @@ export function flatToNested(
         dest[chunks.at(-1)!] = val;
       }
     }
-    objs.push(data);
+    objs.push(output);
   }
   return objs;
 }
