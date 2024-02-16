@@ -82,16 +82,16 @@ test('correct row to record transformation', async tap => {
       },
     },
   };
-  const columnConverter = new SpreadsheetStandardizer(
+  const standardizer = new SpreadsheetStandardizer(
     FIELD_MAPPINGS,
     VALUE_MAPPINGS,
     true,
     fakeIncomeThresholds,
   );
   for (const tc of testCases) {
-    const renamed = columnConverter.convertFieldNames(tc.input);
+    const standardized = standardizer.standardize(tc.input);
     tap.matchOnly(
-      columnConverter.recordToStandardValues('va', renamed),
+      standardizer.refineCollectedData('va', standardized),
       tc.want,
     );
   }
