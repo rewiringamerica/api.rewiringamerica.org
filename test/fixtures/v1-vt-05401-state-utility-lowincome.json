@@ -526,7 +526,7 @@
       "start_date": 2023,
       "end_date": 2024,
       "ami_qualification": null,
-      "eligible": true,
+      "eligible": false,
       "short_description": "BED customers may receive a post purchase rebate up to $12,000 when you install an air-to-water heat pump."
     },
     {
@@ -718,33 +718,6 @@
       "end_date": 2024,
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "Income-eligible Vermonters/BED customers are eligible for an additional enhanced rebate of $400 when you install a qualified air-to-water heat pump."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "vt-burlington-electric-department",
-      "program": "Burlington Electric Department - Heat Pump Rebate Program - Income Bonus",
-      "program_url": "https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/efficiency-vermont-bonus-verification.pdf",
-      "item": {
-        "type": "heat_pump_air_conditioner_heater",
-        "name": "Heat Pump Air Conditioner/Heater",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 400,
-        "maximum": 400
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": 2023,
-      "end_date": 2024,
-      "ami_qualification": null,
-      "eligible": true,
       "short_description": "Income-eligible Vermonters who are BED customers are eligible for an additional enhanced rebate of $400 when you install a qualified ducted heat pump."
     },
     {
@@ -773,6 +746,33 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "Income-eligible BED customers qualify for a $400 enhanced rebate for a ductless HP."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "vt-burlington-electric-department",
+      "program": "Burlington Electric Department - Heat Pump Rebate Program - Income Bonus",
+      "program_url": "https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/efficiency-vermont-bonus-verification.pdf",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 400,
+        "maximum": 400
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "Income-eligible Vermonters/BED customers are eligible for an additional enhanced rebate of $400 when you install a qualified air-to-water heat pump."
     },
     {
       "payment_methods": [
