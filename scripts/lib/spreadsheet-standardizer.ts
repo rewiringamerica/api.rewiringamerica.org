@@ -109,6 +109,8 @@ export class SpreadsheetStandardizer {
     record: CollectedFields,
   ): Partial<StateIncentive> {
     const authorityName = createAuthorityName(state, record.authority_name);
+    // Pass-through fields are those in CollectedFields that appear in the
+    // refined StateIncentive verbatim. Everything else needs some processing.
     const output: Partial<StateIncentive> = _.pick(record, PASS_THROUGH_FIELDS);
     output.authority = authorityName;
     output.program = createProgramName(

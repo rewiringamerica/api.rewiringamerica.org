@@ -142,7 +142,8 @@ const derivedIncentivePropertySchema = {
   low_income: { type: 'string', nullable: true },
 } as const;
 
-// Collected fields that pass-through directly to our StateIncentives schema.
+// Collected fields that pass-through directly to our StateIncentives schema
+// without any modification or processing.
 export const PASS_THROUGH_FIELDS = [
   'id',
   'authority_type',
