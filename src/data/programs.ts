@@ -152,7 +152,7 @@ export const ALL_PROGRAMS = [
   'il_cornBeltEnergyCorporation_rebateProgram',
   // Jo-Carroll Energy Cooperative
   'il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives',
-  // MidAmerican Energy Company       
+  // MidAmerican Energy Company
   'il_midAmericanEnergyCompany_residentialInstantRebates',
 
   // NY
