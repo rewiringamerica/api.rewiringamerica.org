@@ -235,6 +235,16 @@ export const ALL_PROGRAMS = [
   // VGS
   'vt_vermontGasServiceWeatherizationProgram',
   'vt_vermontGasServiceWeatherizationIncomeBonusProgram',
+
+  // IL
+  // Commonwealth Edison
+  'il_commonwealthEdison_applianceRebates',
+  // Corn Belt Energy Corporation
+  'il_cornBeltEnergyCorporation_rebateProgram',
+  // Jo-Carroll Energy Cooperative
+  'il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives',
+  // MidAmerican Energy Company       
+  'il_midAmericanEnergyCompany_residentialInstantRebates',
 ] as const;
 
 export const PROGRAMS_SCHEMA = {
