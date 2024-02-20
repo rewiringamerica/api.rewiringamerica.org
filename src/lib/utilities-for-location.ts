@@ -38,6 +38,12 @@ export async function getUtilitiesForLocation(
     location.zip,
   );
 
+  // If we didn't find any utilities in the dataset, fall back to returning all
+  // the utilities in the state.
+  if (rows.length === 0) {
+    return stateUtilities;
+  }
+
   // For now, only return utilities that are also reflected in authorities.json,
   // as those are the ones we've done data collection for.
   return Object.fromEntries(
