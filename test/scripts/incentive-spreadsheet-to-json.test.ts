@@ -1,4 +1,5 @@
 import { test } from 'tap';
+import { flatToNestedValidate } from '../../scripts/lib/format-converter';
 import {
   FIELD_MAPPINGS,
   VALUE_MAPPINGS,
@@ -51,7 +52,6 @@ test('correct row to record transformation', async tap => {
         id: 'VA-1',
         authority_type: 'utility',
         authority: 'va-appalachian-power',
-        type: 'rebate',
         item: 'heat_pump_clothes_dryer',
         payment_methods: ['rebate'],
         program:
@@ -90,9 +90,8 @@ test('correct row to record transformation', async tap => {
   );
   for (const tc of testCases) {
     const standardized = standardizer.standardize(tc.input);
-    tap.matchOnly(
-      standardizer.refineCollectedData('va', standardized),
-      tc.want,
-    );
+    const [valids, invalids] = flatToNestedValidate([standardized]);
+    tap.equal(invalids.length, 0);
+    tap.matchOnly(standardizer.refineCollectedData('va', valids[0]), tc.want);
   }
 });

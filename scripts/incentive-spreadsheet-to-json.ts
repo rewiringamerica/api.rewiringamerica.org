@@ -6,15 +6,45 @@ import minimist from 'minimist';
 import path from 'path';
 
 import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../src/data/low_income_thresholds';
-import { STATE_SCHEMA, StateIncentive } from '../src/data/state_incentives';
+import {
+  CollectedFields,
+  STATE_SCHEMA,
+  StateIncentive,
+} from '../src/data/state_incentives';
 import { LOCALIZABLE_STRING_SCHEMA } from '../src/data/types/localizable-string';
 import { FILES, IncentiveFile } from './incentive-spreadsheet-registry';
+import { flatToNestedValidate } from './lib/format-converter';
 import { FIELD_MAPPINGS, VALUE_MAPPINGS } from './lib/spreadsheet-mappings';
 import { SpreadsheetStandardizer } from './lib/spreadsheet-standardizer';
 
 const ajv = new Ajv({ allErrors: true });
-
 const validate = ajv.addSchema(LOCALIZABLE_STRING_SCHEMA).compile(STATE_SCHEMA);
+
+type StateIncentivesWithErrors = Partial<StateIncentive> & {
+  errors: object[];
+};
+
+function safeDeleteFiles(...filepaths: string[]) {
+  for (const filepath of filepaths) {
+    if (fs.existsSync(filepath)) {
+      fs.unlinkSync(filepath);
+    }
+  }
+}
+
+function updateJsonFiles(records: object[], filepath: string) {
+  const dir = path.dirname(filepath);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir);
+  if (records.length === 0) {
+    safeDeleteFiles(filepath);
+  } else {
+    fs.writeFileSync(
+      filepath,
+      JSON.stringify(records, null, 2) + '\n',
+      'utf-8',
+    );
+  }
+}
 
 async function convertToJson(
   state: string,
@@ -33,6 +63,9 @@ async function convertToJson(
     columns: true,
     from_line: file.headerRowNumber ?? 1,
   });
+  const invalidPath = file.filepath.replace('.json', '_invalid.json');
+  const rawValidPath = file.filepath.replace('.json', '_raw.json');
+  const rawInvalidPath = file.filepath.replace('.json', '_raw_invalid.json');
 
   const standardizer = new SpreadsheetStandardizer(
     FIELD_MAPPINGS,
@@ -40,41 +73,36 @@ async function convertToJson(
     strict,
     lowIncome ? LOW_INCOME_THRESHOLDS_BY_AUTHORITY : null,
   );
-  const invalids: Record<string, string | number | boolean | object>[] = [];
+
+  const standardized = rows.map(standardizer.standardize.bind(standardizer));
+  const [valids, invalids] = flatToNestedValidate(standardized);
+  if (invalids.length > 0) {
+    updateJsonFiles(valids, rawValidPath);
+    updateJsonFiles(invalids, rawInvalidPath);
+    throw new Error(
+      'Invalid spreadsheet records found. See raw.json and raw_invalid.json files to debug before converting to API-friendly JSON.',
+    );
+  } else {
+    // Clear existing raw files since all were valid in this run.
+    safeDeleteFiles(rawValidPath, rawInvalidPath);
+  }
+
+  const invalid_jsons: StateIncentivesWithErrors[] = [];
   const jsons: StateIncentive[] = [];
-  rows.forEach((row: Record<string, string>) => {
-    const standardized = standardizer.standardize(row);
-    const refined = standardizer.refineCollectedData(state, standardized);
+  valids.forEach((row: CollectedFields) => {
+    const refined = standardizer.refineCollectedData(state, row);
     if (!validate(refined)) {
+      const invalid = refined as StateIncentivesWithErrors;
       if (validate.errors !== undefined && validate.errors !== null) {
-        refined.errors = validate.errors;
+        invalid.errors = validate.errors;
       }
-      invalids.push(refined);
+      invalid_jsons.push(invalid);
     } else {
       jsons.push(refined);
     }
   });
-
-  const dir = path.dirname(file.filepath);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir);
-  fs.writeFileSync(
-    file.filepath,
-    JSON.stringify(jsons, null, 2) + '\n', // include newline to satisfy prettier
-    'utf-8',
-  );
-  const invalidsFilePath = file.filepath.replace('.json', '_invalid.json');
-  if (invalids.length === 0) {
-    if (fs.existsSync(invalidsFilePath)) {
-      // Clear any previous versions if we have no invalid records.
-      fs.unlinkSync(invalidsFilePath);
-    }
-  } else {
-    fs.writeFileSync(
-      invalidsFilePath,
-      JSON.stringify(invalids, null, 2) + '\n', // include newline to satisfy prettier
-      'utf-8',
-    );
-  }
+  updateJsonFiles(jsons, file.filepath);
+  updateJsonFiles(invalid_jsons, invalidPath);
 }
 
 (async function () {

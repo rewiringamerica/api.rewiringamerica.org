@@ -142,8 +142,9 @@ const derivedIncentivePropertySchema = {
   low_income: { type: 'string', nullable: true },
 } as const;
 
-// Collected fields that pass-through directly to our StateIncentives schema.
-const passThroughFields = [
+// Collected fields that pass-through directly to our StateIncentives schema
+// without any modification or processing.
+export const PASS_THROUGH_FIELDS = [
   'id',
   'authority_type',
   'payment_methods',
@@ -153,11 +154,11 @@ const passThroughFields = [
   'short_description',
   'filing_status',
 ] as const;
-type PassThroughField = (typeof passThroughFields)[number];
+type PassThroughField = (typeof PASS_THROUGH_FIELDS)[number];
 
 const passThroughCollectedProperties = _.pick(
   collectedIncentivePropertySchema,
-  passThroughFields,
+  PASS_THROUGH_FIELDS,
 );
 
 export type StateIncentive = Pick<CollectedFields, PassThroughField> &
@@ -171,6 +172,30 @@ const incentivePropertySchema = {
   ...passThroughCollectedProperties,
   ...derivedIncentivePropertySchema,
 };
+
+// We specify field order which helps when debugging records.
+// This type forces all top-level fields to appear.
+const fieldOrder: {
+  [Key in keyof typeof incentivePropertySchema]: undefined;
+} = {
+  id: undefined,
+  agi_max_limit: undefined,
+  agi_min_limit: undefined,
+  authority_type: undefined,
+  authority: undefined,
+  payment_methods: undefined,
+  item: undefined,
+  program: undefined,
+  amount: undefined,
+  owner_status: undefined,
+  short_description: undefined,
+  start_date: undefined,
+  end_date: undefined,
+  bonus_available: undefined,
+  low_income: undefined,
+  filing_status: undefined,
+} as const;
+export const FIELD_ORDER = Object.keys(fieldOrder);
 
 const requiredProperties = [
   'id',
@@ -198,6 +223,7 @@ export const STATE_SCHEMA: JSONSchemaType<StateIncentive> = {
     ...incentivePropertySchema,
   },
   required: requiredProperties,
+  additionalProperties: false,
 } as const;
 
 /******************************************************************************/
