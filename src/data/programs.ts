@@ -145,6 +145,16 @@ export const ALL_PROGRAMS = [
   'ct_coolingAndHeatingIncentivePilotProgram',
   'ct_electricVehicleAndChargingRebateProgram',
 
+  // IL
+  // Commonwealth Edison
+  'il_commonwealthEdison_applianceRebates',
+  // Corn Belt Energy Corporation
+  'il_cornBeltEnergyCorporation_rebateProgram',
+  // Jo-Carroll Energy Cooperative
+  'il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives',
+  // MidAmerican Energy Company       
+  'il_midAmericanEnergyCompany_residentialInstantRebates',
+
   // NY
   // State or State + Utility:
   'ny_cleanHeatIncentives',
@@ -234,17 +244,7 @@ export const ALL_PROGRAMS = [
   'vt_stateOfVermontWeatherizationIncomeBonusProgram',
   // VGS
   'vt_vermontGasServiceWeatherizationProgram',
-  'vt_vermontGasServiceWeatherizationIncomeBonusProgram',
-
-  // IL
-  // Commonwealth Edison
-  'il_commonwealthEdison_applianceRebates',
-  // Corn Belt Energy Corporation
-  'il_cornBeltEnergyCorporation_rebateProgram',
-  // Jo-Carroll Energy Cooperative
-  'il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives',
-  // MidAmerican Energy Company       
-  'il_midAmericanEnergyCompany_residentialInstantRebates',
+  'vt_vermontGasServiceWeatherizationIncomeBonusProgram'
 ] as const;
 
 export const PROGRAMS_SCHEMA = {
