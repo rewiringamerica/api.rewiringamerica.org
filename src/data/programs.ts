@@ -244,7 +244,7 @@ export const ALL_PROGRAMS = [
   'vt_stateOfVermontWeatherizationIncomeBonusProgram',
   // VGS
   'vt_vermontGasServiceWeatherizationProgram',
-  'vt_vermontGasServiceWeatherizationIncomeBonusProgram'
+  'vt_vermontGasServiceWeatherizationIncomeBonusProgram',
 ] as const;
 
 export const PROGRAMS_SCHEMA = {
