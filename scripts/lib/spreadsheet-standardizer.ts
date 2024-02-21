@@ -1,4 +1,12 @@
+import _ from 'lodash';
 import { LowIncomeThresholdsMap } from '../../src/data/low_income_thresholds';
+import {
+  CollectedFields,
+  FIELD_ORDER,
+  LowIncomeAuthority,
+  PASS_THROUGH_FIELDS,
+  StateIncentive,
+} from '../../src/data/state_incentives';
 import {
   createAuthorityName,
   createProgramName,
@@ -77,7 +85,7 @@ export class SpreadsheetStandardizer {
   }
 
   // Convert a row with possible column aliases to a canonical column name.
-  convertFieldNames(input: Record<string, string>): Record<string, string> {
+  standardize(input: Record<string, string>): Record<string, string> {
     const output: Record<string, string> = {};
     for (const key in input) {
       const cleaned = cleanFieldName(key);
@@ -93,44 +101,33 @@ export class SpreadsheetStandardizer {
     return output;
   }
 
-  // Try to convert a row with non-standard values to standard ones.
-  // Failure means the row will still fail a2j schema validation later.
-  recordToStandardValues(
+  // Take a collected data record, filter to a subset of fields, do some
+  // additional processing/derivation, and return a refined record.
+  // That record may still fail ajv schema validation later.
+  refineCollectedData(
     state: string,
-    record: Record<string, string>,
-  ): Record<string, string | number | object | boolean> {
+    record: CollectedFields,
+  ): Partial<StateIncentive> {
     const authorityName = createAuthorityName(state, record.authority_name);
-    const output: Record<string, string | number | object | boolean> = {
-      id: record.id,
-      authority_type: record.authority_type,
-      authority: authorityName,
-      type: record.payment_methods.split(',')[0],
-      payment_methods: record.payment_methods.split(',').map(x => x.trim()),
-      item: record.item,
-      program: createProgramName(
-        state,
-        record.authority_name,
-        record.program_title,
-      ),
-      amount: this.createAmount(record),
-      owner_status: record.owner_status.split(',').map(x => x.trim()),
-      short_description: {
-        en: standardizeDescription(record['short_description.en']),
-      },
+    // Pass-through fields are those in CollectedFields that appear in the
+    // refined StateIncentive verbatim. Everything else needs some processing.
+    const output: Partial<StateIncentive> = _.pick(record, PASS_THROUGH_FIELDS);
+    output.authority = authorityName;
+    output.program = createProgramName(
+      state,
+      record.authority_name,
+      record.program_title,
+    );
+    output.short_description = {
+      en: standardizeDescription(record.short_description.en),
     };
-    if (
-      record.program_start_raw !== undefined &&
-      record.program_start_raw !== ''
-    ) {
+    if (record.program_start_raw && record.program_start_raw !== '') {
       output.start_date = +parseDateToYear(record.program_start_raw);
     }
-    if (record.program_end_raw !== undefined && record.program_end_raw !== '') {
+    if (record.program_end_raw && record.program_end_raw !== '') {
       output.end_date = +parseDateToYear(record.program_end_raw);
     }
-    if (
-      record.bonus_description !== undefined &&
-      record.bonus_description !== ''
-    ) {
+    if (record.bonus_description && record.bonus_description !== '') {
       output.bonus_available = true;
     }
     if (this.lowIncomeThresholds && isPlausibleLowIncomeRow(record)) {
@@ -139,7 +136,7 @@ export class SpreadsheetStandardizer {
         state,
       );
       if (low_income_program) {
-        output.low_income = authorityName;
+        output.low_income = low_income_program;
       } else if (low_income_program === undefined) {
         // This is checked up front by the caller rather than
         // at the row level to avoid spamming error messages.
@@ -150,43 +147,27 @@ export class SpreadsheetStandardizer {
       }
     }
 
-    return output;
+    // Enforce a specific property order on the output for better debugging.
+    return Object.fromEntries(
+      FIELD_ORDER.map((key: string) => [
+        key,
+        key in output ? output[key as keyof typeof output] : undefined,
+      ]).filter(([, val]) => val !== undefined),
+    );
   }
 
-  retrieveLowIncomeProgram(authority: string, state: string) {
+  retrieveLowIncomeProgram(
+    authority: string,
+    state: string,
+  ): LowIncomeAuthority | undefined | null {
     if (this.lowIncomeThresholds![state] === undefined) {
       return undefined;
     }
-    return authority in this.lowIncomeThresholds![state];
-  }
-
-  createAmount(input: Record<string, string>): Record<string, number | string> {
-    const amount: Record<string, number | string> = {
-      type: input['amount.type'],
-      number: +cleanDollars(input['amount.number']),
-    };
-    if (
-      input['amount.representative'] !== undefined &&
-      input['amount.representative'] !== ''
-    ) {
-      amount.representative = +cleanDollars(input['amount.representative']);
+    if (authority in this.lowIncomeThresholds![state]) {
+      return authority as LowIncomeAuthority;
+    } else {
+      return null;
     }
-    if (
-      input['amount.minimum'] !== undefined &&
-      input['amount.minimum'] !== ''
-    ) {
-      amount.minimum = +cleanDollars(input['amount.minimum']);
-    }
-    if (
-      input['amount.maximum'] !== undefined &&
-      input['amount.maximum'] !== ''
-    ) {
-      amount.maximum = +cleanDollars(input['amount.maximum']);
-    }
-    if (input['amount.unit'] !== undefined && input['amount.unit'] !== '') {
-      amount.unit = input['amount.unit'];
-    }
-    return amount;
   }
 }
 
@@ -215,16 +196,13 @@ function standardizeDescription(desc: string): string {
   return desc;
 }
 
-function isPlausibleLowIncomeRow(record: Record<string, string>) {
-  if (
-    record.income_restrictions !== undefined &&
-    record.income_restrictions !== ''
-  ) {
+function isPlausibleLowIncomeRow(record: CollectedFields) {
+  if (record.income_restrictions && record.income_restrictions !== '') {
     return true;
   }
   if (
-    record.short_description !== undefined &&
-    record.short_description.toLowerCase().includes('income')
+    record.short_description?.en &&
+    record.short_description.en.toLowerCase().includes('income')
   ) {
     return true;
   }

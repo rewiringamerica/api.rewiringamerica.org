@@ -58,7 +58,7 @@ export type CollectedFields = {
 
 const collectedIncentivePropertySchema = {
   id: { type: 'string' },
-  data_urls: { type: 'string' },
+  data_urls: { type: 'array', items: { type: 'string' } },
   authority_type: { type: 'string', enum: Object.values(AuthorityType) },
   authority_name: { type: 'string' },
   program_title: { type: 'string' },
@@ -72,6 +72,7 @@ const collectedIncentivePropertySchema = {
   payment_methods: {
     type: 'array',
     items: { type: 'string', enum: Object.values(PaymentMethod) },
+    minItems: 1,
   },
   rebate_value: { type: 'string' },
   amount: AMOUNT_SCHEMA,
@@ -88,6 +89,7 @@ const collectedIncentivePropertySchema = {
   owner_status: {
     type: 'array',
     items: { type: 'string', enum: Object.values(OwnerStatus) },
+    minItems: 1,
   },
   other_restrictions: { type: 'string', nullable: true },
   stacking_details: { type: 'string', nullable: true },
@@ -96,6 +98,21 @@ const collectedIncentivePropertySchema = {
   questions: { type: 'string', nullable: true },
   serve_in_api: { type: 'boolean', nullable: true },
 } as const;
+const requiredCollectedFields = [
+  'id',
+  'data_urls',
+  'authority_type',
+  'authority_name',
+  'program_title',
+  'program_url',
+  'item',
+  'short_description',
+  'program_status',
+  'payment_methods',
+  'rebate_value',
+  'amount',
+  'owner_status',
+] as const;
 
 // DerivedFields and its schema are associated with data not directly collected
 // in the main spreadsheets. They may have a close relationship with collected
@@ -107,7 +124,6 @@ export type DerivedFields = {
   agi_max_limit?: number;
   agi_min_limit?: number;
   authority: string;
-  type: PaymentMethod; // Deprecated; we are switching to use payment_methods instead
   program: string;
   bonus_available?: boolean;
   start_date: number;
@@ -119,7 +135,6 @@ const derivedIncentivePropertySchema = {
   agi_max_limit: { type: 'integer', nullable: true },
   agi_min_limit: { type: 'integer', nullable: true },
   authority: { type: 'string' },
-  type: { type: 'string', enum: Object.values(PaymentMethod) },
   program: { type: 'string', enum: ALL_PROGRAMS },
   bonus_available: { type: 'boolean', nullable: true },
   start_date: { type: 'number' },
@@ -127,8 +142,9 @@ const derivedIncentivePropertySchema = {
   low_income: { type: 'string', nullable: true },
 } as const;
 
-// Collected fields that pass-through directly to our StateIncentives schema.
-const passThroughFields = [
+// Collected fields that pass-through directly to our StateIncentives schema
+// without any modification or processing.
+export const PASS_THROUGH_FIELDS = [
   'id',
   'authority_type',
   'payment_methods',
@@ -138,11 +154,11 @@ const passThroughFields = [
   'short_description',
   'filing_status',
 ] as const;
-type PassThroughField = (typeof passThroughFields)[number];
+type PassThroughField = (typeof PASS_THROUGH_FIELDS)[number];
 
 const passThroughCollectedProperties = _.pick(
   collectedIncentivePropertySchema,
-  passThroughFields,
+  PASS_THROUGH_FIELDS,
 );
 
 export type StateIncentive = Pick<CollectedFields, PassThroughField> &
@@ -157,11 +173,34 @@ const incentivePropertySchema = {
   ...derivedIncentivePropertySchema,
 };
 
+// We specify field order which helps when debugging records.
+// This type forces all top-level fields to appear.
+const fieldOrder: {
+  [Key in keyof typeof incentivePropertySchema]: undefined;
+} = {
+  id: undefined,
+  agi_max_limit: undefined,
+  agi_min_limit: undefined,
+  authority_type: undefined,
+  authority: undefined,
+  payment_methods: undefined,
+  item: undefined,
+  program: undefined,
+  amount: undefined,
+  owner_status: undefined,
+  short_description: undefined,
+  start_date: undefined,
+  end_date: undefined,
+  bonus_available: undefined,
+  low_income: undefined,
+  filing_status: undefined,
+} as const;
+export const FIELD_ORDER = Object.keys(fieldOrder);
+
 const requiredProperties = [
   'id',
   'authority',
   'authority_type',
-  'type',
   'payment_methods',
   'item',
   'program',
@@ -170,12 +209,21 @@ const requiredProperties = [
   'short_description',
 ] as const;
 
+export const COLLECTED_DATA_SCHEMA: JSONSchemaType<CollectedFields> = {
+  type: 'object',
+  properties: {
+    ...collectedIncentivePropertySchema,
+  },
+  required: requiredCollectedFields,
+} as const;
+
 export const STATE_SCHEMA: JSONSchemaType<StateIncentive> = {
   type: 'object',
   properties: {
     ...incentivePropertySchema,
   },
   required: requiredProperties,
+  additionalProperties: false,
 } as const;
 
 /******************************************************************************/

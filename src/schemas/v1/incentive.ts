@@ -11,7 +11,6 @@ export const API_INCENTIVE_SCHEMA = {
   $id: 'APIIncentive',
   type: 'object',
   required: [
-    'type',
     'payment_methods',
     'authority_type',
     'program',
@@ -22,16 +21,13 @@ export const API_INCENTIVE_SCHEMA = {
     'end_date',
   ],
   properties: {
-    type: {
-      type: 'string',
-      enum: Object.values(PaymentMethod),
-    },
     payment_methods: {
       type: 'array',
       items: {
         type: 'string',
         enum: Object.values(PaymentMethod),
       },
+      minItems: 1,
     },
     authority_type: {
       type: 'string',
@@ -90,6 +86,7 @@ export const API_INCENTIVE_SCHEMA = {
         type: 'string',
         enum: Object.values(OwnerStatus),
       },
+      minItems: 1,
     },
     start_date: {
       type: 'number',

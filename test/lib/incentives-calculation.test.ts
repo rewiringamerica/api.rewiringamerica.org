@@ -146,13 +146,13 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
   t.equal(data.savings.performance_rebate, 4000);
 
   const pos_rebate_incentives = data.incentives.filter(
-    i => i.type === PaymentMethod.PosRebate,
+    i => i.payment_methods[0] === PaymentMethod.PosRebate,
   );
   const tax_credit_incentives = data.incentives.filter(
-    i => i.type === PaymentMethod.TaxCredit,
+    i => i.payment_methods[0] === PaymentMethod.TaxCredit,
   );
   const performance_rebate_incentives = data.incentives.filter(
-    i => i.type === PaymentMethod.PerformanceRebate,
+    i => i.payment_methods[0] === PaymentMethod.PerformanceRebate,
   );
 
   t.equal(pos_rebate_incentives.length, 7);
@@ -160,14 +160,17 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
   t.equal(performance_rebate_incentives.length, 1);
 
   // count the incentives by key used to de-dupe in UI:
-  const rebateCounts = _.countBy(pos_rebate_incentives, i => i.item + i.type);
+  const rebateCounts = _.countBy(
+    pos_rebate_incentives,
+    i => i.item + i.payment_methods[0],
+  );
   t.equal(
     Object.values(rebateCounts).every(c => c === 1),
     true,
   );
   const taxCreditCounts = _.countBy(
     tax_credit_incentives,
-    i => i.item + i.type,
+    i => i.item + i.payment_methods[0],
   );
   t.equal(
     Object.values(taxCreditCounts).every(c => c === 1),
@@ -253,13 +256,13 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
   t.equal(data.savings.performance_rebate, 4000);
 
   const pos_rebate_incentives = data.incentives.filter(
-    i => i.type === PaymentMethod.PosRebate,
+    i => i.payment_methods[0] === PaymentMethod.PosRebate,
   );
   const tax_credit_incentives = data.incentives.filter(
-    i => i.type === PaymentMethod.TaxCredit,
+    i => i.payment_methods[0] === PaymentMethod.TaxCredit,
   );
   const performance_rebate_incentives = data.incentives.filter(
-    i => i.type === PaymentMethod.PerformanceRebate,
+    i => i.payment_methods[0] === PaymentMethod.PerformanceRebate,
   );
 
   t.equal(pos_rebate_incentives.length, 7);
@@ -267,14 +270,17 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
   t.equal(performance_rebate_incentives.length, 1);
 
   // count the incentives by key used to de-dupe in UI:
-  const rebateCounts = _.countBy(pos_rebate_incentives, i => i.item + i.type);
+  const rebateCounts = _.countBy(
+    pos_rebate_incentives,
+    i => i.item + i.payment_methods[0],
+  );
   t.equal(
     Object.values(rebateCounts).every(c => c === 1),
     true,
   );
   const taxCreditCounts = _.countBy(
     tax_credit_incentives,
-    i => i.item + i.type,
+    i => i.item + i.payment_methods[0],
   );
   t.equal(
     Object.values(taxCreditCounts).every(c => c === 1),
@@ -360,13 +366,13 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   t.equal(data.savings.performance_rebate, 4000);
 
   const pos_rebate_incentives = data.incentives.filter(
-    i => i.type === PaymentMethod.PosRebate,
+    i => i.payment_methods[0] === PaymentMethod.PosRebate,
   );
   const tax_credit_incentives = data.incentives.filter(
-    i => i.type === PaymentMethod.TaxCredit,
+    i => i.payment_methods[0] === PaymentMethod.TaxCredit,
   );
   const performance_rebate_incentives = data.incentives.filter(
-    i => i.type === PaymentMethod.PerformanceRebate,
+    i => i.payment_methods[0] === PaymentMethod.PerformanceRebate,
   );
 
   t.equal(pos_rebate_incentives.length, 7);
@@ -374,14 +380,17 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   t.equal(performance_rebate_incentives.length, 1);
 
   // count the incentives by key used to de-dupe in UI:
-  const rebateCounts = _.countBy(pos_rebate_incentives, i => i.item + i.type);
+  const rebateCounts = _.countBy(
+    pos_rebate_incentives,
+    i => i.item + i.payment_methods[0],
+  );
   t.equal(
     Object.values(rebateCounts).every(c => c === 1),
     true,
   );
   const taxCreditCounts = _.countBy(
     tax_credit_incentives,
-    i => i.item + i.type,
+    i => i.item + i.payment_methods[0],
   );
   t.equal(
     Object.values(taxCreditCounts).every(c => c === 1),
@@ -463,7 +472,7 @@ test('correctly sorts incentives', async t => {
   });
   let prevIncentive = data.incentives[0];
   data.incentives.slice(1).forEach(incentive => {
-    if (prevIncentive.type === incentive.type) {
+    if (prevIncentive.payment_methods[0] === incentive.payment_methods[0]) {
       if (prevIncentive.amount.type === incentive.amount.type) {
         t.ok(prevIncentive.amount >= incentive.amount);
       } else {
@@ -472,8 +481,8 @@ test('correctly sorts incentives', async t => {
       }
     } else {
       // Tax credits must all be sorted at the end. Rebate types can be mixed.
-      if (prevIncentive.type === 'tax_credit') {
-        t.equal(incentive.type, 'tax_credit');
+      if (prevIncentive.payment_methods[0] === 'tax_credit') {
+        t.equal(incentive.payment_methods[0], 'tax_credit');
       }
     }
     prevIncentive = incentive;
@@ -487,7 +496,6 @@ test('correct filtering of county incentives', async t => {
     authority: 'mock-county-authority',
     start_date: 2023,
     end_date: 2024,
-    type: PaymentMethod.AccountCredit,
     payment_methods: [PaymentMethod.AccountCredit],
     item: 'heat_pump_air_conditioner_heater',
     program: 'ri_hvacAndWaterHeaterIncentives',
@@ -550,7 +558,6 @@ test('correct filtering of city incentives', async t => {
     authority: 'mock-city-authority',
     start_date: 2023,
     end_date: 2024,
-    type: PaymentMethod.AccountCredit,
     payment_methods: [PaymentMethod.AccountCredit],
     item: 'heat_pump_air_conditioner_heater',
     program: 'ri_hvacAndWaterHeaterIncentives',

@@ -182,10 +182,10 @@ function calculateFederalIncentivesAndSavings(
   const dedupedIneligibleIncentives = _.uniqBy(
     ineligibleIncentives.filter(item => {
       // Note: using _ here because it finds by matching properties, not by equality
-      const key = { item: item.item, type: item.type };
+      const key = { item: item.item, type: item.payment_methods[0] };
       return _.find(eligibleIncentives, key) === undefined;
     }),
-    item => item.item + item.type,
+    item => item.item + item.payment_methods[0],
   );
 
   const calculatedIncentives = [
@@ -199,11 +199,11 @@ function calculateFederalIncentivesAndSavings(
   const savings: APISavings = zeroSavings();
 
   for (const item of eligibleIncentives) {
-    if (item.type === 'pos_rebate') {
+    if (item.payment_methods[0] === 'pos_rebate') {
       savings.pos_rebate += item.amount.number!;
-    } else if (item.type === 'performance_rebate') {
+    } else if (item.payment_methods[0] === 'performance_rebate') {
       savings.performance_rebate += item.amount.number!;
-    } else if (item.type === 'tax_credit') {
+    } else if (item.payment_methods[0] === 'tax_credit') {
       // if this is a dollar amount, just add it up:
       if (item.amount.type === 'dollar_amount') {
         savings.tax_credit += item.amount.number!;
@@ -212,7 +212,9 @@ function calculateFederalIncentivesAndSavings(
         savings.tax_credit += item.amount.representative;
       }
     } else {
-      throw new UnexpectedInputError(`Unknown item type: ${item.type}`);
+      throw new UnexpectedInputError(
+        `Unknown item payment_method: ${item.payment_methods[0]}`,
+      );
     }
   }
 
@@ -367,9 +369,9 @@ export default function calculateIncentives(
   // Within each of those categories, put "percent" items first, then
   // "dollar_amount", then sort by amount with highest first.
   const adjustedType = (i: CalculatedIncentive) =>
-    i.type === PaymentMethod.PerformanceRebate
+    i.payment_methods[0] === PaymentMethod.PerformanceRebate
       ? PaymentMethod.PosRebate
-      : i.type;
+      : i.payment_methods[0];
   const sortedIncentives = _.orderBy(
     incentives,
     [adjustedType, i => i.amount.type, i => i.amount.number],

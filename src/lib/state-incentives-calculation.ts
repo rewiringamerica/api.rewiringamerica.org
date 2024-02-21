@@ -183,7 +183,7 @@ export function calculateStateIncentivesAndSavings(
       combinedValue.remainingValue -= amount;
     }
 
-    savings[item.type] += amount;
+    savings[item.payment_methods[0]] += amount;
   });
 
   return {
