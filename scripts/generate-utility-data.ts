@@ -19,10 +19,11 @@ import xlsx from 'xlsx';
 import { createAuthorityName } from './lib/authority-and-program-updater';
 
 /**
- * Utility codes to exclude from consideration. These must be exactly as they
- * appear in the spreadsheet.
+ * Utility codes (number) or utility names (string) to exclude from
+ * consideration. These must be exactly as they appear in the spreadsheet.
+ * Not every utility has a code, which is why names can also be used here.
  */
-const EXCLUSIONS: Set<number> = new Set([
+const EXCLUSIONS: Set<string | number> = new Set([
   // AZ
   25060, // Wellton-Mohawk; no electric
   60772, // Buckeye; no electric
@@ -35,14 +36,19 @@ const EXCLUSIONS: Set<number> = new Set([
   // CT
   9734, // City of Jewett City; no electric
 
+  // IL
+  'Nicor Gas',
+  'Peoples Gas',
+
   // VA
   8198, // City of Harrisonburg; no electric
 ]);
 
 /**
- * Map from utility codes to replacement names. The keys must be exactly as
- * they appear in the spreadsheet. The replacement names will be treated as if
- * they were the name in the sheet.
+ * Map from utility codes (numbers) or utility names (string) to replacement
+ * names. The keys must be exactly as they appear in the spreadsheet. The
+ * replacement names will be treated as if they were the name in the sheet.
+ * (Not every utility has a code, which is why names can also be used here.)
  *
  * The aim of these replacements is to identify a utility by the name most
  * recognizable to its customers. For example, the dataset commonly lists
@@ -52,7 +58,7 @@ const EXCLUSIONS: Set<number> = new Set([
  * picked up on yet, or the dataset referring to the same utility with different
  * abbreviations (e.g. "XYZ Rural Electric Cooperative" and "XYZ R E C").
  */
-const OVERRIDES = new Map<number, string>([
+const OVERRIDES = new Map<string | number, string>([
   // AZ
   [1241, 'DixiePower'],
   [15048, 'Electrical District No 2 Pinal County'],
@@ -78,6 +84,12 @@ const OVERRIDES = new Map<number, string>([
   [7716, 'Groton Utilities'],
   [13831, 'Norwich Public Utilities'],
   [17569, 'South Norwalk Electric and Water'],
+
+  // IL
+  [4362, 'Corn Belt Energy'],
+  [16420, 'Rural Electric Convenience Cooperative'],
+  [56697, 'Ameren Illinois'],
+  [61678, 'Corn Belt Energy'],
 
   // NY
   [1036, 'Con Edison'],
@@ -211,12 +223,17 @@ enum Col {
       continue;
     }
 
-    if (EXCLUSIONS.has(parseInt(row.UtilityCode))) {
+    if (
+      EXCLUSIONS.has(parseInt(row.UtilityCode)) ||
+      EXCLUSIONS.has(row.UtilityName)
+    ) {
       continue;
     }
 
     const sheetName =
-      OVERRIDES.get(parseInt(row.UtilityCode)) ?? row.UtilityName;
+      OVERRIDES.get(parseInt(row.UtilityCode)) ??
+      OVERRIDES.get(row.UtilityName) ??
+      row.UtilityName;
     const { id, name } = convertName(sheetName, row.State);
 
     if (seen.has(row.Zip + id)) {
