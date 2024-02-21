@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { AuthorityType } from './authorities';
 import {
   COLowIncomeAuthority,
+  ILIncomeAuthority,
   RILowIncomeAuthority,
 } from './low_income_thresholds';
 import { ALL_PROGRAMS } from './programs';
@@ -18,8 +19,9 @@ import { OwnerStatus } from './types/owner-status';
 
 export type LowIncomeAuthority =
   | 'default'
-  | RILowIncomeAuthority
-  | COLowIncomeAuthority;
+  | COLowIncomeAuthority
+  | ILIncomeAuthority
+  | RILowIncomeAuthority;
 
 // CollectedFields and its JSON schema represent the data that lives in raw
 // collected form, e.g. spreadsheets. It should match column-for-column to our

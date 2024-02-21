@@ -27,6 +27,10 @@ export enum COLowIncomeAuthority {
   WALKING_MOUNTAINS = 'co-walking-mountains',
 }
 
+export enum ILIncomeAuthority {
+  STATE = 'il-state-of-illinois'
+}
+
 export enum RILowIncomeAuthority {
   DHS = 'ri-dhs',
   ENERGY = 'ri-rhode-island-energy',
@@ -56,12 +60,16 @@ export const STATE_THRESHOLDS_SCHEMA: JSONSchemaType<StateLowIncomeThresholds> =
     type: 'object',
     required: ['default'],
     dependentSchemas: {
-      RI: {
-        required: Object.values(RILowIncomeAuthority),
-      },
       CO: {
         required: Object.values(COLowIncomeAuthority),
       },
+      IL: {
+        required: Object.values(ILIncomeAuthority)
+      },
+      RI: {
+        required: Object.values(RILowIncomeAuthority),
+      },
+
     },
     additionalProperties: AUTHORITY_INFO_SCHEMA,
   };
@@ -69,7 +77,7 @@ export const STATE_THRESHOLDS_SCHEMA: JSONSchemaType<StateLowIncomeThresholds> =
 // Keep states in alphabetic order.
 export const SCHEMA: JSONSchemaType<LowIncomeThresholdsMap> = {
   type: 'object',
-  required: ['AZ', 'CO', 'CT', 'NY', 'RI', 'VA', 'VT'],
+  required: ['AZ', 'CO', 'CT', 'IL', 'NY', 'RI', 'VA', 'VT'],
   additionalProperties: STATE_THRESHOLDS_SCHEMA,
 };
 
