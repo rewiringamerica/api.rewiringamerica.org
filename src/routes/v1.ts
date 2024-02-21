@@ -118,8 +118,7 @@ export default async function (
   );
 
   //
-  // This endpoint currently just returns all utilities in the state of the
-  // given location. We could be smarter about it.
+  // Returns the utilities that might serve the given location.
   //
   server.get(
     '/api/v1/utilities',
@@ -147,7 +146,8 @@ export default async function (
           .type('application/json')
           .send({
             location: { state: location.state_id },
-            utilities: getUtilitiesForLocation(
+            utilities: await getUtilitiesForLocation(
+              fastify.sqlite,
               location,
               request.query.include_beta_states ?? false,
             ),
