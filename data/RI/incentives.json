@@ -265,11 +265,33 @@
     ],
     "low_income": "default",
     "short_description": {
-      "en": "30% up to $350 back on the final purchase of an e-bike or e-cargo bike. For income-qualified residents, 75% up to $750 is available.",
-      "es": ""
+      "en": "30% up to $350 back on the final purchase of an e-bike or e-cargo bike."
     },
-    "income_restrictions": "75% up to $750 for low income applicants.",
-    "other_restrictions": "Max 2 rebates per household. Apply within 180 days (6 months) of the date listed on the e-bike sales receipt."
+    "other_restrictions": "Max 2 rebates per household. Apply within 180 days (6 months) of the date listed on the e-bike sales receipt. E-Bikes must be purchased from a retail store physically located in Rhode Island. Online purchases are only valid if the e-bike is purchased from an online retailer with a direct association or prior agreement with a local Rhode Island store."
+  },
+  {
+    "id": "RI-43",
+    "authority_type": "state",
+    "authority": "ri-oer",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "ebike",
+    "program": "ri_erikaNiedowskiMemorialEBikeRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "low_income": "default",
+    "short_description": {
+      "en": "75% up to $750 back on the final purchase of an e-bike or e-cargo bike for income qualified residents."
+    },
+    "other_restrictions": "Max 2 rebates per household. Apply within 180 days (6 months) of the date listed on the e-bike sales receipt. E-Bikes must be purchased from a retail store physically located in Rhode Island. Online purchases are only valid if the e-bike is purchased from an online retailer with a direct association or prior agreement with a local Rhode Island store."
   },
   {
     "id": "RI-19",

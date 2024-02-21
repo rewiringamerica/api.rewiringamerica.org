@@ -155,6 +155,32 @@
       },
       "amount": {
         "type": "percent",
+        "number": 0.75,
+        "maximum": 750
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "75% up to $750 back on the final purchase of an e-bike or e-cargo bike for income qualified residents."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "ri-oer",
+      "program": "Erika Niedowski Memorial Electric Bicycle Rebate Program",
+      "program_url": "https://drive.ri.gov/erika-niedowski-memorial-electric-bicycle-rebate-program",
+      "item": {
+        "type": "ebike"
+      },
+      "amount": {
+        "type": "percent",
         "number": 0.3,
         "maximum": 350
       },
@@ -165,8 +191,8 @@
       "start_date": 2023,
       "end_date": 2024,
       "ami_qualification": null,
-      "eligible": true,
-      "short_description": "30% up to $350 back on the final purchase of an e-bike or e-cargo bike. For income-qualified residents, 75% up to $750 is available."
+      "eligible": false,
+      "short_description": "30% up to $350 back on the final purchase of an e-bike or e-cargo bike."
     },
     {
       "payment_methods": [
