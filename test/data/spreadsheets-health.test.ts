@@ -10,10 +10,12 @@ import {
 } from '../../scripts/lib/spreadsheet-mappings';
 import { SpreadsheetStandardizer } from '../../scripts/lib/spreadsheet-standardizer';
 
-const run: boolean = true;
+// TODO: condition this on an environment variable that we set only
+// in workflows where we want to run this test.
+const skip: boolean = true;
 test(
   'rows in registered spreadsheets meet our collected data schema or are opted out',
-  { skip: run ? false : 'not run unless explicitly commanded' },
+  { skip: skip ? 'spreadsheet health tests: skipped by default' : false },
   async tap => {
     for (const [state, file] of Object.entries(FILES)) {
       if (!file.runSpreadsheetHealthCheck) continue;
@@ -25,23 +27,19 @@ test(
           from_line: file.headerRowNumber ?? 1,
         });
 
-        // Filter out unfilled rows at the end where we prepopulated IDs
-        // but nothing else is filled in.
-
         const standardizer = new SpreadsheetStandardizer(
           FIELD_MAPPINGS,
           VALUE_MAPPINGS,
           false, // allow extra columns not in our schema
           null,
         );
-        let standardized = rows.map(
+        const standardized = rows.map(
           standardizer.standardize.bind(standardizer),
         );
 
-        standardized = standardized.filter(
-          (row: object) => Object.keys(row).length > 1,
-        );
         let [, invalids] = flatToNestedValidate(standardized);
+        // Filter out unfilled rows at the end of the spreadsheet
+        // where we prepopulated IDs but nothing else is filled in.
         invalids = invalids.filter(invalid => Object.keys(invalid).length > 2);
         if (invalids.length !== 0)
           console.error(
