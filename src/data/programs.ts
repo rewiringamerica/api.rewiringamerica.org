@@ -153,7 +153,7 @@ export const ALL_PROGRAMS = [
   // Jo-Carroll Energy Cooperative
   'il_jo-CarrollEnergyCooperative_2023EnergyEfficiencyIncentives',
   'il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives',
-  // MidAmerican Energy Company       
+  // MidAmerican Energy Company
   'il_midAmericanEnergyCompany_residentialInstantRebates',
   // State of Illinois
   'il_stateOfIllinois_homeWeatherization',

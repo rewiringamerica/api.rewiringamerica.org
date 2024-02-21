@@ -25,7 +25,6 @@ const DOLLAR_FIELDS = [
   'amount.maximum',
   'amount.representative',
 ];
-const DEFAULT = 'default';
 
 // Standardize column names or values in an incentive spreadsheet.
 export class SpreadsheetStandardizer {
@@ -163,11 +162,9 @@ export class SpreadsheetStandardizer {
   ): LowIncomeAuthority | undefined | null {
     if (this.lowIncomeThresholds![state] === undefined) {
       return undefined;
-    } else if (authority in this.lowIncomeThresholds![state]) {
+    }
+    if (authority in this.lowIncomeThresholds![state]) {
       return authority as LowIncomeAuthority;
-    } else if (DEFAULT in this.lowIncomeThresholds![state]) {
-      console.log(`Warning: no low-income thresholds defined for authority: ${authority} and state: ${state}. Please make sure the appropriate thresholds are defined 'default' values are deprecated and will not be used.`);
-      return null;
     } else {
       return null;
     }

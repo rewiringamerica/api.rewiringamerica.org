@@ -28,7 +28,7 @@ export enum COLowIncomeAuthority {
 }
 
 export enum ILIncomeAuthority {
-  STATE = 'il-state-of-illinois'
+  STATE = 'il-state-of-illinois',
 }
 
 export enum RILowIncomeAuthority {
@@ -64,12 +64,11 @@ export const STATE_THRESHOLDS_SCHEMA: JSONSchemaType<StateLowIncomeThresholds> =
         required: Object.values(COLowIncomeAuthority),
       },
       IL: {
-        required: Object.values(ILIncomeAuthority)
+        required: Object.values(ILIncomeAuthority),
       },
       RI: {
         required: Object.values(RILowIncomeAuthority),
       },
-
     },
     additionalProperties: AUTHORITY_INFO_SCHEMA,
   };
