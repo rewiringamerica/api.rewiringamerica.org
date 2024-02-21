@@ -63,9 +63,9 @@ async function convertToJson(
     columns: true,
     from_line: file.headerRowNumber ?? 1,
   });
-  const invalidPath = file.filepath!.replace('.json', '_invalid.json');
-  const rawValidPath = file.filepath!.replace('.json', '_raw.json');
-  const rawInvalidPath = file.filepath!.replace('.json', '_raw_invalid.json');
+  const invalidPath = file.filepath.replace('.json', '_invalid.json');
+  const rawValidPath = file.filepath.replace('.json', '_raw.json');
+  const rawInvalidPath = file.filepath.replace('.json', '_raw_invalid.json');
 
   const standardizer = new SpreadsheetStandardizer(
     FIELD_MAPPINGS,
@@ -101,7 +101,7 @@ async function convertToJson(
       jsons.push(refined);
     }
   });
-  updateJsonFiles(jsons, file.filepath!);
+  updateJsonFiles(jsons, file.filepath);
   updateJsonFiles(invalid_jsons, invalidPath);
 }
 
