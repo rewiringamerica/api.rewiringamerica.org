@@ -40,6 +40,7 @@ test(
         let [, invalids] = flatToNestedValidate(standardized);
         // Filter out unfilled rows at the end of the spreadsheet
         // where we prepopulated IDs but nothing else is filled in.
+        // The two keys we expected are ID and errors.
         invalids = invalids.filter(invalid => Object.keys(invalid).length > 2);
         if (invalids.length !== 0)
           console.error(
