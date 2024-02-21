@@ -246,6 +246,32 @@
     }
   },
   {
+    "id": "RI-13",
+    "authority_type": "state",
+    "authority": "ri-oer",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "ebike",
+    "program": "ri_erikaNiedowskiMemorialEBikeRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.3,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "low_income": "default",
+    "short_description": {
+      "en": "30% up to $350 back on the final purchase of an e-bike or e-cargo bike. For income-qualified residents, 75% up to $750 is available.",
+      "es": ""
+    },
+    "income_restrictions": "75% up to $750 for low income applicants.",
+    "other_restrictions": "Max 2 rebates per household. Apply within 180 days (6 months) of the date listed on the e-bike sales receipt."
+  },
+  {
     "id": "RI-19",
     "authority_type": "utility",
     "authority": "ri-rhode-island-energy",

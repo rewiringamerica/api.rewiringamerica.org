@@ -163,6 +163,7 @@ export const ALL_PROGRAMS = [
   'ri_smallScaleSolar',
   'ri_cleanHeat',
   'ri_dhsWeatherizationAssistanceProgram',
+  'ri_erikaNiedowskiMemorialEBikeRebateProgram',
   // Pascoag
   'ri_hvacAndWaterHeaterIncentives',
   'ri_residentialEnergyStarOfferings',
