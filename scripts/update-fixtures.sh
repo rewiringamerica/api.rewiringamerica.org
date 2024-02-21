@@ -88,6 +88,19 @@ curl \
 &utility=ct-eversource" \
   | jq . > test/fixtures/v1-ct-06002-state-utility-lowincome.json
 
+# TODO: Remove beta states argument when IL is fully launched.
+curl \
+  "http://localhost:3000/api/v1/calculator?\
+location%5Bzip%5D=60304\
+&include_beta_states=true\
+&owner_status=homeowner\
+&household_income=35000\
+&tax_filing=joint\
+&household_size=1\
+&authority_types=state\
+&authority=il-state-of-illinois" \
+ | jq . > test/fixtures/il-60304-state-utility-lowincome.json
+
 # TODO: Remove &include_beta_states when NY is launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
