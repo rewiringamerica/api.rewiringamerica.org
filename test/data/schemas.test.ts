@@ -5,6 +5,7 @@ import {
   AuthorityType,
 } from '../../src/data/authorities';
 import {
+  IRAIncentive,
   IRA_INCENTIVES,
   SCHEMA as I_SCHEMA,
 } from '../../src/data/ira_incentives';
@@ -53,7 +54,6 @@ import {
   PROGRAMS_SCHEMA,
 } from '../../src/data/programs';
 import { PaymentMethod } from '../../src/data/types/incentive-types';
-import { BETA_ITEMS } from '../../src/data/types/items';
 import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
 import { LAUNCHED_STATES } from '../../src/data/types/states';
 import {
@@ -195,18 +195,25 @@ test('state incentives JSON files match schemas', async tap => {
   });
 });
 
-test("launched states do not have any values that we don't support in the frontend", async tap => {
+test('All IRA incentives have more_info links populated for their items', async tap => {
+  IRA_INCENTIVES.forEach((incentive: IRAIncentive) => {
+    const item = incentive.item;
+    for (const [lang, locale] of Object.entries(LOCALES)) {
+      tap.ok(
+        item in locale.urls,
+        `Technology ${item} has no more_info link in locale ${lang}, but is used in IRA Incentive ${incentive.id}`,
+      );
+    }
+  });
+});
+
+test("launched states do not have any values that we don't support for broader consumption in the API", async tap => {
   STATE_INCENTIVE_TESTS.forEach(([state, , data]) => {
     if (LAUNCHED_STATES.includes(state)) {
       for (const incentive of data) {
         // TODO: remove once City/County incentives have been beta-tested.
         tap.not(incentive.authority_type, AuthorityType.City);
         tap.not(incentive.authority_type, AuthorityType.County);
-
-        tap.notOk(
-          BETA_ITEMS.includes(incentive.item),
-          `${incentive.item} not a launched technology in ${incentive.id} and cannot be used in state: ${state}`,
-        );
 
         tap.notOk(incentive.payment_methods.includes(PaymentMethod.Unknown));
       }

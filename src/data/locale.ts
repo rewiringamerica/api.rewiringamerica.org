@@ -4,7 +4,7 @@ import {
   ALL_ERROR_MESSAGES,
   ERROR_MESSAGES_SCHEMA,
 } from './types/error-message';
-import { ITEMS_SCHEMA, LAUNCHED_ITEMS } from './types/items';
+import { ALL_ITEMS, ITEMS_SCHEMA } from './types/items';
 
 export const SCHEMA = {
   type: 'object',
@@ -12,13 +12,12 @@ export const SCHEMA = {
     items: {
       type: 'object',
       properties: ITEMS_SCHEMA,
-      required: LAUNCHED_ITEMS,
+      required: ALL_ITEMS,
       additionalProperties: false,
     },
     urls: {
       type: 'object',
       properties: ITEMS_SCHEMA,
-      required: LAUNCHED_ITEMS,
       additionalProperties: false,
     },
     errors: {
