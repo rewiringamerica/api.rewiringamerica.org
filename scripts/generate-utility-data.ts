@@ -210,6 +210,9 @@ enum Col {
   const seen = new Set<string>();
   const names = new Map<string, string>();
 
+  // Print the last refresh date
+  console.log(sheet[0][0].v);
+
   for (const sheetRow of sheet.slice(3)) {
     const row: { [c in keyof typeof Col]: string } = Object.fromEntries(
       _.zip(
