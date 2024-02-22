@@ -484,27 +484,21 @@ const UTILITIES = [
     },
   ],
   [
-    '06033',
+    '06360',
     true,
     {
       location: { state: 'CT' },
       utilities: {
-        'ct-eversource': {
-          name: 'Eversource',
-        },
-        'ct-united-illuminating-company': {
-          name: 'The United Illuminating Company',
-        },
-        'ct-groton-utilities': {
-          name: 'Groton Utilities',
-        },
         'ct-norwich-public-utilities': {
           name: 'Norwich Public Utilities',
+        },
+        'ct-eversource': {
+          name: 'Eversource',
         },
       },
     },
   ],
-  ['06033', false, { location: { state: 'CT' }, utilities: {} }],
+  ['06360', false, { location: { state: 'CT' }, utilities: {} }],
   [
     '80212',
     false,
