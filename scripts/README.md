@@ -61,3 +61,41 @@ All valid records according to our schema will be written to the location you sp
 
 Note that even after running these, there are still files you must edit manually to get the JSON in. Follow a recent CL example.
 Eg: https://github.com/rewiringamerica/api.rewiringamerica.org/pull/209/files
+
+## Utility Data
+
+`generate-utility-data.ts` reads a [dataset](https://downloads.energystar.gov/bi/portfolio-manager/Public_Utility_Map_en_US.xlsx) published by ENERGY STAR to create a mapping from ZIP codes to utilities. It writes to two CSV files in `scripts/data`, which are then imported into the SQLite database by `build.sh`. This data is used in the `/api/v1/utilities` endpoint.
+
+The script has no required arguments. It downloads the data file from ENERGY STAR by default; you can pass `--file <file>` to have it read a local file instead (useful when testing).
+
+The script should be run, and the changes to the CSV files committed, any time the underlying dataset is updated (which we have to notice manually), and any time the script is updated.
+
+At the top, the script defines a set of "exclusions" and "overrides", which patch the utility data in the underlying dataset to suit our needs. Exclusions are generally for utilities that don't provide electricity. Overrides are for changing utility names to be more in line with our needs -- fixing old names, consolidating different names for the same utility, using customer-facing brands, etc.
+
+When adding support for a new state, you should vet and clean up the utility data we have for that state, using this process:
+
+1. Run SQLite on the database and run:
+   ```sql
+   select utility_id, name, min(zip)
+   from zip_to_utility
+   natural join utilities
+   where utility_id like 'ca-%'
+   group by 1, 2;
+   ```
+   (Replace `ca` with the abbreviation for the state you're working on)
+2. For each row, try to determine:
+
+   - Does the utility provide electricity? If not, exclude them (see below).
+   - Does the utility have a different customer-facing name? (E.g. the data tends to name municipal utilities as `City of XYZ`, but they often brand themselves as `XYZ Public Utilities` or similar.) If so, add an override (see below). We prefer to use the name that's at the top of their website / in their logo.
+   - Are there multiple rows that seem to refer to the same utility? (E.g. the data is inconsistent about abbreviations, like `XYZ Rural Electric Cooperative` and `XYZ R E C`.) If so, override one or all to the customer-facing name, preferring to spell out abbreviations.
+
+   Do some quick googling to answer these questions. Especially for small utilities, make sure they're in the right state; there are a lot of similarly-named municipal utilities across the country.
+
+3. To exclude or override a utility:
+   1. Find a row for the utility in the spreadsheet, using the ZIP that came up for the utility in the SQL query. (This is the quickest way to find rows in the sheet.)
+   2. If there's a numeric Utility Code, then either:
+      - Exclude it by adding the utility code to `EXCLUSIONS`, under the appropriate state, with a brief comment about what the utility is and why you're excluding it.
+      - Override its name by adding a pair with the utility code and the new name to `OVERRIDES`, under the appropriate state. The new name will be treated as if it came from the "Utility Name" column.
+   3. If there's no numeric Utility Code (i.e. it says `Not Available` in that column), then do the step above but with the Utility Name from the spreadsheet instead.
+4. As you add exclusions and overrides, rerun the script and `yarn build` to reflect your changes in the CSVs and SQLite.
+5. When all the cleanup is done, make sure the set of utilities for the state in `authorities.json` is a subset of the utility IDs in SQLite. (There is a test for this.)
