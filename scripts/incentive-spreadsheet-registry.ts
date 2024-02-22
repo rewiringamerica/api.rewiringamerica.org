@@ -16,6 +16,14 @@ export const FILES: { [ident: string]: IncentiveFile } = {
     enHeader: 'Short Description (150 characters max)',
     esHeader: 'Short Description-Spanish',
   },
+  AZ: {
+    filepath: 'data/AZ/incentives.json',
+    sheetUrl:
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vQEGP5ZcMknLdHAqBAeCUtdkNPtS0CiFzQzoM4bdbLWYqC_30j1lHLeJhMSKElFRuwRdrgcd46Gl54j/pub?gid=995688950&single=true&output=csv',
+    headerRowNumber: 2,
+    idHeader: 'ID',
+    enHeader: 'Program Description (style guide)',
+  },
   CO: {
     filepath: 'data/CO/incentives.json',
     sheetUrl:
@@ -33,13 +41,5 @@ export const FILES: { [ident: string]: IncentiveFile } = {
     idHeader: 'ID',
     enHeader: 'Program Description (style guide)',
     esHeader: 'Program Description (Spanish)',
-  },
-  AZ: {
-    filepath: 'data/AZ/incentives.json',
-    sheetUrl:
-      'https://docs.google.com/spreadsheets/d/e/2PACX-1vQEGP5ZcMknLdHAqBAeCUtdkNPtS0CiFzQzoM4bdbLWYqC_30j1lHLeJhMSKElFRuwRdrgcd46Gl54j/pub?gid=995688950&single=true&output=csv',
-    headerRowNumber: 2,
-    idHeader: 'ID',
-    enHeader: 'Program Description (style guide)',
   },
 };
