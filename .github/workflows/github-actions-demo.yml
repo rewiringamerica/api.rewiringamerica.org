@@ -1,0 +1,22 @@
+name: Incentives Freshness Check
+on:
+  schedule:
+    - cron: '30 5 * * 1'
+permissions:
+  contents: read
+jobs:
+  verify-incentives-freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+          uses: actions/checkout@v4
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 16.13.x
+          cache: npm
+      - name: Install
+        run: npm ci
+      - name: URL checker
+        run: |
+          ./script/
