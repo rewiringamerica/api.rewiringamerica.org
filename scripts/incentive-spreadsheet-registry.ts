@@ -27,6 +27,15 @@ export const FILES: { [ident: string]: IncentiveFile } = {
     esHeader: 'Program Description (Spanish)',
     runSpreadsheetHealthCheck: true,
   },
+  CT: {
+    filepath: 'data/CT/incentives.json',
+    sheetUrl:
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vRGd0l3oNXGgLOkM2DUtWGURg640oaurqyHkJ0vQDVXRWd8TDfoGGAEgAIEkPWXLuMEPGiWSOeUTcOY/pub?gid=995688950&single=true&output=csv',
+    headerRowNumber: 2,
+    idHeader: 'ID',
+    enHeader: 'Program Description (guideline)',
+    esHeader: 'Program Description (Spanish)',
+  },
   RI: {
     filepath: 'data/RI/incentives.json',
     sheetUrl:
