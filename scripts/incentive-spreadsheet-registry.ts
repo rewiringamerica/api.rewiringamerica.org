@@ -5,6 +5,7 @@ export type IncentiveFile = {
   enHeader: string;
   esHeader?: string;
   headerRowNumber?: number;
+  runSpreadsheetHealthCheck?: boolean;
 };
 
 export const FILES: { [ident: string]: IncentiveFile } = {
@@ -24,6 +25,7 @@ export const FILES: { [ident: string]: IncentiveFile } = {
     idHeader: 'ID',
     enHeader: 'Program Description (guideline)',
     esHeader: 'Program Description (Spanish)',
+    runSpreadsheetHealthCheck: true,
   },
   RI: {
     filepath: 'data/RI/incentives.json',
@@ -41,5 +43,6 @@ export const FILES: { [ident: string]: IncentiveFile } = {
     headerRowNumber: 2,
     idHeader: 'ID',
     enHeader: 'Program Description (style guide)',
+    runSpreadsheetHealthCheck: true,
   },
 };
