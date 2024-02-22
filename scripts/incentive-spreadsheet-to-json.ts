@@ -7,7 +7,7 @@ import path from 'path';
 
 import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../src/data/low_income_thresholds';
 import {
-  CollectedFields,
+  CollectedIncentive,
   STATE_SCHEMA,
   StateIncentive,
 } from '../src/data/state_incentives';
@@ -89,7 +89,7 @@ async function convertToJson(
 
   const invalid_jsons: StateIncentivesWithErrors[] = [];
   const jsons: StateIncentive[] = [];
-  valids.forEach((row: CollectedFields) => {
+  valids.forEach((row: CollectedIncentive) => {
     const refined = standardizer.refineCollectedData(state, row);
     if (!validate(refined)) {
       const invalid = refined as StateIncentivesWithErrors;

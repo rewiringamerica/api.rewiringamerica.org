@@ -21,11 +21,11 @@ export type LowIncomeAuthority =
   | RILowIncomeAuthority
   | COLowIncomeAuthority;
 
-// CollectedFields and its JSON schema represent the data that lives in raw
+// CollectedIncentive and its JSON schema represent the data that lives in raw
 // collected form, e.g. spreadsheets. It should match column-for-column to our
 // spreadsheet format aside from nested fields like amount and column
 // renames/aliases.
-export type CollectedFields = {
+export type CollectedIncentive = {
   id: string;
   data_urls: string[];
   authority_type: AuthorityType;
@@ -161,7 +161,7 @@ const passThroughCollectedProperties = _.pick(
   PASS_THROUGH_FIELDS,
 );
 
-export type StateIncentive = Pick<CollectedFields, PassThroughField> &
+export type StateIncentive = Pick<CollectedIncentive, PassThroughField> &
   DerivedFields;
 
 export type StateIncentivesMap = {
@@ -209,7 +209,7 @@ const requiredProperties = [
   'short_description',
 ] as const;
 
-export const COLLECTED_DATA_SCHEMA: JSONSchemaType<CollectedFields> = {
+export const COLLECTED_DATA_SCHEMA: JSONSchemaType<CollectedIncentive> = {
   type: 'object',
   properties: {
     ...collectedIncentivePropertySchema,
