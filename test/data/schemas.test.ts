@@ -195,13 +195,13 @@ test('state incentives JSON files match schemas', async tap => {
   });
 });
 
-test('All IRA incentives have more_info links populated for their items', async tap => {
+test('All items used in IRA incentives have urls available', async tap => {
   IRA_INCENTIVES.forEach((incentive: IRAIncentive) => {
     const item = incentive.item;
     for (const [lang, locale] of Object.entries(LOCALES)) {
       tap.ok(
         item in locale.urls,
-        `Technology ${item} has no more_info link in locale ${lang}, but is used in IRA Incentive ${incentive.id}`,
+        `Technology ${item} is missing url in locale ${lang}, but is used in IRA Incentive ${incentive.id}`,
       );
     }
   });
