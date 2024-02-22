@@ -252,7 +252,7 @@
     ],
     "short_description": {
       "en": "Up to $600 rebate for Mini Split Cold Climate Air Source Heat Pump. Minimum efficiency of 15.2 SEER2 & 7.6 HSPF2."
-    } 
+    }
   },
   {
     "id": "IL-13",
@@ -884,15 +884,15 @@
     "program": "il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 800,
-      "maximum": 800
+      "number": 500,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $500 back on home insulation and air sealing. As well as up to $300 for an energy audit."
+      "en": "Up to $500 back on home insulation and air sealing."
     },
     "start_date": 2024,
     "end_date": 2024
@@ -1103,6 +1103,30 @@
     ],
     "short_description": {
       "en": "Up to $225 per unit. Eligible HPWH will have a maximum capacity of 120 gal and at least 2.2 UEF."
+    },
+    "start_date": 2024,
+    "end_date": 2024
+  },
+  {
+    "id": "IL-50",
+    "authority_type": "utility",
+    "authority": "il-jo-carroll-energy-cooperative",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "weatherization",
+    "program": "il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $300 for an energy audit. Completed by a Jo-Carrol Energy representative."
     },
     "start_date": 2024,
     "end_date": 2024
