@@ -5,7 +5,10 @@ import fetch from 'make-fetch-happen';
 import minimist from 'minimist';
 import path from 'path';
 
-import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../src/data/low_income_thresholds';
+import {
+  LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
+  LowIncomeThresholdsMap,
+} from '../src/data/low_income_thresholds';
 import {
   CollectedIncentive,
   STATE_SCHEMA,
@@ -52,17 +55,17 @@ function updateJsonFiles(records: object[], filepath: string) {
   }
 }
 
-export async function spreadsheetToJson(
+export function spreadsheetToJson(
   state: string,
   rows: Record<string, string>[],
   strict: boolean,
-  lowIncome: boolean,
-): Promise<SpreadsheetConversionOutput> {
+  lowIncome: LowIncomeThresholdsMap | null,
+): SpreadsheetConversionOutput {
   const standardizer = new SpreadsheetStandardizer(
     FIELD_MAPPINGS,
     VALUE_MAPPINGS,
     strict,
-    lowIncome ? LOW_INCOME_THRESHOLDS_BY_AUTHORITY : null,
+    lowIncome,
   );
 
   const standardized = rows.map(standardizer.standardize.bind(standardizer));
@@ -118,7 +121,12 @@ async function convertToJson(
     invalidCollectedIncentives,
     invalidStateIncentives,
     validStateIncentives,
-  } = await spreadsheetToJson(state, rows, strict, lowIncome);
+  } = await spreadsheetToJson(
+    state,
+    rows,
+    strict,
+    lowIncome ? LOW_INCOME_THRESHOLDS_BY_AUTHORITY : null,
+  );
 
   const invalidCollectedPath = file.filepath.replace(
     '.json',

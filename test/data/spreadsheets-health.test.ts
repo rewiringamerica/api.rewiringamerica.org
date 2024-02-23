@@ -22,7 +22,7 @@ test(
           from_line: file.headerRowNumber ?? 1,
         });
 
-        const output = await spreadsheetToJson(state, rows, false, false);
+        const output = await spreadsheetToJson(state, rows, false, null);
         if (output.invalidCollectedIncentives.length > 0) {
           console.error(
             `${state}` +
