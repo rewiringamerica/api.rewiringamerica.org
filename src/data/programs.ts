@@ -158,6 +158,38 @@ export const ALL_PROGRAMS = [
   // State of Illinois
   'il_stateOfIllinois_homeWeatherization',
 
+  // NV
+  // NV
+  // NV Energy
+  'nv_nVEnergy_homeEnergySaver',
+  'nv_nVEnergy_qualifiedApplianceReplacementProgram',
+  'nv_nVEnergy_residentialAirconditioningProgram',
+  'nv_nVEnergy_residentialSmartThermostatProgram',
+  // Wells Rural Electric Co.
+  'nv_wellsRuralElectricCo_saveEnergy,SaveMoney',
+  // Lincoln County Power District No. 1
+  'nv_lincolnCountyPowerDistrictNo1_residentialAndCommercialHighEfficiencyAirConditioningAndHeatPumpRebate',
+  // Mt. Wheeler Power
+  'nv_mtWheelerPower_windowsAndInsulationRebates',
+  'nv_mtWheelerPower_appliancesRebates',
+  'nv_mtWheelerPower_hybridWaterHeaterRebate',
+  'nv_mtWheelerPower_airAndHeatRebates',
+  'nv_mtWheelerPower_renewableEnergyGenerationRebates',
+  // Boulder City Municipal Utility
+  'nv_boulderCityMunicipalUtility_utilityRebateProgram',
+  // Raft River Rural Electric Co-op, Inc.
+  'nv_raftRiverRuralElectricCo-Op,Inc_energyEfficiencyRebate',
+  // Plumas-Sierra Rural Electric Co-op
+  'nv_plumas-SierraRuralElectricCo-Op_rebates',
+  // CSA Reno
+  'nv_cSAReno_weatherizationAssistanceProgram',
+  // Rural Nevada Development Corporation
+  'nv_ruralNevadaDevelopmentCorporation_weatherizationAssistanceProgram',
+  // Nevada Rural Housing
+  'nv_nevadaRuralHousing_weatherizationAssistanceProgram',
+  // HELP of Southern Nevada
+  'nv_hELPOfSouthernNevada_weatherizationAssistanceProgram',
+
   // NY
   // State or State + Utility:
   'ny_cleanHeatIncentives',

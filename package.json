@@ -59,7 +59,8 @@
     "lint": "tsc --noEmit && prettier --check . --ignore-path=.prettierignore && eslint .",
     "test": "dotenv -- tap -- --ts \"test/**/*.test.ts\"",
     "testfilter": "dotenv -- tap -- --ts",
-    "update-descriptions": "ts-node scripts/update-descriptions"
+    "update-descriptions": "ts-node scripts/update-descriptions",
+    "update": "ts-node scripts/incentive-spreadsheet-to-json.ts --strict NV"
   },
   "tap": {
     "disable-coverage": true,
