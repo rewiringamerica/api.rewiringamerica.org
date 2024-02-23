@@ -5,6 +5,7 @@ export type IncentiveFile = {
   enHeader: string;
   esHeader?: string;
   headerRowNumber?: number;
+  runSpreadsheetHealthCheck?: boolean;
 };
 
 export const FILES: { [ident: string]: IncentiveFile } = {
@@ -20,6 +21,16 @@ export const FILES: { [ident: string]: IncentiveFile } = {
     filepath: 'data/CO/incentives.json',
     sheetUrl:
       'https://docs.google.com/spreadsheets/d/1nITjSNRWJjSusB0fWuSS63fqynm_4Co7KEeuo9Cm7fU/pub?gid=30198531&single=true&output=csv',
+    headerRowNumber: 2,
+    idHeader: 'ID',
+    enHeader: 'Program Description (guideline)',
+    esHeader: 'Program Description (Spanish)',
+    runSpreadsheetHealthCheck: true,
+  },
+  CT: {
+    filepath: 'data/CT/incentives.json',
+    sheetUrl:
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vRGd0l3oNXGgLOkM2DUtWGURg640oaurqyHkJ0vQDVXRWd8TDfoGGAEgAIEkPWXLuMEPGiWSOeUTcOY/pub?gid=995688950&single=true&output=csv',
     headerRowNumber: 2,
     idHeader: 'ID',
     enHeader: 'Program Description (guideline)',
@@ -41,5 +52,6 @@ export const FILES: { [ident: string]: IncentiveFile } = {
     headerRowNumber: 2,
     idHeader: 'ID',
     enHeader: 'Program Description (style guide)',
+    runSpreadsheetHealthCheck: true,
   },
 };

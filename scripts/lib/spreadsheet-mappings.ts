@@ -13,7 +13,11 @@ export const FIELD_MAPPINGS: AliasMap = {
   program_url: ['Program URL'],
   item: ['Technology *'],
   item_if_selected_other: ["Technology (If selected 'Other')"],
-  'short_description.en': ['Program Description (guideline)'],
+  'short_description.en': [
+    'Program Description (guideline)',
+    'Program Description (style guide)',
+  ],
+  'short_description.es': ['Program Description (Spanish)'],
   program_status: ['Program Status'],
   program_start_raw: ['Program Start', 'Program Start (mm/dd/yyyy)'],
   program_end_raw: ['Program End', 'Program End (mm/dd/yyyy)'],
