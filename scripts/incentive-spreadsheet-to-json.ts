@@ -41,10 +41,14 @@ function safeDeleteFiles(...filepaths: string[]) {
   }
 }
 
-function updateJsonFiles(records: object[], filepath: string) {
+function updateJsonFiles(
+  records: object[],
+  filepath: string,
+  deleteEmpty: boolean = true,
+) {
   const dir = path.dirname(filepath);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir);
-  if (records.length === 0) {
+  if (records.length === 0 && deleteEmpty) {
     safeDeleteFiles(filepath);
   } else {
     fs.writeFileSync(
@@ -138,7 +142,8 @@ async function convertToJson(
   );
   updateJsonFiles(invalidCollectedIncentives, invalidCollectedPath);
   updateJsonFiles(invalidStateIncentives, invalidStatePath);
-  updateJsonFiles(validStateIncentives, file.filepath);
+  // Pass deleteEmpty = false since missing incentives files cause compilation errors.
+  updateJsonFiles(validStateIncentives, file.filepath, false);
   if (
     invalidCollectedIncentives.length > 0 ||
     invalidStateIncentives.length > 0
