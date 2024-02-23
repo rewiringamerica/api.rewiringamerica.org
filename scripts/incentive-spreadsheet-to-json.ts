@@ -30,7 +30,7 @@ type SpreadsheetConversionOutput = {
   validStateIncentives: StateIncentive[];
 };
 
-export function safeDeleteFiles(...filepaths: string[]) {
+function safeDeleteFiles(...filepaths: string[]) {
   for (const filepath of filepaths) {
     if (fs.existsSync(filepath)) {
       fs.unlinkSync(filepath);
@@ -38,7 +38,7 @@ export function safeDeleteFiles(...filepaths: string[]) {
   }
 }
 
-export function updateJsonFiles(records: object[], filepath: string) {
+function updateJsonFiles(records: object[], filepath: string) {
   const dir = path.dirname(filepath);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir);
   if (records.length === 0) {
@@ -107,7 +107,6 @@ async function convertToJson(
       `No low-income thresholds defined for ${state} - define them or turn off strict mode.`,
     );
   }
-
   const response = await fetch(file.sheetUrl);
   const csvContent = await response.text();
   const rows = parse(csvContent, {
@@ -130,16 +129,14 @@ async function convertToJson(
     '_invalid_state.json',
   );
   updateJsonFiles(invalidCollectedIncentives, invalidCollectedPath);
-  updateJsonFiles(validStateIncentives, file.filepath);
   updateJsonFiles(invalidStateIncentives, invalidStatePath);
-  if (invalidCollectedIncentives.length > 0) {
+  updateJsonFiles(validStateIncentives, file.filepath);
+  if (
+    invalidCollectedIncentives.length > 0 ||
+    invalidStateIncentives.length > 0
+  ) {
     throw new Error(
-      `Some records failed CollectedIncentive validation. See ${invalidCollectedPath} to debug errors.`,
-    );
-  }
-  if (invalidStateIncentives.length > 0) {
-    throw new Error(
-      `Some records failed StateIncentive validation. See ${invalidStatePath} to debug errors.`,
+      `Some records failed validation. See ${invalidCollectedPath} and/or ${invalidStatePath} to debug errors.`,
     );
   }
 }

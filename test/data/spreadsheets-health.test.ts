@@ -7,7 +7,7 @@ import { spreadsheetToJson } from '../../scripts/incentive-spreadsheet-to-json';
 
 // TODO: condition this on an environment variable that we set only
 // in workflows where we want to run this test.
-const skip: boolean = false;
+const skip: boolean = true;
 test(
   'rows in registered spreadsheets meet our collected data schema or are opted out',
   { skip: skip ? 'spreadsheet health tests: skipped by default' : false },
@@ -24,7 +24,16 @@ test(
 
         const output = await spreadsheetToJson(state, rows, false, false);
         if (output.invalidCollectedIncentives.length > 0) {
-          console.error(util.inspect(output.invalidCollectedIncentives[0]));
+          console.error(
+            `${state}` +
+              util.inspect(
+                output.invalidCollectedIncentives.map(invalid => [
+                  invalid.id,
+                  invalid.errors,
+                ]),
+                { depth: null },
+              ),
+          );
         }
         tap.equal(
           output.invalidCollectedIncentives.length,
