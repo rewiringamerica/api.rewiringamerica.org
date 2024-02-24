@@ -148,13 +148,13 @@ export const ALL_PROGRAMS = [
   // IL
   // Commonwealth Edison
   'il_commonwealthEdison_applianceRebates',
-  // Corn Belt Energy Corporation
-  'il_cornBeltEnergyCorporation_rebateProgram',
+  // Corn Belt Energy
+  'il_cornBeltEnergy_rebateProgram',
   // Jo-Carroll Energy Cooperative
   'il_jo-CarrollEnergyCooperative_2023EnergyEfficiencyIncentives',
   'il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives',
-  // MidAmerican Energy Company
-  'il_midAmericanEnergyCompany_residentialInstantRebates',
+  // MidAmerican Energy
+  'il_midAmericanEnergy_residentialInstantRebates',
   // State of Illinois
   'il_stateOfIllinois_homeWeatherization',
 
