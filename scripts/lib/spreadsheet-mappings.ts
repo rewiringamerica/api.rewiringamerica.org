@@ -5,7 +5,7 @@ export type FlatAliasMap = { [index: string]: string };
 
 // Map from canonical column name to possible aliases in spreadsheets.
 export const FIELD_MAPPINGS: AliasMap = {
-  id: ['ID'],
+  id: ['ID', 'ID (StateAbv-number. eg., NY-1)'],
   data_urls: ['Data Source URL(s)'],
   authority_type: ['Authority Level *'],
   authority_name: ['Authority (Name) *'],

@@ -30,6 +30,16 @@ export const FILES: { [ident: string]: IncentiveFile } = {
       'https://docs.google.com/spreadsheets/d/e/2PACX-1vRGd0l3oNXGgLOkM2DUtWGURg640oaurqyHkJ0vQDVXRWd8TDfoGGAEgAIEkPWXLuMEPGiWSOeUTcOY/pub?gid=995688950&single=true&output=csv',
     headerRowNumber: 2,
   },
+  DC: {
+    filepath: 'data/DC/incentives.json',
+    sheetUrl:
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vQb8t0MXV32iNBujzP4s5saPZl7qpaBcVckDCqSwzHHKAQVdaQtBvE2FgPCv1XvwDGN5ORAlXtKMqmp/pub?gid=995688950&single=true&output=csv',
+    headerRowNumber: 2,
+    idHeader: 'ID',
+    enHeader: 'Program Description (guideline)',
+    esHeader: 'Program Description (Spanish)',
+    runSpreadsheetHealthCheck: true,
+  },
   IL: {
     filepath: 'data/IL/incentives.json',
     sheetUrl:
