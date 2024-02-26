@@ -121,6 +121,9 @@ export class SpreadsheetStandardizer {
     output.short_description = {
       en: standardizeDescription(record.short_description.en),
     };
+    if (record.short_description.es) {
+      output.short_description.es = record.short_description.es;
+    }
     if (record.program_start_raw && record.program_start_raw !== '') {
       output.start_date = +parseDateToYear(record.program_start_raw);
     }
