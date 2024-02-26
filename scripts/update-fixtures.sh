@@ -164,3 +164,16 @@ curl \
 &tax_filing=joint\
 &household_size=4" \
   | jq . > test/fixtures/v1-15289-homeowner-80000-joint-4.json
+
+# TODO: Remove beta states argument when WI is fully launched.
+curl \
+  "http://localhost:3000/api/v1/calculator?\
+location%5Bzip%5D=53703\
+&include_beta_states=true\
+&owner_status=homeowner\
+&household_income=50000\
+&tax_filing=joint\
+&household_size=1\
+&authority_types=state\
+&authority=wi-focus-on-energy" \
+ | jq . > test/fixtures/v1-wi-53703-state-utility-lowincome.json
