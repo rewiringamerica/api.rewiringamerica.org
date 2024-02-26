@@ -159,14 +159,13 @@ export const ALL_PROGRAMS = [
   'il_stateOfIllinois_homeWeatherization',
 
   // NV
-  // NV
   // NV Energy
   'nv_nVEnergy_homeEnergySaver',
   'nv_nVEnergy_qualifiedApplianceReplacementProgram',
   'nv_nVEnergy_residentialAirconditioningProgram',
   'nv_nVEnergy_residentialSmartThermostatProgram',
-  // Wells Rural Electric Co.
-  'nv_wellsRuralElectricCo_saveEnergy,SaveMoney',
+  // Wells Rural Electric
+  'nv_wellsRuralElectric_saveEnergy,SaveMoney',
   // Lincoln County Power District No. 1
   'nv_lincolnCountyPowerDistrictNo1_residentialAndCommercialHighEfficiencyAirConditioningAndHeatPumpRebate',
   // Mt. Wheeler Power
@@ -175,12 +174,12 @@ export const ALL_PROGRAMS = [
   'nv_mtWheelerPower_hybridWaterHeaterRebate',
   'nv_mtWheelerPower_airAndHeatRebates',
   'nv_mtWheelerPower_renewableEnergyGenerationRebates',
-  // Boulder City Municipal Utility
-  'nv_boulderCityMunicipalUtility_utilityRebateProgram',
-  // Raft River Rural Electric Co-op, Inc.
-  'nv_raftRiverRuralElectricCo-Op,Inc_energyEfficiencyRebate',
-  // Plumas-Sierra Rural Electric Co-op
-  'nv_plumas-SierraRuralElectricCo-Op_rebates',
+  // City of Boulder City
+  'nv_cityOfBoulderCity_utilityRebateProgram',
+  // Raft Rural Electric Cooperative
+  'nv_raftRuralElectricCooperative_energyEfficiencyRebate',
+  // Plumas-Sierra Rural Electric Cooperative
+  'nv_plumas-SierraRuralElectricCooperative_rebates',
   // CSA Reno
   'nv_cSAReno_weatherizationAssistanceProgram',
   // Rural Nevada Development Corporation
