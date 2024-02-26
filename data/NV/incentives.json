@@ -379,7 +379,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Existing site built homes or existing manufactured homes are eligible to receive a $1,000 rebate on ductless heat pump when replacing electric forced air furnace or electric zone heat."
+      "en": "Existing site built homes or manufactured homes are eligible to receive a $1,000 rebate on ductless heat pump."
     }
   },
   {
@@ -510,7 +510,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Receive up to $4,000 income qualified instant rebate from qualifying distributors when you replace your old air condition system with an air source HP."
+      "en": "Receive up to $4,000 income qualified instant rebate from qualifying distributors when you replace old air condition system with an air source HP."
     },
     "low_income": "nv-nv-energy"
   },
@@ -612,7 +612,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate for Ductless Mini Split Air Conditioner and Heat Pump – Single Head (single air handler unit) with minimum efficiency of 9.5 HSPF, 16 SEER."
+      "en": "$400 rebate for Ductless Mini Split Air Conditioner and Heat Pump (single air handler unit) with minimum efficiency of 9.5 HSPF, 16 SEER."
     }
   },
   {
@@ -632,7 +632,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$800 rebate for Ductless Mini Split Air Conditioner and Heat Pump – Multiple Head (single air handler unit) with minimum efficiency of 9.5 HSPF, 16 SEER."
+      "en": "$800 rebate for Ductless Mini Split Air Conditioner and Heat Pump (single air handler unit) with minimum efficiency of 9.5 HSPF, 16 SEER."
     }
   },
   {
@@ -654,7 +654,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Windows: $2.5 per sq ft for installations with U-Value of .35 or less   Insulation: $0.4 per sq ft for attic, wall, and floor insulation installations with at least R-19 and increased R value by 11 or more."
+      "en": "Windows: $2.5 per sq ft for installations with U-Value of .35 or less. Insulation: $0.4 per sq ft for attic, wall, and floor insulation installations."
     },
     "bonus_available": true
   },
@@ -677,7 +677,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Windows: $2.5 per sq ft for installations with U-Value of .35 or less   Insulation: $0.4 per sq ft for attic, wall, and floor insulation installations with at least R-19 and increased R value by 11 or more."
+      "en": "Windows: $2.5 per sq ft for installations with U-Value of .35 or less. Insulation: $0.4 per sq ft for attic, wall, and floor insulation installations."
     },
     "bonus_available": true
   },
@@ -898,7 +898,7 @@
     "program": "nv_mtWheelerPower_renewableEnergyGenerationRebates",
     "amount": {
       "type": "percent",
-      "number": 25,
+      "number": 0.25,
       "maximum": 1000
     },
     "owner_status": [
@@ -920,7 +920,7 @@
     "program": "nv_boulderCityMunicipalUtility_utilityRebateProgram",
     "amount": {
       "type": "percent",
-      "number": 50,
+      "number": 0.5,
       "maximum": 75
     },
     "owner_status": [
@@ -1009,7 +1009,7 @@
     "program": "nv_boulderCityMunicipalUtility_utilityRebateProgram",
     "amount": {
       "type": "percent",
-      "number": 50,
+      "number": 0.5,
       "maximum": 75
     },
     "owner_status": [
@@ -1202,7 +1202,8 @@
     "program": "nv_raftRiverRuralElectricCo-Op,Inc_energyEfficiencyRebate",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 7.2
+      "number": 7.2,
+      "unit": "square_foot"
     },
     "owner_status": [
       "homeowner"
@@ -1264,7 +1265,7 @@
     "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
     "amount": {
       "type": "percent",
-      "number": 500,
+      "number": 0.5,
       "maximum": 500
     },
     "owner_status": [
@@ -1287,7 +1288,7 @@
     "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
     "amount": {
       "type": "percent",
-      "number": 100,
+      "number": 0.5,
       "maximum": 100
     },
     "owner_status": [
@@ -1310,7 +1311,7 @@
     "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
     "amount": {
       "type": "percent",
-      "number": 100,
+      "number": 0.5,
       "maximum": 100
     },
     "owner_status": [
@@ -1333,7 +1334,7 @@
     "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
     "amount": {
       "type": "percent",
-      "number": 50,
+      "number": 0.5,
       "maximum": 50
     },
     "owner_status": [
@@ -1356,7 +1357,7 @@
     "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
     "amount": {
       "type": "percent",
-      "number": 125,
+      "number": 0.5,
       "maximum": 125
     },
     "owner_status": [
@@ -1379,7 +1380,7 @@
     "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
     "amount": {
       "type": "percent",
-      "number": 125,
+      "number": 0.5,
       "maximum": 125
     },
     "owner_status": [
@@ -1402,7 +1403,7 @@
     "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
     "amount": {
       "type": "percent",
-      "number": 15,
+      "number": 0.5,
       "maximum": 75
     },
     "owner_status": [
@@ -1425,7 +1426,7 @@
     "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
     "amount": {
       "type": "percent",
-      "number": 75,
+      "number": 0.5,
       "maximum": 75
     },
     "owner_status": [
@@ -1448,7 +1449,7 @@
     "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
     "amount": {
       "type": "percent",
-      "number": 150,
+      "number": 0.5,
       "maximum": 150
     },
     "owner_status": [
@@ -1471,8 +1472,7 @@
     "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
     "amount": {
       "type": "percent",
-      "number": 3,
-      "unit": "square_foot"
+      "number": 0.5
     },
     "owner_status": [
       "homeowner",
@@ -1699,8 +1699,7 @@
       "type": "dollar_amount",
       "number": 400,
       "minimum": 0,
-      "maximum": 400,
-      "representative": 200
+      "maximum": 400
     },
     "owner_status": [
       "homeowner",

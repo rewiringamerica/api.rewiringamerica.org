@@ -35,6 +35,8 @@ import {
   CT_INCENTIVES_SCHEMA,
   IL_INCENTIVES,
   IL_INCENTIVES_SCHEMA,
+  NV_INCENTIVES,
+  NV_INCENTIVES_SCHEMA,
   NY_INCENTIVES,
   NY_INCENTIVES_SCHEMA,
   RI_INCENTIVES,
@@ -96,6 +98,7 @@ const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
   ['CO', CO_INCENTIVES_SCHEMA, CO_INCENTIVES],
   ['CT', CT_INCENTIVES_SCHEMA, CT_INCENTIVES],
   ['IL', IL_INCENTIVES_SCHEMA, IL_INCENTIVES],
+  ['NV', NV_INCENTIVES_SCHEMA, NV_INCENTIVES],
   ['NY', NY_INCENTIVES_SCHEMA, NY_INCENTIVES],
   ['RI', RI_INCENTIVES_SCHEMA, RI_INCENTIVES],
   ['VA', VA_INCENTIVES_SCHEMA, VA_INCENTIVES],
@@ -123,6 +126,10 @@ function isIncentiveAmountValid<T extends StateIncentive>(
       return amount.number >= 0 && amount.number <= 1 && !amount.unit;
     case 'dollars_per_unit':
       return amount.unit !== undefined;
+    case 'other':
+      return true;
+    case 'unknown':
+      return true;
     default:
       return false;
   }

@@ -5,7 +5,7 @@ export enum AmountType {
   Percent = 'percent',
   PerUnit = 'dollars_per_unit',
   Other = 'other',
-  Unknown = 'unknown'
+  Unknown = 'unknown',
 }
 
 export enum AmountUnit {

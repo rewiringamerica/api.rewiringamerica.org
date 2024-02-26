@@ -125,7 +125,7 @@ export const VALUE_MAPPINGS: { [index: string]: AliasMap } = {
     percent: ['Percent', 'Percent With a Cap'],
     dollar_amount: ['Dollar Amount', 'Dollar Amount With a Cap'],
     other: ['Other'],
-    unknown: ['Unknown']
+    unknown: ['Unknown'],
   },
   'amount.unit': {
     kilowatt: ['Kilowatt', 'kW'],
