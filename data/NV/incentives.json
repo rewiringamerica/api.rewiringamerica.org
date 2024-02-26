@@ -1,0 +1,1713 @@
+[
+  {
+    "id": "NV-1",
+    "authority_type": "utility",
+    "authority": "nv-nv-energy",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "nv_nVEnergy_homeEnergySaver",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for Energy Star certified electric dryer."
+    }
+  },
+  {
+    "id": "NV-2",
+    "authority_type": "utility",
+    "authority": "nv-nv-energy",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "nv_nVEnergy_homeEnergySaver",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate for Energy Star certified heat pump dryer."
+    }
+  },
+  {
+    "id": "NV-3",
+    "authority_type": "utility",
+    "authority": "nv-nv-energy",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "nv_nVEnergy_homeEnergySaver",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for Energy Star certified heat pump water heater."
+    }
+  },
+  {
+    "id": "NV-4",
+    "authority_type": "utility",
+    "authority": "nv-wells-rural-electric-co",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "nv_wellsRuralElectricCo_saveEnergy,SaveMoney",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$150 rebate from utility for qualifying thermostat."
+    }
+  },
+  {
+    "id": "NV-5",
+    "authority_type": "utility",
+    "authority": "nv-wells-rural-electric-co",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "nv_wellsRuralElectricCo_saveEnergy,SaveMoney",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "minimum": 300,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 - $800 rebate for a qualifying Heat Pump Water Heater."
+    }
+  },
+  {
+    "id": "NV-6",
+    "authority_type": "utility",
+    "authority": "nv-wells-rural-electric-co",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "nv_wellsRuralElectricCo_saveEnergy,SaveMoney",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for Energy Star rated electric dryer."
+    }
+  },
+  {
+    "id": "NV-7",
+    "authority_type": "utility",
+    "authority": "nv-wells-rural-electric-co",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_wellsRuralElectricCo_saveEnergy,SaveMoney",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 12,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Site built home and manufactured homes may qualify for a fractional rebate for window replacements, up to 100% of costs."
+    }
+  },
+  {
+    "id": "NV-8",
+    "authority_type": "utility",
+    "authority": "nv-wells-rural-electric-co",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_wellsRuralElectricCo_saveEnergy,SaveMoney",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 16,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Site built home and manufactured homes may qualify for a fractional rebate for window replacements, up to 100% of costs."
+    }
+  },
+  {
+    "id": "NV-9",
+    "authority_type": "utility",
+    "authority": "nv-wells-rural-electric-co",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_wellsRuralElectricCo_saveEnergy,SaveMoney",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 12,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Site built home and manufactured homes may qualify for a fractional rebate on patio/sliding doors replacement, up to 100% of costs."
+    }
+  },
+  {
+    "id": "NV-10",
+    "authority_type": "utility",
+    "authority": "nv-wells-rural-electric-co",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_wellsRuralElectricCo_saveEnergy,SaveMoney",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 16,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Site built home and manufactured homes may qualify for a fractional rebate on patio/sliding doors replacement, up to 100% of costs."
+    }
+  },
+  {
+    "id": "NV-11",
+    "authority_type": "utility",
+    "authority": "nv-wells-rural-electric-co",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_wellsRuralElectricCo_saveEnergy,SaveMoney",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$40 rebate for Energy Star insulated exterior doors, up to 100% of costs."
+    }
+  },
+  {
+    "id": "NV-12",
+    "authority_type": "utility",
+    "authority": "nv-wells-rural-electric-co",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_wellsRuralElectricCo_saveEnergy,SaveMoney",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1.75,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Site built homes with 4 units or less may be eligible for fractional rebate on insulation upgrades in home attic, up to 100% of costs."
+    }
+  },
+  {
+    "id": "NV-13",
+    "authority_type": "utility",
+    "authority": "nv-wells-rural-electric-co",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_wellsRuralElectricCo_saveEnergy,SaveMoney",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1.75,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Site built homes with 4 units or less may be eligible for fractional rebate on insulation upgrades in home floor, up to 100% of costs."
+    }
+  },
+  {
+    "id": "NV-14",
+    "authority_type": "utility",
+    "authority": "nv-wells-rural-electric-co",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_wellsRuralElectricCo_saveEnergy,SaveMoney",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Site built homes with 4 units or less may be eligible for fractional rebate on insulation upgrades in home walls, up to 100% of costs."
+    }
+  },
+  {
+    "id": "NV-15",
+    "authority_type": "utility",
+    "authority": "nv-wells-rural-electric-co",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_wellsRuralElectricCo_saveEnergy,SaveMoney",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1.5,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Manufactured homes may be eligible for fractional rebate on insulation upgrades in manufactured home attic/roof, up to 100% of costs."
+    }
+  },
+  {
+    "id": "NV-16",
+    "authority_type": "utility",
+    "authority": "nv-wells-rural-electric-co",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_wellsRuralElectricCo_saveEnergy,SaveMoney",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1.5,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Manufactured homes may be eligible for fractional rebate on insulation upgrades in manufactured home floor, up to 100% of costs."
+    }
+  },
+  {
+    "id": "NV-17",
+    "authority_type": "utility",
+    "authority": "nv-nv-energy",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "nv_nVEnergy_qualifiedApplianceReplacementProgram",
+    "amount": {
+      "type": "other",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free replacement of electric dryers (10 years or older) when you meet income eligibility requirements."
+    },
+    "low_income": "nv-nv-energy"
+  },
+  {
+    "id": "NV-18",
+    "authority_type": "utility",
+    "authority": "nv-wells-rural-electric-co",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "nv_wellsRuralElectricCo_saveEnergy,SaveMoney",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Existing site built homes or existing manufactured homes are eligible to receive a $1,000 rebate on ductless heat pump when replacing electric forced air furnace or electric zone heat."
+    }
+  },
+  {
+    "id": "NV-19",
+    "authority_type": "utility",
+    "authority": "nv-wells-rural-electric-co",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "nv_wellsRuralElectricCo_saveEnergy,SaveMoney",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "minimum": 800,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 rebate on qualified projects for existing single-family Site Built or Manufactured homes when replacing electric forced air furnance."
+    }
+  },
+  {
+    "id": "NV-20",
+    "authority_type": "utility",
+    "authority": "nv-nv-energy",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "other",
+    "program": "nv_nVEnergy_residentialAirconditioningProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1600,
+      "minimum": 400,
+      "maximum": 1600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive up to $1,600 instant rebate from qualifying distributors when you replace your old air condition system with higher efficiency equipment."
+    }
+  },
+  {
+    "id": "NV-21",
+    "authority_type": "utility",
+    "authority": "nv-nv-energy",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "nv_nVEnergy_residentialAirconditioningProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2400,
+      "minimum": 600,
+      "maximum": 2400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive up to $2,400 instant rebate from qualifying distributors when you replace your old air condition system with an air source HP."
+    }
+  },
+  {
+    "id": "NV-22",
+    "authority_type": "utility",
+    "authority": "nv-nv-energy",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "nv_nVEnergy_residentialAirconditioningProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive up to $1,600 discount from qualifying distributors when your replace your old air conditioning system with a ductless HP."
+    }
+  },
+  {
+    "id": "NV-23",
+    "authority_type": "utility",
+    "authority": "nv-nv-energy",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "other",
+    "program": "nv_nVEnergy_residentialAirconditioningProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3600,
+      "minimum": 1700,
+      "maximum": 3600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive up to $3,600 income qualified instant rebate when you replace your old air condition system with higher efficiency equipment."
+    },
+    "low_income": "nv-nv-energy"
+  },
+  {
+    "id": "NV-24",
+    "authority_type": "utility",
+    "authority": "nv-nv-energy",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "nv_nVEnergy_residentialAirconditioningProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000,
+      "minimum": 2000,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive up to $4,000 income qualified instant rebate from qualifying distributors when you replace your old air condition system with an air source HP."
+    },
+    "low_income": "nv-nv-energy"
+  },
+  {
+    "id": "NV-25",
+    "authority_type": "utility",
+    "authority": "nv-nv-energy",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "nv_nVEnergy_residentialAirconditioningProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive up to $3,200 income qualified discount from qualifying distributors when your replace your old air conditioning system with a ductless HP."
+    },
+    "low_income": "nv-nv-energy"
+  },
+  {
+    "id": "NV-26",
+    "authority_type": "utility",
+    "authority": "nv-nv-energy",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "smart_thermostat",
+    "program": "nv_nVEnergy_residentialSmartThermostatProgram",
+    "amount": {
+      "type": "other",
+      "number": 4
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive a free Smart Thermostat with free professional installation and you can start saving up to $100 on your energy bill each year."
+    }
+  },
+  {
+    "id": "NV-27",
+    "authority_type": "utility",
+    "authority": "nv-lincoln-county-power-district-no-1",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "nv_lincolnCountyPowerDistrictNo1_residentialAndCommercialHighEfficiencyAirConditioningAndHeatPumpRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 rebates for air source heat pump with minimum efficiency of 9.0 HSPF, 15 SEER."
+    }
+  },
+  {
+    "id": "NV-28",
+    "authority_type": "utility",
+    "authority": "nv-lincoln-county-power-district-no-1",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "nv_lincolnCountyPowerDistrictNo1_residentialAndCommercialHighEfficiencyAirConditioningAndHeatPumpRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for air source heat pump with minimum efficiency of 9.5 HSPF, 16 SEER."
+    }
+  },
+  {
+    "id": "NV-29",
+    "authority_type": "utility",
+    "authority": "nv-lincoln-county-power-district-no-1",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "nv_lincolnCountyPowerDistrictNo1_residentialAndCommercialHighEfficiencyAirConditioningAndHeatPumpRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for Ductless Mini Split Air Conditioner and Heat Pump – Single Head (single air handler unit) with minimum efficiency of 9.5 HSPF, 16 SEER."
+    }
+  },
+  {
+    "id": "NV-30",
+    "authority_type": "utility",
+    "authority": "nv-lincoln-county-power-district-no-1",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "nv_lincolnCountyPowerDistrictNo1_residentialAndCommercialHighEfficiencyAirConditioningAndHeatPumpRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 rebate for Ductless Mini Split Air Conditioner and Heat Pump – Multiple Head (single air handler unit) with minimum efficiency of 9.5 HSPF, 16 SEER."
+    }
+  },
+  {
+    "id": "NV-31",
+    "authority_type": "utility",
+    "authority": "nv-mt-wheeler-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_mtWheelerPower_windowsAndInsulationRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2.5,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Windows: $2.5 per sq ft for installations with U-Value of .35 or less   Insulation: $0.4 per sq ft for attic, wall, and floor insulation installations with at least R-19 and increased R value by 11 or more."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-32",
+    "authority_type": "utility",
+    "authority": "nv-mt-wheeler-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_mtWheelerPower_windowsAndInsulationRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.4,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Windows: $2.5 per sq ft for installations with U-Value of .35 or less   Insulation: $0.4 per sq ft for attic, wall, and floor insulation installations with at least R-19 and increased R value by 11 or more."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-33",
+    "authority_type": "utility",
+    "authority": "nv-mt-wheeler-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_stove",
+    "program": "nv_mtWheelerPower_appliancesRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Mt. Wheeler Power of rebates of up to $325 for purchasing ENERGY STAR rated appliances."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-34",
+    "authority_type": "utility",
+    "authority": "nv-mt-wheeler-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "nv_mtWheelerPower_appliancesRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Mt. Wheeler Power of rebates of up to $325 for purchasing ENERGY STAR rated appliances."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-35",
+    "authority_type": "utility",
+    "authority": "nv-mt-wheeler-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "nv_mtWheelerPower_appliancesRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Mt. Wheeler Power of rebates of up to $325 for purchasing ENERGY STAR rated appliances."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-36",
+    "authority_type": "utility",
+    "authority": "nv-mt-wheeler-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "nv_mtWheelerPower_appliancesRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Mt. Wheeler Power of rebates of up to $325 for purchasing ENERGY STAR rated appliances."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-37",
+    "authority_type": "utility",
+    "authority": "nv-mt-wheeler-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "nv_mtWheelerPower_hybridWaterHeaterRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Mt. Wheeler Power of rebates of up to $300 for purchasing a Geothermal / Spring / Hybrid Water Heater."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-38",
+    "authority_type": "utility",
+    "authority": "nv-mt-wheeler-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "geothermal_heating_installation",
+    "program": "nv_mtWheelerPower_airAndHeatRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton",
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Mt. Wheeler Power of rebates of up to $300 per ton (capped at $2000) for purchasing an air-to-air heat pump and $500 per ton (capped at $3000)."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-39",
+    "authority_type": "utility",
+    "authority": "nv-mt-wheeler-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "nv_mtWheelerPower_airAndHeatRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 150,
+      "unit": "ton",
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Mt. Wheeler Power of rebates of up to $300 per ton (capped at $2000) for purchasing an air-to-air heat pump and $500 per ton (capped at $3000)."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-40",
+    "authority_type": "utility",
+    "authority": "nv-mt-wheeler-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "nv_mtWheelerPower_airAndHeatRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 175,
+      "unit": "ton",
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Mt. Wheeler Power of rebates of up to $300 per ton (capped at $2000) for purchasing an air-to-air heat pump and $500 per ton (capped at $3000)."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-41",
+    "authority_type": "utility",
+    "authority": "nv-mt-wheeler-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "nv_mtWheelerPower_airAndHeatRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 300,
+      "unit": "ton",
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Mt. Wheeler Power of rebates of up to $300 per ton (capped at $2000) for purchasing an air-to-air heat pump and $500 per ton (capped at $3000)."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-42",
+    "authority_type": "utility",
+    "authority": "nv-mt-wheeler-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "rooftop_solar_installation",
+    "program": "nv_mtWheelerPower_renewableEnergyGenerationRebates",
+    "amount": {
+      "type": "percent",
+      "number": 25,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Mt. Wheeler Power of rebates of up to 25% or $1000 for installing solar energy with up to 5 kW (residential) or 20 kW (small commercial) in size."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-43",
+    "authority_type": "utility",
+    "authority": "nv-boulder-city-municipal-utility",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "nv_boulderCityMunicipalUtility_utilityRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 50,
+      "maximum": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate up to $75 per smart controller or fifty percent off the MSRP, whichever is less for the installation of a smart thermostat."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-44",
+    "authority_type": "utility",
+    "authority": "nv-boulder-city-municipal-utility",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "nv_boulderCityMunicipalUtility_utilityRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebates up to $600 for 16 SEER/9 HSPF, $1,200 for 18 SEER/10 HSPF, and $2,400 for 20 SEER/11 HSPF and above."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-45",
+    "authority_type": "utility",
+    "authority": "nv-boulder-city-municipal-utility",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "nv_boulderCityMunicipalUtility_utilityRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1600
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebates for Ductless Heat Pump replacement in the amount of $1,600 16 SEER/9 HSPF and above."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-46",
+    "authority_type": "utility",
+    "authority": "nv-boulder-city-municipal-utility",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "nv_boulderCityMunicipalUtility_utilityRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1600
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebates for Central Air Conditioner replacement in the amount of $400 for 16 SEER, $900 for 18 SEER and $1,600 for 20 SEER and above."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-47",
+    "authority_type": "utility",
+    "authority": "nv-boulder-city-municipal-utility",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "nv_boulderCityMunicipalUtility_utilityRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 50,
+      "maximum": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $75 rebate per smart controller or fifty percent off the MSRP, whichever is less for the installation of a smart irrigation controller."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-48",
+    "authority_type": "utility",
+    "authority": "nv-boulder-city-municipal-utility",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "nv_boulderCityMunicipalUtility_utilityRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $200 in rebates are available for a solar water heating system to supplement electric domestic water heating. Minimum 40 gallons."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-49",
+    "authority_type": "utility",
+    "authority": "nv-boulder-city-municipal-utility",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "nv_boulderCityMunicipalUtility_utilityRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for the replacement of an existing pool pump with a new efficient 2 speed pump or $200 for an efficient variable-speed pump."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-50",
+    "authority_type": "utility",
+    "authority": "nv-raft-river-rural-electric-co-op-inc",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "nv_raftRiverRuralElectricCo-Op,Inc_energyEfficiencyRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate available for a new ENERGY STAR electric clothes dryer."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-51",
+    "authority_type": "utility",
+    "authority": "nv-raft-river-rural-electric-co-op-inc",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "nv_raftRiverRuralElectricCo-Op,Inc_energyEfficiencyRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 450
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $450 rebate available for Unitary Tier 2 or 3 or Split System heat pump water heaters. Up to $270 available for Unitary Tier 1."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-52",
+    "authority_type": "utility",
+    "authority": "nv-raft-river-rural-electric-co-op-inc",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "nv_raftRiverRuralElectricCo-Op,Inc_energyEfficiencyRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 30
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $30 available for electric washers and dryers."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-53",
+    "authority_type": "utility",
+    "authority": "nv-raft-river-rural-electric-co-op-inc",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_raftRiverRuralElectricCo-Op,Inc_energyEfficiencyRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 36
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $36 rebate per door available. Applies when replacing a qualified un-insulated exterior door with a pre-hung ENERGY STAR qualified door."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-54",
+    "authority_type": "utility",
+    "authority": "nv-raft-river-rural-electric-co-op-inc",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "nv_raftRiverRuralElectricCo-Op,Inc_energyEfficiencyRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 16
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$16 per unit rebate when you replace qualifying bi-metal line-voltage thermostats with line-voltage electronic thermostats."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-55",
+    "authority_type": "utility",
+    "authority": "nv-raft-river-rural-electric-co-op-inc",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "nv_raftRiverRuralElectricCo-Op,Inc_energyEfficiencyRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1260
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Raft River Rural Electric offers an incentive when you purchase a new manufactured home that is electrically heated."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-56",
+    "authority_type": "utility",
+    "authority": "nv-raft-river-rural-electric-co-op-inc",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_raftRiverRuralElectricCo-Op,Inc_energyEfficiencyRebate",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 7.2
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate when you replace qualifying windows in an existing single family or manufactured home with primary electric heat."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-57",
+    "authority_type": "utility",
+    "authority": "nv-raft-river-rural-electric-co-op-inc",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_raftRiverRuralElectricCo-Op,Inc_energyEfficiencyRebate",
+    "amount": {
+      "type": "unknown",
+      "number": 0
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Incentive to improve the insulation in your existing single family, multi-family, or manufactured home with primary electric heat."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-58",
+    "authority_type": "utility",
+    "authority": "nv-raft-river-rural-electric-co-op-inc",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "nv_raftRiverRuralElectricCo-Op,Inc_energyEfficiencyRebate",
+    "amount": {
+      "type": "unknown",
+      "number": 0
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Raft River Rural Electric offers an incentive for qualified heat pumps."
+    }
+  },
+  {
+    "id": "NV-59",
+    "authority_type": "utility",
+    "authority": "nv-plumas-sierra-rural-electric-co-op",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
+    "amount": {
+      "type": "percent",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate for 50% of the cost up to $500 for the purchase and installation of a new ENERGY STAR® certified Hybrid/Heat Pump Water Heater."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-60",
+    "authority_type": "utility",
+    "authority": "nv-plumas-sierra-rural-electric-co-op",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
+    "amount": {
+      "type": "percent",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase and installation of a new, ENERGY STAR® Clothes Washer."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-61",
+    "authority_type": "utility",
+    "authority": "nv-plumas-sierra-rural-electric-co-op",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
+    "amount": {
+      "type": "percent",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase and installation of a new, ENERGY STAR® Clothes Dryer."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-62",
+    "authority_type": "utility",
+    "authority": "nv-plumas-sierra-rural-electric-co-op",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
+    "amount": {
+      "type": "percent",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase and installation of a new, ENERGY STAR® Dishwasher."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-63",
+    "authority_type": "utility",
+    "authority": "nv-plumas-sierra-rural-electric-co-op",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
+    "amount": {
+      "type": "percent",
+      "number": 125,
+      "maximum": 125
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for the purchase of a new ENERGY STAR certified refrigerator. Additional $75 available for recycling old refrigerator."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-64",
+    "authority_type": "utility",
+    "authority": "nv-plumas-sierra-rural-electric-co-op",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
+    "amount": {
+      "type": "percent",
+      "number": 125,
+      "maximum": 125
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for the purchase of a new ENERGY STAR certified freezer. Additional $75 available for recycling old freezer."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-65",
+    "authority_type": "utility",
+    "authority": "nv-plumas-sierra-rural-electric-co-op",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
+    "amount": {
+      "type": "percent",
+      "number": 15,
+      "maximum": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase of new, ENERGY STAR® certified holiday LED strings."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-66",
+    "authority_type": "utility",
+    "authority": "nv-plumas-sierra-rural-electric-co-op",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
+    "amount": {
+      "type": "percent",
+      "number": 75,
+      "maximum": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for the purchase and installation of a new ENERGY STAR® certified Room Air Conditioner."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-67",
+    "authority_type": "utility",
+    "authority": "nv-plumas-sierra-rural-electric-co-op",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
+    "amount": {
+      "type": "percent",
+      "number": 150,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase and installation of a qualified new electric storage water heater."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-68",
+    "authority_type": "utility",
+    "authority": "nv-plumas-sierra-rural-electric-co-op",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
+    "amount": {
+      "type": "percent",
+      "number": 3,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase and installation of qualified new Replacement Windows."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-69",
+    "authority_type": "utility",
+    "authority": "nv-plumas-sierra-rural-electric-co-op",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.25,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase and installation of qualified new Insulation upgrades."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-70",
+    "authority_type": "utility",
+    "authority": "nv-plumas-sierra-rural-electric-co-op",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 75,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase and installation of a new, qualifying Central Air Conditioner."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-71",
+    "authority_type": "utility",
+    "authority": "nv-plumas-sierra-rural-electric-co-op",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 350,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase and installation of a new qualifying Air Source Heat Pump."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-72",
+    "authority_type": "utility",
+    "authority": "nv-plumas-sierra-rural-electric-co-op",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase and installation of a new qualifying Air Source Heat Pump."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-73",
+    "authority_type": "utility",
+    "authority": "nv-plumas-sierra-rural-electric-co-op",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "geothermal_heating_installation",
+    "program": "nv_plumas-SierraRuralElectricCo-Op_rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 600,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $600 per ton rebate for the purchase and installation of a new ENERGY STAR® Certified Ground Source Heat Pump."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "NV-74",
+    "authority_type": "other",
+    "authority": "nv-csa-reno",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_cSAReno_weatherizationAssistanceProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 12666
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for residents below 200% of the federal poverty line."
+    },
+    "low_income": "default"
+  },
+  {
+    "id": "NV-75",
+    "authority_type": "other",
+    "authority": "nv-rural-nevada-development-corporation",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_ruralNevadaDevelopmentCorporation_weatherizationAssistanceProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 12666
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for residents below 200% of the federal poverty line."
+    },
+    "low_income": "default"
+  },
+  {
+    "id": "NV-76",
+    "authority_type": "other",
+    "authority": "nv-nevada-rural-housing",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_nevadaRuralHousing_weatherizationAssistanceProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 12666
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for residents below 200% of the federal poverty line."
+    },
+    "low_income": "default"
+  },
+  {
+    "id": "NV-77",
+    "authority_type": "other",
+    "authority": "nv-help-of-southern-nevada",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_hELPOfSouthernNevada_weatherizationAssistanceProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 12666
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for residents below 200% of the federal poverty line."
+    },
+    "low_income": "default"
+  },
+  {
+    "id": "NV-78",
+    "authority_type": "utility",
+    "authority": "nv-nv-energy",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_nVEnergy_homeEnergySaver",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "minimum": 0,
+      "maximum": 400,
+      "representative": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "NV Energy provides a rebate of up to $400 for weather stripping, duct sealing, and insulation."
+    }
+  }
+]

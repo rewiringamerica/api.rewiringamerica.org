@@ -53,6 +53,7 @@ export const VALUE_MAPPINGS: { [index: string]: AliasMap } = {
     utility: ['Utility'],
     county: ['County'],
     city: ['City'],
+    other: ['Other'],
   },
   payment_methods: {
     rebate: ['Rebate (Post Purchase)'],
@@ -123,6 +124,8 @@ export const VALUE_MAPPINGS: { [index: string]: AliasMap } = {
     dollars_per_unit: ['Dollar Per Unit'],
     percent: ['Percent', 'Percent With a Cap'],
     dollar_amount: ['Dollar Amount', 'Dollar Amount With a Cap'],
+    other: ['Other'],
+    unknown: ['Unknown']
   },
   'amount.unit': {
     kilowatt: ['Kilowatt', 'kW'],
