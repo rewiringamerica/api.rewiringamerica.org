@@ -54,4 +54,13 @@ export const FILES: { [ident: string]: IncentiveFile } = {
     enHeader: 'Program Description (style guide)',
     runSpreadsheetHealthCheck: true,
   },
+  IL: {
+    filepath: 'data/IL/incentives.json',
+    sheetUrl:
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vS2FQ0bImM65Gk0KFmDIhXZXCExrh605eWGscPXLPY5Kz_rQWG8KtyNJo82vYZMngTlSCCHfkYLFsUt/pub?gid=995688950&single=true&output=csv',
+    headerRowNumber: 2,
+    idHeader: 'ID',
+    enHeader: 'Program Description (guideline)',
+    esHeader: 'Program Description (Spanish)',
+  },
 };

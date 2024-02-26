@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { AuthorityType } from './authorities';
 import {
   COLowIncomeAuthority,
+  ILIncomeAuthority,
   RILowIncomeAuthority,
 } from './low_income_thresholds';
 import { ALL_PROGRAMS } from './programs';
@@ -18,8 +19,9 @@ import { OwnerStatus } from './types/owner-status';
 
 export type LowIncomeAuthority =
   | 'default'
-  | RILowIncomeAuthority
-  | COLowIncomeAuthority;
+  | COLowIncomeAuthority
+  | ILIncomeAuthority
+  | RILowIncomeAuthority;
 
 // CollectedIncentive and its JSON schema represent the data that lives in raw
 // collected form, e.g. spreadsheets. It should match column-for-column to our
@@ -278,6 +280,22 @@ export const CT_INCENTIVES: StateIncentive[] = JSON.parse(
   fs.readFileSync('./data/CT/incentives.json', 'utf-8'),
 );
 
+export const IL_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
+  type: 'array',
+  items: {
+    type: 'object',
+    properties: {
+      ...incentivePropertySchema,
+    },
+    required: requiredProperties,
+    additionalProperties: false,
+  },
+} as const;
+
+export const IL_INCENTIVES: StateIncentive[] = JSON.parse(
+  fs.readFileSync('./data/IL/incentives.json', 'utf-8'),
+);
+
 export const NY_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
   type: 'array',
   items: {
@@ -346,6 +364,7 @@ export const STATE_INCENTIVES_BY_STATE: StateIncentivesMap = {
   AZ: AZ_INCENTIVES,
   CO: CO_INCENTIVES,
   CT: CT_INCENTIVES,
+  IL: IL_INCENTIVES,
   NY: NY_INCENTIVES,
   RI: RI_INCENTIVES,
   VA: VA_INCENTIVES,
