@@ -544,5 +544,51 @@
       "en": "Depending on your income, 100% of the cost to install a heat pump water heater, including up to $3,000 towards related electric service upgrades.",
       "es": "Según sus ingresos, el costo total de instalar un calentador de agua con bomba de calor. Incluye hasta $3,000 para mejoras eléctricas relacionadas."
     }
+  },
+  {
+    "id": "RI-41",
+    "authority_type": "utility",
+    "authority": "ri-pascoag-utility-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "ri_residentialEnergyAuditWeatherization",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 back on programmable wireless connection enabled thermostat.",
+      "es": "$100 dólares de devolución en termostato programable con conexión inalámbrica."
+    }
+  },
+  {
+    "id": "RI-42",
+    "authority_type": "utility",
+    "authority": "ri-pascoag-utility-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "ri_residentialEnergyAuditWeatherization",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25,
+      "maximum": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$25 back on programmable non-wireless thermostat.",
+      "es": "$25 dólares de devolución en termostato programable no inalámbrico."
+    }
   }
 ]
