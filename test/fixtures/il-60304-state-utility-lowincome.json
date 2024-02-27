@@ -1,0 +1,49 @@
+{
+  "is_under_80_ami": true,
+  "is_under_150_ami": true,
+  "is_over_150_ami": false,
+  "authorities": {
+    "il-state-of-illinois": {
+      "name": "State of Illinois"
+    }
+  },
+  "coverage": {
+    "state": "IL",
+    "utility": null
+  },
+  "location": {
+    "state": "IL",
+    "city": "Oak Park",
+    "county": "Cook"
+  },
+  "incentives": [
+    {
+      "payment_methods": [
+        "assistance_program"
+      ],
+      "authority_type": "state",
+      "authority": "il-state-of-illinois",
+      "program": "Home Weatherization",
+      "program_url": "https://dceo.illinois.gov/communityservices/homeweatherization/howtoapply.html",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 15000,
+        "maximum": 15000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "Up to $15,000 for weatherization projects, excluding windows, siding, roofing and plumbing. Income qualified. Limited yearly funding available."
+    }
+  ]
+}

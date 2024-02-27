@@ -1,14 +1,14 @@
 import Ajv from 'ajv';
 import {
   COLLECTED_DATA_SCHEMA,
-  CollectedFields,
+  CollectedIncentive,
 } from '../../src/data/state_incentives';
 import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
 
 const ajv = new Ajv({ allErrors: true, coerceTypes: 'array' });
 
 // TODO: consolidate with spreadsheet-standardizer.ts constant
-// and generate both directly from CollectedFields schema.
+// and generate both directly from CollectedIncentive schema.
 const ARRAY_FIELDS = ['data_urls', 'payment_methods', 'owner_status'];
 
 const validate = ajv
@@ -29,8 +29,8 @@ export function flatToNestedValidate(
   rows: any[],
   /* eslint-enable @typescript-eslint/no-explicit-any */
   arrayCols: string[] = ARRAY_FIELDS,
-): [CollectedFields[], Record<string, string | object>[]] {
-  const valids: CollectedFields[] = [];
+): [CollectedIncentive[], Record<string, string | object>[]] {
+  const valids: CollectedIncentive[] = [];
   const invalids: Record<string, string | object>[] = [];
   for (const json of flatToNested(rows, arrayCols)) {
     if (!validate(json)) {

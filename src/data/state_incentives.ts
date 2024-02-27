@@ -4,6 +4,7 @@ import _ from 'lodash';
 import { AuthorityType } from './authorities';
 import {
   COLowIncomeAuthority,
+  ILIncomeAuthority,
   RILowIncomeAuthority,
 } from './low_income_thresholds';
 import { ALL_PROGRAMS } from './programs';
@@ -18,14 +19,15 @@ import { OwnerStatus } from './types/owner-status';
 
 export type LowIncomeAuthority =
   | 'default'
-  | RILowIncomeAuthority
-  | COLowIncomeAuthority;
+  | COLowIncomeAuthority
+  | ILIncomeAuthority
+  | RILowIncomeAuthority;
 
-// CollectedFields and its JSON schema represent the data that lives in raw
+// CollectedIncentive and its JSON schema represent the data that lives in raw
 // collected form, e.g. spreadsheets. It should match column-for-column to our
 // spreadsheet format aside from nested fields like amount and column
 // renames/aliases.
-export type CollectedFields = {
+export type CollectedIncentive = {
   id: string;
   data_urls: string[];
   authority_type: AuthorityType;
@@ -161,7 +163,7 @@ const passThroughCollectedProperties = _.pick(
   PASS_THROUGH_FIELDS,
 );
 
-export type StateIncentive = Pick<CollectedFields, PassThroughField> &
+export type StateIncentive = Pick<CollectedIncentive, PassThroughField> &
   DerivedFields;
 
 export type StateIncentivesMap = {
@@ -209,7 +211,7 @@ const requiredProperties = [
   'short_description',
 ] as const;
 
-export const COLLECTED_DATA_SCHEMA: JSONSchemaType<CollectedFields> = {
+export const COLLECTED_DATA_SCHEMA: JSONSchemaType<CollectedIncentive> = {
   type: 'object',
   properties: {
     ...collectedIncentivePropertySchema,
@@ -276,6 +278,22 @@ export const CT_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
 
 export const CT_INCENTIVES: StateIncentive[] = JSON.parse(
   fs.readFileSync('./data/CT/incentives.json', 'utf-8'),
+);
+
+export const IL_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
+  type: 'array',
+  items: {
+    type: 'object',
+    properties: {
+      ...incentivePropertySchema,
+    },
+    required: requiredProperties,
+    additionalProperties: false,
+  },
+} as const;
+
+export const IL_INCENTIVES: StateIncentive[] = JSON.parse(
+  fs.readFileSync('./data/IL/incentives.json', 'utf-8'),
 );
 
 export const NY_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
@@ -346,6 +364,7 @@ export const STATE_INCENTIVES_BY_STATE: StateIncentivesMap = {
   AZ: AZ_INCENTIVES,
   CO: CO_INCENTIVES,
   CT: CT_INCENTIVES,
+  IL: IL_INCENTIVES,
   NY: NY_INCENTIVES,
   RI: RI_INCENTIVES,
   VA: VA_INCENTIVES,

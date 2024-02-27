@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { LowIncomeThresholdsMap } from '../../src/data/low_income_thresholds';
 import {
-  CollectedFields,
+  CollectedIncentive,
   FIELD_ORDER,
   LowIncomeAuthority,
   PASS_THROUGH_FIELDS,
@@ -106,10 +106,10 @@ export class SpreadsheetStandardizer {
   // That record may still fail ajv schema validation later.
   refineCollectedData(
     state: string,
-    record: CollectedFields,
+    record: CollectedIncentive,
   ): Partial<StateIncentive> {
     const authorityName = createAuthorityName(state, record.authority_name);
-    // Pass-through fields are those in CollectedFields that appear in the
+    // Pass-through fields are those in CollectedIncentive that appear in the
     // refined StateIncentive verbatim. Everything else needs some processing.
     const output: Partial<StateIncentive> = _.pick(record, PASS_THROUGH_FIELDS);
     output.authority = authorityName;
@@ -121,6 +121,9 @@ export class SpreadsheetStandardizer {
     output.short_description = {
       en: standardizeDescription(record.short_description.en),
     };
+    if (record.short_description.es) {
+      output.short_description.es = record.short_description.es;
+    }
     if (record.program_start_raw && record.program_start_raw !== '') {
       output.start_date = +parseDateToYear(record.program_start_raw);
     }
@@ -196,7 +199,7 @@ function standardizeDescription(desc: string): string {
   return desc;
 }
 
-function isPlausibleLowIncomeRow(record: CollectedFields) {
+function isPlausibleLowIncomeRow(record: CollectedIncentive) {
   if (record.income_restrictions && record.income_restrictions !== '') {
     return true;
   }
