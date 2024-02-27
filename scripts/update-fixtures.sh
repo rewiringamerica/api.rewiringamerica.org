@@ -111,7 +111,6 @@ curl \
 &tax_filing=joint\
 &household_size=1\
 &authority_types=utility\
-&authority_types=other\
 &utility=nv-nv-energy" \
   | jq . > test/fixtures/v1-nv-89108-state-utility-lowincome.json
 

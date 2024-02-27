@@ -180,14 +180,6 @@ export const ALL_PROGRAMS = [
   'nv_raftRuralElectricCooperative_energyEfficiencyRebate',
   // Plumas-Sierra Rural Electric Cooperative
   'nv_plumas-SierraRuralElectricCooperative_rebates',
-  // CSA Reno
-  'nv_cSAReno_weatherizationAssistanceProgram',
-  // Rural Nevada Development Corporation
-  'nv_ruralNevadaDevelopmentCorporation_weatherizationAssistanceProgram',
-  // Nevada Rural Housing
-  'nv_nevadaRuralHousing_weatherizationAssistanceProgram',
-  // HELP of Southern Nevada
-  'nv_hELPOfSouthernNevada_weatherizationAssistanceProgram',
 
   // NY
   // State or State + Utility:

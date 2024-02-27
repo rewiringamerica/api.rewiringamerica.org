@@ -350,7 +350,7 @@
     "item": "heat_pump_clothes_dryer",
     "program": "nv_nVEnergy_qualifiedApplianceReplacementProgram",
     "amount": {
-      "type": "other",
+      "type": "percent",
       "number": 1
     },
     "owner_status": [
@@ -545,8 +545,9 @@
     "item": "smart_thermostat",
     "program": "nv_nVEnergy_residentialSmartThermostatProgram",
     "amount": {
-      "type": "other",
-      "number": 4
+      "type": "percent",
+      "number": 1,
+      "maximum": 4
     },
     "owner_status": [
       "homeowner"
@@ -1214,47 +1215,6 @@
     "bonus_available": true
   },
   {
-    "id": "NV-57",
-    "authority_type": "utility",
-    "authority": "nv-raft-rural-electric-cooperative",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "weatherization",
-    "program": "nv_raftRuralElectricCooperative_energyEfficiencyRebate",
-    "amount": {
-      "type": "unknown",
-      "number": 0
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Incentive to improve the insulation in your existing single family, multi-family, or manufactured home with primary electric heat."
-    },
-    "bonus_available": true
-  },
-  {
-    "id": "NV-58",
-    "authority_type": "utility",
-    "authority": "nv-raft-rural-electric-cooperative",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "nv_raftRuralElectricCooperative_energyEfficiencyRebate",
-    "amount": {
-      "type": "unknown",
-      "number": 0
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Raft River Rural Electric offers an incentive for qualified heat pumps."
-    }
-  },
-  {
     "id": "NV-59",
     "authority_type": "utility",
     "authority": "nv-plumas-sierra-rural-electric-cooperative",
@@ -1597,94 +1557,6 @@
       "en": "Up to $600 per ton rebate for the purchase and installation of a new ENERGY STAR® Certified Ground Source Heat Pump."
     },
     "bonus_available": true
-  },
-  {
-    "id": "NV-74",
-    "authority_type": "other",
-    "authority": "nv-csa-reno",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "item": "weatherization",
-    "program": "nv_cSAReno_weatherizationAssistanceProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 12666
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for residents below 200% of the federal poverty line."
-    },
-    "low_income": "default"
-  },
-  {
-    "id": "NV-75",
-    "authority_type": "other",
-    "authority": "nv-rural-nevada-development-corporation",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "item": "weatherization",
-    "program": "nv_ruralNevadaDevelopmentCorporation_weatherizationAssistanceProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 12666
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for residents below 200% of the federal poverty line."
-    },
-    "low_income": "default"
-  },
-  {
-    "id": "NV-76",
-    "authority_type": "other",
-    "authority": "nv-nevada-rural-housing",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "item": "weatherization",
-    "program": "nv_nevadaRuralHousing_weatherizationAssistanceProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 12666
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for residents below 200% of the federal poverty line."
-    },
-    "low_income": "default"
-  },
-  {
-    "id": "NV-77",
-    "authority_type": "other",
-    "authority": "nv-help-of-southern-nevada",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "item": "weatherization",
-    "program": "nv_hELPOfSouthernNevada_weatherizationAssistanceProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 12666
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for residents below 200% of the federal poverty line."
-    },
-    "low_income": "default"
   },
   {
     "id": "NV-78",

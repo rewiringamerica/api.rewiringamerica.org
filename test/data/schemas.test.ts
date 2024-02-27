@@ -126,10 +126,6 @@ function isIncentiveAmountValid<T extends StateIncentive>(
       return amount.number >= 0 && amount.number <= 1 && !amount.unit;
     case 'dollars_per_unit':
       return amount.unit !== undefined;
-    case 'other':
-      return true;
-    case 'unknown':
-      return true;
     default:
       return false;
   }

@@ -202,7 +202,7 @@ test('NV low income response with state and utility filtering is valid and corre
       household_size: 1,
       household_income: 40000,
       tax_filing: 'joint',
-      authority_types: ['utility', 'other'],
+      authority_types: ['utility'],
       utility: 'nv-nv-energy',
       // TODO: Remove when NV is fully launched.
       include_beta_states: true,
