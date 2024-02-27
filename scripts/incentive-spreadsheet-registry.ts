@@ -39,7 +39,7 @@ export const FILES: { [ident: string]: IncentiveFile } = {
   RI: {
     filepath: 'data/RI/incentives.json',
     sheetUrl:
-      'https://docs.google.com/spreadsheets/d/e/2PACX-1vSoBQdIvYNb9fRkFggllmLZmz9nwL6SYxM7cdsiTPDU90C0HXtFh2r1qlYKdfbTzzxiPZ0o4NpOva__/pub?gid=30198531&single=true&output=csv',
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vSoBQdIvYNb9fRkFggllmLZmz9nwL6SYxM7cdsiTPDU90C0HXtFh2r1qlYKdfbTzzxiPZ0o4NpOva__/pub?gid=533322917&single=true&output=csv',
     headerRowNumber: 2,
     idHeader: 'ID',
     enHeader: 'Program Description (style guide)',

@@ -170,23 +170,38 @@ export const ALL_PROGRAMS = [
   'ny_allElectricHomesProgram',
 
   // RI
-  // State: OER, Commerce RI, RI DHS
-  'ri_drive',
-  'ri_drive_plus',
-  'ri_smallScaleSolar',
-  'ri_cleanHeat',
-  'ri_dhsWeatherizationAssistanceProgram',
-  // Pascoag
-  'ri_hvacAndWaterHeaterIncentives',
-  'ri_residentialEnergyStarOfferings',
-  'ri_residentialEnergyAuditWeatherization',
+  // PUD
+  'ri_pUD_hVAC&WaterHeaterIncentives',
+  'ri_pUD_residentialEnergyStarOfferings',
+  'ri_pUD_residentialEnergyAudit-WeatherizationIncentives',
   // Block Island
-  'ri_blockIslandEnergyEfficiency',
-  // Rhode Island Energy
-  'ri_energyStarClothesDryer',
-  'ri_residentialHeatPumpWaterHeater',
-  'ri_electricHeatingAndCoolingRebates',
-  'ri_incomeEligibleEnergySavings',
+  'ri_blockIsland_blockIslandUtilityDistrictEnergyEfficiencyProgram',
+  // RI OER
+  'ri_rIOER_dRIVE',
+  'ri_rIOER_dRIVE+',
+  'ri_rIOER_erikaNiedowskiMemorialElectricBicycleRebateProgram',
+  'ri_rIOER_netMetering',
+  'ri_rIOER_cleanHeatRhodeIslandResidentialIncentive',
+  'ri_rIOER_cleanHeatRhodeIslandResidentialIncome-EligibleIncentive',
+  // RI DHS
+  'ri_rIDHS_weatherizationAssistanceProgram',
+  // RI Energy
+  'ri_rIEnergy_rhodeIslandENERGYSTAR®CertifiedDehumidifierRebate',
+  'ri_rIEnergy_rhodeIslandENERGYSTAR®CertifiedRoomAirCleaner/PurifierRebate',
+  'ri_rIEnergy_rhodeIslandENERGYSTAR®CertifiedRoomAirConditioners',
+  'ri_rIEnergy_rhodeIslandENERGYSTAR®CertifiedElectricClothesDryerRebate',
+  'ri_rIEnergy_residentialHeatPumpWaterHeaterRebate',
+  'ri_rIEnergy_heatPumpIncentives',
+  'ri_rIEnergy_applianceRecyclingProgram',
+  'ri_rIEnergy_homeEnergyUpgradeFinancing',
+  'ri_rIEnergy_incomeEligibleEnergySavingsProgram',
+  'ri_rIEnergy_homeEnergyAssesments',
+  'ri_rIEnergy_residentialNewConstruction&ZeroEnergyHomes',
+  'ri_rIEnergy_electricHeatingAndCoolingRebates',
+  // Commerce RI
+  'ri_commerceRI_smallScaleSolarProgram',
+  // 
+  'ri__n/A',
 
   //  VA
   // Appalachian Power

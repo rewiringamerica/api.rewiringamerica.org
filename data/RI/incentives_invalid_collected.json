@@ -1,0 +1,2727 @@
+[
+  {
+    "id": "RI-1",
+    "data_urls": [
+      "https://pud-ri.org/conservation/download-rebate-forms"
+    ],
+    "authority_type": "utility",
+    "authority_name": "PUD",
+    "program_title": "HVAC & Water Heater Incentives",
+    "program_url": "https://pud-ri.org/conservation/download-rebate-forms",
+    "item": "heat_pump_air_conditioner_heater",
+    "short_description": {
+      "en": "Up to $700 applied to your PUD account for purchase and installation of qualifying heat pumps and mini-splits. ",
+      "es": "Hasta $700 aplicado a su cuenta de PUD para la compra e instalación de bombas de calor y mini-splits calificados."
+    },
+    "payment_methods": [
+      "account_credit"
+    ],
+    "rebate_value": "$350 / ton (HP HVAC)",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 350,
+      "unit": "ton",
+      "maximum": 700,
+      "representative": 700
+    },
+    "equipment_standards_restrictions": "SEER >= 15 (HP HVAC)\nHSPF >= 9 (Central HP, Ducted MSHP)\nHSPF >10 (Ductless MSHP)",
+    "owner_status": [
+      "homeowner"
+    ],
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      }
+    ]
+  },
+  {
+    "id": "RI-2",
+    "data_urls": [
+      "https://pud-ri.org/conservation/download-rebate-forms"
+    ],
+    "authority_type": "utility",
+    "authority_name": "PUD",
+    "program_title": "HVAC & Water Heater Incentives",
+    "program_url": "https://pud-ri.org/conservation/download-rebate-forms",
+    "item": "heat_pump_water_heater",
+    "short_description": {
+      "en": "Up to $450 applied to your PUD account for purchase and installation of a qualifying heat pump water heater, depending on the size of the heater. ",
+      "es": "Hasta $450 aplicado a su cuenta de PUD para la compra e instalación de un calentador de agua con bomba de calor calificado, según el tamaño del calentador."
+    },
+    "payment_methods": [
+      "account_credit"
+    ],
+    "rebate_value": "$450 (size <= 55 gal)\n$150 (size > 55 gal)",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 450,
+      "minimum": 150,
+      "maximum": 450
+    },
+    "equipment_standards_restrictions": "UEF >= 3.2",
+    "owner_status": [
+      "homeowner"
+    ],
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      }
+    ]
+  },
+  {
+    "id": "RI-3",
+    "data_urls": [
+      "https://pud-ri.org/conservation/download-rebate-forms"
+    ],
+    "authority_type": "utility",
+    "authority_name": "PUD",
+    "program_title": "Residential Energy Star Offerings",
+    "program_url": "https://pud-ri.org/conservation/download-rebate-forms",
+    "item": "heat_pump_clothes_dryer",
+    "short_description": {
+      "en": "$75 applied to your PUD account for qualifying heat pump clothes dryers. ",
+      "es": "$75 aplicado a su cuenta de PUD para las secadoras de ropa con bomba de calor calificadas."
+    },
+    "payment_methods": [
+      "account_credit"
+    ],
+    "rebate_value": "Clothes Dryer - $75",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      }
+    ]
+  },
+  {
+    "id": "RI-4",
+    "data_urls": [
+      "https://pud-ri.org/conservation/download-rebate-forms"
+    ],
+    "authority_type": "utility",
+    "authority_name": "PUD",
+    "program_title": "Residential Energy Audit-Weatherization Incentives",
+    "program_url": "https://pud-ri.org/conservation/download-rebate-forms",
+    "item": "weatherization",
+    "short_description": {
+      "en": "Up to $2,250 back on insulation and air sealing your home. Must be recommended in a home energy audit and installed by a BPI certified contractor.",
+      "es": "Reembolsos hasta $2,250 por el aislamiento y sellado de aire. Debe ser recomendado en una auditoría energética e instalado por un contratista certificado."
+    },
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "Incentives of 100% of cost, up to $2250 incentive for insulation and air sealing and $100 incentive for a programmable wireless thermostat or $25 for a programmable non-wireless thermostat.",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 2250,
+      "representative": 2250
+    },
+    "contractor_restrictions": "Requires Home Energy Audit through ENE. Must use BPI certified weatherization contractor.",
+    "owner_status": [
+      "homeowner"
+    ],
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-5",
+    "data_urls": [
+      "https://blockislandpowercompany.com/efficiency-program/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Block Island",
+    "program_title": "Block Island Utility District Energy Efficiency Program",
+    "program_url": "https://blockislandpowercompany.com/efficiency-program/",
+    "item": "heat_pump_air_conditioner_heater",
+    "short_description": {
+      "en": "Up to $750 back after purchase and installation of qualifying heat pumps and mini-splits, depending on size.",
+      "es": "Reembolsos hasta $750 después de la compra e instalación de bombas de calor y mini-splits calificados, según el tamaño."
+    },
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "Up to $250 / ton for HP HVAC",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton",
+      "maximum": 750,
+      "representative": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "Customers must have received a home energy assessment to be eligible for rebates.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-6",
+    "data_urls": [
+      "https://blockislandpowercompany.com/efficiency-program/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Block Island",
+    "program_title": "Block Island Utility District Energy Efficiency Program",
+    "program_url": "https://blockislandpowercompany.com/efficiency-program/",
+    "item": "heat_pump_water_heater",
+    "short_description": {
+      "en": "Up to $300 back after purchase and installation of qualifying heat pump water heaters, depending on the size of the heater.",
+      "es": "Reembolsos hasta $300 después de la compra e instalación de calentadores de agua con bomba de calor calificados, según el tamaño del calentador."
+    },
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "Up to $300 off a qualifying heat pump water heater.\n$300 (size <= 55 gal)\n$150 (size > 55 gal)",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "minimum": 150,
+      "maximum": 300
+    },
+    "equipment_standards_restrictions": "UEF >= 2.0",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "Customers must have received a home energy assessment to be eligible for rebates.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-7",
+    "data_urls": [
+      "https://blockislandpowercompany.com/efficiency-program/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Block Island",
+    "program_title": "Block Island Utility District Energy Efficiency Program",
+    "program_url": "https://blockislandpowercompany.com/efficiency-program/",
+    "item": "weatherization",
+    "short_description": {
+      "en": "100% of weatherization costs, including air/duct sealing and insulation, up to $2,000.",
+      "es": "El total de los costos de la impermeabilización, hasta $2000, incluyendo el sellado de conductos de aire y el aislamiento."
+    },
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "100% of costs up to $2,000 in total weatherization costs\n\n$250 Bonus if HP heating system also installed with weatherization improvements",
+    "amount": {
+      "type": "dollar_amount",
+      "maximum": 2000
+    },
+    "contractor_restrictions": "Requires Home Energy Audit through ENE",
+    "owner_status": [
+      "homeowner"
+    ],
+    "bonus_description": "$250 Bonus if HP heating system also installed with weatherization improvements",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      },
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      }
+    ]
+  },
+  {
+    "id": "RI-8",
+    "data_urls": [
+      "https://blockislandpowercompany.com/efficiency-program/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Block Island",
+    "program_title": "Block Island Utility District Energy Efficiency Program",
+    "program_url": "https://blockislandpowercompany.com/efficiency-program/",
+    "item": "smart_thermostat",
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "$25 rebate for a programmable thermostat",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "short_description"
+        },
+        "message": "must have required property 'short_description'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-9",
+    "data_urls": [
+      "https://drive.ri.gov/ev-programs/drive-ev"
+    ],
+    "authority_type": "state",
+    "authority_name": "RI OER",
+    "program_title": "DRIVE",
+    "program_url": "https://drive.ri.gov/ev-programs/drive-ev",
+    "item": "new_electric_vehicle",
+    "short_description": {
+      "en": "Up to $1,500 back after purchase or lease of a new EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served. ",
+      "es": "Reembolsos hasta $1,500 por la compra o arrendamiento de un vehículo eléctrico nuevo de un concesionario con licencia de RI o calificado de otro estado."
+    },
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "$1,500.00 rebate for new Battery Electric Vehicles (BEVs) or new Fuel-Cell Electric Vehicles (FCEVs)\n$1,000.00 rebate for NEW Plug-in Hybrid Electric Vehicles (PHEVs)\n\nAdditional rebates available through the DRIVE+ low income program",
+    "amount": {
+      "type": "dollar_amount",
+      "minimum": 1000,
+      "maximum": 1500
+    },
+    "income_restrictions": "Additional rebates available through the DRIVE+ low income program",
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "other_restrictions": "New purchase price <= $60k\n\nFor leases, term must be >= 24mo\n\n-Rebate must be claimed within 120 days of purchase / lease.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      },
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      }
+    ]
+  },
+  {
+    "id": "RI-10",
+    "data_urls": [
+      "https://drive.ri.gov/ev-programs/drive-ev"
+    ],
+    "authority_type": "state",
+    "authority_name": "RI OER",
+    "program_title": "DRIVE",
+    "program_url": "https://drive.ri.gov/ev-programs/drive-ev",
+    "item": "used_electric_vehicle",
+    "short_description": {
+      "en": "Up to $1,000 back after purchase or lease of a used EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served.",
+      "es": "Reembolsos hasta $1,000 por la compra o arrendamiento de un vehículo eléctrico usado de un concesionario con licencia de RI o calificado de otro estado. "
+    },
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "$1,000 for used Battery Electric Vehicles (BEVs) or used Fuel-Cell Electric Vehicles (FCEVs)\n$750.00 for used Plug-in Hybrid Electric Vehicles (PHEVs).\n\nAdditional rebates available through the DRIVE+ low income program",
+    "amount": {
+      "type": "dollar_amount",
+      "minimum": 750,
+      "maximum": 1000
+    },
+    "income_restrictions": "Additional rebates available through the DRIVE+ low income program",
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "other_restrictions": "Used purchase price <= $40k\n\nFor leases, term must be >= 24mo\n\n-Rebate must be claimed within 120 days of purchase / lease.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      },
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      }
+    ]
+  },
+  {
+    "id": "RI-11",
+    "data_urls": [
+      "https://drive.ri.gov/ev-programs/drive-plus"
+    ],
+    "authority_type": "state",
+    "authority_name": "RI OER",
+    "program_title": "DRIVE+",
+    "program_url": "https://drive.ri.gov/ev-programs/drive-plus",
+    "item": "new_electric_vehicle",
+    "short_description": {
+      "en": "Additional $1,500 back after purchase or lease of a new EV from a licensed Rhode Island or qualified out-of-state dealership for LIHEAP-qualifiers. ",
+      "es": "Un reembolso adicional de $1,500 por la compra o arrendamiento de un vehículo eléctrico nuevo para los calificadores de LIHEAP."
+    },
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "$1,500 ($3,000 total) rebate for new Battery Electric Vehicles (BEVs) or new Fuel-Cell Electric Vehicles (FCEVs)\n$1,000 ($2,000 total) rebate for new Plug-in Hybrid Electric Vehicles (PHEVs)\n\nAll DRIVE+ rebates can be combined with DRIVE rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "minimum": 1000,
+      "maximum": 1500
+    },
+    "income_restrictions": "Low income only (LIHEAP/WAP definition)",
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "other_restrictions": "New purchase price <= $60k\n\nFor leases, term must be >= 24mo\n\n- Rebate must be claimed within 120 days of purchase / lease.",
+    "stacking_details": "Rebate can be stacked with the regular DRIVE program rebates (RI-9)",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      },
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      }
+    ]
+  },
+  {
+    "id": "RI-12",
+    "data_urls": [
+      "https://drive.ri.gov/ev-programs/drive-plus"
+    ],
+    "authority_type": "state",
+    "authority_name": "RI OER",
+    "program_title": "DRIVE+",
+    "program_url": "https://drive.ri.gov/ev-programs/drive-plus",
+    "item": "used_electric_vehicle",
+    "short_description": {
+      "en": "Additional $1,500 towards a used EV from a licensed Rhode Island or qualified out-of-state dealership for LIHEAP-qualifiers. First-come, first-served.",
+      "es": "Un reembolso adicional de $1,500 por un vehículo eléctrico usado para los calificadores de LIHEAP. Por orden de llegada."
+    },
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "$1,500 ($2,500 total) for used Battery Electric Vehicles (BEVs) or used Fuel-Cell Electric Vehicles (FCEVs)\n$750.00 ($1,500 total) or used Plug-in Hybrid Electric Vehicles (PHEVs).\n\nAll DRIVE+ rebates can be combined with DRIVE rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "minimum": 750,
+      "maximum": 1500
+    },
+    "income_restrictions": "Low income only (LIHEAP/WAP definition)",
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "other_restrictions": "Used purchase price <= $40k\n\nFor leases, term must be >= 24mo\n\n-Rebate must be claimed within 120 days of purchase / lease.",
+    "stacking_details": "Rebate can be stacked with the regular DRIVE program rebates (RI-10)",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      },
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      }
+    ]
+  },
+  {
+    "id": "RI-13",
+    "data_urls": [
+      "https://drive.ri.gov/erika-niedowski-memorial-electric-bicycle-rebate-program"
+    ],
+    "authority_type": "state",
+    "authority_name": "RI OER",
+    "program_title": "Erika Niedowski Memorial Electric Bicycle Rebate Program",
+    "program_url": "https://drive.ri.gov/erika-niedowski-memorial-electric-bicycle-rebate-program",
+    "item": "ebike",
+    "short_description": {
+      "en": "30% up to $350 back on the final purchase of an e-bike or e-cargo bike.",
+      "es": "Devolución del 30% hasta $350 dólares en la compra final de una bicicleta e-bike o una e-cargo bike."
+    },
+    "program_start_raw": "10/24/2022",
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "30% up to $350 standard rebate",
+    "amount": {
+      "type": "percent",
+      "number": "0.3 for standard rebate",
+      "maximum": 350
+    },
+    "income_restrictions": "See RI-43",
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "other_restrictions": "- Max 2 rebates per household\n- Apply within 180 days (6 months) of the date listed on the e-bike sales receipt.\n- E-Bikes must be purchased from a retail store physically located in Rhode Island. Online purchases are only valid if the e-bike is purchased from an online retailer with a direct association or prior agreement with a local Rhode Island store.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      },
+      {
+        "instancePath": "/amount/number",
+        "schemaPath": "#/properties/amount/properties/number/type",
+        "keyword": "type",
+        "params": {
+          "type": "number"
+        },
+        "message": "must be number"
+      }
+    ]
+  },
+  {
+    "id": "RI-14",
+    "data_urls": [
+      "https://dhs.ri.gov/programs-and-services/energy-assistance-programs/weatherization-assistance-program-wap"
+    ],
+    "authority_type": "state",
+    "authority_name": "RI DHS",
+    "program_title": "Weatherization Assistance Program",
+    "program_url": "https://dhs.ri.gov/programs-and-services/energy-assistance-programs/weatherization-assistance-program-wap",
+    "item": "weatherization",
+    "short_description": {
+      "en": "Weatherization Assistance Program reduces energy costs for households that meet LIHEAP criteria. If you qualify, there's no cost to you.",
+      "es": "Este programa tiene el objetivo de reducir los costes de calefacción y refrigeración para los dueños de hogares y arrendatarios que califican para LIHEAP. "
+    },
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "income_restrictions": "Low-income only (LIHEAP/WAP definition)",
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "rebate_value"
+        },
+        "message": "must have required property 'rebate_value'"
+      }
+    ]
+  },
+  {
+    "id": "RI-15",
+    "data_urls": [
+      "https://www.rienergy.com/media/ri-energy/pdfs/ways-to-save/appliances/dehumidifier_rebateform_rie6441.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "RI Energy",
+    "program_title": "Rhode Island ENERGY STAR®  Certified Dehumidifier Rebate",
+    "program_url": "https://www.rienergy.com/media/ri-energy/pdfs/ways-to-save/appliances/dehumidifier_rebateform_rie6441.pdf",
+    "item": "other",
+    "item_if_selected_other": "Electric Dehumidifier",
+    "program_status": "paused",
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "$30",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 30
+    },
+    "equipment_standards_restrictions": "ENERGY STAR Certified",
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "other_restrictions": "Max 2 rebates per resident per calendar year",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "short_description"
+        },
+        "message": "must have required property 'short_description'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-16",
+    "data_urls": [
+      "https://www.rienergy.com/media/ri-energy/pdfs/ways-to-save/appliances/aircleaner_rebateform_rie5553.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "RI Energy",
+    "program_title": "Rhode Island ENERGY STAR® Certified Room Air Cleaner/Purifier Rebate",
+    "program_url": "https://www.rienergy.com/media/ri-energy/pdfs/ways-to-save/appliances/aircleaner_rebateform_rie5553.pdf",
+    "item": "other",
+    "item_if_selected_other": "Electric Air Purifier",
+    "program_status": "active",
+    "program_start_raw": "1/1/24",
+    "program_end_raw": "12/31/24",
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "$40",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40
+    },
+    "equipment_standards_restrictions": "ENERGY STAR Certified",
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "other_restrictions": "Max 2 rebates per resident per calendar year",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "short_description"
+        },
+        "message": "must have required property 'short_description'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-17",
+    "data_urls": [
+      "https://www.rienergy.com/media/ri-energy/pdfs/ways-to-save/appliances/roomairconditioner_rebateform_rie6698.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "RI Energy",
+    "program_title": "Rhode Island ENERGY STAR® Certified Room Air Conditioners",
+    "program_url": "https://www.rienergy.com/media/ri-energy/pdfs/ways-to-save/appliances/roomairconditioner_rebateform_rie6698.pdf",
+    "item": "other",
+    "item_if_selected_other": "Electric Room AC",
+    "program_status": "paused",
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "$40",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40
+    },
+    "equipment_standards_restrictions": "ENERGY STAR Certified",
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "other_restrictions": "Max 2 rebates per resident per calendar year",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "short_description"
+        },
+        "message": "must have required property 'short_description'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-18",
+    "data_urls": [
+      "https://energy.ri.gov/renewable-energy/wind/net-metering"
+    ],
+    "authority_type": "utility",
+    "authority_name": "RI OER",
+    "program_title": "Net Metering",
+    "program_url": "https://energy.ri.gov/renewable-energy/wind/net-metering",
+    "item": "Solar, Wind, Biomass, Hydro",
+    "rebate_value": "Up to 125% of consumption per billing period",
+    "owner_status": [
+      "homeowner"
+    ],
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "short_description"
+        },
+        "message": "must have required property 'short_description'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "amount"
+        },
+        "message": "must have required property 'amount'"
+      },
+      {
+        "instancePath": "/item",
+        "schemaPath": "#/properties/item/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "battery_storage_installation",
+            "ebike",
+            "efficiency_rebates",
+            "electric_outdoor_equipment",
+            "electric_panel",
+            "electric_stove",
+            "electric_thermal_storage_and_slab",
+            "electric_vehicle_charger",
+            "electric_wiring",
+            "evaporative_cooler",
+            "geothermal_heating_installation",
+            "heat_pump_air_conditioner_heater",
+            "heat_pump_clothes_dryer",
+            "heat_pump_water_heater",
+            "new_electric_vehicle",
+            "non_heat_pump_clothes_dryer",
+            "non_heat_pump_water_heater",
+            "other",
+            "rooftop_solar_installation",
+            "smart_thermostat",
+            "used_electric_vehicle",
+            "weatherization",
+            "whole_house_fan"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-19",
+    "data_urls": [
+      "https://www.rienergy.com/media/ri-energy/pdfs/ways-to-save/appliances/electricdryer_rebateform_rie6935.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "RI Energy",
+    "program_title": "Rhode Island ENERGY STAR®  Certified Electric Clothes Dryer Rebate",
+    "program_url": "https://www.rienergy.com/media/ri-energy/pdfs/ways-to-save/appliances/electricdryer_rebateform_rie6935.pdf",
+    "item": "heat_pump_clothes_dryer",
+    "short_description": {
+      "en": "$50 back on ENERGY STAR® certified electric clothes dryer purchased in 2023. Rebate requests must be completed within 90 days of purchase.",
+      "es": "$50 de reembolso en secadoras de ropa eléctricas certificadas por ENERGY STAR y compradas en 2023. Solicita dentro de los 90 días posteriores a la compra."
+    },
+    "program_status": "paused",
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "$50",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "equipment_standards_restrictions": "ENERGY STAR Certified",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "Max 2 rebates per resident per calendar year",
+    "errors": [
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-20",
+    "data_urls": [
+      "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/rie-2680081-rebate-form-hpwh.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "RI Energy",
+    "program_title": "Residential heat pump water heater rebate",
+    "program_url": "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/rie-2680081-rebate-form-hpwh.pdf",
+    "item": "heat_pump_water_heater",
+    "short_description": {
+      "en": "Up to $600 back on a qualifying electric heat pump water heater when replacing an existing electric water heater or installing in a new home.",
+      "es": "Reembolso hasta $600 cuando reemplaza un calentador de agua eléctrico con calentador de agua con bomba de calor calificado o al instalarlo en una casa nueva."
+    },
+    "program_status": "active",
+    "program_start_raw": "1/1/24",
+    "program_end_raw": "12/31/24",
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "Up to $600",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "minimum": 150,
+      "maximum": 600
+    },
+    "equipment_standards_restrictions": "$600 <= 55 gallons, UEF >= 2.0\n$150 > 55 gallons, UEF >= 2.7",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "- Limit three (3) rebates per RI residential electric account.\n- Rebates are not available for replacement of oil, propane, or gas water heating units. \n- The unit must be installed by a licensed plumber \n- Certain equipment models are eligible, and there are restrictions about where the unit can be installed to ensure that it operates at its maximum efficiency. \n",
+    "errors": [
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-21",
+    "data_urls": [
+      "https://energy.ri.gov/sites/g/files/xkgbur741/files/2023-03/REF-Small-Scale-Flyer-1.18.22.pdf"
+    ],
+    "authority_name": "Commerce RI",
+    "program_title": "Small Scale Solar Program",
+    "program_url": "https://energy.ri.gov/sites/g/files/xkgbur741/files/2023-03/REF-Small-Scale-Flyer-1.18.22.pdf",
+    "item": "rooftop_solar_installation",
+    "short_description": {
+      "en": "10-25% back on installation costs up to $5,000. Includes electricity-generating solar panels and solar domestic hot water technologies. ",
+      "es": "10-25% de reembolso en costos de instalación hasta $5,000. Incluye paneles solares que generan electricidad y sistemas solares térmicos de agua caliente."
+    },
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "$0.65/W up to $5,000\n$2,000 Bonus if installed with storage",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 650,
+      "unit": "kilowatt",
+      "maximum": 5000,
+      "representative": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "financing_details": "https://commerceri.com/financing/renewable-energy-fund/",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "authority_type"
+        },
+        "message": "must have required property 'authority_type'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-22",
+    "data_urls": [
+      "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/ri_electric_heating-cooling_form.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "RI Energy",
+    "program_title": "Heat Pump Incentives",
+    "program_url": "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Heat-Pump-Incentives",
+    "item": "Air Source Heat Pump, Smart Thermostat",
+    "short_description": {
+      "en": "$150+ back on installation of heat pump, depending on size. Additional funding available to replace electric baseboard resistance heating."
+    },
+    "program_status": "active",
+    "program_start_raw": "1/1/24",
+    "program_end_raw": "12/31/24",
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "HVAC: Up to $350 / ton\nBonus: Up to $1250 / ton for homes with electric baseboard heating\n$75 rebate Energy Star Smart Thermostat",
+    "equipment_standards_restrictions": "Central AC\nAHRI: SEER ≥ 16, EER ≥ 13\nOR AHRI: SEER2 ≥ 15.2, EER2 ≥ 12.0\n\nCentral Heat Pump\nAHRI: SEER ≥ 15, HSPF ≥ 9;\nOR AHRI: SEER2 > 14.3, HSPF2 > 7.7 or ENERGY STAR V6.1\n\nMini-Split Ducted / Mixed\nAHRI: SEER ≥ 15, HSPF ≥ 9\nOR AHRI: SEER2 > 14.3, HSPF2 > 7.7 or ENERGY STAR V6.1\n\nMini-Split Non-Ducted\nNEEP: SEER ≥ 15, HSPF ≥ 10;\nOR NEEP6\n: SEER2 > 15, HSPF2 > 8.5;\nAND COP at 5°F > 1.75 or ENERGY STAR V6.1",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "Max 4 rebates for HVAC, 2 rebates for thermostat\n\nHome energy audit required for bonus",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "amount"
+        },
+        "message": "must have required property 'amount'"
+      },
+      {
+        "instancePath": "/item",
+        "schemaPath": "#/properties/item/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "battery_storage_installation",
+            "ebike",
+            "efficiency_rebates",
+            "electric_outdoor_equipment",
+            "electric_panel",
+            "electric_stove",
+            "electric_thermal_storage_and_slab",
+            "electric_vehicle_charger",
+            "electric_wiring",
+            "evaporative_cooler",
+            "geothermal_heating_installation",
+            "heat_pump_air_conditioner_heater",
+            "heat_pump_clothes_dryer",
+            "heat_pump_water_heater",
+            "new_electric_vehicle",
+            "non_heat_pump_clothes_dryer",
+            "non_heat_pump_water_heater",
+            "other",
+            "rooftop_solar_installation",
+            "smart_thermostat",
+            "used_electric_vehicle",
+            "weatherization",
+            "whole_house_fan"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-23",
+    "data_urls": [
+      "N/A"
+    ],
+    "program_title": "N/A",
+    "program_url": "N/A",
+    "item": "N/A",
+    "short_description": {
+      "en": "N/A",
+      "es": "N/A"
+    },
+    "payment_methods": [
+      "N/A"
+    ],
+    "rebate_value": "N/A",
+    "equipment_standards_restrictions": "N/A",
+    "income_restrictions": "N/A",
+    "other_restrictions": "N/A",
+    "stacking_details": "N/A",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "authority_type"
+        },
+        "message": "must have required property 'authority_type'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "authority_name"
+        },
+        "message": "must have required property 'authority_name'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "amount"
+        },
+        "message": "must have required property 'amount'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/item",
+        "schemaPath": "#/properties/item/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "battery_storage_installation",
+            "ebike",
+            "efficiency_rebates",
+            "electric_outdoor_equipment",
+            "electric_panel",
+            "electric_stove",
+            "electric_thermal_storage_and_slab",
+            "electric_vehicle_charger",
+            "electric_wiring",
+            "evaporative_cooler",
+            "geothermal_heating_installation",
+            "heat_pump_air_conditioner_heater",
+            "heat_pump_clothes_dryer",
+            "heat_pump_water_heater",
+            "new_electric_vehicle",
+            "non_heat_pump_clothes_dryer",
+            "non_heat_pump_water_heater",
+            "other",
+            "rooftop_solar_installation",
+            "smart_thermostat",
+            "used_electric_vehicle",
+            "weatherization",
+            "whole_house_fan"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-24",
+    "data_urls": [
+      "N/A"
+    ],
+    "program_title": "N/A",
+    "program_url": "N/A",
+    "item": "N/A",
+    "short_description": {
+      "en": "N/A",
+      "es": "N/A"
+    },
+    "payment_methods": [
+      "N/A"
+    ],
+    "rebate_value": "N/A",
+    "equipment_standards_restrictions": "N/A",
+    "income_restrictions": "N/A",
+    "other_restrictions": "N/A",
+    "stacking_details": "N/A",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "authority_type"
+        },
+        "message": "must have required property 'authority_type'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "authority_name"
+        },
+        "message": "must have required property 'authority_name'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "amount"
+        },
+        "message": "must have required property 'amount'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/item",
+        "schemaPath": "#/properties/item/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "battery_storage_installation",
+            "ebike",
+            "efficiency_rebates",
+            "electric_outdoor_equipment",
+            "electric_panel",
+            "electric_stove",
+            "electric_thermal_storage_and_slab",
+            "electric_vehicle_charger",
+            "electric_wiring",
+            "evaporative_cooler",
+            "geothermal_heating_installation",
+            "heat_pump_air_conditioner_heater",
+            "heat_pump_clothes_dryer",
+            "heat_pump_water_heater",
+            "new_electric_vehicle",
+            "non_heat_pump_clothes_dryer",
+            "non_heat_pump_water_heater",
+            "other",
+            "rooftop_solar_installation",
+            "smart_thermostat",
+            "used_electric_vehicle",
+            "weatherization",
+            "whole_house_fan"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-25",
+    "data_urls": [
+      "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Appliance-Recycling-Program+G10"
+    ],
+    "authority_type": "utility",
+    "authority_name": "RI Energy",
+    "program_title": "Appliance Recycling Program",
+    "program_url": "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Appliance-Recycling-Program+G10",
+    "item": "N/A",
+    "program_status": "paused",
+    "rebate_value": "$50 for fridges/freezers, $30 for dehumidifiers",
+    "equipment_standards_restrictions": "Working refrigerators/freezers with inside measurements between 10-30 cubic feet, Working dehumidifiers of any size accepted.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "short_description"
+        },
+        "message": "must have required property 'short_description'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "amount"
+        },
+        "message": "must have required property 'amount'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/item",
+        "schemaPath": "#/properties/item/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "battery_storage_installation",
+            "ebike",
+            "efficiency_rebates",
+            "electric_outdoor_equipment",
+            "electric_panel",
+            "electric_stove",
+            "electric_thermal_storage_and_slab",
+            "electric_vehicle_charger",
+            "electric_wiring",
+            "evaporative_cooler",
+            "geothermal_heating_installation",
+            "heat_pump_air_conditioner_heater",
+            "heat_pump_clothes_dryer",
+            "heat_pump_water_heater",
+            "new_electric_vehicle",
+            "non_heat_pump_clothes_dryer",
+            "non_heat_pump_water_heater",
+            "other",
+            "rooftop_solar_installation",
+            "smart_thermostat",
+            "used_electric_vehicle",
+            "weatherization",
+            "whole_house_fan"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-26",
+    "data_urls": [
+      "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/ri-steps-to-apply-0-financing.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "RI Energy",
+    "program_title": "Home Energy Upgrade Financing",
+    "program_url": "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/ri-steps-to-apply-0-financing.pdf",
+    "item": "N/A",
+    "short_description": {
+      "en": "Apply for 0% financing for qualified home energy upgrades when you have a Home Energy Assessment completed through the EnergyWise Program",
+      "es": "Solicite financiamiento al 0% para mejoras energéticas calificadas cuando realice una evaluación de energía del hogar del Programa EnergyWise."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "financing"
+    ],
+    "rebate_value": "0% interest financing",
+    "equipment_standards_restrictions": "Insulation and air sealing, Duct sealing and duct insulation, Natural gas heating systems, Natural gas water heaters, Electric heat pump water heaters, Electric air source heat pumps.",
+    "other_restrictions": "Contingent on loan approval\r",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "amount"
+        },
+        "message": "must have required property 'amount'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/item",
+        "schemaPath": "#/properties/item/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "battery_storage_installation",
+            "ebike",
+            "efficiency_rebates",
+            "electric_outdoor_equipment",
+            "electric_panel",
+            "electric_stove",
+            "electric_thermal_storage_and_slab",
+            "electric_vehicle_charger",
+            "electric_wiring",
+            "evaporative_cooler",
+            "geothermal_heating_installation",
+            "heat_pump_air_conditioner_heater",
+            "heat_pump_clothes_dryer",
+            "heat_pump_water_heater",
+            "new_electric_vehicle",
+            "non_heat_pump_clothes_dryer",
+            "non_heat_pump_water_heater",
+            "other",
+            "rooftop_solar_installation",
+            "smart_thermostat",
+            "used_electric_vehicle",
+            "weatherization",
+            "whole_house_fan"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-27",
+    "data_urls": [
+      "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Income-Eligible-Services"
+    ],
+    "authority_type": "utility",
+    "authority_name": "RI Energy",
+    "program_title": "Income Eligible Energy Savings Program",
+    "program_url": "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Income-Eligible-Services",
+    "item": "weatherization",
+    "item_if_selected_other": "Insulation, air sealing, weather stripping, heat, refrigerator, window air conditioning, freezer, clothes washer, dehumidifier.",
+    "short_description": {
+      "en": "Income-Eligible Energy Savings Program makes your home healthier, more comfortable and more affordable. If you qualify, there's no cost to you.",
+      "es": "Este programa hace que su hogar sea más saludable, cómodo y económico. Si califica, no hay costo para usted."
+    },
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "rebate_value": "No-cost upgrades",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "equipment_standards_restrictions": "No-cost Services: Attic and wall insulation, Air sealing of leaks, Weather stripping. No-cost Upgrades: Replacement heating system, Replacement refrigerator, Replacement window air conditioning unit, Replacement freezer, Replacement clothes washer, Replacement dehumidifier.",
+    "income_restrictions": "Low-income only (RIE definition)",
+    "owner_status": [
+      "homeowner"
+    ],
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      }
+    ]
+  },
+  {
+    "id": "RI-28",
+    "data_urls": [
+      "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Home-Energy-Assessments"
+    ],
+    "authority_type": "utility",
+    "authority_name": "RI Energy",
+    "program_title": "Home Energy Assesments",
+    "program_url": "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Home-Energy-Assessments",
+    "item": "other",
+    "item_if_selected_other": "Advanced power strips, low-flow showerheads, faucet aerators, programmable thermostat",
+    "rebate_value": "No-cost products",
+    "equipment_standards_restrictions": "No cost upgrades: Advanced power strips, low-flow showerheads, faucet aerators, programmable thermostats.",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "Multifamily residents or property managers",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "short_description"
+        },
+        "message": "must have required property 'short_description'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "amount"
+        },
+        "message": "must have required property 'amount'"
+      }
+    ]
+  },
+  {
+    "id": "RI-29",
+    "data_urls": [
+      "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/ri-energy-rn_zero-energy-ready-program-description.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "RI Energy",
+    "program_title": "Residential New Construction & Zero Energy Homes",
+    "program_url": "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/ri-energy-rn_zero-energy-ready-program-description.pdf",
+    "item": "other",
+    "item_if_selected_other": "Electric heating, electric water heating, electric appliances",
+    "program_status": "active",
+    "program_start_raw": "1/1/24",
+    "program_end_raw": "12/31/24",
+    "rebate_value": "Zero Energy Ready Home Certified or RI Stretch Code Compliant: $1,000 (1-4 units), $750 (5-10 units), $500 (11-30 units), $500 (31-75 units) Passive House Certified: $1,500 (1-4 units), $1,500 (5-10 units), $900 (11-30 units), $750 (31-75 units)",
+    "equipment_standards_restrictions": "Electric equipment required for primary space heating, water heating, cooking, cleaning, and all appliances.",
+    "owner_status": [
+      "homeowner"
+    ],
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "short_description"
+        },
+        "message": "must have required property 'short_description'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "amount"
+        },
+        "message": "must have required property 'amount'"
+      }
+    ]
+  },
+  {
+    "id": "RI-30",
+    "data_urls": [
+      "https://cleanheatri.com/resources/incentives/"
+    ],
+    "authority_type": "state",
+    "authority_name": "RI OER",
+    "program_title": "Clean Heat Rhode Island Residential Incentive",
+    "program_url": "https://cleanheatri.com/resources/incentives/",
+    "item": "heat_pump_air_conditioner_heater",
+    "short_description": {
+      "en": "Up to $10,000 for installation of an air source heat pump, depending on size. Typical heat pump installations will receive $2,500-$3,000.",
+      "es": "Hasta $10,000 para la instalación de una aerotermia, según el tamaño. Valor típica de $2,500 a $3,000."
+    },
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "$1,000 / ton for Air Source HP\n$750 / ton for New Construction\nUp to $10,000 per household",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "ton",
+      "maximum": 10000
+    },
+    "equipment_standards_restrictions": "▪ Central Ducted: AHRI: SEER >= 15, HSPF >= 9; OR SEER2 >=14.3, HSPF2 >=7.7\n▪ Multizone Mix of Ducted and Non-Ducted: AHRI: SEER >= 15, HSPF >= 9;\nOR SEER2 >=14.3, HSPF2 >=7.7\n▪ Non-Ducted: NEEP’s Cold Climate Heat Pump List",
+    "income_restrictions": "Not low income\n\nSee: RI-34",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "Must displace oil, propane, or natural gas heating. Partial fuel displacement is allowed, whole-home displacement is not required.",
+    "stacking_details": "Additional incentive RI-32 for coincident Electrical Service Upgrade.\n\n$10,000 max across the program.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-31",
+    "data_urls": [
+      "https://cleanheatri.com/resources/incentives/"
+    ],
+    "authority_type": "state",
+    "authority_name": "RI OER",
+    "program_title": "Clean Heat Rhode Island Residential Incentive",
+    "program_url": "https://cleanheatri.com/resources/incentives/",
+    "item": "geothermal_heating_installation",
+    "short_description": {
+      "en": "Up to $10,000 to install a ground source (geothermal) heat pump, depending on size. Typical heat pump installations will receive $2,500-$3,000.",
+      "es": "Hasta $10,000 para instalar una bomba de calor geotérmica, según el tamaño. Valor típica de $2,500 a $3,000."
+    },
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "$1,250 / ton for Ground Source Heat Pump\n$750 / ton for New Construction\nUp to $10,000 per household",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1250,
+      "unit": "ton",
+      "maximum": 10000
+    },
+    "equipment_standards_restrictions": "▪ ENERGY STAR & AHRI Matched Equipment",
+    "income_restrictions": "N/A",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "Must displace oil, propane, or natural gas heating. Partial fuel displacement is allowed, whole-home displacement is not required.",
+    "stacking_details": "Additional incentive RI-32 for coincident Electrical Service Upgrade.\n\n$10,000 max across the program.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-32",
+    "data_urls": [
+      "https://cleanheatri.com/resources/incentives/"
+    ],
+    "authority_type": "state",
+    "authority_name": "RI OER",
+    "program_title": "Clean Heat Rhode Island Residential Incentive",
+    "program_url": "https://cleanheatri.com/resources/incentives/",
+    "item": "other",
+    "item_if_selected_other": "Electrical Service Upgrade",
+    "short_description": {
+      "en": "Additional $500 for an electrical service upgrade at the same time as installation of a heat pump or heat pump water heater.",
+      "es": "Reembolso adicional de $500 para una mejora del servicio eléctrico al mismo tiempo que instala una bomba de calor o calentador de agua con bomba de calor."
+    },
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "$500 for coincident electrical service upgrade",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "equipment_standards_restrictions": "▪ Minimum upgrade to 150 amp service",
+    "income_restrictions": "Not low income\n\nSee: RI-34 and RI-35",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "N/A",
+    "stacking_details": "Must be coincident with Air Source Heat Pump RI-30, Ground Source Heat Pump RI-31, or Heat Pump Water Heater RI-33.\n\n$10,000 max across the program.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-33",
+    "data_urls": [
+      "https://cleanheatri.com/resources/incentives/"
+    ],
+    "authority_type": "state",
+    "authority_name": "RI OER",
+    "program_title": "Clean Heat Rhode Island Residential Incentive",
+    "program_url": "https://cleanheatri.com/resources/incentives/",
+    "item": "heat_pump_water_heater",
+    "short_description": {
+      "en": "$750 rebate after the installation of a heat pump water heater. $1,500 for split system heat pump water heaters.",
+      "es": "$750 de reembolso después de instalar un calentador de agua con bomba de calor. $1,500 por calentadores de agua con bomba de calor de sistema dividido."
+    },
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "$750 for a Heat Pump Water Heater\n$1,500 for a Split-System Heat Pump Water Heater",
+    "amount": {
+      "type": "dollar_amount",
+      "minimum": 750,
+      "maximum": 1500
+    },
+    "equipment_standards_restrictions": "▪ Heat Pump Water Heater: ENERGY STAR certified UEF 3.30\n▪ Heat Pump Water Heater (120volt/15amp circuit): ENERGY STAR certified UEF 2.20\n▪ Split-System Heat Pump Water Heater: ENERGY STAR certified UEF 2.20",
+    "income_restrictions": "Not low income\n\nSee RI-35",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "N/A",
+    "stacking_details": "Additional incentive RI-32 for coincident Electrical Service Upgrade.\n\n$10,000 max across the program.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      },
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      }
+    ]
+  },
+  {
+    "id": "RI-34",
+    "data_urls": [
+      "https://cleanheatri.com/resources/incentives/"
+    ],
+    "authority_type": "state",
+    "authority_name": "RI OER",
+    "program_title": "Clean Heat Rhode Island Residential Income-Eligible Incentive",
+    "program_url": "https://cleanheatri.com/resources/incentives/",
+    "item": "heat_pump_air_conditioner_heater",
+    "short_description": {
+      "en": "Depending on your income, 100% of the cost to install an air source heat pump, including up to $3,000 towards related electric service upgrades.",
+      "es": "Según sus ingresos, el costo total de instalar una aerotermia. Incluye hasta $3,000 para mejoras eléctricas relacionadas."
+    },
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "100% toward the cost of an Air Source Heat Pump, including Electrical Service Upgrade up to $3,000.",
+    "amount": {
+      "type": "percent",
+      "number": "100%"
+    },
+    "equipment_standards_restrictions": "▪ NEEP’s Cold Climate Heat Pump List & Weatherization",
+    "income_restrictions": "Any of the following programs will qualify a customer for the income-eligible program: SNAP, LIHEAP, or Rhode Island Energy Discount Rate.\n\nAlternatively, customers can be income-qualified through the application process.\n\nSupercedes RI-30, RI-31, and RI-32 for income-qualified residents.",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "Must displace oil or propane heating. Natural gas is not eligible. Partial fuel displacement is allowed; whole-home displacement is not required.",
+    "bonus_description": "Up to $3000 additional for electrical service upgrade",
+    "stacking_details": "N/A",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      },
+      {
+        "instancePath": "/amount/number",
+        "schemaPath": "#/properties/amount/properties/number/type",
+        "keyword": "type",
+        "params": {
+          "type": "number"
+        },
+        "message": "must be number"
+      }
+    ]
+  },
+  {
+    "id": "RI-35",
+    "data_urls": [
+      "https://cleanheatri.com/resources/incentives/"
+    ],
+    "authority_type": "state",
+    "authority_name": "RI OER",
+    "program_title": "Clean Heat Rhode Island Residential Income-Eligible Incentive",
+    "program_url": "https://cleanheatri.com/resources/incentives/",
+    "item": "heat_pump_water_heater",
+    "short_description": {
+      "en": "Depending on your income, 100% of the cost to install a heat pump water heater, including up to $3,000 towards related electric service upgrades.",
+      "es": "Según sus ingresos, el costo total de instalar un calentador de agua con bomba de calor. Incluye hasta $3,000 para mejoras eléctricas relacionadas."
+    },
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "100% toward the cost of a Heat Pump Water Heater, including Electrical Service Upgrade up to $3,000.",
+    "equipment_standards_restrictions": "▪ Heat Pump Water Heater: ENERGY STAR certified UEF 3.30\n▪ Heat Pump Water Heater (120volt/15amp circuit): ENERGY STAR certified UEF 2.20",
+    "income_restrictions": "Any of the following programs will qualify a customer for the income-eligible program: SNAP, LIHEAP, or Rhode Island Energy Discount Rate.\n\nAlternatively, customers can be income-qualified through the application process.\n\nSupercedes RI-33 for income-qualified residents.",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "Must displace oil or propane heating. Natural gas is not eligible. Partial fuel displacement is allowed; whole-home displacement is not required.",
+    "stacking_details": "N/A",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "amount"
+        },
+        "message": "must have required property 'amount'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-36",
+    "data_urls": [
+      "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/ri_electric_heating-cooling_form.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "RI Energy",
+    "program_title": "Electric Heating and Cooling Rebates",
+    "program_url": "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/ri_electric_heating-cooling_form.pdf",
+    "item": "other",
+    "item_if_selected_other": "Central AC",
+    "short_description": {
+      "en": "$50+ back on installation of qualifying ducted central AC. Additional funding available to replace electric baseboard resistance heating.\n\n",
+      "es": "$50+ de reembolso para la instalación de aire central por conductos. Reembolso adicional para reemplazar la calefacción eléctrica a base de resistencias.\n\n"
+    },
+    "program_status": "expired",
+    "payment_methods": [
+      "Rebate"
+    ],
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 50,
+      "unit": "ton"
+    },
+    "equipment_standards_restrictions": "Central AC\nAHRI: SEER ≥ 16, EER ≥ 13\nOR AHRI: SEER2 ≥ 15.2, EER2 ≥ 12.0",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "-Max 4 rebates for HVAC\n-Home energy audit required for bonus\n-Licensed contractor must install the equipment",
+    "bonus_description": "Bonus: Enhanced rebate up to $1250 / ton for homes with electric baseboard heating. ",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "rebate_value"
+        },
+        "message": "must have required property 'rebate_value'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-37",
+    "data_urls": [
+      "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/ri_electric_heating-cooling_form.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "RI Energy",
+    "program_title": "Electric Heating and Cooling Rebates",
+    "program_url": "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/ri_electric_heating-cooling_form.pdf",
+    "item": "other",
+    "item_if_selected_other": "Central Heat Pump",
+    "short_description": {
+      "en": "$350+ back on qualifying ducted central heat pump, depending on size. Additional funding available for replacing baseboard resistance heating. ",
+      "es": "$350+ de reembolso para la instalación de una bomba de calor central por conductos y más para reemplazar la calefacción eléctrica a base de resistencias."
+    },
+    "program_status": "active",
+    "program_start_raw": "1/1/24",
+    "program_end_raw": "12/31/24",
+    "payment_methods": [
+      "Rebate"
+    ],
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 350,
+      "unit": "ton"
+    },
+    "equipment_standards_restrictions": "Central Heat Pump\nAHRI: SEER ≥ 15, HSPF ≥ 9;\nOR AHRI: SEER2 > 14.3, HSPF2 > 7.7",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "-Max 4 rebates for HVAC\n-Home energy audit required for bonus\n-Licensed contractor must install the equipment",
+    "bonus_description": "Bonus: Enhanced rebate up to $1250 / ton for homes with electric baseboard heating. ",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "rebate_value"
+        },
+        "message": "must have required property 'rebate_value'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-38",
+    "data_urls": [
+      "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/ri_electric_heating-cooling_form.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "RI Energy",
+    "program_title": "Electric Heating and Cooling Rebates",
+    "program_url": "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/ri_electric_heating-cooling_form.pdf",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_if_selected_other": "Mini-Split Ducted / Mixed",
+    "short_description": {
+      "en": "$350+ back on ducted/mixed ducted mini-split heat pump, depending on size. Additional funding available for replacing baseboard resistance heating. ",
+      "es": "$350+ de reembolso para una bomba de calor por conductos/mini-split por conductos y más para reemplazar la calefacción eléctrica a base de resistencias."
+    },
+    "program_status": "active",
+    "program_start_raw": "1/1/24",
+    "program_end_raw": "12/31/24",
+    "payment_methods": [
+      "Rebate"
+    ],
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 350,
+      "unit": "ton"
+    },
+    "equipment_standards_restrictions": "Mini-Split Ducted / Mixed\nAHRI: SEER ≥ 15, HSPF ≥ 9\nOR AHRI: SEER2 > 14.3, HSPF2 > 7.7",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "-Max 4 rebates for HVAC\n-Home energy audit required for bonus\n-Licensed contractor must install the equipment",
+    "bonus_description": "Bonus: Enhanced rebate up to $1250 / ton for homes with electric baseboard heating. ",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "rebate_value"
+        },
+        "message": "must have required property 'rebate_value'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-39",
+    "data_urls": [
+      "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/ri_electric_heating-cooling_form.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "RI Energy",
+    "program_title": "Electric Heating and Cooling Rebates",
+    "program_url": "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/ri_electric_heating-cooling_form.pdf",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_if_selected_other": "Mini-Split Non-Ducted",
+    "short_description": {
+      "en": "$150+ back on qualifying mini-split non-ducted heat pump, depending on size. Additional funding available for replacing baseboard resistance heating. ",
+      "es": "$150+ de reembolso para una bomba de calor mini-split sin conductos. Reembolso adicional para reemplazar la calefacción eléctrica a base de resistencias.\n\n"
+    },
+    "program_status": "active",
+    "program_start_raw": "1/1/24",
+    "program_end_raw": "12/31/24",
+    "payment_methods": [
+      "Rebate"
+    ],
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 150,
+      "unit": "ton"
+    },
+    "equipment_standards_restrictions": "Mini-Split Non-Ducted\nNEEP: SEER ≥ 15, HSPF ≥ 10;\nOR NEEP6\n: SEER2 > 15, HSPF2 > 8.5;\nAND COP at 5°F > 1.75 ",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "-Max 4 rebates for HVAC\n-Home energy audit required for bonus\n-Licensed contractor must install the equipment",
+    "bonus_description": "Bonus: Enhanced rebate up to $1250 / ton for homes with electric baseboard heating. ",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "rebate_value"
+        },
+        "message": "must have required property 'rebate_value'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-40",
+    "data_urls": [
+      "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/ri_electric_heating-cooling_form.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "RI Energy",
+    "program_title": "Electric Heating and Cooling Rebates",
+    "program_url": "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/ri_electric_heating-cooling_form.pdf",
+    "item": "smart_thermostat",
+    "short_description": {
+      "en": "$75 back on ENERGY STAR certified, wireless connection enabled Smart Thermostat.",
+      "es": "$75 de reembolso en un termostato inteligente certificado por ENERGY STAR con conexión inalámbrica."
+    },
+    "program_status": "active",
+    "program_start_raw": "1/1/24",
+    "program_end_raw": "12/31/24",
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "$75 rebate Energy Star Smart Thermostat",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "equipment_standards_restrictions": "ENERGY STAR certified; wireless connections must be enabled.",
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "other_restrictions": "Max 2 rebates for thermostat\n",
+    "errors": [
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-41",
+    "data_urls": [
+      "https://pud-ri.org/wp-content/uploads/2022/01/Residential-Energy-Audit-Weatherization-Incentives.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "PUD",
+    "program_title": "Residential Energy Audit-Weatherization Incentives",
+    "program_url": "https://pud-ri.org/conservation/download-rebate-forms",
+    "item": "smart_thermostat",
+    "item_if_selected_other": "Programmable wireless thermostat",
+    "short_description": {
+      "en": "$100 back on programmable wireless connection enabled thermostat.",
+      "es": "$100 dólares de devolución en termostato programable con conexión inalámbrica."
+    },
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "$100 rebate for wireless thermostat",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "equipment_standards_restrictions": "Wireless connection enabled",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-42",
+    "data_urls": [
+      "https://pud-ri.org/wp-content/uploads/2022/01/Residential-Energy-Audit-Weatherization-Incentives.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "PUD",
+    "program_title": "Residential Energy Audit-Weatherization Incentives",
+    "program_url": "https://pud-ri.org/conservation/download-rebate-forms",
+    "item": "smart_thermostat",
+    "item_if_selected_other": "Programmable non-wireless thermostat",
+    "short_description": {
+      "en": "$25 back on programmable non-wireless thermostat.",
+      "es": "$25 dólares de devolución en termostato programable no inalámbrico."
+    },
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "$25 rebate for non-wireless programmable thermostat",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "RI-43",
+    "data_urls": [
+      "https://drive.ri.gov/erika-niedowski-memorial-electric-bicycle-rebate-program"
+    ],
+    "authority_type": "state",
+    "authority_name": "RI OER",
+    "program_title": "Erika Niedowski Memorial Electric Bicycle Rebate Program",
+    "program_url": "https://drive.ri.gov/erika-niedowski-memorial-electric-bicycle-rebate-program",
+    "item": "ebike",
+    "short_description": {
+      "en": "75% up to $750 back on the final purchase of an e-bike or e-cargo bike for income qualified residents.",
+      "es": "Devolución del 75% hasta $750 dólares en la compra final de una bicicleta e-bike o una e-cargo bike para residentes que cumplan con el nivel de ingresos."
+    },
+    "program_status": "active",
+    "program_start_raw": "10/24/2022",
+    "payment_methods": [
+      "Rebate"
+    ],
+    "rebate_value": "75% up to $750 income qualified rebate",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": "750 for low income rebate"
+    },
+    "income_restrictions": "75% up to $750 for low income applicants",
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "other_restrictions": "- Max 2 rebates per household\n- Apply within 180 days (6 months) of the date listed on the e-bike sales receipt.\n- E-Bikes must be purchased from a retail store physically located in Rhode Island. Online purchases are only valid if the e-bike is purchased from an online retailer with a direct association or prior agreement with a local Rhode Island store.",
+    "errors": [
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      },
+      {
+        "instancePath": "/amount/maximum",
+        "schemaPath": "#/properties/amount/properties/maximum/type",
+        "keyword": "type",
+        "params": {
+          "type": "number"
+        },
+        "message": "must be number"
+      }
+    ]
+  }
+]
