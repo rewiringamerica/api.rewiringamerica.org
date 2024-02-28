@@ -20,7 +20,6 @@ export const ALL_PROGRAMS = [
   // Salt River Project
   'az_saltRiverProject_insulationRebate',
   'az_saltRiverProject_heatPumpWaterHeaterRebate',
-  'az_saltRiverProject_homeElectricVehicle(EV)ChargerRebate',
   'az_saltRiverProject_homeElectricVehicleChargerRebate',
   // Sulphur Springs Valley Electric Cooperative
   'az_sulphurSpringsValleyElectricCooperative_hotWaterHeaterRebate',
