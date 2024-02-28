@@ -23,6 +23,7 @@ export enum AuthorityType {
   County = 'county',
   State = 'state',
   Utility = 'utility',
+  Other = 'other',
 }
 
 export const API_AUTHORITY_SCHEMA = {
@@ -60,6 +61,7 @@ export const SCHEMA = {
       utility: authoritiesMapSchema,
       city: authoritiesMapSchema,
       county: authoritiesMapSchema,
+      other: authoritiesMapSchema,
     },
     required: ['state', 'utility'],
     additionalProperties: false,

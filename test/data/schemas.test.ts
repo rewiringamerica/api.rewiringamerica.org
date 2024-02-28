@@ -55,6 +55,10 @@ import { TAX_BRACKETS, SCHEMA as TB_SCHEMA } from '../../src/data/tax_brackets';
 import Ajv from 'ajv/dist/2020';
 import { SomeJSONSchema } from 'ajv/dist/types/json-schema';
 import {
+  GEO_GROUPS_BY_STATE,
+  GEO_GROUPS_SCHEMA,
+} from '../../src/data/geo_groups';
+import {
   ALL_PROGRAMS,
   PROGRAMS,
   PROGRAMS_SCHEMA,
@@ -82,6 +86,7 @@ const TESTS = [
     LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
     'State low income',
   ],
+  [GEO_GROUPS_SCHEMA, GEO_GROUPS_BY_STATE, 'geo_groups'],
 ];
 
 test('static JSON files match schema', async tap => {
@@ -191,6 +196,21 @@ test('state incentives JSON files match schemas', async tap => {
           authorities[incentive.authority_type]![incentive.authority],
           'city',
           `must define city attribute on corresponding authority ${incentive.authority} for incentives with city authority type`,
+        );
+      }
+      if (incentive.authority_type === AuthorityType.Other) {
+        tap.hasProp(
+          incentive,
+          'geo_group',
+          `authority_type 'other' must include a geo group (id ${incentive.id})`,
+        );
+
+        const stateGroups = GEO_GROUPS_BY_STATE[stateId];
+        tap.equal(incentive.authority_type, AuthorityType.Other);
+        tap.hasProp(
+          stateGroups,
+          incentive.geo_group!,
+          `nonexistent geo_group (${stateId}, id ${incentive.id})`,
         );
       }
 

@@ -12,7 +12,6 @@ import { AUTHORITIES_BY_STATE } from '../../src/data/authorities';
 // be a customer of. That is, separate the concepts of "who offers this
 // incentive" from "which utilities must someone be a customer of to get this".
 const EXCEPTIONS = new Set([
-  'co-platte-river-power-authority',
   'co-tri-state-g-and-t',
   'co-walking-mountains',
   'vt-vppsa',

@@ -1,5 +1,6 @@
 import { min } from 'lodash';
 import { AuthoritiesByType, AuthorityType } from '../data/authorities';
+import { GEO_GROUPS_BY_STATE } from '../data/geo_groups';
 import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/low_income_thresholds';
 import {
   INCENTIVE_RELATIONSHIPS_BY_STATE,
@@ -284,5 +285,29 @@ function skipBasedOnRequestParams(
       return true;
     }
   }
+
+  if (item.geo_group) {
+    // A test ensures that geo groups are registered.
+    const group = GEO_GROUPS_BY_STATE[location.state_id]![item.geo_group];
+
+    // The request params must match ALL of the keys the geo group defines
+    if (
+      (group.utilities &&
+        (!request.utility || !group.utilities.includes(request.utility))) ||
+      (group.counties &&
+        (!location.county ||
+          !group.counties
+            .map(id => stateAuthorities.county[id].county)
+            .includes(location.county))) ||
+      (group.cities &&
+        (!location.city ||
+          !group.cities
+            .map(id => stateAuthorities.city[id].city)
+            .includes(location.city)))
+    ) {
+      return true;
+    }
+  }
+
   return false;
 }
