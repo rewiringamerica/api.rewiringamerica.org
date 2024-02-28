@@ -246,25 +246,51 @@
     }
   },
   {
-    "id": "RI-19",
-    "authority_type": "utility",
-    "authority": "ri-rhode-island-energy",
+    "id": "RI-13",
+    "authority_type": "state",
+    "authority": "ri-oer",
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_clothes_dryer",
-    "program": "ri_energyStarClothesDryer",
+    "item": "ebike",
+    "program": "ri_erikaNiedowskiMemorialEBikeRebateProgram",
     "amount": {
-      "type": "dollar_amount",
-      "number": 50
+      "type": "percent",
+      "number": 0.3,
+      "maximum": 350
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
+    "low_income": "default",
     "short_description": {
-      "en": "$50 back on ENERGY STAR® certified electric clothes dryer purchased in 2023. Rebate requests must be completed within 90 days of purchase.",
-      "es": "$50 de reembolso en secadoras de ropa eléctricas certificadas por ENERGY STAR y compradas en 2023. Solicita dentro de los 90 días posteriores a la compra."
+      "en": "30% up to $350 back on the final purchase of an e-bike or e-cargo bike.",
+      "es": "Devolución del 30% hasta $350 dólares en la compra final de una bicicleta e-bike o una e-cargo bike."
+    }
+  },
+  {
+    "id": "RI-43",
+    "authority_type": "state",
+    "authority": "ri-oer",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "ebike",
+    "program": "ri_erikaNiedowskiMemorialEBikeRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "low_income": "default",
+    "short_description": {
+      "en": "75% up to $750 back on the final purchase of an e-bike or e-cargo bike for income qualified residents.",
+      "es": "Devolución del 75% hasta $750 dólares en la compra final de una bicicleta e-bike o una e-cargo bike para residentes que cumplan con el nivel de ingresos."
     }
   },
   {
@@ -276,6 +302,8 @@
     ],
     "item": "heat_pump_water_heater",
     "program": "ri_residentialHeatPumpWaterHeater",
+    "start_date": 2024,
+    "end_date": 2024,
     "amount": {
       "type": "dollar_amount",
       "number": 600,
@@ -323,6 +351,8 @@
     ],
     "item": "heat_pump_air_conditioner_heater",
     "program": "ri_electricHeatingAndCoolingRebates",
+    "start_date": 2024,
+    "end_date": 2024,
     "amount": {
       "type": "dollars_per_unit",
       "unit": "ton",
@@ -513,6 +543,29 @@
     "short_description": {
       "en": "Depending on your income, 100% of the cost to install a heat pump water heater, including up to $3,000 towards related electric service upgrades.",
       "es": "Según sus ingresos, el costo total de instalar un calentador de agua con bomba de calor. Incluye hasta $3,000 para mejoras eléctricas relacionadas."
+    }
+  },
+  {
+    "id": "RI-41",
+    "authority_type": "utility",
+    "authority": "ri-pascoag-utility-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "ri_residentialEnergyAuditWeatherization",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 back on a programmable wireless connection enabled thermostat. $25 back on a programmable non-wireless thermostat.",
+      "es": "$100 dólares de devolución en termostato programable con conexión inalámbrica. $25 dólares de devolución en termostato programable no inalámbrico."
     }
   }
 ]
