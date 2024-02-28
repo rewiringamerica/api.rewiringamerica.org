@@ -3,12 +3,12 @@ import fs from 'fs';
 import _ from 'lodash';
 import fetch from 'make-fetch-happen';
 import { test } from 'tap';
+import { FILES } from '../../scripts/incentive-spreadsheet-registry';
+import { spreadsheetToJson } from '../../scripts/incentive-spreadsheet-to-json';
 import {
   PASS_THROUGH_FIELDS,
   StateIncentive,
-} from '../src/data/state_incentives';
-import { FILES } from './incentive-spreadsheet-registry';
-import { spreadsheetToJson } from './incentive-spreadsheet-to-json';
+} from '../../src/data/state_incentives';
 
 // TODO: condition this on an environment variable that we set only
 // in workflows where we want to run this test.
