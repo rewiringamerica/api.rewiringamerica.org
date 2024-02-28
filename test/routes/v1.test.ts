@@ -193,6 +193,25 @@ test('CT low income response with state and utility filtering is valid and corre
   );
 });
 
+// DC low income test
+test('DC low income response with state and city filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '20303' },
+      owner_status: 'homeowner',
+      household_size: 4,
+      household_income: 95796,
+      tax_filing: 'joint',
+      authority_types: ['state', 'city'],
+      authority: 'dc-dc-sustainable-energy-utility',
+      // TODO: Remove when DC is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-dc-20303-state-city-lowincome.json',
+  );
+});
+
 // IL low income test
 test('IL low income response with state and utility filtering is valid and correct', async t => {
   await validateResponse(

@@ -1,7 +1,7 @@
 [
   {
     "id": "DC-1",
-    "authority_type": "state",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "rebate"
@@ -25,7 +25,7 @@
   },
   {
     "id": "DC-2",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "rebate"
@@ -49,7 +49,7 @@
   },
   {
     "id": "DC-3",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "rebate"
@@ -73,7 +73,7 @@
   },
   {
     "id": "DC-4",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "rebate"
@@ -96,7 +96,7 @@
   },
   {
     "id": "DC-5",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "rebate"
@@ -119,7 +119,7 @@
   },
   {
     "id": "DC-6",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "rebate"
@@ -142,7 +142,7 @@
   },
   {
     "id": "DC-7",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "rebate"
@@ -165,7 +165,7 @@
   },
   {
     "id": "DC-8",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "rebate"
@@ -189,7 +189,7 @@
   },
   {
     "id": "DC-9",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "rebate"
@@ -213,7 +213,7 @@
   },
   {
     "id": "DC-10",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "rebate"
@@ -237,7 +237,7 @@
   },
   {
     "id": "DC-11",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "rebate"
@@ -261,7 +261,7 @@
   },
   {
     "id": "DC-12",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "assistance_program"
@@ -284,7 +284,7 @@
   },
   {
     "id": "DC-13",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "assistance_program"
@@ -307,7 +307,7 @@
   },
   {
     "id": "DC-14",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "assistance_program"
@@ -330,7 +330,7 @@
   },
   {
     "id": "DC-15",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "assistance_program"
@@ -353,7 +353,7 @@
   },
   {
     "id": "DC-16",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "assistance_program"
@@ -376,7 +376,7 @@
   },
   {
     "id": "DC-17",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "assistance_program"
@@ -399,7 +399,7 @@
   },
   {
     "id": "DC-18",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "assistance_program"
@@ -422,7 +422,7 @@
   },
   {
     "id": "DC-19",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "assistance_program"
@@ -445,7 +445,7 @@
   },
   {
     "id": "DC-20",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "assistance_program"
@@ -477,18 +477,19 @@
     "program": "dc_dCDepartmentOfEnergyAndEnvironment_weatherizationAssistanceProgram",
     "amount": {
       "type": "percent",
-      "number": 100
+      "number": 1
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "The Weatherization Assistance Program (WAP) provides low-income District residents with technical and financial assistance to help reduce their energy bills by making their homes more energy efficient."
+      "en": "Provides low-income residents with technical and financial assistance to help reduce their energy bills by making their homes more energy efficient."
     },
     "start_date": 2023,
     "end_date": 2024,
-    "bonus_available": true
+    "bonus_available": true,
+    "low_income": "dc-dc-department-of-energy-and-environment"
   },
   {
     "id": "DC-22",
@@ -501,18 +502,19 @@
     "program": "dc_dCDepartmentOfEnergyAndEnvironment_weatherizationAssistanceProgram",
     "amount": {
       "type": "percent",
-      "number": 100
+      "number": 1
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "The Weatherization Assistance Program (WAP) provides low-income District residents with technical and financial assistance to help reduce their energy bills by making their homes more energy efficient."
+      "en": "Provides low-income residents with technical and financial assistance to help reduce their energy bills by making their homes more energy efficient."
     },
     "start_date": 2023,
     "end_date": 2024,
-    "bonus_available": true
+    "bonus_available": true,
+    "low_income": "dc-dc-department-of-energy-and-environment"
   },
   {
     "id": "DC-23",
@@ -525,22 +527,23 @@
     "program": "dc_dCDepartmentOfEnergyAndEnvironment_weatherizationAssistanceProgram",
     "amount": {
       "type": "percent",
-      "number": 100
+      "number": 1
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "The Weatherization Assistance Program (WAP) provides low-income District residents with technical and financial assistance to help reduce their energy bills by making their homes more energy efficient."
+      "en": "Provides low-income residents with technical and financial assistance to help reduce their energy bills by making their homes more energy efficient."
     },
     "start_date": 2023,
     "end_date": 2024,
-    "bonus_available": true
+    "bonus_available": true,
+    "low_income": "dc-dc-department-of-energy-and-environment"
   },
   {
     "id": "DC-24",
-    "authority_type": "utility",
+    "authority_type": "city",
     "authority": "dc-dc-sustainable-energy-utility",
     "payment_methods": [
       "assistance_program"
@@ -549,14 +552,14 @@
     "program": "dc_dCSustainableEnergyUtility_solarForAllSingle-FamilyProgram",
     "amount": {
       "type": "percent",
-      "number": 100
+      "number": 1
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Through Solar for All, local solar contractors design and install solar photovoltaic (PV) systems at no cost to income-qualified District homeowners. These systems have the potential to offset electricity costs by as much as $500 per year."
+      "en": "Local solar contractors design and install solar photovoltaic (PV) systems at no cost to income-qualified homeowners."
     },
     "start_date": 2024,
     "end_date": 2024,
@@ -573,18 +576,19 @@
     "program": "dc_dCDepartmentOfEnergyAndEnvironment_solarForAll-CommunitySolar",
     "amount": {
       "type": "percent",
-      "number": 100
+      "number": 1
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Through Solar for All - community solar, income-qualified District residents (renters and homeowners) have the potential to offset electricity costs by as much as $500 per year."
+      "en": "Income-qualified residents (renters and homeowners) have the potential to offset electricity costs by as much as $500/year through community solar."
     },
     "start_date": 2023,
     "end_date": 2024,
-    "bonus_available": true
+    "bonus_available": true,
+    "low_income": "dc-dc-department-of-energy-and-environment"
   },
   {
     "id": "DC-26",
@@ -597,17 +601,18 @@
     "program": "dc_dCDepartmentOfEnergyAndEnvironment_LowIncomeHomeEnergyAssistanceProgram(LIHEAP)",
     "amount": {
       "type": "percent",
-      "number": 100
+      "number": 1
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "LIHEAP assists income-eligible District households with heating and cooling energy costs. Eligible households may receive energy bill assistance between $250 and $1,800 as a one-time regular energy assistance benefit. This benefit is based on household size, total household income, heating source, and type of dwelling."
+      "en": "Assists income-eligible households with heating and cooling energy costs with assistance between $250 and $1,800 as a one-time benefit."
     },
     "start_date": 2023,
     "end_date": 2024,
-    "bonus_available": true
+    "bonus_available": true,
+    "low_income": "dc-dc-department-of-energy-and-environment"
   }
 ]
