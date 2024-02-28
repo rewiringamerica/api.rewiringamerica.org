@@ -113,6 +113,10 @@ export function flatToNested(
   return objs;
 }
 
+// This function is only necessary because ajv cannot convert the string values
+// 'TRUE' or 'FALSE' to boolean, which is how Google Sheets/csv renders boolean
+// values. Any other value will (appropriately) cause the schema validation to
+// fail, so we don't deal with errors here.
 function coerceToBoolean(input: string): boolean | string {
   if (input.toLowerCase() === 'true') return true;
   if (input.toLowerCase() === 'false') return false;
