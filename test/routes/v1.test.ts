@@ -154,6 +154,26 @@ test('AZ low income response with state and utility filtering for UniSource is v
     './test/fixtures/v1-az-85702-state-utility-lowincome.json',
   );
 });
+
+// CO low income test
+test('CO low income response with state and utility filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '81657' },
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 100000,
+      tax_filing: 'joint',
+      authority_types: ['state', 'utility'],
+      utility: 'co-walking-mountains',
+      // TODO: Remove when CO is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-co-81657-state-utility-lowincome.json',
+  );
+});
+
 // CT low income test
 test('CT low income response with state and utility filtering is valid and correct', async t => {
   await validateResponse(
