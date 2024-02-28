@@ -62,4 +62,13 @@ export const FILES: { [ident: string]: IncentiveFile } = {
     enHeader: 'Program Description (style guide)',
     esHeader: 'Program Description (Spanish)',
   },
+  VA: {
+    filepath: 'data/VA/incentives.json',
+    sheetUrl:
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vSR3gOc40GeRzaYJwSn7MwKs7LQ2otHExlDWQb6AvfXHLzal-mt5b6IPGelDc6roSPgF-41GaU-L5Ae/pub?gid=995688950&single=true&output=csv',
+    headerRowNumber: 2,
+    idHeader: 'ID',
+    enHeader: 'Program Description (guideline)',
+    esHeader: 'Program Description (Spanish)',
+  },
 };
