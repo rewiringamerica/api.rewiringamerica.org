@@ -10,12 +10,16 @@ const ajv = new Ajv({ allErrors: true, coerceTypes: 'array' });
 // TODO: consolidate with spreadsheet-standardizer.ts constant
 // and generate both directly from CollectedIncentive schema.
 const ARRAY_FIELDS = ['data_urls', 'payment_methods', 'owner_status'];
+const BOOL_FIELDS = ['omit_from_api'];
 
 const validate = ajv
   .addSchema(LOCALIZABLE_STRING_SCHEMA)
   .compile(COLLECTED_DATA_SCHEMA);
 
 type NestedKeyVal = { [index: string]: NestedKeyVal };
+export type CollectedIncentivesWithErrors = Partial<CollectedIncentive> & {
+  errors: object[];
+};
 
 /**
  * Call this function to perform validation on the collected records.
@@ -29,15 +33,17 @@ export function flatToNestedValidate(
   rows: any[],
   /* eslint-enable @typescript-eslint/no-explicit-any */
   arrayCols: string[] = ARRAY_FIELDS,
-): [CollectedIncentive[], Record<string, string | object>[]] {
+  boolCols: string[] = BOOL_FIELDS,
+): [CollectedIncentive[], CollectedIncentivesWithErrors[]] {
   const valids: CollectedIncentive[] = [];
-  const invalids: Record<string, string | object>[] = [];
-  for (const json of flatToNested(rows, arrayCols)) {
+  const invalids: CollectedIncentivesWithErrors[] = [];
+  for (const json of flatToNested(rows, arrayCols, boolCols)) {
     if (!validate(json)) {
+      const invalid = json as CollectedIncentivesWithErrors;
       if (validate.errors !== undefined && validate.errors !== null) {
-        json.errors = validate.errors;
+        invalid.errors = validate.errors;
       }
-      invalids.push(json);
+      invalids.push(invalid);
     } else {
       valids.push(json);
     }
@@ -67,7 +73,8 @@ export function flatToNested(
   rows: any[],
   /* eslint-enable @typescript-eslint/no-explicit-any */
   arrayCols: string[] = [],
-): Record<string, string | string[] | object>[] {
+  boolCols: string[] = [],
+): Partial<CollectedIncentive>[] {
   const objs: Record<string, string | string[] | object>[] = [];
   for (const row of rows) {
     const output: NestedKeyVal = {};
@@ -77,6 +84,10 @@ export function flatToNested(
       if (arrayCols.includes(columnName)) {
         // Assume comma-delimited array and split into components.
         val = val.split(',').map((s: string) => s.trim());
+      }
+      if (boolCols.includes(columnName)) {
+        // Minimal-effort conversion of booleans from string.
+        val = coerceToBoolean(val);
       }
 
       const chunks = columnName.split('.');
@@ -100,4 +111,14 @@ export function flatToNested(
     objs.push(output);
   }
   return objs;
+}
+
+// This function is only necessary because ajv cannot convert the string values
+// 'TRUE' or 'FALSE' to boolean, which is how Google Sheets/csv renders boolean
+// values. Any other value will (appropriately) cause the schema validation to
+// fail, so we don't deal with errors here.
+function coerceToBoolean(input: string): boolean | string {
+  if (input.toLowerCase() === 'true') return true;
+  if (input.toLowerCase() === 'false') return false;
+  return input;
 }
