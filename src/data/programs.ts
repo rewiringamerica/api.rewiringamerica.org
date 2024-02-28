@@ -55,12 +55,12 @@ export const ALL_PROGRAMS = [
   'co_lovelandWaterAndPower_efficiencyWorks',
   // Platte River Power Authority
   'co_platteRiverPowerAuthority_efficiencyWorks',
-  // Empire Electric Association and Tri-State Generation and Transmission Association, Inc.
-  'co_empireElectricAssociationAndTri-StateGenerationAndTransmissionAssociation,Inc_energyEfficiencyProductsProgram',
+  // Empire Electric Association
+  'co_empireElectricAssociation_energyEfficiencyProductsProgram',
   // Energy Outreach Colorado
   'co_energyOutreachColorado_weatherizationAssistanceProgram',
-  // Gunnison County Electric
-  'co_gunnisonCountyElectric_rebates',
+  // Gunnison County Electric Association
+  'co_gunnisonCountyElectricAssociation_rebates',
   // Holy Cross Energy
   'co_holyCrossEnergy_residentialRebates',
   // La Plata Electric Association
@@ -122,8 +122,8 @@ export const ALL_PROGRAMS = [
   'co_walkingMountains_rebates&Incentives',
   // White River Electric Association
   'co_whiteRiverElectricAssociation_rebates',
-  // YW Electric Association
-  'co_yWElectricAssociation_rebateProgram',
+  // Y-W Electric Association
+  'co_y-WElectricAssociation_rebateProgram',
 
   // CT
   // State: DEEP
