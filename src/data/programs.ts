@@ -13,25 +13,26 @@ export const ALL_PROGRAMS = [
 
   // AZ
   // Mohave Electric Cooperative
-  'az_mohaveElectricCooperativeMohaveChargedRebates',
-  'az_mohaveElectricCooperativeMohaveHeatPumpRebate',
-  'az_mohaveElectricCooperativeSunWattsRenewableEnergyAndRebateProgram',
-  'az_mohaveElectricCooperativeMohaveHeatBatteryRebate',
+  'az_mohaveElectricCooperative_mohaveChargedRebates',
+  'az_mohaveElectricCooperative_mohaveHeatPumpRebate',
+  'az_mohaveElectricCooperative_sunWattsRenewableEnergyAndRebateProgram',
+  'az_mohaveElectricCooperative_mohaveHeatBatteryRebate',
   // Salt River Project
-  'az_saltRiverProjectInsulationRebate',
-  'az_saltRiverProjectHeatPumpWaterHeaterRebate',
-  'az_saltRiverProjectHomeElectricVehicleChargerRebate',
+  'az_saltRiverProject_insulationRebate',
+  'az_saltRiverProject_heatPumpWaterHeaterRebate',
+  'az_saltRiverProject_homeElectricVehicle(EV)ChargerRebate',
+  'az_saltRiverProject_homeElectricVehicleChargerRebate',
   // Sulphur Springs Valley Electric Cooperative
-  'az_sulphurSpringsValleyElectricCooperativeHotWaterHeaterRebate',
-  'az_sulphurSpringsValleyElectricCooperativeHeatPumpRebates',
+  'az_sulphurSpringsValleyElectricCooperative_hotWaterHeaterRebate',
+  'az_sulphurSpringsValleyElectricCooperative_heatPumpRebates',
   // Tucson Electric Power
-  'az_tucsonElectricPowerEfficientHomeProgram',
-  'az_tucsonElectricPowerWeatherizationAssistance',
-  'az_tucsonElectricPowerEfficientHomeWaterHeating',
-  'az_tucsonElectricPowerEVChargerRebates',
+  'az_tucsonElectricPower_efficientHomeProgram',
+  'az_tucsonElectricPower_weatherizationAssistance',
+  'az_tucsonElectricPower_efficientHomeWaterHeating',
+  'az_tucsonElectricPower_eVChargerRebates',
   // UniSource Energy Services
-  'az_uniSourceEnergyServicesWeatherizationAssistance',
-  'az_uniSourceEnergyServicesEfficientHomeProgram',
+  'az_uniSourceEnergyServices_weatherizationAssistance',
+  'az_uniSourceEnergyServices_efficientHomeProgram',
 
   // CO
   // Black Hills Energy

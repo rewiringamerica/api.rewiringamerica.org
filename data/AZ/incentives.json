@@ -7,34 +7,40 @@
       "rebate"
     ],
     "item": "electric_vehicle_charger",
-    "program": "az_mohaveElectricCooperativeMohaveChargedRebates",
+    "program": "az_mohaveElectricCooperative_mohaveChargedRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 1000
     },
-    "owner_status": ["homeowner"],
+    "owner_status": [
+      "homeowner"
+    ],
     "short_description": {
-      "en": "Rebate of $1,000 will be available for each qualifying charging station."
+      "en": "Rebate of $1,000 will be available for each qualifying charging station.",
+      "es": "Un reembolso de $1,000 dólares estará disponible para cada estación de recarga que cumpla los requisitos."
     }
   },
   {
     "id": "AZ-2",
     "authority_type": "utility",
     "authority": "az-mohave-electric-cooperative",
-    "item": "heat_pump_air_conditioner_heater",
     "payment_methods": [
       "rebate"
     ],
-    "program": "az_mohaveElectricCooperativeMohaveHeatPumpRebate",
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "az_mohaveElectricCooperative_mohaveHeatPumpRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 2000,
       "minimum": 200,
       "maximum": 2000
     },
-    "owner_status": ["homeowner"],
+    "owner_status": [
+      "homeowner"
+    ],
     "short_description": {
-      "en": "Rebate up to $2000 available based on Heat Pump SEER value."
+      "en": "Rebate up to $2000 available based on Heat Pump SEER value.",
+      "es": "Un reembolso de hasta $2,000 dólares según el valor SEER de la bomba de calor."
     }
   },
   {
@@ -45,16 +51,19 @@
       "rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "az_mohaveElectricCooperativeMohaveHeatPumpRebate",
+    "program": "az_mohaveElectricCooperative_mohaveHeatPumpRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 2000,
       "minimum": 200,
       "maximum": 2000
     },
-    "owner_status": ["homeowner"],
+    "owner_status": [
+      "homeowner"
+    ],
     "short_description": {
-      "en": "Rebate up to $2000 available based on Heat Pump SEER value."
+      "en": "Rebate up to $2000 available based on Heat Pump SEER value.",
+      "es": "Un reembolso de hasta $2,000 dólares según el valor SEER de la bomba de calor."
     }
   },
   {
@@ -65,16 +74,19 @@
       "rebate"
     ],
     "item": "rooftop_solar_installation",
-    "program": "az_mohaveElectricCooperativeSunWattsRenewableEnergyAndRebateProgram",
+    "program": "az_mohaveElectricCooperative_sunWattsRenewableEnergyAndRebateProgram",
     "amount": {
       "type": "dollars_per_unit",
-      "unit": "watt",
       "number": 0.05,
+      "unit": "watt",
       "maximum": 2500
     },
-    "owner_status": ["homeowner"],
+    "owner_status": [
+      "homeowner"
+    ],
     "short_description": {
-      "en": "Rebate up to $2500 for residential photovoltaic and wind system installation."
+      "en": "Rebate up to $2500 for residential photovolatic and wind system installation.",
+      "es": "Un reembolso de $2,500 dólares para sistemas fotovoltaicos y eólicos residenciales."
     }
   },
   {
@@ -85,15 +97,19 @@
       "rebate"
     ],
     "item": "battery_storage_installation",
-    "program": "az_mohaveElectricCooperativeMohaveHeatBatteryRebate",
+    "program": "az_mohaveElectricCooperative_mohaveHeatBatteryRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 500
     },
-    "owner_status": ["homeowner"],
+    "owner_status": [
+      "homeowner"
+    ],
     "short_description": {
-      "en": "Rebate of $500 for each minimum usable capacity battery unit of 5 kWh, installed on or after Jan 9, 2022."
-    }
+      "en": "Rebate of $500 for each minimum usable capacity battery unit of 5 kWh, installed on or after Jan 9, 2022.",
+      "es": "Un reembolso de $500 dólares por cada unidad de batería de 5 kWh de capacidad mínima utilizable instalada a partir del 9 de enero del 2022."
+    },
+    "start_date": 2022
   },
   {
     "id": "AZ-7",
@@ -103,15 +119,18 @@
       "pos_rebate"
     ],
     "item": "weatherization",
-    "program": "az_saltRiverProjectInsulationRebate",
+    "program": "az_saltRiverProject_insulationRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 600,
       "maximum": 600
     },
-    "owner_status": ["homeowner"],
+    "owner_status": [
+      "homeowner"
+    ],
     "short_description": {
-      "en": "Up to $600 rebate for attic insulation installed by SRP insulation program contactor."
+      "en": "Up to $600 rebate for attic insulation installed by SRP insulation program contactor.",
+      "es": "Un reembolso de hasta $600 dólares para aislamiento del ático instalado por un contratista del programa de aislamiento SRP."
     }
   },
   {
@@ -122,14 +141,17 @@
       "rebate"
     ],
     "item": "heat_pump_water_heater",
-    "program": "az_saltRiverProjectHeatPumpWaterHeaterRebate",
+    "program": "az_saltRiverProject_heatPumpWaterHeaterRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 500
     },
-    "owner_status": ["homeowner"],
+    "owner_status": [
+      "homeowner"
+    ],
     "short_description": {
-      "en": "$500 rebate for at least 2.8 UEW HPWH installed by contractor licensed in Arizona between July 1, 2023 and April 30, 2024."
+      "en": "$500 rebate for at least 2.8 UEW HPWH installed by contractor licensed in Arizona between July 1, 2023 and April 30, 2024.",
+      "es": "Un reembolso de $500 para un calentador de agua con bomba de calor y capacidad mínima de 2.8 instalado por un contratista de UEW certificado en Arizona entre el 1 de julio y el 30 de abril del 2024."
     }
   },
   {
@@ -140,14 +162,17 @@
       "pos_rebate"
     ],
     "item": "electric_vehicle_charger",
-    "program": "az_saltRiverProjectHomeElectricVehicleChargerRebate",
+    "program": "az_saltRiverProject_homeElectricVehicle(EV)ChargerRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 250
     },
-    "owner_status": ["homeowner"],
+    "owner_status": [
+      "homeowner"
+    ],
     "short_description": {
-      "en": "Save $250 on a new Level 2 smart charger by shopping SRP Marketplace."
+      "en": "Save $250 on a new Level 2 smart charger by shopping SRP Marketplace.",
+      "es": "Ahorre $250 dólares en un nuevo cargador inteligente de nivel 2 comprando en SRP Marketplace."
     }
   },
   {
@@ -158,14 +183,17 @@
       "rebate"
     ],
     "item": "electric_vehicle_charger",
-    "program": "az_saltRiverProjectHomeElectricVehicleChargerRebate",
+    "program": "az_saltRiverProject_homeElectricVehicleChargerRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 250
     },
-    "owner_status": ["homeowner"],
+    "owner_status": [
+      "homeowner"
+    ],
     "short_description": {
-      "en": "Save $250 on a new Level 2 smart charger on or after Jan. 1, 2022, and submitted a rebate application within 90 days of purchase."
+      "en": "Save $250 on a new Level 2 smart charger on or after Jan. 1, 2022, and submitted a rebate application within 90 days of purchase.",
+      "es": "Ahorre $250 dólares en un nuevo cargador inteligente de nivel 2 a partir del 1 de enero de 2022 y presente una solicitud de reembolso en los 90 días siguientes a la compra."
     }
   },
   {
@@ -176,14 +204,17 @@
       "rebate"
     ],
     "item": "heat_pump_water_heater",
-    "program": "az_sulphurSpringsValleyElectricCooperativeHotWaterHeaterRebate",
+    "program": "az_sulphurSpringsValleyElectricCooperative_hotWaterHeaterRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 100
     },
-    "owner_status": ["homeowner"],
+    "owner_status": [
+      "homeowner"
+    ],
     "short_description": {
-      "en": "$100 Rebate for Electric Storage Water Heater with a .93+ Uniform Energy Factor (UEF)."
+      "en": "$100 Rebate for Electric Storage Water Heater with a .93+ Uniform Energy Factor (UEF).",
+      "es": "Un reembolso de $100 dólares para calentadores de agua eléctricos con un factor de energía uniforme (o UEF) de .93+."
     }
   },
   {
@@ -194,14 +225,17 @@
       "rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "az_sulphurSpringsValleyElectricCooperativeHeatPumpRebates",
+    "program": "az_sulphurSpringsValleyElectricCooperative_heatPumpRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 500
     },
-    "owner_status": ["homeowner"],
+    "owner_status": [
+      "homeowner"
+    ],
     "short_description": {
-      "en": "$500 rebate for all electric ductless heat pump with a minimum 2 tons and must have 15.2 SEER2/7.5 HSPF2 minimum rating."
+      "en": "$500 rebate for all electric ductless heat pump with a minimum 2 tons and must have 15.2 SEER2/7.5 HSPF2 minimum rating.",
+      "es": "Un reembolso de $500 dólares para todas las bombas de calor eléctricas sin ductos de un mínimo de 2 toneladas y una calificación mínima de 15.2 SEER2/7.5 HSPF2."
     }
   },
   {
@@ -212,16 +246,19 @@
       "assistance_program"
     ],
     "item": "weatherization",
-    "program": "az_tucsonElectricPowerWeatherizationAssistance",
+    "program": "az_tucsonElectricPower_weatherizationAssistance",
     "amount": {
       "type": "percent",
       "number": 1
     },
-    "low_income": "default",
-    "owner_status": ["homeowner"],
+    "owner_status": [
+      "homeowner"
+    ],
     "short_description": {
-      "en": "Weatherization improvements for homes for limited-income customers."
-    }
+      "en": "Weatherization improvements for homes for limited-income customers.",
+      "es": "Mejoras de climatización para viviendas de clientes con ingresos limitados."
+    },
+    "low_income": "default"
   },
   {
     "id": "AZ-19",
@@ -231,14 +268,17 @@
       "rebate"
     ],
     "item": "heat_pump_water_heater",
-    "program": "az_tucsonElectricPowerEfficientHomeWaterHeating",
+    "program": "az_tucsonElectricPower_efficientHomeWaterHeating",
     "amount": {
       "type": "dollar_amount",
       "number": 400
     },
-    "owner_status": ["homeowner"],
+    "owner_status": [
+      "homeowner"
+    ],
     "short_description": {
-      "en": "$400 rebate for TEP residential customers who purchase and install an Energy Star HPWH equipped with a wireless, programmable controller."
+      "en": "$400 rebate for TEP residential customers who purchase and install an Energy Star HPWH equipped with a wireless, programmable controller.",
+      "es": "Un reembolso de $400 dólares para los clientes residenciales de TEP que compren e instalen un calentador de agua con bomba de calor Energy Star equipado con un temporizador/controlador inalámbrico y programable."
     },
     "start_date": 2023,
     "end_date": 2023
@@ -251,14 +291,17 @@
       "assistance_program"
     ],
     "item": "weatherization",
-    "program": "az_uniSourceEnergyServicesWeatherizationAssistance",
+    "program": "az_uniSourceEnergyServices_weatherizationAssistance",
     "amount": {
       "type": "percent",
       "number": 1
     },
-    "owner_status": ["homeowner"],
+    "owner_status": [
+      "homeowner"
+    ],
     "short_description": {
-      "en": "Assistance available for energy efficient retrofitting to homes of income-qualifying customers."
+      "en": "Assistance available for energy efficient retrofitting to homes of income-qualifying customers.",
+      "es": "Reacondicionamiento para la eficiencia energética en hogares de clientes que cumplen nivel de ingresos."
     },
     "low_income": "default"
   },
@@ -270,14 +313,17 @@
       "pos_rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "az_uniSourceEnergyServicesEfficientHomeProgram",
+    "program": "az_uniSourceEnergyServices_efficientHomeProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 900
     },
-    "owner_status": ["homeowner"],
+    "owner_status": [
+      "homeowner"
+    ],
     "short_description": {
-      "en": "Up to $900 rebate for retiring an existing, qualified system and installing an Energy Star heat pump/AC purchase via a qualified contractor."
+      "en": "Up to $900 rebate for retiring an existing, qualified system and installing an Energy Star heat pump/AC purchase via a qualified contractor.",
+      "es": "Un reembolso de hasta $900 dólares por la instalación de una bomba de calor de calidad con retiro anticipado de un sistema existente que cumple los requisitos."
     }
   },
   {
@@ -288,14 +334,17 @@
       "pos_rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "az_uniSourceEnergyServicesEfficientHomeProgram",
+    "program": "az_uniSourceEnergyServices_efficientHomeProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 650
     },
-    "owner_status": ["homeowner"],
+    "owner_status": [
+      "homeowner"
+    ],
     "short_description": {
-      "en": "Up to $650 rebate for an Energy Star heat pump/AC purchase and installation through a qualified contractor."
+      "en": "Up to $650 rebate for an Energy Star heat pump/AC purchase and installation through a qualified contractor.",
+      "es": "Un reembolso de hasta $650 dólares por la compra e instalación de una bomba de calor."
     }
   }
 ]
