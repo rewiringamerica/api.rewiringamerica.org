@@ -164,3 +164,31 @@ curl \
 &tax_filing=joint\
 &household_size=4" \
   | jq . > test/fixtures/v1-15289-homeowner-80000-joint-4.json
+
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?location\[zip\]=80517\
+&include_beta_states=true\
+&owner_status=homeowner\
+&household_income=80000\
+&tax_filing=single\
+&household_size=1\
+&authority_types=state\
+&authority_types=utility\
+&items=heat_pump_water_heater\
+&utility=co-xcel-energy" \
+  | jq . > test/fixtures/v1-80517-xcel.json
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?location\[zip\]=80517\
+&include_beta_states=true\
+&owner_status=homeowner\
+&household_income=80000\
+&tax_filing=single\
+&household_size=1\
+&authority_types=state\
+&authority_types=utility\
+&items=heat_pump_water_heater\
+&utility=co-estes-park-power-and-communications" \
+  | jq . > test/fixtures/v1-80517-estes-park.json
+

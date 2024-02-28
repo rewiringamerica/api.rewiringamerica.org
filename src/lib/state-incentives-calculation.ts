@@ -249,6 +249,15 @@ function skipBasedOnRequestParams(
     return true;
   }
 
+  if (
+    item.utilities &&
+    (!request.utility || !item.utilities.includes(request.utility))
+  ) {
+    // If the incentive requires you to be a customer of some set of utilities,
+    // fail if no utility was passed or it's not in the set.
+    return true;
+  }
+
   // County and City incentives are approximate and prone to
   // false positives, since zip codes to not map 1:1 to counties
   // and cities.

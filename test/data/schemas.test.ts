@@ -187,6 +187,9 @@ test('state incentives JSON files match schemas', async tap => {
           `must define city attribute on corresponding authority ${incentive.authority} for incentives with city authority type`,
         );
       }
+      incentive.utilities?.forEach(utility =>
+        tap.hasProp(authorities.utility, utility),
+      );
 
       // Allow duplicate incentive IDs if we split one incentive into multiple due
       // to tax filing status
