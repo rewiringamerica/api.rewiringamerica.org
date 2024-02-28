@@ -62,7 +62,7 @@
     "test": "dotenv -- tap -- --ts \"test/**/*.test.ts\"",
     "testfilter": "dotenv -- tap -- --ts",
     "update-descriptions": "ts-node scripts/update-descriptions",
-    "check-data-freshness": "ts-node scripts/check-data-freshness --no-timeout"
+    "check-data-freshness": "tap --timeout=0 scripts/check-data-freshness.ts"
   },
   "tap": {
     "disable-coverage": true,
