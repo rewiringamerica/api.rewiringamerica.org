@@ -1,7 +1,6 @@
 name: Incentives Freshness Check
 on:
-  schedule:
-    - cron: '30 5 * * 1'
+  push
 permissions:
   contents: read
 jobs:
