@@ -173,6 +173,25 @@ test('CT low income response with state and utility filtering is valid and corre
   );
 });
 
+// IL low income test
+test('IL low income response with state and utility filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '60304' },
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 35000,
+      tax_filing: 'joint',
+      authority_types: ['state'],
+      authority: 'il-state-of-illinois',
+      // TODO: Remove when IL is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/il-60304-state-utility-lowincome.json',
+  );
+});
+
 // NY low income test.
 test('NY response with state and utility is valid and correct', async t => {
   await validateResponse(

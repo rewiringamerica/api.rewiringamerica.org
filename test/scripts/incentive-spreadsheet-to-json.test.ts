@@ -24,6 +24,7 @@ test('correct row to record transformation', async tap => {
         "Technology (If selected 'Other')": '',
         'Program Description (guideline)':
           'Receive a $50 rebate for an Energy Star certified electric ventless\nor vented\nclothes dryer from an approved retailer',
+        'Program Description (Spanish)': 'Unas palabras en español.',
         'Program Status': 'Active',
         'Program Start (MM/DD/YYYY)': '1/1/2022',
         'Program End (MM/DD/YYYY)': '12/31/2026',
@@ -65,6 +66,7 @@ test('correct row to record transformation', async tap => {
         ],
         short_description: {
           en: 'Receive a $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',
+          es: 'Unas palabras en español.',
         },
         start_date: 2022,
         end_date: 2026,
@@ -91,7 +93,7 @@ test('correct row to record transformation', async tap => {
   for (const tc of testCases) {
     const standardized = standardizer.standardize(tc.input);
     const [valids, invalids] = flatToNestedValidate([standardized]);
-    tap.equal(invalids.length, 0);
+    tap.equal(invalids.length, 0, `Invalid record: ${invalids[0]}`);
     tap.matchOnly(standardizer.refineCollectedData('va', valids[0]), tc.want);
   }
 });

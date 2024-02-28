@@ -5,9 +5,12 @@ import fetch from 'make-fetch-happen';
 import minimist from 'minimist';
 import path from 'path';
 
-import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../src/data/low_income_thresholds';
 import {
-  CollectedFields,
+  LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
+  LowIncomeThresholdsMap,
+} from '../src/data/low_income_thresholds';
+import {
+  CollectedIncentive,
   STATE_SCHEMA,
   StateIncentive,
 } from '../src/data/state_incentives';
@@ -24,6 +27,12 @@ type StateIncentivesWithErrors = Partial<StateIncentive> & {
   errors: object[];
 };
 
+type SpreadsheetConversionOutput = {
+  invalidCollectedIncentives: Record<string, string | object>[];
+  invalidStateIncentives: StateIncentivesWithErrors[];
+  validStateIncentives: StateIncentive[];
+};
+
 function safeDeleteFiles(...filepaths: string[]) {
   for (const filepath of filepaths) {
     if (fs.existsSync(filepath)) {
@@ -32,10 +41,14 @@ function safeDeleteFiles(...filepaths: string[]) {
   }
 }
 
-function updateJsonFiles(records: object[], filepath: string) {
+function updateJsonFiles(
+  records: object[],
+  filepath: string,
+  deleteEmpty: boolean = true,
+) {
   const dir = path.dirname(filepath);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir);
-  if (records.length === 0) {
+  if (records.length === 0 && deleteEmpty) {
     safeDeleteFiles(filepath);
   } else {
     fs.writeFileSync(
@@ -44,6 +57,50 @@ function updateJsonFiles(records: object[], filepath: string) {
       'utf-8',
     );
   }
+}
+
+export function spreadsheetToJson(
+  state: string,
+  rows: Record<string, string>[],
+  strict: boolean,
+  lowIncome: LowIncomeThresholdsMap | null,
+): SpreadsheetConversionOutput {
+  const standardizer = new SpreadsheetStandardizer(
+    FIELD_MAPPINGS,
+    VALUE_MAPPINGS,
+    strict,
+    lowIncome,
+  );
+
+  const standardized = rows.map(standardizer.standardize.bind(standardizer));
+  const validated = flatToNestedValidate(standardized);
+  const validCollectedIncentives = validated[0];
+  let invalidCollectedIncentives = validated[1];
+  // Filter out unfilled rows at the end of the spreadsheet
+  // where we prepopulated IDs but nothing else is filled in.
+  // The two keys we expect are ID and errors.
+  invalidCollectedIncentives = invalidCollectedIncentives.filter(
+    invalid => Object.keys(invalid).length > 2,
+  );
+  const invalidStateIncentives: StateIncentivesWithErrors[] = [];
+  const validStateIncentives: StateIncentive[] = [];
+  validCollectedIncentives.forEach((row: CollectedIncentive) => {
+    const refined = standardizer.refineCollectedData(state, row);
+    if (!validate(refined)) {
+      const invalid = refined as StateIncentivesWithErrors;
+      if (validate.errors !== undefined && validate.errors !== null) {
+        invalid.errors = validate.errors;
+      }
+      invalidStateIncentives.push(invalid);
+    } else {
+      validStateIncentives.push(refined);
+    }
+  });
+  return {
+    invalidCollectedIncentives,
+    invalidStateIncentives,
+    validStateIncentives,
+  };
 }
 
 async function convertToJson(
@@ -63,46 +120,38 @@ async function convertToJson(
     columns: true,
     from_line: file.headerRowNumber ?? 1,
   });
-  const invalidPath = file.filepath.replace('.json', '_invalid.json');
-  const rawValidPath = file.filepath.replace('.json', '_raw.json');
-  const rawInvalidPath = file.filepath.replace('.json', '_raw_invalid.json');
 
-  const standardizer = new SpreadsheetStandardizer(
-    FIELD_MAPPINGS,
-    VALUE_MAPPINGS,
+  const {
+    invalidCollectedIncentives,
+    invalidStateIncentives,
+    validStateIncentives,
+  } = await spreadsheetToJson(
+    state,
+    rows,
     strict,
     lowIncome ? LOW_INCOME_THRESHOLDS_BY_AUTHORITY : null,
   );
 
-  const standardized = rows.map(standardizer.standardize.bind(standardizer));
-  const [valids, invalids] = flatToNestedValidate(standardized);
-  if (invalids.length > 0) {
-    updateJsonFiles(valids, rawValidPath);
-    updateJsonFiles(invalids, rawInvalidPath);
+  const invalidCollectedPath = file.filepath.replace(
+    '.json',
+    '_invalid_collected.json',
+  );
+  const invalidStatePath = file.filepath.replace(
+    '.json',
+    '_invalid_state.json',
+  );
+  updateJsonFiles(invalidCollectedIncentives, invalidCollectedPath);
+  updateJsonFiles(invalidStateIncentives, invalidStatePath);
+  // Pass deleteEmpty = false since missing incentives files cause compilation errors.
+  updateJsonFiles(validStateIncentives, file.filepath, false);
+  if (
+    invalidCollectedIncentives.length > 0 ||
+    invalidStateIncentives.length > 0
+  ) {
     throw new Error(
-      'Invalid spreadsheet records found. See raw.json and raw_invalid.json files to debug before converting to API-friendly JSON.',
+      `Some records failed validation. See ${invalidCollectedPath} and/or ${invalidStatePath} to debug errors.`,
     );
-  } else {
-    // Clear existing raw files since all were valid in this run.
-    safeDeleteFiles(rawValidPath, rawInvalidPath);
   }
-
-  const invalid_jsons: StateIncentivesWithErrors[] = [];
-  const jsons: StateIncentive[] = [];
-  valids.forEach((row: CollectedFields) => {
-    const refined = standardizer.refineCollectedData(state, row);
-    if (!validate(refined)) {
-      const invalid = refined as StateIncentivesWithErrors;
-      if (validate.errors !== undefined && validate.errors !== null) {
-        invalid.errors = validate.errors;
-      }
-      invalid_jsons.push(invalid);
-    } else {
-      jsons.push(refined);
-    }
-  });
-  updateJsonFiles(jsons, file.filepath);
-  updateJsonFiles(invalid_jsons, invalidPath);
 }
 
 (async function () {

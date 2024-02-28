@@ -148,6 +148,60 @@
       ],
       "authority_type": "state",
       "authority": "ri-oer",
+      "program": "Erika Niedowski Memorial Electric Bicycle Rebate Program",
+      "program_url": "https://drive.ri.gov/erika-niedowski-memorial-electric-bicycle-rebate-program",
+      "item": {
+        "type": "ebike",
+        "name": "E-Bike"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.75,
+        "maximum": 750
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "75% up to $750 back on the final purchase of an e-bike or e-cargo bike for income qualified residents."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "ri-oer",
+      "program": "Erika Niedowski Memorial Electric Bicycle Rebate Program",
+      "program_url": "https://drive.ri.gov/erika-niedowski-memorial-electric-bicycle-rebate-program",
+      "item": {
+        "type": "ebike",
+        "name": "E-Bike"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.3,
+        "maximum": 350
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "30% up to $350 back on the final purchase of an e-bike or e-cargo bike."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "ri-oer",
       "program": "RI Office of Energy Resources Clean Heat RI",
       "program_url": "https://cleanheatri.com/",
       "item": {
@@ -441,33 +495,6 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "Additional $500 for an electrical service upgrade at the same time as installation of a heat pump or heat pump water heater."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "ri-rhode-island-energy",
-      "program": "Rhode Island Energy ENERGY STAR® Certified Electric Clothes Dryer Rebate",
-      "program_url": "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/rebate-programs",
-      "item": {
-        "type": "heat_pump_clothes_dryer",
-        "name": "Heat Pump Clothes Dryer",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-clothes-dryer"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 50
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": 2023,
-      "end_date": 2024,
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "$50 back on ENERGY STAR® certified electric clothes dryer purchased in 2023. Rebate requests must be completed within 90 days of purchase."
     }
   ]
 }
