@@ -55,7 +55,7 @@ export type CollectedIncentive = {
   financing_details?: string;
   editorial_notes?: string;
   questions?: string;
-  serve_in_api?: boolean;
+  omit_from_api?: boolean;
 };
 
 const collectedIncentivePropertySchema = {
@@ -98,7 +98,7 @@ const collectedIncentivePropertySchema = {
   financing_details: { type: 'string', nullable: true },
   editorial_notes: { type: 'string', nullable: true },
   questions: { type: 'string', nullable: true },
-  serve_in_api: { type: 'boolean', nullable: true },
+  omit_from_api: { type: 'boolean', nullable: true },
 } as const;
 const requiredCollectedFields = [
   'id',

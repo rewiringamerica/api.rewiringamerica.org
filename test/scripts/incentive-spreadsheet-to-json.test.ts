@@ -1,4 +1,5 @@
 import { test } from 'tap';
+import { spreadsheetToJson } from '../../scripts/incentive-spreadsheet-to-json';
 import { flatToNestedValidate } from '../../scripts/lib/format-converter';
 import {
   FIELD_MAPPINGS,
@@ -6,7 +7,7 @@ import {
 } from '../../scripts/lib/spreadsheet-mappings';
 import { SpreadsheetStandardizer } from '../../scripts/lib/spreadsheet-standardizer';
 
-test('correct row to record transformation', async tap => {
+test('correct row to record transformation', tap => {
   const testCases: {
     input: Record<string, string>;
     want: Record<string, string | number | object | boolean>;
@@ -96,4 +97,31 @@ test('correct row to record transformation', async tap => {
     tap.equal(invalids.length, 0, `Invalid record: ${invalids[0]}`);
     tap.matchOnly(standardizer.refineCollectedData('va', valids[0]), tc.want);
   }
+  tap.end();
+});
+
+test('drop records with omit_from_api marked', tap => {
+  // Standard case: record appears as invalid.
+  const keepInput = {
+    ID: 'VA-1',
+    some_other_field: 'value',
+  };
+  const output = spreadsheetToJson('VA', [keepInput], false, null);
+  tap.equal(output.invalidCollectedIncentives.length, 1);
+
+  // With omit_from_api: it's dropped entirely.
+  const omitInput = {
+    ID: 'VA-1',
+    some_other_field: 'value',
+    omit_from_api: 'true',
+  };
+  const {
+    invalidCollectedIncentives,
+    invalidStateIncentives,
+    validStateIncentives,
+  } = spreadsheetToJson('VA', [omitInput], false, null);
+  tap.equal(invalidCollectedIncentives.length, 0);
+  tap.equal(invalidStateIncentives.length, 0);
+  tap.equal(validStateIncentives.length, 0);
+  tap.end();
 });

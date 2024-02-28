@@ -43,6 +43,7 @@ export const FIELD_MAPPINGS: AliasMap = {
   // It may not appear in all spreadsheets.
   editorial_notes: ['Editorial Notes'],
   questions: ['Questions'],
+  omit_from_api: ['Omit from API?'],
 };
 
 export const VALUE_MAPPINGS: { [index: string]: AliasMap } = {
