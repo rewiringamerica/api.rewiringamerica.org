@@ -19,7 +19,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,125 for ENERGY STAR Qualified Air Sealing."
+      "en": "Up to $1,125 for ENERGY STAR Qualified Air Sealing. Must be completed with Trade Ally contractor installed attic or wall insulation improvements."
     },
     "start_date": 2023,
     "end_date": 2023,
@@ -71,7 +71,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $225 for Foundation Insulation."
+      "en": "Up to $225 for Foundation Insulation. Must be completed along with Trade Ally contractor installed attic or wall insulation improvements."
     },
     "start_date": 2023,
     "end_date": 2023,
@@ -123,7 +123,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$75 for Duct Sealing & Insulation."
+      "en": "$75 for Duct Sealing & Insulation. Must be completed along with Trade Ally contractor installed attic or wall insulation improvements."
     },
     "start_date": 2023,
     "end_date": 2023,
@@ -149,7 +149,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$200 for DIY Attic Insulation & Air Sealing."
+      "en": "$200 cash back for self-installed attic insulation and air sealing."
     },
     "start_date": 2023,
     "end_date": 2023,
@@ -175,7 +175,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 for Smart Thermostats."
+      "en": "$50 for Smart Thermostats. Available as instant discounts in the online marketplace or as rebates."
     },
     "start_date": 2023,
     "end_date": 2023,
@@ -187,7 +187,7 @@
     "authority_type": "state",
     "authority": "wi-focus-on-energy",
     "payment_methods": [
-      "unknown"
+      "pos_rebate"
     ],
     "item": "heat_pump_water_heater",
     "program": "wi_focusOnEnergy_waterHeatingRebates",
@@ -201,29 +201,6 @@
     ],
     "short_description": {
       "en": "Instant discounts for electric heat pump water heaters starting at $300 through a Trade Ally contractor."
-    },
-    "bonus_available": true,
-    "low_income": "wi-focus-on-energy"
-  },
-  {
-    "id": "WI-9",
-    "authority_type": "state",
-    "authority": "wi-focus-on-energy",
-    "payment_methods": [
-      "unknown"
-    ],
-    "item": "other",
-    "program": "wi_focusOnEnergy_waterHeatingRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 120,
-      "minimum": 120
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Instant discounts for natural gas tankless water heaters start at $120 through a Trade Ally contractor."
     },
     "bonus_available": true,
     "low_income": "wi-focus-on-energy"
@@ -275,240 +252,6 @@
     ],
     "short_description": {
       "en": "$200 cash back for qualified self-installed attic insulation and air sealing."
-    },
-    "start_date": 2023,
-    "end_date": 2023,
-    "low_income": "wi-focus-on-energy"
-  },
-  {
-    "id": "WI-12",
-    "authority_type": "state",
-    "authority": "wi-focus-on-energy",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "other",
-    "program": "wi_focusOnEnergy_residentialHeating&CoolingRebate",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 550,
-      "minimum": 150,
-      "maximum": 550
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $550 for qualifying 97%+ AFUE Multi-Stage Furnace."
-    },
-    "start_date": 2023,
-    "end_date": 2023,
-    "low_income": "wi-focus-on-energy"
-  },
-  {
-    "id": "WI-13",
-    "authority_type": "state",
-    "authority": "wi-focus-on-energy",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "other",
-    "program": "wi_focusOnEnergy_residentialHeating&CoolingRebate",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 450,
-      "minimum": 100,
-      "maximum": 450
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $450 for qualifying 96% AFUE Furnace."
-    },
-    "start_date": 2023,
-    "end_date": 2023,
-    "low_income": "wi-focus-on-energy"
-  },
-  {
-    "id": "WI-14",
-    "authority_type": "state",
-    "authority": "wi-focus-on-energy",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "other",
-    "program": "wi_focusOnEnergy_residentialHeating&CoolingRebate",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 350,
-      "minimum": 50,
-      "maximum": 350
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $350 for qualifying 95% AFUE Furnace."
-    },
-    "start_date": 2023,
-    "end_date": 2023,
-    "low_income": "wi-focus-on-energy"
-  },
-  {
-    "id": "WI-15",
-    "authority_type": "state",
-    "authority": "wi-focus-on-energy",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "other",
-    "program": "wi_focusOnEnergy_residentialHeating&CoolingRebate",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 25,
-      "minimum": 25,
-      "maximum": 25
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$25 for qualifying Blower Fan Replacement."
-    },
-    "start_date": 2023,
-    "end_date": 2023,
-    "low_income": "wi-focus-on-energy"
-  },
-  {
-    "id": "WI-16",
-    "authority_type": "state",
-    "authority": "wi-focus-on-energy",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "other",
-    "program": "wi_focusOnEnergy_residentialHeating&CoolingRebate",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 700,
-      "minimum": 500,
-      "maximum": 700
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $700 for qualifying 95%+ AFUE Combination Boiler."
-    },
-    "start_date": 2023,
-    "end_date": 2023,
-    "low_income": "wi-focus-on-energy"
-  },
-  {
-    "id": "WI-17",
-    "authority_type": "state",
-    "authority": "wi-focus-on-energy",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "other",
-    "program": "wi_focusOnEnergy_residentialHeating&CoolingRebate",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 600,
-      "minimum": 400,
-      "maximum": 600
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $600 for qualifying 90-94% AFUE Combination Boiler."
-    },
-    "start_date": 2023,
-    "end_date": 2023,
-    "low_income": "wi-focus-on-energy"
-  },
-  {
-    "id": "WI-18",
-    "authority_type": "state",
-    "authority": "wi-focus-on-energy",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "other",
-    "program": "wi_focusOnEnergy_residentialHeating&CoolingRebate",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 550,
-      "minimum": 400,
-      "maximum": 550
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $550 for qualifying 95%+ AFUE Standard Boiler."
-    },
-    "start_date": 2023,
-    "end_date": 2023,
-    "low_income": "wi-focus-on-energy"
-  },
-  {
-    "id": "WI-19",
-    "authority_type": "state",
-    "authority": "wi-focus-on-energy",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "other",
-    "program": "wi_focusOnEnergy_residentialHeating&CoolingRebate",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 450,
-      "minimum": 300,
-      "maximum": 450
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $450 for qualifying 90-94% AFUE Standard Boiler."
-    },
-    "start_date": 2023,
-    "end_date": 2023,
-    "low_income": "wi-focus-on-energy"
-  },
-  {
-    "id": "WI-20",
-    "authority_type": "state",
-    "authority": "wi-focus-on-energy",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "other",
-    "program": "wi_focusOnEnergy_residentialHeating&CoolingRebate",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 150,
-      "minimum": 100,
-      "maximum": 150
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $150 for qualifying Indirect Water Heater."
     },
     "start_date": 2023,
     "end_date": 2023,

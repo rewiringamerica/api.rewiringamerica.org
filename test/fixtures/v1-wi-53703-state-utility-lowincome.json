@@ -19,6 +19,32 @@
   "incentives": [
     {
       "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "wi-focus-on-energy",
+      "program": "Water Heating Rebates\n",
+      "program_url": "https://focusonenergy.com/residential/water-heating",
+      "item": {
+        "type": "heat_pump_water_heater",
+        "name": "Heat Pump Water Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-water-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 300
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Instant discounts for electric heat pump water heaters starting at $300 through a Trade Ally contractor."
+    },
+    {
+      "payment_methods": [
         "rebate"
       ],
       "authority_type": "state",
@@ -71,7 +97,7 @@
       "end_date": 2024,
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "Up to $1,125 for ENERGY STAR Qualified Air Sealing."
+      "short_description": "Up to $1,125 for ENERGY STAR Qualified Air Sealing. Must be completed with Trade Ally contractor installed attic or wall insulation improvements."
     },
     {
       "payment_methods": [
@@ -163,33 +189,6 @@
       ],
       "authority_type": "state",
       "authority": "wi-focus-on-energy",
-      "program": "Residential Heating & Cooling Rebate",
-      "program_url": "https://focusonenergy.com/residential/heating-and-cooling",
-      "item": {
-        "type": "other",
-        "name": "Other"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 700,
-        "maximum": 700
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": 2023,
-      "end_date": 2024,
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "Up to $700 for qualifying 95%+ AFUE Combination Boiler."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "wi-focus-on-energy",
       "program": "Insulation & Air Sealing Rebates",
       "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing#details",
       "item": {
@@ -211,87 +210,6 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "Up to $675 for Attic Insulation."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "wi-focus-on-energy",
-      "program": "Residential Heating & Cooling Rebate",
-      "program_url": "https://focusonenergy.com/residential/heating-and-cooling",
-      "item": {
-        "type": "other",
-        "name": "Other"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 600,
-        "maximum": 600
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": 2023,
-      "end_date": 2024,
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "Up to $600 for qualifying 90-94% AFUE Combination Boiler."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "wi-focus-on-energy",
-      "program": "Residential Heating & Cooling Rebate",
-      "program_url": "https://focusonenergy.com/residential/heating-and-cooling",
-      "item": {
-        "type": "other",
-        "name": "Other"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 550,
-        "maximum": 550
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": 2023,
-      "end_date": 2024,
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "Up to $550 for qualifying 97%+ AFUE Multi-Stage Furnace."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "wi-focus-on-energy",
-      "program": "Residential Heating & Cooling Rebate",
-      "program_url": "https://focusonenergy.com/residential/heating-and-cooling",
-      "item": {
-        "type": "other",
-        "name": "Other"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 550,
-        "maximum": 550
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": 2023,
-      "end_date": 2024,
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "Up to $550 for qualifying 95%+ AFUE Standard Boiler."
     },
     {
       "payment_methods": [
@@ -386,60 +304,6 @@
       "program": "Residential Heating & Cooling Rebate",
       "program_url": "https://focusonenergy.com/residential/heating-and-cooling",
       "item": {
-        "type": "other",
-        "name": "Other"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 450,
-        "maximum": 450
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": 2023,
-      "end_date": 2024,
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "Up to $450 for qualifying 96% AFUE Furnace."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "wi-focus-on-energy",
-      "program": "Residential Heating & Cooling Rebate",
-      "program_url": "https://focusonenergy.com/residential/heating-and-cooling",
-      "item": {
-        "type": "other",
-        "name": "Other"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 450,
-        "maximum": 450
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": 2023,
-      "end_date": 2024,
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "Up to $450 for qualifying 90-94% AFUE Standard Boiler."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "wi-focus-on-energy",
-      "program": "Residential Heating & Cooling Rebate",
-      "program_url": "https://focusonenergy.com/residential/heating-and-cooling",
-      "item": {
         "type": "heat_pump_air_conditioner_heater",
         "name": "Heat Pump Air Conditioner/Heater",
         "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
@@ -458,33 +322,6 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "$400 for Air Source Heat Pump (existing primary heating fuel: propane, oil, etc.)."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "wi-focus-on-energy",
-      "program": "Residential Heating & Cooling Rebate",
-      "program_url": "https://focusonenergy.com/residential/heating-and-cooling",
-      "item": {
-        "type": "other",
-        "name": "Other"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 350,
-        "maximum": 350
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": 2023,
-      "end_date": 2024,
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "Up to $350 for qualifying 95% AFUE Furnace."
     },
     {
       "payment_methods": [
@@ -512,7 +349,7 @@
       "end_date": 2024,
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "Up to $225 for Foundation Insulation."
+      "short_description": "Up to $225 for Foundation Insulation. Must be completed along with Trade Ally contractor installed attic or wall insulation improvements."
     },
     {
       "payment_methods": [
@@ -540,7 +377,7 @@
       "end_date": 2024,
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "$200 for DIY Attic Insulation & Air Sealing."
+      "short_description": "$200 cash back for self-installed attic insulation and air sealing."
     },
     {
       "payment_methods": [
@@ -576,33 +413,6 @@
       ],
       "authority_type": "state",
       "authority": "wi-focus-on-energy",
-      "program": "Residential Heating & Cooling Rebate",
-      "program_url": "https://focusonenergy.com/residential/heating-and-cooling",
-      "item": {
-        "type": "other",
-        "name": "Other"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 150,
-        "maximum": 150
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": 2023,
-      "end_date": 2024,
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "Up to $150 for qualifying Indirect Water Heater."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "wi-focus-on-energy",
       "program": "Insulation & Air Sealing Rebates",
       "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing#details",
       "item": {
@@ -623,7 +433,7 @@
       "end_date": 2024,
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "$75 for Duct Sealing & Insulation."
+      "short_description": "$75 for Duct Sealing & Insulation. Must be completed along with Trade Ally contractor installed attic or wall insulation improvements."
     },
     {
       "payment_methods": [
@@ -650,85 +460,7 @@
       "end_date": 2024,
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "$50 for Smart Thermostats."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "wi-focus-on-energy",
-      "program": "Residential Heating & Cooling Rebate",
-      "program_url": "https://focusonenergy.com/residential/heating-and-cooling",
-      "item": {
-        "type": "other",
-        "name": "Other"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 25,
-        "maximum": 25
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": 2023,
-      "end_date": 2024,
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "$25 for qualifying Blower Fan Replacement."
-    },
-    {
-      "payment_methods": [
-        "unknown"
-      ],
-      "authority_type": "state",
-      "authority": "wi-focus-on-energy",
-      "program": "Water Heating Rebates\n",
-      "program_url": "https://focusonenergy.com/residential/water-heating",
-      "item": {
-        "type": "heat_pump_water_heater",
-        "name": "Heat Pump Water Heater",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-water-heater"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 300
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": 2023,
-      "end_date": 2024,
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "Instant discounts for electric heat pump water heaters starting at $300 through a Trade Ally contractor."
-    },
-    {
-      "payment_methods": [
-        "unknown"
-      ],
-      "authority_type": "state",
-      "authority": "wi-focus-on-energy",
-      "program": "Water Heating Rebates\n",
-      "program_url": "https://focusonenergy.com/residential/water-heating",
-      "item": {
-        "type": "other",
-        "name": "Other"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 120
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": 2023,
-      "end_date": 2024,
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "Instant discounts for natural gas tankless water heaters start at $120 through a Trade Ally contractor."
+      "short_description": "$50 for Smart Thermostats. Available as instant discounts in the online marketplace or as rebates."
     }
   ]
 }
