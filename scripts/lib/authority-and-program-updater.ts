@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { Project } from 'ts-morph';
+import { Programs, STATE_PROGRAMS_JSON_FILE } from '../../src/data/programs';
 
 const project = new Project({
   tsConfigFilePath: 'tsconfig.json',
@@ -9,7 +10,6 @@ const PROGRAMS_TS_FILE = 'src/data/programs.ts';
 project.addSourceFileAtPath(PROGRAMS_TS_FILE);
 const sourceFile = project.getSourceFileOrThrow(PROGRAMS_TS_FILE);
 
-const PROGRAMS_JSON_FILE = 'data/programs.json';
 const AUTHORITIES_JSON_FILE = 'data/authorities.json';
 
 const wordSeparators =
@@ -77,16 +77,14 @@ export function createProgramName(
   );
 }
 
-export function sortJsonAlphabeticallyByStateKey(
-  json: StateToAuthorityTypeMap,
-) {
-  const ordered = Object.keys(json)
-    .sort()
-    .reduce((obj, key) => {
-      obj[key] = json[key];
-      return obj;
-    }, {} as StateToAuthorityTypeMap);
-  return ordered;
+export function sortJsonAlphabeticallyByTopLevelKey<
+  T extends { [index: string]: object },
+>(json: T): T {
+  return Object.fromEntries(
+    Object.keys(json)
+      .sort()
+      .map(key => [key, json[key]]),
+  ) as T;
 }
 
 export function updateAuthorities(
@@ -107,7 +105,33 @@ export function updateAuthorities(
     };
   }
 
-  return sortJsonAlphabeticallyByStateKey(json);
+  return sortJsonAlphabeticallyByTopLevelKey(json);
+}
+
+export function updateProgramsImpl(
+  programs: Programs,
+  state: string,
+  authorityMap: AuthorityMap,
+) {
+  // Clear existing entries for that state.
+  for (const key in programs) {
+    if (key.startsWith(`${state.toLocaleLowerCase()}_`)) {
+      delete programs[key];
+    }
+  }
+  for (const authority of Object.values(authorityMap)) {
+    for (const [programShort, program] of Object.entries(authority.programs)) {
+      programs[programShort] = {
+        name: {
+          en: program.name,
+        },
+        url: {
+          en: program.url,
+        },
+      };
+    }
+  }
+  return sortJsonAlphabeticallyByTopLevelKey(programs);
 }
 
 type AuthorityKey = string;
@@ -219,29 +243,13 @@ export class AuthorityAndProgramUpdater {
   }
 
   updateProgramJson() {
-    const json = JSON.parse(fs.readFileSync(PROGRAMS_JSON_FILE, 'utf-8'));
-    for (const authority of Object.values(this.authorityMap)) {
-      for (const [programShort, program] of Object.entries(
-        authority.programs,
-      )) {
-        if (programShort in json) {
-          throw new Error(
-            `Program ${programShort} already exists in Programs file: ${PROGRAMS_JSON_FILE}`,
-          );
-        }
-        json[programShort] = {
-          name: {
-            en: program.name,
-          },
-          url: {
-            en: program.url,
-          },
-        };
-      }
-    }
+    const json = JSON.parse(fs.readFileSync(STATE_PROGRAMS_JSON_FILE, 'utf-8'));
+
+    const updated = updateProgramsImpl(json, this.state, this.authorityMap);
+
     fs.writeFileSync(
-      PROGRAMS_JSON_FILE,
-      JSON.stringify(json, null, 2),
+      STATE_PROGRAMS_JSON_FILE,
+      JSON.stringify(updated, null, 2),
       'utf-8',
     );
   }

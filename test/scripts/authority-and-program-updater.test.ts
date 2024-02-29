@@ -1,10 +1,12 @@
 import { test } from 'tap';
 import {
   AuthorityMap,
-  sortJsonAlphabeticallyByStateKey,
+  sortJsonAlphabeticallyByTopLevelKey,
   StateToAuthorityTypeMap,
   updateAuthorities,
+  updateProgramsImpl,
 } from '../../scripts/lib/authority-and-program-updater';
+import { Programs } from '../../src/data/programs';
 
 const unorderedFixture: StateToAuthorityTypeMap = {
   CT: {
@@ -106,7 +108,7 @@ test('correctly sort state authority information by state', tap => {
   };
   tap.matchOnly(
     ordered_json,
-    sortJsonAlphabeticallyByStateKey(unorderedFixture),
+    sortJsonAlphabeticallyByTopLevelKey(unorderedFixture),
   );
   tap.end();
 });
@@ -242,5 +244,78 @@ test('add and alpha-sort new state', tap => {
     expected,
     updateAuthorities(unorderedFixture, 'DE', authorityMap),
   );
+  tap.end();
+});
+
+test('programs are added and sorted correctly', tap => {
+  const authorityMap: AuthorityMap = {
+    'de-state': {
+      name: 'Delaware State Energy',
+      authority_type: 'state',
+      programs: {
+        de_delawareStateEnergy_foo: {
+          url: 'foo.com',
+          name: 'foo',
+        },
+        de_delawareStateEnergy_bar: {
+          url: 'bar.com',
+          name: 'bar',
+        },
+      },
+    },
+    'de-utility': {
+      name: 'Delaware Utility',
+      authority_type: 'utility',
+      programs: {
+        de_delawareUtility_baz: {
+          url: 'baz.com',
+          name: 'baz',
+        },
+        de_delawareUtility_qux: {
+          url: 'qux.com',
+          name: 'qux',
+        },
+      },
+    },
+  };
+
+  const input: Programs = {
+    az_someAuthority_someProgram: {
+      name: { en: 'An Arizona Program' },
+      url: { en: 'arizonaprogram.com' },
+    },
+    wa_someOtherAuthority_someOtherProgram: {
+      name: { en: 'An Washington Program' },
+      url: { en: 'washingtonprogram.com' },
+    },
+  };
+
+  const expected: Programs = {
+    az_someAuthority_someProgram: {
+      name: { en: 'An Arizona Program' },
+      url: { en: 'arizonaprogram.com' },
+    },
+    de_delawareStateEnergy_bar: {
+      name: { en: 'bar' },
+      url: { en: 'bar.com' },
+    },
+    de_delawareStateEnergy_foo: {
+      name: { en: 'foo' },
+      url: { en: 'foo.com' },
+    },
+    de_delawareUtility_baz: {
+      name: { en: 'baz' },
+      url: { en: 'baz.com' },
+    },
+    de_delawareUtility_qux: {
+      name: { en: 'qux' },
+      url: { en: 'qux.com' },
+    },
+    wa_someOtherAuthority_someOtherProgram: {
+      name: { en: 'An Washington Program' },
+      url: { en: 'washingtonprogram.com' },
+    },
+  };
+  tap.matchOnly(expected, updateProgramsImpl(input, 'DE', authorityMap));
   tap.end();
 });

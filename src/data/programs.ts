@@ -2,6 +2,10 @@ import fs from 'fs';
 import { FromSchema } from 'json-schema-to-ts';
 import { LOCALIZABLE_STRING_SCHEMA } from './types/localizable-string';
 
+const FEDERAL_PROGRAMS_JSON_FILE = './data/federal_programs.json';
+// Exported to be in sync with AuthorityAndProgramUpdater.
+export const STATE_PROGRAMS_JSON_FILE = './data/state_programs.json';
+
 export const ALL_PROGRAMS = [
   'alternativeFuelVehicleRefuelingPropertyCredit',
   'cleanVehicleCredit',
@@ -301,6 +305,10 @@ export type Programs = FromSchema<
   { references: [typeof LOCALIZABLE_STRING_SCHEMA] }
 >;
 
-export const PROGRAMS: Programs = JSON.parse(
-  fs.readFileSync('./data/programs.json', 'utf-8'),
+const FEDERAL_PROGRAMS: Programs = JSON.parse(
+  fs.readFileSync(FEDERAL_PROGRAMS_JSON_FILE, 'utf-8'),
 );
+const STATE_PROGRAMS: Programs = JSON.parse(
+  fs.readFileSync(STATE_PROGRAMS_JSON_FILE, 'utf-8'),
+);
+export const PROGRAMS: Programs = { ...FEDERAL_PROGRAMS, ...STATE_PROGRAMS };
