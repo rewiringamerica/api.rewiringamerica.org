@@ -192,6 +192,25 @@ test('IL low income response with state and utility filtering is valid and corre
   );
 });
 
+// NV low income test
+test('NV low income response with state and utility filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '89108' },
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 40000,
+      tax_filing: 'joint',
+      authority_types: ['utility'],
+      utility: 'nv-nv-energy',
+      // TODO: Remove when NV is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-nv-89108-state-utility-lowincome.json',
+  );
+});
+
 // NY low income test.
 test('NY response with state and utility is valid and correct', async t => {
   await validateResponse(
