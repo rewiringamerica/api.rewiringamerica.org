@@ -16,7 +16,10 @@ import {
 } from '../src/data/state_incentives';
 import { LOCALIZABLE_STRING_SCHEMA } from '../src/data/types/localizable-string';
 import { FILES, IncentiveFile } from './incentive-spreadsheet-registry';
-import { flatToNestedValidate } from './lib/format-converter';
+import {
+  CollectedIncentivesWithErrors,
+  flatToNestedValidate,
+} from './lib/format-converter';
 import { FIELD_MAPPINGS, VALUE_MAPPINGS } from './lib/spreadsheet-mappings';
 import { SpreadsheetStandardizer } from './lib/spreadsheet-standardizer';
 
@@ -28,7 +31,7 @@ type StateIncentivesWithErrors = Partial<StateIncentive> & {
 };
 
 type SpreadsheetConversionOutput = {
-  invalidCollectedIncentives: Record<string, string | object>[];
+  invalidCollectedIncentives: CollectedIncentivesWithErrors[];
   invalidStateIncentives: StateIncentivesWithErrors[];
   validStateIncentives: StateIncentive[];
 };
@@ -74,8 +77,14 @@ export function spreadsheetToJson(
 
   const standardized = rows.map(standardizer.standardize.bind(standardizer));
   const validated = flatToNestedValidate(standardized);
-  const validCollectedIncentives = validated[0];
-  let invalidCollectedIncentives = validated[1];
+  // For now, anything marked as omit_from_api is dropped. We may eventually
+  // return these anyway even though they are not really errors.
+  const validCollectedIncentives = validated[0].filter(
+    incentive => !incentive.omit_from_api,
+  );
+  let invalidCollectedIncentives = validated[1].filter(
+    incentive => !incentive.omit_from_api,
+  );
   // Filter out unfilled rows at the end of the spreadsheet
   // where we prepopulated IDs but nothing else is filled in.
   // The two keys we expect are ID and errors.

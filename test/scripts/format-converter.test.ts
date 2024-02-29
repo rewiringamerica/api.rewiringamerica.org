@@ -31,6 +31,19 @@ test('array fields are split up', tap => {
   tap.end();
 });
 
+test('eligible boolean fields are converted', tap => {
+  const objs = [
+    {
+      basicProperty: 'foo',
+      booleanProperty: 'TRUE',
+    },
+  ];
+  tap.matchOnly(flatToNested(objs, [], ['booleanProperty']), [
+    { basicProperty: 'foo', booleanProperty: true },
+  ]);
+  tap.end();
+});
+
 test('nested columns properly expanded', tap => {
   const objs = [
     {
@@ -53,7 +66,7 @@ test('nested columns properly expanded', tap => {
   tap.end();
 });
 
-test('validation work', tap => {
+test('validation works', tap => {
   const fullInput = {
     id: 'VA-1',
     data_urls: 'https://takechargeva.com/programs/for-your-home',
