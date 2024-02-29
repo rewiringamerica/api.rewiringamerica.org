@@ -13,7 +13,7 @@ import { AUTHORITIES_BY_STATE } from '../../src/data/authorities';
 // incentive" from "which utilities must someone be a customer of to get this".
 const EXCEPTIONS = new Set([
   'co-platte-river-power-authority',
-  'co-tri-state-g-t',
+  'co-tri-state-g-and-t',
   'co-walking-mountains',
   'vt-vppsa',
 ]);
