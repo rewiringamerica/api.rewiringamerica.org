@@ -101,6 +101,19 @@ location%5Bzip%5D=60304\
 &authority=il-state-of-illinois" \
  | jq . > test/fixtures/il-60304-state-utility-lowincome.json
 
+# TODO: Remove beta states argument when NV is fully launched.
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?location\[zip\]=89108\
+&include_beta_states=true\
+&owner_status=homeowner\
+&household_income=40000\
+&tax_filing=joint\
+&household_size=1\
+&authority_types=utility\
+&utility=nv-nv-energy" \
+  | jq . > test/fixtures/v1-nv-89108-state-utility-lowincome.json
+
 # TODO: Remove &include_beta_states when NY is launched.
 curl \
   "http://localhost:3000/api/v1/calculator\

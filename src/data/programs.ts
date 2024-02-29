@@ -158,6 +158,29 @@ export const ALL_PROGRAMS = [
   // State of Illinois
   'il_stateOfIllinois_homeWeatherization',
 
+  // NV
+  // NV Energy
+  'nv_nVEnergy_homeEnergySaver',
+  'nv_nVEnergy_qualifiedApplianceReplacementProgram',
+  'nv_nVEnergy_residentialAirconditioningProgram',
+  'nv_nVEnergy_residentialSmartThermostatProgram',
+  // Wells Rural Electric
+  'nv_wellsRuralElectric_saveEnergy,SaveMoney',
+  // Lincoln County Power District No. 1
+  'nv_lincolnCountyPowerDistrictNo1_residentialAndCommercialHighEfficiencyAirConditioningAndHeatPumpRebate',
+  // Mt. Wheeler Power
+  'nv_mtWheelerPower_windowsAndInsulationRebates',
+  'nv_mtWheelerPower_appliancesRebates',
+  'nv_mtWheelerPower_hybridWaterHeaterRebate',
+  'nv_mtWheelerPower_airAndHeatRebates',
+  'nv_mtWheelerPower_renewableEnergyGenerationRebates',
+  // City of Boulder City
+  'nv_cityOfBoulderCity_utilityRebateProgram',
+  // Raft Rural Electric Cooperative
+  'nv_raftRuralElectricCooperative_energyEfficiencyRebate',
+  // Plumas-Sierra Rural Electric Cooperative
+  'nv_plumas-SierraRuralElectricCooperative_rebates',
+
   // NY
   // State or State + Utility:
   'ny_cleanHeatIncentives',
