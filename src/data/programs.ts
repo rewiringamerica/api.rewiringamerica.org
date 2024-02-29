@@ -13,25 +13,25 @@ export const ALL_PROGRAMS = [
 
   // AZ
   // Mohave Electric Cooperative
-  'az_mohaveElectricCooperativeMohaveChargedRebates',
-  'az_mohaveElectricCooperativeMohaveHeatPumpRebate',
-  'az_mohaveElectricCooperativeSunWattsRenewableEnergyAndRebateProgram',
-  'az_mohaveElectricCooperativeMohaveHeatBatteryRebate',
+  'az_mohaveElectricCooperative_mohaveChargedRebates',
+  'az_mohaveElectricCooperative_mohaveHeatPumpRebate',
+  'az_mohaveElectricCooperative_sunWattsRenewableEnergyAndRebateProgram',
+  'az_mohaveElectricCooperative_mohaveHeatBatteryRebate',
   // Salt River Project
-  'az_saltRiverProjectInsulationRebate',
-  'az_saltRiverProjectHeatPumpWaterHeaterRebate',
-  'az_saltRiverProjectHomeElectricVehicleChargerRebate',
+  'az_saltRiverProject_insulationRebate',
+  'az_saltRiverProject_heatPumpWaterHeaterRebate',
+  'az_saltRiverProject_homeElectricVehicleChargerRebate',
   // Sulphur Springs Valley Electric Cooperative
-  'az_sulphurSpringsValleyElectricCooperativeHotWaterHeaterRebate',
-  'az_sulphurSpringsValleyElectricCooperativeHeatPumpRebates',
+  'az_sulphurSpringsValleyElectricCooperative_hotWaterHeaterRebate',
+  'az_sulphurSpringsValleyElectricCooperative_heatPumpRebates',
   // Tucson Electric Power
-  'az_tucsonElectricPowerEfficientHomeProgram',
-  'az_tucsonElectricPowerWeatherizationAssistance',
-  'az_tucsonElectricPowerEfficientHomeWaterHeating',
-  'az_tucsonElectricPowerEVChargerRebates',
+  'az_tucsonElectricPower_efficientHomeProgram',
+  'az_tucsonElectricPower_weatherizationAssistance',
+  'az_tucsonElectricPower_efficientHomeWaterHeating',
+  'az_tucsonElectricPower_eVChargerRebates',
   // UniSource Energy Services
-  'az_uniSourceEnergyServicesWeatherizationAssistance',
-  'az_uniSourceEnergyServicesEfficientHomeProgram',
+  'az_uniSourceEnergyServices_weatherizationAssistance',
+  'az_uniSourceEnergyServices_efficientHomeProgram',
 
   // CO
   // Black Hills Energy
@@ -55,12 +55,12 @@ export const ALL_PROGRAMS = [
   'co_lovelandWaterAndPower_efficiencyWorks',
   // Platte River Power Authority
   'co_platteRiverPowerAuthority_efficiencyWorks',
-  // Empire Electric Association and Tri-State Generation and Transmission Association, Inc.
-  'co_empireElectricAssociationAndTri-StateGenerationAndTransmissionAssociation,Inc_energyEfficiencyProductsProgram',
+  // Empire Electric Association
+  'co_empireElectricAssociation_energyEfficiencyProductsProgram',
   // Energy Outreach Colorado
   'co_energyOutreachColorado_weatherizationAssistanceProgram',
-  // Gunnison County Electric
-  'co_gunnisonCountyElectric_rebates',
+  // Gunnison County Electric Association
+  'co_gunnisonCountyElectricAssociation_rebates',
   // Holy Cross Energy
   'co_holyCrossEnergy_residentialRebates',
   // La Plata Electric Association
@@ -122,8 +122,8 @@ export const ALL_PROGRAMS = [
   'co_walkingMountains_rebates&Incentives',
   // White River Electric Association
   'co_whiteRiverElectricAssociation_rebates',
-  // YW Electric Association
-  'co_yWElectricAssociation_rebateProgram',
+  // Y-W Electric Association
+  'co_y-WElectricAssociation_rebateProgram',
 
   // CT
   // State: DEEP

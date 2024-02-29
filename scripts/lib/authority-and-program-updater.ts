@@ -89,6 +89,27 @@ export function sortJsonAlphabeticallyByStateKey(
   return ordered;
 }
 
+export function updateAuthorities(
+  json: StateToAuthorityTypeMap,
+  state: string,
+  authorityMap: AuthorityMap,
+): StateToAuthorityTypeMap {
+  const stateUpper = state.toUpperCase();
+  json[stateUpper] = {};
+  for (const [authorityShort, authority] of Object.entries(authorityMap)) {
+    if (
+      json[stateUpper][authority.authority_type.toLowerCase()] === undefined
+    ) {
+      json[stateUpper][authority.authority_type.toLowerCase()] = {};
+    }
+    json[stateUpper][authority.authority_type.toLowerCase()][authorityShort] = {
+      name: authority.name,
+    };
+  }
+
+  return sortJsonAlphabeticallyByStateKey(json);
+}
+
 type AuthorityKey = string;
 type ProgramKey = string;
 type StateKey = string;
@@ -102,7 +123,7 @@ type ProgramMap = {
   [index: ProgramKey]: { url: string; name: string };
 };
 
-type AuthorityMap = {
+export type AuthorityMap = {
   [index: AuthorityKey]: Authority;
 };
 
@@ -167,32 +188,10 @@ export class AuthorityAndProgramUpdater {
     const json: StateToAuthorityTypeMap = JSON.parse(
       fs.readFileSync(AUTHORITIES_JSON_FILE, 'utf-8'),
     );
-    const stateUpper = this.state.toUpperCase();
-    if (stateUpper in json) {
-      throw new Error(
-        `State ${stateUpper} already exists in Authorities file: ${AUTHORITIES_JSON_FILE}`,
-      );
-    }
-    json[stateUpper] = {};
-    for (const [authorityShort, authority] of Object.entries(
-      this.authorityMap,
-    )) {
-      if (
-        json[stateUpper][authority.authority_type.toLowerCase()] === undefined
-      ) {
-        json[stateUpper][authority.authority_type.toLowerCase()] = {};
-      }
-      json[stateUpper][authority.authority_type.toLowerCase()][authorityShort] =
-        {
-          name: authority.name,
-        };
-    }
-
-    const ordered_json = sortJsonAlphabeticallyByStateKey(json);
-
+    const updated = updateAuthorities(json, this.state, this.authorityMap);
     fs.writeFileSync(
       AUTHORITIES_JSON_FILE,
-      JSON.stringify(ordered_json, null, 2),
+      JSON.stringify(updated, null, 2),
       'utf-8',
     );
   }
