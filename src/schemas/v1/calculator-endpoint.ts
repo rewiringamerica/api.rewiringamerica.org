@@ -14,7 +14,20 @@ const API_CALCULATOR_REQUEST_SCHEMA = {
   title: 'APICalculatorRequest',
   type: 'object',
   properties: {
+    // TODO: remove location param once frontend is not using it
     location: API_REQUEST_LOCATION_SCHEMA,
+    zip: {
+      type: 'string',
+      description:
+        'Your zip code helps us estimate the amount of discounts and tax credits you qualify for by finding representative census tracts in your area.',
+      maxLength: 5,
+      minLength: 5,
+    },
+    address: {
+      type: 'string',
+      description:
+        "Your address can determine the precise census tract you're in that determines the correct amount of discounts and tax credits you qualify for.",
+    },
     authority_types: {
       type: 'array',
       description:
@@ -92,8 +105,12 @@ const API_CALCULATOR_REQUEST_SCHEMA = {
     },
   },
   additionalProperties: false,
+  oneOf: [
+    { required: ['location'] },
+    { required: ['zip'] },
+    { required: ['address'] },
+  ],
   required: [
-    'location',
     'owner_status',
     'household_income',
     'tax_filing',

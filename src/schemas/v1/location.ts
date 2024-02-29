@@ -34,6 +34,7 @@ export const API_REQUEST_LOCATION_SCHEMA = {
   ],
   maxProperties: 1,
   minProperties: 1,
+  additionalProperties: false,
 } as const;
 
 /**
