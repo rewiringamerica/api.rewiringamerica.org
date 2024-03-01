@@ -10,20 +10,17 @@
     "program": "wi_focusOnEnergy_insulation&AirSealingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 1125,
-      "minimum": 675,
-      "maximum": 1125
+      "number": 675
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,125 for ENERGY STAR Qualified Air Sealing. Must be completed with Trade Ally contractor installed attic or wall insulation improvements."
+      "en": "$675 for ENERGY STAR Qualified Air Sealing. Must be completed with Trade Ally contractor installed attic or wall insulation improvements."
     },
     "start_date": 2023,
-    "end_date": 2023,
-    "low_income": "wi-focus-on-energy"
+    "end_date": 2023
   },
   {
     "id": "WI-2",
@@ -36,16 +33,14 @@
     "program": "wi_focusOnEnergy_insulation&AirSealingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 675,
-      "minimum": 525,
-      "maximum": 675
+      "number": 1125
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $675 for Attic Insulation."
+      "en": "$1,125 for ENERGY STAR Qualified Air Sealing for income-qualified customers. Must be completed with Trade Ally contractor installed insulation."
     },
     "start_date": 2023,
     "end_date": 2023,
@@ -62,20 +57,17 @@
     "program": "wi_focusOnEnergy_insulation&AirSealingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 225,
-      "minimum": 150,
-      "maximum": 225
+      "number": 525
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $225 for Foundation Insulation. Must be completed along with Trade Ally contractor installed attic or wall insulation improvements."
+      "en": "$525 for Attic Insulation."
     },
     "start_date": 2023,
-    "end_date": 2023,
-    "low_income": "wi-focus-on-energy"
+    "end_date": 2023
   },
   {
     "id": "WI-4",
@@ -88,16 +80,14 @@
     "program": "wi_focusOnEnergy_insulation&AirSealingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 450,
-      "minimum": 450,
-      "maximum": 450
+      "number": 675
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$450 for Wall Insulation."
+      "en": "$675 for Attic Insulation for income-qualified customers."
     },
     "start_date": 2023,
     "end_date": 2023,
@@ -114,20 +104,17 @@
     "program": "wi_focusOnEnergy_insulation&AirSealingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 75,
-      "minimum": 75,
-      "maximum": 75
+      "number": 150
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$75 for Duct Sealing & Insulation. Must be completed along with Trade Ally contractor installed attic or wall insulation improvements."
+      "en": "$150 for Foundation Insulation. Must be completed along with Trade Ally contractor installed attic or wall insulation improvements."
     },
     "start_date": 2023,
-    "end_date": 2023,
-    "low_income": "wi-focus-on-energy"
+    "end_date": 2023
   },
   {
     "id": "WI-6",
@@ -140,16 +127,14 @@
     "program": "wi_focusOnEnergy_insulation&AirSealingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 200,
-      "minimum": 200,
-      "maximum": 200
+      "number": 225
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$200 cash back for self-installed attic insulation and air sealing."
+      "en": "$225 for Foundation Insulation for income-qualified customers. Must be completed along with Trade Ally contractor installed insulation."
     },
     "start_date": 2023,
     "end_date": 2023,
@@ -162,13 +147,81 @@
     "payment_methods": [
       "rebate"
     ],
+    "item": "weatherization",
+    "program": "wi_focusOnEnergy_insulation&AirSealingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 450
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$450 for Wall Insulation."
+    },
+    "start_date": 2023,
+    "end_date": 2023
+  },
+  {
+    "id": "WI-8",
+    "authority_type": "state",
+    "authority": "wi-focus-on-energy",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "wi_focusOnEnergy_insulation&AirSealingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 for Duct Sealing & Insulation. Must be completed along with Trade Ally contractor installed attic or wall insulation improvements."
+    },
+    "start_date": 2023,
+    "end_date": 2023
+  },
+  {
+    "id": "WI-9",
+    "authority_type": "state",
+    "authority": "wi-focus-on-energy",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "wi_focusOnEnergy_insulation&AirSealingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 cash back for self-installed attic insulation and air sealing."
+    },
+    "start_date": 2023,
+    "end_date": 2023
+  },
+  {
+    "id": "WI-10",
+    "authority_type": "state",
+    "authority": "wi-focus-on-energy",
+    "payment_methods": [
+      "rebate",
+      "pos_rebate"
+    ],
     "item": "smart_thermostat",
     "program": "wi_focusOnEnergy_smartThermostatsRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 50,
-      "minimum": 50,
-      "maximum": 50
+      "number": 50
     },
     "owner_status": [
       "homeowner",
@@ -179,11 +232,10 @@
     },
     "start_date": 2023,
     "end_date": 2023,
-    "bonus_available": true,
-    "low_income": "wi-focus-on-energy"
+    "bonus_available": true
   },
   {
-    "id": "WI-8",
+    "id": "WI-11",
     "authority_type": "state",
     "authority": "wi-focus-on-energy",
     "payment_methods": [
@@ -193,8 +245,7 @@
     "program": "wi_focusOnEnergy_waterHeatingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 300,
-      "minimum": 300
+      "number": 300
     },
     "owner_status": [
       "homeowner"
@@ -202,11 +253,10 @@
     "short_description": {
       "en": "Instant discounts for electric heat pump water heaters starting at $300 through a Trade Ally contractor."
     },
-    "bonus_available": true,
-    "low_income": "wi-focus-on-energy"
+    "bonus_available": true
   },
   {
-    "id": "WI-10",
+    "id": "WI-12",
     "authority_type": "state",
     "authority": "wi-focus-on-energy",
     "payment_methods": [
@@ -216,23 +266,20 @@
     "program": "wi_focusOnEnergy_residentialCustomerSolarPVRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "minimum": 500,
-      "maximum": 500
+      "number": 500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Rural residential customers can receive an additional $500 for installing a system."
+      "en": "$500 for qualifying solar electric systems. Available to rural residential customers."
     },
     "start_date": 2023,
-    "end_date": 2023,
-    "low_income": "wi-focus-on-energy"
+    "end_date": 2023
   },
   {
-    "id": "WI-11",
+    "id": "WI-13",
     "authority_type": "state",
     "authority": "wi-focus-on-energy",
     "payment_methods": [
@@ -242,9 +289,7 @@
     "program": "wi_focusOnEnergy_dIYResidentialInsulation&AirSealingRebate",
     "amount": {
       "type": "dollar_amount",
-      "number": 200,
-      "minimum": 200,
-      "maximum": 200
+      "number": 200
     },
     "owner_status": [
       "homeowner",
@@ -254,11 +299,10 @@
       "en": "$200 cash back for qualified self-installed attic insulation and air sealing."
     },
     "start_date": 2023,
-    "end_date": 2023,
-    "low_income": "wi-focus-on-energy"
+    "end_date": 2023
   },
   {
-    "id": "WI-21",
+    "id": "WI-14",
     "authority_type": "state",
     "authority": "wi-focus-on-energy",
     "payment_methods": [
@@ -268,22 +312,20 @@
     "program": "wi_focusOnEnergy_residentialHeating&CoolingRebate",
     "amount": {
       "type": "dollar_amount",
-      "number": 1300,
-      "minimum": 1300,
-      "maximum": 1300
+      "number": 1000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$1,300 for Cold Climate Air Source Heat Pump (existing primary heating fuel: natural gas or electric)."
+      "en": "$1,000 for Air Source Heat Pump replacing natural gas or electric primary heating source."
     },
     "start_date": 2023,
     "end_date": 2023
   },
   {
-    "id": "WI-22",
+    "id": "WI-15",
     "authority_type": "state",
     "authority": "wi-focus-on-energy",
     "payment_methods": [
@@ -293,72 +335,20 @@
     "program": "wi_focusOnEnergy_residentialHeating&CoolingRebate",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "minimum": 500,
-      "maximum": 500
+      "number": 400
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$500 for Cold Climate Air Source Heat Pump (existing primary heating fuel: propane, oil, etc.)."
+      "en": "$400 for Air Source Heat Pump replacing propane, oil, existing heat pump etc."
     },
     "start_date": 2023,
     "end_date": 2023
   },
   {
-    "id": "WI-23",
-    "authority_type": "state",
-    "authority": "wi-focus-on-energy",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "wi_focusOnEnergy_residentialHeating&CoolingRebate",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1000,
-      "minimum": 1000,
-      "maximum": 1000
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$1,000 for Air Source Heat Pump (existing primary heating fuel: natural gas or electric)."
-    },
-    "start_date": 2023,
-    "end_date": 2023
-  },
-  {
-    "id": "WI-24",
-    "authority_type": "state",
-    "authority": "wi-focus-on-energy",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "wi_focusOnEnergy_residentialHeating&CoolingRebate",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400,
-      "minimum": 400,
-      "maximum": 400
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$400 for Air Source Heat Pump (existing primary heating fuel: propane, oil, etc.)."
-    },
-    "start_date": 2023,
-    "end_date": 2023
-  },
-  {
-    "id": "WI-25",
+    "id": "WI-16",
     "authority_type": "state",
     "authority": "wi-focus-on-energy",
     "payment_methods": [
@@ -368,9 +358,7 @@
     "program": "wi_focusOnEnergy_residentialHeating&CoolingRebate",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000,
-      "minimum": 1000,
-      "maximum": 1000
+      "number": 1000
     },
     "owner_status": [
       "homeowner",
@@ -383,7 +371,7 @@
     "end_date": 2023
   },
   {
-    "id": "WI-26",
+    "id": "WI-17",
     "authority_type": "state",
     "authority": "wi-focus-on-energy",
     "payment_methods": [
@@ -393,9 +381,7 @@
     "program": "wi_focusOnEnergy_residentialHeating&CoolingRebate",
     "amount": {
       "type": "dollar_amount",
-      "number": 750,
-      "minimum": 750,
-      "maximum": 750
+      "number": 750
     },
     "owner_status": [
       "homeowner",

@@ -186,5 +186,6 @@ location%5Bzip%5D=53703\
 &owner_status=homeowner\
 &household_income=50000\
 &tax_filing=joint\
-&household_size=1" \
+&household_size=1\
+&authority_types=state"\
  | jq . > test/fixtures/v1-wi-53703-state-utility-lowincome.json
