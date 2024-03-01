@@ -155,6 +155,10 @@ export const ALL_PROGRAMS = [
   'dc_dCDepartmentOfEnergyAndEnvironment_solarForAll-CommunitySolar',
   'dc_dCDepartmentOfEnergyAndEnvironment_LowIncomeHomeEnergyAssistanceProgram(LIHEAP)',
 
+  // GA
+  // Georgia Power
+  'ga_georgiaPower_homeEnergyImprovementProgram',
+
   // IL
   // Commonwealth Edison
   'il_commonwealthEdison_applianceRebates',
