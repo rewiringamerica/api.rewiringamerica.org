@@ -169,7 +169,7 @@
       }
     },
     "dc-dc-department-of-energy-and-environment": {
-      "/": "DOEE uses 60% AMI as the threshold for their Weatherization Assistance Program, but 80% for Solar for All. I believe that in cases like this, we opt for the higher threshold values. See https://doee.dc.gov/service/wap for 60% AMI values",
+      "/": "DOEE's Solar for All's threshold is 80% AMI",
       "source_url": "https://doee.dc.gov/solarforall",
       "thresholds": {
         "1": 85200,
@@ -182,8 +182,22 @@
         "8": 170350
       }
     },
+    "dc-dc-department-of-energy-and-environment-60-ami": {
+      "/": "DOEE's Weatherization Assistance Program's threshold is 60% AMI",
+      "source_url": "https://doee.dc.gov/service/wap",
+      "thresholds": {
+        "1": 49814,
+        "2": 65141,
+        "3": 80469,
+        "4": 95797,
+        "5": 111124,
+        "6": 126452,
+        "7": 129325,
+        "8": 132199
+      }
+    },
     "default": {
-      "source_url": "https://doee.dc.gov/solarforall",
+      "source_url": "https://www.dcseu.com/affordable-home-electrification",
       "thresholds": {
         "1": 85200,
         "2": 97350,
