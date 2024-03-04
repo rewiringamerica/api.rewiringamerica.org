@@ -4,6 +4,8 @@ import fetch from 'make-fetch-happen';
 import minimist from 'minimist';
 
 import { FILES, IncentiveFile } from './incentive-spreadsheet-registry';
+import { FIELD_MAPPINGS, VALUE_MAPPINGS } from './lib/spreadsheet-mappings';
+import { SpreadsheetStandardizer } from './lib/spreadsheet-standardizer';
 import { Incentive, LocalizableString } from './translation-types';
 
 async function edit(file: IncentiveFile, write: boolean) {
@@ -14,17 +16,25 @@ async function edit(file: IncentiveFile, write: boolean) {
     from_line: file.headerRowNumber ?? 1,
   });
 
+  const standardizer = new SpreadsheetStandardizer(
+    FIELD_MAPPINGS,
+    VALUE_MAPPINGS,
+    /* strict */ false,
+    /* low income thresholds */ null,
+  );
+  const standardized = rows.map(standardizer.standardize.bind(standardizer));
+
   const descriptionsById = new Map<string, LocalizableString>();
 
-  rows.forEach((row: Record<string, string>) => {
-    const id = row[file.idHeader];
+  standardized.forEach((row: Record<string, string>) => {
+    const id = row['id'];
     if (!descriptionsById.has(id)) {
       descriptionsById.set(id, { en: '' });
     }
 
-    descriptionsById.get(id)!.en = row[file.enHeader].trim();
+    descriptionsById.get(id)!.en = row['short_description.en'].trim();
     if (file.esHeader) {
-      descriptionsById.get(id)!.es = row[file.esHeader].trim();
+      descriptionsById.get(id)!.es = row['short_description.es'].trim();
     }
   });
 
