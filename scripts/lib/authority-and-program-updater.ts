@@ -1,15 +1,16 @@
 import fs from 'fs';
-import { Project } from 'ts-morph';
+import * as prettier from 'prettier';
+import { Project, SourceFile } from 'ts-morph';
 
 const project = new Project({
   tsConfigFilePath: 'tsconfig.json',
 });
 
+const PROGRAMS_DIR = 'src/data/programs/';
 const PROGRAMS_TS_FILE = 'src/data/programs.ts';
 project.addSourceFileAtPath(PROGRAMS_TS_FILE);
-const sourceFile = project.getSourceFileOrThrow(PROGRAMS_TS_FILE);
+const globalSourceFile = project.getSourceFileOrThrow(PROGRAMS_TS_FILE);
 
-const PROGRAMS_JSON_FILE = 'data/programs.json';
 const AUTHORITIES_JSON_FILE = 'data/authorities.json';
 
 const wordSeparators =
@@ -110,6 +111,105 @@ export function updateAuthorities(
   return sortJsonAlphabeticallyByStateKey(json);
 }
 
+export async function createProgramsContent(
+  state: string,
+  authorityMap: AuthorityMap,
+  formatOptions: prettier.Options,
+) {
+  // We don't need to worry too much about formatting because we
+  // programmtically invoke prettier at the end.
+  let output = `export const ${state.toUpperCase()}_PROGRAMS = {\n`;
+  for (const authority of Object.values(authorityMap)) {
+    for (const [programShort, program] of Object.entries(authority.programs)) {
+      output += `'${programShort}': {\n`;
+      output += 'name: {\n';
+      output += `en: '${program.name}',\n`;
+      output += '},\n';
+      output += 'url: {\n';
+      output += `en: '${program.url}',\n`;
+      output += '},\n';
+      output += '},\n';
+    }
+  }
+  output += '} as const;';
+  try {
+    return await prettier.format(output, formatOptions);
+  } catch (e) {
+    console.error(
+      `Error while trying to run prettier on programs.ts. Fix errors manually and reformat.`,
+    );
+    return output;
+  }
+}
+
+export function maybeUpdateProgramsTsFile(
+  state: string,
+  sourceFile: SourceFile,
+  save: boolean = true,
+) {
+  // If there is an existing import for this state in PROGRAMS_TS_FILE, it's
+  // already configured and we don't need to do anything.
+  const moduleSpecifier = `./programs/${state.toLowerCase()}_programs`;
+  if (sourceFile.getImportDeclaration(moduleSpecifier)) {
+    return;
+  }
+
+  // Otherwise
+  // 1. Insert an import in between the right states alphabetically.
+  const newDefaultImport = `${state.toUpperCase()}_PROGRAMS`;
+  let inserted = false;
+  let lastStateImport = 0;
+  for (const [ind, importDec] of sourceFile.getImportDeclarations().entries()) {
+    const defaultImport = importDec.getDefaultImport();
+    if (!defaultImport) continue;
+    // Skip non-state imports.
+    if (!defaultImport!.getText().endsWith('_PROGRAMS')) continue;
+    lastStateImport = ind;
+    // If the current import is alphabetically greater than the new one,
+    // insert a new import and exit the loop.
+    if (defaultImport!.getText() > newDefaultImport) {
+      sourceFile.insertImportDeclaration(ind, {
+        defaultImport: newDefaultImport,
+        moduleSpecifier: `${moduleSpecifier}`,
+      });
+      inserted = true;
+      break;
+    }
+  }
+  if (!inserted) {
+    sourceFile.insertImportDeclaration(lastStateImport + 1, {
+      defaultImport: newDefaultImport,
+      moduleSpecifier: `${moduleSpecifier}`,
+    });
+  }
+
+  // 2. Find all_programs definition and insert programs similar to the above.
+  const programsDef = sourceFile.getVariableStatement('all_programs');
+  if (!programsDef) {
+    throw new Error(
+      `Could not find all_programs variable definition in ${PROGRAMS_TS_FILE}`,
+    );
+  }
+  const varInitializer = programsDef
+    .getDeclarations()[0]
+    .getInitializerOrThrow();
+
+  // See tests for how this string-hacking is supposed to work.
+  const components = varInitializer.getText().split(',\n');
+  for (const [ind, component] of components.entries()) {
+    if (ind === 0) continue; // skip ira_incentives
+    // This still works for the last component since it starts with }
+    if (component > `  ...${newDefaultImport}`) {
+      components.splice(ind, 0, `  ...${newDefaultImport}`);
+      break;
+    }
+  }
+  varInitializer.replaceWithText(components.join(',\n'));
+  if (save) {
+    sourceFile.save();
+  }
+}
+
 type AuthorityKey = string;
 type ProgramKey = string;
 type StateKey = string;
@@ -148,6 +248,11 @@ export class AuthorityAndProgramUpdater {
   }
 
   addRow(row: Record<string, string>) {
+    if (row.authority_name === '' && row.program_title === '') {
+      // Expected because we have some records at the end of the file that
+      // are just IDs and should be ignored.
+      return;
+    }
     const program = row.program_title;
     const program_short = createProgramName(
       this.state,
@@ -196,53 +301,21 @@ export class AuthorityAndProgramUpdater {
     );
   }
 
-  updateProgramsTs() {
-    const varStatement = sourceFile.getVariableStatement('ALL_PROGRAMS');
-    if (varStatement !== undefined) {
-      const initializer = varStatement
-        .getDeclarations()[0]
-        .getInitializerOrThrow();
-      const text = initializer.getText();
-      const split = text.lastIndexOf('\n]');
-      let newText = `\n\n  // ${this.state}`;
-      for (const authority of Object.values(this.authorityMap)) {
-        newText += `\n  // ${authority.name}`;
-        for (const program of Object.keys(authority.programs)) {
-          newText += `\n  '${program}',`;
-        }
-      }
-      initializer.replaceWithText(
-        text.substring(0, split) + newText + text.substring(split),
-      );
+  async updatePrograms() {
+    // Create program content and (over)write file.
+    const filePath = PROGRAMS_DIR + `${this.state.toLowerCase()}_programs.ts`;
+    const formatOptions = await prettier.resolveConfig(filePath);
+    if (!formatOptions) {
+      throw new Error(`Could not retrieve Prettier config for ${filePath}`);
     }
-    sourceFile.save();
-  }
-
-  updateProgramJson() {
-    const json = JSON.parse(fs.readFileSync(PROGRAMS_JSON_FILE, 'utf-8'));
-    for (const authority of Object.values(this.authorityMap)) {
-      for (const [programShort, program] of Object.entries(
-        authority.programs,
-      )) {
-        if (programShort in json) {
-          throw new Error(
-            `Program ${programShort} already exists in Programs file: ${PROGRAMS_JSON_FILE}`,
-          );
-        }
-        json[programShort] = {
-          name: {
-            en: program.name,
-          },
-          url: {
-            en: program.url,
-          },
-        };
-      }
-    }
-    fs.writeFileSync(
-      PROGRAMS_JSON_FILE,
-      JSON.stringify(json, null, 2),
-      'utf-8',
+    formatOptions.filepath = filePath;
+    const tsFileContent = await createProgramsContent(
+      this.state,
+      this.authorityMap,
+      formatOptions,
     );
+    fs.writeFileSync(filePath, tsFileContent);
+
+    maybeUpdateProgramsTsFile(this.state, globalSourceFile);
   }
 }
