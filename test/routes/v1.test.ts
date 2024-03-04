@@ -219,7 +219,7 @@ test('MI response with state and utility is valid and correct', async t => {
     {
       location: { zip: '48103' },
       owner_status: 'homeowner',
-      // Qualifies as low-income for NY PSEG Long Island utility.
+      // Qualifies as low-income for MI DTE.
       household_size: 1,
       household_income: 50000,
       tax_filing: 'joint',
