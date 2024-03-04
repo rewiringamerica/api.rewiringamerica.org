@@ -8,6 +8,20 @@ import { FIELD_MAPPINGS, VALUE_MAPPINGS } from './lib/spreadsheet-mappings';
 import { SpreadsheetStandardizer } from './lib/spreadsheet-standardizer';
 import { Incentive, LocalizableString } from './translation-types';
 
+function validateColumns(row: Record<string, string>) {
+  for (const colName of [
+    'id',
+    'short_description.en',
+    'short_description.es',
+  ]) {
+    if (row[colName] === undefined) {
+      throw new Error(
+        `Could not find required column that matched ${colName}. If your spreadsheet uses a different name, configure the mapping in scripts/lib/spreadsheet-mappings.ts and rerun.`,
+      );
+    }
+  }
+}
+
 async function edit(file: IncentiveFile, write: boolean) {
   const response = await fetch(file.sheetUrl);
   const csvContent = await response.text();
@@ -23,6 +37,8 @@ async function edit(file: IncentiveFile, write: boolean) {
     /* low income thresholds */ null,
   );
   const standardized = rows.map(standardizer.standardize.bind(standardizer));
+  // Validate the first row to ensure we found all the columns we need.
+  validateColumns(standardized[0]);
 
   const descriptionsById = new Map<string, LocalizableString>();
 
@@ -33,7 +49,7 @@ async function edit(file: IncentiveFile, write: boolean) {
     }
 
     descriptionsById.get(id)!.en = row['short_description.en'].trim();
-    if (file.esHeader) {
+    if (row['short_description.es']) {
       descriptionsById.get(id)!.es = row['short_description.es'].trim();
     }
   });
