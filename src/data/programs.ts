@@ -145,6 +145,16 @@ export const ALL_PROGRAMS = [
   'ct_coolingAndHeatingIncentivePilotProgram',
   'ct_electricVehicleAndChargingRebateProgram',
 
+  // DC
+  // DC Sustainable Energy Utility
+  'dc_dCSustainableEnergyUtility_dCResidentialRebates',
+  'dc_dCSustainableEnergyUtility_affordableHomeElectrificationProgram',
+  'dc_dCSustainableEnergyUtility_solarForAllSingle-FamilyProgram',
+  // DC Department of Energy and Environment
+  'dc_dCDepartmentOfEnergyAndEnvironment_weatherizationAssistanceProgram',
+  'dc_dCDepartmentOfEnergyAndEnvironment_solarForAll-CommunitySolar',
+  'dc_dCDepartmentOfEnergyAndEnvironment_LowIncomeHomeEnergyAssistanceProgram(LIHEAP)',
+
   // IL
   // Commonwealth Edison
   'il_commonwealthEdison_applianceRebates',
