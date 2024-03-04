@@ -23,7 +23,8 @@ An instance of this API is live at https://api.rewiringamerica.org. An API key i
 4. Install Yarn by running `corepack enable`.
 5. Run `yarn install` to install dependencies.
 6. Run `yarn build` to build the SQLite database of geographic and income data.
-7. Run `yarn dev` to run the API server. It will automatically reload whenever you modify code. The server listens on port 3000 by default.
+7. Run `yarn tsc` to compile TS scripts
+8. Run `yarn dev` to run the API server. It will automatically reload whenever you modify code. The server listens on port 3000 by default.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for a guide to the codebase.
 
