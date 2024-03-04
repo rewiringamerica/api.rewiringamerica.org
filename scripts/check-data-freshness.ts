@@ -69,6 +69,7 @@ test('All URLs linking to current programs have an OK response code', async tap 
             key +
               'returned a 403 status code. This is likely a Cloudflare security denial, and the website should be manually checked.',
           );
+          console.log('403 error occurred for: ', key);
         } else {
           tap.fail(
             'Non-OK status code obtained for ' +
