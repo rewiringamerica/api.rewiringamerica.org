@@ -7,7 +7,7 @@ import {
   ILIncomeAuthority,
   RILowIncomeAuthority,
 } from './low_income_thresholds';
-import { ALL_PROGRAMS } from './programs';
+import { PROGRAMS } from './programs';
 import { FilingStatus } from './tax_brackets';
 import { AMOUNT_SCHEMA } from './types/amount';
 
@@ -140,7 +140,7 @@ const derivedIncentivePropertySchema = {
   agi_min_limit: { type: 'integer', nullable: true },
   authority: { type: 'string' },
   eligible_geo_group: { type: 'string', nullable: true },
-  program: { type: 'string', enum: ALL_PROGRAMS },
+  program: { type: 'string', enum: Object.keys(PROGRAMS) },
   bonus_available: { type: 'boolean', nullable: true },
   start_date: { type: 'number' },
   end_date: { type: 'number' },
