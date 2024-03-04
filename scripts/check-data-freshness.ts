@@ -18,30 +18,12 @@ async function checkUrlDataAvailability(
   }).catch(function (error) {
     // If a non-2xx response status exists, return it.
     if (error.response) {
-      /**
-      console.log(
-        source,
-        ' has an non-OK status code of: ',
-        error.response.status,
-        'with URL',
-        link,
-      );
-      */
       return error.response.status;
     }
     // If the request was made but no response was received, log the request.
     else if (error.request) {
-      /*
-      console.log(
-        'Request was made to',
-        source,
-        ' but no response received. The request was: ',
-        error.request,
-      );
-      */
       return undefined;
     } else {
-      /*console.log('An error occurred for ', source, ': ', error.message);*/
       return undefined;
     }
   });
