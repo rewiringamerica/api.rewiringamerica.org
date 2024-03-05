@@ -203,18 +203,18 @@ test('state incentives JSON files match schemas', async tap => {
       if (incentive.authority_type === AuthorityType.Other) {
         tap.hasProp(
           incentive,
-          'geo_eligibility_group',
+          'eligible_geo_group',
           `authority_type 'other' must include a geo group (id ${incentive.id})`,
         );
 
         tap.hasProp(
           stateGeoGroups,
-          incentive.geo_eligibility_group!,
+          incentive.eligible_geo_group!,
           `nonexistent geo_group (${stateId}, id ${incentive.id})`,
         );
       } else {
         tap.notOk(
-          incentive.geo_eligibility_group,
+          incentive.eligible_geo_group,
           `only authority_type 'other' can have a geo group (id ${incentive.id})`,
         );
       }
