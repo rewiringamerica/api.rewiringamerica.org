@@ -10,77 +10,70 @@ import {
 import { FILES } from './incentive-spreadsheet-registry';
 import { spreadsheetToJson } from './incentive-spreadsheet-to-json';
 
-// TODO: condition this on an environment variable that we set only
-// in workflows where we want to run this test.
-const skip: boolean = true;
-test(
-  'registered spreadsheets are in sync with checked-in JSON files',
-  { skip: skip ? 'spreadsheet health tests: skipped by default' : false },
-  async tap => {
-    for (const [state, file] of Object.entries(FILES)) {
-      if (!file.runSpreadsheetHealthCheck) continue;
-      try {
-        const response = await fetch(file.sheetUrl);
-        const csvContent = await response.text();
-        const rows = parse(csvContent, {
-          columns: true,
-          from_line: file.headerRowNumber ?? 1,
-        });
+test('registered spreadsheets are in sync with checked-in JSON files', async tap => {
+  for (const [state, file] of Object.entries(FILES)) {
+    if (!file.runSpreadsheetHealthCheck) continue;
+    try {
+      const response = await fetch(file.sheetUrl);
+      const csvContent = await response.text();
+      const rows = parse(csvContent, {
+        columns: true,
+        from_line: file.headerRowNumber ?? 1,
+      });
 
-        const output = await spreadsheetToJson(state, rows, false, null);
-        const invalidCollectedPath = file.filepath.replace(
-          '.json',
-          '_invalid_collected.json',
-        );
-        const invalidStatePath = file.filepath.replace(
-          '.json',
-          '_invalid_state.json',
-        );
-        const previousCollectedExceptions: string = fs.existsSync(
-          invalidCollectedPath,
-        )
-          ? JSON.parse(fs.readFileSync(invalidCollectedPath, 'utf-8'))
-          : [];
-        const previousStateExceptions: string = fs.existsSync(invalidStatePath)
-          ? JSON.parse(fs.readFileSync(invalidStatePath, 'utf-8'))
-          : [];
+      const output = await spreadsheetToJson(state, rows, false, null);
+      const invalidCollectedPath = file.filepath.replace(
+        '.json',
+        '_invalid_collected.json',
+      );
+      const invalidStatePath = file.filepath.replace(
+        '.json',
+        '_invalid_state.json',
+      );
+      const previousCollectedExceptions: string = fs.existsSync(
+        invalidCollectedPath,
+      )
+        ? JSON.parse(fs.readFileSync(invalidCollectedPath, 'utf-8'))
+        : [];
+      const previousStateExceptions: string = fs.existsSync(invalidStatePath)
+        ? JSON.parse(fs.readFileSync(invalidStatePath, 'utf-8'))
+        : [];
 
-        // We expect equality of any invalid records, since humans shouldn't be
-        // editing these anyway.
-        tap.matchOnlyStrict(
-          output.invalidCollectedIncentives,
-          previousCollectedExceptions,
-          'Spreadsheet out of sync with invalid collected JSON files. See test/scripts/README.md for advice on how to resolve',
-        );
-        tap.matchOnlyStrict(
-          output.invalidStateIncentives,
-          previousStateExceptions,
-          'Spreadsheet out of sync with invalid state JSON files. See test/scripts/README.md for advice on how to resolve',
-        );
+      // We expect full equality of any invalid records, in contrast to valid
+      // records where we only assert agreement for some fields.
+      tap.matchOnlyStrict(
+        output.invalidCollectedIncentives,
+        previousCollectedExceptions,
+        'Spreadsheet out of sync with invalid collected JSON files. See scripts/README.md for advice on how to resolve',
+      );
+      tap.matchOnlyStrict(
+        output.invalidStateIncentives,
+        previousStateExceptions,
+        'Spreadsheet out of sync with invalid state JSON files. See scripts/README.md for advice on how to resolve',
+      );
 
-        // We have more lenience for valid JSON records, since there are still
-        // parts of the process that require manual steps. Eventually, we want
-        // the process to require strict equality here as well. For now, we
-        // assert that all pass-through fields are exactly the same, which
-        // should still keep things roughly in sync.
-        const goldenValidStateIncentives: StateIncentive[] = fs.existsSync(
-          file.filepath,
-        )
-          ? JSON.parse(fs.readFileSync(file.filepath, 'utf-8'))
-          : [];
+      // We have more lenience for valid JSON records, since there are still
+      // parts of the process that require manual steps. Eventually, we want
+      // the process to require strict equality here as well. For now, we
+      // assert that all pass-through fields are exactly the same, which
+      // should still keep things roughly in sync.
+      const goldenValidStateIncentives: StateIncentive[] = fs.existsSync(
+        file.filepath,
+      )
+        ? JSON.parse(fs.readFileSync(file.filepath, 'utf-8'))
+        : [];
 
-        tap.matchOnlyStrict(
-          goldenValidStateIncentives.map(incentive =>
-            _.pick(incentive, PASS_THROUGH_FIELDS),
-          ),
-          output.validStateIncentives.map(incentive =>
-            _.pick(incentive, PASS_THROUGH_FIELDS),
-          ),
-          'Spreadsheet out of sync with valid JSON files. See test/scripts/README.md for advice on how to resolve',
-        );
-      } catch (e) {
-        tap.fail(`Error while validating spreadsheet for state ${state}: ${e}`);
-      }
+      tap.matchOnlyStrict(
+        goldenValidStateIncentives.map(incentive =>
+          _.pick(incentive, PASS_THROUGH_FIELDS),
+        ),
+        output.validStateIncentives.map(incentive =>
+          _.pick(incentive, PASS_THROUGH_FIELDS),
+        ),
+        'Spreadsheet out of sync with valid JSON files. See scripts/README.md for advice on how to resolve',
+      );
+    } catch (e) {
+      tap.fail(`Error while validating spreadsheet for state ${state}: ${e}`);
     }
-  },
-);
+  }
+});
