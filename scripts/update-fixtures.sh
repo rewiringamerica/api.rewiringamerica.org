@@ -206,6 +206,7 @@ curl \
 &items=heat_pump_water_heater\
 &utility=co-xcel-energy" \
   | jq . > test/fixtures/v1-80517-xcel.json
+
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?location\[zip\]=80517\
