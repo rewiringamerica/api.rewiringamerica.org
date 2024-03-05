@@ -144,6 +144,7 @@ test('state incentives JSON files match schemas', async tap => {
 
   STATE_INCENTIVE_TESTS.forEach(([stateId, schema, data]) => {
     const authorities = AUTHORITIES_BY_STATE[stateId as string];
+    const stateGeoGroups = GEO_GROUPS_BY_STATE[stateId];
 
     if (!tap.ok(ajv.validate(schema, data), `${stateId} incentives invalid`)) {
       console.error(ajv.errors);
@@ -198,19 +199,23 @@ test('state incentives JSON files match schemas', async tap => {
           `must define city attribute on corresponding authority ${incentive.authority} for incentives with city authority type`,
         );
       }
+
       if (incentive.authority_type === AuthorityType.Other) {
         tap.hasProp(
           incentive,
-          'geo_group',
+          'geo_eligibility_group',
           `authority_type 'other' must include a geo group (id ${incentive.id})`,
         );
 
-        const stateGroups = GEO_GROUPS_BY_STATE[stateId];
-        tap.equal(incentive.authority_type, AuthorityType.Other);
         tap.hasProp(
-          stateGroups,
-          incentive.geo_group!,
+          stateGeoGroups,
+          incentive.geo_eligibility_group!,
           `nonexistent geo_group (${stateId}, id ${incentive.id})`,
+        );
+      } else {
+        tap.notOk(
+          incentive.geo_eligibility_group,
+          `only authority_type 'other' can have a geo group (id ${incentive.id})`,
         );
       }
 

@@ -286,9 +286,10 @@ function skipBasedOnRequestParams(
     }
   }
 
-  if (item.geo_group) {
+  if (item.geo_eligibility_group) {
     // A test ensures that geo groups are registered.
-    const group = GEO_GROUPS_BY_STATE[location.state_id]![item.geo_group];
+    const group =
+      GEO_GROUPS_BY_STATE[location.state_id]![item.geo_eligibility_group];
 
     // The request params must match ALL of the keys the geo group defines
     if (
