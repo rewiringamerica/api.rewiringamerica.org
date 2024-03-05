@@ -1,0 +1,336 @@
+[
+  {
+    "id": "DC-2",
+    "authority_type": "city",
+    "authority": "dc-dc-sustainable-energy-utility",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "dc_dCSustainableEnergyUtility_dCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "minimum": 75,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$75-$200 rebate for ENERGY STAR® or ENERGY STAR® Most Efficient qualified clothes dryers."
+    },
+    "start_date": 2023,
+    "end_date": 2024
+  },
+  {
+    "id": "DC-4",
+    "authority_type": "city",
+    "authority": "dc-dc-sustainable-energy-utility",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_outdoor_equipment",
+    "program": "dc_dCSustainableEnergyUtility_dCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for electric push lawn mowers."
+    },
+    "start_date": 2023,
+    "end_date": 2024
+  },
+  {
+    "id": "DC-5",
+    "authority_type": "city",
+    "authority": "dc-dc-sustainable-energy-utility",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_outdoor_equipment",
+    "program": "dc_dCSustainableEnergyUtility_dCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for electric riding lawn mowers."
+    },
+    "start_date": 2023,
+    "end_date": 2024
+  },
+  {
+    "id": "DC-7",
+    "authority_type": "city",
+    "authority": "dc-dc-sustainable-energy-utility",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "dc_dCSustainableEnergyUtility_dCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for ENERGY STAR® qualified smart thermostats."
+    },
+    "start_date": 2023,
+    "end_date": 2024
+  },
+  {
+    "id": "DC-9",
+    "authority_type": "city",
+    "authority": "dc-dc-sustainable-energy-utility",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "dc_dCSustainableEnergyUtility_dCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "minimum": 375,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$375-$700 rebate for qualified ducted air source heat pump systems."
+    },
+    "start_date": 2023,
+    "end_date": 2024
+  },
+  {
+    "id": "DC-10",
+    "authority_type": "city",
+    "authority": "dc-dc-sustainable-energy-utility",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "dc_dCSustainableEnergyUtility_dCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "minimum": 375,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$375-$700 rebate for qualified variable speed (ductless) mini-split heat pumps systems."
+    },
+    "start_date": 2023,
+    "end_date": 2024
+  },
+  {
+    "id": "DC-12",
+    "authority_type": "city",
+    "authority": "dc-dc-sustainable-energy-utility",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "dc_dCSustainableEnergyUtility_affordableHomeElectrificationProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "100% of costs covered for switching to ducted heating systems. Income-qualified residents only."
+    },
+    "start_date": 2023,
+    "end_date": 2024,
+    "low_income": "dc-dc-sustainable-energy-utility"
+  },
+  {
+    "id": "DC-13",
+    "authority_type": "city",
+    "authority": "dc-dc-sustainable-energy-utility",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "dc_dCSustainableEnergyUtility_affordableHomeElectrificationProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "100% of costs covered for switching to ductless heating systems. Income-qualified residents only."
+    },
+    "start_date": 2023,
+    "end_date": 2024,
+    "low_income": "dc-dc-sustainable-energy-utility"
+  },
+  {
+    "id": "DC-14",
+    "authority_type": "city",
+    "authority": "dc-dc-sustainable-energy-utility",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "electric_stove",
+    "program": "dc_dCSustainableEnergyUtility_affordableHomeElectrificationProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "100% of costs covered for switching to electric resistance stoves. Income-qualified residents only."
+    },
+    "start_date": 2023,
+    "end_date": 2024,
+    "low_income": "dc-dc-sustainable-energy-utility"
+  },
+  {
+    "id": "DC-15",
+    "authority_type": "city",
+    "authority": "dc-dc-sustainable-energy-utility",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "electric_stove",
+    "program": "dc_dCSustainableEnergyUtility_affordableHomeElectrificationProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "100% of costs covered for switching to induction cooktops. Income-qualified residents only."
+    },
+    "start_date": 2023,
+    "end_date": 2024,
+    "low_income": "dc-dc-sustainable-energy-utility"
+  },
+  {
+    "id": "DC-16",
+    "authority_type": "city",
+    "authority": "dc-dc-sustainable-energy-utility",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "dc_dCSustainableEnergyUtility_affordableHomeElectrificationProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "100% of costs covered for switching to heat pump water heaters. Income-qualified residents only."
+    },
+    "start_date": 2023,
+    "end_date": 2024,
+    "low_income": "dc-dc-sustainable-energy-utility"
+  },
+  {
+    "id": "DC-19",
+    "authority_type": "city",
+    "authority": "dc-dc-sustainable-energy-utility",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "electric_panel",
+    "program": "dc_dCSustainableEnergyUtility_affordableHomeElectrificationProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "100% of costs covered for upgrading electrical panels. Income-qualified residents only."
+    },
+    "start_date": 2023,
+    "end_date": 2024,
+    "low_income": "dc-dc-sustainable-energy-utility"
+  },
+  {
+    "id": "DC-21",
+    "authority_type": "state",
+    "authority": "dc-dc-department-of-energy-and-environment",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "weatherization",
+    "program": "dc_dCDepartmentOfEnergyAndEnvironment_weatherizationAssistanceProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "100% of costs covered for home weatherization (insulation and air sealing). Income-qualified residents only."
+    },
+    "start_date": 2023,
+    "end_date": 2024,
+    "bonus_available": true,
+    "low_income": "dc-dc-department-of-energy-and-environment-60-ami"
+  },
+  {
+    "id": "DC-24",
+    "authority_type": "city",
+    "authority": "dc-dc-sustainable-energy-utility",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "rooftop_solar_installation",
+    "program": "dc_dCSustainableEnergyUtility_solarForAllSingle-FamilyProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "100% of costs covered for income-qualified homeowners to have solar photovoltaic (PV) systems installed by local contractors."
+    },
+    "start_date": 2024,
+    "end_date": 2024,
+    "low_income": "dc-dc-sustainable-energy-utility"
+  }
+]

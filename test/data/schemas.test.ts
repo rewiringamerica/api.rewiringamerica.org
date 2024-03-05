@@ -33,8 +33,12 @@ import {
   CO_INCENTIVES_SCHEMA,
   CT_INCENTIVES,
   CT_INCENTIVES_SCHEMA,
+  DC_INCENTIVES,
+  DC_INCENTIVES_SCHEMA,
   IL_INCENTIVES,
   IL_INCENTIVES_SCHEMA,
+  MI_INCENTIVES,
+  MI_INCENTIVES_SCHEMA,
   NV_INCENTIVES,
   NV_INCENTIVES_SCHEMA,
   NY_INCENTIVES,
@@ -52,6 +56,10 @@ import { TAX_BRACKETS, SCHEMA as TB_SCHEMA } from '../../src/data/tax_brackets';
 
 import Ajv from 'ajv/dist/2020';
 import { SomeJSONSchema } from 'ajv/dist/types/json-schema';
+import {
+  GEO_GROUPS_BY_STATE,
+  GEO_GROUPS_SCHEMA,
+} from '../../src/data/geo_groups';
 import {
   ALL_PROGRAMS,
   PROGRAMS,
@@ -80,6 +88,7 @@ const TESTS = [
     LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
     'State low income',
   ],
+  [GEO_GROUPS_SCHEMA, GEO_GROUPS_BY_STATE, 'geo_groups'],
 ];
 
 test('static JSON files match schema', async tap => {
@@ -97,7 +106,9 @@ const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
   ['AZ', AZ_INCENTIVES_SCHEMA, AZ_INCENTIVES],
   ['CO', CO_INCENTIVES_SCHEMA, CO_INCENTIVES],
   ['CT', CT_INCENTIVES_SCHEMA, CT_INCENTIVES],
+  ['DC', DC_INCENTIVES_SCHEMA, DC_INCENTIVES],
   ['IL', IL_INCENTIVES_SCHEMA, IL_INCENTIVES],
+  ['MI', MI_INCENTIVES_SCHEMA, MI_INCENTIVES],
   ['NV', NV_INCENTIVES_SCHEMA, NV_INCENTIVES],
   ['NY', NY_INCENTIVES_SCHEMA, NY_INCENTIVES],
   ['RI', RI_INCENTIVES_SCHEMA, RI_INCENTIVES],
@@ -136,6 +147,7 @@ test('state incentives JSON files match schemas', async tap => {
 
   STATE_INCENTIVE_TESTS.forEach(([stateId, schema, data]) => {
     const authorities = AUTHORITIES_BY_STATE[stateId as string];
+    const stateGeoGroups = GEO_GROUPS_BY_STATE[stateId];
 
     if (!tap.ok(ajv.validate(schema, data), `${stateId} incentives invalid`)) {
       console.error(ajv.errors);
@@ -188,6 +200,25 @@ test('state incentives JSON files match schemas', async tap => {
           authorities[incentive.authority_type]![incentive.authority],
           'city',
           `must define city attribute on corresponding authority ${incentive.authority} for incentives with city authority type`,
+        );
+      }
+
+      if (incentive.authority_type === AuthorityType.Other) {
+        tap.hasProp(
+          incentive,
+          'eligible_geo_group',
+          `authority_type 'other' must include a geo group (id ${incentive.id})`,
+        );
+
+        tap.hasProp(
+          stateGeoGroups,
+          incentive.eligible_geo_group!,
+          `nonexistent geo_group (${stateId}, id ${incentive.id})`,
+        );
+      } else {
+        tap.notOk(
+          incentive.eligible_geo_group,
+          `only authority_type 'other' can have a geo group (id ${incentive.id})`,
         );
       }
 

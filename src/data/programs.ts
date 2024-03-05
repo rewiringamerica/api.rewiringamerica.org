@@ -145,6 +145,16 @@ export const ALL_PROGRAMS = [
   'ct_coolingAndHeatingIncentivePilotProgram',
   'ct_electricVehicleAndChargingRebateProgram',
 
+  // DC
+  // DC Sustainable Energy Utility
+  'dc_dCSustainableEnergyUtility_dCResidentialRebates',
+  'dc_dCSustainableEnergyUtility_affordableHomeElectrificationProgram',
+  'dc_dCSustainableEnergyUtility_solarForAllSingle-FamilyProgram',
+  // DC Department of Energy and Environment
+  'dc_dCDepartmentOfEnergyAndEnvironment_weatherizationAssistanceProgram',
+  'dc_dCDepartmentOfEnergyAndEnvironment_solarForAll-CommunitySolar',
+  'dc_dCDepartmentOfEnergyAndEnvironment_LowIncomeHomeEnergyAssistanceProgram(LIHEAP)',
+
   // IL
   // Commonwealth Edison
   'il_commonwealthEdison_applianceRebates',
@@ -157,6 +167,26 @@ export const ALL_PROGRAMS = [
   'il_midAmericanEnergy_residentialInstantRebates',
   // State of Illinois
   'il_stateOfIllinois_homeWeatherization',
+
+  // MI
+  // Consumers Energy
+  'mi_consumersEnergy_residentialHeating,CoolingAndWaterHeatingProgram',
+  'mi_consumersEnergy_windowsAndInsulationRebates',
+  'mi_consumersEnergy_windowAndDoorRebates',
+  'mi_consumersEnergy_applianceRebates',
+  'mi_consumersEnergy_powerMIDrive™HomeChargerInstallationRebates',
+  // DTE
+  'mi_dTE_airConditioners',
+  'mi_dTE_wi-FiEnabledThermostats',
+  'mi_dTE_insulation&Windows',
+  'mi_dTE_washers&Dryers',
+  'mi_dTE_homeEVChargerRebate',
+  'mi_dTE_electricVehicleRebate',
+  'mi_dTE_waterHeaters',
+  // Great Lakes Energy
+  'mi_greatLakesEnergyCooperative_energyWise',
+  // Indiana Michigan Power
+  'mi_indianaMichiganPower_i&MMarketplace',
 
   // NV
   // NV Energy

@@ -101,6 +101,19 @@ location%5Bzip%5D=60304\
 &authority=il-state-of-illinois" \
  | jq . > test/fixtures/il-60304-state-utility-lowincome.json
 
+# TODO: Remove beta states argument when MI is fully launched.
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?location\[zip\]=48103\
+&include_beta_states=true\
+&owner_status=homeowner\
+&household_income=40000\
+&tax_filing=joint\
+&household_size=1\
+&authority_types=utility\
+&utility=mi-dte" \
+  | jq . > test/fixtures/v1-mi-48103-state-utility-lowincome.json
+
 # TODO: Remove beta states argument when NV is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
@@ -177,3 +190,47 @@ curl \
 &tax_filing=joint\
 &household_size=4" \
   | jq . > test/fixtures/v1-15289-homeowner-80000-joint-4.json
+
+
+# TODO: Remove beta states argument when DC is fully launched.
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?location\[zip\]=20303\
+&include_beta_states=true\
+&owner_status=homeowner\
+&household_income=95797\
+&tax_filing=joint\
+&household_size=4\
+&authority_types=state\
+&authority_types=city" \
+  | jq . > test/fixtures/v1-dc-20303-state-city-lowincome.json
+
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?location\[zip\]=80517\
+&include_beta_states=true\
+&owner_status=homeowner\
+&household_income=80000\
+&tax_filing=single\
+&household_size=1\
+&authority_types=state\
+&authority_types=utility\
+&authority_types=other\
+&items=heat_pump_water_heater\
+&utility=co-xcel-energy" \
+  | jq . > test/fixtures/v1-80517-xcel.json
+
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?location\[zip\]=80517\
+&include_beta_states=true\
+&owner_status=homeowner\
+&household_income=80000\
+&tax_filing=single\
+&household_size=1\
+&authority_types=state\
+&authority_types=utility\
+&authority_types=other\
+&items=heat_pump_water_heater\
+&utility=co-estes-park-power-and-communications" \
+  | jq . > test/fixtures/v1-80517-estes-park.json
