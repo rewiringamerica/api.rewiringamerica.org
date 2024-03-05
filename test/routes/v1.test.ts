@@ -174,6 +174,44 @@ test('CO low income response with state and utility filtering is valid and corre
   );
 });
 
+// CO utility consortium tests
+test('CO incentive for PRPA shows up as intended', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '80517' },
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 80000,
+      tax_filing: 'single',
+      authority_types: ['state', 'utility', 'other'],
+      items: ['heat_pump_water_heater'],
+      // Not in PRPA; incentives should not show up
+      utility: 'co-xcel-energy',
+      // TODO: Remove when CO is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-80517-xcel.json',
+  );
+  await validateResponse(
+    t,
+    {
+      location: { zip: '80517' },
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 80000,
+      tax_filing: 'joint',
+      authority_types: ['state', 'utility', 'other'],
+      items: ['heat_pump_water_heater'],
+      // Is in PRPA; incentives should show up
+      utility: 'co-estes-park-power-and-communications',
+      // TODO: Remove when CO is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-80517-estes-park.json',
+  );
+});
+
 // CT low income test
 test('CT low income response with state and utility filtering is valid and correct', async t => {
   await validateResponse(

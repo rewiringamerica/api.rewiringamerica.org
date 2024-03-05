@@ -381,13 +381,9 @@ export default function calculateIncentives(
   const authorities: AuthoritiesById = {};
   if (stateAuthorities) {
     incentives.forEach(i => {
-      if (
-        'authority' in i &&
-        i.authority &&
-        (i.authority_type === 'state' || i.authority_type === 'utility')
-      ) {
+      if ('authority' in i && i.authority && i.authority_type !== 'federal') {
         authorities[i.authority] =
-          stateAuthorities[i.authority_type][i.authority];
+          stateAuthorities[i.authority_type]![i.authority];
       }
     });
   }

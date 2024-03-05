@@ -9,6 +9,7 @@ export const FIELD_MAPPINGS: AliasMap = {
   data_urls: ['Data Source URL(s)'],
   authority_type: ['Authority Level *'],
   authority_name: ['Authority (Name) *'],
+  geo_eligibility: ['Geographic Eligibility'],
   program_title: ['Program Title *'],
   program_url: ['Program URL'],
   item: ['Technology *'],

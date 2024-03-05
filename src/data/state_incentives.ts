@@ -63,6 +63,7 @@ const collectedIncentivePropertySchema = {
   data_urls: { type: 'array', items: { type: 'string' } },
   authority_type: { type: 'string', enum: Object.values(AuthorityType) },
   authority_name: { type: 'string' },
+  geo_eligibility: { type: 'string', nullable: true },
   program_title: { type: 'string' },
   program_url: { type: 'string' },
   item: { type: 'string', enum: ALL_ITEMS },
@@ -126,6 +127,7 @@ export type DerivedFields = {
   agi_max_limit?: number;
   agi_min_limit?: number;
   authority: string;
+  eligible_geo_group?: string;
   program: string;
   bonus_available?: boolean;
   start_date: number;
@@ -137,6 +139,7 @@ const derivedIncentivePropertySchema = {
   agi_max_limit: { type: 'integer', nullable: true },
   agi_min_limit: { type: 'integer', nullable: true },
   authority: { type: 'string' },
+  eligible_geo_group: { type: 'string', nullable: true },
   program: { type: 'string', enum: ALL_PROGRAMS },
   bonus_available: { type: 'boolean', nullable: true },
   start_date: { type: 'number' },
@@ -185,6 +188,7 @@ const fieldOrder: {
   agi_min_limit: undefined,
   authority_type: undefined,
   authority: undefined,
+  eligible_geo_group: undefined,
   payment_methods: undefined,
   item: undefined,
   program: undefined,
