@@ -66,6 +66,19 @@ test('response is valid and correct', async t => {
     },
     './test/fixtures/v1-80212-homeowner-80000-joint-4.json',
   );
+
+  // Same request but with location passed differently
+  await validateResponse(
+    t,
+    {
+      zip: '80212',
+      owner_status: 'homeowner',
+      household_income: 80000,
+      tax_filing: 'joint',
+      household_size: 4,
+    },
+    './test/fixtures/v1-80212-homeowner-80000-joint-4.json',
+  );
 });
 
 test('parent ZCTA is used', async t => {
@@ -367,13 +380,6 @@ test('VT low income response with state and utility filtering is valid and corre
 const BAD_QUERIES = [
   // bad location:
   {
-    owner_status: 'homeowner',
-    household_income: 80000,
-    tax_filing: 'joint',
-    household_size: 4,
-  },
-  {
-    zip: '80212',
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: 'joint',
