@@ -168,6 +168,26 @@ export const ALL_PROGRAMS = [
   // State of Illinois
   'il_stateOfIllinois_homeWeatherization',
 
+  // MI
+  // Consumers Energy
+  'mi_consumersEnergy_residentialHeating,CoolingAndWaterHeatingProgram',
+  'mi_consumersEnergy_windowsAndInsulationRebates',
+  'mi_consumersEnergy_windowAndDoorRebates',
+  'mi_consumersEnergy_applianceRebates',
+  'mi_consumersEnergy_powerMIDrive™HomeChargerInstallationRebates',
+  // DTE
+  'mi_dTE_airConditioners',
+  'mi_dTE_wi-FiEnabledThermostats',
+  'mi_dTE_insulation&Windows',
+  'mi_dTE_washers&Dryers',
+  'mi_dTE_homeEVChargerRebate',
+  'mi_dTE_electricVehicleRebate',
+  'mi_dTE_waterHeaters',
+  // Great Lakes Energy
+  'mi_greatLakesEnergyCooperative_energyWise',
+  // Indiana Michigan Power
+  'mi_indianaMichiganPower_i&MMarketplace',
+
   // NV
   // NV Energy
   'nv_nVEnergy_homeEnergySaver',

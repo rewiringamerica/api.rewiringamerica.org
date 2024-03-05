@@ -311,6 +311,22 @@ export const IL_INCENTIVES: StateIncentive[] = JSON.parse(
   fs.readFileSync('./data/IL/incentives.json', 'utf-8'),
 );
 
+export const MI_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
+  type: 'array',
+  items: {
+    type: 'object',
+    properties: {
+      ...incentivePropertySchema,
+    },
+    required: requiredProperties,
+    additionalProperties: false,
+  },
+} as const;
+
+export const MI_INCENTIVES: StateIncentive[] = JSON.parse(
+  fs.readFileSync('./data/MI/incentives.json', 'utf-8'),
+);
+
 export const NV_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
   type: 'array',
   items: {
@@ -397,6 +413,7 @@ export const STATE_INCENTIVES_BY_STATE: StateIncentivesMap = {
   CT: CT_INCENTIVES,
   DC: DC_INCENTIVES,
   IL: IL_INCENTIVES,
+  MI: MI_INCENTIVES,
   NV: NV_INCENTIVES,
   NY: NY_INCENTIVES,
   RI: RI_INCENTIVES,

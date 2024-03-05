@@ -44,6 +44,12 @@ export const FILES: { [ident: string]: IncentiveFile } = {
       'https://docs.google.com/spreadsheets/d/e/2PACX-1vS2FQ0bImM65Gk0KFmDIhXZXCExrh605eWGscPXLPY5Kz_rQWG8KtyNJo82vYZMngTlSCCHfkYLFsUt/pub?gid=995688950&single=true&output=csv',
     headerRowNumber: 2,
   },
+  MI: {
+    filepath: 'data/MI/incentives.json',
+    sheetUrl:
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vThx1Nimf1NVxXxY5HRqg3EZU9FdoZSESPoLXFMxeGczR7vpjH16pNDRX6zPpNlz9aOGbcQivgnFtNK/pub?gid=995688950&single=true&output=csv',
+    headerRowNumber: 2,
+  },
   NV: {
     filepath: 'data/NV/incentives.json',
     sheetUrl:
