@@ -15,6 +15,7 @@ async function checkUrlDataAvailability(
     method: 'get',
     url: link,
     timeout: 10000,
+    validateStatus: () => true,
   }).catch(function (error) {
     // If a non-2xx response status exists, return it.
     if (error.response) {
@@ -24,6 +25,7 @@ async function checkUrlDataAvailability(
     else if (error.request) {
       return undefined;
     } else {
+      console.log('An error occurred for ', link, ': ', error.message);
       return undefined;
     }
   });
@@ -61,6 +63,13 @@ test('All URLs linking to current programs have an OK response code', async tap 
           );
         } else if (status >= 200 && status <= 299) {
           tap.pass(key + ' returned an OK status code');
+        } // Temporary condition check for 403 status code. This is due to Cloudflare security measures (at least for Efficiency Vermont's case), and should be noted, but not necessarily failed.
+        else if (status === 403) {
+          tap.pass(
+            key +
+              'returned a 403 status code. This is likely a Cloudflare security denial, and the website should be manually checked.',
+          );
+          console.log('403 error occurred for: ', key);
         } else {
           tap.fail(
             'Non-OK status code obtained for ' +
