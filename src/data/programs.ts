@@ -1,6 +1,7 @@
 import { AZ_PROGRAMS } from '../../data/AZ/programs';
 import { CO_PROGRAMS } from '../../data/CO/programs';
 import { CT_PROGRAMS } from '../../data/CT/programs';
+import { DC_PROGRAMS } from '../../data/DC/programs';
 import { IL_PROGRAMS } from '../../data/IL/programs';
 import { MI_PROGRAMS } from '../../data/MI/programs';
 import { NV_PROGRAMS } from '../../data/NV/programs';
@@ -65,6 +66,7 @@ const all_programs = {
   ...AZ_PROGRAMS,
   ...CO_PROGRAMS,
   ...CT_PROGRAMS,
+  ...DC_PROGRAMS,
   ...IL_PROGRAMS,
   ...MI_PROGRAMS,
   ...NV_PROGRAMS,
