@@ -4,7 +4,7 @@ import _ from 'lodash';
 import { Database } from 'sqlite';
 import { IRA_INCENTIVES, IRAIncentive } from '../data/ira_incentives';
 import { IRA_STATE_SAVINGS } from '../data/ira_state_savings';
-import { PROGRAMS, Programs } from '../data/programs';
+import { PROGRAMS } from '../data/programs';
 import { AmountType } from '../data/types/amount';
 import { PaymentMethod } from '../data/types/incentive-types';
 import { InvalidInputError } from '../lib/error';
@@ -29,8 +29,8 @@ function translateIncentives(incentives: IRAIncentive[]): WebsiteIncentive[] {
     ...incentive,
     item_es: t('items', incentive.item, 'es'),
     item: t('items', incentive.item, 'en'),
-    program_es: tr(PROGRAMS[incentive.program as keyof Programs].name, 'es'),
-    program: tr(PROGRAMS[incentive.program as keyof Programs].name, 'en'),
+    program_es: tr(PROGRAMS[incentive.program].name, 'es'),
+    program: tr(PROGRAMS[incentive.program].name, 'en'),
     // strip domain from v0 links:
     more_info_url_es: t('urls', incentive.item, 'es').replace(
       'https://www.rewiringamerica.org',

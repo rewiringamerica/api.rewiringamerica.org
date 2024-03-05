@@ -2,7 +2,7 @@ import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts
 import { FastifyInstance } from 'fastify';
 import { Database } from 'sqlite';
 import { LOCALES } from '../data/locale';
-import { PROGRAMS, Programs } from '../data/programs';
+import { PROGRAMS } from '../data/programs';
 import { InvalidInputError, UnexpectedInputError } from '../lib/error';
 import fetchAMIsForAddress from '../lib/fetch-amis-for-address';
 import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
@@ -34,9 +34,9 @@ function transformIncentives(
       name: t('items', incentive.item, language),
       url: t('urls', incentive.item, language),
     },
-    program: tr(PROGRAMS[incentive.program as keyof Programs].name, language),
-    program_url: PROGRAMS[incentive.program as keyof Programs].url
-      ? tr(PROGRAMS[incentive.program as keyof Programs].url!, language)
+    program: tr(PROGRAMS[incentive.program].name, language),
+    program_url: PROGRAMS[incentive.program].url
+      ? tr(PROGRAMS[incentive.program].url!, language)
       : undefined,
     short_description: tr(incentive.short_description, language),
   }));
