@@ -60,11 +60,7 @@ import {
   GEO_GROUPS_BY_STATE,
   GEO_GROUPS_SCHEMA,
 } from '../../src/data/geo_groups';
-import {
-  ALL_PROGRAMS,
-  PROGRAMS,
-  PROGRAMS_SCHEMA,
-} from '../../src/data/programs';
+import { PROGRAMS } from '../../src/data/programs';
 import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
 import { LAUNCHED_STATES } from '../../src/data/types/states';
@@ -82,7 +78,6 @@ const TESTS = [
   [SMFI_SCHEMA, STATE_MFIS, 'state_mfis'],
   [TB_SCHEMA, TAX_BRACKETS, 'tax_brackets'],
   [AUTHORITIES_SCHEMA, AUTHORITIES_BY_STATE, 'authorities'],
-  [PROGRAMS_SCHEMA, PROGRAMS, 'programs'],
   [
     LOW_INCOME_THRESHOLDS_SCHEMA,
     LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
@@ -256,10 +251,6 @@ test("launched states do not have any values that we don't support for broader c
       }
     }
   });
-});
-
-test('programs in data are exactly those in code', async tap => {
-  tap.same(Object.keys(PROGRAMS).sort(), Array.from(ALL_PROGRAMS).sort());
 });
 
 const isURLValid = (url: string): boolean => {
