@@ -55,4 +55,10 @@ export const FILES: { [ident: string]: IncentiveFile } = {
       'https://docs.google.com/spreadsheets/d/e/2PACX-1vSR3gOc40GeRzaYJwSn7MwKs7LQ2otHExlDWQb6AvfXHLzal-mt5b6IPGelDc6roSPgF-41GaU-L5Ae/pub?gid=995688950&single=true&output=csv',
     headerRowNumber: 2,
   },
+  VT: {
+    filepath: 'data/VT/incentives.json',
+    sheetUrl:
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vTm6qcrCiLdhYDUak0m7sXWh6PGaDC8-kpmSOhoVmfwso_F9S029yhTZJV5Npvt2vdmpBztZj_ZtH7_/pub?gid=30198531&single=true&output=csv',
+    headerRowNumber: 1,
+  },
 };
