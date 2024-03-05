@@ -48,4 +48,4 @@ export const DC_PROGRAMS = {
         en: 'https://doee.dc.gov/liheap',
       },
     },
-};
+} as const;

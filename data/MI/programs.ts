@@ -111,4 +111,4 @@ export const MI_PROGRAMS = {
       en: 'https://electricideas.com/at-home/rebates-products/marketplace/',
     },
   },
-};
+} as const;
