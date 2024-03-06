@@ -66,6 +66,19 @@ test('response is valid and correct', async t => {
     },
     './test/fixtures/v1-80212-homeowner-80000-joint-4.json',
   );
+
+  // Same request but with location passed differently
+  await validateResponse(
+    t,
+    {
+      zip: '80212',
+      owner_status: 'homeowner',
+      household_income: 80000,
+      tax_filing: 'joint',
+      household_size: 4,
+    },
+    './test/fixtures/v1-80212-homeowner-80000-joint-4.json',
+  );
 });
 
 test('parent ZCTA is used', async t => {
@@ -154,6 +167,64 @@ test('AZ low income response with state and utility filtering for UniSource is v
     './test/fixtures/v1-az-85702-state-utility-lowincome.json',
   );
 });
+
+// CO low income test
+test('CO low income response with state and utility filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '81657' },
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 100000,
+      tax_filing: 'joint',
+      authority_types: ['state', 'utility'],
+      utility: 'co-walking-mountains',
+      // TODO: Remove when CO is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-co-81657-state-utility-lowincome.json',
+  );
+});
+
+// CO utility consortium tests
+test('CO incentive for PRPA shows up as intended', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '80517' },
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 80000,
+      tax_filing: 'single',
+      authority_types: ['state', 'utility', 'other'],
+      items: ['heat_pump_water_heater'],
+      // Not in PRPA; incentives should not show up
+      utility: 'co-xcel-energy',
+      // TODO: Remove when CO is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-80517-xcel.json',
+  );
+  await validateResponse(
+    t,
+    {
+      location: { zip: '80517' },
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 80000,
+      tax_filing: 'joint',
+      authority_types: ['state', 'utility', 'other'],
+      items: ['heat_pump_water_heater'],
+      // Is in PRPA; incentives should show up
+      utility: 'co-estes-park-power-and-communications',
+      // TODO: Remove when CO is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-80517-estes-park.json',
+  );
+});
+
 // CT low income test
 test('CT low income response with state and utility filtering is valid and correct', async t => {
   await validateResponse(
@@ -173,6 +244,25 @@ test('CT low income response with state and utility filtering is valid and corre
   );
 });
 
+// DC low income test
+test('DC low income response with state and city filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '20303' },
+      owner_status: 'homeowner',
+      household_size: 4,
+      household_income: 95796,
+      tax_filing: 'joint',
+      authority_types: ['state', 'city'],
+      authority: 'dc-dc-sustainable-energy-utility',
+      // TODO: Remove when DC is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-dc-20303-state-city-lowincome.json',
+  );
+});
+
 // IL low income test
 test('IL low income response with state and utility filtering is valid and correct', async t => {
   await validateResponse(
@@ -189,6 +279,25 @@ test('IL low income response with state and utility filtering is valid and corre
       include_beta_states: true,
     },
     './test/fixtures/il-60304-state-utility-lowincome.json',
+  );
+});
+
+// MI low income test.
+test('MI response with state and utility is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '48103' },
+      owner_status: 'homeowner',
+      // Qualifies as low-income for MI DTE.
+      household_size: 1,
+      household_income: 50000,
+      tax_filing: 'joint',
+      authority_types: ['utility'],
+      utility: 'mi-dte',
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-mi-48103-state-utility-lowincome.json',
   );
 });
 
@@ -290,13 +399,6 @@ test('WI low income response with state and utility filtering is valid and corre
 const BAD_QUERIES = [
   // bad location:
   {
-    owner_status: 'homeowner',
-    household_income: 80000,
-    tax_filing: 'joint',
-    household_size: 4,
-  },
-  {
-    zip: '80212',
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: 'joint',

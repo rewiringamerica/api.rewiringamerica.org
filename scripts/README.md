@@ -32,8 +32,6 @@ Filling out an entry for `incentive-spreadsheet-registry.ts` consists of creatin
 - Exporting and sharing a sheet URL in `sheetUrl`
   - To do this for a Google sheet, click File -> Share -> Publish to web and under `Link`, select the Incentives data tab and change the `Web page` default to `Comma separated values (.csv)`. The link that appears is what should be copied into the value.
 - Optionally declaring the header row number, if not the top row of the spreadsheet, in `headerRowNumber`
-- Declaring what the name of the ID column is in `idHeader`
-- Recording the english and spanish program description column names, in `enHeader` and `esHeader`
 
 [`generate-misc-state-data.ts`](generate-misc-state-data.ts) adds values to ancillary files to reflect the programs and authorities that will be needed for the JSON. This needs to happen first because our data schemas actually require an incentive's program/authority to be one of the listed members, and if that's not the case, the incentive will fail validation.
 
