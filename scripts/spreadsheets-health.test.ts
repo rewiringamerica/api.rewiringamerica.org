@@ -10,6 +10,21 @@ import {
 import { FILES } from './incentive-spreadsheet-registry';
 import { spreadsheetToJson } from './incentive-spreadsheet-to-json';
 
+// Avoid these kind of exceptions, but can be helpful when spreadsheet-based
+// work is mid-progress.
+const IGNORE_ES_TRANSLATIONS = ['CO'];
+
+function filterToKeyFields(
+  incentive: StateIncentive,
+  state: string,
+): Partial<StateIncentive> {
+  const subset = _.pick(incentive, PASS_THROUGH_FIELDS);
+  if (IGNORE_ES_TRANSLATIONS.includes(state)) {
+    delete subset.short_description.es;
+  }
+  return subset;
+}
+
 test('registered spreadsheets are in sync with checked-in JSON files', async tap => {
   for (const [state, file] of Object.entries(FILES)) {
     if (!file.runSpreadsheetHealthCheck) continue;
@@ -44,12 +59,12 @@ test('registered spreadsheets are in sync with checked-in JSON files', async tap
       tap.matchOnlyStrict(
         output.invalidCollectedIncentives,
         previousCollectedExceptions,
-        'Spreadsheet out of sync with invalid collected JSON files. See scripts/README.md for advice on how to resolve',
+        `${state} spreadsheet out of sync with invalid collected JSON files. See scripts/README.md for advice on how to resolve`,
       );
       tap.matchOnlyStrict(
         output.invalidStateIncentives,
         previousStateExceptions,
-        'Spreadsheet out of sync with invalid state JSON files. See scripts/README.md for advice on how to resolve',
+        `${state} spreadsheet out of sync with invalid state JSON files. See scripts/README.md for advice on how to resolve`,
       );
 
       // We have more lenience for valid JSON records, since there are still
@@ -65,12 +80,12 @@ test('registered spreadsheets are in sync with checked-in JSON files', async tap
 
       tap.matchOnlyStrict(
         goldenValidStateIncentives.map(incentive =>
-          _.pick(incentive, PASS_THROUGH_FIELDS),
+          filterToKeyFields(incentive, state),
         ),
         output.validStateIncentives.map(incentive =>
-          _.pick(incentive, PASS_THROUGH_FIELDS),
+          filterToKeyFields(incentive, state),
         ),
-        'Spreadsheet out of sync with valid JSON files. See scripts/README.md for advice on how to resolve',
+        `${state} spreadsheet out of sync with valid JSON files. See scripts/README.md for advice on how to resolve`,
       );
     } catch (e) {
       tap.fail(`Error while validating spreadsheet for state ${state}: ${e}`);
