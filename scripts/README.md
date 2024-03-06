@@ -124,7 +124,7 @@ Sometimes, you might find records that are in the spreadsheets but not in the JS
 
 There are a lot of potential reasons for diffs in the valid JSON:
 
-- someone may have added or subtracted rows in the spreadsheet, in which case you should expect whole records to be added or removed from the JSON. It could also be that those records were always the spreadsheet, but when the JSON conversion process was manual, someone left them out intentionally for editorial reasons. You can use the `Omit from API?` column in the spreadsheet to ignore records if you don't want them to be served by the API.
+- someone may have added or subtracted rows in the spreadsheet, in which case you should expect whole records to be added or removed from the JSON. It could also be that those records were always in the spreadsheet, but when the JSON conversion process was manual, someone left them out intentionally for editorial reasons. You can use the `Omit from API?` column in the spreadsheet to ignore records if you don't want them to be served by the API.
 - Wordsmith-ing or minor changes might have been made to the JSON and never propagated back to the spreadsheets. This is understandable, but we don't want this in the future.
 - Authorities or programs are commonly renamed, because our rules for converting authority or program names into string identifiers has changed over time. You might need to go back one step easlier and re-run the _entire_ spreadsheet-to-json flow, starting with `generate-misc-state-data.ts` (again, see the `scripts/README.md`). In particular, we now actually require utility Authorities to appear in the utilities database, meaning that some of the Authority Names in the spreadsheet are wrong.
 
