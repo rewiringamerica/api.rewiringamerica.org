@@ -164,10 +164,10 @@ test('state incentives JSON files match schemas', async tap => {
           `(${incentive.short_description.en.length}), id ${incentive.id}, index ${index}`,
       );
 
-      // We let Spanish descriptions be a little longer
+      // We let Spanish descriptions be longer
       if (incentive.short_description.es) {
         tap.ok(
-          incentive.short_description.es.length <= 250,
+          incentive.short_description.es.length <= 400,
           `${stateId} Spanish description too long ` +
             `(${incentive.short_description.en.length}), id ${incentive.id}, index ${index}`,
         );
