@@ -302,6 +302,15 @@ export const ALL_PROGRAMS = [
   // VGS
   'vt_vermontGasServiceWeatherizationProgram',
   'vt_vermontGasServiceWeatherizationIncomeBonusProgram',
+
+  // WI
+  // Focus On Energy
+  'wi_focusOnEnergy_insulation&AirSealingRebates',
+  'wi_focusOnEnergy_smartThermostatsRebates',
+  'wi_focusOnEnergy_waterHeatingRebates',
+  'wi_focusOnEnergy_residentialCustomerSolarPVRebates',
+  'wi_focusOnEnergy_dIYResidentialInsulation&AirSealingRebate',
+  'wi_focusOnEnergy_residentialHeating&CoolingRebate',
 ] as const;
 
 export const PROGRAMS_SCHEMA = {

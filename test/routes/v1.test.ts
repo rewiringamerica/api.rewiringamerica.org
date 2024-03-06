@@ -377,6 +377,25 @@ test('VT low income response with state and utility filtering is valid and corre
   );
 });
 
+// WI low income test
+test('WI low income response with state and utility filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '53703' },
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 50000,
+      tax_filing: 'joint',
+      authority_types: ['state'],
+      authority: 'wi-focus-on-energy',
+      // TODO: Remove when WI is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-wi-53703-state-utility-lowincome.json',
+  );
+});
+
 const BAD_QUERIES = [
   // bad location:
   {

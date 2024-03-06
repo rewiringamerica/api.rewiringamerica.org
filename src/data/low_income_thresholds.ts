@@ -76,7 +76,7 @@ export const STATE_THRESHOLDS_SCHEMA: JSONSchemaType<StateLowIncomeThresholds> =
 // Keep states in alphabetic order.
 export const SCHEMA: JSONSchemaType<LowIncomeThresholdsMap> = {
   type: 'object',
-  required: ['AZ', 'CO', 'CT', 'IL', 'MI', 'NV', 'NY', 'RI', 'VA', 'VT'],
+  required: ['AZ', 'CO', 'CT', 'IL', 'MI', 'NV', 'NY', 'RI', 'VA', 'VT', 'WI'],
   additionalProperties: STATE_THRESHOLDS_SCHEMA,
 };
 

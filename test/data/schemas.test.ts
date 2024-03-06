@@ -50,6 +50,8 @@ import {
   VA_INCENTIVES_SCHEMA,
   VT_INCENTIVES,
   VT_INCENTIVES_SCHEMA,
+  WI_INCENTIVES,
+  WI_INCENTIVES_SCHEMA,
 } from '../../src/data/state_incentives';
 import { SCHEMA as SMFI_SCHEMA, STATE_MFIS } from '../../src/data/state_mfi';
 import { TAX_BRACKETS, SCHEMA as TB_SCHEMA } from '../../src/data/tax_brackets';
@@ -114,6 +116,7 @@ const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
   ['RI', RI_INCENTIVES_SCHEMA, RI_INCENTIVES],
   ['VA', VA_INCENTIVES_SCHEMA, VA_INCENTIVES],
   ['VT', VT_INCENTIVES_SCHEMA, VT_INCENTIVES],
+  ['WI', WI_INCENTIVES_SCHEMA, WI_INCENTIVES],
 ];
 
 const STATE_INCENTIVE_RELATIONSHIP_TESTS: [string, IncentiveRelationships][] = [
