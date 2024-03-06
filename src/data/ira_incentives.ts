@@ -1,7 +1,7 @@
 import { JSONSchemaType } from 'ajv';
 import fs from 'fs';
 import { AuthorityType } from './authorities';
-import { ALL_PROGRAMS } from './programs';
+import { PROGRAMS } from './programs';
 import { FilingStatus } from './tax_brackets';
 import { AMOUNT_SCHEMA, Amount } from './types/amount';
 import { PaymentMethod } from './types/incentive-types';
@@ -60,7 +60,7 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
         type: 'array',
         items: { type: 'string', enum: Object.values(PaymentMethod) },
       },
-      program: { type: 'string', enum: ALL_PROGRAMS },
+      program: { type: 'string', enum: Object.keys(PROGRAMS) },
       authority_type: { type: 'string', const: AuthorityType.Federal },
       item: { type: 'string', enum: ALL_ITEMS },
       amount: AMOUNT_SCHEMA,
