@@ -22,6 +22,7 @@ import { SOLAR_PRICES, SCHEMA as SP_SCHEMA } from '../../src/data/solar_prices';
 import {
   CO_RELATIONSHIPS,
   CT_RELATIONSHIPS,
+  GA_RELATIONSHIPS,
   INCENTIVE_RELATIONSHIPS_SCHEMA,
   IncentiveRelationships,
   VT_RELATIONSHIPS,
@@ -125,6 +126,7 @@ const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
 const STATE_INCENTIVE_RELATIONSHIP_TESTS: [string, IncentiveRelationships][] = [
   ['CO', CO_RELATIONSHIPS],
   ['CT', CT_RELATIONSHIPS],
+  ['GA', GA_RELATIONSHIPS],
   ['VT', VT_RELATIONSHIPS],
 ];
 
