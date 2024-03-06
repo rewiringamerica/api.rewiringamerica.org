@@ -264,6 +264,25 @@ test('DC low income response with state and city filtering is valid and correct'
   );
 });
 
+// GA Georgia Power test
+test('GA response with utility filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '30033' },
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 35000,
+      tax_filing: 'joint',
+      authority_types: ['utility'],
+      utility: 'ga-georgia-power',
+      // TODO: Remove when GA is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-ga-30033-utility.json',
+  );
+});
+
 // IL low income test
 test('IL low income response with state and utility filtering is valid and correct', async t => {
   await validateResponse(

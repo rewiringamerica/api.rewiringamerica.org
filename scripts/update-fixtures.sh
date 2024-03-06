@@ -88,6 +88,19 @@ curl \
 &utility=ct-eversource" \
   | jq . > test/fixtures/v1-ct-06002-state-utility-lowincome.json
 
+# TODO: Remove beta states argument when GA is fully launched.
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?location\[zip\]=30033\
+&include_beta_states=true\
+&owner_status=homeowner\
+&household_income=40000\
+&tax_filing=joint\
+&household_size=1\
+&authority_types=utility\
+&utility=ga-georgia-power" \
+  | jq . > test/fixtures/v1-ga-30033-utility.json
+
 # TODO: Remove beta states argument when IL is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator?\
