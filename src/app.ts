@@ -50,7 +50,7 @@ export default async function (
   // Equivalent to Fastify's default request-end logging
   fastify.addHook('onResponse', (req, reply, done) => {
     req.log.info(
-      { res: reply, responseTime: reply.getResponseTime() },
+      { res: reply, responseTime: reply.elapsedTime },
       'request completed',
     );
     done();
