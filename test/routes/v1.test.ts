@@ -173,13 +173,14 @@ test('CO low income response with state and utility filtering is valid and corre
   await validateResponse(
     t,
     {
+      // Eagle County, which gets Walking Mountains incentives
       location: { zip: '81657' },
       owner_status: 'homeowner',
       household_size: 1,
       household_income: 100000,
       tax_filing: 'joint',
-      authority_types: ['state', 'utility'],
-      utility: 'co-walking-mountains',
+      authority_types: ['state', 'utility', 'other'],
+      utility: 'co-xcel-energy',
       // TODO: Remove when CO is fully launched.
       include_beta_states: true,
     },

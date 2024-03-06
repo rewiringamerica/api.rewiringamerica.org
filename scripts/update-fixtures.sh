@@ -179,7 +179,8 @@ curl \
 &household_size=1\
 &authority_types=state\
 &authority_types=utility\
-&utility=co-walking-mountains" \
+&authority_types=other\
+&utility=co-xcel-energy" \
   | jq . > test/fixtures/v1-co-81657-state-utility-lowincome.json
 
 curl \

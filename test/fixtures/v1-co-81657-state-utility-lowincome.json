@@ -3,6 +3,9 @@
   "is_under_150_ami": true,
   "is_over_150_ami": false,
   "authorities": {
+    "co-xcel-energy": {
+      "name": "Xcel Energy"
+    },
     "co-colorado-energy-office": {
       "name": "Colorado Energy Office"
     },
@@ -18,7 +21,7 @@
   },
   "coverage": {
     "state": "CO",
-    "utility": "co-walking-mountains"
+    "utility": "co-xcel-energy"
   },
   "location": {
     "state": "CO",
@@ -28,9 +31,145 @@
   "incentives": [
     {
       "payment_methods": [
-        "assistance_program"
+        "account_credit",
+        "rebate"
       ],
       "authority_type": "utility",
+      "authority": "co-xcel-energy",
+      "program": "Heat Pump Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
+      "item": {
+        "type": "geothermal_heating_installation",
+        "name": "Geothermal Heating Installation",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/geothermal-heating-installation"
+      },
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 600,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$600 per heating ton for qualifying Ground Source Heat Pumps."
+    },
+    {
+      "payment_methods": [
+        "account_credit",
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-xcel-energy",
+      "program": "Heat Pump Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2200
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$2200 for qualifying Cold Climate Air Source Heat Pumps."
+    },
+    {
+      "payment_methods": [
+        "account_credit",
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-xcel-energy",
+      "program": "Heat Pump Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2200
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$2200 for qualifying Cold Climate Mini Split Heat Pumps."
+    },
+    {
+      "payment_methods": [
+        "account_credit",
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-xcel-energy",
+      "program": "Heat Pump Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1700
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$1700 for qualifying High Efficiency Air Source Heat Pumps."
+    },
+    {
+      "payment_methods": [
+        "account_credit",
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-xcel-energy",
+      "program": "Heat Pump Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1700
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": 2023,
+      "end_date": 2024,
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$1700 for qualifying Mini Split Heat Pumps."
+    },
+    {
+      "payment_methods": [
+        "assistance_program"
+      ],
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Low-Moderate Income Program",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -137,7 +276,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -164,7 +303,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -191,7 +330,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -218,7 +357,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -245,7 +384,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -272,7 +411,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -299,7 +438,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -326,7 +465,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -353,7 +492,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -380,7 +519,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -406,7 +545,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -433,7 +572,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -460,7 +599,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -487,7 +626,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -514,7 +653,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -541,7 +680,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -568,7 +707,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -595,7 +734,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -622,7 +761,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -649,7 +788,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -676,7 +815,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -702,7 +841,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
@@ -729,7 +868,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "utility",
+      "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
