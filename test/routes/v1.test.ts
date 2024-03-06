@@ -298,7 +298,7 @@ test('IL low income response with state and utility filtering is valid and corre
       // TODO: Remove when IL is fully launched.
       include_beta_states: true,
     },
-    './test/fixtures/il-60304-state-utility-lowincome.json',
+    './test/fixtures/v1-il-60304-state-utility-lowincome.json',
   );
 });
 
