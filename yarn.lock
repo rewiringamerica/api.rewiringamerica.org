@@ -1115,14 +1115,6 @@ axios-retry@^4.0.0:
   dependencies:
     is-retry-allowed "^2.2.0"
 
-axios@^0.27.2:
-  version "0.27.2"
-  resolved "https://registry.yarnpkg.com/axios/-/axios-0.27.2.tgz#207658cc8621606e586c85db4b41a750e756d972"
-  integrity sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==
-  dependencies:
-    follow-redirects "^1.14.9"
-    form-data "^4.0.0"
-
 axios@^1.6.7:
   version "1.6.7"
   resolved "https://registry.yarnpkg.com/axios/-/axios-1.6.7.tgz#7b48c2e27c96f9c68a2f8f31e2ab19f59b06b0a7"
@@ -1986,11 +1978,6 @@ flatted@^3.1.0:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
   integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
 
-follow-redirects@^1.14.9:
-  version "1.15.2"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
-  integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
-
 follow-redirects@^1.15.4:
   version "1.15.5"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.5.tgz#54d4d6d062c0fa7d9d17feb008461550e3ba8020"
@@ -2127,12 +2114,12 @@ generify@^4.0.0:
     split2 "^3.0.0"
     walker "^1.0.6"
 
-geocodio-library-node@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/geocodio-library-node/-/geocodio-library-node-1.5.0.tgz#c6a98fedab42cc5a271634590b9f2499179ac6b8"
-  integrity sha512-hd6L/F8IQleqr3E1/UkBYoHqwANnXI0GkzMDi7UoziFgTJla2/kHxjfgIHkL6XWFvpJTE6V4NLhPBXJpoG+xhA==
+geocodio-library-node@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/geocodio-library-node/-/geocodio-library-node-1.6.1.tgz#3762f6e3e9fc799652de67b310fb66596521398c"
+  integrity sha512-/VbjgjsNz04jbuPC3HVHCQNOneVzD7npyKpOFZJ7ErgxF21W2cdVsA5sbeIwqB1oQD5IrQ73eoe/PSe4PlBLOQ==
   dependencies:
-    axios "^0.27.2"
+    axios "^1.6.7"
     form-data "^4.0.0"
 
 get-caller-file@^2.0.5:
