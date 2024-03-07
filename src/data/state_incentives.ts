@@ -32,6 +32,7 @@ export type CollectedIncentive = {
   data_urls: string[];
   authority_type: AuthorityType;
   authority_name: string;
+  geo_eligibility?: string;
   program_title: string;
   program_url: string;
   item: Item;

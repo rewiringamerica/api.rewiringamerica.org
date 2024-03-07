@@ -6,7 +6,7 @@ import {
   StateToAuthorityTypeMap,
   createProgramsContent,
   maybeUpdateProgramsTsFile,
-  sortJsonAlphabeticallyByStateKey,
+  sortMapByKey,
   updateAuthorities,
 } from '../../scripts/lib/authority-and-program-updater';
 
@@ -63,7 +63,7 @@ const baseSourceFile = `import SomeClass from './some_file';
 import CT_PROGRAMS from './programs/ct_programs';
 import NY_PROGRAMS from './programs/ny_programs';
 import OtherClass from './other_file';
-  
+
 const var = 'foo';
 
 const all_programs = {
@@ -122,10 +122,7 @@ test('correctly sort state authority information by state', tap => {
       },
     },
   };
-  tap.matchOnly(
-    ordered_json,
-    sortJsonAlphabeticallyByStateKey(unorderedFixture),
-  );
+  tap.matchOnly(ordered_json, sortMapByKey(unorderedFixture));
   tap.end();
 });
 
@@ -360,7 +357,7 @@ import AZ_PROGRAMS from './programs/az_programs';
 import CT_PROGRAMS from './programs/ct_programs';
 import NY_PROGRAMS from './programs/ny_programs';
 import OtherClass from './other_file';
-  
+
 const var = 'foo';
 
 const all_programs = {
@@ -396,7 +393,7 @@ import CT_PROGRAMS from './programs/ct_programs';
 import IL_PROGRAMS from './programs/il_programs';
 import NY_PROGRAMS from './programs/ny_programs';
 import OtherClass from './other_file';
-  
+
 const var = 'foo';
 
 const all_programs = {
@@ -432,7 +429,7 @@ import CT_PROGRAMS from './programs/ct_programs';
 import NY_PROGRAMS from './programs/ny_programs';
 import WA_PROGRAMS from './programs/wa_programs';
 import OtherClass from './other_file';
-  
+
 const var = 'foo';
 
 const all_programs = {

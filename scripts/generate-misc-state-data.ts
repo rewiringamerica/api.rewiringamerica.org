@@ -30,6 +30,7 @@ async function generate(state: string, file: IncentiveFile) {
 
   authorityProgramManager.updatePrograms();
   authorityProgramManager.updateAuthoritiesJson();
+  authorityProgramManager.updateGeoGroupsJson();
 }
 
 (async function () {
