@@ -90,10 +90,13 @@ export function authorityNameToGroupName(authorityName: string): string {
 export function sortMapByKey<T>(json: Record<string, T>): Record<string, T> {
   const ordered = Object.keys(json)
     .sort()
-    .reduce((obj, key) => {
-      obj[key] = json[key];
-      return obj;
-    }, {} as Record<string, T>);
+    .reduce(
+      (obj, key) => {
+        obj[key] = json[key];
+        return obj;
+      },
+      {} as Record<string, T>,
+    );
   return ordered;
 }
 
