@@ -4,6 +4,7 @@ import {
   AuthoritiesById,
   AuthorityType,
 } from '../data/authorities';
+import { DataPartnersType } from '../data/data_partners';
 import { IRAIncentive, IRA_INCENTIVES } from '../data/ira_incentives';
 import { SOLAR_PRICES } from '../data/solar_prices';
 import { StateIncentive } from '../data/state_incentives';
@@ -26,7 +27,6 @@ import {
   getStateIncentiveRelationships,
 } from './state-incentives-calculation';
 import estimateTaxAmount from './tax-brackets';
-import { DataPartnersType } from '../data/data_partners';
 
 const MAX_POS_SAVINGS = 14000;
 const OWNER_STATUSES = new Set(Object.values(OwnerStatus));
@@ -390,7 +390,10 @@ export default function calculateIncentives(
     });
   }
 
-  const data_partners: DataPartnersType = getStateDataPartners(state_id, request);
+  const data_partners: DataPartnersType = getStateDataPartners(
+    state_id,
+    request,
+  );
 
   return {
     is_under_80_ami: isUnder80Ami,

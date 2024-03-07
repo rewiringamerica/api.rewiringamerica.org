@@ -8,7 +8,7 @@ import { STATES_PLUS_DC } from './types/states';
  * and review the state's incentive data, but they don't offer incentives
  * directly. We include them to give them credit for their work and to demonstrate
  * their endorsement of the incentives calculator.
- * 
+ *
  * Some organizations are both data partners who have helped gather incentives
  * and authorities that offer incentives. These organizations should
  * represented as authorities in the code.
@@ -23,7 +23,6 @@ export const API_DATA_PARTNER_SCHEMA = {
   required: ['name'],
   additionalProperties: false,
 } as const;
-
 
 const dataPartnerMapSchema = {
   type: 'object',
