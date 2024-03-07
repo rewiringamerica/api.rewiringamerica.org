@@ -13,9 +13,9 @@ async function generate(state: string, file: IncentiveFile) {
     from_line: file.headerRowNumber ?? 1,
   });
 
-  // For now this is always on since we need to ID this columns
-  // accurately to do the rest of the work.
-  const strict_mode = true;
+  // strict_mode can be false since it's more error-tolerant, and we'll fail
+  // if we don't have the right columns anyway.
+  const strict_mode = false;
   const standardizer = new SpreadsheetStandardizer(
     FIELD_MAPPINGS,
     {},
@@ -28,8 +28,7 @@ async function generate(state: string, file: IncentiveFile) {
     authorityProgramManager.addRow(standardized);
   });
 
-  authorityProgramManager.updateProgramsTs();
-  authorityProgramManager.updateProgramJson();
+  authorityProgramManager.updatePrograms();
   authorityProgramManager.updateAuthoritiesJson();
 }
 
