@@ -16,6 +16,7 @@ import {
 } from '../src/data/state_incentives';
 import { LOCALIZABLE_STRING_SCHEMA } from '../src/data/types/localizable-string';
 import { FILES, IncentiveFile } from './incentive-spreadsheet-registry';
+import { DataRefiner } from './lib/data-refiner';
 import {
   CollectedIncentivesWithErrors,
   flatToNestedValidate,
@@ -72,8 +73,8 @@ export function spreadsheetToJson(
     FIELD_MAPPINGS,
     VALUE_MAPPINGS,
     strict,
-    lowIncome,
   );
+  const refiner = new DataRefiner(lowIncome);
 
   const standardized = rows.map(standardizer.standardize.bind(standardizer));
   const validated = flatToNestedValidate(standardized);
@@ -94,7 +95,7 @@ export function spreadsheetToJson(
   const invalidStateIncentives: StateIncentivesWithErrors[] = [];
   const validStateIncentives: StateIncentive[] = [];
   validCollectedIncentives.forEach((row: CollectedIncentive) => {
-    const refined = standardizer.refineCollectedData(state, row);
+    const refined = refiner.refineCollectedData(state, row);
     if (!validate(refined)) {
       const invalid = refined as StateIncentivesWithErrors;
       if (validate.errors !== undefined && validate.errors !== null) {
