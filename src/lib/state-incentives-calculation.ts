@@ -10,6 +10,7 @@ import {
   STATE_INCENTIVES_BY_STATE,
   StateIncentive,
 } from '../data/state_incentives';
+import { DATA_PARTNERS_BY_STATE } from '../data/data_partners';
 import { AmountType } from '../data/types/amount';
 import { APICoverage } from '../data/types/coverage';
 import { OwnerStatus } from '../data/types/owner-status';
@@ -44,6 +45,14 @@ export function getAllStateIncentives(
 
 export function getStateIncentiveRelationships(stateId: string) {
   return INCENTIVE_RELATIONSHIPS_BY_STATE[stateId] ?? {};
+}
+
+export function getStateDataPartners(stateId: string, request: CalculateParams,) {
+  // Only process state data partners for launched states, or beta states if beta was requested.
+  if (!isStateIncluded(stateId, request.include_beta_states ?? false)) {
+    return {};
+  }
+  return DATA_PARTNERS_BY_STATE[stateId] || {};
 }
 
 export function calculateStateIncentivesAndSavings(
