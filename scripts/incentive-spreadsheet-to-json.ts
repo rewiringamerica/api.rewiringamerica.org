@@ -27,7 +27,7 @@ import { SpreadsheetStandardizer } from './lib/spreadsheet-standardizer';
 const ajv = new Ajv({ allErrors: true });
 const validate = ajv.addSchema(LOCALIZABLE_STRING_SCHEMA).compile(STATE_SCHEMA);
 
-type StateIncentivesWithErrors = Partial<StateIncentive> & {
+export type StateIncentivesWithErrors = Partial<StateIncentive> & {
   errors: object[];
 };
 
