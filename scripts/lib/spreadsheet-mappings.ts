@@ -54,6 +54,7 @@ export const VALUE_MAPPINGS: { [index: string]: AliasMap } = {
     utility: ['Utility'],
     county: ['County'],
     city: ['City'],
+    other: ['Other'],
   },
   payment_methods: {
     rebate: ['Rebate (Post Purchase)'],

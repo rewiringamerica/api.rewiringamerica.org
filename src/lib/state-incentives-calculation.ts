@@ -1,5 +1,6 @@
 import { min } from 'lodash';
 import { AuthoritiesByType, AuthorityType } from '../data/authorities';
+import { DATA_PARTNERS_BY_STATE } from '../data/data_partners';
 import { GEO_GROUPS_BY_STATE } from '../data/geo_groups';
 import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/low_income_thresholds';
 import {
@@ -44,6 +45,17 @@ export function getAllStateIncentives(
 
 export function getStateIncentiveRelationships(stateId: string) {
   return INCENTIVE_RELATIONSHIPS_BY_STATE[stateId] ?? {};
+}
+
+export function getStateDataPartners(
+  stateId: string,
+  request: CalculateParams,
+) {
+  // Only process state data partners for launched states, or beta states if beta was requested.
+  if (!isStateIncluded(stateId, request.include_beta_states ?? false)) {
+    return {};
+  }
+  return DATA_PARTNERS_BY_STATE[stateId] || {};
 }
 
 export function calculateStateIncentivesAndSavings(

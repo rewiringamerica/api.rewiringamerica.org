@@ -34,7 +34,6 @@ async function edit(file: IncentiveFile, write: boolean) {
     FIELD_MAPPINGS,
     VALUE_MAPPINGS,
     /* strict */ false,
-    /* low income thresholds */ null,
   );
   const standardized = rows.map(standardizer.standardize.bind(standardizer));
   // Validate the first row to ensure we found all the columns we need.
