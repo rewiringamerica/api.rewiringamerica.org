@@ -8,6 +8,7 @@ import {
   StateIncentive,
 } from '../../src/data/state_incentives';
 import {
+  authorityNameToGroupName,
   createAuthorityName,
   createProgramName,
 } from './authority-and-program-updater';
@@ -69,6 +70,19 @@ export class DataRefiner {
         );
       }
     }
+    if (record.authority_type === 'other') {
+      // During initial data collection, the "Geographic Eligibility" column
+      // will be filled in with free text. After misc state data is generated,
+      // which adds entries to geo_groups.json, translate the free text into
+      // structured representation in geo_groups.json, and replace the
+      // "Geographic Eligibility" free text with the ID of the geo group.
+      //
+      // If the column doesn't contain a plausible geo group ID, derive the
+      // geo group ID from the authority name (the common case).
+      output.eligible_geo_group = isPlausibleGeoGroup(record.geo_eligibility)
+        ? record.geo_eligibility
+        : authorityNameToGroupName(output.authority);
+    }
 
     // Enforce a specific property order on the output for better debugging.
     return Object.fromEntries(
@@ -113,6 +127,15 @@ function isPlausibleLowIncomeRow(record: CollectedIncentive) {
     return true;
   }
   return false;
+}
+
+/** An ID-like string that includes "-group-", like "nv-group-some-counties". */
+function isPlausibleGeoGroup(geo_eligibility: string | undefined) {
+  return (
+    !!geo_eligibility &&
+    !geo_eligibility.includes(' ') &&
+    geo_eligibility.includes('-group-')
+  );
 }
 
 function parseDateToYear(input: string): string {
