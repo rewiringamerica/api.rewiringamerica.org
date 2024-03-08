@@ -1,0 +1,226 @@
+[
+  {
+    "id": "NV-74",
+    "data_urls": [
+      "https://www.csareno.org/Energy-Efficiency-Weatherization"
+    ],
+    "authority_type": "Other",
+    "authority_name": "CSA Reno",
+    "program_title": "Weatherization Assistance Program",
+    "program_url": "https://www.csareno.org/Energy-Efficiency-Weatherization",
+    "item": "weatherization",
+    "short_description": {
+      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for income-qualified residents. Application required."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "amount": {
+      "type": "percent",
+      "number": 100
+    },
+    "contractor_restrictions": "Measures must be recommended by a WAP-certified energy auditer and measures implemented by a WAP-certified contractor.",
+    "income_restrictions": "Individuals and families must be at or below 200% of the Federal Poverty Line (FPL)",
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "other_restrictions": "For eligible homeowners and renters, there is no direct cost to participate in the program.  Owners of eligible rental properties may be required to pay of 50% of any capital improvement measures that are installed.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "rebate_value"
+        },
+        "message": "must have required property 'rebate_value'"
+      },
+      {
+        "instancePath": "/authority_type",
+        "schemaPath": "#/properties/authority_type/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "federal",
+            "city",
+            "county",
+            "state",
+            "utility",
+            "other"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "NV-75",
+    "data_urls": [
+      "https://rndcnv.org/weatherization-services-rural-nevada-development-corporation/"
+    ],
+    "authority_type": "Other",
+    "authority_name": "Rural Nevada Development Corporation",
+    "program_title": "Weatherization Assistance Program",
+    "program_url": "https://rndcnv.org/weatherization-services-rural-nevada-development-corporation/",
+    "item": "weatherization",
+    "short_description": {
+      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for income-qualified residents. Application required."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "amount": {
+      "type": "percent",
+      "number": 100
+    },
+    "contractor_restrictions": "Measures must be recommended by a WAP-certified energy auditer and measures implemented by a WAP-certified contractor.",
+    "income_restrictions": "Households whose annual gross income is at or below 150% of the federal poverty income guidelines (established by the Office of Management and Budget) are eligible for assistance",
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "other_restrictions": "For eligible homeowners and renters, there is no direct cost to participate in the program.  Owners of eligible rental properties may be required to pay of 50% of any capital improvement measures that are installed.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "rebate_value"
+        },
+        "message": "must have required property 'rebate_value'"
+      },
+      {
+        "instancePath": "/authority_type",
+        "schemaPath": "#/properties/authority_type/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "federal",
+            "city",
+            "county",
+            "state",
+            "utility",
+            "other"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "NV-76",
+    "data_urls": [
+      "https://nvrural.org/programs/weatherization/"
+    ],
+    "authority_type": "Other",
+    "authority_name": "Nevada Rural Housing",
+    "program_title": "Weatherization Assistance Program",
+    "program_url": "https://nvrural.org/programs/weatherization/",
+    "item": "weatherization",
+    "short_description": {
+      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for income-qualified residents. Application required."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "amount": {
+      "type": "percent",
+      "number": 100
+    },
+    "contractor_restrictions": "Measures must be recommended by a WAP-certified energy auditer and measures implemented by a WAP-certified contractor.",
+    "income_restrictions": "Households whose annual gross income is at or below 150% of the federal poverty income guidelines (established by the Office of Management and Budget) are eligible for assistance",
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "other_restrictions": "For eligible homeowners and renters, there is no direct cost to participate in the program.  Owners of eligible rental properties may be required to pay of 50% of any capital improvement measures that are installed.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "rebate_value"
+        },
+        "message": "must have required property 'rebate_value'"
+      },
+      {
+        "instancePath": "/authority_type",
+        "schemaPath": "#/properties/authority_type/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "federal",
+            "city",
+            "county",
+            "state",
+            "utility",
+            "other"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "NV-77",
+    "data_urls": [
+      "https://www.helpsonv.org/weatherization"
+    ],
+    "authority_type": "Other",
+    "authority_name": "HELP of Southern Nevada",
+    "program_title": "Weatherization Assistance Program",
+    "program_url": "https://www.helpsonv.org/weatherization",
+    "item": "weatherization",
+    "short_description": {
+      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for income-qualified residents. Application required."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "amount": {
+      "type": "percent",
+      "number": 100
+    },
+    "contractor_restrictions": "Measures must be recommended by a WAP-certified energy auditer and measures implemented by a WAP-certified contractor.",
+    "income_restrictions": "Individuals and families must be at or below 200% of the Federal Poverty Line (FPL)",
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "other_restrictions": "For eligible homeowners and renters, there is no direct cost to participate in the program.  Owners of eligible rental properties may be required to pay of 50% of any capital improvement measures that are installed.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "rebate_value"
+        },
+        "message": "must have required property 'rebate_value'"
+      },
+      {
+        "instancePath": "/authority_type",
+        "schemaPath": "#/properties/authority_type/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "federal",
+            "city",
+            "county",
+            "state",
+            "utility",
+            "other"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  }
+]
