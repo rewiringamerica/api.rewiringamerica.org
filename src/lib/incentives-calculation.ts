@@ -4,6 +4,7 @@ import {
   AuthoritiesById,
   AuthorityType,
 } from '../data/authorities';
+import { DataPartnersType } from '../data/data_partners';
 import { IRAIncentive, IRA_INCENTIVES } from '../data/ira_incentives';
 import { SOLAR_PRICES } from '../data/solar_prices';
 import { StateIncentive } from '../data/state_incentives';
@@ -22,6 +23,7 @@ import { AMI, CompleteIncomeInfo, GeoInfo, MFI } from './income-info';
 import {
   calculateStateIncentivesAndSavings,
   getAllStateIncentives,
+  getStateDataPartners,
   getStateIncentiveRelationships,
 } from './state-incentives-calculation';
 import estimateTaxAmount from './tax-brackets';
@@ -388,12 +390,18 @@ export default function calculateIncentives(
     });
   }
 
+  const data_partners: DataPartnersType = getStateDataPartners(
+    state_id,
+    request,
+  );
+
   return {
     is_under_80_ami: isUnder80Ami,
     is_under_150_ami: isUnder150Ami,
     is_over_150_ami: isOver150Ami,
     authorities,
     coverage,
+    data_partners,
     location: {
       state: state_id,
       city: location.city,
