@@ -120,7 +120,7 @@ Assuming it does, the easiest way to resolve any diffs is to run the `incentive-
 
 Our goal is that converting collected spreadsheet data into JSON is automatable, so if something is failing, it is a problem we eventually need to solve. If there are records in categories #1 or #2 above, spend some time trying to fix the issues by looking at the `errors` field in those files. Updating the spreadsheet or occasionally the codebase to fix errors is preferable to checking in the invalid record.
 
-Sometimes, you might find records that are in the spreadsheets but not in the JSON because they're really far away from being convertable – perhaps they're an Item type that we don't know how to capture, or something that we're far away from being able to model. In that case, you can leave it in those files; just check them in. They're now clearly documented gaps in our data processing pipeline.
+Sometimes, you might find records that are in the spreadsheets but not in the JSON because they're really far away from being convertable – perhaps they're an Item type that we don't know how to capture, or something that we're far away from being able to model. In that case, you can leave the generated invalid records in the state's `incentives_invalid_collected.json` or `incentives_invalid_state.json` files and check them in. They're now clearly documented gaps in our data processing pipeline.
 
 There are a lot of potential reasons for diffs in the valid JSON:
 
