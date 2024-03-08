@@ -63,7 +63,8 @@
     "testfilter": "dotenv -- tap -- --ts",
     "update-descriptions": "ts-node scripts/update-descriptions",
     "check-data-freshness": "tap --timeout=0 scripts/check-data-freshness.ts",
-    "check-spreadsheet-health": "dotenv -- tap -- --ts scripts/spreadsheets-health.test.ts"
+    "check-spreadsheet-health": "dotenv -- tap -- --ts scripts/spreadsheets-health.test.ts",
+    "export": "ts-node ./scripts/export-csv.ts"
   },
   "tap": {
     "disable-coverage": true,
