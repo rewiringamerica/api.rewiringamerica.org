@@ -5,6 +5,7 @@ import { AuthorityType } from './authorities';
 import {
   COLowIncomeAuthority,
   ILIncomeAuthority,
+  NVLowIncomeAuthority,
   RILowIncomeAuthority,
 } from './low_income_thresholds';
 import { PROGRAMS } from './programs';
@@ -21,6 +22,7 @@ export type LowIncomeAuthority =
   | 'default'
   | COLowIncomeAuthority
   | ILIncomeAuthority
+  | NVLowIncomeAuthority
   | RILowIncomeAuthority;
 
 // CollectedIncentive and its JSON schema represent the data that lives in raw
