@@ -1,6 +1,7 @@
 import fs from 'fs';
 import * as prettier from 'prettier';
 import { Project, SourceFile } from 'ts-morph';
+import { GeoGroup } from '../../src/data/geo_groups';
 
 const project = new Project({
   tsConfigFilePath: 'tsconfig.json',
@@ -121,6 +122,36 @@ export function updateAuthorities(
   return sortMapByKey(json);
 }
 
+export function updateGeoGroups(
+  json: StateToGeoGroupMap,
+  state: string,
+  authorityMap: AuthorityMap,
+): StateToGeoGroupMap {
+  const otherAuthorities = Object.entries(authorityMap)
+    .filter(([, auth]) => auth.authority_type === 'other')
+    .map(([id]) => id)
+    .sort();
+
+  if (otherAuthorities.length === 0) {
+    return json;
+  }
+
+  const stateGroups: { [id: string]: GeoGroup } = json[state] ?? {};
+  for (const id of otherAuthorities) {
+    const groupId = authorityNameToGroupName(id);
+    if (!(groupId in stateGroups)) {
+      stateGroups[groupId] = {
+        utilities: [],
+        cities: [],
+        counties: [],
+      };
+    }
+  }
+
+  json[state] = sortMapByKey(stateGroups);
+  return sortMapByKey(json);
+}
+
 export async function createProgramsContent(
   state: string,
   authorityMap: AuthorityMap,
@@ -229,12 +260,6 @@ type Authority = {
   programs: ProgramMap;
 };
 
-type GeoGroup = {
-  utilities?: string[];
-  cities?: string[];
-  counties?: string[];
-};
-
 type ProgramMap = {
   [index: ProgramKey]: { url: string; name: string };
 };
@@ -253,6 +278,9 @@ type AuthorityTypeMap = {
 };
 export type StateToAuthorityTypeMap = {
   [index: StateKey]: AuthorityTypeMap;
+};
+export type StateToGeoGroupMap = {
+  [index: StateKey]: { [id: string]: GeoGroup };
 };
 
 export class AuthorityAndProgramUpdater {
@@ -336,34 +364,13 @@ export class AuthorityAndProgramUpdater {
   }
 
   updateGeoGroupsJson() {
-    const otherAuthorities = Object.entries(this.authorityMap)
-      .filter(([, auth]) => auth.authority_type === 'Other')
-      .map(([id]) => id)
-      .sort();
-
-    if (otherAuthorities.length === 0) {
-      return;
-    }
-
-    const json = JSON.parse(fs.readFileSync(GEOGROUPS_JSON_FILE, 'utf-8'));
-
-    const stateGroups: { [id: string]: GeoGroup } = json[this.state] ?? {};
-    for (const id of otherAuthorities) {
-      const groupId = authorityNameToGroupName(id);
-      if (!(groupId in stateGroups)) {
-        stateGroups[groupId] = {
-          utilities: [],
-          cities: [],
-          counties: [],
-        };
-      }
-    }
-
-    json[this.state] = sortMapByKey(stateGroups);
-
+    const json: StateToGeoGroupMap = JSON.parse(
+      fs.readFileSync(GEOGROUPS_JSON_FILE, 'utf-8'),
+    );
+    const updated = updateGeoGroups(json, this.state, this.authorityMap);
     fs.writeFileSync(
       GEOGROUPS_JSON_FILE,
-      JSON.stringify(sortMapByKey(json), null, 2),
+      JSON.stringify(updated, null, 2) + '\n',
       'utf-8',
     );
   }

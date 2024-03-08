@@ -4,10 +4,12 @@ import { Project, QuoteKind } from 'ts-morph';
 import {
   AuthorityMap,
   StateToAuthorityTypeMap,
+  StateToGeoGroupMap,
   createProgramsContent,
   maybeUpdateProgramsTsFile,
   sortMapByKey,
   updateAuthorities,
+  updateGeoGroups,
 } from '../../scripts/lib/authority-and-program-updater';
 
 const unorderedFixture: StateToAuthorityTypeMap = {
@@ -447,4 +449,78 @@ const all_programs = {
   );
 
   tap.matchOnly(project.getSourceFileOrThrow(unusedPath).getText(), expected);
+});
+
+test('add geo groups for new state', async tap => {
+  const original: StateToGeoGroupMap = {
+    CO: {
+      'co-group-something': {
+        utilities: ['co-some-utility'],
+      },
+    },
+  };
+  const authorityMap: AuthorityMap = {
+    // Should not be turned into a geo group
+    'ca-state-auth': {
+      name: 'State authority',
+      authority_type: 'state',
+      programs: {},
+    },
+    'ca-other-auth': {
+      name: 'Other authority',
+      authority_type: 'other',
+      programs: {},
+    },
+  };
+
+  tap.matchOnly(updateGeoGroups(original, 'CA', authorityMap), {
+    CA: {
+      'ca-group-other-auth': {
+        utilities: [],
+        cities: [],
+        counties: [],
+      },
+    },
+    CO: {
+      'co-group-something': {
+        utilities: ['co-some-utility'],
+      },
+    },
+  });
+});
+
+test('add geo groups to existing state', async tap => {
+  const original: StateToGeoGroupMap = {
+    CO: {
+      'co-group-something': {
+        utilities: ['co-some-utility'],
+      },
+    },
+  };
+  const authorityMap: AuthorityMap = {
+    // The existing group should not be modified
+    'co-something': {
+      name: 'Authority with existing group',
+      authority_type: 'other',
+      programs: {},
+    },
+    'co-other-auth': {
+      name: 'Other authority',
+      authority_type: 'other',
+      programs: {},
+    },
+  };
+
+  tap.matchOnly(updateGeoGroups(original, 'CO', authorityMap), {
+    CO: {
+      'co-group-other-auth': {
+        utilities: [],
+        cities: [],
+        counties: [],
+      },
+      'co-group-something': {
+        utilities: ['co-some-utility'],
+      },
+    },
+  });
 });
