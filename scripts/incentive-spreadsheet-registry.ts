@@ -43,24 +43,28 @@ export const FILES: { [ident: string]: IncentiveFile } = {
     sheetUrl:
       'https://docs.google.com/spreadsheets/d/e/2PACX-1vSDKli_a0lss6rlzw08lEoFYskREZWsT1bGq0XHTa2jYqYiNarAMq76A20uC9rrg5bWqFSYeNY7W2gq/pub?gid=995688950&single=true&output=csv',
     headerRowNumber: 2,
+    runSpreadsheetHealthCheck: true,
   },
   IL: {
     filepath: 'data/IL/incentives.json',
     sheetUrl:
       'https://docs.google.com/spreadsheets/d/e/2PACX-1vS2FQ0bImM65Gk0KFmDIhXZXCExrh605eWGscPXLPY5Kz_rQWG8KtyNJo82vYZMngTlSCCHfkYLFsUt/pub?gid=995688950&single=true&output=csv',
     headerRowNumber: 2,
+    runSpreadsheetHealthCheck: true,
   },
   MI: {
     filepath: 'data/MI/incentives.json',
     sheetUrl:
       'https://docs.google.com/spreadsheets/d/e/2PACX-1vThx1Nimf1NVxXxY5HRqg3EZU9FdoZSESPoLXFMxeGczR7vpjH16pNDRX6zPpNlz9aOGbcQivgnFtNK/pub?gid=995688950&single=true&output=csv',
     headerRowNumber: 2,
+    runSpreadsheetHealthCheck: true,
   },
   NV: {
     filepath: 'data/NV/incentives.json',
     sheetUrl:
       'https://docs.google.com/spreadsheets/d/e/2PACX-1vTmxGiQVAxehqTk76ej-y5BwoqmnLiE7Cq_1QGnaGokKG3-EYlZIFoZEa3KAv7HK3xdN2AxvGggFLAK/pub?gid=995688950&single=true&output=csv',
     headerRowNumber: 2,
+    runSpreadsheetHealthCheck: true,
   },
   RI: {
     filepath: 'data/RI/incentives.json',
