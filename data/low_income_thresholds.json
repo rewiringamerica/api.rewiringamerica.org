@@ -1,6 +1,10 @@
 {
   "AZ": {
     "default": {
+      "records": [
+        "AZ-18",
+        "AZ-21"
+      ],
       "source_url": "https://www.tep.com/weatherization-assistance",
       "thresholds": {
         "1": 29160,
@@ -16,6 +20,11 @@
   },
   "CO": {
     "co-black-hills-energy": {
+      "records": [
+        "CO-24",
+        "CO-25",
+        "CO-26"
+      ],
       "source_url": "https://www.blackhillsenergy.com/sites/blackhillsenergy.com/files/2023%20COE%20Income%20Qualified%20EV%20Residential%20Rebate%20Form.pdf",
       "thresholds": {
         "1": 36983,
@@ -31,6 +40,10 @@
       }
     },
     "co-city-and-county-of-denver": {
+      "records": [
+        "CO-46",
+        "CO-47"
+      ],
       "source_url": "https://www.denvergov.org/files/assets/public/v/1/housing-stability/documents/2023-incomerent-limits/host-income-rent-limit-2023-mah.pdf",
       "thresholds": {
         "1": 69520,
@@ -44,6 +57,9 @@
       }
     },
     "co-energy-outreach-colorado": {
+      "records": [
+        "CO-103"
+      ],
       "source_url": "https://socgov02.my.site.com/ceoweatherization/resource/Income_Guidelines",
       "thresholds": {
         "1": 36983,
@@ -59,6 +75,10 @@
       }
     },
     "co-colorado-energy-office": {
+      "records": [
+        "CO-318",
+        "CO-319"
+      ],
       "source_url": "https://docs.google.com/spreadsheets/d/1I9wrt5zJ6khmLR3ZeFCKlz5EmNKUusaFYAK4oeKO4wY/edit#gid=0",
       "thresholds": {
         "1": 48720,
@@ -74,6 +94,9 @@
       }
     },
     "co-city-of-boulder": {
+      "records": [
+        "CO-335"
+      ],
       "source_url": "https://assets-partners.bouldercounty.gov/wp-content/uploads/sites/2/2023/02/2023-COB-Rebate-Eligible-Upgrades.pdf",
       "thresholds": {
         "1": 75980,
@@ -87,6 +110,9 @@
       }
     },
     "co-glenwood-springs-electric": {
+      "records": [
+        "CO-376"
+      ],
       "source_url": "https://garfieldcleanenergy.org/gwse-rebate-form/",
       "thresholds": {
         "1": 104250,
@@ -100,19 +126,20 @@
       }
     },
     "co-walking-mountains": {
-      "source_url": "https://www.walkingmountains.org/sustainability-hub/low-to-moderate-income-rebate-information/",
-      "thresholds": {
-        "1": 124350,
-        "2": 142050,
-        "3": 159750,
-        "4": 177450,
-        "5": 191700,
-        "6": 205950,
-        "7": 220050,
-        "8": 234300
-      }
-    },
-    "default": {
+      "records": [
+        "CO-494",
+        "CO-506",
+        "CO-507",
+        "CO-508",
+        "CO-509",
+        "CO-510",
+        "CO-511",
+        "CO-512",
+        "CO-513",
+        "CO-514",
+        "CO-515",
+        "CO-516"
+      ],
       "source_url": "https://www.walkingmountains.org/sustainability-hub/low-to-moderate-income-rebate-information/",
       "thresholds": {
         "1": 124350,
@@ -128,6 +155,10 @@
   },
   "CT": {
     "default": {
+      "records": [
+        "CT-1",
+        "CT-4"
+      ],
       "source_url": "https://energizect.com/energy-evaluations/income-eligible-options",
       "thresholds": {
         "1": 39761,
@@ -141,6 +172,10 @@
       }
     },
     "ct-cheapr": {
+      "records": [
+        "CT-33",
+        "CT-34"
+      ],
       "source_url": "https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines",
       "thresholds": {
         "1": 45180,
@@ -156,21 +191,16 @@
   },
   "DC": {
     "dc-dc-sustainable-energy-utility": {
+      "records": [
+        "DC-12",
+        "DC-13",
+        "DC-14",
+        "DC-15",
+        "DC-16",
+        "DC-19",
+        "DC-24"
+      ],
       "source_url": "https://www.dcseu.com/affordable-home-electrification",
-      "thresholds": {
-        "1": 85200,
-        "2": 97350,
-        "3": 109500,
-        "4": 121700,
-        "5": 133850,
-        "6": 146000,
-        "7": 158200,
-        "8": 170350
-      }
-    },
-    "dc-dc-department-of-energy-and-environment": {
-      "/": "DOEE's Solar for All's threshold is 80% AMI",
-      "source_url": "https://doee.dc.gov/solarforall",
       "thresholds": {
         "1": 85200,
         "2": 97350,
@@ -184,6 +214,9 @@
     },
     "dc-dc-department-of-energy-and-environment-60-ami": {
       "/": "DOEE's Weatherization Assistance Program's threshold is 60% AMI",
+      "records": [
+        "DC-21"
+      ],
       "source_url": "https://doee.dc.gov/service/wap",
       "thresholds": {
         "1": 49814,
@@ -195,38 +228,14 @@
         "7": 129325,
         "8": 132199
       }
-    },
-    "default": {
-      "source_url": "https://www.dcseu.com/affordable-home-electrification",
-      "thresholds": {
-        "1": 85200,
-        "2": 97350,
-        "3": 109500,
-        "4": 121700,
-        "5": 133850,
-        "6": 146000,
-        "7": 158200,
-        "8": 170350
-      }
     }
   },
-  "GA": {
-    "default": {
-      "source_url": "https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines",
-      "thresholds": {
-        "1": 15060,
-        "2": 20440,
-        "3": 25820,
-        "4": 31200,
-        "5": 36580,
-        "6": 41960,
-        "7": 47340,
-        "8": 52720
-      }
-    }
-  },
+  "GA": {},
   "IL": {
     "default": {
+      "records": [
+        "IL-35"
+      ],
       "source_url": "https://dceo.illinois.gov/communityservices/homeweatherization.html",
       "thresholds": {
         "1": 29160,
@@ -241,20 +250,10 @@
     }
   },
   "MI": {
-    "default": {
-      "source_url": "https://www.dteenergy.com/us/en/residential/service-request/pev/electric-vehicle-rebate.html#accordion-2c85f65c90-item-614638b806",
-      "thresholds": {
-        "1": 60240,
-        "2": 81760,
-        "3": 103280,
-        "4": 124800,
-        "5": 146320,
-        "6": 167840,
-        "7": 189360,
-        "8": 210880
-      }
-    },
     "mi-dte": {
+      "records": [
+        "MI-39"
+      ],
       "source_url": "https://www.dteenergy.com/us/en/residential/service-request/pev/electric-vehicle-rebate.html#accordion-2c85f65c90-item-614638b806",
       "thresholds": {
         "1": 60240,
@@ -269,20 +268,13 @@
     }
   },
   "NV": {
-    "default": {
-      "source_url": "https://www.nvenergy.com/save-with-powershift/qualified-appliance-replacement",
-      "thresholds": {
-        "1": 61400,
-        "2": 70200,
-        "3": 78950,
-        "4": 87700,
-        "5": 94750,
-        "6": 101750,
-        "7": 108750,
-        "8": 115800
-      }
-    },
     "nv-nv-energy": {
+      "records": [
+        "NV-17",
+        "NV-23",
+        "NV-24",
+        "NV-25"
+      ],
       "source_url": "https://www.nvenergy.com/save-with-powershift/qualified-appliance-replacement",
       "thresholds": {
         "1": 61400,
@@ -298,6 +290,9 @@
   },
   "NY": {
     "default": {
+      "records": [
+        "NY-15"
+      ],
       "source_url": "https://homeenergy.pseg.com/homeweatherization",
       "thresholds": {
         "1": 58320,
@@ -313,6 +308,14 @@
   },
   "RI": {
     "default": {
+      "records": [
+        "RI-11",
+        "RI-12",
+        "RI-13",
+        "RI-43",
+        "RI-34",
+        "RI-35"
+      ],
       "source_url": "https://dhs.ri.gov/programs-and-services/energy-and-water-assistance-programs/ffy-2023-low-income-guidelines",
       "thresholds": {
         "1": 34039,
@@ -330,6 +333,9 @@
       }
     },
     "ri-dhs": {
+      "records": [
+        "RI-14"
+      ],
       "source_url": "https://dhs.ri.gov/programs-and-services/energy-and-water-assistance-programs/ffy-2023-low-income-guidelines",
       "thresholds": {
         "1": 34039,
@@ -347,6 +353,9 @@
       }
     },
     "ri-rhode-island-energy": {
+      "records": [
+        "RI-27"
+      ],
       "source_url": "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Income-Eligible-Services#qualify",
       "thresholds": {
         "1": 32265,
@@ -364,6 +373,9 @@
   },
   "VA": {
     "default": {
+      "records": [
+        "VA-18"
+      ],
       "source_url": "https://www.dhcd.virginia.gov/sites/default/files/Docx/weatherization/income-limits.pdf",
       "thresholds": {
         "1": 37792,
@@ -383,6 +395,12 @@
   },
   "VT": {
     "default": {
+      "records": [
+        "VT-10",
+        "VT-20",
+        "VT-28",
+        "VT-52"
+      ],
       "source_url": "https://www.efficiencyvermont.com/services/income-based-assistance/energy-bill-reduction",
       "thresholds": {
         "1": 55050,
@@ -396,6 +414,16 @@
       }
     },
     "default-moderate": {
+      "records": [
+        "VT-2",
+        "VT-8",
+        "VT-11",
+        "VT-21",
+        "VT-38",
+        "VT-42",
+        "VT-51",
+        "VT-54"
+      ],
       "source_url": "https://www.efficiencyvermont.com/rebates/list/centrally-ducted-heat-pumps",
       "thresholds": {
         "1": 82400,
@@ -409,6 +437,11 @@
       }
     },
     "vt-burlington-electric-department": {
+      "records": [
+        "VT-4",
+        "VT-13",
+        "VT-25"
+      ],
       "source_url": "https://www.burlingtonelectric.com/rebate-form",
       "thresholds": {
         "1": 63600,
@@ -422,6 +455,9 @@
       }
     },
     "vt-state-of-vermont": {
+      "records": [
+        "VT-30"
+      ],
       "source_url": "https://www.driveelectricvt.com/Media/Default/docs/ryr/vermont-replace-your-ride-program-guidelines.pdf?refresh",
       "thresholds": {
         "1": 51968,
@@ -435,6 +471,9 @@
       }
     },
     "vt-vgs": {
+      "records": [
+        "VT-56"
+      ],
       "source_url": "https://vgsvt.com/wp-content/uploads/2023/03/2023-Income-Verification-Form.pdf",
       "thresholds": {
         "1": 78700,
@@ -449,20 +488,12 @@
     }
   },
   "WI": {
-    "default": {
-      "source_url": "https://focusonenergy.com/income-qualified",
-      "thresholds": {
-        "1": 66300,
-        "2": 75750,
-        "3": 85200,
-        "4": 94650,
-        "5": 102250,
-        "6": 109800,
-        "7": 117400,
-        "8": 124950
-      }
-    },
     "wi-focus-on-energy": {
+      "records": [
+        "WI-2",
+        "WI-4",
+        "WI-6"
+      ],
       "source_url": "https://focusonenergy.com/income-qualified",
       "thresholds": {
         "1": 66300,

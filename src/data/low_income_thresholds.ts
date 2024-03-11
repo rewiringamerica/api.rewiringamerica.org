@@ -12,6 +12,7 @@ export type StateLowIncomeThresholds = {
 export type LowIncomeThresholdsAuthority = {
   source_url: string;
   thresholds: LowIncomeThresholds;
+  records: string[];
 };
 
 export type LowIncomeThresholds = {
@@ -51,14 +52,20 @@ export const AUTHORITY_INFO_SCHEMA: JSONSchemaType<LowIncomeThresholdsAuthority>
     properties: {
       source_url: { type: 'string' },
       thresholds: AUTHORITY_THRESHOLDS_SCHEMA,
+      records: {
+        type: 'array',
+        items: { type: 'string' },
+        minItems: 1,
+        uniqueItems: true,
+      },
     },
-    required: ['source_url', 'thresholds'],
+    required: ['source_url', 'thresholds', 'records'],
   } as const;
 
 export const STATE_THRESHOLDS_SCHEMA: JSONSchemaType<StateLowIncomeThresholds> =
   {
     type: 'object',
-    required: ['default'],
+    required: [],
     dependentSchemas: {
       CO: {
         required: Object.values(COLowIncomeAuthority),
