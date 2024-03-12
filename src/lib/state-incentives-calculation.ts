@@ -225,8 +225,8 @@ function transformItems(
 
       // TODO: unclear whether state/utility incentives always have defined
       // end dates.
-      start_date: 2023,
-      end_date: 2024,
+      start_date: '2023',
+      end_date: '2024',
     };
     transformed.push(transformedItem);
   }

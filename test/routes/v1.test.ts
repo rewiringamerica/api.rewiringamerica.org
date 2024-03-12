@@ -47,7 +47,7 @@ async function validateResponse(
 
   // Verify the specific content of the response
   const expectedResponse = JSON.parse(fs.readFileSync(fixtureFile, 'utf-8'));
-  t.same(
+  t.strictSame(
     calculatorResponse,
     expectedResponse,
     `response does not match ${fixtureFile}`,
@@ -712,6 +712,6 @@ test('/utilities', async t => {
     await validator(utilitiesResponse);
     t.equal(validator.errors, null);
 
-    t.same(utilitiesResponse, expectedResponse);
+    t.strictSame(utilitiesResponse, expectedResponse);
   }
 });

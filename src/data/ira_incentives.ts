@@ -1,5 +1,6 @@
 import { JSONSchemaType } from 'ajv';
 import fs from 'fs';
+import { START_END_DATE_REGEX } from '../lib/dates';
 import { AuthorityType } from './authorities';
 import { PROGRAMS } from './programs';
 import { FilingStatus } from './tax_brackets';
@@ -21,12 +22,12 @@ export interface IRAIncentive {
   ami_qualification: AmiQualification | null;
   amount: Amount;
   authority_type: AuthorityType.Federal;
-  end_date: number;
+  end_date: string;
   filing_status?: FilingStatus;
   item: Item;
   owner_status: OwnerStatus[];
   program: string;
-  start_date: number;
+  start_date: string;
   type:
     | PaymentMethod.PosRebate
     | PaymentMethod.TaxCredit
@@ -80,8 +81,14 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
         enum: Object.values(FilingStatus),
         nullable: true,
       },
-      start_date: { type: 'number' },
-      end_date: { type: 'number' },
+      start_date: {
+        type: 'string',
+        pattern: START_END_DATE_REGEX.source,
+      },
+      end_date: {
+        type: 'string',
+        pattern: START_END_DATE_REGEX.source,
+      },
       short_description: {
         $ref: 'LocalizableString',
       },

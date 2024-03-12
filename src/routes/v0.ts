@@ -27,6 +27,8 @@ IRA_INCENTIVES.forEach(incentive => Object.freeze(incentive));
 function translateIncentives(incentives: IRAIncentive[]): WebsiteIncentive[] {
   return incentives.map(incentive => ({
     ...incentive,
+    start_date: parseInt(incentive.start_date),
+    end_date: parseInt(incentive.end_date),
     item_es: t('items', incentive.item, 'es'),
     item: t('items', incentive.item, 'en'),
     program_es: tr(PROGRAMS[incentive.program as keyof Programs].name, 'es'),

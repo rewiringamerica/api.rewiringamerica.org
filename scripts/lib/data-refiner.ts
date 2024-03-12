@@ -52,10 +52,10 @@ export class DataRefiner {
       output.short_description.es = record.short_description.es;
     }
     if (record.program_start_raw && record.program_start_raw !== '') {
-      output.start_date = +parseDateToYear(record.program_start_raw);
+      output.start_date = parseDateToYear(record.program_start_raw);
     }
     if (record.program_end_raw && record.program_end_raw !== '') {
-      output.end_date = +parseDateToYear(record.program_end_raw);
+      output.end_date = parseDateToYear(record.program_end_raw);
     }
     if (record.bonus_description && record.bonus_description !== '') {
       output.bonus_available = true;
