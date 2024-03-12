@@ -132,8 +132,8 @@ export type DerivedFields = {
   eligible_geo_group?: string;
   program: string;
   bonus_available?: boolean;
-  start_date?: string;
-  end_date?: string;
+  start_date: string;
+  end_date: string;
   low_income?: LowIncomeAuthority;
 };
 
@@ -147,12 +147,10 @@ const derivedIncentivePropertySchema = {
   start_date: {
     type: 'string',
     pattern: START_END_DATE_REGEX.source,
-    nullable: true,
   },
   end_date: {
     type: 'string',
     pattern: START_END_DATE_REGEX.source,
-    nullable: true,
   },
   low_income: { type: 'string', nullable: true },
 } as const;
