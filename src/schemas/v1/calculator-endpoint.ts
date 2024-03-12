@@ -1,5 +1,6 @@
 import { FromSchema } from 'json-schema-to-ts';
 import { API_AUTHORITY_SCHEMA, AuthorityType } from '../../data/authorities';
+import { API_DATA_PARTNER_SCHEMA } from '../../data/data_partners';
 import { FilingStatus } from '../../data/tax_brackets';
 import { API_COVERAGE_SCHEMA } from '../../data/types/coverage';
 import { ALL_ITEMS } from '../../data/types/items';
@@ -146,6 +147,10 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
     },
     coverage: API_COVERAGE_SCHEMA,
     location: API_RESPONSE_LOCATION_SCHEMA,
+    data_partners: {
+      type: 'object',
+      additionalProperties: API_DATA_PARTNER_SCHEMA,
+    },
     incentives: {
       type: 'array',
       items: { $ref: 'APIIncentive' },

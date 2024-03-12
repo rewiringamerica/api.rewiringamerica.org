@@ -4,10 +4,12 @@ import { Project, QuoteKind } from 'ts-morph';
 import {
   AuthorityMap,
   StateToAuthorityTypeMap,
+  StateToGeoGroupMap,
   createProgramsContent,
   maybeUpdateProgramsTsFile,
-  sortJsonAlphabeticallyByStateKey,
+  sortMapByKey,
   updateAuthorities,
+  updateGeoGroups,
 } from '../../scripts/lib/authority-and-program-updater';
 
 const unorderedFixture: StateToAuthorityTypeMap = {
@@ -63,7 +65,7 @@ const baseSourceFile = `import SomeClass from './some_file';
 import CT_PROGRAMS from './programs/ct_programs';
 import NY_PROGRAMS from './programs/ny_programs';
 import OtherClass from './other_file';
-  
+
 const var = 'foo';
 
 const all_programs = {
@@ -122,10 +124,7 @@ test('correctly sort state authority information by state', tap => {
       },
     },
   };
-  tap.matchOnly(
-    ordered_json,
-    sortJsonAlphabeticallyByStateKey(unorderedFixture),
-  );
+  tap.matchOnly(ordered_json, sortMapByKey(unorderedFixture));
   tap.end();
 });
 
@@ -360,7 +359,7 @@ import AZ_PROGRAMS from './programs/az_programs';
 import CT_PROGRAMS from './programs/ct_programs';
 import NY_PROGRAMS from './programs/ny_programs';
 import OtherClass from './other_file';
-  
+
 const var = 'foo';
 
 const all_programs = {
@@ -396,7 +395,7 @@ import CT_PROGRAMS from './programs/ct_programs';
 import IL_PROGRAMS from './programs/il_programs';
 import NY_PROGRAMS from './programs/ny_programs';
 import OtherClass from './other_file';
-  
+
 const var = 'foo';
 
 const all_programs = {
@@ -432,7 +431,7 @@ import CT_PROGRAMS from './programs/ct_programs';
 import NY_PROGRAMS from './programs/ny_programs';
 import WA_PROGRAMS from './programs/wa_programs';
 import OtherClass from './other_file';
-  
+
 const var = 'foo';
 
 const all_programs = {
@@ -450,4 +449,80 @@ const all_programs = {
   );
 
   tap.matchOnly(project.getSourceFileOrThrow(unusedPath).getText(), expected);
+});
+
+test('add geo groups for new state', async tap => {
+  const original: StateToGeoGroupMap = {
+    CO: {
+      'co-group-something': {
+        utilities: ['co-some-utility'],
+      },
+    },
+  };
+  const authorityMap: AuthorityMap = {
+    // Should not be turned into a geo group
+    'ca-state-auth': {
+      name: 'State authority',
+      authority_type: 'state',
+      programs: {},
+    },
+    'ca-other-auth': {
+      name: 'Other authority',
+      authority_type: 'other',
+      programs: {},
+    },
+  };
+
+  tap.matchOnly(updateGeoGroups(original, 'CA', authorityMap), {
+    CA: {
+      'ca-group-other-auth': {
+        utilities: [],
+        cities: [],
+        counties: [],
+        notes: '',
+      },
+    },
+    CO: {
+      'co-group-something': {
+        utilities: ['co-some-utility'],
+      },
+    },
+  });
+});
+
+test('add geo groups to existing state', async tap => {
+  const original: StateToGeoGroupMap = {
+    CO: {
+      'co-group-something': {
+        utilities: ['co-some-utility'],
+      },
+    },
+  };
+  const authorityMap: AuthorityMap = {
+    // The existing group should not be modified
+    'co-something': {
+      name: 'Authority with existing group',
+      authority_type: 'other',
+      programs: {},
+    },
+    'co-other-auth': {
+      name: 'Other authority',
+      authority_type: 'other',
+      programs: {},
+    },
+  };
+
+  tap.matchOnly(updateGeoGroups(original, 'CO', authorityMap), {
+    CO: {
+      'co-group-other-auth': {
+        utilities: [],
+        cities: [],
+        counties: [],
+        notes: '',
+      },
+      'co-group-something': {
+        utilities: ['co-some-utility'],
+      },
+    },
+  });
 });
