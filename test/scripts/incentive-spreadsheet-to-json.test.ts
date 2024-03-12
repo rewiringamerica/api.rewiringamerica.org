@@ -83,7 +83,7 @@ test('correct row to record transformation', tap => {
       'va-appalachian-power': {
         source_url: 'url',
         thresholds: {},
-        records: ['ID-1'],
+        incentives: ['VA-1'],
       },
     },
   };
