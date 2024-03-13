@@ -12,7 +12,7 @@ import { spreadsheetToJson } from './incentive-spreadsheet-to-json';
 
 // Avoid these kind of exceptions, but can be helpful when spreadsheet-based
 // work is mid-progress.
-const IGNORE_ES_TRANSLATIONS = ['CO'];
+const IGNORE_ES_TRANSLATIONS : string[] = [];
 
 function filterToKeyFields(
   incentive: StateIncentive,
