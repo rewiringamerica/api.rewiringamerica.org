@@ -13,13 +13,19 @@ import {
   createProgramName,
 } from './authority-and-program-updater';
 
+type IncentiveToLowIncomeThresholdMap = {
+  [index: string]: string;
+};
+
 export class DataRefiner {
-  private lowIncomeThresholds: LowIncomeThresholdsMap | null;
+  private incentiveToLowIncomeThresholdMap: IncentiveToLowIncomeThresholdMap | null;
   /**
    * @param lowIncomeThresholds: state-segmented income thresholds. If empty, the script won't try to associate records with low-income programs.
    */
   constructor(lowIncomeThresholds: LowIncomeThresholdsMap | null = null) {
-    this.lowIncomeThresholds = lowIncomeThresholds;
+    this.incentiveToLowIncomeThresholdMap = lowIncomeThresholds
+      ? computeIncentiveToLowIncomeThresholdMap(lowIncomeThresholds)
+      : null;
   }
 
   // Take a collected data record, filter to a subset of fields, do some
@@ -54,19 +60,19 @@ export class DataRefiner {
     if (record.bonus_description && record.bonus_description !== '') {
       output.bonus_available = true;
     }
-    if (this.lowIncomeThresholds && isPlausibleLowIncomeRow(record)) {
-      const low_income_program = this.retrieveLowIncomeProgram(
-        authorityName,
-        state,
-      );
+    if (this.incentiveToLowIncomeThresholdMap) {
+      const low_income_program =
+        this.incentiveToLowIncomeThresholdMap[record.id];
       if (low_income_program) {
-        output.low_income = low_income_program;
-      } else if (low_income_program === undefined) {
-        // This is checked up front by the caller rather than
-        // at the row level to avoid spamming error messages.
-      } else {
+        if (!record.income_restrictions) {
+          throw new Error(
+            `Incentive ${record.id} has a low-income program configured in low_income_thresholds.json, but has no matching data in the spreadsheet. If the incentive has low-income eligibility restrictions, describe them (in free text) in the spreadsheet in the income_restrictions column. If it does not, remove that ID's configuration from low_income_thresholds.json.`,
+          );
+        }
+        output.low_income = low_income_program as LowIncomeAuthority;
+      } else if (isPlausibleLowIncomeRow(record)) {
         console.log(
-          `Warning: no low-income thresholds found for ${record.id} despite references to income eligiblity in description or income restrictions columns. This either means: 1) manually set this field in the JSON to 'default' to use a state's default thresholds (must be defined), or 2) you need to define program-specific thresholds for it, or 3) it's not actually a low-income row and no action is necessary.`,
+          `Warning: no low-income thresholds found for ${record.id} despite references to income eligiblity in description or income restrictions columns. This may mean you're missing a configuration for that record in low_income_thresholds.json. If not, you can make this warning go away by deleting any value in this row's income_restrictions column in the spreadsheet.`,
         );
       }
     }
@@ -92,20 +98,20 @@ export class DataRefiner {
       ]).filter(([, val]) => val !== undefined),
     );
   }
+}
 
-  retrieveLowIncomeProgram(
-    authority: string,
-    state: string,
-  ): LowIncomeAuthority | undefined | null {
-    if (this.lowIncomeThresholds![state] === undefined) {
-      return undefined;
-    }
-    if (authority in this.lowIncomeThresholds![state]) {
-      return authority as LowIncomeAuthority;
-    } else {
-      return null;
+function computeIncentiveToLowIncomeThresholdMap(
+  thresholds: LowIncomeThresholdsMap,
+): IncentiveToLowIncomeThresholdMap {
+  const inverted: IncentiveToLowIncomeThresholdMap = {};
+  for (const stateThreshold of Object.values(thresholds)) {
+    for (const [identifier, threshold] of Object.entries(stateThreshold)) {
+      for (const incentive of threshold.incentives) {
+        inverted[incentive] = identifier;
+      }
     }
   }
+  return inverted;
 }
 
 function standardizeDescription(desc: string): string {
