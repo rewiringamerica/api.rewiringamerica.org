@@ -456,6 +456,7 @@ test('add geo groups for new state', async tap => {
     CO: {
       'co-group-something': {
         utilities: ['co-some-utility'],
+        incentives: [],
       },
     },
   };
@@ -479,12 +480,13 @@ test('add geo groups for new state', async tap => {
         utilities: [],
         cities: [],
         counties: [],
-        notes: '',
+        incentives: [],
       },
     },
     CO: {
       'co-group-something': {
         utilities: ['co-some-utility'],
+        incentives: [],
       },
     },
   });
@@ -495,6 +497,7 @@ test('add geo groups to existing state', async tap => {
     CO: {
       'co-group-something': {
         utilities: ['co-some-utility'],
+        incentives: [],
       },
     },
   };
@@ -518,10 +521,11 @@ test('add geo groups to existing state', async tap => {
         utilities: [],
         cities: [],
         counties: [],
-        notes: '',
+        incentives: [],
       },
       'co-group-something': {
         utilities: ['co-some-utility'],
+        incentives: [],
       },
     },
   });
