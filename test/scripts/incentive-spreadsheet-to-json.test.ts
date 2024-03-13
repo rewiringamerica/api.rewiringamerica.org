@@ -108,7 +108,7 @@ test('drop records with omit_from_api marked', tap => {
     ID: 'VA-1',
     some_other_field: 'value',
   };
-  const output = spreadsheetToJson('VA', [keepInput], false, null);
+  const output = spreadsheetToJson('VA', [keepInput], false, null, null);
   tap.equal(output.invalidCollectedIncentives.length, 1);
 
   // With omit_from_api: it's dropped entirely.
@@ -121,7 +121,7 @@ test('drop records with omit_from_api marked', tap => {
     invalidCollectedIncentives,
     invalidStateIncentives,
     validStateIncentives,
-  } = spreadsheetToJson('VA', [omitInput], false, null);
+  } = spreadsheetToJson('VA', [omitInput], false, null, null);
   tap.equal(invalidCollectedIncentives.length, 0);
   tap.equal(invalidStateIncentives.length, 0);
   tap.equal(validStateIncentives.length, 0);
