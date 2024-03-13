@@ -33,7 +33,7 @@ export enum ILIncomeAuthority {
 }
 
 export enum NVLowIncomeAuthority {
-  CSA_REN0 = 'nv-csa-reno',
+  CSA_RENO = 'nv-csa-reno',
   RURAL_NEVADA_DEVELOPMENT_CO = 'nv-rural-nevada-development-corporation',
   NV_RURAL_HOUSING = 'nv-nevada-rural-housing',
   HELP_OF_SOUTHERN_NV = 'nv-help-of-southern-nevada',

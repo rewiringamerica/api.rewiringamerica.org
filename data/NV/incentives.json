@@ -1672,5 +1672,28 @@
     "short_description": {
       "en": "NV Energy provides a rebate of up to $400 for weather stripping, duct sealing, and insulation."
     }
+  },
+  {
+    "id": "NV-79",
+    "authority_type": "other",
+    "authority": "nv-nevada-rural-housing",
+    "eligible_geo_group": "nv-group-nevada-rural-housing-north-lv",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "weatherization",
+    "program": "nv_nevadaRuralHousing_weatherizationAssistanceProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for income-qualified residents. Application required."
+    },
+    "low_income": "nv-nevada-rural-housing"
   }
 ]
