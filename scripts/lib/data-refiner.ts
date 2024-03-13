@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import { GeoGroupsByState } from '../../src/data/geo_groups';
 import { LowIncomeThresholdsMap } from '../../src/data/low_income_thresholds';
 import {
   CollectedIncentive,
@@ -8,23 +9,30 @@ import {
   StateIncentive,
 } from '../../src/data/state_incentives';
 import {
-  authorityNameToGroupName,
   createAuthorityName,
   createProgramName,
 } from './authority-and-program-updater';
 
-type IncentiveToLowIncomeThresholdMap = {
+type IncentiveToIdentifierMap = {
   [index: string]: string;
 };
 
 export class DataRefiner {
-  private incentiveToLowIncomeThresholdMap: IncentiveToLowIncomeThresholdMap | null;
+  private incentiveToLowIncomeThresholdMap: IncentiveToIdentifierMap | null;
+  private incentiveToGeoGroupIdentifier: IncentiveToIdentifierMap | null;
   /**
    * @param lowIncomeThresholds: state-segmented income thresholds. If empty, the script won't try to associate records with low-income programs.
+   * @param geoGroups: state-segmented geo groups. If empty, the script won't try to associate records with eligible geo groups.
    */
-  constructor(lowIncomeThresholds: LowIncomeThresholdsMap | null = null) {
+  constructor(
+    lowIncomeThresholds: LowIncomeThresholdsMap | null = null,
+    geoGroups: GeoGroupsByState | null = null,
+  ) {
     this.incentiveToLowIncomeThresholdMap = lowIncomeThresholds
-      ? computeIncentiveToLowIncomeThresholdMap(lowIncomeThresholds)
+      ? computeIncentiveToIdentifierMap(lowIncomeThresholds)
+      : null;
+    this.incentiveToGeoGroupIdentifier = geoGroups
+      ? computeIncentiveToIdentifierMap(geoGroups)
       : null;
   }
 
@@ -76,18 +84,20 @@ export class DataRefiner {
         );
       }
     }
-    if (record.authority_type === 'other') {
-      // During initial data collection, the "Geographic Eligibility" column
-      // will be filled in with free text. After misc state data is generated,
-      // which adds entries to geo_groups.json, translate the free text into
-      // structured representation in geo_groups.json, and replace the
-      // "Geographic Eligibility" free text with the ID of the geo group.
-      //
-      // If the column doesn't contain a plausible geo group ID, derive the
-      // geo group ID from the authority name (the common case).
-      output.eligible_geo_group = isPlausibleGeoGroup(record.geo_eligibility)
-        ? record.geo_eligibility
-        : authorityNameToGroupName(output.authority);
+    if (this.incentiveToGeoGroupIdentifier) {
+      const eligible_geo_group = this.incentiveToGeoGroupIdentifier[record.id];
+      if (eligible_geo_group) {
+        if (!record.geo_eligibility) {
+          throw new Error(
+            `Incentive ${record.id} has a geo group configured in geo_groups.json, but has no matching data in the spreadsheet. If the incentive has eligible geo_group, describe it (in free text) in the spreadsheet in the geo_eligibility column. If it does not, remove that ID's configuration from geo_groups.json.`,
+          );
+        }
+        output.eligible_geo_group = eligible_geo_group;
+      } else if (record.geo_eligibility) {
+        console.log(
+          `Warning: no geo group configured for ${record.id} despite the geo_eligibility column being populated in the spreadsheet. This may mean you're missing a configuration for that record in geo_groups.json. If not, you can make this warning go away by deleting any value in this row's geo_eligibility column in the spreadsheet.`,
+        );
+      }
     }
 
     // Enforce a specific property order on the output for better debugging.
@@ -100,13 +110,19 @@ export class DataRefiner {
   }
 }
 
-function computeIncentiveToLowIncomeThresholdMap(
-  thresholds: LowIncomeThresholdsMap,
-): IncentiveToLowIncomeThresholdMap {
-  const inverted: IncentiveToLowIncomeThresholdMap = {};
-  for (const stateThreshold of Object.values(thresholds)) {
-    for (const [identifier, threshold] of Object.entries(stateThreshold)) {
-      for (const incentive of threshold.incentives) {
+// Low-income thresholds and geo groups have the same structure:
+// Keyed by state
+// Sub-keyed by the threshold/geo group string identifier
+// The sub-values contain a field called incentives that contains incentive IDs.
+function computeIncentiveToIdentifierMap<
+  T extends {
+    [index: string]: { [index: string]: { incentives: string[] } };
+  },
+>(stateKeyedMap: T): IncentiveToIdentifierMap {
+  const inverted: { [index: string]: string } = {};
+  for (const stateData of Object.values(stateKeyedMap)) {
+    for (const [identifier, data] of Object.entries(stateData)) {
+      for (const incentive of data.incentives) {
         inverted[incentive] = identifier;
       }
     }
@@ -133,15 +149,6 @@ function isPlausibleLowIncomeRow(record: CollectedIncentive) {
     return true;
   }
   return false;
-}
-
-/** An ID-like string that includes "-group-", like "nv-group-some-counties". */
-function isPlausibleGeoGroup(geo_eligibility: string | undefined) {
-  return (
-    !!geo_eligibility &&
-    !geo_eligibility.includes(' ') &&
-    geo_eligibility.includes('-group-')
-  );
 }
 
 function parseDateToYear(input: string): string {

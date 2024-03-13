@@ -144,7 +144,7 @@ export function updateGeoGroups(
         utilities: [],
         cities: [],
         counties: [],
-        notes: '',
+        incentives: [],
       };
     }
   }

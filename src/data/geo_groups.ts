@@ -8,7 +8,7 @@ const GEO_GROUP_SCHEMA = {
     utilities: { type: 'array', items: { type: 'string' }, minItems: 1 },
     cities: { type: 'array', items: { type: 'string' }, minItems: 1 },
     counties: { type: 'array', items: { type: 'string' }, minItems: 1 },
-    notes: { type: 'string' },
+    incentives: { type: 'array', items: { type: 'string' }, minItems: 1 },
   },
   additionalProperties: false,
   anyOf: [
@@ -16,6 +16,7 @@ const GEO_GROUP_SCHEMA = {
     { required: ['cities'] },
     { required: ['counties'] },
   ],
+  required: ['incentives'],
 } as const;
 
 export type GeoGroup = FromSchema<typeof GEO_GROUP_SCHEMA>;
