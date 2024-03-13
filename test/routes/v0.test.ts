@@ -66,11 +66,11 @@ test('response is valid and correct', async t => {
     ),
   );
 
-  t.same(
+  t.strictSame(
     calculatorResponse.pos_rebate_incentives,
     expectedResponse.pos_rebate_incentives,
   );
-  t.same(
+  t.strictSame(
     calculatorResponse.tax_credit_incentives,
     expectedResponse.tax_credit_incentives,
   );

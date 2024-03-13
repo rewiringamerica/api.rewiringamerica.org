@@ -180,63 +180,63 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
   const posRebates = _.keyBy(pos_rebate_incentives, 'item');
   t.equal(posRebates['electric_panel'].eligible, true);
   t.equal(posRebates['electric_panel'].amount.number, 4000);
-  t.equal(posRebates['electric_panel'].start_date, 2023);
+  t.equal(posRebates['electric_panel'].start_date, '2023');
   t.equal(posRebates['electric_stove'].eligible, true);
   t.equal(posRebates['electric_stove'].amount.number, 840);
-  t.equal(posRebates['electric_stove'].start_date, 2023);
+  t.equal(posRebates['electric_stove'].start_date, '2023');
   t.equal(posRebates['electric_wiring'].eligible, true);
   t.equal(posRebates['electric_wiring'].amount.number, 2500);
-  t.equal(posRebates['electric_wiring'].start_date, 2023);
+  t.equal(posRebates['electric_wiring'].start_date, '2023');
   t.equal(posRebates['heat_pump_water_heater'].eligible, true);
   t.equal(posRebates['heat_pump_water_heater'].amount.number, 1750);
-  t.equal(posRebates['heat_pump_water_heater'].start_date, 2023);
+  t.equal(posRebates['heat_pump_water_heater'].start_date, '2023');
   t.equal(posRebates['heat_pump_air_conditioner_heater'].eligible, true);
   t.equal(posRebates['heat_pump_air_conditioner_heater'].amount.number, 8000);
-  t.equal(posRebates['heat_pump_air_conditioner_heater'].start_date, 2023);
+  t.equal(posRebates['heat_pump_air_conditioner_heater'].start_date, '2023');
   t.equal(posRebates['heat_pump_clothes_dryer'].eligible, true);
   t.equal(posRebates['heat_pump_clothes_dryer'].amount.number, 840);
-  t.equal(posRebates['heat_pump_clothes_dryer'].start_date, 2023);
+  t.equal(posRebates['heat_pump_clothes_dryer'].start_date, '2023');
   t.equal(posRebates['weatherization'].eligible, true);
   t.equal(posRebates['weatherization'].amount.number, 1600);
-  t.equal(posRebates['weatherization'].start_date, 2023);
+  t.equal(posRebates['weatherization'].start_date, '2023');
 
   t.equal(performance_rebate_incentives[0].eligible, true);
   t.equal(performance_rebate_incentives[0].amount.number, 4000);
-  t.equal(performance_rebate_incentives[0].start_date, 2023);
+  t.equal(performance_rebate_incentives[0].start_date, '2023');
 
   const taxCredits = _.keyBy(tax_credit_incentives, 'item');
   t.equal(taxCredits['battery_storage_installation'].eligible, true);
   t.equal(taxCredits['battery_storage_installation'].amount.number, 0.3); // will be displayed as 30%
-  t.equal(taxCredits['battery_storage_installation'].start_date, 2023);
+  t.equal(taxCredits['battery_storage_installation'].start_date, '2023');
   t.equal(taxCredits['geothermal_heating_installation'].eligible, true);
   t.equal(taxCredits['geothermal_heating_installation'].amount.number, 0.3); // will be displayed as 30%
-  t.equal(taxCredits['geothermal_heating_installation'].start_date, 2022);
+  t.equal(taxCredits['geothermal_heating_installation'].start_date, '2022');
   t.equal(taxCredits['electric_panel'].eligible, true);
   t.equal(taxCredits['electric_panel'].amount.number, 600);
-  t.equal(taxCredits['electric_panel'].start_date, 2023);
+  t.equal(taxCredits['electric_panel'].start_date, '2023');
   t.equal(taxCredits['electric_vehicle_charger'].eligible, true);
   t.equal(taxCredits['electric_vehicle_charger'].amount.number, 1000);
-  t.equal(taxCredits['electric_vehicle_charger'].start_date, 2023);
+  t.equal(taxCredits['electric_vehicle_charger'].start_date, '2023');
   t.equal(taxCredits['new_electric_vehicle'].eligible, true);
   t.equal(taxCredits['new_electric_vehicle'].amount.number, 7500);
-  t.equal(taxCredits['new_electric_vehicle'].start_date, 2023);
+  t.equal(taxCredits['new_electric_vehicle'].start_date, '2023');
   t.equal(taxCredits['heat_pump_air_conditioner_heater'].eligible, true);
   t.equal(taxCredits['heat_pump_air_conditioner_heater'].amount.number, 2000);
-  t.equal(taxCredits['heat_pump_air_conditioner_heater'].start_date, 2023);
+  t.equal(taxCredits['heat_pump_air_conditioner_heater'].start_date, '2023');
   t.equal(taxCredits['heat_pump_water_heater'].eligible, true);
   t.equal(taxCredits['heat_pump_water_heater'].amount.number, 2000);
-  t.equal(taxCredits['heat_pump_water_heater'].start_date, 2023);
+  t.equal(taxCredits['heat_pump_water_heater'].start_date, '2023');
   t.equal(taxCredits['rooftop_solar_installation'].eligible, true);
   t.equal(taxCredits['rooftop_solar_installation'].amount.number, 0.3);
   t.equal(taxCredits['rooftop_solar_installation'].amount.representative, 4770);
-  t.equal(taxCredits['rooftop_solar_installation'].start_date, 2022);
+  t.equal(taxCredits['rooftop_solar_installation'].start_date, '2022');
   t.equal(taxCredits['weatherization'].eligible, true);
   t.equal(taxCredits['weatherization'].amount.number, 1200);
-  t.equal(taxCredits['weatherization'].start_date, 2023);
+  t.equal(taxCredits['weatherization'].start_date, '2023');
   // everything except used EV should be eligible for tax credit (agi limit is 75k)
   t.equal(taxCredits['used_electric_vehicle'].eligible, false);
   t.equal(taxCredits['used_electric_vehicle'].amount.number, 4000);
-  t.equal(taxCredits['used_electric_vehicle'].start_date, 2023);
+  t.equal(taxCredits['used_electric_vehicle'].start_date, '2023');
 });
 
 test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k Household income in San Francisco"', async t => {
@@ -290,63 +290,63 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
   const posRebates = _.keyBy(pos_rebate_incentives, 'item');
   t.equal(posRebates['electric_panel'].eligible, true);
   t.equal(posRebates['electric_panel'].amount.number, 4000);
-  t.equal(posRebates['electric_panel'].start_date, 2023);
+  t.equal(posRebates['electric_panel'].start_date, '2023');
   t.equal(posRebates['electric_stove'].eligible, true);
   t.equal(posRebates['electric_stove'].amount.number, 840);
-  t.equal(posRebates['electric_stove'].start_date, 2023);
+  t.equal(posRebates['electric_stove'].start_date, '2023');
   t.equal(posRebates['electric_wiring'].eligible, true);
   t.equal(posRebates['electric_wiring'].amount.number, 2500);
-  t.equal(posRebates['electric_wiring'].start_date, 2023);
+  t.equal(posRebates['electric_wiring'].start_date, '2023');
   t.equal(posRebates['heat_pump_water_heater'].eligible, true);
   t.equal(posRebates['heat_pump_water_heater'].amount.number, 1750);
-  t.equal(posRebates['heat_pump_water_heater'].start_date, 2023);
+  t.equal(posRebates['heat_pump_water_heater'].start_date, '2023');
   t.equal(posRebates['heat_pump_air_conditioner_heater'].eligible, true);
   t.equal(posRebates['heat_pump_air_conditioner_heater'].amount.number, 8000);
-  t.equal(posRebates['heat_pump_air_conditioner_heater'].start_date, 2023);
+  t.equal(posRebates['heat_pump_air_conditioner_heater'].start_date, '2023');
   t.equal(posRebates['heat_pump_clothes_dryer'].eligible, true);
   t.equal(posRebates['heat_pump_clothes_dryer'].amount.number, 840);
-  t.equal(posRebates['heat_pump_clothes_dryer'].start_date, 2023);
+  t.equal(posRebates['heat_pump_clothes_dryer'].start_date, '2023');
   t.equal(posRebates['weatherization'].eligible, true);
   t.equal(posRebates['weatherization'].amount.number, 1600);
-  t.equal(posRebates['weatherization'].start_date, 2023);
+  t.equal(posRebates['weatherization'].start_date, '2023');
 
   t.equal(performance_rebate_incentives[0].eligible, true);
   t.equal(performance_rebate_incentives[0].amount.number, 4000);
-  t.equal(performance_rebate_incentives[0].start_date, 2023);
+  t.equal(performance_rebate_incentives[0].start_date, '2023');
 
   const taxCredits = _.keyBy(tax_credit_incentives, 'item');
   t.equal(taxCredits['battery_storage_installation'].eligible, true);
   t.equal(taxCredits['battery_storage_installation'].amount.number, 0.3); // will be displayed as 30%
-  t.equal(taxCredits['battery_storage_installation'].start_date, 2023);
+  t.equal(taxCredits['battery_storage_installation'].start_date, '2023');
   t.equal(taxCredits['geothermal_heating_installation'].eligible, true);
   t.equal(taxCredits['geothermal_heating_installation'].amount.number, 0.3); // will be displayed as 30%
-  t.equal(taxCredits['geothermal_heating_installation'].start_date, 2022);
+  t.equal(taxCredits['geothermal_heating_installation'].start_date, '2022');
   t.equal(taxCredits['electric_panel'].eligible, true);
   t.equal(taxCredits['electric_panel'].amount.number, 600);
-  t.equal(taxCredits['electric_panel'].start_date, 2023);
+  t.equal(taxCredits['electric_panel'].start_date, '2023');
   t.equal(taxCredits['electric_vehicle_charger'].eligible, true);
   t.equal(taxCredits['electric_vehicle_charger'].amount.number, 1000);
-  t.equal(taxCredits['electric_vehicle_charger'].start_date, 2023);
+  t.equal(taxCredits['electric_vehicle_charger'].start_date, '2023');
   t.equal(taxCredits['new_electric_vehicle'].eligible, true);
   t.equal(taxCredits['new_electric_vehicle'].amount.number, 7500);
-  t.equal(taxCredits['new_electric_vehicle'].start_date, 2023);
+  t.equal(taxCredits['new_electric_vehicle'].start_date, '2023');
   t.equal(taxCredits['heat_pump_air_conditioner_heater'].eligible, true);
   t.equal(taxCredits['heat_pump_air_conditioner_heater'].amount.number, 2000);
-  t.equal(taxCredits['heat_pump_air_conditioner_heater'].start_date, 2023);
+  t.equal(taxCredits['heat_pump_air_conditioner_heater'].start_date, '2023');
   t.equal(taxCredits['heat_pump_water_heater'].eligible, true);
   t.equal(taxCredits['heat_pump_water_heater'].amount.number, 2000);
-  t.equal(taxCredits['heat_pump_water_heater'].start_date, 2023);
+  t.equal(taxCredits['heat_pump_water_heater'].start_date, '2023');
   t.equal(taxCredits['rooftop_solar_installation'].eligible, true);
   t.equal(taxCredits['rooftop_solar_installation'].amount.number, 0.3);
   t.equal(taxCredits['rooftop_solar_installation'].amount.representative, 4572);
-  t.equal(taxCredits['rooftop_solar_installation'].start_date, 2022);
+  t.equal(taxCredits['rooftop_solar_installation'].start_date, '2022');
   t.equal(taxCredits['weatherization'].eligible, true);
   t.equal(taxCredits['weatherization'].amount.number, 1200);
-  t.equal(taxCredits['weatherization'].start_date, 2023);
+  t.equal(taxCredits['weatherization'].start_date, '2023');
   // everything except used EV should be eligible for tax credit (agi limit is 75k)
   t.equal(taxCredits['used_electric_vehicle'].eligible, false);
   t.equal(taxCredits['used_electric_vehicle'].amount.number, 4000);
-  t.equal(taxCredits['used_electric_vehicle'].start_date, 2023);
+  t.equal(taxCredits['used_electric_vehicle'].start_date, '2023');
 });
 
 test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in Missisippi"', async t => {
@@ -400,67 +400,67 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   const posRebates = _.keyBy(pos_rebate_incentives, 'item');
   t.equal(posRebates['electric_panel'].eligible, false);
   t.equal(posRebates['electric_panel'].amount.number, 4000);
-  t.equal(posRebates['electric_panel'].start_date, 2023);
+  t.equal(posRebates['electric_panel'].start_date, '2023');
   t.equal(posRebates['electric_stove'].eligible, false);
   t.equal(posRebates['electric_stove'].amount.number, 840);
-  t.equal(posRebates['electric_stove'].start_date, 2023);
+  t.equal(posRebates['electric_stove'].start_date, '2023');
   t.equal(posRebates['electric_wiring'].eligible, false);
   t.equal(posRebates['electric_wiring'].amount.number, 2500);
-  t.equal(posRebates['electric_wiring'].start_date, 2023);
+  t.equal(posRebates['electric_wiring'].start_date, '2023');
   t.equal(posRebates['heat_pump_water_heater'].eligible, false);
   t.equal(posRebates['heat_pump_water_heater'].amount.number, 1750);
-  t.equal(posRebates['heat_pump_water_heater'].start_date, 2023);
+  t.equal(posRebates['heat_pump_water_heater'].start_date, '2023');
   t.equal(posRebates['heat_pump_air_conditioner_heater'].eligible, false);
   t.equal(posRebates['heat_pump_air_conditioner_heater'].amount.number, 8000);
-  t.equal(posRebates['heat_pump_air_conditioner_heater'].start_date, 2023);
+  t.equal(posRebates['heat_pump_air_conditioner_heater'].start_date, '2023');
   t.equal(posRebates['heat_pump_clothes_dryer'].eligible, false);
   t.equal(posRebates['heat_pump_clothes_dryer'].amount.number, 840);
-  t.equal(posRebates['heat_pump_clothes_dryer'].start_date, 2023);
+  t.equal(posRebates['heat_pump_clothes_dryer'].start_date, '2023');
   t.equal(posRebates['weatherization'].eligible, false);
   t.equal(posRebates['weatherization'].amount.number, 1600);
-  t.equal(posRebates['weatherization'].start_date, 2023);
+  t.equal(posRebates['weatherization'].start_date, '2023');
 
   // only items.efficiency_rebates are eligible here:
   t.equal(performance_rebate_incentives[0].eligible, true);
   t.equal(performance_rebate_incentives[0].amount.number, 4000);
-  t.equal(performance_rebate_incentives[0].start_date, 2023);
+  t.equal(performance_rebate_incentives[0].start_date, '2023');
 
   const taxCredits = _.keyBy(tax_credit_incentives, 'item');
   t.equal(taxCredits['battery_storage_installation'].eligible, true);
   t.equal(taxCredits['battery_storage_installation'].amount.number, 0.3); // will be displayed as 30%
-  t.equal(taxCredits['battery_storage_installation'].start_date, 2023);
+  t.equal(taxCredits['battery_storage_installation'].start_date, '2023');
   t.equal(taxCredits['geothermal_heating_installation'].eligible, true);
   t.equal(taxCredits['geothermal_heating_installation'].amount.number, 0.3); // will be displayed as 30%
-  t.equal(taxCredits['geothermal_heating_installation'].start_date, 2022);
+  t.equal(taxCredits['geothermal_heating_installation'].start_date, '2022');
   t.equal(taxCredits['electric_panel'].eligible, true);
   t.equal(taxCredits['electric_panel'].amount.number, 600);
-  t.equal(taxCredits['electric_panel'].start_date, 2023);
+  t.equal(taxCredits['electric_panel'].start_date, '2023');
   t.equal(taxCredits['electric_vehicle_charger'].eligible, true);
   t.equal(taxCredits['electric_vehicle_charger'].amount.number, 1000);
-  t.equal(taxCredits['electric_vehicle_charger'].start_date, 2023);
+  t.equal(taxCredits['electric_vehicle_charger'].start_date, '2023');
   t.equal(taxCredits['heat_pump_air_conditioner_heater'].eligible, true);
   t.equal(taxCredits['heat_pump_air_conditioner_heater'].amount.number, 2000);
-  t.equal(taxCredits['heat_pump_air_conditioner_heater'].start_date, 2023);
+  t.equal(taxCredits['heat_pump_air_conditioner_heater'].start_date, '2023');
   t.equal(taxCredits['heat_pump_water_heater'].eligible, true);
   t.equal(taxCredits['heat_pump_water_heater'].amount.number, 2000);
-  t.equal(taxCredits['heat_pump_water_heater'].start_date, 2023);
+  t.equal(taxCredits['heat_pump_water_heater'].start_date, '2023');
   t.equal(taxCredits['rooftop_solar_installation'].eligible, true);
   t.equal(taxCredits['rooftop_solar_installation'].amount.number, 0.3);
   t.equal(
     taxCredits['rooftop_solar_installation'].amount.representative,
     4428.9,
   );
-  t.equal(taxCredits['rooftop_solar_installation'].start_date, 2022);
+  t.equal(taxCredits['rooftop_solar_installation'].start_date, '2022');
   t.equal(taxCredits['weatherization'].eligible, true);
   t.equal(taxCredits['weatherization'].amount.number, 1200);
-  t.equal(taxCredits['weatherization'].start_date, 2023);
+  t.equal(taxCredits['weatherization'].start_date, '2023');
   // new and used EVs should not be eligible:
   t.equal(taxCredits['new_electric_vehicle'].eligible, false);
   t.equal(taxCredits['new_electric_vehicle'].amount.number, 7500);
-  t.equal(taxCredits['new_electric_vehicle'].start_date, 2023);
+  t.equal(taxCredits['new_electric_vehicle'].start_date, '2023');
   t.equal(taxCredits['used_electric_vehicle'].eligible, false);
   t.equal(taxCredits['used_electric_vehicle'].amount.number, 4000);
-  t.equal(taxCredits['used_electric_vehicle'].start_date, 2023);
+  t.equal(taxCredits['used_electric_vehicle'].start_date, '2023');
 });
 
 test('correctly sorts incentives', async t => {
@@ -494,8 +494,8 @@ test('correct filtering of county incentives', async t => {
     id: 'CO',
     authority_type: AuthorityType.County,
     authority: 'mock-county-authority',
-    start_date: 2023,
-    end_date: 2024,
+    start_date: '2023',
+    end_date: '2024',
     payment_methods: [PaymentMethod.AccountCredit],
     item: 'heat_pump_air_conditioner_heater',
     program: 'ri_hvacAndWaterHeaterIncentives',
@@ -556,8 +556,8 @@ test('correct filtering of city incentives', async t => {
     id: 'CO',
     authority_type: AuthorityType.City,
     authority: 'mock-city-authority',
-    start_date: 2023,
-    end_date: 2024,
+    start_date: '2023',
+    end_date: '2024',
     payment_methods: [PaymentMethod.AccountCredit],
     item: 'heat_pump_air_conditioner_heater',
     program: 'ri_hvacAndWaterHeaterIncentives',

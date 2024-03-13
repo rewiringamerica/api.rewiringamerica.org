@@ -89,10 +89,10 @@ export const API_INCENTIVE_SCHEMA = {
       minItems: 1,
     },
     start_date: {
-      type: 'number',
+      type: 'string',
     },
     end_date: {
-      type: 'number',
+      type: 'string',
     },
     special_note: {
       type: 'string',
