@@ -17,7 +17,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate for ENERGY STAR certified electric dryers. Redeemable at Home Depot. Limit 1 per customer."
+      "en": "$50 rebate for ENERGY STAR certified electric dryers. Redeemable at Home Depot. Limit 1 per customer.",
+      "es": "Reembolso de $50 dólares para secadoras eléctricas con certificación ENERGY STAR. Canjeable en Home Depot. Límite de 1 por cliente."
     }
   },
   {
@@ -38,7 +39,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "$200 rebate for ENERGY STAR certified heat pump dryers. Redeemable at Home Depot. Limit 1 per customer."
+      "en": "$200 rebate for ENERGY STAR certified heat pump dryers. Redeemable at Home Depot. Limit 1 per customer.",
+      "es": "Reembolso de $200 dólares para secadoras con bomba de calor certificadas ENERGY STAR. Canjeable en Home Depot. Límite de 1 por cliente."
     }
   },
   {
@@ -58,7 +60,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate for ENERGY STAR certified heat pump water heaters. Redeemable at Lowe's. Limit 1 per customer."
+      "en": "$400 rebate for ENERGY STAR certified heat pump water heaters. Redeemable at Lowe's. Limit 1 per customer.",
+      "es": "Reembolso de $400 dólares para calentadores de agua con bomba de calor certificados ENERGY STAR. Canjeable en Lowe's. Límite de 1 por cliente."
     }
   },
   {
@@ -79,7 +82,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "$150 rebate from utility for qualifying thermostat."
+      "en": "$150 rebate from utility for qualifying thermostat.",
+      "es": "Reembolso de $150 dólares de su compañía de luz por termostato que cumpla los requisitos."
     }
   },
   {
@@ -102,7 +106,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,100 for qualifying heat pump water heater. Rebate varies depending on model and capacity."
+      "en": "Up to $1,100 for qualifying heat pump water heater. Rebate varies depending on model and capacity.",
+      "es": "Hasta $1,100 dólares por un calentador de agua con bomba de calor certificado. El reembolso varía en función del modelo y su capacidad."
     }
   },
   {
@@ -123,7 +128,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate for ENERGY STAR rated electric dryers."
+      "en": "$50 rebate for ENERGY STAR rated electric dryers.",
+      "es": "Reembolso de $50 dólares para secadoras eléctricas con clasificación ENERGY STAR."
     }
   },
   {
@@ -137,35 +143,17 @@
     "program": "nv_wellsRuralElectric_saveEnergy,SaveMoney",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 12,
-      "unit": "square_foot"
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Site built home and manufactured homes may qualify for a fractional rebate for window replacements, up to 100% of costs. U-factor .23 to .30."
-    }
-  },
-  {
-    "id": "NV-8",
-    "authority_type": "utility",
-    "authority": "nv-wells-rural-electric",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "weatherization",
-    "program": "nv_wellsRuralElectric_saveEnergy,SaveMoney",
-    "amount": {
-      "type": "dollars_per_unit",
       "number": 16,
-      "unit": "square_foot"
+      "unit": "square_foot",
+      "minimum": 12,
+      "maximum": 16
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Site built home and manufactured homes may qualify for a fractional rebate for window replacements, up to 100% of costs. U-factor .22 or lower."
+      "en": "Site built home and manufactured homes may qualify for a rebate for window replacements, up to 100% of costs. Up to 16/sq ft depending on U-factor.",
+      "es": "Las casas construidas en el sitio y las casas prefabricadas pueden obtener un reembolso fraccionado para la sustitución de ventanas, de hasta el 100% de los costos. Factor U de .23 a .30."
     }
   },
   {
@@ -180,34 +168,16 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 12,
-      "unit": "square_foot"
+      "unit": "square_foot",
+      "minimum": 12,
+      "maximum": 16
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Site built home and manufactured homes may qualify for a fractional rebate on patio/sliding doors replacement. U-factor .31 to .35."
-    }
-  },
-  {
-    "id": "NV-10",
-    "authority_type": "utility",
-    "authority": "nv-wells-rural-electric",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "weatherization",
-    "program": "nv_wellsRuralElectric_saveEnergy,SaveMoney",
-    "amount": {
-      "type": "dollars_per_unit",
-      "number": 16,
-      "unit": "square_foot"
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Site built home and manufactured homes may qualify for a fractional rebate on patio/sliding doors replacement. U-factor .30 or lower."
+      "en": "Site built home and manufactured homes may qualify for a fractional rebate on patio/sliding doors replacement. Up to 16/sq ft depending on U-factor.",
+      "es": "Las casas construidas en el sitio y las casas prefabricadas pueden tener derecho a un reembolso fraccionado para la sustitución de puertas corredizas y de patio. Factor U de .31 a .35."
     }
   },
   {
@@ -227,7 +197,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$40 rebate for ENERGY STAR certified insulated exterior doors, up to 100% of costs."
+      "en": "$40 rebate for ENERGY STAR certified insulated exterior doors, up to 100% of costs.",
+      "es": "Reembolso de $40 dólares para puertas exteriores con aislamiento térmico y certificación ENERGY STAR, hasta el 100% de los costos."
     }
   },
   {
@@ -249,7 +220,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Site built homes with 4 units or less may be eligible for fractional rebate on insulation upgrades in home attic, up to 100% of costs."
+      "en": "Site built homes with 4 units or less may be eligible for fractional rebate on insulation upgrades in home attic, up to 100% of costs.",
+      "es": "Las casas construidas en el sitio con 4 unidades o menos pueden optar por un reembolso fraccionado para actualizar el aislamiento térmico del desván de la casa, hasta el 100% de los costos."
     }
   },
   {
@@ -271,7 +243,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Site built homes with 4 units or less may be eligible for fractional rebate on insulation upgrades in home floor, up to 100% of costs."
+      "en": "Site built homes with 4 units or less may be eligible for fractional rebate on insulation upgrades in home floor, up to 100% of costs.",
+      "es": "Las casas construidas en el sitio con 4 unidades o menos pueden optar por un reembolso fraccionado para actualizar el aislamiento térmico del piso de la casa, hasta el 100% de los costos."
     }
   },
   {
@@ -293,7 +266,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Site built homes with 4 units or less may be eligible for fractional rebate on insulation upgrades in home walls, up to 100% of costs."
+      "en": "Site built homes with 4 units or less may be eligible for fractional rebate on insulation upgrades in home walls, up to 100% of costs.",
+      "es": "Las casas construidas en el sitio con 4 unidades o menos pueden optar por un reembolso fraccionado para actualizar el aislamiento térmico de muros, hasta el 100% de los costos."
     }
   },
   {
@@ -315,7 +289,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Manufactured homes may be eligible for fractional rebate on insulation upgrades in manufactured home attic/roof, up to 100% of costs."
+      "en": "Manufactured homes may be eligible for fractional rebate on insulation upgrades in manufactured home attic/roof, up to 100% of costs.",
+      "es": "Las casas prefabricadas pueden optar por un reembolso fraccionado para actualizar el aislamiento térmico del desván/techo de la casa prefabricada, hasta el 100% de los costos."
     }
   },
   {
@@ -337,7 +312,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Manufactured homes may be eligible for fractional rebate on insulation upgrades in manufactured home floor, up to 100% of costs."
+      "en": "Manufactured homes may be eligible for fractional rebate on insulation upgrades in manufactured home floor, up to 100% of costs.",
+      "es": "Las casas prefabricadas pueden optar por un reembolso fraccionado para actualizar el aislamiento térmico del piso de la casa prefabricada, hasta el 100% de los costos."
     }
   },
   {
@@ -358,7 +334,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Free replacement of electric dryers (10 years or older) when you meet income eligibility requirements."
+      "en": "Free replacement of electric dryers (10 years or older) when you meet income eligibility requirements.",
+      "es": "Sustitución gratuita de secadoras eléctricas (de 10 años o más) cuando cumpla los requisitos de nivel de ingresos."
     },
     "low_income": "nv-nv-energy"
   },
@@ -379,7 +356,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Existing site built homes or manufactured homes are eligible to receive a $1,000 rebate on ductless heat pump."
+      "en": "Existing site built homes or manufactured homes are eligible to receive a $1,000 rebate on ductless heat pump.",
+      "es": "Las casas construidas en el sitio o las casas prefabricadas existentes pueden optar por un reembolso de $1,000 dólares en bombas de calor sin ductos."
     }
   },
   {
@@ -393,15 +371,16 @@
     "program": "nv_wellsRuralElectric_saveEnergy,SaveMoney",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000,
-      "minimum": 800,
-      "maximum": 1000
+      "number": 1200,
+      "minimum": 1000,
+      "maximum": 1200
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,000 rebate on qualified projects for existing single-family Site Built or Manufactured homes when replacing electric forced air furnance."
+      "en": "Up to $1,200 rebate on qualified projects for existing single-family Site Built or Manufactured homes when replacing electric forced air furnance.",
+      "es": "Un reembolso de hasta $1,200 dólares en proyectos certificados para casas unifamiliares construidas en el sitio o manufacturadas existentes cuando se sustituya un calefactor eléctrico de aire forzado."
     }
   },
   {
@@ -423,7 +402,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Receive up to $1,600 instant rebate from qualifying distributors when you replace your old air condition system with higher efficiency equipment."
+      "en": "Receive up to $1,600 instant rebate from qualifying distributors when you replace your old air condition system with higher efficiency equipment.",
+      "es": "Reciba hasta $1,600 dólares de reembolso instantáneo de distribuidores habilitados cuando reemplace su viejo sistema de aire acondicionado por un equipo de eficiencia superior."
     }
   },
   {
@@ -445,7 +425,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $2,400 instant rebate from qualifying distributors when you replace your old air condition system with an air source heat pump."
+      "en": "Up to $2,400 instant rebate from qualifying distributors when you replace your old air condition system with an air source heat pump.",
+      "es": "Un reembolso instantáneo de hasta $2,400 dólares de distribuidores certificados cuando sustituya su antiguo sistema de aire acondicionado por una bomba de calor con fuente de aire."
     }
   },
   {
@@ -465,7 +446,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,600 discount from qualifying distributors when your replace your old air conditioning system with a ductless heat pump."
+      "en": "Up to $1,600 discount from qualifying distributors when your replace your old air conditioning system with a ductless heat pump.",
+      "es": "Hasta $1,600 dólares de descuento de distribuidores certificados cuando sustituya su antiguo sistema de aire acondicionado por una bomba de calor sin ductos."
     }
   },
   {
@@ -487,7 +469,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $3,600 income qualified instant rebate when you replace your old air condition system with higher efficiency equipment."
+      "en": "Up to $3,600 income qualified instant rebate when you replace your old air condition system with higher efficiency equipment.",
+      "es": "Un reembolso instantáneo de hasta $3,600 dólares que cumpla con el nivel de ingresos cuando sustituya su viejo sistema de aire acondicionado por un equipo de eficiencia superior. "
     },
     "low_income": "nv-nv-energy"
   },
@@ -510,7 +493,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $4,000 income qualified instant rebate from qualifying distributors when you replace old air condition system with an air source heat pump."
+      "en": "Up to $4,000 income qualified instant rebate from qualifying distributors when you replace old air condition system with an air source heat pump.",
+      "es": "Un reembolso instantáneo de hasta $4,000 dólares si cumple con el nivel de ingresos por distribuidores certificados para reemplazar su antiguo sistema de aire acondicionado por una bomba de calor con fuente de aire. "
     },
     "low_income": "nv-nv-energy"
   },
@@ -531,7 +515,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $3,200 income qualified discount from qualifying distributors when your replace your old air conditioning system with a ductless heat pump."
+      "en": "Up to $3,200 income qualified discount from qualifying distributors when your replace your old air conditioning system with a ductless heat pump.",
+      "es": "Hasta $3,200 dólares de descuento si cumple con requisitos de nivel de ingresos de distribuidores certificados cuando sustituya su antiguo sistema de aire acondicionado por una bomba de calor sin ductos."
     },
     "low_income": "nv-nv-energy"
   },
@@ -553,7 +538,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Receive a free Smart Thermostat valued at $300 with free professional installation."
+      "en": "Receive a free Smart Thermostat valued at $300 with free professional installation.",
+      "es": "Reciba gratis un termostato inteligente con un valor de $300 dólares e instalación profesional gratuita."
     }
   },
   {
@@ -573,7 +559,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$200 rebate for air source heat pump with minimum efficiency of 9.0 HSPF, 15 SEER."
+      "en": "$200 rebate for air source heat pump with minimum efficiency of 9.0 HSPF, 15 SEER.",
+      "es": "Reembolso de $200 dólares por bomba de calor de fuente de aire con una eficiencia mínima de 9.0 HSPF, 15 SEER. "
     }
   },
   {
@@ -593,7 +580,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate for air source heat pump with minimum efficiency of 9.5 HSPF, 16 SEER."
+      "en": "$400 rebate for air source heat pump with minimum efficiency of 9.5 HSPF, 16 SEER.",
+      "es": "Reembolso de $400 dólares por bomba de calor de fuente de aire con una eficiencia mínima de 9.5 HSPF, 16 SEER."
     }
   },
   {
@@ -613,7 +601,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate for Ductless Mini Split Air Conditioner and Heat Pump (single air handler unit) with minimum efficiency of 9.5 HSPF, 16 SEER."
+      "en": "$400 rebate for ductless mini split heat pump – single head (single air handler unit) with minimum efficiency of 9.5 HSPF, 16 SEER.",
+      "es": "Reembolso de $400 dólares para aire acondicionado y bomba de calor mini-split sin ductos (unidad de tratamiento de aire individual) con una eficiencia mínima de 9.5 HSPF, 16 SEER."
     }
   },
   {
@@ -633,7 +622,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$800 rebate for Ductless Mini Split Air Conditioner and Heat Pump (single air handler unit) with minimum efficiency of 9.5 HSPF, 16 SEER."
+      "en": "$800 rebate for ductless mini split heat pump – double head (single air handler unit) with minimum efficiency of 9.5 HSPF, 16 SEER.",
+      "es": "Reembolso de $800 dólares para aire acondicionado y bomba de calor mini-split sin ductos (unidad de tratamiento de aire única) con una eficiencia mínima de 9.5 HSPF, 16 SEER."
     }
   },
   {
@@ -655,7 +645,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Windows: $2.5 per sq ft for installations with U-Value of .35 or less. Insulation: $0.4 per sq ft for attic, wall, and floor insulation installations."
+      "en": "Windows: $2.50/sq ft for installations with U-Value of .35 or less. Insulation: $0.40/sq ft for attic, wall, and floor insulation installations.",
+      "es": "Ventanas: $2.5 dólares por pie cuadrado para instalaciones con un valor U igual o inferior a 0.35. Aislamiento térmico: $0.4 de dólar por pie cuadrado para instalaciones de aislamiento térmico de desvanes, muros y pisos."
     },
     "bonus_available": true
   },
@@ -678,7 +669,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Windows: $2.5 per sq ft for installations with U-Value of .35 or less. Insulation: $0.4 per sq ft for attic, wall, and floor insulation installations."
+      "en": "Windows: $2.50/sq ft for installations with U-Value of .35 or less. Insulation: $0.40/sq ft for attic, wall, and floor insulation installations.",
+      "es": "Ventanas: $2.5 dólares por pie cuadrado para instalaciones con un valor U igual o inferior a 0.35. Aislamiento térmico: $0.4 de dólar por pie cuadrado para instalaciones de aislamiento térmico de desvanes, muros y pisos."
     },
     "bonus_available": true
   },
@@ -700,7 +692,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebates of up to $325 for purchasing ENERGY STAR rated electric stoves."
+      "en": "Rebates of up to $75 for purchasing ENERGY STAR rated electric stoves.",
+      "es": "Reembolsos de hasta $75 dólares por la compra de estufas eléctricas con clasificación ENERGY STAR."
     },
     "bonus_available": true
   },
@@ -722,7 +715,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebates of up to $325 for purchasing ENERGY STAR rated electric clothes washers."
+      "en": "Rebates of up to $50 for purchasing ENERGY STAR rated electric clothes washers.",
+      "es": "Reembolsos de hasta $50 dólares por la compra de lavadoras de ropa eléctricas con clasificación ENERGY STAR."
     },
     "bonus_available": true
   },
@@ -744,7 +738,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebates of up to $325 for purchasing ENERGY STAR rated electric dishwashers."
+      "en": "Rebates of up to $50 for purchasing ENERGY STAR rated electric dishwashers.",
+      "es": "Reembolsos de hasta $50 dólares por la compra de lavavajillas eléctricos con clasificación ENERGY STAR."
     },
     "bonus_available": true
   },
@@ -766,7 +761,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebates of up to $325 for purchasing ENERGY STAR rated refrigerators."
+      "en": "Rebates of up to $150 for purchasing ENERGY STAR rated refrigerators.",
+      "es": "Reembolsos de hasta $150 dólares por la compra de refrigeradores con clasificación ENERGY STAR."
     },
     "bonus_available": true
   },
@@ -777,7 +773,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "other",
+    "item": "heat_pump_water_heater",
     "program": "nv_mtWheelerPower_hybridWaterHeaterRebate",
     "amount": {
       "type": "dollar_amount",
@@ -788,7 +784,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebates of up to $300 for purchasing a Geothermal / Spring / Hybrid Water Heater."
+      "en": "Rebates of up to $300 for purchasing a geothermal / spring / hybrid water heater.",
+      "es": "Reembolsos de hasta $300 dólares por la compra de un calentador de agua geotérmico / Spring / híbrido."
     },
     "bonus_available": true
   },
@@ -812,7 +809,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebates of up to $500 per ton (capped at $3,000) for ground source heat pumps. Must be tier 3, 16.5 SEER."
+      "en": "Rebates of up to $500 per ton (capped at $3,000) for ground source heat pumps. Must be tier 3, 16.5 SEER.",
+      "es": "Reembolso de hasta $500 dólares por tonelada (con un tope de $3,000 dólares) para bombas de calor geotérmicas. Deben ser de nivel 3, 16.5 SEER."
     },
     "bonus_available": true
   },
@@ -836,7 +834,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebates of up to $150 per ton (capped at $2,000) for air-to-air heat pumps. Base tier, 15 SEER."
+      "en": "Rebates of up to $150 per ton (capped at $2,000) for air-to-air heat pumps. Base tier, 15 SEER.",
+      "es": "Un reembolso de hasta $150 dólares por tonelada (con un tope de $2,000 dólares) para bombas de calor aire a aire. Nivel básico, 15 SEER."
     },
     "bonus_available": true
   },
@@ -860,7 +859,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebates of up to $175 per ton (capped at $2,000) for air-to-air heat pumps. Tier 2, 16 SEER."
+      "en": "Rebates of up to $175 per ton (capped at $2,000) for air-to-air heat pumps. Tier 2, 16 SEER.",
+      "es": "Un reembolso de hasta $175 dólares por tonelada (con un tope de $2,000 dólares) para bombas de calor aire a aire. Nivel 2, 16 SEER."
     },
     "bonus_available": true
   },
@@ -884,7 +884,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebates of up to $300 per ton (capped at $2,000) for air-to-air heat pumps. Tier 3, 16.5 SEER."
+      "en": "Rebates of up to $300 per ton (capped at $2,000) for air-to-air heat pumps. Tier 3, 16.5 SEER.",
+      "es": "Reembolso de hasta $300 dólares por tonelada (con un tope de $2,000 dólares) para las bombas de calor aire a aire. Nivel 3, 16.5 SEER."
     },
     "bonus_available": true
   },
@@ -906,7 +907,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebates of up to 25% or $1000 for installing solar energy with up to 5 kW (residential) or 20 kW (small commercial) in size."
+      "en": "Rebates of up to 25% or $1000 for installing solar energy with up to 5 kW (residential) or 20 kW (small commercial) in size.",
+      "es": "Reembolsos de hasta el 25% o $1,000 dólares por la instalación de energía solar con un tamaño de hasta 5 kW (residencial) o 20 kW (comercial pequeña)."
     },
     "bonus_available": true
   },
@@ -929,7 +931,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate up to $75 per smart controller or fifty percent off the MSRP, whichever is less for the installation of a smart thermostat."
+      "en": "Rebate up to $75 per smart controller or fifty percent off the MSRP, whichever is less for the installation of a smart thermostat.",
+      "es": "Reembolso de hasta $75 dólares por mando inteligente o un 50% de descuento del precio de venta recomendado, lo que sea menor, por la instalación de un termostato inteligente."
     },
     "bonus_available": true
   },
@@ -951,7 +954,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebates up to $600 for air source heat pump rated 16 SEER/9 HSPF, $1,200 for 18 SEER/10 HSPF, and $2,400 for 20 SEER/11 HSPF and above."
+      "en": "Rebates up to $600 for air source heat pump rated 16 SEER/9 HSPF, $1,200 for 18 SEER/10 HSPF, and $2,400 for 20 SEER/11 HSPF and above.",
+      "es": "Reembolsos de hasta $600 dólares para una bomba de calor con fuente de aire de 16 SEER/9 HSPF, de $1,200 dólares para una de 18 SEER/10 HSPF y de $2,400 dólares para una de 20 SEER/11 HSPF y de mayor capacidad."
     },
     "bonus_available": true
   },
@@ -973,7 +977,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebates for Ductless Heat Pump replacement in the amount of $1,600 16 SEER/9 HSPF and above."
+      "en": "Rebates for Ductless Heat Pump replacement in the amount of $1,600 16 SEER/9 HSPF and above.",
+      "es": "Reembolsos por sustitución de bombas de calor sin ductos por un monto de $1,600 16 SEER/9 HSPF y de mayor capacidad."
     },
     "bonus_available": true
   },
@@ -995,7 +1000,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebates for Central Air Conditioner replacement in the amount of $400 for 16 SEER, $900 for 18 SEER and $1,600 for 20 SEER and above."
+      "en": "Rebates for Central Air Conditioner replacement in the amount of $400 for 16 SEER, $900 for 18 SEER and $1,600 for 20 SEER and above.",
+      "es": "Reembolsos por sustitución de aire acondicionado central por un monto de $400 dólares para 16 SEER, $900 para 18 SEER y $1,600 para 20 SEER y de mayor capacidad."
     },
     "bonus_available": true
   },
@@ -1018,7 +1024,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $75 rebate per smart controller or fifty percent off the MSRP, whichever is less for the installation of a smart irrigation controller."
+      "en": "Up to $75 rebate per smart controller or fifty percent off the MSRP, whichever is less for the installation of a smart irrigation controller.",
+      "es": "Reembolso de hasta $75 dólares por cada control inteligente o un cincuenta por ciento de descuento sobre el precio de venta al público, lo que sea menor, por la instalación de un control de riego inteligente."
     },
     "bonus_available": true
   },
@@ -1040,7 +1047,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $200 in rebates are available for a solar water heating system to supplement electric domestic water heating. Minimum 40 gallons."
+      "en": "Up to $200 in rebates are available for a solar water heating system to supplement electric domestic water heating. Minimum 40 gallons.",
+      "es": "Reembolso de hasta $200 dólares está disponible para un sistema solar de calentamiento de agua que complemente el calentamiento eléctrico del agua doméstica. Mínimo 40 galones."
     },
     "bonus_available": true
   },
@@ -1062,7 +1070,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "$100 rebate for the replacement of an existing pool pump with a new efficient 2 speed pump or $200 for an efficient variable-speed pump."
+      "en": "$100 rebate for the replacement of an existing pool pump with a new efficient 2 speed pump or $200 for an efficient variable-speed pump.",
+      "es": "Reembolso de $100 dólares por la sustitución de una bomba de piscina existente por una nueva bomba eficiente de 2 velocidades o de $200 dólares por una bomba eficiente de velocidad variable."
     },
     "bonus_available": true
   },
@@ -1083,7 +1092,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$50 rebate available for a new ENERGY STAR electric clothes dryer."
+      "en": "$50 rebate available for a new ENERGY STAR electric clothes dryer.",
+      "es": "Un reembolso de $50 dólares disponible para una nueva secadora de ropa eléctrica con certificación ENERGY STAR."
     },
     "bonus_available": true
   },
@@ -1104,7 +1114,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $450 rebate available for Unitary Tier 2 or 3 or Split System heat pump water heaters. Up to $270 available for Unitary Tier 1."
+      "en": "Up to $450 rebate available for Unitary Tier 2 or 3 or Split System heat pump water heaters. Up to $270 available for Unitary Tier 1.",
+      "es": "Un reembolso de hasta $450 dólares disponible para calentadores de agua con bomba de calor unitarios de nivel 2 ó 3 o de sistema dividido. Hasta $270 dólares disponibles para  Unitary Nivel 1."
     },
     "bonus_available": true
   },
@@ -1125,7 +1136,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $30 rebate available for electric washers and dryers."
+      "en": "Up to $30 rebate available for electric washers and dryers.",
+      "es": "Un reembolso de hasta $30 dólares está disponible para lavadoras y secadoras eléctricas."
     },
     "bonus_available": true
   },
@@ -1146,7 +1158,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $36 rebate per door available. Applies when replacing a qualified un-insulated exterior door with a pre-hung ENERGY STAR qualified door."
+      "en": "Up to $36 rebate per door available. Applies when replacing a qualified un-insulated exterior door with a pre-hung ENERGY STAR qualified door.",
+      "es": "Un reembolso de hasta $36 dólares por puerta está disponible. Se aplica al sustituir una puerta exterior sin aislamiento certificada por una puerta premontada con certificación ENERGY STAR."
     },
     "bonus_available": true
   },
@@ -1167,7 +1180,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$16 per unit rebate when you replace qualifying bi-metal line-voltage thermostats with line-voltage electronic thermostats."
+      "en": "$16 per unit rebate when you replace qualifying bi-metal line-voltage thermostats with line-voltage electronic thermostats.",
+      "es": "Reembolso de $16 dólares por unidad al sustituir termostatos bimetálicos de tensión de línea certificados, por termostatos electrónicos de tensión de línea."
     },
     "bonus_available": true
   },
@@ -1188,7 +1202,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Raft River Rural Electric offers an incentive when you purchase a new manufactured home that is electrically heated."
+      "en": "Raft River Rural Electric offers an incentive when you purchase a new manufactured home that is electrically heated.",
+      "es": "Raft River Rural Electric le ofrece un incentivo al comprar una nueva casa prefabricada con calefacción eléctrica.  "
     },
     "bonus_available": true
   },
@@ -1210,7 +1225,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $7.20/sq ft rebate for replacing qualifying windows in an existing single family or manufactured home with primary electric heat."
+      "en": "Up to $7.20/sq ft rebate for replacing qualifying windows in an existing single family or manufactured home with primary electric heat.",
+      "es": "Reembolso de hasta $7.20 dólares/pie cuadrado por la sustitución de ventanas certificadas en una vivienda unifamiliar o prefabricada existente con calefacción eléctrica primaria."
     },
     "bonus_available": true
   },
@@ -1233,7 +1249,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate for 50% of the cost up to $500 for the purchase and installation of a new ENERGY STAR® certified Hybrid/Heat Pump Water Heater."
+      "en": "Rebate for 50% of the cost up to $500 for the purchase and installation of a new ENERGY STAR® certified Hybrid/Heat Pump Water Heater.",
+      "es": "Un reembolso del 50% de los costos de hasta $500 dólares por la compra e instalación de un nuevo calentador de agua híbrido/bomba de calor con certificación ENERGY STAR®"
     },
     "bonus_available": true
   },
@@ -1256,7 +1273,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase and installation of a new, ENERGY STAR® Clothes Washer."
+      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase and installation of a new, ENERGY STAR® Clothes Washer.",
+      "es": "Se ofrece a los miembros residenciales de Plumas-Sierra Rural Electric Co-op para la compra e instalación de una nueva lavadora de ropa ENERGY STAR®."
     },
     "bonus_available": true
   },
@@ -1279,7 +1297,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to 50% rebate for the purchase and installation of a new, ENERGY STAR® Clothes Dryer."
+      "en": "Up to 50% rebate for the purchase and installation of a new, ENERGY STAR® Clothes Dryer.",
+      "es": "Un reembolso de hasta el 50% por la compra e instalación de una nueva secadora de ropa ENERGY STAR®."
     },
     "bonus_available": true
   },
@@ -1302,7 +1321,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase and installation of a new, ENERGY STAR® Dishwasher."
+      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase and installation of a new, ENERGY STAR® Dishwasher.",
+      "es": "Se ofrece a los miembros residenciales de Plumas-Sierra Rural Electric Co-op para la compra e instalación de un nuevo lavavajillas ENERGY STAR®."
     },
     "bonus_available": true
   },
@@ -1325,7 +1345,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate for the purchase of a new ENERGY STAR certified refrigerator. Additional $75 available for recycling old refrigerator."
+      "en": "$50 rebate for the purchase of a new ENERGY STAR certified refrigerator. Additional $75 available for recycling old refrigerator.",
+      "es": "Un reembolso de $50 dólares por la compra de un nuevo refrigerador con certificado ENERGY STAR. Se ofrecen $75 dólares adicionales por reciclar el refrigerador viejo."
     },
     "bonus_available": true
   },
@@ -1348,7 +1369,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate for the purchase of a new ENERGY STAR certified freezer. Additional $75 available for recycling old freezer."
+      "en": "$50 rebate for the purchase of a new ENERGY STAR certified freezer. Additional $75 available for recycling old freezer.",
+      "es": "Un reembolso de $50 dólares por la compra de un nuevo congelador con certificación ENERGY STAR. Otros $75 adicionales están disponibles por reciclar el congelador antiguo."
     },
     "bonus_available": true
   },
@@ -1371,7 +1393,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase of new, ENERGY STAR® certified holiday LED strings."
+      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase of new, ENERGY STAR® certified holiday LED strings.",
+      "es": "Se ofrece a los miembros residenciales de Plumas-Sierra Rural Electric Co-op para la compra de nuevas series navideñas de LED con certificación ENERGY STAR®."
     },
     "bonus_available": true
   },
@@ -1394,7 +1417,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "$75 rebate for the purchase and installation of a new ENERGY STAR® certified Room Air Conditioner."
+      "en": "$75 rebate for the purchase and installation of a new ENERGY STAR® certified Room Air Conditioner.",
+      "es": "Un reembolso de $75 dólares por la compra e instalación de un nuevo acondicionador de aire de habitación con certificación ENERGY STAR®."
     },
     "bonus_available": true
   },
@@ -1405,7 +1429,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "other",
+    "item": "heat_pump_water_heater",
     "program": "nv_plumas-SierraRuralElectricCooperative_rebates",
     "amount": {
       "type": "percent",
@@ -1417,7 +1441,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase and installation of a qualified new electric storage water heater."
+      "en": "$150 rebate up to 50% of project costs for the purchase and installation of a qualified new electric storage water heater.",
+      "es": "Reembolso de $150 dólares hasta el 50% de los costos del proyecto para la compra e instalación de un nuevo calentador de agua eléctrico certificado."
     },
     "bonus_available": true
   },
@@ -1439,7 +1464,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate of $3/sq ft up to 50% of costs for the purchase and installation of qualified new Replacement Windows."
+      "en": "Rebate of $3/sq ft up to 50% of costs for the purchase and installation of qualified new Replacement Windows.",
+      "es": "Reembolso de $3 dólares/pie cuadrado hasta el 50% de los costos de la compra e instalación de ventanas nuevas de reemplazo certificadas."
     },
     "bonus_available": true
   },
@@ -1462,7 +1488,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase and installation of qualified new Insulation upgrades."
+      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase and installation of qualified new Insulation upgrades.",
+      "es": "Se ofrece a los miembros residenciales de Plumas-Sierra Rural Electric Co-op para la compra e instalación de mejoras en nuevo aislamiento térmico certificado."
     },
     "bonus_available": true
   },
@@ -1485,7 +1512,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase and installation of a new, qualifying Central Air Conditioner."
+      "en": "Offered to Plumas-Sierra Rural Electric Co-op residential members for the purchase and installation of a new, qualifying Central Air Conditioner.",
+      "es": "Se ofrece a los miembros residenciales de Plumas-Sierra Rural Electric Co-op para la compra e instalación de un nuevo acondicionador de aire central certificado."
     },
     "bonus_available": true
   },
@@ -1508,7 +1536,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate up to $350 per ton for the purchase and installation of a new qualifying air source heat pump. Rebate depends on heat pump efficiency."
+      "en": "Rebate up to $350 per ton for the purchase and installation of a new qualifying air source heat pump. Rebate depends on heat pump efficiency.",
+      "es": "Reembolso de hasta $350 dólares por tonelada para la compra e instalación de una nueva bomba de calor con fuente de aire certificada. El reembolso depende de la eficiencia de la bomba de calor."
     },
     "bonus_available": true
   },
@@ -1531,7 +1560,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate up to $250 per ton for the purchase and installation of a new qualifying ductless heat pump."
+      "en": "Rebate up to $250 per ton for the purchase and installation of a new qualifying ductless heat pump.",
+      "es": "Reembolso de hasta $250 dólares por tonelada para la compra e instalación de una nueva bomba de calor sin ductos certificada."
     },
     "bonus_available": true
   },
@@ -1554,7 +1584,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $600 per ton rebate for the purchase and installation of a new ENERGY STAR® Certified Ground Source Heat Pump."
+      "en": "Up to $600 per ton rebate for the purchase and installation of a new ENERGY STAR® Certified Ground Source Heat Pump.",
+      "es": "Reembolso de hasta $600 dólares por tonelada para la compra e instalación de una nueva bomba de calor geotérmica con certificado ENERGY STAR®."
     },
     "bonus_available": true
   },
@@ -1577,7 +1608,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for income-qualified residents. Application required."
+      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for income-qualified residents. Application required.",
+      "es": "El programa de ayuda para la climatización Weatherization Assistance Program aplica medidas de conservación de la energía en el hogar sin costo alguno para los residentes que reúnan los requisitos de nivel de ingresos. Se requiere presentar una solicitud."
     },
     "low_income": "nv-csa-reno"
   },
@@ -1600,7 +1632,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for income-qualified residents. Application required."
+      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for income-qualified residents. Application required.",
+      "es": "El programa de ayuda para la climatización Weatherization Assistance Program aplica medidas de conservación de la energía en el hogar sin costo alguno para los residentes que reúnan los requisitos de nivel de ingresos. Se requiere presentar una solicitud."
     },
     "low_income": "nv-rural-nevada-development-corporation"
   },
@@ -1623,7 +1656,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for income-qualified residents. Application required."
+      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for income-qualified residents. Application required.",
+      "es": "El programa de ayuda para la climatización Weatherization Assistance Program aplica medidas de conservación de la energía en el hogar sin costo alguno para los residentes que reúnan los requisitos de nivel de ingresos. Se requiere presentar una solicitud."
     },
     "low_income": "nv-nevada-rural-housing"
   },
@@ -1646,7 +1680,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for income-qualified residents. Application required."
+      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for income-qualified residents. Application required.",
+      "es": "El programa de ayuda para la climatización Weatherization Assistance Program aplica medidas de conservación de la energía en el hogar sin costo alguno para los residentes que reúnan los requisitos de nivel de ingresos. Se requiere presentar una solicitud."
     },
     "low_income": "nv-help-of-southern-nevada"
   },
@@ -1670,7 +1705,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "NV Energy provides a rebate of up to $400 for weather stripping, duct sealing, and insulation."
+      "en": "NV Energy provides a rebate of up to $400 for weather stripping, duct sealing, and insulation.",
+      "es": "NV Energy ofrece un reembolso de hasta $400 dólares por la colocación de cintas aislantes, sellado de ductos y aislamiento térmico."
     }
   },
   {
@@ -1692,7 +1728,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for income-qualified residents. Application required."
+      "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for income-qualified residents. Application required.",
+      "es": "El programa de ayuda para la climatización Weatherization Assistance Program aplica medidas de conservación de la energía en el hogar sin costo alguno para los residentes que reúnan los requisitos de nivel de ingresos. Se requiere presentar una solicitud."
     },
     "low_income": "nv-nevada-rural-housing"
   }
