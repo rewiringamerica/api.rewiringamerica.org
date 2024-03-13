@@ -112,4 +112,36 @@ export const NV_PROGRAMS = {
       en: 'https://www.psrec.coop/energy/rebates/',
     },
   },
+  nv_cSAReno_weatherizationAssistanceProgram: {
+    name: {
+      en: 'Weatherization Assistance Program',
+    },
+    url: {
+      en: 'https://www.csareno.org/Energy-Efficiency-Weatherization',
+    },
+  },
+  nv_ruralNevadaDevelopmentCorporation_weatherizationAssistanceProgram: {
+    name: {
+      en: 'Weatherization Assistance Program',
+    },
+    url: {
+      en: 'https://rndcnv.org/weatherization-services-rural-nevada-development-corporation/',
+    },
+  },
+  nv_nevadaRuralHousing_weatherizationAssistanceProgram: {
+    name: {
+      en: 'Weatherization Assistance Program',
+    },
+    url: {
+      en: 'https://nvrural.org/programs/weatherization/',
+    },
+  },
+  nv_hELPOfSouthernNevada_weatherizationAssistanceProgram: {
+    name: {
+      en: 'Weatherization Assistance Program',
+    },
+    url: {
+      en: 'https://www.helpsonv.org/weatherization',
+    },
+  },
 } as const;

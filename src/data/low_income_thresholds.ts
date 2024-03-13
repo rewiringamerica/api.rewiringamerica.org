@@ -32,6 +32,13 @@ export enum ILIncomeAuthority {
   STATE = 'il-state-of-illinois',
 }
 
+export enum NVLowIncomeAuthority {
+  CSA_RENO = 'nv-csa-reno',
+  RURAL_NEVADA_DEVELOPMENT_CO = 'nv-rural-nevada-development-corporation',
+  NV_RURAL_HOUSING = 'nv-nevada-rural-housing',
+  HELP_OF_SOUTHERN_NV = 'nv-help-of-southern-nevada',
+}
+
 export enum RILowIncomeAuthority {
   DHS = 'ri-dhs',
   ENERGY = 'ri-rhode-island-energy',
@@ -72,6 +79,9 @@ export const STATE_THRESHOLDS_SCHEMA: JSONSchemaType<StateLowIncomeThresholds> =
       },
       IL: {
         required: Object.values(ILIncomeAuthority),
+      },
+      NV: {
+        required: Object.values(NVLowIncomeAuthority),
       },
       RI: {
         required: Object.values(RILowIncomeAuthority),
