@@ -2,7 +2,7 @@ import { parse } from 'csv-parse/sync';
 import minimist from 'minimist';
 import { FILES, IncentiveFile } from './incentive-spreadsheet-registry';
 import { AuthorityAndProgramUpdater } from './lib/authority-and-program-updater';
-import { FIELD_MAPPINGS } from './lib/spreadsheet-mappings';
+import { FIELD_MAPPINGS, VALUE_MAPPINGS } from './lib/spreadsheet-mappings';
 import { SpreadsheetStandardizer } from './lib/spreadsheet-standardizer';
 
 async function generate(state: string, file: IncentiveFile) {
@@ -13,12 +13,12 @@ async function generate(state: string, file: IncentiveFile) {
     from_line: file.headerRowNumber ?? 1,
   });
 
-  // For now this is always on since we need to ID this columns
-  // accurately to do the rest of the work.
-  const strict_mode = true;
+  // strict_mode can be false since it's more error-tolerant, and we'll fail
+  // if we don't have the right columns anyway.
+  const strict_mode = false;
   const standardizer = new SpreadsheetStandardizer(
     FIELD_MAPPINGS,
-    {},
+    VALUE_MAPPINGS,
     strict_mode,
   );
 
@@ -28,9 +28,9 @@ async function generate(state: string, file: IncentiveFile) {
     authorityProgramManager.addRow(standardized);
   });
 
-  authorityProgramManager.updateProgramsTs();
-  authorityProgramManager.updateProgramJson();
+  authorityProgramManager.updatePrograms();
   authorityProgramManager.updateAuthoritiesJson();
+  authorityProgramManager.updateGeoGroupsJson();
 }
 
 (async function () {

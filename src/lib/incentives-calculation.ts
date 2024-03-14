@@ -4,6 +4,7 @@ import {
   AuthoritiesById,
   AuthorityType,
 } from '../data/authorities';
+import { DataPartnersType } from '../data/data_partners';
 import { IRAIncentive, IRA_INCENTIVES } from '../data/ira_incentives';
 import { SOLAR_PRICES } from '../data/solar_prices';
 import { StateIncentive } from '../data/state_incentives';
@@ -22,6 +23,7 @@ import { AMI, CompleteIncomeInfo, GeoInfo, MFI } from './income-info';
 import {
   calculateStateIncentivesAndSavings,
   getAllStateIncentives,
+  getStateDataPartners,
   getStateIncentiveRelationships,
 } from './state-incentives-calculation';
 import estimateTaxAmount from './tax-brackets';
@@ -381,16 +383,17 @@ export default function calculateIncentives(
   const authorities: AuthoritiesById = {};
   if (stateAuthorities) {
     incentives.forEach(i => {
-      if (
-        'authority' in i &&
-        i.authority &&
-        (i.authority_type === 'state' || i.authority_type === 'utility')
-      ) {
+      if ('authority' in i && i.authority && i.authority_type !== 'federal') {
         authorities[i.authority] =
-          stateAuthorities[i.authority_type][i.authority];
+          stateAuthorities[i.authority_type]![i.authority];
       }
     });
   }
+
+  const data_partners: DataPartnersType = getStateDataPartners(
+    state_id,
+    request,
+  );
 
   return {
     is_under_80_ami: isUnder80Ami,
@@ -398,6 +401,7 @@ export default function calculateIncentives(
     is_over_150_ami: isOver150Ami,
     authorities,
     coverage,
+    data_partners,
     location: {
       state: state_id,
       city: location.city,

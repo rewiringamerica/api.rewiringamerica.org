@@ -19,13 +19,13 @@
     "axios-retry": "^4.0.0",
     "cheerio": "^1.0.0-rc.12",
     "fastify": "^4.17.0",
-    "fastify-cli": "^5.7.1",
-    "fastify-plugin": "^4.5.0",
+    "fastify-cli": "^6.1.1",
+    "fastify-plugin": "^4.5.1",
     "fastify-sqlite": "^1.1.0",
-    "geocodio-library-node": "^1.5.0",
+    "geocodio-library-node": "^1.6.1",
     "lodash": "^4.17.21",
     "qs": "^6.11.2",
-    "sqlite": "^4.1.2"
+    "sqlite": "^5.1.1"
   },
   "devDependencies": {
     "@fastify/type-provider-json-schema-to-ts": "^2.2.2",
@@ -40,7 +40,7 @@
     "ajv": "^8.11.0",
     "csv": "^6.3.5",
     "dotenv": "^16.3.1",
-    "dotenv-cli": "^7.2.1",
+    "dotenv-cli": "^7.3.0",
     "eslint": "^8.52.0",
     "fastify-tsconfig": "^1.0.1",
     "json-schema-to-ts": "^2.0.0",
@@ -64,7 +64,8 @@
     "test": "dotenv -- tap -- --ts \"test/**/*.test.ts\"",
     "testfilter": "dotenv -- tap -- --ts",
     "update-descriptions": "ts-node scripts/update-descriptions",
-    "check-data-freshness": "tap --timeout=0 scripts/check-data-freshness.ts"
+    "check-data-freshness": "tap --timeout=0 scripts/check-data-freshness.ts",
+    "check-spreadsheet-health": "dotenv -- tap -- --ts scripts/spreadsheets-health.test.ts"
   },
   "tap": {
     "disable-coverage": true,

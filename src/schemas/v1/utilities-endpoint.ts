@@ -27,7 +27,20 @@ export const API_UTILITIES_SCHEMA = {
   querystring: {
     type: 'object',
     properties: {
+      // TODO remove location param once frontend is not using it
       location: API_REQUEST_LOCATION_SCHEMA,
+      zip: {
+        type: 'string',
+        description:
+          'Your zip code helps us estimate the amount of discounts and tax credits you qualify for by finding representative census tracts in your area.',
+        maxLength: 5,
+        minLength: 5,
+      },
+      address: {
+        type: 'string',
+        description:
+          "Your address can determine the precise census tract you're in that determines the correct amount of discounts and tax credits you qualify for.",
+      },
       language: {
         type: 'string',
         description: 'Optional choice of language for user-visible strings.',
@@ -44,7 +57,11 @@ export const API_UTILITIES_SCHEMA = {
         default: 'false',
       },
     },
-    required: ['location'],
+    oneOf: [
+      { required: ['location'] },
+      { required: ['zip'] },
+      { required: ['address'] },
+    ],
   },
   response: {
     200: {

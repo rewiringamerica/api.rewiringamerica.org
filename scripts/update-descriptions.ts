@@ -4,7 +4,23 @@ import fetch from 'make-fetch-happen';
 import minimist from 'minimist';
 
 import { FILES, IncentiveFile } from './incentive-spreadsheet-registry';
+import { FIELD_MAPPINGS, VALUE_MAPPINGS } from './lib/spreadsheet-mappings';
+import { SpreadsheetStandardizer } from './lib/spreadsheet-standardizer';
 import { Incentive, LocalizableString } from './translation-types';
+
+function validateColumns(row: Record<string, string>) {
+  for (const colName of [
+    'id',
+    'short_description.en',
+    'short_description.es',
+  ]) {
+    if (row[colName] === undefined) {
+      throw new Error(
+        `Could not find required column that matched ${colName}. If your spreadsheet uses a different name, configure the mapping in scripts/lib/spreadsheet-mappings.ts and rerun.`,
+      );
+    }
+  }
+}
 
 async function edit(file: IncentiveFile, write: boolean) {
   const response = await fetch(file.sheetUrl);
@@ -14,17 +30,26 @@ async function edit(file: IncentiveFile, write: boolean) {
     from_line: file.headerRowNumber ?? 1,
   });
 
+  const standardizer = new SpreadsheetStandardizer(
+    FIELD_MAPPINGS,
+    VALUE_MAPPINGS,
+    /* strict */ false,
+  );
+  const standardized = rows.map(standardizer.standardize.bind(standardizer));
+  // Validate the first row to ensure we found all the columns we need.
+  validateColumns(standardized[0]);
+
   const descriptionsById = new Map<string, LocalizableString>();
 
-  rows.forEach((row: Record<string, string>) => {
-    const id = row[file.idHeader];
+  standardized.forEach((row: Record<string, string>) => {
+    const id = row['id'];
     if (!descriptionsById.has(id)) {
       descriptionsById.set(id, { en: '' });
     }
 
-    descriptionsById.get(id)!.en = row[file.enHeader].trim();
-    if (file.esHeader) {
-      descriptionsById.get(id)!.es = row[file.esHeader].trim();
+    descriptionsById.get(id)!.en = row['short_description.en'].trim();
+    if (row['short_description.es']) {
+      descriptionsById.get(id)!.es = row['short_description.es'].trim();
     }
   });
 

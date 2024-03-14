@@ -36,6 +36,9 @@ const EXCLUSIONS: Set<string | number> = new Set([
   // CT
   9734, // City of Jewett City; no electric
 
+  // DC
+  'Washington Gas', // no electric; Utility Code "Not Available"
+
   // IL
   'Nicor Gas',
   'Peoples Gas',
@@ -85,6 +88,9 @@ const OVERRIDES = new Map<string | number, string>([
   [13831, 'Norwich Public Utilities'],
   [17569, 'South Norwalk Electric and Water'],
 
+  // DC
+  [1143, 'Pepco'], // Potomac Electric Power
+
   // IL
   [4362, 'Corn Belt Energy'],
   [16420, 'Rural Electric Convenience Cooperative'],
@@ -119,6 +125,12 @@ const OVERRIDES = new Map<string | number, string>([
   // VT
   [1061, 'Green Mountain Power'],
   [7601, 'Green Mountain Power'],
+  [8104, 'Town of Hardwick Electric Department'],
+  [11305, 'Village of Ludlow Electric Light Department'],
+  [11359, 'Lyndon Electric Department'],
+  [12989, 'Morrisville Water & Light'],
+  [13789, 'Town of Northfield Electric Department'],
+  [18371, 'Swanton Electric'],
   [19791, 'Vermont Electric Coop'],
   [27316, 'Stowe Electric Department'],
 ]);

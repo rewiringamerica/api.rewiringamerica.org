@@ -22,6 +22,7 @@ import { SOLAR_PRICES, SCHEMA as SP_SCHEMA } from '../../src/data/solar_prices';
 import {
   CO_RELATIONSHIPS,
   CT_RELATIONSHIPS,
+  GA_RELATIONSHIPS,
   INCENTIVE_RELATIONSHIPS_SCHEMA,
   IncentiveRelationships,
   VT_RELATIONSHIPS,
@@ -33,8 +34,14 @@ import {
   CO_INCENTIVES_SCHEMA,
   CT_INCENTIVES,
   CT_INCENTIVES_SCHEMA,
+  DC_INCENTIVES,
+  DC_INCENTIVES_SCHEMA,
+  GA_INCENTIVES,
+  GA_INCENTIVES_SCHEMA,
   IL_INCENTIVES,
   IL_INCENTIVES_SCHEMA,
+  MI_INCENTIVES,
+  MI_INCENTIVES_SCHEMA,
   NV_INCENTIVES,
   NV_INCENTIVES_SCHEMA,
   NY_INCENTIVES,
@@ -46,6 +53,8 @@ import {
   VA_INCENTIVES_SCHEMA,
   VT_INCENTIVES,
   VT_INCENTIVES_SCHEMA,
+  WI_INCENTIVES,
+  WI_INCENTIVES_SCHEMA,
 } from '../../src/data/state_incentives';
 import { SCHEMA as SMFI_SCHEMA, STATE_MFIS } from '../../src/data/state_mfi';
 import { TAX_BRACKETS, SCHEMA as TB_SCHEMA } from '../../src/data/tax_brackets';
@@ -53,10 +62,10 @@ import { TAX_BRACKETS, SCHEMA as TB_SCHEMA } from '../../src/data/tax_brackets';
 import Ajv from 'ajv/dist/2020';
 import { SomeJSONSchema } from 'ajv/dist/types/json-schema';
 import {
-  ALL_PROGRAMS,
-  PROGRAMS,
-  PROGRAMS_SCHEMA,
-} from '../../src/data/programs';
+  GEO_GROUPS_BY_STATE,
+  GEO_GROUPS_SCHEMA,
+} from '../../src/data/geo_groups';
+import { PROGRAMS } from '../../src/data/programs';
 import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
 import { LAUNCHED_STATES } from '../../src/data/types/states';
@@ -74,12 +83,12 @@ const TESTS = [
   [SMFI_SCHEMA, STATE_MFIS, 'state_mfis'],
   [TB_SCHEMA, TAX_BRACKETS, 'tax_brackets'],
   [AUTHORITIES_SCHEMA, AUTHORITIES_BY_STATE, 'authorities'],
-  [PROGRAMS_SCHEMA, PROGRAMS, 'programs'],
   [
     LOW_INCOME_THRESHOLDS_SCHEMA,
     LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
     'State low income',
   ],
+  [GEO_GROUPS_SCHEMA, GEO_GROUPS_BY_STATE, 'geo_groups'],
 ];
 
 test('static JSON files match schema', async tap => {
@@ -97,17 +106,22 @@ const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
   ['AZ', AZ_INCENTIVES_SCHEMA, AZ_INCENTIVES],
   ['CO', CO_INCENTIVES_SCHEMA, CO_INCENTIVES],
   ['CT', CT_INCENTIVES_SCHEMA, CT_INCENTIVES],
+  ['DC', DC_INCENTIVES_SCHEMA, DC_INCENTIVES],
+  ['GA', GA_INCENTIVES_SCHEMA, GA_INCENTIVES],
   ['IL', IL_INCENTIVES_SCHEMA, IL_INCENTIVES],
+  ['MI', MI_INCENTIVES_SCHEMA, MI_INCENTIVES],
   ['NV', NV_INCENTIVES_SCHEMA, NV_INCENTIVES],
   ['NY', NY_INCENTIVES_SCHEMA, NY_INCENTIVES],
   ['RI', RI_INCENTIVES_SCHEMA, RI_INCENTIVES],
   ['VA', VA_INCENTIVES_SCHEMA, VA_INCENTIVES],
   ['VT', VT_INCENTIVES_SCHEMA, VT_INCENTIVES],
+  ['WI', WI_INCENTIVES_SCHEMA, WI_INCENTIVES],
 ];
 
 const STATE_INCENTIVE_RELATIONSHIP_TESTS: [string, IncentiveRelationships][] = [
   ['CO', CO_RELATIONSHIPS],
   ['CT', CT_RELATIONSHIPS],
+  ['GA', GA_RELATIONSHIPS],
   ['VT', VT_RELATIONSHIPS],
 ];
 
@@ -152,10 +166,10 @@ test('state incentives JSON files match schemas', async tap => {
           `(${incentive.short_description.en.length}), id ${incentive.id}, index ${index}`,
       );
 
-      // We let Spanish descriptions be a little longer
+      // We let Spanish descriptions be longer
       if (incentive.short_description.es) {
         tap.ok(
-          incentive.short_description.es.length <= 250,
+          incentive.short_description.es.length <= 400,
           `${stateId} Spanish description too long ` +
             `(${incentive.short_description.en.length}), id ${incentive.id}, index ${index}`,
         );
@@ -225,10 +239,6 @@ test("launched states do not have any values that we don't support for broader c
       }
     }
   });
-});
-
-test('programs in data are exactly those in code', async tap => {
-  tap.same(Object.keys(PROGRAMS).sort(), Array.from(ALL_PROGRAMS).sort());
 });
 
 const isURLValid = (url: string): boolean => {

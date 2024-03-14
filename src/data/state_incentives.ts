@@ -5,12 +5,14 @@ import { AuthorityType } from './authorities';
 import {
   COLowIncomeAuthority,
   ILIncomeAuthority,
+  NVLowIncomeAuthority,
   RILowIncomeAuthority,
 } from './low_income_thresholds';
-import { ALL_PROGRAMS } from './programs';
+import { PROGRAMS } from './programs';
 import { FilingStatus } from './tax_brackets';
 import { AMOUNT_SCHEMA } from './types/amount';
 
+import { START_END_DATE_REGEX } from '../lib/dates';
 import { Amount } from './types/amount';
 import { PaymentMethod } from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
@@ -21,6 +23,7 @@ export type LowIncomeAuthority =
   | 'default'
   | COLowIncomeAuthority
   | ILIncomeAuthority
+  | NVLowIncomeAuthority
   | RILowIncomeAuthority;
 
 // CollectedIncentive and its JSON schema represent the data that lives in raw
@@ -32,6 +35,7 @@ export type CollectedIncentive = {
   data_urls: string[];
   authority_type: AuthorityType;
   authority_name: string;
+  geo_eligibility?: string;
   program_title: string;
   program_url: string;
   item: Item;
@@ -63,6 +67,7 @@ const collectedIncentivePropertySchema = {
   data_urls: { type: 'array', items: { type: 'string' } },
   authority_type: { type: 'string', enum: Object.values(AuthorityType) },
   authority_name: { type: 'string' },
+  geo_eligibility: { type: 'string', nullable: true },
   program_title: { type: 'string' },
   program_url: { type: 'string' },
   item: { type: 'string', enum: ALL_ITEMS },
@@ -126,10 +131,11 @@ export type DerivedFields = {
   agi_max_limit?: number;
   agi_min_limit?: number;
   authority: string;
+  eligible_geo_group?: string;
   program: string;
   bonus_available?: boolean;
-  start_date: number;
-  end_date: number;
+  start_date: string;
+  end_date: string;
   low_income?: LowIncomeAuthority;
 };
 
@@ -137,10 +143,17 @@ const derivedIncentivePropertySchema = {
   agi_max_limit: { type: 'integer', nullable: true },
   agi_min_limit: { type: 'integer', nullable: true },
   authority: { type: 'string' },
-  program: { type: 'string', enum: ALL_PROGRAMS },
+  eligible_geo_group: { type: 'string', nullable: true },
+  program: { type: 'string', enum: Object.keys(PROGRAMS) },
   bonus_available: { type: 'boolean', nullable: true },
-  start_date: { type: 'number' },
-  end_date: { type: 'number' },
+  start_date: {
+    type: 'string',
+    pattern: START_END_DATE_REGEX.source,
+  },
+  end_date: {
+    type: 'string',
+    pattern: START_END_DATE_REGEX.source,
+  },
   low_income: { type: 'string', nullable: true },
 } as const;
 
@@ -185,6 +198,7 @@ const fieldOrder: {
   agi_min_limit: undefined,
   authority_type: undefined,
   authority: undefined,
+  eligible_geo_group: undefined,
   payment_methods: undefined,
   item: undefined,
   program: undefined,
@@ -280,6 +294,37 @@ export const CT_INCENTIVES: StateIncentive[] = JSON.parse(
   fs.readFileSync('./data/CT/incentives.json', 'utf-8'),
 );
 
+export const DC_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
+  type: 'array',
+  items: {
+    type: 'object',
+    properties: {
+      ...incentivePropertySchema,
+    },
+    required: requiredProperties,
+  },
+} as const;
+
+export const DC_INCENTIVES: StateIncentive[] = JSON.parse(
+  fs.readFileSync('./data/DC/incentives.json', 'utf-8'),
+);
+
+export const GA_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
+  type: 'array',
+  items: {
+    type: 'object',
+    properties: {
+      ...incentivePropertySchema,
+    },
+    required: requiredProperties,
+    additionalProperties: false,
+  },
+} as const;
+
+export const GA_INCENTIVES: StateIncentive[] = JSON.parse(
+  fs.readFileSync('./data/GA/incentives.json', 'utf-8'),
+);
+
 export const IL_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
   type: 'array',
   items: {
@@ -294,6 +339,22 @@ export const IL_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
 
 export const IL_INCENTIVES: StateIncentive[] = JSON.parse(
   fs.readFileSync('./data/IL/incentives.json', 'utf-8'),
+);
+
+export const MI_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
+  type: 'array',
+  items: {
+    type: 'object',
+    properties: {
+      ...incentivePropertySchema,
+    },
+    required: requiredProperties,
+    additionalProperties: false,
+  },
+} as const;
+
+export const MI_INCENTIVES: StateIncentive[] = JSON.parse(
+  fs.readFileSync('./data/MI/incentives.json', 'utf-8'),
 );
 
 export const NV_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
@@ -376,14 +437,34 @@ export const VT_INCENTIVES: StateIncentive[] = JSON.parse(
   fs.readFileSync('./data/VT/incentives.json', 'utf-8'),
 );
 
+export const WI_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
+  type: 'array',
+  items: {
+    type: 'object',
+    properties: {
+      ...incentivePropertySchema,
+    },
+    required: requiredProperties,
+    additionalProperties: false,
+  },
+} as const;
+
+export const WI_INCENTIVES: StateIncentive[] = JSON.parse(
+  fs.readFileSync('./data/WI/incentives.json', 'utf-8'),
+);
+
 export const STATE_INCENTIVES_BY_STATE: StateIncentivesMap = {
   AZ: AZ_INCENTIVES,
   CO: CO_INCENTIVES,
   CT: CT_INCENTIVES,
+  DC: DC_INCENTIVES,
+  GA: GA_INCENTIVES,
   IL: IL_INCENTIVES,
+  MI: MI_INCENTIVES,
   NV: NV_INCENTIVES,
   NY: NY_INCENTIVES,
   RI: RI_INCENTIVES,
   VA: VA_INCENTIVES,
   VT: VT_INCENTIVES,
+  WI: WI_INCENTIVES,
 };

@@ -1,5 +1,7 @@
 import { min } from 'lodash';
 import { AuthoritiesByType, AuthorityType } from '../data/authorities';
+import { DATA_PARTNERS_BY_STATE } from '../data/data_partners';
+import { GEO_GROUPS_BY_STATE } from '../data/geo_groups';
 import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/low_income_thresholds';
 import {
   INCENTIVE_RELATIONSHIPS_BY_STATE,
@@ -45,6 +47,17 @@ export function getStateIncentiveRelationships(stateId: string) {
   return INCENTIVE_RELATIONSHIPS_BY_STATE[stateId] ?? {};
 }
 
+export function getStateDataPartners(
+  stateId: string,
+  request: CalculateParams,
+) {
+  // Only process state data partners for launched states, or beta states if beta was requested.
+  if (!isStateIncluded(stateId, request.include_beta_states ?? false)) {
+    return {};
+  }
+  return DATA_PARTNERS_BY_STATE[stateId] || {};
+}
+
 export function calculateStateIncentivesAndSavings(
   location: LocationParams,
   request: CalculateParams,
@@ -85,13 +98,13 @@ export function calculateStateIncentivesAndSavings(
     const thresholds_map = LOW_INCOME_THRESHOLDS_BY_AUTHORITY[stateId];
 
     if (typeof thresholds_map !== 'undefined') {
-      if (item.low_income) {
-        const authorities =
-          thresholds_map[item.low_income] ?? thresholds_map.default;
-        if (
-          request.household_income >
-          authorities.thresholds[request.household_size]
-        ) {
+      if (
+        item.low_income &&
+        thresholds_map[item.low_income] &&
+        request.household_income >
+          thresholds_map[item.low_income].thresholds[request.household_size]
+      ) {
+        {
           eligible = false;
         }
       }
@@ -212,8 +225,8 @@ function transformItems(
 
       // TODO: unclear whether state/utility incentives always have defined
       // end dates.
-      start_date: 2023,
-      end_date: 2024,
+      start_date: '2023',
+      end_date: '2024',
     };
     transformed.push(transformedItem);
   }
@@ -284,5 +297,30 @@ function skipBasedOnRequestParams(
       return true;
     }
   }
+
+  if (item.eligible_geo_group) {
+    // A test ensures that geo groups are registered.
+    const group =
+      GEO_GROUPS_BY_STATE[location.state_id]![item.eligible_geo_group];
+
+    // The request params must match ALL of the keys the geo group defines
+    if (
+      (group.utilities &&
+        (!request.utility || !group.utilities.includes(request.utility))) ||
+      (group.counties &&
+        (!location.county ||
+          !group.counties
+            .map(id => stateAuthorities.county[id].county)
+            .includes(location.county))) ||
+      (group.cities &&
+        (!location.city ||
+          !group.cities
+            .map(id => stateAuthorities.city[id].city)
+            .includes(location.city)))
+    ) {
+      return true;
+    }
+  }
+
   return false;
 }

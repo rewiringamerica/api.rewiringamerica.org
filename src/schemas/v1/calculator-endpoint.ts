@@ -1,5 +1,6 @@
 import { FromSchema } from 'json-schema-to-ts';
 import { API_AUTHORITY_SCHEMA, AuthorityType } from '../../data/authorities';
+import { API_DATA_PARTNER_SCHEMA } from '../../data/data_partners';
 import { FilingStatus } from '../../data/tax_brackets';
 import { API_COVERAGE_SCHEMA } from '../../data/types/coverage';
 import { ALL_ITEMS } from '../../data/types/items';
@@ -14,7 +15,20 @@ const API_CALCULATOR_REQUEST_SCHEMA = {
   title: 'APICalculatorRequest',
   type: 'object',
   properties: {
+    // TODO: remove location param once frontend is not using it
     location: API_REQUEST_LOCATION_SCHEMA,
+    zip: {
+      type: 'string',
+      description:
+        'Your zip code helps us estimate the amount of discounts and tax credits you qualify for by finding representative census tracts in your area.',
+      maxLength: 5,
+      minLength: 5,
+    },
+    address: {
+      type: 'string',
+      description:
+        "Your address can determine the precise census tract you're in that determines the correct amount of discounts and tax credits you qualify for.",
+    },
     authority_types: {
       type: 'array',
       description:
@@ -92,8 +106,12 @@ const API_CALCULATOR_REQUEST_SCHEMA = {
     },
   },
   additionalProperties: false,
+  oneOf: [
+    { required: ['location'] },
+    { required: ['zip'] },
+    { required: ['address'] },
+  ],
   required: [
-    'location',
     'owner_status',
     'household_income',
     'tax_filing',
@@ -129,6 +147,10 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
     },
     coverage: API_COVERAGE_SCHEMA,
     location: API_RESPONSE_LOCATION_SCHEMA,
+    data_partners: {
+      type: 'object',
+      additionalProperties: API_DATA_PARTNER_SCHEMA,
+    },
     incentives: {
       type: 'array',
       items: { $ref: 'APIIncentive' },

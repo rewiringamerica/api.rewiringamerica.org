@@ -12,6 +12,7 @@ export type StateLowIncomeThresholds = {
 export type LowIncomeThresholdsAuthority = {
   source_url: string;
   thresholds: LowIncomeThresholds;
+  incentives: string[];
 };
 
 export type LowIncomeThresholds = {
@@ -29,6 +30,13 @@ export enum COLowIncomeAuthority {
 
 export enum ILIncomeAuthority {
   STATE = 'il-state-of-illinois',
+}
+
+export enum NVLowIncomeAuthority {
+  CSA_RENO = 'nv-csa-reno',
+  RURAL_NEVADA_DEVELOPMENT_CO = 'nv-rural-nevada-development-corporation',
+  NV_RURAL_HOUSING = 'nv-nevada-rural-housing',
+  HELP_OF_SOUTHERN_NV = 'nv-help-of-southern-nevada',
 }
 
 export enum RILowIncomeAuthority {
@@ -51,20 +59,29 @@ export const AUTHORITY_INFO_SCHEMA: JSONSchemaType<LowIncomeThresholdsAuthority>
     properties: {
       source_url: { type: 'string' },
       thresholds: AUTHORITY_THRESHOLDS_SCHEMA,
+      incentives: {
+        type: 'array',
+        items: { type: 'string' },
+        minItems: 1,
+        uniqueItems: true,
+      },
     },
-    required: ['source_url', 'thresholds'],
+    required: ['source_url', 'thresholds', 'incentives'],
   } as const;
 
 export const STATE_THRESHOLDS_SCHEMA: JSONSchemaType<StateLowIncomeThresholds> =
   {
     type: 'object',
-    required: ['default'],
+    required: [],
     dependentSchemas: {
       CO: {
         required: Object.values(COLowIncomeAuthority),
       },
       IL: {
         required: Object.values(ILIncomeAuthority),
+      },
+      NV: {
+        required: Object.values(NVLowIncomeAuthority),
       },
       RI: {
         required: Object.values(RILowIncomeAuthority),
@@ -76,7 +93,20 @@ export const STATE_THRESHOLDS_SCHEMA: JSONSchemaType<StateLowIncomeThresholds> =
 // Keep states in alphabetic order.
 export const SCHEMA: JSONSchemaType<LowIncomeThresholdsMap> = {
   type: 'object',
-  required: ['AZ', 'CO', 'CT', 'IL', 'NV', 'NY', 'RI', 'VA', 'VT'],
+  required: [
+    'AZ',
+    'CO',
+    'CT',
+    'GA',
+    'IL',
+    'MI',
+    'NV',
+    'NY',
+    'RI',
+    'VA',
+    'VT',
+    'WI',
+  ],
   additionalProperties: STATE_THRESHOLDS_SCHEMA,
 };
 

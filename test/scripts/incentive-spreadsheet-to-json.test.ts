@@ -1,5 +1,6 @@
 import { test } from 'tap';
 import { spreadsheetToJson } from '../../scripts/incentive-spreadsheet-to-json';
+import { DataRefiner } from '../../scripts/lib/data-refiner';
 import { flatToNestedValidate } from '../../scripts/lib/format-converter';
 import {
   FIELD_MAPPINGS,
@@ -82,6 +83,7 @@ test('correct row to record transformation', tap => {
       'va-appalachian-power': {
         source_url: 'url',
         thresholds: {},
+        incentives: ['VA-1'],
       },
     },
   };
@@ -89,13 +91,13 @@ test('correct row to record transformation', tap => {
     FIELD_MAPPINGS,
     VALUE_MAPPINGS,
     true,
-    fakeIncomeThresholds,
   );
+  const refiner = new DataRefiner(fakeIncomeThresholds);
   for (const tc of testCases) {
     const standardized = standardizer.standardize(tc.input);
     const [valids, invalids] = flatToNestedValidate([standardized]);
     tap.equal(invalids.length, 0, `Invalid record: ${invalids[0]}`);
-    tap.matchOnly(standardizer.refineCollectedData('va', valids[0]), tc.want);
+    tap.matchOnly(refiner.refineCollectedData('va', valids[0]), tc.want);
   }
   tap.end();
 });
@@ -106,7 +108,7 @@ test('drop records with omit_from_api marked', tap => {
     ID: 'VA-1',
     some_other_field: 'value',
   };
-  const output = spreadsheetToJson('VA', [keepInput], false, null);
+  const output = spreadsheetToJson('VA', [keepInput], false, null, null);
   tap.equal(output.invalidCollectedIncentives.length, 1);
 
   // With omit_from_api: it's dropped entirely.
@@ -119,7 +121,7 @@ test('drop records with omit_from_api marked', tap => {
     invalidCollectedIncentives,
     invalidStateIncentives,
     validStateIncentives,
-  } = spreadsheetToJson('VA', [omitInput], false, null);
+  } = spreadsheetToJson('VA', [omitInput], false, null, null);
   tap.equal(invalidCollectedIncentives.length, 0);
   tap.equal(invalidStateIncentives.length, 0);
   tap.equal(validStateIncentives.length, 0);
