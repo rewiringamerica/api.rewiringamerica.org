@@ -66,6 +66,13 @@ export const FILES: { [ident: string]: IncentiveFile } = {
     headerRowNumber: 2,
     runSpreadsheetHealthCheck: true,
   },
+  OR: {
+    filepath: 'data/OR/incentives.json',
+    sheetUrl:
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vReCvCaEUHSgbxRse-82kV6_P1FuvKwp6AO_Wi6D9GE6faBD4Vr8TjNkj07wH5WueuMlijtchmYOe22/pub?gid=995688950&single=true&output=csv',
+    headerRowNumber: 2,
+    runSpreadsheetHealthCheck: true,
+  },
   RI: {
     filepath: 'data/RI/incentives.json',
     sheetUrl:

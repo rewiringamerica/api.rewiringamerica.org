@@ -259,3 +259,15 @@ location%5Bzip%5D=53703\
 &household_size=1\
 &authority_types=state"\
  | jq . > test/fixtures/v1-wi-53703-state-utility-lowincome.json
+
+# TODO: Remove beta states argument when OR is fully launched.
+curl \
+  "http://localhost:3000/api/v1/calculator?\
+location%5Bzip%5D=97001\
+&include_beta_states=true\
+&owner_status=homeowner\
+&household_income=50000\
+&tax_filing=joint\
+&household_size=1\
+&authority_types=state"\
+ | jq . > test/fixtures/v1-or-97001-state-lowincome.json

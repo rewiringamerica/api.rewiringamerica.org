@@ -77,6 +77,10 @@ export const GA_RELATIONSHIPS: IncentiveRelationships = JSON.parse(
   fs.readFileSync('./data/GA/incentive_relationships.json', 'utf-8'),
 );
 
+export const OR_RELATIONSHIPS: IncentiveRelationships = JSON.parse(
+  fs.readFileSync('./data/OR/incentive_relationships.json', 'utf-8'),
+);
+
 export const RI_RELATIONSHIPS: IncentiveRelationships = JSON.parse(
   fs.readFileSync('./data/RI/incentive_relationships.json', 'utf-8'),
 );
@@ -90,6 +94,7 @@ export const INCENTIVE_RELATIONSHIPS_BY_STATE: IncentiveRelationshipsMap = {
   CT: CT_RELATIONSHIPS,
   GA: GA_RELATIONSHIPS,
   NY: {},
+  OR: OR_RELATIONSHIPS,
   RI: RI_RELATIONSHIPS,
   VT: VT_RELATIONSHIPS,
 };
