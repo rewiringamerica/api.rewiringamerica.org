@@ -63,6 +63,7 @@ Eg: https://github.com/rewiringamerica/api.rewiringamerica.org/pull/209/files
 ### Incentive Relationships
 
 In order to implement an exclusion relationship between incentives, add a `incentive_relationships.json` file to the state's `data` directory and add an entry to `state_incentive_relationships.ts`. For example, if CO-XX is the income-qualified version of CO-YY, `data/CO/incentive_relationships.json` should contain:
+
 ```
 {
   "exclusions": {
@@ -70,6 +71,7 @@ In order to implement an exclusion relationship between incentives, add a `incen
   }
 }
 ```
+
 This will ensure that CO-YY is not displayed if the user qualifies for CO-XX.
 
 ## Utility Data
