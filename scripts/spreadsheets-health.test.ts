@@ -3,6 +3,8 @@ import fs from 'fs';
 import _ from 'lodash';
 import fetch from 'make-fetch-happen';
 import { test } from 'tap';
+import { GEO_GROUPS_BY_STATE } from '../src/data/geo_groups';
+import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../src/data/low_income_thresholds';
 import {
   PASS_THROUGH_FIELDS,
   StateIncentive,
@@ -36,7 +38,13 @@ test('registered spreadsheets are in sync with checked-in JSON files', async tap
         from_line: file.headerRowNumber ?? 1,
       });
 
-      const output = await spreadsheetToJson(state, rows, false, null);
+      const output = await spreadsheetToJson(
+        state,
+        rows,
+        false,
+        LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
+        GEO_GROUPS_BY_STATE,
+      );
       const invalidCollectedPath = file.filepath.replace(
         '.json',
         '_invalid_collected.json',

@@ -5,6 +5,7 @@ import fetch from 'make-fetch-happen';
 import minimist from 'minimist';
 import path from 'path';
 
+import { GEO_GROUPS_BY_STATE, GeoGroupsByState } from '../src/data/geo_groups';
 import {
   LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
   LowIncomeThresholdsMap,
@@ -68,13 +69,14 @@ export function spreadsheetToJson(
   rows: Record<string, string>[],
   strict: boolean,
   lowIncome: LowIncomeThresholdsMap | null,
+  geoGroups: GeoGroupsByState | null,
 ): SpreadsheetConversionOutput {
   const standardizer = new SpreadsheetStandardizer(
     FIELD_MAPPINGS,
     VALUE_MAPPINGS,
     strict,
   );
-  const refiner = new DataRefiner(lowIncome);
+  const refiner = new DataRefiner(lowIncome, geoGroups);
 
   const standardized = rows.map(standardizer.standardize.bind(standardizer));
   const validated = flatToNestedValidate(standardized);
@@ -118,6 +120,7 @@ async function convertToJson(
   file: IncentiveFile,
   strict: boolean,
   lowIncome: boolean,
+  geoGroups: boolean,
 ) {
   if (lowIncome && !(state in LOW_INCOME_THRESHOLDS_BY_AUTHORITY)) {
     throw new Error(
@@ -140,6 +143,7 @@ async function convertToJson(
     rows,
     strict,
     lowIncome ? LOW_INCOME_THRESHOLDS_BY_AUTHORITY : null,
+    geoGroups ? GEO_GROUPS_BY_STATE : null,
   );
 
   const invalidCollectedPath = file.filepath.replace(
@@ -166,7 +170,7 @@ async function convertToJson(
 
 (async function () {
   const args = minimist(process.argv.slice(2), {
-    boolean: ['strict', 'skip_low_income'],
+    boolean: ['strict', 'skip_low_income', 'skip_geo_groups'],
   });
 
   const bad = args._.filter(f => !(f in FILES));
@@ -177,12 +181,19 @@ async function convertToJson(
     process.exit(1);
   }
 
-  // Flip boolean so we can have low-income be the default
-  // command-line arg, but then pass around a more intuitive
+  // Flip boolean so we can have the command-line interface result in the
+  // behavior being on by default, but then pass around a more intuitive
   // boolean after that.
   const lowIncome = args.skip_low_income ? false : true;
+  const geoGroups = args.skip_geo_groups ? false : true;
 
   args._.forEach(async fileIdent => {
-    await convertToJson(fileIdent, FILES[fileIdent], args.strict, lowIncome);
+    await convertToJson(
+      fileIdent,
+      FILES[fileIdent],
+      args.strict,
+      lowIncome,
+      geoGroups,
+    );
   });
 })();
