@@ -8,6 +8,7 @@ import { MI_PROGRAMS } from './programs/mi_programs';
 import { NV_PROGRAMS } from './programs/nv_programs';
 import { NY_PROGRAMS } from './programs/ny_programs';
 import { OR_PROGRAMS } from './programs/or_programs';
+import { PA_PROGRAMS } from "./programs/pa_programs";
 import { RI_PROGRAMS } from './programs/ri_programs';
 import { VA_PROGRAMS } from './programs/va_programs';
 import { VT_PROGRAMS } from './programs/vt_programs';
@@ -77,6 +78,7 @@ const all_programs = {
   ...NY_PROGRAMS,
   ...NY_PROGRAMS,
   ...OR_PROGRAMS,
+  ...PA_PROGRAMS,
   ...RI_PROGRAMS,
   ...VA_PROGRAMS,
   ...VT_PROGRAMS,

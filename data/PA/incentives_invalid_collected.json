@@ -1,0 +1,50 @@
+[
+  {
+    "id": "PA-34",
+    "data_urls": [
+      "https://www.pplelectricsavings.com/ppl/sites/ppl/files/2023-08/2023_PPL_Res_ResReb_3862941_FLY_Q3_PRJ101498.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "PPL Electric",
+    "program_title": "Products & Rebates",
+    "program_url": "https://www.pplelectricsavings.com/ppl/homeequipment/products",
+    "item": "weatherization",
+    "short_description": {
+      "en": "$200 rebate for air sealing. Air infiltration reduction (@ CFM50) x $0.25 up to a max of $200"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "Air infiltration reduction (@ CFM50) x $0.25 up to a max of $200",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 200,
+      "unit": "Other",
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "bonus_description": "Receive up to $350 in bonus rebates when you combine any of these weatherization upgrades with one or more of the major energy-efficient equipment upgrades.",
+    "errors": [
+      {
+        "instancePath": "/amount/unit",
+        "schemaPath": "#/properties/amount/properties/unit/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "ton",
+            "kilowatt",
+            "watt",
+            "btuh10k",
+            "square_foot",
+            "kilowatt_hour"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  }
+]

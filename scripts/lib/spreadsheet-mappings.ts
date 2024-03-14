@@ -132,6 +132,7 @@ export const VALUE_MAPPINGS: { [index: string]: AliasMap } = {
     ton: ['Ton'],
     watt: ['Watt'],
     btuh10k: ['Btuh10k'],
+    cmf50: ['CMF50'],
     square_foot: ['Square Foot'],
   },
   owner_status: {
