@@ -124,7 +124,7 @@ const STATE_INCENTIVE_RELATIONSHIP_TESTS: [string, IncentiveRelationships][] = [
   ['CT', CT_RELATIONSHIPS],
   ['GA', GA_RELATIONSHIPS],
   ['VT', VT_RELATIONSHIPS],
-  ['WI', WI_RELATIONSHIPS]
+  ['WI', WI_RELATIONSHIPS],
 ];
 
 /**
