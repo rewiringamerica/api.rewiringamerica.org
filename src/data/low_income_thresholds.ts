@@ -20,6 +20,10 @@ export type LowIncomeThresholds = {
 };
 
 // Add custom state low income authorities here
+
+export enum CALowIncomeAuthority {}
+// TODO Add CA low income authorities
+
 export enum COLowIncomeAuthority {
   DENVER = 'co-city-and-county-of-denver',
   ENERGY_OUTREACH = 'co-energy-outreach-colorado',
@@ -74,6 +78,7 @@ export const STATE_THRESHOLDS_SCHEMA: JSONSchemaType<StateLowIncomeThresholds> =
     type: 'object',
     required: [],
     dependentSchemas: {
+      CA: { required: Object.values(CALowIncomeAuthority) },
       CO: {
         required: Object.values(COLowIncomeAuthority),
       },
@@ -95,6 +100,7 @@ export const SCHEMA: JSONSchemaType<LowIncomeThresholdsMap> = {
   type: 'object',
   required: [
     'AZ',
+    'CA',
     'CO',
     'CT',
     'GA',
