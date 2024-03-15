@@ -60,19 +60,7 @@ All valid records according to our schema will be written to the location you sp
 Note that even after running these, there are still files you must edit manually to get the JSON in. Follow a recent CL example.
 Eg: https://github.com/rewiringamerica/api.rewiringamerica.org/pull/209/files
 
-### Incentive Relationships
-
-In order to implement an exclusion relationship between incentives, add a `incentive_relationships.json` file to the state's `data` directory and add an entry to `state_incentive_relationships.ts`. For example, if CO-XX is the income-qualified version of CO-YY, `data/CO/incentive_relationships.json` should contain:
-
-```
-{
-  "exclusions": {
-    "CO-XX": ["CO-YY"]
-  }
-}
-```
-
-This will ensure that CO-YY is not displayed if the user qualifies for CO-XX.
+To encode relationships between incentives, see the [`relationships-README`](https://github.com/rewiringamerica/api.rewiringamerica.org/blob/main/docs/relationships-README.md).
 
 ## Utility Data
 
