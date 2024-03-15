@@ -222,11 +222,6 @@ function transformItems(
       // Fill in fields expected for IRA incentive.
       // TODO: don't require these on APIIncentive
       ami_qualification: null,
-
-      // TODO: unclear whether state/utility incentives always have defined
-      // end dates.
-      start_date: '2023',
-      end_date: '2024',
     };
     transformed.push(transformedItem);
   }

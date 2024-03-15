@@ -17,8 +17,6 @@ export const API_INCENTIVE_SCHEMA = {
     'item',
     'amount',
     'owner_status',
-    'start_date',
-    'end_date',
   ],
   properties: {
     payment_methods: {
