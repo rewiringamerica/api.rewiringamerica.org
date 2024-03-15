@@ -27,6 +27,7 @@ import {
   IncentiveRelationships,
   OR_RELATIONSHIPS,
   VT_RELATIONSHIPS,
+  WI_RELATIONSHIPS,
 } from '../../src/data/state_incentive_relationships';
 import {
   AZ_INCENTIVES,
@@ -128,6 +129,7 @@ const STATE_INCENTIVE_RELATIONSHIP_TESTS: [string, IncentiveRelationships][] = [
   ['GA', GA_RELATIONSHIPS],
   ['OR', OR_RELATIONSHIPS],
   ['VT', VT_RELATIONSHIPS],
+  ['WI', WI_RELATIONSHIPS],
 ];
 
 /**
