@@ -1,4 +1,5 @@
 import { AZ_PROGRAMS } from './programs/az_programs';
+import { CA_PROGRAMS } from "./programs/ca_programs";
 import { CO_PROGRAMS } from './programs/co_programs';
 import { CT_PROGRAMS } from './programs/ct_programs';
 import { DC_PROGRAMS } from './programs/dc_programs';
@@ -68,6 +69,7 @@ const ira_programs = {
 const all_programs = {
   ...ira_programs,
   ...AZ_PROGRAMS,
+  ...CA_PROGRAMS,
   ...CO_PROGRAMS,
   ...CT_PROGRAMS,
   ...DC_PROGRAMS,
