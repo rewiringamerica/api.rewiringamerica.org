@@ -157,7 +157,7 @@ const derivedIncentivePropertySchema = {
   },
   low_income: { type: 'string', nullable: true },
   url: {
-    $ref: 'LocalizableString'
+    $ref: 'LocalizableString',
   },
 } as const;
 

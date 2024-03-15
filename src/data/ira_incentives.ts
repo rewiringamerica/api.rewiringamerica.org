@@ -94,7 +94,7 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
         $ref: 'LocalizableString',
       },
       url: {
-        $ref: 'LocalizableString'
+        $ref: 'LocalizableString',
       },
     },
     required: [

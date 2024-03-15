@@ -26,7 +26,7 @@ const ira_programs = {
     },
     url: {
       en: 'https://homes.rewiringamerica.org/federal-incentives/30C-EV-charger-tax-credit',
-      es: 'https://www.rewiringamerica.org/app/ira-calculator/information/ve-cargador'
+      es: 'https://www.rewiringamerica.org/app/ira-calculator/information/ve-cargador',
     },
   },
   cleanVehicleCredit: {
@@ -36,7 +36,7 @@ const ira_programs = {
     },
     url: {
       en: 'https://homes.rewiringamerica.org/federal-incentives/30d-new-ev-tax-incentive',
-      es: 'https://www.rewiringamerica.org/app/ira-calculator/information/vehiculo-electrico'
+      es: 'https://www.rewiringamerica.org/app/ira-calculator/information/vehiculo-electrico',
     },
   },
   creditForPreviouslyOwnedCleanVehicles: {
@@ -46,7 +46,7 @@ const ira_programs = {
     },
     url: {
       en: 'https://homes.rewiringamerica.org/federal-incentives/25e-used-ev-tax-incentive',
-      es: 'https://www.rewiringamerica.org/app/ira-calculator/information/vehiculo-electrico'
+      es: 'https://www.rewiringamerica.org/app/ira-calculator/information/vehiculo-electrico',
     },
   },
   energyEfficientHomeImprovementCredit: {
@@ -68,7 +68,7 @@ const ira_programs = {
     },
     url: {
       en: 'https://homes.rewiringamerica.org/federal-incentives/home-efficiency-rebates',
-      es: 'https://www.rewiringamerica.org/app/ira-calculator/information/reduccion-de-energia-en-toda-la-casa'
+      es: 'https://www.rewiringamerica.org/app/ira-calculator/information/reduccion-de-energia-en-toda-la-casa',
     },
   },
   residentialCleanEnergyCredit: {

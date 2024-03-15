@@ -32,7 +32,9 @@ function transformIncentives(
     item: {
       type: incentive.item,
       name: t('items', incentive.item, language),
-      url: incentive.url ? incentive.url[language] : t('urls', incentive.item, language),
+      url: incentive.url
+        ? incentive.url[language]
+        : t('urls', incentive.item, language),
     },
     program: tr(PROGRAMS[incentive.program as keyof Programs].name, language),
     program_url: PROGRAMS[incentive.program as keyof Programs].url
