@@ -1,5 +1,3 @@
-import { DateTimeFormatter, LocalDate } from '@js-joda/core';
-import { Locale } from '@js-joda/locale_en-us';
 import _ from 'lodash';
 import { GeoGroupsByState } from '../../src/data/geo_groups';
 import { LowIncomeThresholdsMap } from '../../src/data/low_income_thresholds';
@@ -10,7 +8,6 @@ import {
   PASS_THROUGH_FIELDS,
   StateIncentive,
 } from '../../src/data/state_incentives';
-import { START_END_DATE_REGEX } from '../../src/lib/dates';
 import {
   createAuthorityName,
   createProgramName,
@@ -61,12 +58,6 @@ export class DataRefiner {
     };
     if (record.short_description.es) {
       output.short_description.es = record.short_description.es;
-    }
-    if (record.program_start_raw && record.program_start_raw !== '') {
-      output.start_date = normalizeDate(record.program_start_raw);
-    }
-    if (record.program_end_raw && record.program_end_raw !== '') {
-      output.end_date = normalizeDate(record.program_end_raw);
     }
     if (record.bonus_description && record.bonus_description !== '') {
       output.bonus_available = true;
@@ -153,48 +144,3 @@ function isPlausibleLowIncomeRow(record: CollectedIncentive) {
   }
   return false;
 }
-
-/**
- * This is for start and end dates of incentives. If the input is already in
- * the required date format, it's returned as-is.
- *
- * Otherwise, we make an effort to parse a date from a few common formats.
- * Ideally, though, spreadsheets should use our incentive date format directly
- * (a superset of ISO 8601 dates).
- */
-export function normalizeDate(input: string): string {
-  if (START_END_DATE_REGEX.test(input)) {
-    return input;
-  }
-
-  for (const formatter of ALLOWED_DATE_FORMATTERS) {
-    try {
-      const parsed = LocalDate.parse(input, formatter);
-      return parsed.format(OUTPUT_DATE_FORMATTER);
-    } catch (_) {
-      // keep going
-    }
-  }
-
-  // If the date was unparseable, return it as-is; it will fail JSON validation
-  // later on.
-  return input;
-}
-
-/** ISO 8601 date */
-const OUTPUT_DATE_FORMATTER = DateTimeFormatter.ofPattern('yyyy-MM-dd');
-
-/**
- * Parse these formats, which all exist in spreadsheets:
- *
- * - 9/30/2024
- * - Sep 30, 2024
- * - Sep 30 2024
- * - September 30, 2024
- * - September 30 2024
- */
-const ALLOWED_DATE_FORMATTERS = [
-  DateTimeFormatter.ofPattern('M/d/yyyy'),
-  DateTimeFormatter.ofPattern('MMM d[,] yyyy').withLocale(Locale.ENGLISH),
-  DateTimeFormatter.ofPattern('MMMM d[,] yyyy').withLocale(Locale.ENGLISH),
-];
