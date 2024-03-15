@@ -24,29 +24,17 @@ const ira_programs = {
       en: 'Federal Alternative Fuel Vehicle Refueling Property Credit (30C)',
       es: 'Crédito a la propiedad para el repostaje de vehículos de combustible alternativo (30C)',
     },
-    url: {
-      en: 'https://homes.rewiringamerica.org/federal-incentives/30C-EV-charger-tax-credit',
-      es: 'https://www.rewiringamerica.org/app/ira-calculator/information/ve-cargador',
-    },
   },
   cleanVehicleCredit: {
     name: {
       en: 'Federal Clean Vehicle Credit (30D)',
       es: 'Crédito para vehículos limpios (30D)',
     },
-    url: {
-      en: 'https://homes.rewiringamerica.org/federal-incentives/30d-new-ev-tax-incentive',
-      es: 'https://www.rewiringamerica.org/app/ira-calculator/information/vehiculo-electrico',
-    },
   },
   creditForPreviouslyOwnedCleanVehicles: {
     name: {
       en: 'Federal Credit for Previously-Owned Clean Vehicles (25E)',
       es: 'Crédito para vehículos limpios de propiedad anterior (25E)',
-    },
-    url: {
-      en: 'https://homes.rewiringamerica.org/federal-incentives/25e-used-ev-tax-incentive',
-      es: 'https://www.rewiringamerica.org/app/ira-calculator/information/vehiculo-electrico',
     },
   },
   energyEfficientHomeImprovementCredit: {
@@ -65,10 +53,6 @@ const ira_programs = {
     name: {
       en: 'Federal Home Efficiency Rebates (HER)',
       es: 'Reembolsos de Eficiencia en el Consumo de Energía en el Hogar (HER)',
-    },
-    url: {
-      en: 'https://homes.rewiringamerica.org/federal-incentives/home-efficiency-rebates',
-      es: 'https://www.rewiringamerica.org/app/ira-calculator/information/reduccion-de-energia-en-toda-la-casa',
     },
   },
   residentialCleanEnergyCredit: {
