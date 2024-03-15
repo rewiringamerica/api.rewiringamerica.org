@@ -12,6 +12,14 @@ test('Only HTML body and readable content is returned', tap => {
   tap.end();
 });
 
+test('If no body is present, but readable html exists, the html is returned', tap => {
+  const unclean_html: string =
+    "<html> <head> <meta content='Incorrect to be shown'> <p> Readable Text </p> <link as='style' href='/doc/assets/stylesheets/fonts-b49e8aae.css' rel='stylesheet'> <meta content='ie=edge' http-equiv='X-UA-Compatible'> </head></html>";
+  tap.equal(cleanWebsiteData(unclean_html), 'Readable Text');
+  tap.end();
+});
+
+// All HTML included within this is not rendered on the webpage as visible text. It has stylesheets and "meta" content, i.e. information about the HTML document.
 test('If no body is present, and no readable html, an empty string is returned', tap => {
   const unclean_html: string =
     "<html> <head> <meta content='Incorrect to be shown'> <link as='style' href='/doc/assets/stylesheets/fonts-b49e8aae.css' rel='stylesheet'> <meta content='ie=edge' http-equiv='X-UA-Compatible'> </head></html>";
