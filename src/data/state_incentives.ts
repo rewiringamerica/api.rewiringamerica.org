@@ -42,8 +42,8 @@ export type CollectedIncentive = {
   item_if_selected_other?: string;
   short_description: LocalizableString;
   program_status: string;
-  program_start_raw?: string;
-  program_end_raw?: string;
+  start_date?: string;
+  end_date?: string;
   payment_methods: PaymentMethod[];
   rebate_value: string;
   amount: Amount;
@@ -74,8 +74,16 @@ const collectedIncentivePropertySchema = {
   item_if_selected_other: { type: 'string', nullable: true },
   short_description: { $ref: 'LocalizableString' },
   program_status: { type: 'string' },
-  program_start_raw: { type: 'string', nullable: true },
-  program_end_raw: { type: 'string', nullable: true },
+  start_date: {
+    type: 'string',
+    pattern: START_END_DATE_REGEX.source,
+    nullable: true,
+  },
+  end_date: {
+    type: 'string',
+    pattern: START_END_DATE_REGEX.source,
+    nullable: true,
+  },
   payment_methods: {
     type: 'array',
     items: { type: 'string', enum: Object.values(PaymentMethod) },
@@ -123,10 +131,9 @@ const requiredCollectedFields = [
 
 // DerivedFields and its schema are associated with data not directly collected
 // in the main spreadsheets. They may have a close relationship with collected
-// fields (for example, program_start_raw and program_start). Generally, if
-// what's in the spreadsheet requires more than just fitting to an enum or
-// converting from string to number with minor cleanup, it should have a
-// separate collected and derived version.
+// fields. Generally, if what's in the spreadsheet requires more than just
+// fitting to an enum or converting from string to number with minor cleanup,
+// it should have a separate collected and derived version.
 export type DerivedFields = {
   agi_max_limit?: number;
   agi_min_limit?: number;
@@ -134,9 +141,8 @@ export type DerivedFields = {
   eligible_geo_group?: string;
   program: string;
   bonus_available?: boolean;
-  start_date: string;
-  end_date: string;
   low_income?: LowIncomeAuthority;
+  more_info_url?: LocalizableString;
 };
 
 const derivedIncentivePropertySchema = {
@@ -146,15 +152,10 @@ const derivedIncentivePropertySchema = {
   eligible_geo_group: { type: 'string', nullable: true },
   program: { type: 'string', enum: Object.keys(PROGRAMS) },
   bonus_available: { type: 'boolean', nullable: true },
-  start_date: {
-    type: 'string',
-    pattern: START_END_DATE_REGEX.source,
-  },
-  end_date: {
-    type: 'string',
-    pattern: START_END_DATE_REGEX.source,
-  },
   low_income: { type: 'string', nullable: true },
+  more_info_url: {
+    $ref: 'LocalizableString',
+  },
 } as const;
 
 // Collected fields that pass-through directly to our StateIncentives schema
@@ -164,6 +165,8 @@ export const PASS_THROUGH_FIELDS = [
   'authority_type',
   'payment_methods',
   'item',
+  'start_date',
+  'end_date',
   'amount',
   'owner_status',
   'short_description',
@@ -210,6 +213,7 @@ const fieldOrder: {
   bonus_available: undefined,
   low_income: undefined,
   filing_status: undefined,
+  more_info_url: undefined,
 } as const;
 export const FIELD_ORDER = Object.keys(fieldOrder);
 

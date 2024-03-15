@@ -42,6 +42,8 @@ function translateIncentives(incentives: IRAIncentive[]): WebsiteIncentive[] {
       'https://www.rewiringamerica.org',
       '',
     ),
+    // TODO: remove when PEP is migrated to v1 API
+    more_info_url_internal: tr(incentive.more_info_url, 'en'),
     short_description: tr(incentive.short_description, 'en'),
 
     type:

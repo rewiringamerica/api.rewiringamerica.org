@@ -60,6 +60,8 @@ All valid records according to our schema will be written to the location you sp
 Note that even after running these, there are still files you must edit manually to get the JSON in. Follow a recent CL example.
 Eg: https://github.com/rewiringamerica/api.rewiringamerica.org/pull/209/files
 
+To encode relationships between incentives, see the [`relationships-README`](https://github.com/rewiringamerica/api.rewiringamerica.org/blob/main/docs/relationships-README.md).
+
 ## Utility Data
 
 `generate-utility-data.ts` reads a [dataset](https://downloads.energystar.gov/bi/portfolio-manager/Public_Utility_Map_en_US.xlsx) published by ENERGY STAR to create a mapping from ZIP codes to utilities. It writes to two CSV files in `scripts/data`, which are then imported into the SQLite database by `build.sh`. This data is used in the `/api/v1/utilities` endpoint.

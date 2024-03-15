@@ -136,6 +136,12 @@ export const WEBSITE_INCENTIVE_SCHEMA = {
       description:
         'A 150 character (or shorter) display description for the incentive.',
     },
+    // TODO: remove when PEP is migrated to v1 API
+    more_info_url_internal: {
+      type: 'string',
+      description:
+        'Temporary more info URL to support internal RA consumer site until migration to V1',
+    },
   },
   additionalProperties: false,
 } as const;
