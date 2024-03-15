@@ -137,6 +137,7 @@ export type DerivedFields = {
   start_date: string;
   end_date: string;
   low_income?: LowIncomeAuthority;
+  more_info_url?: LocalizableString;
 };
 
 const derivedIncentivePropertySchema = {
@@ -155,6 +156,9 @@ const derivedIncentivePropertySchema = {
     pattern: START_END_DATE_REGEX.source,
   },
   low_income: { type: 'string', nullable: true },
+  more_info_url: {
+    $ref: 'LocalizableString',
+  },
 } as const;
 
 // Collected fields that pass-through directly to our StateIncentives schema
@@ -210,6 +214,7 @@ const fieldOrder: {
   bonus_available: undefined,
   low_income: undefined,
   filing_status: undefined,
+  more_info_url: undefined,
 } as const;
 export const FIELD_ORDER = Object.keys(fieldOrder);
 
