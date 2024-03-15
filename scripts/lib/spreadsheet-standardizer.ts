@@ -1,3 +1,6 @@
+import { DateTimeFormatter, LocalDate } from '@js-joda/core';
+import { Locale } from '@js-joda/locale_en-us';
+import { START_END_DATE_REGEX } from '../../src/lib/dates';
 import {
   AliasMap,
   FIELD_MAPPINGS,
@@ -12,6 +15,7 @@ const DOLLAR_FIELDS = [
   'amount.maximum',
   'amount.representative',
 ];
+const DATE_FIELDS = ['start_date', 'end_date'];
 
 // Standardize column names or values in an incentive spreadsheet.
 export class SpreadsheetStandardizer {
@@ -58,6 +62,9 @@ export class SpreadsheetStandardizer {
   handleSpecialCases(val: string, colName: string): string {
     if (DOLLAR_FIELDS.includes(colName)) {
       val = cleanDollars(val);
+    }
+    if (DATE_FIELDS.includes(colName)) {
+      val = normalizeDate(val);
     }
     // We've allowed Both as a owner_status when it's really multiple
     // statuses, so hard to cover with our existing renaming schemes.
@@ -137,3 +144,48 @@ function reverseValueMap(map: { [index: string]: AliasMap }): {
 function cleanDollars(input: string): string {
   return input.replaceAll('$', '').replaceAll(',', '');
 }
+
+/**
+ * This is for start and end dates of incentives. If the input is already in
+ * the required date format, it's returned as-is.
+ *
+ * Otherwise, we make an effort to parse a date from a few common formats.
+ * Ideally, though, spreadsheets should use our incentive date format directly
+ * (a superset of ISO 8601 dates).
+ */
+export function normalizeDate(input: string): string {
+  if (START_END_DATE_REGEX.test(input)) {
+    return input;
+  }
+
+  for (const formatter of ALLOWED_DATE_FORMATTERS) {
+    try {
+      const parsed = LocalDate.parse(input, formatter);
+      return parsed.format(OUTPUT_DATE_FORMATTER);
+    } catch (_) {
+      // keep going
+    }
+  }
+
+  // If the date was unparseable, return it as-is; it will fail JSON validation
+  // later on.
+  return input;
+}
+
+/** ISO 8601 date */
+const OUTPUT_DATE_FORMATTER = DateTimeFormatter.ofPattern('yyyy-MM-dd');
+
+/**
+ * Parse these formats, which all exist in spreadsheets:
+ *
+ * - 9/30/2024
+ * - Sep 30, 2024
+ * - Sep 30 2024
+ * - September 30, 2024
+ * - September 30 2024
+ */
+const ALLOWED_DATE_FORMATTERS = [
+  DateTimeFormatter.ofPattern('M/d/yyyy'),
+  DateTimeFormatter.ofPattern('MMM d[,] yyyy').withLocale(Locale.ENGLISH),
+  DateTimeFormatter.ofPattern('MMMM d[,] yyyy').withLocale(Locale.ENGLISH),
+];
