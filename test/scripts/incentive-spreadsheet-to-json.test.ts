@@ -70,8 +70,8 @@ test('correct row to record transformation', tap => {
           en: 'Receive a $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',
           es: 'Unas palabras en español.',
         },
-        start_date: 2022,
-        end_date: 2026,
+        start_date: '2022-01-01',
+        end_date: '2026-12-31',
         bonus_available: true,
         low_income: 'va-appalachian-power',
       },
@@ -97,7 +97,7 @@ test('correct row to record transformation', tap => {
     const standardized = standardizer.standardize(tc.input);
     const [valids, invalids] = flatToNestedValidate([standardized]);
     tap.equal(invalids.length, 0, `Invalid record: ${invalids[0]}`);
-    tap.matchOnly(refiner.refineCollectedData('va', valids[0]), tc.want);
+    tap.matchOnlyStrict(refiner.refineCollectedData('va', valids[0]), tc.want);
   }
   tap.end();
 });
