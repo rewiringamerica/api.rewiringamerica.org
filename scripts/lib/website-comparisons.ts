@@ -23,13 +23,12 @@ export function isPdf(link: string, response: string): boolean {
     if ($('[type="application/pdf"]').length > 0) {
       return true;
     }
-    // Can add other tells of pdf-ness here.
   }
   // Otherwise, assume this is a normal website.
   return false;
 }
 
-// Given a website link and its html, return a hash of the cleaned website.
+// Given a website link and its html, return a hash of the cleaned website. Do not return a hash if the site is for a PDF.
 export function checkWebsiteAndReturnHash(
   link: string,
   response: string,
