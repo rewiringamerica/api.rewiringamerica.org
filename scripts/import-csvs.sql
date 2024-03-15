@@ -4,8 +4,6 @@ DROP TABLE IF EXISTS zips;
 
 DROP TABLE IF EXISTS tracts;
 
-DROP TABLE IF EXISTS utilities;
-
 DROP TABLE IF EXISTS zip_to_tract;
 
 DROP TABLE IF EXISTS zip_to_cbsasub;
@@ -70,11 +68,6 @@ CREATE TABLE tracts(
     is_urban INTEGER
 );
 
-CREATE TABLE utilities(
-    utility_id TEXT PRIMARY KEY,
-    name TEXT
-) STRICT;
-
 CREATE TABLE zip_to_tract(
     zip TEXT,
     tract TEXT,
@@ -108,7 +101,6 @@ CREATE INDEX idx_amicbsasub ON ami(cbsasub);
 .import --csv --skip 1 ./scripts/data/ami.csv ami
 .import --csv --skip 1 ./scripts/data/zips.csv zips
 .import --csv --skip 1 ./scripts/data/tracts.csv tracts
-.import --csv --skip 1 ./scripts/data/utilities.csv utilities
 .import --csv --skip 1 ./scripts/data/zip-to-tract.csv zip_to_tract
 .import --csv --skip 1 ./scripts/data/zip-to-cbsasub.csv zip_to_cbsasub
 .import --csv --skip 1 ./scripts/data/zip-to-utility.csv zip_to_utility
