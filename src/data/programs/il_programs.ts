@@ -15,12 +15,12 @@ export const IL_PROGRAMS = {
       en: 'https://www.cornbeltenergy.com/programs-services/rebate-program',
     },
   },
-  'il_jo-CarrollEnergyCooperative_2023EnergyEfficiencyIncentives': {
+  il_stateOfIllinois_homeWeatherization: {
     name: {
-      en: '2023 Energy Efficiency Incentives',
+      en: 'Home Weatherization',
     },
     url: {
-      en: 'https://www.jocarroll.com/energy-efficiency-incentives',
+      en: 'https://dceo.illinois.gov/communityservices/homeweatherization/howtoapply.html',
     },
   },
   'il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives': {
@@ -37,14 +37,6 @@ export const IL_PROGRAMS = {
     },
     url: {
       en: 'https://www.midamericanenergy.com/il-residential-rebates',
-    },
-  },
-  il_stateOfIllinois_homeWeatherization: {
-    name: {
-      en: 'Home Weatherization',
-    },
-    url: {
-      en: 'https://dceo.illinois.gov/communityservices/homeweatherization/howtoapply.html',
     },
   },
 } as const;
