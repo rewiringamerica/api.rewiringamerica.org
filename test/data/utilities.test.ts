@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import path from 'path';
 import { open } from 'sqlite';
 import sqlite3 from 'sqlite3';
@@ -11,18 +10,18 @@ test('all authorities.json utilities are in DB', async t => {
     driver: sqlite3.Database,
   });
 
-  const utilityIdLists = Object.values(AUTHORITIES_BY_STATE)
+  const allUtilityIds = Object.values(AUTHORITIES_BY_STATE)
     .map(state => state.utility)
-    .map(Object.keys);
-  const utilityIds = _.flatten(utilityIdLists);
+    .map(Object.keys)
+    .flat();
 
-  for (const utilityId of utilityIds) {
-    t.ok(
+  for (const id of allUtilityIds) {
+    const dbCount = (
       await database.get(
-        'SELECT 1 FROM utilities WHERE utility_id = ?',
-        utilityId,
-      ),
-      `${utilityId} missing from dataset`,
-    );
+        'SELECT count(1) AS ct FROM zip_to_utility WHERE utility_id = ?',
+        id,
+      )
+    )['ct'];
+    t.ok(dbCount > 0, `utility ${id} does not appear in zip_to_utility`);
   }
 });

@@ -668,6 +668,9 @@ const UTILITIES = [
     {
       location: { state: 'CT' },
       utilities: {
+        'ct-bozrah-light-and-power-company': {
+          name: 'Bozrah Light & Power Company',
+        },
         'ct-norwich-public-utilities': {
           name: 'Norwich Public Utilities',
         },
