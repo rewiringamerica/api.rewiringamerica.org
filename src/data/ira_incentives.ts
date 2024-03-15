@@ -34,7 +34,7 @@ export interface IRAIncentive {
     | PaymentMethod.PerformanceRebate;
   payment_methods: PaymentMethod[];
   short_description: LocalizableString;
-  more_info_url?: LocalizableString;
+  more_info_url: LocalizableString;
 }
 
 // Work around https://github.com/ajv-validator/ajv/issues/1664
