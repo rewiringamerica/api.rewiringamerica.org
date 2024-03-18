@@ -1,0 +1,593 @@
+{
+  "is_under_80_ami": false,
+  "is_under_150_ami": true,
+  "is_over_150_ami": false,
+  "authorities": {
+    "or-energy-trust-of-oregon": {
+      "name": "Energy Trust of Oregon"
+    }
+  },
+  "coverage": {
+    "state": "OR",
+    "utility": null
+  },
+  "location": {
+    "state": "OR",
+    "city": "Antelope",
+    "county": "Wasco"
+  },
+  "data_partners": {},
+  "incentives": [
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$500 discount on a ductless heat pump with additional heating source. The heat pump must replace zonal electric as the primary heat source."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "other",
+        "name": "Other"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 250
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$250 discount on qualifying heat pump controls. Must lock electric auxiliary heat out @ 35F or lower and have an outdoor temp sensor / be web-enabled."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "smart_thermostat",
+        "name": "Smart Thermostat"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 100
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$100 off qualifying Google Nest and ecobee Smart Thermostats."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 1.5,
+        "unit": "square_foot"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$1.50 per sq ft for higher efficiency windows. Windows must replace existing windows, glass doors or skylights. U-value must be 0.22 or less."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Savings Within Reach",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 1.5,
+        "unit": "square_foot"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$1.50 per sq ft of attic insulation for manufactured homes. Income-qualified customers. Existing insulation must be R-18 or less."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Savings Within Reach",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 1.5,
+        "unit": "square_foot"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$1.50 per sq ft of attic insulation. Income-qualified customers. Existing insulation must be R-18 or less. Must insulate to R-38 or greater."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 1.25,
+        "unit": "square_foot"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "$1.25 per sq ft of attic insulation for manufactured homes. Existing insulation must be R-18 or less. Must insulate to R-30 or greater."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 1.25,
+        "unit": "square_foot"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "$1.25 per sq ft of attic insulation for manufactured homes. Existing insulation must be R-18 or less. Must insulate to R-30 or greater."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 1,
+        "unit": "square_foot"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$1 per sq ft for high efficiency windows. Windows must replace existing windows, glass doors or skylights. U-value must be between 0.27 – 0.23."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Savings Within Reach",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 0.75,
+        "unit": "square_foot"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$0.75 per sq ft for floor insulation of manufactured homes. Income-qualified customers. Must insulate to at least R-22."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Savings Within Reach",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 0.75,
+        "unit": "square_foot"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$0.75 per sq ft for floor insulation for income-qualified customers. Must insulate to R-30 or greater or fill the accessible floor cavity."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 0.75,
+        "unit": "square_foot"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$0.75 per sq ft of wall insulation for income-qualified customers. Existing wall insulation must be R-4 or less. Must insulate to R-11 or greater."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 0.5,
+        "unit": "square_foot"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "$0.50 per sq ft for floor insulation of manufactured homes. Must insulate to at least R-22 or fill the accessible floor cavity."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 0.5,
+        "unit": "square_foot"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "$0.50 per sq ft for floor insulation. Existing insulation must be R-11 or less. Must insulate to R-30 or greater or fill the accessible floor cavity."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 0.5,
+        "unit": "square_foot"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "$0.50 per sq ft of wall insulation. Existing wall insulation must be R-4 or less. Must insulate to R-11 or greater or fill the accessible cavity."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 3000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$3,000 rebate for an extended capacity central ducted heat pump. Must replace an electric forced-air furnace as the primary heat source."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Savings Within Reach",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 3000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$3,000 rebate for a heat pump for income-qualified customers. Must replace an electric forced-air furnace as the primary heating source."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$2,000 rebate for an extended capacity heat pump. Must be a central ducted system from Energy Trust's list and be the primary heat source."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1800
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$1,800 rebate for a ductless heat pump for income-qualified customers. Must replace electric resistance as the primary heat source."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$1,000 rebate for an extended capacity central ducted heat pump. Must be listed on Energy Trust’s list and be the primary heat source."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023",
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "$1,000 rebate for a heat pump. Must replace an electric forced-air furnace as the primary heat source. If back up heat present, must be electric."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023",
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "$1,000 rebate for a ductless heat pump. Must replace electric resistance as the primary heat source and primary unit must be in the main living space."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$500 rebate for a ductless heat pump replacing zonal electric resistance as the primary heat source. Primary unit must be in the main living space."
+    }
+  ]
+}

@@ -62,6 +62,7 @@ export const BETA_STATES: string[] = [
   'MI',
   'NV',
   'NY',
+  'OR',
   'VA',
   'VT',
   'WI',
