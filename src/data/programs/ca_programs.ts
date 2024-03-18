@@ -15,6 +15,22 @@ export const CA_PROGRAMS = {
       en: 'https://www.burbankwaterandpower.com/conservation/residential-programs-rebates/residential-rebates',
     },
   },
+  'ca_burbankWater&Power_residentialBuildingElectrificationRebateProgram': {
+    name: {
+      en: 'Residential Building Electrification Rebate Program',
+    },
+    url: {
+      en: 'https://burbankwaterandpower.com/images/administrative/downloads/BWP%20Electrification%20Rebate%20Program%20Form%20v2-13-24.pdf',
+    },
+  },
+  'ca_alamedaMunicipalPower_aMPE-BikeRebate': {
+    name: {
+      en: 'AMP E-Bike Rebate',
+    },
+    url: {
+      en: 'https://www.alamedamp.com/407/Rebates-and-Incentives',
+    },
+  },
   ca_alamedaMunicipalPower_aMPOffers: {
     name: {
       en: 'AMP Offers',
@@ -31,6 +47,14 @@ export const CA_PROGRAMS = {
       en: 'https://anaheim.net/936/Energy-Rebates-Programs',
     },
   },
+  ca_anaheimPublicUtilities_energyRebatesAndPrograms: {
+    name: {
+      en: 'Energy Rebates and Programs',
+    },
+    url: {
+      en: 'https://anaheim.net/5242/Building-Projects',
+    },
+  },
   ca_cityOfPaloAltoUtilities_electrification: {
     name: {
       en: 'Electrification',
@@ -39,14 +63,15 @@ export const CA_PROGRAMS = {
       en: 'https://www.cityofpaloalto.org/Departments/Utilities/Sustainability/Ways-to-Save',
     },
   },
-  ca_cityOfPaloAltoUtilities_tRANSFORMERUPGRADEREBATEPROGRAM: {
-    name: {
-      en: 'TRANSFORMER UPGRADE REBATE PROGRAM ',
+  ca_cityOfPaloAltoUtilities_utilityServiceCapacityFeeRebateProgramForResidentialEVChargerInstallations:
+    {
+      name: {
+        en: 'Utility Service Capacity Fee Rebate Program for Residential EV Charger Installations',
+      },
+      url: {
+        en: 'https://www.cityofpaloalto.org/files/assets/public/v/1/utilities/environmental-rebates-and-programs/electric-vehicle/capacity_fee_eligibility-terms-conditions_v02_edit04.06.2020.pdf',
+      },
     },
-    url: {
-      en: 'https://www.cityofpaloalto.org/Departments/Utilities/Sustainability/Ways-to-Save',
-    },
-  },
   ca_cityOfLompocUtilities_rebateAndConservationProgram: {
     name: {
       en: 'Rebate and Conservation Program',
