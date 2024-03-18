@@ -108,7 +108,12 @@ export function updateAuthorities(
 ): StateToAuthorityTypeMap {
   const stateUpper = state.toUpperCase();
   json[stateUpper] = {};
-  for (const [authorityShort, authority] of Object.entries(authorityMap)) {
+
+  // We don't write utilities into authorities.json -- that's done by
+  // generate-utility-data.ts.
+  for (const [authorityShort, authority] of Object.entries(authorityMap).filter(
+    ([, auth]) => auth.authority_type !== 'utility',
+  )) {
     if (
       json[stateUpper][authority.authority_type.toLowerCase()] === undefined
     ) {

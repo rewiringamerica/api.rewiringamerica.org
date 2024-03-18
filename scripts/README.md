@@ -24,7 +24,7 @@ This will print translations to the console.
 
 This workflow takes a Google spreadsheet where initial spreadsheet data has been collected and converts it to the JSON format we use for our incentives.
 
-There are two scripts involved. Before you use either, register the state in [`incentive-spreadsheet-registry.ts`](incentive-spreadsheet-registry.ts).
+There are three scripts involved. Before you use either, register the state in [`incentive-spreadsheet-registry.ts`](incentive-spreadsheet-registry.ts).
 
 Filling out an entry for `incentive-spreadsheet-registry.ts` consists of creating a new key with the state abbreviation, and then:
 
@@ -45,6 +45,8 @@ Usage:
 `node build/scripts/generate-misc-state-data.js <state_id>`
 
 After running, you may need to edit the program files to put states in alphabetical order. The authorities file is already alphabetically sorted. Note that running this script twice will paste the same values twice.
+
+Next you'll need to run [`generate-utility-data.ts`](generate-utility-data.ts) to populate the list of utilities for the state in the authorities file. See [below](#utility-data) for details on that.
 
 It's recommended to also define low-income thresholds in `data/low_income_thresholds.json` for your state to save time in the next step.
 
