@@ -340,6 +340,25 @@ test('NV low income response with state and utility filtering is valid and corre
   );
 });
 
+// OR low income test
+test('OR low income response with state and utility filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '97001' },
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 50000,
+      tax_filing: 'joint',
+      authority_types: ['state'],
+      authority: 'or-energy-trust-of-oregon',
+      // TODO: Remove when OR is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-or-97001-state-lowincome.json',
+  );
+});
+
 // NY low income test.
 test('NY response with state and utility is valid and correct', async t => {
   await validateResponse(
