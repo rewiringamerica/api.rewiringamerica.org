@@ -136,12 +136,12 @@ test('replace existing state', tap => {
           name: 'CT Department of Energy & Environmental Protection',
         },
       },
-      utility: {
-        'ct-eversource': {
-          name: 'Eversource',
+      city: {
+        'ct-city': {
+          name: 'City',
         },
-        'ct-other-source': {
-          name: 'Othersource',
+        'ct-town': {
+          name: 'Town',
         },
       },
     },
@@ -154,9 +154,9 @@ test('replace existing state', tap => {
       programs: {},
     },
     // Updated
-    'ct-new-utility': {
-      name: 'New Utilities Inc',
-      authority_type: 'utility',
+    'ct-metropolis': {
+      name: 'Metropolis',
+      authority_type: 'city',
       programs: {},
     },
   };
@@ -168,9 +168,9 @@ test('replace existing state', tap => {
           name: 'CT Department of Energy & Environmental Protection',
         },
       },
-      utility: {
-        'ct-new-utility': {
-          name: 'New Utilities Inc',
+      city: {
+        'ct-metropolis': {
+          name: 'Metropolis',
         },
       },
     },
@@ -188,9 +188,9 @@ test('add and alpha-sort new state', tap => {
       programs: {},
     },
     // Updated
-    'de-utility': {
-      name: 'Delaware Utility',
-      authority_type: 'utility',
+    'de-city': {
+      name: 'Delaware City',
+      authority_type: 'city',
       programs: {},
     },
   };
@@ -237,9 +237,9 @@ test('add and alpha-sort new state', tap => {
           name: 'Delaware State Energy',
         },
       },
-      utility: {
-        'de-utility': {
-          name: 'Delaware Utility',
+      city: {
+        'de-city': {
+          name: 'Delaware City',
         },
       },
     },
