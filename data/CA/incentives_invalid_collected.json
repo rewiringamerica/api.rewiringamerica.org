@@ -1,0 +1,3242 @@
+[
+  {
+    "id": "CA-33",
+    "data_urls": [
+      "https://www.alamedamp.com/407/Rebates-and-Incentives"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Alameda Municipal Power",
+    "program_title": "AMP Offers",
+    "program_url": "https://www.alamedamp.com/407/Rebates-and-Incentives",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_if_selected_other": "Heat Pump Space Heater",
+    "short_description": {
+      "en": "Rebate up to $1500 for switching from natural gas to Heat Pump."
+    },
+    "program_status": "active",
+    "program_start_raw": "07/01/2022",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "up to $1500",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "equipment_standards_restrictions": "Pump must have 16 SEER (Seasonal Energy Efficiency Ratio) rating or higher, and an 9.2 HSPF (Heat Seasonal Performance Factor) or higher.",
+    "other_restrictions": "One rebate per customer every 10 years, new purchase after July 1, 2022. Replace entire gas furnace in AMP residence. Apply within 6 months of purchase.",
+    "stacking_details": "Can be combined with CA-18",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-34",
+    "data_urls": [
+      "https://www.alamedamp.com/407/Rebates-and-Incentives"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Alameda Municipal Power",
+    "program_title": "AMP Offers",
+    "program_url": "https://www.alamedamp.com/407/Rebates-and-Incentives",
+    "item": "heat_pump_water_heater",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "up to $1,500",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "equipment_standards_restrictions": "ENERGY STAR® Certified Heat Pump",
+    "other_restrictions": "One rebate every five years on new pump installation in existing residence of AMP customer.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "short_description"
+        },
+        "message": "must have required property 'short_description'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "program_status"
+        },
+        "message": "must have required property 'program_status'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-35",
+    "data_urls": [
+      "https://www.cityoflompoc.com/home/showpublisheddocument/37497/638170758773170000"
+    ],
+    "authority_type": "utility",
+    "authority_name": "City of Lompoc Utilities",
+    "program_title": "Rebate and Conservation Program",
+    "program_url": "https://www.cityoflompoc.com/government/departments/utilities/conservation",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_if_selected_other": "Ducted System Heat Pump",
+    "short_description": {
+      "en": "Rebate up to $250 per Ton"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "Rebate up to $250 per Ton",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
+    },
+    "equipment_standards_restrictions": "High Efficiency System ≥ 16 SEER (15.3 SEER2) & 9.0 HSPF\n(7.7 HSPF2) ",
+    "other_restrictions": "Rebate will be issued as a credit to the customer’s\nCity of Lompoc utility account.\nRebate applications must be submitted within one year of purchase to qualify. ",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-36",
+    "data_urls": [
+      "https://www.cityoflompoc.com/home/showpublisheddocument/37497/638170758773170000"
+    ],
+    "authority_type": "utility",
+    "authority_name": "City of Lompoc Utilities",
+    "program_title": "Rebate and Conservation Program",
+    "program_url": "https://www.cityoflompoc.com/government/departments/utilities/conservation",
+    "item": "heat_pump_air_conditioner_heater",
+    "item_if_selected_other": "Ductless Mini-Split Heat\nPump ",
+    "short_description": {
+      "en": "Rebate up to $250 per Ton"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "Rebate up to $250 per Ton",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
+    },
+    "equipment_standards_restrictions": "High Efficiency System ≥ 16 SEER (15.3 SEER2) & 9.0 HSPF\n(7.7 HSPF2)",
+    "other_restrictions": "Rebate will be issued as a credit to the customer’s\nCity of Lompoc utility account.\nRebate applications must be submitted within one year of purchase to qualify. \nRebate(s) apply to upgrades on existing homes only. New construction does not qualify.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-37",
+    "data_urls": [
+      "https://www.cityoflompoc.com/home/showpublisheddocument/37497/638170758773170000"
+    ],
+    "authority_type": "utility",
+    "authority_name": "City of Lompoc Utilities",
+    "program_title": "Rebate and Conservation Program",
+    "program_url": "https://www.cityoflompoc.com/government/departments/utilities/conservation",
+    "item": "smart_thermostat",
+    "short_description": {
+      "en": "Rebate up to $50, limit 2"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "Rebate up to $50, limit 2",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 50,
+      "maximum": 100
+    },
+    "equipment_standards_restrictions": "ENERGY STAR® Certified Connected Smart Thermostat ",
+    "other_restrictions": "Rebate will be issued as a credit to the customer’s\nCity of Lompoc utility account.\nRebate applications must be submitted within one year of purchase to qualify. \nRebate(s) apply to upgrades on existing homes only. New construction does not qualify.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-38",
+    "data_urls": [
+      "https://goldenstaterebates.clearesult.com/heat-pump-water-heater-replacing-electric-water-heater"
+    ],
+    "authority_type": "state",
+    "authority_name": "California Public Utilities Commission",
+    "program_title": "Golden State Rebates Program",
+    "program_url": "https://goldenstaterebates.com/goldenstaterebates/",
+    "item": "heat_pump_water_heater",
+    "short_description": {
+      "en": "Save up to $900 on heat pump water heater"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "rebate_value": "Save up to $900 on heat pump water heater",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900,
+      "maximum": 900
+    },
+    "equipment_standards_restrictions": "minimum UEF is 3.30",
+    "equipment_capacity_restrictions": "45-75 gallons",
+    "other_restrictions": "Heat pump water heater must be on the Qualified Products List at the time of purchase and is only eligible for replacement of electric or natural gas water heaters.\n\nOnly customers of of SDG&E®, PG&E®, SoCalGas®, and SCE® are eligible.\n\nInstall within 60 days of purchase.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-39",
+    "data_urls": [
+      "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Glendale Water and Power",
+    "program_title": "Energy And Water Saving Rebate Program",
+    "program_url": "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program",
+    "item": "electric_vehicle_charger",
+    "short_description": {
+      "en": "Up to $1599 rebate for installing an electric vehicle charging station with electric panel upgrade "
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "Up to $1599 rebate for installing an electric vehicle charging station with electric panel upgrade ",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1599
+    },
+    "equipment_standards_restrictions": "Level 2 (240-Volt) electric vehicle chargers",
+    "income_restrictions": "Additional rebate for customers enrolled in Glendale Care program",
+    "other_restrictions": "Must be a GWP customer; Applications must be submitted no later than six months from the date of purchase and are accepted on a first-come, first served basis. Rebates are issued in the form of a bill credit. Rebates are limited to two (2) per residential account.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-40",
+    "data_urls": [
+      "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Glendale Water and Power",
+    "program_title": "Energy And Water Saving Rebate Program",
+    "program_url": "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program",
+    "item": "ebike",
+    "short_description": {
+      "en": "Up to $300 for a new e-bike purchase"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "Up to $300 for a new e-bike purchase",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "unit": "per item"
+    },
+    "equipment_standards_restrictions": "Bicycle with fully operational pedals with an electric motor of less than 750 watts.\n• Class 1 – A low speed pedal-assisted electric bicycle equipped with a motor which provides assistance only when the rider is pedaling and ceases to provide assistance when a speed of 20 mph is reached.\n• Class 2 – A low speed throttle-assisted electric bicycle equipped with a motor used exclusively to propel the bicycle and NOT capable of providing assistance when a speed of 20 mph is reached.\n• Class 3 – A low speed pedal-assisted electric bicycle equipped with a speedometer, and a motor which provides assistance only when the rider is pedaling and ceases to provide assistance when a speed of 28 mph is reached.",
+    "income_restrictions": "Additional rebate for customers enrolled in Glendale Care program",
+    "other_restrictions": "Must be a GWP customer; Applications must be submitted no later than six months from the date of purchase and are accepted on a first-come, first served basis. Rebates are issued in the form of a bill credit. Rebates are limited to two (2) per residential account.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount/unit",
+        "schemaPath": "#/properties/amount/properties/unit/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "ton",
+            "kilowatt",
+            "watt",
+            "btuh10k",
+            "square_foot",
+            "kilowatt_hour"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "CA-41",
+    "data_urls": [
+      "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Glendale Water and Power",
+    "program_title": "Energy And Water Saving Rebate Program",
+    "program_url": "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program",
+    "item": "other",
+    "item_if_selected_other": "Heat Pump/Mini-Split Pump",
+    "short_description": {
+      "en": "Up to $250/ton rebate for an ENERGY STAR Heat Pump / Mini-Split Pump"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "Up to $250/ton rebate for an ENERGY STAR Heat Pump / Mini-Split Pump",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
+    },
+    "equipment_standards_restrictions": "Must meet current ENERGY STAR guidelines. \nMust have a SEER 2 rating of 15.2 or greater and HSPF 2 of 7.8 or greater.",
+    "other_restrictions": "Limit 1 rebate per story every 10 years for Heat Pumps and 1 rebate per room every 10 years for Ductless ACs per customer at the same residence.\n$250/ Ton rebate if purchased in Glendale\n$230/Ton rebate if purchased outside of Glendale\nMust be a GWP customer; Applications must be submitted no later than 12 months from the date of purchase Rebates are issued in the form of a bill credit. ",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-42",
+    "data_urls": [
+      "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Glendale Water and Power",
+    "program_title": "Energy And Water Saving Rebate Program",
+    "program_url": "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program",
+    "item": "heat_pump_clothes_dryer",
+    "short_description": {
+      "en": "Up to $325 rebate for an ENERGY STAR electric heat pump clothes dryer"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "Up to $325 rebate for an ENERGY STAR electric heat pump clothes dryer",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 325
+    },
+    "equipment_standards_restrictions": "Must meet current ENERGY STAR guidelines. ",
+    "other_restrictions": "Existing natural gas clothes dryer must be replaced with electric counterpart to qualify. \nLimit 1 rebate every 10 years per customer at the same residence. \n$325 rebate if purchased in Glendale \n$300 rebate if purchased outside Glendale\n\nMust be a GWP customer; Applications must be submitted no later than 12 months from the date of purchase Rebates are issued in the form of a bill credit. ",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-43",
+    "data_urls": [
+      "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Glendale Water and Power",
+    "program_title": "Energy And Water Saving Rebate Program",
+    "program_url": "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program",
+    "item": "heat_pump_water_heater",
+    "short_description": {
+      "en": "Up to $525 rebate for an ENERGY STAR electric heat pump water heater"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "Up to $525 rebate for an ENERGY STAR electric heat pump water heater",
+    "amount": {
+      "type": "dollars_per_unit"
+    },
+    "equipment_standards_restrictions": "Must meet current ENERGY STAR guidelines. ",
+    "other_restrictions": "Limit 1 rebate every 10 years per customer at the same residence. \n$525 rebate if purchased in Glendale \n$500 rebate if purchased outside Glendale\n\nMust be a GWP customer; Applications must be submitted no later than 12 months from the date of purchase Rebates are issued in the form of a bill credit. ",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      }
+    ]
+  },
+  {
+    "id": "CA-44",
+    "data_urls": [
+      "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Glendale Water and Power",
+    "program_title": "Energy And Water Saving Rebate Program",
+    "program_url": "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program",
+    "item": "other",
+    "item_if_selected_other": "Electric Clothes Dryer",
+    "short_description": {
+      "en": "Up to $220 rebate for an ENERGY STAR electric clothes dryer"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "Up to $220 rebate for an ENERGY STAR electric clothes dryer",
+    "amount": {
+      "type": "dollars_per_unit"
+    },
+    "equipment_standards_restrictions": "Must meet current ENERGY STAR guidelines. ",
+    "other_restrictions": "• Existing natural gas clothes dryer must be replaced with electric counterpart to qualify. \n• Limit 1 rebate every 10 years per customer at the same residence. \n\n$220 rebate if purchased in Glendale\n$200 rebate if purchased outside Glendale\n\nMust be a GWP customer; Applications must be submitted no later than 12 months from the date of purchase Rebates are issued in the form of a bill credit. ",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      }
+    ]
+  },
+  {
+    "id": "CA-45",
+    "data_urls": [
+      "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Glendale Water and Power",
+    "program_title": "Energy And Water Saving Rebate Program",
+    "program_url": "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program",
+    "item": "electric_outdoor_equipment",
+    "short_description": {
+      "en": "Up to $50 rebate for an electric leaf blower"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "50",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 50
+    },
+    "equipment_standards_restrictions": "Electric leaf blower",
+    "other_restrictions": "Limit 1 rebate every 5 years per customer at the same residence. \n\n$50 rebate if purchased in Glendale\n$40 rebate if purchased outside Glendale\n\nMust be a GWP customer; Applications must be submitted no later than 12 months from the date of purchase Rebates are issued in the form of a bill credit. ",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-46",
+    "data_urls": [
+      "https://www.alamedamp.com/407/Rebates-and-Incentives"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Alameda Municipal Power",
+    "program_title": "AMP Offers",
+    "program_url": "https://www.alamedamp.com/407/Rebates-and-Incentives",
+    "item": "rooftop_solar_installation",
+    "short_description": {
+      "en": "$500 rebate for income qualified AMP customers installing solar in their homes."
+    },
+    "program_status": "active",
+    "program_start_raw": "11/1/2022",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$500",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "equipment_standards_restrictions": "PV systems or PV systems with battery storage.",
+    "income_restrictions": "Annual household income below $106,000.",
+    "other_restrictions": "New solar system installed after November 1, 2022, in home constructed before January 1, 2020.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-47",
+    "data_urls": [
+      "https://www.alamedamp.com/407/Rebates-and-Incentives"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Alameda Municipal Power",
+    "program_title": "AMP Offers",
+    "program_url": "https://www.alamedamp.com/407/Rebates-and-Incentives",
+    "item": "smart_thermostat",
+    "short_description": {
+      "en": "Variable rebates while supplies last."
+    },
+    "program_status": "other",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "Variable.",
+    "equipment_standards_restrictions": "ENERGY STAR-certified Smart Thermostat.",
+    "other_restrictions": "AMP customers on D1H rate schedule. 2 rebates per service address per year.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "amount"
+        },
+        "message": "must have required property 'amount'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-48",
+    "data_urls": [
+      "https://www.alamedamp.com/407/Rebates-and-Incentives"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Alameda Municipal Power",
+    "program_title": "AMP Offers",
+    "program_url": "https://www.alamedamp.com/407/Rebates-and-Incentives",
+    "item": "used_electric_vehicle",
+    "short_description": {
+      "en": "up to $6,000"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "up to $6,000",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 6000,
+      "minimum": 4000,
+      "maximum": 6000
+    },
+    "equipment_standards_restrictions": "Used All-Electric vehicle, model date before 2021, purchased at price below $40,000.",
+    "income_restrictions": "Check with authority.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-49",
+    "data_urls": [
+      "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Imperial Irrigation District",
+    "program_title": "2023 ENERGY REWARDS PROGRAM",
+    "program_url": "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates",
+    "item": "weatherization",
+    "short_description": {
+      "en": "Rebate up to $2/sq.ft. for ENERGY STAR®\nDual-Pane Windows"
+    },
+    "program_status": "active",
+    "program_end_raw": "12/31/2023",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$2/sq.ft.",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot"
+    },
+    "equipment_standards_restrictions": "Window performance rating must be ≤0.25 SHGC (measure\nof window’s ability to absorb/reflect heat) and ≤0.31 U-factor (measure of heat flow through window).",
+    "other_restrictions": "-- Purchase and install qualifying product(s) 1/1/23 - 12/31/23\n-- Submit application by 12/31/23\n-- Rebate limited, first come, first serve\n-- Rebates totaling $2,500 or more require pre-approval from IID",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-50",
+    "data_urls": [
+      "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Imperial Irrigation District",
+    "program_title": "2023 ENERGY REWARDS PROGRAM",
+    "program_url": "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates",
+    "item": "weatherization",
+    "short_description": {
+      "en": "Rebate up to $0.30 /sq.ft. for ENERGY STAR®\nAttic Insulation"
+    },
+    "program_status": "active",
+    "program_end_raw": "12/31/2023",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$0.30 /sq.ft.",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.3,
+      "unit": "square_foot"
+    },
+    "equipment_standards_restrictions": "ENERGY STAR®",
+    "contractor_restrictions": "Unless customer self-installs, insulation must be installed by an attic insulation contractor listed on IID’s Participating Contractors List at www.iid.com/ParticipatingContractors.",
+    "other_restrictions": "Residence may have up to 7 inches in depth of existing insulation. If residence has more than 7 inches of\nexisting insulation, any insulation added will not qualify for a rebate.\n\n-- Purchase and install qualifying product(s) 1/1/23 - 12/31/23\n-- Submit application by 12/31/23\n-- Rebate limited, first come, first serve\n-- Rebates totaling $2,500 or more require pre-approval from IID",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-51",
+    "data_urls": [
+      "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Imperial Irrigation District",
+    "program_title": "2023 ENERGY REWARDS PROGRAM",
+    "program_url": "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates",
+    "item": "other",
+    "item_if_selected_other": "Ductless Mini-Split\nSystem",
+    "short_description": {
+      "en": "Rebate for a Ductless Mini-Split\nSystem up to $200/unit"
+    },
+    "program_status": "active",
+    "program_end_raw": "12/31/2023",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$200/unit",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 200,
+      "unit": "per item"
+    },
+    "equipment_standards_restrictions": "System must meet or exceed ≥17.1 SEER2 and be AHRI certified.",
+    "contractor_restrictions": "Unit must be installed directly in the\nconditioned space of the home by a contractor on IID’s Participating Contractor List available at\nwww.iid.com/ParticipatingContractors.",
+    "other_restrictions": "-- Purchase and install qualifying product(s) 1/1/23 - 12/31/23\n-- Submit application by 12/31/23\n-- Rebate limited, first come, first serve\n-- Rebates totaling $2,500 or more require pre-approval from IID",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount/unit",
+        "schemaPath": "#/properties/amount/properties/unit/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "ton",
+            "kilowatt",
+            "watt",
+            "btuh10k",
+            "square_foot",
+            "kilowatt_hour"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "CA-52",
+    "data_urls": [
+      "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Imperial Irrigation District",
+    "program_title": "2023 ENERGY REWARDS PROGRAM",
+    "program_url": "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates",
+    "item": "other",
+    "item_if_selected_other": "Electric heat pump HVAC system",
+    "short_description": {
+      "en": "Rebate for switching HVAC from gas to electric up to $400/ton"
+    },
+    "program_status": "active",
+    "program_end_raw": "12/31/2023",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$400/ton",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 400,
+      "unit": "ton"
+    },
+    "equipment_standards_restrictions": "1) Electric heat pump HVAC system must be new and replace a gas\nfurnace HVAC system. 2) New ≤5 ton system must meet or exceed: 16.2 SEER2 and 7.7 HSPF2 for Split\nsystems or 15.2 SEER2 and 7.2 HSPF2 for Packaged systems. 3) AHRI certificate with SEER2 values is required.",
+    "contractor_restrictions": "Installation must be performed by a contractor on IID’s Participating Contractor List\n(www.iid.com/ParticipatingContractors), unless self-installed. ",
+    "other_restrictions": "Paid-in-Full invoice submitted must state brand and model number of furnace being replaced\nAND brand name, model number(s) and serial number(s) of ALL parts for the new unit installed. Limit one gas-to-electric rebate per installation\naddress.\n\n-- Purchase and install qualifying product(s) 1/1/23 - 12/31/23\n-- Submit application by 12/31/23\n-- Rebate limited, first come, first serve\n-- Rebates totaling $2,500 or more require pre-approval from IID",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-53",
+    "data_urls": [
+      "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Lassen Municipal Utility District",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates",
+    "item": "other",
+    "item_if_selected_other": "Electric clothes dryer",
+    "short_description": {
+      "en": "Up to $35 rebate for electric ENERGY STAR clothes dryer"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "rebate_value": "Up to $35",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 35,
+      "unit": "per item",
+      "maximum": 35
+    },
+    "equipment_standards_restrictions": "ENERGY STAR certified Electric Clothes Dryer",
+    "other_restrictions": "Application must be submitted within six months of purchase or installation date.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount/unit",
+        "schemaPath": "#/properties/amount/properties/unit/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "ton",
+            "kilowatt",
+            "watt",
+            "btuh10k",
+            "square_foot",
+            "kilowatt_hour"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "CA-54",
+    "data_urls": [
+      "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Lassen Municipal Utility District",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates",
+    "item": "other",
+    "item_if_selected_other": "Hybrid/Heat Pump Water Heater",
+    "short_description": {
+      "en": "Up to $350 rebate for a hybrid-heat pump ENERGY STAR water heater"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "rebate_value": "Up to $350",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 350,
+      "unit": "per item",
+      "maximum": 350
+    },
+    "equipment_standards_restrictions": "ENERGY STAR certification and minimum 2.8 Uniform Energy Factor (UEF).",
+    "equipment_capacity_restrictions": "Available on eligible 40-80 gallon models (40-gallon units do not qualify).",
+    "other_restrictions": "Application must be submitted within six months of purchase or installation date.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount/unit",
+        "schemaPath": "#/properties/amount/properties/unit/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "ton",
+            "kilowatt",
+            "watt",
+            "btuh10k",
+            "square_foot",
+            "kilowatt_hour"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "CA-55",
+    "data_urls": [
+      "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Lassen Municipal Utility District",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates",
+    "item": "other",
+    "item_if_selected_other": "Air Source Heat Pump (includes ductless mini-splits)",
+    "short_description": {
+      "en": "Rebate for up to 50% of the cost for an air source heat pump"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "rebate_value": "Up to 50% of the cost\n\n$100 per ton\nMinimum 16.0 SEER and 9.0 HSPF (equivalent to 15.3 SEER2 and 7.7 HSPF2)\n\n$125 per ton\nMinimum 17.0 SEER and 10.0 HSPF (equivalent to 16.2 SEER2 and 8.5 HSPF2).",
+    "amount": {
+      "type": "percent",
+      "number": "50%",
+      "unit": "per item"
+    },
+    "equipment_standards_restrictions": "Minimum 16.0 SEER and 9.0 HSPF (equivalent to 15.3 SEER2 and 7.7 HSPF2)\n\nMinimum 17.0 SEER and 10.0 HSPF (equivalent to 16.2 SEER2 and 8.5 HSPF2).",
+    "other_restrictions": "Application must be submitted within six months of purchase or installation date.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount/number",
+        "schemaPath": "#/properties/amount/properties/number/type",
+        "keyword": "type",
+        "params": {
+          "type": "number"
+        },
+        "message": "must be number"
+      },
+      {
+        "instancePath": "/amount/unit",
+        "schemaPath": "#/properties/amount/properties/unit/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "ton",
+            "kilowatt",
+            "watt",
+            "btuh10k",
+            "square_foot",
+            "kilowatt_hour"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "CA-56",
+    "data_urls": [
+      "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Lassen Municipal Utility District",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates",
+    "item": "geothermal_heating_installation",
+    "short_description": {
+      "en": "Rebate for up to 50% of the cost for a qualified Geothermal Heat Pump"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "Up to 50% of cost\n\n$1,000 per ton of cooling capacity (1 ton=12,000 Btuh, result is not rounded).\n\n",
+    "amount": {
+      "type": "dollars_per_unit",
+      "unit": "ton",
+      "maximum": 1000
+    },
+    "equipment_standards_restrictions": "ENERGY STAR certification\n\n$1,000 per ton of cooling capacity (1 ton=12,000 Btuh, result is not rounded",
+    "other_restrictions": "Application must be submitted within six months of purchase or installation date.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      }
+    ]
+  },
+  {
+    "id": "CA-57",
+    "data_urls": [
+      "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Lassen Municipal Utility District",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates",
+    "item": "smart_thermostat",
+    "short_description": {
+      "en": "Rebate for up to 50% of the cost for a qualified ENERGY STAR certified Smart Thermostat"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "rebate_value": "Up to 50% of cost\n\n$50 per unit",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 50,
+      "unit": "per item",
+      "maximum": 50
+    },
+    "equipment_standards_restrictions": "ENERGY STAR certification\n\nSmart Thermostat must control Central Air Conditioner, Heat Pump, or Electric Forced Air Furnace.",
+    "other_restrictions": "Application must be submitted within six months of purchase or installation date.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount/unit",
+        "schemaPath": "#/properties/amount/properties/unit/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "ton",
+            "kilowatt",
+            "watt",
+            "btuh10k",
+            "square_foot",
+            "kilowatt_hour"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "CA-58",
+    "data_urls": [
+      "https://california.libertyutilities.com/portola/residential/smart-energy-use/electric/energy-savings-assistance-program.html"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Liberty Utilities",
+    "program_title": "Energy Savings Assistance Program (ESAP)",
+    "program_url": "https://california.libertyutilities.com/portola/residential/smart-energy-use/electric/energy-savings-assistance-program.html",
+    "item": "weatherization",
+    "short_description": {
+      "en": "Income qualified customers receive free weatherization"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "other"
+    ],
+    "amount": {
+      "type": "Other"
+    },
+    "income_restrictions": "Option 1: Public Assistance Programs\nYou or someone in your household participates in at least one of the following public assistance programs:\n\nMedi-Cal/Medicaid\nCalFresh/SNAP\nTANF/Tribal TANF\nWIC\nMedi-Cal for Families\nLIHEAP\nSupplemental Security Income (SSI)\nBureau of Indian Affairs General Assistance\nHead Start Income Eligible (Tribal Only)\n\nOption 2: Household Income\nYour gross annual household income falls within the ranges listed below:\n\nESA Income Guidelines - Effective June 1, 2023 to May 31, 2024\n\nMaximum Gross Annual Household Income\nNumber of Persons in Household\n\nTotal Combined Annual Income\n1\t$36,450\n2\t$49,300\n3\t$62,150\n4\t$75,000\n5\t$87,850\n6\t$100,700\n7\t$113,550\n8\t$126,400\nEach Additional Person\t$12,850\n \n*Upper Limit Calculation = 250% of Federal Poverty Guidelines",
+    "other_restrictions": "Must be a Southwest Gas or Liberty customer",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "rebate_value"
+        },
+        "message": "must have required property 'rebate_value'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      },
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      },
+      {
+        "instancePath": "/amount/type",
+        "schemaPath": "#/properties/amount/properties/type/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "dollar_amount",
+            "percent",
+            "dollars_per_unit"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "CA-59",
+    "data_urls": [
+      "https://www.lodi.gov/909/Residential-Rebates#:~:text=Appliance%2FProduct%20Rebate&text=Appliances%20and%20products%20must%20be",
+      "City%20of%20Lodi%20utility%20bill."
+    ],
+    "authority_type": "utility",
+    "authority_name": "Lodi Electric Utility",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.lodi.gov/909/Residential-Rebates#:~:text=Appliance%2FProduct%20Rebate&text=Appliances%20and%20products%20must%20be,City%20of%20Lodi%20utility%20bill.",
+    "item": "other",
+    "item_if_selected_other": "Electric clothes dryer",
+    "short_description": {
+      "en": "Up to $100 rebate for an ENERGY STAR® certified Electric Clothes Dryer"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "rebate_value": "100",
+    "amount": {
+      "type": "dollar_amount"
+    },
+    "equipment_standards_restrictions": "New Electric Clothes Dryer must have ENERGY STAR® certification.",
+    "other_restrictions": "Offered to Lodi Electric Utility residential customers\n\nThis application should be submitted within six (6) months of the purchase or installation date.\n\nRebates are limited to 50% of the total project cost.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      }
+    ]
+  },
+  {
+    "id": "CA-60",
+    "data_urls": [
+      "https://california.libertyutilities.com/portola/residential/smart-energy-use/electric/energy-savings-assistance-program.html"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Liberty Utilities",
+    "program_title": "Energy Savings Assistance Program (ESAP)",
+    "program_url": "https://california.libertyutilities.com/portola/residential/smart-energy-use/electric/energy-savings-assistance-program.html",
+    "item": "electric_stove",
+    "short_description": {
+      "en": "Up to $500 rebate for new stationary Induction Range or Cooktop"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "rebate_value": "500",
+    "amount": {
+      "type": "dollar_amount"
+    },
+    "equipment_standards_restrictions": "New stationary Induction Range or Cooktop",
+    "other_restrictions": "Offered to Lodi Electric Utility residential customers\n\nThis application should be submitted within six (6) months of the purchase or installation date.\n\nRebates are limited to 50% of the total project cost.",
+    "bonus_description": "$100 for new Portable Induction Cooktop\n\nRebates under $300 are paid as a credit on the customer’s utility account. For rebates over $300, the customer will be sent a check.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      }
+    ]
+  },
+  {
+    "id": "CA-61",
+    "data_urls": [
+      "https://www.lodi.gov/909/Residential-Rebates#:~:text=Appliance%2FProduct%20Rebate&text=Appliances%20and%20products%20must%20be",
+      "City%20of%20Lodi%20utility%20bill."
+    ],
+    "authority_type": "utility",
+    "authority_name": "Lodi Electric Utility",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.lodi.gov/909/Residential-Rebates#:~:text=Appliance%2FProduct%20Rebate&text=Appliances%20and%20products%20must%20be,City%20of%20Lodi%20utility%20bill.",
+    "item": "other",
+    "item_if_selected_other": "Hybrid/Heat Pump Water Heater",
+    "short_description": {
+      "en": "Up to $200 rebate for an ENERGY STAR® Hybrid/Heat Pump Water Heater"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "rebate_value": "200",
+    "amount": {
+      "type": "dollar_amount",
+      "unit": "per item"
+    },
+    "equipment_standards_restrictions": "New ENERGY STAR® certified Hybrid/Heat Pump Water Heater",
+    "equipment_capacity_restrictions": "40-80 gallon models are eligible for the rebate",
+    "other_restrictions": "Offered to Lodi Electric Utility residential customers\n\nThis application should be submitted within six (6) months of the purchase or installation date.\n\nRebates are limited to 50% of the total project cost.\n\nEligible homes must have an electric water heater.\n\nHomes with existing gas water heaters do not qualify for this rebate.\n\n40-80 gallon models are eligible for the rebate (40-gallon units do not qualify).",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      },
+      {
+        "instancePath": "/amount/unit",
+        "schemaPath": "#/properties/amount/properties/unit/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "ton",
+            "kilowatt",
+            "watt",
+            "btuh10k",
+            "square_foot",
+            "kilowatt_hour"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "CA-62",
+    "data_urls": [
+      "https://www.lodi.gov/909/Residential-Rebates#:~:text=Appliance%2FProduct%20Rebate&text=Appliances%20and%20products%20must%20be",
+      "City%20of%20Lodi%20utility%20bill."
+    ],
+    "authority_type": "utility",
+    "authority_name": "Liberty Utilities",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.lodi.gov/909/Residential-Rebates#:~:text=Appliance%2FProduct%20Rebate&text=Appliances%20and%20products%20must%20be,City%20of%20Lodi%20utility%20bill.",
+    "item": "smart_thermostat",
+    "short_description": {
+      "en": "Up to $50 rebate for a new, ENERGY STAR® certified Smart Thermostat"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "rebate_value": "$50",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 50,
+      "unit": "per item",
+      "maximum": 2
+    },
+    "equipment_standards_restrictions": "ENERGY STAR® certified Smart Thermostat",
+    "other_restrictions": "Offered to Lodi Electric Utility residential customers\n\nThis application should be submitted within six (6) months of the purchase or installation date.\n\nRebates are limited to 50% of the cost (limit two devices per home).\n",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount/unit",
+        "schemaPath": "#/properties/amount/properties/unit/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "ton",
+            "kilowatt",
+            "watt",
+            "btuh10k",
+            "square_foot",
+            "kilowatt_hour"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "CA-63",
+    "data_urls": [
+      "https://www.lodi.gov/909/Residential-Rebates#:~:text=Appliance%2FProduct%20Rebate&text=Appliances%20and%20products%20must%20be",
+      "City%20of%20Lodi%20utility%20bill."
+    ],
+    "authority_type": "utility",
+    "authority_name": "Lodi Electric Utility",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.lodi.gov/909/Residential-Rebates#:~:text=Appliance%2FProduct%20Rebate&text=Appliances%20and%20products%20must%20be,City%20of%20Lodi%20utility%20bill.",
+    "item": "weatherization",
+    "item_if_selected_other": "Insulation",
+    "short_description": {
+      "en": "Rebate for qualified new insulation upgrades"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "rebate_value": "0.75",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.75,
+      "unit": "square_foot"
+    },
+    "equipment_standards_restrictions": "Existing Attic condition: R-19 or lower\n\nFinal Attic condition: R-30 or higher",
+    "other_restrictions": "Offered to Lodi Electric Utility residential customers\n\nThis application should be submitted within six (6) months of the purchase or installation date.\n\nRebates are limited to 50% of the cost \n\nTo qualify for the insulation rebate, the home must be equipped with Central Air Conditioning, Heat Pump, and/or Electric Heat.",
+    "bonus_description": "Wall insulation: $0.30 per sq. ft.\n\nExisting Wall condition: R-0\nFinal Wall condition: R-13 or higher",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-64",
+    "data_urls": [
+      "https://california.libertyutilities.com/portola/residential/smart-energy-use/electric/energy-savings-assistance-program.html"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Liberty Utilities",
+    "program_title": "Energy Savings Assistance Program (ESAP)",
+    "program_url": "https://california.libertyutilities.com/portola/residential/smart-energy-use/electric/energy-savings-assistance-program.html",
+    "item": "weatherization",
+    "item_if_selected_other": "Windows",
+    "short_description": {
+      "en": "Rebate for qualified new Replacement Windows"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "rebate_value": "$3",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3,
+      "unit": "square_foot"
+    },
+    "equipment_standards_restrictions": "U-Factor of 0.32 or lower and a Solar Heat Gain Coefficient (SHGC) of 0.25 or lower to qualify.",
+    "other_restrictions": "Offered to Lodi Electric Utility residential customers\n\nThis application should be submitted within six (6) months of the purchase or installation date.\n\nRebates are limited to 50% of the cost \n\nQualifying homes must have central air conditioning, heat pump, or electric heat.\n\nExisting windows must be single-pane or double-pane with metal frames.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-65",
+    "data_urls": [
+      "https://www.lodi.gov/909/Residential-Rebates#:~:text=Appliance%2FProduct%20Rebate&text=Appliances%20and%20products%20must%20be",
+      "City%20of%20Lodi%20utility%20bill."
+    ],
+    "authority_type": "utility",
+    "authority_name": "Lodi Electric Utility",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.lodi.gov/909/Residential-Rebates#:~:text=Appliance%2FProduct%20Rebate&text=Appliances%20and%20products%20must%20be,City%20of%20Lodi%20utility%20bill.",
+    "item": "heat_pump_air_conditioner_heater",
+    "short_description": {
+      "en": "Rebate up to $250/ton for new qualifying Air Source Heat Pump."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "rebate_value": "250",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
+    },
+    "equipment_standards_restrictions": "Minimum 18.0 SEER and 11.0 HSPF (equivalent to 17.2 SEER2 and 9.4 HSPF2)",
+    "other_restrictions": "Offered to Lodi Electric Utility residential customers\n\nThis application should be submitted within six (6) months of the purchase or installation date.\n\nRebates are limited to 50% of the cost \n\n",
+    "bonus_description": "Rebate Amounts\nSplit or Unitary/Package Ducted Systems:\n$150 per ton\n*Minimum 16.0 SEER and 9.0 HSPF (equivalent to 15.3 SEER2 and 7.7 HSPF2)\n$200 per ton\n*Minimum 17.0 SEER and 10.0 HSPF (equivalent to 16.2 SEER2 and 8.5 HSPF2).\n$250 per ton\n*Minimum 18.0 SEER and 11.0 HSPF (equivalent to 17.2 SEER2 and 9.4 HSPF2).\n\nMini/Multi-Split Ductless Systems:\n$250 per ton\n*Minimum 16.0 SEER and 9.0 HSPF (equivalent to 15.3 SEER2 and 7.7 HSPF2)",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-66",
+    "data_urls": [
+      "https://www.lodi.gov/909/Residential-Rebates#:~:text=Appliance%2FProduct%20Rebate&text=Appliances%20and%20products%20must%20be",
+      "City%20of%20Lodi%20utility%20bill."
+    ],
+    "authority_type": "utility",
+    "authority_name": "Lodi Electric Utility",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.lodi.gov/909/Residential-Rebates#:~:text=Appliance%2FProduct%20Rebate&text=Appliances%20and%20products%20must%20be,City%20of%20Lodi%20utility%20bill.",
+    "item": "weatherization",
+    "item_if_selected_other": "Duct sealing",
+    "short_description": {
+      "en": "Rebate up to $150 for Duct Sealing with Testing for homes with excessive leakage"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "rebate_value": "150",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150,
+      "maximum": 150
+    },
+    "equipment_standards_restrictions": "Duct Seal Installation Certificate",
+    "other_restrictions": "Offered to Lodi Electric Utility residential customers\n\nThis application should be submitted within six (6) months of the purchase or installation date.\n\nRebates are limited to 50% of the cost \n\n",
+    "bonus_description": "Before you get started\nNewly installed ducts are not eligible for the rebate.  Measure only applies to existing ducted systems with runs in unconditioned space.\nYou must have a Duct Seal Installation Certificate documenting pre-and post-treatment Cubic Feet per Minute (CFM) readings in air duct leakage.\nYour final invoice/receipt is required to submit this application.\n\nRebate is not available if:\nAny of the HVAC system’s major components were replaced, such as evaporator coil, condensing unit, or furnace.\nThe duct system was added or extended, where more than 40 feet of duct is in unconditioned space.\nThe duct system was modified, where more than 75% of the ducts are new.\n",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-67",
+    "data_urls": [
+      "https://www.ladwp.com/who-we-are/all-programs-and-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Los Angeles Department of Water and Power",
+    "program_title": "LADWP Rebates and Programs",
+    "program_url": "https://www.ladwp.com/who-we-are/all-programs-and-rebates",
+    "item": "weatherization",
+    "item_if_selected_other": "ENERGY STAR® Qualified Residential Window",
+    "short_description": {
+      "en": "Rebate of $2 per sq ft for ENERGY STAR® Qualified Residential Windows"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$2",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot"
+    },
+    "equipment_standards_restrictions": "U-Factor ≤0.30\nSHGC ≤0.25",
+    "other_restrictions": "Must be a ADWP customer \n\nApplications must be postmarked within 12 months of purchase\n\nApplicants will be required to provide a Final Approved Building and Safety Permit.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-68",
+    "data_urls": [
+      "https://www.ladwp.com/who-we-are/all-programs-and-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Los Angeles Department of Water and Power",
+    "program_title": "LADWP Rebates and Programs",
+    "program_url": "https://www.ladwp.com/who-we-are/all-programs-and-rebates",
+    "item": "other",
+    "item_if_selected_other": "Central Heat Pump",
+    "short_description": {
+      "en": "Rebate up to $1,500 for a ENERGY STAR® Qualified Heat Pump Water Heater "
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "1500",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1500,
+      "unit": "per item"
+    },
+    "other_restrictions": "Must be a ADWP customer \n\nApplications must be postmarked within 12 months of purchase\n\nApplicants will be required to provide installation contract and Final Approved Building and Safety Permit.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount/unit",
+        "schemaPath": "#/properties/amount/properties/unit/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "ton",
+            "kilowatt",
+            "watt",
+            "btuh10k",
+            "square_foot",
+            "kilowatt_hour"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "CA-69",
+    "data_urls": [
+      "https://www.ladwp.com/who-we-are/all-programs-and-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Los Angeles Department of Water and Power",
+    "program_title": "LADWP Rebates and Programs",
+    "program_url": "https://www.ladwp.com/who-we-are/all-programs-and-rebates",
+    "item": "electric_vehicle_charger",
+    "short_description": {
+      "en": "Rebate up to $1,500 for a qualifying Level 2 EV charger and EV meter"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "1500",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "equipment_standards_restrictions": "Level 2 (240-volt) charging station and a dedicated EV meter ",
+    "other_restrictions": "Must be a ADWP customer \n\nApplications must be postmarked within 12 months of purchase",
+    "bonus_description": "Eligible customers may receive a rebate of up to $1,000 for the purchase and installation of a qualified Level 2 (240-volt) charging station and a $250 rebate for the installation of a dedicated EV meter. \n\nIn addition, income-eligible customers participating in LADWP's Senior Citizen/Disability Lifeline or EZ-SAVE programs are eligible for an additional $500 rebate.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-70",
+    "data_urls": [
+      "https://www.ladwp.com/who-we-are/all-programs-and-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Los Angeles Department of Water and Power",
+    "program_title": "LADWP Rebates and Programs",
+    "program_url": "https://www.ladwp.com/who-we-are/all-programs-and-rebates",
+    "item": "heat_pump_water_heater",
+    "short_description": {
+      "en": "Rebate up to $1,500 per unit for an ENERGY STAR® Qualified Heat Pump Water Heater"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "1500",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "unit": "per item"
+    },
+    "equipment_standards_restrictions": "ENERGY STAR® Qualified Heat Pump Water Heater",
+    "other_restrictions": "Must be a ADWP customer \n\nApplications must be postmarked within 12 months of purchase\n\nApplicants will be required to provide Installation Contract and Final Approved Building and Safety Permit",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount/unit",
+        "schemaPath": "#/properties/amount/properties/unit/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "ton",
+            "kilowatt",
+            "watt",
+            "btuh10k",
+            "square_foot",
+            "kilowatt_hour"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "CA-74",
+    "data_urls": [
+      "https://www.roseville.ca.us/cms/One.aspx?portalId=7964922&pageId=19015895\nhttps://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_7964838/File/Government/Departments/Roseville%20Electric%20Utility/Electric-1/Application_Rebate_ElectricHeatingUpgrades_2023.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Roseville Electric",
+    "program_title": "Residential Electric Home Program",
+    "program_url": "https://www.roseville.ca.us/cms/One.aspx?portalId=7964922&pageId=19015895",
+    "item": "smart_thermostat",
+    "short_description": {
+      "en": "$100 rebate for an Energy Star certified smart thermostat"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$100",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "other_restrictions": "*Rebates may not exceed the cost of the qualifying equipment.\n*Apply here",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-75",
+    "data_urls": [
+      "https://www.roseville.ca.us/cms/One.aspx?portalId=7964922&pageId=19015894"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Roseville Electric",
+    "program_title": "Residential New Construction Incentive Program",
+    "program_url": "https://www.roseville.ca.us/cms/One.aspx?portalId=7964922&pageId=19015894",
+    "item": "other",
+    "short_description": {
+      "en": "Residential New Construction incentive program is fully subscribed at this time. Please check back for future funding availability."
+    },
+    "program_status": "paused",
+    "owner_status": [
+      "homeowner"
+    ],
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "rebate_value"
+        },
+        "message": "must have required property 'rebate_value'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "amount"
+        },
+        "message": "must have required property 'amount'"
+      }
+    ]
+  },
+  {
+    "id": "CA-78",
+    "data_urls": [
+      "https://www.pge.com/content/pge/language-masters/en/save-energy-and-money/rebates-and-incentives/self-generation-incentive-program.html"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Pacific Gas and Electric",
+    "program_title": "EV Charge Program",
+    "program_url": "https://www.pge.com/en/clean-energy/electric-vehicles/ev-charge-program.html",
+    "item": "electric_vehicle_charger",
+    "short_description": {
+      "en": "Rebate for the purchase of an Electric Vehicle Charger-fully subscribed"
+    },
+    "program_status": "paused",
+    "owner_status": [
+      "homeowner"
+    ],
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "rebate_value"
+        },
+        "message": "must have required property 'rebate_value'"
+      },
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "amount"
+        },
+        "message": "must have required property 'amount'"
+      }
+    ]
+  },
+  {
+    "id": "CA-79",
+    "data_urls": [
+      "https://www.pge.com/en/clean-energy/electric-vehicles/empower-ev-program.html"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Pacific Gas and Electric",
+    "program_title": "Empower EV Program",
+    "program_url": "https://www.pge.com/en/clean-energy/electric-vehicles/empower-ev-program.html",
+    "item": "electric_vehicle_charger",
+    "short_description": {
+      "en": "PG&E will provide one free Level 2 charger valued at $500 (hardwires or plugs in to 220+ Volt outlet)."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "other"
+    ],
+    "rebate_value": "$500",
+    "amount": {
+      "type": "Other"
+    },
+    "equipment_standards_restrictions": "hardwires or plugs in to 220+ Volt outlet",
+    "income_restrictions": "Customer must verify income eligibility (within 400 percent of the federal poverty level):\n$54,630 for a one-person household\n$73,240 for a two-person household\n$92,120 for a three-person household\n$111,000 for a four-person household\n$129,880 for a five-person household",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "*Customer will have purchased or leased a new or used EV (fully battery electric or plug-in hybrid) in the six months prior to applying to this program.\n*Customer must use the program’s licensed electrician, Synergy Companies, for panel upgrade work and is financially responsible for any costs above the $2,000 project cost cap.\n*Customer will be automatically enrolled in PG&E’s Home Charging EV2-A Time-of-Use rate plan and must remain on the rate for a minimum of six billing cycles. Learn more about the Home Charging rate plan.\n*Apply here",
+    "errors": [
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      },
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      },
+      {
+        "instancePath": "/amount/type",
+        "schemaPath": "#/properties/amount/properties/type/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "dollar_amount",
+            "percent",
+            "dollars_per_unit"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "CA-81",
+    "data_urls": [
+      "https://www.cpuc.ca.gov/SolarInDACs/\nhttps://gridalternatives.org/what-we-do/program-administration/dac-sash"
+    ],
+    "authority_type": "other",
+    "authority_name": "GRID Alternatives",
+    "program_title": "Disadvantaged Communities - Single-family Solar Homes (DAC-SASH)",
+    "program_url": "https://gridalternatives.org/what-we-do/program-administration/dac-sash",
+    "item": "rooftop_solar_installation",
+    "short_description": {
+      "en": "\t\n$3/watt incentives to install an onsite solar system and energy efficiency training"
+    },
+    "program_status": "active",
+    "program_start_raw": "1/1/2019",
+    "program_end_raw": "12/31/2030",
+    "rebate_value": "$3/watt",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3000,
+      "unit": "kilowatt"
+    },
+    "income_restrictions": "        \nIncome-qualified, single-family homeowners in DACs (must be eligible for CARE or FERA)",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "*Apply here",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      }
+    ]
+  },
+  {
+    "id": "CA-82",
+    "data_urls": [
+      "https://www.mid.org/rebates/home/documents/MID_residential_catalog.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Modesto Irrigation District",
+    "program_title": "MID Home Rebates",
+    "program_url": "https://www.mid.org/rebates/home/default.html",
+    "item": "electric_vehicle_charger",
+    "short_description": {
+      "en": "Up to $500 rebate per charger for Level 2 Electric Vehicle Charger"
+    },
+    "program_status": "active",
+    "rebate_value": "Up to $500",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "equipment_standards_restrictions": "Residential charger must be a 240 volt plug in or hard wired, factory designed permanent wall mount unit. Portable chargers do not qualify.",
+    "equipment_capacity_restrictions": "EV chargers must be for the sole use of Department of Transportation-approved highway vehicles.",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "*Level 2 charger/s must be installed at the same address that appears on the California Department of Motor Vehicles registration of the electric vehicle being charged.\n*Apply at https://www.mid.org/rebates/home/documents/MID_residential_app.pdf",
+    "stacking_details": "Limit 2 Electric Vehicle Charger rebates, one per registered vehicle, per household.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      }
+    ]
+  },
+  {
+    "id": "CA-83",
+    "data_urls": [
+      "https://www.mid.org/rebates/home/documents/MID_residential_catalog.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Modesto Irrigation District",
+    "program_title": "MID Home Rebates",
+    "program_url": "https://www.mid.org/rebates/home/default.html",
+    "item": "other",
+    "item_if_selected_other": "Central Heat Pump",
+    "short_description": {
+      "en": "$450 rebate per unit for Central Heat Pump with Tier 1 rating"
+    },
+    "program_status": "active",
+    "rebate_value": "$450 per unit",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 450
+    },
+    "equipment_standards_restrictions": "Split system:\n*SEER/SEER2: 16.0/15.2\n*EER/EER2: 12,2/11.7\n*HSPF/HSPF2: 9.2/7.8\nPackage Unit:\n*SEER/SEER2: 16.0/15.2\n*EER/EER2: 11,0/10.6\n*HSPF/HSPF2: 8.5/7.2\nMust be listed on the Consortium for Energy Efficiency (CEE) Directory of Efficient Equipment",
+    "equipment_capacity_restrictions": "Maximum cooling capacity 65,000 Btu/h (5 Tons) per unit",
+    "contractor_restrictions": "A California State License Board contractor with a C-20 license must perform installation.",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "*Apply at https://www.mid.org/rebates/home/documents/MID_residential_app.pdf\n*Split systems require installation of matching (indoor) coil. For rooftop installations, customer must provide code-compliant access for MID inspection.\n*Brand name and model numbers must be included on\ninvoice.\n• Unit must be listed (Active Status) on the Consortium\nfor Energy Efficiency (CEE) Directory of Efficient\nEquipment (www.ahrinet.org).\n• Split systems require installation of matching (indoor)\ncoil.\n• Split systems using water/evaporative-cooled condensers\nmay be eligible provided the air conditioning system has\na current AHRI Certificate of Product Ratings. MID will\ndetermine qualification of rebate.\n• For rooftop installations, customer must provide codecompliant access for MID inspection.\n• Copy of the permit (city or county).",
+    "stacking_details": "Limit 2 Central Air Conditioner / Heat Pump rebate\nper household.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      }
+    ]
+  },
+  {
+    "id": "CA-84",
+    "data_urls": [
+      "https://www.mid.org/rebates/home/documents/MID_residential_catalog.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Modesto Irrigation District",
+    "program_title": "MID Home Rebates",
+    "program_url": "https://www.mid.org/rebates/home/default.html",
+    "item": "other",
+    "item_if_selected_other": "Central Heat Pump",
+    "short_description": {
+      "en": "$700 rebate per unit for Central Heat Pump with Tier 2 rating"
+    },
+    "program_status": "active",
+    "rebate_value": "$700 per unit",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700
+    },
+    "equipment_standards_restrictions": "Split system:\n*SEER/SEER2: 18.0/17.0\n*EER/EER2: 12,5/12.0\n*HSPF/HSPF2: 9.5/8.0\nPackage Unit:\n*SEER/SEER2: 17.0/16.0\n*EER/EER2: 11,5/11.0\n*HSPF/HSPF2: 9.5/8.0\nMust be listed on the Consortium for Energy Efficiency (CEE) Directory of Efficient Equipment",
+    "equipment_capacity_restrictions": "Maximum cooling capacity 65,000 Btu/h (5 Tons) per unit",
+    "contractor_restrictions": "A California State License Board contractor with a C-20 license must perform installation.",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "*Apply at https://www.mid.org/rebates/home/documents/MID_residential_app.pdf\n*Split systems require installation of matching (indoor) coil. For rooftop installations, customer must provide code-compliant access for MID inspection.\n*Brand name and model numbers must be included on\ninvoice.\n• Unit must be listed (Active Status) on the Consortium\nfor Energy Efficiency (CEE) Directory of Efficient\nEquipment (www.ahrinet.org).\n• Split systems require installation of matching (indoor)\ncoil.\n• Split systems using water/evaporative-cooled condensers\nmay be eligible provided the air conditioning system has\na current AHRI Certificate of Product Ratings. MID will\ndetermine qualification of rebate.\n• For rooftop installations, customer must provide codecompliant access for MID inspection.\n• Copy of the permit (city or county).",
+    "stacking_details": "Limit 2 Central Air Conditioner / Heat Pump rebate\nper household.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      }
+    ]
+  },
+  {
+    "id": "CA-85",
+    "data_urls": [
+      "https://www.mid.org/rebates/home/documents/MID_residential_catalog.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Modesto Irrigation District",
+    "program_title": "MID Home Rebates",
+    "program_url": "https://www.mid.org/rebates/home/default.html",
+    "item": "heat_pump_air_conditioner_heater",
+    "short_description": {
+      "en": "$250 rebate per unit for Ductless Mini Split Air Conditioner"
+    },
+    "program_status": "active",
+    "rebate_value": "$250 per unit",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "equipment_standards_restrictions": "Minimum efficiency: 16.0 SEER/15.2 SEER2, 12.2 EER/11.7 EER2, 9.2 HSPF/7.8 HSPF2",
+    "contractor_restrictions": "A California licensed contractor with a C-20 license must perform installation.",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "*Apply at https://www.mid.org/rebates/home/documents/MID_residential_app.pdf\n",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      }
+    ]
+  },
+  {
+    "id": "CA-86",
+    "data_urls": [
+      "https://www.mid.org/rebates/home/documents/MID_residential_catalog.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Modesto Irrigation District",
+    "program_title": "MID Home Rebates",
+    "program_url": "https://www.mid.org/rebates/home/default.html",
+    "item": "smart_thermostat",
+    "short_description": {
+      "en": "$50 rebate per unit for ENERGY STAR Smart Thermostat for central AC/Heat Pump - electric heating"
+    },
+    "program_status": "active",
+    "rebate_value": "$50 per unit",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "*Apply at https://www.mid.org/rebates/home/documents/MID_residential_app.pdf\n*Thermostats must qualify as an ENERGY STAR Smart Thermostat and must replace existing manual or programmable thermostat on a central heating and cooling system.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      }
+    ]
+  },
+  {
+    "id": "CA-87",
+    "data_urls": [
+      "https://www.mid.org/rebates/home/documents/MID_residential_catalog.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Modesto Irrigation District",
+    "program_title": "MID Home Rebates",
+    "program_url": "https://www.mid.org/rebates/home/default.html",
+    "item": "weatherization",
+    "short_description": {
+      "en": "$17 rebate per square foot for Attic Insulation"
+    },
+    "program_status": "active",
+    "rebate_value": "$17 per square foot",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 17,
+      "unit": "square_foot"
+    },
+    "equipment_standards_restrictions": "*Must have pre-retrofit insulation level of R-11 or less. Final insulation level must be R-30 or greater.",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "*Apply at https://www.mid.org/rebates/home/documents/MID_residential_app.pdf\n",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      }
+    ]
+  },
+  {
+    "id": "CA-88",
+    "data_urls": [
+      "https://www.mid.org/rebates/home/documents/MID_residential_catalog.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Modesto Irrigation District",
+    "program_title": "MID Home Rebates",
+    "program_url": "https://www.mid.org/rebates/home/default.html",
+    "item": "electric_stove",
+    "short_description": {
+      "en": "$100 rebate per unit for Induction Cooktop / Range"
+    },
+    "program_status": "active",
+    "rebate_value": "$100 per unit",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "equipment_standards_restrictions": "measuring 30\" or larger.",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "*Apply at https://www.mid.org/rebates/home/documents/MID_residential_app.pdf\n*Must install an induction cooktop / range measuring 30\" or larger. Electric to electric replacements only.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      }
+    ]
+  },
+  {
+    "id": "CA-89",
+    "data_urls": [
+      "https://www.mid.org/rebates/home/documents/MID_residential_catalog.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Modesto Irrigation District",
+    "program_title": "MID Home Rebates",
+    "program_url": "https://www.mid.org/rebates/home/default.html",
+    "item": "heat_pump_water_heater",
+    "short_description": {
+      "en": "$500 rebate per unit for ENERGY STAR Heat Pump Storage Water Heater"
+    },
+    "program_status": "active",
+    "rebate_value": "$500 per unit",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "equipment_standards_restrictions": "Must have a Uniform Energy Factor (UEF) of 2.2 or greater ",
+    "equipment_capacity_restrictions": "capacity greater than 40 gallons.",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "*Apply at https://www.mid.org/rebates/home/documents/MID_residential_app.pdf\n*Must replace electric tank storage water heater. ",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      }
+    ]
+  },
+  {
+    "id": "CA-90",
+    "data_urls": [
+      "https://www.mid.org/rebates/home/documents/MID_residential_catalog.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Modesto Irrigation District",
+    "program_title": "MID Home Rebates",
+    "program_url": "https://www.mid.org/rebates/home/default.html",
+    "item": "weatherization",
+    "item_if_selected_other": "Sun Screens",
+    "short_description": {
+      "en": "$1 rebate per square foot for Sun Screens"
+    },
+    "program_status": "active",
+    "rebate_value": "$1 per square foot",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "*Apply at https://www.mid.org/rebates/home/documents/MID_residential_app.pdf\n*Must be installed on south, east, or west facing windows. Must be installed in space conditioned by refrigerant-based air conditioning.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      }
+    ]
+  },
+  {
+    "id": "CA-91",
+    "data_urls": [
+      "https://www.mid.org/rebates/home/documents/MID_residential_catalog.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Modesto Irrigation District",
+    "program_title": "MID Home Rebates",
+    "program_url": "https://www.mid.org/rebates/home/default.html",
+    "item": "weatherization",
+    "item_if_selected_other": "Window Films",
+    "short_description": {
+      "en": "$1 rebate per square foot for Window Films"
+    },
+    "program_status": "active",
+    "rebate_value": "$1 per square foot",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "*Apply at https://www.mid.org/rebates/home/documents/MID_residential_app.pdf\n*Must be installed on south, east, or west facing windows. Must be installed in space conditioned by refrigerant-based air conditioning.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      }
+    ]
+  },
+  {
+    "id": "CA-92",
+    "data_urls": [
+      "https://www.mid.org/rebates/home/documents/MID_residential_catalog.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Modesto Irrigation District",
+    "program_title": "MID Home Rebates",
+    "program_url": "https://www.mid.org/rebates/home/default.html",
+    "item": "weatherization",
+    "item_if_selected_other": "Replacement window",
+    "short_description": {
+      "en": "$2 rebate per square foot for ENERGY STAR Replacement Window"
+    },
+    "program_status": "active",
+    "rebate_value": "$2 per square foot",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "*Apply at https://www.mid.org/rebates/home/documents/MID_residential_app.pdf\n*Must replace existing windows with new high-performance dual pane ENERGY STAR qualified windows. Must be installed according to the manufacturer's instruction on south, east, or west facing windows.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      }
+    ]
+  },
+  {
+    "id": "CA-94",
+    "data_urls": [
+      "https://wattsmartsavings.net/california-residential/find-savings-plumbing-and-heating/heat-pumps-water-heaters/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Pacific Power",
+    "program_title": "Incentives for Heating and Cooling",
+    "program_url": "https://wattsmartsavings.net/california-residential/find-savings-heating-and-cooling/",
+    "item": "smart_thermostat",
+    "short_description": {
+      "en": "Get $50 cash back"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$50",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "unit": "per item"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "Applicant must be a customer of Pacific Power on one of specified rate schedules.",
+    "errors": [
+      {
+        "instancePath": "/amount/unit",
+        "schemaPath": "#/properties/amount/properties/unit/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "ton",
+            "kilowatt",
+            "watt",
+            "btuh10k",
+            "square_foot",
+            "kilowatt_hour"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "CA-97",
+    "data_urls": [
+      "https://pwp.cityofpasadena.net/savemoney/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Pasadena Water and Power",
+    "program_title": "Residential Programs - Ceiling Insulation Rebate",
+    "program_url": "https://pwp.cityofpasadena.net/ceilinginsulationrebate/",
+    "item": "weatherization",
+    "short_description": {
+      "en": "$0.05 per sq. ft."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$0.05",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.05,
+      "unit": "square_foot"
+    },
+    "equipment_standards_restrictions": "Must increase R-value to R-30 or higher",
+    "contractor_restrictions": "Local contractor or purchase in Pasadena",
+    "other_restrictions": "Residential PWP electric customers",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-98",
+    "data_urls": [
+      "https://pwp.cityofpasadena.net/savemoney/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Pasadena Water and Power",
+    "program_title": "Residential Programs - Heating & Cooling Systems - Smart Thermostat Rebate",
+    "program_url": "https://pwp.cityofpasadena.net/smartthermostatrebate/",
+    "item": "smart_thermostat",
+    "short_description": {
+      "en": "Install a Smart Thermostat and get a $10 rebate"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$10",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 10,
+      "unit": "per item",
+      "maximum": 20
+    },
+    "equipment_standards_restrictions": "Wifi enabled",
+    "other_restrictions": "PWP customer",
+    "bonus_description": "Limit to 2 every 5 years",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount/unit",
+        "schemaPath": "#/properties/amount/properties/unit/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "ton",
+            "kilowatt",
+            "watt",
+            "btuh10k",
+            "square_foot",
+            "kilowatt_hour"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "CA-99",
+    "data_urls": [
+      "https://pwp.cityofpasadena.net/savemoney/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Pasadena Water and Power",
+    "program_title": "Residential Programs - Electrify Your Home - Electric Heat Pump Water Heater Rebate",
+    "program_url": "https://pwp.cityofpasadena.net/electricheatpumpwaterheaterrebate/",
+    "item": "heat_pump_water_heater",
+    "short_description": {
+      "en": "$500"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$500",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "equipment_standards_restrictions": "Energy Star Certified",
+    "contractor_restrictions": "Buy in Pasadena to get an additional $20",
+    "other_restrictions": "PWP customer",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-100",
+    "data_urls": [
+      "https://pwp.cityofpasadena.net/savemoney/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Pasadena Water and Power",
+    "program_title": "Residential Programs - Electrify Your Home - Electric Heat Pump Clothes Dryer",
+    "program_url": "https://pwp.cityofpasadena.net/electricheatpumpclothesdryer/",
+    "item": "heat_pump_clothes_dryer",
+    "short_description": {
+      "en": "$300"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$300",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "equipment_standards_restrictions": "Energy Star Certified",
+    "contractor_restrictions": "Buy in Pasadena to get an additional $20",
+    "other_restrictions": "PWP customer",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-101",
+    "data_urls": [
+      "https://pwp.cityofpasadena.net/savemoney/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Pasadena Water and Power",
+    "program_title": "Residential Programs - Electrify Your Home - Electric Panel Upgrade Rebate",
+    "program_url": "https://pwp.cityofpasadena.net/electricpanelrebate/",
+    "item": "electric_panel",
+    "short_description": {
+      "en": "$1,000"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$1,000",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "equipment_standards_restrictions": "New panel upgraded to 200 amps or greater",
+    "other_restrictions": "Installation must include dedicated Level 2 EV charger circuit AND a dedicated electric water heater circuit",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-102",
+    "data_urls": [
+      "https://www.psrec.coop/energy/rebates/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Plumas-Sierra REC",
+    "program_title": "Hybrid/Heat Pump Water Heaters",
+    "program_url": "https://www.psrec.coop/energy/rebates/hybrid-heat-pump-water-heaters/",
+    "item": "heat_pump_water_heater",
+    "short_description": {
+      "en": "$500"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$500",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "equipment_standards_restrictions": "Energy Star Certified Hybrid Heat Pump Water Heater",
+    "other_restrictions": "Installation must be an upgrade from an Electrric Water Heater. Gas Water Heaters do not qualify.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-103",
+    "data_urls": [
+      "https://www.psrec.coop/energy/rebates/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Plumas-Sierra REC",
+    "program_title": "Air Source Heat Pumps",
+    "program_url": "https://www.psrec.coop/energy/rebates/air-source-heat-pumps/",
+    "item": "heat_pump_air_conditioner_heater",
+    "short_description": {
+      "en": "Split or Unitary/Package Ducted Systems"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$100 - $350",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": "100 - 350",
+      "unit": "ton"
+    },
+    "equipment_standards_restrictions": "Must meet SEER and HSPF requirements",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount/number",
+        "schemaPath": "#/properties/amount/properties/number/type",
+        "keyword": "type",
+        "params": {
+          "type": "number"
+        },
+        "message": "must be number"
+      }
+    ]
+  },
+  {
+    "id": "CA-104",
+    "data_urls": [
+      "https://www.psrec.coop/energy/rebates/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Plumas-Sierra REC",
+    "program_title": "Ground Source Heat Pumps",
+    "program_url": "https://www.psrec.coop/energy/rebates/ground-source-heat-pumps/",
+    "item": "geothermal_heating_installation",
+    "short_description": {
+      "en": "Rebate: $600 per ton"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$600",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 600,
+      "unit": "ton"
+    },
+    "equipment_standards_restrictions": "Energy Star Certified, AHRI Certificate required",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-105",
+    "data_urls": [
+      "https://www.psrec.coop/energy/rebates/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Plumas-Sierra REC",
+    "program_title": "$500 rebate for the purchase of an EV",
+    "program_url": "https://www.psrec.coop/energy/electric-vehicles/",
+    "item": "new_electric_vehicle",
+    "short_description": {
+      "en": "$500"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$500",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-106",
+    "data_urls": [
+      "https://sce.com"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Southern California Edison",
+    "program_title": "Save up to $115 with a Smart Thermostat",
+    "program_url": "https://www.sce.com/residential/demand-response/smart-energy-program",
+    "item": "smart_thermostat",
+    "short_description": {
+      "en": "$115"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "other"
+    ],
+    "rebate_value": "$115",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 115
+    },
+    "other_restrictions": "Signup for Smart Energy Program to get a one-time $75 bill credit. Get up to $40 each year by participating in SCE Energy Events between June 1 and September 30.",
+    "bonus_description": "$75 one-time bill credit + upto $40 bill credit per year.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/payment_methods/0",
+        "schemaPath": "#/properties/payment_methods/items/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "rebate",
+            "pos_rebate",
+            "tax_credit",
+            "account_credit",
+            "assistance_program",
+            "performance_rebate",
+            "unknown"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "CA-107",
+    "data_urls": [
+      "https://sce.com"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Southern California Edison",
+    "program_title": "PRE-OWNED ELECTRIC VEHICLE REBATE PROGRAM",
+    "program_url": "https://evrebates.sce.com/",
+    "item": "used_electric_vehicle",
+    "short_description": {
+      "en": "Standard rebate $1000, or Income-qualified $4000"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$1000 or $4000",
+    "amount": {
+      "type": "dollar_amount",
+      "number": "1000\n4000"
+    },
+    "equipment_standards_restrictions": "Purchased or Leased Pre-owned Battery Electric Vehicle (BEV) or Plug-in Hybrid Electric Vehicle (PHEV).",
+    "income_restrictions": "Restrictions apply for Income-qualified Rebate Plus option of $4000 rebate.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount/number",
+        "schemaPath": "#/properties/amount/properties/number/type",
+        "keyword": "type",
+        "params": {
+          "type": "number"
+        },
+        "message": "must be number"
+      }
+    ]
+  },
+  {
+    "id": "CA-108",
+    "data_urls": [
+      "https://www.tdpud.org/home/showpublisheddocument/10274/638187882479870000"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Truckee Donner Public Utility District",
+    "program_title": "TDPUD Residential Home Upgrades",
+    "program_url": "https://www.tdpud.org/departments/energy-and-water-conservation/residential-services-and-programs/residential-home-upgrades",
+    "item": "electric_panel",
+    "short_description": {
+      "en": "Upto $1000"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$1,000",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "equipment_standards_restrictions": "1. Comply with District Electric Service Requirements.\n2. Min. 200 amps.\n3. Include dedicated circuit for at least two of:\n  * EV Charger\n  * Heat Pump Water Heater\n  * Heat Pump (HVAC)\n  * Solar PV",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-109",
+    "data_urls": [
+      "https://www.tdpud.org/home/showpublisheddocument/10133/638109280067870000"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Truckee Donner Public Utility District",
+    "program_title": "TDPUD Residential Home Upgrades",
+    "program_url": "https://www.tdpud.org/departments/energy-and-water-conservation/residential-services-and-programs/residential-home-upgrades",
+    "item": "heat_pump_water_heater",
+    "short_description": {
+      "en": "Heat Pump Water Heater Rebate"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$1,000",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "equipment_standards_restrictions": "Uniform Energy Factor (UEF) ?=2.5",
+    "other_restrictions": "Replaces gas unit.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-110",
+    "data_urls": [
+      "https://www.tdpud.org/home/showpublisheddocument/10133/638109280067870000"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Truckee Donner Public Utility District",
+    "program_title": "TDPUD Residential Home Upgrades",
+    "program_url": "https://www.tdpud.org/departments/energy-and-water-conservation/residential-services-and-programs/residential-home-upgrades",
+    "item": "heat_pump_water_heater",
+    "short_description": {
+      "en": "Heat Pump Water Heater Rebate"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$750",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "equipment_standards_restrictions": "Uniform Energy Factor (UEF) ?=2.5",
+    "other_restrictions": "Replaces electric unit",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "CA-111",
+    "data_urls": [
+      "https://www.tdpud.org/home/showpublisheddocument/10238/638162832470230000"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Truckee Donner Public Utility District",
+    "program_title": "TDPUD Residential Home Upgrades",
+    "program_url": "https://www.tdpud.org/departments/energy-and-water-conservation/residential-services-and-programs/residential-home-upgrades",
+    "item": "electric_vehicle_charger",
+    "short_description": {
+      "en": "Electric Vehicle Chargin Stattion Rebate"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "Up to $950",
+    "amount": {
+      "type": "dollar_amount",
+      "number": "600 +350"
+    },
+    "equipment_standards_restrictions": "Level 2 (240V) utilize SAE J1772 plug or Tesla High Power Wall Connector\nEnergy Star Listed EV Charger - $600\nAdditional $350 if Smart Charger",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount/number",
+        "schemaPath": "#/properties/amount/properties/number/type",
+        "keyword": "type",
+        "params": {
+          "type": "number"
+        },
+        "message": "must be number"
+      }
+    ]
+  },
+  {
+    "id": "CA-120",
+    "data_urls": [
+      "https://www.siliconvalleypower.com/residents/rebates-6214"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Silicon Valley Power",
+    "program_title": "Rebates",
+    "program_url": "https://www.siliconvalleypower.com/residents/rebates-6214",
+    "item": "battery_storage_installation",
+    "short_description": {
+      "en": "Pilot program is over- Incentives of $0.15 per Watt-hour (Wh) up to $2,700 available for battery storage systems integrated with a solar PV system"
+    },
+    "program_status": "paused",
+    "program_start_raw": "9/1/2023",
+    "program_end_raw": "11/15/2023",
+    "rebate_value": "Incentives of $0.15 per Watt-hour (Wh) up to $2,700 are available\nAdditional $2,000 in bonus incentives for income-qualified customers on the Financial Rate Assistance Program\nAdditional $2,000 in bonus incentives for Income-qualified customers who meet LIHEAP income requirements",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2700,
+      "maximum": 6700
+    },
+    "income_restrictions": "See FRAP and LIHEAP requirements for details on how to qualify for bonus incentives",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "\n\nProgram Rules\nApply Online",
+    "bonus_description": "*Additional $2,000 in bonus incentives for income-qualified customers on the Financial Rate Assistance Program\n*Additional $2,000 in bonus incentives for Income-qualified customers who meet LIHEAP income requirements",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "payment_methods"
+        },
+        "message": "must have required property 'payment_methods'"
+      }
+    ]
+  },
+  {
+    "id": "CA-124",
+    "data_urls": [
+      "https://www.bayren.org/home-rebates\nhttps://www.bayren.org/insulation"
+    ],
+    "authority_type": "Local",
+    "authority_name": "Bay Area Regional Energy Network (BayREN)",
+    "program_title": "Rebates: Single Family Homeowners",
+    "program_url": "https://www.bayren.org/home-rebates",
+    "item": "weatherization",
+    "short_description": {
+      "en": "$0.70 / sqft rebate (not to exceed $1,000 per home) for wall insulation"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$0.70 / sqft rebate up to $1,000",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.7,
+      "unit": "square_foot",
+      "maximum": 1000
+    },
+    "equipment_standards_restrictions": "Wall insulation ≥ R-13 (2x4 framing) or ≥ R-19 (2x6 framing)\t",
+    "contractor_restrictions": "Must work with a BayREN Participating Contractor \n\nTo get started, contact your Home Energy Advisor for information about qualifying projects. Then hire a BayREN Participating Contractor and get your project started!",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "Customer must not have previously received a rebate for the same product or equipment from more than one energy-efficiency program offering rebates, financing or other rebates funded with PG&E ratepayer dollars within the past three years for O&M measures and eight years for building shell, HVAC and water heating measures.",
+    "bonus_description": "$100 bonus rebate for Combustion Appliance Safety (CAS) test-out \n\n",
+    "stacking_details": "Rebates are capped at $4,000 per eligible customer over an eight-year period. Individual measure rebates may not exceed the measure cost.\n\nOne rebate is offered per measure per address. \n",
+    "errors": [
+      {
+        "instancePath": "/authority_type",
+        "schemaPath": "#/properties/authority_type/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "federal",
+            "city",
+            "county",
+            "state",
+            "utility",
+            "other"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "CA-126",
+    "data_urls": [
+      "https://www.bayren.org/home-rebates\nhttps://www.bayren.org/homeowners/ducts"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Bay Area Regional Energy Network (BayREN)",
+    "program_title": "Rebates: Single Family Homeowners",
+    "program_url": "https://www.bayren.org/home-rebates",
+    "item": "other",
+    "item_if_selected_other": "Duct Replacement",
+    "short_description": {
+      "en": "$500 rebate for duct replacement"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$500",
+    "amount": {
+      "type": "dollar_amount"
+    },
+    "equipment_standards_restrictions": "Duct Replacement ≤ 5% total leakage\n",
+    "contractor_restrictions": "Must work with a BayREN Participating Contractor \n\nTo get started, contact your Home Energy Advisor for information about qualifying projects. Then hire a BayREN Participating Contractor and get your project started!",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "*Customer must not have previously received a rebate for the same product or equipment from more than one energy-efficiency program offering rebates, financing or other rebates funded with PG&E ratepayer dollars within the past three years for O&M measures and eight years for building shell, HVAC and water heating measures.",
+    "bonus_description": "$100 bonus rebate for Combustion Appliance Safety (CAS) test-out \n\n",
+    "stacking_details": "Rebates are capped at $4,000 per eligible customer over an eight-year period. Individual measure rebates may not exceed the measure cost.\n\nOne rebate is offered per measure per address. \n",
+    "errors": [
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      }
+    ]
+  },
+  {
+    "id": "CA-128",
+    "data_urls": [
+      "https://www.bayren.org/home-rebates\nhttps://www.bayren.org/homeowners/heat-pump-dryers"
+    ],
+    "authority_type": "Local",
+    "authority_name": "Bay Area Regional Energy Network (BayREN)",
+    "program_title": "Rebates: Single Family Homeowners",
+    "program_url": "https://www.bayren.org/home-rebates",
+    "item": "heat_pump_clothes_dryer",
+    "short_description": {
+      "en": "Get $250 back on your high efficiency heat pump clothes dryer when replacing an existing natural gas clothes dryer."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$250",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "equipment_standards_restrictions": "Heat pump clothes dryer ≥ 4.50 Combined Energy Factor (CEF) (must replace existing natural gas clothes dryer and listed as ENERGY STAR Efficient heat pump clothes dryer)",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "*Customer must not have previously received a rebate for the same product or equipment from more than one energy-efficiency program offering rebates, financing or other rebates funded with PG&E ratepayer dollars within the past three years for O&M measures and eight years for building shell, HVAC and water heating measures.",
+    "stacking_details": "Rebates are capped at $4,000 per eligible customer over an eight-year period. Individual measure rebates may not exceed the measure cost.\n\nOne rebate is offered per measure per address. \n",
+    "errors": [
+      {
+        "instancePath": "/authority_type",
+        "schemaPath": "#/properties/authority_type/enum",
+        "keyword": "enum",
+        "params": {
+          "allowedValues": [
+            "federal",
+            "city",
+            "county",
+            "state",
+            "utility",
+            "other"
+          ]
+        },
+        "message": "must be equal to one of the allowed values"
+      }
+    ]
+  },
+  {
+    "id": "CA-129",
+    "data_urls": [
+      "https://riversideca.gov/utilities/residents/rebates/energy-rebates/weatherization\nhttps://riversideca.gov/utilities/sites/riversideca.gov.utilities/files/pdf/rebates/RPU_Residential%20Rebates_Form_Fillable_EnglishSpanish.pdf"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Riverside Public Utilities",
+    "program_title": "Energy Star",
+    "program_url": "https://riversideca.gov/utilities/residents/rebates/energy-rebates/energy-star",
+    "item": "weatherization",
+    "short_description": {
+      "en": "Rebates for attic and exterior wall insulation, duct insulation and sealing, window film, Cool Roof coatings, and smart thermostats"
+    },
+    "program_status": "active",
+    "program_start_raw": "2/1/2022",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "Varies. See amount for each type of weatherization upgrade here.",
+    "amount": {
+      "type": "dollar_amount"
+    },
+    "equipment_standards_restrictions": "See requirements for each type of weatherization upgrade on this page.",
+    "owner_status": [
+      "homeowner"
+    ],
+    "other_restrictions": "Submit your completed and signed application, proof-of-purchase and other supporting documentation as required, within 90 days of the purchase date and in accordance with program guidelines to:\n\nMail:\nRiverside Public Utilities – Programs & Services\n3025 Madison St.\nRiverside, CA 92504\n\nOR\n\nE-mail:\nRPURebates@riversideca.gov",
+    "errors": [
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      }
+    ]
+  }
+]
