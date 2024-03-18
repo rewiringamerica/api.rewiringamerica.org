@@ -263,7 +263,7 @@ zip=53703\
 # TODO: Remove beta states argument when OR is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator?\
-location%5Bzip%5D=97001\
+zip=97001\
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=50000\

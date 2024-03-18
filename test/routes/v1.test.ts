@@ -345,7 +345,7 @@ test('OR low income response with state and utility filtering is valid and corre
   await validateResponse(
     t,
     {
-      location: { zip: '97001' },
+      zip: '97001',
       owner_status: 'homeowner',
       household_size: 1,
       household_income: 50000,
@@ -444,14 +444,14 @@ const BAD_QUERIES = [
     household_size: 4,
   },
   {
-    location: null,
+    zip: null,
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: 'joint',
     household_size: 4,
   },
   {
-    location: {},
+    zip: {},
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: 'joint',
