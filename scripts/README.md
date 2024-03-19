@@ -24,7 +24,7 @@ This will print translations to the console.
 
 This workflow takes a Google spreadsheet where initial spreadsheet data has been collected and converts it to the JSON format we use for our incentives.
 
-There are three scripts involved. Before you use either, register the state in [`incentive-spreadsheet-registry.ts`](incentive-spreadsheet-registry.ts).
+There are three scripts involved. Before you use them, register the state in [`incentive-spreadsheet-registry.ts`](incentive-spreadsheet-registry.ts).
 
 Filling out an entry for `incentive-spreadsheet-registry.ts` consists of creating a new key with the state abbreviation, and then:
 
@@ -32,6 +32,11 @@ Filling out an entry for `incentive-spreadsheet-registry.ts` consists of creatin
 - Exporting and sharing a sheet URL in `sheetUrl`
   - To do this for a Google sheet, click File -> Share -> Publish to web and under `Link`, select the Incentives data tab and change the `Web page` default to `Comma separated values (.csv)`. The link that appears is what should be copied into the value.
 - Optionally declaring the header row number, if not the top row of the spreadsheet, in `headerRowNumber`
+
+First, **edit `authorities.json` manually** to include a top-level entry for
+the state you're adding, if it's not already present.
+
+Then, run [`generate-utility-data.ts`](generate-utility-data.ts) to populate the list of utilities for the state in the authorities file. See [below](#utility-data) for details on that.
 
 [`generate-misc-state-data.ts`](generate-misc-state-data.ts) adds values to ancillary files to reflect the programs and authorities that will be needed for the JSON. This needs to happen first because our data schemas actually require an incentive's program/authority to be one of the listed members, and if that's not the case, the incentive will fail validation.
 
@@ -45,8 +50,6 @@ Usage:
 `node build/scripts/generate-misc-state-data.js <state_id>`
 
 After running, you may need to edit the program files to put states in alphabetical order. The authorities file is already alphabetically sorted. Note that running this script twice will paste the same values twice.
-
-Next you'll need to run [`generate-utility-data.ts`](generate-utility-data.ts) to populate the list of utilities for the state in the authorities file. See [below](#utility-data) for details on that.
 
 It's recommended to also define low-income thresholds in `data/low_income_thresholds.json` for your state to save time in the next step.
 

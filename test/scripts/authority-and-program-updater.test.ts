@@ -144,6 +144,14 @@ test('replace existing state', tap => {
           name: 'Town',
         },
       },
+      utility: {
+        'ct-utility': {
+          name: 'Utility',
+        },
+        'ct-other-utility': {
+          name: 'Other utility',
+        },
+      },
     },
   };
   const authorityMap: AuthorityMap = {
@@ -157,6 +165,12 @@ test('replace existing state', tap => {
     'ct-metropolis': {
       name: 'Metropolis',
       authority_type: 'city',
+      programs: {},
+    },
+    // Utility has different name from existing
+    'ct-utility': {
+      name: 'New name for existing utility',
+      authority_type: 'utility',
       programs: {},
     },
   };
@@ -173,91 +187,50 @@ test('replace existing state', tap => {
           name: 'Metropolis',
         },
       },
+      utility: {
+        // AuthorityMap had a different name for this, but original is kept
+        'ct-utility': {
+          name: 'Utility',
+        },
+        // This utility is still here even though it's not in authorityMap
+        'ct-other-utility': {
+          name: 'Other utility',
+        },
+      },
     },
   };
-  tap.matchOnly(expected, updateAuthorities(initial, 'CT', authorityMap));
+  tap.matchOnly(updateAuthorities(initial, 'CT', authorityMap), expected);
   tap.end();
 });
 
-test('add and alpha-sort new state', tap => {
+test('error on utility not in authorities', tap => {
   const authorityMap: AuthorityMap = {
-    // Same as before
+    'ct-new-utility': {
+      name: 'New Utility',
+      authority_type: 'utility',
+      programs: {},
+    },
+  };
+
+  tap.throws(
+    () => updateAuthorities(unorderedFixture, 'CT', authorityMap),
+    /Utility ct-new-utility is in spreadsheet but not in authorities/,
+  );
+  tap.end();
+});
+
+test('error on nonexistent state', tap => {
+  const authorityMap: AuthorityMap = {
     'de-state': {
       name: 'Delaware State Energy',
       authority_type: 'state',
       programs: {},
     },
-    // Updated
-    'de-city': {
-      name: 'Delaware City',
-      authority_type: 'city',
-      programs: {},
-    },
   };
 
-  const expected: StateToAuthorityTypeMap = {
-    AZ: {
-      state: {},
-      utility: {
-        'az-mohave-electric-cooperative': {
-          name: 'Mohave Electric Cooperative',
-        },
-        'az-salt-river-project': {
-          name: 'Salt River Project',
-        },
-        'az-sulphur-springs-valley-electric-cooperative': {
-          name: 'Sulphur Springs Valley Electric Cooperative',
-        },
-        'az-tucson-electric-power': {
-          name: 'Tucson Electric Power',
-        },
-        'az-uni-source-energy-services': {
-          name: 'UniSource Energy Services',
-        },
-      },
-    },
-    CT: {
-      state: {
-        'ct-deep': {
-          name: 'CT Department of Energy & Environmental Protection',
-        },
-      },
-      utility: {
-        'ct-eversource': {
-          name: 'Eversource',
-        },
-        'ct-other-source': {
-          name: 'Othersource',
-        },
-      },
-    },
-    DE: {
-      state: {
-        'de-state': {
-          name: 'Delaware State Energy',
-        },
-      },
-      city: {
-        'de-city': {
-          name: 'Delaware City',
-        },
-      },
-    },
-    VA: {
-      state: {},
-      utility: {
-        'va-appalachian-power': {
-          name: 'Appalachian Power',
-        },
-        'va-dominion-energy': {
-          name: 'Dominion Energy',
-        },
-      },
-    },
-  };
-  tap.matchOnly(
-    expected,
-    updateAuthorities(unorderedFixture, 'DE', authorityMap),
+  tap.throws(
+    () => updateAuthorities(unorderedFixture, 'DE', authorityMap),
+    /authorities.json has no entry for DE./,
   );
   tap.end();
 });
