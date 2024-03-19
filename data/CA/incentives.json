@@ -18,9 +18,7 @@
     ],
     "short_description": {
       "en": "The Energy Savings Assistance Program (ESA), offered to income-qualified customers, provides energy-saving improvements at no charge."
-    },
-    "start_date": "2023-07-01",
-    "end_date": "2024-05-31"
+    }
   },
   {
     "id": "CA-2",
@@ -29,13 +27,13 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "other",
-    "program": "ca_burbankWater&Power_residentialRebateProgram",
+    "item": "smart_thermostat",
+    "program": "ca_burbankWater&Power_residentialBuildingElectrificationRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 25,
+      "number": 75,
       "minimum": 1,
-      "maximum": 3
+      "maximum": 2
     },
     "owner_status": [
       "homeowner",
@@ -52,125 +50,8 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "other",
-    "program": "ca_burbankWater&Power_residentialRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 75,
-      "minimum": 1,
-      "maximum": 1
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Make home more comfortable with energy efficient improvements and by purchasing Energy Star® certified appliances."
-    }
-  },
-  {
-    "id": "CA-4",
-    "authority_type": "utility",
-    "authority": "ca-burbank-water-and-power",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "other",
-    "program": "ca_burbankWater&Power_residentialRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 35,
-      "minimum": 1,
-      "maximum": 3
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Make home more comfortable with energy efficient improvements and by purchasing Energy Star® certified appliances."
-    }
-  },
-  {
-    "id": "CA-5",
-    "authority_type": "utility",
-    "authority": "ca-burbank-water-and-power",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "smart_thermostat",
-    "program": "ca_burbankWater&Power_residentialRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 75,
-      "minimum": 1,
-      "maximum": 2
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Make home more comfortable with energy efficient improvements and by purchasing Energy Star® certified appliances."
-    }
-  },
-  {
-    "id": "CA-6",
-    "authority_type": "utility",
-    "authority": "ca-burbank-water-and-power",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "other",
-    "program": "ca_burbankWater&Power_residentialRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400,
-      "minimum": 1,
-      "maximum": 1
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Make home more comfortable with energy efficient improvements and by purchasing Energy Star® certified appliances."
-    }
-  },
-  {
-    "id": "CA-7",
-    "authority_type": "utility",
-    "authority": "ca-burbank-water-and-power",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "other",
-    "program": "ca_burbankWater&Power_residentialRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 250,
-      "unit": "ton",
-      "minimum": 1,
-      "maximum": 1
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Rebate for installing Central Air Conditioning."
-    },
-    "bonus_available": true
-  },
-  {
-    "id": "CA-8",
-    "authority_type": "utility",
-    "authority": "ca-burbank-water-and-power",
-    "payment_methods": [
-      "rebate"
-    ],
     "item": "electric_vehicle_charger",
-    "program": "ca_burbankWater&Power_residentialRebateProgram",
+    "program": "ca_burbankWater&Power_residentialBuildingElectrificationRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 1500
@@ -184,14 +65,14 @@
     }
   },
   {
-    "id": "CA-9",
+    "id": "CA-4",
     "authority_type": "utility",
     "authority": "ca-burbank-water-and-power",
     "payment_methods": [
       "rebate"
     ],
     "item": "weatherization",
-    "program": "ca_burbankWater&Power_residentialRebateProgram",
+    "program": "ca_burbankWater&Power_residentialBuildingElectrificationRebateProgram",
     "amount": {
       "type": "dollars_per_unit",
       "number": 0.15,
@@ -202,7 +83,115 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate for installing Central Air Conditioning."
+      "en": "Rebate for home weatherization measures."
+    }
+  },
+  {
+    "id": "CA-5",
+    "authority_type": "utility",
+    "authority": "ca-burbank-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "ca_burbankWater&Power_residentialBuildingElectrificationRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.15,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate for home weatherization measures."
+    }
+  },
+  {
+    "id": "CA-6",
+    "authority_type": "utility",
+    "authority": "ca-burbank-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_burbankWater&Power_residentialBuildingElectrificationRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 per ton for a Central heat pump HVAC."
+    }
+  },
+  {
+    "id": "CA-7",
+    "authority_type": "utility",
+    "authority": "ca-burbank-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_burbankWater&Power_residentialBuildingElectrificationRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 per ton for a Central heat pump HVAC."
+    }
+  },
+  {
+    "id": "CA-8",
+    "authority_type": "utility",
+    "authority": "ca-burbank-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "ca_burbankWater&Power_residentialBuildingElectrificationRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,500 for a heat pump water heater."
+    }
+  },
+  {
+    "id": "CA-9",
+    "authority_type": "utility",
+    "authority": "ca-burbank-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "ca_burbankWater&Power_residentialBuildingElectrificationRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $200 for a heat pump clothers dryer."
     }
   },
   {
@@ -212,40 +201,39 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "weatherization",
-    "program": "ca_burbankWater&Power_residentialRebateProgram",
+    "item": "electric_stove",
+    "program": "ca_burbankWater&Power_residentialBuildingElectrificationRebateProgram",
     "amount": {
-      "type": "dollars_per_unit",
-      "number": 0.15,
-      "unit": "square_foot"
+      "type": "dollar_amount",
+      "number": 500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Rebate for installing Central Air Conditioning."
+      "en": "Up to $500 for an electric range with induction or electric cooktop."
     }
   },
   {
     "id": "CA-11",
     "authority_type": "utility",
-    "authority": "ca-alameda-municipal-power",
+    "authority": "ca-burbank-water-and-power",
     "payment_methods": [
       "rebate"
     ],
-    "item": "ebike",
-    "program": "ca_alamedaMunicipalPower_aMPOffers",
+    "item": "electric_panel",
+    "program": "ca_burbankWater&Power_residentialBuildingElectrificationRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 100
+      "number": 750
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$100 rebate on E-bike purchase cost $999.99 or less."
+      "en": "A new electrical panel may be necessary to support new electric appliances, EVs and solar. Must contact BWP to determine qualification."
     }
   },
   {
@@ -256,17 +244,18 @@
       "rebate"
     ],
     "item": "ebike",
-    "program": "ca_alamedaMunicipalPower_aMPOffers",
+    "program": "ca_alamedaMunicipalPower_aMPE-BikeRebate",
     "amount": {
       "type": "dollar_amount",
-      "number": 200
+      "number": 300,
+      "maximum": 300
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Income-qualified $200 rebate on E-bike purchase cost $999.99 or less."
+      "en": "Purchase a new electric bicycle (e-bike) and you may be eligible for a cash rebate up to $300."
     }
   },
   {
@@ -287,11 +276,32 @@
       "renter"
     ],
     "short_description": {
-      "en": "$200 rebate on E-bike purchase cost $1,000 - $1,999.99."
+      "en": "Income-qualified $200 rebate on E-bike purchase cost $999.99 or less."
     }
   },
   {
     "id": "CA-14",
+    "authority_type": "utility",
+    "authority": "ca-alameda-municipal-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "ebike",
+    "program": "ca_alamedaMunicipalPower_aMPOffers",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate on E-bike purchase cost $1,000 - $1,999.99."
+    }
+  },
+  {
+    "id": "CA-15",
     "authority_type": "utility",
     "authority": "ca-alameda-municipal-power",
     "payment_methods": [
@@ -312,7 +322,7 @@
     }
   },
   {
-    "id": "CA-15",
+    "id": "CA-16",
     "authority_type": "utility",
     "authority": "ca-alameda-municipal-power",
     "payment_methods": [
@@ -333,7 +343,7 @@
     }
   },
   {
-    "id": "CA-16",
+    "id": "CA-17",
     "authority_type": "utility",
     "authority": "ca-alameda-municipal-power",
     "payment_methods": [
@@ -354,7 +364,7 @@
     }
   },
   {
-    "id": "CA-17",
+    "id": "CA-18",
     "authority_type": "utility",
     "authority": "ca-alameda-municipal-power",
     "payment_methods": [
@@ -375,7 +385,7 @@
     }
   },
   {
-    "id": "CA-18",
+    "id": "CA-19",
     "authority_type": "utility",
     "authority": "ca-alameda-municipal-power",
     "payment_methods": [
@@ -385,18 +395,18 @@
     "program": "ca_alamedaMunicipalPower_aMPOffers",
     "amount": {
       "type": "dollar_amount",
-      "number": 2500
+      "number": 1500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "up to $2,500 on upgradde of Electric Switch Panel."
+      "en": "Earn up to $1,500 when you upgrade your electric panel."
     }
   },
   {
-    "id": "CA-19",
+    "id": "CA-20",
     "authority_type": "utility",
     "authority": "ca-alameda-municipal-power",
     "payment_methods": [
@@ -413,11 +423,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "up to $500 on installation of new level 2 Electric Vehicle Charger."
+      "en": "Earn a rebate up to $500 after the installation of a new level 2 Electric Vehicle Charger."
     }
   },
   {
-    "id": "CA-20",
+    "id": "CA-21",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -434,12 +444,12 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $200 rebate on installed ENERGY STAR Certified heat pump clothes dryer."
+      "en": "Earn up to $200 for replacing your clothes dryer with a new, ENERGY STAR Certified heat pump clothes dryer."
     },
     "bonus_available": true
   },
   {
-    "id": "CA-21",
+    "id": "CA-22",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -456,12 +466,12 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $400 rebate on installed ENERGY STAR Certified electric storage water heater."
+      "en": "Up to $400 rebate on replacing your water heater with a new, ENERGY STAR Certified electric storage water heater."
     },
     "bonus_available": true
   },
   {
-    "id": "CA-22",
+    "id": "CA-23",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -483,7 +493,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-23",
+    "id": "CA-24",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -506,7 +516,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-24",
+    "id": "CA-25",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -529,7 +539,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-25",
+    "id": "CA-26",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -552,7 +562,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-26",
+    "id": "CA-27",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -575,7 +585,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-27",
+    "id": "CA-28",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -593,18 +603,18 @@
       "renter"
     ],
     "short_description": {
-      "en": "$200 per Ton rebate for a qualified mini-split heat pump."
+      "en": "$200 per ton rebate for a qualified ductless mini-split heat pump."
     },
     "bonus_available": true
   },
   {
-    "id": "CA-28",
+    "id": "CA-29",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
       "rebate"
     ],
-    "item": "other",
+    "item": "heat_pump_air_conditioner_heater",
     "program": "ca_anaheimPublicUtilities_energyRebates",
     "amount": {
       "type": "dollars_per_unit",
@@ -616,12 +626,12 @@
       "renter"
     ],
     "short_description": {
-      "en": "$200 per Ton rebate for a qualified mini-split heat pump."
+      "en": "$200 per Ton rebate for a qualified heat pump HVAC."
     },
     "bonus_available": true
   },
   {
-    "id": "CA-29",
+    "id": "CA-30",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -639,40 +649,87 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate for ENERGY STAR Certified smart thermostate."
+      "en": "$50 rebate for ENERGY STAR Certified smart thermostat."
     },
     "bonus_available": true
   },
   {
     "id": "CA-31",
     "authority_type": "utility",
-    "authority": "ca-city-of-palo-alto-utilities",
+    "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
       "rebate"
     ],
-    "item": "other",
-    "program": "ca_cityOfPaloAltoUtilities_electrification",
+    "item": "electric_vehicle_charger",
+    "program": "ca_anaheimPublicUtilities_energyRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 2300
+      "number": 1000,
+      "maximum": 1000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "encourages the community to consider home electrification by shifting away from carbon-based fuels."
-    }
+      "en": "Rebates for installation costs and upgrades of Level 2 EV chargers. Up to $500 for non-program participants and up to $1,000 for networked chargers with enrollment in time-based rates."
+    },
+    "bonus_available": true
   },
   {
     "id": "CA-32",
+    "authority_type": "utility",
+    "authority": "ca-anaheim-public-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "ca_anaheimPublicUtilities_energyRebatesAndPrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.35,
+      "unit": "square_foot",
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$0.35 per square foot rebate for new fire resistant attic insulation."
+    }
+  },
+  {
+    "id": "CA-33",
+    "authority_type": "utility",
+    "authority": "ca-city-of-palo-alto-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "ca_cityOfPaloAltoUtilities_electrification",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2300,
+      "maximum": 2300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2,300 rebate for residents who replace an existing water heater with a new, efficient, electric heat pump water heater."
+    }
+  },
+  {
+    "id": "CA-34",
     "authority_type": "utility",
     "authority": "ca-city-of-palo-alto-utilities",
     "payment_methods": [
       "rebate"
     ],
     "item": "electric_vehicle_charger",
-    "program": "ca_cityOfPaloAltoUtilities_tRANSFORMERUPGRADEREBATEPROGRAM",
+    "program": "ca_cityOfPaloAltoUtilities_utilityServiceCapacityFeeRebateProgramForResidentialEVChargerInstallations",
     "amount": {
       "type": "dollar_amount",
       "number": 10000
@@ -682,11 +739,856 @@
       "renter"
     ],
     "short_description": {
-      "en": "rebates to help cover the costs incurred for infrastructure upgrades directly related to EV charger installations."
+      "en": "Up to $10,000 rebate available to help cover the costs incurred for infrastructure upgrades directly related to EV charger installations."
+    }
+  },
+  {
+    "id": "CA-35",
+    "authority_type": "utility",
+    "authority": "ca-alameda-municipal-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_alamedaMunicipalPower_aMPOffers",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Earn up to $1,500 for switching from natural gas to an electric heat pump."
+    }
+  },
+  {
+    "id": "CA-36",
+    "authority_type": "utility",
+    "authority": "ca-alameda-municipal-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "ca_alamedaMunicipalPower_aMPOffers",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Earn up to $1,500 when you install a qualifying electric heat pump water heater."
+    }
+  },
+  {
+    "id": "CA-37",
+    "authority_type": "utility",
+    "authority": "ca-city-of-lompoc-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_cityOfLompocUtilities_rebateAndConservationProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Earn a $250 per ton rebate up to 100% of the cost to purchase and install a new qualifying air source heat pump."
+    }
+  },
+  {
+    "id": "CA-38",
+    "authority_type": "utility",
+    "authority": "ca-city-of-lompoc-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_cityOfLompocUtilities_rebateAndConservationProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Earn a $250 per ton rebate up to 100% of the cost to purchase and install a new qualifying air source heat pump."
+    }
+  },
+  {
+    "id": "CA-39",
+    "authority_type": "utility",
+    "authority": "ca-city-of-lompoc-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "ca_cityOfLompocUtilities_rebateAndConservationProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 50,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Earn up to $50 as a rebate for the purchase and installation of a new qualifying smart thermostat to replace an existing non-connected, manual, or programmable thermostat.  Limit 2 per household.."
+    }
+  },
+  {
+    "id": "CA-40",
+    "authority_type": "state",
+    "authority": "ca-california-public-utilities-commission",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "ca_californiaPublicUtilitiesCommission_goldenStateRebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Save up to $500 on heat pump water heater replacing an electric water heater."
+    }
+  },
+  {
+    "id": "CA-41",
+    "authority_type": "utility",
+    "authority": "ca-glendale-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_vehicle_charger",
+    "program": "ca_glendaleWaterAndPower_energyAndWaterSavingRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1599
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1599 rebate for installing an electric vehicle charging station with electric panel upgrade."
+    }
+  },
+  {
+    "id": "CA-42",
+    "authority_type": "utility",
+    "authority": "ca-glendale-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "ebike",
+    "program": "ca_glendaleWaterAndPower_energyAndWaterSavingRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Earn $300 as a rebate for a new e-bike purchase."
+    }
+  },
+  {
+    "id": "CA-43",
+    "authority_type": "utility",
+    "authority": "ca-glendale-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_glendaleWaterAndPower_energyAndWaterSavingRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $250/ton rebate for an ENERGY STAR Heat Pump / Mini-Split Pump."
+    }
+  },
+  {
+    "id": "CA-44",
+    "authority_type": "utility",
+    "authority": "ca-glendale-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "ca_glendaleWaterAndPower_energyAndWaterSavingRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 325
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $325 rebate for an ENERGY STAR electric heat pump clothes dryer."
+    }
+  },
+  {
+    "id": "CA-45",
+    "authority_type": "utility",
+    "authority": "ca-glendale-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "ca_glendaleWaterAndPower_energyAndWaterSavingRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 525
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $525 rebate for an ENERGY STAR electric heat pump water heater."
+    }
+  },
+  {
+    "id": "CA-46",
+    "authority_type": "utility",
+    "authority": "ca-glendale-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "ca_glendaleWaterAndPower_energyAndWaterSavingRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 220
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $220 rebate for an ENERGY STAR electric clothes dryer."
+    }
+  },
+  {
+    "id": "CA-47",
+    "authority_type": "utility",
+    "authority": "ca-glendale-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_outdoor_equipment",
+    "program": "ca_glendaleWaterAndPower_energyAndWaterSavingRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $50 rebate for an electric leaf blower."
+    }
+  },
+  {
+    "id": "CA-48",
+    "authority_type": "utility",
+    "authority": "ca-alameda-municipal-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "rooftop_solar_installation",
+    "program": "ca_alamedaMunicipalPower_incomeQualifiedSolarRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for income qualified AMP customers installing solar in their homes."
+    }
+  },
+  {
+    "id": "CA-49",
+    "authority_type": "utility",
+    "authority": "ca-alameda-municipal-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "ca_alamedaMunicipalPower_aMPOffers",
+    "amount": {
+      "type": "percent",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Variable rebates while supplies last."
+    }
+  },
+  {
+    "id": "CA-50",
+    "authority_type": "utility",
+    "authority": "ca-alameda-municipal-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "used_electric_vehicle",
+    "program": "ca_alamedaMunicipalPower_aMPOffers",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 6000,
+      "minimum": 1500,
+      "maximum": 6000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Earn up to $6,000 as a rebate for purchasing a used electric vehicle."
+    }
+  },
+  {
+    "id": "CA-51",
+    "authority_type": "utility",
+    "authority": "ca-imperial-irrigation-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "ca_imperialIrrigationDistrict_iIDEnergyRewardsProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate up to $2/sq.ft. for ENERGY STAR® Dual-Pane Windows."
+    }
+  },
+  {
+    "id": "CA-52",
+    "authority_type": "utility",
+    "authority": "ca-imperial-irrigation-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "ca_imperialIrrigationDistrict_iIDEnergyRewardsProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.3,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate up to $0.30 /sq.ft. for ENERGY STAR® Attic Insulation."
+    }
+  },
+  {
+    "id": "CA-53",
+    "authority_type": "utility",
+    "authority": "ca-imperial-irrigation-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_imperialIrrigationDistrict_iIDEnergyRewardsProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Earn up to $200/unit for a ductless mini-split system."
+    }
+  },
+  {
+    "id": "CA-54",
+    "authority_type": "utility",
+    "authority": "ca-imperial-irrigation-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_imperialIrrigationDistrict_iIDEnergyRewardsProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 300,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate for switching HVAC from gas to electric up to $300/ton."
+    }
+  },
+  {
+    "id": "CA-55",
+    "authority_type": "utility",
+    "authority": "ca-lassen-municipal-utility-district",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "ca_lassenMunicipalUtilityDistrict_residentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 35,
+      "maximum": 35
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $35 rebate for electric ENERGY STAR clothes dryer."
+    }
+  },
+  {
+    "id": "CA-56",
+    "authority_type": "utility",
+    "authority": "ca-lassen-municipal-utility-district",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "ca_lassenMunicipalUtilityDistrict_residentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 350,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $350 rebate for a hybrid-heat pump ENERGY STAR water heater."
+    }
+  },
+  {
+    "id": "CA-57",
+    "authority_type": "utility",
+    "authority": "ca-lassen-municipal-utility-district",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_lassenMunicipalUtilityDistrict_residentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate for up to 50% of the cost for an air source heat pump."
+    }
+  },
+  {
+    "id": "CA-58",
+    "authority_type": "utility",
+    "authority": "ca-lassen-municipal-utility-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "geothermal_heating_installation",
+    "program": "ca_lassenMunicipalUtilityDistrict_residentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 50,
+      "unit": "ton",
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate for up to 50% of the cost for a qualified Geothermal Heat Pump."
+    }
+  },
+  {
+    "id": "CA-59",
+    "authority_type": "utility",
+    "authority": "ca-lassen-municipal-utility-district",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "smart_thermostat",
+    "program": "ca_lassenMunicipalUtilityDistrict_residentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate for up to 50% of the cost for a qualified ENERGY STAR certified Smart Thermostat."
+    }
+  },
+  {
+    "id": "CA-60",
+    "authority_type": "utility",
+    "authority": "ca-liberty-utilities",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "weatherization",
+    "program": "ca_libertyUtilities_energySavingsAssistanceProgram(ESAP)",
+    "amount": {
+      "type": "percent",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Income qualified customers receive free weatherization upgrades."
+    }
+  },
+  {
+    "id": "CA-61",
+    "authority_type": "utility",
+    "authority": "ca-liberty-utilities",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "electric_stove",
+    "program": "ca_libertyUtilities_energySavingsAssistanceProgram(ESAP)",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate for new stationary Induction Range or Cooktop."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "CA-62",
+    "authority_type": "utility",
+    "authority": "ca-liberty-utilities",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "weatherization",
+    "program": "ca_libertyUtilities_energySavingsAssistanceProgram(ESAP)",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate for qualified new Replacement Windows."
+    }
+  },
+  {
+    "id": "CA-63",
+    "authority_type": "utility",
+    "authority": "ca-liberty-utilities",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "smart_thermostat",
+    "program": "ca_libertyUtilities_residentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 50,
+      "maximum": 2
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $50 rebate for a new, ENERGY STAR® certified Smart Thermostat."
+    }
+  },
+  {
+    "id": "CA-64",
+    "authority_type": "utility",
+    "authority": "ca-lodi-electric-utility",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "ca_lodiElectricUtility_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate up to 50% of the cost of installing an ENERGY STAR certified electric clothes dryer."
+    }
+  },
+  {
+    "id": "CA-65",
+    "authority_type": "utility",
+    "authority": "ca-lodi-electric-utility",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "ca_lodiElectricUtility_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $200 rebate up to 50% of the project cost for installing a ENERGY STAR Hybrid/Heat Pump Water Heater."
+    }
+  },
+  {
+    "id": "CA-66",
+    "authority_type": "utility",
+    "authority": "ca-lodi-electric-utility",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "weatherization",
+    "program": "ca_lodiElectricUtility_residentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.75,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate for qualified new insulation upgrades."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "CA-67",
+    "authority_type": "utility",
+    "authority": "ca-lodi-electric-utility",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_lodiElectricUtility_residentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate up to $250/ton for new qualifying Air Source Heat Pump."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "CA-68",
+    "authority_type": "utility",
+    "authority": "ca-lodi-electric-utility",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "weatherization",
+    "program": "ca_lodiElectricUtility_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate up to $150 for Duct Sealing with Testing for homes with excessive leakage."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "CA-69",
+    "authority_type": "utility",
+    "authority": "ca-los-angeles-department-of-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "ca_losAngelesDepartmentOfWaterAndPower_lADWPRebatesAndPrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of $2 per sq ft for ENERGY STAR® Qualified Residential Windows."
+    }
+  },
+  {
+    "id": "CA-70",
+    "authority_type": "utility",
+    "authority": "ca-los-angeles-department-of-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_losAngelesDepartmentOfWaterAndPower_lADWPRebatesAndPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $3,000 maximum rebate depending on building type. System must be replaced with a qualifying ENERGY STAR system."
     }
   },
   {
     "id": "CA-71",
+    "authority_type": "utility",
+    "authority": "ca-los-angeles-department-of-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_panel",
+    "program": "ca_losAngelesDepartmentOfWaterAndPower_lADWPRebatesAndPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 maximum rebate available if electric service improvement is necessary to replace centrail air conditioner and gas furnace."
+    }
+  },
+  {
+    "id": "CA-72",
+    "authority_type": "utility",
+    "authority": "ca-los-angeles-department-of-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_vehicle_charger",
+    "program": "ca_losAngelesDepartmentOfWaterAndPower_lADWPRebatesAndPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate up to $1,500 for a qualifying Level 2 EV charger and EV meter."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "CA-73",
+    "authority_type": "utility",
+    "authority": "ca-los-angeles-department-of-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "ca_losAngelesDepartmentOfWaterAndPower_lADWPRebatesAndPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate up to $1,500 per unit for an ENERGY STAR® Qualified Heat Pump Water Heater."
+    }
+  },
+  {
+    "id": "CA-74",
     "authority_type": "utility",
     "authority": "ca-roseville-electric",
     "payment_methods": [
@@ -706,7 +1608,7 @@
     }
   },
   {
-    "id": "CA-72",
+    "id": "CA-75",
     "authority_type": "utility",
     "authority": "ca-roseville-electric",
     "payment_methods": [
@@ -728,13 +1630,13 @@
     }
   },
   {
-    "id": "CA-73",
+    "id": "CA-76",
     "authority_type": "utility",
     "authority": "ca-roseville-electric",
     "payment_methods": [
       "rebate"
     ],
-    "item": "other",
+    "item": "heat_pump_air_conditioner_heater",
     "program": "ca_rosevilleElectric_residentialElectricHomeProgram",
     "amount": {
       "type": "dollars_per_unit",
@@ -751,7 +1653,27 @@
     }
   },
   {
-    "id": "CA-76",
+    "id": "CA-77",
+    "authority_type": "utility",
+    "authority": "ca-roseville-electric",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "ca_rosevilleElectric_residentialElectricHomeProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an Energy Star certified smart thermostat."
+    }
+  },
+  {
+    "id": "CA-78",
     "authority_type": "state",
     "authority": "ca-california-public-utilities-commission",
     "payment_methods": [
@@ -773,7 +1695,7 @@
     }
   },
   {
-    "id": "CA-77",
+    "id": "CA-79",
     "authority_type": "utility",
     "authority": "ca-pacific-gas-and-electric",
     "payment_methods": [
@@ -798,6 +1720,26 @@
     "authority_type": "utility",
     "authority": "ca-pacific-gas-and-electric",
     "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "electric_vehicle_charger",
+    "program": "ca_pacificGasAndElectric_empowerEVProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "PG&E will provide one free Level 2 charger valued at $500 (hardwires or plugs in to 220+ Volt outlet)."
+    }
+  },
+  {
+    "id": "CA-81",
+    "authority_type": "utility",
+    "authority": "ca-pacific-gas-and-electric",
+    "payment_methods": [
       "rebate"
     ],
     "item": "electric_panel",
@@ -814,7 +1756,252 @@
     }
   },
   {
+    "id": "CA-82",
+    "authority_type": "other",
+    "authority": "ca-grid-alternatives",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "rooftop_solar_installation",
+    "program": "ca_gRIDAlternatives_disadvantagedCommunities-Single-FamilySolarHomes(DAC-SASH)",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3000,
+      "unit": "kilowatt"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3/watt incentives to install an onsite solar system and energy efficiency training."
+    }
+  },
+  {
+    "id": "CA-83",
+    "authority_type": "utility",
+    "authority": "ca-modesto-irrigation-district",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "electric_vehicle_charger",
+    "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate per charger for Level 2 Electric Vehicle Charger."
+    }
+  },
+  {
+    "id": "CA-84",
+    "authority_type": "utility",
+    "authority": "ca-modesto-irrigation-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 450
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$450 rebate per unit for Central Heat Pump with Tier 1 rating."
+    }
+  },
+  {
+    "id": "CA-85",
+    "authority_type": "utility",
+    "authority": "ca-modesto-irrigation-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$700 rebate per unit for Central Heat Pump with Tier 2 rating."
+    }
+  },
+  {
+    "id": "CA-86",
+    "authority_type": "utility",
+    "authority": "ca-modesto-irrigation-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate per unit for Ductless Mini Split Air Conditioner."
+    }
+  },
+  {
+    "id": "CA-87",
+    "authority_type": "utility",
+    "authority": "ca-modesto-irrigation-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate per unit for ENERGY STAR Smart Thermostat for central AC/Heat Pump - electric heating."
+    }
+  },
+  {
+    "id": "CA-88",
+    "authority_type": "utility",
+    "authority": "ca-modesto-irrigation-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 17,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$17 rebate per square foot for Attic Insulation."
+    }
+  },
+  {
+    "id": "CA-89",
+    "authority_type": "utility",
+    "authority": "ca-modesto-irrigation-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_stove",
+    "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate per unit for Induction Cooktop / Range."
+    }
+  },
+  {
+    "id": "CA-90",
+    "authority_type": "utility",
+    "authority": "ca-modesto-irrigation-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate per unit for ENERGY STAR Heat Pump Storage Water Heater."
+    }
+  },
+  {
+    "id": "CA-91",
+    "authority_type": "utility",
+    "authority": "ca-modesto-irrigation-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1 rebate per square foot for Sun Screens."
+    }
+  },
+  {
+    "id": "CA-92",
+    "authority_type": "utility",
+    "authority": "ca-modesto-irrigation-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1 rebate per square foot for Window Films."
+    }
+  },
+  {
     "id": "CA-93",
+    "authority_type": "utility",
+    "authority": "ca-modesto-irrigation-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2 rebate per square foot for ENERGY STAR Replacement Window."
+    }
+  },
+  {
+    "id": "CA-94",
     "authority_type": "utility",
     "authority": "ca-pacific-power",
     "payment_methods": [
@@ -840,6 +2027,26 @@
     "payment_methods": [
       "rebate"
     ],
+    "item": "smart_thermostat",
+    "program": "ca_pacificPower_incentivesForHeatingAndCooling",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Get $50 cash back."
+    }
+  },
+  {
+    "id": "CA-96",
+    "authority_type": "utility",
+    "authority": "ca-pacific-power",
+    "payment_methods": [
+      "rebate"
+    ],
     "item": "heat_pump_air_conditioner_heater",
     "program": "ca_pacificPower_heatPumps",
     "amount": {
@@ -855,7 +2062,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-96",
+    "id": "CA-97",
     "authority_type": "utility",
     "authority": "ca-pasadena-water-and-power",
     "payment_methods": [
@@ -869,14 +2076,353 @@
       "unit": "square_foot"
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$0.10 per sq. ft. of insulation installed."
     }
   },
   {
+    "id": "CA-98",
+    "authority_type": "utility",
+    "authority": "ca-pasadena-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "ca_pasadenaWaterAndPower_residentialPrograms-CeilingInsulationRebate",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.05,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$0.05 per sq. ft."
+    }
+  },
+  {
+    "id": "CA-99",
+    "authority_type": "utility",
+    "authority": "ca-pasadena-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "ca_pasadenaWaterAndPower_residentialPrograms-Heating&CoolingSystems-SmartThermostatRebate",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 10,
+      "maximum": 20
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Install a Smart Thermostat and get a $10 rebate."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "CA-100",
+    "authority_type": "utility",
+    "authority": "ca-pasadena-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "ca_pasadenaWaterAndPower_residentialPrograms-ElectrifyYourHome-ElectricHeatPumpWaterHeaterRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500."
+    }
+  },
+  {
+    "id": "CA-101",
+    "authority_type": "utility",
+    "authority": "ca-pasadena-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "ca_pasadenaWaterAndPower_residentialPrograms-ElectrifyYourHome-ElectricHeatPumpClothesDryer",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300."
+    }
+  },
+  {
+    "id": "CA-102",
+    "authority_type": "utility",
+    "authority": "ca-pasadena-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_panel",
+    "program": "ca_pasadenaWaterAndPower_residentialPrograms-ElectrifyYourHome-ElectricPanelUpgradeRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,000."
+    }
+  },
+  {
+    "id": "CA-103",
+    "authority_type": "utility",
+    "authority": "ca-plumas-sierra-rec",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "ca_plumas-SierraREC_hybrid/HeatPumpWaterHeaters",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500."
+    }
+  },
+  {
+    "id": "CA-104",
+    "authority_type": "utility",
+    "authority": "ca-plumas-sierra-rec",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_plumas-SierraREC_airSourceHeatPumps",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 350,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $350 per ton minimum 16.0 SEER and 9.0 HSPF."
+    }
+  },
+  {
+    "id": "CA-105",
+    "authority_type": "utility",
+    "authority": "ca-plumas-sierra-rec",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "geothermal_heating_installation",
+    "program": "ca_plumas-SierraREC_groundSourceHeatPumps",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 600,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate: $600 per ton."
+    }
+  },
+  {
+    "id": "CA-106",
+    "authority_type": "utility",
+    "authority": "ca-plumas-sierra-rec",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "new_electric_vehicle",
+    "program": "ca_plumas-SierraREC_$500RebateForThePurchaseOfAnEV",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500."
+    }
+  },
+  {
+    "id": "CA-107",
+    "authority_type": "utility",
+    "authority": "ca-southern-california-edison",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "smart_thermostat",
+    "program": "ca_southernCaliforniaEdison_saveUpTo$115WithASmartThermostat",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 115
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$115."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "CA-108",
+    "authority_type": "utility",
+    "authority": "ca-southern-california-edison",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "used_electric_vehicle",
+    "program": "ca_southernCaliforniaEdison_pRE-OWNEDELECTRICVEHICLEREBATEPROGRAM",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1000 for standard applicants for the purchase or lease of a pre-owned EV. One of two options, may only claim one."
+    }
+  },
+  {
+    "id": "CA-109",
+    "authority_type": "utility",
+    "authority": "ca-southern-california-edison",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "used_electric_vehicle",
+    "program": "ca_southernCaliforniaEdison_pRE-OWNEDELECTRICVEHICLEREBATEPROGRAM",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $4000 for income qualified applicants for the purchase or lease of a pre-owned EV. One of two options, may only claim one."
+    }
+  },
+  {
+    "id": "CA-110",
+    "authority_type": "utility",
+    "authority": "ca-truckee-donner-public-utility-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_panel",
+    "program": "ca_truckeeDonnerPublicUtilityDistrict_tDPUDResidentialHomeUpgrades",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Upto $1000."
+    }
+  },
+  {
+    "id": "CA-111",
+    "authority_type": "utility",
+    "authority": "ca-truckee-donner-public-utility-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "ca_truckeeDonnerPublicUtilityDistrict_tDPUDResidentialHomeUpgrades",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Heat Pump Water Heater Rebate."
+    }
+  },
+  {
     "id": "CA-112",
+    "authority_type": "utility",
+    "authority": "ca-truckee-donner-public-utility-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "ca_truckeeDonnerPublicUtilityDistrict_tDPUDResidentialHomeUpgrades",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Heat Pump Water Heater Rebate."
+    }
+  },
+  {
+    "id": "CA-113",
+    "authority_type": "utility",
+    "authority": "ca-truckee-donner-public-utility-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_vehicle_charger",
+    "program": "ca_truckeeDonnerPublicUtilityDistrict_tDPUDResidentialHomeUpgrades",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 950
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Electric Vehicle Chargin Station Rebate."
+    }
+  },
+  {
+    "id": "CA-114",
     "authority_type": "utility",
     "authority": "ca-sacramento-municipal-utility-district",
     "payment_methods": [
@@ -898,7 +2444,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-113",
+    "id": "CA-115",
     "authority_type": "utility",
     "authority": "ca-sacramento-municipal-utility-district",
     "payment_methods": [
@@ -920,7 +2466,7 @@
     }
   },
   {
-    "id": "CA-114",
+    "id": "CA-116",
     "authority_type": "utility",
     "authority": "ca-sacramento-municipal-utility-district",
     "payment_methods": [
@@ -943,7 +2489,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-115",
+    "id": "CA-117",
     "authority_type": "utility",
     "authority": "ca-silicon-valley-power",
     "payment_methods": [
@@ -963,11 +2509,10 @@
     "short_description": {
       "en": "Up 10% rebate for the purchase of an electric bicycle (e-bike), up to $300."
     },
-    "start_date": "2020-12-01",
     "bonus_available": true
   },
   {
-    "id": "CA-116",
+    "id": "CA-118",
     "authority_type": "utility",
     "authority": "ca-silicon-valley-power",
     "payment_methods": [
@@ -989,7 +2534,7 @@
     }
   },
   {
-    "id": "CA-117",
+    "id": "CA-119",
     "authority_type": "utility",
     "authority": "ca-silicon-valley-power",
     "payment_methods": [
@@ -1009,7 +2554,7 @@
     }
   },
   {
-    "id": "CA-118",
+    "id": "CA-120",
     "authority_type": "utility",
     "authority": "ca-silicon-valley-power",
     "payment_methods": [
@@ -1031,7 +2576,7 @@
     }
   },
   {
-    "id": "CA-119",
+    "id": "CA-121",
     "authority_type": "utility",
     "authority": "ca-silicon-valley-power",
     "payment_methods": [
@@ -1051,11 +2596,10 @@
     "short_description": {
       "en": "$2,000 rebate for upgrading to a Smart Electric Panel."
     },
-    "start_date": "2022-07-01",
     "bonus_available": true
   },
   {
-    "id": "CA-121",
+    "id": "CA-122",
     "authority_type": "utility",
     "authority": "ca-bay-area-regional-energy-network-bay-ren",
     "payment_methods": [
@@ -1078,7 +2622,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-122",
+    "id": "CA-123",
     "authority_type": "utility",
     "authority": "ca-bay-area-regional-energy-network-bay-ren",
     "payment_methods": [
@@ -1099,7 +2643,7 @@
     }
   },
   {
-    "id": "CA-123",
+    "id": "CA-124",
     "authority_type": "utility",
     "authority": "ca-bay-area-regional-energy-network-bay-ren",
     "payment_methods": [
@@ -1122,7 +2666,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-125",
+    "id": "CA-126",
     "authority_type": "utility",
     "authority": "ca-bay-area-regional-energy-network-bay-ren",
     "payment_methods": [
@@ -1153,6 +2697,27 @@
     "program": "ca_bayAreaRegionalEnergyNetwork(BayREN)_rebates:SingleFamilyHomeowners",
     "amount": {
       "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for duct replacement."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "CA-128",
+    "authority_type": "utility",
+    "authority": "ca-bay-area-regional-energy-network-bay-ren",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "other",
+    "program": "ca_bayAreaRegionalEnergyNetwork(BayREN)_rebates:SingleFamilyHomeowners",
+    "amount": {
+      "type": "dollar_amount",
       "number": 400,
       "minimum": 250,
       "maximum": 400
@@ -1172,8 +2737,71 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "other",
-    "program": "ca_riversidePublicUtilities_energyStar",
+    "item": "weatherization",
+    "program": "ca_riversidePublicUtilities_residentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.2,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Attic Insulation upto 20¢ per sq. ft. Minimum Rating R-19."
+    }
+  },
+  {
+    "id": "CA-131",
+    "authority_type": "utility",
+    "authority": "ca-riverside-public-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "ca_riversidePublicUtilities_residentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.15,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Exterior Wall Insulation upto 20¢ per sq. ft. Minimum Rating R-13+/."
+    }
+  },
+  {
+    "id": "CA-132",
+    "authority_type": "utility",
+    "authority": "ca-riverside-public-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "ca_riversidePublicUtilities_residentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Upto $1 per sq. ft for windows/glass doors, window film, or solar window screen."
+    }
+  },
+  {
+    "id": "CA-133",
+    "authority_type": "utility",
+    "authority": "ca-riverside-public-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_riversidePublicUtilities_residentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 200
@@ -1183,18 +2811,17 @@
     ],
     "short_description": {
       "en": "$200 Rebate for Energy Star-rated heat pump water heaters and heat pump dryers."
-    },
-    "start_date": "2022-02-01"
+    }
   },
   {
-    "id": "CA-131",
+    "id": "CA-134",
     "authority_type": "utility",
     "authority": "ca-riverside-public-utilities",
     "payment_methods": [
       "rebate"
     ],
     "item": "used_electric_vehicle",
-    "program": "ca_riversidePublicUtilities_energyStar",
+    "program": "ca_riversidePublicUtilities_residentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 1000
@@ -1206,18 +2833,17 @@
     "short_description": {
       "en": "Up to $1,000 rebate for a used Battery Electric or Plug-In Hybrid vehicle if purchased or leased after January 1, 2023."
     },
-    "start_date": "2023-01-01",
     "bonus_available": true
   },
   {
-    "id": "CA-132",
+    "id": "CA-135",
     "authority_type": "utility",
     "authority": "ca-riverside-public-utilities",
     "payment_methods": [
       "rebate"
     ],
     "item": "electric_vehicle_charger",
-    "program": "ca_riversidePublicUtilities_energyStar",
+    "program": "ca_riversidePublicUtilities_residentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 500
@@ -1227,18 +2853,17 @@
     ],
     "short_description": {
       "en": "Up to $500 rebate for installing a Level 2 (240-Volt AC) plug-in charger at residence."
-    },
-    "start_date": "2021-01-01"
+    }
   },
   {
-    "id": "CA-133",
+    "id": "CA-136",
     "authority_type": "utility",
     "authority": "ca-riverside-public-utilities",
     "payment_methods": [
       "pos_rebate"
     ],
     "item": "other",
-    "program": "ca_riversidePublicUtilities_energyStar",
+    "program": "ca_riversidePublicUtilities_residentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 805

@@ -7,20 +7,12 @@ export const CA_PROGRAMS = {
       en: 'https://www.bvesinc.com/customer-service/assistance-programs/energy-savings-assistance-program',
     },
   },
-  'ca_burbankWater&Power_residentialRebateProgram': {
-    name: {
-      en: 'Residential Rebate Program',
-    },
-    url: {
-      en: 'https://www.burbankwaterandpower.com/conservation/residential-programs-rebates/residential-rebates',
-    },
-  },
   'ca_burbankWater&Power_residentialBuildingElectrificationRebateProgram': {
     name: {
       en: 'Residential Building Electrification Rebate Program',
     },
     url: {
-      en: 'https://burbankwaterandpower.com/images/administrative/downloads/BWP%20Electrification%20Rebate%20Program%20Form%20v2-13-24.pdf',
+      en: 'https://burbankwaterandpower.com/electrify',
     },
   },
   'ca_alamedaMunicipalPower_aMPE-BikeRebate': {
@@ -34,6 +26,14 @@ export const CA_PROGRAMS = {
   ca_alamedaMunicipalPower_aMPOffers: {
     name: {
       en: 'AMP Offers',
+    },
+    url: {
+      en: 'https://www.alamedamp.com/407/Rebates-and-Incentives',
+    },
+  },
+  ca_alamedaMunicipalPower_incomeQualifiedSolarRebateProgram: {
+    name: {
+      en: 'Income Qualified Solar Rebate Program',
     },
     url: {
       en: 'https://www.alamedamp.com/407/Rebates-and-Incentives',
@@ -96,9 +96,9 @@ export const CA_PROGRAMS = {
       en: 'https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program',
     },
   },
-  ca_imperialIrrigationDistrict_2023ENERGYREWARDSPROGRAM: {
+  ca_imperialIrrigationDistrict_iIDEnergyRewardsProgram: {
     name: {
-      en: '2023 ENERGY REWARDS PROGRAM',
+      en: 'IID Energy Rewards Program ',
     },
     url: {
       en: 'https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates',
@@ -109,7 +109,7 @@ export const CA_PROGRAMS = {
       en: 'Residential Rebates',
     },
     url: {
-      en: 'https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates',
+      en: 'https://www.lmud.org/customer-services/rebates-solar/residential-rebates/',
     },
   },
   'ca_libertyUtilities_energySavingsAssistanceProgram(ESAP)': {
@@ -160,28 +160,12 @@ export const CA_PROGRAMS = {
       en: 'https://www.roseville.ca.us/cms/One.aspx?portalId=7964922&pageId=19015895',
     },
   },
-  ca_rosevilleElectric_residentialNewConstructionIncentiveProgram: {
-    name: {
-      en: 'Residential New Construction Incentive Program',
-    },
-    url: {
-      en: 'https://www.roseville.ca.us/cms/One.aspx?portalId=7964922&pageId=19015894',
-    },
-  },
   ca_pacificGasAndElectric_generatorAndBatteryRebateProgram: {
     name: {
       en: 'Generator and Battery Rebate Program',
     },
     url: {
       en: 'https://www.pge.com/en_US/residential/save-energy-money/savings-solutions-and-rebates/rebates-by-product/rebates-by-product.page',
-    },
-  },
-  ca_pacificGasAndElectric_eVChargeProgram: {
-    name: {
-      en: 'EV Charge Program',
-    },
-    url: {
-      en: 'https://www.pge.com/en/clean-energy/electric-vehicles/ev-charge-program.html',
     },
   },
   ca_pacificGasAndElectric_empowerEVProgram: {
@@ -373,12 +357,12 @@ export const CA_PROGRAMS = {
       en: 'https://www.bayren.org/home-rebates',
     },
   },
-  ca_riversidePublicUtilities_energyStar: {
+  ca_riversidePublicUtilities_residentialRebates: {
     name: {
-      en: 'Energy Star',
+      en: 'Residential Rebates',
     },
     url: {
-      en: 'https://riversideca.gov/utilities/residents/rebates/energy-rebates/energy-star',
+      en: 'https://riversideca.gov/utilities/residents/rebates/about',
     },
   },
 } as const;
