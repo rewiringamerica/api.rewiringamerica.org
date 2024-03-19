@@ -159,5 +159,27 @@
     },
     "start_date": "2023-01-01",
     "end_date": "2025-12-31"
+  },
+  {
+    "id": "GA-8",
+    "authority_type": "utility",
+    "authority": "ga-jefferson-electric-member-corp",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ga_jeffersonElectricMemberCorp_heatPumpRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 450,
+      "minimum": 250,
+      "maximum": 450
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $450 rebate available for all gas to electric heat pump conversions. Rebate amount is based on the size (tonnage) of the heat pump installed."
+    }
   }
 ]
