@@ -478,7 +478,8 @@
     "program": "pa_firstEnergy_residentialProductsRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 50
+      "number": 75,
+      "maximum": 75
     },
     "owner_status": [
       "homeowner",
@@ -576,8 +577,8 @@
     "program": "pa_firstEnergy_residentialProductsRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 50,
-      "maximum": 50
+      "number": 75,
+      "maximum": 75
     },
     "owner_status": [
       "homeowner",
@@ -610,7 +611,8 @@
     ],
     "short_description": {
       "en": "Free energy audit and weatherization services for income-qualified residents."
-    }
+    },
+    "low_income": "pa-first-energy-warm"
   },
   {
     "id": "PA-27",
