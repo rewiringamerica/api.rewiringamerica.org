@@ -238,10 +238,6 @@ test("launched states do not have any values that we don't support for broader c
   STATE_INCENTIVE_TESTS.forEach(([state, , data]) => {
     if (LAUNCHED_STATES.includes(state)) {
       for (const incentive of data) {
-        // TODO: remove once City/County incentives have been beta-tested.
-        tap.not(incentive.authority_type, AuthorityType.City);
-        tap.not(incentive.authority_type, AuthorityType.County);
-
         tap.notOk(incentive.payment_methods.includes(PaymentMethod.Unknown));
       }
     }
