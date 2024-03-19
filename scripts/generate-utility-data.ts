@@ -9,14 +9,17 @@
  */
 
 import { stringify } from 'csv-stringify';
-import fs from 'fs';
+import fs from 'fs/promises';
 import _ from 'lodash';
 import fetch from 'make-fetch-happen';
 import minimist from 'minimist';
 import path from 'path';
-import { promisify } from 'util';
 import xlsx from 'xlsx';
-import { createAuthorityName } from './lib/authority-and-program-updater';
+import { AuthoritiesByState } from '../src/data/authorities';
+import {
+  createAuthorityName,
+  sortMapByKey,
+} from './lib/authority-and-program-updater';
 
 /**
  * Utility codes (number) or utility names (string) to exclude from
@@ -190,7 +193,7 @@ enum Col {
   });
 
   const rawSheet = args.file
-    ? await promisify(fs.readFile)(args.file)
+    ? await fs.readFile(args.file)
     : await fetch(
         'https://downloads.energystar.gov/bi/portfolio-manager/Public_Utility_Map_en_US.xlsx',
       ).then(response => response.buffer());
@@ -215,12 +218,14 @@ enum Col {
     columns: ['zip', 'utility_id', 'predominant'],
   });
   zipToUtilityOut.pipe(
-    fs.createWriteStream(path.join(__dirname, 'data/zip-to-utility.csv')),
+    (
+      await fs.open(path.join(__dirname, 'data/zip-to-utility.csv'))
+    ).createWriteStream(),
   );
 
   // For deduplication by utility ID and zip.
   const seen = new Set<string>();
-  const names = new Map<string, string>();
+  const utilitiesByState = new Map<string, Map<string, { name: string }>>();
 
   // Print the last refresh date
   console.log(sheet[0][0].v);
@@ -256,7 +261,11 @@ enum Col {
     }
     seen.add(row.Zip + id);
 
-    names.set(id, name);
+    if (!utilitiesByState.has(row.State)) {
+      utilitiesByState.set(row.State, new Map());
+    }
+    utilitiesByState.get(row.State)!.set(id, { name });
+
     zipToUtilityOut.write({
       zip: row.Zip,
       utility_id: id,
@@ -264,13 +273,33 @@ enum Col {
     });
   }
 
-  const utilitiesOut = stringify({
-    header: true,
-    columns: ['utility_id', 'name'],
-  });
-  utilitiesOut.pipe(
-    fs.createWriteStream(path.join(__dirname, 'data/utilities.csv')),
+  // Update authorities.json with the utilities from the dataset.
+  const authoritiesJsonPath = path.join(__dirname, '../data/authorities.json');
+  const authoritiesJson: AuthoritiesByState = JSON.parse(
+    await fs.readFile(authoritiesJsonPath, 'utf-8'),
   );
 
-  names.forEach((name, utility_id) => utilitiesOut.write({ utility_id, name }));
+  utilitiesByState.forEach((utilityMap, state) => {
+    if (state in authoritiesJson) {
+      const existingUtilities = authoritiesJson[state].utility;
+      const newUtilities: typeof existingUtilities = {};
+      utilityMap.forEach((utility, id) => {
+        // Existing utilities in authorities.json may have other info like a
+        // logo; preserve that and update only the name
+        if (id in existingUtilities) {
+          newUtilities[id] = { ...existingUtilities[id], ...utility };
+        } else {
+          newUtilities[id] = utility;
+        }
+      });
+
+      // This removes any utilities that aren't in the dataset
+      authoritiesJson[state].utility = sortMapByKey(newUtilities);
+    }
+  });
+
+  await fs.writeFile(
+    authoritiesJsonPath,
+    JSON.stringify(authoritiesJson, null, 2) + '\n',
+  );
 })();

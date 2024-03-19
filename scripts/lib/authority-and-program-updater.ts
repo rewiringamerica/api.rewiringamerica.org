@@ -1,4 +1,5 @@
 import fs from 'fs';
+import _ from 'lodash';
 import * as prettier from 'prettier';
 import { Project, SourceFile } from 'ts-morph';
 import { GeoGroup } from '../../src/data/geo_groups';
@@ -107,8 +108,37 @@ export function updateAuthorities(
   authorityMap: AuthorityMap,
 ): StateToAuthorityTypeMap {
   const stateUpper = state.toUpperCase();
+  // Preserve existing utilities. Those are generated from an external dataset
+  // by generate-utility-data.ts.
+  const existingUtilities = json[stateUpper]?.utility;
+
+  if (!existingUtilities) {
+    throw new Error(
+      `authorities.json has no entry for ${stateUpper}. Make sure there is a ` +
+        `top-level entry for ${stateUpper}, and run generate-utility-data.ts ` +
+        'before running this script.',
+    );
+  }
+
   json[stateUpper] = {};
-  for (const [authorityShort, authority] of Object.entries(authorityMap)) {
+
+  const [utilities, nonUtilities] = _.partition(
+    Object.entries(authorityMap),
+    ([, auth]) => auth.authority_type === 'utility',
+  );
+
+  // Make sure all utilities already exist in JSON.
+  for (const [utilityId] of utilities) {
+    if (!(utilityId in existingUtilities)) {
+      throw new Error(
+        `Utility ${utilityId} is in spreadsheet but not in authorities.json. ` +
+          'Run generate-utility-data.ts before this script, or fix the ' +
+          'utility name in the spreadsheet.',
+      );
+    }
+  }
+
+  for (const [authorityShort, authority] of nonUtilities) {
     if (
       json[stateUpper][authority.authority_type.toLowerCase()] === undefined
     ) {
@@ -119,6 +149,7 @@ export function updateAuthorities(
     };
   }
 
+  json[stateUpper].utility = existingUtilities;
   return sortMapByKey(json);
 }
 
