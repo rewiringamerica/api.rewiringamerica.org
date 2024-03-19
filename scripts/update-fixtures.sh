@@ -154,11 +154,9 @@ curl \
 &include_beta_states=true" \
   | jq . > test/fixtures/v1-ny-11557-state-utility-lowincome.json
 
-# TODO: Remove beta states argument when VA is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?location\[zip\]=22030\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=40000\
 &tax_filing=joint\
@@ -205,11 +203,9 @@ curl \
 &household_size=4" \
   | jq . > test/fixtures/v1-15289-homeowner-80000-joint-4.json
 
-# TODO: Remove beta states argument when DC is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?location\[zip\]=20303\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=95797\
 &tax_filing=joint\
