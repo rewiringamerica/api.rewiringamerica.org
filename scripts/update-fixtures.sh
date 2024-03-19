@@ -14,7 +14,7 @@ curl \
 
 curl \
   "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=80212\
+?zip=80212\
 &owner_status=homeowner\
 &household_income=80000\
 &tax_filing=joint\
@@ -23,7 +23,7 @@ curl \
 
 curl \
   "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=02807\
+?zip=02807\
 &owner_status=homeowner\
 &household_income=65000\
 &tax_filing=joint\
@@ -36,7 +36,7 @@ curl \
 
 curl \
   "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=02903\
+?zip=02903\
 &owner_status=homeowner\
 &household_income=65000\
 &tax_filing=joint\
@@ -49,7 +49,7 @@ curl \
 # TODO: Remove beta states argument when AZ is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=85701\
+?zip=85701\
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=28000\
@@ -63,7 +63,7 @@ curl \
 # TODO: Remove beta states argument when AZ is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=85702\
+?zip=85702\
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=28000\
@@ -77,7 +77,7 @@ curl \
 # TODO: Remove beta states argument when CT is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=06002\
+?zip=06002\
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=35000\
@@ -91,7 +91,7 @@ curl \
 # TODO: Remove beta states argument when GA is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=30033\
+?zip=30033\
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=40000\
@@ -104,7 +104,7 @@ curl \
 # TODO: Remove beta states argument when IL is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator?\
-location%5Bzip%5D=60304\
+zip=60304\
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=35000\
@@ -117,7 +117,7 @@ location%5Bzip%5D=60304\
 # TODO: Remove beta states argument when MI is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=48103\
+?zip=48103\
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=40000\
@@ -130,7 +130,7 @@ curl \
 # TODO: Remove beta states argument when NV is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=89108\
+?zip=89108\
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=40000\
@@ -143,7 +143,7 @@ curl \
 # TODO: Remove &include_beta_states when NY is launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=11557\
+?zip=11557\
 &owner_status=homeowner\
 &household_income=50000\
 &tax_filing=joint\
@@ -157,7 +157,7 @@ curl \
 # TODO: Remove beta states argument when VA is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=22030\
+?zip=22030\
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=40000\
@@ -170,7 +170,7 @@ curl \
 
 curl \
   "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=05401\
+?zip=05401\
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=40000\
@@ -184,7 +184,7 @@ curl \
 # TODO: Remove beta states argument when CO is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=81657\
+?zip=81657\
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=100000\
@@ -198,7 +198,7 @@ curl \
 
 curl \
   "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=15289\
+?zip=15289\
 &owner_status=homeowner\
 &household_income=80000\
 &tax_filing=joint\
@@ -208,7 +208,7 @@ curl \
 # TODO: Remove beta states argument when DC is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=20303\
+?zip=20303\
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=95797\
@@ -220,7 +220,7 @@ curl \
 
 curl \
   "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=80517\
+?zip=80517\
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=80000\
@@ -235,7 +235,7 @@ curl \
 
 curl \
   "http://localhost:3000/api/v1/calculator\
-?location\[zip\]=80517\
+?zip=80517\
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=80000\
@@ -251,7 +251,7 @@ curl \
 # TODO: Remove beta states argument when WI is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator?\
-location%5Bzip%5D=53703\
+zip=53703\
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=50000\
@@ -263,7 +263,7 @@ location%5Bzip%5D=53703\
 # TODO: Remove beta states argument when OR is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator?\
-location%5Bzip%5D=97001\
+zip=97001\
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=50000\

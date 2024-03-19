@@ -18,7 +18,6 @@ import {
   API_CALCULATOR_SCHEMA,
 } from '../schemas/v1/calculator-endpoint';
 import { APIIncentive, API_INCENTIVE_SCHEMA } from '../schemas/v1/incentive';
-import { APIRequestLocation } from '../schemas/v1/location';
 import { API_UTILITIES_SCHEMA } from '../schemas/v1/utilities-endpoint';
 
 function transformIncentives(
@@ -48,13 +47,14 @@ export default async function (
   fastify: FastifyInstance & { sqlite: Database },
 ) {
   async function fetchAMIsForLocation(
-    location: Partial<APIRequestLocation>,
+    zip: string | undefined,
+    address: string | undefined,
   ): Promise<IncomeInfo | null> {
-    if (location.address) {
+    if (address) {
       // TODO: make sure bad addresses are handled here, and don't return anything
-      return await fetchAMIsForAddress(fastify.sqlite, location.address);
-    } else if (location.zip) {
-      return await fetchAMIsForZip(fastify.sqlite, location.zip);
+      return await fetchAMIsForAddress(fastify.sqlite, address);
+    } else if (zip) {
+      return await fetchAMIsForZip(fastify.sqlite, zip);
     } else {
       // NOTE: this should never happen, APICalculatorSchema should block it:
       throw new UnexpectedInputError(
@@ -79,16 +79,15 @@ export default async function (
     { schema: API_CALCULATOR_SCHEMA },
     async (request, reply) => {
       const language = request.query.language ?? 'en';
-      const queryLocation = request.query.location ?? {
-        zip: request.query.zip,
-        address: request.query.address,
-      };
-      const incomeInfo = await fetchAMIsForLocation(queryLocation);
+      const incomeInfo = await fetchAMIsForLocation(
+        request.query.zip,
+        request.query.address,
+      );
 
       if (!incomeInfo) {
         throw fastify.httpErrors.createError(
           404,
-          queryLocation.zip
+          request.query.zip
             ? t('errors', 'zip_code_doesnt_exist', language)
             : t('errors', 'cannot_locate_address', language),
           { field: 'location' },
@@ -131,16 +130,14 @@ export default async function (
     { schema: API_UTILITIES_SCHEMA },
     async (request, reply) => {
       const language = request.query.language ?? 'en';
-      const queryLocation = request.query.location ?? {
-        zip: request.query.zip,
-        address: request.query.address,
-      };
-      const location = (await fetchAMIsForLocation(queryLocation))?.location;
+      const location = (
+        await fetchAMIsForLocation(request.query.zip, request.query.address)
+      )?.location;
 
       if (!location) {
         throw fastify.httpErrors.createError(
           404,
-          queryLocation.zip
+          request.query.zip
             ? t('errors', 'zip_code_doesnt_exist', language)
             : t('errors', 'cannot_locate_address', language),
           {

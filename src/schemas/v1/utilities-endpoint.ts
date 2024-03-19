@@ -1,7 +1,4 @@
-import {
-  API_REQUEST_LOCATION_SCHEMA,
-  API_RESPONSE_LOCATION_SCHEMA,
-} from './location';
+import { API_RESPONSE_LOCATION_SCHEMA } from './location';
 
 export const API_UTILITIES_RESPONSE_SCHEMA = {
   $id: 'APIUtilitiesResponse',
@@ -27,8 +24,6 @@ export const API_UTILITIES_SCHEMA = {
   querystring: {
     type: 'object',
     properties: {
-      // TODO remove location param once frontend is not using it
-      location: API_REQUEST_LOCATION_SCHEMA,
       zip: {
         type: 'string',
         description:
@@ -58,10 +53,10 @@ export const API_UTILITIES_SCHEMA = {
       },
     },
     oneOf: [
-      { required: ['location'] },
       { required: ['zip'] },
       { required: ['address'] },
     ],
+    additionalProperties: false,
   },
   response: {
     200: {

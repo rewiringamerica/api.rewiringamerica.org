@@ -6,17 +6,12 @@ import { API_COVERAGE_SCHEMA } from '../../data/types/coverage';
 import { ALL_ITEMS } from '../../data/types/items';
 import { OwnerStatus } from '../../data/types/owner-status';
 import { API_INCENTIVE_SCHEMA } from './incentive';
-import {
-  API_REQUEST_LOCATION_SCHEMA,
-  API_RESPONSE_LOCATION_SCHEMA,
-} from './location';
+import { API_RESPONSE_LOCATION_SCHEMA } from './location';
 
 const API_CALCULATOR_REQUEST_SCHEMA = {
   title: 'APICalculatorRequest',
   type: 'object',
   properties: {
-    // TODO: remove location param once frontend is not using it
-    location: API_REQUEST_LOCATION_SCHEMA,
     zip: {
       type: 'string',
       description:
@@ -107,7 +102,6 @@ const API_CALCULATOR_REQUEST_SCHEMA = {
   },
   additionalProperties: false,
   oneOf: [
-    { required: ['location'] },
     { required: ['zip'] },
     { required: ['address'] },
   ],
