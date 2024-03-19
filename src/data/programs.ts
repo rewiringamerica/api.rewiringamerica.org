@@ -8,7 +8,7 @@ import { MI_PROGRAMS } from './programs/mi_programs';
 import { NV_PROGRAMS } from './programs/nv_programs';
 import { NY_PROGRAMS } from './programs/ny_programs';
 import { OR_PROGRAMS } from './programs/or_programs';
-import { PA_PROGRAMS } from "./programs/pa_programs";
+import { PA_PROGRAMS } from './programs/pa_programs';
 import { RI_PROGRAMS } from './programs/ri_programs';
 import { VA_PROGRAMS } from './programs/va_programs';
 import { VT_PROGRAMS } from './programs/vt_programs';

@@ -157,14 +157,17 @@ curl \
 # TODO: Remove beta states argument when PA is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator?\
-location%5Bzip%5D=19128\
+location%5Bzip%5D=17555\
 &include_beta_states=true\
 &owner_status=homeowner\
 &household_income=20000\
 &tax_filing=joint\
 &household_size=1\
-&authority_types=state"\
- | jq . > test/fixtures/v1-pa-19128-state-lowincome.json
+&authority_types=state\
+&authority_types=utility\
+&authority_types=other\
+&utility=pa-metropolitan-edison" \
+ | jq . > test/fixtures/v1-pa-17555-state-lowincome.json
 
 # TODO: Remove beta states argument when VA is fully launched.
 curl \

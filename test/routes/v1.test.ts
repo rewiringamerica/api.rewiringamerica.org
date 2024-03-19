@@ -359,6 +359,25 @@ test('OR low income response with state and utility filtering is valid and corre
   );
 });
 
+// PA low income test
+test('PA low income response with state and utility filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      location: { zip: '17555' },
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 20000,
+      tax_filing: 'joint',
+      authority_types: ['state', 'utility', 'other'],
+      utility: 'pa-metropolitan-edison',
+      // TODO: Remove when OR is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-pa-17555-state-lowincome.json',
+  );
+});
+
 // NY low income test.
 test('NY response with state and utility is valid and correct', async t => {
   await validateResponse(
