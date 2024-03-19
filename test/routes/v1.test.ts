@@ -364,7 +364,7 @@ test('PA low income response with state and utility filtering is valid and corre
   await validateResponse(
     t,
     {
-      location: { zip: '17555' },
+      zip: '17555',
       owner_status: 'homeowner',
       household_size: 1,
       household_income: 20000,
