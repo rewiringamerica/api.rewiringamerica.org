@@ -6,6 +6,12 @@ import {
   CollectedIncentive,
 } from '../../src/data/state_incentives';
 import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
+import {
+  AliasMap,
+  FIELD_MAPPINGS,
+  VALUE_MAPPINGS,
+} from './spreadsheet-mappings';
+import { SpreadsheetStandardizer } from './spreadsheet-standardizer';
 
 const ajv = new Ajv({ allErrors: true, coerceTypes: 'array' });
 
@@ -226,4 +232,94 @@ export function googleSheetToFlatData(
     );
   }
   return records;
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type StringKeyed = { [index: string]: any };
+
+export function nestedToFlat(input: StringKeyed): StringKeyed {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const output: { [index: string]: any } = {};
+  for (const [fieldName, field] of Object.entries(input)) {
+    if (field === undefined) continue;
+    if (Array.isArray(field)) {
+      output[fieldName] = field.join(', ');
+    } else if (typeof field === 'object' && !Array.isArray(field)) {
+      for (const [nestedKey, nestedVal] of Object.entries(
+        nestedToFlat(field),
+      )) {
+        output[`${fieldName}.${nestedKey}`] = nestedVal;
+      }
+    } else {
+      output[fieldName] = field;
+    }
+  }
+  return output;
+}
+
+export function collectedIncentiveToGoogleSheet(
+  incentives: CollectedIncentive[],
+  fieldMappings: AliasMap,
+): sheets_v4.Schema$Sheet {
+  const standardizer = new SpreadsheetStandardizer(
+    FIELD_MAPPINGS,
+    VALUE_MAPPINGS,
+    false,
+  );
+
+  const headers = Object.values(fieldMappings).map(mapping => mapping[0]);
+  let rowData: sheets_v4.Schema$RowData[] = [];
+  incentives.forEach(incentive => {
+    const flattened = nestedToFlat(incentive);
+    const aliased = standardizer.convertToAliases(flattened);
+    // First ensure we have a header column for every value, including those
+    // not in our schema.
+    for (const key in aliased) {
+      if (!headers.includes(key)) {
+        console.log(`Missing key: ${key}`);
+        headers.push(key);
+      }
+    }
+
+    // Then populate a row, including "blanks" for keys we don't have.
+    const rowValues: sheets_v4.Schema$CellData[] = [];
+    for (const col of headers) {
+      if (col in aliased) {
+        let valToWrite: sheets_v4.Schema$ExtendedValue = {};
+        if (typeof aliased[col] === 'string') {
+          valToWrite = { stringValue: aliased[col] };
+        } else if (typeof aliased[col] === 'boolean') {
+          valToWrite = { boolValue: aliased[col] };
+        } else if (typeof aliased[col] === 'number') {
+          valToWrite = { numberValue: +aliased[col] };
+        } else {
+          console.warn(
+            `Unexpected value type: ${col}: ${aliased[col]}. Writing as string.`,
+          );
+          valToWrite = { stringValue: aliased[col] };
+        }
+        rowValues.push({
+          userEnteredValue: valToWrite,
+        });
+      } else {
+        rowValues.push({});
+      }
+    }
+    rowData.push({ values: rowValues });
+  });
+  // Prepend the headers.
+  const headersRow: sheets_v4.Schema$CellData[] = [];
+  for (const col of headers) {
+    headersRow.push({
+      userEnteredValue: { stringValue: col },
+    });
+  }
+  rowData = [{ values: headersRow }, ...rowData];
+  return {
+    data: [
+      {
+        rowData,
+      },
+    ],
+  };
 }

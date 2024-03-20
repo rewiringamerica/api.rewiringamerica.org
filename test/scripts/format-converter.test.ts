@@ -3,10 +3,17 @@ import _ from 'lodash';
 import { test } from 'tap';
 import {
   LinkMode,
+  collectedIncentiveToGoogleSheet,
   flatToNested,
   flatToNestedValidate,
   googleSheetToFlatData,
 } from '../../scripts/lib/format-converter';
+import { FIELD_MAPPINGS } from '../../scripts/lib/spreadsheet-mappings';
+import { AuthorityType } from '../../src/data/authorities';
+import { CollectedIncentive } from '../../src/data/state_incentives';
+import { AmountType } from '../../src/data/types/amount';
+import { PaymentMethod } from '../../src/data/types/incentive-types';
+import { OwnerStatus } from '../../src/data/types/owner-status';
 
 test('empty fields are removed', tap => {
   const objs = [
@@ -206,5 +213,109 @@ test('Google sheet with links is converted to parseable format', tap => {
     () => googleSheetToFlatData(input, LinkMode.Error, 1),
     new Error('Hyperlinks found in spreadsheet'),
   );
+  tap.end();
+});
+
+test('CollectedIncentives are converted back into Google Sheets format', tap => {
+  const incentives: CollectedIncentive[] = [
+    {
+      id: 'VA-1',
+      data_urls: ['appalachia.com'],
+      authority_name: 'Appalachian Power',
+      authority_type: AuthorityType.Utility,
+      item: 'heat_pump_clothes_dryer',
+      program_title: 'The Appalachian Program',
+      program_url: 'appalachianprogram.com',
+      program_status: 'Active',
+      rebate_value: '$50 flat rate',
+      payment_methods: [PaymentMethod.Rebate],
+      amount: {
+        type: AmountType.DollarAmount,
+        number: 50,
+      },
+      owner_status: [
+        OwnerStatus.Homeowner,
+      ],
+      short_description: {
+        en: 'Receive a $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',
+        es: 'Unas palabras en español.',
+      },
+      start_date: '2022-01-01',
+      end_date: '2026-12-31',
+    },
+  ];
+  const output = collectedIncentiveToGoogleSheet(incentives, FIELD_MAPPINGS);
+
+  const expected: sheets_v4.Schema$Sheet = {
+    data: [
+      {
+        rowData: [
+          {
+            values: [
+              { userEnteredValue: { stringValue: 'ID' } },
+              { userEnteredValue: { stringValue: 'Data Source URL(s)' } },
+              { userEnteredValue: { stringValue: 'Authority Level *' } },
+              { userEnteredValue: { stringValue: 'Authority (Name) *' } },
+              { userEnteredValue: { stringValue: 'Geographic Eligibility' } },
+              { userEnteredValue: { stringValue: 'Program Title *' } },
+              { userEnteredValue: { stringValue: 'Program URL' } },
+              { userEnteredValue: { stringValue: 'Technology *' } },
+              { userEnteredValue: { stringValue: 'Program Status' } },
+              { userEnteredValue: { stringValue: 'Rebate Value *' } },
+              { userEnteredValue: { stringValue: 'Rebate Type' } },
+              { userEnteredValue: { stringValue: 'Amount Type *' } },
+              { userEnteredValue: { stringValue: 'Number *' } },
+              { userEnteredValue: { stringValue: 'Homeowner / Renter' } },
+              {
+                userEnteredValue: {
+                  stringValue: 'Program Description (guideline)',
+                },
+              },
+              {
+                userEnteredValue: {
+                  stringValue: 'Program Description (Spanish)',
+                },
+              },
+              { userEnteredValue: { stringValue: 'Program Start' } },
+              { userEnteredValue: { stringValue: 'Program End' } },
+            ],
+          },
+          {
+            values: [
+              { userEnteredValue: { stringValue: 'VA-1' } },
+              { userEnteredValue: { stringValue: 'appalachia.com' } },
+              { userEnteredValue: { stringValue: 'Appalachian Power' } },
+              { userEnteredValue: { stringValue: 'Utility' } },
+              {
+                userEnteredValue: {
+                  stringValue: 'Heat Pump Dryers / Clothes Dryer',
+                },
+              },
+              { userEnteredValue: { stringValue: 'The Appalachian Program' } },
+              { userEnteredValue: { stringValue: 'appalachianprogram.com' } },
+              { userEnteredValue: { stringValue: 'Active' } },
+              { userEnteredValue: { stringValue: '$50 flat rate' } },
+              { userEnteredValue: { stringValue: 'Rebate (Post Purchase)' } },
+              { userEnteredValue: { stringValue: 'Dollar Amount' } },
+              { userEnteredValue: { stringValue: '50' } },
+              { userEnteredValue: { stringValue: 'Homeowner' } },
+              {
+                userEnteredValue: {
+                  stringValue:
+                    'Receive a $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',
+                },
+              },
+              {
+                userEnteredValue: { stringValue: 'Unas palabras en español.' },
+              },
+              { userEnteredValue: { stringValue: '2022-01-01' } },
+              { userEnteredValue: { stringValue: '2026-12-31' } },
+            ],
+          },
+        ],
+      },
+    ],
+  };
+  tap.strictSame(output, expected);
   tap.end();
 });
