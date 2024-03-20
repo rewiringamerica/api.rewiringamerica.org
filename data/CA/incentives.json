@@ -18,7 +18,8 @@
     ],
     "short_description": {
       "en": "The Energy Savings Assistance Program (ESA), offered to income-qualified customers, provides energy-saving improvements at no charge."
-    }
+    },
+    "low_income": "ca-bear-valley-electric-service"
   },
   {
     "id": "CA-2",
@@ -256,31 +257,11 @@
     ],
     "short_description": {
       "en": "Purchase a new electric bicycle (e-bike) and you may be eligible for a cash rebate up to $300."
-    }
+    },
+    "low_income": "ca-alameda-municipal-power"
   },
   {
     "id": "CA-13",
-    "authority_type": "utility",
-    "authority": "ca-alameda-municipal-power",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "ebike",
-    "program": "ca_alamedaMunicipalPower_aMPOffers",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 200
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Income-qualified $200 rebate on E-bike purchase cost $999.99 or less."
-    }
-  },
-  {
-    "id": "CA-14",
     "authority_type": "utility",
     "authority": "ca-alameda-municipal-power",
     "payment_methods": [
@@ -301,70 +282,7 @@
     }
   },
   {
-    "id": "CA-15",
-    "authority_type": "utility",
-    "authority": "ca-alameda-municipal-power",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "ebike",
-    "program": "ca_alamedaMunicipalPower_aMPOffers",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Income-qualified $400 rebate on E-bike purchase cost $1,000 - $1,999.99."
-    }
-  },
-  {
-    "id": "CA-16",
-    "authority_type": "utility",
-    "authority": "ca-alameda-municipal-power",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "ebike",
-    "program": "ca_alamedaMunicipalPower_aMPOffers",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 300
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$300 rebate on E-bike purchase cost $2,000 and up."
-    }
-  },
-  {
-    "id": "CA-17",
-    "authority_type": "utility",
-    "authority": "ca-alameda-municipal-power",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "ebike",
-    "program": "ca_alamedaMunicipalPower_aMPOffers",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 600
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Income-qualified $600 rebate on E-bike purchase cost $2,000 and up."
-    }
-  },
-  {
-    "id": "CA-18",
+    "id": "CA-14",
     "authority_type": "utility",
     "authority": "ca-alameda-municipal-power",
     "payment_methods": [
@@ -385,7 +303,7 @@
     }
   },
   {
-    "id": "CA-19",
+    "id": "CA-15",
     "authority_type": "utility",
     "authority": "ca-alameda-municipal-power",
     "payment_methods": [
@@ -406,7 +324,7 @@
     }
   },
   {
-    "id": "CA-20",
+    "id": "CA-16",
     "authority_type": "utility",
     "authority": "ca-alameda-municipal-power",
     "payment_methods": [
@@ -427,7 +345,114 @@
     }
   },
   {
+    "id": "CA-17",
+    "authority_type": "utility",
+    "authority": "ca-alameda-municipal-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "rooftop_solar_installation",
+    "program": "ca_alamedaMunicipalPower_incomeQualifiedSolarRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for income qualified AMP customers installing solar in their homes."
+    }
+  },
+  {
+    "id": "CA-18",
+    "authority_type": "utility",
+    "authority": "ca-alameda-municipal-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "ca_alamedaMunicipalPower_aMPOffers",
+    "amount": {
+      "type": "percent",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Variable rebates while supplies last."
+    }
+  },
+  {
+    "id": "CA-19",
+    "authority_type": "utility",
+    "authority": "ca-alameda-municipal-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "used_electric_vehicle",
+    "program": "ca_alamedaMunicipalPower_aMPOffers",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 6000,
+      "minimum": 1500,
+      "maximum": 6000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Earn up to $6,000 as a rebate for purchasing a used electric vehicle."
+    }
+  },
+  {
+    "id": "CA-20",
+    "authority_type": "utility",
+    "authority": "ca-alameda-municipal-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_alamedaMunicipalPower_aMPOffers",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Earn up to $1,500 for switching from natural gas to an electric heat pump."
+    }
+  },
+  {
     "id": "CA-21",
+    "authority_type": "utility",
+    "authority": "ca-alameda-municipal-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "ca_alamedaMunicipalPower_aMPOffers",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Earn up to $1,500 when you install a qualifying electric heat pump water heater."
+    }
+  },
+  {
+    "id": "CA-22",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -449,7 +474,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-22",
+    "id": "CA-23",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -471,7 +496,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-23",
+    "id": "CA-24",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -493,7 +518,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-24",
+    "id": "CA-25",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -516,7 +541,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-25",
+    "id": "CA-26",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -539,7 +564,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-26",
+    "id": "CA-27",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -562,7 +587,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-27",
+    "id": "CA-28",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -585,7 +610,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-28",
+    "id": "CA-29",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -608,7 +633,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-29",
+    "id": "CA-30",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -631,7 +656,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-30",
+    "id": "CA-31",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -654,7 +679,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-31",
+    "id": "CA-32",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -677,7 +702,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-32",
+    "id": "CA-33",
     "authority_type": "utility",
     "authority": "ca-anaheim-public-utilities",
     "payment_methods": [
@@ -700,7 +725,7 @@
     }
   },
   {
-    "id": "CA-33",
+    "id": "CA-34",
     "authority_type": "utility",
     "authority": "ca-city-of-palo-alto-utilities",
     "payment_methods": [
@@ -722,7 +747,7 @@
     }
   },
   {
-    "id": "CA-34",
+    "id": "CA-35",
     "authority_type": "utility",
     "authority": "ca-city-of-palo-alto-utilities",
     "payment_methods": [
@@ -743,45 +768,25 @@
     }
   },
   {
-    "id": "CA-35",
+    "id": "CA-36",
     "authority_type": "utility",
-    "authority": "ca-alameda-municipal-power",
+    "authority": "ca-city-of-lompoc-utilities",
     "payment_methods": [
       "rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "ca_alamedaMunicipalPower_aMPOffers",
+    "program": "ca_cityOfLompocUtilities_rebateAndConservationProgram",
     "amount": {
-      "type": "dollar_amount",
-      "number": 1500
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Earn up to $1,500 for switching from natural gas to an electric heat pump."
-    }
-  },
-  {
-    "id": "CA-36",
-    "authority_type": "utility",
-    "authority": "ca-alameda-municipal-power",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_water_heater",
-    "program": "ca_alamedaMunicipalPower_aMPOffers",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1500
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Earn up to $1,500 when you install a qualifying electric heat pump water heater."
+      "en": "Earn a $250 per ton rebate up to 100% of the cost to purchase and install a new qualifying air source heat pump."
     }
   },
   {
@@ -813,28 +818,6 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "ca_cityOfLompocUtilities_rebateAndConservationProgram",
-    "amount": {
-      "type": "dollars_per_unit",
-      "number": 250,
-      "unit": "ton"
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Earn a $250 per ton rebate up to 100% of the cost to purchase and install a new qualifying air source heat pump."
-    }
-  },
-  {
-    "id": "CA-39",
-    "authority_type": "utility",
-    "authority": "ca-city-of-lompoc-utilities",
-    "payment_methods": [
-      "rebate"
-    ],
     "item": "smart_thermostat",
     "program": "ca_cityOfLompocUtilities_rebateAndConservationProgram",
     "amount": {
@@ -851,7 +834,7 @@
     }
   },
   {
-    "id": "CA-40",
+    "id": "CA-39",
     "authority_type": "state",
     "authority": "ca-california-public-utilities-commission",
     "payment_methods": [
@@ -873,7 +856,7 @@
     }
   },
   {
-    "id": "CA-41",
+    "id": "CA-40",
     "authority_type": "utility",
     "authority": "ca-glendale-water-and-power",
     "payment_methods": [
@@ -894,7 +877,7 @@
     }
   },
   {
-    "id": "CA-42",
+    "id": "CA-41",
     "authority_type": "utility",
     "authority": "ca-glendale-water-and-power",
     "payment_methods": [
@@ -915,7 +898,7 @@
     }
   },
   {
-    "id": "CA-43",
+    "id": "CA-42",
     "authority_type": "utility",
     "authority": "ca-glendale-water-and-power",
     "payment_methods": [
@@ -937,7 +920,7 @@
     }
   },
   {
-    "id": "CA-44",
+    "id": "CA-43",
     "authority_type": "utility",
     "authority": "ca-glendale-water-and-power",
     "payment_methods": [
@@ -958,7 +941,7 @@
     }
   },
   {
-    "id": "CA-45",
+    "id": "CA-44",
     "authority_type": "utility",
     "authority": "ca-glendale-water-and-power",
     "payment_methods": [
@@ -979,7 +962,7 @@
     }
   },
   {
-    "id": "CA-46",
+    "id": "CA-45",
     "authority_type": "utility",
     "authority": "ca-glendale-water-and-power",
     "payment_methods": [
@@ -1000,7 +983,7 @@
     }
   },
   {
-    "id": "CA-47",
+    "id": "CA-46",
     "authority_type": "utility",
     "authority": "ca-glendale-water-and-power",
     "payment_methods": [
@@ -1021,72 +1004,7 @@
     }
   },
   {
-    "id": "CA-48",
-    "authority_type": "utility",
-    "authority": "ca-alameda-municipal-power",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "rooftop_solar_installation",
-    "program": "ca_alamedaMunicipalPower_incomeQualifiedSolarRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$500 rebate for income qualified AMP customers installing solar in their homes."
-    }
-  },
-  {
-    "id": "CA-49",
-    "authority_type": "utility",
-    "authority": "ca-alameda-municipal-power",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "smart_thermostat",
-    "program": "ca_alamedaMunicipalPower_aMPOffers",
-    "amount": {
-      "type": "percent",
-      "number": 100
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Variable rebates while supplies last."
-    }
-  },
-  {
-    "id": "CA-50",
-    "authority_type": "utility",
-    "authority": "ca-alameda-municipal-power",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "used_electric_vehicle",
-    "program": "ca_alamedaMunicipalPower_aMPOffers",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 6000,
-      "minimum": 1500,
-      "maximum": 6000
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Earn up to $6,000 as a rebate for purchasing a used electric vehicle."
-    }
-  },
-  {
-    "id": "CA-51",
+    "id": "CA-47",
     "authority_type": "utility",
     "authority": "ca-imperial-irrigation-district",
     "payment_methods": [
@@ -1108,7 +1026,7 @@
     }
   },
   {
-    "id": "CA-52",
+    "id": "CA-48",
     "authority_type": "utility",
     "authority": "ca-imperial-irrigation-district",
     "payment_methods": [
@@ -1130,7 +1048,7 @@
     }
   },
   {
-    "id": "CA-53",
+    "id": "CA-49",
     "authority_type": "utility",
     "authority": "ca-imperial-irrigation-district",
     "payment_methods": [
@@ -1151,7 +1069,7 @@
     }
   },
   {
-    "id": "CA-54",
+    "id": "CA-50",
     "authority_type": "utility",
     "authority": "ca-imperial-irrigation-district",
     "payment_methods": [
@@ -1173,7 +1091,7 @@
     }
   },
   {
-    "id": "CA-55",
+    "id": "CA-51",
     "authority_type": "utility",
     "authority": "ca-lassen-municipal-utility-district",
     "payment_methods": [
@@ -1195,7 +1113,7 @@
     }
   },
   {
-    "id": "CA-56",
+    "id": "CA-52",
     "authority_type": "utility",
     "authority": "ca-lassen-municipal-utility-district",
     "payment_methods": [
@@ -1217,7 +1135,7 @@
     }
   },
   {
-    "id": "CA-57",
+    "id": "CA-53",
     "authority_type": "utility",
     "authority": "ca-lassen-municipal-utility-district",
     "payment_methods": [
@@ -1238,7 +1156,7 @@
     }
   },
   {
-    "id": "CA-58",
+    "id": "CA-54",
     "authority_type": "utility",
     "authority": "ca-lassen-municipal-utility-district",
     "payment_methods": [
@@ -1261,7 +1179,7 @@
     }
   },
   {
-    "id": "CA-59",
+    "id": "CA-55",
     "authority_type": "utility",
     "authority": "ca-lassen-municipal-utility-district",
     "payment_methods": [
@@ -1283,7 +1201,7 @@
     }
   },
   {
-    "id": "CA-60",
+    "id": "CA-56",
     "authority_type": "utility",
     "authority": "ca-liberty-utilities",
     "payment_methods": [
@@ -1304,7 +1222,7 @@
     }
   },
   {
-    "id": "CA-61",
+    "id": "CA-57",
     "authority_type": "utility",
     "authority": "ca-liberty-utilities",
     "payment_methods": [
@@ -1326,7 +1244,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-62",
+    "id": "CA-58",
     "authority_type": "utility",
     "authority": "ca-liberty-utilities",
     "payment_methods": [
@@ -1348,7 +1266,7 @@
     }
   },
   {
-    "id": "CA-63",
+    "id": "CA-59",
     "authority_type": "utility",
     "authority": "ca-liberty-utilities",
     "payment_methods": [
@@ -1370,7 +1288,7 @@
     }
   },
   {
-    "id": "CA-64",
+    "id": "CA-60",
     "authority_type": "utility",
     "authority": "ca-lodi-electric-utility",
     "payment_methods": [
@@ -1391,7 +1309,7 @@
     }
   },
   {
-    "id": "CA-65",
+    "id": "CA-61",
     "authority_type": "utility",
     "authority": "ca-lodi-electric-utility",
     "payment_methods": [
@@ -1412,7 +1330,7 @@
     }
   },
   {
-    "id": "CA-66",
+    "id": "CA-62",
     "authority_type": "utility",
     "authority": "ca-lodi-electric-utility",
     "payment_methods": [
@@ -1435,7 +1353,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-67",
+    "id": "CA-63",
     "authority_type": "utility",
     "authority": "ca-lodi-electric-utility",
     "payment_methods": [
@@ -1458,7 +1376,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-68",
+    "id": "CA-64",
     "authority_type": "utility",
     "authority": "ca-lodi-electric-utility",
     "payment_methods": [
@@ -1481,7 +1399,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-69",
+    "id": "CA-65",
     "authority_type": "utility",
     "authority": "ca-los-angeles-department-of-water-and-power",
     "payment_methods": [
@@ -1503,7 +1421,7 @@
     }
   },
   {
-    "id": "CA-70",
+    "id": "CA-66",
     "authority_type": "utility",
     "authority": "ca-los-angeles-department-of-water-and-power",
     "payment_methods": [
@@ -1524,7 +1442,7 @@
     }
   },
   {
-    "id": "CA-71",
+    "id": "CA-67",
     "authority_type": "utility",
     "authority": "ca-los-angeles-department-of-water-and-power",
     "payment_methods": [
@@ -1545,7 +1463,7 @@
     }
   },
   {
-    "id": "CA-72",
+    "id": "CA-68",
     "authority_type": "utility",
     "authority": "ca-los-angeles-department-of-water-and-power",
     "payment_methods": [
@@ -1567,7 +1485,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-73",
+    "id": "CA-69",
     "authority_type": "utility",
     "authority": "ca-los-angeles-department-of-water-and-power",
     "payment_methods": [
@@ -1588,7 +1506,7 @@
     }
   },
   {
-    "id": "CA-74",
+    "id": "CA-70",
     "authority_type": "utility",
     "authority": "ca-roseville-electric",
     "payment_methods": [
@@ -1608,7 +1526,7 @@
     }
   },
   {
-    "id": "CA-75",
+    "id": "CA-71",
     "authority_type": "utility",
     "authority": "ca-roseville-electric",
     "payment_methods": [
@@ -1630,7 +1548,7 @@
     }
   },
   {
-    "id": "CA-76",
+    "id": "CA-72",
     "authority_type": "utility",
     "authority": "ca-roseville-electric",
     "payment_methods": [
@@ -1653,7 +1571,7 @@
     }
   },
   {
-    "id": "CA-77",
+    "id": "CA-73",
     "authority_type": "utility",
     "authority": "ca-roseville-electric",
     "payment_methods": [
@@ -1673,7 +1591,7 @@
     }
   },
   {
-    "id": "CA-78",
+    "id": "CA-74",
     "authority_type": "state",
     "authority": "ca-california-public-utilities-commission",
     "payment_methods": [
@@ -1695,7 +1613,7 @@
     }
   },
   {
-    "id": "CA-79",
+    "id": "CA-75",
     "authority_type": "utility",
     "authority": "ca-pacific-gas-and-electric",
     "payment_methods": [
@@ -1716,7 +1634,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-80",
+    "id": "CA-76",
     "authority_type": "utility",
     "authority": "ca-pacific-gas-and-electric",
     "payment_methods": [
@@ -1736,7 +1654,7 @@
     }
   },
   {
-    "id": "CA-81",
+    "id": "CA-77",
     "authority_type": "utility",
     "authority": "ca-pacific-gas-and-electric",
     "payment_methods": [
@@ -1756,8 +1674,8 @@
     }
   },
   {
-    "id": "CA-82",
-    "authority_type": "other",
+    "id": "CA-78",
+    "authority_type": "state",
     "authority": "ca-grid-alternatives",
     "payment_methods": [
       "assistance_program"
@@ -1777,7 +1695,7 @@
     }
   },
   {
-    "id": "CA-83",
+    "id": "CA-79",
     "authority_type": "utility",
     "authority": "ca-modesto-irrigation-district",
     "payment_methods": [
@@ -1797,7 +1715,7 @@
     }
   },
   {
-    "id": "CA-84",
+    "id": "CA-80",
     "authority_type": "utility",
     "authority": "ca-modesto-irrigation-district",
     "payment_methods": [
@@ -1817,7 +1735,7 @@
     }
   },
   {
-    "id": "CA-85",
+    "id": "CA-81",
     "authority_type": "utility",
     "authority": "ca-modesto-irrigation-district",
     "payment_methods": [
@@ -1837,7 +1755,7 @@
     }
   },
   {
-    "id": "CA-86",
+    "id": "CA-82",
     "authority_type": "utility",
     "authority": "ca-modesto-irrigation-district",
     "payment_methods": [
@@ -1857,7 +1775,7 @@
     }
   },
   {
-    "id": "CA-87",
+    "id": "CA-83",
     "authority_type": "utility",
     "authority": "ca-modesto-irrigation-district",
     "payment_methods": [
@@ -1877,7 +1795,7 @@
     }
   },
   {
-    "id": "CA-88",
+    "id": "CA-84",
     "authority_type": "utility",
     "authority": "ca-modesto-irrigation-district",
     "payment_methods": [
@@ -1898,7 +1816,7 @@
     }
   },
   {
-    "id": "CA-89",
+    "id": "CA-85",
     "authority_type": "utility",
     "authority": "ca-modesto-irrigation-district",
     "payment_methods": [
@@ -1918,7 +1836,7 @@
     }
   },
   {
-    "id": "CA-90",
+    "id": "CA-86",
     "authority_type": "utility",
     "authority": "ca-modesto-irrigation-district",
     "payment_methods": [
@@ -1938,7 +1856,7 @@
     }
   },
   {
-    "id": "CA-91",
+    "id": "CA-87",
     "authority_type": "utility",
     "authority": "ca-modesto-irrigation-district",
     "payment_methods": [
@@ -1959,7 +1877,7 @@
     }
   },
   {
-    "id": "CA-92",
+    "id": "CA-88",
     "authority_type": "utility",
     "authority": "ca-modesto-irrigation-district",
     "payment_methods": [
@@ -1980,7 +1898,7 @@
     }
   },
   {
-    "id": "CA-93",
+    "id": "CA-89",
     "authority_type": "utility",
     "authority": "ca-modesto-irrigation-district",
     "payment_methods": [
@@ -2001,7 +1919,7 @@
     }
   },
   {
-    "id": "CA-94",
+    "id": "CA-90",
     "authority_type": "utility",
     "authority": "ca-pacific-power",
     "payment_methods": [
@@ -2021,7 +1939,7 @@
     }
   },
   {
-    "id": "CA-95",
+    "id": "CA-91",
     "authority_type": "utility",
     "authority": "ca-pacific-power",
     "payment_methods": [
@@ -2041,7 +1959,7 @@
     }
   },
   {
-    "id": "CA-96",
+    "id": "CA-92",
     "authority_type": "utility",
     "authority": "ca-pacific-power",
     "payment_methods": [
@@ -2062,7 +1980,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-97",
+    "id": "CA-93",
     "authority_type": "utility",
     "authority": "ca-pasadena-water-and-power",
     "payment_methods": [
@@ -2084,7 +2002,7 @@
     }
   },
   {
-    "id": "CA-98",
+    "id": "CA-94",
     "authority_type": "utility",
     "authority": "ca-pasadena-water-and-power",
     "payment_methods": [
@@ -2106,7 +2024,7 @@
     }
   },
   {
-    "id": "CA-99",
+    "id": "CA-95",
     "authority_type": "utility",
     "authority": "ca-pasadena-water-and-power",
     "payment_methods": [
@@ -2129,7 +2047,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-100",
+    "id": "CA-96",
     "authority_type": "utility",
     "authority": "ca-pasadena-water-and-power",
     "payment_methods": [
@@ -2150,7 +2068,7 @@
     }
   },
   {
-    "id": "CA-101",
+    "id": "CA-97",
     "authority_type": "utility",
     "authority": "ca-pasadena-water-and-power",
     "payment_methods": [
@@ -2171,7 +2089,7 @@
     }
   },
   {
-    "id": "CA-102",
+    "id": "CA-98",
     "authority_type": "utility",
     "authority": "ca-pasadena-water-and-power",
     "payment_methods": [
@@ -2192,7 +2110,7 @@
     }
   },
   {
-    "id": "CA-103",
+    "id": "CA-99",
     "authority_type": "utility",
     "authority": "ca-plumas-sierra-rec",
     "payment_methods": [
@@ -2213,7 +2131,7 @@
     }
   },
   {
-    "id": "CA-104",
+    "id": "CA-100",
     "authority_type": "utility",
     "authority": "ca-plumas-sierra-rec",
     "payment_methods": [
@@ -2235,7 +2153,7 @@
     }
   },
   {
-    "id": "CA-105",
+    "id": "CA-101",
     "authority_type": "utility",
     "authority": "ca-plumas-sierra-rec",
     "payment_methods": [
@@ -2257,7 +2175,7 @@
     }
   },
   {
-    "id": "CA-106",
+    "id": "CA-102",
     "authority_type": "utility",
     "authority": "ca-plumas-sierra-rec",
     "payment_methods": [
@@ -2278,7 +2196,7 @@
     }
   },
   {
-    "id": "CA-107",
+    "id": "CA-103",
     "authority_type": "utility",
     "authority": "ca-southern-california-edison",
     "payment_methods": [
@@ -2300,7 +2218,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-108",
+    "id": "CA-104",
     "authority_type": "utility",
     "authority": "ca-southern-california-edison",
     "payment_methods": [
@@ -2321,7 +2239,7 @@
     }
   },
   {
-    "id": "CA-109",
+    "id": "CA-105",
     "authority_type": "utility",
     "authority": "ca-southern-california-edison",
     "payment_methods": [
@@ -2342,7 +2260,7 @@
     }
   },
   {
-    "id": "CA-110",
+    "id": "CA-106",
     "authority_type": "utility",
     "authority": "ca-truckee-donner-public-utility-district",
     "payment_methods": [
@@ -2362,7 +2280,7 @@
     }
   },
   {
-    "id": "CA-111",
+    "id": "CA-107",
     "authority_type": "utility",
     "authority": "ca-truckee-donner-public-utility-district",
     "payment_methods": [
@@ -2382,7 +2300,7 @@
     }
   },
   {
-    "id": "CA-112",
+    "id": "CA-108",
     "authority_type": "utility",
     "authority": "ca-truckee-donner-public-utility-district",
     "payment_methods": [
@@ -2402,7 +2320,7 @@
     }
   },
   {
-    "id": "CA-113",
+    "id": "CA-109",
     "authority_type": "utility",
     "authority": "ca-truckee-donner-public-utility-district",
     "payment_methods": [
@@ -2422,7 +2340,7 @@
     }
   },
   {
-    "id": "CA-114",
+    "id": "CA-110",
     "authority_type": "utility",
     "authority": "ca-sacramento-municipal-utility-district",
     "payment_methods": [
@@ -2444,7 +2362,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-115",
+    "id": "CA-111",
     "authority_type": "utility",
     "authority": "ca-sacramento-municipal-utility-district",
     "payment_methods": [
@@ -2466,7 +2384,7 @@
     }
   },
   {
-    "id": "CA-116",
+    "id": "CA-112",
     "authority_type": "utility",
     "authority": "ca-sacramento-municipal-utility-district",
     "payment_methods": [
@@ -2489,7 +2407,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-117",
+    "id": "CA-113",
     "authority_type": "utility",
     "authority": "ca-silicon-valley-power",
     "payment_methods": [
@@ -2512,7 +2430,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-118",
+    "id": "CA-114",
     "authority_type": "utility",
     "authority": "ca-silicon-valley-power",
     "payment_methods": [
@@ -2534,7 +2452,7 @@
     }
   },
   {
-    "id": "CA-119",
+    "id": "CA-115",
     "authority_type": "utility",
     "authority": "ca-silicon-valley-power",
     "payment_methods": [
@@ -2554,7 +2472,7 @@
     }
   },
   {
-    "id": "CA-120",
+    "id": "CA-116",
     "authority_type": "utility",
     "authority": "ca-silicon-valley-power",
     "payment_methods": [
@@ -2576,7 +2494,7 @@
     }
   },
   {
-    "id": "CA-121",
+    "id": "CA-117",
     "authority_type": "utility",
     "authority": "ca-silicon-valley-power",
     "payment_methods": [
@@ -2599,9 +2517,10 @@
     "bonus_available": true
   },
   {
-    "id": "CA-122",
-    "authority_type": "utility",
+    "id": "CA-118",
+    "authority_type": "other",
     "authority": "ca-bay-area-regional-energy-network-bay-ren",
+    "eligible_geo_group": "ca-group-bay-area-regional-energy-network-bay-ren",
     "payment_methods": [
       "rebate"
     ],
@@ -2622,9 +2541,10 @@
     "bonus_available": true
   },
   {
-    "id": "CA-123",
-    "authority_type": "utility",
+    "id": "CA-119",
+    "authority_type": "other",
     "authority": "ca-bay-area-regional-energy-network-bay-ren",
+    "eligible_geo_group": "ca-group-bay-area-regional-energy-network-bay-ren",
     "payment_methods": [
       "rebate"
     ],
@@ -2643,9 +2563,10 @@
     }
   },
   {
-    "id": "CA-124",
-    "authority_type": "utility",
+    "id": "CA-120",
+    "authority_type": "other",
     "authority": "ca-bay-area-regional-energy-network-bay-ren",
+    "eligible_geo_group": "ca-group-bay-area-regional-energy-network-bay-ren",
     "payment_methods": [
       "rebate"
     ],
@@ -2666,9 +2587,34 @@
     "bonus_available": true
   },
   {
-    "id": "CA-126",
-    "authority_type": "utility",
+    "id": "CA-121",
+    "authority_type": "other",
     "authority": "ca-bay-area-regional-energy-network-bay-ren",
+    "eligible_geo_group": "ca-group-bay-area-regional-energy-network-bay-ren",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "ca_bayAreaRegionalEnergyNetwork(BayREN)_rebates:SingleFamilyHomeowners",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.7,
+      "unit": "square_foot",
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$0.70 / sqft rebate (not to exceed $1,000 per home) for wall insulation."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "CA-122",
+    "authority_type": "other",
+    "authority": "ca-bay-area-regional-energy-network-bay-ren",
+    "eligible_geo_group": "ca-group-bay-area-regional-energy-network-bay-ren",
     "payment_methods": [
       "rebate"
     ],
@@ -2687,9 +2633,10 @@
     "bonus_available": true
   },
   {
-    "id": "CA-127",
-    "authority_type": "utility",
+    "id": "CA-123",
+    "authority_type": "other",
     "authority": "ca-bay-area-regional-energy-network-bay-ren",
+    "eligible_geo_group": "ca-group-bay-area-regional-energy-network-bay-ren",
     "payment_methods": [
       "rebate"
     ],
@@ -2708,9 +2655,10 @@
     "bonus_available": true
   },
   {
-    "id": "CA-128",
-    "authority_type": "utility",
+    "id": "CA-124",
+    "authority_type": "other",
     "authority": "ca-bay-area-regional-energy-network-bay-ren",
+    "eligible_geo_group": "ca-group-bay-area-regional-energy-network-bay-ren",
     "payment_methods": [
       "rebate"
     ],
@@ -2731,7 +2679,28 @@
     "bonus_available": true
   },
   {
-    "id": "CA-130",
+    "id": "CA-125",
+    "authority_type": "other",
+    "authority": "ca-bay-area-regional-energy-network-bay-ren",
+    "eligible_geo_group": "ca-group-bay-area-regional-energy-network-bay-ren",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "ca_bayAreaRegionalEnergyNetwork(BayREN)_rebates:SingleFamilyHomeowners",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Get $250 back on your high efficiency heat pump clothes dryer when replacing an existing natural gas clothes dryer."
+    }
+  },
+  {
+    "id": "CA-126",
     "authority_type": "utility",
     "authority": "ca-riverside-public-utilities",
     "payment_methods": [
@@ -2752,7 +2721,7 @@
     }
   },
   {
-    "id": "CA-131",
+    "id": "CA-127",
     "authority_type": "utility",
     "authority": "ca-riverside-public-utilities",
     "payment_methods": [
@@ -2773,7 +2742,7 @@
     }
   },
   {
-    "id": "CA-132",
+    "id": "CA-128",
     "authority_type": "utility",
     "authority": "ca-riverside-public-utilities",
     "payment_methods": [
@@ -2794,7 +2763,7 @@
     }
   },
   {
-    "id": "CA-133",
+    "id": "CA-129",
     "authority_type": "utility",
     "authority": "ca-riverside-public-utilities",
     "payment_methods": [
@@ -2814,7 +2783,7 @@
     }
   },
   {
-    "id": "CA-134",
+    "id": "CA-130",
     "authority_type": "utility",
     "authority": "ca-riverside-public-utilities",
     "payment_methods": [
@@ -2836,7 +2805,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-135",
+    "id": "CA-131",
     "authority_type": "utility",
     "authority": "ca-riverside-public-utilities",
     "payment_methods": [
@@ -2856,7 +2825,7 @@
     }
   },
   {
-    "id": "CA-136",
+    "id": "CA-132",
     "authority_type": "utility",
     "authority": "ca-riverside-public-utilities",
     "payment_methods": [
