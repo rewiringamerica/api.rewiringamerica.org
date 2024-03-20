@@ -12,7 +12,7 @@
   },
   "coverage": {
     "state": "PA",
-    "utility": "pa-metropolitan-edison"
+    "utility": "pa-met-ed"
   },
   "location": {
     "state": "PA",
@@ -27,7 +27,7 @@
       ],
       "authority_type": "state",
       "authority": "pa-department-of-community-and-economic-development",
-      "program": "Pennsylvania Weatherization Assitance Program",
+      "program": "Pennsylvania Weatherization Assistance Program",
       "program_url": "https://dced.pa.gov/programs/weatherization-assistance-program-wap/",
       "item": {
         "type": "weatherization",
@@ -92,8 +92,8 @@
         "homeowner",
         "renter"
       ],
-      "start_date": "2021",
-      "end_date": "2026",
+      "start_date": "2021-06-01",
+      "end_date": "2026-05-31",
       "ami_qualification": null,
       "eligible": true,
       "short_description": "$500 rebate for ENERGY STAR certified heat pump water heaters."
@@ -119,8 +119,8 @@
         "homeowner",
         "renter"
       ],
-      "start_date": "2021",
-      "end_date": "2026",
+      "start_date": "2021-06-01",
+      "end_date": "2026-05-31",
       "ami_qualification": null,
       "eligible": true,
       "short_description": "$75 rebate for ENERGY STAR certified smart thermostats for income-qualified residents."
@@ -145,8 +145,8 @@
         "homeowner",
         "renter"
       ],
-      "start_date": "2021",
-      "end_date": "2026",
+      "start_date": "2021-06-01",
+      "end_date": "2026-05-31",
       "ami_qualification": null,
       "eligible": false,
       "short_description": "$50 rebate for ENERGY STAR certified smart thermostats."
@@ -172,8 +172,8 @@
         "homeowner",
         "renter"
       ],
-      "start_date": "2021",
-      "end_date": "2026",
+      "start_date": "2021-06-01",
+      "end_date": "2026-05-31",
       "ami_qualification": null,
       "eligible": true,
       "short_description": "$650 rebate for ENERGY STAR® certified geothermal heat pumps."
@@ -193,14 +193,15 @@
       },
       "amount": {
         "type": "dollar_amount",
-        "number": 500
+        "number": 500,
+        "maximum": 500
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "start_date": "2021",
-      "end_date": "2026",
+      "start_date": "2021-06-01",
+      "end_date": "2026-05-31",
       "ami_qualification": null,
       "eligible": true,
       "short_description": "Up to $500 rebate for ENERGY STAR certified air source heat pumps meeting qualifications. Rebate value depends on efficiency."
@@ -226,8 +227,8 @@
         "homeowner",
         "renter"
       ],
-      "start_date": "2021",
-      "end_date": "2026",
+      "start_date": "2021-06-01",
+      "end_date": "2026-05-31",
       "ami_qualification": null,
       "eligible": true,
       "short_description": "$400 rebate for ENERGY STAR certified air-to-water heat pumps."
@@ -252,8 +253,8 @@
         "homeowner",
         "renter"
       ],
-      "start_date": "2021",
-      "end_date": "2026",
+      "start_date": "2021-06-01",
+      "end_date": "2026-05-31",
       "ami_qualification": null,
       "eligible": true,
       "short_description": "$200 rebate for ENERGY STAR certified ductless mini-split AC."
@@ -279,37 +280,11 @@
         "homeowner",
         "renter"
       ],
-      "start_date": "2021",
-      "end_date": "2026",
+      "start_date": "2021-06-01",
+      "end_date": "2026-05-31",
       "ami_qualification": null,
       "eligible": true,
       "short_description": "$200 rebate for ENERGY STAR certified ductless mini-split heat pump."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "other",
-      "authority": "pa-first-energy",
-      "program": "Residential Products Rebate Program",
-      "program_url": "https://rebates.energysavepa.com/",
-      "item": {
-        "type": "other",
-        "name": "Other"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 150
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2021",
-      "end_date": "2026",
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "$150 rebate for ENERGY STAR® certified packaged terminal heat pumps."
     },
     {
       "payment_methods": [
@@ -333,8 +308,8 @@
         "homeowner",
         "renter"
       ],
-      "start_date": "2021",
-      "end_date": "2026",
+      "start_date": "2021-06-01",
+      "end_date": "2026-05-31",
       "ami_qualification": null,
       "eligible": true,
       "short_description": "$75 rebate for ENERGY STAR certified clothes dryer for income-qualified residents."
@@ -361,8 +336,8 @@
         "homeowner",
         "renter"
       ],
-      "start_date": "2021",
-      "end_date": "2026",
+      "start_date": "2021-06-01",
+      "end_date": "2026-05-31",
       "ami_qualification": null,
       "eligible": false,
       "short_description": "$50 rebate for ENERGY STAR certified clothes dryer."

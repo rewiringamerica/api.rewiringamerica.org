@@ -46,6 +46,9 @@ const EXCLUSIONS: Set<string | number> = new Set([
   'Nicor Gas',
   'Peoples Gas',
 
+  // PA
+  'Philadelphia Gas Works',
+
   // VA
   8198, // City of Harrisonburg; no electric
 ]);
@@ -111,6 +114,14 @@ const OVERRIDES = new Map<string | number, string>([
   [14154, 'Orange & Rockland'],
   [16183, 'Rochester Gas & Electric'],
   [16549, 'Salamanca Board of Public Utilities'],
+
+  // PA
+  [12390, 'Met-Ed'],
+  [1096, 'Met-Ed'],
+  [1135, 'PECO'],
+  [14711, 'Penelec'],
+  [14716, 'Penn Power'],
+  [1188, 'West Penn Power Company'],
 
   // RI
   [1857, 'Block Island Power Company'],

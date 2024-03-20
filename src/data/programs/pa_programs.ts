@@ -8,7 +8,7 @@ export const PA_PROGRAMS = {
         en: 'https://dced.pa.gov/programs/weatherization-assistance-program-wap/',
       },
     },
-  pa_duquesne_homeWeatherization: {
+  pa_duquesneLightCompany_homeWeatherization: {
     name: {
       en: 'Home Weatherization',
     },
@@ -16,7 +16,7 @@ export const PA_PROGRAMS = {
       en: 'https://duquesnelight.com/account-billing/payment-assistance/home-weatherization',
     },
   },
-  pa_duquesne_duquesneEnergyEfficiencyRebateProgram: {
+  pa_duquesneLightCompany_duquesneEnergyEfficiencyRebateProgram: {
     name: {
       en: 'Duquesne Energy Efficiency Rebate Program',
     },
@@ -40,7 +40,7 @@ export const PA_PROGRAMS = {
       en: 'https://www.firstenergycorp.com/save_energy/save_energy_pennsylvania/met_ed/for_your_home/warm-info.html',
     },
   },
-  'pa_pPLElectric_products&Rebates': {
+  'pa_pPLElectricUtilitiesCorp_products&Rebates': {
     name: {
       en: 'Products & Rebates',
     },
