@@ -1,5 +1,8 @@
 import { test } from 'tap';
-import { spreadsheetToJson } from '../../scripts/incentive-spreadsheet-to-json';
+import {
+  extractIdsFromUrl,
+  spreadsheetToJson,
+} from '../../scripts/incentive-spreadsheet-to-json';
 import { DataRefiner } from '../../scripts/lib/data-refiner';
 import { flatToNestedValidate } from '../../scripts/lib/format-converter';
 import {
@@ -125,5 +128,15 @@ test('drop records with omit_from_api marked', tap => {
   tap.equal(invalidCollectedIncentives.length, 0);
   tap.equal(invalidStateIncentives.length, 0);
   tap.equal(validStateIncentives.length, 0);
+  tap.end();
+});
+
+test('extract IDs from a standard URL', tap => {
+  const url =
+    'https://docs.google.com/spreadsheets/d/1nITjSNRWJjSusB0fWuSS63fqynm_4Co7KEeuo9Cm7fU/pub?gid=30198531&single=true&output=csv';
+  tap.strictSame(extractIdsFromUrl(url), {
+    spreadsheetId: '1nITjSNRWJjSusB0fWuSS63fqynm_4Co7KEeuo9Cm7fU',
+    incentiveDataSheetId: 30198531,
+  });
   tap.end();
 });
