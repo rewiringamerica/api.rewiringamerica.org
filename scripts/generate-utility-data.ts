@@ -9,7 +9,7 @@
  */
 
 import { stringify } from 'csv-stringify';
-import fs from 'fs/promises';
+import fs from 'fs';
 import _ from 'lodash';
 import fetch from 'make-fetch-happen';
 import minimist from 'minimist';
@@ -193,7 +193,7 @@ enum Col {
   });
 
   const rawSheet = args.file
-    ? await fs.readFile(args.file)
+    ? fs.readFileSync(args.file)
     : await fetch(
         'https://downloads.energystar.gov/bi/portfolio-manager/Public_Utility_Map_en_US.xlsx',
       ).then(response => response.buffer());
@@ -218,9 +218,7 @@ enum Col {
     columns: ['zip', 'utility_id', 'predominant'],
   });
   zipToUtilityOut.pipe(
-    (
-      await fs.open(path.join(__dirname, 'data/zip-to-utility.csv'))
-    ).createWriteStream(),
+    fs.createWriteStream(path.join(__dirname, 'data/zip-to-utility.csv')),
   );
 
   // For deduplication by utility ID and zip.
@@ -276,7 +274,7 @@ enum Col {
   // Update authorities.json with the utilities from the dataset.
   const authoritiesJsonPath = path.join(__dirname, '../data/authorities.json');
   const authoritiesJson: AuthoritiesByState = JSON.parse(
-    await fs.readFile(authoritiesJsonPath, 'utf-8'),
+    fs.readFileSync(authoritiesJsonPath, 'utf-8'),
   );
 
   utilitiesByState.forEach((utilityMap, state) => {
@@ -298,7 +296,7 @@ enum Col {
     }
   });
 
-  await fs.writeFile(
+  fs.writeFileSync(
     authoritiesJsonPath,
     JSON.stringify(authoritiesJson, null, 2) + '\n',
   );

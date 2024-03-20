@@ -34,7 +34,17 @@ Filling out an entry for `incentive-spreadsheet-registry.ts` consists of creatin
 - Optionally declaring the header row number, if not the top row of the spreadsheet, in `headerRowNumber`
 
 First, **edit `authorities.json` manually** to include a top-level entry for
-the state you're adding, if it's not already present.
+the state you're adding, if it's not already present, like this:
+
+```json
+{
+  "<state-abbreviation>": {
+    "state": {},
+    "utility": {}
+  },
+  ...
+}
+```
 
 Then, run [`generate-utility-data.ts`](generate-utility-data.ts) to populate the list of utilities for the state in the authorities file. See [below](#utility-data) for details on that.
 
