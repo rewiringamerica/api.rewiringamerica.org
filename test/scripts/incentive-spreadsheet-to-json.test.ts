@@ -1,16 +1,11 @@
 import { GaxiosPromise, GaxiosResponse } from 'gaxios';
 import { sheets_v4 } from 'googleapis';
 import { test } from 'tap';
-<<<<<<< HEAD
 import { IncentiveFile } from '../../scripts/incentive-spreadsheet-registry';
 import {
   SheetsClient,
   extractIdsFromUrl,
   retrieveGoogleSheet,
-=======
-import {
-  extractIdsFromUrl,
->>>>>>> edc75f1 (Add way to read Google Sheets API and retrieve hyperlinks.)
   spreadsheetToJson,
 } from '../../scripts/incentive-spreadsheet-to-json';
 import { DataRefiner } from '../../scripts/lib/data-refiner';
