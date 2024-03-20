@@ -1,8 +1,8 @@
 export const PA_PROGRAMS = {
-  pa_departmentOfCommunityAndEconomicDevelopment_pennsylvaniaWeatherizationAssitanceProgram:
+  pa_departmentOfCommunityAndEconomicDevelopment_pennsylvaniaWeatherizationAssistanceProgram:
     {
       name: {
-        en: 'Pennsylvania Weatherization Assitance Program',
+        en: 'Pennsylvania Weatherization Assistance Program',
       },
       url: {
         en: 'https://dced.pa.gov/programs/weatherization-assistance-program-wap/',
