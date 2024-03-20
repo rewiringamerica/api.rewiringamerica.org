@@ -36,10 +36,13 @@ export class SpreadsheetStandardizer {
     valueMap: { [index: string]: AliasMap } = VALUE_MAPPINGS,
     strict: boolean = true,
   ) {
+    // These first two maps are stored to translate from canonical column or
+    // value to an alias, which is needed when writing JSON back to human-
+    // readable version.
     this.fieldMap = fieldMap;
     this.valueMap = valueMap;
-    // We reverse the input map for easier runtime use, since
-    // we need to go from alias back to canonical name.
+    // We reverse the input maps for easier runtime use when converting from
+    // spreadsheet to JSON, since we need to go from aliases to canonical.
     this.fieldAliasToCanonical = reverseMap(fieldMap);
     this.valueAliasToCanonical = reverseValueMap(valueMap);
     this.strict = strict;
