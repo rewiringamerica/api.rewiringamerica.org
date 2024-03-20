@@ -100,6 +100,10 @@ const OVERRIDES = new Map<string | number, string>([
   [56697, 'Ameren Illinois'],
   [61678, 'Corn Belt Energy'],
 
+  // NV
+  [13407, 'NV Energy'], // Nevada Power (became NV Energy in 2008)
+  [17166, 'NV Energy'], // Sierra Pacific Power Co (became NV Energy in 2008)
+
   // NY
   [1036, 'Con Edison'],
   [1115, 'NYSEG'],
