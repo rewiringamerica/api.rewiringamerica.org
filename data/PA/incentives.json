@@ -651,14 +651,14 @@
     "amount": {
       "type": "percent",
       "number": 0.75,
-      "maximum": 500
+      "maximum": 1000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Rebate for 75% of costs up to $500 for attic insulation in an electric heated house."
+      "en": "Rebate for 75% of costs up to $1000 for insulation in an electric heated house. Up to $500 for attic insulation and $500 for basement wall insulation."
     },
     "bonus_available": true
   },
@@ -674,60 +674,14 @@
     "amount": {
       "type": "percent",
       "number": 0.75,
-      "maximum": 200
+      "maximum": 400
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Rebate for 75% of costs up to $200 for attic insulation (central AC, non-electric heat)."
-    },
-    "bonus_available": true
-  },
-  {
-    "id": "PA-32",
-    "authority_type": "utility",
-    "authority": "pa-ppl-electric-utilities-corp",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "weatherization",
-    "program": "pa_pPLElectricUtilitiesCorp_products&Rebates",
-    "amount": {
-      "type": "percent",
-      "number": 0.75,
-      "maximum": 500
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Rebate for 75% of costs up to $500 for basement wall insulation in an electric heated house."
-    },
-    "bonus_available": true
-  },
-  {
-    "id": "PA-33",
-    "authority_type": "utility",
-    "authority": "pa-ppl-electric-utilities-corp",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "weatherization",
-    "program": "pa_pPLElectricUtilitiesCorp_products&Rebates",
-    "amount": {
-      "type": "percent",
-      "number": 0.75,
-      "maximum": 200
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Rebate for 75% of costs up to $200 for basement wall insulation (central AC, non-electric heat)."
+      "en": "Rebate for 75% of costs up to $400 for insulation in non-electric heated homes with central AC. Up to $200 for attic and $200 for basement insulation."
     },
     "bonus_available": true
   },
