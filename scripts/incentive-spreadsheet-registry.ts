@@ -21,7 +21,7 @@ export const FILES: { [ident: string]: IncentiveFile } = {
   CA: {
     filepath: 'data/CA/incentives.json',
     sheetUrl:
-    'https://docs.google.com/spreadsheets/d/e/2PACX-1vRkumgOZd2XNDhUHIsQgj5VgzttXcHTqkcgI3-rorrgN0nDQtXqGiy8Wt1Qn8p-Pqbh-d21W967aM0d/pub?gid=995688950&single=true&output=csv',
+      'https://docs.google.com/spreadsheets/d/e/2PACX-1vRkumgOZd2XNDhUHIsQgj5VgzttXcHTqkcgI3-rorrgN0nDQtXqGiy8Wt1Qn8p-Pqbh-d21W967aM0d/pub?gid=995688950&single=true&output=csv',
     headerRowNumber: 2,
     runSpreadsheetHealthCheck: true,
   },
