@@ -79,6 +79,9 @@ const OVERRIDES = new Map<string | number, string>([
   [62683, "Tohono O'odham Utility Authority"],
   [606953, 'UniSource Energy Services'],
 
+  // CA
+  [207, 'Alameda Municipal Power'],
+
   // CO
   [5997, 'Estes Park Power and Communications'],
   [7300, 'Glenwood Springs Electric'],
