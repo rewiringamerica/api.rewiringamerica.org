@@ -8,6 +8,7 @@ export function cleanWebsiteData(response: string): string {
   if ($('body').length > 0) {
     // If <p> tags exist, try to only return those, as they'll likely be relevant tags.
     if ($('p').length > 0) {
+      // All contents in any <p> sections get concatenated together in a string, and have whitespace removed from start/end.
       return $('p').contents().text().trim();
     }
     return $('body').contents().text().trim();
