@@ -89,6 +89,9 @@ const OVERRIDES = new Map<string | number, string>([
   [16603, 'San Luis Valley REC'],
   [16616, 'San Isabel Electric'],
 
+  // GA
+  [9689, 'Jefferson Energy Cooperative'],
+
   // CT
   [7716, 'Groton Utilities'],
   [13831, 'Norwich Public Utilities'],
