@@ -5,7 +5,14 @@ import {
   isPdf,
 } from '../../scripts/lib/website-comparisons';
 
-test('Only HTML body and readable content is returned', tap => {
+test('Only HTML <p> tag content is returned, if both body and <p> tags exist', tap => {
+  const unclean_html: string =
+    "<html> <head> <meta content='Incorrect to be shown'> <link as='style' href='/doc/assets/stylesheets/fonts-b49e8aae.css' rel='stylesheet'> <meta content='ie=edge' http-equiv='X-UA-Compatible'> </head> <body> <p> Correct content</p> <div> <p> and div contents</p> </div> <div> not readable </div> </body> </html>";
+  tap.equal(cleanWebsiteData(unclean_html), 'Correct content and div contents');
+  tap.end();
+});
+
+test('Only HTML body and readable content is returned, if <p> tag does not exist', tap => {
   const unclean_html: string =
     "<html> <head> <meta content='Incorrect to be shown'> <link as='style' href='/doc/assets/stylesheets/fonts-b49e8aae.css' rel='stylesheet'> <meta content='ie=edge' http-equiv='X-UA-Compatible'> </head> <body>Correct content<div> and div contents</div> </body> </html>";
   tap.equal(cleanWebsiteData(unclean_html), 'Correct content and div contents');
@@ -14,7 +21,7 @@ test('Only HTML body and readable content is returned', tap => {
 
 test('If no body is present, but readable html exists, the html is returned', tap => {
   const unclean_html: string =
-    "<html> <head> <meta content='Incorrect to be shown'> <p> Readable Text </p> <link as='style' href='/doc/assets/stylesheets/fonts-b49e8aae.css' rel='stylesheet'> <meta content='ie=edge' http-equiv='X-UA-Compatible'> </head></html>";
+    "<html> <head> <meta content='Incorrect to be shown'> <div> Readable Text </div> <link as='style' href='/doc/assets/stylesheets/fonts-b49e8aae.css' rel='stylesheet'> <meta content='ie=edge' http-equiv='X-UA-Compatible'> </head></html>";
   tap.equal(cleanWebsiteData(unclean_html), 'Readable Text');
   tap.end();
 });
