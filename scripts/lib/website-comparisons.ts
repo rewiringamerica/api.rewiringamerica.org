@@ -7,7 +7,7 @@ export function cleanWebsiteData(response: string): string {
   // Only check for the HTML body to try and avoid metadata and scripts that may change per-system/call.
   if ($('body').length > 0) {
     // If <p> tags exist, try to only return those, as they'll likely be relevant tags.
-    if($('p').length > 0) {
+    if ($('p').length > 0) {
       return $('p').contents().text().trim();
     }
     return $('body').contents().text().trim();
