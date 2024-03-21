@@ -58,7 +58,7 @@ test('response is valid and correct', async t => {
   await validateResponse(
     t,
     {
-      location: { zip: '80212' },
+      zip: '80212',
       owner_status: 'homeowner',
       household_income: 80000,
       tax_filing: 'joint',
@@ -87,7 +87,7 @@ test('parent ZCTA is used', async t => {
     {
       // This does not correspond to physical land area, but its parent ZCTA
       // is 15213, which does.
-      location: { zip: '15289' },
+      zip: '15289',
       owner_status: 'homeowner',
       household_income: 80000,
       tax_filing: 'joint',
@@ -101,7 +101,7 @@ test('response with state and utility is valid and correct', async t => {
   await validateResponse(
     t,
     {
-      location: { zip: '02903' },
+      zip: '02903',
       owner_status: 'homeowner',
       // Qualifies as low-income for RI DHS but not Rhode Island Energy.
       household_size: 4,
@@ -118,7 +118,7 @@ test('response with state and item filtering is valid and correct', async t => {
   await validateResponse(
     t,
     {
-      location: { zip: '02807' },
+      zip: '02807',
       owner_status: 'homeowner',
       household_size: 4,
       household_income: 65000,
@@ -135,7 +135,7 @@ test('AZ low income response with state and utility filtering for Tuscon Electri
   await validateResponse(
     t,
     {
-      location: { zip: '85701' },
+      zip: '85701',
       owner_status: 'homeowner',
       household_size: 1,
       household_income: 28000,
@@ -154,7 +154,7 @@ test('AZ low income response with state and utility filtering for UniSource is v
   await validateResponse(
     t,
     {
-      location: { zip: '85702' },
+      zip: '85702',
       owner_status: 'homeowner',
       household_size: 1,
       household_income: 28000,
@@ -174,7 +174,7 @@ test('CO low income response with state and utility filtering is valid and corre
     t,
     {
       // Eagle County, which gets Walking Mountains incentives
-      location: { zip: '81657' },
+      zip: '81657',
       owner_status: 'homeowner',
       household_size: 1,
       household_income: 100000,
@@ -193,7 +193,7 @@ test('CO incentive for PRPA shows up as intended', async t => {
   await validateResponse(
     t,
     {
-      location: { zip: '80517' },
+      zip: '80517',
       owner_status: 'homeowner',
       household_size: 1,
       household_income: 80000,
@@ -210,7 +210,7 @@ test('CO incentive for PRPA shows up as intended', async t => {
   await validateResponse(
     t,
     {
-      location: { zip: '80517' },
+      zip: '80517',
       owner_status: 'homeowner',
       household_size: 1,
       household_income: 80000,
@@ -231,7 +231,7 @@ test('CT low income response with state and utility filtering is valid and corre
   await validateResponse(
     t,
     {
-      location: { zip: '06002' },
+      zip: '06002',
       owner_status: 'homeowner',
       household_size: 1,
       household_income: 35000,
@@ -250,7 +250,7 @@ test('DC low income response with state and city filtering is valid and correct'
   await validateResponse(
     t,
     {
-      location: { zip: '20303' },
+      zip: '20303',
       owner_status: 'homeowner',
       household_size: 4,
       household_income: 95796,
@@ -269,7 +269,7 @@ test('GA response with utility filtering is valid and correct', async t => {
   await validateResponse(
     t,
     {
-      location: { zip: '30033' },
+      zip: '30033',
       owner_status: 'homeowner',
       household_size: 1,
       household_income: 35000,
@@ -288,7 +288,7 @@ test('IL low income response with state and utility filtering is valid and corre
   await validateResponse(
     t,
     {
-      location: { zip: '60304' },
+      zip: '60304',
       owner_status: 'homeowner',
       household_size: 1,
       household_income: 35000,
@@ -307,7 +307,7 @@ test('MI response with state and utility is valid and correct', async t => {
   await validateResponse(
     t,
     {
-      location: { zip: '48103' },
+      zip: '48103',
       owner_status: 'homeowner',
       // Qualifies as low-income for MI DTE.
       household_size: 1,
@@ -326,7 +326,7 @@ test('NV low income response with state and utility filtering is valid and corre
   await validateResponse(
     t,
     {
-      location: { zip: '89108' },
+      zip: '89108',
       owner_status: 'homeowner',
       household_size: 1,
       household_income: 40000,
@@ -345,7 +345,7 @@ test('OR low income response with state and utility filtering is valid and corre
   await validateResponse(
     t,
     {
-      location: { zip: '97001' },
+      zip: '97001',
       owner_status: 'homeowner',
       household_size: 1,
       household_income: 50000,
@@ -359,12 +359,31 @@ test('OR low income response with state and utility filtering is valid and corre
   );
 });
 
+// PA low income test
+test('PA low income response with state and utility filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      zip: '17555',
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 20000,
+      tax_filing: 'joint',
+      authority_types: ['state', 'utility', 'other'],
+      utility: 'pa-met-ed',
+      // TODO: Remove when PA is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-pa-17555-state-lowincome.json',
+  );
+});
+
 // NY low income test.
 test('NY response with state and utility is valid and correct', async t => {
   await validateResponse(
     t,
     {
-      location: { zip: '11557' },
+      zip: '11557',
       owner_status: 'homeowner',
       // Qualifies as low-income for NY PSEG Long Island utility.
       household_size: 1,
@@ -383,7 +402,7 @@ test('VA low income response with state and utility filtering is valid and corre
   await validateResponse(
     t,
     {
-      location: { zip: '22030' },
+      zip: '22030',
       owner_status: 'homeowner',
       household_size: 1,
       household_income: 40000,
@@ -402,7 +421,7 @@ test('VT low income response with state and utility filtering is valid and corre
   await validateResponse(
     t,
     {
-      location: { zip: '05401' },
+      zip: '05401',
       owner_status: 'homeowner',
       household_size: 1,
       household_income: 40000,
@@ -421,7 +440,7 @@ test('WI low income response with state and utility filtering is valid and corre
   await validateResponse(
     t,
     {
-      location: { zip: '53703' },
+      zip: '53703',
       owner_status: 'homeowner',
       household_size: 1,
       household_income: 50000,
@@ -444,14 +463,14 @@ const BAD_QUERIES = [
     household_size: 4,
   },
   {
-    location: null,
+    zip: null,
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: 'joint',
     household_size: 4,
   },
   {
-    location: {},
+    zip: {},
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: 'joint',
@@ -459,27 +478,27 @@ const BAD_QUERIES = [
   },
   // bad owner_status:
   {
-    location: { zip: '80212' },
+    zip: '80212',
     household_income: 80000,
     tax_filing: 'joint',
     household_size: 4,
   },
   {
-    location: { zip: '80212' },
+    zip: '80212',
     owner_status: '',
     household_income: 80000,
     tax_filing: 'joint',
     household_size: 4,
   },
   {
-    location: { zip: '80212' },
+    zip: '80212',
     owner_status: 'aaa',
     household_income: 80000,
     tax_filing: 'joint',
     household_size: 4,
   },
   {
-    location: { zip: '80212' },
+    zip: '80212',
     owner_status: -1,
     household_income: 80000,
     tax_filing: 'joint',
@@ -487,55 +506,55 @@ const BAD_QUERIES = [
   },
   // bad household_income:
   {
-    location: { zip: '80212' },
+    zip: '80212',
     owner_status: 'homeowner',
     household_income: null,
     tax_filing: 'joint',
     household_size: 4,
   }, // null is the JSON encoding of NaN
   {
-    location: { zip: '80212' },
+    zip: '80212',
     owner_status: 'homeowner',
     household_income: -1,
     tax_filing: 'joint',
     household_size: 4,
   },
   {
-    location: { zip: '80212' },
+    zip: '80212',
     owner_status: 'homeowner',
     household_income: 100000001,
     tax_filing: 'joint',
     household_size: 4,
   },
   {
-    location: { zip: '80212' },
+    zip: '80212',
     owner_status: 'homeowner',
     tax_filing: 'joint',
     household_size: 4,
   },
   // bad tax_filing:
   {
-    location: { zip: '80212' },
+    zip: '80212',
     owner_status: 'homeowner',
     household_income: 80000,
     household_size: 4,
   },
   {
-    location: { zip: '80212' },
+    zip: '80212',
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: '',
     household_size: 4,
   },
   {
-    location: { zip: '80212' },
+    zip: '80212',
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: 'foo',
     household_size: 4,
   },
   {
-    location: { zip: '80212' },
+    zip: '80212',
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: null,
@@ -543,34 +562,34 @@ const BAD_QUERIES = [
   },
   // bad household_size:
   {
-    location: { zip: '80212' },
+    zip: '80212',
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: 'joint',
   },
   {
-    location: { zip: '80212' },
+    zip: '80212',
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: 'joint',
     household_size: 0,
   },
   {
-    location: { zip: '80212' },
+    zip: '80212',
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: 'joint',
     household_size: 'a',
   },
   {
-    location: { zip: '80212' },
+    zip: '80212',
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: 'joint',
     household_size: 9,
   },
   {
-    location: { zip: '80212' },
+    zip: '80212',
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: 'joint',
@@ -579,7 +598,7 @@ const BAD_QUERIES = [
     authority_types: ['utility'],
   },
   {
-    location: { zip: '02861' },
+    zip: '02861',
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: 'joint',
@@ -588,7 +607,7 @@ const BAD_QUERIES = [
     utility: 'nonexistent-utility',
   },
   {
-    location: { zip: '80212' },
+    zip: '80212',
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: 'joint',
@@ -634,7 +653,7 @@ test('non-existent zips', async t => {
 
   for (const zip of BAD_ZIPS) {
     const res = await getCalculatorResponse(t, {
-      location: { zip },
+      zip,
       owner_status: 'homeowner',
       household_income: 0,
       household_size: 1,
@@ -687,6 +706,9 @@ const UTILITIES = [
     {
       location: { state: 'CT' },
       utilities: {
+        'ct-bozrah-light-and-power-company': {
+          name: 'Bozrah Light & Power Company',
+        },
         'ct-norwich-public-utilities': {
           name: 'Norwich Public Utilities',
         },
@@ -720,7 +742,7 @@ test('/utilities', async t => {
 
   for (const [zip, beta, expectedResponse] of UTILITIES) {
     const searchParams = qs.stringify(
-      { location: { zip }, include_beta_states: beta },
+      { zip, include_beta_states: beta },
       { encodeValuesOnly: true },
     );
     const res = await app.inject({ url: `/api/v1/utilities?${searchParams}` });

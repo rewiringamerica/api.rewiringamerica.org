@@ -11,6 +11,7 @@ export enum AmountUnit {
   Kilowatt = 'kilowatt',
   Watt = 'watt',
   Btuh10k = 'btuh10k',
+  CMF50 = 'cmf50',
   SquareFoot = 'square_foot',
   KilowattHour = 'kilowatt_hour',
 }

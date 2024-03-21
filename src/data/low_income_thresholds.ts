@@ -103,6 +103,7 @@ export const SCHEMA: JSONSchemaType<LowIncomeThresholdsMap> = {
     'NV',
     'NY',
     'OR',
+    'PA',
     'RI',
     'VA',
     'VT',
