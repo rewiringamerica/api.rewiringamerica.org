@@ -6,6 +6,11 @@ export function cleanWebsiteData(response: string): string {
   const $ = cheerio.load(response);
   // Only check for the HTML body to try and avoid metadata and scripts that may change per-system/call.
   if ($('body').length > 0) {
+    // If <p> tags exist, try to only return those, as they'll likely be relevant tags.
+    if ($('p').length > 0) {
+      // All contents in any <p> sections get concatenated together in a string, and have whitespace removed from start/end.
+      return $('p').contents().text().trim();
+    }
     return $('body').contents().text().trim();
   }
   // If the website does not have a body tag, return all found html (for now).
