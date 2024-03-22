@@ -106,6 +106,15 @@ const OVERRIDES = new Map<string | number, string>([
   [56697, 'Ameren Illinois'],
   [61678, 'Corn Belt Energy'],
 
+  // MI
+  [61241, 'City of Charlevoix'],
+  [1366, 'Bay City Electric Light and Power'],
+  [3915, 'Coldwater Board of Public Utilities'],
+  [8631, 'Hillsdale Board of Public Utilities'],
+  [60990, 'Marshall Municipal Utilities'],
+  [18895, 'Thumb Electric Cooperative'],
+  [21048, 'Wyandotte Municipal Services'],
+
   // NV
   [13407, 'NV Energy'], // Nevada Power (became NV Energy in 2008)
   [17166, 'NV Energy'], // Sierra Pacific Power Co (became NV Energy in 2008)
