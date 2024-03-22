@@ -187,6 +187,24 @@ test('CA low income response with state and utility filtering is valid and corre
   );
 });
 
+// CA utility consortium tests
+test('CA incentive for BAYREN shows up as intended', async t => {
+  await validateResponse(
+    t,
+    {
+      zip: '94501',
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 20000,
+      tax_filing: 'single',
+      authority: 'ca-bay-area-regional-energy-network-bay-ren',
+      // TODO: Remove when OR is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-ca-94501-other-utility.json',
+  );
+});
+
 // CO low income test
 test('CO low income response with state and utility filtering is valid and correct', async t => {
   await validateResponse(
