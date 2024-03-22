@@ -3,6 +3,7 @@ import fs from 'fs';
 import _ from 'lodash';
 import { AuthorityType } from './authorities';
 import {
+  CALowIncomeAuthority,
   COLowIncomeAuthority,
   ILIncomeAuthority,
   NVLowIncomeAuthority,
@@ -21,6 +22,7 @@ import { OwnerStatus } from './types/owner-status';
 
 export type LowIncomeAuthority =
   | 'default'
+  | CALowIncomeAuthority
   | COLowIncomeAuthority
   | ILIncomeAuthority
   | NVLowIncomeAuthority

@@ -1,0 +1,100 @@
+{
+  "is_under_80_ami": true,
+  "is_under_150_ami": true,
+  "is_over_150_ami": false,
+  "authorities": {
+    "ca-california-public-utilities-commission": {
+      "name": "California Public Utilities Commission"
+    },
+    "ca-grid-alternatives": {
+      "name": "GRID Alternatives"
+    }
+  },
+  "coverage": {
+    "state": "CA",
+    "utility": null
+  },
+  "location": {
+    "state": "CA",
+    "city": "Greenville",
+    "county": "Plumas"
+  },
+  "data_partners": {},
+  "incentives": [
+    {
+      "payment_methods": [
+        "assistance_program"
+      ],
+      "authority_type": "state",
+      "authority": "ca-grid-alternatives",
+      "program": "Disadvantaged Communities - Single-family Solar Homes (DAC-SASH)",
+      "program_url": "https://gridalternatives.org/what-we-do/program-administration/dac-sash",
+      "item": {
+        "type": "rooftop_solar_installation",
+        "name": "Rooftop Solar Installation",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/rooftop-solar-installation"
+      },
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 3000,
+        "unit": "kilowatt"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$3/watt incentives to install an onsite solar system and energy efficiency training."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "ca-california-public-utilities-commission",
+      "program": "Golden State Rebates Program",
+      "program_url": "https://goldenstaterebates.com/goldenstaterebates/",
+      "item": {
+        "type": "heat_pump_water_heater",
+        "name": "Heat Pump Water Heater",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-water-heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 500,
+        "maximum": 500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Save up to $500 on heat pump water heater replacing an electric water heater."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "ca-california-public-utilities-commission",
+      "program": "Golden State Rebates Program",
+      "program_url": "https://goldenstaterebates.com/goldenstaterebates/",
+      "item": {
+        "type": "smart_thermostat",
+        "name": "Smart Thermostat"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 75,
+        "maximum": 75
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Up to $75 instant rebate for purchase and installation of an ENERGY STAR® certified Smart Thermostat."
+    }
+  ]
+}
