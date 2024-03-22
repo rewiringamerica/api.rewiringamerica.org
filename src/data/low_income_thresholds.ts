@@ -22,14 +22,7 @@ export type LowIncomeThresholds = {
 // Add custom state low income authorities here
 
 export enum CALowIncomeAuthority {
-  // BEAR_VALLEY_ELECTRIC = 'ca-bear-valley-electric-service',
-  // ALAMEDA_MUNICIPAL_POWER = 'ca-alameda-municipal-power',
-  // LIBERTY_UTILITIES = 'ca-liberty-utilities',
-  // ROSEVILLE_ELECTRIC = 'ca-roseville-electric',
-  // PACIFIC_GAS_AND_ELECTRIC = 'ca-pacific-gas-and-electric',
   GRID_ALTERNATIVES = 'ca-grid-alternatives',
-  // SOUTHERN_CALIFORNIA_EDISON = 'ca-southern-california-edison',
-  // SILICON_VALLEY_POWER = 'ca-silicon-valley-power',
 }
 
 export enum COLowIncomeAuthority {
