@@ -122,6 +122,16 @@ const OVERRIDES = new Map<string | number, string>([
   [16183, 'Rochester Gas & Electric'],
   [16549, 'Salamanca Board of Public Utilities'],
 
+  // OR
+  [3264, 'Central Lincoln'],
+  [60724, 'Central Lincoln'],
+  [28541, 'Clatskanie PUD'],
+  [40438, 'Columbia River PUD'],
+  [40437, "Emerald People's Utility District"],
+  [14109, 'Oregon Trail Electric Cooperative'],
+  [18917, "Tillamook People's Utility District"],
+  [1736, 'Blachly-Lane Electric Cooperative'],
+
   // PA
   [12390, 'Met-Ed'],
   [1096, 'Met-Ed'],
