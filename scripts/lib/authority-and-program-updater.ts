@@ -1,5 +1,6 @@
 import fs from 'fs';
 import _ from 'lodash';
+import path from 'path';
 import * as prettier from 'prettier';
 import { Project, SourceFile } from 'ts-morph';
 import { GeoGroup } from '../../src/data/geo_groups';
@@ -13,7 +14,6 @@ const PROGRAMS_TS_FILE = 'src/data/programs.ts';
 project.addSourceFileAtPath(PROGRAMS_TS_FILE);
 const globalSourceFile = project.getSourceFileOrThrow(PROGRAMS_TS_FILE);
 
-const AUTHORITIES_JSON_FILE = 'data/authorities.json';
 const GEOGROUPS_JSON_FILE = 'data/geo_groups.json';
 
 const wordSeparators =
@@ -103,24 +103,13 @@ export function sortMapByKey<T>(json: Record<string, T>): Record<string, T> {
 }
 
 export function updateAuthorities(
-  json: StateToAuthorityTypeMap,
-  state: string,
+  existingJson: AuthorityTypeMap,
   authorityMap: AuthorityMap,
-): StateToAuthorityTypeMap {
-  const stateUpper = state.toUpperCase();
+): AuthorityTypeMap {
   // Preserve existing utilities. Those are generated from an external dataset
   // by generate-utility-data.ts.
-  const existingUtilities = json[stateUpper]?.utility;
-
-  if (!existingUtilities) {
-    throw new Error(
-      `authorities.json has no entry for ${stateUpper}. Make sure there is a ` +
-        `top-level entry for ${stateUpper}, and run generate-utility-data.ts ` +
-        'before running this script.',
-    );
-  }
-
-  json[stateUpper] = {};
+  const existingUtilities = existingJson.utility;
+  const json: AuthorityTypeMap = {};
 
   const [utilities, nonUtilities] = _.partition(
     Object.entries(authorityMap),
@@ -139,17 +128,15 @@ export function updateAuthorities(
   }
 
   for (const [authorityShort, authority] of nonUtilities) {
-    if (
-      json[stateUpper][authority.authority_type.toLowerCase()] === undefined
-    ) {
-      json[stateUpper][authority.authority_type.toLowerCase()] = {};
+    if (json[authority.authority_type.toLowerCase()] === undefined) {
+      json[authority.authority_type.toLowerCase()] = {};
     }
-    json[stateUpper][authority.authority_type.toLowerCase()][authorityShort] = {
+    json[authority.authority_type.toLowerCase()][authorityShort] = {
       name: authority.name,
     };
   }
 
-  json[stateUpper].utility = existingUtilities;
+  json.utility = existingUtilities;
   return sortMapByKey(json);
 }
 
@@ -305,7 +292,7 @@ type JsonAuthorities = {
   [index: AuthorityKey]: { name: string };
 };
 type AuthorityType = string;
-type AuthorityTypeMap = {
+export type AuthorityTypeMap = {
   [index: AuthorityType]: JsonAuthorities;
 };
 export type StateToAuthorityTypeMap = {
@@ -366,15 +353,22 @@ export class AuthorityAndProgramUpdater {
   }
 
   updateAuthoritiesJson() {
-    const json: StateToAuthorityTypeMap = JSON.parse(
-      fs.readFileSync(AUTHORITIES_JSON_FILE, 'utf-8'),
+    const filepath = path.join(
+      __dirname,
+      `../../data/${this.state}/authorities.json`,
     );
-    const updated = updateAuthorities(json, this.state, this.authorityMap);
-    fs.writeFileSync(
-      AUTHORITIES_JSON_FILE,
-      JSON.stringify(updated, null, 2),
-      'utf-8',
+    if (!fs.existsSync(filepath)) {
+      throw new Error(
+        `No authorities.json file for ${this.state}. ` +
+          `Make sure the directory data/${this.state} exists, then run ` +
+          'generate-utility-data.ts, then run this script again.',
+      );
+    }
+    const json: AuthorityTypeMap = JSON.parse(
+      fs.readFileSync(filepath, 'utf-8'),
     );
+    const updated = updateAuthorities(json, this.authorityMap);
+    fs.writeFileSync(filepath, JSON.stringify(updated, null, 2), 'utf-8');
   }
 
   async updatePrograms() {

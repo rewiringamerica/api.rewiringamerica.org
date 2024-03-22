@@ -3,6 +3,7 @@ import { test } from 'tap';
 import { Project, QuoteKind } from 'ts-morph';
 import {
   AuthorityMap,
+  AuthorityTypeMap,
   StateToAuthorityTypeMap,
   StateToGeoGroupMap,
   createProgramsContent,
@@ -129,28 +130,26 @@ test('correctly sort state authority information by state', tap => {
 });
 
 test('replace existing state', tap => {
-  const initial: StateToAuthorityTypeMap = {
-    CT: {
-      state: {
-        'ct-deep': {
-          name: 'CT Department of Energy & Environmental Protection',
-        },
+  const initial: AuthorityTypeMap = {
+    state: {
+      'ct-deep': {
+        name: 'CT Department of Energy & Environmental Protection',
       },
-      city: {
-        'ct-city': {
-          name: 'City',
-        },
-        'ct-town': {
-          name: 'Town',
-        },
+    },
+    city: {
+      'ct-city': {
+        name: 'City',
       },
-      utility: {
-        'ct-utility': {
-          name: 'Utility',
-        },
-        'ct-other-utility': {
-          name: 'Other utility',
-        },
+      'ct-town': {
+        name: 'Town',
+      },
+    },
+    utility: {
+      'ct-utility': {
+        name: 'Utility',
+      },
+      'ct-other-utility': {
+        name: 'Other utility',
       },
     },
   };
@@ -175,31 +174,29 @@ test('replace existing state', tap => {
     },
   };
 
-  const expected: StateToAuthorityTypeMap = {
-    CT: {
-      state: {
-        'ct-deep': {
-          name: 'CT Department of Energy & Environmental Protection',
-        },
+  const expected: AuthorityTypeMap = {
+    state: {
+      'ct-deep': {
+        name: 'CT Department of Energy & Environmental Protection',
       },
-      city: {
-        'ct-metropolis': {
-          name: 'Metropolis',
-        },
+    },
+    city: {
+      'ct-metropolis': {
+        name: 'Metropolis',
       },
-      utility: {
-        // AuthorityMap had a different name for this, but original is kept
-        'ct-utility': {
-          name: 'Utility',
-        },
-        // This utility is still here even though it's not in authorityMap
-        'ct-other-utility': {
-          name: 'Other utility',
-        },
+    },
+    utility: {
+      // AuthorityMap had a different name for this, but original is kept
+      'ct-utility': {
+        name: 'Utility',
+      },
+      // This utility is still here even though it's not in authorityMap
+      'ct-other-utility': {
+        name: 'Other utility',
       },
     },
   };
-  tap.matchOnly(updateAuthorities(initial, 'CT', authorityMap), expected);
+  tap.matchOnly(updateAuthorities(initial, authorityMap), expected);
   tap.end();
 });
 
@@ -213,24 +210,8 @@ test('error on utility not in authorities', tap => {
   };
 
   tap.throws(
-    () => updateAuthorities(unorderedFixture, 'CT', authorityMap),
+    () => updateAuthorities(unorderedFixture.CT, authorityMap),
     /Utility ct-new-utility is in spreadsheet but not in authorities/,
-  );
-  tap.end();
-});
-
-test('error on nonexistent state', tap => {
-  const authorityMap: AuthorityMap = {
-    'de-state': {
-      name: 'Delaware State Energy',
-      authority_type: 'state',
-      programs: {},
-    },
-  };
-
-  tap.throws(
-    () => updateAuthorities(unorderedFixture, 'DE', authorityMap),
-    /authorities.json has no entry for DE./,
   );
   tap.end();
 });
