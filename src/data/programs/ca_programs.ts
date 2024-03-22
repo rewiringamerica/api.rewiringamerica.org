@@ -72,7 +72,7 @@ export const CA_PROGRAMS = {
         en: 'https://www.cityofpaloalto.org/files/assets/public/v/1/utilities/environmental-rebates-and-programs/electric-vehicle/capacity_fee_eligibility-terms-conditions_v02_edit04.06.2020.pdf',
       },
     },
-  ca_cityOfLompocUtilities_rebateAndConservationProgram: {
+  ca_cityOfLompoc_rebateAndConservationProgram: {
     name: {
       en: 'Rebate and Conservation Program',
     },
@@ -118,14 +118,6 @@ export const CA_PROGRAMS = {
     },
     url: {
       en: 'https://california.libertyutilities.com/portola/residential/smart-energy-use/electric/energy-savings-assistance-program.html',
-    },
-  },
-  ca_libertyUtilities_residentialRebates: {
-    name: {
-      en: 'Residential Rebates',
-    },
-    url: {
-      en: 'https://www.lodi.gov/909/Residential-Rebates#:~:text=Appliance%2FProduct%20Rebate&text=Appliances%20and%20products%20must%20be,City%20of%20Lodi%20utility%20bill.',
     },
   },
   ca_lodiElectricUtility_residentialRebates: {
@@ -269,7 +261,7 @@ export const CA_PROGRAMS = {
         en: 'https://pwp.cityofpasadena.net/electricpanelrebate/',
       },
     },
-  'ca_plumas-SierraREC_hybrid/HeatPumpWaterHeaters': {
+  'ca_plumas-SierraRuralElectricCooperative_hybrid/HeatPumpWaterHeaters': {
     name: {
       en: 'Hybrid/Heat Pump Water Heaters',
     },
@@ -277,7 +269,7 @@ export const CA_PROGRAMS = {
       en: 'https://www.psrec.coop/energy/rebates/hybrid-heat-pump-water-heaters/',
     },
   },
-  'ca_plumas-SierraREC_airSourceHeatPumps': {
+  'ca_plumas-SierraRuralElectricCooperative_airSourceHeatPumps': {
     name: {
       en: 'Air Source Heat Pumps',
     },
@@ -285,7 +277,7 @@ export const CA_PROGRAMS = {
       en: 'https://www.psrec.coop/energy/rebates/air-source-heat-pumps/',
     },
   },
-  'ca_plumas-SierraREC_groundSourceHeatPumps': {
+  'ca_plumas-SierraRuralElectricCooperative_groundSourceHeatPumps': {
     name: {
       en: 'Ground Source Heat Pumps',
     },
@@ -293,7 +285,7 @@ export const CA_PROGRAMS = {
       en: 'https://www.psrec.coop/energy/rebates/ground-source-heat-pumps/',
     },
   },
-  'ca_plumas-SierraREC_$500RebateForThePurchaseOfAnEV': {
+  'ca_plumas-SierraRuralElectricCooperative_$500RebateForThePurchaseOfAnEV': {
     name: {
       en: '$500 rebate for the purchase of an EV',
     },
