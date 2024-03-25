@@ -1,4 +1,6 @@
 import Ajv from 'ajv';
+import { sheets_v4 } from 'googleapis';
+import util from 'util';
 import {
   COLLECTED_DATA_SCHEMA,
   CollectedIncentive,
@@ -121,4 +123,107 @@ function coerceToBoolean(input: string): boolean | string {
   if (input.toLowerCase() === 'true') return true;
   if (input.toLowerCase() === 'false') return false;
   return input;
+}
+
+function colToLetter(column: number) {
+  let temp,
+    letter = '';
+  while (column > 0) {
+    temp = (column - 1) % 26;
+    letter = String.fromCharCode(temp + 65) + letter;
+    column = (column - temp - 1) / 26;
+  }
+  return letter;
+}
+
+// This method only retrieves hyperlinks that are not already represented in
+// the cell's text. If a URL appears in the text, it will be ignored.
+function retrieveCellHyperLinks(cell: sheets_v4.Schema$CellData): string[] {
+  const hyperlinks = new Set<string>();
+  if (cell.textFormatRuns) {
+    for (const run of cell.textFormatRuns) {
+      const uri = run.format?.link?.uri;
+      if (uri && !cell.formattedValue!.includes(uri)) {
+        hyperlinks.add(uri);
+      }
+    }
+  }
+  if (cell.hyperlink && !cell.formattedValue!.includes(cell.hyperlink)) {
+    hyperlinks.add(cell.hyperlink);
+  }
+  return Array.from(hyperlinks);
+}
+
+export enum LinkMode {
+  Convert,
+  Drop,
+  Error,
+}
+
+/**
+ * Call this function to convert a Google Sheet to a csv-like flat format.
+ * @param incentives the Google sheet, which can be retrieved with the Sheets API.
+ * @param convertLinks if true, hyperlinks will be inserted into the cell text so they are not lost during conversion. If false, will error if there are hyperlinks.
+ * @param headerRow the 1-indexed row where the header data is (same row number as you see in Google Sheets).
+ * @returns a list of records suitable for the rest of the spreadsheet-to-json process.
+ */
+export function googleSheetToFlatData(
+  incentives: sheets_v4.Schema$Sheet,
+  convertLinks: LinkMode,
+  headerRow: number,
+): Record<string, string>[] {
+  if (!incentives.data) throw new Error('No grid data in GoogleSheet');
+
+  const cellAddressToHyperlinks: { [index: string]: string[] } = {};
+  const records: Record<string, string>[] = [];
+  const headers: string[] = [];
+  incentives.data[0].rowData!.forEach((row, rIndex) => {
+    if (rIndex < headerRow - 1) return; // skip pre-header rows
+    if (rIndex === headerRow - 1) {
+      if (!row.values) {
+        throw new Error(
+          'No values found in header row, probably due to incorrect header row provided',
+        );
+      }
+      row.values.forEach(cell => {
+        headers.push(cell.formattedValue!);
+      });
+      return;
+    }
+    const record: Record<string, string> = {};
+    if (row.values) {
+      row.values.forEach((cell, cIndex) => {
+        let cellValue = cell.formattedValue ?? '';
+        const links = retrieveCellHyperLinks(cell);
+        if (links.length > 0) {
+          if (convertLinks === LinkMode.Convert) {
+            cellValue = cellValue + ` (link(s): ${links.join(', ')})`;
+          } else {
+            // Store to possibly log as error with all hyperlinks.
+            cellAddressToHyperlinks[`${colToLetter(cIndex + 1)}${rIndex + 1}`] =
+              links;
+          }
+        }
+        record[headers[cIndex]] = cellValue;
+      });
+      // This targets spreadsheet rows where we only have the ID and nothing
+      // else is populated. We have this in some spreadsheets for convenience.
+      if (Object.keys(record).length < 2) return;
+      records.push(record);
+    }
+  });
+  if (
+    convertLinks === LinkMode.Error &&
+    Object.keys(cellAddressToHyperlinks).length > 0
+  ) {
+    throw new Error(
+      `Hyperlinks found in spreadsheet, which don't convert well to JSON. Either: 1) pass LinkMode.Convert, which will change the cell text to contain the hyperlink target, 2) pass LinkMode.Drop, which will suppress this error but lose the hyperlink targets, or 3) go to the source spreadsheet and remove the hyperlinks. Hyperlinks found: ${util.inspect(
+        cellAddressToHyperlinks,
+        {
+          depth: null,
+        },
+      )}`,
+    );
+  }
+  return records;
 }
