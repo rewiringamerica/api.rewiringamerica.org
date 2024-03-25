@@ -32,6 +32,7 @@ Filling out an entry for `incentive-spreadsheet-registry.ts` consists of creatin
 - Exporting and sharing a sheet URL in `sheetUrl`
   - To do this for a Google sheet, click File -> Share -> Publish to web and under `Link`, select the Incentives data tab and change the `Web page` default to `Comma separated values (.csv)`. The link that appears is what should be copied into the value.
 - Optionally declaring the header row number, if not the top row of the spreadsheet, in `headerRowNumber`
+- Optionally naming a filepath where _collected_ incentives will be written in `collectedFilepath`. This is experimental and affects how some of the scripts work, so you shouldn't do this for now unless you know what you're doing.
 
 First, **edit `authorities.json` manually** to include a top-level entry for
 the state you're adding, if it's not already present, like this:
