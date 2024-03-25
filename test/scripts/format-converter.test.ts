@@ -1,8 +1,11 @@
+import { sheets_v4 } from 'googleapis';
 import _ from 'lodash';
 import { test } from 'tap';
 import {
+  LinkMode,
   flatToNested,
   flatToNestedValidate,
+  googleSheetToFlatData,
 } from '../../scripts/lib/format-converter';
 
 test('empty fields are removed', tap => {
@@ -108,5 +111,100 @@ test('validation works', tap => {
   const [valid, invalid] = flatToNestedValidate([fullInput, partialInput]);
   tap.equal(valid.length, 1);
   tap.equal(invalid.length, 1);
+  tap.end();
+});
+
+test('Google sheet with links is converted to parseable format', tap => {
+  const input: sheets_v4.Schema$Sheet = {
+    data: [
+      {
+        rowData: [
+          {
+            values: [
+              {
+                formattedValue: 'Column 1',
+              },
+              {
+                formattedValue: 'Column 2',
+              },
+            ],
+          },
+          {
+            values: [
+              {
+                formattedValue: 'Regular cell val',
+              },
+              {
+                formattedValue: 'Regular cell val 2',
+              },
+            ],
+          },
+          {
+            values: [
+              {
+                formattedValue: 'whole cell link',
+                hyperlink: 'http://foo.com',
+              },
+
+              {
+                formattedValue: 'cell with multiple links',
+                textFormatRuns: [
+                  {
+                    format: {
+                      link: {
+                        uri: 'http://bar.com',
+                      },
+                    },
+                  },
+                  {
+                    startIndex: 4,
+                    format: {},
+                  },
+                  {
+                    startIndex: 10,
+                    format: {
+                      link: {
+                        uri: 'http://baz.com',
+                      },
+                    },
+                  },
+                  {
+                    startIndex: 18,
+                    format: {},
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  };
+  // LinkMode.Convert: returns altered data
+  const output = googleSheetToFlatData(input, LinkMode.Convert, 1);
+  tap.strictSame(output, [
+    { 'Column 1': 'Regular cell val', 'Column 2': 'Regular cell val 2' },
+    {
+      'Column 1': 'whole cell link (link(s): http://foo.com)',
+      'Column 2':
+        'cell with multiple links (link(s): http://bar.com, http://baz.com)',
+    },
+  ]);
+
+  // LinkMode.Drop: returns data with links gone
+  const linklessOutput = googleSheetToFlatData(input, LinkMode.Drop, 1);
+  tap.strictSame(linklessOutput, [
+    { 'Column 1': 'Regular cell val', 'Column 2': 'Regular cell val 2' },
+    {
+      'Column 1': 'whole cell link',
+      'Column 2': 'cell with multiple links',
+    },
+  ]);
+
+  // LinkMode.Error: errors
+  tap.throws(
+    () => googleSheetToFlatData(input, LinkMode.Error, 1),
+    new Error('Hyperlinks found in spreadsheet'),
+  );
   tap.end();
 });
