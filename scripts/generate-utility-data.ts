@@ -116,6 +116,8 @@ const OVERRIDES = new Map<string | number, string>([
   [1143, 'Pepco'], // Potomac Electric Power
 
   // IL
+  [14840, 'Peru Municipal Electric Department'],
+  [15686, 'Rantoul Utilities'],
   [4362, 'Corn Belt Energy'],
   [16420, 'Rural Electric Convenience Cooperative'],
   [56697, 'Ameren Illinois'],
