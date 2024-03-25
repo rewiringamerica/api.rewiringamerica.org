@@ -33,17 +33,19 @@ export function isPdf(link: string, response: string): boolean {
   return false;
 }
 
-// Given a website link and its html, return a hash of the cleaned website. Do not return a hash if the site is for a PDF.
+// Given a website link and its data, return a hash of the cleaned website. If it's a PDF, attempt to convert to readable text first.
 export function checkWebsiteAndReturnHash(
   link: string,
   response: string,
 ): string | null {
+  const hash = createHash('sha256');
   if (isPdf(link, response)) {
-    return null;
+    // This "response" is actually pre-parsed PDF text, via 'returnAvailablePdfUrlData', so can skip cleaning and just update hash.
+    hash.update(response);
+    return hash.digest('hex');
   }
   const cleaned_html = cleanWebsiteData(response);
   if (cleaned_html !== null && cleaned_html !== '') {
-    const hash = createHash('sha256');
     hash.update(cleaned_html);
     return hash.digest('hex');
   }
