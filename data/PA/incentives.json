@@ -935,5 +935,51 @@
     },
     "start_date": "2024-01-01",
     "end_date": "2024-12-31"
+  },
+  {
+    "id": "PA-45",
+    "authority_type": "utility",
+    "authority": "pa-duquesne-light-company",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "new_electric_vehicle",
+    "program": "pa_duquesneLightCompany_dLCEVRegistrationIncentive",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate per new electric vehicle you own or lease. Must be either full electric or plug-in hybrid."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "PA-46",
+    "authority_type": "utility",
+    "authority": "pa-duquesne-light-company",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "used_electric_vehicle",
+    "program": "pa_duquesneLightCompany_dLCEVRegistrationIncentive",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate per used electric vehicle you own or lease. Must be either full electric or plug-in hybrid."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   }
 ]

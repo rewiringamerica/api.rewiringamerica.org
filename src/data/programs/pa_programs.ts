@@ -24,6 +24,14 @@ export const PA_PROGRAMS = {
       en: 'https://duquesne.clearesult.com/',
     },
   },
+  pa_duquesneLightCompany_dLCEVRegistrationIncentive: {
+    name: {
+      en: 'DLC EV Registration Incentive',
+    },
+    url: {
+      en: 'https://frontdoor.portal.poweredbyefi.org/initiative/duqpev',
+    },
+  },
   pa_firstEnergy_residentialProductsRebateProgram: {
     name: {
       en: 'Residential Products Rebate Program',
