@@ -1,5 +1,6 @@
 export type IncentiveFile = {
   filepath: string;
+  collectedFilepath?: string;
   sheetUrl: string;
   headerRowNumber?: number;
   runSpreadsheetHealthCheck?: boolean;
@@ -27,6 +28,7 @@ export const FILES: { [ident: string]: IncentiveFile } = {
   },
   CO: {
     filepath: 'data/CO/incentives.json',
+    collectedFilepath: 'data/CO/collected.json',
     sheetUrl:
       'https://docs.google.com/spreadsheets/d/1nITjSNRWJjSusB0fWuSS63fqynm_4Co7KEeuo9Cm7fU/pub?gid=30198531&single=true&output=csv',
     headerRowNumber: 2,
