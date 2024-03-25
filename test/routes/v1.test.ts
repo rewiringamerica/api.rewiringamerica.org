@@ -180,7 +180,7 @@ test('CA low income response with state and utility filtering is valid and corre
       tax_filing: 'single',
       authority_types: ['state'],
       authority: 'ca-grid-alternatives',
-      // TODO: Remove when OR is fully launched.
+      // TODO: Remove when CA is fully launched.
       include_beta_states: true,
     },
     './test/fixtures/v1-ca-95947-state-utility-lowincome.json',
@@ -198,7 +198,7 @@ test('CA incentive for BAYREN shows up as intended', async t => {
       household_income: 20000,
       tax_filing: 'single',
       authority: 'ca-bay-area-regional-energy-network-bay-ren',
-      // TODO: Remove when OR is fully launched.
+      // TODO: Remove when CA is fully launched.
       include_beta_states: true,
     },
     './test/fixtures/v1-ca-94501-other-utility.json',
