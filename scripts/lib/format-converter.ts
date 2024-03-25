@@ -136,6 +136,8 @@ function colToLetter(column: number) {
   return letter;
 }
 
+// This method only retrieves hyperlinks that are not already represented in
+// the cell's text. If a URL appears in the text, it will be ignored.
 function retrieveCellHyperLinks(cell: sheets_v4.Schema$CellData): string[] {
   const hyperlinks = new Set<string>();
   if (cell.textFormatRuns) {
@@ -178,10 +180,11 @@ export function googleSheetToFlatData(
   incentives.data[0].rowData!.forEach((row, rIndex) => {
     if (rIndex < headerRow - 1) return; // skip pre-header rows
     if (rIndex === headerRow - 1) {
-      if (!row.values)
+      if (!row.values) {
         throw new Error(
           'No values found in header row, probably due to incorrect header row provided',
         );
+      }
       row.values.forEach(cell => {
         headers.push(cell.formattedValue!);
       });

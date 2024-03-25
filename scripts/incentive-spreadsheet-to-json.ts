@@ -6,6 +6,7 @@ import fetch from 'make-fetch-happen';
 import minimist from 'minimist';
 import path from 'path';
 
+import { GaxiosPromise } from 'gaxios';
 import { GEO_GROUPS_BY_STATE, GeoGroupsByState } from '../src/data/geo_groups';
 import {
   LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
@@ -127,7 +128,7 @@ type UrlParts = {
 };
 
 const urlRegex = new RegExp(
-  /https:\/\/docs\.google\.com\/spreadsheets\/d\/(.*)\/pub\?gid=([0-9]+)&.*/,
+  'https://docs.google.com/spreadsheets/d/(.*)/pub\\?gid=([0-9]+)&.*',
 );
 export function extractIdsFromUrl(url: string): UrlParts {
   const match = url.match(urlRegex);
@@ -138,22 +139,32 @@ export function extractIdsFromUrl(url: string): UrlParts {
   };
 }
 
-async function retrieveGoogleSheet(
+export interface SheetsClient {
+  spreadsheets: {
+    get: (req: {
+      spreadsheetId: string;
+      includeGridData: boolean;
+    }) => GaxiosPromise<sheets_v4.Schema$Spreadsheet>;
+  };
+}
+
+export async function retrieveGoogleSheet(
   file: IncentiveFile,
+  client: SheetsClient,
 ): Promise<sheets_v4.Schema$Sheet> {
-  const auth = await authorize();
-  if (!auth)
-    throw new Error(
-      'Unable to authenticate to Google Sheets API. Confirm you have credentials in the secrets/ folder.',
-    );
   const { spreadsheetId, incentiveDataSheetId } = extractIdsFromUrl(
     file.sheetUrl,
   );
-  const sheetsClient = google.sheets({ version: 'v4', auth: auth });
-  const resp = await sheetsClient.spreadsheets.get({
+
+  const resp = await client.spreadsheets.get({
     spreadsheetId: spreadsheetId,
     includeGridData: true,
   });
+  if (resp.status !== 200) {
+    throw new Error(
+      `Status from Google Sheets API not okay: ${resp.status}. Details: ${resp.statusText}`,
+    );
+  }
   for (const sheet of resp.data.sheets!) {
     if (sheet.properties?.sheetId === incentiveDataSheetId) {
       return sheet;
@@ -177,11 +188,15 @@ async function convertToJson(
     );
   }
 
-  // any needed given output of csv-parse
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  let rows: any;
+  let rows: Record<string, string>[];
   if (file.collectedFilepath) {
-    const data = await retrieveGoogleSheet(file);
+    const auth = await authorize();
+    if (!auth)
+      throw new Error(
+        'Unable to authenticate to Google Sheets API. Confirm you have credentials in the secrets/ folder.',
+      );
+    const sheetsClient = google.sheets({ version: 'v4', auth: auth });
+    const data = await retrieveGoogleSheet(file, sheetsClient);
     rows = googleSheetToFlatData(
       data,
       LinkMode.Convert,

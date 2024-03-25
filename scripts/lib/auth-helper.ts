@@ -2,9 +2,10 @@ import { authenticate } from '@google-cloud/local-auth';
 import fs from 'fs';
 import { AuthClient, OAuth2Client } from 'google-auth-library';
 import { google } from 'googleapis';
+import path from 'path';
 
-const TOKEN_PATH = 'secrets/token.json';
-const CREDENTIALS_PATH = 'secrets/credentials.json';
+const TOKEN_PATH = path.join(__dirname, '../../secrets/token.json');
+const CREDENTIALS_PATH = path.join(__dirname, '../../secrets/credentials.json');
 
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
 

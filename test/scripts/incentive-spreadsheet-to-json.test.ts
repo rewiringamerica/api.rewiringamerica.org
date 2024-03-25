@@ -1,6 +1,11 @@
+import { GaxiosPromise, GaxiosResponse } from 'gaxios';
+import { sheets_v4 } from 'googleapis';
 import { test } from 'tap';
+import { IncentiveFile } from '../../scripts/incentive-spreadsheet-registry';
 import {
+  SheetsClient,
   extractIdsFromUrl,
+  retrieveGoogleSheet,
   spreadsheetToJson,
 } from '../../scripts/incentive-spreadsheet-to-json';
 import { DataRefiner } from '../../scripts/lib/data-refiner';
@@ -139,4 +144,84 @@ test('extract IDs from a standard URL', tap => {
     incentiveDataSheetId: 30198531,
   });
   tap.end();
+});
+
+test('fails to extract IDs from a nonstandard URL', tap => {
+  const url = 'https://docs.google.com/something-else';
+  tap.throws(() => extractIdsFromUrl(url));
+  tap.end();
+});
+
+enum FakeSheetsClientMode {
+  Undefined,
+  BadStatus,
+  BadSheetId,
+}
+
+// Fake Google Sheets API client to make it easier to test.
+class FakeSheetsClient implements SheetsClient {
+  mode: FakeSheetsClientMode;
+  spreadsheets = { get: this.get.bind(this) };
+
+  constructor(mode: FakeSheetsClientMode) {
+    this.mode = mode;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  async get(req: {
+    spreadsheetId: string;
+    includeGridData: boolean;
+  }): GaxiosPromise<sheets_v4.Schema$Spreadsheet> {
+    const baseResponse: GaxiosResponse<sheets_v4.Schema$Spreadsheet> = {
+      data: {},
+      config: {},
+      headers: {},
+      status: 200,
+      statusText: 'Unused',
+      request: {
+        responseURL: 'http',
+      },
+    };
+    if (this.mode === FakeSheetsClientMode.BadStatus) {
+      baseResponse.status = 500;
+      return baseResponse;
+    } else if (this.mode === FakeSheetsClientMode.BadSheetId) {
+      baseResponse.data = {
+        sheets: [
+          {
+            properties: {
+              // This sheetId doesn't match the requested one in the tests.
+              sheetId: 111111111,
+            },
+          },
+        ],
+      };
+      return baseResponse;
+    } else {
+      throw new Error('Unhandled FakeSheetsClient mode');
+    }
+  }
+}
+
+test('fails when spreadsheet get returns an unsuccessful request', async tap => {
+  const file: IncentiveFile = {
+    filepath: 'unused',
+    collectedFilepath: 'unused',
+    sheetUrl:
+      'https://docs.google.com/spreadsheets/d/some-spreadsheet-id/pub?gid=123456789&single=true&output=csv',
+  };
+
+  tap.rejects(async () => {
+    const badStatusClient = new FakeSheetsClient(
+      FakeSheetsClientMode.BadStatus,
+    );
+    await retrieveGoogleSheet(file, badStatusClient);
+  });
+
+  tap.rejects(async () => {
+    const badSheetIdClient = new FakeSheetsClient(
+      FakeSheetsClientMode.BadSheetId,
+    );
+    await retrieveGoogleSheet(file, badSheetIdClient);
+  });
 });
