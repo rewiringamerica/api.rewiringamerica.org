@@ -237,24 +237,54 @@ export function googleSheetToFlatData(
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type StringKeyed = { [index: string]: any };
 
+// Reverse of flatToNested methods above. Note that arrays are not expanded, so
+// if we add arrays of nested objects to the schema, we will need to revisit
+// this.
 export function nestedToFlat(input: StringKeyed): StringKeyed {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const output: { [index: string]: any } = {};
-  for (const [fieldName, field] of Object.entries(input)) {
-    if (field === undefined) continue;
-    if (Array.isArray(field)) {
-      output[fieldName] = field.join(', ');
-    } else if (typeof field === 'object' && !Array.isArray(field)) {
+  const output: StringKeyed = {};
+  for (const [fieldName, fieldValue] of Object.entries(input)) {
+    if (fieldValue === undefined) continue;
+    if (typeof fieldValue === 'object' && !Array.isArray(fieldValue)) {
       for (const [nestedKey, nestedVal] of Object.entries(
-        nestedToFlat(field),
+        nestedToFlat(fieldValue),
       )) {
         output[`${fieldName}.${nestedKey}`] = nestedVal;
       }
     } else {
-      output[fieldName] = field;
+      output[fieldName] = fieldValue;
     }
   }
   return output;
+}
+
+function createCellValue(
+  colName: string,
+  colValue: object | string | number | boolean,
+): sheets_v4.Schema$ExtendedValue {
+  let valToWrite: sheets_v4.Schema$ExtendedValue = {};
+  if (Array.isArray(colValue)) {
+    valToWrite = { stringValue: colValue.join(', ') };
+  } else if (typeof colValue === 'string') {
+    valToWrite = { stringValue: colValue };
+  } else if (typeof colValue === 'boolean') {
+    valToWrite = { boolValue: colValue };
+  } else if (typeof colValue === 'number') {
+    valToWrite = { numberValue: +colValue };
+  } else if (typeof colValue === 'object') {
+    throw new Error(
+      `Trying to write object to spreadsheet. Objects should be flattened prior to write. Column name: ${colName}; value: ${util.inspect(
+        colValue,
+      )}`,
+    );
+  } else {
+    console.warn(
+      `Unexpected value type: ${colName}: ${util.inspect(
+        colValue,
+      )}. Writing as string.`,
+    );
+    valToWrite = { stringValue: colValue };
+  }
+  return valToWrite;
 }
 
 export function collectedIncentiveToGoogleSheet(
@@ -285,21 +315,8 @@ export function collectedIncentiveToGoogleSheet(
     const rowValues: sheets_v4.Schema$CellData[] = [];
     for (const col of headers) {
       if (col in aliased) {
-        let valToWrite: sheets_v4.Schema$ExtendedValue = {};
-        if (typeof aliased[col] === 'string') {
-          valToWrite = { stringValue: aliased[col] };
-        } else if (typeof aliased[col] === 'boolean') {
-          valToWrite = { boolValue: aliased[col] };
-        } else if (typeof aliased[col] === 'number') {
-          valToWrite = { numberValue: +aliased[col] };
-        } else {
-          console.warn(
-            `Unexpected value type: ${col}: ${aliased[col]}. Writing as string.`,
-          );
-          valToWrite = { stringValue: aliased[col] };
-        }
         rowValues.push({
-          userEnteredValue: valToWrite,
+          userEnteredValue: createCellValue(col, aliased[col]),
         });
       } else {
         rowValues.push({});

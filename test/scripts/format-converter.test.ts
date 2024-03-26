@@ -235,6 +235,7 @@ test('CollectedIncentives are converted back into Google Sheets format', tap => 
       },
       owner_status: [
         OwnerStatus.Homeowner,
+        OwnerStatus.Renter,
       ],
       short_description: {
         en: 'Receive a $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',
@@ -242,6 +243,7 @@ test('CollectedIncentives are converted back into Google Sheets format', tap => 
       },
       start_date: '2022-01-01',
       end_date: '2026-12-31',
+      omit_from_api: true,
     },
   ];
   const output = collectedIncentiveToGoogleSheet(incentives, FIELD_MAPPINGS);
@@ -260,12 +262,11 @@ test('CollectedIncentives are converted back into Google Sheets format', tap => 
               { userEnteredValue: { stringValue: 'Program Title *' } },
               { userEnteredValue: { stringValue: 'Program URL' } },
               { userEnteredValue: { stringValue: 'Technology *' } },
-              { userEnteredValue: { stringValue: 'Program Status' } },
-              { userEnteredValue: { stringValue: 'Rebate Value *' } },
-              { userEnteredValue: { stringValue: 'Rebate Type' } },
-              { userEnteredValue: { stringValue: 'Amount Type *' } },
-              { userEnteredValue: { stringValue: 'Number *' } },
-              { userEnteredValue: { stringValue: 'Homeowner / Renter' } },
+              {
+                userEnteredValue: {
+                  stringValue: "Technology (If selected 'Other')",
+                },
+              },
               {
                 userEnteredValue: {
                   stringValue: 'Program Description (guideline)',
@@ -276,29 +277,64 @@ test('CollectedIncentives are converted back into Google Sheets format', tap => 
                   stringValue: 'Program Description (Spanish)',
                 },
               },
+              { userEnteredValue: { stringValue: 'Program Status' } },
               { userEnteredValue: { stringValue: 'Program Start' } },
               { userEnteredValue: { stringValue: 'Program End' } },
+              { userEnteredValue: { stringValue: 'Rebate Type' } },
+              { userEnteredValue: { stringValue: 'Rebate Value *' } },
+              { userEnteredValue: { stringValue: 'Amount Type *' } },
+              { userEnteredValue: { stringValue: 'Number *' } },
+              { userEnteredValue: { stringValue: 'Unit' } },
+              { userEnteredValue: { stringValue: 'Amount Minimum' } },
+              { userEnteredValue: { stringValue: 'Amount Maximum' } },
+              {
+                userEnteredValue: {
+                  stringValue:
+                    'Amount Representative (only for average values)',
+                },
+              },
+              { userEnteredValue: { stringValue: 'Bonus Description' } },
+              {
+                userEnteredValue: {
+                  stringValue: 'Equipment Standards Restrictions',
+                },
+              },
+              {
+                userEnteredValue: {
+                  stringValue: 'Equipment Capacity Restrictions',
+                },
+              },
+              { userEnteredValue: { stringValue: 'Contractor Restrictions' } },
+              { userEnteredValue: { stringValue: 'Income Restrictions' } },
+              {
+                userEnteredValue: {
+                  stringValue: 'Tax - filing Status Restrictions',
+                },
+              },
+              { userEnteredValue: { stringValue: 'Homeowner / Renter' } },
+              { userEnteredValue: { stringValue: 'Other Restrictions' } },
+              { userEnteredValue: { stringValue: 'Stacking Details' } },
+              { userEnteredValue: { stringValue: 'Financing Details' } },
+              { userEnteredValue: { stringValue: 'Editorial Notes' } },
+              { userEnteredValue: { stringValue: 'Questions' } },
+              { userEnteredValue: { stringValue: 'Omit from API?' } },
             ],
           },
           {
             values: [
               { userEnteredValue: { stringValue: 'VA-1' } },
               { userEnteredValue: { stringValue: 'appalachia.com' } },
-              { userEnteredValue: { stringValue: 'Appalachian Power' } },
               { userEnteredValue: { stringValue: 'Utility' } },
+              { userEnteredValue: { stringValue: 'Appalachian Power' } },
+              {},
+              { userEnteredValue: { stringValue: 'The Appalachian Program' } },
+              { userEnteredValue: { stringValue: 'appalachianprogram.com' } },
               {
                 userEnteredValue: {
                   stringValue: 'Heat Pump Dryers / Clothes Dryer',
                 },
               },
-              { userEnteredValue: { stringValue: 'The Appalachian Program' } },
-              { userEnteredValue: { stringValue: 'appalachianprogram.com' } },
-              { userEnteredValue: { stringValue: 'Active' } },
-              { userEnteredValue: { stringValue: '$50 flat rate' } },
-              { userEnteredValue: { stringValue: 'Rebate (Post Purchase)' } },
-              { userEnteredValue: { stringValue: 'Dollar Amount' } },
-              { userEnteredValue: { stringValue: '50' } },
-              { userEnteredValue: { stringValue: 'Homeowner' } },
+              {},
               {
                 userEnteredValue: {
                   stringValue:
@@ -308,8 +344,30 @@ test('CollectedIncentives are converted back into Google Sheets format', tap => 
               {
                 userEnteredValue: { stringValue: 'Unas palabras en español.' },
               },
+              { userEnteredValue: { stringValue: 'Active' } },
               { userEnteredValue: { stringValue: '2022-01-01' } },
               { userEnteredValue: { stringValue: '2026-12-31' } },
+              { userEnteredValue: { stringValue: 'Rebate (Post Purchase)' } },
+              { userEnteredValue: { stringValue: '$50 flat rate' } },
+              { userEnteredValue: { stringValue: 'Dollar Amount' } },
+              { userEnteredValue: { numberValue: 50 } },
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              {},
+              { userEnteredValue: { stringValue: 'Homeowner, Renter' } },
+              {},
+              {},
+              {},
+              {},
+              {},
+              { userEnteredValue: { boolValue: true } },
             ],
           },
         ],

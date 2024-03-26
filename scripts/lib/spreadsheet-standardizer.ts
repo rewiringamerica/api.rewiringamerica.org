@@ -101,16 +101,28 @@ export class SpreadsheetStandardizer {
     return output;
   }
 
+  // This method expects already flattened input (i.e. no nested objects).
+  // Arrays as values are allowed.
   convertToAliases(input: StringKeyed): StringKeyed {
     const output: StringKeyed = {};
-    for (const [fieldName, field] of Object.entries(input)) {
+    for (const [fieldName, fieldValue] of Object.entries(input)) {
       let outputFieldName = fieldName;
       if (this.fieldMap[fieldName] && this.fieldMap[fieldName][0]) {
         outputFieldName = this.fieldMap[fieldName][0];
       }
-      let val = field;
-      if (this.valueMap[fieldName] && this.valueMap[fieldName][field]) {
-        val = this.valueMap[fieldName][field][0];
+      let val = fieldValue;
+      if (Array.isArray(val)) {
+        // Special handling for arrays: try to rename each value.
+        val = val.map(component => {
+          if (this.valueMap[fieldName] && this.valueMap[fieldName][component]) {
+            return this.valueMap[fieldName][component][0];
+          }
+          return component;
+        });
+      } else {
+        if (this.valueMap[fieldName] && this.valueMap[fieldName][fieldValue]) {
+          val = this.valueMap[fieldName][fieldValue][0];
+        }
       }
       output[outputFieldName] = val;
     }
