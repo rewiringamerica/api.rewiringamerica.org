@@ -112,7 +112,7 @@ When adding support for a new state, you should vet and clean up the utility dat
       - Override its name by adding a pair with the utility code and the new name to `OVERRIDES`, under the appropriate state. The new name will be treated as if it came from the "Utility Name" column.
    3. If there's no numeric Utility Code (i.e. it says `Not Available` in that column), then do the step above but with the Utility Name from the spreadsheet instead.
 
-3. As you add exclusions and overrides, rerun the script and `yarn build` to reflect your changes in the CSVs and SQLite.
+3. As you add exclusions and overrides, rerun the script (`ts-node scripts/generate-utility-data.ts`) and `yarn build` to reflect your changes in the CSVs and SQLite.
 4. When all the cleanup is done, make sure the set of utilities in the state's `authorities.json` is a subset of the utility IDs in SQLite. (There is a test for this: `test/data/utilities.test.ts`.)
 
 ## spreadsheets-health.test.ts
