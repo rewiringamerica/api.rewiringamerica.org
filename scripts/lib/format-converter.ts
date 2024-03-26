@@ -7,11 +7,22 @@ import {
 } from '../../src/data/state_incentives';
 import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
 import {
+  headerBaseFormat,
+  rebateFieldsColor,
+  restrictionsConditionsColor,
+  standardValueCellFormat,
+} from './google-sheets-styling';
+import {
   AliasMap,
   FIELD_MAPPINGS,
   VALUE_MAPPINGS,
 } from './spreadsheet-mappings';
 import { SpreadsheetStandardizer } from './spreadsheet-standardizer';
+
+const REBATE_AMOUNT_FIELDS_START = 15; // inclusive
+const REBATE_AMOUNT_FIELDS_END = 22; // exclusive
+const RESTRICTIONS_CONDITIONS_START = 23; // inclusive
+const RESTRICTIONS_CONDITIONS_END = 30; // exclusive
 
 const ajv = new Ajv({ allErrors: true, coerceTypes: 'array' });
 
@@ -290,6 +301,7 @@ function createCellValue(
 export function collectedIncentiveToGoogleSheet(
   incentives: CollectedIncentive[],
   fieldMappings: AliasMap,
+  useStandardHeader: boolean = true,
 ): sheets_v4.Schema$Sheet {
   const standardizer = new SpreadsheetStandardizer(
     FIELD_MAPPINGS,
@@ -311,32 +323,110 @@ export function collectedIncentiveToGoogleSheet(
       }
     }
 
-    // Then populate a row, including "blanks" for keys we don't have.
+    // Then populate a row, including empty cells for keys we don't have.
     const rowValues: sheets_v4.Schema$CellData[] = [];
     for (const col of headers) {
+      const cell: sheets_v4.Schema$CellData = {
+        userEnteredFormat: standardValueCellFormat,
+      };
       if (col in aliased) {
-        rowValues.push({
-          userEnteredValue: createCellValue(col, aliased[col]),
-        });
-      } else {
-        rowValues.push({});
+        cell.userEnteredValue = createCellValue(col, aliased[col]);
       }
+      rowValues.push(cell);
     }
     rowData.push({ values: rowValues });
   });
   // Prepend the headers.
-  const headersRow: sheets_v4.Schema$CellData[] = [];
-  for (const col of headers) {
-    headersRow.push({
-      userEnteredValue: { stringValue: col },
-    });
+  const headerRows: sheets_v4.Schema$RowData[] = [];
+  if (useStandardHeader) {
+    const optionalHeaderRow: sheets_v4.Schema$CellData[] = [];
+    for (let i = 0; i < headers.length; i++) {
+      if (i === REBATE_AMOUNT_FIELDS_START) {
+        optionalHeaderRow.push({
+          userEnteredValue: {
+            stringValue: 'Rebate Amount Fields (guidelines)',
+          },
+          userEnteredFormat: { ...headerBaseFormat, ...rebateFieldsColor },
+          textFormatRuns: [
+            {
+              startIndex: 22,
+              format: {
+                link: {
+                  uri: 'https://docs.google.com/document/d/1nM9320uOUYpfpD3eZ4DFo32Scd5kauLEL17j1NYB5Ww/edit#bookmark=id.s9a0j7v2m6vb',
+                },
+              },
+            },
+            {
+              startIndex: 32,
+            },
+          ],
+        });
+      } else if (i === RESTRICTIONS_CONDITIONS_START) {
+        optionalHeaderRow.push({
+          userEnteredValue: {
+            stringValue: 'Restrictions / Eligibility Conditions',
+          },
+          userEnteredFormat: {
+            ...headerBaseFormat,
+            ...restrictionsConditionsColor,
+          },
+        });
+      } else {
+        optionalHeaderRow.push({});
+      }
+    }
+    headerRows.push({ values: optionalHeaderRow });
   }
-  rowData = [{ values: headersRow }, ...rowData];
-  return {
+  const primaryHeaderRow: sheets_v4.Schema$CellData[] = [];
+  headers.forEach((col, ind) => {
+    let format: sheets_v4.Schema$CellFormat = { ...headerBaseFormat };
+    if (ind >= REBATE_AMOUNT_FIELDS_START && ind < REBATE_AMOUNT_FIELDS_END) {
+      format = { ...format, ...rebateFieldsColor };
+    } else if (
+      ind >= RESTRICTIONS_CONDITIONS_START &&
+      ind < RESTRICTIONS_CONDITIONS_END
+    ) {
+      format = { ...format, ...restrictionsConditionsColor };
+    }
+    primaryHeaderRow.push({
+      userEnteredValue: { stringValue: col },
+      userEnteredFormat: format,
+    });
+  });
+  headerRows.push({ values: primaryHeaderRow });
+  rowData = [...headerRows, ...rowData];
+  const output: sheets_v4.Schema$Sheet = {
     data: [
       {
         rowData,
+        columnMetadata: Array(headers.length).fill({ pixelSize: 150 }),
       },
     ],
+    properties: {
+      sheetId: 0,
+      gridProperties: {
+        frozenRowCount: useStandardHeader ? 2 : 1,
+        frozenColumnCount: 1,
+      },
+    },
   };
+  if (useStandardHeader) {
+    output.merges = [
+      {
+        startRowIndex: 0,
+        startColumnIndex: REBATE_AMOUNT_FIELDS_START,
+        endRowIndex: 1,
+        endColumnIndex: REBATE_AMOUNT_FIELDS_END,
+        sheetId: 0,
+      },
+      {
+        startRowIndex: 0,
+        startColumnIndex: RESTRICTIONS_CONDITIONS_START,
+        endRowIndex: 1,
+        endColumnIndex: RESTRICTIONS_CONDITIONS_END,
+        sheetId: 0,
+      },
+    ];
+  }
+  return output;
 }
