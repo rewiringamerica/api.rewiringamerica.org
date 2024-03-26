@@ -115,6 +115,7 @@ const OVERRIDES = new Map<string | number, string>([
   [60990, 'Marshall Municipal Utilities'],
   [18895, 'Thumb Electric Cooperative'],
   [21048, 'Wyandotte Municipal Services'],
+  [19125, 'Traverse City Light & Power'],
 
   // NV
   [13407, 'NV Energy'], // Nevada Power (became NV Energy in 2008)
