@@ -26,7 +26,7 @@ import {
   getStateDataPartners,
   getStateIncentiveRelationships,
 } from './state-incentives-calculation';
-import estimateTaxAmount from './tax-brackets';
+import { estimateFederalTaxAmount } from './tax-brackets';
 
 const MAX_POS_SAVINGS = 14000;
 const OWNER_STATUSES = new Set(Object.values(OwnerStatus));
@@ -119,7 +119,7 @@ function calculateFederalIncentivesAndSavings(
     }
 
     //
-    // 4) Verify tax filing status is eligible for benfit
+    // 4) Verify tax filing status is eligible for benefit
     //
     if (item.filing_status) {
       if (item.filing_status !== tax_filing) {
@@ -358,7 +358,10 @@ export default function calculateIncentives(
   }
 
   // Get tax owed to determine max potential tax savings
-  const tax = estimateTaxAmount(tax_filing as FilingStatus, household_income);
+  const tax = estimateFederalTaxAmount(
+    tax_filing as FilingStatus,
+    household_income,
+  );
 
   // You can't save more than tax owed. Choose the lesser of tax owed vs tax savings
   if (savings.tax_credit > tax.tax_owed) {

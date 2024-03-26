@@ -177,7 +177,7 @@ test('CO low income response with state and utility filtering is valid and corre
       zip: '81657',
       owner_status: 'homeowner',
       household_size: 1,
-      household_income: 100000,
+      household_income: 113637,
       tax_filing: 'joint',
       authority_types: ['state', 'utility', 'other'],
       utility: 'co-xcel-energy',
