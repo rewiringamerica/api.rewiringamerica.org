@@ -36,8 +36,12 @@ function transformIncentives(
         : t('urls', incentive.item, language),
     },
     program: tr(PROGRAMS[incentive.program as keyof Programs].name, language),
-    program_url: PROGRAMS[incentive.program as keyof Programs].url
-      ? tr(PROGRAMS[incentive.program as keyof Programs].url!, language)
+    program_url: tr(
+      PROGRAMS[incentive.program as keyof Programs].url,
+      language,
+    ),
+    more_info_url: incentive.more_info_url
+      ? tr(incentive.more_info_url, language)
       : undefined,
     short_description: tr(incentive.short_description, language),
   }));

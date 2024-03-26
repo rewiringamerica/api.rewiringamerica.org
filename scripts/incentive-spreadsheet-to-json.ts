@@ -1,10 +1,12 @@
 import Ajv from 'ajv';
 import { parse } from 'csv-parse/sync';
 import fs from 'fs';
+import { google, sheets_v4 } from 'googleapis';
 import fetch from 'make-fetch-happen';
 import minimist from 'minimist';
 import path from 'path';
 
+import { GaxiosPromise } from 'gaxios';
 import { GEO_GROUPS_BY_STATE, GeoGroupsByState } from '../src/data/geo_groups';
 import {
   LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
@@ -17,10 +19,13 @@ import {
 } from '../src/data/state_incentives';
 import { LOCALIZABLE_STRING_SCHEMA } from '../src/data/types/localizable-string';
 import { FILES, IncentiveFile } from './incentive-spreadsheet-registry';
+import { authorize } from './lib/auth-helper';
 import { DataRefiner } from './lib/data-refiner';
 import {
   CollectedIncentivesWithErrors,
+  LinkMode,
   flatToNestedValidate,
+  googleSheetToFlatData,
 } from './lib/format-converter';
 import { FIELD_MAPPINGS, VALUE_MAPPINGS } from './lib/spreadsheet-mappings';
 import { SpreadsheetStandardizer } from './lib/spreadsheet-standardizer';
@@ -34,6 +39,7 @@ export type StateIncentivesWithErrors = Partial<StateIncentive> & {
 
 type SpreadsheetConversionOutput = {
   invalidCollectedIncentives: CollectedIncentivesWithErrors[];
+  validCollectedIncentives: CollectedIncentive[];
   invalidStateIncentives: StateIncentivesWithErrors[];
   validStateIncentives: StateIncentive[];
 };
@@ -110,9 +116,63 @@ export function spreadsheetToJson(
   });
   return {
     invalidCollectedIncentives,
+    validCollectedIncentives,
     invalidStateIncentives,
     validStateIncentives,
   };
+}
+
+type UrlParts = {
+  spreadsheetId: string;
+  incentiveDataSheetId: number;
+};
+
+const urlRegex = new RegExp(
+  'https://docs.google.com/spreadsheets/d/(.*)/pub\\?gid=([0-9]+)&.*',
+);
+export function extractIdsFromUrl(url: string): UrlParts {
+  const match = url.match(urlRegex);
+  if (!match) throw new Error(`Could not extract IDs from URL: ${url}`);
+  return {
+    spreadsheetId: match[1],
+    incentiveDataSheetId: +match[2],
+  };
+}
+
+export interface SheetsClient {
+  spreadsheets: {
+    get: (req: {
+      spreadsheetId: string;
+      includeGridData: boolean;
+    }) => GaxiosPromise<sheets_v4.Schema$Spreadsheet>;
+  };
+}
+
+export async function retrieveGoogleSheet(
+  file: IncentiveFile,
+  client: SheetsClient,
+): Promise<sheets_v4.Schema$Sheet> {
+  const { spreadsheetId, incentiveDataSheetId } = extractIdsFromUrl(
+    file.sheetUrl,
+  );
+
+  const resp = await client.spreadsheets.get({
+    spreadsheetId: spreadsheetId,
+    includeGridData: true,
+  });
+  if (resp.status !== 200) {
+    throw new Error(
+      `Status from Google Sheets API not okay: ${resp.status}. Details: ${resp.statusText}`,
+    );
+  }
+  for (const sheet of resp.data.sheets!) {
+    if (sheet.properties?.sheetId === incentiveDataSheetId) {
+      return sheet;
+    }
+  }
+  throw new Error(
+    `No sheet found with sheet ID ${incentiveDataSheetId} for original URL ${file.sheetUrl}. This is likely a non-standard URL.`,
+  );
 }
 
 async function convertToJson(
@@ -127,15 +187,33 @@ async function convertToJson(
       `No low-income thresholds defined for ${state} - define them or turn off strict mode.`,
     );
   }
-  const response = await fetch(file.sheetUrl);
-  const csvContent = await response.text();
-  const rows = parse(csvContent, {
-    columns: true,
-    from_line: file.headerRowNumber ?? 1,
-  });
+
+  let rows: Record<string, string>[];
+  if (file.collectedFilepath) {
+    const auth = await authorize();
+    if (!auth)
+      throw new Error(
+        'Unable to authenticate to Google Sheets API. Confirm you have credentials in the secrets/ folder.',
+      );
+    const sheetsClient = google.sheets({ version: 'v4', auth: auth });
+    const data = await retrieveGoogleSheet(file, sheetsClient);
+    rows = googleSheetToFlatData(
+      data,
+      LinkMode.Convert,
+      file.headerRowNumber ?? 1,
+    );
+  } else {
+    const response = await fetch(file.sheetUrl);
+    const csvContent = await response.text();
+    rows = parse(csvContent, {
+      columns: true,
+      from_line: file.headerRowNumber ?? 1,
+    });
+  }
 
   const {
     invalidCollectedIncentives,
+    validCollectedIncentives,
     invalidStateIncentives,
     validStateIncentives,
   } = await spreadsheetToJson(
@@ -156,6 +234,9 @@ async function convertToJson(
   );
   updateJsonFiles(invalidCollectedIncentives, invalidCollectedPath);
   updateJsonFiles(invalidStateIncentives, invalidStatePath);
+  if (file.collectedFilepath) {
+    updateJsonFiles(validCollectedIncentives, file.collectedFilepath);
+  }
   // Pass deleteEmpty = false since missing incentives files cause compilation errors.
   updateJsonFiles(validStateIncentives, file.filepath, false);
   if (
