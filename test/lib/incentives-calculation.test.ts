@@ -677,6 +677,6 @@ test('correctly evaluates savings when state tax liability is lower than max sav
 
   t.ok(result);
   t.equal(result.stateIncentives.length, 1);
-  t.equal(result.stateIncentives[0].amount.number, 4400); // should this be capped to the max state tax liability, as well?
+  t.equal(result.stateIncentives[0].amount.number, 4400);
   t.equal(result.savings.tax_credit, 4400);
 });

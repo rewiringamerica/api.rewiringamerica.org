@@ -15,7 +15,7 @@ test('correctly determines Colorado state tax liability', async t => {
   t.equal(data.effective_rate, 4.4);
 });
 
-test('defaults to a state tax obligation of $0 for unsupported states', async t => {
+test('defaults to a null state tax obligation for unsupported states', async t => {
   const data = estimateStateTaxAmount(100000, 'DC');
   t.equal(data.tax_owed, null);
   t.equal(data.effective_rate, null);

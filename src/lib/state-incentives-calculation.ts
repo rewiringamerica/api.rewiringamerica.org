@@ -136,16 +136,18 @@ export function calculateStateIncentivesAndSavings(
       }
     }
 
-    const isTaxCredit =
+    // check if the incentive is a tax credit and the users's tax liability is less than the credit amount
+    if (
       item.payment_methods[0] === 'tax_credit' &&
-      item.payment_methods.length === 1;
-    const stateTaxLowerThanMaxTaxCredit =
       typeof stateTaxOwed.tax_owed === 'number' &&
-      stateTaxOwed.tax_owed < item.amount.number;
-    if (isTaxCredit && stateTaxLowerThanMaxTaxCredit) {
-      if (stateTaxOwed.tax_owed === 0) {
+      stateTaxOwed.tax_owed < item.amount.number
+    ) {
+      // mark the incentive ineligible if the user owes no taxes and the incentive isn't redeemable in another way
+      if (stateTaxOwed.tax_owed === 0 && item.payment_methods.length === 1) {
         eligible = false;
       }
+
+      // change the tax credit amount to match the user's max tax liability
       item.amount.number = stateTaxOwed.tax_owed;
     }
 
