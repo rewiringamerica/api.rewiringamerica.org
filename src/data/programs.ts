@@ -48,8 +48,6 @@ const ira_programs = {
     },
     url: {
       en: 'https://www.irs.gov/credits-deductions/used-clean-vehicle-credit',
-      // TODO this page's content isn't translated into Spanish, but this is
-      // the URL where it should appear when they get it translated
       es: 'https://www.irs.gov/es/credits-deductions/used-clean-vehicle-credit',
     },
   },
