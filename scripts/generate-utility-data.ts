@@ -15,7 +15,6 @@ import fetch from 'make-fetch-happen';
 import minimist from 'minimist';
 import path from 'path';
 import xlsx from 'xlsx';
-import { AuthoritiesByState } from '../src/data/authorities';
 import {
   createAuthorityName,
   sortMapByKey,
@@ -101,6 +100,8 @@ const OVERRIDES = new Map<string | number, string>([
   [1143, 'Pepco'], // Potomac Electric Power
 
   // IL
+  [14840, 'Peru Municipal Electric Department'],
+  [15686, 'Rantoul Utilities'],
   [4362, 'Corn Belt Energy'],
   [16420, 'Rural Electric Convenience Cooperative'],
   [56697, 'Ameren Illinois'],
@@ -357,33 +358,34 @@ enum Col {
     });
   }
 
-  // Update authorities.json with the utilities from the dataset.
-  const authoritiesJsonPath = path.join(__dirname, '../data/authorities.json');
-  const authoritiesJson: AuthoritiesByState = JSON.parse(
-    fs.readFileSync(authoritiesJsonPath, 'utf-8'),
-  );
-
+  // Update each state's authorities.json with the utilities from the dataset.
   utilitiesByState.forEach((utilityMap, state) => {
-    if (state in authoritiesJson) {
-      const existingUtilities = authoritiesJson[state].utility;
-      const newUtilities: typeof existingUtilities = {};
-      utilityMap.forEach((utility, id) => {
-        // Existing utilities in authorities.json may have other info like a
-        // logo; preserve that and update only the name
-        if (id in existingUtilities) {
-          newUtilities[id] = { ...existingUtilities[id], ...utility };
-        } else {
-          newUtilities[id] = utility;
-        }
-      });
-
-      // This removes any utilities that aren't in the dataset
-      authoritiesJson[state].utility = sortMapByKey(newUtilities);
+    // If there's no subdir for the state in /data, skip it entirely.
+    const stateDir = path.join(__dirname, `../data/${state}`);
+    if (!fs.existsSync(stateDir)) {
+      // Return from forEach lambda; move on to next state
+      return;
     }
-  });
 
-  fs.writeFileSync(
-    authoritiesJsonPath,
-    JSON.stringify(authoritiesJson, null, 2) + '\n',
-  );
+    const filepath = path.join(stateDir, 'authorities.json');
+    const authoritiesJson = fs.existsSync(filepath)
+      ? JSON.parse(fs.readFileSync(filepath, 'utf-8'))
+      : { utility: {} };
+    const existingUtilities = authoritiesJson.utility;
+    const newUtilities: typeof existingUtilities = {};
+    utilityMap.forEach((utility, id) => {
+      // Existing utilities in authorities.json may have other info like a
+      // logo; preserve that and update only the name
+      if (id in existingUtilities) {
+        newUtilities[id] = { ...existingUtilities[id], ...utility };
+      } else {
+        newUtilities[id] = utility;
+      }
+    });
+
+    // This removes any utilities that aren't in the dataset
+    authoritiesJson.utility = sortMapByKey(newUtilities);
+
+    fs.writeFileSync(filepath, JSON.stringify(authoritiesJson, null, 2) + '\n');
+  });
 })();
