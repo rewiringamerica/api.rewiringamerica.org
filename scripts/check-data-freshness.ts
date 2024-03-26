@@ -1,5 +1,6 @@
 import axios from 'axios';
 import axiosRetry from 'axios-retry';
+import pdf from 'pdf-parse';
 import { test } from 'tap';
 import { PROGRAMS } from '../src/data/programs';
 
@@ -30,6 +31,42 @@ async function checkUrlDataAvailability(
     }
   });
   return content.status;
+}
+
+// Returns the response data obtained by trying to request the URL content.
+async function returnAvailablePdfUrlData(
+  link: string,
+): Promise<string | undefined> {
+  // Set the number of retries to 3 for network errors or those in the 5xx range.
+  axiosRetry(axios, {
+    retries: 3,
+  });
+  const content = await axios({
+    method: 'get',
+    url: link,
+    timeout: 10000,
+    responseType: 'arraybuffer',
+    validateStatus: () => true,
+    headers: {
+      'Content-Type': 'application/pdf',
+    },
+  }).catch(function (error) {
+    // If a non-2xx response status exists, return it.
+    if (error.response) {
+      return error.response.status;
+    }
+    // If the request was made but no response was received, log the request.
+    else if (error.request) {
+      return undefined;
+    } else {
+      console.log('An error occurred for ', link, ': ', error.message);
+      return undefined;
+    }
+  });
+  const pdf_data = await pdf(content.data).then(function (data) {
+    return data.text.toString();
+  });
+  return pdf_data;
 }
 
 const isURLValid = (url: string): boolean => {
@@ -84,5 +121,20 @@ test('All URLs linking to current programs have an OK response code', async tap 
     } else {
       console.log('No URL found for: ', key, '. Value was: ', value);
     }
+  }
+});
+
+test('PDF returned readable text, able to be parsed', async tap => {
+  // Check that PDF link can be read and returned.
+  // This PDF may oneday no longer exist, and if this test fails, the url should be checked first.
+  const data = await returnAvailablePdfUrlData(
+    'https://assets-partners.bouldercounty.gov/wp-content/uploads/sites/2/2023/08/Manufactured-Homes-Eligible-Measures-List-2023.pdf',
+  );
+  if (data === undefined || data === null || data === '') {
+    tap.fail(
+      'PDF link was unable to be read, data returned is undefined or empty.',
+    );
+  } else {
+    tap.pass('Non-empty PDF data was returned.');
   }
 });
