@@ -1,18 +1,10 @@
 export const WI_PROGRAMS = {
-  'wi_focusOnEnergy_insulation&AirSealingRebates': {
+  'wi_focusOnEnergy_dIYInsulation&AirSealingRebates': {
     name: {
-      en: 'Insulation & Air Sealing Rebates',
+      en: 'DIY Insulation & Air Sealing Rebates',
     },
     url: {
-      en: 'https://focusonenergy.com/residential/insulation-and-air-sealing',
-    },
-  },
-  wi_focusOnEnergy_smartThermostatsRebates: {
-    name: {
-      en: 'Smart Thermostats Rebates',
-    },
-    url: {
-      en: 'https://focusonenergy.com/residential/smart-thermostats',
+      en: 'https://focusonenergy.com/residential/diy',
     },
   },
   wi_focusOnEnergy_waterHeatingRebates: {
@@ -23,38 +15,6 @@ export const WI_PROGRAMS = {
       en: 'https://focusonenergy.com/residential/water-heating',
     },
   },
-  wi_focusOnEnergy_residentialCustomerSolarPVRebates: {
-    name: {
-      en: 'Residential Customer Solar PV Rebates',
-    },
-    url: {
-      en: 'https://focusonenergy.com/residential/solar-for-homes',
-    },
-  },
-  'wi_focusOnEnergy_dIYResidentialInsulation&AirSealingRebate': {
-    name: {
-      en: 'DIY Residential Insulation & Air Sealing Rebate',
-    },
-    url: {
-      en: 'https://focusonenergy.com/residential/diy',
-    },
-  },
-  'wi_focusOnEnergy_residentialHeating&CoolingRebate': {
-    name: {
-      en: 'Residential Heating & Cooling Rebate',
-    },
-    url: {
-      en: 'https://focusonenergy.com/residential/heating-and-cooling',
-    },
-  },
-  'wi_focusOnEnergy_dIYInsulation&AirSealingRebates': {
-    name: {
-      en: 'DIY Insulation & Air Sealing Rebates',
-    },
-    url: {
-      en: 'https://focusonenergy.com/residential/diy',
-    },
-  },
   wi_focusOnEnergy_solarForHomes: {
     name: {
       en: 'Solar for Homes',
@@ -63,12 +23,28 @@ export const WI_PROGRAMS = {
       en: 'https://focusonenergy.com/residential/solar-for-homes',
     },
   },
+  wi_focusOnEnergy_smartThermostatsRebates: {
+    name: {
+      en: 'Smart Thermostats Rebates',
+    },
+    url: {
+      en: 'https://focusonenergy.com/residential/smart-thermostats',
+    },
+  },
   'wi_focusOnEnergy_heating&CoolingRebates': {
     name: {
       en: 'Heating & Cooling Rebates',
     },
     url: {
       en: 'https://focusonenergy.com/residential/heating-and-cooling',
+    },
+  },
+  'wi_focusOnEnergy_insulation&AirSealingRebates': {
+    name: {
+      en: 'Insulation & Air Sealing Rebates',
+    },
+    url: {
+      en: 'https://focusonenergy.com/residential/insulation-and-air-sealing',
     },
   },
   'wi_barronElectricCooperative_energySavingsRebates:EVChargers': {
@@ -191,14 +167,6 @@ export const WI_PROGRAMS = {
     },
     url: {
       en: 'https://www.cvecoop.com/rebates.php',
-    },
-  },
-  wi_clarkElectricCooperative_eVChargingStationIncentives: {
-    name: {
-      en: 'EV Charging Station Incentives',
-    },
-    url: {
-      en: 'https://www.cecoop.com/rebatesincentives',
     },
   },
   wi_clarkElectricCooperative_eNERGYSTARApplianceIncentives: {
