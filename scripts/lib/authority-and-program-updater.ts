@@ -108,8 +108,7 @@ export function updateAuthorities(
 ): AuthorityTypeMap {
   // Preserve existing utilities. Those are generated from an external dataset
   // by generate-utility-data.ts.
-  const existingUtilities = existingJson.utility;
-  const json: AuthorityTypeMap = {};
+  const json: AuthorityTypeMap = { utility: existingJson.utility };
 
   const [utilities, nonUtilities] = _.partition(
     Object.entries(authorityMap),
@@ -118,10 +117,11 @@ export function updateAuthorities(
 
   // Make sure all utilities already exist in JSON.
   for (const [utilityId] of utilities) {
-    if (!(utilityId in existingUtilities)) {
+    if (!(utilityId in json.utility)) {
       throw new Error(
         `Utility ${utilityId} is in spreadsheet but not in authorities.json. ` +
-          'Run generate-utility-data.ts before this script, or fix the ' +
+          'Run generate-utility-data.ts before this script (possibly after ' +
+          "updating it to override the utility's name), or fix the " +
           'utility name in the spreadsheet.',
       );
     }
@@ -136,7 +136,6 @@ export function updateAuthorities(
     };
   }
 
-  json.utility = existingUtilities;
   return sortMapByKey(json);
 }
 
