@@ -34,20 +34,9 @@ Filling out an entry for `incentive-spreadsheet-registry.ts` consists of creatin
 - Optionally declaring the header row number, if not the top row of the spreadsheet, in `headerRowNumber`
 - Optionally naming a filepath where _collected_ incentives will be written in `collectedFilepath`. This is experimental and affects how some of the scripts work, so you shouldn't do this for now unless you know what you're doing.
 
-First, **edit `authorities.json` manually** to include a top-level entry for
-the state you're adding, if it's not already present, like this:
+First, create a subdirectory in `data/` named with the new state's abbreviation.
 
-```json
-{
-  "<state-abbreviation>": {
-    "state": {},
-    "utility": {}
-  },
-  ...
-}
-```
-
-Then, run [`generate-utility-data.ts`](generate-utility-data.ts) to populate the list of utilities for the state in the authorities file. See [below](#utility-data) for details on that.
+Then, run [`generate-utility-data.ts`](generate-utility-data.ts) to populate the list of utilities in the state's authorities.json file. See [below](#utility-data) for details on that.
 
 [`generate-misc-state-data.ts`](generate-misc-state-data.ts) adds values to ancillary files to reflect the programs and authorities that will be needed for the JSON. This needs to happen first because our data schemas actually require an incentive's program/authority to be one of the listed members, and if that's not the case, the incentive will fail validation.
 
@@ -80,7 +69,7 @@ To encode relationships between incentives, see the [`relationships-README`](htt
 
 ## Utility Data
 
-`generate-utility-data.ts` reads a [dataset](https://downloads.energystar.gov/bi/portfolio-manager/Public_Utility_Map_en_US.xlsx) published by ENERGY STAR to create a mapping from ZIP codes to utilities. It writes to a CSV file in `scripts/data`, which is then imported into the SQLite database by `build.sh`. It also modifies `authorities.json` to include the utility IDs and names. This data is used in the `/api/v1/utilities` endpoint.
+`generate-utility-data.ts` reads a [dataset](https://downloads.energystar.gov/bi/portfolio-manager/Public_Utility_Map_en_US.xlsx) published by ENERGY STAR to create a mapping from ZIP codes to utilities. It writes to a CSV file in `scripts/data`, which is then imported into the SQLite database by `build.sh`. For any state with a subdirectory in `data`, it also modifies that state's `authorities.json` to include the utility IDs and names. This data is used in the `/api/v1/utilities` endpoint.
 
 The script has no required arguments. It downloads the data file from ENERGY STAR by default; you can pass `--file <file>` to have it read a local file instead (useful when testing).
 
@@ -92,7 +81,7 @@ At the top, the script defines a set of "exclusions" and "overrides", which patc
 
 When adding support for a new state, you should vet and clean up the utility data we have for that state, using this process:
 
-1. Look in authorities.json at the list of utilities for your state. For each one, try to determine:
+1. After running the script once, look at the list of utilities in your state's authorities.json. For each one, try to determine:
 
    - Does the utility provide electricity? If not, exclude them (see below).
    - Does the utility have a different customer-facing name? (E.g. the data tends to name municipal utilities as `City of XYZ`, but they often brand themselves as `XYZ Public Utilities` or similar.) If so, add an override (see below). We prefer to use the name that's at the top of their website / in their logo.
@@ -123,8 +112,8 @@ When adding support for a new state, you should vet and clean up the utility dat
       - Override its name by adding a pair with the utility code and the new name to `OVERRIDES`, under the appropriate state. The new name will be treated as if it came from the "Utility Name" column.
    3. If there's no numeric Utility Code (i.e. it says `Not Available` in that column), then do the step above but with the Utility Name from the spreadsheet instead.
 
-3. As you add exclusions and overrides, rerun the script and `yarn build` to reflect your changes in the CSVs and SQLite.
-4. When all the cleanup is done, make sure the set of utilities for the state in `authorities.json` is a subset of the utility IDs in SQLite. (There is a test for this.)
+3. As you add exclusions and overrides, rerun the script (`ts-node scripts/generate-utility-data.ts`) and `yarn build` to reflect your changes in the CSVs and SQLite.
+4. When all the cleanup is done, make sure the set of utilities in the state's `authorities.json` is a subset of the utility IDs in SQLite. (There is a test for this: `test/data/utilities.test.ts`.)
 
 ## spreadsheets-health.test.ts
 
