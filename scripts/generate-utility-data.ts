@@ -15,7 +15,6 @@ import fetch from 'make-fetch-happen';
 import minimist from 'minimist';
 import path from 'path';
 import xlsx from 'xlsx';
-import { AuthoritiesByState } from '../src/data/authorities';
 import {
   createAuthorityName,
   sortMapByKey,
@@ -190,6 +189,55 @@ const OVERRIDES = new Map<string | number, string>([
   [18371, 'Swanton Electric'],
   [19791, 'Vermont Electric Coop'],
   [27316, 'Stowe Electric Department'],
+
+  // WI
+  [307, 'Algoma Utilities'],
+  [2273, 'Brodhead Water & Light'],
+  [3208, 'Cedarburg Light & Water Utility'],
+  [1776, 'Black River Falls Municipal Utilities'],
+  [1997, 'Boscobel Utilities'],
+  [3814, 'Clintonville Utilities'],
+  [4073, 'Columbus Utilties'],
+  [4607, 'Cuba City Light & Water'],
+  [5777, 'Elkhorn Light & Water'],
+  [6043, 'Evansville Water & Light'],
+  [10056, 'Kaukauna Utilities'],
+  [11125, 'Lodi Utilities'],
+  [11740, 'Marshfield Utilities'],
+  [12265, 'Medford Utilities'],
+  [12298, 'Menasha Utilities'],
+  [13448, 'New Holstein Utilities'],
+  [13481, 'New Richmond Utilities'],
+  [15159, 'Plymouth Utilities'],
+  [15978, 'City Utilities Richland Center'],
+  [16082, 'River Falls Municipal Utilities'],
+  [17028, 'Sheboygan Falls Utilities'],
+  [18181, 'Stoughton Utilities'],
+  [18249, 'Sturgeon Bay Utilities'],
+  [20434, 'Westby Utilities'],
+  [4247, 'Consolidated Water Power Company'],
+  [4715, 'Dahlberg Light & Power Company'],
+  [5417, 'Dunn Energy Cooperative'],
+  [5632, 'Eau Claire Energy Cooperative'],
+  [6424, 'Florence Utilities'],
+  [8212, 'Hartford Utilities'],
+  [9936, 'Juneau Utilities'],
+  [11479, 'Madison Gas and Electric'],
+  [13467, 'New London Utilities'],
+  [13815, 'Northwestern Wisconsin Electric Company'],
+  [13964, 'Oconto Falls Municipal Utilities'],
+  [15034, 'Pierce Pepin Cooperative Services'],
+  [18336, 'Superior Water, Light & Power'],
+  [19324, 'Two Rivers Utilities'],
+  [1181, 'Bangor Municipal Utilities'],
+  [13036, 'Mount Horeb Utilities'],
+  [13145, 'Muscoda Utilities'],
+  [13438, 'New Glarus Utilities'],
+  [20211, 'Waunakee Utilities'],
+  [20182, 'Waterloo Utilities'],
+  [40036, 'Westfield Milling and Electric Light Company'],
+  [20847, 'We Energies'],
+  [54921, 'Water Works & Lighting Commission'],
 ]);
 
 /**
@@ -325,33 +373,34 @@ enum Col {
     });
   }
 
-  // Update authorities.json with the utilities from the dataset.
-  const authoritiesJsonPath = path.join(__dirname, '../data/authorities.json');
-  const authoritiesJson: AuthoritiesByState = JSON.parse(
-    fs.readFileSync(authoritiesJsonPath, 'utf-8'),
-  );
-
+  // Update each state's authorities.json with the utilities from the dataset.
   utilitiesByState.forEach((utilityMap, state) => {
-    if (state in authoritiesJson) {
-      const existingUtilities = authoritiesJson[state].utility;
-      const newUtilities: typeof existingUtilities = {};
-      utilityMap.forEach((utility, id) => {
-        // Existing utilities in authorities.json may have other info like a
-        // logo; preserve that and update only the name
-        if (id in existingUtilities) {
-          newUtilities[id] = { ...existingUtilities[id], ...utility };
-        } else {
-          newUtilities[id] = utility;
-        }
-      });
-
-      // This removes any utilities that aren't in the dataset
-      authoritiesJson[state].utility = sortMapByKey(newUtilities);
+    // If there's no subdir for the state in /data, skip it entirely.
+    const stateDir = path.join(__dirname, `../data/${state}`);
+    if (!fs.existsSync(stateDir)) {
+      // Return from forEach lambda; move on to next state
+      return;
     }
-  });
 
-  fs.writeFileSync(
-    authoritiesJsonPath,
-    JSON.stringify(authoritiesJson, null, 2) + '\n',
-  );
+    const filepath = path.join(stateDir, 'authorities.json');
+    const authoritiesJson = fs.existsSync(filepath)
+      ? JSON.parse(fs.readFileSync(filepath, 'utf-8'))
+      : { utility: {} };
+    const existingUtilities = authoritiesJson.utility;
+    const newUtilities: typeof existingUtilities = {};
+    utilityMap.forEach((utility, id) => {
+      // Existing utilities in authorities.json may have other info like a
+      // logo; preserve that and update only the name
+      if (id in existingUtilities) {
+        newUtilities[id] = { ...existingUtilities[id], ...utility };
+      } else {
+        newUtilities[id] = utility;
+      }
+    });
+
+    // This removes any utilities that aren't in the dataset
+    authoritiesJson.utility = sortMapByKey(newUtilities);
+
+    fs.writeFileSync(filepath, JSON.stringify(authoritiesJson, null, 2) + '\n');
+  });
 })();
