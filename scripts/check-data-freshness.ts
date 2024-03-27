@@ -1,36 +1,6 @@
-import axios from 'axios';
-import axiosRetry from 'axios-retry';
 import { test } from 'tap';
 import { PROGRAMS } from '../src/data/programs';
-
-// Returns the status obtained by trying to request the URL content.
-async function checkUrlDataAvailability(
-  link: string,
-): Promise<number | undefined> {
-  // Set the number of retries to 3 for network errors or those in the 5xx range.
-  axiosRetry(axios, {
-    retries: 3,
-  });
-  const content = await axios({
-    method: 'get',
-    url: link,
-    timeout: 10000,
-    validateStatus: () => true,
-  }).catch(function (error) {
-    // If a non-2xx response status exists, return it.
-    if (error.response) {
-      return error.response.status;
-    }
-    // If the request was made but no response was received, log the request.
-    else if (error.request) {
-      return undefined;
-    } else {
-      console.log('An error occurred for ', link, ': ', error.message);
-      return undefined;
-    }
-  });
-  return content.status;
-}
+import { checkUrlDataAvailability } from './lib/website-comparisons';
 
 const isURLValid = (url: string): boolean => {
   try {
