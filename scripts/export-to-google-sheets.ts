@@ -4,8 +4,9 @@ import minimist from 'minimist';
 import { CollectedIncentive } from '../src/data/state_incentives';
 import { FILES, IncentiveFile } from './incentive-spreadsheet-registry';
 import { authorize } from './lib/auth-helper';
+import { generateDataModelTable } from './lib/google-data-model';
 import { collectedIncentiveToGoogleSheet } from './lib/google-sheets-exporter';
-import { FIELD_MAPPINGS } from './lib/spreadsheet-mappings';
+import { FIELD_MAPPINGS, FIELD_METADATA } from './lib/spreadsheet-mappings';
 
 const INCENTIVE_SHEET_NAME = 'Incentives Data';
 
@@ -30,6 +31,7 @@ async function exportToGoogleSheets(state: string, file: IncentiveFile) {
 
   const workbook: sheets_v4.Schema$Spreadsheet = {
     sheets: [
+      generateDataModelTable(FIELD_METADATA),
       sheet,
     ],
   };
