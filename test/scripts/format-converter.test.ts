@@ -3,11 +3,13 @@ import _ from 'lodash';
 import { test } from 'tap';
 import {
   LinkMode,
-  collectedIncentiveToGoogleSheet,
+  SpreadsheetData,
+  collectedIncentivesToSpreadsheet,
   flatToNested,
   flatToNestedValidate,
   googleSheetToFlatData,
 } from '../../scripts/lib/format-converter';
+import { spreadsheetToGoogleSheet } from '../../scripts/lib/google-sheets-exporter';
 import { FIELD_MAPPINGS } from '../../scripts/lib/spreadsheet-mappings';
 import { AuthorityType } from '../../src/data/authorities';
 import { CollectedIncentive } from '../../src/data/state_incentives';
@@ -216,7 +218,7 @@ test('Google sheet with links is converted to parseable format', tap => {
   tap.end();
 });
 
-test('CollectedIncentives are converted back into Google Sheets format', tap => {
+test('CollectedIncentives are converted into spreadsheet format', tap => {
   const incentives: CollectedIncentive[] = [
     {
       id: 'VA-1',
@@ -246,134 +248,279 @@ test('CollectedIncentives are converted back into Google Sheets format', tap => 
       omit_from_api: true,
     },
   ];
-  const output = collectedIncentiveToGoogleSheet(incentives, FIELD_MAPPINGS);
+  const output = collectedIncentivesToSpreadsheet(incentives, FIELD_MAPPINGS);
+  const expected = {
+    records: [
+      {
+        ID: 'VA-1',
+        'Data Source URL(s)': ['appalachia.com'],
+        'Authority (Name) *': 'Appalachian Power',
+        'Authority Level *': 'Utility',
+        'Technology *': 'Heat Pump Dryers / Clothes Dryer',
+        'Program Title *': 'The Appalachian Program',
+        'Program URL': 'appalachianprogram.com',
+        'Program Status': 'Active',
+        'Rebate Value *': '$50 flat rate',
+        'Rebate Type': ['Rebate (Post Purchase)'],
+        'Amount Type *': 'Dollar Amount',
+        'Number *': 50,
+        'Homeowner / Renter': ['Homeowner', 'Renter'],
+        'Program Description (guideline)':
+          'Receive a $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',
+        'Program Description (Spanish)': 'Unas palabras en español.',
+        'Program Start': '2022-01-01',
+        'Program End': '2026-12-31',
+        'Omit from API?': true,
+      },
+    ],
+    headers: [
+      'ID',
+      'Data Source URL(s)',
+      'Authority Level *',
+      'Authority (Name) *',
+      'Geographic Eligibility',
+      'Program Title *',
+      'Program URL',
+      'Technology *',
+      "Technology (If selected 'Other')",
+      'Program Description (guideline)',
+      'Program Description (Spanish)',
+      'Program Status',
+      'Program Start',
+      'Program End',
+      'Rebate Type',
+      'Rebate Value *',
+      'Amount Type *',
+      'Number *',
+      'Unit',
+      'Amount Minimum',
+      'Amount Maximum',
+      'Amount Representative (only for average values)',
+      'Bonus Description',
+      'Equipment Standards Restrictions',
+      'Equipment Capacity Restrictions',
+      'Contractor Restrictions',
+      'Income Restrictions',
+      'Tax - filing Status Restrictions',
+      'Homeowner / Renter',
+      'Other Restrictions',
+      'Stacking Details',
+      'Financing Details',
+      'Editorial Notes',
+      'Questions',
+      'Omit from API?',
+    ],
+  };
 
-  const expected: sheets_v4.Schema$Sheet = {
+  tap.strictSame(output, expected);
+  tap.end();
+});
+
+test('Spreadsheet format converts to Google sheet without standard header', tap => {
+  const input: SpreadsheetData = {
+    headers: ['foo', 'bar', 'baz', 'qux'],
+    records: [
+      { foo: 3, baz: 'string' },
+      { bar: true, baz: 10 },
+    ],
+  };
+  const output = spreadsheetToGoogleSheet(input, false);
+
+  const expected = {
     data: [
       {
         rowData: [
           {
             values: [
-              { userEnteredValue: { stringValue: 'ID' } },
-              { userEnteredValue: { stringValue: 'Data Source URL(s)' } },
-              { userEnteredValue: { stringValue: 'Authority Level *' } },
-              { userEnteredValue: { stringValue: 'Authority (Name) *' } },
-              { userEnteredValue: { stringValue: 'Geographic Eligibility' } },
-              { userEnteredValue: { stringValue: 'Program Title *' } },
-              { userEnteredValue: { stringValue: 'Program URL' } },
-              { userEnteredValue: { stringValue: 'Technology *' } },
               {
-                userEnteredValue: {
-                  stringValue: "Technology (If selected 'Other')",
+                userEnteredValue: { stringValue: 'foo' },
+                userEnteredFormat: {
+                  horizontalAlignment: 'CENTER',
+                  textFormat: { bold: true },
+                  wrapStrategy: 'WRAP',
+                  backgroundColorStyle: {
+                    rgbColor: {
+                      red: 0.9529411764705882,
+                      green: 0.9529411764705882,
+                      blue: 0.9529411764705882,
+                      alpha: 1,
+                    },
+                  },
                 },
               },
               {
-                userEnteredValue: {
-                  stringValue: 'Program Description (guideline)',
+                userEnteredValue: { stringValue: 'bar' },
+                userEnteredFormat: {
+                  horizontalAlignment: 'CENTER',
+                  textFormat: { bold: true },
+                  wrapStrategy: 'WRAP',
+                  backgroundColorStyle: {
+                    rgbColor: {
+                      red: 0.9529411764705882,
+                      green: 0.9529411764705882,
+                      blue: 0.9529411764705882,
+                      alpha: 1,
+                    },
+                  },
                 },
               },
               {
-                userEnteredValue: {
-                  stringValue: 'Program Description (Spanish)',
-                },
-              },
-              { userEnteredValue: { stringValue: 'Program Status' } },
-              { userEnteredValue: { stringValue: 'Program Start' } },
-              { userEnteredValue: { stringValue: 'Program End' } },
-              { userEnteredValue: { stringValue: 'Rebate Type' } },
-              { userEnteredValue: { stringValue: 'Rebate Value *' } },
-              { userEnteredValue: { stringValue: 'Amount Type *' } },
-              { userEnteredValue: { stringValue: 'Number *' } },
-              { userEnteredValue: { stringValue: 'Unit' } },
-              { userEnteredValue: { stringValue: 'Amount Minimum' } },
-              { userEnteredValue: { stringValue: 'Amount Maximum' } },
-              {
-                userEnteredValue: {
-                  stringValue:
-                    'Amount Representative (only for average values)',
-                },
-              },
-              { userEnteredValue: { stringValue: 'Bonus Description' } },
-              {
-                userEnteredValue: {
-                  stringValue: 'Equipment Standards Restrictions',
+                userEnteredValue: { stringValue: 'baz' },
+                userEnteredFormat: {
+                  horizontalAlignment: 'CENTER',
+                  textFormat: { bold: true },
+                  wrapStrategy: 'WRAP',
+                  backgroundColorStyle: {
+                    rgbColor: {
+                      red: 0.9529411764705882,
+                      green: 0.9529411764705882,
+                      blue: 0.9529411764705882,
+                      alpha: 1,
+                    },
+                  },
                 },
               },
               {
-                userEnteredValue: {
-                  stringValue: 'Equipment Capacity Restrictions',
+                userEnteredValue: { stringValue: 'qux' },
+                userEnteredFormat: {
+                  horizontalAlignment: 'CENTER',
+                  textFormat: { bold: true },
+                  wrapStrategy: 'WRAP',
+                  backgroundColorStyle: {
+                    rgbColor: {
+                      red: 0.9529411764705882,
+                      green: 0.9529411764705882,
+                      blue: 0.9529411764705882,
+                      alpha: 1,
+                    },
+                  },
                 },
               },
-              { userEnteredValue: { stringValue: 'Contractor Restrictions' } },
-              { userEnteredValue: { stringValue: 'Income Restrictions' } },
-              {
-                userEnteredValue: {
-                  stringValue: 'Tax - filing Status Restrictions',
-                },
-              },
-              { userEnteredValue: { stringValue: 'Homeowner / Renter' } },
-              { userEnteredValue: { stringValue: 'Other Restrictions' } },
-              { userEnteredValue: { stringValue: 'Stacking Details' } },
-              { userEnteredValue: { stringValue: 'Financing Details' } },
-              { userEnteredValue: { stringValue: 'Editorial Notes' } },
-              { userEnteredValue: { stringValue: 'Questions' } },
-              { userEnteredValue: { stringValue: 'Omit from API?' } },
             ],
           },
           {
             values: [
-              { userEnteredValue: { stringValue: 'VA-1' } },
-              { userEnteredValue: { stringValue: 'appalachia.com' } },
-              { userEnteredValue: { stringValue: 'Utility' } },
-              { userEnteredValue: { stringValue: 'Appalachian Power' } },
-              {},
-              { userEnteredValue: { stringValue: 'The Appalachian Program' } },
-              { userEnteredValue: { stringValue: 'appalachianprogram.com' } },
               {
-                userEnteredValue: {
-                  stringValue: 'Heat Pump Dryers / Clothes Dryer',
+                userEnteredFormat: {
+                  borders: {
+                    top: { style: 'SOLID' },
+                    bottom: { style: 'SOLID' },
+                    left: { style: 'SOLID' },
+                    right: { style: 'SOLID' },
+                  },
+                  wrapStrategy: 'WRAP',
+                  verticalAlignment: 'TOP',
+                },
+                userEnteredValue: { numberValue: 3 },
+              },
+              {
+                userEnteredFormat: {
+                  borders: {
+                    top: { style: 'SOLID' },
+                    bottom: { style: 'SOLID' },
+                    left: { style: 'SOLID' },
+                    right: { style: 'SOLID' },
+                  },
+                  wrapStrategy: 'WRAP',
+                  verticalAlignment: 'TOP',
                 },
               },
-              {},
               {
-                userEnteredValue: {
-                  stringValue:
-                    'Receive a $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',
+                userEnteredFormat: {
+                  borders: {
+                    top: { style: 'SOLID' },
+                    bottom: { style: 'SOLID' },
+                    left: { style: 'SOLID' },
+                    right: { style: 'SOLID' },
+                  },
+                  wrapStrategy: 'WRAP',
+                  verticalAlignment: 'TOP',
+                },
+                userEnteredValue: { stringValue: 'string' },
+              },
+              {
+                userEnteredFormat: {
+                  borders: {
+                    top: { style: 'SOLID' },
+                    bottom: { style: 'SOLID' },
+                    left: { style: 'SOLID' },
+                    right: { style: 'SOLID' },
+                  },
+                  wrapStrategy: 'WRAP',
+                  verticalAlignment: 'TOP',
+                },
+              },
+            ],
+          },
+          {
+            values: [
+              {
+                userEnteredFormat: {
+                  borders: {
+                    top: { style: 'SOLID' },
+                    bottom: { style: 'SOLID' },
+                    left: { style: 'SOLID' },
+                    right: { style: 'SOLID' },
+                  },
+                  wrapStrategy: 'WRAP',
+                  verticalAlignment: 'TOP',
                 },
               },
               {
-                userEnteredValue: { stringValue: 'Unas palabras en español.' },
+                userEnteredFormat: {
+                  borders: {
+                    top: { style: 'SOLID' },
+                    bottom: { style: 'SOLID' },
+                    left: { style: 'SOLID' },
+                    right: { style: 'SOLID' },
+                  },
+                  wrapStrategy: 'WRAP',
+                  verticalAlignment: 'TOP',
+                },
+                userEnteredValue: { boolValue: true },
               },
-              { userEnteredValue: { stringValue: 'Active' } },
-              { userEnteredValue: { stringValue: '2022-01-01' } },
-              { userEnteredValue: { stringValue: '2026-12-31' } },
-              { userEnteredValue: { stringValue: 'Rebate (Post Purchase)' } },
-              { userEnteredValue: { stringValue: '$50 flat rate' } },
-              { userEnteredValue: { stringValue: 'Dollar Amount' } },
-              { userEnteredValue: { numberValue: 50 } },
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              { userEnteredValue: { stringValue: 'Homeowner, Renter' } },
-              {},
-              {},
-              {},
-              {},
-              {},
-              { userEnteredValue: { boolValue: true } },
+              {
+                userEnteredFormat: {
+                  borders: {
+                    top: { style: 'SOLID' },
+                    bottom: { style: 'SOLID' },
+                    left: { style: 'SOLID' },
+                    right: { style: 'SOLID' },
+                  },
+                  wrapStrategy: 'WRAP',
+                  verticalAlignment: 'TOP',
+                },
+                userEnteredValue: { numberValue: 10 },
+              },
+              {
+                userEnteredFormat: {
+                  borders: {
+                    top: { style: 'SOLID' },
+                    bottom: { style: 'SOLID' },
+                    left: { style: 'SOLID' },
+                    right: { style: 'SOLID' },
+                  },
+                  wrapStrategy: 'WRAP',
+                  verticalAlignment: 'TOP',
+                },
+              },
             ],
           },
         ],
+        columnMetadata: [
+          { pixelSize: 150 },
+          { pixelSize: 150 },
+          { pixelSize: 150 },
+          { pixelSize: 150 },
+        ],
       },
     ],
+    properties: {
+      sheetId: 0,
+      gridProperties: { frozenRowCount: 1, frozenColumnCount: 1 },
+    },
   };
+
   tap.strictSame(output, expected);
   tap.end();
 });
