@@ -1,36 +1,6 @@
-import axios from 'axios';
-import axiosRetry from 'axios-retry';
 import { test } from 'tap';
 import { PROGRAMS } from '../src/data/programs';
-
-// Returns the status obtained by trying to request the URL content.
-async function checkUrlDataAvailability(
-  link: string,
-): Promise<number | undefined> {
-  // Set the number of retries to 3 for network errors or those in the 5xx range.
-  axiosRetry(axios, {
-    retries: 3,
-  });
-  const content = await axios({
-    method: 'get',
-    url: link,
-    timeout: 10000,
-    validateStatus: () => true,
-  }).catch(function (error) {
-    // If a non-2xx response status exists, return it.
-    if (error.response) {
-      return error.response.status;
-    }
-    // If the request was made but no response was received, log the request.
-    else if (error.request) {
-      return undefined;
-    } else {
-      console.log('An error occurred for ', link, ': ', error.message);
-      return undefined;
-    }
-  });
-  return content.status;
-}
+import { retrieveWebContent } from './lib/website-comparisons';
 
 const isURLValid = (url: string): boolean => {
   try {
@@ -53,7 +23,19 @@ test('All URLs linking to current programs have an OK response code', async tap 
         console.error('${url_to_check} is not a valid URL for program: ', key);
         process.exit(1);
       } else {
-        const status = await checkUrlDataAvailability(url_to_check);
+        const response = await retrieveWebContent(
+          url_to_check,
+          url_to_check.endsWith('.pdf'),
+        );
+        if (response?.data === undefined || response.data === null) {
+          tap.fail(
+            'Website returned no data from link: ' +
+              url_to_check +
+              ' for: ' +
+              key,
+          );
+        }
+        const status = response ? response.status : null;
         if (status === undefined || status === null) {
           tap.fail(
             'No status code was found when checking ' +
