@@ -7,6 +7,8 @@ import { authorize } from './lib/auth-helper';
 import { collectedIncentiveToGoogleSheet } from './lib/google-sheets-exporter';
 import { FIELD_MAPPINGS } from './lib/spreadsheet-mappings';
 
+const INCENTIVE_SHEET_NAME = 'Incentives Data';
+
 async function exportToGoogleSheets(state: string, file: IncentiveFile) {
   if (!file.collectedFilepath)
     throw new Error(
@@ -24,7 +26,7 @@ async function exportToGoogleSheets(state: string, file: IncentiveFile) {
   if (!sheet.properties) {
     sheet.properties = {};
   }
-  sheet.properties.title = 'Incentives Data';
+  sheet.properties.title = INCENTIVE_SHEET_NAME;
 
   const workbook: sheets_v4.Schema$Spreadsheet = {
     sheets: [
@@ -32,14 +34,49 @@ async function exportToGoogleSheets(state: string, file: IncentiveFile) {
     ],
   };
   const auth = await authorize();
-  if (auth) {
-    const sheetsClient = google.sheets({ version: 'v4', auth: auth });
-    const resp = await sheetsClient.spreadsheets.create({
-      requestBody: workbook,
-    });
-
-    console.log(`\nGoogle spreadsheet created: ${resp.data.spreadsheetUrl}\n`);
+  if (!auth) {
+    throw new Error(
+      'Unable to authenticate to Google Sheets API. Confirm you have credentials in the secrets/ folder.',
+    );
   }
+  const sheetsClient = google.sheets({ version: 'v4', auth: auth });
+  const resp = await sheetsClient.spreadsheets.create({
+    requestBody: workbook,
+  });
+
+  if (resp.status !== 200) {
+    throw new Error(`Spreadsheet creation failed: ${resp.statusText}`);
+  }
+  if (!resp.data.spreadsheetId) {
+    throw new Error('Spreadsheet ID not returned from Google Sheets creation.');
+  }
+  console.log(`\nFinalizing Google spreadsheet: ${resp.data.spreadsheetUrl}\n`);
+
+  // This next section is required because Google Sheets doesn't automatically
+  // render URLs when written via API unless the hyperlinks are explicitly
+  // supplied. This is hard to do via up-front processing. However, reading and
+  // then re-writing the cell values triggers Google Sheets to format them.
+  const valuesResp = await sheetsClient.spreadsheets.values.get({
+    spreadsheetId: resp.data.spreadsheetId,
+    range: INCENTIVE_SHEET_NAME, // Entire sheet name is a valid range.
+  });
+  if (valuesResp.status !== 200 || !valuesResp.data) {
+    throw new Error(`Spreadsheet values read failed: ${valuesResp.statusText}`);
+  }
+  const valuesWrite = await sheetsClient.spreadsheets.values.update({
+    spreadsheetId: resp.data.spreadsheetId,
+    // The data returned in the read request is a subset of rows, and must
+    // match the requestBody, so we can't use the sheet name here.
+    range: valuesResp.data.range!,
+    requestBody: valuesResp.data,
+    valueInputOption: 'USER_ENTERED',
+  });
+  if (valuesWrite.status !== 200) {
+    throw new Error(
+      `Spreadsheet values write failed: ${valuesWrite.statusText}`,
+    );
+  }
+  console.log('Spreadsheet finalized.');
 }
 
 (async function () {
