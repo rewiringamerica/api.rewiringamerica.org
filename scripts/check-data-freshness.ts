@@ -1,6 +1,6 @@
 import { test } from 'tap';
 import { PROGRAMS } from '../src/data/programs';
-import { checkUrlDataAvailability } from './lib/website-comparisons';
+import { returnAvailableUrlData } from './lib/website-comparisons';
 
 const isURLValid = (url: string): boolean => {
   try {
@@ -23,7 +23,19 @@ test('All URLs linking to current programs have an OK response code', async tap 
         console.error('${url_to_check} is not a valid URL for program: ', key);
         process.exit(1);
       } else {
-        const status = await checkUrlDataAvailability(url_to_check);
+        const response = await returnAvailableUrlData(
+          url_to_check,
+          url_to_check.endsWith('.pdf'),
+        );
+        if (response?.data === undefined || response.data === null) {
+          tap.fail(
+            'Website returned no data from link: ' +
+              url_to_check +
+              ' for: ' +
+              key,
+          );
+        }
+        const status = response ? response.status : null;
         if (status === undefined || status === null) {
           tap.fail(
             'No status code was found when checking ' +

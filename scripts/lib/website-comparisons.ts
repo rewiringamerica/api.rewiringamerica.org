@@ -1,35 +1,45 @@
-import axios from 'axios';
+import axios, { AxiosError, AxiosResponse } from 'axios';
 import axiosRetry from 'axios-retry';
 import * as cheerio from 'cheerio';
 import { createHash } from 'node:crypto';
 
-// Returns the status obtained by trying to request the URL content.
-export async function checkUrlDataAvailability(
+// Returns URL data, with additional parameters added if the URL is pointed to a PDF.
+export async function returnAvailableUrlData(
   link: string,
-): Promise<number | undefined> {
-  // Set the number of retries to 3 for network errors or those in the 5xx range.
+  is_pdf: boolean = false,
+): Promise<AxiosResponse | undefined> {
+  // Set the number of retries to 3 for network errors.
   axiosRetry(axios, {
     retries: 3,
   });
-  const content = await axios({
+  return axios({
     method: 'get',
     url: link,
     timeout: 10000,
+    headers: is_pdf
+      ? {
+          'Content-Type': 'application/pdf',
+        }
+      : {},
+    responseType: is_pdf ? 'arraybuffer' : 'json',
     validateStatus: () => true,
-  }).catch(function (error) {
-    // If a non-2xx response status exists, return it.
-    if (error.response) {
-      return error.response.status;
-    }
-    // If the request was made but no response was received, log the request.
-    else if (error.request) {
-      return undefined;
-    } else {
-      console.log('An error occurred for ', link, ': ', error.message);
-      return undefined;
-    }
-  });
-  return content.status;
+  })
+    .then(content => {
+      return content;
+    })
+    .catch(function (error: AxiosError) {
+      // If a non-2xx response status exists, return it.
+      if (error.response) {
+        return error.response;
+      }
+      // If the request was made but no response was received, log the request.
+      else if (error.request) {
+        return undefined;
+      } else {
+        console.log('An error occurred for ', link, ': ', error.message);
+        return undefined;
+      }
+    });
 }
 
 // Return and clean the HTML body portions of a returned website.
@@ -53,7 +63,7 @@ export function isPdf(link: string, response: string): boolean {
   if (link.endsWith('.pdf')) {
     return true;
   }
-  // It is still possible a link is to a PDF, even if the URL doesn't end with pdf. For these, we check the object type.
+  // It is still possible a link is to a PDF, even if the URL doesn't end with '.pdf'. For these, we check the object type.
   const $ = cheerio.load(response);
   if ($('body').length > 0) {
     if ($('[type="application/pdf"]').length > 0) {
