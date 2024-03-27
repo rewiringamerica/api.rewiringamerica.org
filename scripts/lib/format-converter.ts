@@ -6,6 +6,12 @@ import {
   CollectedIncentive,
 } from '../../src/data/state_incentives';
 import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
+import {
+  AliasMap,
+  FIELD_MAPPINGS,
+  VALUE_MAPPINGS,
+} from './spreadsheet-mappings';
+import { SpreadsheetStandardizer } from './spreadsheet-standardizer';
 
 const ajv = new Ajv({ allErrors: true, coerceTypes: 'array' });
 
@@ -226,4 +232,111 @@ export function googleSheetToFlatData(
     );
   }
   return records;
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export type StringKeyed = { [index: string]: any };
+
+// Reverse of flatToNested methods above. Note that arrays are not expanded, so
+// if we add arrays of nested objects to the schema, we will need to revisit
+// this.
+export function nestedToFlat(input: StringKeyed): StringKeyed {
+  const output: StringKeyed = {};
+  for (const [fieldName, fieldValue] of Object.entries(input)) {
+    if (fieldValue === undefined) continue;
+    if (typeof fieldValue === 'object' && !Array.isArray(fieldValue)) {
+      for (const [nestedKey, nestedVal] of Object.entries(
+        nestedToFlat(fieldValue),
+      )) {
+        output[`${fieldName}.${nestedKey}`] = nestedVal;
+      }
+    } else {
+      output[fieldName] = fieldValue;
+    }
+  }
+  return output;
+}
+
+function createCellValue(
+  colName: string,
+  colValue: object | string | number | boolean,
+): sheets_v4.Schema$ExtendedValue {
+  let valToWrite: sheets_v4.Schema$ExtendedValue = {};
+  if (Array.isArray(colValue)) {
+    valToWrite = { stringValue: colValue.join(', ') };
+  } else if (typeof colValue === 'string') {
+    valToWrite = { stringValue: colValue };
+  } else if (typeof colValue === 'boolean') {
+    valToWrite = { boolValue: colValue };
+  } else if (typeof colValue === 'number') {
+    valToWrite = { numberValue: +colValue };
+  } else if (typeof colValue === 'object') {
+    throw new Error(
+      `Trying to write object to spreadsheet. Objects should be flattened prior to write. Column name: ${colName}; value: ${util.inspect(
+        colValue,
+      )}`,
+    );
+  } else {
+    console.warn(
+      `Unexpected value type: ${colName}: ${util.inspect(
+        colValue,
+      )}. Writing as string.`,
+    );
+    valToWrite = { stringValue: colValue };
+  }
+  return valToWrite;
+}
+
+export function collectedIncentiveToGoogleSheet(
+  incentives: CollectedIncentive[],
+  fieldMappings: AliasMap,
+): sheets_v4.Schema$Sheet {
+  const standardizer = new SpreadsheetStandardizer(
+    FIELD_MAPPINGS,
+    VALUE_MAPPINGS,
+    false,
+  );
+
+  const headers = Object.values(fieldMappings).map(mapping => mapping[0]);
+  let rowData: sheets_v4.Schema$RowData[] = [];
+  incentives.forEach(incentive => {
+    const flattened = nestedToFlat(incentive);
+    const aliased = standardizer.convertToAliases(flattened);
+    // First ensure we have a header column for every value, including those
+    // not in our schema.
+    for (const key in aliased) {
+      if (!headers.includes(key)) {
+        console.log(`Missing key: ${key}`);
+        headers.push(key);
+      }
+    }
+
+    // Then populate a row, including "blanks" for keys we don't have.
+    const rowValues: sheets_v4.Schema$CellData[] = [];
+    for (const col of headers) {
+      if (col in aliased) {
+        rowValues.push({
+          userEnteredValue: createCellValue(col, aliased[col]),
+        });
+      } else {
+        rowValues.push({});
+      }
+    }
+    rowData.push({ values: rowValues });
+  });
+  // Prepend the headers.
+  const headersRow: sheets_v4.Schema$CellData[] = [];
+  for (const col of headers) {
+    headersRow.push({
+      userEnteredValue: { stringValue: col },
+    });
+  }
+  rowData = [{ values: headersRow }, ...rowData];
+  return {
+    data: [
+      {
+        rowData,
+      },
+    ],
+  };
 }
