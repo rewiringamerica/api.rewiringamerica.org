@@ -3,12 +3,12 @@ import axiosRetry from 'axios-retry';
 import { test } from 'tap';
 import { PROGRAMS } from '../src/data/programs';
 
-// Returns URL data, with additional parameters added if the url is pointed to a PDF.
+// Returns URL data, with additional parameters added if the URL is pointed to a PDF.
 async function returnAvailableUrlData(
   link: string,
   is_pdf: boolean = false,
 ): Promise<AxiosResponse | undefined> {
-  // Set the number of retries to 3 for network errors or those in the 5xx range.
+  // Set the number of retries to 3 for network errors.
   axiosRetry(axios, {
     retries: 3,
   });
