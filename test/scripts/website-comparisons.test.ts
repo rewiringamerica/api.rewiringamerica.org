@@ -77,12 +77,10 @@ test('For website with no html returned, return null', tap => {
   tap.end();
 });
 
-test('Create hash for website that is a PDF', tap => {
+test('For website that is a PDF, return null', tap => {
   const web_link = 'https://fakelink.com/no_indications.pdf';
-  const web_pdf: string = 'PDF content\n that is returned as text from site.';
-  tap.equal(
-    checkWebsiteAndReturnHash(web_link, web_pdf),
-    '4cfabb8994f2e202714a272b761fc761ec531ecb020f8c1e39ffaee926a10481',
-  );
+  const bad_web_html: string =
+    "<html> <head> <meta content='Incorrect to be shown'> <link as='style' href='/doc/assets/stylesheets/fonts-b49e8aae.css' rel='stylesheet'> <meta content='ie=edge' http-equiv='X-UA-Compatible'> </head> </html>";
+  tap.equal(checkWebsiteAndReturnHash(web_link, bad_web_html), null);
   tap.end();
 });
