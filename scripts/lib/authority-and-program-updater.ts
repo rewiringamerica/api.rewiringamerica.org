@@ -5,21 +5,22 @@ import * as prettier from 'prettier';
 import { Project, SourceFile } from 'ts-morph';
 import { GeoGroup } from '../../src/data/geo_groups';
 
-const project = new Project({
-  tsConfigFilePath: 'tsconfig.json',
-});
-
 const PROGRAMS_DIR = 'src/data/programs/';
 const PROGRAMS_TS_FILE = 'src/data/programs.ts';
-project.addSourceFileAtPath(PROGRAMS_TS_FILE);
-const globalSourceFile = project.getSourceFileOrThrow(PROGRAMS_TS_FILE);
-
 const GEOGROUPS_JSON_FILE = 'data/geo_groups.json';
 
 const wordSeparators =
   /[\s\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]+/g;
 const capital_plus_lower = /[A-ZÀ-Ý\u00C0-\u00D6\u00D9-\u00DD][a-zà-ÿ]/g;
 const capitals = /[A-ZÀ-Ý\u00C0-\u00D6\u00D9-\u00DD]+/g;
+
+function getProgramSourceFile() {
+  const project = new Project({
+    tsConfigFilePath: 'tsconfig.json',
+  });
+  project.addSourceFileAtPath(PROGRAMS_TS_FILE);
+  return project.getSourceFileOrThrow(PROGRAMS_TS_FILE);
+}
 
 function kebabCase(str: string) {
   // replace word starts with space + lower case equivalent for later parsing
@@ -385,7 +386,7 @@ export class AuthorityAndProgramUpdater {
     );
     fs.writeFileSync(filePath, tsFileContent);
 
-    maybeUpdateProgramsTsFile(this.state, globalSourceFile);
+    maybeUpdateProgramsTsFile(this.state, getProgramSourceFile());
   }
 
   updateGeoGroupsJson() {
