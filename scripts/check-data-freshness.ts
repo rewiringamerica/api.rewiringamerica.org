@@ -1,4 +1,4 @@
-import axios, {AxiosResponse, AxiosError} from 'axios';
+import axios, { AxiosError, AxiosResponse } from 'axios';
 import axiosRetry from 'axios-retry';
 import { test } from 'tap';
 import { PROGRAMS } from '../src/data/programs';
@@ -7,7 +7,7 @@ import { PROGRAMS } from '../src/data/programs';
 async function returnAvailableUrlData(
   link: string,
   is_pdf: boolean = false,
-): Promise< AxiosResponse | undefined> {
+): Promise<AxiosResponse | undefined> {
   // Set the number of retries to 3 for network errors or those in the 5xx range.
   axiosRetry(axios, {
     retries: 3,
@@ -16,24 +16,30 @@ async function returnAvailableUrlData(
     method: 'get',
     url: link,
     timeout: 10000,
-    headers: is_pdf ? {
-      'Content-Type': 'application/pdf',
-    } : {},
-    responseType: is_pdf? 'arraybuffer': 'json',
+    headers: is_pdf
+      ? {
+          'Content-Type': 'application/pdf',
+        }
+      : {},
+    responseType: is_pdf ? 'arraybuffer' : 'json',
     validateStatus: () => true,
-  }).then(content => {return content;}).catch(function (error: AxiosError) {
-    // If a non-2xx response status exists, return it.
-    if (error.response) {
-      return error.response;
-    }
-    // If the request was made but no response was received, log the request.
-    else if (error.request) {
-      return undefined;
-    } else {
-      console.log('An error occurred for ', link, ': ', error.message);
-      return undefined;
-    }
-  });
+  })
+    .then(content => {
+      return content;
+    })
+    .catch(function (error: AxiosError) {
+      // If a non-2xx response status exists, return it.
+      if (error.response) {
+        return error.response;
+      }
+      // If the request was made but no response was received, log the request.
+      else if (error.request) {
+        return undefined;
+      } else {
+        console.log('An error occurred for ', link, ': ', error.message);
+        return undefined;
+      }
+    });
 }
 
 const isURLValid = (url: string): boolean => {
@@ -57,11 +63,19 @@ test('All URLs linking to current programs have an OK response code', async tap 
         console.error('${url_to_check} is not a valid URL for program: ', key);
         process.exit(1);
       } else {
-        const response = await returnAvailableUrlData(url_to_check, url_to_check.endsWith('.pdf'));
-        if(response?.data === undefined || response.data === null) {
-          tap.fail('Website returned no data from link: '+ url_to_check+ ' for: '+ key);
+        const response = await returnAvailableUrlData(
+          url_to_check,
+          url_to_check.endsWith('.pdf'),
+        );
+        if (response?.data === undefined || response.data === null) {
+          tap.fail(
+            'Website returned no data from link: ' +
+              url_to_check +
+              ' for: ' +
+              key,
+          );
         }
-        const status = response? response.status : null;
+        const status = response ? response.status : null;
         if (status === undefined || status === null) {
           tap.fail(
             'No status code was found when checking ' +
