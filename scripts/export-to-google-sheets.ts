@@ -4,7 +4,7 @@ import minimist from 'minimist';
 import { CollectedIncentive } from '../src/data/state_incentives';
 import { FILES, IncentiveFile } from './incentive-spreadsheet-registry';
 import { authorize } from './lib/auth-helper';
-import { collectedIncentiveToGoogleSheet } from './lib/format-converter';
+import { collectedIncentiveToGoogleSheet } from './lib/google-sheets-exporter';
 import { FIELD_MAPPINGS } from './lib/spreadsheet-mappings';
 
 async function exportToGoogleSheets(state: string, file: IncentiveFile) {
@@ -16,7 +16,11 @@ async function exportToGoogleSheets(state: string, file: IncentiveFile) {
   const collected: CollectedIncentive[] = JSON.parse(
     fs.readFileSync(file.collectedFilepath!, 'utf-8'),
   );
-  const sheet = collectedIncentiveToGoogleSheet(collected, FIELD_MAPPINGS);
+  const sheet = collectedIncentiveToGoogleSheet(
+    collected,
+    FIELD_MAPPINGS,
+    true,
+  );
   if (!sheet.properties) {
     sheet.properties = {};
   }
