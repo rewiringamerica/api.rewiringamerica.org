@@ -1,5 +1,5 @@
 import { sheets_v4 } from 'googleapis';
-import { FieldMetadata } from './spreadsheet-mappings';
+import { FieldMetadata } from '../spreadsheet-mappings';
 
 const headerRowFormat: sheets_v4.Schema$CellFormat = {
   backgroundColorStyle: {
@@ -12,6 +12,7 @@ const headerRowFormat: sheets_v4.Schema$CellFormat = {
   },
   textFormat: {
     bold: true,
+    fontSize: 12,
   },
   borders: {
     bottom: {
@@ -29,6 +30,7 @@ const dataRowFormat = {
       alpha: 1,
     },
   },
+  wrapStrategy: 'WRAP',
 };
 
 export function generateDataModelTable(metadata: {
@@ -71,6 +73,11 @@ export function generateDataModelTable(metadata: {
     data: [
       {
         rowData,
+        columnMetadata: [
+          { pixelSize: 31 },
+          { pixelSize: 182 },
+          { pixelSize: 489 },
+        ],
       },
     ],
     properties: {

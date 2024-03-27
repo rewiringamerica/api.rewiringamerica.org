@@ -19,10 +19,12 @@ type NestedKeyOf<O extends object> = {
 }[keyof O & (string | number)];
 
 export type FieldMetadata = {
+  // The first column alias is special: when we export to spreadsheet, that is
+  // the column name that is used.
   column_aliases: string[];
   description: string;
   // critical doesn't seem to be used in a meaningful way. Maintaining it for
-  // now, but retire if it isn't used in Q3 2024.
+  // now, but retire if it isn't used by Q3 2024.
   critical?: boolean;
 };
 
@@ -66,7 +68,7 @@ export const FIELD_METADATA: Record<
   program_url: {
     column_aliases: ['Program URL'],
     description:
-      'This will be the link that is shared with the consumers as "Learn More" when they see an incentive that interests them. It can be a link to the incentive program page, or a PDF for the rebate form.\n\nTip: Try to identify the best resource to send users to when they want to ""Learn More"" about the incentive. When in doubt, capture both."',
+      'This will be the link that is shared with the consumers as "Learn More" when they see an incentive that interests them. It can be a link to the incentive program page, or a PDF for the rebate form.\n\nTip: Try to identify the best resource to send users to when they want to "Learn More" about the incentive. When in doubt, capture both.',
   },
   item: {
     column_aliases: ['Technology *'],
@@ -84,7 +86,7 @@ export const FIELD_METADATA: Record<
       'Program Description (style guide)',
     ],
     description:
-      'A short description of the incentive program and the rebate value it offers including any limitations at a very high level (refer to the guidelines here)',
+      'A short description of the incentive program and the rebate value it offers including any limitations at a very high level (refer to the guidelines at https://docs.google.com/document/d/1nM9320uOUYpfpD3eZ4DFo32Scd5kauLEL17j1NYB5Ww/edit#bookmark=id.mryjojvw3dsg)',
   },
   'short_description.es': {
     column_aliases: ['Program Description (Spanish)'],
