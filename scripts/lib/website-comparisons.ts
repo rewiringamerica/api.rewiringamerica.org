@@ -4,7 +4,7 @@ import * as cheerio from 'cheerio';
 import { createHash } from 'node:crypto';
 
 // Returns URL data, with additional parameters added if the URL is pointed to a PDF.
-export async function returnAvailableUrlData(
+export async function retrieveWebContent(
   link: string,
   is_pdf: boolean = false,
 ): Promise<AxiosResponse | undefined> {
