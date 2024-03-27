@@ -1,59 +1,30 @@
-import axios from 'axios';
+import axios, {AxiosResponse, AxiosError} from 'axios';
 import axiosRetry from 'axios-retry';
-import pdf from 'pdf-parse';
 import { test } from 'tap';
 import { PROGRAMS } from '../src/data/programs';
 
-// Returns the status obtained by trying to request the URL content.
-async function checkUrlDataAvailability(
+// Returns URL data, with additional parameters added if the url is pointed to a PDF.
+async function returnAvailableUrlData(
   link: string,
-): Promise<number | undefined> {
+  is_pdf: boolean = false,
+): Promise< AxiosResponse | undefined> {
   // Set the number of retries to 3 for network errors or those in the 5xx range.
   axiosRetry(axios, {
     retries: 3,
   });
-  const content = await axios({
+  return axios({
     method: 'get',
     url: link,
     timeout: 10000,
-    validateStatus: () => true,
-  }).catch(function (error) {
-    // If a non-2xx response status exists, return it.
-    if (error.response) {
-      return error.response.status;
-    }
-    // If the request was made but no response was received, log the request.
-    else if (error.request) {
-      return undefined;
-    } else {
-      console.log('An error occurred for ', link, ': ', error.message);
-      return undefined;
-    }
-  });
-  return content.status;
-}
-
-// Returns the response data obtained by trying to request the URL content.
-async function returnAvailablePdfUrlData(
-  link: string,
-): Promise<string | undefined> {
-  // Set the number of retries to 3 for network errors or those in the 5xx range.
-  axiosRetry(axios, {
-    retries: 3,
-  });
-  const content = await axios({
-    method: 'get',
-    url: link,
-    timeout: 10000,
-    responseType: 'arraybuffer',
-    validateStatus: () => true,
-    headers: {
+    headers: is_pdf ? {
       'Content-Type': 'application/pdf',
-    },
-  }).catch(function (error) {
+    } : {},
+    responseType: is_pdf? 'arraybuffer': 'json',
+    validateStatus: () => true,
+  }).then(content => {return content;}).catch(function (error: AxiosError) {
     // If a non-2xx response status exists, return it.
     if (error.response) {
-      return error.response.status;
+      return error.response;
     }
     // If the request was made but no response was received, log the request.
     else if (error.request) {
@@ -63,10 +34,6 @@ async function returnAvailablePdfUrlData(
       return undefined;
     }
   });
-  const pdf_data = await pdf(content.data).then(function (data) {
-    return data.text.toString();
-  });
-  return pdf_data;
 }
 
 const isURLValid = (url: string): boolean => {
@@ -90,7 +57,11 @@ test('All URLs linking to current programs have an OK response code', async tap 
         console.error('${url_to_check} is not a valid URL for program: ', key);
         process.exit(1);
       } else {
-        const status = await checkUrlDataAvailability(url_to_check);
+        const response = await returnAvailableUrlData(url_to_check, url_to_check.endsWith('.pdf'));
+        if(response?.data === undefined || response.data === null) {
+          tap.fail('Website returned no data from link: '+ url_to_check+ ' for: '+ key);
+        }
+        const status = response? response.status : null;
         if (status === undefined || status === null) {
           tap.fail(
             'No status code was found when checking ' +
@@ -121,20 +92,5 @@ test('All URLs linking to current programs have an OK response code', async tap 
     } else {
       console.log('No URL found for: ', key, '. Value was: ', value);
     }
-  }
-});
-
-test('PDF returned readable text, able to be parsed', async tap => {
-  // Check that PDF link can be read and returned.
-  // This PDF may oneday no longer exist, and if this test fails, the url should be checked first.
-  const data = await returnAvailablePdfUrlData(
-    'https://assets-partners.bouldercounty.gov/wp-content/uploads/sites/2/2023/08/Manufactured-Homes-Eligible-Measures-List-2023.pdf',
-  );
-  if (data === undefined || data === null || data === '') {
-    tap.fail(
-      'PDF link was unable to be read, data returned is undefined or empty.',
-    );
-  } else {
-    tap.pass('Non-empty PDF data was returned.');
   }
 });
