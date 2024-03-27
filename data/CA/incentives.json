@@ -1351,9 +1351,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate for qualified new insulation upgrades."
-    },
-    "bonus_available": true
+      "en": "Rebate for qualified new attic insulation upgrades."
+    }
   },
   {
     "id": "CA-63",
@@ -1374,7 +1373,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate up to $250/ton for new qualifying Air Source Heat Pump."
+      "en": "Rebate up to $250/ton for a new qualifying air source heat pump."
     },
     "bonus_available": true
   },
@@ -1397,7 +1396,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate up to $150 for Duct Sealing with Testing for homes with excessive leakage."
+      "en": "$150 up to 50% of duct sealing costs for homes with central ducted air conditioning or heat pumps with excessive leakage of conditioned air."
     },
     "bonus_available": true
   },
@@ -1420,49 +1419,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate of $2 per sq ft for ENERGY STAR® Qualified Residential Windows."
-    }
-  },
-  {
-    "id": "CA-66",
-    "authority_type": "utility",
-    "authority": "ca-los-angeles-department-of-water-and-power",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "ca_losAngelesDepartmentOfWaterAndPower_lADWPRebatesAndPrograms",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 3000
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $3,000 maximum rebate depending on building type. System must be replaced with a qualifying ENERGY STAR system."
-    }
-  },
-  {
-    "id": "CA-67",
-    "authority_type": "utility",
-    "authority": "ca-los-angeles-department-of-water-and-power",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "electric_panel",
-    "program": "ca_losAngelesDepartmentOfWaterAndPower_lADWPRebatesAndPrograms",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1000
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $1,000 maximum rebate available if electric service improvement is necessary to replace centrail air conditioner and gas furnace."
+      "en": "Rebate of $2 per sq ft for ENERGY STAR® qualified residential windows while supplies last."
     }
   },
   {
@@ -1505,7 +1462,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate up to $1,500 per unit for an ENERGY STAR® Qualified Heat Pump Water Heater."
+      "en": "Rebate up to $1,500 per unit for an ENERGY STAR® qualified heat pump water heater."
     }
   },
   {
@@ -1525,7 +1482,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate available for income-qualified residents who purchase a level 2 charger."
+      "en": "$400 rebate available for income-qualified residents who purchase a level 2 charger while funds last."
     },
     "low_income": "ca-roseville-electric"
   },
@@ -1540,15 +1497,14 @@
     "program": "ca_rosevilleElectric_residentialElectricHomeProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 2000,
-      "minimum": 600,
-      "maximum": 2000
+      "number": 500,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$2000 rebate for a heat pump water if replacing a gas water heater; $600 if replacing electric."
+      "en": "$500 rebate for replacing a gas or electric water heater with a heat pump water heater."
     }
   },
   {
@@ -1561,37 +1517,16 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "ca_rosevilleElectric_residentialElectricHomeProgram",
     "amount": {
-      "type": "dollars_per_unit",
-      "number": 600,
-      "unit": "ton",
-      "minimum": 250,
-      "maximum": 600
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$600/ton rebate for a heat pump or mini split if replacing gas HVAC; $250/ton if replacing electric."
-    }
-  },
-  {
-    "id": "CA-73",
-    "authority_type": "utility",
-    "authority": "ca-roseville-electric",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "smart_thermostat",
-    "program": "ca_rosevilleElectric_residentialElectricHomeProgram",
-    "amount": {
       "type": "dollar_amount",
-      "number": 100
+      "number": 1000,
+      "minimum": 500,
+      "maximum": 1000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$100 rebate for an Energy Star certified smart thermostat."
+      "en": "Earn between $500 - $1,000 rebate for replacing a gas or electric HVAC system with a heat pump HVAC or mini-split system."
     }
   },
   {
@@ -1613,7 +1548,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $75 instant rebate for purchase and installation of an ENERGY STAR® certified Smart Thermostat."
+      "en": "Up to $75 instant rebate for purchase and installation of an ENERGY STAR certified Smart Thermostat."
     }
   },
   {
@@ -1654,7 +1589,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "PG&E will provide one free Level 2 charger valued at $500 (hardwires or plugs in to 220+ Volt outlet)."
+      "en": "PG&E will provide one free Level 2 charger valued at $500."
     },
     "low_income": "ca-pacific-gas-and-electric"
   },
@@ -1706,7 +1641,7 @@
     "authority_type": "utility",
     "authority": "ca-modesto-irrigation-district",
     "payment_methods": [
-      "assistance_program"
+      "pos_rebate"
     ],
     "item": "electric_vehicle_charger",
     "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
@@ -1718,7 +1653,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 rebate per charger for Level 2 Electric Vehicle Charger."
+      "en": "$350 rebate per charger for Level 2 electric vehicle charger. Limit two per houseehold."
     }
   },
   {
@@ -1738,7 +1673,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$450 rebate per unit for Central Heat Pump with Tier 1 rating."
+      "en": "$450 rebate per unit for central heat pump with Tier 1 rating."
     }
   },
   {
@@ -1758,7 +1693,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$700 rebate per unit for Central Heat Pump with Tier 2 rating."
+      "en": "$700 rebate per unit for central heat pump with Tier 2 rating."
     }
   },
   {
@@ -1772,13 +1707,13 @@
     "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 250
+      "number": 350
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$250 rebate per unit for Ductless Mini Split Air Conditioner."
+      "en": "$350 rebate per unit for ductless mini split heat pump."
     }
   },
   {
@@ -1798,7 +1733,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$50 rebate per unit for ENERGY STAR Smart Thermostat for central AC/Heat Pump - electric heating."
+      "en": "$50 rebate per unit on a new ENERGY STAR Smart Thermostat to replace eligible thermostats on a central heating and cooling system."
     }
   },
   {
@@ -1812,14 +1747,15 @@
     "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 17,
-      "unit": "square_foot"
+      "number": 0.17,
+      "unit": "square_foot",
+      "maximum": 850
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$17 rebate per square foot for Attic Insulation."
+      "en": "$0.17 per square foot rebate up to $850 for attic insulation."
     }
   },
   {
@@ -1839,7 +1775,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$100 rebate per unit for Induction Cooktop / Range."
+      "en": "$100 rebate per unit for induction cooktop / range replacement."
     }
   },
   {
@@ -1859,7 +1795,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate per unit for ENERGY STAR Heat Pump Storage Water Heater."
+      "en": "$500 rebate per unit for ENERGY STAR certified heat pump storage water heater."
     }
   },
   {
@@ -1880,7 +1816,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1 rebate per square foot for Sun Screens."
+      "en": "$1 rebate per square foot for sun screens."
     }
   },
   {
@@ -1901,7 +1837,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1 rebate per square foot for Window Films."
+      "en": "$1 rebate per square foot for window films."
     }
   },
   {
@@ -1922,7 +1858,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$2 rebate per square foot for ENERGY STAR Replacement Window."
+      "en": "$2 rebate per square foot for ENERGY STAR replacement windows."
     }
   },
   {
@@ -1942,7 +1878,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Get upto $400 cach back."
+      "en": "Up to $400 cash back when you upgrade to a heat pump water heater."
     }
   },
   {
@@ -1962,7 +1898,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Get $50 cash back."
+      "en": "$50 cash back after purchasing a qualifying Smart Thermostat."
     }
   },
   {
@@ -1982,7 +1918,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Get upto $2500 cash back."
+      "en": "Up to $2500 cash back for converting an electric resistance heating system with a ductless heat pump."
     },
     "bonus_available": true
   },
@@ -2005,8 +1941,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "$0.10 per sq. ft. of insulation installed."
-    }
+      "en": "Upgrade your home’s exterior wall insulation and receive up to $0.10 per square foot. Additional savings available for qualifying projects."
+    },
+    "bonus_available": true
   },
   {
     "id": "CA-94",
@@ -2019,7 +1956,7 @@
     "program": "ca_pasadenaWaterAndPower_residentialPrograms-CeilingInsulationRebate",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 0.05,
+      "number": 0.1,
       "unit": "square_foot"
     },
     "owner_status": [
@@ -2027,8 +1964,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "$0.05 per sq. ft."
-    }
+      "en": "Upgrade your home’s ceiling insulation and receive up to $0.10 per square foot. Additional savings available for qualifying projects."
+    },
+    "bonus_available": true
   },
   {
     "id": "CA-95",
@@ -2853,6 +2791,27 @@
     ],
     "short_description": {
       "en": "Up to $805 rebate for installing a Time-of-Use (TOU) EV Rate Meter."
+    }
+  },
+  {
+    "id": "CA-133",
+    "authority_type": "utility",
+    "authority": "ca-lodi-electric-utility",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "ca_lodiElectricUtility_residentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.75,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for qualified new attic insulation upgrades."
     }
   }
 ]
