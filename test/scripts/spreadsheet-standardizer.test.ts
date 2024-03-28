@@ -175,7 +175,7 @@ test('representative example', tap => {
     equipment_capacity_restrictions: '',
     contractor_restrictions: '',
     income_restrictions: '',
-    tax_filing_status_restrictions: '',
+    filing_status: '',
     owner_status: '',
     other_restrictions:
       'Customers can only apply for one rebate of this type per calendar year.',

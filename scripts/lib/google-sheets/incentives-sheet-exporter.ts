@@ -1,11 +1,11 @@
 import { sheets_v4 } from 'googleapis';
 import util from 'util';
-import { CollectedIncentive } from '../../src/data/state_incentives';
+import { CollectedIncentive } from '../../../src/data/state_incentives';
 import {
   SpreadsheetData,
   collectedIncentivesToSpreadsheet,
-} from './format-converter';
-import { AliasMap } from './spreadsheet-mappings';
+} from '../format-converter';
+import { AliasMap } from '../spreadsheet-mappings';
 
 const REBATE_AMOUNT_FIELDS_START = 15; // inclusive
 const REBATE_AMOUNT_FIELDS_END = 22; // exclusive
