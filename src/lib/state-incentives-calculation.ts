@@ -207,16 +207,13 @@ export function calculateStateIncentivesAndSavings(
   );
 
   // You can't save more than tax owed. Choose the lesser of state tax owed vs tax credit savings
-  const maxTaxCreditSavings = stateTaxOwed
+  savings.tax_credit = stateTaxOwed
     ? Math.min(stateTaxOwed.taxOwed, savings.tax_credit)
     : savings.tax_credit;
 
   return {
     stateIncentives,
-    savings: {
-      ...savings,
-      tax_credit: maxTaxCreditSavings,
-    },
+    savings,
     coverage: {
       state: stateId,
       utility: request.utility ?? null,
