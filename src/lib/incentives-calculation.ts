@@ -364,8 +364,8 @@ export default function calculateIncentives(
   );
 
   // You can't save more than tax owed. Choose the lesser of tax owed vs tax savings
-  if (savings.tax_credit > tax.tax_owed) {
-    savings.tax_credit = tax.tax_owed;
+  if (savings.tax_credit > tax.taxOwed) {
+    savings.tax_credit = tax.taxOwed;
   }
 
   // Sort incentives https://app.asana.com/0/0/1204275945510481/f

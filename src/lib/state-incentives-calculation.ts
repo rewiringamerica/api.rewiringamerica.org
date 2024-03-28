@@ -82,12 +82,6 @@ export function calculateStateIncentivesAndSavings(
   const eligibleIncentives = new Map<string, StateIncentive>();
   const ineligibleIncentives = new Map<string, StateIncentive>();
 
-  // Get state tax owed to determine max potential tax savings
-  const stateTaxOwed = estimateStateTaxAmount(
-    request.household_income,
-    stateId,
-  );
-
   for (const item of incentives) {
     if (skipBasedOnRequestParams(item, request, location, stateAuthorities)) {
       continue;
@@ -206,11 +200,16 @@ export function calculateStateIncentivesAndSavings(
     savings[item.payment_methods[0]] += amount;
   });
 
+  // Get state tax owed to determine max potential tax savings
+  const stateTaxOwed = estimateStateTaxAmount(
+    request.household_income,
+    stateId,
+  );
+
   // You can't save more than tax owed. Choose the lesser of state tax owed vs tax credit savings
-  const maxTaxCreditSavings =
-    typeof stateTaxOwed.tax_owed === 'number'
-      ? Math.min(stateTaxOwed.tax_owed, savings.tax_credit)
-      : savings.tax_credit;
+  const maxTaxCreditSavings = stateTaxOwed
+    ? Math.min(stateTaxOwed.taxOwed, savings.tax_credit)
+    : savings.tax_credit;
 
   return {
     stateIncentives,

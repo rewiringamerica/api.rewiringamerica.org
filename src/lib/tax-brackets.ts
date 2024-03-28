@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import { FilingStatus, TAX_BRACKETS } from '../data/tax_brackets';
+import { TaxEstimate } from '../data/types/tax';
 
 function roundCents(dollars: number): number {
   return Math.round(dollars * 100) / 100;
@@ -11,10 +12,7 @@ function roundCents(dollars: number): number {
 export function estimateStateTaxAmount(
   householdIncome: number,
   stateCode: string,
-): {
-  effective_rate: number | null;
-  tax_owed: number | null;
-} {
+): TaxEstimate | null {
   let taxOwed = null;
   let effectiveRate = null;
 
@@ -29,17 +27,17 @@ export function estimateStateTaxAmount(
       break;
     }
     default: {
-      break;
+      return null;
     }
   }
 
-  return { tax_owed: taxOwed, effective_rate: effectiveRate };
+  return { taxOwed, effectiveRate };
 }
 
 export function estimateFederalTaxAmount(
   filing_status: FilingStatus,
   household_income: number,
-): { tax_owed: number; effective_rate: number } {
+): TaxEstimate {
   // Note: this could be simplified to hardcoded value lookup
   const tax_brackets = TAX_BRACKETS.filter(
     row => filing_status === row.filing_status,
@@ -96,8 +94,8 @@ export function estimateFederalTaxAmount(
   console.log('Step 7: effective rate', effectiveRate);*/
 
   return {
-    tax_owed: Math.ceil(taxOwed), // Math.ceil rounds up any decimal
-    effective_rate: effectiveRate,
+    taxOwed: Math.ceil(taxOwed), // Math.ceil rounds up any decimal
+    effectiveRate,
   };
 }
 

@@ -11,14 +11,13 @@ import {
  */
 test('correctly determines Colorado state tax liability', async t => {
   const data = estimateStateTaxAmount(100000, 'CO');
-  t.equal(data.tax_owed, 4400);
-  t.equal(data.effective_rate, 4.4);
+  t.equal(data?.taxOwed, 4400);
+  t.equal(data?.effectiveRate, 4.4);
 });
 
 test('defaults to a null state tax obligation for unsupported states', async t => {
   const data = estimateStateTaxAmount(100000, 'DC');
-  t.equal(data.tax_owed, null);
-  t.equal(data.effective_rate, null);
+  t.equal(data, null);
 });
 
 /**
@@ -36,52 +35,52 @@ test('defaults to a null state tax obligation for unsupported states', async t =
 
 test('correctly evaluates scenerio: $112,500 hoh', async t => {
   const data = estimateFederalTaxAmount(FilingStatus.HoH, 112500);
-  t.equal(data.tax_owed, 13875);
+  t.equal(data.taxOwed, 13875);
 });
 
 test('correctly evaluates scenerio: $53,100 single', async t => {
   const data = estimateFederalTaxAmount(FilingStatus.Single, 53100);
-  t.equal(data.tax_owed, 4490);
+  t.equal(data.taxOwed, 4490);
 });
 
 test('correctly evaluates scenerio: $300,000 hoh', async t => {
   const data = estimateFederalTaxAmount(FilingStatus.HoH, 300000);
-  t.equal(data.tax_owed, 68009);
+  t.equal(data.taxOwed, 68009);
 });
 
 test('correctly evaluates scenerio: $300,000 single', async t => {
   const data = estimateFederalTaxAmount(FilingStatus.Single, 300000);
-  t.equal(data.tax_owed, 72047);
+  t.equal(data.taxOwed, 72047);
 });
 
 test('correctly evaluates scenerio: $94,000 joint', async t => {
   const data = estimateFederalTaxAmount(FilingStatus.Joint, 94000);
-  t.equal(data.tax_owed, 7516);
+  t.equal(data.taxOwed, 7516);
 });
 
 test('correctly evaluates scenerio: $1,000,000 joint', async t => {
   const data = estimateFederalTaxAmount(FilingStatus.Joint, 1000000);
-  t.equal(data.tax_owed, 289665);
+  t.equal(data.taxOwed, 289665);
 });
 
 test('correctly evaluates scenerio: $8,000 single', async t => {
   const data = estimateFederalTaxAmount(FilingStatus.Single, 8000);
-  t.equal(data.tax_owed, 0);
+  t.equal(data.taxOwed, 0);
 });
 
 test('correctly evaluates income at standard deduction', async t => {
   const data = estimateFederalTaxAmount(FilingStatus.Joint, 13850);
-  t.equal(data.tax_owed, 0);
+  t.equal(data.taxOwed, 0);
 });
 
 test('correctly evaluates income below standard deduction', async t => {
   const data = estimateFederalTaxAmount(FilingStatus.Joint, 5000);
-  t.equal(data.tax_owed, 0);
+  t.equal(data.taxOwed, 0);
 });
 
 test('correctly evaluates $0 income', async t => {
   const data = estimateFederalTaxAmount(FilingStatus.Single, 0);
-  t.equal(data.tax_owed, 0);
+  t.equal(data.taxOwed, 0);
 });
 
 test('correctly evaluates scenario: $500,000 married-separate', async t => {
@@ -89,7 +88,7 @@ test('correctly evaluates scenario: $500,000 married-separate', async t => {
     FilingStatus.MarriedFilingSeparately,
     500000,
   );
-  t.equal(data.tax_owed, 144833);
+  t.equal(data.taxOwed, 144833);
 });
 
 test('correctly evaluates scenario: $53,100 married-separate', async t => {
@@ -97,7 +96,7 @@ test('correctly evaluates scenario: $53,100 married-separate', async t => {
     FilingStatus.MarriedFilingSeparately,
     53100,
   );
-  t.equal(data.tax_owed, 4490);
+  t.equal(data.taxOwed, 4490);
 });
 
 test('bracket bounds are well-formed', async t => {
