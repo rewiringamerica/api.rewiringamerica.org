@@ -5,7 +5,38 @@ function roundCents(dollars: number): number {
   return Math.round(dollars * 100) / 100;
 }
 
-export default function estimateTaxAmount(
+/**
+ * Formula to calculate tax owed to states
+ */
+export function estimateStateTaxAmount(
+  householdIncome: number,
+  stateCode: string,
+): {
+  effective_rate: number | null;
+  tax_owed: number | null;
+} {
+  let taxOwed = null;
+  let effectiveRate = null;
+
+  switch (stateCode) {
+    /**
+     * Colorado has a flat income tax rate of 4.4% on all income earners.
+     * The state does not offer a standard deduction.
+     */
+    case 'CO': {
+      effectiveRate = 4.4;
+      taxOwed = Math.ceil(householdIncome * (effectiveRate / 100));
+      break;
+    }
+    default: {
+      break;
+    }
+  }
+
+  return { tax_owed: taxOwed, effective_rate: effectiveRate };
+}
+
+export function estimateFederalTaxAmount(
   filing_status: FilingStatus,
   household_income: number,
 ): { tax_owed: number; effective_rate: number } {
@@ -69,3 +100,8 @@ export default function estimateTaxAmount(
     effective_rate: effectiveRate,
   };
 }
+
+export default {
+  estimateFederalTaxAmount,
+  estimateStateTaxAmount,
+};

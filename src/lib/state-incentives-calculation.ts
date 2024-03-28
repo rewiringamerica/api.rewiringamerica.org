@@ -31,6 +31,7 @@ import {
   CalculatedIncentive,
   LocationParams,
 } from './incentives-calculation';
+import { estimateStateTaxAmount } from './tax-brackets';
 
 export function getAllStateIncentives(
   stateId: string,
@@ -81,6 +82,12 @@ export function calculateStateIncentivesAndSavings(
   const eligibleIncentives = new Map<string, StateIncentive>();
   const ineligibleIncentives = new Map<string, StateIncentive>();
 
+  // Get state tax owed to determine max potential tax savings
+  const stateTaxOwed = estimateStateTaxAmount(
+    request.household_income,
+    stateId,
+  );
+
   for (const item of incentives) {
     if (skipBasedOnRequestParams(item, request, location, stateAuthorities)) {
       continue;
@@ -127,6 +134,21 @@ export function calculateStateIncentivesAndSavings(
       if (item.filing_status !== request.tax_filing) {
         eligible = false;
       }
+    }
+
+    // check if the incentive is a tax credit and the users's tax liability is less than the credit amount
+    if (
+      item.payment_methods[0] === 'tax_credit' &&
+      typeof stateTaxOwed.tax_owed === 'number' &&
+      stateTaxOwed.tax_owed < item.amount.number
+    ) {
+      // mark the incentive ineligible if the user owes no taxes and the incentive isn't redeemable in another way
+      if (stateTaxOwed.tax_owed === 0 && item.payment_methods.length === 1) {
+        eligible = false;
+      }
+
+      // change the tax credit amount to match the user's max tax liability
+      item.amount.number = stateTaxOwed.tax_owed;
     }
 
     if (eligible) {
@@ -199,9 +221,18 @@ export function calculateStateIncentivesAndSavings(
     savings[item.payment_methods[0]] += amount;
   });
 
+  // You can't save more than tax owed. Choose the lesser of state tax owed vs tax credit savings
+  const maxTaxCreditSavings =
+    typeof stateTaxOwed.tax_owed === 'number'
+      ? Math.min(stateTaxOwed.tax_owed, savings.tax_credit)
+      : savings.tax_credit;
+
   return {
     stateIncentives,
-    savings,
+    savings: {
+      ...savings,
+      tax_credit: maxTaxCreditSavings,
+    },
     coverage: {
       state: stateId,
       utility: request.utility ?? null,
