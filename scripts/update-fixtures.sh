@@ -272,7 +272,9 @@ zip=53703\
 &household_income=50000\
 &tax_filing=joint\
 &household_size=1\
-&authority_types=state"\
+&authority_types=state\
+&authority_types=other\
+&utility=wi-madison-gas-and-electric"\
  | jq . > test/fixtures/v1-wi-53703-state-utility-lowincome.json
 
 # TODO: Remove beta states argument when OR is fully launched.
