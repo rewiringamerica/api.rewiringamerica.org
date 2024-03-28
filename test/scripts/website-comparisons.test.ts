@@ -1,8 +1,10 @@
+import { AxiosResponse, RawAxiosRequestConfig } from 'axios';
 import { test } from 'tap';
 import {
   checkWebsiteAndReturnHash,
   cleanWebsiteData,
   isPdf,
+  parseWebContent,
 } from '../../scripts/lib/website-comparisons';
 
 test('Only HTML <p> tag content is returned, if both body and <p> tags exist', tap => {
@@ -82,5 +84,42 @@ test('For website that is a PDF, return null', tap => {
   const bad_web_html: string =
     "<html> <head> <meta content='Incorrect to be shown'> <link as='style' href='/doc/assets/stylesheets/fonts-b49e8aae.css' rel='stylesheet'> <meta content='ie=edge' http-equiv='X-UA-Compatible'> </head> </html>";
   tap.equal(checkWebsiteAndReturnHash(web_link, bad_web_html), null);
+  tap.end();
+});
+
+// TODO: AxiosRequestConfig is not able to be mocked appropriately here, see https://github.com/axios/axios/issues/5476 .
+// My only thought of a workaround is to call for a real response, save that somewhere, and then use the saved config here.
+// But I will outline this in my follow-up document.
+test('For response that is pure HTML, HTML is cleaned as expected and returned', tap => {
+  const web_link = 'https://newlinktocheck.com';
+  const web_html: string = '<html> <body> Body of website </body> </html>';
+  // Mocked AxiosResponse object.
+  const axiosResponse: AxiosResponse = {
+    data: web_html,
+    status: 200,
+    statusText: 'OK',
+    config: {},
+    headers: {},
+  };
+  const parsed_content = parseWebContent(web_link, axiosResponse);
+  tap.equal(parsed_content, 'Body of website');
+  tap.end();
+});
+
+test('For response that is a PDF, but error occurred, parsing returns undefined', tap => {
+  const web_link = 'https://pdflink.pdf';
+  const pdf_content: string =
+    "<html> <head> <meta content='Meta content'> <link as='style' href='/doc/assets/stylesheets/fonts-b49e8aae.css' rel='stylesheet'> <meta content='ie=edge' http-equiv='X-UA-Compatible'> </head> </html>";
+  // Mocked AxiosResponse object.
+  const conf: RawAxiosRequestConfig = {};
+  const axiosResponse: AxiosResponse = {
+    data: pdf_content,
+    status: 200,
+    statusText: 'OK',
+    config: conf,
+    headers: {},
+  };
+  const parsed_content = parseWebContent(web_link, axiosResponse);
+  tap.equal(parsed_content, undefined);
   tap.end();
 });
