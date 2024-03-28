@@ -7,6 +7,14 @@ export const MI_PROGRAMS = {
       en: 'https://www.consumersenergy.com/-/media/CE/Documents/residential/save-money-and-energy/rebates/hvac/res-programs.pdf',
     },
   },
+  mi_consumersEnergy_residentialApplianceRebateProgram: {
+    name: {
+      en: 'Residential Appliance Rebate Program',
+    },
+    url: {
+      en: 'https://www.consumersenergy.com/-/media/CE/Documents/save%20money%20and%20energy/2020-appliance-application.pdf',
+    },
+  },
   mi_consumersEnergy_windowsAndInsulationRebates: {
     name: {
       en: 'Windows and Insulation Rebates',
@@ -23,20 +31,20 @@ export const MI_PROGRAMS = {
       en: 'https://www.consumersenergy.com/residential/save-money-and-energy/rebates/windows-and-insulation#inwin-windows-door',
     },
   },
-  mi_consumersEnergy_applianceRebates: {
-    name: {
-      en: 'Appliance Rebates',
-    },
-    url: {
-      en: 'https://www.consumersenergy.com/residential/save-money-and-energy/rebates/appliance-rebates',
-    },
-  },
   'mi_consumersEnergy_powerMIDrive™HomeChargerInstallationRebates': {
     name: {
       en: 'PowerMIDrive™ Home Charger Installation Rebates',
     },
     url: {
       en: 'https://www.consumersenergy.com/residential/programs-and-services/electric-vehicles#savings',
+    },
+  },
+  mi_consumersEnergy_heatingAndCoolingRebates: {
+    name: {
+      en: 'Heating and Cooling Rebates',
+    },
+    url: {
+      en: 'https://www.consumersenergy.com/residential/save-money-and-energy/rebates/heating-and-cooling',
     },
   },
   mi_dTE_airConditioners: {
@@ -109,6 +117,22 @@ export const MI_PROGRAMS = {
     },
     url: {
       en: 'https://electricideas.com/at-home/rebates-products/marketplace/',
+    },
+  },
+  mi_upperPeninsulaPowerCompany_uPPCOHeatPumpRebates: {
+    name: {
+      en: 'UPPCO Heat Pump Rebates',
+    },
+    url: {
+      en: 'https://ee.uppco.com/uppco-heat-pump/',
+    },
+  },
+  'mi_upperPeninsulaPowerCompany_uPPCOENERGYSTAR®Program': {
+    name: {
+      en: 'UPPCO ENERGY STAR ® Program',
+    },
+    url: {
+      en: 'https://ee.uppco.com/uppco-energy-star/',
     },
   },
 } as const;
