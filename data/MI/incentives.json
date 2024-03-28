@@ -183,19 +183,17 @@
       "rebate"
     ],
     "item": "smart_thermostat",
-    "program": "mi_consumersEnergy_residentialHeating,CoolingAndWaterHeatingProgram",
+    "program": "mi_consumersEnergy_residentialApplianceRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 100
+      "number": 75
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$100 rebate for Wi-Fi enabled thermostat. Must replace an existing non-programmable thermostat."
-    },
-    "start_date": "2023-04-01",
-    "end_date": "2023-12-31"
+      "en": "$75 rebate for Wi-Fi enabled smart thermostat."
+    }
   },
   {
     "id": "MI-10",
@@ -419,7 +417,7 @@
       "rebate"
     ],
     "item": "heat_pump_clothes_dryer",
-    "program": "mi_consumersEnergy_applianceRebates",
+    "program": "mi_consumersEnergy_residentialApplianceRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 75
@@ -430,8 +428,7 @@
     "short_description": {
       "en": "$75 rebate for heat pump clothes dryer (electric customers only)."
     },
-    "start_date": "2022-12-01",
-    "end_date": "2023-12-31"
+    "start_date": "2022-12-01"
   },
   {
     "id": "MI-20",
@@ -465,73 +462,15 @@
     "program": "mi_dTE_airConditioners",
     "amount": {
       "type": "dollar_amount",
-      "number": 850
+      "number": 850,
+      "minimum": 150,
+      "maximum": 850
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$850 for 19+ SEER or 18+ SEER2 Air Source Heat Pump."
-    }
-  },
-  {
-    "id": "MI-22",
-    "authority_type": "utility",
-    "authority": "mi-dte",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "mi_dTE_airConditioners",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 750
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$750 for 18 SEER or 17-17.99 SEER2 Air Source Heat Pump."
-    }
-  },
-  {
-    "id": "MI-23",
-    "authority_type": "utility",
-    "authority": "mi-dte",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "mi_dTE_airConditioners",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 250
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$250 for 16-17 SEER or 15.2-16.99 SEER2 Air Source Heat Pump."
-    }
-  },
-  {
-    "id": "MI-24",
-    "authority_type": "utility",
-    "authority": "mi-dte",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "mi_dTE_airConditioners",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 150
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$150 for 15 SEER or 14.3-15.19 SEER2 Air Source Heat Pump."
+      "en": "Up to $850 rebate for air source heat pumps. Rebate value depends on appliance efficiency."
     }
   },
   {
@@ -551,7 +490,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$800 for 17+ SEER or 16+ EER2 Ground Source Heat Pump."
+      "en": "$800 rebate for 16+ EER2 ground source heat pumps."
     }
   },
   {
@@ -571,7 +510,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1000 for ductless heat pumps. Must be 18+ SEER and HSPF 8.8+, or 17+ SEER2 and HSPF2 7.5+."
+      "en": "$1000 for ductless heat pumps. Must be both 17+ SEER2 and HSPF2 7.5+, and must replace a heat pump or electric heat system."
     }
   },
   {
@@ -880,7 +819,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$50 rebate for Induction replacing gas or electric resistance. 3 element minimum. Portable units do not qualify."
+      "en": "$50 rebate for induction stove replacing gas or electric resistance. 3 burner minimum. Portable units do not qualify."
     },
     "start_date": "2024-01-01",
     "end_date": "2024-12-31"
@@ -902,7 +841,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$75 rebate for Wi-Fi enabled smart thermostat."
+      "en": "$75 rebate for Wi-Fi enabled smart thermostat. Thermostat must control an HVAC system with an air conditioner and/or electric heat. Limit 1."
     },
     "start_date": "2024-01-01",
     "end_date": "2024-12-31"
@@ -1033,35 +972,13 @@
     "program": "mi_greatLakesEnergyCooperative_energyWise",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$1000 rebate for central air source heat pump. AHRI Rated 15.0 SEER and 8.5 HSPF."
-    },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
-  },
-  {
-    "id": "MI-50",
-    "authority_type": "utility",
-    "authority": "mi-great-lakes-energy-cooperative",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "mi_greatLakesEnergyCooperative_energyWise",
-    "amount": {
-      "type": "dollar_amount",
       "number": 1500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1500 rebate for ASHP – Central Air-Source Heat Pump (Must be listed on ashp.neep.org)."
+      "en": "Up to $1500 rebate for central air source heat pump. Rebate amount depends on appliance efficiency. Requires a licensed mechanical contractor."
     },
     "start_date": "2024-01-01",
     "end_date": "2024-12-31"
@@ -1084,33 +1001,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$900 rebate per outdoor unit for mini/multi split air-source heat pumps. Limit 2 units."
+      "en": "$900 rebate per outdoor unit for mini/multi split air-source heat pumps. Limit 2 units. Additional $100 per indoor unit."
     },
     "start_date": "2024-01-01",
     "end_date": "2024-12-31",
     "bonus_available": true
-  },
-  {
-    "id": "MI-52",
-    "authority_type": "utility",
-    "authority": "mi-great-lakes-energy-cooperative",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "mi_greatLakesEnergyCooperative_energyWise",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 100
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$100 rebate per indoor unit for mini/multi split air-source heat pumps. No limit on number of units."
-    },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
   },
   {
     "id": "MI-53",
@@ -1278,49 +1173,49 @@
     "program": "mi_indianaMichiganPower_i&MMarketplace",
     "amount": {
       "type": "dollar_amount",
-      "number": 155,
-      "minimum": 50,
-      "maximum": 155
+      "number": 25,
+      "minimum": 15,
+      "maximum": 80
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Get rebates up to $155 on smart thermostats via the I&M Marketplace."
+      "en": "$25 rebate for smart thermostats and $15 rebate for Wi-Fi thermostats. Limit 2 of each kind per account lifetime. Household must have electric heat."
     },
     "bonus_available": true
   },
   {
-    "id": "MI-61",
+    "id": "MI-65",
     "authority_type": "utility",
-    "authority": "mi-indiana-michigan-power",
+    "authority": "mi-consumers-energy",
     "payment_methods": [
-      "pos_rebate"
+      "rebate"
     ],
-    "item": "heat_pump_clothes_dryer",
-    "program": "mi_indianaMichiganPower_i&MMarketplace",
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "mi_consumersEnergy_heatingAndCoolingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 400,
-      "minimum": 130,
-      "maximum": 400
+      "number": 500,
+      "minimum": 75,
+      "maximum": 50
     },
     "owner_status": [
-      "homeowner"
+      "renter"
     ],
     "short_description": {
-      "en": "Up to $400 rebate on a qualifying heat pump clothes dryer."
+      "en": "Up to $500 rebate for installing a new air conditioner. Rebate value depends on efficiency of appliance."
     }
   },
   {
-    "id": "MI-62",
+    "id": "MI-66",
     "authority_type": "utility",
-    "authority": "mi-indiana-michigan-power",
+    "authority": "mi-great-lakes-energy-cooperative",
     "payment_methods": [
-      "pos_rebate"
+      "rebate"
     ],
-    "item": "electric_vehicle_charger",
-    "program": "mi_indianaMichiganPower_i&MMarketplace",
+    "item": "non_heat_pump_water_heater",
+    "program": "mi_greatLakesEnergyCooperative_energyWise",
     "amount": {
       "type": "dollar_amount",
       "number": 100
@@ -1329,29 +1224,116 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$100 rebate on an Enel X Level 2 EV Charger."
-    }
+      "en": "$100 rebate for electric resistance (non-heat pump) water heater. Must be high durability, point-of-use electric, or whole home electric."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
-    "id": "MI-63",
+    "id": "MI-67",
     "authority_type": "utility",
     "authority": "mi-indiana-michigan-power",
     "payment_methods": [
-      "pos_rebate"
+      "rebate"
     ],
-    "item": "electric_stove",
+    "item": "heat_pump_water_heater",
     "program": "mi_indianaMichiganPower_i&MMarketplace",
     "amount": {
       "type": "dollar_amount",
-      "number": 650,
+      "number": 50,
       "minimum": 50,
-      "maximum": 650
+      "maximum": 100
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate up to $650 on an Electric Range."
+      "en": "$50 rebate for electric water heaters. Must be UEF >= 0.92. Limit 2/account/lifetime."
+    }
+  },
+  {
+    "id": "MI-68",
+    "authority_type": "utility",
+    "authority": "mi-upper-peninsula-power-company",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "mi_upperPeninsulaPowerCompany_uPPCOHeatPumpRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 300,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 rebate per ton with baseline SEER of 15 or more. Additional bonuses available for better efficiency heat pumps."
+    },
+    "bonus_available": true
+  },
+  {
+    "id": "MI-69",
+    "authority_type": "utility",
+    "authority": "mi-upper-peninsula-power-company",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "mi_upperPeninsulaPowerCompany_uPPCOENERGYSTAR®Program",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$25 rebate for ENERGY STAR® certified electric clothes dryers."
+    }
+  },
+  {
+    "id": "MI-70",
+    "authority_type": "utility",
+    "authority": "mi-upper-peninsula-power-company",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "mi_upperPeninsulaPowerCompany_uPPCOENERGYSTAR®Program",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for ENERGY STAR® certified heat pump clothes dryers."
+    }
+  },
+  {
+    "id": "MI-71",
+    "authority_type": "utility",
+    "authority": "mi-upper-peninsula-power-company",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "mi_upperPeninsulaPowerCompany_uPPCOENERGYSTAR®Program",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "minimum": 475,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $600 rebate per heater for ENERGY STAR® heat pump water heaters. $600 for UEF ≥ 3.5, $475 for UEF ≥ 3.0."
     }
   }
 ]
