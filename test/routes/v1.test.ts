@@ -445,8 +445,9 @@ test('WI low income response with state and utility filtering is valid and corre
       household_size: 1,
       household_income: 50000,
       tax_filing: 'joint',
-      authority_types: ['state'],
+      authority_types: ['state', 'other'],
       authority: 'wi-focus-on-energy',
+      utility: 'wi-madison-gas-and-electric',
       // TODO: Remove when WI is fully launched.
       include_beta_states: true,
     },
