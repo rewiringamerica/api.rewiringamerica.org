@@ -257,40 +257,17 @@ export function nestedToFlat(input: StringKeyed): StringKeyed {
   return output;
 }
 
-function createCellValue(
-  colName: string,
-  colValue: object | string | number | boolean,
-): sheets_v4.Schema$ExtendedValue {
-  let valToWrite: sheets_v4.Schema$ExtendedValue = {};
-  if (Array.isArray(colValue)) {
-    valToWrite = { stringValue: colValue.join(', ') };
-  } else if (typeof colValue === 'string') {
-    valToWrite = { stringValue: colValue };
-  } else if (typeof colValue === 'boolean') {
-    valToWrite = { boolValue: colValue };
-  } else if (typeof colValue === 'number') {
-    valToWrite = { numberValue: +colValue };
-  } else if (typeof colValue === 'object') {
-    throw new Error(
-      `Trying to write object to spreadsheet. Objects should be flattened prior to write. Column name: ${colName}; value: ${util.inspect(
-        colValue,
-      )}`,
-    );
-  } else {
-    console.warn(
-      `Unexpected value type: ${colName}: ${util.inspect(
-        colValue,
-      )}. Writing as string.`,
-    );
-    valToWrite = { stringValue: colValue };
-  }
-  return valToWrite;
-}
+// This encapsulated the information necessary to write a spreadsheet.
+// It should be agnostic to format (Google Sheet vs Excel).
+export type SpreadsheetData = {
+  records: StringKeyed[];
+  headers: string[];
+};
 
-export function collectedIncentiveToGoogleSheet(
+export function collectedIncentivesToSpreadsheet(
   incentives: CollectedIncentive[],
   fieldMappings: AliasMap,
-): sheets_v4.Schema$Sheet {
+): SpreadsheetData {
   const standardizer = new SpreadsheetStandardizer(
     FIELD_MAPPINGS,
     VALUE_MAPPINGS,
@@ -298,11 +275,11 @@ export function collectedIncentiveToGoogleSheet(
   );
 
   const headers = Object.values(fieldMappings).map(mapping => mapping[0]);
-  let rowData: sheets_v4.Schema$RowData[] = [];
+  const records: StringKeyed[] = [];
   incentives.forEach(incentive => {
     const flattened = nestedToFlat(incentive);
     const aliased = standardizer.convertToAliases(flattened);
-    // First ensure we have a header column for every value, including those
+    // Ensure we have a header column for every value, including those
     // not in our schema.
     for (const key in aliased) {
       if (!headers.includes(key)) {
@@ -310,33 +287,7 @@ export function collectedIncentiveToGoogleSheet(
         headers.push(key);
       }
     }
-
-    // Then populate a row, including "blanks" for keys we don't have.
-    const rowValues: sheets_v4.Schema$CellData[] = [];
-    for (const col of headers) {
-      if (col in aliased) {
-        rowValues.push({
-          userEnteredValue: createCellValue(col, aliased[col]),
-        });
-      } else {
-        rowValues.push({});
-      }
-    }
-    rowData.push({ values: rowValues });
+    records.push(aliased);
   });
-  // Prepend the headers.
-  const headersRow: sheets_v4.Schema$CellData[] = [];
-  for (const col of headers) {
-    headersRow.push({
-      userEnteredValue: { stringValue: col },
-    });
-  }
-  rowData = [{ values: headersRow }, ...rowData];
-  return {
-    data: [
-      {
-        rowData,
-      },
-    ],
-  };
+  return { records, headers };
 }

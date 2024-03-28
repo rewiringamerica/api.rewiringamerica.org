@@ -9,7 +9,7 @@
   },
   "coverage": {
     "state": "WI",
-    "utility": null
+    "utility": "wi-madison-gas-and-electric"
   },
   "location": {
     "state": "WI",
@@ -22,9 +22,9 @@
       "payment_methods": [
         "pos_rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "wi-focus-on-energy",
-      "program": "Water Heating Rebates\n",
+      "program": "Water Heating Rebates",
       "program_url": "https://focusonenergy.com/residential/water-heating",
       "item": {
         "type": "heat_pump_water_heater",
@@ -40,16 +40,16 @@
       ],
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "Instant discounts for electric heat pump water heaters starting at $300 through a Trade Ally contractor."
+      "short_description": "Instant discounts starting at $300 for ENERGY STAR certified electric heat pump water heaters."
     },
     {
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "wi-focus-on-energy",
       "program": "Insulation & Air Sealing Rebates",
-      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing#details",
+      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing",
       "item": {
         "type": "weatherization",
         "name": "Weatherization",
@@ -60,22 +60,21 @@
         "number": 1125
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
-      "start_date": "2023-01-01",
-      "end_date": "2023-12-31",
+      "start_date": "2024-01-01",
+      "end_date": "2024-05-31",
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "$1,125 for ENERGY STAR Qualified Air Sealing for income-qualified customers. Must be completed with Trade Ally contractor installed insulation."
+      "short_description": "Up to $1,125 rebate for ENERGY STAR Qualified Air Sealing, assessment required. For income-qualified customers."
     },
     {
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "wi-focus-on-energy",
-      "program": "Residential Heating & Cooling Rebate",
+      "program": "Heating & Cooling Rebates",
       "program_url": "https://focusonenergy.com/residential/heating-and-cooling",
       "item": {
         "type": "heat_pump_air_conditioner_heater",
@@ -87,22 +86,21 @@
         "number": 1000
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
-      "start_date": "2023-01-01",
-      "end_date": "2023-12-31",
+      "start_date": "2024-01-01",
+      "end_date": "2024-05-31",
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "$1,000 for Air Source Heat Pump replacing natural gas or electric primary heating source."
+      "short_description": "$1,000 rebate for Air Source Heat Pump replacing natural gas or electric resistance."
     },
     {
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "wi-focus-on-energy",
-      "program": "Residential Heating & Cooling Rebate",
+      "program": "Heating & Cooling Rebates",
       "program_url": "https://focusonenergy.com/residential/heating-and-cooling",
       "item": {
         "type": "geothermal_heating_installation",
@@ -111,53 +109,26 @@
       },
       "amount": {
         "type": "dollar_amount",
-        "number": 1000
+        "number": 1000,
+        "maximum": 100
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
-      "start_date": "2023-01-01",
-      "end_date": "2023-12-31",
+      "start_date": "2024-01-01",
+      "end_date": "2024-05-31",
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "$1,000 for Certified Geothermal Heat Pump (with natural gas service)."
+      "short_description": "$750 rebate for Certified Geothermal Heat Pump without natural gas service or $1000 with natural gas service."
     },
     {
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
-      "authority": "wi-focus-on-energy",
-      "program": "Residential Heating & Cooling Rebate",
-      "program_url": "https://focusonenergy.com/residential/heating-and-cooling",
-      "item": {
-        "type": "geothermal_heating_installation",
-        "name": "Geothermal Heating Installation",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/geothermal-heating-installation"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 750
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2023-01-01",
-      "end_date": "2023-12-31",
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "$750 for Certified Geothermal Heat Pump (with no natural gas service)."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "wi-focus-on-energy",
       "program": "Insulation & Air Sealing Rebates",
-      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing#details",
+      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing",
       "item": {
         "type": "weatherization",
         "name": "Weatherization",
@@ -168,23 +139,22 @@
         "number": 675
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
-      "start_date": "2023-01-01",
-      "end_date": "2023-12-31",
+      "start_date": "2024-01-01",
+      "end_date": "2024-05-31",
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "$675 for Attic Insulation for income-qualified customers."
+      "short_description": "Up to $675 rebate for Attic Insulation. For income-qualified customers."
     },
     {
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "wi-focus-on-energy",
       "program": "Insulation & Air Sealing Rebates",
-      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing#details",
+      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing",
       "item": {
         "type": "weatherization",
         "name": "Weatherization",
@@ -195,23 +165,22 @@
         "number": 675
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
-      "start_date": "2023-01-01",
-      "end_date": "2023-12-31",
+      "start_date": "2024-01-01",
+      "end_date": "2024-05-31",
       "ami_qualification": null,
       "eligible": false,
-      "short_description": "$675 for ENERGY STAR Qualified Air Sealing. Must be completed with Trade Ally contractor installed attic or wall insulation improvements."
+      "short_description": "Up to $675 rebate for ENERGY STAR Qualified Air Sealing, assessment required."
     },
     {
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "wi-focus-on-energy",
       "program": "Insulation & Air Sealing Rebates",
-      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing#details",
+      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing",
       "item": {
         "type": "weatherization",
         "name": "Weatherization",
@@ -222,22 +191,21 @@
         "number": 525
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
-      "start_date": "2023-01-01",
-      "end_date": "2023-12-31",
+      "start_date": "2024-01-01",
+      "end_date": "2024-05-31",
       "ami_qualification": null,
       "eligible": false,
-      "short_description": "$525 for Attic Insulation."
+      "short_description": "Up to $525 rebate for Attic Insulation."
     },
     {
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "wi-focus-on-energy",
-      "program": "Residential Customer Solar PV Rebates",
+      "program": "Solar for Homes",
       "program_url": "https://focusonenergy.com/residential/solar-for-homes",
       "item": {
         "type": "rooftop_solar_installation",
@@ -246,26 +214,26 @@
       },
       "amount": {
         "type": "dollar_amount",
-        "number": 500
+        "number": 500,
+        "maximum": 1000
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
-      "start_date": "2023-01-01",
-      "end_date": "2023-12-31",
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "$500 for qualifying solar electric systems. Available to rural residential customers."
+      "short_description": "Up to $500 rebate for residential solar PV systems, additional $500 for rural areas."
     },
     {
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "wi-focus-on-energy",
       "program": "Insulation & Air Sealing Rebates",
-      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing#details",
+      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing",
       "item": {
         "type": "weatherization",
         "name": "Weatherization",
@@ -276,22 +244,21 @@
         "number": 450
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
-      "start_date": "2023-01-01",
-      "end_date": "2023-12-31",
+      "start_date": "2024-01-01",
+      "end_date": "2024-05-31",
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "$450 for Wall Insulation."
+      "short_description": "Up to $450 rebate for Wall Insulation."
     },
     {
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "wi-focus-on-energy",
-      "program": "Residential Heating & Cooling Rebate",
+      "program": "Heating & Cooling Rebates",
       "program_url": "https://focusonenergy.com/residential/heating-and-cooling",
       "item": {
         "type": "heat_pump_air_conditioner_heater",
@@ -303,23 +270,22 @@
         "number": 400
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
-      "start_date": "2023-01-01",
-      "end_date": "2023-12-31",
+      "start_date": "2024-01-01",
+      "end_date": "2024-05-31",
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "$400 for Air Source Heat Pump replacing propane, oil, existing heat pump etc."
+      "short_description": "$400 rebate for Air Source Heat Pump replacing propane, oil, existing heat pump, etc."
     },
     {
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "wi-focus-on-energy",
       "program": "Insulation & Air Sealing Rebates",
-      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing#details",
+      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing",
       "item": {
         "type": "weatherization",
         "name": "Weatherization",
@@ -330,49 +296,21 @@
         "number": 225
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
-      "start_date": "2023-01-01",
-      "end_date": "2023-12-31",
+      "start_date": "2024-01-01",
+      "end_date": "2024-05-31",
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "$225 for Foundation Insulation for income-qualified customers. Must be completed along with Trade Ally contractor installed insulation."
+      "short_description": "Up to $225 rebate for Foundation Insulation. For income-qualified customers."
     },
     {
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "wi-focus-on-energy",
-      "program": "Insulation & Air Sealing Rebates",
-      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing#details",
-      "item": {
-        "type": "weatherization",
-        "name": "Weatherization",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 200
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2023-01-01",
-      "end_date": "2023-12-31",
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "$200 cash back for self-installed attic insulation and air sealing."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "wi-focus-on-energy",
-      "program": "DIY Residential Insulation & Air Sealing Rebate\n",
+      "program": "DIY Insulation & Air Sealing Rebates",
       "program_url": "https://focusonenergy.com/residential/diy",
       "item": {
         "type": "weatherization",
@@ -384,23 +322,48 @@
         "number": 200
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
-      "start_date": "2023-01-01",
-      "end_date": "2023-12-31",
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "$200 cash back for qualified self-installed attic insulation and air sealing."
+      "short_description": "$200 rebate for DIY attic insulation and air sealing, must meet R42 insulation level."
     },
     {
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "wi-focus-on-energy",
       "program": "Insulation & Air Sealing Rebates",
-      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing#details",
+      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization",
+        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 200
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2024-01-01",
+      "end_date": "2024-05-31",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$200 rebate for DIY Attic Insulation & Air Sealing."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "other",
+      "authority": "wi-focus-on-energy",
+      "program": "Insulation & Air Sealing Rebates",
+      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing",
       "item": {
         "type": "weatherization",
         "name": "Weatherization",
@@ -411,23 +374,22 @@
         "number": 150
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
-      "start_date": "2023-01-01",
-      "end_date": "2023-12-31",
+      "start_date": "2024-01-01",
+      "end_date": "2024-05-31",
       "ami_qualification": null,
       "eligible": false,
-      "short_description": "$150 for Foundation Insulation. Must be completed along with Trade Ally contractor installed attic or wall insulation improvements."
+      "short_description": "Up to $150 rebate for Foundation Insulation."
     },
     {
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "wi-focus-on-energy",
       "program": "Insulation & Air Sealing Rebates",
-      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing#details",
+      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing",
       "item": {
         "type": "weatherization",
         "name": "Weatherization",
@@ -438,23 +400,22 @@
         "number": 75
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
-      "start_date": "2023-01-01",
-      "end_date": "2023-12-31",
+      "start_date": "2024-01-01",
+      "end_date": "2024-05-31",
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "$75 for Duct Sealing & Insulation. Must be completed along with Trade Ally contractor installed attic or wall insulation improvements."
+      "short_description": "Up to $75 rebate for Duct Sealing & Insulation."
     },
     {
       "payment_methods": [
         "rebate",
         "pos_rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "wi-focus-on-energy",
-      "program": "Smart Thermostats Rebates\n",
+      "program": "Smart Thermostats Rebates",
       "program_url": "https://focusonenergy.com/residential/smart-thermostats",
       "item": {
         "type": "smart_thermostat",
@@ -465,14 +426,12 @@
         "number": 50
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
-      "start_date": "2023-01-01",
-      "end_date": "2023-12-31",
+      "start_date": "2024-01-01",
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "$50 for Smart Thermostats. Available as instant discounts in the online marketplace or as rebates."
+      "short_description": "$50 rebate for qualified Smart Thermostats. Available as instant discounts in the online marketplace or as rebates."
     }
   ]
 }

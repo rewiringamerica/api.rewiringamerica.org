@@ -3,7 +3,7 @@ import _ from 'lodash';
 import { test } from 'tap';
 import {
   LinkMode,
-  collectedIncentiveToGoogleSheet,
+  collectedIncentivesToSpreadsheet,
   flatToNested,
   flatToNestedValidate,
   googleSheetToFlatData,
@@ -216,7 +216,7 @@ test('Google sheet with links is converted to parseable format', tap => {
   tap.end();
 });
 
-test('CollectedIncentives are converted back into Google Sheets format', tap => {
+test('CollectedIncentives are converted into spreadsheet format', tap => {
   const incentives: CollectedIncentive[] = [
     {
       id: 'VA-1',
@@ -246,134 +246,70 @@ test('CollectedIncentives are converted back into Google Sheets format', tap => 
       omit_from_api: true,
     },
   ];
-  const output = collectedIncentiveToGoogleSheet(incentives, FIELD_MAPPINGS);
-
-  const expected: sheets_v4.Schema$Sheet = {
-    data: [
+  const output = collectedIncentivesToSpreadsheet(incentives, FIELD_MAPPINGS);
+  const expected = {
+    records: [
       {
-        rowData: [
-          {
-            values: [
-              { userEnteredValue: { stringValue: 'ID' } },
-              { userEnteredValue: { stringValue: 'Data Source URL(s)' } },
-              { userEnteredValue: { stringValue: 'Authority Level *' } },
-              { userEnteredValue: { stringValue: 'Authority (Name) *' } },
-              { userEnteredValue: { stringValue: 'Geographic Eligibility' } },
-              { userEnteredValue: { stringValue: 'Program Title *' } },
-              { userEnteredValue: { stringValue: 'Program URL' } },
-              { userEnteredValue: { stringValue: 'Technology *' } },
-              {
-                userEnteredValue: {
-                  stringValue: "Technology (If selected 'Other')",
-                },
-              },
-              {
-                userEnteredValue: {
-                  stringValue: 'Program Description (guideline)',
-                },
-              },
-              {
-                userEnteredValue: {
-                  stringValue: 'Program Description (Spanish)',
-                },
-              },
-              { userEnteredValue: { stringValue: 'Program Status' } },
-              { userEnteredValue: { stringValue: 'Program Start' } },
-              { userEnteredValue: { stringValue: 'Program End' } },
-              { userEnteredValue: { stringValue: 'Rebate Type' } },
-              { userEnteredValue: { stringValue: 'Rebate Value *' } },
-              { userEnteredValue: { stringValue: 'Amount Type *' } },
-              { userEnteredValue: { stringValue: 'Number *' } },
-              { userEnteredValue: { stringValue: 'Unit' } },
-              { userEnteredValue: { stringValue: 'Amount Minimum' } },
-              { userEnteredValue: { stringValue: 'Amount Maximum' } },
-              {
-                userEnteredValue: {
-                  stringValue:
-                    'Amount Representative (only for average values)',
-                },
-              },
-              { userEnteredValue: { stringValue: 'Bonus Description' } },
-              {
-                userEnteredValue: {
-                  stringValue: 'Equipment Standards Restrictions',
-                },
-              },
-              {
-                userEnteredValue: {
-                  stringValue: 'Equipment Capacity Restrictions',
-                },
-              },
-              { userEnteredValue: { stringValue: 'Contractor Restrictions' } },
-              { userEnteredValue: { stringValue: 'Income Restrictions' } },
-              {
-                userEnteredValue: {
-                  stringValue: 'Tax - filing Status Restrictions',
-                },
-              },
-              { userEnteredValue: { stringValue: 'Homeowner / Renter' } },
-              { userEnteredValue: { stringValue: 'Other Restrictions' } },
-              { userEnteredValue: { stringValue: 'Stacking Details' } },
-              { userEnteredValue: { stringValue: 'Financing Details' } },
-              { userEnteredValue: { stringValue: 'Editorial Notes' } },
-              { userEnteredValue: { stringValue: 'Questions' } },
-              { userEnteredValue: { stringValue: 'Omit from API?' } },
-            ],
-          },
-          {
-            values: [
-              { userEnteredValue: { stringValue: 'VA-1' } },
-              { userEnteredValue: { stringValue: 'appalachia.com' } },
-              { userEnteredValue: { stringValue: 'Utility' } },
-              { userEnteredValue: { stringValue: 'Appalachian Power' } },
-              {},
-              { userEnteredValue: { stringValue: 'The Appalachian Program' } },
-              { userEnteredValue: { stringValue: 'appalachianprogram.com' } },
-              {
-                userEnteredValue: {
-                  stringValue: 'Heat Pump Dryers / Clothes Dryer',
-                },
-              },
-              {},
-              {
-                userEnteredValue: {
-                  stringValue:
-                    'Receive a $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',
-                },
-              },
-              {
-                userEnteredValue: { stringValue: 'Unas palabras en español.' },
-              },
-              { userEnteredValue: { stringValue: 'Active' } },
-              { userEnteredValue: { stringValue: '2022-01-01' } },
-              { userEnteredValue: { stringValue: '2026-12-31' } },
-              { userEnteredValue: { stringValue: 'Rebate (Post Purchase)' } },
-              { userEnteredValue: { stringValue: '$50 flat rate' } },
-              { userEnteredValue: { stringValue: 'Dollar Amount' } },
-              { userEnteredValue: { numberValue: 50 } },
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              {},
-              { userEnteredValue: { stringValue: 'Homeowner, Renter' } },
-              {},
-              {},
-              {},
-              {},
-              {},
-              { userEnteredValue: { boolValue: true } },
-            ],
-          },
-        ],
+        ID: 'VA-1',
+        'Data Source URL(s)': ['appalachia.com'],
+        'Authority (Name) *': 'Appalachian Power',
+        'Authority Level *': 'Utility',
+        'Technology *': 'Heat Pump Dryers / Clothes Dryer',
+        'Program Title *': 'The Appalachian Program',
+        'Program URL': 'appalachianprogram.com',
+        'Program Status': 'Active',
+        'Rebate Value *': '$50 flat rate',
+        'Rebate Type': ['Rebate (Post Purchase)'],
+        'Amount Type *': 'Dollar Amount',
+        'Number *': 50,
+        'Homeowner / Renter': ['Homeowner', 'Renter'],
+        'Program Description (guideline)':
+          'Receive a $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',
+        'Program Description (Spanish)': 'Unas palabras en español.',
+        'Program Start': '2022-01-01',
+        'Program End': '2026-12-31',
+        'Omit from API?': true,
       },
     ],
+    headers: [
+      'ID',
+      'Data Source URL(s)',
+      'Authority Level *',
+      'Authority (Name) *',
+      'Geographic Eligibility',
+      'Program Title *',
+      'Program URL',
+      'Technology *',
+      "Technology (If selected 'Other')",
+      'Program Description (guideline)',
+      'Program Description (Spanish)',
+      'Program Status',
+      'Program Start',
+      'Program End',
+      'Rebate Type',
+      'Rebate Value *',
+      'Amount Type *',
+      'Number *',
+      'Unit',
+      'Amount Minimum',
+      'Amount Maximum',
+      'Amount Representative (only for average values)',
+      'Bonus Description',
+      'Equipment Standards Restrictions',
+      'Equipment Capacity Restrictions',
+      'Contractor Restrictions',
+      'Income Restrictions',
+      'Tax - filing Status Restrictions',
+      'Homeowner / Renter',
+      'Other Restrictions',
+      'Stacking Details',
+      'Financing Details',
+      'Editorial Notes',
+      'Questions',
+      'Omit from API?',
+    ],
   };
+
   tap.strictSame(output, expected);
   tap.end();
 });
