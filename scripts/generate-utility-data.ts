@@ -32,6 +32,9 @@ const EXCLUSIONS: Set<string | number> = new Set([
   62264, // Hohokam; no electric
   78679, // Ocotillo; no electric
 
+  // CA
+  'Bay Area Regional Energy Network (BayREN)', // Not a utility, but a network of local governments to promote efficiency
+
   // CO
   6752, // Town of Frederick; now served by United Power
 
@@ -77,6 +80,18 @@ const OVERRIDES = new Map<string | number, string>([
   [40165, 'DixiePower'],
   [62683, "Tohono O'odham Utility Authority"],
   [606953, 'UniSource Energy Services'],
+
+  // CA
+  [207, 'Alameda Municipal Power'],
+  [16088, 'Riverside Public Utilities'],
+  [16655, 'Silicon Valley Power'],
+  [19229, 'Truckee Donner Public Utility District'],
+  [14534, 'Pasadena Water and Power'],
+  [16295, 'Roseville Electric'],
+  [11124, 'Lodi Electric Utility'],
+  [7294, 'Glendale Water and Power'],
+  [590, 'Anaheim Public Utilities'],
+  [2507, 'Burbank Water and Power'],
 
   // CO
   [5997, 'Estes Park Power and Communications'],
