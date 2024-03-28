@@ -636,7 +636,7 @@ test('correctly evaluates savings when state tax liability is lower than max sav
     program: 'co_hvacAndWaterHeaterIncentives',
     amount: {
       type: AmountType.DollarAmount,
-      number: 10000,
+      number: 5000,
     },
     owner_status: [
       OwnerStatus.Homeowner,
@@ -677,6 +677,6 @@ test('correctly evaluates savings when state tax liability is lower than max sav
 
   t.ok(result);
   t.equal(result.stateIncentives.length, 1);
-  t.equal(result.stateIncentives[0].amount.number, 4400);
+  t.equal(result.stateIncentives[0].amount.number, 5000);
   t.equal(result.savings.tax_credit, 4400);
 });
