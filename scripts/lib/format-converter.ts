@@ -19,6 +19,7 @@ const ajv = new Ajv({ allErrors: true, coerceTypes: 'array' });
 // and generate both directly from CollectedIncentive schema.
 const ARRAY_FIELDS = ['data_urls', 'payment_methods', 'owner_status'];
 const BOOL_FIELDS = ['omit_from_api'];
+const IGNORE_FIELDS = ['Description character count', 'Description word count'];
 
 const validate = ajv
   .addSchema(LOCALIZABLE_STRING_SCHEMA)
@@ -34,6 +35,8 @@ export type CollectedIncentivesWithErrors = Partial<CollectedIncentive> & {
  * To convert without validation, call flatToNested instead.
  * @param rows the result of csv-parse.
  * @param arrayCols any column names that should be treated as comma-delimited arrays
+ * @param boolCols any column names that should be treated as booleans
+ * @param ignoreCols any column names that should not be included in the output
  * @returns a tuple of valid and invalid records.
  */
 export function flatToNestedValidate(
@@ -42,10 +45,11 @@ export function flatToNestedValidate(
   /* eslint-enable @typescript-eslint/no-explicit-any */
   arrayCols: string[] = ARRAY_FIELDS,
   boolCols: string[] = BOOL_FIELDS,
+  ignoreCols: string[] = IGNORE_FIELDS,
 ): [CollectedIncentive[], CollectedIncentivesWithErrors[]] {
   const valids: CollectedIncentive[] = [];
   const invalids: CollectedIncentivesWithErrors[] = [];
-  for (const json of flatToNested(rows, arrayCols, boolCols)) {
+  for (const json of flatToNested(rows, arrayCols, boolCols, ignoreCols)) {
     if (!validate(json)) {
       const invalid = json as CollectedIncentivesWithErrors;
       if (validate.errors !== undefined && validate.errors !== null) {
@@ -82,11 +86,13 @@ export function flatToNested(
   /* eslint-enable @typescript-eslint/no-explicit-any */
   arrayCols: string[] = [],
   boolCols: string[] = [],
+  ignoreCols: string[] = [],
 ): Partial<CollectedIncentive>[] {
   const objs: Record<string, string | string[] | object>[] = [];
   for (const row of rows) {
     const output: NestedKeyVal = {};
     for (const columnName in row) {
+      if (ignoreCols.includes(columnName)) continue;
       let val = row[columnName];
       if (val === '') continue;
       if (arrayCols.includes(columnName)) {
@@ -131,7 +137,7 @@ function coerceToBoolean(input: string): boolean | string {
   return input;
 }
 
-function colToLetter(column: number) {
+export function colToLetter(column: number) {
   let temp,
     letter = '';
   while (column > 0) {
