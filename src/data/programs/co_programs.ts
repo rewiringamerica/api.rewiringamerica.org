@@ -217,6 +217,14 @@ export const CO_PROGRAMS = {
       en: 'https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps',
     },
   },
+  co_xcelEnergy_heatPumpWaterHeaterRebates: {
+    name: {
+      en: 'Heat Pump Water Heater Rebates',
+    },
+    url: {
+      en: 'https://co.my.xcelenergy.com/s/residential/home-rebates/water-heaters',
+    },
+  },
   co_coloradoEnergyOffice_electricVehicleTaxCredits: {
     name: {
       en: 'Electric Vehicle Tax Credits',
@@ -324,6 +332,14 @@ export const CO_PROGRAMS = {
   co_sangreDeCristoElectricAssociation_rebates: {
     name: {
       en: 'Rebates',
+    },
+    url: {
+      en: 'https://www.myelectric.coop/energy-efficiency/energy-efficiency-credit-programs/',
+    },
+  },
+  'co_sangreDeCristoElectricAssociation_saveEnergy&Money': {
+    name: {
+      en: 'Save Energy & Money',
     },
     url: {
       en: 'https://www.myelectric.coop/energy-efficiency/energy-efficiency-credit-programs/',

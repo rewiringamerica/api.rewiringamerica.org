@@ -801,6 +801,29 @@
     },
     {
       "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-xcel-energy",
+      "program": "Heat Pump Water Heater Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/home-rebates/water-heaters",
+      "item": {
+        "type": "heat_pump_water_heater",
+        "name": "Heat Pump Water Heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 800
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$800 off qualifying new heat pump water heaters for Xcel customers. Must be installed by registered contractor and may not exceed 80 gallons."
+    },
+    {
+      "payment_methods": [
         "tax_credit"
       ],
       "authority_type": "state",
