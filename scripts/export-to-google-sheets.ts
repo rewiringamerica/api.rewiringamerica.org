@@ -25,6 +25,7 @@ async function exportToGoogleSheets(state: string, file: IncentiveFile) {
     FIELD_MAPPINGS,
     true,
     FIELD_METADATA['short_description.en'].column_aliases[0],
+    Object.values(FIELD_METADATA),
   );
   if (!sheet.properties) {
     sheet.properties = {};

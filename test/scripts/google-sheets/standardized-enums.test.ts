@@ -258,7 +258,16 @@ test('Creates correct standardized enums sheet', tap => {
         ],
       },
     ],
-    properties: { title: 'Standardized Enum List Values' },
+    properties: { title: 'Standardized Enum List Values', sheetId: 1 },
+    protectedRanges: [
+      {
+        range: {
+          sheetId: 1,
+        },
+        requestingUserCanEdit: true,
+        warningOnly: true,
+      },
+    ],
   };
 
   tap.strictSame(output, expected);
