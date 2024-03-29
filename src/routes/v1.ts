@@ -31,9 +31,6 @@ function transformIncentives(
     item: {
       type: incentive.item,
       name: t('items', incentive.item, language),
-      url: incentive.more_info_url
-        ? tr(incentive.more_info_url, language)
-        : t('urls', incentive.item, language),
     },
     program: tr(PROGRAMS[incentive.program as keyof Programs].name, language),
     program_url: tr(
