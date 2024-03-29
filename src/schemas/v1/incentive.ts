@@ -54,9 +54,6 @@ export const API_INCENTIVE_SCHEMA = {
         name: {
           type: 'string',
         },
-        url: {
-          type: 'string',
-        },
       },
       required: ['type'],
       additionalProperties: false,
