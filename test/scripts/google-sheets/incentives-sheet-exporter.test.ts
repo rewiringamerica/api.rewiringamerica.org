@@ -10,7 +10,7 @@ test('Spreadsheet format converts to Google sheet without standard header', tap 
       { bar: true, baz: 10 },
     ],
   };
-  const output = spreadsheetToGoogleSheet(input, false);
+  const output = spreadsheetToGoogleSheet(input, false, 'baz');
 
   const expected = {
     data: [
@@ -82,6 +82,40 @@ test('Spreadsheet format converts to Google sheet without standard header', tap 
                   },
                 },
               },
+              {
+                userEnteredFormat: {
+                  horizontalAlignment: 'CENTER',
+                  textFormat: { bold: true },
+                  wrapStrategy: 'WRAP',
+                  backgroundColorStyle: {
+                    rgbColor: {
+                      red: 0.9529411764705882,
+                      green: 0.9529411764705882,
+                      blue: 0.9529411764705882,
+                      alpha: 1,
+                    },
+                  },
+                },
+                userEnteredValue: {
+                  stringValue: 'Description character count',
+                },
+              },
+              {
+                userEnteredFormat: {
+                  horizontalAlignment: 'CENTER',
+                  textFormat: { bold: true },
+                  wrapStrategy: 'WRAP',
+                  backgroundColorStyle: {
+                    rgbColor: {
+                      red: 0.9529411764705882,
+                      green: 0.9529411764705882,
+                      blue: 0.9529411764705882,
+                      alpha: 1,
+                    },
+                  },
+                },
+                userEnteredValue: { stringValue: 'Description word count' },
+              },
             ],
           },
           {
@@ -136,6 +170,34 @@ test('Spreadsheet format converts to Google sheet without standard header', tap 
                   verticalAlignment: 'TOP',
                 },
               },
+              {
+                userEnteredFormat: {
+                  borders: {
+                    top: { style: 'SOLID' },
+                    bottom: { style: 'SOLID' },
+                    left: { style: 'SOLID' },
+                    right: { style: 'SOLID' },
+                  },
+                  wrapStrategy: 'WRAP',
+                  verticalAlignment: 'TOP',
+                },
+                userEnteredValue: { formulaValue: '=LEN(C2)' },
+              },
+              {
+                userEnteredFormat: {
+                  borders: {
+                    top: { style: 'SOLID' },
+                    bottom: { style: 'SOLID' },
+                    left: { style: 'SOLID' },
+                    right: { style: 'SOLID' },
+                  },
+                  wrapStrategy: 'WRAP',
+                  verticalAlignment: 'TOP',
+                },
+                userEnteredValue: {
+                  formulaValue: '=IF(C2="","",COUNTA(SPLIT(C2," ")))',
+                },
+              },
             ],
           },
           {
@@ -188,6 +250,34 @@ test('Spreadsheet format converts to Google sheet without standard header', tap 
                   },
                   wrapStrategy: 'WRAP',
                   verticalAlignment: 'TOP',
+                },
+              },
+              {
+                userEnteredFormat: {
+                  borders: {
+                    top: { style: 'SOLID' },
+                    bottom: { style: 'SOLID' },
+                    left: { style: 'SOLID' },
+                    right: { style: 'SOLID' },
+                  },
+                  wrapStrategy: 'WRAP',
+                  verticalAlignment: 'TOP',
+                },
+                userEnteredValue: { formulaValue: '=LEN(C3)' },
+              },
+              {
+                userEnteredFormat: {
+                  borders: {
+                    top: { style: 'SOLID' },
+                    bottom: { style: 'SOLID' },
+                    left: { style: 'SOLID' },
+                    right: { style: 'SOLID' },
+                  },
+                  wrapStrategy: 'WRAP',
+                  verticalAlignment: 'TOP',
+                },
+                userEnteredValue: {
+                  formulaValue: '=IF(C3="","",COUNTA(SPLIT(C3," ")))',
                 },
               },
             ],

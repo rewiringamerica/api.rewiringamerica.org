@@ -54,6 +54,19 @@ test('eligible boolean fields are converted', tap => {
   tap.end();
 });
 
+test('ignored columns are removed', tap => {
+  const objs = [
+    {
+      basicProperty: 'foo',
+      ignoredProperty: 'some values we do not care about',
+    },
+  ];
+  tap.matchOnly(flatToNested(objs, [], [], ['ignoredProperty']), [
+    { basicProperty: 'foo' },
+  ]);
+  tap.end();
+});
+
 test('nested columns properly expanded', tap => {
   const objs = [
     {

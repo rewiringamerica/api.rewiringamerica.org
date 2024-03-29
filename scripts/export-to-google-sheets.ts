@@ -24,6 +24,7 @@ async function exportToGoogleSheets(state: string, file: IncentiveFile) {
     collected,
     FIELD_MAPPINGS,
     true,
+    FIELD_METADATA['short_description.en'].column_aliases[0],
   );
   if (!sheet.properties) {
     sheet.properties = {};
@@ -63,6 +64,7 @@ async function exportToGoogleSheets(state: string, file: IncentiveFile) {
   const valuesResp = await sheetsClient.spreadsheets.values.get({
     spreadsheetId: resp.data.spreadsheetId,
     range: INCENTIVE_SHEET_NAME, // Entire sheet name is a valid range.
+    valueRenderOption: 'FORMULA',
   });
   if (valuesResp.status !== 200 || !valuesResp.data) {
     throw new Error(`Spreadsheet values read failed: ${valuesResp.statusText}`);

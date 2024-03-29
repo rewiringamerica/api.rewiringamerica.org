@@ -3,6 +3,7 @@ import util from 'util';
 import { CollectedIncentive } from '../../../src/data/state_incentives';
 import {
   SpreadsheetData,
+  colToLetter,
   collectedIncentivesToSpreadsheet,
 } from '../format-converter';
 import { AliasMap } from '../spreadsheet-mappings';
@@ -95,22 +96,42 @@ export function collectedIncentiveToGoogleSheet(
   incentives: CollectedIncentive[],
   fieldMappings: AliasMap,
   useStandardHeader: boolean,
+  descriptionColumnName?: string,
 ) {
   const spreadsheetData = collectedIncentivesToSpreadsheet(
     incentives,
     fieldMappings,
   );
-  return spreadsheetToGoogleSheet(spreadsheetData, useStandardHeader);
+  return spreadsheetToGoogleSheet(
+    spreadsheetData,
+    useStandardHeader,
+    descriptionColumnName,
+  );
 }
 
+// descriptionColumnName is used to add formulas that depend on that column.
+// It's not required if you don't want them added.
 export function spreadsheetToGoogleSheet(
   spreadsheet: SpreadsheetData,
   useStandardHeader: boolean,
+  descriptionColumnName?: string,
 ) {
   const { records, headers } = spreadsheet;
 
+  let descCol: string;
+  if (descriptionColumnName) {
+    if (!headers.includes(descriptionColumnName)) {
+      throw new Error(
+        `Formula columns requested, but couldn't find the short_description column. Expected column name: ${descriptionColumnName}`,
+      );
+    } else {
+      descCol = colToLetter(1 + headers.indexOf(descriptionColumnName));
+    }
+  }
+  const numHeaders = useStandardHeader ? 2 : 1;
+
   let rowData: sheets_v4.Schema$RowData[] = [];
-  records.forEach(record => {
+  records.forEach((record, rowInd) => {
     const rowValues: sheets_v4.Schema$CellData[] = [];
     for (const col of headers) {
       const cell: sheets_v4.Schema$CellData = {
@@ -120,6 +141,21 @@ export function spreadsheetToGoogleSheet(
         cell.userEnteredValue = createCellValue(col, record[col]);
       }
       rowValues.push(cell);
+    }
+    if (descriptionColumnName) {
+      const descCellAddress = `${descCol}${rowInd + numHeaders + 1}`;
+      rowValues.push({
+        userEnteredFormat: standardValueCellFormat,
+        userEnteredValue: {
+          formulaValue: `=LEN(${descCellAddress})`,
+        },
+      });
+      rowValues.push({
+        userEnteredFormat: standardValueCellFormat,
+        userEnteredValue: {
+          formulaValue: `=IF(${descCellAddress}="","",COUNTA(SPLIT(${descCellAddress}," ")))`,
+        },
+      });
     }
     rowData.push({ values: rowValues });
   });
@@ -183,6 +219,16 @@ export function spreadsheetToGoogleSheet(
       userEnteredFormat: format,
     });
   });
+  if (descriptionColumnName) {
+    primaryHeaderRow.push({
+      userEnteredFormat: headerBaseFormat,
+      userEnteredValue: { stringValue: 'Description character count' },
+    });
+    primaryHeaderRow.push({
+      userEnteredFormat: headerBaseFormat,
+      userEnteredValue: { stringValue: 'Description word count' },
+    });
+  }
   headerRows.push({ values: primaryHeaderRow });
   rowData = [...headerRows, ...rowData];
   const output: sheets_v4.Schema$Sheet = {
