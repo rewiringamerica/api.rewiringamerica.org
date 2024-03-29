@@ -31,6 +31,7 @@ import {
   CalculatedIncentive,
   LocationParams,
 } from './incentives-calculation';
+import { estimateStateTaxAmount } from './tax-brackets';
 
 export function getAllStateIncentives(
   stateId: string,
@@ -198,6 +199,17 @@ export function calculateStateIncentivesAndSavings(
 
     savings[item.payment_methods[0]] += amount;
   });
+
+  // Get state tax owed to determine max potential tax savings
+  const stateTaxOwed = estimateStateTaxAmount(
+    request.household_income,
+    stateId,
+  );
+
+  // You can't save more than tax owed. Choose the lesser of state tax owed vs tax credit savings
+  savings.tax_credit = stateTaxOwed
+    ? Math.min(stateTaxOwed.taxOwed, savings.tax_credit)
+    : savings.tax_credit;
 
   return {
     stateIncentives,
