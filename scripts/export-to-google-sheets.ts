@@ -6,6 +6,7 @@ import { FILES, IncentiveFile } from './incentive-spreadsheet-registry';
 import { authorize } from './lib/auth-helper';
 import { generateDataModelTable } from './lib/google-sheets/data-model';
 import { collectedIncentiveToGoogleSheet } from './lib/google-sheets/incentives-sheet-exporter';
+import { generateStandardEnumsSheet } from './lib/google-sheets/standardized-enums';
 import { FIELD_MAPPINGS, FIELD_METADATA } from './lib/spreadsheet-mappings';
 
 const INCENTIVE_SHEET_NAME = 'Incentives Data';
@@ -32,6 +33,7 @@ async function exportToGoogleSheets(state: string, file: IncentiveFile) {
   const workbook: sheets_v4.Schema$Spreadsheet = {
     sheets: [
       generateDataModelTable(FIELD_METADATA),
+      generateStandardEnumsSheet(FIELD_METADATA),
       sheet,
     ],
   };
