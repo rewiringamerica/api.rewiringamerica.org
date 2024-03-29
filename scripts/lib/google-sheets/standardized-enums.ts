@@ -137,6 +137,18 @@ export function generateStandardEnumsSheet(metadata: {
     ],
     properties: {
       title: 'Standardized Enum List Values',
+      sheetId: 1,
     },
+    protectedRanges: [
+      {
+        range: {
+          sheetId: 1,
+        },
+        requestingUserCanEdit: true,
+        // We discourage changes, but want to enable data collectors to make
+        // them when there need to be changes to our schema.
+        warningOnly: true,
+      },
+    ],
   };
 }

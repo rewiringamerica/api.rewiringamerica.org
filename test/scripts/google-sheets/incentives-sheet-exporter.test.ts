@@ -10,7 +10,16 @@ test('Spreadsheet format converts to Google sheet without standard header', tap 
       { bar: true, baz: 10 },
     ],
   };
-  const output = spreadsheetToGoogleSheet(input, false, 'baz');
+  const output = spreadsheetToGoogleSheet(input, false, 'baz', [
+    {
+      column_aliases: ['bar'],
+      description: 'A property',
+      values: {
+        valA: { value_aliases: ['unused'] },
+        valB: { value_aliases: ['unused'] },
+      },
+    },
+  ]);
 
   const expected = {
     data: [
@@ -144,6 +153,19 @@ test('Spreadsheet format converts to Google sheet without standard header', tap 
                   wrapStrategy: 'WRAP',
                   verticalAlignment: 'TOP',
                 },
+                dataValidation: {
+                  strict: true,
+                  showCustomUi: true,
+                  condition: {
+                    type: 'ONE_OF_RANGE',
+                    values: [
+                      {
+                        userEnteredValue:
+                          "='Standardized Enum List Values'!$A$2:$A$3",
+                      },
+                    ],
+                  },
+                },
               },
               {
                 userEnteredFormat: {
@@ -226,6 +248,19 @@ test('Spreadsheet format converts to Google sheet without standard header', tap 
                   verticalAlignment: 'TOP',
                 },
                 userEnteredValue: { boolValue: true },
+                dataValidation: {
+                  strict: true,
+                  showCustomUi: true,
+                  condition: {
+                    type: 'ONE_OF_RANGE',
+                    values: [
+                      {
+                        userEnteredValue:
+                          "='Standardized Enum List Values'!$A$2:$A$3",
+                      },
+                    ],
+                  },
+                },
               },
               {
                 userEnteredFormat: {
