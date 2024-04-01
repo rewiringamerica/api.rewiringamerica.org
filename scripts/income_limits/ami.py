@@ -157,9 +157,8 @@ for col in string_cols:
     ami_limits[col] = ami_limits[col].str.zfill(str_len)
 ami_limits = clean_colnames(ami_limits)
 
-# select "base" ami columns (4 person households)
-geographic_cols = ['fips2010_identifier', 'hud_area_code', 'hud_area_name',
-                   'state_name', 'usps_state_abbr', 'usps_state_code', 'county_or_town_name']
+#select "base" ami columns (4 person households)
+geographic_cols = ['fips2010_identifier', 'usps_state_abbr', 'hud_area_code']
 ami_cols = ['2023_median_family_income'] + \
     [col for col in ami_limits.columns if 'ami_4_persons' in col]
 ami_limits = ami_limits[geographic_cols + ami_cols]
@@ -173,9 +172,9 @@ ami_limits['county_geoid'] = ami_limits.fips2010_identifier.apply(
 # Join amis to zctas and to tracts, where new england states will match on countysub geoids
 # and non-new england states will match on county geoids
 # The following to not have a match in the crosswalk, and thus get dropped
-# * 15 unpopulated countysubs in New England 
+# * 15 unpopulated countysubs in New England
 # * Sullivan MO which is an edge case of a county sub outside New England
-#TODO: add data checks?
+# TODO: add data checks?
 ami_countysub_zcta_non_new_england = ami_limits.merge(
     zcta_csub_crosswalk, left_on='county_geoid', right_on='county_code', how='inner')
 ami_countysub_zcta_new_england = ami_limits.merge(
@@ -210,6 +209,17 @@ ami_by_tract = aggregate_over_origin(
 #     weight_col='zcta_to_cousub20_allocation_factor',
 #     minimize_type_2_error=False)
 # %%
+# -- Create a county metro status lookup for EV incentives  -- #
+# A county resides entirely within or outside of a metro area, and if it is within
+# a metro area, it will be indicated by the FMR Area prefix
+ami_limits['county_geoid'] = ami_limits.fips2010_identifier.str.slice(0,5)
+ami_limits['is_metro'] = ami_limits.hud_area_code.str.slice(0,5) == 'METRO'
+county_metro_status = ami_limits[['county_geoid', 'is_metro']].drop_duplicates()
+
+# %%
 # -- Write out data -- #
-ami_by_zcta.to_csv(DATA_FPATH / 'processed' / 'amy_by_zcta.csv', index=False)
-ami_by_tract.to_csv(DATA_FPATH / 'processed' / 'amy_by_tract.csv', index=False)
+ami_by_zcta.to_csv(DATA_FPATH / 'processed' / 'ami_by_zcta.csv', index=False)
+ami_by_tract.to_csv(DATA_FPATH / 'processed' / 'ami_by_tract.csv', index=False)
+county_metro_status.to_csv(DATA_FPATH / 'processed' / 'metro_status_by_county.csv', index=False)
+
+# %%
