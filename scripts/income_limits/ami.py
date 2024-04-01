@@ -221,5 +221,3 @@ county_metro_status = ami_limits[['county_geoid', 'is_metro']].drop_duplicates()
 ami_by_zcta.to_csv(DATA_FPATH / 'processed' / 'ami_by_zcta.csv', index=False)
 ami_by_tract.to_csv(DATA_FPATH / 'processed' / 'ami_by_tract.csv', index=False)
 county_metro_status.to_csv(DATA_FPATH / 'processed' / 'metro_status_by_county.csv', index=False)
-
-# %%
