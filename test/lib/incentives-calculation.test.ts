@@ -40,7 +40,7 @@ afterEach(async t => {
   await t.context.db.close();
 });
 
-test('correctly evaluates scenerio "Single w/ $120k Household income"', async t => {
+test('correctly evaluates scenario "Single w/ $120k Household income"', async t => {
   const data = calculateIncentives(AMIS_FOR_11211, {
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
@@ -99,7 +99,7 @@ test('correctly evaluates state incentives for beta states', async t => {
   t.not(data.incentives.length, 0);
 });
 
-test('correctly evaluates scenerio "Joint w/ 5 persons and $60k Household income"', async t => {
+test('correctly evaluates scenario "Joint w/ 5 persons and $60k Household income"', async t => {
   const data = calculateIncentives(AMIS_FOR_11211, {
     owner_status: OwnerStatus.Homeowner,
     household_income: 60000,
@@ -109,7 +109,7 @@ test('correctly evaluates scenerio "Joint w/ 5 persons and $60k Household income
   t.ok(data);
 });
 
-test('correctly evaluates scenerio "Joint w/ $300k Household income"', async t => {
+test('correctly evaluates scenario "Joint w/ $300k Household income"', async t => {
   const data = calculateIncentives(AMIS_FOR_11211, {
     owner_status: OwnerStatus.Homeowner,
     household_income: 300000,
@@ -129,7 +129,7 @@ test('correctly evaluates scenario "MFS w/ $100k Household income"', async t => 
   t.ok(data);
 });
 
-test('correctly evaluates scenerio "Single w/ $120k Household income in the Bronx"', async t => {
+test('correctly evaluates scenario "Single w/ $120k Household income in the Bronx"', async t => {
   const data = calculateIncentives(AMIS_FOR_11211, {
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
@@ -180,29 +180,29 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
   const posRebates = _.keyBy(pos_rebate_incentives, 'item');
   t.equal(posRebates['electric_panel'].eligible, true);
   t.equal(posRebates['electric_panel'].amount.number, 4000);
-  t.equal(posRebates['electric_panel'].start_date, '2023');
+  t.equal(posRebates['electric_panel'].start_date, '2025');
   t.equal(posRebates['electric_stove'].eligible, true);
   t.equal(posRebates['electric_stove'].amount.number, 840);
-  t.equal(posRebates['electric_stove'].start_date, '2023');
+  t.equal(posRebates['electric_stove'].start_date, '2025');
   t.equal(posRebates['electric_wiring'].eligible, true);
   t.equal(posRebates['electric_wiring'].amount.number, 2500);
-  t.equal(posRebates['electric_wiring'].start_date, '2023');
+  t.equal(posRebates['electric_wiring'].start_date, '2025');
   t.equal(posRebates['heat_pump_water_heater'].eligible, true);
   t.equal(posRebates['heat_pump_water_heater'].amount.number, 1750);
-  t.equal(posRebates['heat_pump_water_heater'].start_date, '2023');
+  t.equal(posRebates['heat_pump_water_heater'].start_date, '2025');
   t.equal(posRebates['heat_pump_air_conditioner_heater'].eligible, true);
   t.equal(posRebates['heat_pump_air_conditioner_heater'].amount.number, 8000);
-  t.equal(posRebates['heat_pump_air_conditioner_heater'].start_date, '2023');
+  t.equal(posRebates['heat_pump_air_conditioner_heater'].start_date, '2025');
   t.equal(posRebates['heat_pump_clothes_dryer'].eligible, true);
   t.equal(posRebates['heat_pump_clothes_dryer'].amount.number, 840);
-  t.equal(posRebates['heat_pump_clothes_dryer'].start_date, '2023');
+  t.equal(posRebates['heat_pump_clothes_dryer'].start_date, '2025');
   t.equal(posRebates['weatherization'].eligible, true);
   t.equal(posRebates['weatherization'].amount.number, 1600);
-  t.equal(posRebates['weatherization'].start_date, '2023');
+  t.equal(posRebates['weatherization'].start_date, '2025');
 
   t.equal(performance_rebate_incentives[0].eligible, true);
   t.equal(performance_rebate_incentives[0].amount.number, 4000);
-  t.equal(performance_rebate_incentives[0].start_date, '2023');
+  t.equal(performance_rebate_incentives[0].start_date, '2025');
 
   const taxCredits = _.keyBy(tax_credit_incentives, 'item');
   t.equal(taxCredits['battery_storage_installation'].eligible, true);
@@ -239,7 +239,7 @@ test('correctly evaluates scenerio "Single w/ $120k Household income in the Bron
   t.equal(taxCredits['used_electric_vehicle'].start_date, '2023');
 });
 
-test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k Household income in San Francisco"', async t => {
+test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k Household income in San Francisco"', async t => {
   const data = calculateIncentives(AMIS_FOR_94117, {
     owner_status: OwnerStatus.Homeowner,
     household_income: 250000,
@@ -290,29 +290,29 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
   const posRebates = _.keyBy(pos_rebate_incentives, 'item');
   t.equal(posRebates['electric_panel'].eligible, true);
   t.equal(posRebates['electric_panel'].amount.number, 4000);
-  t.equal(posRebates['electric_panel'].start_date, '2023');
+  t.equal(posRebates['electric_panel'].start_date, '2025');
   t.equal(posRebates['electric_stove'].eligible, true);
   t.equal(posRebates['electric_stove'].amount.number, 840);
-  t.equal(posRebates['electric_stove'].start_date, '2023');
+  t.equal(posRebates['electric_stove'].start_date, '2025');
   t.equal(posRebates['electric_wiring'].eligible, true);
   t.equal(posRebates['electric_wiring'].amount.number, 2500);
-  t.equal(posRebates['electric_wiring'].start_date, '2023');
+  t.equal(posRebates['electric_wiring'].start_date, '2025');
   t.equal(posRebates['heat_pump_water_heater'].eligible, true);
   t.equal(posRebates['heat_pump_water_heater'].amount.number, 1750);
-  t.equal(posRebates['heat_pump_water_heater'].start_date, '2023');
+  t.equal(posRebates['heat_pump_water_heater'].start_date, '2025');
   t.equal(posRebates['heat_pump_air_conditioner_heater'].eligible, true);
   t.equal(posRebates['heat_pump_air_conditioner_heater'].amount.number, 8000);
-  t.equal(posRebates['heat_pump_air_conditioner_heater'].start_date, '2023');
+  t.equal(posRebates['heat_pump_air_conditioner_heater'].start_date, '2025');
   t.equal(posRebates['heat_pump_clothes_dryer'].eligible, true);
   t.equal(posRebates['heat_pump_clothes_dryer'].amount.number, 840);
-  t.equal(posRebates['heat_pump_clothes_dryer'].start_date, '2023');
+  t.equal(posRebates['heat_pump_clothes_dryer'].start_date, '2025');
   t.equal(posRebates['weatherization'].eligible, true);
   t.equal(posRebates['weatherization'].amount.number, 1600);
-  t.equal(posRebates['weatherization'].start_date, '2023');
+  t.equal(posRebates['weatherization'].start_date, '2025');
 
   t.equal(performance_rebate_incentives[0].eligible, true);
   t.equal(performance_rebate_incentives[0].amount.number, 4000);
-  t.equal(performance_rebate_incentives[0].start_date, '2023');
+  t.equal(performance_rebate_incentives[0].start_date, '2025');
 
   const taxCredits = _.keyBy(tax_credit_incentives, 'item');
   t.equal(taxCredits['battery_storage_installation'].eligible, true);
@@ -349,7 +349,7 @@ test('correctly evaluates scenerio "Married filing jointly w/ 2 kids and $250k H
   t.equal(taxCredits['used_electric_vehicle'].start_date, '2023');
 });
 
-test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in Missisippi"', async t => {
+test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in Missisippi"', async t => {
   const data = calculateIncentives(AMIS_FOR_39503, {
     owner_status: OwnerStatus.Homeowner,
     household_income: 500000,
@@ -400,30 +400,30 @@ test('correctly evaluates scenerio "Hoh w/ 6 kids and $500k Household income in 
   const posRebates = _.keyBy(pos_rebate_incentives, 'item');
   t.equal(posRebates['electric_panel'].eligible, false);
   t.equal(posRebates['electric_panel'].amount.number, 4000);
-  t.equal(posRebates['electric_panel'].start_date, '2023');
+  t.equal(posRebates['electric_panel'].start_date, '2025');
   t.equal(posRebates['electric_stove'].eligible, false);
   t.equal(posRebates['electric_stove'].amount.number, 840);
-  t.equal(posRebates['electric_stove'].start_date, '2023');
+  t.equal(posRebates['electric_stove'].start_date, '2025');
   t.equal(posRebates['electric_wiring'].eligible, false);
   t.equal(posRebates['electric_wiring'].amount.number, 2500);
-  t.equal(posRebates['electric_wiring'].start_date, '2023');
+  t.equal(posRebates['electric_wiring'].start_date, '2025');
   t.equal(posRebates['heat_pump_water_heater'].eligible, false);
   t.equal(posRebates['heat_pump_water_heater'].amount.number, 1750);
-  t.equal(posRebates['heat_pump_water_heater'].start_date, '2023');
+  t.equal(posRebates['heat_pump_water_heater'].start_date, '2025');
   t.equal(posRebates['heat_pump_air_conditioner_heater'].eligible, false);
   t.equal(posRebates['heat_pump_air_conditioner_heater'].amount.number, 8000);
-  t.equal(posRebates['heat_pump_air_conditioner_heater'].start_date, '2023');
+  t.equal(posRebates['heat_pump_air_conditioner_heater'].start_date, '2025');
   t.equal(posRebates['heat_pump_clothes_dryer'].eligible, false);
   t.equal(posRebates['heat_pump_clothes_dryer'].amount.number, 840);
-  t.equal(posRebates['heat_pump_clothes_dryer'].start_date, '2023');
+  t.equal(posRebates['heat_pump_clothes_dryer'].start_date, '2025');
   t.equal(posRebates['weatherization'].eligible, false);
   t.equal(posRebates['weatherization'].amount.number, 1600);
-  t.equal(posRebates['weatherization'].start_date, '2023');
+  t.equal(posRebates['weatherization'].start_date, '2025');
 
   // only items.efficiency_rebates are eligible here:
   t.equal(performance_rebate_incentives[0].eligible, true);
   t.equal(performance_rebate_incentives[0].amount.number, 4000);
-  t.equal(performance_rebate_incentives[0].start_date, '2023');
+  t.equal(performance_rebate_incentives[0].start_date, '2025');
 
   const taxCredits = _.keyBy(tax_credit_incentives, 'item');
   t.equal(taxCredits['battery_storage_installation'].eligible, true);
@@ -622,4 +622,61 @@ test('correct filtering of city incentives', async t => {
   );
   t.ok(shouldNotFindWithPartialMatch);
   t.equal(shouldNotFindWithPartialMatch.stateIncentives.length, 0);
+});
+
+test('correctly evaluates savings when state tax liability is lower than max savings', async t => {
+  const incentive: StateIncentive = {
+    id: 'CO',
+    authority_type: AuthorityType.State,
+    authority: 'mock-state-authority',
+    start_date: '2023',
+    end_date: '2024',
+    payment_methods: [PaymentMethod.TaxCredit],
+    item: 'heat_pump_air_conditioner_heater',
+    program: 'co_hvacAndWaterHeaterIncentives',
+    amount: {
+      type: AmountType.DollarAmount,
+      number: 5000,
+    },
+    owner_status: [
+      OwnerStatus.Homeowner,
+    ],
+    short_description: {
+      en: 'This is a model incentive only to be used for testing.',
+    },
+  };
+
+  const authorities: AuthoritiesByType = {
+    state: {},
+    utility: {},
+    city: {
+      'mock-state-authority': {
+        name: 'Colorado Mock Department of Energy',
+        city: 'Colorado Springs',
+        county: 'El Paso County',
+      },
+    },
+  };
+
+  const request = {
+    owner_status: OwnerStatus.Homeowner,
+    household_income: 100000,
+    tax_filing: FilingStatus.MarriedFilingSeparately,
+    household_size: 8,
+    authority_types: [AuthorityType.State],
+    include_beta_states: true,
+  };
+
+  const result = calculateStateIncentivesAndSavings(
+    { state_id: 'CO', city: 'Colorado Springs', county: 'El Paso County' },
+    request,
+    [incentive],
+    {},
+    authorities,
+  );
+
+  t.ok(result);
+  t.equal(result.stateIncentives.length, 1);
+  t.equal(result.stateIncentives[0].amount.number, 5000);
+  t.equal(result.savings.tax_credit, 4400);
 });

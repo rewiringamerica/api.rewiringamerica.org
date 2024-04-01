@@ -15,146 +15,11 @@ import fetch from 'make-fetch-happen';
 import minimist from 'minimist';
 import path from 'path';
 import xlsx from 'xlsx';
-import { AuthoritiesByState } from '../src/data/authorities';
 import {
   createAuthorityName,
   sortMapByKey,
 } from './lib/authority-and-program-updater';
-
-/**
- * Utility codes (number) or utility names (string) to exclude from
- * consideration. These must be exactly as they appear in the spreadsheet.
- * Not every utility has a code, which is why names can also be used here.
- */
-const EXCLUSIONS: Set<string | number> = new Set([
-  // AZ
-  25060, // Wellton-Mohawk; no electric
-  60772, // Buckeye; no electric
-  62264, // Hohokam; no electric
-  78679, // Ocotillo; no electric
-
-  // CO
-  6752, // Town of Frederick; now served by United Power
-
-  // CT
-  9734, // City of Jewett City; no electric
-
-  // DC
-  'Washington Gas', // no electric; Utility Code "Not Available"
-
-  // IL
-  'Nicor Gas',
-  'Peoples Gas',
-
-  // PA
-  'Philadelphia Gas Works',
-
-  // VA
-  8198, // City of Harrisonburg; no electric
-]);
-
-/**
- * Map from utility codes (numbers) or utility names (string) to replacement
- * names. The keys must be exactly as they appear in the spreadsheet. The
- * replacement names will be treated as if they were the name in the sheet.
- * (Not every utility has a code, which is why names can also be used here.)
- *
- * The aim of these replacements is to identify a utility by the name most
- * recognizable to its customers. For example, the dataset commonly lists
- * municipal utilities as "Town of XYZ", but often those utilities use the
- * branding "XYZ Public Utilities" or similar. In some cases it's also to deal
- * with unusual abbreviations, or a complete name change that the dataset hasn't
- * picked up on yet, or the dataset referring to the same utility with different
- * abbreviations (e.g. "XYZ Rural Electric Cooperative" and "XYZ R E C").
- */
-const OVERRIDES = new Map<string | number, string>([
-  // AZ
-  [1241, 'DixiePower'],
-  [15048, 'Electrical District No 2 Pinal County'],
-  [30518, 'Electrical District No 3 Pinal County'],
-  [15049, 'Electrical District No 4 Pinal County'],
-  [18280, 'Sulphur Springs Valley Electric Cooperative'],
-  [19728, 'UniSource Energy Services'],
-  [40165, 'DixiePower'],
-  [62683, "Tohono O'odham Utility Authority"],
-  [606953, 'UniSource Energy Services'],
-
-  // CO
-  [5997, 'Estes Park Power and Communications'],
-  [7300, 'Glenwood Springs Electric'],
-  [10066, 'K.C. Electric Association'],
-  [11256, 'Loveland Water and Power'],
-  [12860, 'Morgan County REA'],
-  [15257, 'Poudre Valley REA'],
-  [16603, 'San Luis Valley REC'],
-  [16616, 'San Isabel Electric'],
-
-  // GA
-  [9689, 'Jefferson Energy Cooperative'],
-
-  // CT
-  [7716, 'Groton Utilities'],
-  [13831, 'Norwich Public Utilities'],
-  [17569, 'South Norwalk Electric and Water'],
-
-  // DC
-  [1143, 'Pepco'], // Potomac Electric Power
-
-  // IL
-  [4362, 'Corn Belt Energy'],
-  [16420, 'Rural Electric Convenience Cooperative'],
-  [56697, 'Ameren Illinois'],
-  [61678, 'Corn Belt Energy'],
-
-  // NV
-  [13407, 'NV Energy'], // Nevada Power (became NV Energy in 2008)
-  [17166, 'NV Energy'], // Sierra Pacific Power Co (became NV Energy in 2008)
-
-  // NY
-  [1036, 'Con Edison'],
-  [1115, 'NYSEG'],
-  [1117, 'National Grid'], // Niagara Mohawk
-  [3249, 'Central Hudson Gas & Electric'],
-  [4226, 'Con Edison'],
-  [11811, 'Massena Electric'],
-  [13511, 'NYSEG'],
-  [14154, 'Orange & Rockland'],
-  [16183, 'Rochester Gas & Electric'],
-  [16549, 'Salamanca Board of Public Utilities'],
-
-  // PA
-  [12390, 'Met-Ed'],
-  [1096, 'Met-Ed'],
-  [1135, 'PECO'],
-  [14711, 'Penelec'],
-  [14716, 'Penn Power'],
-  [1188, 'West Penn Power Company'],
-
-  // RI
-  [1857, 'Block Island Power Company'],
-
-  // VA
-  [1186, 'Dominion Energy'],
-  [2248, 'BVU Authority'],
-  [4794, 'Danville Utilities'],
-  [6715, 'Franklin Municipal Power and Light'],
-  [13640, 'NOVEC'],
-  [15619, 'Radford Electric Department'],
-  [19876, 'Dominion Energy'],
-  [60762, 'BVU Authority'],
-
-  // VT
-  [1061, 'Green Mountain Power'],
-  [7601, 'Green Mountain Power'],
-  [8104, 'Town of Hardwick Electric Department'],
-  [11305, 'Village of Ludlow Electric Light Department'],
-  [11359, 'Lyndon Electric Department'],
-  [12989, 'Morrisville Water & Light'],
-  [13789, 'Town of Northfield Electric Department'],
-  [18371, 'Swanton Electric'],
-  [19791, 'Vermont Electric Coop'],
-  [27316, 'Stowe Electric Department'],
-]);
+import { EXCLUSIONS, OVERRIDES } from './lib/utility-data-overrides';
 
 /**
  * A best-effort attempt to convert the name from the spreadsheet into a
@@ -289,33 +154,34 @@ enum Col {
     });
   }
 
-  // Update authorities.json with the utilities from the dataset.
-  const authoritiesJsonPath = path.join(__dirname, '../data/authorities.json');
-  const authoritiesJson: AuthoritiesByState = JSON.parse(
-    fs.readFileSync(authoritiesJsonPath, 'utf-8'),
-  );
-
+  // Update each state's authorities.json with the utilities from the dataset.
   utilitiesByState.forEach((utilityMap, state) => {
-    if (state in authoritiesJson) {
-      const existingUtilities = authoritiesJson[state].utility;
-      const newUtilities: typeof existingUtilities = {};
-      utilityMap.forEach((utility, id) => {
-        // Existing utilities in authorities.json may have other info like a
-        // logo; preserve that and update only the name
-        if (id in existingUtilities) {
-          newUtilities[id] = { ...existingUtilities[id], ...utility };
-        } else {
-          newUtilities[id] = utility;
-        }
-      });
-
-      // This removes any utilities that aren't in the dataset
-      authoritiesJson[state].utility = sortMapByKey(newUtilities);
+    // If there's no subdir for the state in /data, skip it entirely.
+    const stateDir = path.join(__dirname, `../data/${state}`);
+    if (!fs.existsSync(stateDir)) {
+      // Return from forEach lambda; move on to next state
+      return;
     }
-  });
 
-  fs.writeFileSync(
-    authoritiesJsonPath,
-    JSON.stringify(authoritiesJson, null, 2) + '\n',
-  );
+    const filepath = path.join(stateDir, 'authorities.json');
+    const authoritiesJson = fs.existsSync(filepath)
+      ? JSON.parse(fs.readFileSync(filepath, 'utf-8'))
+      : { utility: {} };
+    const existingUtilities = authoritiesJson.utility;
+    const newUtilities: typeof existingUtilities = {};
+    utilityMap.forEach((utility, id) => {
+      // Existing utilities in authorities.json may have other info like a
+      // logo; preserve that and update only the name
+      if (id in existingUtilities) {
+        newUtilities[id] = { ...existingUtilities[id], ...utility };
+      } else {
+        newUtilities[id] = utility;
+      }
+    });
+
+    // This removes any utilities that aren't in the dataset
+    authoritiesJson.utility = sortMapByKey(newUtilities);
+
+    fs.writeFileSync(filepath, JSON.stringify(authoritiesJson, null, 2) + '\n');
+  });
 })();

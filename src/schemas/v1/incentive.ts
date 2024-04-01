@@ -14,6 +14,7 @@ export const API_INCENTIVE_SCHEMA = {
     'payment_methods',
     'authority_type',
     'program',
+    'program_url',
     'item',
     'amount',
     'owner_status',
@@ -40,6 +41,9 @@ export const API_INCENTIVE_SCHEMA = {
     program_url: {
       type: 'string',
     },
+    more_info_url: {
+      type: 'string',
+    },
     item: {
       type: 'object',
       properties: {
@@ -48,9 +52,6 @@ export const API_INCENTIVE_SCHEMA = {
           enum: ALL_ITEMS,
         },
         name: {
-          type: 'string',
-        },
-        url: {
           type: 'string',
         },
       },
