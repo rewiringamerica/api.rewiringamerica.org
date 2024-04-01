@@ -1,6 +1,7 @@
 import { DateTimeFormatter, LocalDate } from '@js-joda/core';
 import { Locale } from '@js-joda/locale_en-us';
 import { START_END_DATE_REGEX } from '../../src/lib/dates';
+import { StringKeyed } from './format-converter';
 import {
   AliasMap,
   FIELD_MAPPINGS,
@@ -19,8 +20,10 @@ const DATE_FIELDS = ['start_date', 'end_date'];
 
 // Standardize column names or values in an incentive spreadsheet.
 export class SpreadsheetStandardizer {
-  private fieldMap: FlatAliasMap;
-  private valueMap: { [index: string]: FlatAliasMap };
+  private fieldMap: AliasMap;
+  private valueMap: { [index: string]: AliasMap };
+  private fieldAliasToCanonical: FlatAliasMap;
+  private valueAliasToCanonical: { [index: string]: FlatAliasMap };
   private strict: boolean;
 
   /**
@@ -33,10 +36,15 @@ export class SpreadsheetStandardizer {
     valueMap: { [index: string]: AliasMap } = VALUE_MAPPINGS,
     strict: boolean = true,
   ) {
-    // We reverse the input map for easier runtime use, since
-    // we need to go from alias back to canonical name.
-    this.fieldMap = reverseMap(fieldMap);
-    this.valueMap = reverseValueMap(valueMap);
+    // These first two maps are stored to translate from canonical column or
+    // value to an alias, which is needed when writing JSON back to human-
+    // readable version.
+    this.fieldMap = fieldMap;
+    this.valueMap = valueMap;
+    // We reverse the input maps for easier runtime use when converting from
+    // spreadsheet to JSON, since we need to go from aliases to canonical.
+    this.fieldAliasToCanonical = reverseMap(fieldMap);
+    this.valueAliasToCanonical = reverseValueMap(valueMap);
     this.strict = strict;
   }
 
@@ -48,10 +56,12 @@ export class SpreadsheetStandardizer {
     return components
       .map((component: string) => {
         if (
-          this.valueMap[colName] !== undefined &&
-          this.valueMap[colName][cleanFieldName(component)] !== undefined
+          this.valueAliasToCanonical[colName] !== undefined &&
+          this.valueAliasToCanonical[colName][cleanFieldName(component)] !==
+            undefined
         ) {
-          component = this.valueMap[colName][cleanFieldName(component)];
+          component =
+            this.valueAliasToCanonical[colName][cleanFieldName(component)];
         }
         return component;
       })
@@ -79,14 +89,42 @@ export class SpreadsheetStandardizer {
     const output: Record<string, string> = {};
     for (const key in input) {
       const cleaned = cleanFieldName(key);
-      if (this.fieldMap[cleaned] === undefined && this.strict) {
+      if (this.fieldAliasToCanonical[cleaned] === undefined && this.strict) {
         throw new Error(`Invalid column found: ${cleaned}; original: ${key}`);
       }
 
-      const newCol = this.fieldMap[cleaned] || key;
+      const newCol = this.fieldAliasToCanonical[cleaned] || key;
       const val = this.convertToCanonical(input[key], newCol);
 
       output[newCol] = this.handleSpecialCases(val, newCol);
+    }
+    return output;
+  }
+
+  // This method expects already flattened input (i.e. no nested objects).
+  // Arrays as values are allowed.
+  convertToAliases(input: StringKeyed): StringKeyed {
+    const output: StringKeyed = {};
+    for (const [fieldName, fieldValue] of Object.entries(input)) {
+      let outputFieldName = fieldName;
+      if (this.fieldMap[fieldName] && this.fieldMap[fieldName][0]) {
+        outputFieldName = this.fieldMap[fieldName][0];
+      }
+      let val = fieldValue;
+      if (Array.isArray(val)) {
+        // Special handling for arrays: try to rename each value.
+        val = val.map(component => {
+          if (this.valueMap[fieldName] && this.valueMap[fieldName][component]) {
+            return this.valueMap[fieldName][component][0];
+          }
+          return component;
+        });
+      } else {
+        if (this.valueMap[fieldName] && this.valueMap[fieldName][fieldValue]) {
+          val = this.valueMap[fieldName][fieldValue][0];
+        }
+      }
+      output[outputFieldName] = val;
     }
     return output;
   }

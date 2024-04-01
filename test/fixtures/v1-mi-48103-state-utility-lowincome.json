@@ -28,8 +28,7 @@
       "program_url": "https://www.dteenergy.com/us/en/residential/service-request/pev/electric-vehicle-rebate.html",
       "item": {
         "type": "new_electric_vehicle",
-        "name": "New Electric Vehicle",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/electric-vehicles"
+        "name": "New Electric Vehicle"
       },
       "amount": {
         "type": "dollar_amount",
@@ -54,8 +53,7 @@
       "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/air-conditioners.html",
       "item": {
         "type": "heat_pump_air_conditioner_heater",
-        "name": "Heat Pump Air Conditioner/Heater",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+        "name": "Heat Pump Air Conditioner/Heater"
       },
       "amount": {
         "type": "dollar_amount",
@@ -66,7 +64,7 @@
       ],
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "$1000 for ductless heat pumps. Must be 18+ SEER and HSPF 8.8+, or 17+ SEER2 and HSPF2 7.5+."
+      "short_description": "$1000 for ductless heat pumps. Must be both 17+ SEER2 and HSPF2 7.5+, and must replace a heat pump or electric heat system."
     },
     {
       "payment_methods": [
@@ -78,19 +76,19 @@
       "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/air-conditioners.html",
       "item": {
         "type": "heat_pump_air_conditioner_heater",
-        "name": "Heat Pump Air Conditioner/Heater",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+        "name": "Heat Pump Air Conditioner/Heater"
       },
       "amount": {
         "type": "dollar_amount",
-        "number": 850
+        "number": 850,
+        "maximum": 850
       },
       "owner_status": [
         "homeowner"
       ],
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "$850 for 19+ SEER or 18+ SEER2 Air Source Heat Pump."
+      "short_description": "Up to $850 rebate for air source heat pumps. Rebate value depends on appliance efficiency."
     },
     {
       "payment_methods": [
@@ -102,8 +100,7 @@
       "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/air-conditioners.html",
       "item": {
         "type": "geothermal_heating_installation",
-        "name": "Geothermal Heating Installation",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/geothermal-heating-installation"
+        "name": "Geothermal Heating Installation"
       },
       "amount": {
         "type": "dollar_amount",
@@ -114,31 +111,7 @@
       ],
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "$800 for 17+ SEER or 16+ EER2 Ground Source Heat Pump."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "mi-dte",
-      "program": "Air Conditioners",
-      "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/air-conditioners.html",
-      "item": {
-        "type": "heat_pump_air_conditioner_heater",
-        "name": "Heat Pump Air Conditioner/Heater",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 750
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "$750 for 18 SEER or 17-17.99 SEER2 Air Source Heat Pump."
+      "short_description": "$800 rebate for 16+ EER2 ground source heat pumps."
     },
     {
       "payment_methods": [
@@ -150,8 +123,7 @@
       "program_url": "https://www.dteenergy.com/us/en/residential/service-request/pev/home-ev-charger-rebate.html",
       "item": {
         "type": "electric_vehicle_charger",
-        "name": "Electric Vehicle Charger",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/ev-charger"
+        "name": "Electric Vehicle Charger"
       },
       "amount": {
         "type": "dollar_amount",
@@ -171,36 +143,11 @@
       ],
       "authority_type": "utility",
       "authority": "mi-dte",
-      "program": "Air Conditioners",
-      "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/air-conditioners.html",
-      "item": {
-        "type": "heat_pump_air_conditioner_heater",
-        "name": "Heat Pump Air Conditioner/Heater",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 250
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "$250 for 16-17 SEER or 15.2-16.99 SEER2 Air Source Heat Pump."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "mi-dte",
       "program": "Washers & Dryers",
       "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/washers-dryers.html#tabs-f1a15f985f-item-83a9b1fa23",
       "item": {
         "type": "heat_pump_clothes_dryer",
-        "name": "Heat Pump Clothes Dryer",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-clothes-dryer"
+        "name": "Heat Pump Clothes Dryer"
       },
       "amount": {
         "type": "dollar_amount",
@@ -221,36 +168,11 @@
       ],
       "authority_type": "utility",
       "authority": "mi-dte",
-      "program": "Air Conditioners",
-      "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/air-conditioners.html",
-      "item": {
-        "type": "heat_pump_air_conditioner_heater",
-        "name": "Heat Pump Air Conditioner/Heater",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 150
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "$150 for 15 SEER or 14.3-15.19 SEER2 Air Source Heat Pump."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "mi-dte",
       "program": "Insulation & Windows",
       "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html",
       "item": {
         "type": "weatherization",
-        "name": "Weatherization",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+        "name": "Weatherization"
       },
       "amount": {
         "type": "dollar_amount",
@@ -273,8 +195,7 @@
       "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html",
       "item": {
         "type": "weatherization",
-        "name": "Weatherization",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+        "name": "Weatherization"
       },
       "amount": {
         "type": "dollar_amount",
@@ -320,8 +241,7 @@
       "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html",
       "item": {
         "type": "weatherization",
-        "name": "Weatherization",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+        "name": "Weatherization"
       },
       "amount": {
         "type": "dollar_amount",
@@ -344,8 +264,7 @@
       "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html",
       "item": {
         "type": "weatherization",
-        "name": "Weatherization",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+        "name": "Weatherization"
       },
       "amount": {
         "type": "dollar_amount",
@@ -368,8 +287,7 @@
       "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html",
       "item": {
         "type": "weatherization",
-        "name": "Weatherization",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+        "name": "Weatherization"
       },
       "amount": {
         "type": "dollar_amount",
@@ -392,8 +310,7 @@
       "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html",
       "item": {
         "type": "weatherization",
-        "name": "Weatherization",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+        "name": "Weatherization"
       },
       "amount": {
         "type": "dollar_amount",
@@ -416,8 +333,7 @@
       "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html",
       "item": {
         "type": "weatherization",
-        "name": "Weatherization",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+        "name": "Weatherization"
       },
       "amount": {
         "type": "dollar_amount",
@@ -440,8 +356,7 @@
       "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html",
       "item": {
         "type": "weatherization",
-        "name": "Weatherization",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+        "name": "Weatherization"
       },
       "amount": {
         "type": "dollar_amount",
@@ -464,8 +379,7 @@
       "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html",
       "item": {
         "type": "weatherization",
-        "name": "Weatherization",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+        "name": "Weatherization"
       },
       "amount": {
         "type": "dollar_amount",

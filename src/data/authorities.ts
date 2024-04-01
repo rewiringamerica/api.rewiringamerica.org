@@ -63,7 +63,7 @@ export const SCHEMA = {
       county: authoritiesMapSchema,
       other: authoritiesMapSchema,
     },
-    required: ['state', 'utility'],
+    required: ['utility'],
     additionalProperties: false,
   },
   required: [],
@@ -72,6 +72,13 @@ export const SCHEMA = {
 export type AuthoritiesByType = { [index: string]: AuthoritiesById };
 export type AuthoritiesByState = FromSchema<typeof SCHEMA>;
 
-export const AUTHORITIES_BY_STATE: AuthoritiesByState = JSON.parse(
-  fs.readFileSync('./data/authorities.json', 'utf-8'),
-);
+export const AUTHORITIES_BY_STATE: AuthoritiesByState = (() => {
+  const result: AuthoritiesByState = {};
+  for (const state of STATES_PLUS_DC) {
+    const filepath = `./data/${state}/authorities.json`;
+    if (fs.existsSync(filepath)) {
+      result[state] = JSON.parse(fs.readFileSync(filepath, 'utf-8'));
+    }
+  }
+  return result;
+})();
