@@ -77,7 +77,7 @@ If you need to add a logo for a utility, add it manually in `authorities.json`; 
 
 The script should be run, and the resulting file changes committed, any time the underlying dataset is updated (which we have to notice manually), and any time the script is updated.
 
-At the top, the script defines a set of "exclusions" and "overrides", which patch the utility data in the underlying dataset to suit our needs. Exclusions are generally for utilities that don't provide electricity. Overrides are for changing utility names to be more in line with our needs -- fixing old names, consolidating different names for the same utility, using customer-facing brands, etc.
+The file `scripts/lib/utility-data-overrides.ts` defines a set of "exclusions" and "overrides", which patch the utility data in the underlying dataset to suit our needs. Exclusions are generally for utilities that don't provide electricity. Overrides are for changing utility names to be more in line with our needs -- fixing old names, consolidating different names for the same utility, using customer-facing brands, etc.
 
 When adding support for a new state, you should vet and clean up the utility data we have for that state, using this process:
 
@@ -108,7 +108,7 @@ When adding support for a new state, you should vet and clean up the utility dat
    ```
 
    2. If there's a numeric Utility Code, then either:
-      - Exclude it by adding the utility code to `EXCLUSIONS`, under the appropriate state, with a brief comment about what the utility is and why you're excluding it.
+      - Exclude it by adding the utility code to `EXCLUSIONS` in `scripts/lib/utility-data-overrides.ts`, under the appropriate state, with a brief comment about what the utility is and why you're excluding it.
       - Override its name by adding a pair with the utility code and the new name to `OVERRIDES`, under the appropriate state. The new name will be treated as if it came from the "Utility Name" column.
    3. If there's no numeric Utility Code (i.e. it says `Not Available` in that column), then do the step above but with the Utility Name from the spreadsheet instead.
 
