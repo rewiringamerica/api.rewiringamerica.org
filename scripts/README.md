@@ -34,9 +34,7 @@ Filling out an entry for `incentive-spreadsheet-registry.ts` consists of creatin
 - Optionally declaring the header row number, if not the top row of the spreadsheet, in `headerRowNumber`
 - Optionally naming a filepath where _collected_ incentives will be written in `collectedFilepath`. This is experimental and affects how some of the scripts work, so you shouldn't do this for now unless you know what you're doing.
 
-First, create a subdirectory in `data/` named with the new state's abbreviation.
-
-Then, run [`generate-utility-data.ts`](generate-utility-data.ts) to populate the list of utilities in the state's authorities.json file. See [below](#utility-data) for details on that.
+First, look at the `authorities.json` in your state's subdirectory of `data/`. The state's utilities are populated there, by the script `generate-utility-data.ts`. Follow the [instructions below](#utility-data) to vet the utility data, and update/rerun the script to clean up the utility data as appropriate.
 
 [`generate-misc-state-data.ts`](generate-misc-state-data.ts) adds values to ancillary files to reflect the programs and authorities that will be needed for the JSON. This needs to happen first because our data schemas actually require an incentive's program/authority to be one of the listed members, and if that's not the case, the incentive will fail validation.
 
@@ -69,9 +67,9 @@ To encode relationships between incentives, see the [`relationships-README`](htt
 
 ## Utility Data
 
-`generate-utility-data.ts` reads a [dataset](https://downloads.energystar.gov/bi/portfolio-manager/Public_Utility_Map_en_US.xlsx) published by ENERGY STAR to create a mapping from ZIP codes to utilities. It writes to a CSV file in `scripts/data`, which is then imported into the SQLite database by `build.sh`. For any state with a subdirectory in `data`, it also modifies that state's `authorities.json` to include the utility IDs and names. This data is used in the `/api/v1/utilities` endpoint.
+`generate-utility-data.ts` reads a [dataset](https://downloads.energystar.gov/bi/portfolio-manager/Public_Utility_Map_en_US.xlsx) published by ENERGY STAR to create a mapping from ZIP codes to utilities. It writes to a CSV file in `scripts/data`, which is then imported into the SQLite database by `build.sh`. It also writes every state's utilities (utility IDs and names) into that state's `authorities.json`. This data is used in the `/api/v1/utilities` endpoint.
 
-The script has no required arguments. It downloads the data file from ENERGY STAR by default; you can pass `--file <file>` to have it read a local file instead (useful when testing).
+The script has no required arguments. It downloads the data file from ENERGY STAR by default; you can pass `--file <file>` to have it read a local file instead (useful when iterating on data cleanup).
 
 If you need to add a logo for a utility, add it manually in `authorities.json`; the script will leave it alone.
 
