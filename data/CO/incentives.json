@@ -439,7 +439,7 @@
     ],
     "short_description": {
       "en": "Rebate up to $1600 for Air Source Heat Pumps at least SEER 16, EER 12.5, HSPF 8.5. EPA Energy Star qualified installer: $1600, otherwise $1500.",
-      "es": "Un reembolso de hasta $1,600 dólares para bombas de calor de fuente de aire de al menos SEER 16, EER 12.5, HSPF 8.5. Instalador con certificación Energy Star de la EPA: $1,600 dólares; en caso contrario, $1,500 dólares. "
+      "es": "Un reembolso de hasta $1,600 dólares para bombas de calor de fuente de aire de al menos SEER 16, EER 12.5, HSPF 8.5. Instalador con certificación Energy Star de la EPA: $1,600 dólares; en caso contrario, $1,500 dólares."
     },
     "start_date": "2023-01-01",
     "end_date": "2023-12-31"
@@ -1333,8 +1333,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Tiered air sealing rebate (see link) ranging from $310 to $770 based on reduction of air loss.",
-      "es": "Un reembolso escalonado para el sellado hermético (ver enlace) que oscila entre $310 y $770 dólares según la reducción de la pérdida de aire."
+      "en": "Tiered air sealing rebate ranging from $310 to $770 based on reduction of air loss.",
+      "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de la pérdida de aire."
     }
   },
   {
@@ -1699,8 +1699,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Tiered air sealing rebate (see link) ranging from $310 to $770 based on reduction of air loss.",
-      "es": "Un reembolso escalonado para el sellado hermético  (ver enlace) que oscila entre $310 y $770 dólares según la reducción de pérdida de aire."
+      "en": "Tiered air sealing rebate ranging from $310 to $770 based on reduction of air loss.",
+      "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de pérdida de aire."
     }
   },
   {
@@ -1882,8 +1882,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Tiered air sealing rebate (see link) ranging from $310 to $770 based on reduction of air loss.",
-      "es": "Un reembolso escalonado para el sellado hermético (ver enlace) que oscila entre $310 y $770 dólares según la reducción de pérdida de aire."
+      "en": "Tiered air sealing rebate ranging from $310 to $770 based on reduction of air loss.",
+      "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de pérdida de aire."
     }
   },
   {
@@ -2073,8 +2073,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Tiered air sealing rebate (see link) ranging from $310 to $770 based on reduction of air loss.",
-      "es": "Un reembolso escalonado para el sellado hermético (ver enlace) que oscila entre $310 y $770 dólares según la reducción de pérdida de aire."
+      "en": "Tiered air sealing rebate ranging from $310 to $770 based on reduction of air loss.",
+      "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de pérdida de aire."
     }
   },
   {
@@ -3476,7 +3476,7 @@
     ],
     "short_description": {
       "en": "25% of the cost of the e-lawn care product, with a per-member maximum of $300 across products.",
-      "es": "Un 25% del costo de herramientas electrónicas para el cuidado del césped, con un máximo por socio de $300 dólares en todos los productos.  "
+      "es": "Un 25% del costo de herramientas electrónicas para el cuidado del césped, con un máximo por socio de $300 dólares en todos los productos."
     }
   },
   {
@@ -5943,7 +5943,7 @@
     ],
     "short_description": {
       "en": "$180 rebate for ENERGY STAR-certified Hybrid Heat Pump Dryer.",
-      "es": "Un reembolso de $180 dólares para secadoras híbridas con bomba de calor y certificación ENERGY STAR. "
+      "es": "Un reembolso de $180 dólares para secadoras híbridas con bomba de calor y certificación ENERGY STAR."
     }
   },
   {
@@ -6027,7 +6027,7 @@
     ],
     "short_description": {
       "en": "$700 rebate for ENERGY STAR-certified Air Source Heat Pump Water Heater. Minimum 30 gallons.",
-      "es": "Un reembolso de $700 dólares para un calentador de agua con bomba de calor de fuente de aire y certificación ENERGY STAR. "
+      "es": "Un reembolso de $700 dólares para un calentador de agua con bomba de calor de fuente de aire y certificación ENERGY STAR."
     }
   },
   {
@@ -10293,13 +10293,13 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 500
+      "maximum": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of total equipment and installation costs up to $500 for non-managed Level 2 Electric Vehicle chargers.",
+      "en": "50% of total equipment and installation costs up to $250 for non-managed Level 2 Electric Vehicle chargers.",
       "es": "50% del total de los costos de equipamiento e instalación de cargadores de vehículos eléctricos de nivel 2 sin sistema de control, hasta $500 dólares."
     }
   },
@@ -10419,17 +10419,16 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_sangreDeCristoElectricAssociation_rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 675
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$675 rebate for qualifying Tier 1 Air Source Heat Pump (2 tons or less), up to 50% of equipment cost.",
-      "es": "Reembolso de $675 dólares para una bomba de calor de fuente de aire de nivel 1 que cumpla los requisitos (2 toneladas o menos), hasta el 50% del costo del equipo."
-    },
-    "bonus_available": true
+      "en": "$250/ton rebate for qualifying Tier 1 ductless Heat Pump, with $125/ton for capacity over 5 tons. Not to exceed 50% of equipment cost."
+    }
   },
   {
     "id": "CO-455",
@@ -10441,17 +10440,38 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_sangreDeCristoElectricAssociation_rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 1800
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,800 rebate for qualifying Tier 1 Air Source Heat Pump (2 tons or more), up to 50% of equipment cost.",
-      "es": "Reembolso de $1,800 dólares para una bomba de calor de fuente de aire de nivel 1 que cumpla los requisitos (2 toneladas o más), hasta el 50% del costo del equipo."
+      "en": "$500/ton rebate for qualifying Tier 2 Cold Climate ductless Heat Pump, with $250/ton capacity over 5 tons. Not to exceed 50% of equipment cost."
+    }
+  },
+  {
+    "id": "CO-541",
+    "authority_type": "utility",
+    "authority": "co-sangre-de-cristo-electric-association",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "co_sangreDeCristoElectricAssociation_rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "ton"
     },
-    "bonus_available": true
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1000/ton bonus for low-to-moderate income residents purchasing cold climate ductless heat pumps, to be used through weatherization agency."
+    },
+    "low_income": "co-sangre-de-cristo"
   },
   {
     "id": "CO-456",
@@ -10463,15 +10483,15 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_sangreDeCristoElectricAssociation_rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 1000
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,000 rebate for qualifying Tier 2 Air Source Heat Pump (2 tons or less), up to 50% of equipment cost.",
-      "es": "Reembolso de $1,000 dólares para una bomba de calor de fuente de aire de nivel 2 que cumpla los requisitos (2 toneladas o menos), hasta el 50% del costo del equipo."
+      "en": "$250/ton rebate for qualifying Tier 1 Ducted Heat Pump, with $125/ton for additional tons over 5 tons."
     },
     "bonus_available": true
   },
@@ -10485,17 +10505,39 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_sangreDeCristoElectricAssociation_rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 2400
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,400 rebate for qualifying Tier 2 Air Source Heat Pump (2 tons or more), up to 50% of equipment cost.",
-      "es": "Reembolso de $2,400 dólares para una bomba de calor de fuente de aire de nivel 2 que cumpla los requisitos (2 toneladas o más), hasta el 50% del costo del equipo."
+      "en": "$500/ton rebate for qualifying Tier 2 Cold Climate Ducted Heat Pump, with $250/ton for additional tons over 5 tons."
     },
     "bonus_available": true
+  },
+  {
+    "id": "CO-542",
+    "authority_type": "utility",
+    "authority": "co-sangre-de-cristo-electric-association",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "co_sangreDeCristoElectricAssociation_rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1000/ton bonus for low-to-moderate income residents purchasing cold climate ducted heat pumps, to be used through weatherization agency."
+    },
+    "low_income": "co-sangre-de-cristo"
   },
   {
     "id": "CO-458",
@@ -10507,17 +10549,16 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_sangreDeCristoElectricAssociation_rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 2400
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $2400 or 50% costs for Air-to-Water Heat pumps. Rebates will be taken on a case-by-case basis; contact program staff to learn more.",
-      "es": "Hasta $2,400 dólares o el 50% de los costos para bombas de calor de aire a agua. Los reembolsos se realizarán caso por caso; póngase en contacto con el personal del programa para mayor información."
-    },
-    "bonus_available": true
+      "en": "$500/ton rebate for Air-to-Water Heat pumps, with $250/ton for additional capacity above 5 tons."
+    }
   },
   {
     "id": "CO-459",
@@ -10529,15 +10570,16 @@
     "item": "geothermal_heating_installation",
     "program": "co_sangreDeCristoElectricAssociation_rebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500/ton rebate for new installation of qualifying Central Ground Source Heat Pump ($250/ton rebate for replacement), up to 50%.",
-      "es": "Reembolso de hasta $500 dólares/tonelada por la nueva instalación de una bomba de calor geotérmica central que cumpla los requisitos (un reembolso de $250 dólares/tonelada por su sustitución), hasta el 50%."
+      "en": "Up to $500/ton rebate for new installation of qualifying Central Ground Source Heat Pump ($250/ton rebate for replacement).",
+      "es": "Reembolso de hasta $500 dólares/tonelada por la nueva instalación de una bomba de calor geotérmica central que cumpla los requisitos (un reembolso de $250 dólares/tonelada por su sustitución)."
     },
     "bonus_available": true
   },
@@ -10712,13 +10754,13 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 500
+      "maximum": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% rebate of total equipment and installation costs up to $500 for non-managed Level 2 (L2) chargers.",
+      "en": "50% rebate of total equipment and installation costs up to $250 for non-managed Level 2 (L2) chargers.",
       "es": "Reembolso del 50% del total de los costos de equipamiento e instalación, hasta $500 dólares, para cargadores de nivel 2 (L2) sin sistema de control."
     }
   },
@@ -12282,28 +12324,6 @@
     }
   },
   {
-    "id": "CO-538",
-    "authority_type": "utility",
-    "authority": "co-y-w-electric-association",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "item": "other",
-    "program": "co_y-WElectricAssociation_rebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 0
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Rebates available for various electric outdoor power equipment. Contact Member Services for details.",
-      "es": "Reembolso disponible para varios equipos eléctricos de uso en espacios exteriores. Póngase en contacto con el Servicio de Atención al Afiliado para mayor información."
-    }
-  },
-  {
     "id": "CO-539",
     "authority_type": "utility",
     "authority": "co-y-w-electric-association",
@@ -12346,6 +12366,48 @@
     "short_description": {
       "en": "Up to $180 for Energy Star rated hybrid clothes dryer (ventless).",
       "es": "Hasta $180 dólares por una secadora de ropa híbrida (sin ventilación) con clasificación ENERGY STAR."
+    }
+  },
+  {
+    "id": "CO-543",
+    "authority_type": "utility",
+    "authority": "co-sangre-de-cristo-electric-association",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "co_sangreDeCristoElectricAssociation_saveEnergy&Money",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000,
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $3000 for labor & materials per household for weatherization measures as part of converting to heat pumps from electric or propane heat source."
+    }
+  },
+  {
+    "id": "CO-544",
+    "authority_type": "utility",
+    "authority": "co-xcel-energy",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "co_xcelEnergy_heatPumpWaterHeaterRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 off qualifying new heat pump water heaters for Xcel customers. Must be installed by registered contractor and may not exceed 80 gallons."
     }
   }
 ]

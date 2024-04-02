@@ -2,7 +2,9 @@
 
 ## Automated description updates
 
-The script `scripts/update-descriptions.ts` fetches short descriptions for incentives from our internal spreadsheets, and writes them to the corresponding JSON files. Spreadsheet rows and JSON incentives are correlated by ID. Update the script whenever new states/spreadsheets are added. (We aim to eventually generate entire incentives JSON files like this, not just the `short_description` field.)
+Note: when possible, prefer using the full [Spreadsheet to JSON](#spreadsheet-to-json) process documented below. You may still need this script if many other values between the spreadsheet and JSON would be changed, or if you want to update the IRA fields.
+
+The script `scripts/update-descriptions.ts` fetches short descriptions for incentives from our internal spreadsheets, and writes them to the corresponding JSON files. Spreadsheet rows and JSON incentives are correlated by ID. Update the script whenever new states/spreadsheets are added.
 
 The script is also runnable as `yarn update-descriptions`. Pass two-letter state codes, or `IRA`, as arguments to the script. By default, the script only shows a diff and does not modify the files; pass `--write` to apply edits.
 
@@ -32,7 +34,7 @@ Filling out an entry for `incentive-spreadsheet-registry.ts` consists of creatin
 - Exporting and sharing a sheet URL in `sheetUrl`
   - To do this for a Google sheet, click File -> Share -> Publish to web and under `Link`, select the Incentives data tab and change the `Web page` default to `Comma separated values (.csv)`. The link that appears is what should be copied into the value.
 - Optionally declaring the header row number, if not the top row of the spreadsheet, in `headerRowNumber`
-- Optionally naming a filepath where _collected_ incentives will be written in `collectedFilepath`. This is experimental and affects how some of the scripts work, so you shouldn't do this for now unless you know what you're doing.
+- Optionally naming a filepath where _collected_ incentives will be written in `collectedFilepath`. We recommend using `data/<state_id>/collected.json`. This is experimental and also requires some setup to authenticate with the Google API. See [JSON To Spreadsheet](#json-to-spreadsheet) for more details before proceeding.
 
 First, create a subdirectory in `data/` named with the new state's abbreviation.
 
@@ -43,15 +45,12 @@ Then, run [`generate-utility-data.ts`](generate-utility-data.ts) to populate the
 This script covers:
 
 - data/authorities.json
-- data/programs.ts
 - src/data/programs.ts
 
 Usage:
 `node build/scripts/generate-misc-state-data.js <state_id>`
 
-After running, you may need to edit the program files to put states in alphabetical order. The authorities file is already alphabetically sorted. Note that running this script twice will paste the same values twice.
-
-It's recommended to also define low-income thresholds in `data/low_income_thresholds.json` for your state to save time in the next step.
+It's recommended to also define low-income thresholds in `data/low_income_thresholds.json` and geo groups in `data/geo_groups.json` for your state to save time in the next step.
 
 1. [`incentive-spreadsheet-to-json.ts`](incentive-spreadsheet-to-json.ts) reads the spreadsheet and tries to convert it to JSON. This can be a messy process – spreadsheets may not have the correct column names or values. The script tries to handle small string discrepancies itself because making edits to Google sheets has a 5-minute delay before changes are reflected, but ultimately even with the script's help, this may be a painstaking process.
 
@@ -66,6 +65,37 @@ Note that even after running these, there are still files you must edit manually
 Eg: https://github.com/rewiringamerica/api.rewiringamerica.org/pull/209/files
 
 To encode relationships between incentives, see the [`relationships-README`](https://github.com/rewiringamerica/api.rewiringamerica.org/blob/main/docs/relationships-README.md).
+
+## JSON to Spreadsheet
+
+This takes _CollectedIncentives_ and exports them back to a Google Sheet. Note that CollectedIncentive is a larger schema compared to StateIncentive; the latter is what is stored in the state `incentives.json` files and what we serve in the API. Conceptually, a CollectedIncentive is a JSON represeentation of a spreadsheet row.
+
+### Setup
+
+You'll need credentials to authenticate with the Google Sheets API, both for reading and writing. To do so, visit the [Google Cloud project](https://console.cloud.google.com/welcome?project=spreadsheet-json-conversion), specifically this [OAuth credential](https://console.cloud.google.com/apis/credentials/oauthclient/599066193537-oqjm5hffqfkknfethrm3od9pukeh45hh.apps.googleusercontent.com?project=spreadsheet-json-conversion). If you can't download the existing secret, add a new secret. Download that file and put it in `secrets/credentials.json`.
+
+### Getting CollectedIncentives
+
+Most states don't have their CollectedIncentives checked in, so we'll need to generate some first. Add a `collectedFilepath` field to your state in the [`incentive-spreadsheet-registry.ts`](incentive-spreadsheet-registry.ts). If you haven't already run the state through the [Spreadsheet to JSON](#spreadsheet-to-json) process, do so now, including the first steps with the `generate-utility-data.ts` and `generate-misc-state-data.ts` scripts.
+
+When you get to the `incentive-spreadsheet-to-json.ts` script, if you've supplied the `collectedFilepath`, you will get a URL to your console indicating that you should visit it to continue the authentication process. Give permission from your Google Account and continue the process.
+
+After this point, you should have a CollectedIncentives file located at the `collectedFilepath` you supplied. Ideally, we should check in this file and make it the source of truth, instead of the spreadsheets or the servable API data.
+
+### Exporting to Google Sheets
+
+Once you have your CollectedIncentives, run:
+
+`yarn ts-node scripts/export-to-google-sheets.ts <state_id>`
+
+You will get a URL printed to the console indicating that you've created a Google Sheet. Visit it and see that it is equivalent to the JSON data, and more-or-less equivalent to the original spreadsheet that you ran through the spreadsheet-to-json process. Some diffs you can expect:
+
+1. Minor formatting changes
+2. Links where the target URL isn't present in the text ([example](https://google.com)) are converted include the link target explicitly.
+3. Some column or values names may change to be more canonical
+4. Most non-text features won't survive the conversion (comments, filters, charts, etc.)
+
+If you've made changes to the CollectedIncentives JSON and your exported spreadsheet is more up-to-date than the previous version of the spreadsheet, consider replacing it.
 
 ## Utility Data
 
