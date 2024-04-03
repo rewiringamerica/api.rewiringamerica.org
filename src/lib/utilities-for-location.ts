@@ -1,6 +1,5 @@
 import { Database } from 'sqlite';
 import { AUTHORITIES_BY_STATE, Authority } from '../data/authorities';
-import { isStateIncluded } from '../data/types/states';
 import { GeoInfo } from './income-info';
 
 /** Models the zip_to_utility table in sqlite. */
@@ -22,13 +21,12 @@ type ZipToUtility = {
 export async function getUtilitiesForLocation(
   db: Database,
   location: GeoInfo,
-  includeBeta: boolean,
 ): Promise<{
   [id: string]: Authority;
 }> {
   const stateUtilities = AUTHORITIES_BY_STATE[location.state_id]?.utility;
 
-  if (!stateUtilities || !isStateIncluded(location.state_id, includeBeta)) {
+  if (!stateUtilities) {
     return {};
   }
 

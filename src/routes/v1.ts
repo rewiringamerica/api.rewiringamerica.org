@@ -153,11 +153,7 @@ export default async function (
           .type('application/json')
           .send({
             location: { state: location.state_id },
-            utilities: await getUtilitiesForLocation(
-              fastify.sqlite,
-              location,
-              request.query.include_beta_states ?? false,
-            ),
+            utilities: await getUtilitiesForLocation(fastify.sqlite, location),
           });
       } catch (error) {
         if (error instanceof InvalidInputError) {
