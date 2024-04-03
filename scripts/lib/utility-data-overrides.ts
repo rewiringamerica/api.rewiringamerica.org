@@ -139,7 +139,7 @@ export const OVERRIDES = new Map<string | number, string>([
   // IA
   [7750, 'Guthrie County REC'],
   [8283, 'Harrison County REC'],
-  // Hawkeye?
+  [8298, 'MiEnergy'],
   [12642, 'Maquoketa Valley Electric Cooperative'],
   [13675, 'Nishabotna Valley REC'],
   [18446, 'T.I.P. Rural Electric Cooperative'],
