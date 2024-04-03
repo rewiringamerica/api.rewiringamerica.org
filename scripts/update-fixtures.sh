@@ -101,11 +101,9 @@ curl \
 &utility=ga-georgia-power" \
   | jq . > test/fixtures/v1-ga-30033-utility.json
 
-# TODO: Remove beta states argument when IL is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator?\
 zip=60304\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=35000\
 &tax_filing=joint\
