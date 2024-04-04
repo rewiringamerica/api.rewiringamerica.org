@@ -13,20 +13,12 @@ Note that all APIs will pull the most recently available data year unless otherw
 # Create table of MFIs and AMIs for each county level
 # (or county subdivision  in the case of New England states)
 
-# Pull MFI, 30%, 50%, 80% AMI from API. Note only
+# Pull MFI, 30%, 50%, 80% AMI from API. Takes ~30 min
 # currently ~10 counties/county subs throw errors, see hud_ami_api_error.log.
 mfi_ami80_by_countysub = pd.concat([
     util.pull_state_amis_by_countysub(state_postal_code=state, verbose=True)
     for state in util.STATE_POSTAL_TO_GEOID.keys()]
 )
-
-# mfi_ami80_by_countysub.to_csv(
-#     util.DATA_FPATH / 'processed' / 'ami_by_county_countysub.csv', index=False)
-
-# str_cols = ['counties_msa', 'county_geoid', 'countysub_geoid']
-# mfi_ami80_by_countysub = pd.read_csv(
-#     util.DATA_FPATH / 'processed' / 'ami_by_county_countysub.csv',
-#     dtype={col: str for col in str_cols})
 
 # Read in 150% AMI from HAP
 string_cols = ['fips2010', 'State', 'County']

@@ -20,11 +20,11 @@ pip install -r requirements.txt
 
 ### AMI
 
-HUD publishes [Homeowner Assistance Fund (HAF) Income Limit data](https://www.huduser.gov/portal/datasets/haf-il.html) which provides containing 150% AMI income thresholds (all AMI thresholds can be pulled via API).
+HUD publishes Homeowner Assistance Fund (HAF) Income Limit data which provides containing 150% AMI income thresholds (all other AMI thresholds can be pulled via API).
 
 **Refresh Rate: Annual. According to PNNL "These resources will be updated yearly after HHS and HUD publish new Federal Poverty Level (FPL) and Area Median Income (AMI) numbers."**
 
-1. Go to [Homeowner Assistance Fund Income Limits (HAF)](https://www.huduser.gov/portal/datasets/haf-il.html#data_2024) and download the most recent excel spreadsheet under the "data" tab.
+1. Go to [Homeowner Assistance Fund Income Limits (HAF)](https://www.huduser.gov/portal/datasets/haf-il.html) and download the most recent excel spreadsheet under the "data" tab.
 
 This file is stored at `data/raw/il24_all100_150_HAF.xlsx` (note that filename will change with new updates).
 

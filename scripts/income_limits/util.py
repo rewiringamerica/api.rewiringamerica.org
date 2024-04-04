@@ -72,16 +72,14 @@ TERRITORY_POSTAL_CODES = ['AS', 'GU', 'MP', 'VI']
 # HUD API
 HUD_API_KEY = ""
 if len(HUD_API_KEY) == 0:
-    raise ValueError("Add API key")
+    raise ValueError("Add API key: stored in 1Password web developers vault")
 HUD_API_HEADERS = {"Authorization": f"Bearer {HUD_API_KEY}"}
 HUD_ENDPOINT = "https://www.huduser.gov/hudapi/public"
 
-# data paths
 DATA_FPATH = pathlib.Path() / 'scripts' / 'income_limits' / 'data'
 
+
 # -- Functions -- #
-
-
 def clean_punctuation(x):
     """Clean annoying punctuation in a string by removing or replacing with underscores or letters
 

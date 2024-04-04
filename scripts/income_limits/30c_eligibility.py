@@ -3,6 +3,7 @@ import pandas as pd
 import scripts.income_limits.util as util
 """
 Produce two tables indicating whether each tract or ZCTA is eligible for the 30C tax credit.
+Note that all APIs will pull the most recently available data year unless otherwise specified.
 """
 
 # -- 1. 30C tract eligibility -- #
