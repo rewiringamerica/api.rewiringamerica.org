@@ -2,9 +2,13 @@
   "is_under_80_ami": false,
   "is_under_150_ami": true,
   "is_over_150_ami": false,
-  "authorities": {},
+  "authorities": {
+    "pa-department-of-community-and-economic-development": {
+      "name": "Department of Community and Economic Development"
+    }
+  },
   "coverage": {
-    "state": null,
+    "state": "PA",
     "utility": null
   },
   "location": {
@@ -14,6 +18,29 @@
   },
   "data_partners": {},
   "incentives": [
+    {
+      "payment_methods": [
+        "assistance_program"
+      ],
+      "authority_type": "state",
+      "authority": "pa-department-of-community-and-economic-development",
+      "program": "Pennsylvania Weatherization Assistance Program",
+      "program_url": "https://dced.pa.gov/programs/weatherization-assistance-program-wap/",
+      "item": {
+        "type": "weatherization",
+        "name": "Weatherization"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 1
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "Free energy audit and weatherization services for income-qualified residents. Average value per household is $7,669 depending on results."
+    },
     {
       "payment_methods": [
         "pos_rebate"
