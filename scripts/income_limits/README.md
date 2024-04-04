@@ -13,7 +13,7 @@ Set up environment:
 ```
 python3 -mvenv venv
 source venv/bin/activate
-pip install -r requirements.txt
+pip install -r scripts/income_limits/requirements.txt
 ```
 
 ## Downloading Data
@@ -56,3 +56,5 @@ Repeat all steps, but choosing "Census tract" in step 3.
 Repeat all steps, but choosing "Census tract" in step 4. _Note that this crosswalk is used for the EV eligiblity calculations and thus should NOT be updated._
 
 These files should be saved in `data/raw/` as `geocorr2022_zcta_to_countysub.csv`, `geocorr2022_tract_to_countysub.csv`, and `geocorr2022_zcta_to_tract.csv` respectively.
+
+The current version of all the files in `data/raw` are also stored in [the cube](https://console.cloud.google.com/storage/browser/the-cube/data/raw/income_limits;tab=obje[…]iew=project&prefix=&forceOnObjectsSortingFiltering=false).

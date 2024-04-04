@@ -67,8 +67,10 @@ eligibility_30c_by_zcta = util.aggregate_over_origin(
 
 # write out table with all zctas x tracts to allow for tract lookup and
 # custom zip logic on front end
-eligibility_30c_by_tract_zcta.to_csv(
-    util.DATA_FPATH / 'processed' / '30c_eligibility_by_tract_zcta.csv', index=False)
+fpath_out = util.DATA_FPATH / 'processed' / '30c_eligibility_by_tract_zcta.csv'
+print(f"Writing to {fpath_out}")
+eligibility_30c_by_tract_zcta.to_csv(fpath_out, index=False)
 # write out table with all zctas with min typeII error logic already applied
-eligibility_30c_by_zcta.to_csv(
-    util.DATA_FPATH / 'processed' / '30c_eligibility_by_zcta.csv', index=False)
+fpath_out = util.DATA_FPATH / 'processed' / '30c_eligibility_by_zcta.csv'
+print(f"Writing to {fpath_out}")
+eligibility_30c_by_zcta.to_csv(fpath_out, index=False)

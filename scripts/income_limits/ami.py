@@ -13,6 +13,7 @@ Note that all APIs will pull the most recently available data year unless otherw
 
 # Pull MFI, 30%, 50%, 80% AMI from API. Takes ~30 min
 # currently ~10 counties/county subs throw errors, see hud_ami_api_error.log.
+print(f"Pulling AMI data...")
 mfi_ami80_by_countysub = pd.concat([
     util.pull_state_amis_by_countysub(state_postal_code=state, verbose=True)
     for state in util.STATE_POSTAL_TO_GEOID.keys()]
@@ -46,6 +47,17 @@ ami_by_countysub = pd.merge(
 geoid_to_postal = {v: k for k, v in util.STATE_POSTAL_TO_GEOID.items()}
 ami_by_countysub['state'] = ami_by_countysub.county_geoid.str.slice(
     0, 2).map(geoid_to_postal)
+
+# write this now since it takes a while to pull
+
+geo_cols = ["countysub_geoid",  "county_geoid", "state",  "county_name",
+            "counties_msa", "town_name", "metro_status", "metro_name", "area_name"]
+ami_cols = ['median_family_income', 'ami_30',
+            'ami_50', 'ami_80', 'ami_100', 'ami_150']
+
+fpath_out = util.DATA_FPATH / 'processed' / 'ami_by_countysub.csv'
+print(f"Writing to {fpath_out}")
+ami_by_countysub[geo_cols + ['year'] + ami_cols].to_csv(fpath_out, index=False)
 
 # -- 2. Crosswalks from county sub to tract/zcta -- #
 # read in data
@@ -129,8 +141,6 @@ ami_countysub_tract_new_england = (
 ami_countysub_tract = pd.concat(
     [ami_county_tract_non_new_england, ami_countysub_tract_new_england])
 
-ami_cols = ['median_family_income', 'ami_30',
-            'ami_50', 'ami_80', 'ami_100', 'ami_150']
 # Aggregate over countysubs to get AMI at target geography using strategy of minimizng type II error
 ami_by_zcta = util.aggregate_over_origin(
     df=ami_countysub_zcta,
@@ -168,11 +178,15 @@ ami_by_territory_zip = ami_territory.merge(
 ami_by_territory_zip = ami_by_territory_zip[['zip', 'state'] + ami_cols]
 
 # -- 5. Write out AMI data at various levels of geographic aggregation-- #
-ami_by_countysub.to_csv(util.DATA_FPATH / 'processed' /
-                        'ami_by_countysub.csv', index=False)
-ami_by_zcta.to_csv(util.DATA_FPATH / 'processed' /
-                   'ami_by_zcta.csv', index=False)
-ami_by_tract.to_csv(util.DATA_FPATH / 'processed' /
-                    'ami_by_tract.csv', index=False)
-ami_by_territory_zip.to_csv(
-    util.DATA_FPATH / 'processed' / 'ami_by_territory_zip.csv', index=False)
+
+fpath_out = util.DATA_FPATH / 'processed' / 'ami_by_zcta.csv'
+print(f"Writing to {fpath_out}")
+ami_by_zcta.to_csv(fpath_out, index=False)
+
+fpath_out = util.DATA_FPATH / 'processed' / 'ami_by_tract.csv'
+print(f"Writing to {fpath_out}")
+ami_by_tract.to_csv(fpath_out, index=False)
+
+fpath_out = util.DATA_FPATH / 'processed' / 'ami_by_territory_zip.csv'
+print(f"Writing to {fpath_out}")
+ami_by_territory_zip.to_csv(fpath_out, index=False)
