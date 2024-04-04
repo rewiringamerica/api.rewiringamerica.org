@@ -1,16 +1,13 @@
-# %%
+
 import pandas as pd
-import pathlib
 import scripts.income_limits.util as util
 """
-Produce a table indicating whether each ZCTA is eligible for the 30C tax credit.
+Produce two tables indicating whether each tract or ZCTA is eligible for the 30C tax credit.
 """
 
-DATA_FPATH = pathlib.Path() / 'scripts' / 'income_limits' / 'data'
-# %%
 # -- 1. 30C tract eligibility -- #
 eligibility_30c_by_tract = pd.read_csv(
-    DATA_FPATH / 'raw' / '30C all tracts.csv',
+    util.DATA_FPATH / 'raw' / '30C all tracts.csv',
     dtype={'nmtc': bool, 'nonurb': bool, 'tract': str})
 
 eligibility_30c_by_tract.rename(
@@ -22,17 +19,17 @@ eligibility_30c_by_tract.rename(
 
 # state and county naming is non-standard so convert state col
 # to be 2 letter code and drop county to avoid confusion
-fips_to_postal = {v: k for k, v in util.STATE_POSTAL_TO_FIPS.items()}
-eligibility_30c_by_tract['state'] = eligibility_30c_by_tract.apply(
-    lambda x: fips_to_postal[x.tract_geoid[0:2]], axis=1)
+geoid_to_postal = {v: k for k, v in util.STATE_POSTAL_TO_GEOID.items()}
+eligibility_30c_by_tract['state'] = eligibility_30c_by_tract.tract_geoid.str.slice(
+    0, 2).map(geoid_to_postal)
 eligibility_30c_by_tract.drop('county', axis=1, inplace=True)
 
 # calculate whether tract is eligible under either criteria
 eligibility_30c_by_tract['is_eligible'] = eligibility_30c_by_tract.is_low_income_community | eligibility_30c_by_tract.is_nonurban
-# %%
+
 # -- 2. ZCTA <> tract crosswalk -- #
 zcta_tract_crosswalk = util.clean_colnames(pd.read_csv(
-    DATA_FPATH / 'raw' / 'geocorr2022_zcta_to_tract.csv',
+    util.DATA_FPATH / 'raw' / 'geocorr2022_zcta_to_tract.csv',
     encoding="ISO-8859-1",
     low_memory=False,
     skiprows=1,
@@ -42,14 +39,13 @@ zcta_tract_crosswalk = util.clean_colnames(pd.read_csv(
 # remove non-zctas
 zcta_tract_crosswalk = zcta_tract_crosswalk[zcta_tract_crosswalk.zip_code_name != '[not in a ZCTA]']
 
-
 # construct tract geoid
 zcta_tract_crosswalk['tract_geoid'] = zcta_tract_crosswalk.apply(
     lambda x: x.county_code + f"{x.tract:.2f}".replace('.', '').zfill(6), axis=1)
 
 zcta_tract_crosswalk = zcta_tract_crosswalk[[
     'zcta', 'tract_geoid', 'zcta_to_tract_allocation_factor']]
-# %%
+
 # -- 3. Join tract eligibility to crosswalk -- #
 # dropped from left table: territories AS, GU, VI, MP and 0 population tracts
 # note that the entiruty of these 4 territories are non-urban and therefore eligible,
@@ -64,12 +60,14 @@ eligibility_30c_by_zcta = util.aggregate_over_origin(
     groupby_cols=['zcta'],
     agg_cols=['is_eligible'],
     minimize_type_2_error=True)
-# %%
+
+
 # -- 4. Write out data -- #
 
-# write out table with all zctas x tracts to allow for custom logic on front ent
+# write out table with all zctas x tracts to allow for tract lookup and
+# custom zip logic on front end
 eligibility_30c_by_tract_zcta.to_csv(
-    DATA_FPATH / 'processed' / '30c_eligibility_by_tract_zcta.csv', index=False)
+    util.DATA_FPATH / 'processed' / '30c_eligibility_by_tract_zcta.csv', index=False)
 # write out table with all zctas with min typeII error logic already applied
 eligibility_30c_by_zcta.to_csv(
-    DATA_FPATH / 'processed' / '30c_eligibility_by_zcta.csv', index=False)
+    util.DATA_FPATH / 'processed' / '30c_eligibility_by_zcta.csv', index=False)

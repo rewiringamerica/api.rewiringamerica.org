@@ -1,223 +1,188 @@
-# %%
 import numpy as np
 import pandas as pd
-import re
-import pathlib
 
-DATA_FPATH = pathlib.Path() / 'scripts' / 'income_limits' / 'data'
-# %%
-# --  Functions -- #
+import scripts.income_limits.util as util
 
+"""
+Creates AMI income threshold tables by county/countysub, zcta, tract, and territory. 
+Note that this takes ~30 minutes to run. 
+Note that all APIs will pull the most recently available data year unless otherwise specified.
+"""
 
-def clean_punctuation(x):
-    """Clean annoying punctuation in a string by removing or replacing with underscores or letters
+# -- 1. AMI data by county/countysub -- #
+# Create table of MFIs and AMIs for each county level
+# (or county subdivision  in the case of New England states)
 
-    Args:
-        x (str): string with annoying punctuation
-
-    Returns:
-        str: string without annoying punctuation
-
-    """
-    return (x.replace(" ", "_")
-            .replace("-", "_")
-            .replace("%", "pct")
-            .replace("?", "")
-            .replace("/", "_")
-            .replace(".", "_")
-            .replace(",", "")
-            .replace("(", "")
-            .replace(")", "")
-            .replace("$", "dollars")
-            .replace("<", "lt")
-            .replace(">", "gt")
-            .replace("#", "number")
-            .replace("-", "")
-            .replace("?", "")
-            .replace("º", "degrees")
-            .replace("°", "degrees")
-            .replace("  ", "_")
-            .replace("'", "")
-            .replace("[", "")
-            .replace("]", ""))
-
-
-def camel_to_snake(x: str) -> str:
-    """Convert CamelCase strings to snake_case
-
-    Taken from StackOverflow.
-    https://stackoverflow.com/questions/1175208/elegant-python-function-to-convert-camelcase-to-snake-case
-
-    Args:
-        x (str): string written in CamelCase
-
-    Returns:
-        str: string in snake_case
-
-    """
-    x = re.sub('(.)([A-Z][a-z]+)', r'\1_\2', x)
-    return re.sub('([a-z0-9])([A-Z])', r'\1_\2', x).lower()
-
-
-def clean_colnames(df, convert_camel_case: bool = False):
-    """Replace/remove annoying punctuation in pandas columns, and make all lowercase
-
-    Args:
-        df (pd.Dataframe or pyspark.pandas.frame.DataFrame): Dataframe with column names to be replaced
-        convert_camel_case: Converts columns in CamelCase into snake_case if true
-
-    Returns:
-        pd.Dataframe or pyspark.pandas.frame.DataFrame: Dataframe of same type as df with column names replaced
-
-    """
-    if convert_camel_case:
-        return df.rename(columns={c: camel_to_snake(clean_punctuation(c)) for c in df.columns})
-    return df.rename(columns={c: clean_punctuation(c).lower() for c in df.columns})
-
-
-def aggregate_over_origin(df, groupby_cols, agg_cols, weight_col=None, minimize_type_2_error=True):
-    """
-    Aggregate over the origin geography to get the income thresholds for the target geography
-    using one of two strategies: 
-        1. minimize the type II error: take lowest threshold of all origin geographies, 
-           minimizing the chance that estimated income threshold is higher than true threshold.
-        2. minimize the expected error: take the weighted average of thresholds over all geographies
-
-    Args:
-        df (pd.Dataframe): Dataframe to aggregate over
-        groupby_cols (list): list of columns to groupby
-        agg_cols (list): list of columns to aggregate over
-        weight_col (str, optional): weight column to use if minimize_type_2_error=False. 
-                                    Defaults to None.
-        minimize_type_2_error (bool, optional): Whether or not to minimize type II error.
-                                                Defaults to True.
-    """
-    def weighted_average(x, agg_cols, weight_col):
-        """Calculate the weighted average for multiple columns"""
-        return pd.Series(np.average(x[agg_cols], weights=x[weight_col], axis=0), agg_cols)
-
-    if minimize_type_2_error:
-        # get the minimum value for each group
-        df_grouped = df.groupby(groupby_cols, as_index=False)[ami_cols].min()
-    else:  # Minimize expected error
-        # Calculate the weighted average over agg columns for each group
-        if weight_col is None:
-            raise ValueError(
-                "Must pass weight_col if minimize_type_2_error = False")
-        df_grouped = df.groupby(groupby_cols, as_index=False).apply(
-            weighted_average,
-            agg_cols=agg_cols,
-            weight_col=weight_col,
-            include_groups=False)
-    return df_grouped
-
-
-# %%
-# -- Read in and clean crosswalks -- #
-string_cols = ['County code', 'County subdivision (2020)']
-# Read in data
-tract_csub_crosswalk = clean_colnames(pd.read_csv(
-    DATA_FPATH / 'raw' / 'geocorr2022_tract_to_countysub.csv',
-    encoding="ISO-8859-1",
-    low_memory=False,
-    skiprows=1,
-    dtype={col: str for col in string_cols})
+# Pull MFI, 30%, 50%, 80% AMI from API. Note only
+# currently ~10 counties/county subs throw errors, see hud_ami_api_error.log.
+mfi_ami80_by_countysub = pd.concat([
+    util.pull_state_amis_by_countysub(state_postal_code=state, verbose=True)
+    for state in util.STATE_POSTAL_TO_GEOID.keys()]
 )
 
-zcta_csub_crosswalk = clean_colnames(pd.read_csv(
-    DATA_FPATH / 'raw' / 'geocorr2022_zcta_to_countysub.csv',
-    encoding="ISO-8859-1",
-    low_memory=False,
-    skiprows=1,
-    dtype={col: str for col in string_cols})
+# mfi_ami80_by_countysub.to_csv(
+#     util.DATA_FPATH / 'processed' / 'ami_by_county_countysub.csv', index=False)
+
+# str_cols = ['counties_msa', 'county_geoid', 'countysub_geoid']
+# mfi_ami80_by_countysub = pd.read_csv(
+#     util.DATA_FPATH / 'processed' / 'ami_by_county_countysub.csv',
+#     dtype={col: str for col in str_cols})
+
+# Read in 150% AMI from HAP
+string_cols = ['fips2010', 'State', 'County']
+ami150_by_countysub = pd.read_excel(
+    util.DATA_FPATH / 'raw' / 'il24_all100_150_HAF.xlsx',
+    usecols=['fips2010', 'HAF100_24p4', 'HAF150_24p4'],
+    dtype={'fips2010': str})
+
+ami150_by_countysub.rename(
+    {'fips2010': 'countysub_geoid',
+     'HAF100_24p4': 'ami_100',
+     'HAF150_24p4': 'ami_150'},
+    axis=1,
+    inplace=True)
+
+# Combine amis from the two data sources.
+# Note that the ~10 county/countysubs that we could not pull AMIs for from the API
+# will only have 100% and 150% AMIs since they only appear on the right side of the join
+ami_by_countysub = pd.merge(
+    mfi_ami80_by_countysub,
+    ami150_by_countysub,
+    on='countysub_geoid',
+    how='right',
+    validate="many_to_one")
+
+# add a state column
+geoid_to_postal = {v: k for k, v in util.STATE_POSTAL_TO_GEOID.items()}
+ami_by_countysub['state'] = ami_by_countysub.county_geoid.str.slice(
+    0, 2).map(geoid_to_postal)
+
+# -- 2. Crosswalks from county sub to tract/zcta -- #
+# read in data
+string_cols = ['County code', 'County subdivision (2020)']
+tract_countysub_crosswalk = (
+    util.clean_colnames(pd.read_csv(
+        util.DATA_FPATH / 'raw' / 'geocorr2022_tract_to_countysub.csv',
+        encoding="ISO-8859-1",
+        low_memory=False,
+        skiprows=1,
+        dtype={col: str for col in string_cols}))
+    .drop('county_name', axis=1)
+)
+
+zcta_countysub_crosswalk = (
+    util.clean_colnames(pd.read_csv(
+        util.DATA_FPATH / 'raw' / 'geocorr2022_zcta_to_countysub.csv',
+        encoding="ISO-8859-1",
+        low_memory=False,
+        skiprows=1,
+        dtype={col: str for col in string_cols}))
+    .rename({'zip_census_tabulation_area': 'zcta'}, axis=1)
+    .drop('county_name', axis=1)
 )
 
 # remove non-zctas
-zcta_csub_crosswalk = zcta_csub_crosswalk[zcta_csub_crosswalk.zip_code_name != '[not in a ZCTA]']
+zcta_countysub_crosswalk = zcta_countysub_crosswalk[
+    zcta_countysub_crosswalk.zip_code_name != '[not in a ZCTA]']
 
 # clean up geoids
-zcta_csub_crosswalk['countysub_geoid'] = zcta_csub_crosswalk[['county_code',
-                                                             'county_subdivision_2020']].agg(''.join, axis=1)
-tract_csub_crosswalk['countysub_geoid'] = tract_csub_crosswalk[['county_code',
-                                                               'county_subdivision_2020']].agg(''.join, axis=1)
-tract_csub_crosswalk['tract_geoid'] = tract_csub_crosswalk.apply(
+zcta_countysub_crosswalk['countysub_geoid'] = zcta_countysub_crosswalk[['county_code',
+                                                                        'county_subdivision_2020']].agg(''.join, axis=1)
+tract_countysub_crosswalk['countysub_geoid'] = tract_countysub_crosswalk[['county_code',
+                                                                          'county_subdivision_2020']].agg(''.join, axis=1)
+tract_countysub_crosswalk['tract_geoid'] = tract_countysub_crosswalk.apply(
     lambda x: x.county_code + f"{x.tract:.2f}".replace('.', '').zfill(6), axis=1)
 
-# %%
-# -- Read in and clean AMI data -- #
-string_cols = ['FIPS2010_Identifier', 'USPS_State_Code', 'County_Code']
-ami_limits = pd.read_excel(
-    DATA_FPATH / 'raw' / '2023_AMI_50_80_100_150_EL_from_HUD_240304_Update.xlsx',
-    sheet_name=1,
-    dtype={col: str for col in string_cols}
-)
-# in some cases, excel seems to have dropped 0 padding so need to re-pad
-for col in string_cols:
-    str_len = ami_limits[col].str.len().max()
-    ami_limits[col] = ami_limits[col].str.zfill(str_len)
-ami_limits = clean_colnames(ami_limits)
-
-#select "base" ami columns (4 person households)
-geographic_cols = ['fips2010_identifier', 'usps_state_abbr', 'hud_area_code']
-ami_cols = ['2023_median_family_income'] + \
-    [col for col in ami_limits.columns if 'ami_4_persons' in col]
-ami_limits = ami_limits[geographic_cols + ami_cols]
-
-# %%
-# -- Join AMI to Crosswalks -- #
-# pull county geoid out of county sub geoid
-ami_limits['county_geoid'] = ami_limits.fips2010_identifier.apply(
-    lambda x: x[0:5] if x[5:10] == '99999' else None)
+# -- 3. Map countysub AMIs to target geographies (ZCTA/tract) and aggregate over target -- #
 
 # Join amis to zctas and to tracts, where new england states will match on countysub geoids
 # and non-new england states will match on county geoids
 # The following to not have a match in the crosswalk, and thus get dropped
 # * 15 unpopulated countysubs in New England
 # * Sullivan MO which is an edge case of a county sub outside New England
-# TODO: add data checks?
-ami_countysub_zcta_non_new_england = ami_limits.merge(
-    zcta_csub_crosswalk, left_on='county_geoid', right_on='county_code', how='inner')
-ami_countysub_zcta_new_england = ami_limits.merge(
-    zcta_csub_crosswalk, left_on='fips2010_identifier', right_on='countysub_geoid', how='inner')
+# TODO: add data checks for future refreshes?
+
+# bool mask indicating if row is a county (True) or a county subdivision (False)
+is_county_msk = ami_by_countysub.town_name.isna()
+
+# join county and countysub amis to zcta
+ami_countysub_zcta_non_new_england = (
+    ami_by_countysub[is_county_msk]
+    .merge(
+        zcta_countysub_crosswalk.drop('countysub_geoid', axis=1),
+        left_on='county_geoid',
+        right_on='county_code')
+)
+ami_countysub_zcta_new_england = (
+    ami_by_countysub[~is_county_msk]
+    .merge(
+        zcta_countysub_crosswalk,
+        on='countysub_geoid')
+)
 ami_countysub_zcta = pd.concat(
     [ami_countysub_zcta_non_new_england, ami_countysub_zcta_new_england])
 
-ami_countysub_tract_non_new_england = ami_limits.merge(
-    tract_csub_crosswalk, left_on='county_geoid', right_on='county_code', how='inner')
-ami_countysub_tract_new_england = ami_limits.merge(
-    tract_csub_crosswalk, left_on='fips2010_identifier', right_on='countysub_geoid', how='inner')
+# join county and countysub amis to tract
+ami_countysub_tract_non_new_england = (
+    ami_by_countysub[is_county_msk]
+    .merge(
+        tract_countysub_crosswalk.drop('countysub_geoid', axis=1),
+        left_on='county_geoid',
+        right_on='county_code')
+)
+ami_countysub_tract_new_england = (
+    ami_by_countysub[~is_county_msk]
+    .merge(
+        tract_countysub_crosswalk,
+        on='countysub_geoid')
+)
 ami_countysub_tract = pd.concat(
     [ami_countysub_tract_non_new_england, ami_countysub_tract_new_england])
 
-# %%
-# -- Aggregate over countysubs to get AMI at target geography -- #
-ami_by_zcta = aggregate_over_origin(
+ami_cols = ['median_family_income', 'ami_30',
+            'ami_50', 'ami_80', 'ami_100', 'ami_150']
+# Aggregate over countysubs to get AMI at target geography using strategy of minimizng type II error
+ami_by_zcta = util.aggregate_over_origin(
     df=ami_countysub_zcta,
-    groupby_cols=['zip_census_tabulation_area', 'zip_code_name'],
+    groupby_cols=['zcta', 'zip_code_name'],
     agg_cols=ami_cols)
 
-ami_by_tract = aggregate_over_origin(
+ami_by_tract = util.aggregate_over_origin(
     df=ami_countysub_tract,
-    groupby_cols=['tract_geoid', 'county_name', 'usps_state_abbr'],
+    groupby_cols=['tract_geoid', 'county_name', 'state'],
     agg_cols=ami_cols)
 
-# alternative strategy of minimizing expected error
-# ami_by_zcta = aggregate_over_origin(
-#     df = ami_csub_zcta,
-#     groupby_cols=['zip_census_tabulation_area', 'zip_code_name'],
-#     agg_cols=ami_cols,
-#     weight_col='zcta_to_cousub20_allocation_factor',
-#     minimize_type_2_error=False)
-# %%
-# -- Create a county metro status lookup for EV incentives  -- #
-# A county resides entirely within or outside of a metro area, and if it is within
-# a metro area, it will be indicated by the FMR Area prefix
-ami_limits['county_geoid'] = ami_limits.fips2010_identifier.str.slice(0,5)
-ami_limits['is_metro'] = ami_limits.hud_area_code.str.slice(0,5) == 'METRO'
-county_metro_status = ami_limits[['county_geoid', 'is_metro']].drop_duplicates()
+# -- 4. Create territory lookup  -- #
+# For AS,GU,MP there is only one county over the whole territory,
+# so we can just look these up by territory.
+# For VI, we must map from zips to counties, and since zip -> county is many to one
+# in VI, and all AMIs are defined at the county level, we can just look these up by zip.
 
-# %%
-# -- Write out data -- #
-ami_by_zcta.to_csv(DATA_FPATH / 'processed' / 'ami_by_zcta.csv', index=False)
-ami_by_tract.to_csv(DATA_FPATH / 'processed' / 'ami_by_tract.csv', index=False)
-county_metro_status.to_csv(DATA_FPATH / 'processed' / 'metro_status_by_county.csv', index=False)
+# subset to only non-PR territories (AS,GU,MP,VI)
+ami_territory = ami_by_countysub[ami_by_countysub.state.isin(
+    util.TERRITORY_POSTAL_CODES)]
+
+# Pull zip to county mapping for VI
+zip_county_crosswalk_vi = util.get_zip_crosswalk(
+    state_abbr='VI',
+    crosswalk_type="zip-county").drop('state', axis=1)
+
+# Left join territory AMIs to VI zip <> county mapping
+# which results in a table by territory for AS,GU,MP and by zip for VI
+ami_by_territory_zip = ami_territory.merge(
+    zip_county_crosswalk_vi.rename(columns={'geoid': 'county_geoid'}),
+    on='county_geoid',
+    how='left')
+
+# subset to cols of interest
+ami_by_territory_zip = ami_by_territory_zip[['zip', 'state'] + ami_cols]
+
+# -- 5. Write out AMI data at various levels of geographic aggregation-- #
+ami_by_countysub.to_csv(util.DATA_FPATH / 'processed' /
+                        'ami_by_countysub.csv', index=False)
+ami_by_zcta.to_csv(util.DATA_FPATH / 'processed' /
+                   'ami_by_zcta.csv', index=False)
+ami_by_tract.to_csv(util.DATA_FPATH / 'processed' /
+                    'ami_by_tract.csv', index=False)
+ami_by_territory_zip.to_csv(
+    util.DATA_FPATH / 'processed' / 'ami_by_territory_zip.csv', index=False)
