@@ -80,7 +80,7 @@ DATA_FPATH = pathlib.Path() / 'scripts' / 'income_limits' / 'data'
 
 
 # -- Functions -- #
-def clean_punctuation(x):
+def clean_punctuation(x: str) -> str:
     """Clean annoying punctuation in a string by removing or replacing with underscores or letters
 
     Args:
@@ -130,7 +130,7 @@ def camel_to_snake(x: str) -> str:
     return re.sub('([a-z0-9])([A-Z])', r'\1_\2', x).lower()
 
 
-def clean_colnames(df, convert_camel_case: bool = False):
+def clean_colnames(df, convert_camel_case: bool = False) -> pd.DataFrame:
     """Replace/remove annoying punctuation in pandas columns, and make all lowercase
 
     Args:
@@ -147,7 +147,7 @@ def clean_colnames(df, convert_camel_case: bool = False):
 
 
 # HUD API has a rate limit of 60 queries per min
-def rate_limited_query(query_url: str, headers: dict = {}, sleep_time: int = 10):
+def rate_limited_query(query_url: str, headers: dict = {}, sleep_time: int = 10) -> dict:
     """
     Poor man's rate limiting for querying an API: just sleeps for `sleep_time` seconds if the API 
     throws a "429 Too Many Request" Error. 
@@ -168,7 +168,8 @@ def rate_limited_query(query_url: str, headers: dict = {}, sleep_time: int = 10)
     return response
 
 
-def pull_state_amis_by_countysub(state_postal_code: str, year: int = None, verbose: bool = False):
+def pull_state_amis_by_countysub(
+        state_postal_code: str, year: int = None, verbose: bool = False) -> pd.DataFrame:
     """
     Get AMIs for all county or countysubs within the state
 
@@ -204,7 +205,7 @@ def pull_state_amis_by_countysub(state_postal_code: str, year: int = None, verbo
     return state_amis_by_countysub
 
 
-def pull_countysub_ami(countysub_geoid: str, year: int = None, verbose: bool = False):
+def pull_countysub_ami(countysub_geoid: str, year: int = None, verbose: bool = False) -> pd.DataFrame:
     """
     Pull base (4 person) AMI income thresholds for a given county 
 
@@ -227,18 +228,14 @@ def pull_countysub_ami(countysub_geoid: str, year: int = None, verbose: bool = F
         query_url=county_income_limit_url, headers=HUD_API_HEADERS)
     try:
         data = response.json()['data']
-        # the last 5 digit are just padded with 9s to make it fit the same format as county subs
         data['county_geoid'] = countysub_geoid[0:5]
         data['countysub_geoid'] = countysub_geoid
-
-        # data['is_county'] = if data['town_name'] != '':  # then the county fips queried is actually a county subdivision
         # pull out the 4 person income threshold for each income threshold: 30, 50, and 80% AMI
         data['ami_80'] = data['low']['il80_p4']
         data['ami_50'] = data['very_low']['il50_p4']
         data['ami_30'] = data['extremely_low']['il30_p4']
 
     except:
-        # a few county/countysubs throw errors and we don't want to stall out the code, so just print, write to log and move on
         error_msg = f"{countysub_geoid} failed: {response.status_code}"
         if verbose:
             print(error_msg)
@@ -248,7 +245,7 @@ def pull_countysub_ami(countysub_geoid: str, year: int = None, verbose: bool = F
     return data
 
 
-def get_zip_crosswalk(state_abbr: str, crosswalk_type: str, year: int = None):
+def get_zip_crosswalk(state_abbr: str, crosswalk_type: str, year: int = None) -> pd.DataFrame:
     """Retrives crosswalk to/from zip to/from another geography. See API docs for details:
     https://www.huduser.gov/portal/dataset/uspszip-api.html
 
@@ -282,7 +279,8 @@ def get_zip_crosswalk(state_abbr: str, crosswalk_type: str, year: int = None):
         "zip-countysub",  # (Available 2nd Quarter 2018 onwards)"
         "countysub-zip"  # (Available 2nd Quarter 2018 onwards)
     ]
-    crosswalk_url = f"{HUD_ENDPOINT}/usps?type={crosswalk_types.index(crosswalk_type)+1}&query={state_abbr}"
+    type_index = crosswalk_types.index(crosswalk_type)+1
+    crosswalk_url = f"{HUD_ENDPOINT}/usps?type={type_index}&query={state_abbr}"
 
     if year is not None:
         crosswalk_url += f"&year={year}"
@@ -296,7 +294,9 @@ def get_zip_crosswalk(state_abbr: str, crosswalk_type: str, year: int = None):
     return pd.DataFrame(response.json()["data"]["results"])
 
 
-def aggregate_over_origin(df, groupby_cols, agg_cols, weight_col=None, minimize_type_2_error=True):
+def aggregate_over_origin(
+        df: pd.DataFrame, groupby_cols: list, agg_cols: list, weight_col: str = None,
+        minimize_type_2_error: bool = True) -> pd.DataFrame:
     """
     Aggregate over the origin geography to get the income thresholds for the target geography
     using one of two strategies: 

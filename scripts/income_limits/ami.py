@@ -1,7 +1,5 @@
-import numpy as np
 import pandas as pd
-
-import scripts.income_limits.util as util
+import util
 
 """
 Creates AMI income threshold tables by county/countysub, zcta, tract, and territory. 
@@ -98,7 +96,7 @@ tract_countysub_crosswalk['tract_geoid'] = tract_countysub_crosswalk.apply(
 is_county_msk = ami_by_countysub.town_name.isna()
 
 # join county and countysub amis to zcta
-ami_countysub_zcta_non_new_england = (
+ami_county_zcta_non_new_england = (
     ami_by_countysub[is_county_msk]
     .merge(
         zcta_countysub_crosswalk.drop('countysub_geoid', axis=1),
@@ -112,10 +110,10 @@ ami_countysub_zcta_new_england = (
         on='countysub_geoid')
 )
 ami_countysub_zcta = pd.concat(
-    [ami_countysub_zcta_non_new_england, ami_countysub_zcta_new_england])
+    [ami_county_zcta_non_new_england, ami_countysub_zcta_new_england])
 
 # join county and countysub amis to tract
-ami_countysub_tract_non_new_england = (
+ami_county_tract_non_new_england = (
     ami_by_countysub[is_county_msk]
     .merge(
         tract_countysub_crosswalk.drop('countysub_geoid', axis=1),
@@ -129,7 +127,7 @@ ami_countysub_tract_new_england = (
         on='countysub_geoid')
 )
 ami_countysub_tract = pd.concat(
-    [ami_countysub_tract_non_new_england, ami_countysub_tract_new_england])
+    [ami_county_tract_non_new_england, ami_countysub_tract_new_england])
 
 ami_cols = ['median_family_income', 'ami_30',
             'ami_50', 'ami_80', 'ami_100', 'ami_150']

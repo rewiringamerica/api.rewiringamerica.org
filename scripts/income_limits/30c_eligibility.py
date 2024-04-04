@@ -1,6 +1,6 @@
-
 import pandas as pd
-import scripts.income_limits.util as util
+import util
+
 """
 Produce two tables indicating whether each tract or ZCTA is eligible for the 30C tax credit.
 Note that all APIs will pull the most recently available data year unless otherwise specified.
@@ -19,7 +19,7 @@ eligibility_30c_by_tract.rename(
     inplace=True)
 
 # state and county naming is non-standard so convert state col
-# to be 2 letter code and drop county to avoid confusion
+# to be 2 letter code and drop county name to avoid confusion
 geoid_to_postal = {v: k for k, v in util.STATE_POSTAL_TO_GEOID.items()}
 eligibility_30c_by_tract['state'] = eligibility_30c_by_tract.tract_geoid.str.slice(
     0, 2).map(geoid_to_postal)
@@ -47,7 +47,7 @@ zcta_tract_crosswalk['tract_geoid'] = zcta_tract_crosswalk.apply(
 zcta_tract_crosswalk = zcta_tract_crosswalk[[
     'zcta', 'tract_geoid', 'zcta_to_tract_allocation_factor']]
 
-# -- 3. Join tract eligibility to crosswalk -- #
+# -- 3. Join tract eligibility to zcta crosswalk and aggregate over tract -- #
 # dropped from left table: territories AS, GU, VI, MP and 0 population tracts
 # note that the entiruty of these 4 territories are non-urban and therefore eligible,
 # so these can be handled upstream
