@@ -3,8 +3,8 @@ import util
 
 """
 Creates AMI income threshold tables by county/countysub, zcta, tract, and territory. 
-Note that this takes ~30 minutes to run. 
-Note that all APIs will pull the most recently available data year unless otherwise specified.
+Note that this takes ~30 minutes to run and that all APIs will pull 
+the most recently available data year unless otherwise specified.
 """
 
 # -- 1. AMI data by county/countysub -- #
@@ -105,7 +105,7 @@ tract_countysub_crosswalk['tract_geoid'] = tract_countysub_crosswalk.apply(
 # TODO: add data checks for future refreshes?
 
 # bool mask indicating if row is a county (True) or a county subdivision (False)
-is_county_msk = ami_by_countysub.town_name.isna()
+is_county_msk = ami_by_countysub.town_name == ''
 
 # join county and countysub amis to zcta
 ami_county_zcta_non_new_england = (
@@ -140,7 +140,7 @@ ami_countysub_tract_new_england = (
 )
 ami_countysub_tract = pd.concat(
     [ami_county_tract_non_new_england, ami_countysub_tract_new_england])
-
+# %%
 # Aggregate over countysubs to get AMI at target geography using strategy of minimizng type II error
 ami_by_zcta = util.aggregate_over_origin(
     df=ami_countysub_zcta,
