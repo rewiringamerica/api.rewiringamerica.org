@@ -80,4 +80,13 @@ export const PA_PROGRAMS = {
       en: 'https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/heating-cooling-rebates',
     },
   },
+  pa_pennsylvaniaDepartmentOfEnvironmentalProtection_alternativeFuelVehicleRebates:
+    {
+      name: {
+        en: 'Alternative Fuel Vehicle Rebates',
+      },
+      url: {
+        en: 'https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx',
+      },
+    },
 } as const;
