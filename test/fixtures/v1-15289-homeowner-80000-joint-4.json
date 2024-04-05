@@ -3,8 +3,11 @@
   "is_under_150_ami": true,
   "is_over_150_ami": false,
   "authorities": {
-    "pa-department-of-community-and-economic-development": {
-      "name": "Department of Community and Economic Development"
+    "pa-pennsylvania-department-of-environmental-protection": {
+      "name": "Pennsylvania Department of Environmental Protection"
+    },
+    "pa-pennsylvania-department-of-community-and-economic-development": {
+      "name": "Pennsylvania Department of Community and Economic Development"
     }
   },
   "coverage": {
@@ -23,7 +26,7 @@
         "assistance_program"
       ],
       "authority_type": "state",
-      "authority": "pa-department-of-community-and-economic-development",
+      "authority": "pa-pennsylvania-department-of-community-and-economic-development",
       "program": "Pennsylvania Weatherization Assistance Program",
       "program_url": "https://dced.pa.gov/programs/weatherization-assistance-program-wap/",
       "item": {
@@ -243,6 +246,114 @@
       "ami_qualification": "less_than_150_ami",
       "eligible": true,
       "short_description": "Rebate up to $840 for heat pump dryers. Low-income households: 100% rebate, Moderate-income: 50% rebate."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "pa-pennsylvania-department-of-environmental-protection",
+      "program": "Alternative Fuel Vehicle Rebates",
+      "program_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 3000,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2023-07-01",
+      "end_date": "2024-06-30",
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "Income-qualified rebate for purchase or lease of new electric vehicles. $3,000 for battery EVs; $2,500 for plug-in hybrid EVs."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "pa-pennsylvania-department-of-environmental-protection",
+      "program": "Alternative Fuel Vehicle Rebates",
+      "program_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
+      "item": {
+        "type": "used_electric_vehicle",
+        "name": "Used Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 3000,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2023-07-01",
+      "end_date": "2024-06-30",
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "Income-qualified rebate for purchase of eligible used electric vehicles. $3,000 rebate for battery EVs; $2,500 rebate for plug-in hybrid EVs."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "pa-pennsylvania-department-of-environmental-protection",
+      "program": "Alternative Fuel Vehicle Rebates",
+      "program_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2000,
+        "maximum": 2000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2023-07-01",
+      "end_date": "2024-06-30",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Income-qualified rebate for purchase or lease of new electric vehicles. $2,000 for battery EVs; $1,500 for plug-in hybrid EVs."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "pa-pennsylvania-department-of-environmental-protection",
+      "program": "Alternative Fuel Vehicle Rebates",
+      "program_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
+      "item": {
+        "type": "used_electric_vehicle",
+        "name": "Used Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2000,
+        "maximum": 2000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2023-07-01",
+      "end_date": "2024-06-30",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Income-qualified rebate for purchase of eligible used electric vehicles. $2,000 rebate for battery EVs; $1,500 rebate for plug-in hybrid EVs."
     },
     {
       "payment_methods": [
