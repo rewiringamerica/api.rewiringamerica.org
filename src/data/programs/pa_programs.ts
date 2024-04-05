@@ -1,5 +1,5 @@
 export const PA_PROGRAMS = {
-  pa_departmentOfCommunityAndEconomicDevelopment_pennsylvaniaWeatherizationAssistanceProgram:
+  pa_pennsylvaniaDepartmentOfCommunityAndEconomicDevelopment_pennsylvaniaWeatherizationAssistanceProgram:
     {
       name: {
         en: 'Pennsylvania Weatherization Assistance Program',
