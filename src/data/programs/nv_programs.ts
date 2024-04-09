@@ -1,10 +1,18 @@
 export const NV_PROGRAMS = {
-  nv_nVEnergy_homeEnergySaver: {
+  nv_nVEnergy_residentialAppliancesAndProducts: {
     name: {
-      en: 'Home Energy Saver',
+      en: 'Residential Appliances and Products',
     },
     url: {
-      en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver',
+      en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver/retail-appliances-and-products',
+    },
+  },
+  nv_nVEnergy_heatPumpWaterHeating: {
+    name: {
+      en: 'Heat Pump Water Heating',
+    },
+    url: {
+      en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver/residential-ac-and-mid-stream/water-heating',
     },
   },
   nv_nVEnergy_qualifiedApplianceReplacementProgram: {
@@ -15,9 +23,9 @@ export const NV_PROGRAMS = {
       en: 'https://www.nvenergy.com/save-with-powershift/qualified-appliance-replacement',
     },
   },
-  nv_nVEnergy_residentialAirconditioningProgram: {
+  nv_nVEnergy_residentialAirConditioning: {
     name: {
-      en: 'Residential Airconditioning program',
+      en: 'Residential Air Conditioning',
     },
     url: {
       en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver/residential-ac-and-mid-stream/residential-air-conditioning',
@@ -29,6 +37,14 @@ export const NV_PROGRAMS = {
     },
     url: {
       en: 'https://www.nvenergy.com/save-with-powershift/smart-thermostat',
+    },
+  },
+  nv_nVEnergy_homeImprovements: {
+    name: {
+      en: 'Home Improvements',
+    },
+    url: {
+      en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver/home-improvements',
     },
   },
   'nv_wellsRuralElectric_saveEnergy,SaveMoney': {
