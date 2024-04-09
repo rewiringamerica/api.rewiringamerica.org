@@ -146,7 +146,7 @@
       "end_date": "2025-12-31",
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "Rebate for 50% of cost up to $1,000 for ENERGY STAR certified mini-split and ground source heat pumps."
+      "short_description": "Rebate for 50% of cost up to $1,000 for ENERGY STAR® certified ground source heat pumps."
     },
     {
       "payment_methods": [
@@ -172,7 +172,7 @@
       "end_date": "2025-12-31",
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "Rebate for 50% of cost up to $500 for ENERGY STAR certified heat pump water heaters."
+      "short_description": "Rebate for 50% of cost up to $500 for ENERGY STAR® certified heat pump water heaters."
     },
     {
       "payment_methods": [
@@ -198,7 +198,33 @@
       "end_date": "2025-12-31",
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "Rebate for 50% of cost up to $50 for ENERGY STAR certified electric vehicle chargers. Must be 208/240 volt level 2 charger with dedicated circuit."
+      "short_description": "Rebate for 50% of cost up to $50 for ENERGY STAR® certified electric vehicle chargers. Must be 208/240 volt level 2 charger with dedicated circuit."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ga-georgia-power",
+      "program": "Home Energy Improvement Program",
+      "program_url": "https://www.georgiapower.com/residential/save-money-and-energy/products-programs/home-energy-efficiency-programs/home-energy-improvementprogram.html",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.5,
+        "maximum": 1000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023-01-01",
+      "end_date": "2025-12-31",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Rebate for 50% of cost up to $1,000 for ENERGY STAR® certified mini-split heat pumps."
     }
   ]
 }
