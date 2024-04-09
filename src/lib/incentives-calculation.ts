@@ -8,7 +8,6 @@ import { DataPartnersType } from '../data/data_partners';
 import { IRAIncentive, IRA_INCENTIVES } from '../data/ira_incentives';
 import { SOLAR_PRICES } from '../data/solar_prices';
 import { StateIncentive } from '../data/state_incentives';
-import { STATE_MFIS, StateMFI } from '../data/state_mfi';
 import { FilingStatus } from '../data/tax_brackets';
 import { APICoverage } from '../data/types/coverage';
 import { PaymentMethod } from '../data/types/incentive-types';
@@ -18,8 +17,10 @@ import {
   APICalculatorResponse,
 } from '../schemas/v1/calculator-endpoint';
 import { APISavings, addSavings, zeroSavings } from '../schemas/v1/savings';
+import { AMIAndEVCreditEligibility } from './ami-evcredit-calculation';
 import { InvalidInputError, UnexpectedInputError } from './error';
-import { AMI, CompleteIncomeInfo, GeoInfo, MFI } from './income-info';
+import { ResolvedLocation } from './location';
+import { roundCents } from './rounding';
 import {
   calculateStateIncentivesAndSavings,
   getAllStateIncentives,
@@ -33,10 +34,6 @@ const OWNER_STATUSES = new Set(Object.values(OwnerStatus));
 const TAX_FILINGS = new Set(Object.values(FilingStatus));
 
 IRA_INCENTIVES.forEach(incentive => Object.freeze(incentive));
-
-function roundCents(dollars: number): number {
-  return Math.round(dollars * 100) / 100;
-}
 
 export type CalculatedIncentive = (IRAIncentive | StateIncentive) & {
   eligible?: boolean;
@@ -54,20 +51,11 @@ type CalculatedIncentives = Omit<APICalculatorResponse, 'incentives'> & {
 };
 
 export type CalculateParams = Omit<APICalculatorRequest, 'location'>;
-export type LocationParams = Omit<GeoInfo, 'zip'>;
 
 function calculateFederalIncentivesAndSavings(
-  ami: AMI,
-  calculations: MFI,
-  stateMFI: StateMFI,
+  amiAndEvCreditEligibility: AMIAndEVCreditEligibility,
   solarSystemCost: number,
-  {
-    tax_filing,
-    owner_status,
-    household_income,
-    household_size,
-    items,
-  }: CalculateParams,
+  { tax_filing, owner_status, household_income, items }: CalculateParams,
 ): {
   federalIncentives: CalculatedIncentive[];
   savings: APISavings;
@@ -98,12 +86,12 @@ function calculateFederalIncentivesAndSavings(
     if (item.ami_qualification) {
       if (
         (item.ami_qualification === 'less_than_80_ami' &&
-          household_income >= Number(ami[`l80_${household_size}`])) ||
+          household_income >= amiAndEvCreditEligibility.computedAMI80) ||
         (item.ami_qualification === 'more_than_80_ami' &&
-          household_income < Number(ami[`l80_${household_size}`])) ||
+          household_income < amiAndEvCreditEligibility.computedAMI80) ||
         (item.ami_qualification === 'less_than_150_ami' &&
-          (household_income < Number(ami[`l80_${household_size}`]) ||
-            household_income >= Number(ami[`l150_${household_size}`])))
+          (household_income < amiAndEvCreditEligibility.computedAMI80 ||
+            household_income >= amiAndEvCreditEligibility.computedAMI150))
       ) {
         eligible = false;
       }
@@ -137,35 +125,7 @@ function calculateFederalIncentivesAndSavings(
 
     // EV charger credit has some special eligibility rules
     if (item.item === 'electric_vehicle_charger') {
-      // console.log(
-      //   'EV Charger Qualifications:',
-      //   '\nIs Rural?',
-      //   !calculations.isUrban,
-      //   '\nPoverty rate is greater than or equal to 20%?',
-      //   calculations.highestPovertyRate >= 0.2,
-      //   '\nNon-metro highest MFI is not greater than 80% state MFI',
-      //   ami.metro === '0' && calculations.highestMFI < stateMFI.TOTAL * 0.8,
-      //   '\nMetro highest MFI is not greater than 80% state MFI OR highest MFI is not greater than 80% median AMI?',
-      //   ami.metro === '1' &&
-      //     (calculations.highestMFI < stateMFI.TOTAL * 0.8 ||
-      //       calculations.highestMFI < Number(ami.median2022) * 0.8),
-      // );
-
-      if (
-        !calculations.isUrban ||
-        calculations.highestPovertyRate >= 0.2 ||
-        (ami.metro === '0' && calculations.highestMFI < stateMFI.TOTAL * 0.8) ||
-        (ami.metro === '1' &&
-          (calculations.highestMFI < stateMFI.TOTAL * 0.8 ||
-            calculations.highestMFI < Number(ami.median2022) * 0.8))
-      ) {
-        // @TODO: The above logic was inverted to be truthy statements, but the
-        // logic for incentives is calculated with true-as-default and needs to be negated
-        // so this express should do nothing and the "else" corrects the incentive state
-        eligible = true;
-      } else {
-        eligible = false;
-      }
+      eligible = amiAndEvCreditEligibility.evCreditEligible;
     }
 
     const newItem = {
@@ -222,7 +182,7 @@ function calculateFederalIncentivesAndSavings(
 
   // The max POS savings is $14,000 if you're under 150% ami, otherwise 0
   savings.pos_rebate =
-    household_income < Number(ami[`l150_${household_size}`]) &&
+    household_income < amiAndEvCreditEligibility.computedAMI150 &&
     owner_status !== 'renter'
       ? MAX_POS_SAVINGS
       : 0;
@@ -234,7 +194,8 @@ function calculateFederalIncentivesAndSavings(
 }
 
 export default function calculateIncentives(
-  { location, ami, calculations }: CompleteIncomeInfo,
+  location: ResolvedLocation,
+  amiAndEvCreditEligibility: AMIAndEVCreditEligibility,
   request: CalculateParams,
 ): CalculatedIncentives {
   const {
@@ -245,7 +206,7 @@ export default function calculateIncentives(
     authority_types,
   } = request;
 
-  const state_id = location.state_id;
+  const state_id = location.state;
 
   if (!OWNER_STATUSES.has(owner_status)) {
     throw new UnexpectedInputError('Unknown owner_status');
@@ -272,9 +233,7 @@ export default function calculateIncentives(
   }
 
   const solarSystemCost = SOLAR_PRICES[state_id]?.system_cost;
-  const stateMFI = STATE_MFIS[state_id];
-
-  if (isNaN(solarSystemCost) || isNaN(stateMFI?.TOTAL)) {
+  if (isNaN(solarSystemCost)) {
     throw new InvalidInputError(
       'Invalid state id provided. Must be US state code or DC.',
     );
@@ -310,11 +269,11 @@ export default function calculateIncentives(
     }
   }
 
-  const isUnder80Ami = household_income < Number(ami[`l80_${household_size}`]);
+  const isUnder80Ami =
+    household_income < amiAndEvCreditEligibility.computedAMI80;
   const isUnder150Ami =
-    household_income < Number(ami[`l150_${household_size}`]);
-  const isOver150Ami =
-    household_income >= Number(ami[`l150_${household_size}`]);
+    household_income < amiAndEvCreditEligibility.computedAMI150;
+  const isOver150Ami = !isUnder150Ami;
 
   const incentives: CalculatedIncentive[] = [];
   let savings: APISavings = zeroSavings();
@@ -325,9 +284,7 @@ export default function calculateIncentives(
 
   if (!authority_types || authority_types.includes(AuthorityType.Federal)) {
     const federal = calculateFederalIncentivesAndSavings(
-      ami,
-      calculations,
-      stateMFI,
+      amiAndEvCreditEligibility,
       solarSystemCost,
       request,
     );

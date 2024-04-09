@@ -63,7 +63,6 @@ import {
   WI_INCENTIVES,
   WI_INCENTIVES_SCHEMA,
 } from '../../src/data/state_incentives';
-import { SCHEMA as SMFI_SCHEMA, STATE_MFIS } from '../../src/data/state_mfi';
 import { TAX_BRACKETS, SCHEMA as TB_SCHEMA } from '../../src/data/tax_brackets';
 
 import Ajv from 'ajv/dist/2020';
@@ -88,7 +87,6 @@ const TESTS = [
   [L_SCHEMA, LOCALES.en, 'en locale'],
   [L_SCHEMA, LOCALES.es, 'es locale'],
   [SP_SCHEMA, SOLAR_PRICES, 'solar_prices'],
-  [SMFI_SCHEMA, STATE_MFIS, 'state_mfis'],
   [TB_SCHEMA, TAX_BRACKETS, 'tax_brackets'],
   [AUTHORITIES_SCHEMA, AUTHORITIES_BY_STATE, 'authorities'],
   [
