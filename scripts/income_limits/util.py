@@ -1,4 +1,5 @@
 import datetime
+import json
 import numpy as np
 import pandas as pd
 import pathlib
@@ -70,10 +71,9 @@ STATE_POSTAL_TO_GEOID = {
 TERRITORY_POSTAL_CODES = ['AS', 'GU', 'MP', 'VI']
 
 # HUD API
-HUD_API_KEY = "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI2IiwianRpIjoiNDc1YjBhZGIwNGVjMTJmZDNmZTZjMjgyZmY4NzNkYTQxMjAzZTk5ODAxNzEyODMxNDVmZjg0MTRkNzgzZGJlMDVmYjI1ZjcwZWVlYWFkNDUiLCJpYXQiOjE3MTA1MjQ0NDEuNzYxNTA5LCJuYmYiOjE3MTA1MjQ0NDEuNzYxNTEyLCJleHAiOjIwMjYwNTcyNDEuNzU3NjgxLCJzdWIiOiI1NjkzNSIsInNjb3BlcyI6W119.POJccNCaWqVFrQJUpvH1geNLOCKh7S5tqjtW-HE9AEaZwrLGoJf-5nvUI_JEY9KFEuJEA-05zyLPqMMjDdGAEg"
-if len(HUD_API_KEY) == 0:
-    raise ValueError("Add API key: stored in 1Password web developers vault")
-HUD_API_HEADERS = {"Authorization": f"Bearer {HUD_API_KEY}"}
+with (pathlib.Path() / 'scripts' / 'income_limits' / 'config.json').open('r') as f:
+    config = json.load(f)
+HUD_API_HEADERS = {"Authorization": f"Bearer {config['hud_api_key']}"}
 HUD_ENDPOINT = "https://www.huduser.gov/hudapi/public"
 
 DATA_FPATH = pathlib.Path() / 'scripts' / 'income_limits' / 'data'
@@ -147,7 +147,7 @@ def clean_colnames(df, convert_camel_case: bool = False) -> pd.DataFrame:
 
 
 # HUD API has a rate limit of 60 queries per min
-def rate_limited_query(query_url: str, headers: dict = {}, sleep_time: int = 10) -> dict:
+def rate_limited_query(query_url: str, headers: dict = {}, sleep_time: int = 10, error_log_fpath=None) -> dict:
     """
     Poor man's rate limiting for querying an API: just sleeps for `sleep_time` seconds if the API 
     throws a "429 Too Many Request" Error. 
@@ -161,11 +161,21 @@ def rate_limited_query(query_url: str, headers: dict = {}, sleep_time: int = 10)
         API response
 
     """
-    response = requests.get(query_url, headers=headers)
-    while response.status_code == 429:
-        time.sleep(sleep_time)
-        response = requests.get(query_url, headers=headers)
-    return response
+    # TODO limit number of retries?
+    while True:
+        try:
+            response = requests.get(query_url, headers=headers)
+            if response.status_code != 429:
+                return response
+
+            time.sleep(sleep_time)
+        except:
+            if error_log_fpath:
+                error_msg = f"{query_url} failed: {response.status_code}"
+                print(error_msg)
+                with open(error_log_fpath, 'a') as f:
+                    f.write(f"{datetime.datetime.now()} : {error_msg}\n")
+            time.sleep(sleep_time)
 
 
 def pull_state_amis_by_countysub(
@@ -245,6 +255,7 @@ def pull_countysub_ami(countysub_geoid: str, year: int = None, verbose: bool = F
     return data
 
 
+# NOTE: this is currently only used to pull a zip-county crosswalk for the Virgin Islands
 def get_zip_crosswalk(state_abbr: str, crosswalk_type: str, year: int = None) -> pd.DataFrame:
     """Retrives crosswalk to/from zip to/from another geography. See API docs for details:
     https://www.huduser.gov/portal/dataset/uspszip-api.html
@@ -296,7 +307,7 @@ def get_zip_crosswalk(state_abbr: str, crosswalk_type: str, year: int = None) ->
 
 def aggregate_over_origin(
         df: pd.DataFrame, groupby_cols: list, agg_cols: list, weight_col: str = None,
-        minimize_type_2_error: bool = True) -> pd.DataFrame:
+        use_min_threshold: bool = True) -> pd.DataFrame:
     """
     Aggregate over the origin geography to get the income thresholds for the target geography
     using one of two strategies: 
@@ -310,7 +321,7 @@ def aggregate_over_origin(
         agg_cols (list): list of columns to aggregate over
         weight_col (str, optional): weight column to use if minimize_type_2_error=False. 
                                     Defaults to None.
-        minimize_type_2_error (bool, optional): Whether or not to minimize type II error.
+        use_min_threshold (bool, optional): Whether or not take the minimum threshold over the group.
                                                 Defaults to True.
     Example: 
         ami_by_zcta = aggregate_over_origin(
@@ -318,23 +329,22 @@ def aggregate_over_origin(
             groupby_cols=['zcta', 'zip_code_name'],
             agg_cols=ami_cols,
             weight_col='zcta_to_cousub20_allocation_factor',
-            minimize_type_2_error=False)
+            use_min_threshold=False)
     """
     def weighted_average(x, agg_cols, weight_col):
         """Calculate the weighted average for multiple columns"""
         return pd.Series(np.average(x[agg_cols], weights=x[weight_col], axis=0), agg_cols)
 
-    if minimize_type_2_error:
+    if use_min_threshold:
         # get the minimum value for each group
         df_grouped = df.groupby(groupby_cols, as_index=False)[agg_cols].min()
     else:  # Minimize expected error
         # Calculate the weighted average over agg columns for each group
         if weight_col is None:
             raise ValueError(
-                "Must pass weight_col if minimize_type_2_error = False")
+                "Must pass weight_col if use_min_threshold = False")
         df_grouped = df.groupby(groupby_cols, as_index=False).apply(
             weighted_average,
             agg_cols=agg_cols,
-            weight_col=weight_col,
-            include_groups=False)
+            weight_col=weight_col)
     return df_grouped

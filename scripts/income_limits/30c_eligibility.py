@@ -9,7 +9,7 @@ Note that all APIs will pull the most recently available data year unless otherw
 # -- 1. 30C tract eligibility -- #
 eligibility_30c_by_tract = pd.read_csv(
     util.DATA_FPATH / 'raw' / '30C all tracts.csv',
-    dtype={'nmtc': bool, 'nonurb': bool, 'tract': str})
+    dtype={'nmtc': int, 'nonurb': int, 'tract': str})
 
 eligibility_30c_by_tract.rename(
     columns={
@@ -30,7 +30,7 @@ eligibility_30c_by_tract['is_eligible'] = eligibility_30c_by_tract.is_low_income
 
 # -- 2. ZCTA <> tract crosswalk -- #
 zcta_tract_crosswalk = util.clean_colnames(pd.read_csv(
-    util.DATA_FPATH / 'raw' / 'geocorr2022_zcta_to_tract.csv',
+    util.DATA_FPATH / 'raw' / 'geocorr_zcta_to_tract.csv',
     encoding="ISO-8859-1",
     low_memory=False,
     skiprows=1,
@@ -40,7 +40,8 @@ zcta_tract_crosswalk = util.clean_colnames(pd.read_csv(
 # remove non-zctas
 zcta_tract_crosswalk = zcta_tract_crosswalk[zcta_tract_crosswalk.zip_code_name != '[not in a ZCTA]']
 
-# construct tract geoid
+# construct tract_geoid = 11 digit code: {county_code (5)}{tract_geoid(6)}
+# Note that 'tract' in the file is stored as a float where the last two digits follow a decimal point
 zcta_tract_crosswalk['tract_geoid'] = zcta_tract_crosswalk.apply(
     lambda x: x.county_code + f"{x.tract:.2f}".replace('.', '').zfill(6), axis=1)
 
@@ -60,17 +61,19 @@ eligibility_30c_by_zcta = util.aggregate_over_origin(
     df=eligibility_30c_by_tract_zcta,
     groupby_cols=['zcta'],
     agg_cols=['is_eligible'],
-    minimize_type_2_error=True)
-
+    use_min_threshold=True)
 
 # -- 4. Write out data -- #
-
-# write out table with all zctas x tracts to allow for tract lookup and
-# custom zip logic on front end
-fpath_out = util.DATA_FPATH / 'processed' / '30c_eligibility_by_tract_zcta.csv'
+# write out table by tracts to allow for tract lookup
+fpath_out = util.DATA_FPATH / 'processed' / '30c_eligibility_by_tract.csv'
 print(f"Writing to {fpath_out}")
-eligibility_30c_by_tract_zcta.to_csv(fpath_out, index=False)
-# write out table with all zctas with min typeII error logic already applied
+eligibility_30c_by_tract.to_csv(fpath_out, index=False)
+# write out table by zcta with min typeII error logic already applied
 fpath_out = util.DATA_FPATH / 'processed' / '30c_eligibility_by_zcta.csv'
 print(f"Writing to {fpath_out}")
 eligibility_30c_by_zcta.to_csv(fpath_out, index=False)
+# write out additional table by (zcta, tract)
+# to allow for lookup by zcta with custom agg logic applied at runtime
+fpath_out = util.DATA_FPATH / 'processed' / '30c_eligibility_by_tract_zcta.csv'
+print(f"Writing to {fpath_out}")
+eligibility_30c_by_tract_zcta.to_csv(fpath_out, index=False)

@@ -1,3 +1,4 @@
+import re
 import pandas as pd
 import util
 
@@ -19,19 +20,22 @@ mfi_ami80_by_countysub = pd.concat([
     for state in util.STATE_POSTAL_TO_GEOID.keys()]
 )
 
-# Read in 150% AMI from HAP
+# Read in 100% and 150% AMI from HAF
+# NOTE: if the year naming convention of the column names changes, this might require modification
 string_cols = ['fips2010', 'State', 'County']
+# match 4 person hh AMIs for 100% and 150% AMI
+base_ami_match_pattern = "HAF(100|150).*p4"
 ami150_by_countysub = pd.read_excel(
-    util.DATA_FPATH / 'raw' / 'il24_all100_150_HAF.xlsx',
-    usecols=['fips2010', 'HAF100_24p4', 'HAF150_24p4'],
+    util.DATA_FPATH / 'raw' / 'il_all100_150_HAF.xlsx',
+    usecols=lambda x: x in string_cols or re.match(base_ami_match_pattern, x),
     dtype={'fips2010': str})
 
+# rename to ami_100 and ami_150
 ami150_by_countysub.rename(
-    {'fips2010': 'countysub_geoid',
-     'HAF100_24p4': 'ami_100',
-     'HAF150_24p4': 'ami_150'},
-    axis=1,
-    inplace=True)
+    columns=lambda x: re.sub(base_ami_match_pattern, r"ami_\1", x), inplace=True)
+# rename pkey column
+ami150_by_countysub.rename(
+    columns={'fips2010': 'countysub_geoid'}, inplace=True)
 
 # Combine amis from the two data sources.
 # Note that the ~10 county/countysubs that we could not pull AMIs for from the API
@@ -61,10 +65,10 @@ ami_by_countysub[geo_cols + ['year'] + ami_cols].to_csv(fpath_out, index=False)
 
 # -- 2. Crosswalks from county sub to tract/zcta -- #
 # read in data
-string_cols = ['County code', 'County subdivision (2020)']
+string_cols = ['County code', 'County subdivision (2020)', 'tract']
 tract_countysub_crosswalk = (
     util.clean_colnames(pd.read_csv(
-        util.DATA_FPATH / 'raw' / 'geocorr2022_tract_to_countysub.csv',
+        util.DATA_FPATH / 'raw' / 'geocorr_tract_to_countysub.csv',
         encoding="ISO-8859-1",
         low_memory=False,
         skiprows=1,
@@ -74,7 +78,7 @@ tract_countysub_crosswalk = (
 
 zcta_countysub_crosswalk = (
     util.clean_colnames(pd.read_csv(
-        util.DATA_FPATH / 'raw' / 'geocorr2022_zcta_to_countysub.csv',
+        util.DATA_FPATH / 'raw' / 'geocorr_zcta_to_countysub.csv',
         encoding="ISO-8859-1",
         low_memory=False,
         skiprows=1,
@@ -88,10 +92,13 @@ zcta_countysub_crosswalk = zcta_countysub_crosswalk[
     zcta_countysub_crosswalk.zip_code_name != '[not in a ZCTA]']
 
 # clean up geoids
-zcta_countysub_crosswalk['countysub_geoid'] = zcta_countysub_crosswalk[['county_code',
-                                                                        'county_subdivision_2020']].agg(''.join, axis=1)
-tract_countysub_crosswalk['countysub_geoid'] = tract_countysub_crosswalk[['county_code',
-                                                                          'county_subdivision_2020']].agg(''.join, axis=1)
+# county_sub_geoid = 10 digit code: {county_code (5)}{county_subdivision_2020(5)}
+# tract_geoid = 11 digit code: {county_code (5)}{tract_geoid(6)}
+# Note that 'tract' in the file is stored as a float where the last two digits follow a decimal point
+zcta_countysub_crosswalk['countysub_geoid'] = zcta_countysub_crosswalk.county_code + \
+    zcta_countysub_crosswalk.county_subdivision_2020
+tract_countysub_crosswalk['countysub_geoid'] = tract_countysub_crosswalk.county_code + \
+    tract_countysub_crosswalk.county_subdivision_2020
 tract_countysub_crosswalk['tract_geoid'] = tract_countysub_crosswalk.apply(
     lambda x: x.county_code + f"{x.tract:.2f}".replace('.', '').zfill(6), axis=1)
 
@@ -99,13 +106,17 @@ tract_countysub_crosswalk['tract_geoid'] = tract_countysub_crosswalk.apply(
 
 # Join amis to zctas and to tracts, where new england states will match on countysub geoids
 # and non-new england states will match on county geoids
-# The following to not have a match in the crosswalk, and thus get dropped
-# * 15 unpopulated countysubs in New England
-# * Sullivan MO which is an edge case of a county sub outside New England
-# TODO: add data checks for future refreshes?
+# Note that unpopulated areas are not included in the crosswalk,
+# so 15 unpopulated countysubs in New England get dropped in this join
 
 # bool mask indicating if row is a county (True) or a county subdivision (False)
-is_county_msk = ami_by_countysub.town_name == ''
+is_county_msk = ami_by_countysub.countysub_geoid.str.endswith('99999')
+
+# There is one weird edge case "Sullivan city part of Crawford County",
+# which is a countysub in MO, but the neither the county nor the countysub geoid
+# appear in the crosswalk, so we will just map it to AMIs for Crawford County.
+ami_by_countysub.loc[ami_by_countysub.county_geoid ==
+                     '29056', 'county_geoid'] = '29055'
 
 # join county and countysub amis to zcta
 ami_county_zcta_non_new_england = (
@@ -140,7 +151,7 @@ ami_countysub_tract_new_england = (
 )
 ami_countysub_tract = pd.concat(
     [ami_county_tract_non_new_england, ami_countysub_tract_new_england])
-# %%
+
 # Aggregate over countysubs to get AMI at target geography using strategy of minimizng type II error
 ami_by_zcta = util.aggregate_over_origin(
     df=ami_countysub_zcta,
