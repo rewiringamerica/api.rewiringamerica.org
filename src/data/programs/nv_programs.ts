@@ -1,47 +1,47 @@
 export const NV_PROGRAMS = {
-  nv_nVEnergy_residentialAppliancesAndProducts: {
+  nv_nVEnergy_nVEnergyResidentialAppliancesAndProducts: {
     name: {
-      en: 'Residential Appliances and Products',
+      en: 'NV Energy Residential Appliances and Products',
     },
     url: {
       en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver/retail-appliances-and-products',
     },
   },
-  nv_nVEnergy_heatPumpWaterHeating: {
+  nv_nVEnergy_nVEnergyHeatPumpWaterHeating: {
     name: {
-      en: 'Heat Pump Water Heating',
+      en: 'NV Energy Heat Pump Water Heating',
     },
     url: {
       en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver/residential-ac-and-mid-stream/water-heating',
     },
   },
-  nv_nVEnergy_qualifiedApplianceReplacementProgram: {
+  nv_nVEnergy_nVEnergyQualifiedApplianceReplacementProgram: {
     name: {
-      en: 'Qualified Appliance Replacement program',
+      en: 'NV Energy Qualified Appliance Replacement program',
     },
     url: {
       en: 'https://www.nvenergy.com/save-with-powershift/qualified-appliance-replacement',
     },
   },
-  nv_nVEnergy_residentialAirConditioning: {
+  nv_nVEnergy_nVEnergyResidentialAirConditioning: {
     name: {
-      en: 'Residential Air Conditioning',
+      en: 'NV Energy Residential Air Conditioning',
     },
     url: {
       en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver/residential-ac-and-mid-stream/residential-air-conditioning',
     },
   },
-  nv_nVEnergy_residentialSmartThermostatProgram: {
+  nv_nVEnergy_nVEnergyResidentialSmartThermostatProgram: {
     name: {
-      en: 'Residential Smart Thermostat Program',
+      en: 'NV Energy Residential Smart Thermostat Program',
     },
     url: {
       en: 'https://www.nvenergy.com/save-with-powershift/smart-thermostat',
     },
   },
-  nv_nVEnergy_homeImprovements: {
+  nv_nVEnergy_nVEnergyHomeImprovements: {
     name: {
-      en: 'Home Improvements',
+      en: 'NV Energy Home Improvements',
     },
     url: {
       en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver/home-improvements',
