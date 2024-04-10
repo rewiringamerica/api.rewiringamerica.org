@@ -17,7 +17,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of cost up to $250 for attic insulation. Addition of R-38 or greater required."
+      "en": "Rebate for 50% of cost up to $250 for attic insulation. Addition of R-38 or greater required.",
+      "es": "Reembolso del 50% de los costos hasta $250 dólares por aislamiento térmico del desván. Se requiere un aislamiento R-38 o superior."
     },
     "start_date": "2023-01-01",
     "end_date": "2025-12-31"
@@ -40,7 +41,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of cost up to $300 for air sealing. Must be completed by a participating program contractor."
+      "en": "Rebate for 50% of cost up to $300 for air sealing. Must be completed by a participating program contractor.",
+      "es": "Reembolso del 50% de los costos por sellado hermético, hasta $300 dólares. Debe realizarse por un contratista participante en el programa."
     },
     "start_date": "2023-01-01",
     "end_date": "2025-12-31"
@@ -63,7 +65,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of cost up to $300 for duct sealing."
+      "en": "Rebate for 50% of cost up to $300 for duct sealing.",
+      "es": "Un reembolso del 50% de los costos hasta $300 dólares para el sellado de ductos."
     },
     "start_date": "2023-01-01",
     "end_date": "2025-12-31"
@@ -86,7 +89,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of cost up to $75 for smart thermostats."
+      "en": "Rebate for 50% of cost up to $75 for smart thermostats.",
+      "es": "Reembolso del 50% de los costos por termostatos inteligentes, hasta $75 dólares."
     },
     "start_date": "2023-01-01",
     "end_date": "2025-12-31"
@@ -109,7 +113,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of cost up to $1,000 for ENERGY STAR certified mini-split and ground source heat pumps."
+      "en": "Rebate for 50% of cost up to $1,000 for ENERGY STAR® certified ground source heat pumps.",
+      "es": "Un reembolso del 50% de los costos de bombas de calor geotérmicas con certificación ENERGY STAR, hasta $1,000 dólares."
     },
     "start_date": "2023-01-01",
     "end_date": "2025-12-31"
@@ -132,7 +137,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of cost up to $500 for ENERGY STAR certified heat pump water heaters."
+      "en": "Rebate for 50% of cost up to $500 for ENERGY STAR® certified heat pump water heaters.",
+      "es": "Reembolso del 50% de los costos  para calentadores de agua con bomba de calor certificados ENERGY STAR, hasta $500 dólares."
     },
     "start_date": "2023-01-01",
     "end_date": "2025-12-31"
@@ -155,7 +161,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of cost up to $50 for ENERGY STAR certified electric vehicle chargers. Must be 208/240 volt level 2 charger with dedicated circuit."
+      "en": "Rebate for 50% of cost up to $50 for ENERGY STAR® certified electric vehicle chargers. Must be 208/240 volt level 2 charger with dedicated circuit.",
+      "es": "Reembolso del 50% de los costos para cargadores de vehículos eléctricos con certificación ENERGY STAR, hasta $50 dólares. Debe ser un cargador de nivel 2 de 208/240 voltios con circuito dedicado."
     },
     "start_date": "2023-01-01",
     "end_date": "2025-12-31"
@@ -179,7 +186,32 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $450 rebate available for all gas to electric heat pump conversions. Rebate amount is based on the size (tonnage) of the heat pump installed."
+      "en": "Up to $450 rebate available for all gas to electric heat pump conversions. Rebate amount is based on the size (tonnage) of the heat pump installed.",
+      "es": "Reembolso de hasta $450 dólares disponible para todas las conversiones de bombas de calor de gas a electricidad. El monto del reembolso se basa en el tamaño (tonelaje) de la bomba de calor instalada."
     }
+  },
+  {
+    "id": "GA-9",
+    "authority_type": "utility",
+    "authority": "ga-georgia-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ga_georgiaPower_homeEnergyImprovementProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 50% of cost up to $1,000 for ENERGY STAR® certified mini-split heat pumps.",
+      "es": "Un reembolso del 50% de los costos de mini-splits con certificación ENERGY STAR, hasta $1,000 dólares."
+    },
+    "start_date": "2023-01-01",
+    "end_date": "2025-12-31"
   }
 ]
