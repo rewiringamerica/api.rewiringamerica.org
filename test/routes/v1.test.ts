@@ -314,8 +314,6 @@ test('NV low income response with state and utility filtering is valid and corre
       tax_filing: 'joint',
       authority_types: ['utility'],
       utility: 'nv-nv-energy',
-      // TODO: Remove when NV is fully launched.
-      include_beta_states: true,
     },
     './test/fixtures/v1-nv-89108-state-utility-lowincome.json',
   );
