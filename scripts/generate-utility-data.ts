@@ -40,12 +40,27 @@ function convertName(
   cleaned = cleaned.replace(/\b,?\s+(I(nc)?|Co)\.?$/i, '').trim();
   // Remove "(for __ reporting)" parenthetical
   cleaned = cleaned.replace(/\(.*reporting.*\)/i, '').trim();
-  // Spell out "Pwr", "Assn", "Elec", and "Coop"
-  // The dataset is inconsistent about this
+  // Spell out "Pwr", "Assn", "Elec", "Coop", and "Dist". Replace some
+  // spaced-out abbreviations with un-spaced versions.
+  // The dataset is inconsistent about this.
   cleaned = cleaned.replaceAll(/\bPwr\b/gi, 'Power');
   cleaned = cleaned.replaceAll(/\bAssn\b/gi, 'Association');
   cleaned = cleaned.replaceAll(/\bElec\b/gi, 'Electric');
   cleaned = cleaned.replaceAll(/\bCo-?op\b/gi, 'Cooperative');
+  cleaned = cleaned.replaceAll(/\bRrl\b/gi, 'Rural');
+  cleaned = cleaned.replaceAll(
+    /\bEl (Cooperative|Association|Member)\b/gi,
+    'Electric $1',
+  );
+  cleaned = cleaned.replaceAll(/\bR E C$/g, 'REC');
+  cleaned = cleaned.replaceAll(/\bR E (M|C) C$/g, 'RE$1C');
+  cleaned = cleaned.replaceAll(/\bE (M|C) C$/g, 'E$1C');
+  cleaned = cleaned.replaceAll(/\bE (C|P) A$/g, 'E$1A');
+  cleaned = cleaned.replaceAll(/\bP P D\b/gi, 'Public Power District');
+  cleaned = cleaned.replaceAll(
+    /\bPub(lic)? Power Dist\b/gi,
+    'Public Power District',
+  );
 
   return { id: createAuthorityName(state, cleaned), name: cleaned };
 }
@@ -156,11 +171,10 @@ enum Col {
 
   // Update each state's authorities.json with the utilities from the dataset.
   utilitiesByState.forEach((utilityMap, state) => {
-    // If there's no subdir for the state in /data, skip it entirely.
+    // If there's no subdir for the state in /data, create it.
     const stateDir = path.join(__dirname, `../data/${state}`);
     if (!fs.existsSync(stateDir)) {
-      // Return from forEach lambda; move on to next state
-      return;
+      fs.mkdirSync(stateDir);
     }
 
     const filepath = path.join(stateDir, 'authorities.json');
