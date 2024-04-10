@@ -3,8 +3,8 @@ import pandas as pd
 import util
 
 """
-Creates AMI income threshold tables by county/countysub, zcta, tract, and territory. 
-Note that this takes ~30 minutes to run and that all APIs will pull 
+Creates AMI income threshold tables by county/countysub, zcta, tract, and territory.
+Note that this takes ~30 minutes to run and that all APIs will pull
 the most recently available data year unless otherwise specified.
 """
 
@@ -116,7 +116,7 @@ is_county_msk = ami_by_countysub.countysub_geoid.str.endswith('99999')
 # which is a countysub in MO, but the neither the county nor the countysub geoid
 # appear in the crosswalk, so we will just map it to AMIs for Crawford County.
 ami_by_countysub.loc[ami_by_countysub.county_geoid ==
-                     '29056', 'county_geoid'] = '29055'
+                     '29056', ['county_geoid', 'county_name']] = ['29055', 'Crawford County, MO']
 
 # join county and countysub amis to zcta
 ami_county_zcta_non_new_england = (
