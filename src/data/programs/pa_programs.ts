@@ -80,6 +80,14 @@ export const PA_PROGRAMS = {
       en: 'https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/heating-cooling-rebates',
     },
   },
+  pa_pECO_driverRebates: {
+    name: {
+      en: 'Driver Rebates',
+    },
+    url: {
+      en: 'https://www.peco.com/smart-energy/innovation-technology/electric-vehicles-l3',
+    },
+  },
   pa_pennsylvaniaDepartmentOfEnvironmentalProtection_alternativeFuelVehicleRebates:
     {
       name: {
@@ -89,4 +97,20 @@ export const PA_PROGRAMS = {
         en: 'https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx',
       },
     },
+  pa_uGIUtilities_equipmentRebateProgram: {
+    name: {
+      en: 'Equipment Rebate Program',
+    },
+    url: {
+      en: 'https://www.ugi.com/rebates-for-home/electric/equipment-rebate-program',
+    },
+  },
+  pa_uGIUtilities_applianceRebateProgram: {
+    name: {
+      en: 'Appliance Rebate Program',
+    },
+    url: {
+      en: 'https://www.ugi.com/rebates-for-home/electric/appliance-rebate-program',
+    },
+  },
 } as const;
