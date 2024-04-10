@@ -10,6 +10,10 @@ export const EXCLUSIONS: Set<string | number> = new Set([
   62264, // Hohokam; no electric
   78679, // Ocotillo; no electric
 
+  // CA
+  // Not a utility, but a network of local governments to promote efficiency
+  'Bay Area Regional Energy Network (BayREN)',
+
   // CO
   6752, // Town of Frederick; now served by United Power
 
@@ -19,15 +23,35 @@ export const EXCLUSIONS: Set<string | number> = new Set([
   // DC
   'Washington Gas', // no electric; Utility Code "Not Available"
 
+  // FL
+  15776, // Reedy Creek Improvement District (basically Disney World); dissolved
+
   // IL
   'Nicor Gas',
   'Peoples Gas',
+
+  // MN
+  // Multi-state gas company, in IN, LA, MN, MS, OH, TX. They also provide
+  // electricity in Houston area, but the dataset uses a different name there.
+  'CenterPoint Energy',
+  'District Energy St. Paul', // district heating!
+
+  // NH
+  20913, // Town of Wolfeboro; no electric
+
+  // NJ
+  'Elizabethtown Gas',
+  'New Jersey Natural Gas',
+  'South Jersey Gas',
 
   // PA
   'Philadelphia Gas Works',
 
   // VA
   8198, // City of Harrisonburg; no electric
+
+  // WY
+  'Dominion Energy (formerly Questar Gas)',
 ]);
 
 /**
@@ -45,6 +69,13 @@ export const EXCLUSIONS: Set<string | number> = new Set([
  * abbreviations (e.g. "XYZ Rural Electric Cooperative" and "XYZ R E C").
  */
 export const OVERRIDES = new Map<string | number, string>([
+  // AK
+  [26616, 'North Slope Borough'],
+
+  // AR
+  [17540, 'South Central Arkansas Electric Cooperative'],
+  [17671, 'Southwest Arkansas Electric Cooperative'],
+
   // AZ
   [1241, 'DixiePower'],
   [15048, 'Electrical District No 2 Pinal County'],
@@ -56,6 +87,18 @@ export const OVERRIDES = new Map<string | number, string>([
   [62683, "Tohono O'odham Utility Authority"],
   [606953, 'UniSource Energy Services'],
 
+  // CA
+  [207, 'Alameda Municipal Power'],
+  [16088, 'Riverside Public Utilities'],
+  [16655, 'Silicon Valley Power'],
+  [19229, 'Truckee Donner Public Utility District'],
+  [14534, 'Pasadena Water and Power'],
+  [16295, 'Roseville Electric'],
+  [11124, 'Lodi Electric Utility'],
+  [7294, 'Glendale Water and Power'],
+  [590, 'Anaheim Public Utilities'],
+  [2507, 'Burbank Water and Power'],
+
   // CO
   [5997, 'Estes Park Power and Communications'],
   [7300, 'Glenwood Springs Electric'],
@@ -65,6 +108,16 @@ export const OVERRIDES = new Map<string | number, string>([
   [15257, 'Poudre Valley REA'],
   [16603, 'San Luis Valley REC'],
   [16616, 'San Isabel Electric'],
+
+  // DE
+  [13424, 'New Castle Municipal Services Commission'],
+
+  // FL
+  [6443, 'Florida Keys Electric Cooperative'],
+  [6455, 'Duke Energy Florida'],
+  [14610, 'Orlando Utilities Commission'],
+  [20371, 'West Florida Electric Cooperative'],
+  [31833, 'Okefenoke REMC'],
 
   // GA
   [9689, 'Jefferson Energy Cooperative'],
@@ -77,6 +130,21 @@ export const OVERRIDES = new Map<string | number, string>([
   // DC
   [1143, 'Pepco'], // Potomac Electric Power
 
+  // HI
+  [8287, 'Hawaiian Electric'], // Hawai'i Electric Light, part of HECO
+  [10071, 'Kauai Island Utility Cooperative'],
+  [11843, 'Hawaiian Electric'], // Maui Electric, part of HECO
+  [19547, 'Hawaiian Electric'], // HECO
+
+  // IA
+  [7750, 'Guthrie County REC'],
+  [8283, 'Harrison County REC'],
+  [8298, 'MiEnergy'],
+  [12642, 'Maquoketa Valley Electric Cooperative'],
+  [13675, 'Nishabotna Valley REC'],
+  [18446, 'T.I.P. Rural Electric Cooperative'],
+  [20951, 'Woodbury County REC'],
+
   // IL
   [14840, 'Peru Municipal Electric Department'],
   [15686, 'Rantoul Utilities'],
@@ -84,6 +152,35 @@ export const OVERRIDES = new Map<string | number, string>([
   [16420, 'Rural Electric Convenience Cooperative'],
   [56697, 'Ameren Illinois'],
   [61678, 'Corn Belt Energy'],
+
+  // IN
+  [1119, 'NIPSCO'], // Northern Indiana Public Service Company
+  [4508, 'Crawfordsville Electric Light & Power'],
+  [13756, 'NIPSCO'],
+  [18942, 'Tipton Municipal Utilities'],
+  [19667, 'Utilities District of Western Indiana REMC'],
+
+  // KS
+  [10801, 'Leavenworth-Jefferson Electric Cooperative'],
+
+  // KY
+  [1201, 'Barbourville Utility Commission'],
+
+  // LA
+  [8884, 'Terrebonne Parish Consolidated Government'],
+  [11241, 'Entergy Louisiana'],
+  [21567, 'Washington-St. Tammany Electric Cooperative'],
+  [55936, 'Entergy Gulf States Louisiana'],
+  [1135007, 'Entergy Gulf States Louisiana'],
+
+  // MD
+  [1043, 'Delmarva Power'],
+  [1142, 'Potomac Edison'],
+  [5625, 'Easton Utilities'],
+  [15263, 'Potomac Edison'],
+
+  // ME
+  [10144, 'Kennebunk Light & Power District'],
 
   // MI
   [61241, 'City of Charlevoix'],
@@ -94,6 +191,60 @@ export const OVERRIDES = new Map<string | number, string>([
   [18895, 'Thumb Electric Cooperative'],
   [21048, 'Wyandotte Municipal Services'],
   [19125, 'Traverse City Light & Power'],
+
+  // MN
+  [150, 'Adrian Public Utilities'],
+  [1101, 'Bagley Public Utilities'],
+  [4577, 'Crow Wing Power'],
+  [6151, 'Fairmont Public Utilities'],
+  [7292, 'Glencoe Light & Power Commission'],
+  [7489, 'Grand Rapids Public Utilities'],
+  [8307, 'Hawley Public Utilities'],
+  [8543, 'Hibbing Public Utilities'],
+  [9130, 'Hutchinson Utilities'],
+  [12897, 'Moose Lake Power'],
+  [13480, 'New Prague Utilities'],
+  [13488, 'New Ulm Public Utilities'],
+  [15387, 'Princeton Public Utilities'],
+  [15793, 'Redwood Falls Public Utilities Commission'],
+  [16971, 'Shakopee Public Utilities'],
+  [17320, 'Sleepy Eye Public Utilities'],
+
+  // MO
+  [1051, 'Empire District Electric'],
+  [3486, 'Chillicothe Municipal Utilities'],
+
+  // MS
+  [7651, 'Greenwood Utilities'],
+  [13735, 'Northcentral Electric Cooperative'],
+  [14563, 'Pearl River Valley Electric Power Association'],
+  [21095, 'Public Service Commission of Yazoo City'],
+
+  // MT
+  [11272, 'Lower Yellowstone Rural Electric Cooperative'],
+  [19545, 'Black Hills Power'],
+
+  // NC
+  [3107, 'Carteret-Craven Electric Cooperative'],
+  [5416, 'Duke Energy Carolinas'],
+  [6235, 'Fayetteville PWC'],
+  [7639, 'Greenville Utilities Commission'],
+  [9837, 'Jones-Onslow Electric Membership Corp'],
+
+  // ND
+  [55959, 'Roughrider Electric Cooperative'],
+
+  // NH
+  // Situation explained here:
+  // https://www.energy.nh.gov/utilities-providers/regulated-utility-services/electric
+  [1059, 'Liberty Utilities'], // Granite State Electric
+  [15472, 'Eversource'], // Public Service Co of NH
+  [26510, 'Liberty Utilities'], // Granite State Electric
+
+  // NM
+  [1147, 'PNM'],
+  [15473, 'PNM'],
+  [62472, 'Northern Rio Arriba Electric Cooperative'],
 
   // NV
   [13407, 'NV Energy'], // Nevada Power (became NV Energy in 2008)
@@ -110,6 +261,17 @@ export const OVERRIDES = new Map<string | number, string>([
   [14154, 'Orange & Rockland'],
   [16183, 'Rochester Gas & Electric'],
   [16549, 'Salamanca Board of Public Utilities'],
+
+  // OH
+  [1042, 'AES Ohio'], // Dayton Power & Light
+  // Code 1175, overlaps with a rural co-op in TX
+  ['Toledo Edison Co (The)', 'Toledo Edison'],
+  [3755, 'The Illuminating Company'],
+  [4922, 'AES Ohio'], // Dayton Power & Light
+  [18997, 'Toledo Edison'],
+
+  // OK
+  [15474, 'Public Service Company of Oklahoma'],
 
   // OR
   [3264, 'Central Lincoln'],
@@ -132,6 +294,21 @@ export const OVERRIDES = new Map<string | number, string>([
   // RI
   [1857, 'Block Island Power Company'],
 
+  // SC
+  [3804, 'City of Clinton'],
+  [7654, 'Greer CPW'],
+
+  // TN
+  [20228, 'Weakley County Municipal Electric System'],
+
+  // TX
+  [20230, 'Weatherford Utility Department'],
+  [61891, 'J-A-C Electric Cooperative'],
+  [62653, 'Taylor Electric Cooperative'], // not to be confused with one in WI
+
+  // UT
+  [18206, 'South Utah Valley Electric Service District'], // also known as SESD
+
   // VA
   [1186, 'Dominion Energy'],
   [2248, 'BVU Authority'],
@@ -153,6 +330,11 @@ export const OVERRIDES = new Map<string | number, string>([
   [18371, 'Swanton Electric'],
   [19791, 'Vermont Electric Coop'],
   [27316, 'Stowe Electric Department'],
+
+  // WA
+  [14505, 'Parkland Light & Water'],
+  [19784, 'Vera Water and Power'],
+  [62299, 'Modern Electric Water Company'],
 
   // WI
   [307, 'Algoma Utilities'],
@@ -202,4 +384,8 @@ export const OVERRIDES = new Map<string | number, string>([
   [40036, 'Westfield Milling and Electric Light Company'],
   [20847, 'We Energies'],
   [54921, 'Water Works & Lighting Commission'],
+
+  // WY
+  [3461, 'Black Hills Energy'],
+  [61066, 'Black Hills Energy'], // Cheyenne Light Fuel & Power
 ]);

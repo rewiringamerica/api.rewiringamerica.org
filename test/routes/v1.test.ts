@@ -371,8 +371,6 @@ test('PA low income response with state and utility filtering is valid and corre
       tax_filing: 'joint',
       authority_types: ['state', 'utility', 'other'],
       utility: 'pa-met-ed',
-      // TODO: Remove when PA is fully launched.
-      include_beta_states: true,
     },
     './test/fixtures/v1-pa-17555-state-lowincome.json',
   );
