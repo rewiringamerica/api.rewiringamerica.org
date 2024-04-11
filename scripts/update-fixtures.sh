@@ -125,11 +125,9 @@ curl \
 &utility=mi-dte" \
   | jq . > test/fixtures/v1-mi-48103-state-utility-lowincome.json
 
-# TODO: Remove beta states argument when NV is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?zip=89108\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=40000\
 &tax_filing=joint\
