@@ -80,9 +80,9 @@ export const PA_PROGRAMS = {
       en: 'https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/heating-cooling-rebates',
     },
   },
-  pa_pECO_driverRebates: {
+  pa_pECO_pECODriverRebates: {
     name: {
-      en: 'Driver Rebates',
+      en: 'PECO Driver Rebates',
     },
     url: {
       en: 'https://www.peco.com/smart-energy/innovation-technology/electric-vehicles-l3',
