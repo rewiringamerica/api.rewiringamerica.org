@@ -16,6 +16,14 @@ source venv/bin/activate
 pip install -r scripts/income_limits/requirements.txt
 ```
 
+Add a `config.json` file in `scripts/income_limits/` with a HUD API key. The API key can be found in the Web Developers vault in RA's 1Password account.
+
+```
+{
+    "hud_api_key" : "{API_KEY}"
+}
+```
+
 ## Downloading Data
 
 ### AMI

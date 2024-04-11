@@ -72,8 +72,3 @@ eligibility_30c_by_tract.to_csv(fpath_out, index=False)
 fpath_out = util.DATA_FPATH / 'processed' / '30c_eligibility_by_zcta.csv'
 print(f"Writing to {fpath_out}")
 eligibility_30c_by_zcta.to_csv(fpath_out, index=False)
-# write out additional table by (zcta, tract)
-# to allow for lookup by zcta with custom agg logic applied at runtime
-fpath_out = util.DATA_FPATH / 'processed' / '30c_eligibility_by_tract_zcta.csv'
-print(f"Writing to {fpath_out}")
-eligibility_30c_by_tract_zcta.to_csv(fpath_out, index=False)
