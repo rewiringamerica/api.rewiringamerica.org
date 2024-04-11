@@ -1089,5 +1089,67 @@
     "start_date": "2023-07-01",
     "end_date": "2024-06-30",
     "low_income": "pa-pennsylvania-department-of-environmental-protection-bonus"
+  },
+  {
+    "id": "PA-51",
+    "authority_type": "utility",
+    "authority": "pa-ugi-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "pa_uGIUtilities_equipmentRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1250,
+      "minimum": 150,
+      "maximum": 1250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,250 rebate for ENERGY STAR® certified mini-split heat pumps. Rebate amount varies depending on heat pump efficiency and capacity."
+    }
+  },
+  {
+    "id": "PA-52",
+    "authority_type": "utility",
+    "authority": "pa-ugi-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "pa_uGIUtilities_applianceRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for ENERGY STAR® certified smart thermostats."
+    }
+  },
+  {
+    "id": "PA-53",
+    "authority_type": "utility",
+    "authority": "pa-peco",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "new_electric_vehicle",
+    "program": "pa_pECO_pECODriverRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for purchasing a plug-in EV."
+    }
   }
 ]
