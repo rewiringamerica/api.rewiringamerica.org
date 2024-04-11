@@ -126,7 +126,6 @@ zip=60202\
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?zip=48103\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=40000\
 &tax_filing=joint\

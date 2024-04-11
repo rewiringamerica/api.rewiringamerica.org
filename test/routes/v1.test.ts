@@ -307,7 +307,6 @@ test('MI response with state and utility is valid and correct', async t => {
       tax_filing: 'joint',
       authority_types: ['utility'],
       utility: 'mi-dte',
-      include_beta_states: true,
     },
     './test/fixtures/v1-mi-48103-state-utility-lowincome.json',
   );
