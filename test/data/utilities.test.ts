@@ -15,13 +15,17 @@ test('all authorities.json utilities are in DB', async t => {
     .map(Object.keys)
     .flat();
 
+  const query = await database.all<{ utility_id: string; ct: number }[]>(
+    'SELECT utility_id, COUNT(1) AS ct FROM zip_to_utility GROUP BY utility_id',
+  );
+  const utilityCounts = Object.fromEntries(
+    query!.map(({ utility_id, ct }) => [utility_id, ct]),
+  );
+
   for (const id of allUtilityIds) {
-    const dbCount = (
-      await database.get(
-        'SELECT count(1) AS ct FROM zip_to_utility WHERE utility_id = ?',
-        id,
-      )
-    )['ct'];
-    t.ok(dbCount > 0, `utility ${id} does not appear in zip_to_utility`);
+    t.ok(
+      utilityCounts[id] > 0,
+      `utility ${id} does not appear in zip_to_utility`,
+    );
   }
 });

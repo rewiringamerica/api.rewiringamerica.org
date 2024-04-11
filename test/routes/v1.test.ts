@@ -653,7 +653,6 @@ test('non-existent zips', async t => {
 const UTILITIES = [
   [
     '02807',
-    false,
     {
       location: { state: 'RI' },
       utilities: {
@@ -663,7 +662,6 @@ const UTILITIES = [
   ],
   [
     '02814',
-    false,
     {
       location: { state: 'RI' },
       utilities: {
@@ -674,7 +672,6 @@ const UTILITIES = [
   ],
   [
     '02905',
-    false,
     {
       location: { state: 'RI' },
       utilities: { 'ri-rhode-island-energy': { name: 'Rhode Island Energy' } },
@@ -682,7 +679,6 @@ const UTILITIES = [
   ],
   [
     '06360',
-    true,
     {
       location: { state: 'CT' },
       utilities: {
@@ -698,16 +694,18 @@ const UTILITIES = [
       },
     },
   ],
-  ['06360', false, { location: { state: 'CT' }, utilities: {} }],
   [
     '84106',
-    false,
     {
       location: { state: 'UT' },
-      utilities: {},
+      utilities: {
+        'ut-rocky-mountain-power': {
+          name: 'Rocky Mountain Power',
+        },
+      },
     },
   ],
-];
+] as const;
 
 test('/utilities', async t => {
   const app = await build(t);
@@ -720,11 +718,8 @@ test('/utilities', async t => {
   });
   const validator = ajv.getSchema('APIUtilitiesResponse')!;
 
-  for (const [zip, beta, expectedResponse] of UTILITIES) {
-    const searchParams = qs.stringify(
-      { zip, include_beta_states: beta },
-      { encodeValuesOnly: true },
-    );
+  for (const [zip, expectedResponse] of UTILITIES) {
+    const searchParams = qs.stringify({ zip }, { encodeValuesOnly: true });
     const res = await app.inject({ url: `/api/v1/utilities?${searchParams}` });
     t.equal(res.statusCode, 200);
 
