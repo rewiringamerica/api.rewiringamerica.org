@@ -54,7 +54,6 @@ export const STATES_PLUS_DC = [
 
 export const BETA_STATES: string[] = [
   'AZ',
-  'CO',
   'CT',
   'GA',
   'IL',
@@ -67,6 +66,7 @@ export const BETA_STATES: string[] = [
 ];
 
 export const LAUNCHED_STATES: string[] = [
+  'CO',
   'DC',
   'PA',
   'RI',

@@ -4,7 +4,7 @@ import { FilingStatus } from '../../src/data/tax_brackets';
 import { OwnerStatus } from '../../src/data/types/owner-status';
 import { buildRelationshipGraph } from '../../src/lib/incentive-relationship-calculation';
 import { calculateStateIncentivesAndSavings } from '../../src/lib/state-incentives-calculation';
-import { incentiveRelationshipsContainCycle } from '../data/schemas.test';
+import { incentiveRelationshipsContainCycle } from '../data/cycles';
 import {
   TEST_INCENTIVE_RELATIONSHIPS,
   TEST_INCENTIVE_RELATIONSHIPS_2,

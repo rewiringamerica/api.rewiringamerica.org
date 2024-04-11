@@ -80,6 +80,7 @@ import {
   addPrerequisites,
   buildRelationshipGraph,
 } from '../../src/lib/incentive-relationship-calculation';
+import { incentiveRelationshipsContainCycle } from './cycles';
 
 const TESTS = [
   [I_SCHEMA, IRA_INCENTIVES, 'ira_incentives'],
@@ -243,7 +244,10 @@ test("launched states do not have any values that we don't support for broader c
   STATE_INCENTIVE_TESTS.forEach(([state, , data]) => {
     if (LAUNCHED_STATES.includes(state)) {
       for (const incentive of data) {
-        tap.notOk(incentive.payment_methods.includes(PaymentMethod.Unknown));
+        tap.notOk(
+          incentive.payment_methods.includes(PaymentMethod.Unknown),
+          `Incentive ${incentive.id} has unknown payment method`,
+        );
       }
     }
   });
@@ -287,53 +291,6 @@ test('state incentive relationships JSON files match schemas', async tap => {
     }
   });
 });
-
-// Helper to check for circular dependencies in the incentive relationships.
-export function checkForCycle(
-  incentiveId: string,
-  seen: Set<string>,
-  finished: Set<string>,
-  edges: Map<string, Set<string>>,
-) {
-  if (finished.has(incentiveId)) {
-    // We've already finished checking this incentive.
-    return false;
-  }
-  if (seen.has(incentiveId)) {
-    // We haven't finished checking this incentive's dependencies but are
-    // visiting it for the second time. This is a cycle.
-    return true;
-  }
-  seen.add(incentiveId);
-  const dependencies = edges.get(incentiveId);
-  if (dependencies !== undefined) {
-    for (const id of dependencies) {
-      if (checkForCycle(id, seen, finished, edges)) {
-        return true;
-      }
-    }
-  }
-  finished.add(incentiveId);
-  return false;
-}
-
-export function incentiveRelationshipsContainCycle(
-  relationshipGraph: Map<string, Set<string>>,
-) {
-  const seen = new Set<string>();
-  const finished = new Set<string>();
-  const toCheck = Array.from(relationshipGraph.keys());
-  let hasCycle = false;
-  if (toCheck !== undefined) {
-    for (const incentiveId of toCheck) {
-      hasCycle = checkForCycle(incentiveId, seen, finished, relationshipGraph);
-      if (hasCycle) {
-        break;
-      }
-    }
-  }
-  return hasCycle;
-}
 
 test('state incentive relationships contain no circular dependencies', async tap => {
   STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([, data]) => {

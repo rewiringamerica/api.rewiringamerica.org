@@ -2,6 +2,7 @@ import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts
 import { FastifyInstance } from 'fastify';
 import _ from 'lodash';
 import { Database } from 'sqlite';
+import { AuthorityType } from '../data/authorities';
 import { IRA_INCENTIVES, IRAIncentive } from '../data/ira_incentives';
 import { IRA_STATE_SAVINGS } from '../data/ira_state_savings';
 import { PROGRAMS, Programs } from '../data/programs';
@@ -146,6 +147,7 @@ export default async function (
       try {
         const result = calculateIncentives(incomeInfo, {
           ...request.query,
+          authority_types: [AuthorityType.Federal],
         });
 
         const pos_rebate_incentives = result.incentives.filter(
