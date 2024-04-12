@@ -47,6 +47,10 @@ ami_by_countysub = pd.merge(
     how='right',
     validate="many_to_one")
 
+# get county geoid from the first 5 digits of countysub geoid
+ami_by_countysub['county_geoid'] = ami_by_countysub.countysub_geoid.str.slice(
+    0, 5)
+
 # add a state column
 geoid_to_postal = {v: k for k, v in util.STATE_POSTAL_TO_GEOID.items()}
 ami_by_countysub['state'] = ami_by_countysub.county_geoid.str.slice(
@@ -104,6 +108,12 @@ tract_countysub_crosswalk['tract_geoid'] = tract_countysub_crosswalk.apply(
 
 # -- 3. Map countysub AMIs to target geographies (ZCTA/tract) and aggregate over target -- #
 
+# First, impute 80%, 50% and 30% AMI for any county/countysubs to pull from API (see error log)
+missing_ami_80_mask = ami_by_countysub.ami_80.isna()
+for ami_threshold in [30, 50, 80]:
+    ami_by_countysub.loc[missing_ami_80_mask,
+                         f"ami_{ami_threshold}"] = ami_by_countysub.loc[missing_ami_80_mask, "ami_100"] * ami_threshold/100
+
 # Join amis to zctas and to tracts, where new england states will match on countysub geoids
 # and non-new england states will match on county geoids
 # Note that unpopulated areas are not included in the crosswalk,
@@ -160,8 +170,19 @@ ami_by_zcta = util.aggregate_over_origin(
 
 ami_by_tract = util.aggregate_over_origin(
     df=ami_countysub_tract,
-    groupby_cols=['tract_geoid', 'county_name', 'state'],
+    groupby_cols=['tract_geoid', 'state'],
     agg_cols=ami_cols)
+
+
+# check that all zctas and tracts appear in the final tables
+assert len(set(zcta_countysub_crosswalk.zcta).difference(
+    ami_by_zcta.zcta)) == 0
+assert len(set(tract_countysub_crosswalk.tract_geoid).difference(
+    ami_by_tract.tract_geoid)) == 0
+
+# check that all 80% and 100% AMI's are non-missing in the final tables
+assert sum(ami_by_zcta.ami_80.isna() | ami_by_zcta.ami_100.isna()) == 0
+assert sum(ami_by_tract.ami_80.isna() | ami_by_tract.ami_100.isna()) == 0
 
 # -- 4. Create territory lookup  -- #
 # For AS,GU,MP there is only one county over the whole territory,
