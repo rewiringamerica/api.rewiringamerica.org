@@ -14,12 +14,12 @@ curl \
 
 curl \
   "http://localhost:3000/api/v1/calculator\
-?zip=80212\
+?zip=84106\
 &owner_status=homeowner\
 &household_income=80000\
 &tax_filing=joint\
 &household_size=4" \
-  | jq . > test/fixtures/v1-80212-homeowner-80000-joint-4.json
+  | jq . > test/fixtures/v1-84106-homeowner-80000-joint-4.json
 
 curl \
   "http://localhost:3000/api/v1/calculator\
@@ -101,11 +101,9 @@ curl \
 &utility=ga-georgia-power" \
   | jq . > test/fixtures/v1-ga-30033-utility.json
 
-# TODO: Remove beta states argument when IL is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator?\
 zip=60304\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=35000\
 &tax_filing=joint\
@@ -127,11 +125,9 @@ curl \
 &utility=mi-dte" \
   | jq . > test/fixtures/v1-mi-48103-state-utility-lowincome.json
 
-# TODO: Remove beta states argument when NV is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?zip=89108\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=40000\
 &tax_filing=joint\
@@ -198,7 +194,6 @@ curl \
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?zip=81657\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=100000\
 &tax_filing=joint\
@@ -234,7 +229,6 @@ curl \
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?zip=80517\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=80000\
 &tax_filing=single\
@@ -249,7 +243,6 @@ curl \
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?zip=80517\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=80000\
 &tax_filing=single\

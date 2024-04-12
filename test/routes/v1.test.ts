@@ -58,26 +58,13 @@ test('response is valid and correct', async t => {
   await validateResponse(
     t,
     {
-      zip: '80212',
+      zip: '84106',
       owner_status: 'homeowner',
       household_income: 80000,
       tax_filing: 'joint',
       household_size: 4,
     },
-    './test/fixtures/v1-80212-homeowner-80000-joint-4.json',
-  );
-
-  // Same request but with location passed differently
-  await validateResponse(
-    t,
-    {
-      zip: '80212',
-      owner_status: 'homeowner',
-      household_income: 80000,
-      tax_filing: 'joint',
-      household_size: 4,
-    },
-    './test/fixtures/v1-80212-homeowner-80000-joint-4.json',
+    './test/fixtures/v1-84106-homeowner-80000-joint-4.json',
   );
 });
 
@@ -181,8 +168,6 @@ test('CO low income response with state and utility filtering is valid and corre
       tax_filing: 'joint',
       authority_types: ['state', 'utility', 'other'],
       utility: 'co-xcel-energy',
-      // TODO: Remove when CO is fully launched.
-      include_beta_states: true,
     },
     './test/fixtures/v1-co-81657-state-utility-lowincome.json',
   );
@@ -202,8 +187,6 @@ test('CO incentive for PRPA shows up as intended', async t => {
       items: ['heat_pump_water_heater'],
       // Not in PRPA; incentives should not show up
       utility: 'co-xcel-energy',
-      // TODO: Remove when CO is fully launched.
-      include_beta_states: true,
     },
     './test/fixtures/v1-80517-xcel.json',
   );
@@ -219,8 +202,6 @@ test('CO incentive for PRPA shows up as intended', async t => {
       items: ['heat_pump_water_heater'],
       // Is in PRPA; incentives should show up
       utility: 'co-estes-park-power-and-communications',
-      // TODO: Remove when CO is fully launched.
-      include_beta_states: true,
     },
     './test/fixtures/v1-80517-estes-park.json',
   );
@@ -333,8 +314,6 @@ test('NV low income response with state and utility filtering is valid and corre
       tax_filing: 'joint',
       authority_types: ['utility'],
       utility: 'nv-nv-energy',
-      // TODO: Remove when NV is fully launched.
-      include_beta_states: true,
     },
     './test/fixtures/v1-nv-89108-state-utility-lowincome.json',
   );
@@ -606,12 +585,12 @@ const BAD_QUERIES = [
     utility: 'nonexistent-utility',
   },
   {
-    zip: '80212',
+    zip: '84106',
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: 'joint',
     household_size: 4,
-    // We don't have coverage in 80212 (Colorado)
+    // We don't have coverage in 84106 (Utah)
     utility: 'ri-rhode-island-energy',
   },
 ];
@@ -672,7 +651,6 @@ test('non-existent zips', async t => {
 const UTILITIES = [
   [
     '02807',
-    false,
     {
       location: { state: 'RI' },
       utilities: {
@@ -682,7 +660,6 @@ const UTILITIES = [
   ],
   [
     '02814',
-    false,
     {
       location: { state: 'RI' },
       utilities: {
@@ -693,7 +670,6 @@ const UTILITIES = [
   ],
   [
     '02905',
-    false,
     {
       location: { state: 'RI' },
       utilities: { 'ri-rhode-island-energy': { name: 'Rhode Island Energy' } },
@@ -701,7 +677,6 @@ const UTILITIES = [
   ],
   [
     '06360',
-    true,
     {
       location: { state: 'CT' },
       utilities: {
@@ -717,16 +692,18 @@ const UTILITIES = [
       },
     },
   ],
-  ['06360', false, { location: { state: 'CT' }, utilities: {} }],
   [
-    '80212',
-    false,
+    '84106',
     {
-      location: { state: 'CO' },
-      utilities: {},
+      location: { state: 'UT' },
+      utilities: {
+        'ut-rocky-mountain-power': {
+          name: 'Rocky Mountain Power',
+        },
+      },
     },
   ],
-];
+] as const;
 
 test('/utilities', async t => {
   const app = await build(t);
@@ -739,11 +716,8 @@ test('/utilities', async t => {
   });
   const validator = ajv.getSchema('APIUtilitiesResponse')!;
 
-  for (const [zip, beta, expectedResponse] of UTILITIES) {
-    const searchParams = qs.stringify(
-      { zip, include_beta_states: beta },
-      { encodeValuesOnly: true },
-    );
+  for (const [zip, expectedResponse] of UTILITIES) {
+    const searchParams = qs.stringify({ zip }, { encodeValuesOnly: true });
     const res = await app.inject({ url: `/api/v1/utilities?${searchParams}` });
     t.equal(res.statusCode, 200);
 

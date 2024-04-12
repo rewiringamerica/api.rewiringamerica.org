@@ -1,7 +1,7 @@
 export const CO_PROGRAMS = {
   co_blackHillsEnergy_coloradoElectricResidentialRebates: {
     name: {
-      en: 'Colorado Electric Residential Rebates',
+      en: 'Black Hills Energy Residential Rebate Program',
     },
     url: {
       en: 'https://www.blackhillsenergy.com/efficiency-and-savings/residential-rebates/colorado-electric-residential-rebates',
@@ -9,7 +9,7 @@ export const CO_PROGRAMS = {
   },
   co_blackHillsEnergy_electrificationPilotProgram: {
     name: {
-      en: 'Electrification Pilot Program',
+      en: 'Black Hills Energy Electrification Pilot Program',
     },
     url: {
       en: 'https://www.blackhillsenergy.com/efficiency-and-savings/residential-rebates/colorado-electric-residential-rebates',
@@ -17,7 +17,7 @@ export const CO_PROGRAMS = {
   },
   co_blackHillsEnergy_readyEVProgram: {
     name: {
-      en: 'Ready EV Program',
+      en: 'Black Hills Energy Electric Vehicle Rebate Program',
     },
     url: {
       en: 'https://www.blackhillsenergy.com/efficiency-and-savings/residential-rebates/colorado-electric-residential-rebates',
@@ -25,7 +25,7 @@ export const CO_PROGRAMS = {
   },
   co_coloradoSpringsUtilities_residentialEfficiencyRebateProgram: {
     name: {
-      en: 'Residential Efficiency Rebate Program',
+      en: 'Colorado Springs Utilities Residential Rebates & Incentives',
     },
     url: {
       en: 'https://www.csu.org/Pages/ResidentialRebates.aspx',
@@ -59,7 +59,7 @@ export const CO_PROGRAMS = {
   },
   co_fortCollinsUtilities_solarRebates: {
     name: {
-      en: 'Solar Rebates',
+      en: 'Fort Collins Utilities Solar Rebates',
     },
     url: {
       en: 'https://www.fcgov.com/utilities/residential/renewables/solar-rebates',
@@ -67,7 +67,7 @@ export const CO_PROGRAMS = {
   },
   'co_fortCollinsUtilities_solarRebates-ResidentialBatteryStorageProgram': {
     name: {
-      en: 'Solar Rebates-Residential Battery Storage Program',
+      en: 'Fort Collins Utilities Residential Battery Storage Program',
     },
     url: {
       en: 'https://www.fcgov.com/utilities/residential-battery-storage-program',
@@ -107,15 +107,15 @@ export const CO_PROGRAMS = {
   },
   co_empireElectricAssociation_energyEfficiencyProductsProgram: {
     name: {
-      en: 'Energy Efficiency Products Program',
+      en: 'Empire Electric Association Residential Energy Efficiency Program',
     },
     url: {
-      en: 'https://www.eea.coop/energy-efficiency-products-program',
+      en: 'https://www.eea.coop/residential-energy-efficiency-program',
     },
   },
   co_energyOutreachColorado_weatherizationAssistanceProgram: {
     name: {
-      en: 'Weatherization Assistance Program',
+      en: 'Energy Outreach Colorado Weatherization Assistance Program',
     },
     url: {
       en: 'https://socgov02.my.site.com/ceoweatherization/s/',
@@ -123,7 +123,7 @@ export const CO_PROGRAMS = {
   },
   co_gunnisonCountyElectricAssociation_rebates: {
     name: {
-      en: 'Rebates',
+      en: 'Gunnison County Electric Association Rebates',
     },
     url: {
       en: 'https://www.gcea.coop/energy-efficiency/rebates/',
@@ -131,7 +131,7 @@ export const CO_PROGRAMS = {
   },
   co_holyCrossEnergy_residentialRebates: {
     name: {
-      en: 'Residential Rebates',
+      en: 'Holy Cross Energy Residential Rebates',
     },
     url: {
       en: 'https://www.holycross.com/rebates/',
@@ -139,7 +139,7 @@ export const CO_PROGRAMS = {
   },
   co_laPlataElectricAssociation_electrifyAndSave: {
     name: {
-      en: 'Electrify and Save',
+      en: 'La Plata Electric Association - Electrify and Save',
     },
     url: {
       en: 'https://lpea.coop/electrify',
@@ -147,7 +147,7 @@ export const CO_PROGRAMS = {
   },
   'co_morganCountyREA_tri-StateG&T': {
     name: {
-      en: 'Tri-State G&T',
+      en: 'Morgan County REA Energy Efficiency Rebates',
     },
     url: {
       en: 'https://www.mcrea.org/energy-efficiency-rebates',
@@ -155,7 +155,7 @@ export const CO_PROGRAMS = {
   },
   co_mountainViewElectricAssociation_rebates: {
     name: {
-      en: 'Rebates',
+      en: 'Mountain View Electric Association Rebates',
     },
     url: {
       en: 'https://www.mvea.coop/save-energy-money/rebates/',
@@ -163,7 +163,7 @@ export const CO_PROGRAMS = {
   },
   co_poudreValleyREA_rebatesForResidentialCustomers: {
     name: {
-      en: 'Rebates for Residential Customers',
+      en: 'Poudre Valley REA Rebates for Residential Members',
     },
     url: {
       en: 'https://pvrea.coop/for-members/residential-services/rebates/',
@@ -171,7 +171,7 @@ export const CO_PROGRAMS = {
   },
   co_sanIsabelElectric_sanIsabelElectric: {
     name: {
-      en: 'San Isabel Electric',
+      en: 'San Isabel Electric Residential Rebates',
     },
     url: {
       en: 'https://siea.com/rebates/',
@@ -179,7 +179,7 @@ export const CO_PROGRAMS = {
   },
   co_sanMiguelPowerAssociation_residentialAndCommercialRebates: {
     name: {
-      en: 'Residential and Commercial Rebates',
+      en: 'San Miguel Power Association Residential and Commercial Rebates',
     },
     url: {
       en: 'https://www.smpa.com/energy#berebates',
@@ -187,7 +187,7 @@ export const CO_PROGRAMS = {
   },
   'co_southeastColoradoPowerAssociation_tri-StateG&T': {
     name: {
-      en: 'Tri-State G&T',
+      en: 'Southeast Colorado Power Association Rebates',
     },
     url: {
       en: 'https://www.secpa.com/rebates',
@@ -195,7 +195,7 @@ export const CO_PROGRAMS = {
   },
   'co_tri-StateG&T_tri-StateG&T': {
     name: {
-      en: 'Tri-State G&T',
+      en: 'United Power Heat Pump Rebates',
     },
     url: {
       en: 'https://www.unitedpower.com/heat-pumps',
@@ -203,7 +203,7 @@ export const CO_PROGRAMS = {
   },
   'co_unitedPower_tri-StateG&T': {
     name: {
-      en: 'Tri-State G&T',
+      en: 'United Power Rebates & Programs',
     },
     url: {
       en: 'https://www.unitedpower.com/rebates',
@@ -211,7 +211,7 @@ export const CO_PROGRAMS = {
   },
   co_xcelEnergy_heatPumpRebates: {
     name: {
-      en: 'Heat Pump Rebates',
+      en: 'Xcel Energy Heat Pump Rebates',
     },
     url: {
       en: 'https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps',
@@ -219,7 +219,7 @@ export const CO_PROGRAMS = {
   },
   co_xcelEnergy_heatPumpWaterHeaterRebates: {
     name: {
-      en: 'Heat Pump Water Heater Rebates',
+      en: 'Xcel Energy Heat Pump Water Heater Rebates',
     },
     url: {
       en: 'https://co.my.xcelenergy.com/s/residential/home-rebates/water-heaters',
@@ -227,7 +227,7 @@ export const CO_PROGRAMS = {
   },
   co_coloradoEnergyOffice_electricVehicleTaxCredits: {
     name: {
-      en: 'Electric Vehicle Tax Credits',
+      en: 'Colorado Electric Vehicle Tax Credits',
     },
     url: {
       en: 'https://energyoffice.colorado.gov/transportation/grants-incentives/electric-vehicle-tax-credits',
@@ -251,7 +251,7 @@ export const CO_PROGRAMS = {
   },
   co_stateOfColorado_taxCredits: {
     name: {
-      en: 'Tax Credits',
+      en: 'Colorado Tax Credits',
     },
     url: {
       en: 'https://energysmartcolorado.org/tax-credits-incentives/',
@@ -259,7 +259,7 @@ export const CO_PROGRAMS = {
   },
   co_cityOfBoulder_residentialRebates: {
     name: {
-      en: 'Residential Rebates',
+      en: 'City of Boulder Residential Rebates',
     },
     url: {
       en: 'https://energysmartyes.com/rebates-financing/',
@@ -267,7 +267,7 @@ export const CO_PROGRAMS = {
   },
   co_cityOfBoulder_solarTaxRebates: {
     name: {
-      en: 'Solar Tax Rebates',
+      en: 'City of Boulder Solar Tax Rebates',
     },
     url: {
       en: 'https://bouldercolorado.gov/services/solar-tax-rebates',
@@ -275,7 +275,7 @@ export const CO_PROGRAMS = {
   },
   co_boulderCounty_energySmart: {
     name: {
-      en: 'EnergySmart',
+      en: 'Boulder County EnergySmart',
     },
     url: {
       en: 'https://energysmartyes.com/rebates-financing/boco-rebates/',
@@ -283,7 +283,7 @@ export const CO_PROGRAMS = {
   },
   co_boulderCounty_energySmartManufacturedHomesRebates: {
     name: {
-      en: 'EnergySmart Manufactured Homes Rebates',
+      en: 'Boulder County EnergySmart Manufactured Homes Rebates',
     },
     url: {
       en: 'https://assets-partners.bouldercounty.gov/wp-content/uploads/sites/2/2023/08/Manufactured-Homes-Eligible-Measures-List-2023.pdf',
@@ -299,7 +299,7 @@ export const CO_PROGRAMS = {
   },
   co_highlineElectricAssociation_rebateProgram: {
     name: {
-      en: 'Rebate Program',
+      en: 'Highline Electric Association Rebate Program',
     },
     url: {
       en: 'https://www.hea.coop/rebates',
@@ -307,7 +307,7 @@ export const CO_PROGRAMS = {
   },
   co_kCElectricAssociation_rebates: {
     name: {
-      en: 'Rebates',
+      en: 'K.C. Electric Association Rebates',
     },
     url: {
       en: 'https://www.kcelectric.coop/rebates',
@@ -315,7 +315,7 @@ export const CO_PROGRAMS = {
   },
   co_mountainParksElectric_rebates: {
     name: {
-      en: 'Rebates',
+      en: 'Mountain Parks Electric Rebates',
     },
     url: {
       en: 'https://www.mpei.com/rebates',
@@ -323,7 +323,7 @@ export const CO_PROGRAMS = {
   },
   co_sanLuisValleyREC_energyEfficiencyRebateProgram: {
     name: {
-      en: 'Energy Efficiency Rebate Program',
+      en: 'San Luis Valley REC Energy Efficiency Rebate Program',
     },
     url: {
       en: 'https://slvrec.com/rebates',
@@ -331,7 +331,7 @@ export const CO_PROGRAMS = {
   },
   co_sangreDeCristoElectricAssociation_rebates: {
     name: {
-      en: 'Rebates',
+      en: 'Sangre de Cristo Electric Association Rebates',
     },
     url: {
       en: 'https://www.myelectric.coop/energy-efficiency/energy-efficiency-credit-programs/',
@@ -339,7 +339,7 @@ export const CO_PROGRAMS = {
   },
   'co_sangreDeCristoElectricAssociation_saveEnergy&Money': {
     name: {
-      en: 'Save Energy & Money',
+      en: 'Sangre de Cristo Electric Association - Save Energy & Money',
     },
     url: {
       en: 'https://www.myelectric.coop/energy-efficiency/energy-efficiency-credit-programs/',
@@ -347,7 +347,7 @@ export const CO_PROGRAMS = {
   },
   co_townOfAvon_energyEfficiencyProgram: {
     name: {
-      en: 'Energy Efficiency Program',
+      en: 'Town of Avon Energy Efficiency Program',
     },
     url: {
       en: 'https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/',
@@ -355,7 +355,7 @@ export const CO_PROGRAMS = {
   },
   co_townOfEagle_energyEfficiencyProgram: {
     name: {
-      en: 'Energy Efficiency Program',
+      en: 'Town of Eagle Energy Efficiency Program',
     },
     url: {
       en: 'https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/',
@@ -363,7 +363,7 @@ export const CO_PROGRAMS = {
   },
   co_townOfErie_rebates: {
     name: {
-      en: 'Rebates',
+      en: 'Town of Erie Rebates',
     },
     url: {
       en: 'https://www.erieco.gov/2242/Energy-Efficiency-Rebates',
@@ -371,7 +371,7 @@ export const CO_PROGRAMS = {
   },
   co_townOfVail_energyEfficiencyProgram: {
     name: {
-      en: 'Energy Efficiency Program',
+      en: 'Town of Vail Energy Efficiency Program',
     },
     url: {
       en: 'https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/',
@@ -387,7 +387,7 @@ export const CO_PROGRAMS = {
   },
   'co_walkingMountains_low-ModerateIncomeProgram': {
     name: {
-      en: 'Low-Moderate Income Program',
+      en: 'Walking Mountains Low-Moderate Income Program',
     },
     url: {
       en: 'https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/',
@@ -395,7 +395,7 @@ export const CO_PROGRAMS = {
   },
   'co_walkingMountains_rebates&Incentives': {
     name: {
-      en: 'Rebates & Incentives',
+      en: 'Walking Mountains Rebates & Incentives',
     },
     url: {
       en: 'https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/',
@@ -403,7 +403,7 @@ export const CO_PROGRAMS = {
   },
   co_whiteRiverElectricAssociation_rebates: {
     name: {
-      en: 'Rebates',
+      en: 'White River Electric Association Rebates',
     },
     url: {
       en: 'https://www.wrea.org/rebates',
@@ -411,7 +411,7 @@ export const CO_PROGRAMS = {
   },
   'co_y-WElectricAssociation_rebateProgram': {
     name: {
-      en: 'Rebate Program',
+      en: 'Y-W Electric Association Rebate Program',
     },
     url: {
       en: 'https://www.ywelectric.coop/rebate-program-information',

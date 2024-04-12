@@ -1,7 +1,7 @@
 export const IL_PROGRAMS = {
   il_commonwealthEdison_applianceRebates: {
     name: {
-      en: 'Appliance Rebates',
+      en: 'ComEd Appliance Rebates',
     },
     url: {
       en: 'https://www.comed.com/WaysToSave/ForYourHome/Pages/ApplianceRebates.aspx',
@@ -9,7 +9,7 @@ export const IL_PROGRAMS = {
   },
   il_cornBeltEnergy_rebateProgram: {
     name: {
-      en: 'Rebate Program',
+      en: 'Corn Belt Energy Rebate Program',
     },
     url: {
       en: 'https://www.cornbeltenergy.com/programs-services/rebate-program',
@@ -17,7 +17,7 @@ export const IL_PROGRAMS = {
   },
   il_stateOfIllinois_homeWeatherization: {
     name: {
-      en: 'Home Weatherization',
+      en: 'Illinois Home Weatherization Assistance Program',
     },
     url: {
       en: 'https://dceo.illinois.gov/communityservices/homeweatherization/howtoapply.html',
@@ -25,7 +25,7 @@ export const IL_PROGRAMS = {
   },
   'il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives': {
     name: {
-      en: 'Energy Efficiency Incentives',
+      en: 'JCE Co-op Energy Efficiency Incentives',
     },
     url: {
       en: 'https://jcecoop.com/incentives',
@@ -33,7 +33,7 @@ export const IL_PROGRAMS = {
   },
   il_midAmericanEnergy_residentialInstantRebates: {
     name: {
-      en: 'Residential Instant Rebates',
+      en: 'MidAmerican Energy Residential Instant Rebates',
     },
     url: {
       en: 'https://www.midamericanenergy.com/il-residential-rebates',
