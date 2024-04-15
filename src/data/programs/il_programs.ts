@@ -95,4 +95,12 @@ export const IL_PROGRAMS = {
       en: 'https://www.amerenillinoissavings.com/res-incentives/',
     },
   },
+  il_evanstonDevelopmentCooperative_evanstonGreenHomesPilotProgram: {
+    name: {
+      en: 'Evanston Green Homes Pilot Program',
+    },
+    url: {
+      en: 'https://greenhomes.cnt.org/',
+    },
+  },
 } as const;
