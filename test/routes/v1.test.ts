@@ -283,6 +283,23 @@ test('IL low income response with state and utility filtering is valid and corre
   );
 });
 
+test('IL low income response with city authority filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      zip: '60202',
+      owner_status: 'homeowner',
+      household_size: 2,
+      household_income: 10000,
+      tax_filing: 'single',
+      authority_types: ['city'],
+      // TODO: Remove when IL is fully launched.
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-il-60202-city-lowincome.json',
+  );
+});
+
 // MI low income test.
 test('MI response with state and utility is valid and correct', async t => {
   await validateResponse(
