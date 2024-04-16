@@ -1175,7 +1175,7 @@
       "en": "Up to $2000 per customer off air source heat pumps. Efficiency minimums apply.",
       "es": "Hasta $2000 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-50",
@@ -1198,7 +1198,7 @@
       "en": "Up to $3000 per customer off ground source heat pumps. Efficiency minimums apply.",
       "es": "Hasta $3000 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-51",
@@ -1218,9 +1218,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Ductless mini-split $500/ton.",
-      "es": "Mini split sin ductos $500 dólares/tonelada"
-    }
+      "en": "Ductless mini-split $500/ton. Efficiency minimums apply.",
+      "es": "Mini split sin ductos $500 dólares/tonelada. Mínimos de eficiencia aplican."
+    },
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-52",
@@ -1243,7 +1244,8 @@
     "short_description": {
       "en": "$800 off a heat pump water heater UEF 3.3. ENERGY STAR certified.",
       "es": "Un descuento de $800 dólares en un calentador de agua con bomba de calor UEF 3.3 certificada por ENERGY STAR."
-    }
+    },
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-54",
@@ -1266,7 +1268,8 @@
     "short_description": {
       "en": "$35 off smart thermostats. Max rebate: $70 per home.",
       "es": "Un descuento de $35 dólares en termostatos inteligentes. Un reembolso máximo: $70 dólares por hogar."
-    }
+    },
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-55",
@@ -1324,17 +1327,17 @@
     "program": "co_longmontPowerAndCommunications_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 2000,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off air source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
+      "en": "Up to $2000 per customer off air source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $2000 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-58",
@@ -1347,17 +1350,17 @@
     "program": "co_longmontPowerAndCommunications_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 3000,
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off ground source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
+      "en": "Up to $3000 per customer off ground source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $3000 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-59",
@@ -1369,18 +1372,18 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_longmontPowerAndCommunications_efficiencyWorks",
     "amount": {
-      "type": "dollar_amount",
-      "number": 250,
-      "minimum": 250,
-      "maximum": 750
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Ductless mini-split $250/head (max $500 for gas heated home, $750 for electric heated home).",
-      "es": "Mini split sin ductos $250 dólares/cabeza (máximo $500 dólares para viviendas con calefacción de gas, $750 dólares para viviendas con calefacción eléctrica)."
-    }
+      "en": "Ductless mini-split $500/ton. Efficiency minimums apply.",
+      "es": "Mini split sin ductos $500 dólares/tonelada. Mínimos de eficiencia aplican."
+    },
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-60",
@@ -1401,32 +1404,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 off a heat pump water heater UEF 2.0. Max rebate: $1000 per home.",
-      "es": "Un descuento de $300 dólares en un calentador de agua con bomba de calor UEF 2.0. Reembolso máximo: $1,000 dólares por vivienda."
-    }
-  },
-  {
-    "id": "CO-61",
-    "authority_type": "utility",
-    "authority": "co-longmont-power-and-communications",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_water_heater",
-    "program": "co_longmontPowerAndCommunications_efficiencyWorks",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "minimum": 500,
-      "maximum": 1000
+      "en": "$800 off a heat pump water heater UEF 3.3. ENERGY STAR certified.",
+      "es": "Un descuento de $800 dólares en un calentador de agua con bomba de calor UEF 3.3 certificada por ENERGY STAR."
     },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$500 off a heat pump water heater UEF 3.0. Max rebate: $1000 per home.",
-      "es": "Un descuento de $500 dólares en un calentador de agua con bomba de calor UEF 3.0. Reembolso máximo: $1,000 dólares por vivienda."
-    }
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-62",
@@ -1448,8 +1429,9 @@
     ],
     "short_description": {
       "en": "$35 off smart thermostats. Max rebate: $70 per home.",
-      "es": "Un descuento de $35 dólares en termostatos inteligentes. Reembolso máximo: $70 dólares por hogar."
-    }
+      "es": "Un descuento de $35 dólares en termostatos inteligentes. Un reembolso máximo: $70 dólares por hogar."
+    },
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-63",
@@ -1493,7 +1475,7 @@
     ],
     "short_description": {
       "en": "Tiered air sealing rebate ranging from $310 to $770 based on reduction of air loss.",
-      "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de pérdida de aire."
+      "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de la pérdida de aire."
     }
   },
   {
@@ -1507,17 +1489,17 @@
     "program": "co_estesParkPowerAndCommunications_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 2000,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off air source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
+      "en": "Up to $2000 per customer off air source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $2000 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-66",
@@ -1530,17 +1512,17 @@
     "program": "co_estesParkPowerAndCommunications_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 3000,
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off ground source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
+      "en": "Up to $3000 per customer off ground source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $3000 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-67",
@@ -1552,18 +1534,18 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_estesParkPowerAndCommunications_efficiencyWorks",
     "amount": {
-      "type": "dollar_amount",
-      "number": 250,
-      "minimum": 250,
-      "maximum": 750
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Ductless mini-split $250/head (max $500 for gas heated home, $750 for electric heated home).",
-      "es": "Mini split sin ductos $250 dólares/cabeza (máximo $500 dólares para viviendas con calefacción de gas, $750 dólares para viviendas con calefacción eléctrica)."
-    }
+      "en": "Ductless mini-split $500/ton. Efficiency minimums apply.",
+      "es": "Mini split sin ductos $500 dólares/tonelada. Mínimos de eficiencia aplican."
+    },
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-68",
@@ -1584,32 +1566,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 off a heat pump water heater UEF 2.0. Max rebate: $1000 per home.",
-      "es": "Un descuento de $300 dólares en un calentador de agua con bomba de calor UEF 2.0. Reembolso máximo: $1,000 dólares por vivienda."
-    }
-  },
-  {
-    "id": "CO-69",
-    "authority_type": "utility",
-    "authority": "co-estes-park-power-and-communications",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_water_heater",
-    "program": "co_estesParkPowerAndCommunications_efficiencyWorks",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "minimum": 500,
-      "maximum": 1000
+      "en": "$800 off a heat pump water heater UEF 3.3. ENERGY STAR certified.",
+      "es": "Un descuento de $800 dólares en un calentador de agua con bomba de calor UEF 3.3 certificada por ENERGY STAR."
     },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$500 off a heat pump water heater UEF 3.0. Max rebate: $1000 per home.",
-      "es": "Un descuento de $500 dólares por un calentador de agua con bomba de calor UEF 3.0. Reembolso máximo: $1,000 dólares por vivienda."
-    }
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-70",
@@ -1631,8 +1591,9 @@
     ],
     "short_description": {
       "en": "$35 off smart thermostats. Max rebate: $70 per home.",
-      "es": "Un descuento de $35 dólares en termostatos inteligentes. Reembolso máximo: $70 dólares por hogar."
-    }
+      "es": "Un descuento de $35 dólares en termostatos inteligentes. Un reembolso máximo: $70 dólares por hogar."
+    },
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-71",
@@ -1653,7 +1614,7 @@
     ],
     "short_description": {
       "en": "Rebate of $1.16 per sq ft for insulation. Attic (flat ceiling) and already insulated attic kneewalls capped at a rebate of $0.77 per sq ft.",
-      "es": "Un reembolso de $1.16 dólares por pie cuadrado de aislamiento. Un reembolso de $0.77 de dólar por pie cuadrado para el desván (techo plano) y los muros inclinados del desván ya aislados."
+      "es": "Un reembolso de $1.16 dólares por pie cuadrado de aislamiento. Un reembolso de $0.77 de dólar por pie cuadrado para el desván (de techo plano) y para los muros inclinados del desván ya aislados."
     }
   },
   {
@@ -1676,7 +1637,7 @@
     ],
     "short_description": {
       "en": "Tiered air sealing rebate ranging from $310 to $770 based on reduction of air loss.",
-      "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de pérdida de aire."
+      "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de la pérdida de aire."
     }
   },
   {
@@ -1690,17 +1651,17 @@
     "program": "co_lovelandWaterAndPower_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 2000,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off air source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
+      "en": "Up to $2000 per customer off air source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $2000 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-74",
@@ -1713,17 +1674,17 @@
     "program": "co_lovelandWaterAndPower_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 3000,
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off ground source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares por cliente en descuentos para bombas de calor geotérmicas. Mínimos de eficiencia aplican."
+      "en": "Up to $3000 per customer off ground source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $3000 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-75",
@@ -1735,18 +1696,18 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_lovelandWaterAndPower_efficiencyWorks",
     "amount": {
-      "type": "dollar_amount",
-      "number": 250,
-      "minimum": 250,
-      "maximum": 750
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Ductless mini-split $250/head (max $500 for gas heated home, $750 for electric heated home).",
-      "es": "Mini split sin ductos $250 dólares/cabeza (máximo $500 dólares para viviendas con calefacción de gas, $750 dólares para viviendas con calefacción eléctrica)."
-    }
+      "en": "Ductless mini-split $500/ton. Efficiency minimums apply.",
+      "es": "Mini split sin ductos $500 dólares/tonelada. Mínimos de eficiencia aplican."
+    },
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-76",
@@ -1767,32 +1728,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 off a heat pump water heater UEF 2.0. Max rebate: $1000 per home.",
-      "es": "Un descuento de $300 dólares en un calentador de agua con bomba de calor UEF 2.0. Reembolso máximo: $1,000 dólares por vivienda."
-    }
-  },
-  {
-    "id": "CO-77",
-    "authority_type": "utility",
-    "authority": "co-loveland-water-and-power",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_water_heater",
-    "program": "co_lovelandWaterAndPower_efficiencyWorks",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "minimum": 500,
-      "maximum": 1000
+      "en": "$800 off a heat pump water heater UEF 3.3. ENERGY STAR certified.",
+      "es": "Un descuento de $800 dólares en un calentador de agua con bomba de calor UEF 3.3 certificada por ENERGY STAR."
     },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$500 off a heat pump water heater UEF 3.0. Max rebate: $1000 per home.",
-      "es": "Un descuento de $500 dólares en un calentador de agua con bomba de calor UEF 3.0. Reembolso máximo: $1,000 dólares por vivienda."
-    }
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-78",
@@ -1814,8 +1753,9 @@
     ],
     "short_description": {
       "en": "$35 off smart thermostats. Max rebate: $70 per home.",
-      "es": "Un descuento de $35 dólares en termostatos inteligentes. Reembolso máximo: $70 dólares por hogar."
-    }
+      "es": "Un descuento de $35 dólares en termostatos inteligentes. Un reembolso máximo: $70 dólares por hogar."
+    },
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-79",
@@ -1836,7 +1776,7 @@
     ],
     "short_description": {
       "en": "Rebate of $1.16 per sq ft for insulation. Attic (flat ceiling) and already insulated attic kneewalls capped at a rebate of $0.77 per sq ft.",
-      "es": "Un reembolso de $1.16 dólares por pie cuadrado de aislamiento. Un reembolso de $0.77 de dólar por pie cuadrado para el desván (techo plano) y los muros inclinados del desván ya aislados."
+      "es": "Un reembolso de $1.16 dólares por pie cuadrado de aislamiento. Un reembolso de $0.77 de dólar por pie cuadrado para el desván (de techo plano) y para los muros inclinados del desván ya aislados."
     }
   },
   {
@@ -1859,7 +1799,7 @@
     ],
     "short_description": {
       "en": "Tiered air sealing rebate ranging from $310 to $770 based on reduction of air loss.",
-      "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de pérdida de aire."
+      "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de la pérdida de aire."
     }
   },
   {
@@ -1874,17 +1814,17 @@
     "program": "co_platteRiverPowerAuthority_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 2000,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off air source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
+      "en": "Up to $2000 per customer off air source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $2000 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-82",
@@ -1898,17 +1838,17 @@
     "program": "co_platteRiverPowerAuthority_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 3000,
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off ground source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares en descuentos por cliente en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
+      "en": "Up to $3000 per customer off ground source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $3000 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-83",
@@ -1921,18 +1861,18 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_platteRiverPowerAuthority_efficiencyWorks",
     "amount": {
-      "type": "dollar_amount",
-      "number": 250,
-      "minimum": 250,
-      "maximum": 750
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Ductless mini-split $250/head (max $500 for gas heated home, $750 for electric heated home).",
-      "es": "Mini split sin ductos $250 dólares/cabeza (máximo $500 dólares para viviendas con calefacción de gas, $750 dólares para viviendas con calefacción eléctrica)."
-    }
+      "en": "Ductless mini-split $500/ton. Efficiency minimums apply.",
+      "es": "Mini split sin ductos $500 dólares/tonelada. Mínimos de eficiencia aplican."
+    },
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-84",
@@ -1954,33 +1894,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 off a heat pump water heater UEF 2.0. Max rebate: $1000 per home.",
-      "es": "Un descuento de $300 dólares en un calentador de agua con bomba de calor UEF 2.0. Reembolso máximo: $1,000 por hogar."
-    }
-  },
-  {
-    "id": "CO-85",
-    "authority_type": "other",
-    "authority": "co-platte-river-power-authority",
-    "eligible_geo_group": "co-group-platte-river-power-authority",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_water_heater",
-    "program": "co_platteRiverPowerAuthority_efficiencyWorks",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "minimum": 500,
-      "maximum": 1000
+      "en": "$800 off a heat pump water heater UEF 3.3. ENERGY STAR certified.",
+      "es": "Un descuento de $800 dólares en un calentador de agua con bomba de calor UEF 3.3 certificada por ENERGY STAR."
     },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$500 off a heat pump water heater UEF 3.0. Max rebate: $1000 per home.",
-      "es": "Un descuento de $500 dólares en un calentador de agua con bomba de calor UEF 3.0. Reembolso máximo: $1,000 por hogar."
-    }
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-86",
@@ -2003,8 +1920,9 @@
     ],
     "short_description": {
       "en": "$35 off smart thermostats. Max rebate: $70 per home.",
-      "es": "Un descuento de $35 dólares en termostatos inteligentes. Reembolso máximo: $70 dólares por hogar."
-    }
+      "es": "Un descuento de $35 dólares en termostatos inteligentes. Un reembolso máximo: $70 dólares por hogar."
+    },
+    "start_date": "2024-01-01"
   },
   {
     "id": "CO-87",
@@ -2026,7 +1944,7 @@
     ],
     "short_description": {
       "en": "Rebate of $1.16 per sq ft for insulation. Attic (flat ceiling) and already insulated attic kneewalls capped at a rebate of $0.77 per sq ft.",
-      "es": "Un reembolso de $1.16 dólares por pie cuadrado de aislamiento. Un reembolso de $0.77 de dólar por pie cuadrado para el desván (techo plano) y los muros inclinados del desván ya aislados."
+      "es": "Un reembolso de $1.16 dólares por pie cuadrado de aislamiento. Un reembolso de $0.77 de dólar por pie cuadrado para el desván (de techo plano) y para los muros inclinados del desván ya aislados."
     }
   },
   {
@@ -2050,7 +1968,7 @@
     ],
     "short_description": {
       "en": "Tiered air sealing rebate ranging from $310 to $770 based on reduction of air loss.",
-      "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de pérdida de aire."
+      "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de la pérdida de aire."
     }
   },
   {
