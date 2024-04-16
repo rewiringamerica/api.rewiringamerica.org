@@ -1165,15 +1165,15 @@
     "program": "co_fortCollinsUtilities_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 2000,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off air source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
+      "en": "Up to $2000 per customer off air source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $2000 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
     },
     "start_date": "2023-04-01"
   },
@@ -1188,15 +1188,15 @@
     "program": "co_fortCollinsUtilities_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 3000,
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off ground source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
+      "en": "Up to $3000 per customer off ground source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $3000 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
     },
     "start_date": "2023-04-01"
   },
@@ -1210,17 +1210,16 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_fortCollinsUtilities_efficiencyWorks",
     "amount": {
-      "type": "dollar_amount",
-      "number": 250,
-      "minimum": 250,
-      "maximum": 750
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Ductless mini-split $250/head (max $500 for gas heated home, $750 for electric heated home).",
-      "es": "Mini split sin ductos $250 dólares/cabeza (máximo $500 dólares para viviendas con calefacción de gas, $750 dólares para viviendas con calefacción eléctrica)."
+      "en": "Ductless mini-split $500/ton.",
+      "es": "Mini split sin ductos $500 dólares/tonelada"
     }
   },
   {
@@ -1242,31 +1241,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 off a heat pump water heater UEF 2.0. Max rebate for water heater incentives: $1000 per home.",
-      "es": "Un descuento de $300 dólares en un calentador de agua con bomba de calor UEF 2.0. Reembolso máximo para incentivos de calentadores de agua: $1,000 dólares por vivienda."
-    }
-  },
-  {
-    "id": "CO-53",
-    "authority_type": "utility",
-    "authority": "co-fort-collins-utilities",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_water_heater",
-    "program": "co_fortCollinsUtilities_efficiencyWorks",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "minimum": 500,
-      "maximum": 1000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$500 off a heat pump water heater UEF 3.0. Max rebate for water heater incentives: $1000 per home.",
-      "es": "Un descuento de $500 dólares en un calentador de agua con bomba de calor UEF 3.0. Un reembolso máximo para incentivos de calentadores de agua: $1,000 dólares por vivienda."
+      "en": "$800 off a heat pump water heater UEF 3.3. ENERGY STAR certified.",
+      "es": "Un descuento de $800 dólares en un calentador de agua con bomba de calor UEF 3.3 certificada por ENERGY STAR."
     }
   },
   {
