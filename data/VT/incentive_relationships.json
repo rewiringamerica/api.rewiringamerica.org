@@ -1,17 +1,23 @@
 {
   "prerequisites": {
-    "VT-29": "VT-27",
-    "VT-30": "VT-28"
+    "VT-2": "VT-1",
+    "VT-8": "VT-7",
+    "VT-20": "VT-19",
+    "VT-21": "VT-18",
+    "VT-38": "VT-37",
+    "VT-42": "VT-41",
+    "VT-44": "VT-43"
   },
   "exclusions": {
     "VT-56": [
       "VT-55"
     ],
+    "VT-54": [
+      "VT-53"
+    ],
     "VT-1": [
       "VT-3",
       "VT-4"
     ]
-  },
-  "combinations": [
-    { "ids": ["VT-29", "VT-30"], "max_value": 5000 }]
+  }
 }
