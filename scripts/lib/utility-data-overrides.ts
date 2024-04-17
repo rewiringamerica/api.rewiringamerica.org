@@ -180,7 +180,15 @@ export const OVERRIDES = new Map<string | number, string>([
   [15263, 'Potomac Edison'],
 
   // ME
+  // Versant has two districts, Bangor Hydro and Maine Public. They have
+  // different rates, but don't seem to offer incentives, so we can collapse
+  // them for now. (The utility codes do not seem to line up with the real
+  // division between districts.)
+  [1011, 'Versant Power'],
+  [1091, 'Versant Power'],
+  [1179, 'Versant Power'],
   [10144, 'Kennebunk Light & Power District'],
+  [11477, 'Madison Electric Works'],
 
   // MI
   [61241, 'City of Charlevoix'],
