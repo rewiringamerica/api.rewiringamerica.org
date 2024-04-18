@@ -197,27 +197,6 @@
     "low_income": "default-moderate"
   },
   {
-    "id": "VT-9",
-    "authority_type": "utility",
-    "authority": "vt-green-mountain-power",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "vt_greenMountainPower_greenMountainPowerDuctedHeatPumpRebate",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "GMP customers receive a $400 point of purchase discount on ducted heat pump.",
-      "es": "Los clientes de GMP reciben un descuento de $400 dólares en el punto de compra de la bomba de calor con ductos."
-    }
-  },
-  {
     "id": "VT-10",
     "authority_type": "utility",
     "authority": "vt-green-mountain-power",
@@ -228,15 +207,14 @@
     "program": "vt_greenMountainPower_greenMountainPowerDuctedHeatPumpRebate",
     "amount": {
       "type": "dollar_amount",
-      "number": 300,
-      "maximum": 600
+      "number": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Income-eligible Vermonters qualify for a $300-$600 bonus rebate on a ducted heat pump, depending on their utility.",
-      "es": "Los residentes de Vermont que cumplen con el nivel de ingresos tienen derecho a un reembolso de entre $300 y $600 dólares para una bomba de calor con ductos pero depende de la compañía de suministro de luz."
+      "en": "Income-eligible GMP customers qualify for a $2,000 bonus rebate on a ducted heat pump.",
+      "es": "Los clientes de GMP que cumplen con el nivel de ingresos tienen derecho a un reembolso de $2,000 dólares para una bomba de calor con ductos."
     },
     "low_income": "default"
   },
@@ -384,52 +362,6 @@
     "start_date": "2021-11-01"
   },
   {
-    "id": "VT-19",
-    "authority_type": "utility",
-    "authority": "vt-green-mountain-power",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "vt_greenMountainPower_greenMountainPowerDuctlessHeatPumpRebate",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400,
-      "maximum": 400
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "GMP customers receive a $400 point of purchase discount on ductless heat pump.",
-      "es": "Los clientes de GMP reciben un descuento de $400 dólares en el punto de compra de una bomba de calor sin ductos."
-    }
-  },
-  {
-    "id": "VT-20",
-    "authority_type": "utility",
-    "authority": "vt-green-mountain-power",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "vt_greenMountainPower_greenMountainPowerHeatPumpRebateIncomeBonus",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 300,
-      "maximum": 600
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Customers who are low or moderate income can save more with GMP's low to moderate income rebate for ductless heat pumps.",
-      "es": "Los clientes con ingresos bajos o moderados pueden ahorrar más con el reembolso por ingresos bajos o moderados de GMP para bombas de calor sin ductos."
-    },
-    "start_date": "2021-11-01",
-    "low_income": "default"
-  },
-  {
     "id": "VT-21",
     "authority_type": "state",
     "authority": "vt-efficiency-vermont",
@@ -493,30 +425,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "BED customers may receive a rebate up to $2,500 on qualifying HPs, plus an additional $500 for a second HP.",
-      "es": "Los clientes de BED pueden recibir un reembolso de hasta $2,500 dólares en las bombas de calor que cumplan los requisitos, más $500 dólares adicionales por una segunda bomba de calor."
-    },
-    "start_date": "2022-01-01",
-    "end_date": "2023-12-31"
-  },
-  {
-    "id": "VT-24",
-    "authority_type": "utility",
-    "authority": "vt-burlington-electric-department",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForDuctlessHeatPump",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "BED customers may receive a rebate up to $2,500 on qualifying HPs, plus an additional $500 for a second HP.",
+      "en": "Rebate up to $2,500 on qualifying ductless heat pumps, plus an additional $500 for a second heat pump.",
       "es": "Los clientes de BED pueden recibir un reembolso de hasta $2,500 dólares en las bombas de calor que cumplan los requisitos, más $500 dólares adicionales por una segunda bomba de calor."
     },
     "start_date": "2022-01-01",
