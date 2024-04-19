@@ -405,8 +405,6 @@ test('VT low income response with state and utility filtering is valid and corre
       tax_filing: 'joint',
       authority_types: ['state', 'utility'],
       utility: 'vt-burlington-electric-department',
-      // TODO: Remove when VT is fully launched.
-      include_beta_states: true,
     },
     './test/fixtures/v1-vt-05401-state-utility-lowincome.json',
   );
@@ -424,8 +422,6 @@ test('VT low income EV incentives are correct', async t => {
       tax_filing: 'single',
       utility: 'vt-vermont-electric-cooperative',
       items: ['new_electric_vehicle', 'used_electric_vehicle'],
-      // TODO: remove when VT is fully launched
-      include_beta_states: true,
     },
     './test/fixtures/v1-vt-05845-vec-ev-low-income.json',
   );
