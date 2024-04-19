@@ -323,11 +323,17 @@ test('state incentive relationships only reference real IDs', async tap => {
         for (const [incentiveId, prerequisites] of Object.entries(
           data.prerequisites,
         )) {
-          tap.equal(incentivesForState.has(incentiveId), true);
+          tap.ok(
+            incentivesForState.has(incentiveId),
+            `ID ${incentiveId} (in prereq map) does not exist`,
+          );
           const prerequisiteIds = new Set<string>();
           addPrerequisites(prerequisites, prerequisiteIds);
           for (const id of prerequisiteIds) {
-            tap.equal(incentivesForState.has(id), true);
+            tap.ok(
+              incentivesForState.has(id),
+              `ID ${id} (prereq of ${incentiveId}) does not exist`,
+            );
           }
         }
       }
@@ -335,16 +341,22 @@ test('state incentive relationships only reference real IDs', async tap => {
         for (const [incentiveId, supersededIds] of Object.entries(
           data.exclusions,
         )) {
-          tap.equal(incentivesForState.has(incentiveId), true);
+          tap.ok(
+            incentivesForState.has(incentiveId),
+            `ID ${incentiveId} (in exclusions map) does not exist`,
+          );
           for (const id of supersededIds) {
-            tap.equal(incentivesForState.has(id), true);
+            tap.ok(
+              incentivesForState.has(id),
+              `ID ${id} (superseded by ${incentiveId}) does not exist`,
+            );
           }
         }
       }
       if (data.combinations !== undefined) {
         for (const relationship of data.combinations) {
           for (const id of relationship.ids) {
-            tap.equal(incentivesForState.has(id), true);
+            tap.ok(incentivesForState.has(id), `ID ${id} does not exist`);
           }
         }
       }
