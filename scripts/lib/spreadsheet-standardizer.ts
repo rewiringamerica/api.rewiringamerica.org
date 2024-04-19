@@ -63,7 +63,7 @@ export class SpreadsheetStandardizer {
           component =
             this.valueAliasToCanonical[colName][cleanFieldName(component)];
         }
-        return component;
+        return component.trim();
       })
       .join(',');
   }
