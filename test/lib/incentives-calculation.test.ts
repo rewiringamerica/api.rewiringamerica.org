@@ -1,4 +1,3 @@
-import fs from 'fs';
 import _ from 'lodash';
 import { open } from 'sqlite';
 import sqlite3 from 'sqlite3';
@@ -13,21 +12,33 @@ import { BETA_STATES, LAUNCHED_STATES } from '../../src/data/types/states';
 import calculateIncentives from '../../src/lib/incentives-calculation';
 import { calculateStateIncentivesAndSavings } from '../../src/lib/state-incentives-calculation';
 
-const AMIS_FOR_11211 = JSON.parse(
-  fs.readFileSync('./test/fixtures/amis-for-zip-11211.json', 'utf-8'),
-);
-const AMIS_FOR_94117 = JSON.parse(
-  fs.readFileSync('./test/fixtures/amis-for-zip-94117.json', 'utf-8'),
-);
-const AMIS_FOR_39503 = JSON.parse(
-  fs.readFileSync('./test/fixtures/amis-for-zip-39503.json', 'utf-8'),
-);
-const AMIS_FOR_02861 = JSON.parse(
-  fs.readFileSync('./test/fixtures/amis-for-zip-02861.json', 'utf-8'),
-);
-const AMIS_FOR_06002 = JSON.parse(
-  fs.readFileSync('./test/fixtures/amis-for-zip-06002.json', 'utf-8'),
-);
+const LOCATION_AND_AMIS = {
+  '11211': [
+    { zcta: '11211', city: 'Brooklyn', state: 'NY', county: 'Kings' },
+    { computedAMI80: 87080, computedAMI150: 163065, evCreditEligible: false },
+  ],
+  '94117': [
+    {
+      zcta: '94117',
+      city: 'San Francisco',
+      state: 'CA',
+      county: 'San Francisco',
+    },
+    { computedAMI80: 156650, computedAMI150: 293700, evCreditEligible: false },
+  ],
+  '39503': [
+    { zcta: '39503', city: 'Gulfport', state: 'MS', county: 'Harrison' },
+    { computedAMI80: 80256, computedAMI150: 150480, evCreditEligible: false },
+  ],
+  '02861': [
+    { zcta: '02861', city: 'Pawtucket', state: 'RI', county: 'Providence' },
+    { computedAMI80: 62930, computedAMI150: 118020, evCreditEligible: false },
+  ],
+  '06002': [
+    { zcta: '06002', city: 'Bloomfield', state: 'CT', county: 'Hartford' },
+    { computedAMI80: 68215, computedAMI150: 127890, evCreditEligible: false },
+  ],
+} as const;
 
 beforeEach(async t => {
   t.context.db = await open({
@@ -41,7 +52,7 @@ afterEach(async t => {
 });
 
 test('correctly evaluates scenario "Single w/ $120k Household income"', async t => {
-  const data = calculateIncentives(AMIS_FOR_11211, {
+  const data = calculateIncentives(...LOCATION_AND_AMIS['11211'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
     tax_filing: FilingStatus.Single,
@@ -57,7 +68,7 @@ test('beta states and launched states are disjoint', async t => {
 
 test('correctly evaluates state incentives for launched states', async t => {
   // RI is launched so should get state incentives even if include_beta_states = false.
-  const data = calculateIncentives(AMIS_FOR_02861, {
+  const data = calculateIncentives(...LOCATION_AND_AMIS['02861'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
     tax_filing: FilingStatus.Single,
@@ -71,7 +82,7 @@ test('correctly evaluates state incentives for launched states', async t => {
 
 test('correctly excludes state incentives for beta states', async t => {
   // CT is not launched so will not get state incentives.
-  const data = calculateIncentives(AMIS_FOR_06002, {
+  const data = calculateIncentives(...LOCATION_AND_AMIS['06002'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
     tax_filing: FilingStatus.Single,
@@ -86,7 +97,7 @@ test('correctly excludes state incentives for beta states', async t => {
 
 test('correctly evaluates state incentives for beta states', async t => {
   // CT is in beta so we should get incentives for it when beta is requested.
-  const data = calculateIncentives(AMIS_FOR_06002, {
+  const data = calculateIncentives(...LOCATION_AND_AMIS['06002'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
     tax_filing: FilingStatus.Single,
@@ -100,7 +111,7 @@ test('correctly evaluates state incentives for beta states', async t => {
 });
 
 test('correctly evaluates scenario "Joint w/ 5 persons and $60k Household income"', async t => {
-  const data = calculateIncentives(AMIS_FOR_11211, {
+  const data = calculateIncentives(...LOCATION_AND_AMIS['11211'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 60000,
     tax_filing: FilingStatus.Joint,
@@ -110,7 +121,7 @@ test('correctly evaluates scenario "Joint w/ 5 persons and $60k Household income
 });
 
 test('correctly evaluates scenario "Joint w/ $300k Household income"', async t => {
-  const data = calculateIncentives(AMIS_FOR_11211, {
+  const data = calculateIncentives(...LOCATION_AND_AMIS['11211'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 300000,
     tax_filing: FilingStatus.Joint,
@@ -120,7 +131,7 @@ test('correctly evaluates scenario "Joint w/ $300k Household income"', async t =
 });
 
 test('correctly evaluates scenario "MFS w/ $100k Household income"', async t => {
-  const data = calculateIncentives(AMIS_FOR_11211, {
+  const data = calculateIncentives(...LOCATION_AND_AMIS['11211'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 100000,
     tax_filing: FilingStatus.MarriedFilingSeparately,
@@ -129,8 +140,8 @@ test('correctly evaluates scenario "MFS w/ $100k Household income"', async t => 
   t.ok(data);
 });
 
-test('correctly evaluates scenario "Single w/ $120k Household income in the Bronx"', async t => {
-  const data = calculateIncentives(AMIS_FOR_11211, {
+test('correctly evaluates scenario "Single w/ $120k Household income in Brooklyn"', async t => {
+  const data = calculateIncentives(...LOCATION_AND_AMIS['11211'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
     tax_filing: FilingStatus.Single,
@@ -214,7 +225,7 @@ test('correctly evaluates scenario "Single w/ $120k Household income in the Bron
   t.equal(taxCredits['electric_panel'].eligible, true);
   t.equal(taxCredits['electric_panel'].amount.number, 600);
   t.equal(taxCredits['electric_panel'].start_date, '2023');
-  t.equal(taxCredits['electric_vehicle_charger'].eligible, true);
+  t.equal(taxCredits['electric_vehicle_charger'].eligible, false);
   t.equal(taxCredits['electric_vehicle_charger'].amount.number, 1000);
   t.equal(taxCredits['electric_vehicle_charger'].start_date, '2023');
   t.equal(taxCredits['new_electric_vehicle'].eligible, true);
@@ -240,7 +251,7 @@ test('correctly evaluates scenario "Single w/ $120k Household income in the Bron
 });
 
 test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k Household income in San Francisco"', async t => {
-  const data = calculateIncentives(AMIS_FOR_94117, {
+  const data = calculateIncentives(...LOCATION_AND_AMIS['94117'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 250000,
     tax_filing: FilingStatus.Joint,
@@ -252,7 +263,7 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
   t.equal(data.is_over_150_ami, false);
 
   t.equal(data.savings.pos_rebate, 14000);
-  t.equal(data.savings.tax_credit, 30872);
+  t.equal(data.savings.tax_credit, 29872);
   t.equal(data.savings.performance_rebate, 4000);
 
   const pos_rebate_incentives = data.incentives.filter(
@@ -324,7 +335,7 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
   t.equal(taxCredits['electric_panel'].eligible, true);
   t.equal(taxCredits['electric_panel'].amount.number, 600);
   t.equal(taxCredits['electric_panel'].start_date, '2023');
-  t.equal(taxCredits['electric_vehicle_charger'].eligible, true);
+  t.equal(taxCredits['electric_vehicle_charger'].eligible, false);
   t.equal(taxCredits['electric_vehicle_charger'].amount.number, 1000);
   t.equal(taxCredits['electric_vehicle_charger'].start_date, '2023');
   t.equal(taxCredits['new_electric_vehicle'].eligible, true);
@@ -350,7 +361,7 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
 });
 
 test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in Missisippi"', async t => {
-  const data = calculateIncentives(AMIS_FOR_39503, {
+  const data = calculateIncentives(...LOCATION_AND_AMIS['39503'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 500000,
     tax_filing: FilingStatus.HoH,
@@ -362,7 +373,7 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
   t.equal(data.is_over_150_ami, true);
 
   t.equal(data.savings.pos_rebate, 0);
-  t.equal(data.savings.tax_credit, 23228.9);
+  t.equal(data.savings.tax_credit, 22228.9);
   t.equal(data.savings.performance_rebate, 4000);
 
   const pos_rebate_incentives = data.incentives.filter(
@@ -435,7 +446,7 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
   t.equal(taxCredits['electric_panel'].eligible, true);
   t.equal(taxCredits['electric_panel'].amount.number, 600);
   t.equal(taxCredits['electric_panel'].start_date, '2023');
-  t.equal(taxCredits['electric_vehicle_charger'].eligible, true);
+  t.equal(taxCredits['electric_vehicle_charger'].eligible, false);
   t.equal(taxCredits['electric_vehicle_charger'].amount.number, 1000);
   t.equal(taxCredits['electric_vehicle_charger'].start_date, '2023');
   t.equal(taxCredits['heat_pump_air_conditioner_heater'].eligible, true);
@@ -464,7 +475,7 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
 });
 
 test('correctly sorts incentives', async t => {
-  const data = calculateIncentives(AMIS_FOR_11211, {
+  const data = calculateIncentives(...LOCATION_AND_AMIS['11211'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
     tax_filing: FilingStatus.Single,
@@ -531,7 +542,7 @@ test('correct filtering of county incentives', async t => {
     include_beta_states: true,
   };
   const shouldFind = calculateStateIncentivesAndSavings(
-    { state_id: 'CO', county: 'Cook' },
+    { state: 'CO', county: 'Cook', city: 'Asdf', zcta: '00000' },
     request,
     [incentive],
     {},
@@ -541,7 +552,7 @@ test('correct filtering of county incentives', async t => {
   t.equal(shouldFind.stateIncentives.length, 1);
 
   const shouldNotFind = calculateStateIncentivesAndSavings(
-    { state_id: 'CO', county: 'Nomatch' },
+    { state: 'CO', county: 'Nomatch', city: 'Asdf', zcta: '00000' },
     request,
     [incentive],
     {},
@@ -594,7 +605,7 @@ test('correct filtering of city incentives', async t => {
     include_beta_states: true,
   };
   const shouldFind = calculateStateIncentivesAndSavings(
-    { state_id: 'CO', city: 'New York', county: 'Cook' },
+    { state: 'CO', city: 'New York', county: 'Cook', zcta: '00000' },
     request,
     [incentive],
     {},
@@ -603,18 +614,8 @@ test('correct filtering of city incentives', async t => {
   t.ok(shouldFind);
   t.equal(shouldFind.stateIncentives.length, 1);
 
-  const shouldNotFindWithoutCounty = calculateStateIncentivesAndSavings(
-    { state_id: 'CO', city: 'New York' },
-    request,
-    [incentive],
-    {},
-    authorities,
-  );
-  t.ok(shouldNotFindWithoutCounty);
-  t.equal(shouldNotFindWithoutCounty.stateIncentives.length, 0);
-
   const shouldNotFindWithPartialMatch = calculateStateIncentivesAndSavings(
-    { state_id: 'CO', city: 'New York', county: 'NoMatch' },
+    { state: 'CO', city: 'New York', county: 'NoMatch', zcta: '00000' },
     request,
     [incentive],
     {},
@@ -668,7 +669,12 @@ test('correctly evaluates savings when state tax liability is lower than max sav
   };
 
   const result = calculateStateIncentivesAndSavings(
-    { state_id: 'CO', city: 'Colorado Springs', county: 'El Paso County' },
+    {
+      state: 'CO',
+      city: 'Colorado Springs',
+      county: 'El Paso County',
+      zcta: '80903',
+    },
     request,
     [incentive],
     {},

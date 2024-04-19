@@ -26,11 +26,8 @@ import {
   makeIneligible,
   meetsPrerequisites,
 } from './incentive-relationship-calculation';
-import {
-  CalculateParams,
-  CalculatedIncentive,
-  LocationParams,
-} from './incentives-calculation';
+import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
+import { ResolvedLocation } from './location';
 import { estimateStateTaxAmount } from './tax-brackets';
 
 export function getAllStateIncentives(
@@ -60,7 +57,7 @@ export function getStateDataPartners(
 }
 
 export function calculateStateIncentivesAndSavings(
-  location: LocationParams,
+  location: ResolvedLocation,
   request: CalculateParams,
   incentives: StateIncentive[],
   incentiveRelationships: IncentiveRelationships,
@@ -78,7 +75,7 @@ export function calculateStateIncentivesAndSavings(
     };
   }
 
-  const stateId = location.state_id;
+  const stateId = location.state;
   const eligibleIncentives = new Map<string, StateIncentive>();
   const ineligibleIncentives = new Map<string, StateIncentive>();
 
@@ -243,7 +240,7 @@ function transformItems(
 function skipBasedOnRequestParams(
   item: StateIncentive,
   request: CalculateParams,
-  location: LocationParams,
+  location: ResolvedLocation,
   stateAuthorities: AuthoritiesByType,
 ) {
   if (
@@ -307,8 +304,7 @@ function skipBasedOnRequestParams(
 
   if (item.eligible_geo_group) {
     // A test ensures that geo groups are registered.
-    const group =
-      GEO_GROUPS_BY_STATE[location.state_id]![item.eligible_geo_group];
+    const group = GEO_GROUPS_BY_STATE[location.state]![item.eligible_geo_group];
 
     // The request params must match ALL of the keys the geo group defines
     if (

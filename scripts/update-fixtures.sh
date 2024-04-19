@@ -219,18 +219,16 @@ curl \
   "http://localhost:3000/api/v1/calculator\
 ?zip=15289\
 &owner_status=homeowner\
-&household_income=80000\
+&household_income=85000\
 &tax_filing=joint\
 &household_size=4" \
-  | jq . > test/fixtures/v1-15289-homeowner-80000-joint-4.json
+  | jq . > test/fixtures/v1-15289-homeowner-85000-joint-4.json
 
-# TODO: Remove beta states argument when DC is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?zip=20303\
-&include_beta_states=true\
 &owner_status=homeowner\
-&household_income=95797\
+&household_income=95796\
 &tax_filing=joint\
 &household_size=4\
 &authority_types=state\
