@@ -5,6 +5,9 @@
   "authorities": {
     "il-state-of-illinois": {
       "name": "State of Illinois"
+    },
+    "il-illinois-solar-for-all": {
+      "name": "Illinois Solar For All"
     }
   },
   "coverage": {
@@ -23,8 +26,33 @@
         "assistance_program"
       ],
       "authority_type": "state",
+      "authority": "il-illinois-solar-for-all",
+      "program": "ILSFA Residential Solar Program",
+      "program_url": "https://www.illinoissfa.com/programs/for-homeowners-and-building-owners/",
+      "item": {
+        "type": "rooftop_solar_installation",
+        "name": "Rooftop Solar Installation"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 1
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Qualified homeowners can work with ILSFA approved vendors to have solar panels installed on their property with no upfront costs."
+    },
+    {
+      "payment_methods": [
+        "assistance_program"
+      ],
+      "authority_type": "state",
       "authority": "il-state-of-illinois",
-      "program": "Illinois Home Weatherization Assistance Program",
+      "program": "Illinois Home Weatherization",
       "program_url": "https://dceo.illinois.gov/communityservices/homeweatherization/howtoapply.html",
       "item": {
         "type": "weatherization",
@@ -42,6 +70,31 @@
       "ami_qualification": null,
       "eligible": false,
       "short_description": "Up to $18,500 for weatherization projects, excluding windows, siding, roofing and plumbing. Income qualified. Limited yearly funding available."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "il-state-of-illinois",
+      "program": "Illinois Electric Vehicle Rebate Program",
+      "program_url": "https://epa.illinois.gov/topics/ceja/electric-vehicle-rebates.html",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 4000,
+        "maximum": 4000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Up to $4,000 rebates for Illinois residents buying new or used all-electric vehicles. Vehicle must be purchased from a licensed dealer."
     }
   ]
 }

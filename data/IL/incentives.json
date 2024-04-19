@@ -8,7 +8,7 @@
       "rebate"
     ],
     "item": "heat_pump_clothes_dryer",
-    "program": "il_commonwealthEdison_applianceRebates",
+    "program": "il_commonwealthEdison_comEdApplianceRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 40
@@ -30,7 +30,7 @@
       "rebate"
     ],
     "item": "heat_pump_clothes_dryer",
-    "program": "il_commonwealthEdison_applianceRebates",
+    "program": "il_commonwealthEdison_comEdApplianceRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 200
@@ -52,7 +52,7 @@
       "rebate"
     ],
     "item": "electric_stove",
-    "program": "il_commonwealthEdison_applianceRebates",
+    "program": "il_commonwealthEdison_comEdApplianceRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 100
@@ -74,7 +74,7 @@
       "rebate"
     ],
     "item": "smart_thermostat",
-    "program": "il_commonwealthEdison_applianceRebates",
+    "program": "il_commonwealthEdison_comEdApplianceRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 75
@@ -96,7 +96,7 @@
       "pos_rebate"
     ],
     "item": "weatherization",
-    "program": "il_commonwealthEdison_applianceRebates",
+    "program": "il_commonwealthEdison_comEdApplianceRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 2
@@ -113,12 +113,53 @@
   {
     "id": "IL-6",
     "authority_type": "utility",
+    "authority": "il-commonwealth-edison",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "weatherization",
+    "program": "il_commonwealthEdison_comEdSingleFamilyHomeEnergySavings",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Provides free energy assessments and offers various weatherization upgrade items such as insulation, and door sweeps."
+    },
+    "low_income": "il-comEd-single-family-home-energy-savings"
+  },
+  {
+    "id": "IL-7",
+    "authority_type": "utility",
+    "authority": "il-commonwealth-edison",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_vehicle_charger",
+    "program": "il_commonwealthEdison_comEdElectricVehicleChargerAndInstallationRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $3,750 towards purchase and installation of a lvl 2 smart charger. Requires enrolling in supply rate options program."
+    }
+  },
+  {
+    "id": "IL-8",
+    "authority_type": "utility",
     "authority": "il-corn-belt-energy",
     "payment_methods": [
       "rebate"
     ],
     "item": "geothermal_heating_installation",
-    "program": "il_cornBeltEnergy_rebateProgram",
+    "program": "il_cornBeltEnergy_cornBeltEnergyRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 750
@@ -132,14 +173,14 @@
     }
   },
   {
-    "id": "IL-9",
+    "id": "IL-10",
     "authority_type": "utility",
     "authority": "il-corn-belt-energy",
     "payment_methods": [
       "rebate"
     ],
     "item": "smart_thermostat",
-    "program": "il_cornBeltEnergy_rebateProgram",
+    "program": "il_cornBeltEnergy_cornBeltEnergyRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 75,
@@ -155,14 +196,14 @@
     }
   },
   {
-    "id": "IL-10",
+    "id": "IL-11",
     "authority_type": "utility",
     "authority": "il-corn-belt-energy",
     "payment_methods": [
       "rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "il_cornBeltEnergy_rebateProgram",
+    "program": "il_cornBeltEnergy_cornBeltEnergyRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 1500,
@@ -178,14 +219,14 @@
     }
   },
   {
-    "id": "IL-11",
+    "id": "IL-12",
     "authority_type": "utility",
     "authority": "il-corn-belt-energy",
     "payment_methods": [
       "rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "il_cornBeltEnergy_rebateProgram",
+    "program": "il_cornBeltEnergy_cornBeltEnergyRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 750,
@@ -201,14 +242,14 @@
     }
   },
   {
-    "id": "IL-12",
+    "id": "IL-13",
     "authority_type": "utility",
     "authority": "il-corn-belt-energy",
     "payment_methods": [
       "rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "il_cornBeltEnergy_rebateProgram",
+    "program": "il_cornBeltEnergy_cornBeltEnergyRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 600,
@@ -224,14 +265,14 @@
     }
   },
   {
-    "id": "IL-13",
+    "id": "IL-14",
     "authority_type": "utility",
     "authority": "il-corn-belt-energy",
     "payment_methods": [
       "rebate"
     ],
     "item": "heat_pump_water_heater",
-    "program": "il_cornBeltEnergy_rebateProgram",
+    "program": "il_cornBeltEnergy_cornBeltEnergyRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 800,
@@ -246,14 +287,14 @@
     }
   },
   {
-    "id": "IL-14",
+    "id": "IL-15",
     "authority_type": "utility",
     "authority": "il-corn-belt-energy",
     "payment_methods": [
       "rebate"
     ],
     "item": "electric_vehicle_charger",
-    "program": "il_cornBeltEnergy_rebateProgram",
+    "program": "il_cornBeltEnergy_cornBeltEnergyRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 200,
@@ -268,14 +309,14 @@
     }
   },
   {
-    "id": "IL-35",
+    "id": "IL-16",
     "authority_type": "state",
     "authority": "il-state-of-illinois",
     "payment_methods": [
       "assistance_program"
     ],
     "item": "weatherization",
-    "program": "il_stateOfIllinois_homeWeatherization",
+    "program": "il_stateOfIllinois_illinoisHomeWeatherization",
     "amount": {
       "type": "dollar_amount",
       "number": 18500,
@@ -289,17 +330,40 @@
       "en": "Up to $18,500 for weatherization projects, excluding windows, siding, roofing and plumbing. Income qualified. Limited yearly funding available.",
       "es": "Hasta $18,500 dólares para proyectos de climatización, excluyendo ventanas, revestimientos, tejados y fontanería. Cumplir requisitos de ingresos. Financiamiento anual limitado disponible."
     },
-    "low_income": "default"
+    "low_income": "il-home-weatherization"
   },
   {
-    "id": "IL-36",
+    "id": "IL-17",
+    "authority_type": "state",
+    "authority": "il-state-of-illinois",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "new_electric_vehicle",
+    "program": "il_stateOfIllinois_illinoisElectricVehicleRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000,
+      "minimum": 1500,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $4,000 rebates for Illinois residents buying new or used all-electric vehicles. Vehicle must be purchased from a licensed dealer."
+    }
+  },
+  {
+    "id": "IL-18",
     "authority_type": "utility",
     "authority": "il-corn-belt-energy",
     "payment_methods": [
       "rebate"
     ],
     "item": "non_heat_pump_water_heater",
-    "program": "il_cornBeltEnergy_rebateProgram",
+    "program": "il_cornBeltEnergy_cornBeltEnergyRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 800,
@@ -315,14 +379,14 @@
     }
   },
   {
-    "id": "IL-37",
+    "id": "IL-19",
     "authority_type": "utility",
     "authority": "il-jo-carroll-energy-cooperative",
     "payment_methods": [
       "account_credit"
     ],
     "item": "weatherization",
-    "program": "il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives",
+    "program": "il_jo-CarrollEnergyCooperative_jCECo-OpEnergyEfficiencyIncentives",
     "amount": {
       "type": "dollar_amount",
       "number": 500,
@@ -339,14 +403,14 @@
     "end_date": "2024-12-26"
   },
   {
-    "id": "IL-38",
+    "id": "IL-20",
     "authority_type": "utility",
     "authority": "il-jo-carroll-energy-cooperative",
     "payment_methods": [
       "account_credit"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives",
+    "program": "il_jo-CarrollEnergyCooperative_jCECo-OpEnergyEfficiencyIncentives",
     "amount": {
       "type": "dollars_per_unit",
       "number": 250,
@@ -363,14 +427,14 @@
     "end_date": "2024-12-26"
   },
   {
-    "id": "IL-39",
+    "id": "IL-21",
     "authority_type": "utility",
     "authority": "il-jo-carroll-energy-cooperative",
     "payment_methods": [
       "account_credit"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives",
+    "program": "il_jo-CarrollEnergyCooperative_jCECo-OpEnergyEfficiencyIncentives",
     "amount": {
       "type": "dollars_per_unit",
       "number": 250,
@@ -387,14 +451,14 @@
     "end_date": "2024-12-26"
   },
   {
-    "id": "IL-40",
+    "id": "IL-22",
     "authority_type": "utility",
     "authority": "il-jo-carroll-energy-cooperative",
     "payment_methods": [
       "account_credit"
     ],
     "item": "weatherization",
-    "program": "il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives",
+    "program": "il_jo-CarrollEnergyCooperative_jCECo-OpEnergyEfficiencyIncentives",
     "amount": {
       "type": "dollar_amount",
       "number": 800,
@@ -412,14 +476,14 @@
     "end_date": "2024-12-26"
   },
   {
-    "id": "IL-41",
+    "id": "IL-23",
     "authority_type": "utility",
     "authority": "il-jo-carroll-energy-cooperative",
     "payment_methods": [
       "account_credit"
     ],
     "item": "electric_stove",
-    "program": "il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives",
+    "program": "il_jo-CarrollEnergyCooperative_jCECo-OpEnergyEfficiencyIncentives",
     "amount": {
       "type": "dollar_amount",
       "number": 25,
@@ -436,14 +500,14 @@
     "end_date": "2024-12-26"
   },
   {
-    "id": "IL-42",
+    "id": "IL-24",
     "authority_type": "utility",
     "authority": "il-jo-carroll-energy-cooperative",
     "payment_methods": [
       "account_credit"
     ],
     "item": "weatherization",
-    "program": "il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives",
+    "program": "il_jo-CarrollEnergyCooperative_jCECo-OpEnergyEfficiencyIncentives",
     "amount": {
       "type": "dollar_amount",
       "number": 500,
@@ -461,14 +525,14 @@
     "end_date": "2024-12-26"
   },
   {
-    "id": "IL-43",
+    "id": "IL-25",
     "authority_type": "utility",
     "authority": "il-jo-carroll-energy-cooperative",
     "payment_methods": [
       "account_credit"
     ],
     "item": "non_heat_pump_water_heater",
-    "program": "il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives",
+    "program": "il_jo-CarrollEnergyCooperative_jCECo-OpEnergyEfficiencyIncentives",
     "amount": {
       "type": "dollar_amount",
       "number": 150,
@@ -486,14 +550,14 @@
     "end_date": "2024-12-26"
   },
   {
-    "id": "IL-44",
+    "id": "IL-26",
     "authority_type": "utility",
     "authority": "il-jo-carroll-energy-cooperative",
     "payment_methods": [
       "account_credit"
     ],
     "item": "heat_pump_clothes_dryer",
-    "program": "il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives",
+    "program": "il_jo-CarrollEnergyCooperative_jCECo-OpEnergyEfficiencyIncentives",
     "amount": {
       "type": "dollar_amount",
       "number": 25
@@ -510,14 +574,39 @@
     "end_date": "2024-12-26"
   },
   {
-    "id": "IL-45",
+    "id": "IL-27",
+    "authority_type": "utility",
+    "authority": "il-jo-carroll-energy-cooperative",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "weatherization",
+    "program": "il_jo-CarrollEnergyCooperative_jCECo-OpEnergyEfficiencyIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $300 for an energy audit by a Jo-Carroll Energy representative once subsequent insulation or air-sealing project is completed.",
+      "es": "Hasta $300 dólares para una auditoría de consumo de energía realizada por un representante de Jo-Carroll Energy una vez que haya concluido el proyecto posterior de aislamiento o sellado hermético."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-26"
+  },
+  {
+    "id": "IL-28",
     "authority_type": "utility",
     "authority": "il-mid-american-energy",
     "payment_methods": [
       "pos_rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "il_midAmericanEnergy_residentialInstantRebates",
+    "program": "il_midAmericanEnergy_midAmericanEnergyResidentialInstantRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 375,
@@ -534,14 +623,14 @@
     "end_date": "2024-12-31"
   },
   {
-    "id": "IL-46",
+    "id": "IL-29",
     "authority_type": "utility",
     "authority": "il-mid-american-energy",
     "payment_methods": [
       "pos_rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "il_midAmericanEnergy_residentialInstantRebates",
+    "program": "il_midAmericanEnergy_midAmericanEnergyResidentialInstantRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 300,
@@ -558,14 +647,14 @@
     "end_date": "2024-12-31"
   },
   {
-    "id": "IL-47",
+    "id": "IL-30",
     "authority_type": "utility",
     "authority": "il-mid-american-energy",
     "payment_methods": [
       "rebate"
     ],
     "item": "smart_thermostat",
-    "program": "il_midAmericanEnergy_residentialInstantRebates",
+    "program": "il_midAmericanEnergy_midAmericanEnergyResidentialInstantRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 75,
@@ -583,14 +672,14 @@
     "end_date": "2024-12-31"
   },
   {
-    "id": "IL-48",
+    "id": "IL-31",
     "authority_type": "utility",
     "authority": "il-mid-american-energy",
     "payment_methods": [
       "pos_rebate"
     ],
     "item": "geothermal_heating_installation",
-    "program": "il_midAmericanEnergy_residentialInstantRebates",
+    "program": "il_midAmericanEnergy_midAmericanEnergyResidentialInstantRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 1200,
@@ -607,14 +696,14 @@
     "end_date": "2024-12-31"
   },
   {
-    "id": "IL-49",
+    "id": "IL-32",
     "authority_type": "utility",
     "authority": "il-mid-american-energy",
     "payment_methods": [
       "pos_rebate"
     ],
     "item": "heat_pump_water_heater",
-    "program": "il_midAmericanEnergy_residentialInstantRebates",
+    "program": "il_midAmericanEnergy_midAmericanEnergyResidentialInstantRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 225,
@@ -631,28 +720,231 @@
     "end_date": "2024-12-31"
   },
   {
-    "id": "IL-50",
-    "authority_type": "utility",
-    "authority": "il-jo-carroll-energy-cooperative",
+    "id": "IL-33",
+    "authority_type": "state",
+    "authority": "il-illinois-solar-for-all",
     "payment_methods": [
-      "account_credit"
+      "assistance_program"
     ],
-    "item": "weatherization",
-    "program": "il_jo-CarrollEnergyCooperative_energyEfficiencyIncentives",
+    "item": "rooftop_solar_installation",
+    "program": "il_illinoisSolarForAll_iLSFAResidentialSolarProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Qualified homeowners can work with ILSFA approved vendors to have solar panels installed on their property with no upfront costs."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31",
+    "low_income": "il-solar-for-all"
+  },
+  {
+    "id": "IL-34",
+    "authority_type": "utility",
+    "authority": "il-ameren-illinois",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "il_amerenIllinois_amerenEnergy-EfficientProductDiscountsAndRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 300,
-      "maximum": 300
+      "number": 125
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $300 for an energy audit by a Jo-Carroll Energy representative once subsequent insulation or air-sealing project is completed.",
-      "es": "Hasta $300 dólares para una auditoría de consumo de energía realizada por un representante de Jo-Carroll Energy una vez que haya concluido el proyecto posterior de aislamiento o sellado hermético."
+      "en": "Up to $125 rebate for the purchase of a smart thermostat. You may also purchase discounted smart thermostats through Ameren's online marketplace."
+    }
+  },
+  {
+    "id": "IL-35",
+    "authority_type": "utility",
+    "authority": "il-ameren-illinois",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "il_amerenIllinois_amerenEnergy-EfficientProductDiscountsAndRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-26"
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 rebate for the purchase of a HPWH."
+    }
+  },
+  {
+    "id": "IL-36",
+    "authority_type": "utility",
+    "authority": "il-ameren-illinois",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "il_amerenIllinois_amerenEnergy-EfficientProductDiscountsAndRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,300 instant discount when HPWH is installed by a trusted Program Ally contractor."
+    }
+  },
+  {
+    "id": "IL-37",
+    "authority_type": "utility",
+    "authority": "il-ameren-illinois",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "il_amerenIllinois_amerenEnergy-EfficientProductDiscountsAndRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an ENERGY STAR certified electric dryer with a min of 4.4 cu ft in capacity."
+    }
+  },
+  {
+    "id": "IL-38",
+    "authority_type": "utility",
+    "authority": "il-ameren-illinois",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "il_amerenIllinois_amerenInstantIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $700 discount for air source heat pump. Must be 15.2 SEER2 and 8.1 HSPF2 or greater as confirmed by AHRI. Must utilize Program Ally Contractor."
+    }
+  },
+  {
+    "id": "IL-39",
+    "authority_type": "utility",
+    "authority": "il-ameren-illinois",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "il_amerenIllinois_amerenInstantIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $700 discount for air source heat pump. Must be 16 SEER2 and 8.55 HSPF2 or greater as confirmed by AHRI. Must utilize Program Ally Contractor."
+    }
+  },
+  {
+    "id": "IL-40",
+    "authority_type": "city",
+    "authority": "il-evanston-development-cooperative",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "weatherization",
+    "program": "il_evanstonDevelopmentCooperative_evanstonGreenHomesPilotProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $20,000 for energy efficiency, and health improvement updates. In most cases, the program will cover the full cost of home improvements."
+    },
+    "low_income": "il-evanston-green-homes-pilot-program"
+  },
+  {
+    "id": "IL-41",
+    "authority_type": "city",
+    "authority": "il-evanston-development-cooperative",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "electric_panel",
+    "program": "il_evanstonDevelopmentCooperative_evanstonGreenHomesPilotProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "New electrical systems. In most cases, the program will cover the full cost of home improvements."
+    },
+    "low_income": "il-evanston-green-homes-pilot-program"
+  },
+  {
+    "id": "IL-42",
+    "authority_type": "city",
+    "authority": "il-evanston-development-cooperative",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "electric_panel",
+    "program": "il_evanstonDevelopmentCooperative_evanstonGreenHomesPilotProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "New electrical systems. In most cases, the program will cover the full cost of home improvements."
+    },
+    "low_income": "il-evanston-green-homes-pilot-program"
+  },
+  {
+    "id": "IL-43",
+    "authority_type": "city",
+    "authority": "il-evanston-development-cooperative",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "item": "rooftop_solar_installation",
+    "program": "il_evanstonDevelopmentCooperative_evanstonGreenHomesPilotProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rooftop solar panels. In most cases, the program will cover the full cost of home improvements."
+    },
+    "low_income": "il-evanston-green-homes-pilot-program"
   }
 ]
