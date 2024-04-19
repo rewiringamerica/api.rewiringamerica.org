@@ -1,55 +1,13 @@
-DROP TABLE IF EXISTS ami;
-
 DROP TABLE IF EXISTS zips;
-
-DROP TABLE IF EXISTS tracts;
-
-DROP TABLE IF EXISTS zip_to_tract;
-
-DROP TABLE IF EXISTS zip_to_cbsasub;
-
 DROP TABLE IF EXISTS zip_to_utility;
-
-CREATE TABLE ami(
-    State_Alpha TEXT,
-    fips2010 TEXT,
-    cbsasub TEXT,
-    median2022 TEXT,
-    Metro_Area_Name TEXT,
-    county_town_name TEXT,
-    l80_1 INTEGER,
-    l80_2 INTEGER,
-    l80_3 INTEGER,
-    l80_4 INTEGER,
-    l80_5 INTEGER,
-    l80_6 INTEGER,
-    l80_7 INTEGER,
-    l80_8 INTEGER,
-    l100_1 INTEGER,
-    l100_2 INTEGER,
-    l100_3 INTEGER,
-    l100_4 INTEGER,
-    l100_5 INTEGER,
-    l100_6 INTEGER,
-    l100_7 INTEGER,
-    l100_8 INTEGER,
-    l150_1 INTEGER,
-    l150_2 INTEGER,
-    l150_3 INTEGER,
-    l150_4 INTEGER,
-    l150_5 INTEGER,
-    l150_6 INTEGER,
-    l150_7 INTEGER,
-    l150_8 INTEGER,
-    state TEXT,
-    county TEXT,
-    County_Name TEXT,
-    state_name TEXT,
-    metro TEXT
-);
+DROP TABLE IF EXISTS ami_by_zcta;
+DROP TABLE IF EXISTS ami_by_tract;
+DROP TABLE IF EXISTS ami_by_territory_zip;
+DROP TABLE IF EXISTS "30c_eligibility_by_zcta";
+DROP TABLE IF EXISTS "30c_eligibility_by_tract_zcta";
 
 CREATE TABLE zips(
-    zip TEXT,
+    zip TEXT PRIMARY KEY,
     city TEXT,
     state_id TEXT,
     state_name TEXT,
@@ -59,28 +17,6 @@ CREATE TABLE zips(
     county_name TEXT
 );
 
-CREATE TABLE tracts(
-    tract_geoid TEXT,
-    total_pop INTEGER,
-    poverty_pop INTEGER,
-    poverty_percent REAL,
-    mfi INTEGER,
-    is_urban INTEGER
-);
-
-CREATE TABLE zip_to_tract(
-    zip TEXT,
-    tract TEXT,
-    usps_zip_pref_city TEXT,
-    usps_zip_pref_state TEXT,
-    res_ratio REAL,
-    bus_ratio REAL,
-    oth_ratio REAL,
-    tot_ratio REAL
-);
-
-CREATE TABLE zip_to_cbsasub(zipcode TEXT, cbsasub TEXT);
-
 CREATE TABLE zip_to_utility(
     zip TEXT,
     utility_id TEXT,
@@ -88,19 +24,57 @@ CREATE TABLE zip_to_utility(
     UNIQUE (zip, utility_id)
 ) STRICT;
 
-CREATE INDEX idx_zipzip ON zips(zip);
+CREATE TABLE ami_by_zcta(
+    zcta TEXT PRIMARY KEY,
+    zip_code_name TEXT,
+    median_family_income TEXT,
+    ami_30 INT,
+    ami_50 INT,
+    ami_80 INT,
+    ami_100 INT,
+    ami_150 INT
+) STRICT;
 
-CREATE INDEX idx_tractgeoid ON tracts(tract_geoid);
+CREATE TABLE ami_by_tract(
+    tract_geoid TEXT PRIMARY KEY,
+    state TEXT,
+    median_family_income TEXT,
+    ami_30 INT,
+    ami_50 INT,
+    ami_80 INT,
+    ami_100 INT,
+    ami_150 INT
+) STRICT;
 
-CREATE INDEX idx_ziptract ON zip_to_tract(zip);
+CREATE TABLE ami_by_territory_zip(
+    zip TEXT,
+    state TEXT,
+    median_family_income INT,
+    ami_30 INT,
+    ami_50 INT,
+    ami_80 INT,
+    ami_100 INT,
+    ami_150 INT,
+    UNIQUE (zip, state)
+) STRICT;
 
-CREATE INDEX idx_zipcbsasub ON zip_to_cbsasub(zipcode);
+CREATE TABLE "30c_eligibility_by_zcta"(
+    zcta TEXT PRIMARY KEY,
+    is_eligible TEXT
+) STRICT;
 
-CREATE INDEX idx_amicbsasub ON ami(cbsasub);
+CREATE TABLE "30c_eligibility_by_tract"(
+    tract_geoid TEXT PRIMARY KEY,
+    state TEXT,
+    is_nonurban TEXT,
+    is_low_income_community TEXT,
+    is_eligible TEXT
+) STRICT;
 
-.import --csv --skip 1 ./scripts/data/ami.csv ami
 .import --csv --skip 1 ./scripts/data/zips.csv zips
-.import --csv --skip 1 ./scripts/data/tracts.csv tracts
-.import --csv --skip 1 ./scripts/data/zip-to-tract.csv zip_to_tract
-.import --csv --skip 1 ./scripts/data/zip-to-cbsasub.csv zip_to_cbsasub
 .import --csv --skip 1 ./scripts/data/zip-to-utility.csv zip_to_utility
+.import --csv --skip 1 ./scripts/income_limits/data/processed/ami_by_zcta.csv ami_by_zcta
+.import --csv --skip 1 ./scripts/income_limits/data/processed/ami_by_tract.csv ami_by_tract
+.import --csv --skip 1 ./scripts/income_limits/data/processed/ami_by_territory_zip.csv ami_by_territory_zip
+.import --csv --skip 1 ./scripts/income_limits/data/processed/30c_eligibility_by_zcta.csv 30c_eligibility_by_zcta
+.import --csv --skip 1 ./scripts/income_limits/data/processed/30c_eligibility_by_tract.csv 30c_eligibility_by_tract

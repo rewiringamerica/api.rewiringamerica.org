@@ -59,7 +59,6 @@ export const BETA_STATES: string[] = [
   'MI',
   'NY',
   'OR',
-  'VT',
   'WI',
 ];
 
@@ -71,6 +70,7 @@ export const LAUNCHED_STATES: string[] = [
   'PA',
   'RI',
   'VA',
+  'VT',
 ];
 
 export const isStateIncluded = (

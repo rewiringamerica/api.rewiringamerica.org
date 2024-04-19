@@ -1,10 +1,7 @@
 import _ from 'lodash';
 import { FilingStatus, TAX_BRACKETS } from '../data/tax_brackets';
 import { TaxEstimate } from '../data/types/tax';
-
-function roundCents(dollars: number): number {
-  return Math.round(dollars * 100) / 100;
-}
+import { roundCents } from './rounding';
 
 /**
  * Formula to calculate tax owed to states

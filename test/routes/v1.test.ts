@@ -76,11 +76,11 @@ test('parent ZCTA is used', async t => {
       // is 15213, which does.
       zip: '15289',
       owner_status: 'homeowner',
-      household_income: 80000,
+      household_income: 85000,
       tax_filing: 'joint',
       household_size: 4,
     },
-    './test/fixtures/v1-15289-homeowner-80000-joint-4.json',
+    './test/fixtures/v1-15289-homeowner-85000-joint-4.json',
   );
 });
 
@@ -238,8 +238,6 @@ test('DC low income response with state and city filtering is valid and correct'
       tax_filing: 'joint',
       authority_types: ['state', 'city'],
       authority: 'dc-dc-sustainable-energy-utility',
-      // TODO: Remove when DC is fully launched.
-      include_beta_states: true,
     },
     './test/fixtures/v1-dc-20303-state-city-lowincome.json',
   );
@@ -420,8 +418,6 @@ test('VT low income response with state and utility filtering is valid and corre
       tax_filing: 'joint',
       authority_types: ['state', 'utility'],
       utility: 'vt-burlington-electric-department',
-      // TODO: Remove when VT is fully launched.
-      include_beta_states: true,
     },
     './test/fixtures/v1-vt-05401-state-utility-lowincome.json',
   );
@@ -439,8 +435,6 @@ test('VT low income EV incentives are correct', async t => {
       tax_filing: 'single',
       utility: 'vt-vermont-electric-cooperative',
       items: ['new_electric_vehicle', 'used_electric_vehicle'],
-      // TODO: remove when VT is fully launched
-      include_beta_states: true,
     },
     './test/fixtures/v1-vt-05845-vec-ev-low-income.json',
   );
