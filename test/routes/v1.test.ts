@@ -412,6 +412,25 @@ test('VT low income response with state and utility filtering is valid and corre
   );
 });
 
+// VT electric vehicles complexity
+test('VT low income EV incentives are correct', async t => {
+  await validateResponse(
+    t,
+    {
+      zip: '05845',
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 40000,
+      tax_filing: 'single',
+      utility: 'vt-vermont-electric-cooperative',
+      items: ['new_electric_vehicle', 'used_electric_vehicle'],
+      // TODO: remove when VT is fully launched
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-vt-05845-vec-ev-low-income.json',
+  );
+});
+
 // WI low income test
 test('WI low income response with state and utility filtering is valid and correct', async t => {
   await validateResponse(
