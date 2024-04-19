@@ -3,11 +3,11 @@
   "is_under_150_ami": true,
   "is_over_150_ami": false,
   "authorities": {
-    "vt-efficiency-vermont": {
-      "name": "Efficiency Vermont"
-    },
     "vt-burlington-electric-department": {
       "name": "Burlington Electric Department"
+    },
+    "vt-efficiency-vermont": {
+      "name": "Efficiency Vermont"
     },
     "vt-state-of-vermont": {
       "name": "State of Vermont"
@@ -103,6 +103,7 @@
         "renter"
       ],
       "ami_qualification": null,
+      "agi_max_limit": 90000,
       "filing_status": "joint",
       "eligible": true,
       "short_description": "Incentive up to $5,000 for a new electric vehicle, or up to $3,000 for a new plug-in hybrid vehicle."
@@ -129,6 +130,7 @@
         "renter"
       ],
       "ami_qualification": null,
+      "agi_max_limit": 60000,
       "filing_status": "single",
       "eligible": false,
       "short_description": "Incentive up to $5,000 for a new electric vehicle, or up to $3,000 for a new plug-in hybrid vehicle."
@@ -155,6 +157,7 @@
         "renter"
       ],
       "ami_qualification": null,
+      "agi_max_limit": 75000,
       "filing_status": "hoh",
       "eligible": false,
       "short_description": "Incentive up to $5,000 for a new electric vehicle, or up to $3,000 for a new plug-in hybrid vehicle."
@@ -181,6 +184,7 @@
         "renter"
       ],
       "ami_qualification": null,
+      "agi_max_limit": 60000,
       "filing_status": "married_filing_separately",
       "eligible": false,
       "short_description": "Incentive up to $5,000 for a new electric vehicle, or up to $3,000 for a new plug-in hybrid vehicle."
@@ -207,32 +211,8 @@
         "renter"
       ],
       "ami_qualification": null,
-      "filing_status": "joint",
-      "eligible": true,
-      "short_description": "Incentive up to $2,500 for a new electric vehicle, or up to $1,500 for a new plug-in hybrid vehicle."
-    },
-    {
-      "payment_methods": [
-        "pos_rebate"
-      ],
-      "authority_type": "state",
-      "authority": "vt-state-of-vermont",
-      "program": "State of Vermont Incentives for New Electric Vehicles",
-      "program_url": "https://www.driveelectricvt.com/Media/Default/docs/purchase-incentives/vermont-new-pev-incentive-form.pdf?refresh",
-      "item": {
-        "type": "new_electric_vehicle",
-        "name": "New Electric Vehicle"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 2500,
-        "maximum": 2500
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "ami_qualification": null,
+      "agi_max_limit": 100000,
+      "agi_min_limit": 60001,
       "filing_status": "single",
       "eligible": false,
       "short_description": "Incentive up to $2,500 for a new electric vehicle, or up to $1,500 for a new plug-in hybrid vehicle."
@@ -259,6 +239,8 @@
         "renter"
       ],
       "ami_qualification": null,
+      "agi_max_limit": 125000,
+      "agi_min_limit": 75001,
       "filing_status": "hoh",
       "eligible": false,
       "short_description": "Incentive up to $2,500 for a new electric vehicle, or up to $1,500 for a new plug-in hybrid vehicle."
@@ -285,6 +267,36 @@
         "renter"
       ],
       "ami_qualification": null,
+      "agi_max_limit": 150000,
+      "agi_min_limit": 90001,
+      "filing_status": "joint",
+      "eligible": false,
+      "short_description": "Incentive up to $2,500 for a new electric vehicle, or up to $1,500 for a new plug-in hybrid vehicle."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "vt-state-of-vermont",
+      "program": "State of Vermont Incentives for New Electric Vehicles",
+      "program_url": "https://www.driveelectricvt.com/Media/Default/docs/purchase-incentives/vermont-new-pev-incentive-form.pdf?refresh",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2500,
+        "maximum": 2500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "ami_qualification": null,
+      "agi_max_limit": 100000,
+      "agi_min_limit": 60001,
       "filing_status": "married_filing_separately",
       "eligible": false,
       "short_description": "Incentive up to $2,500 for a new electric vehicle, or up to $1,500 for a new plug-in hybrid vehicle."
@@ -488,7 +500,7 @@
       "end_date": "2023-12-31",
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "BED customers may receive a rebate up to $2,500 on qualifying HPs, plus an additional $500 for a second HP."
+      "short_description": "Rebate up to $2,500 on qualifying ductless heat pumps, plus an additional $500 for a second heat pump."
     },
     {
       "payment_methods": [
@@ -613,7 +625,7 @@
       ],
       "start_date": "2021-07-01",
       "ami_qualification": null,
-      "eligible": true,
+      "eligible": false,
       "short_description": "Hire a participating contractor and get up to $2,100 cash back per ton on qualifying equipment for a Ground Source HP."
     },
     {
@@ -640,7 +652,7 @@
       "start_date": "2021-01-01",
       "end_date": "2023-12-31",
       "ami_qualification": null,
-      "eligible": false,
+      "eligible": true,
       "short_description": "BED customers may receive a post purchase rebate up to $12,000 when you install an air-to-water heat pump."
     },
     {
@@ -691,7 +703,7 @@
       ],
       "start_date": "2020-01-01",
       "ami_qualification": null,
-      "eligible": true,
+      "eligible": false,
       "short_description": "Work with an Efficiency Excellence Network contractor to install your air-to-water heat pump and get up to $6,000 back."
     },
     {
@@ -865,33 +877,8 @@
         "homeowner"
       ],
       "ami_qualification": null,
-      "eligible": true,
+      "eligible": false,
       "short_description": "$500 bonus rebate for income-eligible Vermonters to work with an Efficiency Excellence Network contractor to install an air-to-water heat pump."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "vt-burlington-electric-department",
-      "program": "Burlington Electric Department - Rebate for Ductless Heat Pump",
-      "program_url": "https://www.burlingtonelectric.com/rebate-form?item_purchased=Mini-Split%20Heat%20Pump",
-      "item": {
-        "type": "heat_pump_air_conditioner_heater",
-        "name": "Heat Pump Air Conditioner/Heater"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 500
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2022-01-01",
-      "end_date": "2023-12-31",
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "BED customers may receive a rebate up to $2,500 on qualifying HPs, plus an additional $500 for a second HP."
     },
     {
       "payment_methods": [
@@ -915,8 +902,34 @@
       ],
       "start_date": "2021-07-01",
       "ami_qualification": null,
-      "eligible": true,
+      "eligible": false,
       "short_description": "Income-eligible Vermonters qualify for a $500 bonus rebate on eligible Ground Source HP."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "vt-burlington-electric-department",
+      "program": "Burlington Electric Department - Rebate for Air-to-Water Heat Pump",
+      "program_url": "https://www.burlingtonelectric.com/rebate-form",
+      "item": {
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 400,
+        "maximum": 400
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2021-01-01",
+      "end_date": "2023-12-31",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Income-eligible BED customers are eligible for an enhanced rebate of $400 when installing a qualified air-to-water heat pump."
     },
     {
       "payment_methods": [
@@ -994,32 +1007,6 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "Apply for a rebate and get up to $400 cash back on qualifying ENERGY STAR® heat pump models."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "vt-burlington-electric-department",
-      "program": "Burlington Electric Department - Rebate for Air-to-Water Heat Pump",
-      "program_url": "https://www.burlingtonelectric.com/rebate-form",
-      "item": {
-        "type": "heat_pump_air_conditioner_heater",
-        "name": "Heat Pump Air Conditioner/Heater"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 400,
-        "maximum": 400
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2021-01-01",
-      "end_date": "2023-12-31",
-      "ami_qualification": null,
-      "eligible": false,
-      "short_description": "Income-eligible BED customers are eligible for an enhanced rebate of $400 when installing a qualified air-to-water heat pump."
     },
     {
       "payment_methods": [
