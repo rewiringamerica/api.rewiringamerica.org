@@ -235,6 +235,24 @@ export const VT_PROGRAMS = {
         en: 'https://www.burlingtonelectric.com/lawnmowers',
       },
     },
+  vt_burlingtonElectricDepartment_burlingtonElectricDepartmentElectricVehicleRebates:
+    {
+      name: {
+        en: 'Burlington Electric Department Electric Vehicle Rebates',
+      },
+      url: {
+        en: 'https://www.burlingtonelectric.com/evrebates/',
+      },
+    },
+  vt_burlingtonElectricDepartment_burlingtonElectricDepartmentElectricVehicleRebateIncomeBonus:
+    {
+      name: {
+        en: 'Burlington Electric Department Electric Vehicle Rebate Income Bonus',
+      },
+      url: {
+        en: 'https://www.burlingtonelectric.com/evrebates/',
+      },
+    },
   'vt_washingtonElectricCooperative_buttonUpWEC-AirToWaterHeatPumpRebate': {
     name: {
       en: 'Button Up WEC - Air to Water Heat Pump Rebate',
@@ -291,6 +309,14 @@ export const VT_PROGRAMS = {
       en: 'https://www.washingtonelectric.coop/wp-content/uploads/2023/06/5-2023-WEC-Button-Up-Thermal-incentives.pdf',
     },
   },
+  vt_washingtonElectricCooperative_buttonUpWECTransportationIncentives: {
+    name: {
+      en: 'Button Up WEC Transportation Incentives',
+    },
+    url: {
+      en: 'https://www.washingtonelectric.coop/wp-content/uploads/2024/02/2-2024-WEC-Button-Up-Transportation-sheet.pdf',
+    },
+  },
   vt_greenMountainPower_greenMountainPowerDuctedHeatPumpRebate: {
     name: {
       en: 'Green Mountain Power Ducted Heat Pump Rebate',
@@ -337,6 +363,22 @@ export const VT_PROGRAMS = {
     },
     url: {
       en: 'https://greenmountainpower.com/rebates-programs/home-and-yard/electric-mower-rebate/',
+    },
+  },
+  vt_greenMountainPower_greenMountainPowerElectricVehicleRebate: {
+    name: {
+      en: 'Green Mountain Power Electric Vehicle Rebate',
+    },
+    url: {
+      en: 'https://greenmountainpower.com/rebates-programs/electric-vehicles/ev-rebate/',
+    },
+  },
+  vt_greenMountainPower_greenMountainPowerElectricVehicleRebateIncomeBonus: {
+    name: {
+      en: 'Green Mountain Power Electric Vehicle Rebate Income Bonus',
+    },
+    url: {
+      en: 'https://greenmountainpower.com/rebates-programs/electric-vehicles/ev-rebate/',
     },
   },
   vt_vPPSA_vPPSAHeatPumpRebateIncomeBonus: {
@@ -421,6 +463,15 @@ export const VT_PROGRAMS = {
       en: 'https://vermontelectric.coop/energy-transformation-programs',
     },
   },
+  'vt_vermontElectricCooperative_vermontElectricCo-OpEnergyTransformationIncentives':
+    {
+      name: {
+        en: 'Vermont Electric Co-op Energy Transformation Incentives',
+      },
+      url: {
+        en: 'https://vermontelectric.coop/energy-transformation-programs',
+      },
+    },
   vt_stateOfVermont_stateOfVermontIncentivesForNewElectricVehicles: {
     name: {
       en: 'State of Vermont Incentives for New Electric Vehicles',
@@ -435,6 +486,14 @@ export const VT_PROGRAMS = {
     },
     url: {
       en: 'https://www.driveelectricvt.com/incentives/vermont-state-incentives#mileagesmart',
+    },
+  },
+  vt_stateOfVermont_replaceYourRide: {
+    name: {
+      en: 'Replace your ride',
+    },
+    url: {
+      en: 'https://www.driveelectricvt.com/Media/Default/docs/ryr/vermont-replace-your-ride-program-guidelines.pdf?refresh',
     },
   },
   vt_stateOfVermont_incomeBasedWeatherizationAssistanceProgram: {
