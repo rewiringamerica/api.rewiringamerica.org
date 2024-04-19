@@ -1,0 +1,412 @@
+{
+  "is_under_80_ami": true,
+  "is_under_150_ami": true,
+  "is_over_150_ami": false,
+  "authorities": {
+    "vt-state-of-vermont": {
+      "name": "State of Vermont"
+    },
+    "vt-vermont-electric-cooperative": {
+      "name": "Vermont Electric Cooperative"
+    }
+  },
+  "coverage": {
+    "state": "VT",
+    "utility": "vt-vermont-electric-cooperative"
+  },
+  "location": {
+    "state": "VT",
+    "city": "Irasburg",
+    "county": "Orleans"
+  },
+  "data_partners": {
+    "vt-efficiency-vermont": {
+      "name": "Efficiency Vermont",
+      "logo": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/vt-efficiency-vermont-color.png",
+        "width": 300,
+        "height": 200
+      }
+    }
+  },
+  "incentives": [
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "vt-state-of-vermont",
+      "program": "MileageSmart Used High Efficiency Vehicle Incentive Program",
+      "program_url": "https://www.driveelectricvt.com/incentives/vermont-state-incentives#mileagesmart",
+      "item": {
+        "type": "used_electric_vehicle",
+        "name": "Used Electric Vehicle"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 0.25,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "25% of the upfront cost of a used high-efficiency vehicle, up to $5,000, for low and moderate income car buyers."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "vt-state-of-vermont",
+      "program": "State of Vermont Incentives for New Electric Vehicles",
+      "program_url": "https://www.driveelectricvt.com/Media/Default/docs/purchase-incentives/vermont-new-pev-incentive-form.pdf?refresh",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 5000,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "ami_qualification": null,
+      "agi_max_limit": 60000,
+      "filing_status": "single",
+      "eligible": true,
+      "short_description": "Incentive up to $5,000 for a new electric vehicle, or up to $3,000 for a new plug-in hybrid vehicle."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "vt-state-of-vermont",
+      "program": "State of Vermont Incentives for New Electric Vehicles",
+      "program_url": "https://www.driveelectricvt.com/Media/Default/docs/purchase-incentives/vermont-new-pev-incentive-form.pdf?refresh",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 5000,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "ami_qualification": null,
+      "agi_max_limit": 75000,
+      "filing_status": "hoh",
+      "eligible": false,
+      "short_description": "Incentive up to $5,000 for a new electric vehicle, or up to $3,000 for a new plug-in hybrid vehicle."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "vt-state-of-vermont",
+      "program": "State of Vermont Incentives for New Electric Vehicles",
+      "program_url": "https://www.driveelectricvt.com/Media/Default/docs/purchase-incentives/vermont-new-pev-incentive-form.pdf?refresh",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 5000,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "ami_qualification": null,
+      "agi_max_limit": 90000,
+      "filing_status": "joint",
+      "eligible": false,
+      "short_description": "Incentive up to $5,000 for a new electric vehicle, or up to $3,000 for a new plug-in hybrid vehicle."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "vt-state-of-vermont",
+      "program": "State of Vermont Incentives for New Electric Vehicles",
+      "program_url": "https://www.driveelectricvt.com/Media/Default/docs/purchase-incentives/vermont-new-pev-incentive-form.pdf?refresh",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 5000,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "ami_qualification": null,
+      "agi_max_limit": 60000,
+      "filing_status": "married_filing_separately",
+      "eligible": false,
+      "short_description": "Incentive up to $5,000 for a new electric vehicle, or up to $3,000 for a new plug-in hybrid vehicle."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "vt-state-of-vermont",
+      "program": "State of Vermont Incentives for New Electric Vehicles",
+      "program_url": "https://www.driveelectricvt.com/Media/Default/docs/purchase-incentives/vermont-new-pev-incentive-form.pdf?refresh",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2500,
+        "maximum": 2500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "ami_qualification": null,
+      "agi_max_limit": 100000,
+      "agi_min_limit": 60001,
+      "filing_status": "single",
+      "eligible": false,
+      "short_description": "Incentive up to $2,500 for a new electric vehicle, or up to $1,500 for a new plug-in hybrid vehicle."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "vt-state-of-vermont",
+      "program": "State of Vermont Incentives for New Electric Vehicles",
+      "program_url": "https://www.driveelectricvt.com/Media/Default/docs/purchase-incentives/vermont-new-pev-incentive-form.pdf?refresh",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2500,
+        "maximum": 2500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "ami_qualification": null,
+      "agi_max_limit": 125000,
+      "agi_min_limit": 75001,
+      "filing_status": "hoh",
+      "eligible": false,
+      "short_description": "Incentive up to $2,500 for a new electric vehicle, or up to $1,500 for a new plug-in hybrid vehicle."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "vt-state-of-vermont",
+      "program": "State of Vermont Incentives for New Electric Vehicles",
+      "program_url": "https://www.driveelectricvt.com/Media/Default/docs/purchase-incentives/vermont-new-pev-incentive-form.pdf?refresh",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2500,
+        "maximum": 2500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "ami_qualification": null,
+      "agi_max_limit": 150000,
+      "agi_min_limit": 90001,
+      "filing_status": "joint",
+      "eligible": false,
+      "short_description": "Incentive up to $2,500 for a new electric vehicle, or up to $1,500 for a new plug-in hybrid vehicle."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "vt-state-of-vermont",
+      "program": "State of Vermont Incentives for New Electric Vehicles",
+      "program_url": "https://www.driveelectricvt.com/Media/Default/docs/purchase-incentives/vermont-new-pev-incentive-form.pdf?refresh",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2500,
+        "maximum": 2500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "ami_qualification": null,
+      "agi_max_limit": 100000,
+      "agi_min_limit": 60001,
+      "filing_status": "married_filing_separately",
+      "eligible": false,
+      "short_description": "Incentive up to $2,500 for a new electric vehicle, or up to $1,500 for a new plug-in hybrid vehicle."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "vt-vermont-electric-cooperative",
+      "program": "Vermont Electric Co-op Energy Transformation Incentives",
+      "program_url": "https://vermontelectric.coop/energy-transformation-programs",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 500,
+        "maximum": 500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "end_date": "2024-12-31",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$500 for purchasing a new all-electric vehicle, or $250 for a plug-in hybrid."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "vt-vermont-electric-cooperative",
+      "program": "Vermont Electric Co-op Energy Transformation Incentives",
+      "program_url": "https://vermontelectric.coop/energy-transformation-programs",
+      "item": {
+        "type": "used_electric_vehicle",
+        "name": "Used Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 500,
+        "maximum": 500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "end_date": "2024-12-31",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$500 for purchasing a used all-electric vehicle, or $250 for a plug-in hybrid."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "vt-vermont-electric-cooperative",
+      "program": "Vermont Electric Co-op Energy Transformation Incentives",
+      "program_url": "https://vermontelectric.coop/energy-transformation-programs",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "end_date": "2024-12-31",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "An extra $500 for purchasing a new all-electric vehicle or plug-in hybrid, for income-qualified customers."
+    },
+    {
+      "payment_methods": [
+        "tax_credit"
+      ],
+      "authority_type": "federal",
+      "program": "Federal Clean Vehicle Credit (30D)",
+      "program_url": "https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after",
+      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/30d-new-ev-tax-incentive",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 7500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2023",
+      "end_date": "2032",
+      "ami_qualification": null,
+      "agi_max_limit": 150000,
+      "filing_status": "single",
+      "eligible": true,
+      "short_description": "Tax credit (up to $7,500) for new EVs with a maximum MSRP of $55,000 and vans, pickup trucks, and SUVs with a maximum MSRP of $80,000."
+    },
+    {
+      "payment_methods": [
+        "tax_credit"
+      ],
+      "authority_type": "federal",
+      "program": "Federal Credit for Previously-Owned Clean Vehicles (25E)",
+      "program_url": "https://www.irs.gov/credits-deductions/used-clean-vehicle-credit",
+      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25e-used-ev-tax-incentive",
+      "item": {
+        "type": "used_electric_vehicle",
+        "name": "Used Electric Vehicle"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 4000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2023",
+      "end_date": "2032",
+      "ami_qualification": null,
+      "agi_max_limit": 75000,
+      "filing_status": "single",
+      "eligible": true,
+      "short_description": "30% tax credit (up to $4,000) for a used EV of up to 14,000 lbs, with an MSRP of up to $25,000."
+    }
+  ]
+}

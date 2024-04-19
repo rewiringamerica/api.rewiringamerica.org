@@ -1730,5 +1730,326 @@
     "filing_status": "married_filing_separately",
     "agi_min_limit": 60001,
     "agi_max_limit": 100000
+  },
+  {
+    "id": "VT-83",
+    "authority_type": "utility",
+    "authority": "vt-green-mountain-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "new_electric_vehicle",
+    "program": "vt_greenMountainPower_greenMountainPowerElectricVehicleRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2200,
+      "minimum": 1000,
+      "maximum": 2200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Incentive up to $2,200 for a new electric vehicle, or up to $1,000 for a plug-in hybrid.",
+      "es": "Incentivo de hasta $2,200 para un vehículo eléctrico nuevo o de hasta $1,000 para un vehículo híbrido enchufable nuevo."
+    }
+  },
+  {
+    "id": "VT-84",
+    "authority_type": "utility",
+    "authority": "vt-green-mountain-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "used_electric_vehicle",
+    "program": "vt_greenMountainPower_greenMountainPowerElectricVehicleRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "minimum": 750,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Incentive up to $1,500 for a used electric vehicle, or up to $750 for a plug-in hybrid.",
+      "es": "Incentivo de hasta $1,500 para un vehículo eléctrico usado o de hasta $750 para un vehículo híbrido enchufable usado."
+    }
+  },
+  {
+    "id": "VT-85",
+    "authority_type": "utility",
+    "authority": "vt-green-mountain-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "new_electric_vehicle",
+    "program": "vt_greenMountainPower_greenMountainPowerElectricVehicleRebateIncomeBonus",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "An extra $1,000 for leasing or buying a new all-electric vehicle, for income-qualified customers."
+    },
+    "low_income": "vt-green-mountain-power-ev"
+  },
+  {
+    "id": "VT-86",
+    "authority_type": "utility",
+    "authority": "vt-green-mountain-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "used_electric_vehicle",
+    "program": "vt_greenMountainPower_greenMountainPowerElectricVehicleRebateIncomeBonus",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "An extra $1,000 for leasing or buying a used all-electric vehicle, for income-qualified customers."
+    },
+    "low_income": "vt-green-mountain-power-ev"
+  },
+  {
+    "id": "VT-87",
+    "authority_type": "utility",
+    "authority": "vt-burlington-electric-department",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "new_electric_vehicle",
+    "program": "vt_burlingtonElectricDepartment_burlingtonElectricDepartmentElectricVehicleRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2300,
+      "minimum": 2000,
+      "maximum": 2300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Incentive up to $2,300 for a new electric vehicle, or up to $2,000 for a plug-in hybrid.",
+      "es": "Incentivo de hasta $2,300 para un vehículo eléctrico nuevo o de hasta $2,000 para un vehículo híbrido enchufable nuevo."
+    }
+  },
+  {
+    "id": "VT-88",
+    "authority_type": "utility",
+    "authority": "vt-burlington-electric-department",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "used_electric_vehicle",
+    "program": "vt_burlingtonElectricDepartment_burlingtonElectricDepartmentElectricVehicleRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Incentive up to $1,300 for a used electric vehicle or plug-in hybrid.",
+      "es": "Incentivo de hasta $1,300 para un vehículo eléctrico o vehículo híbrido enchufable usado."
+    }
+  },
+  {
+    "id": "VT-89",
+    "authority_type": "utility",
+    "authority": "vt-burlington-electric-department",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "new_electric_vehicle",
+    "program": "vt_burlingtonElectricDepartment_burlingtonElectricDepartmentElectricVehicleRebateIncomeBonus",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "minimum": 300,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "An extra $700 for a new all-electric vehicle, or $300 for a plug-in hybrid, for income-qualified customers."
+    },
+    "low_income": "vt-burlington-electric-department-ev"
+  },
+  {
+    "id": "VT-90",
+    "authority_type": "utility",
+    "authority": "vt-burlington-electric-department",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "used_electric_vehicle",
+    "program": "vt_burlingtonElectricDepartment_burlingtonElectricDepartmentElectricVehicleRebateIncomeBonus",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "An extra $300 for a used all-electric vehicle or plug-in hybrid, for income-qualified customers."
+    },
+    "low_income": "vt-burlington-electric-department-ev"
+  },
+  {
+    "id": "VT-91",
+    "authority_type": "utility",
+    "authority": "vt-washington-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "new_electric_vehicle",
+    "program": "vt_washingtonElectricCooperative_buttonUpWECTransportationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 for purchasing or leasing a new all-electric vehicle, or $250 for a plug-in hybrid."
+    },
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "VT-92",
+    "authority_type": "utility",
+    "authority": "vt-washington-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "used_electric_vehicle",
+    "program": "vt_washingtonElectricCooperative_buttonUpWECTransportationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 for purchasing or leasing a used electric vehicle."
+    },
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "VT-93",
+    "authority_type": "utility",
+    "authority": "vt-washington-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "new_electric_vehicle",
+    "program": "vt_washingtonElectricCooperative_buttonUpWECTransportationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "An extra $700 for purchasing or leasing a new all-electric vehicle, for income-qualified customers."
+    },
+    "end_date": "2024-12-31",
+    "low_income": "vt-washington-electric-cooperative-ev"
+  },
+  {
+    "id": "VT-94",
+    "authority_type": "utility",
+    "authority": "vt-vermont-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "new_electric_vehicle",
+    "program": "vt_vermontElectricCooperative_vermontElectricCo-OpEnergyTransformationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 250,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 for purchasing a new all-electric vehicle, or $250 for a plug-in hybrid."
+    },
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "VT-95",
+    "authority_type": "utility",
+    "authority": "vt-vermont-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "used_electric_vehicle",
+    "program": "vt_vermontElectricCooperative_vermontElectricCo-OpEnergyTransformationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 250,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 for purchasing a used all-electric vehicle, or $250 for a plug-in hybrid."
+    },
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "VT-96",
+    "authority_type": "utility",
+    "authority": "vt-vermont-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "new_electric_vehicle",
+    "program": "vt_vermontElectricCooperative_vermontElectricCo-OpEnergyTransformationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "An extra $500 for purchasing a new all-electric vehicle or plug-in hybrid, for income-qualified customers."
+    },
+    "end_date": "2024-12-31"
   }
 ]
