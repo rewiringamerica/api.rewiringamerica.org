@@ -31,14 +31,6 @@ export const IL_PROGRAMS = {
       en: 'https://www.cornbeltenergy.com/programs-services/rebate-program',
     },
   },
-  il_cornBeltEnergy_rebateProgram: {
-    name: {
-      en: 'Rebate Program',
-    },
-    url: {
-      en: 'https://www.cornbeltenergy.com/programs-services/rebate-program',
-    },
-  },
   il_stateOfIllinois_illinoisHomeWeatherization: {
     name: {
       en: 'Illinois Home Weatherization',

@@ -276,7 +276,6 @@ test('IL low income response with state and utility filtering is valid and corre
       tax_filing: 'joint',
       authority_types: ['state'],
       authority: 'il-state-of-illinois',
-      // TODO: Remove when IL is fully launched.
       include_beta_states: true,
     },
     './test/fixtures/il-60304-state-utility-lowincome.json',
@@ -293,7 +292,6 @@ test('IL low income response with city authority filtering is valid and correct'
       household_income: 10000,
       tax_filing: 'single',
       authority_types: ['city'],
-      // TODO: Remove when IL is fully launched.
       include_beta_states: true,
     },
     './test/fixtures/v1-il-60202-city-lowincome.json',
