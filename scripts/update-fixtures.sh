@@ -190,6 +190,19 @@ curl \
 &utility=vt-burlington-electric-department" \
   | jq . > test/fixtures/v1-vt-05401-state-utility-lowincome.json
 
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?zip=05845\
+&include_beta_states=true\
+&owner_status=homeowner\
+&household_income=40000\
+&tax_filing=single\
+&household_size=1\
+&items=new_electric_vehicle\
+&items=used_electric_vehicle\
+&utility=vt-vermont-electric-cooperative" \
+  | jq . > test/fixtures/v1-vt-05845-vec-ev-low-income.json
+
 # TODO: Remove beta states argument when CO is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
