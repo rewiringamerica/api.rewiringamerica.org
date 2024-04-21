@@ -37,7 +37,7 @@ export const CO_PROGRAMS = {
         en: 'Denver Climate Action Rebate Program-Home Energy Rebates',
       },
       url: {
-        en: 'https://denverhomeenergy.powerappsportals.com/faqs/',
+        en: 'https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Cutting-Denvers-Carbon-Pollution/High-Performance-Buildings-and-Homes/Electrify-Your-Home',
       },
     },
   'co_cityAndCountyOfDenver_denverClimateActionRebateProgram-E-BikeAndE-CargoBikeRebateVouchers':
