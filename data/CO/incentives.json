@@ -7229,29 +7229,6 @@
     "bonus_available": true
   },
   {
-    "id": "CO-321",
-    "authority_type": "state",
-    "authority": "co-state-of-colorado",
-    "payment_methods": [
-      "tax_credit"
-    ],
-    "item": "battery_storage_installation",
-    "program": "co_stateOfColorado_taxCredits",
-    "amount": {
-      "type": "percent",
-      "number": 0.129
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "12.9% discount on battery storage systems through Colorado State tax credit and sales tax exemption.",
-      "es": "Un descuento del 12.9% en sistemas de almacenamiento en batería gracias a una condonación fiscal por parte del estado de Colorado y una bonificación del impuesto sobre las ventas."
-    },
-    "start_date": "2023-01-01"
-  },
-  {
     "id": "CO-322",
     "authority_type": "city",
     "authority": "co-city-of-boulder",
@@ -7261,19 +7238,18 @@
     "item": "geothermal_heating_installation",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 650
+      "type": "dollar_amount",
+      "number": 650
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $650 for ENERGY STAR Ground Source Heat Pumps with desuperheater.",
-      "es": "El 50% de los costos de bombas de calor geotérmicas ENERGY STAR con regulador de vapor sobrecalentado, hasta $650 dólares."
+      "en": "Up to $650 for ENERGY STAR ground source heat pump with desuperheater.",
+      "es": "Hasta $650 para bomba de calor geotérmica ENERGY STAR con regulador de vapor sobrecalentado."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-323",
@@ -7285,19 +7261,18 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 400
+      "type": "dollar_amount",
+      "number": 400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $400 for 'Cold Climate' Rated Ducted Air Source Heat Pump (ASHP) (incl. Mini-Splits Cooling & Heating units).",
-      "es": "50% de los costos para bomba de calor de fuente de aire con ductos (ASHP) con calificación de \"clima frío\" (incl. unidades mini-splits de refrigeración y calefacción), hasta $400 dólares."
+      "en": "Up to $400 for cold climate-rated ducted air source heat pump.",
+      "es": "Hasta $400 para bomba de calor de fuente de aire con ductos (ASHP) con calificación de \"clima frío\"."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-324",
@@ -7309,19 +7284,18 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 400
+      "type": "dollar_amount",
+      "number": 400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $400 for 'Cold Climate' Rated Ductless Air Source Heat Pump (ASHP) (incl. Mini-Splits Cooling & Heating units).",
-      "es": "50% de los costos para bombas de calor sin ductos (ASHP) con clasificación de \"clima frío\" (incl. unidades mini-splits de refrigeración y calefacción) , hasta $400 dólares."
+      "en": "Up to $400 for cold climate-rated ductless air source heat pump (incl. mini-split cooling & heating units).",
+      "es": "Hasta $400 para bombas de calor sin ductos (ASHP) con clasificación de \"clima frío\" (incl. unidades mini-splits de refrigeración y calefacción)"
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-325",
@@ -7333,19 +7307,18 @@
     "item": "geothermal_heating_installation",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 400
+      "type": "dollar_amount",
+      "number": 400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $400 for ENERGY STAR Ground Source Heat Pump (no desuperheater).",
-      "es": "50% de los costos, hasta $400 dólares para bomba de calor geotérmica ENERGY STAR (sin regulador de vapor sobrecalentado)."
+      "en": "Up to $400 for ENERGY STAR ground source heat pump (no desuperheater).",
+      "es": "Hasta $400 para bomba de calor geotérmica ENERGY STAR (sin regulador de vapor sobrecalentado)."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-326",
@@ -7357,19 +7330,18 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 250
+      "type": "dollar_amount",
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $250 for 'Non-Cold' Climate Ducted Air Source Heat Pump (ASHP) (incl. Mini-Split Cooling & Heating units) with HSPF 8.5/SEER 15.",
-      "es": "50% de los costos para bombas de calor de fuente de aire (ASHP) con ductos (incluyendo unidades mini-splits de refrigeración y calefacción) con HSPF 8.5/SEER 15, hasta $250 dólares."
+      "en": "Up to $250 for non-cold climate ducted air source heat pump with HSPF2 at least 7.8.",
+      "es": "Hasta $250 para bombas de calor de fuente de aire (ASHP) con ductos con HSPF2 de al menos 8.5."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-327",
@@ -7381,19 +7353,18 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 250
+      "type": "dollar_amount",
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $250 for 'Non-Cold' Climate Ductless Air Source Heat Pump (ASHP) with HSPF 8.5/SEER 15.",
-      "es": "50% de los costos para clima \"no frío\" de bomba de calor de fuente de aire sin ductos (ASHP) con HSPF 8.5/SEER 15, hasta $250 dólares."
+      "en": "Up to $250 for non-cold climate ductless air source heat pump with HSPF2 at least 7.8.",
+      "es": "Hasta $250 para clima \"no frío\" de bomba de calor de fuente de aire sin ductos (ASHP) con HSPF2 de al menos 7.8."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-328",
@@ -7405,19 +7376,18 @@
     "item": "heat_pump_water_heater",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 250
+      "type": "dollar_amount",
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $250 for ENERGY STAR Electric Heat Pump Water Heater (minimum 2.00 Energy Factor).",
-      "es": "50% de los costos de calentador eléctrico de agua con bomba de calor ENERGY STAR (factor energético mínimo de 2.00), hasta $250 dólares."
+      "en": "Up to $250 for ENERGY STAR electric heat pump water heater (minimum 2.00 Energy Factor).",
+      "es": "Hasta $250 para calentador eléctrico de agua con bomba de calor ENERGY STAR (factor energético mínimo de 2.00)."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-329",
@@ -7429,19 +7399,18 @@
     "item": "weatherization",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 250
+      "type": "dollar_amount",
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $250 for Attic Insulation & Air Sealing.",
-      "es": "50% de los costos para aislamiento térmico y sellado hermético del desván, hasta $250 dólares."
+      "en": "Up to $250 for attic insulation & air sealing.",
+      "es": "Hasta $250 para aislamiento térmico y sellado hermético del desván."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-330",
@@ -7453,19 +7422,18 @@
     "item": "weatherization",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 250
+      "type": "dollar_amount",
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $250 for Wall Insulation.",
-      "es": "50% de los costos para el aislamiento térmico de muros, hasta $250 dólares."
+      "en": "Up to $250 for wall insulation.",
+      "es": "Hasta $250 para el aislamiento térmico de muros."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-331",
@@ -7477,19 +7445,18 @@
     "item": "weatherization",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 250
+      "type": "dollar_amount",
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $250 for Foundation (Crawl Space or Basement) Insulation & Air Sealing.",
-      "es": "50% de los costos para aislamiento térmico de muros, hasta $250 dólares."
+      "en": "Up to $250 for foundation (crawl space or basement) insulation & air sealing.",
+      "es": "Hasta $250 para aislamiento y sellado hermético de cimientos (sótanos o espacios reducidos)."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-332",
@@ -7501,19 +7468,18 @@
     "item": "weatherization",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 250
+      "type": "dollar_amount",
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $250 for Sub-Floor or Frame Floor Insulation & Air Sealing.",
-      "es": "50% de los costos para aislamiento térmico y sellado hermético del subsuelo o del piso de la estructura, hasta $250 dólares."
+      "en": "Up to $250 for sub-floor or frame floor insulation & air sealing.",
+      "es": "Hasta $250 para aislamiento térmico y sellado hermético del subsuelo o del piso de la estructura."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-333",
@@ -7525,19 +7491,18 @@
     "item": "weatherization",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 250
+      "type": "dollar_amount",
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $250 for Professionally Applied Air Sealing, and Duct Insulation. Do-it-yourself not eligible.",
-      "es": "50% de los costos para sellado hermético y aislamiento de ductos realizados por un profesional. Los trabajos hechos por usted mismo no son elegibles, hasta $250 dólares."
+      "en": "Up to $250 for professionally applied air sealing, and duct insulation. Do-it-yourself not eligible.",
+      "es": "Hasta $250 para sellado hermético y aislamiento de ductos realizados por un profesional. Los trabajos hechos por usted mismo no son elegibles."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-334",
@@ -7549,19 +7514,18 @@
     "item": "weatherization",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 250
+      "type": "dollar_amount",
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $250 for Duct Insulation.",
-      "es": "50% de los costos para aislamiento de ductos, hasta $250 dólares."
+      "en": "Up to $250 for duct insulation.",
+      "es": "Hasta $250 para aislamiento de ductos."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-335",
@@ -7776,30 +7740,6 @@
     "start_date": "2023-01-01",
     "end_date": "2023-12-31",
     "bonus_available": true
-  },
-  {
-    "id": "CO-344",
-    "authority_type": "county",
-    "authority": "co-boulder-county",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "rooftop_solar_installation",
-    "program": "co_boulderCounty_energySmart",
-    "amount": {
-      "type": "percent",
-      "number": 0.25,
-      "maximum": 200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Rebate for 25% of project costs up to $200 for Solar PV in conjunction with air or ground source heat pump installation or owning an EV.",
-      "es": "Un reembolso del 25% de los costos del proyecto para energía solar fotovoltaica junto con la instalación de una bomba de calor de fuente de aire o de tierra o por poseer un VE, hasta $200 dólares."
-    },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
   },
   {
     "id": "CO-345",
