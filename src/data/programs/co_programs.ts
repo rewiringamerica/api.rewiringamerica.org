@@ -262,7 +262,7 @@ export const CO_PROGRAMS = {
       en: 'City of Boulder Residential Rebates',
     },
     url: {
-      en: 'https://energysmartyes.com/rebates-financing/',
+      en: 'https://energysmartyes.com/rebates-financing/city-of-boulder/',
     },
   },
   co_cityOfBoulder_solarTaxRebates: {
