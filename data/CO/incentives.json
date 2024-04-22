@@ -653,45 +653,21 @@
     "program": "co_coloradoSpringsUtilities_residentialEfficiencyRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 200,
-      "maximum": 200
+      "number": 1500,
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate up to $200 for insulation and air sealing.",
-      "es": "Un reembolso de hasta $200 dólares por aislamiento y sellado hermético."
+      "en": "Rebate up to $1,500 for insulation and air sealing.",
+      "es": "Un reembolso de hasta $1,500 dólares por aislamiento y sellado hermético."
     },
     "start_date": "2023-01-01",
     "end_date": "2023-12-31"
   },
   {
     "id": "CO-28",
-    "authority_type": "utility",
-    "authority": "co-colorado-springs-utilities",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "co_coloradoSpringsUtilities_residentialEfficiencyRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Rebate up to $500 for an Energy Star certified ducted or ductless air source heat pump.",
-      "es": "Un reembolso de hasta $500 dólares por una bomba de calor con fuente de aire, con o sin ductos, con certificación Energy Star."
-    },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
-  },
-  {
-    "id": "CO-29",
     "authority_type": "utility",
     "authority": "co-colorado-springs-utilities",
     "payment_methods": [
@@ -708,8 +684,32 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate up to $1000 for a qualifying cold climate air source heat pump.",
-      "es": "Un reembolso de hasta $1,000 dólares por una bomba de calor con fuente de aire para climas fríos que cumpla los requisitos."
+      "en": "Rebate up to $1,000 for an Energy Star certified ducted or ductless air source heat pump.",
+      "es": "Un reembolso de hasta $1,000 por una bomba de calor con fuente de aire, con o sin ductos, con certificación Energy Star."
+    },
+    "start_date": "2023-01-01",
+    "end_date": "2023-12-31"
+  },
+  {
+    "id": "CO-29",
+    "authority_type": "utility",
+    "authority": "co-colorado-springs-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "co_coloradoSpringsUtilities_residentialEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate up to $2000 for a qualifying cold climate air source heat pump.",
+      "es": "Un reembolso de hasta $2,000 dólares por una bomba de calor con fuente de aire para climas fríos que cumpla los requisitos."
     },
     "start_date": "2023-01-01",
     "end_date": "2023-12-31"
@@ -725,18 +725,42 @@
     "program": "co_coloradoSpringsUtilities_residentialEfficiencyRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 200,
-      "maximum": 200
+      "number": 750,
+      "maximum": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate up to $200 on an Energy Star certified heat pump water heater.",
-      "es": "Un reembolso de hasta $200 dólares en un calentador de agua con bomba de calor con certificación Energy Star."
+      "en": "Up to $50 rebate for Smart Thermostat. Must be ENERGY STAR certified.",
+      "es": "Un reembolso de hasta $750 en un calentador de agua con bomba de calor con certificación Energy Star."
     },
     "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "CO-545",
+    "authority_type": "utility",
+    "authority": "co-colorado-springs-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "co_coloradoSpringsUtilities_residentialEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $50 rebate for Smart Thermostat. Must be ENERGY STAR certified.",
+      "es": "Hasta $50 de reembolso para termostatos inteligentes. Deben ser certificados por ENERGY STAR."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-31",
@@ -5764,14 +5788,15 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
+      "maximum": 20000,
       "representative": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,000/ton for Air Source Heat Pumps, capped at 50% of costs. See details for pricing for less than 2 or greater than 5 tons.",
-      "es": "$1,000 dólares/tonelada para bombas de calor de fuente de aire, con un tope del 50% de los costos. Consulte los detalles de los precios para menos de 2 o más de 5 toneladas."
+      "en": "$500/ton for Air Source Heat Pumps less than or equal to 5 tons, $250/ton greater than 5 tons. capped at 50% of costs. $20,000 maximum per project.",
+      "es": "$500/tonelada para bombas de calor de fuente de aire de 5 toneladas o menos, $250/tonelada para aquellas de más de 5 toneladas, con un límite del 50% del costo. Máximo de $20,000 por proyecto."
     },
     "bonus_available": true
   },
@@ -6309,6 +6334,29 @@
     "short_description": {
       "en": "$150 rebate for Electric Bicycles.",
       "es": "Un reembolso de $150 dólares para bicicletas eléctricas."
+    }
+  },
+  {
+    "id": "CO-546",
+    "authority_type": "utility",
+    "authority": "co-san-miguel-power-association",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "rooftop_solar_installation",
+    "program": "co_sanMiguelPowerAssociation_sMPARenewableRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.1,
+      "unit": "kilowatt",
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $300 available for Solar. At $0.10 per watt, Maximum amount 3kW.",
+      "es": "Hasta $300 disponibles para solar a $0.10 por vatio, con un máximo de 3kW."
     }
   },
   {
