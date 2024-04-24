@@ -220,7 +220,7 @@ export const VT_PROGRAMS = {
   'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForInductionCooktop':
     {
       name: {
-        en: 'Burlington Electric Department - Rebate for Induction Cooktop ',
+        en: 'Burlington Electric Department - Rebate for Induction Cooktop',
       },
       url: {
         en: 'https://www.burlingtonelectric.com/rebate-form?item_purchased=Induction%20Cooktop',
@@ -258,7 +258,7 @@ export const VT_PROGRAMS = {
       en: 'Button Up WEC - Air to Water Heat Pump Rebate',
     },
     url: {
-      en: 'https://www.washingtonelectric.coop/wp-content/uploads/2023/06/5-2023-WEC-Button-Up-Thermal-incentives.pdf',
+      en: 'https://www.washingtonelectric.coop/wp-content/uploads/2024/01/1-2024-WEC-Button-Up-Thermal-incentives.pdf',
     },
   },
   'vt_washingtonElectricCooperative_buttonUpWEC-DuctedHeatPumpRebate': {
@@ -290,7 +290,7 @@ export const VT_PROGRAMS = {
       en: 'Button Up WEC - Ground Source Heat Pump Rebate',
     },
     url: {
-      en: 'https://www.washingtonelectric.coop/wp-content/uploads/2023/06/5-2023-WEC-Button-Up-Thermal-incentives.pdf',
+      en: 'https://www.washingtonelectric.coop/wp-content/uploads/2024/01/1-2024-WEC-Button-Up-Thermal-incentives.pdf',
     },
   },
   'vt_washingtonElectricCooperative_buttonUpWEC-HeatPumpWaterHeaterRebate': {
@@ -298,7 +298,7 @@ export const VT_PROGRAMS = {
       en: 'Button Up WEC - Heat Pump Water Heater Rebate',
     },
     url: {
-      en: 'https://www.washingtonelectric.coop/wp-content/uploads/2023/06/5-2023-WEC-Button-Up-Thermal-incentives.pdf',
+      en: 'https://www.washingtonelectric.coop/wp-content/uploads/2024/01/1-2024-WEC-Button-Up-Thermal-incentives.pdf',
     },
   },
   'vt_washingtonElectricCooperative_buttonUpWEC-WeatherizationProgram': {
@@ -351,7 +351,7 @@ export const VT_PROGRAMS = {
   },
   'vt_greenMountainPower_greenMountainPower-RebateForInductionCooktop': {
     name: {
-      en: 'Green Mountain Power - Rebate for Induction Cooktop ',
+      en: 'Green Mountain Power - Rebate for Induction Cooktop',
     },
     url: {
       en: 'https://greenmountainpower.com/rebates-programs/home-and-yard/induction-cooktop-rebate/',
@@ -449,7 +449,7 @@ export const VT_PROGRAMS = {
   'vt_vermontElectricCooperative_vermontElectric-BillCreditForInductionCooktop':
     {
       name: {
-        en: 'Vermont Electric - Bill Credit for Induction Cooktop ',
+        en: 'Vermont Electric - Bill Credit for Induction Cooktop',
       },
       url: {
         en: 'https://vermontelectric.coop/client_media/files/Induction_cooktop_incentive_form_9_1_22_Fillable.pdf',
@@ -512,12 +512,12 @@ export const VT_PROGRAMS = {
       en: 'https://vgsvt.com/savings/residentialrebate/energy-audits-weatherization/',
     },
   },
-  'vt_vGS_vGSIncome-QualifiedWeatherizationProgram': {
+  'vt_vGS_vGSWeatherizationRebatesForIncome-QualifiedHomeowners': {
     name: {
-      en: 'VGS Income-Qualified Weatherization Program',
+      en: 'VGS Weatherization Rebates for Income-Qualified Homeowners',
     },
     url: {
-      en: 'https://vgsvt.com/wp-content/uploads/2023/03/2023-Income-Verification-Form.pdf',
+      en: 'https://vgsvt.com/savings/residentialrebate/weatherization-rebates/',
     },
   },
   'vt_stoweElectricDepartment_stoweElectricRebates&Incentives': {
