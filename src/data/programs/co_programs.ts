@@ -185,6 +185,14 @@ export const CO_PROGRAMS = {
       en: 'https://www.smpa.com/energy#berebates',
     },
   },
+  co_sanMiguelPowerAssociation_sMPARenewableRebates: {
+    name: {
+      en: 'SMPA Renewable Rebates',
+    },
+    url: {
+      en: 'https://www.smpa.com/content/renewable-rebates',
+    },
+  },
   'co_southeastColoradoPowerAssociation_tri-StateG&T': {
     name: {
       en: 'Southeast Colorado Power Association Rebates',
