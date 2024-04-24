@@ -764,7 +764,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_water_heater",
+    "item": "non_heat_pump_water_heater",
     "program": "mi_greatLakesEnergyCooperative_energyWise",
     "amount": {
       "type": "dollar_amount",
@@ -920,9 +920,7 @@
     "program": "mi_lansingBoardOfWaterAndLight_lansingBWLElectrificationPrograms",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000,
-      "minimum": 1000,
-      "maximum": 1000
+      "number": 1000
     },
     "owner_status": [
       "homeowner",
@@ -966,6 +964,27 @@
     "program": "mi_lansingBoardOfWaterAndLight_lansingBWLENERGYSTARApplianceRebates",
     "amount": {
       "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$25 rebate on an electric clothes dryer. Must be ENERGY STAR certified. Limit 1."
+    }
+  },
+  {
+    "id": "MI-71",
+    "authority_type": "utility",
+    "authority": "mi-lansing-board-of-water-and-light",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "mi_lansingBoardOfWaterAndLight_lansingBWLENERGYSTARApplianceRebates",
+    "amount": {
+      "type": "dollar_amount",
       "number": 100
     },
     "owner_status": [
@@ -973,11 +992,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "$100 rebate on a Heat Pump Clothes Dryer. Must be ENERGY STAR certified. Limit 1."
+      "en": "$100 rebate on a heat pump clothes dryer. Must be ENERGY STAR certified. Limit 1."
     }
   },
   {
-    "id": "MI-71",
+    "id": "MI-72",
     "authority_type": "utility",
     "authority": "mi-lansing-board-of-water-and-light",
     "payment_methods": [
@@ -999,7 +1018,7 @@
     }
   },
   {
-    "id": "MI-72",
+    "id": "MI-73",
     "authority_type": "utility",
     "authority": "mi-lansing-board-of-water-and-light",
     "payment_methods": [
@@ -1021,7 +1040,7 @@
     }
   },
   {
-    "id": "MI-73",
+    "id": "MI-74",
     "authority_type": "utility",
     "authority": "mi-lansing-board-of-water-and-light",
     "payment_methods": [
@@ -1041,7 +1060,7 @@
     }
   },
   {
-    "id": "MI-74",
+    "id": "MI-75",
     "authority_type": "utility",
     "authority": "mi-lansing-board-of-water-and-light",
     "payment_methods": [
