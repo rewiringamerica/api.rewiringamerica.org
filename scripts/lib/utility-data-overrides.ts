@@ -173,6 +173,9 @@ export const OVERRIDES = new Map<string | number, string>([
   [55936, 'Entergy Gulf States Louisiana'],
   [1135007, 'Entergy Gulf States Louisiana'],
 
+  // MI
+  [10704, 'Lansing Board of Water & Light'],
+
   // MD
   [1043, 'Delmarva Power'],
   [1142, 'Potomac Edison'],

@@ -135,4 +135,36 @@ export const MI_PROGRAMS = {
       en: 'https://ee.uppco.com/uppco-energy-star/',
     },
   },
+  mi_lansingBoardOfWaterAndLight_lansingBWLElectrificationPrograms: {
+    name: {
+      en: 'Lansing BWL Electrification Programs',
+    },
+    url: {
+      en: 'https://www.lbwl.com/customers/save-money-energy/electrification-programs',
+    },
+  },
+  mi_lansingBoardOfWaterAndLight_lansingBWLENERGYSTARApplianceRebates: {
+    name: {
+      en: 'Lansing BWL ENERGY STAR Appliance Rebates',
+    },
+    url: {
+      en: 'https://www.lbwl.com/appliances',
+    },
+  },
+  mi_lansingBoardOfWaterAndLight_lansingBWLHeatingAndCoolingRebates: {
+    name: {
+      en: 'Lansing BWL Heating and Cooling Rebates',
+    },
+    url: {
+      en: 'https://www.lbwl.com/hvac',
+    },
+  },
+  'mi_lansingBoardOfWaterAndLight_lansingBWLPlug-InElectricVehicleRebates': {
+    name: {
+      en: 'Lansing BWL Plug-in Electric Vehicle Rebates',
+    },
+    url: {
+      en: 'https://www.lbwl.com/customers/save-money-energy/plug-electric-vehicles-pev',
+    },
+  },
 } as const;

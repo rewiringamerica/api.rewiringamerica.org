@@ -751,7 +751,7 @@
       "maximum": 50
     },
     "owner_status": [
-      "renter"
+      "homeowner"
     ],
     "short_description": {
       "en": "Up to $500 rebate for installing a new air conditioner. Rebate value depends on efficiency of appliance."
@@ -871,7 +871,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "item": "non_heat_pump_water_heater",
+    "item": "heat_pump_water_heater",
     "program": "mi_upperPeninsulaPowerCompany_uPPCOENERGYSTAR®Program",
     "amount": {
       "type": "dollar_amount",
@@ -884,6 +884,225 @@
     ],
     "short_description": {
       "en": "Up to $600 rebate per heater for ENERGY STAR® heat pump water heaters. $600 for UEF of at least 3.5, $475 for UEF of at least 3.0."
+    }
+  },
+  {
+    "id": "MI-72",
+    "authority_type": "utility",
+    "authority": "mi-lansing-board-of-water-and-light",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "ebike",
+    "program": "mi_lansingBoardOfWaterAndLight_lansingBWLElectrificationPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 300,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a cargo e-bike or $300 rebate for a standard e-bike. Must be UL 2849 certified. Motor must be 750 watts or less. Limit 1."
+    }
+  },
+  {
+    "id": "MI-73",
+    "authority_type": "utility",
+    "authority": "mi-lansing-board-of-water-and-light",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "ebike",
+    "program": "mi_lansingBoardOfWaterAndLight_lansingBWLElectrificationPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "minimum": 1200,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,500 rebate for an e-bike. Income qualified. Must be UL 2849 certified. Motor must be 750 watts or less. Limit 1."
+    },
+    "low_income": "mi-lbwl"
+  },
+  {
+    "id": "MI-74",
+    "authority_type": "utility",
+    "authority": "mi-lansing-board-of-water-and-light",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_stove",
+    "program": "mi_lansingBoardOfWaterAndLight_lansingBWLElectrificationPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate. Must include no less than three elements. Cooktop or range must be at least 24in x 24in LW. Limit 1."
+    }
+  },
+  {
+    "id": "MI-75",
+    "authority_type": "utility",
+    "authority": "mi-lansing-board-of-water-and-light",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_outdoor_equipment",
+    "program": "mi_lansingBoardOfWaterAndLight_lansingBWLElectrificationPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150,
+      "minimum": 25,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $150 rebate for electric lawn equipment. Includes rebates for mowers, trimmers, chainsaws and blowers."
+    }
+  },
+  {
+    "id": "MI-76",
+    "authority_type": "utility",
+    "authority": "mi-lansing-board-of-water-and-light",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "non_heat_pump_water_heater",
+    "program": "mi_lansingBoardOfWaterAndLight_lansingBWLENERGYSTARApplianceRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$25 rebate on an electric clothes dryer. Must be ENERGY STAR certified. Limit 1."
+    }
+  },
+  {
+    "id": "MI-77",
+    "authority_type": "utility",
+    "authority": "mi-lansing-board-of-water-and-light",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "mi_lansingBoardOfWaterAndLight_lansingBWLENERGYSTARApplianceRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate on a heat pump clothes dryer. Must be ENERGY STAR certified. Limit 1."
+    }
+  },
+  {
+    "id": "MI-78",
+    "authority_type": "utility",
+    "authority": "mi-lansing-board-of-water-and-light",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "mi_lansingBoardOfWaterAndLight_lansingBWLHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "minimum": 200,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $600 rebate for a ducted heat pump system. Minimum 15.2 SEER2."
+    }
+  },
+  {
+    "id": "MI-79",
+    "authority_type": "utility",
+    "authority": "mi-lansing-board-of-water-and-light",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "mi_lansingBoardOfWaterAndLight_lansingBWLHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 300,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate for a ductless heat pump system. Minimum 25 SEER2."
+    }
+  },
+  {
+    "id": "MI-80",
+    "authority_type": "utility",
+    "authority": "mi-lansing-board-of-water-and-light",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "mi_lansingBoardOfWaterAndLight_lansingBWLHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for a Smart Wi-Fi enabled thermostat. Limit 1."
+    }
+  },
+  {
+    "id": "MI-81",
+    "authority_type": "utility",
+    "authority": "mi-lansing-board-of-water-and-light",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_vehicle_charger",
+    "program": "mi_lansingBoardOfWaterAndLight_lansingBWLPlug-InElectricVehicleRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "minimum": 500,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 rebate for installation of a home EV charger."
     }
   }
 ]
