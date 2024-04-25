@@ -313,6 +313,23 @@ test('MI response with state and utility is valid and correct', async t => {
   );
 });
 
+test('MI response with state and utility is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      zip: '48825',
+      owner_status: 'homeowner',
+      household_size: 2,
+      household_income: 10000,
+      tax_filing: 'single',
+      authority_types: ['utility'],
+      utility: 'mi-lansing-board-of-water-and-light',
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-mi-48825-city-lowincome.json',
+  );
+});
+
 // NV low income test
 test('NV low income response with state and utility filtering is valid and correct', async t => {
   await validateResponse(
