@@ -7,12 +7,12 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/rebates/list/air-to-water-heat-pumps',
     },
   },
-  vt_efficiencyVermont_efficiencyVermontHeatPumpRebateIncomeBonus: {
+  vt_efficiencyVermont_efficiencyVermontAirToWaterHeatPumpRebateIncomeBonus: {
     name: {
-      en: 'Efficiency Vermont Heat Pump Rebate Income Bonus',
+      en: 'Efficiency Vermont Air to Water Heat Pump Rebate Income Bonus',
     },
     url: {
-      en: 'https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/efficiency-vermont-bonus-verification.pdf',
+      en: 'https://www.efficiencyvermont.com/rebates/list/air-to-water-heat-pumps',
     },
   },
   vt_efficiencyVermont_efficiencyVermontClothesDryerRebate: {
@@ -20,12 +20,20 @@ export const VT_PROGRAMS = {
       en: 'Efficiency Vermont Clothes Dryer Rebate',
     },
     url: {
-      en: 'https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/efficiency-vermont-clothes-dryer-rebate-form.pdf',
+      en: 'https://www.efficiencyvermont.com/rebates/list/clothes-dryers',
     },
   },
   vt_efficiencyVermont_efficiencyVermontDuctedHeatPumpRebate: {
     name: {
       en: 'Efficiency Vermont Ducted Heat Pump Rebate',
+    },
+    url: {
+      en: 'https://www.efficiencyvermont.com/rebates/list/centrally-ducted-heat-pumps',
+    },
+  },
+  vt_efficiencyVermont_efficiencyVermontDuctedHeatPumpRebateIncomeBonus: {
+    name: {
+      en: 'Efficiency Vermont Ducted Heat Pump Rebate Income Bonus',
     },
     url: {
       en: 'https://www.efficiencyvermont.com/rebates/list/centrally-ducted-heat-pumps',
@@ -39,6 +47,14 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/rebates/list/heat-pump-heating-cooling-system',
     },
   },
+  vt_efficiencyVermont_efficiencyVermontDuctlessHeatPumpRebateIncomeBonus: {
+    name: {
+      en: 'Efficiency Vermont Ductless Heat Pump Rebate Income Bonus',
+    },
+    url: {
+      en: 'https://www.efficiencyvermont.com/rebates/list/heat-pump-heating-cooling-system',
+    },
+  },
   vt_efficiencyVermont_efficiencyVermontGroundSourceHeatPumpRebate: {
     name: {
       en: 'Efficiency Vermont Ground Source Heat Pump Rebate',
@@ -47,12 +63,20 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/efficiency-vermont-ground-source-heat-pump-rebate-form.pdf',
     },
   },
+  vt_efficiencyVermont_efficiencyVermontGroundSourceHeatPumpRebateIncomeBonus: {
+    name: {
+      en: 'Efficiency Vermont Ground Source Heat Pump Rebate Income Bonus',
+    },
+    url: {
+      en: 'https://www.efficiencyvermont.com/rebates/list/ground-source-heat-pumps',
+    },
+  },
   vt_efficiencyVermont_efficiencyVermontHeatPumpWaterHeaterRebateProgram: {
     name: {
       en: 'Efficiency Vermont Heat Pump Water Heater Rebate Program',
     },
     url: {
-      en: 'https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/efficiency-vermont-heat-pump-water-heater-rebate-form.pdf',
+      en: 'https://www.efficiencyvermont.com/rebates/list/heat-pump-water-heaters',
     },
   },
   'vt_efficiencyVermont_efficiencyVermont-ResidentialEnergyEfficiencyRebateProgram(DIYWeatherization)':
