@@ -112,6 +112,16 @@ zip=60304\
 &authority=il-state-of-illinois" \
  | jq . > test/fixtures/il-60304-state-utility-lowincome.json
 
+ curl \
+  "http://localhost:3000/api/v1/calculator?\
+zip=60202\
+&owner_status=homeowner\
+&household_income=10000\
+&tax_filing=single\
+&household_size=2\
+&authority_types=city" \
+ | jq . > test/fixtures/v1-il-60202-city-lowincome.json
+
 # TODO: Remove beta states argument when MI is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
@@ -124,6 +134,19 @@ curl \
 &authority_types=utility\
 &utility=mi-dte" \
   | jq . > test/fixtures/v1-mi-48103-state-utility-lowincome.json
+
+# TODO: Remove beta states argument when MI is fully launched.
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?zip=48825\
+&include_beta_states=true\
+&owner_status=homeowner\
+&household_income=10000\
+&tax_filing=single\
+&household_size=2\
+&authority_types=utility\
+&utility=mi-lansing-board-of-water-and-light" \
+  | jq . > test/fixtures/v1-mi-48825-city-lowincome.json
 
 curl \
   "http://localhost:3000/api/v1/calculator\
