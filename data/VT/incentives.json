@@ -32,7 +32,7 @@
       "rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "vt_efficiencyVermont_efficiencyVermontHeatPumpRebateIncomeBonus",
+    "program": "vt_efficiencyVermont_efficiencyVermontAirToWaterHeatPumpRebateIncomeBonus",
     "amount": {
       "type": "dollar_amount",
       "number": 500,
@@ -129,7 +129,7 @@
     "authority_type": "state",
     "authority": "vt-efficiency-vermont",
     "payment_methods": [
-      "pos_rebate"
+      "rebate"
     ],
     "item": "heat_pump_clothes_dryer",
     "program": "vt_efficiencyVermont_efficiencyVermontClothesDryerRebate",
@@ -143,8 +143,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Receive up to $400 cash back on qualifying ENERGY STAR® electric clothes dryer models.",
-      "es": "Reciba hasta $400 dólares de devolución en efectivo en  modelos de secadoras eléctricas de ropa ENERGY STAR® que cumplan los requisitos."
+      "en": "Receive up to $400 cash back on qualifying ENERGY STAR® heat pump clothes dryers.",
+      "es": "Reciba hasta $400 de devolución en efectivo en secadoras de ropa con bomba de calor ENERGY STAR® que cumplan los requisitos."
     },
     "start_date": "2019-07-15"
   },
@@ -180,19 +180,17 @@
       "rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "vt_efficiencyVermont_efficiencyVermontHeatPumpRebateIncomeBonus",
+    "program": "vt_efficiencyVermont_efficiencyVermontDuctedHeatPumpRebateIncomeBonus",
     "amount": {
       "type": "dollar_amount",
-      "number": 800,
-      "minimum": 200,
-      "maximum": 800
+      "number": 200
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Vermonters with low or moderate household income may qualify for a $200-$800 bonus rebate on a ducted heat pump, depending on their utility.",
-      "es": "Los residentes de Vermont cuyos ingresos familiares sean iguales o inferiores al nivel de ingresos siguiente (rango moderado) ftienen derecho a un reembolso adicional de entre $200 y $800 dólares por una bomba de calor con ductos, dependiendo de la compañía de suministro de luz que utilicen."
+      "en": "Vermonters with low or moderate household income may qualify for a $200 bonus rebate on a ducted heat pump, depending on their utility.",
+      "es": "Los residentes de Vermont cuyos ingresos familiares sean iguales o inferiores al nivel de ingresos siguiente (rango moderado) ftienen derecho a un reembolso adicional de $200 por una bomba de calor con ductos, dependiendo de la compañía de suministro de luz que utilicen."
     },
     "low_income": "default-moderate"
   },
@@ -207,14 +205,14 @@
     "program": "vt_greenMountainPower_greenMountainPowerDuctedHeatPumpRebate",
     "amount": {
       "type": "dollar_amount",
-      "number": 2000
+      "number": 2200
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Income-eligible GMP customers qualify for a $2,000 bonus rebate on a ducted heat pump.",
-      "es": "Los clientes de GMP que cumplen con el nivel de ingresos tienen derecho a un reembolso de $2,000 dólares para una bomba de calor con ductos."
+      "en": "Income-eligible GMP customers qualify for a $2,200 bonus rebate on a ducted heat pump.",
+      "es": "Los clientes de GMP que cumplen con el nivel de ingresos tienen derecho a un reembolso de $2,200 para una bomba de calor con ductos."
     },
     "low_income": "default"
   },
@@ -369,7 +367,7 @@
       "rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "vt_efficiencyVermont_efficiencyVermontHeatPumpRebateIncomeBonus",
+    "program": "vt_efficiencyVermont_efficiencyVermontDuctlessHeatPumpRebateIncomeBonus",
     "amount": {
       "type": "dollar_amount",
       "number": 1000,
@@ -677,7 +675,7 @@
       "rebate"
     ],
     "item": "geothermal_heating_installation",
-    "program": "vt_efficiencyVermont_efficiencyVermontHeatPumpRebateIncomeBonus",
+    "program": "vt_efficiencyVermont_efficiencyVermontGroundSourceHeatPumpRebateIncomeBonus",
     "amount": {
       "type": "dollar_amount",
       "number": 500,
@@ -745,22 +743,19 @@
     "authority_type": "state",
     "authority": "vt-efficiency-vermont",
     "payment_methods": [
-      "pos_rebate"
+      "rebate"
     ],
     "item": "heat_pump_water_heater",
     "program": "vt_efficiencyVermont_efficiencyVermontHeatPumpWaterHeaterRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 600,
-      "minimum": 300,
-      "maximum": 600
+      "number": 600
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Hire a contractor and get a $300-$600 discount from your utility or Efficiency Vermont.",
-      "es": "Contrate a un técnico especialista y obtenga un descuento de entre $300 y $600 dólares de su compañía de suministro de luz o de Efficiency Vermont."
+      "en": "$600 rebate for a heat pump water heater, or $600 instant discount through participating distributors."
     },
     "start_date": "2020-01-01"
   },
@@ -772,18 +767,17 @@
       "rebate"
     ],
     "item": "heat_pump_water_heater",
-    "program": "vt_efficiencyVermont_efficiencyVermontHeatPumpRebateIncomeBonus",
+    "program": "vt_efficiencyVermont_efficiencyVermontHeatPumpWaterHeaterRebateProgram",
     "amount": {
-      "type": "dollar_amount",
-      "number": 200,
-      "maximum": 200
+      "type": "percent",
+      "number": 1,
+      "maximum": 4500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Income-eligible Vermonters may qualify for a $200 bonus rebate on a heat pump water heater.",
-      "es": "Los residentes de Vermont que cumplan el nivel de ingresos pueden optar por un reembolso adicional de $200 en calentadores de agua con bomba de calor."
+      "en": "90% off a heat pump water heater, up to $4,500, for moderate-income customers."
     },
     "start_date": "2020-01-01",
     "low_income": "default-moderate"
@@ -2074,5 +2068,27 @@
       "es": "VGS ofrece a los propietarios de viviendas unifamiliares que cumplan los requisitos un incentivo para cubrir el 75% de los costos del proyecto de climatización integral hasta un máximo de $9,500."
     },
     "low_income": "vt-vgs-low"
+  },
+  {
+    "id": "VT-98",
+    "authority_type": "state",
+    "authority": "vt-efficiency-vermont",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "vt_efficiencyVermont_efficiencyVermontHeatPumpWaterHeaterRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "100% off a heat pump water heater, up to $5,000, for low-income customers."
+    },
+    "low_income": "default"
   }
 ]

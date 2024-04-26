@@ -332,31 +332,6 @@
       ],
       "authority_type": "state",
       "authority": "vt-efficiency-vermont",
-      "program": "Efficiency Vermont Heat Pump Water Heater Rebate Program",
-      "program_url": "https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/efficiency-vermont-heat-pump-water-heater-rebate-form.pdf",
-      "item": {
-        "type": "heat_pump_water_heater",
-        "name": "Heat Pump Water Heater"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 600,
-        "maximum": 600
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2020-01-01",
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "Hire a contractor and get a $300-$600 discount from your utility or Efficiency Vermont."
-    },
-    {
-      "payment_methods": [
-        "pos_rebate"
-      ],
-      "authority_type": "state",
-      "authority": "vt-efficiency-vermont",
       "program": "Efficiency Vermont Ductless Heat Pump Rebate",
       "program_url": "https://www.efficiencyvermont.com/rebates/list/heat-pump-heating-cooling-system",
       "item": {
@@ -375,31 +350,6 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "Hire a contractor and get a $350-$450 instant discount on qualifying models of ductless heat pumps at a participating distributor."
-    },
-    {
-      "payment_methods": [
-        "pos_rebate"
-      ],
-      "authority_type": "state",
-      "authority": "vt-efficiency-vermont",
-      "program": "Efficiency Vermont Clothes Dryer Rebate",
-      "program_url": "https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/efficiency-vermont-clothes-dryer-rebate-form.pdf",
-      "item": {
-        "type": "heat_pump_clothes_dryer",
-        "name": "Heat Pump Clothes Dryer"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 400,
-        "maximum": 400
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2019-07-15",
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "Receive up to $400 cash back on qualifying ENERGY STAR® electric clothes dryer models."
     },
     {
       "payment_methods": [
@@ -475,6 +425,55 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "Hire a contractor and get a $15-$600 instant rebate on each qualifying high-performance circulator pump at participating distributors."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "vt-efficiency-vermont",
+      "program": "Efficiency Vermont Heat Pump Water Heater Rebate Program",
+      "program_url": "https://www.efficiencyvermont.com/rebates/list/heat-pump-water-heaters",
+      "item": {
+        "type": "heat_pump_water_heater",
+        "name": "Heat Pump Water Heater"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 1,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "100% off a heat pump water heater, up to $5,000, for low-income customers."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "vt-efficiency-vermont",
+      "program": "Efficiency Vermont Heat Pump Water Heater Rebate Program",
+      "program_url": "https://www.efficiencyvermont.com/rebates/list/heat-pump-water-heaters",
+      "item": {
+        "type": "heat_pump_water_heater",
+        "name": "Heat Pump Water Heater"
+      },
+      "amount": {
+        "type": "percent",
+        "number": 1,
+        "maximum": 4500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2020-01-01",
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "90% off a heat pump water heater, up to $4,500, for moderate-income customers."
     },
     {
       "payment_methods": [
@@ -812,8 +811,8 @@
       ],
       "authority_type": "state",
       "authority": "vt-efficiency-vermont",
-      "program": "Efficiency Vermont Heat Pump Rebate Income Bonus",
-      "program_url": "https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/efficiency-vermont-bonus-verification.pdf",
+      "program": "Efficiency Vermont Ductless Heat Pump Rebate Income Bonus",
+      "program_url": "https://www.efficiencyvermont.com/rebates/list/heat-pump-heating-cooling-system",
       "item": {
         "type": "heat_pump_air_conditioner_heater",
         "name": "Heat Pump Air Conditioner/Heater"
@@ -829,30 +828,6 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "Income-eligible Vermonters qualify for a $200-$1,000 bonus rebate on a ductless heat pump, depending on their utility."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "vt-efficiency-vermont",
-      "program": "Efficiency Vermont Heat Pump Rebate Income Bonus",
-      "program_url": "https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/efficiency-vermont-bonus-verification.pdf",
-      "item": {
-        "type": "heat_pump_air_conditioner_heater",
-        "name": "Heat Pump Air Conditioner/Heater"
-      },
-      "amount": {
-        "type": "dollar_amount",
-        "number": 800,
-        "maximum": 800
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "Vermonters with low or moderate household income may qualify for a $200-$800 bonus rebate on a ducted heat pump, depending on their utility."
     },
     {
       "payment_methods": [
@@ -936,8 +911,32 @@
       ],
       "authority_type": "state",
       "authority": "vt-efficiency-vermont",
-      "program": "Efficiency Vermont Heat Pump Rebate Income Bonus",
-      "program_url": "https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/efficiency-vermont-bonus-verification.pdf",
+      "program": "Efficiency Vermont Heat Pump Water Heater Rebate Program",
+      "program_url": "https://www.efficiencyvermont.com/rebates/list/heat-pump-water-heaters",
+      "item": {
+        "type": "heat_pump_water_heater",
+        "name": "Heat Pump Water Heater"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 600
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2020-01-01",
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "$600 rebate for a heat pump water heater, or $600 instant discount through participating distributors."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "vt-efficiency-vermont",
+      "program": "Efficiency Vermont Air to Water Heat Pump Rebate Income Bonus",
+      "program_url": "https://www.efficiencyvermont.com/rebates/list/air-to-water-heat-pumps",
       "item": {
         "type": "heat_pump_air_conditioner_heater",
         "name": "Heat Pump Air Conditioner/Heater"
@@ -960,8 +959,8 @@
       ],
       "authority_type": "state",
       "authority": "vt-efficiency-vermont",
-      "program": "Efficiency Vermont Heat Pump Rebate Income Bonus",
-      "program_url": "https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/efficiency-vermont-bonus-verification.pdf",
+      "program": "Efficiency Vermont Ground Source Heat Pump Rebate Income Bonus",
+      "program_url": "https://www.efficiencyvermont.com/rebates/list/ground-source-heat-pumps",
       "item": {
         "type": "geothermal_heating_installation",
         "name": "Geothermal Heating Installation"
@@ -1004,6 +1003,31 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "Income-eligible BED customers are eligible for an enhanced rebate of $400 when installing a qualified air-to-water heat pump."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "vt-efficiency-vermont",
+      "program": "Efficiency Vermont Clothes Dryer Rebate",
+      "program_url": "https://www.efficiencyvermont.com/rebates/list/clothes-dryers",
+      "item": {
+        "type": "heat_pump_clothes_dryer",
+        "name": "Heat Pump Clothes Dryer"
+      },
+      "amount": {
+        "type": "dollar_amount",
+        "number": 400,
+        "maximum": 400
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2019-07-15",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Receive up to $400 cash back on qualifying ENERGY STAR® heat pump clothes dryers."
     },
     {
       "payment_methods": [
@@ -1088,24 +1112,22 @@
       ],
       "authority_type": "state",
       "authority": "vt-efficiency-vermont",
-      "program": "Efficiency Vermont Heat Pump Rebate Income Bonus",
-      "program_url": "https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/efficiency-vermont-bonus-verification.pdf",
+      "program": "Efficiency Vermont Ducted Heat Pump Rebate Income Bonus",
+      "program_url": "https://www.efficiencyvermont.com/rebates/list/centrally-ducted-heat-pumps",
       "item": {
-        "type": "heat_pump_water_heater",
-        "name": "Heat Pump Water Heater"
+        "type": "heat_pump_air_conditioner_heater",
+        "name": "Heat Pump Air Conditioner/Heater"
       },
       "amount": {
         "type": "dollar_amount",
-        "number": 200,
-        "maximum": 200
+        "number": 200
       },
       "owner_status": [
         "homeowner"
       ],
-      "start_date": "2020-01-01",
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "Income-eligible Vermonters may qualify for a $200 bonus rebate on a heat pump water heater."
+      "short_description": "Vermonters with low or moderate household income may qualify for a $200 bonus rebate on a ducted heat pump, depending on their utility."
     },
     {
       "payment_methods": [
