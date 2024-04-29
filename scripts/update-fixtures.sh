@@ -122,7 +122,6 @@ zip=60202\
 &authority_types=city" \
  | jq . > test/fixtures/v1-il-60202-city-lowincome.json
 
-# TODO: Remove beta states argument when MI is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?zip=48103\
@@ -134,11 +133,9 @@ curl \
 &utility=mi-dte" \
   | jq . > test/fixtures/v1-mi-48103-state-utility-lowincome.json
 
-# TODO: Remove beta states argument when MI is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?zip=48825\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=10000\
 &tax_filing=single\
