@@ -128,7 +128,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,000 per ton for a Central heat pump HVAC."
+      "en": "Up to $1,000 per ton for a central heat pump."
     }
   },
   {
@@ -150,7 +150,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,000 per ton for a Central heat pump HVAC."
+      "en": "Up to $1,000 per ton for a ductless mini split heat pump."
     }
   },
   {
@@ -234,7 +234,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "A new electrical panel may be necessary to support new electric appliances, EVs and solar. Must contact BWP to determine qualification."
+      "en": "Up to $750 for upgrading your electric panel to support new electric appliances, EVs and solar. Must contact BWP to determine qualification."
     }
   },
   {
@@ -249,6 +249,7 @@
     "amount": {
       "type": "dollar_amount",
       "number": 300,
+      "minimum": 100,
       "maximum": 300
     },
     "owner_status": [
@@ -256,7 +257,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Purchase a new electric bicycle (e-bike) and you may be eligible for a cash rebate up to $300."
+      "en": "Purchase a new electric bicycle (e-bike) and you may be eligible for a cash rebate between $100-$300."
     },
     "low_income": "ca-alameda-municipal-power"
   },
@@ -299,7 +300,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate on installation of new ENERGY STAR-certified Electric Clothes Dryer in current residence."
+      "en": "$50 rebate on installation of new ENERGY STAR-certified electric clothes dryer in current residence."
     }
   },
   {
@@ -384,7 +385,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Variable rebates while supplies last."
+      "en": "Variable rebates for Smart Thermostats while supplies last."
     }
   },
   {
@@ -1024,7 +1025,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate up to $2/sq.ft. for ENERGY STAR® Dual-Pane Windows."
+      "en": "Rebate up to $2/sq.ft. for Energy Star certified dual-pane windows."
     }
   },
   {
@@ -1046,7 +1047,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate up to $0.30 /sq.ft. for ENERGY STAR® Attic Insulation."
+      "en": "Rebate up to $0.30 /sq.ft. for Energy Star attic insulation."
     }
   },
   {
@@ -1089,7 +1090,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate for switching HVAC from gas to electric up to $300/ton."
+      "en": "Up to $300/ton rebate for switching HVAC from gas to electric."
     }
   },
   {
@@ -1111,7 +1112,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $35 rebate for electric ENERGY STAR clothes dryer."
+      "en": "Up to $35 rebate for electric Energy Star certified clothes dryer."
     }
   },
   {
@@ -1133,7 +1134,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $350 rebate for a hybrid-heat pump ENERGY STAR water heater."
+      "en": "Up to $350 rebate for a hybrid-heat pump Energy Star certified heat pump water heater."
     }
   },
   {
@@ -1220,7 +1221,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Income qualified customers receive free weatherization upgrades."
+      "en": "Income qualified customers are eligible to receive free weatherization upgrades."
     },
     "low_income": "ca-liberty-utilities"
   },
@@ -1265,7 +1266,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate for qualified new Replacement Windows."
+      "en": "Rebate for qualified new replacement windows."
     }
   },
   {
@@ -1419,7 +1420,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate of $2 per sq ft for ENERGY STAR® qualified residential windows while supplies last."
+      "en": "Rebate of $2 per sq ft for Energy Star certified residential windows while supplies last."
     }
   },
   {
@@ -1979,17 +1980,18 @@
     "program": "ca_pasadenaWaterAndPower_residentialPrograms-Heating&CoolingSystems-SmartThermostatRebate",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 10,
-      "maximum": 20
+      "number": 50,
+      "maximum": 60
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Install a Smart Thermostat and get a $10 rebate."
+      "en": "Receive a $50 rebate when you purchase and install a smart thermostat in your home."
     },
-    "bonus_available": true
+    "bonus_available": true,
+    "low_income": "ca-pasadena-water-and-power"
   },
   {
     "id": "CA-96",
@@ -2009,8 +2011,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "$500."
-    }
+      "en": "Receive a $500 rebate when you purchase a new, high-efficiency electric heat pump water heater."
+    },
+    "bonus_available": true
   },
   {
     "id": "CA-97",
@@ -2030,8 +2033,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "$300."
-    }
+      "en": "Receive a $300 rebate when you purchase a new, high-efficiency electric heat pump clothes dryer."
+    },
+    "bonus_available": true
   },
   {
     "id": "CA-98",
@@ -2051,8 +2055,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "$1,000."
-    }
+      "en": "Receive a $1,000 rebate when you upgrade your existing electric panel to a new electric panel that is 200 amps or higher."
+    },
+    "low_income": "ca-pasadena-water-and-power"
   },
   {
     "id": "CA-99",
@@ -2072,7 +2077,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$500."
+      "en": "Up to $500 rebate for the purchase and installation of a a new ENERGY STAR certified Hybrid/Heat Pump Water Heater."
     }
   },
   {
@@ -2094,7 +2099,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $350 per ton minimum 16.0 SEER and 9.0 HSPF."
+      "en": "Up to $350 per ton for the purchase and installation of a new qualifying air source heat pump. Rebate amount varies based on system efficiency."
     }
   },
   {
@@ -2116,7 +2121,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate: $600 per ton."
+      "en": "$600 per ton for the purchase and installation of a new ENERGY STAR certified ground or water source heat pump, up to 50% of the total project cost."
     }
   },
   {
@@ -2127,7 +2132,7 @@
       "rebate"
     ],
     "item": "new_electric_vehicle",
-    "program": "ca_plumas-SierraRuralElectricCooperative_$500RebateForThePurchaseOfAnEV",
+    "program": "ca_plumas-SierraRuralElectricCooperative_electricVehicleRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 500
@@ -2137,7 +2142,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$500."
+      "en": "$500 rebate for replacing a gas-powered vehicle with a plug-in electric vehicle."
     }
   },
   {
@@ -2148,7 +2153,7 @@
       "account_credit"
     ],
     "item": "smart_thermostat",
-    "program": "ca_southernCaliforniaEdison_saveUpTo$115WithASmartThermostat",
+    "program": "ca_southernCaliforniaEdison_smartEnergyProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 115
@@ -2158,7 +2163,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$115."
+      "en": "Get up to $115 in bill credits when you participate in energy events after enrolling in the Smart Energy Program."
     },
     "bonus_available": true
   },
@@ -2170,7 +2175,7 @@
       "rebate"
     ],
     "item": "used_electric_vehicle",
-    "program": "ca_southernCaliforniaEdison_pRE-OWNEDELECTRICVEHICLEREBATEPROGRAM",
+    "program": "ca_southernCaliforniaEdison_pre-OwnedElectricVehicleProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 1000
@@ -2180,7 +2185,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1000 for standard applicants for the purchase or lease of a pre-owned EV. One of two options, may only claim one."
+      "en": "$1,000 rebate for the purchase or lease of a pre-owned EV."
     }
   },
   {
@@ -2191,7 +2196,7 @@
       "rebate"
     ],
     "item": "used_electric_vehicle",
-    "program": "ca_southernCaliforniaEdison_pRE-OWNEDELECTRICVEHICLEREBATEPROGRAM",
+    "program": "ca_southernCaliforniaEdison_pre-OwnedElectricVehicleProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 4000
@@ -2201,7 +2206,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $4000 for income qualified applicants for the purchase or lease of a pre-owned EV. One of two options, may only claim one."
+      "en": "$4000 rebate for income-qualified applicants for the purchase or lease of a pre-owned EV."
     },
     "low_income": "ca-southern-california-edison"
   },
@@ -2222,7 +2227,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Upto $1000."
+      "en": "Up to $1,000 rebate for a new electric panel upgrade."
     }
   },
   {
@@ -2242,7 +2247,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Heat Pump Water Heater Rebate."
+      "en": "$1,000 rebate to replace a gas unit with an electric heat pump water heater."
     }
   },
   {
@@ -2262,7 +2267,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Heat Pump Water Heater Rebate."
+      "en": "$750 rebate to replace an electric unit with an electric heat pump water heater."
     }
   },
   {
@@ -2276,17 +2281,40 @@
     "program": "ca_truckeeDonnerPublicUtilityDistrict_tDPUDResidentialHomeUpgrades",
     "amount": {
       "type": "dollar_amount",
-      "number": 950
+      "number": 950,
+      "minimum": 600,
+      "maximum": 950
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Electric Vehicle Chargin Station Rebate."
+      "en": "Up to $950 for installing a qualifying electric vehicle charging station at home."
     }
   },
   {
     "id": "CA-110",
+    "authority_type": "utility",
+    "authority": "ca-sacramento-municipal-utility-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_sacramentoMunicipalUtilityDistrict_heatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750 in rebates on energy-efficient electric heat pump heating and cooling system upgrades installed by a qualifying contractor."
+    }
+  },
+  {
+    "id": "CA-111",
     "authority_type": "utility",
     "authority": "ca-sacramento-municipal-utility-district",
     "payment_methods": [
@@ -2303,12 +2331,12 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $3,500 in rebates for energy-efficient heat pump heating and cooling systems."
+      "en": "Up to $3,500 rebate when you replace a gas system with an energy-efficient electric heat pump heating and cooling system by a qualifying contractor."
     },
     "bonus_available": true
   },
   {
-    "id": "CA-111",
+    "id": "CA-112",
     "authority_type": "utility",
     "authority": "ca-sacramento-municipal-utility-district",
     "payment_methods": [
@@ -2326,11 +2354,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$100-$750 rebate for qualifying Induction Cooktop/range."
+      "en": "Up to $750 rebate for replacing your existing cooktop/range with a qualifying ENERGY STAR certified induction cooktop/range."
     }
   },
   {
-    "id": "CA-112",
+    "id": "CA-113",
     "authority_type": "utility",
     "authority": "ca-sacramento-municipal-utility-district",
     "payment_methods": [
@@ -2348,12 +2376,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebates up to $3,000 for qualifying Heat Pump Water Heater."
-    },
-    "bonus_available": true
+      "en": "Up to $3,000 for upgrading your water heater with a qualifying heat pump water heater."
+    }
   },
   {
-    "id": "CA-113",
+    "id": "CA-114",
     "authority_type": "utility",
     "authority": "ca-silicon-valley-power",
     "payment_methods": [
@@ -2364,7 +2391,7 @@
     "amount": {
       "type": "dollar_amount",
       "number": 0.1,
-      "maximum": 500
+      "maximum": 300
     },
     "owner_status": [
       "homeowner",
@@ -2377,7 +2404,7 @@
     "low_income": "ca-silicon-valley-power"
   },
   {
-    "id": "CA-114",
+    "id": "CA-115",
     "authority_type": "utility",
     "authority": "ca-silicon-valley-power",
     "payment_methods": [
@@ -2399,7 +2426,7 @@
     }
   },
   {
-    "id": "CA-115",
+    "id": "CA-116",
     "authority_type": "utility",
     "authority": "ca-silicon-valley-power",
     "payment_methods": [
@@ -2419,7 +2446,7 @@
     }
   },
   {
-    "id": "CA-116",
+    "id": "CA-117",
     "authority_type": "utility",
     "authority": "ca-silicon-valley-power",
     "payment_methods": [
@@ -2437,12 +2464,12 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Income-Qualified Solar Grant Program provides a grant of $3.75 per watt, up to 3 kilowatts DC."
+      "en": "Qualified homeowners can enroll in the free solar PV system and receive $3.75 per watt, up to 3 kilowatts DC to cover the costs of the system."
     },
     "low_income": "ca-silicon-valley-power"
   },
   {
-    "id": "CA-117",
+    "id": "CA-118",
     "authority_type": "utility",
     "authority": "ca-silicon-valley-power",
     "payment_methods": [
@@ -2460,13 +2487,13 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,000 rebate for upgrading to a Smart Electric Panel."
+      "en": "$2,000 rebate for upgrading your electric panel to a smart panel."
     },
     "bonus_available": true,
     "low_income": "ca-silicon-valley-power"
   },
   {
-    "id": "CA-118",
+    "id": "CA-119",
     "authority_type": "other",
     "authority": "ca-bay-area-regional-energy-network-bay-ren",
     "eligible_geo_group": "ca-group-bay-area-regional-energy-network-bay-ren",
@@ -2490,7 +2517,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-119",
+    "id": "CA-120",
     "authority_type": "other",
     "authority": "ca-bay-area-regional-energy-network-bay-ren",
     "eligible_geo_group": "ca-group-bay-area-regional-energy-network-bay-ren",
@@ -2508,11 +2535,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Get up to $250 cash back on your induction range or cooktop upgrade.  Must replace existing gas range."
+      "en": "Get up to $250 when you replace your gas range with an induction range or cooktop."
     }
   },
   {
-    "id": "CA-120",
+    "id": "CA-121",
     "authority_type": "other",
     "authority": "ca-bay-area-regional-energy-network-bay-ren",
     "eligible_geo_group": "ca-group-bay-area-regional-energy-network-bay-ren",
@@ -2536,7 +2563,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-121",
+    "id": "CA-122",
     "authority_type": "other",
     "authority": "ca-bay-area-regional-energy-network-bay-ren",
     "eligible_geo_group": "ca-group-bay-area-regional-energy-network-bay-ren",
@@ -2560,7 +2587,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-122",
+    "id": "CA-123",
     "authority_type": "other",
     "authority": "ca-bay-area-regional-energy-network-bay-ren",
     "eligible_geo_group": "ca-group-bay-area-regional-energy-network-bay-ren",
@@ -2582,7 +2609,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-123",
+    "id": "CA-124",
     "authority_type": "other",
     "authority": "ca-bay-area-regional-energy-network-bay-ren",
     "eligible_geo_group": "ca-group-bay-area-regional-energy-network-bay-ren",
@@ -2599,19 +2626,19 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for duct replacement."
+      "en": "Get $500 cash back on duct replacements when you work with a BayREN Participating Contractor."
     },
     "bonus_available": true
   },
   {
-    "id": "CA-124",
+    "id": "CA-125",
     "authority_type": "other",
     "authority": "ca-bay-area-regional-energy-network-bay-ren",
     "eligible_geo_group": "ca-group-bay-area-regional-energy-network-bay-ren",
     "payment_methods": [
       "rebate"
     ],
-    "item": "other",
+    "item": "heat_pump_air_conditioner_heater",
     "program": "ca_bayAreaRegionalEnergyNetwork(BayREN)_rebates:SingleFamilyHomeowners",
     "amount": {
       "type": "dollar_amount",
@@ -2628,7 +2655,7 @@
     "bonus_available": true
   },
   {
-    "id": "CA-125",
+    "id": "CA-126",
     "authority_type": "other",
     "authority": "ca-bay-area-regional-energy-network-bay-ren",
     "eligible_geo_group": "ca-group-bay-area-regional-energy-network-bay-ren",
@@ -2649,7 +2676,7 @@
     }
   },
   {
-    "id": "CA-126",
+    "id": "CA-127",
     "authority_type": "utility",
     "authority": "ca-riverside-public-utilities",
     "payment_methods": [
@@ -2659,18 +2686,18 @@
     "program": "ca_riversidePublicUtilities_residentialRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 0.2,
+      "number": 0.1,
       "unit": "square_foot"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Attic Insulation upto 20¢ per sq. ft. Minimum Rating R-19."
+      "en": "Earn up to 20 ¢ per sq. ft. on attic insulation replacement."
     }
   },
   {
-    "id": "CA-127",
+    "id": "CA-128",
     "authority_type": "utility",
     "authority": "ca-riverside-public-utilities",
     "payment_methods": [
@@ -2687,11 +2714,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Exterior Wall Insulation upto 20¢ per sq. ft. Minimum Rating R-13+/."
+      "en": "Earn 15 ¢ per sq. ft. on exterior wall insulation replacement."
     }
   },
   {
-    "id": "CA-128",
+    "id": "CA-129",
     "authority_type": "utility",
     "authority": "ca-riverside-public-utilities",
     "payment_methods": [
@@ -2708,18 +2735,60 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Upto $1 per sq. ft for windows/glass doors, window film, or solar window screen."
+      "en": "Earn $1 per sq. ft for installing Energy Star Certified windows/glass doors."
     }
   },
   {
-    "id": "CA-129",
+    "id": "CA-130",
     "authority_type": "utility",
     "authority": "ca-riverside-public-utilities",
     "payment_methods": [
       "rebate"
     ],
-    "item": "heat_pump_air_conditioner_heater",
+    "item": "weatherization",
     "program": "ca_riversidePublicUtilities_residentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Earn $1 per sq. ft for installing NFRC certified window film."
+    }
+  },
+  {
+    "id": "CA-131",
+    "authority_type": "utility",
+    "authority": "ca-riverside-public-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "ca_riversidePublicUtilities_residentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Earn $1 per sq. ft for installing qualifying solar window screens."
+    }
+  },
+  {
+    "id": "CA-132",
+    "authority_type": "utility",
+    "authority": "ca-riverside-public-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_clothes_dryer",
+    "program": "ca_riversidePublicUtilities_newTechnologyEnergyStarProductRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 200
@@ -2728,11 +2797,31 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$200 Rebate for Energy Star-rated heat pump water heaters and heat pump dryers."
+      "en": "Receive a $200 rebate for purchasing an Energy Star-rated electric heat pump dryer."
     }
   },
   {
-    "id": "CA-130",
+    "id": "CA-133",
+    "authority_type": "utility",
+    "authority": "ca-riverside-public-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_riversidePublicUtilities_newTechnologyEnergyStarProductRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive a $200 rebate for purchasing an Energy Star-rated electric heat pump water heater."
+    }
+  },
+  {
+    "id": "CA-134",
     "authority_type": "utility",
     "authority": "ca-riverside-public-utilities",
     "payment_methods": [
@@ -2754,14 +2843,14 @@
     "bonus_available": true
   },
   {
-    "id": "CA-131",
+    "id": "CA-135",
     "authority_type": "utility",
     "authority": "ca-riverside-public-utilities",
     "payment_methods": [
       "rebate"
     ],
     "item": "electric_vehicle_charger",
-    "program": "ca_riversidePublicUtilities_residentialRebates",
+    "program": "ca_riversidePublicUtilities_electrifyYourRideEVRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 500
@@ -2770,18 +2859,18 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 rebate for installing a Level 2 (240-Volt AC) plug-in charger at residence."
+      "en": "Up to $500 rebate for installing a Level 2 (240-Volt AC) plug-in charger at home in eligible locations."
     }
   },
   {
-    "id": "CA-132",
+    "id": "CA-136",
     "authority_type": "utility",
     "authority": "ca-riverside-public-utilities",
     "payment_methods": [
       "pos_rebate"
     ],
     "item": "other",
-    "program": "ca_riversidePublicUtilities_residentialRebates",
+    "program": "ca_riversidePublicUtilities_electrifyYourRideEVRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 805
@@ -2794,7 +2883,7 @@
     }
   },
   {
-    "id": "CA-133",
+    "id": "CA-137",
     "authority_type": "utility",
     "authority": "ca-lodi-electric-utility",
     "payment_methods": [
@@ -2804,14 +2893,14 @@
     "program": "ca_lodiElectricUtility_residentialRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 0.75,
+      "number": 0.3,
       "unit": "square_foot"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for qualified new attic insulation upgrades."
+      "en": "$0.30 per sq. ft. rebate for qualified new wall insulation upgrades."
     }
   }
 ]
