@@ -23,6 +23,11 @@ export type FieldMetadata = {
   // the column name that is used.
   column_aliases: string[];
   description: string;
+  // To provide aliases for enum values and generate explanations.
+  // We might be able to constrain the values below with some more type magic.
+  values?: {
+    [index: string]: { value_aliases: string[]; description?: string };
+  };
   // critical doesn't seem to be used in a meaningful way. Maintaining it for
   // now, but retire if it isn't used by Q3 2024.
   critical?: boolean;
@@ -47,6 +52,21 @@ export const FIELD_METADATA: Record<
     description:
       'The level of the authority administering the incentive program to the consumer (usually state, utility, federal, muni)',
     critical: true,
+    values: {
+      federal: { value_aliases: ['Federal'] },
+      state: {
+        value_aliases: ['State'],
+        description: 'Typically a government entity',
+      },
+      utility: {
+        value_aliases: ['Utility'],
+        description:
+          'The utility service provider (electricity provider etc) that is not necessarily a government entity',
+      },
+      county: { value_aliases: ['County'] },
+      city: { value_aliases: ['City'] },
+      other: { value_aliases: ['Other'] },
+    },
   },
   authority_name: {
     column_aliases: ['Authority (Name) *'],
@@ -74,6 +94,59 @@ export const FIELD_METADATA: Record<
     column_aliases: ['Technology *'],
     description:
       'The technology (appliance or product) for which the rebate applies',
+    values: {
+      geothermal_heating_installation: {
+        value_aliases: [
+          'Ground Source Heat Pump (GSHP) / Geothermal HP',
+        ],
+      },
+      heat_pump_air_conditioner_heater: {
+        value_aliases: [
+          'HVAC - Air Source Heat Pump',
+          'HVAC - Air to Water Heat Pump',
+          'HVAC - Ducted Heat Pump',
+          'HVAC - Ductless Heat Pump',
+        ],
+      },
+      heat_pump_water_heater: {
+        value_aliases: ['Heat Pump Water Heater (HPWH)'],
+      },
+      new_electric_vehicle: { value_aliases: ['New Electric Vehicle'] },
+      used_electric_vehicle: { value_aliases: ['Used Electric Vehicle'] },
+      electric_vehicle_charger: { value_aliases: ['Electric Vehicle Charger'] },
+      rooftop_solar_installation: { value_aliases: ['Rooftop Solar'] },
+      battery_storage_installation: { value_aliases: ['Battery Storage'] },
+      heat_pump_clothes_dryer: {
+        value_aliases: ['Heat Pump Dryers / Clothes Dryer'],
+      },
+      electric_stove: {
+        value_aliases: ['Induction Cooktop', 'Electric Stove'],
+      },
+      weatherization: {
+        value_aliases: ['Weatherization (Insulation and Air Sealing)'],
+      },
+      electric_panel: { value_aliases: ['Electric Panel', 'Electric Wiring'] },
+      electric_outdoor_equipment: {
+        value_aliases: [
+          'Electric Lawn Equipment (Mower, Edger, Leaf Blower, Weedwacker)',
+          'Electric Lawn Equipment (Mower, Edger, Leaf Blower, Weedwhacker)',
+        ],
+      },
+      smart_thermostat: { value_aliases: ['Smart Thermostat'] },
+      ebike: { value_aliases: ['E-Bike'] },
+      electric_thermal_storage_and_slab: {
+        value_aliases: ['Electric Thermal Storage/Slab'],
+      },
+      evaporative_cooler: { value_aliases: ['Evaporative Cooler'] },
+      non_heat_pump_clothes_dryer: {
+        value_aliases: ['Non-Heat Pump Clothes Dryer'],
+      },
+      non_heat_pump_water_heater: {
+        value_aliases: ['Non-Heat Pump Water Heater'],
+      },
+      whole_house_fan: { value_aliases: ['Whole House Fan'] },
+      other: { value_aliases: ['Other'] },
+    },
   },
   item_if_selected_other: {
     column_aliases: ["Technology (If selected 'Other')"],
@@ -96,6 +169,35 @@ export const FIELD_METADATA: Record<
     column_aliases: ['Program Status'],
     description:
       'Status of the incentive program (active, expired, paused, unknown)',
+    values: {
+      active: {
+        value_aliases: ['Active'],
+        description: 'The incentive program is live',
+      },
+      expired: {
+        value_aliases: ['Expired'],
+        description: 'The incentive program has ended / expired',
+      },
+      paused: {
+        value_aliases: ['Paused'],
+        description:
+          'The incentive program is on pause (eg., when funding is frozen)',
+      },
+      other: {
+        value_aliases: ['Other'],
+        description: 'Use when a new/different value is provided',
+      },
+      unknown: {
+        value_aliases: ['Unknown'],
+        description:
+          'Use only when no information is provided about this on the rebate',
+      },
+      planned: {
+        value_aliases: ['Planned'],
+        description:
+          'The incentive program is scheduled to start at a future date',
+      },
+    },
   },
   start_date: {
     column_aliases: ['Program Start', 'Program Start (mm/dd/yyyy)'],
@@ -114,6 +216,54 @@ export const FIELD_METADATA: Record<
     description:
       'Indicates how the consumer receives the rebate (Point of sale rebate, tax credit, account / bill credit, financing)',
     critical: true,
+    values: {
+      rebate: {
+        value_aliases: ['Rebate (Post Purchase)'],
+        description: 'After purchase rebate',
+      },
+      pos_rebate: {
+        value_aliases: ['Point of Sale Rebate'],
+        description:
+          'Consumer receives an instant discount at the time of purchase (upfront discount)',
+      },
+      account_credit: {
+        value_aliases: ['Account Credit'],
+        description: 'Credit to the utility account bill',
+      },
+      tax_credit: {
+        value_aliases: ['Tax Credit'],
+        description: 'Consumer receives a tax credit',
+      },
+      assistance_program: {
+        value_aliases: ['Assistance Program'],
+        description:
+          'Free products or free service like weatherization or free EV charger',
+      },
+      bonus: {
+        value_aliases: ['Bonus'],
+        description:
+          'For bonus offers that are dependent on a parent/primary incentive and cannot be applied to be redeemed on its own',
+      },
+      multiple: {
+        value_aliases: ['Multiple'],
+        description:
+          'When multiple rebate type values are applicable for the incentive (add a comment for which ones)',
+      },
+      other: {
+        value_aliases: ['Other'],
+        description:
+          'Use when a new/different value is provided for rebate type on the rebate program',
+      },
+      unknown: {
+        value_aliases: ['Unknown'],
+        description:
+          'Use only when no information is provided about this on the rebate',
+      },
+      financing: {
+        value_aliases: ['Financing'],
+        description: 'For loan financing programs',
+      },
+    },
   },
   rebate_value: {
     column_aliases: ['Rebate Value *'],
@@ -125,6 +275,13 @@ export const FIELD_METADATA: Record<
     column_aliases: ['Amount Type *'],
     description:
       'Indicates the structure in which the incentive is being offered for the particular technology / product (e.g. dollar_amount, dollar_per_unit, percentage)',
+    values: {
+      dollars_per_unit: { value_aliases: ['Dollar Per Unit'] },
+      percent: { value_aliases: ['Percent', 'Percent With a Cap'] },
+      dollar_amount: {
+        value_aliases: ['Dollar Amount', 'Dollar Amount With a Cap'],
+      },
+    },
   },
   'amount.number': {
     column_aliases: ['Number *'],
@@ -134,6 +291,14 @@ export const FIELD_METADATA: Record<
   'amount.unit': {
     column_aliases: ['Unit'],
     description: 'The unit of the incentive offering (eg., ton)',
+    values: {
+      kilowatt: { value_aliases: ['Kilowatt', 'kW'] },
+      kilowatt_hour: { value_aliases: ['Kilowatt-hour', 'kWh'] },
+      ton: { value_aliases: ['Ton'] },
+      watt: { value_aliases: ['Watt'] },
+      btuh10k: { value_aliases: ['Btuh10k'] },
+      square_foot: { value_aliases: ['Square Foot'] },
+    },
   },
   'amount.minimum': {
     column_aliases: ['Amount Minimum'],
@@ -182,11 +347,28 @@ export const FIELD_METADATA: Record<
     description:
       'Tax filing status to qualify for an incentive.\nFor example, there is a maximum income for each tax filing status for both the new and used EV credits.',
     critical: true,
+    values: {
+      hoh: { value_aliases: ['Head of the household'] },
+      joint: { value_aliases: ['Married, filing jointly'] },
+      married_filing_separately: {
+        value_aliases: ['Married, filing separately'],
+      },
+      single: { value_aliases: ['Single'] },
+      qualifying_widower_with_dependent_child: {
+        value_aliases: [
+          'Qualifying widower with dependent child',
+        ],
+      },
+    },
   },
   owner_status: {
     column_aliases: ['Homeowner / Renter'],
     description:
       'Indicates ownership of the property - homeowner or renter. Use your judgement to make a call on if the appliance incentive makes sense for a renter - We typically think of this as something you could take with you if you move, vs a "fixture" in the home that only the owner benefits from.',
+    values: {
+      homeowner: { value_aliases: ['Homeowner'] },
+      renter: { value_aliases: ['Renter'] },
+    },
   },
   other_restrictions: {
     column_aliases: ['Other Restrictions'],
@@ -228,96 +410,16 @@ export const FIELD_MAPPINGS: AliasMap = Object.fromEntries(
   ]),
 );
 
-// TODO: consolidate VALUE_MAPPINGS data into FIELD_METADATA.
-export const VALUE_MAPPINGS: { [index: string]: AliasMap } = {
-  authority_type: {
-    federal: ['Federal'],
-    state: ['State'],
-    utility: ['Utility'],
-    county: ['County'],
-    city: ['City'],
-    other: ['Other'],
-  },
-  payment_methods: {
-    rebate: ['Rebate (Post Purchase)'],
-    pos_rebate: ['Point of Sale Rebate'],
-    account_credit: ['Account Credit'],
-    tax_credit: ['Tax Credit'],
-    assistance_program: ['Assistance Program'],
-    bonus: ['Bonus'],
-    multiple: ['Multiple'],
-    other: ['Other'],
-    unknown: ['Unknown'],
-    financing: ['Financing'],
-  },
-  type: {
-    rebate: ['Rebate (Post Purchase)'],
-    pos_rebate: ['Point of Sale Rebate'],
-    account_credit: ['Account Credit'],
-    tax_credit: ['Tax Credit'],
-    assistance_program: ['Assistance Program'],
-    bonus: ['Bonus'],
-    multiple: ['Multiple'],
-    other: ['Other'],
-    unknown: ['Unknown'],
-    financing: ['Financing'],
-  },
-  item: {
-    geothermal_heating_installation: [
-      'Ground Source Heat Pump (GSHP) / Geothermal HP',
-    ],
-    heat_pump_air_conditioner_heater: [
-      'HVAC - Air Source Heat Pump',
-      'HVAC - Air to Water Heat Pump',
-      'HVAC - Ducted Heat Pump',
-      'HVAC - Ductless Heat Pump',
-    ],
-    heat_pump_water_heater: ['Heat Pump Water Heater (HPWH)'],
-    new_electric_vehicle: ['New Electric Vehicle'],
-    used_electric_vehicle: ['Used Electric Vehicle'],
-    electric_vehicle_charger: ['Electric Vehicle Charger'],
-    rooftop_solar_installation: ['Rooftop Solar'],
-    battery_storage_installation: ['Battery Storage'],
-    heat_pump_clothes_dryer: ['Heat Pump Dryers / Clothes Dryer'],
-    electric_stove: ['Induction Cooktop', 'Electric Stove'],
-    weatherization: ['Weatherization (Insulation and Air Sealing)'],
-    electric_panel: ['Electric Panel', 'Electric Wiring'],
-    electric_outdoor_equipment: [
-      'Electric Lawn Equipment (Mower, Edger, Leaf Blower, Weedwacker)',
-      'Electric Lawn Equipment (Mower, Edger, Leaf Blower, Weedwhacker)',
-    ],
-    smart_thermostat: ['Smart Thermostat'],
-    ebike: ['E-Bike'],
-    electric_thermal_storage_and_slab: ['Electric Thermal Storage/Slab'],
-    evaporative_cooler: ['Evaporative Cooler'],
-    non_heat_pump_clothes_dryer: ['Non-Heat Pump Clothes Dryer'],
-    non_heat_pump_water_heater: ['Non-Heat Pump Water Heater'],
-    whole_house_fan: ['Whole House Fan'],
-    other: ['Other'],
-  },
-  program_status: {
-    active: ['Active'],
-    expired: ['Expired'],
-    paused: ['Paused'],
-    other: ['Other'],
-    unknown: ['Unknown'],
-    planned: ['Planned'],
-  },
-  'amount.type': {
-    dollars_per_unit: ['Dollar Per Unit'],
-    percent: ['Percent', 'Percent With a Cap'],
-    dollar_amount: ['Dollar Amount', 'Dollar Amount With a Cap'],
-  },
-  'amount.unit': {
-    kilowatt: ['Kilowatt', 'kW'],
-    kilowatt_hour: ['Kilowatt-hour', 'kWh'],
-    ton: ['Ton'],
-    watt: ['Watt'],
-    btuh10k: ['Btuh10k'],
-    square_foot: ['Square Foot'],
-  },
-  owner_status: {
-    homeowner: ['Homeowner'],
-    renter: ['Renter'],
-  },
-};
+export const VALUE_MAPPINGS: { [index: string]: AliasMap } = Object.fromEntries(
+  Object.entries(FIELD_METADATA)
+    .filter(([, metadata]) => metadata.values)
+    .map(([fieldName, metadata]) => [
+      fieldName,
+      Object.fromEntries(
+        Object.entries(metadata.values!).map(([value, valueMetadata]) => [
+          value,
+          valueMetadata.value_aliases,
+        ]),
+      ),
+    ]),
+);

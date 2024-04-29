@@ -439,7 +439,7 @@
     ],
     "short_description": {
       "en": "Rebate up to $1600 for Air Source Heat Pumps at least SEER 16, EER 12.5, HSPF 8.5. EPA Energy Star qualified installer: $1600, otherwise $1500.",
-      "es": "Un reembolso de hasta $1,600 dólares para bombas de calor de fuente de aire de al menos SEER 16, EER 12.5, HSPF 8.5. Instalador con certificación Energy Star de la EPA: $1,600 dólares; en caso contrario, $1,500 dólares. "
+      "es": "Un reembolso de hasta $1,600 dólares para bombas de calor de fuente de aire de al menos SEER 16, EER 12.5, HSPF 8.5. Instalador con certificación Energy Star de la EPA: $1,600 dólares; en caso contrario, $1,500 dólares."
     },
     "start_date": "2023-01-01",
     "end_date": "2023-12-31"
@@ -653,45 +653,21 @@
     "program": "co_coloradoSpringsUtilities_residentialEfficiencyRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 200,
-      "maximum": 200
+      "number": 1500,
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate up to $200 for insulation and air sealing.",
-      "es": "Un reembolso de hasta $200 dólares por aislamiento y sellado hermético."
+      "en": "Rebate up to $1,500 for insulation and air sealing.",
+      "es": "Un reembolso de hasta $1,500 dólares por aislamiento y sellado hermético."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-28",
-    "authority_type": "utility",
-    "authority": "co-colorado-springs-utilities",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_air_conditioner_heater",
-    "program": "co_coloradoSpringsUtilities_residentialEfficiencyRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Rebate up to $500 for an Energy Star certified ducted or ductless air source heat pump.",
-      "es": "Un reembolso de hasta $500 dólares por una bomba de calor con fuente de aire, con o sin ductos, con certificación Energy Star."
-    },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
-  },
-  {
-    "id": "CO-29",
     "authority_type": "utility",
     "authority": "co-colorado-springs-utilities",
     "payment_methods": [
@@ -708,11 +684,35 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate up to $1000 for a qualifying cold climate air source heat pump.",
-      "es": "Un reembolso de hasta $1,000 dólares por una bomba de calor con fuente de aire para climas fríos que cumpla los requisitos."
+      "en": "Rebate up to $1,000 for an Energy Star certified ducted or ductless air source heat pump.",
+      "es": "Un reembolso de hasta $1,000 por una bomba de calor con fuente de aire, con o sin ductos, con certificación Energy Star."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "CO-29",
+    "authority_type": "utility",
+    "authority": "co-colorado-springs-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "co_coloradoSpringsUtilities_residentialEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate up to $2000 for a qualifying cold climate air source heat pump.",
+      "es": "Un reembolso de hasta $2,000 dólares por una bomba de calor con fuente de aire para climas fríos que cumpla los requisitos."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-30",
@@ -725,18 +725,42 @@
     "program": "co_coloradoSpringsUtilities_residentialEfficiencyRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 200,
-      "maximum": 200
+      "number": 750,
+      "maximum": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate up to $200 on an Energy Star certified heat pump water heater.",
-      "es": "Un reembolso de hasta $200 dólares en un calentador de agua con bomba de calor con certificación Energy Star."
+      "en": "Rebate up to $750 on an Energy Star certified heat pump water heater.",
+      "es": "Un reembolso de hasta $750 en un calentador de agua con bomba de calor con certificación Energy Star."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "CO-545",
+    "authority_type": "utility",
+    "authority": "co-colorado-springs-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "co_coloradoSpringsUtilities_residentialEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $50 rebate for Smart Thermostat. Must be ENERGY STAR certified.",
+      "es": "Hasta $50 de reembolso para termostatos inteligentes. Deben ser certificados por ENERGY STAR."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-31",
@@ -871,7 +895,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate up to 60% of the total cost of a high efficency heat pump water heater and installation, up to $1,000. Efficiency minimums apply.",
+      "en": "Rebate up to 60% of the total cost of a high efficiency heat pump water heater and installation, up to $1,000. Efficiency minimums apply.",
       "es": "Un reembolso de hasta el 60% del costo total de un calentador de agua con bomba de calor de alta eficiencia y de la instalación, hasta $1,000 dólares. Mínimos de eficiencia aplican."
     },
     "start_date": "2023-01-01"
@@ -1165,17 +1189,18 @@
     "program": "co_fortCollinsUtilities_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 2000,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off air source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
+      "en": "Up to $2000 per customer off air source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $2000 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-50",
@@ -1188,17 +1213,18 @@
     "program": "co_fortCollinsUtilities_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 3000,
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off ground source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
+      "en": "Up to $3000 per customer off ground source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $3000 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-51",
@@ -1210,18 +1236,19 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_fortCollinsUtilities_efficiencyWorks",
     "amount": {
-      "type": "dollar_amount",
-      "number": 250,
-      "minimum": 250,
-      "maximum": 750
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Ductless mini-split $250/head (max $500 for gas heated home, $750 for electric heated home).",
-      "es": "Mini split sin ductos $250 dólares/cabeza (máximo $500 dólares para viviendas con calefacción de gas, $750 dólares para viviendas con calefacción eléctrica)."
-    }
+      "en": "Ductless mini-split $500/ton. Efficiency minimums apply.",
+      "es": "Mini split sin ductos $500 dólares/tonelada. Mínimos de eficiencia aplican."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-52",
@@ -1234,40 +1261,19 @@
     "program": "co_fortCollinsUtilities_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 300,
-      "minimum": 300,
-      "maximum": 1000
+      "number": 900,
+      "minimum": 800,
+      "maximum": 900
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 off a heat pump water heater UEF 2.0. Max rebate for water heater incentives: $1000 per home.",
-      "es": "Un descuento de $300 dólares en un calentador de agua con bomba de calor UEF 2.0. Reembolso máximo para incentivos de calentadores de agua: $1,000 dólares por vivienda."
-    }
-  },
-  {
-    "id": "CO-53",
-    "authority_type": "utility",
-    "authority": "co-fort-collins-utilities",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_water_heater",
-    "program": "co_fortCollinsUtilities_efficiencyWorks",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "minimum": 500,
-      "maximum": 1000
+      "en": "Up to $900 off a heat pump water heater UEF 3.3. ENERGY STAR certified with CTA-2045 certified communication control.",
+      "es": "Hasta $900 de descuento en un calentador de agua con bomba de calor UEF 3.3. Certificado por ENERGY STAR con control de comunicación certificado CTA-2045."
     },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$500 off a heat pump water heater UEF 3.0. Max rebate for water heater incentives: $1000 per home.",
-      "es": "Un descuento de $500 dólares en un calentador de agua con bomba de calor UEF 3.0. Un reembolso máximo para incentivos de calentadores de agua: $1,000 dólares por vivienda."
-    }
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-54",
@@ -1290,7 +1296,9 @@
     "short_description": {
       "en": "$35 off smart thermostats. Max rebate: $70 per home.",
       "es": "Un descuento de $35 dólares en termostatos inteligentes. Un reembolso máximo: $70 dólares por hogar."
-    }
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-55",
@@ -1312,7 +1320,9 @@
     "short_description": {
       "en": "Rebate of $1.16 per sq ft for insulation. Attic (flat ceiling) and already insulated attic kneewalls capped at a rebate of $0.77 per sq ft.",
       "es": "Un reembolso de $1.16 dólares por pie cuadrado de aislamiento. Un reembolso de $0.77 de dólar por pie cuadrado para el desván (de techo plano) y para los muros inclinados del desván ya aislados."
-    }
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-56",
@@ -1333,9 +1343,60 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Tiered air sealing rebate (see link) ranging from $310 to $770 based on reduction of air loss.",
-      "es": "Un reembolso escalonado para el sellado hermético (ver enlace) que oscila entre $310 y $770 dólares según la reducción de la pérdida de aire."
-    }
+      "en": "Tiered air sealing rebate ranging from $310 to $770 based on reduction of air loss.",
+      "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de la pérdida de aire."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "CO-548",
+    "authority_type": "utility",
+    "authority": "co-fort-collins-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "co_fortCollinsUtilities_efficiencyWorks",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3.75,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3.75/sq. ft. towards replacement windows and doors. Windows and doors must meet ENERGY STAR northern climate zone performance criteria.",
+      "es": "$3.75 por pie cuadrado para ventanas y puertas de reemplazo. Las ventanas y puertas deben cumplir con los criterios de rendimiento de la zona climática norte de ENERGY STAR."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "CO-555",
+    "authority_type": "utility",
+    "authority": "co-fort-collins-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_stove",
+    "program": "co_fortCollinsUtilities_efficiencyWorks",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "minimum": 50,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $350 for an induction range/cooktop when replacing gas. Up to $50 when replacing electric.",
+      "es": "Hasta $350 por una estufa o encimera de inducción al reemplazar una de gas. Hasta $50 al reemplazar una eléctrica."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-57",
@@ -1348,17 +1409,18 @@
     "program": "co_longmontPowerAndCommunications_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 2000,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off air source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
+      "en": "Up to $2000 per customer off air source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $2000 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-58",
@@ -1371,17 +1433,18 @@
     "program": "co_longmontPowerAndCommunications_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 3000,
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off ground source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
+      "en": "Up to $3000 per customer off ground source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $3000 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-59",
@@ -1393,18 +1456,19 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_longmontPowerAndCommunications_efficiencyWorks",
     "amount": {
-      "type": "dollar_amount",
-      "number": 250,
-      "minimum": 250,
-      "maximum": 750
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Ductless mini-split $250/head (max $500 for gas heated home, $750 for electric heated home).",
-      "es": "Mini split sin ductos $250 dólares/cabeza (máximo $500 dólares para viviendas con calefacción de gas, $750 dólares para viviendas con calefacción eléctrica)."
-    }
+      "en": "Ductless mini-split $500/ton. Efficiency minimums apply.",
+      "es": "Mini split sin ductos $500 dólares/tonelada. Mínimos de eficiencia aplican."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-60",
@@ -1417,40 +1481,19 @@
     "program": "co_longmontPowerAndCommunications_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 300,
-      "minimum": 300,
-      "maximum": 1000
+      "number": 900,
+      "minimum": 800,
+      "maximum": 900
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 off a heat pump water heater UEF 2.0. Max rebate: $1000 per home.",
-      "es": "Un descuento de $300 dólares en un calentador de agua con bomba de calor UEF 2.0. Reembolso máximo: $1,000 dólares por vivienda."
-    }
-  },
-  {
-    "id": "CO-61",
-    "authority_type": "utility",
-    "authority": "co-longmont-power-and-communications",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_water_heater",
-    "program": "co_longmontPowerAndCommunications_efficiencyWorks",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "minimum": 500,
-      "maximum": 1000
+      "en": "Up to $900 off a heat pump water heater UEF 3.3. ENERGY STAR certified with CTA-2045 certified communication control.",
+      "es": "Hasta $900 de descuento en un calentador de agua con bomba de calor UEF 3.3. Certificado por ENERGY STAR con control de comunicación certificado CTA-2045."
     },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$500 off a heat pump water heater UEF 3.0. Max rebate: $1000 per home.",
-      "es": "Un descuento de $500 dólares en un calentador de agua con bomba de calor UEF 3.0. Reembolso máximo: $1,000 dólares por vivienda."
-    }
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-62",
@@ -1472,8 +1515,10 @@
     ],
     "short_description": {
       "en": "$35 off smart thermostats. Max rebate: $70 per home.",
-      "es": "Un descuento de $35 dólares en termostatos inteligentes. Reembolso máximo: $70 dólares por hogar."
-    }
+      "es": "Un descuento de $35 dólares en termostatos inteligentes. Un reembolso máximo: $70 dólares por hogar."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-63",
@@ -1495,7 +1540,9 @@
     "short_description": {
       "en": "Rebate of $1.16 per sq ft for insulation. Attic (flat ceiling) and already insulated attic kneewalls capped at a rebate of $0.77 per sq ft.",
       "es": "Un reembolso de $1.16 dólares por pie cuadrado de aislamiento. Un reembolso de $0.77 de dólar por pie cuadrado para el desván (de techo plano) y para los muros inclinados del desván ya aislados."
-    }
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-64",
@@ -1517,8 +1564,59 @@
     ],
     "short_description": {
       "en": "Tiered air sealing rebate ranging from $310 to $770 based on reduction of air loss.",
-      "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de pérdida de aire."
-    }
+      "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de la pérdida de aire."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "CO-549",
+    "authority_type": "utility",
+    "authority": "co-longmont-power-and-communications",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "co_longmontPowerAndCommunications_efficiencyWorks",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3.75,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3.75/sq. ft. towards replacement windows and doors. Windows and doors must meet ENERGY STAR northern climate zone performance criteria.",
+      "es": "$3.75 por pie cuadrado para ventanas y puertas de reemplazo. Las ventanas y puertas deben cumplir con los criterios de rendimiento de la zona climática norte de ENERGY STAR."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "CO-554",
+    "authority_type": "utility",
+    "authority": "co-longmont-power-and-communications",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_stove",
+    "program": "co_longmontPowerAndCommunications_efficiencyWorks",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "minimum": 50,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $350 for an induction range/cooktop when replacing gas. Up to $50 when replacing electric.",
+      "es": "Hasta $350 por una estufa o encimera de inducción al reemplazar una de gas. Hasta $50 al reemplazar una eléctrica."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-65",
@@ -1531,17 +1629,18 @@
     "program": "co_estesParkPowerAndCommunications_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 2000,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off air source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
+      "en": "Up to $2000 per customer off air source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $2000 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-66",
@@ -1554,17 +1653,18 @@
     "program": "co_estesParkPowerAndCommunications_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 3000,
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off ground source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
+      "en": "Up to $3000 per customer off ground source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $3000 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-67",
@@ -1576,18 +1676,19 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_estesParkPowerAndCommunications_efficiencyWorks",
     "amount": {
-      "type": "dollar_amount",
-      "number": 250,
-      "minimum": 250,
-      "maximum": 750
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Ductless mini-split $250/head (max $500 for gas heated home, $750 for electric heated home).",
-      "es": "Mini split sin ductos $250 dólares/cabeza (máximo $500 dólares para viviendas con calefacción de gas, $750 dólares para viviendas con calefacción eléctrica)."
-    }
+      "en": "Ductless mini-split $500/ton. Efficiency minimums apply.",
+      "es": "Mini split sin ductos $500 dólares/tonelada. Mínimos de eficiencia aplican."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-68",
@@ -1600,40 +1701,19 @@
     "program": "co_estesParkPowerAndCommunications_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 300,
-      "minimum": 300,
-      "maximum": 1000
+      "number": 900,
+      "minimum": 800,
+      "maximum": 900
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 off a heat pump water heater UEF 2.0. Max rebate: $1000 per home.",
-      "es": "Un descuento de $300 dólares en un calentador de agua con bomba de calor UEF 2.0. Reembolso máximo: $1,000 dólares por vivienda."
-    }
-  },
-  {
-    "id": "CO-69",
-    "authority_type": "utility",
-    "authority": "co-estes-park-power-and-communications",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_water_heater",
-    "program": "co_estesParkPowerAndCommunications_efficiencyWorks",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "minimum": 500,
-      "maximum": 1000
+      "en": "Up to $900 off a heat pump water heater UEF 3.3. ENERGY STAR certified with CTA-2045 certified communication control.",
+      "es": "Hasta $900 de descuento en un calentador de agua con bomba de calor UEF 3.3. Certificado por ENERGY STAR con control de comunicación certificado CTA-2045."
     },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$500 off a heat pump water heater UEF 3.0. Max rebate: $1000 per home.",
-      "es": "Un descuento de $500 dólares por un calentador de agua con bomba de calor UEF 3.0. Reembolso máximo: $1,000 dólares por vivienda."
-    }
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-70",
@@ -1655,8 +1735,10 @@
     ],
     "short_description": {
       "en": "$35 off smart thermostats. Max rebate: $70 per home.",
-      "es": "Un descuento de $35 dólares en termostatos inteligentes. Reembolso máximo: $70 dólares por hogar."
-    }
+      "es": "Un descuento de $35 dólares en termostatos inteligentes. Un reembolso máximo: $70 dólares por hogar."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-71",
@@ -1677,8 +1759,10 @@
     ],
     "short_description": {
       "en": "Rebate of $1.16 per sq ft for insulation. Attic (flat ceiling) and already insulated attic kneewalls capped at a rebate of $0.77 per sq ft.",
-      "es": "Un reembolso de $1.16 dólares por pie cuadrado de aislamiento. Un reembolso de $0.77 de dólar por pie cuadrado para el desván (techo plano) y los muros inclinados del desván ya aislados."
-    }
+      "es": "Un reembolso de $1.16 dólares por pie cuadrado de aislamiento. Un reembolso de $0.77 de dólar por pie cuadrado para el desván (de techo plano) y para los muros inclinados del desván ya aislados."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-72",
@@ -1699,9 +1783,60 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Tiered air sealing rebate (see link) ranging from $310 to $770 based on reduction of air loss.",
-      "es": "Un reembolso escalonado para el sellado hermético  (ver enlace) que oscila entre $310 y $770 dólares según la reducción de pérdida de aire."
-    }
+      "en": "Tiered air sealing rebate ranging from $310 to $770 based on reduction of air loss.",
+      "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de la pérdida de aire."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "CO-550",
+    "authority_type": "utility",
+    "authority": "co-estes-park-power-and-communications",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "co_estesParkPowerAndCommunications_efficiencyWorks",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3.75,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3.75/sq. ft. towards replacement windows and doors. Windows and doors must meet ENERGY STAR northern climate zone performance criteria.",
+      "es": "$3.75 por pie cuadrado para ventanas y puertas de reemplazo. Las ventanas y puertas deben cumplir con los criterios de rendimiento de la zona climática norte de ENERGY STAR."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "CO-553",
+    "authority_type": "utility",
+    "authority": "co-estes-park-power-and-communications",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_stove",
+    "program": "co_estesParkPowerAndCommunications_efficiencyWorks",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "minimum": 50,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $350 for an induction range/cooktop when replacing gas. Up to $50 when replacing electric.",
+      "es": "Hasta $350 por una estufa o encimera de inducción al reemplazar una de gas. Hasta $50 al reemplazar una eléctrica."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-73",
@@ -1714,17 +1849,18 @@
     "program": "co_lovelandWaterAndPower_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 2000,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off air source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
+      "en": "Up to $2000 per customer off air source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $2000 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-74",
@@ -1737,17 +1873,18 @@
     "program": "co_lovelandWaterAndPower_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 3000,
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off ground source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares por cliente en descuentos para bombas de calor geotérmicas. Mínimos de eficiencia aplican."
+      "en": "Up to $3000 per customer off ground source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $3000 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-75",
@@ -1759,18 +1896,19 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_lovelandWaterAndPower_efficiencyWorks",
     "amount": {
-      "type": "dollar_amount",
-      "number": 250,
-      "minimum": 250,
-      "maximum": 750
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Ductless mini-split $250/head (max $500 for gas heated home, $750 for electric heated home).",
-      "es": "Mini split sin ductos $250 dólares/cabeza (máximo $500 dólares para viviendas con calefacción de gas, $750 dólares para viviendas con calefacción eléctrica)."
-    }
+      "en": "Ductless mini-split $500/ton. Efficiency minimums apply.",
+      "es": "Mini split sin ductos $500 dólares/tonelada. Mínimos de eficiencia aplican."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-76",
@@ -1783,40 +1921,19 @@
     "program": "co_lovelandWaterAndPower_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 300,
-      "minimum": 300,
-      "maximum": 1000
+      "number": 900,
+      "minimum": 800,
+      "maximum": 900
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 off a heat pump water heater UEF 2.0. Max rebate: $1000 per home.",
-      "es": "Un descuento de $300 dólares en un calentador de agua con bomba de calor UEF 2.0. Reembolso máximo: $1,000 dólares por vivienda."
-    }
-  },
-  {
-    "id": "CO-77",
-    "authority_type": "utility",
-    "authority": "co-loveland-water-and-power",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_water_heater",
-    "program": "co_lovelandWaterAndPower_efficiencyWorks",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "minimum": 500,
-      "maximum": 1000
+      "en": "Up to $900 off a heat pump water heater UEF 3.3. ENERGY STAR certified with CTA-2045 certified communication control.",
+      "es": "Hasta $900 de descuento en un calentador de agua con bomba de calor UEF 3.3. Certificado por ENERGY STAR con control de comunicación certificado CTA-2045."
     },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$500 off a heat pump water heater UEF 3.0. Max rebate: $1000 per home.",
-      "es": "Un descuento de $500 dólares en un calentador de agua con bomba de calor UEF 3.0. Reembolso máximo: $1,000 dólares por vivienda."
-    }
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-78",
@@ -1838,8 +1955,10 @@
     ],
     "short_description": {
       "en": "$35 off smart thermostats. Max rebate: $70 per home.",
-      "es": "Un descuento de $35 dólares en termostatos inteligentes. Reembolso máximo: $70 dólares por hogar."
-    }
+      "es": "Un descuento de $35 dólares en termostatos inteligentes. Un reembolso máximo: $70 dólares por hogar."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-79",
@@ -1860,8 +1979,10 @@
     ],
     "short_description": {
       "en": "Rebate of $1.16 per sq ft for insulation. Attic (flat ceiling) and already insulated attic kneewalls capped at a rebate of $0.77 per sq ft.",
-      "es": "Un reembolso de $1.16 dólares por pie cuadrado de aislamiento. Un reembolso de $0.77 de dólar por pie cuadrado para el desván (techo plano) y los muros inclinados del desván ya aislados."
-    }
+      "es": "Un reembolso de $1.16 dólares por pie cuadrado de aislamiento. Un reembolso de $0.77 de dólar por pie cuadrado para el desván (de techo plano) y para los muros inclinados del desván ya aislados."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-80",
@@ -1882,9 +2003,60 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Tiered air sealing rebate (see link) ranging from $310 to $770 based on reduction of air loss.",
-      "es": "Un reembolso escalonado para el sellado hermético (ver enlace) que oscila entre $310 y $770 dólares según la reducción de pérdida de aire."
-    }
+      "en": "Tiered air sealing rebate ranging from $310 to $770 based on reduction of air loss.",
+      "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de la pérdida de aire."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "CO-551",
+    "authority_type": "utility",
+    "authority": "co-loveland-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "co_lovelandWaterAndPower_efficiencyWorks",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3.75,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3.75/sq. ft. towards replacement windows and doors. Windows and doors must meet ENERGY STAR northern climate zone performance criteria.",
+      "es": "$3.75 por pie cuadrado para ventanas y puertas de reemplazo. Las ventanas y puertas deben cumplir con los criterios de rendimiento de la zona climática norte de ENERGY STAR."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "CO-556",
+    "authority_type": "utility",
+    "authority": "co-loveland-water-and-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_stove",
+    "program": "co_lovelandWaterAndPower_efficiencyWorks",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "minimum": 50,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $350 for an induction range/cooktop when replacing gas. Up to $50 when replacing electric.",
+      "es": "Hasta $350 por una estufa o encimera de inducción al reemplazar una de gas. Hasta $50 al reemplazar una eléctrica."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-81",
@@ -1898,17 +2070,18 @@
     "program": "co_platteRiverPowerAuthority_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 2000,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off air source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
+      "en": "Up to $2000 per customer off air source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $2000 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-82",
@@ -1922,17 +2095,18 @@
     "program": "co_platteRiverPowerAuthority_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 3000,
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 per customer off ground source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $500 dólares en descuentos por cliente en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
+      "en": "Up to $3000 per customer off ground source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $3000 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-04-01"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-83",
@@ -1945,18 +2119,19 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_platteRiverPowerAuthority_efficiencyWorks",
     "amount": {
-      "type": "dollar_amount",
-      "number": 250,
-      "minimum": 250,
-      "maximum": 750
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Ductless mini-split $250/head (max $500 for gas heated home, $750 for electric heated home).",
-      "es": "Mini split sin ductos $250 dólares/cabeza (máximo $500 dólares para viviendas con calefacción de gas, $750 dólares para viviendas con calefacción eléctrica)."
-    }
+      "en": "Ductless mini-split $500/ton. Efficiency minimums apply.",
+      "es": "Mini split sin ductos $500 dólares/tonelada. Mínimos de eficiencia aplican."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-84",
@@ -1970,41 +2145,19 @@
     "program": "co_platteRiverPowerAuthority_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 300,
-      "minimum": 300,
-      "maximum": 1000
+      "number": 900,
+      "minimum": 800,
+      "maximum": 900
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 off a heat pump water heater UEF 2.0. Max rebate: $1000 per home.",
-      "es": "Un descuento de $300 dólares en un calentador de agua con bomba de calor UEF 2.0. Reembolso máximo: $1,000 por hogar."
-    }
-  },
-  {
-    "id": "CO-85",
-    "authority_type": "other",
-    "authority": "co-platte-river-power-authority",
-    "eligible_geo_group": "co-group-platte-river-power-authority",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "heat_pump_water_heater",
-    "program": "co_platteRiverPowerAuthority_efficiencyWorks",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "minimum": 500,
-      "maximum": 1000
+      "en": "Up to $900 off a heat pump water heater UEF 3.3. ENERGY STAR certified with CTA-2045 certified communication control.",
+      "es": "Hasta $900 de descuento en un calentador de agua con bomba de calor UEF 3.3. Certificado por ENERGY STAR con control de comunicación certificado CTA-2045."
     },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$500 off a heat pump water heater UEF 3.0. Max rebate: $1000 per home.",
-      "es": "Un descuento de $500 dólares en un calentador de agua con bomba de calor UEF 3.0. Reembolso máximo: $1,000 por hogar."
-    }
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-86",
@@ -2027,8 +2180,10 @@
     ],
     "short_description": {
       "en": "$35 off smart thermostats. Max rebate: $70 per home.",
-      "es": "Un descuento de $35 dólares en termostatos inteligentes. Reembolso máximo: $70 dólares por hogar."
-    }
+      "es": "Un descuento de $35 dólares en termostatos inteligentes. Un reembolso máximo: $70 dólares por hogar."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-87",
@@ -2050,8 +2205,10 @@
     ],
     "short_description": {
       "en": "Rebate of $1.16 per sq ft for insulation. Attic (flat ceiling) and already insulated attic kneewalls capped at a rebate of $0.77 per sq ft.",
-      "es": "Un reembolso de $1.16 dólares por pie cuadrado de aislamiento. Un reembolso de $0.77 de dólar por pie cuadrado para el desván (techo plano) y los muros inclinados del desván ya aislados."
-    }
+      "es": "Un reembolso de $1.16 dólares por pie cuadrado de aislamiento. Un reembolso de $0.77 de dólar por pie cuadrado para el desván (de techo plano) y para los muros inclinados del desván ya aislados."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-88",
@@ -2073,9 +2230,62 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Tiered air sealing rebate (see link) ranging from $310 to $770 based on reduction of air loss.",
-      "es": "Un reembolso escalonado para el sellado hermético (ver enlace) que oscila entre $310 y $770 dólares según la reducción de pérdida de aire."
-    }
+      "en": "Tiered air sealing rebate ranging from $310 to $770 based on reduction of air loss.",
+      "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de la pérdida de aire."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "CO-552",
+    "authority_type": "other",
+    "authority": "co-platte-river-power-authority",
+    "eligible_geo_group": "co-group-platte-river-power-authority",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "co_platteRiverPowerAuthority_efficiencyWorks",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3.75,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3.75/sq. ft. towards replacement windows and doors. Windows and doors must meet ENERGY STAR northern climate zone performance criteria.",
+      "es": "$3.75 por pie cuadrado para ventanas y puertas de reemplazo. Las ventanas y puertas deben cumplir con los criterios de rendimiento de la zona climática norte de ENERGY STAR."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "CO-557",
+    "authority_type": "other",
+    "authority": "co-platte-river-power-authority",
+    "eligible_geo_group": "co-group-platte-river-power-authority",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "electric_stove",
+    "program": "co_platteRiverPowerAuthority_efficiencyWorks",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "minimum": 50,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $350 for an induction range/cooktop when replacing gas. Up to $50 when replacing electric.",
+      "es": "Hasta $350 por una estufa o encimera de inducción al reemplazar una de gas. Hasta $50 al reemplazar una eléctrica."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-89",
@@ -3476,7 +3686,7 @@
     ],
     "short_description": {
       "en": "25% of the cost of the e-lawn care product, with a per-member maximum of $300 across products.",
-      "es": "Un 25% del costo de herramientas electrónicas para el cuidado del césped, con un máximo por socio de $300 dólares en todos los productos.  "
+      "es": "Un 25% del costo de herramientas electrónicas para el cuidado del césped, con un máximo por socio de $300 dólares en todos los productos."
     }
   },
   {
@@ -5236,7 +5446,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "non_heat_pump_clothes_dryer",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5259,7 +5469,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "heat_pump_clothes_dryer",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5282,7 +5492,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "heat_pump_water_heater",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5305,7 +5515,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "electric_outdoor_equipment",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5330,7 +5540,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "electric_outdoor_equipment",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5355,7 +5565,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "ebike",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5380,7 +5590,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "electric_outdoor_equipment",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5405,7 +5615,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "electric_outdoor_equipment",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5430,7 +5640,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "electric_outdoor_equipment",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5455,7 +5665,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "smart_thermostat",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5480,7 +5690,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "evaporative_cooler",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5503,7 +5713,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "whole_house_fan",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5526,7 +5736,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "battery_storage_installation",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5550,7 +5760,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "battery_storage_installation",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5574,7 +5784,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "weatherization",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5598,7 +5808,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "weatherization",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5622,7 +5832,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "weatherization",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5646,7 +5856,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5670,7 +5880,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5694,7 +5904,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "new_electric_vehicle",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5718,7 +5928,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "used_electric_vehicle",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5742,7 +5952,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "electric_vehicle_charger",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5766,7 +5976,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "electric_vehicle_charger",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5790,7 +6000,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "electric_vehicle_charger",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5814,7 +6024,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "electric_vehicle_charger",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5838,7 +6048,7 @@
     "authority_type": "utility",
     "authority": "co-san-isabel-electric",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "geothermal_heating_installation",
     "program": "co_sanIsabelElectric_sanIsabelElectric",
@@ -5870,14 +6080,15 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
+      "maximum": 20000,
       "representative": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,000/ton for Air Source Heat Pumps, capped at 50% of costs. See details for pricing for less than 2 or greater than 5 tons.",
-      "es": "$1,000 dólares/tonelada para bombas de calor de fuente de aire, con un tope del 50% de los costos. Consulte los detalles de los precios para menos de 2 o más de 5 toneladas."
+      "en": "$500/ton for Air Source Heat Pumps less than or equal to 5 tons, $250/ton greater than 5 tons. capped at 50% of costs. $20,000 maximum per project.",
+      "es": "$500/tonelada para bombas de calor de fuente de aire de 5 toneladas o menos, $250/tonelada para aquellas de más de 5 toneladas, con un límite del 50% del costo. Máximo de $20,000 por proyecto."
     },
     "bonus_available": true
   },
@@ -5943,7 +6154,7 @@
     ],
     "short_description": {
       "en": "$180 rebate for ENERGY STAR-certified Hybrid Heat Pump Dryer.",
-      "es": "Un reembolso de $180 dólares para secadoras híbridas con bomba de calor y certificación ENERGY STAR. "
+      "es": "Un reembolso de $180 dólares para secadoras híbridas con bomba de calor y certificación ENERGY STAR."
     }
   },
   {
@@ -6027,7 +6238,7 @@
     ],
     "short_description": {
       "en": "$700 rebate for ENERGY STAR-certified Air Source Heat Pump Water Heater. Minimum 30 gallons.",
-      "es": "Un reembolso de $700 dólares para un calentador de agua con bomba de calor de fuente de aire y certificación ENERGY STAR. "
+      "es": "Un reembolso de $700 dólares para un calentador de agua con bomba de calor de fuente de aire y certificación ENERGY STAR."
     }
   },
   {
@@ -6418,11 +6629,34 @@
     }
   },
   {
+    "id": "CO-546",
+    "authority_type": "utility",
+    "authority": "co-san-miguel-power-association",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "rooftop_solar_installation",
+    "program": "co_sanMiguelPowerAssociation_sMPARenewableRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.1,
+      "unit": "kilowatt",
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $300 available for Solar. At $0.10 per watt, Maximum amount 3kW.",
+      "es": "Hasta $300 disponibles para solar a $0.10 por vatio, con un máximo de 3kW."
+    }
+  },
+  {
     "id": "CO-280",
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "evaporative_cooler",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6443,7 +6677,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "whole_house_fan",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6464,7 +6698,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "smart_thermostat",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6487,7 +6721,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "battery_storage_installation",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6509,7 +6743,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "battery_storage_installation",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6531,7 +6765,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6553,7 +6787,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6575,7 +6809,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6597,7 +6831,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "battery_storage_installation",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6618,7 +6852,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6640,7 +6874,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "geothermal_heating_installation",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6662,7 +6896,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "geothermal_heating_installation",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6685,7 +6919,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "heat_pump_water_heater",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6706,7 +6940,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "heat_pump_clothes_dryer",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6727,7 +6961,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "electric_outdoor_equipment",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6750,7 +6984,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "electric_outdoor_equipment",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6774,7 +7008,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "electric_outdoor_equipment",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6797,7 +7031,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "electric_outdoor_equipment",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6820,7 +7054,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "electric_outdoor_equipment",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6843,7 +7077,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "electric_outdoor_equipment",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -6866,7 +7100,7 @@
     "authority_type": "utility",
     "authority": "co-southeast-colorado-power-association",
     "payment_methods": [
-      "unknown"
+      "rebate"
     ],
     "item": "electric_vehicle_charger",
     "program": "co_southeastColoradoPowerAssociation_tri-StateG&T",
@@ -7335,29 +7569,6 @@
     "bonus_available": true
   },
   {
-    "id": "CO-321",
-    "authority_type": "state",
-    "authority": "co-state-of-colorado",
-    "payment_methods": [
-      "tax_credit"
-    ],
-    "item": "battery_storage_installation",
-    "program": "co_stateOfColorado_taxCredits",
-    "amount": {
-      "type": "percent",
-      "number": 0.129
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "12.9% discount on battery storage systems through Colorado State tax credit and sales tax exemption.",
-      "es": "Un descuento del 12.9% en sistemas de almacenamiento en batería gracias a una condonación fiscal por parte del estado de Colorado y una bonificación del impuesto sobre las ventas."
-    },
-    "start_date": "2023-01-01"
-  },
-  {
     "id": "CO-322",
     "authority_type": "city",
     "authority": "co-city-of-boulder",
@@ -7367,19 +7578,18 @@
     "item": "geothermal_heating_installation",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 650
+      "type": "dollar_amount",
+      "number": 650
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $650 for ENERGY STAR Ground Source Heat Pumps with desuperheater.",
-      "es": "El 50% de los costos de bombas de calor geotérmicas ENERGY STAR con regulador de vapor sobrecalentado, hasta $650 dólares."
+      "en": "Up to $650 for ENERGY STAR ground source heat pump with desuperheater.",
+      "es": "Hasta $650 para bomba de calor geotérmica ENERGY STAR con regulador de vapor sobrecalentado."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-323",
@@ -7391,19 +7601,18 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 400
+      "type": "dollar_amount",
+      "number": 400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $400 for 'Cold Climate' Rated Ducted Air Source Heat Pump (ASHP) (incl. Mini-Splits Cooling & Heating units).",
-      "es": "50% de los costos para bomba de calor de fuente de aire con ductos (ASHP) con calificación de \"clima frío\" (incl. unidades mini-splits de refrigeración y calefacción), hasta $400 dólares."
+      "en": "Up to $400 for cold climate-rated ducted air source heat pump.",
+      "es": "Hasta $400 para bomba de calor de fuente de aire con ductos (ASHP) con calificación de \"clima frío\"."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-324",
@@ -7415,19 +7624,18 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 400
+      "type": "dollar_amount",
+      "number": 400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $400 for 'Cold Climate' Rated Ductless Air Source Heat Pump (ASHP) (incl. Mini-Splits Cooling & Heating units).",
-      "es": "50% de los costos para bombas de calor sin ductos (ASHP) con clasificación de \"clima frío\" (incl. unidades mini-splits de refrigeración y calefacción) , hasta $400 dólares."
+      "en": "Up to $400 for cold climate-rated ductless air source heat pump (incl. mini-split cooling & heating units).",
+      "es": "Hasta $400 para bombas de calor sin ductos (ASHP) con clasificación de \"clima frío\" (incl. unidades mini-splits de refrigeración y calefacción)"
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-325",
@@ -7439,19 +7647,18 @@
     "item": "geothermal_heating_installation",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 400
+      "type": "dollar_amount",
+      "number": 400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $400 for ENERGY STAR Ground Source Heat Pump (no desuperheater).",
-      "es": "50% de los costos, hasta $400 dólares para bomba de calor geotérmica ENERGY STAR (sin regulador de vapor sobrecalentado)."
+      "en": "Up to $400 for ENERGY STAR ground source heat pump (no desuperheater).",
+      "es": "Hasta $400 para bomba de calor geotérmica ENERGY STAR (sin regulador de vapor sobrecalentado)."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-326",
@@ -7463,19 +7670,18 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 250
+      "type": "dollar_amount",
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $250 for 'Non-Cold' Climate Ducted Air Source Heat Pump (ASHP) (incl. Mini-Split Cooling & Heating units) with HSPF 8.5/SEER 15.",
-      "es": "50% de los costos para bombas de calor de fuente de aire (ASHP) con ductos (incluyendo unidades mini-splits de refrigeración y calefacción) con HSPF 8.5/SEER 15, hasta $250 dólares."
+      "en": "Up to $250 for non-cold climate ducted air source heat pump with HSPF2 at least 7.8.",
+      "es": "Hasta $250 para bombas de calor de fuente de aire (ASHP) con ductos con HSPF2 de al menos 8.5."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-327",
@@ -7487,19 +7693,18 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 250
+      "type": "dollar_amount",
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $250 for 'Non-Cold' Climate Ductless Air Source Heat Pump (ASHP) with HSPF 8.5/SEER 15.",
-      "es": "50% de los costos para clima \"no frío\" de bomba de calor de fuente de aire sin ductos (ASHP) con HSPF 8.5/SEER 15, hasta $250 dólares."
+      "en": "Up to $250 for non-cold climate ductless air source heat pump with HSPF2 at least 7.8.",
+      "es": "Hasta $250 para clima \"no frío\" de bomba de calor de fuente de aire sin ductos (ASHP) con HSPF2 de al menos 7.8."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-328",
@@ -7511,19 +7716,18 @@
     "item": "heat_pump_water_heater",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 250
+      "type": "dollar_amount",
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $250 for ENERGY STAR Electric Heat Pump Water Heater (minimum 2.00 Energy Factor).",
-      "es": "50% de los costos de calentador eléctrico de agua con bomba de calor ENERGY STAR (factor energético mínimo de 2.00), hasta $250 dólares."
+      "en": "Up to $250 for ENERGY STAR electric heat pump water heater (minimum 2.00 Energy Factor).",
+      "es": "Hasta $250 para calentador eléctrico de agua con bomba de calor ENERGY STAR (factor energético mínimo de 2.00)."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-329",
@@ -7535,19 +7739,18 @@
     "item": "weatherization",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 250
+      "type": "dollar_amount",
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $250 for Attic Insulation & Air Sealing.",
-      "es": "50% de los costos para aislamiento térmico y sellado hermético del desván, hasta $250 dólares."
+      "en": "Up to $250 for attic insulation & air sealing.",
+      "es": "Hasta $250 para aislamiento térmico y sellado hermético del desván."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-330",
@@ -7559,19 +7762,18 @@
     "item": "weatherization",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 250
+      "type": "dollar_amount",
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $250 for Wall Insulation.",
-      "es": "50% de los costos para el aislamiento térmico de muros, hasta $250 dólares."
+      "en": "Up to $250 for wall insulation.",
+      "es": "Hasta $250 para el aislamiento térmico de muros."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-331",
@@ -7583,19 +7785,18 @@
     "item": "weatherization",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 250
+      "type": "dollar_amount",
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $250 for Foundation (Crawl Space or Basement) Insulation & Air Sealing.",
-      "es": "50% de los costos para aislamiento térmico de muros, hasta $250 dólares."
+      "en": "Up to $250 for foundation (crawl space or basement) insulation & air sealing.",
+      "es": "Hasta $250 para aislamiento y sellado hermético de cimientos (sótanos o espacios reducidos)."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-332",
@@ -7607,19 +7808,18 @@
     "item": "weatherization",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 250
+      "type": "dollar_amount",
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $250 for Sub-Floor or Frame Floor Insulation & Air Sealing.",
-      "es": "50% de los costos para aislamiento térmico y sellado hermético del subsuelo o del piso de la estructura, hasta $250 dólares."
+      "en": "Up to $250 for sub-floor or frame floor insulation & air sealing.",
+      "es": "Hasta $250 para aislamiento térmico y sellado hermético del subsuelo o del piso de la estructura."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-333",
@@ -7631,19 +7831,18 @@
     "item": "weatherization",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 250
+      "type": "dollar_amount",
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $250 for Professionally Applied Air Sealing, and Duct Insulation. Do-it-yourself not eligible.",
-      "es": "50% de los costos para sellado hermético y aislamiento de ductos realizados por un profesional. Los trabajos hechos por usted mismo no son elegibles, hasta $250 dólares."
+      "en": "Up to $250 for professionally applied air sealing, and duct insulation. Do-it-yourself not eligible.",
+      "es": "Hasta $250 para sellado hermético y aislamiento de ductos realizados por un profesional. Los trabajos hechos por usted mismo no son elegibles."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-334",
@@ -7655,19 +7854,18 @@
     "item": "weatherization",
     "program": "co_cityOfBoulder_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 250
+      "type": "dollar_amount",
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of costs, up to $250 for Duct Insulation.",
-      "es": "50% de los costos para aislamiento de ductos, hasta $250 dólares."
+      "en": "Up to $250 for duct insulation.",
+      "es": "Hasta $250 para aislamiento de ductos."
     },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-335",
@@ -7882,30 +8080,6 @@
     "start_date": "2023-01-01",
     "end_date": "2023-12-31",
     "bonus_available": true
-  },
-  {
-    "id": "CO-344",
-    "authority_type": "county",
-    "authority": "co-boulder-county",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "rooftop_solar_installation",
-    "program": "co_boulderCounty_energySmart",
-    "amount": {
-      "type": "percent",
-      "number": 0.25,
-      "maximum": 200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Rebate for 25% of project costs up to $200 for Solar PV in conjunction with air or ground source heat pump installation or owning an EV.",
-      "es": "Un reembolso del 25% de los costos del proyecto para energía solar fotovoltaica junto con la instalación de una bomba de calor de fuente de aire o de tierra o por poseer un VE, hasta $200 dólares."
-    },
-    "start_date": "2023-01-01",
-    "end_date": "2023-12-31"
   },
   {
     "id": "CO-345",
@@ -10293,13 +10467,13 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 500
+      "maximum": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of total equipment and installation costs up to $500 for non-managed Level 2 Electric Vehicle chargers.",
+      "en": "50% of total equipment and installation costs up to $250 for non-managed Level 2 Electric Vehicle chargers.",
       "es": "50% del total de los costos de equipamiento e instalación de cargadores de vehículos eléctricos de nivel 2 sin sistema de control, hasta $500 dólares."
     }
   },
@@ -10419,17 +10593,16 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_sangreDeCristoElectricAssociation_rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 675
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$675 rebate for qualifying Tier 1 Air Source Heat Pump (2 tons or less), up to 50% of equipment cost.",
-      "es": "Reembolso de $675 dólares para una bomba de calor de fuente de aire de nivel 1 que cumpla los requisitos (2 toneladas o menos), hasta el 50% del costo del equipo."
-    },
-    "bonus_available": true
+      "en": "$250/ton rebate for qualifying Tier 1 ductless Heat Pump, with $125/ton for capacity over 5 tons. Not to exceed 50% of equipment cost."
+    }
   },
   {
     "id": "CO-455",
@@ -10441,17 +10614,38 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_sangreDeCristoElectricAssociation_rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 1800
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,800 rebate for qualifying Tier 1 Air Source Heat Pump (2 tons or more), up to 50% of equipment cost.",
-      "es": "Reembolso de $1,800 dólares para una bomba de calor de fuente de aire de nivel 1 que cumpla los requisitos (2 toneladas o más), hasta el 50% del costo del equipo."
+      "en": "$500/ton rebate for qualifying Tier 2 Cold Climate ductless Heat Pump, with $250/ton capacity over 5 tons. Not to exceed 50% of equipment cost."
+    }
+  },
+  {
+    "id": "CO-541",
+    "authority_type": "utility",
+    "authority": "co-sangre-de-cristo-electric-association",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "co_sangreDeCristoElectricAssociation_rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "ton"
     },
-    "bonus_available": true
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1000/ton bonus for low-to-moderate income residents purchasing cold climate ductless heat pumps, to be used through weatherization agency."
+    },
+    "low_income": "co-sangre-de-cristo"
   },
   {
     "id": "CO-456",
@@ -10463,15 +10657,15 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_sangreDeCristoElectricAssociation_rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 1000
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,000 rebate for qualifying Tier 2 Air Source Heat Pump (2 tons or less), up to 50% of equipment cost.",
-      "es": "Reembolso de $1,000 dólares para una bomba de calor de fuente de aire de nivel 2 que cumpla los requisitos (2 toneladas o menos), hasta el 50% del costo del equipo."
+      "en": "$250/ton rebate for qualifying Tier 1 Ducted Heat Pump, with $125/ton for additional tons over 5 tons."
     },
     "bonus_available": true
   },
@@ -10485,17 +10679,39 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_sangreDeCristoElectricAssociation_rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 2400
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,400 rebate for qualifying Tier 2 Air Source Heat Pump (2 tons or more), up to 50% of equipment cost.",
-      "es": "Reembolso de $2,400 dólares para una bomba de calor de fuente de aire de nivel 2 que cumpla los requisitos (2 toneladas o más), hasta el 50% del costo del equipo."
+      "en": "$500/ton rebate for qualifying Tier 2 Cold Climate Ducted Heat Pump, with $250/ton for additional tons over 5 tons."
     },
     "bonus_available": true
+  },
+  {
+    "id": "CO-542",
+    "authority_type": "utility",
+    "authority": "co-sangre-de-cristo-electric-association",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "co_sangreDeCristoElectricAssociation_rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1000/ton bonus for low-to-moderate income residents purchasing cold climate ducted heat pumps, to be used through weatherization agency."
+    },
+    "low_income": "co-sangre-de-cristo"
   },
   {
     "id": "CO-458",
@@ -10507,17 +10723,16 @@
     "item": "heat_pump_air_conditioner_heater",
     "program": "co_sangreDeCristoElectricAssociation_rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 2400
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $2400 or 50% costs for Air-to-Water Heat pumps. Rebates will be taken on a case-by-case basis; contact program staff to learn more.",
-      "es": "Hasta $2,400 dólares o el 50% de los costos para bombas de calor de aire a agua. Los reembolsos se realizarán caso por caso; póngase en contacto con el personal del programa para mayor información."
-    },
-    "bonus_available": true
+      "en": "$500/ton rebate for Air-to-Water Heat pumps, with $250/ton for additional capacity above 5 tons."
+    }
   },
   {
     "id": "CO-459",
@@ -10529,15 +10744,16 @@
     "item": "geothermal_heating_installation",
     "program": "co_sangreDeCristoElectricAssociation_rebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500/ton rebate for new installation of qualifying Central Ground Source Heat Pump ($250/ton rebate for replacement), up to 50%.",
-      "es": "Reembolso de hasta $500 dólares/tonelada por la nueva instalación de una bomba de calor geotérmica central que cumpla los requisitos (un reembolso de $250 dólares/tonelada por su sustitución), hasta el 50%."
+      "en": "Up to $500/ton rebate for new installation of qualifying Central Ground Source Heat Pump ($250/ton rebate for replacement).",
+      "es": "Reembolso de hasta $500 dólares/tonelada por la nueva instalación de una bomba de calor geotérmica central que cumpla los requisitos (un reembolso de $250 dólares/tonelada por su sustitución)."
     },
     "bonus_available": true
   },
@@ -10712,13 +10928,13 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 500
+      "maximum": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% rebate of total equipment and installation costs up to $500 for non-managed Level 2 (L2) chargers.",
+      "en": "50% rebate of total equipment and installation costs up to $250 for non-managed Level 2 (L2) chargers.",
       "es": "Reembolso del 50% del total de los costos de equipamiento e instalación, hasta $500 dólares, para cargadores de nivel 2 (L2) sin sistema de control."
     }
   },
@@ -11570,7 +11786,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebates of up to 50% of project costs for weatherization projects such as air/duct sealing, insulation, and more for income-qualitying households.",
+      "en": "Rebates of up to 50% of project costs for weatherization projects such as air/duct sealing, insulation, and more for income-qualifying households.",
       "es": "Reembolsos de hasta el 50% de los costos del proyecto para proyectos de climatización, como sellado hermético del aire/ductos, aislamiento térmicos y otros, para hogares con bajos ingresos."
     },
     "low_income": "co-walking-mountains"
@@ -11594,7 +11810,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebates of up to 50% of project costs for qualifying cold climate air source heat pumps for income-qualitying households.",
+      "en": "Rebates of up to 50% of project costs for qualifying cold climate air source heat pumps for income-qualifying households.",
       "es": "Reembolsos de hasta el 50% de costos de proyecto de bombas de calor con fuente de aire para climas fríos que reúnan los requisitos necesarios para hogares que cumplan requisitos de nivel de ingresos."
     },
     "low_income": "co-walking-mountains"
@@ -11618,7 +11834,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebates of up to 50% of project costs for qualifying cold climate air to water heat pumps for income-qualitying households.",
+      "en": "Rebates of up to 50% of project costs for qualifying cold climate air to water heat pumps for income-qualifying households.",
       "es": "Reembolsos de hasta el 50% de los costos de proyecto para bombas de calor de aire a agua de clima frío certificadas para hogares que cumplan requisitos de nivel de ingresos."
     },
     "low_income": "co-walking-mountains"
@@ -11642,7 +11858,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebates of up to 50% of project costs for qualifying cold climate ground source heat pumps for income-qualitying households.",
+      "en": "Rebates of up to 50% of project costs for qualifying cold climate ground source heat pumps for income-qualifying households.",
       "es": "Reembolsos de hasta el 50% de los costos de proyecto en bombas de calor geotérmico de clima frío que reúnan los requisitos necesarios para hogares que cumplan con nivel de ingresos."
     },
     "low_income": "co-walking-mountains"
@@ -11666,7 +11882,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebates of up to 50% of project costs for qualifying ductless heat pumps for income-qualitying households.",
+      "en": "Rebates of up to 50% of project costs for qualifying ductless heat pumps for income-qualifying households.",
       "es": "Reembolsos de hasta el 50% de los costos del proyecto para bombas de calor sin ductos para hogares que cumplan con el nivel de ingresos."
     },
     "low_income": "co-walking-mountains"
@@ -11690,7 +11906,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebates of up to 50% of project costs for heat pump water heaters for income-qualitying households.",
+      "en": "Rebates of up to 50% of project costs for heat pump water heaters for income-qualifying households.",
       "es": "Reembolsos hasta el 50% de los costos de proyecto para calentadores de agua con bomba de calor destinados a hogares que cumplan con requisitos de nivel de ingresos."
     },
     "low_income": "co-walking-mountains"
@@ -11714,7 +11930,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebates of up to 50% of project costs for heat pump clothes dryer for income-qualitying households.",
+      "en": "Rebates of up to 50% of project costs for heat pump clothes dryer for income-qualifying households.",
       "es": "Reembolsos de hasta el 50% de los costos del proyecto de secadora de ropa con bomba de calor para hogares que cumplan con nivel de ingresos."
     },
     "low_income": "co-walking-mountains"
@@ -11738,7 +11954,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebates of up to 50% of project costs for wiring projects related to electrification for income-qualitying households.",
+      "en": "Rebates of up to 50% of project costs for wiring projects related to electrification for income-qualifying households.",
       "es": "Reembolso de hasta el 50% de los costos de proyecto para  proyectos de cableado relacionados con la electrificación de los hogares que cumplen requisitos de nivel de ingresos."
     },
     "low_income": "co-walking-mountains"
@@ -11762,7 +11978,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebates of up to 50% of project costs for panel upgrades related to electrification for income-qualitying households.",
+      "en": "Rebates of up to 50% of project costs for panel upgrades related to electrification for income-qualifying households.",
       "es": "Un reembolso de hasta el 50% de los costos del proyecto para proyectos de cableado relacionados con la electrificación para hogares que cumplen con requisitos de nivel de ingresos."
     },
     "low_income": "co-walking-mountains"
@@ -11786,7 +12002,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebates of up to 50% of project costs for WiFi-enabled smart thermostats or programmable thermostats for income-qualitying households.",
+      "en": "Rebates of up to 50% of project costs for WiFi-enabled smart thermostats or programmable thermostats for income-qualifying households.",
       "es": "Reembolsos de hasta el 50% de los costos del proyecto por termostatos inteligentes con WiFi o termostatos programables para hogares que cumplen con requisitos de nivel de ingresos."
     },
     "low_income": "co-walking-mountains"
@@ -11810,7 +12026,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebates of up to 50% of project costs for induction cooktops and stoves for income-qualitying households.",
+      "en": "Rebates of up to 50% of project costs for induction cooktops and stoves for income-qualifying households.",
       "es": "Reembolso de hasta el 50% de los costos del proyecto para parrillas de inducción y estufas para hogares que cumplan con requisitos de nivel de ingresos."
     },
     "low_income": "co-walking-mountains"
@@ -12282,28 +12498,6 @@
     }
   },
   {
-    "id": "CO-538",
-    "authority_type": "utility",
-    "authority": "co-y-w-electric-association",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "item": "other",
-    "program": "co_y-WElectricAssociation_rebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 0
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Rebates available for various electric outdoor power equipment. Contact Member Services for details.",
-      "es": "Reembolso disponible para varios equipos eléctricos de uso en espacios exteriores. Póngase en contacto con el Servicio de Atención al Afiliado para mayor información."
-    }
-  },
-  {
     "id": "CO-539",
     "authority_type": "utility",
     "authority": "co-y-w-electric-association",
@@ -12346,6 +12540,48 @@
     "short_description": {
       "en": "Up to $180 for Energy Star rated hybrid clothes dryer (ventless).",
       "es": "Hasta $180 dólares por una secadora de ropa híbrida (sin ventilación) con clasificación ENERGY STAR."
+    }
+  },
+  {
+    "id": "CO-543",
+    "authority_type": "utility",
+    "authority": "co-sangre-de-cristo-electric-association",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "weatherization",
+    "program": "co_sangreDeCristoElectricAssociation_saveEnergy&Money",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000,
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $3000 for labor & materials per household for weatherization measures as part of converting to heat pumps from electric or propane heat source."
+    }
+  },
+  {
+    "id": "CO-544",
+    "authority_type": "utility",
+    "authority": "co-xcel-energy",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "co_xcelEnergy_heatPumpWaterHeaterRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 off qualifying new heat pump water heaters for Xcel customers. Must be installed by registered contractor and may not exceed 80 gallons."
     }
   }
 ]

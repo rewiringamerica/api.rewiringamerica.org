@@ -2,16 +2,17 @@ import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts
 import { FastifyInstance } from 'fastify';
 import _ from 'lodash';
 import { Database } from 'sqlite';
+import { AuthorityType } from '../data/authorities';
 import { IRA_INCENTIVES, IRAIncentive } from '../data/ira_incentives';
 import { IRA_STATE_SAVINGS } from '../data/ira_state_savings';
 import { PROGRAMS, Programs } from '../data/programs';
 import { AmountType } from '../data/types/amount';
 import { PaymentMethod } from '../data/types/incentive-types';
+import { computeAMIAndEVCreditEligibility } from '../lib/ami-evcredit-calculation';
 import { InvalidInputError } from '../lib/error';
-import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
 import { t, tr } from '../lib/i18n';
 import calculateIncentives from '../lib/incentives-calculation';
-import { isCompleteIncomeInfo } from '../lib/income-info';
+import { resolveLocation } from '../lib/location';
 import { WEBSITE_CALCULATOR_REQUEST_SCHEMA } from '../schemas/v0/calculator-request';
 import {
   WEBSITE_CALCULATOR_RESPONSE_SCHEMA,
@@ -121,12 +122,8 @@ export default async function (
     '/api/v0/calculator',
     { schema: CalculatorSchema },
     async (request, reply) => {
-      // TODO: refactor as a plugin like fastify.amis.getForZip(zip)?
-      const incomeInfo = await fetchAMIsForZip(
-        fastify.sqlite,
-        request.query.zip,
-      );
-      if (!incomeInfo) {
+      const location = await resolveLocation(fastify.sqlite, request.query);
+      if (!location) {
         throw fastify.httpErrors.createError(
           404,
           t('errors', 'zip_code_doesnt_exist'),
@@ -135,7 +132,13 @@ export default async function (
           },
         );
       }
-      if (!isCompleteIncomeInfo(incomeInfo)) {
+
+      const amiAndEvCreditEligibility = await computeAMIAndEVCreditEligibility(
+        fastify.sqlite,
+        location,
+        request.query.household_size,
+      );
+      if (!amiAndEvCreditEligibility) {
         throw fastify.httpErrors.createError(
           404,
           t('errors', 'no_data_for_location'),
@@ -144,9 +147,14 @@ export default async function (
       }
 
       try {
-        const result = calculateIncentives(incomeInfo, {
-          ...request.query,
-        });
+        const result = calculateIncentives(
+          location,
+          amiAndEvCreditEligibility,
+          {
+            ...request.query,
+            authority_types: [AuthorityType.Federal],
+          },
+        );
 
         const pos_rebate_incentives = result.incentives.filter(
           i =>
@@ -191,8 +199,7 @@ export default async function (
 
           // 2) Add annual savings from pregenerated model
           estimated_annual_savings:
-            IRA_STATE_SAVINGS[incomeInfo.location.state_id]
-              .estimated_savings_heat_pump_ev,
+            IRA_STATE_SAVINGS[location.state].estimated_savings_heat_pump_ev,
 
           // 3) Populate the expected English and Spanish strings
           pos_rebate_incentives: translateIncentives(pos_rebate_incentives),

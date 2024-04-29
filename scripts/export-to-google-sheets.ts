@@ -6,6 +6,7 @@ import { FILES, IncentiveFile } from './incentive-spreadsheet-registry';
 import { authorize } from './lib/auth-helper';
 import { generateDataModelTable } from './lib/google-sheets/data-model';
 import { collectedIncentiveToGoogleSheet } from './lib/google-sheets/incentives-sheet-exporter';
+import { generateStandardEnumsSheet } from './lib/google-sheets/standardized-enums';
 import { FIELD_MAPPINGS, FIELD_METADATA } from './lib/spreadsheet-mappings';
 
 const INCENTIVE_SHEET_NAME = 'Incentives Data';
@@ -23,6 +24,8 @@ async function exportToGoogleSheets(state: string, file: IncentiveFile) {
     collected,
     FIELD_MAPPINGS,
     true,
+    FIELD_METADATA['short_description.en'].column_aliases[0],
+    Object.values(FIELD_METADATA),
   );
   if (!sheet.properties) {
     sheet.properties = {};
@@ -32,6 +35,7 @@ async function exportToGoogleSheets(state: string, file: IncentiveFile) {
   const workbook: sheets_v4.Schema$Spreadsheet = {
     sheets: [
       generateDataModelTable(FIELD_METADATA),
+      generateStandardEnumsSheet(FIELD_METADATA),
       sheet,
     ],
   };
@@ -61,6 +65,7 @@ async function exportToGoogleSheets(state: string, file: IncentiveFile) {
   const valuesResp = await sheetsClient.spreadsheets.values.get({
     spreadsheetId: resp.data.spreadsheetId,
     range: INCENTIVE_SHEET_NAME, // Entire sheet name is a valid range.
+    valueRenderOption: 'FORMULA',
   });
   if (valuesResp.status !== 200 || !valuesResp.data) {
     throw new Error(`Spreadsheet values read failed: ${valuesResp.statusText}`);

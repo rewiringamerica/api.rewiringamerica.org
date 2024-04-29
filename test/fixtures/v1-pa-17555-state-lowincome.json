@@ -3,11 +3,14 @@
   "is_under_150_ami": true,
   "is_over_150_ami": false,
   "authorities": {
-    "pa-department-of-community-and-economic-development": {
-      "name": "Department of Community and Economic Development"
+    "pa-pennsylvania-department-of-community-and-economic-development": {
+      "name": "Pennsylvania Department of Community and Economic Development"
     },
     "pa-first-energy": {
       "name": "First Energy"
+    },
+    "pa-pennsylvania-department-of-environmental-protection": {
+      "name": "Pennsylvania Department of Environmental Protection"
     }
   },
   "coverage": {
@@ -26,14 +29,16 @@
         "assistance_program"
       ],
       "authority_type": "state",
-      "authority": "pa-department-of-community-and-economic-development",
+      "authority": "pa-pennsylvania-department-of-community-and-economic-development",
       "program": "Pennsylvania Weatherization Assistance Program",
       "program_url": "https://dced.pa.gov/programs/weatherization-assistance-program-wap/",
       "item": {
         "type": "weatherization",
-        "name": "Weatherization",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+        "name": "Weatherization"
       },
+      "items": [
+        "weatherization"
+      ],
       "amount": {
         "type": "percent",
         "number": 1
@@ -55,9 +60,11 @@
       "program_url": "https://www.firstenergycorp.com/save_energy/save_energy_pennsylvania/met_ed/for_your_home/warm-info.html",
       "item": {
         "type": "weatherization",
-        "name": "Weatherization",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+        "name": "Weatherization"
       },
+      "items": [
+        "weatherization"
+      ],
       "amount": {
         "type": "percent",
         "number": 1
@@ -79,9 +86,11 @@
       "program_url": "https://rebates.energysavepa.com/",
       "item": {
         "type": "heat_pump_water_heater",
-        "name": "Heat Pump Water Heater",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-water-heater"
+        "name": "Heat Pump Water Heater"
       },
+      "items": [
+        "heat_pump_water_heater"
+      ],
       "amount": {
         "type": "dollar_amount",
         "number": 500
@@ -107,6 +116,9 @@
         "type": "smart_thermostat",
         "name": "Smart Thermostat"
       },
+      "items": [
+        "smart_thermostat"
+      ],
       "amount": {
         "type": "dollar_amount",
         "number": 75,
@@ -133,6 +145,9 @@
         "type": "smart_thermostat",
         "name": "Smart Thermostat"
       },
+      "items": [
+        "smart_thermostat"
+      ],
       "amount": {
         "type": "dollar_amount",
         "number": 50
@@ -150,15 +165,137 @@
       "payment_methods": [
         "rebate"
       ],
+      "authority_type": "state",
+      "authority": "pa-pennsylvania-department-of-environmental-protection",
+      "program": "Alternative Fuel Vehicle Rebates",
+      "program_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle"
+      },
+      "items": [
+        "new_electric_vehicle"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 3000,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2023-07-01",
+      "end_date": "2024-06-30",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Income-qualified rebate for purchase or lease of new electric vehicles. $3,000 for battery EVs; $2,500 for plug-in hybrid EVs."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "pa-pennsylvania-department-of-environmental-protection",
+      "program": "Alternative Fuel Vehicle Rebates",
+      "program_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
+      "item": {
+        "type": "used_electric_vehicle",
+        "name": "Used Electric Vehicle"
+      },
+      "items": [
+        "used_electric_vehicle"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 3000,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2023-07-01",
+      "end_date": "2024-06-30",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Income-qualified rebate for purchase of eligible used electric vehicles. $3,000 rebate for battery EVs; $2,500 rebate for plug-in hybrid EVs."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "pa-pennsylvania-department-of-environmental-protection",
+      "program": "Alternative Fuel Vehicle Rebates",
+      "program_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
+      "item": {
+        "type": "new_electric_vehicle",
+        "name": "New Electric Vehicle"
+      },
+      "items": [
+        "new_electric_vehicle"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2000,
+        "maximum": 2000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2023-07-01",
+      "end_date": "2024-06-30",
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "Income-qualified rebate for purchase or lease of new electric vehicles. $2,000 for battery EVs; $1,500 for plug-in hybrid EVs."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "pa-pennsylvania-department-of-environmental-protection",
+      "program": "Alternative Fuel Vehicle Rebates",
+      "program_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
+      "item": {
+        "type": "used_electric_vehicle",
+        "name": "Used Electric Vehicle"
+      },
+      "items": [
+        "used_electric_vehicle"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2000,
+        "maximum": 2000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2023-07-01",
+      "end_date": "2024-06-30",
+      "ami_qualification": null,
+      "eligible": false,
+      "short_description": "Income-qualified rebate for purchase of eligible used electric vehicles. $2,000 rebate for battery EVs; $1,500 rebate for plug-in hybrid EVs."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
       "authority_type": "other",
       "authority": "pa-first-energy",
       "program": "Residential Products Rebate Program",
       "program_url": "https://rebates.energysavepa.com/",
       "item": {
         "type": "geothermal_heating_installation",
-        "name": "Geothermal Heating Installation",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/geothermal-heating-installation"
+        "name": "Geothermal Heating Installation"
       },
+      "items": [
+        "geothermal_heating_installation"
+      ],
       "amount": {
         "type": "dollar_amount",
         "number": 650
@@ -182,9 +319,11 @@
       "program_url": "https://rebates.energysavepa.com/",
       "item": {
         "type": "heat_pump_air_conditioner_heater",
-        "name": "Heat Pump Air Conditioner/Heater",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+        "name": "Heat Pump Air Conditioner/Heater"
       },
+      "items": [
+        "heat_pump_air_conditioner_heater"
+      ],
       "amount": {
         "type": "dollar_amount",
         "number": 500,
@@ -209,9 +348,11 @@
       "program_url": "https://rebates.energysavepa.com/",
       "item": {
         "type": "heat_pump_air_conditioner_heater",
-        "name": "Heat Pump Air Conditioner/Heater",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+        "name": "Heat Pump Air Conditioner/Heater"
       },
+      "items": [
+        "heat_pump_air_conditioner_heater"
+      ],
       "amount": {
         "type": "dollar_amount",
         "number": 400
@@ -237,6 +378,9 @@
         "type": "other",
         "name": "Other"
       },
+      "items": [
+        "other"
+      ],
       "amount": {
         "type": "dollar_amount",
         "number": 200
@@ -260,9 +404,11 @@
       "program_url": "https://rebates.energysavepa.com/",
       "item": {
         "type": "heat_pump_air_conditioner_heater",
-        "name": "Heat Pump Air Conditioner/Heater",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+        "name": "Heat Pump Air Conditioner/Heater"
       },
+      "items": [
+        "heat_pump_air_conditioner_heater"
+      ],
       "amount": {
         "type": "dollar_amount",
         "number": 200
@@ -286,9 +432,11 @@
       "program_url": "https://rebates.energysavepa.com/",
       "item": {
         "type": "heat_pump_clothes_dryer",
-        "name": "Heat Pump Clothes Dryer",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-clothes-dryer"
+        "name": "Heat Pump Clothes Dryer"
       },
+      "items": [
+        "heat_pump_clothes_dryer"
+      ],
       "amount": {
         "type": "dollar_amount",
         "number": 75,
@@ -313,9 +461,11 @@
       "program_url": "https://rebates.energysavepa.com/",
       "item": {
         "type": "heat_pump_clothes_dryer",
-        "name": "Heat Pump Clothes Dryer",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-clothes-dryer"
+        "name": "Heat Pump Clothes Dryer"
       },
+      "items": [
+        "heat_pump_clothes_dryer"
+      ],
       "amount": {
         "type": "dollar_amount",
         "number": 50,

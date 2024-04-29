@@ -28,7 +28,6 @@ export const FILES: { [ident: string]: IncentiveFile } = {
   },
   CO: {
     filepath: 'data/CO/incentives.json',
-    collectedFilepath: 'data/CO/collected.json',
     sheetUrl:
       'https://docs.google.com/spreadsheets/d/1nITjSNRWJjSusB0fWuSS63fqynm_4Co7KEeuo9Cm7fU/pub?gid=30198531&single=true&output=csv',
     headerRowNumber: 2,
@@ -106,6 +105,7 @@ export const FILES: { [ident: string]: IncentiveFile } = {
     sheetUrl:
       'https://docs.google.com/spreadsheets/d/e/2PACX-1vTm6qcrCiLdhYDUak0m7sXWh6PGaDC8-kpmSOhoVmfwso_F9S029yhTZJV5Npvt2vdmpBztZj_ZtH7_/pub?gid=30198531&single=true&output=csv',
     headerRowNumber: 1,
+    runSpreadsheetHealthCheck: true,
   },
   WI: {
     filepath: 'data/WI/incentives.json',

@@ -63,7 +63,6 @@ import {
   WI_INCENTIVES,
   WI_INCENTIVES_SCHEMA,
 } from '../../src/data/state_incentives';
-import { SCHEMA as SMFI_SCHEMA, STATE_MFIS } from '../../src/data/state_mfi';
 import { TAX_BRACKETS, SCHEMA as TB_SCHEMA } from '../../src/data/tax_brackets';
 
 import Ajv from 'ajv/dist/2020';
@@ -80,6 +79,7 @@ import {
   addPrerequisites,
   buildRelationshipGraph,
 } from '../../src/lib/incentive-relationship-calculation';
+import { incentiveRelationshipsContainCycle } from './cycles';
 
 const TESTS = [
   [I_SCHEMA, IRA_INCENTIVES, 'ira_incentives'],
@@ -87,7 +87,6 @@ const TESTS = [
   [L_SCHEMA, LOCALES.en, 'en locale'],
   [L_SCHEMA, LOCALES.es, 'es locale'],
   [SP_SCHEMA, SOLAR_PRICES, 'solar_prices'],
-  [SMFI_SCHEMA, STATE_MFIS, 'state_mfis'],
   [TB_SCHEMA, TAX_BRACKETS, 'tax_brackets'],
   [AUTHORITIES_SCHEMA, AUTHORITIES_BY_STATE, 'authorities'],
   [
@@ -243,7 +242,10 @@ test("launched states do not have any values that we don't support for broader c
   STATE_INCENTIVE_TESTS.forEach(([state, , data]) => {
     if (LAUNCHED_STATES.includes(state)) {
       for (const incentive of data) {
-        tap.notOk(incentive.payment_methods.includes(PaymentMethod.Unknown));
+        tap.notOk(
+          incentive.payment_methods.includes(PaymentMethod.Unknown),
+          `Incentive ${incentive.id} has unknown payment method`,
+        );
       }
     }
   });
@@ -288,53 +290,6 @@ test('state incentive relationships JSON files match schemas', async tap => {
   });
 });
 
-// Helper to check for circular dependencies in the incentive relationships.
-export function checkForCycle(
-  incentiveId: string,
-  seen: Set<string>,
-  finished: Set<string>,
-  edges: Map<string, Set<string>>,
-) {
-  if (finished.has(incentiveId)) {
-    // We've already finished checking this incentive.
-    return false;
-  }
-  if (seen.has(incentiveId)) {
-    // We haven't finished checking this incentive's dependencies but are
-    // visiting it for the second time. This is a cycle.
-    return true;
-  }
-  seen.add(incentiveId);
-  const dependencies = edges.get(incentiveId);
-  if (dependencies !== undefined) {
-    for (const id of dependencies) {
-      if (checkForCycle(id, seen, finished, edges)) {
-        return true;
-      }
-    }
-  }
-  finished.add(incentiveId);
-  return false;
-}
-
-export function incentiveRelationshipsContainCycle(
-  relationshipGraph: Map<string, Set<string>>,
-) {
-  const seen = new Set<string>();
-  const finished = new Set<string>();
-  const toCheck = Array.from(relationshipGraph.keys());
-  let hasCycle = false;
-  if (toCheck !== undefined) {
-    for (const incentiveId of toCheck) {
-      hasCycle = checkForCycle(incentiveId, seen, finished, relationshipGraph);
-      if (hasCycle) {
-        break;
-      }
-    }
-  }
-  return hasCycle;
-}
-
 test('state incentive relationships contain no circular dependencies', async tap => {
   STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([, data]) => {
     // Check that there are no circular dependencies in the relationships.
@@ -366,11 +321,17 @@ test('state incentive relationships only reference real IDs', async tap => {
         for (const [incentiveId, prerequisites] of Object.entries(
           data.prerequisites,
         )) {
-          tap.equal(incentivesForState.has(incentiveId), true);
+          tap.ok(
+            incentivesForState.has(incentiveId),
+            `ID ${incentiveId} (in prereq map) does not exist`,
+          );
           const prerequisiteIds = new Set<string>();
           addPrerequisites(prerequisites, prerequisiteIds);
           for (const id of prerequisiteIds) {
-            tap.equal(incentivesForState.has(id), true);
+            tap.ok(
+              incentivesForState.has(id),
+              `ID ${id} (prereq of ${incentiveId}) does not exist`,
+            );
           }
         }
       }
@@ -378,16 +339,22 @@ test('state incentive relationships only reference real IDs', async tap => {
         for (const [incentiveId, supersededIds] of Object.entries(
           data.exclusions,
         )) {
-          tap.equal(incentivesForState.has(incentiveId), true);
+          tap.ok(
+            incentivesForState.has(incentiveId),
+            `ID ${incentiveId} (in exclusions map) does not exist`,
+          );
           for (const id of supersededIds) {
-            tap.equal(incentivesForState.has(id), true);
+            tap.ok(
+              incentivesForState.has(id),
+              `ID ${id} (superseded by ${incentiveId}) does not exist`,
+            );
           }
         }
       }
       if (data.combinations !== undefined) {
         for (const relationship of data.combinations) {
           for (const id of relationship.ids) {
-            tap.equal(incentivesForState.has(id), true);
+            tap.ok(incentivesForState.has(id), `ID ${id} does not exist`);
           }
         }
       }

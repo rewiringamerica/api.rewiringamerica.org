@@ -1,7 +1,6 @@
 import { Database } from 'sqlite';
 import { AUTHORITIES_BY_STATE, Authority } from '../data/authorities';
-import { isStateIncluded } from '../data/types/states';
-import { GeoInfo } from './income-info';
+import { ResolvedLocation } from './location';
 
 /** Models the zip_to_utility table in sqlite. */
 type ZipToUtility = {
@@ -21,21 +20,20 @@ type ZipToUtility = {
  */
 export async function getUtilitiesForLocation(
   db: Database,
-  location: GeoInfo,
-  includeBeta: boolean,
+  location: ResolvedLocation,
 ): Promise<{
   [id: string]: Authority;
 }> {
-  const stateUtilities = AUTHORITIES_BY_STATE[location.state_id]?.utility;
+  const stateUtilities = AUTHORITIES_BY_STATE[location.state]?.utility;
 
-  if (!stateUtilities || !isStateIncluded(location.state_id, includeBeta)) {
+  if (!stateUtilities) {
     return {};
   }
 
   // Put the predominant utility first
   const rows = await db.all<ZipToUtility[]>(
     'SELECT * FROM zip_to_utility WHERE zip = ? ORDER BY predominant DESC',
-    location.zip,
+    location.zcta,
   );
 
   // If we didn't find any utilities in the dataset, fall back to returning all

@@ -1,5 +1,5 @@
 {
-  "is_under_80_ami": false,
+  "is_under_80_ami": true,
   "is_under_150_ami": true,
   "is_over_150_ami": false,
   "authorities": {
@@ -29,6 +29,30 @@
         "width": 300,
         "height": 200
       }
+    },
+    "dc-mayor": {
+      "name": "Government of the District of Columbia, Muriel Bowser, Mayor",
+      "logo": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/dc-mayor.png",
+        "width": 473,
+        "height": 100
+      }
+    },
+    "dc-doee": {
+      "name": "Department of Energy & Environment",
+      "logo": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/dc-doee.png",
+        "width": 343,
+        "height": 100
+      }
+    },
+    "dc-seu": {
+      "name": "DC Sustainable Energy Utility",
+      "logo": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/dc-seu.png",
+        "width": 332,
+        "height": 100
+      }
     }
   },
   "incentives": [
@@ -42,9 +66,11 @@
       "program_url": "https://www.dcseu.com/affordable-home-electrification",
       "item": {
         "type": "heat_pump_air_conditioner_heater",
-        "name": "Heat Pump Air Conditioner/Heater",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+        "name": "Heat Pump Air Conditioner/Heater"
       },
+      "items": [
+        "heat_pump_air_conditioner_heater"
+      ],
       "amount": {
         "type": "percent",
         "number": 1
@@ -69,9 +95,11 @@
       "program_url": "https://www.dcseu.com/affordable-home-electrification",
       "item": {
         "type": "electric_stove",
-        "name": "Electric/Induction Stove",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/electric-stove-induction-stove"
+        "name": "Electric/Induction Stove"
       },
+      "items": [
+        "electric_stove"
+      ],
       "amount": {
         "type": "percent",
         "number": 1
@@ -96,9 +124,11 @@
       "program_url": "https://www.dcseu.com/affordable-home-electrification",
       "item": {
         "type": "heat_pump_water_heater",
-        "name": "Heat Pump Water Heater",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-water-heater"
+        "name": "Heat Pump Water Heater"
       },
+      "items": [
+        "heat_pump_water_heater"
+      ],
       "amount": {
         "type": "percent",
         "number": 1
@@ -123,9 +153,11 @@
       "program_url": "https://www.dcseu.com/affordable-home-electrification",
       "item": {
         "type": "electric_panel",
-        "name": "Electric Panel",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/electrical-panel"
+        "name": "Electric Panel"
       },
+      "items": [
+        "electric_panel"
+      ],
       "amount": {
         "type": "percent",
         "number": 1
@@ -150,9 +182,11 @@
       "program_url": "https://doee.dc.gov/service/wap",
       "item": {
         "type": "weatherization",
-        "name": "Weatherization",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/weatherization"
+        "name": "Weatherization"
       },
+      "items": [
+        "weatherization"
+      ],
       "amount": {
         "type": "percent",
         "number": 1
@@ -177,9 +211,11 @@
       "program_url": "https://www.dcseu.com/solar-for-all",
       "item": {
         "type": "rooftop_solar_installation",
-        "name": "Rooftop Solar Installation",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/rooftop-solar-installation"
+        "name": "Rooftop Solar Installation"
       },
+      "items": [
+        "rooftop_solar_installation"
+      ],
       "amount": {
         "type": "percent",
         "number": 1
@@ -204,9 +240,11 @@
       "program_url": "https://www.dcseu.com/homes/appliance-rebates",
       "item": {
         "type": "heat_pump_air_conditioner_heater",
-        "name": "Heat Pump Air Conditioner/Heater",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-air-conditioner-heater"
+        "name": "Heat Pump Air Conditioner/Heater"
       },
+      "items": [
+        "heat_pump_air_conditioner_heater"
+      ],
       "amount": {
         "type": "dollar_amount",
         "number": 700,
@@ -233,6 +271,9 @@
         "type": "electric_outdoor_equipment",
         "name": "Electric Outdoor Equipment"
       },
+      "items": [
+        "electric_outdoor_equipment"
+      ],
       "amount": {
         "type": "dollar_amount",
         "number": 500
@@ -257,9 +298,11 @@
       "program_url": "https://www.dcseu.com/homes/appliance-rebates",
       "item": {
         "type": "heat_pump_clothes_dryer",
-        "name": "Heat Pump Clothes Dryer",
-        "url": "https://www.rewiringamerica.org/app/ira-calculator/information/heat-pump-clothes-dryer"
+        "name": "Heat Pump Clothes Dryer"
       },
+      "items": [
+        "heat_pump_clothes_dryer"
+      ],
       "amount": {
         "type": "dollar_amount",
         "number": 200,
@@ -286,6 +329,9 @@
         "type": "electric_outdoor_equipment",
         "name": "Electric Outdoor Equipment"
       },
+      "items": [
+        "electric_outdoor_equipment"
+      ],
       "amount": {
         "type": "dollar_amount",
         "number": 75
@@ -312,6 +358,9 @@
         "type": "smart_thermostat",
         "name": "Smart Thermostat"
       },
+      "items": [
+        "smart_thermostat"
+      ],
       "amount": {
         "type": "dollar_amount",
         "number": 50

@@ -14,12 +14,12 @@ curl \
 
 curl \
   "http://localhost:3000/api/v1/calculator\
-?zip=80212\
+?zip=84106\
 &owner_status=homeowner\
 &household_income=80000\
 &tax_filing=joint\
 &household_size=4" \
-  | jq . > test/fixtures/v1-80212-homeowner-80000-joint-4.json
+  | jq . > test/fixtures/v1-84106-homeowner-80000-joint-4.json
 
 curl \
   "http://localhost:3000/api/v1/calculator\
@@ -101,11 +101,9 @@ curl \
 &utility=ga-georgia-power" \
   | jq . > test/fixtures/v1-ga-30033-utility.json
 
-# TODO: Remove beta states argument when IL is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator?\
 zip=60304\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=35000\
 &tax_filing=joint\
@@ -114,11 +112,19 @@ zip=60304\
 &authority=il-state-of-illinois" \
  | jq . > test/fixtures/il-60304-state-utility-lowincome.json
 
-# TODO: Remove beta states argument when MI is fully launched.
+ curl \
+  "http://localhost:3000/api/v1/calculator?\
+zip=60202\
+&owner_status=homeowner\
+&household_income=10000\
+&tax_filing=single\
+&household_size=2\
+&authority_types=city" \
+ | jq . > test/fixtures/v1-il-60202-city-lowincome.json
+
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?zip=48103\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=40000\
 &tax_filing=joint\
@@ -127,11 +133,20 @@ curl \
 &utility=mi-dte" \
   | jq . > test/fixtures/v1-mi-48103-state-utility-lowincome.json
 
-# TODO: Remove beta states argument when NV is fully launched.
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?zip=48825\
+&owner_status=homeowner\
+&household_income=10000\
+&tax_filing=single\
+&household_size=2\
+&authority_types=utility\
+&utility=mi-lansing-board-of-water-and-light" \
+  | jq . > test/fixtures/v1-mi-48825-city-lowincome.json
+
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?zip=89108\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=40000\
 &tax_filing=joint\
@@ -154,11 +169,9 @@ curl \
 &include_beta_states=true" \
   | jq . > test/fixtures/v1-ny-11557-state-utility-lowincome.json
 
-# TODO: Remove beta states argument when PA is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator?\
 zip=17555\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=20000\
 &tax_filing=joint\
@@ -186,7 +199,6 @@ curl \
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?zip=05401\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=40000\
 &tax_filing=joint\
@@ -196,11 +208,22 @@ curl \
 &utility=vt-burlington-electric-department" \
   | jq . > test/fixtures/v1-vt-05401-state-utility-lowincome.json
 
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?zip=05845\
+&owner_status=homeowner\
+&household_income=40000\
+&tax_filing=single\
+&household_size=1\
+&items=new_electric_vehicle\
+&items=used_electric_vehicle\
+&utility=vt-vermont-electric-cooperative" \
+  | jq . > test/fixtures/v1-vt-05845-vec-ev-low-income.json
+
 # TODO: Remove beta states argument when CO is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?zip=81657\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=100000\
 &tax_filing=joint\
@@ -215,18 +238,16 @@ curl \
   "http://localhost:3000/api/v1/calculator\
 ?zip=15289\
 &owner_status=homeowner\
-&household_income=80000\
+&household_income=85000\
 &tax_filing=joint\
 &household_size=4" \
-  | jq . > test/fixtures/v1-15289-homeowner-80000-joint-4.json
+  | jq . > test/fixtures/v1-15289-homeowner-85000-joint-4.json
 
-# TODO: Remove beta states argument when DC is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?zip=20303\
-&include_beta_states=true\
 &owner_status=homeowner\
-&household_income=95797\
+&household_income=95796\
 &tax_filing=joint\
 &household_size=4\
 &authority_types=state\
@@ -236,7 +257,6 @@ curl \
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?zip=80517\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=80000\
 &tax_filing=single\
@@ -251,7 +271,6 @@ curl \
 curl \
   "http://localhost:3000/api/v1/calculator\
 ?zip=80517\
-&include_beta_states=true\
 &owner_status=homeowner\
 &household_income=80000\
 &tax_filing=single\

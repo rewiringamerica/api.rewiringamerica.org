@@ -7,7 +7,7 @@
       "pos_rebate"
     ],
     "item": "heat_pump_clothes_dryer",
-    "program": "nv_nVEnergy_homeEnergySaver",
+    "program": "nv_nVEnergy_nVEnergyResidentialAppliancesAndProducts",
     "amount": {
       "type": "dollar_amount",
       "number": 50
@@ -29,7 +29,7 @@
       "pos_rebate"
     ],
     "item": "heat_pump_clothes_dryer",
-    "program": "nv_nVEnergy_homeEnergySaver",
+    "program": "nv_nVEnergy_nVEnergyResidentialAppliancesAndProducts",
     "amount": {
       "type": "dollar_amount",
       "number": 200
@@ -51,7 +51,7 @@
       "pos_rebate"
     ],
     "item": "heat_pump_water_heater",
-    "program": "nv_nVEnergy_homeEnergySaver",
+    "program": "nv_nVEnergy_nVEnergyHeatPumpWaterHeating",
     "amount": {
       "type": "dollar_amount",
       "number": 400
@@ -324,7 +324,7 @@
       "assistance_program"
     ],
     "item": "heat_pump_clothes_dryer",
-    "program": "nv_nVEnergy_qualifiedApplianceReplacementProgram",
+    "program": "nv_nVEnergy_nVEnergyQualifiedApplianceReplacementProgram",
     "amount": {
       "type": "percent",
       "number": 1
@@ -337,7 +337,7 @@
       "en": "Free replacement of electric dryers (10 years or older) when you meet income eligibility requirements.",
       "es": "Sustitución gratuita de secadoras eléctricas (de 10 años o más) cuando cumpla los requisitos de nivel de ingresos."
     },
-    "low_income": "nv-nv-energy"
+    "low_income": "nv-nv-energy-appliance-replacement"
   },
   {
     "id": "NV-18",
@@ -391,19 +391,19 @@
       "pos_rebate"
     ],
     "item": "other",
-    "program": "nv_nVEnergy_residentialAirconditioningProgram",
+    "program": "nv_nVEnergy_nVEnergyResidentialAirConditioning",
     "amount": {
       "type": "dollar_amount",
-      "number": 1600,
-      "minimum": 400,
-      "maximum": 1600
+      "number": 1360,
+      "minimum": 340,
+      "maximum": 1360
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Receive up to $1,600 instant rebate from qualifying distributors when you replace your old air condition system with higher efficiency equipment.",
-      "es": "Reciba hasta $1,600 dólares de reembolso instantáneo de distribuidores habilitados cuando reemplace su viejo sistema de aire acondicionado por un equipo de eficiencia superior."
+      "en": "Receive up to $1,360 instant rebate from qualifying distributors when you replace your old air condition system with higher efficiency equipment.",
+      "es": "Reciba hasta $1,360 dólares de reembolso instantáneo de distribuidores habilitados cuando reemplace su viejo sistema de aire acondicionado por un equipo de eficiencia superior."
     }
   },
   {
@@ -414,19 +414,19 @@
       "pos_rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "nv_nVEnergy_residentialAirconditioningProgram",
+    "program": "nv_nVEnergy_nVEnergyResidentialAirConditioning",
     "amount": {
       "type": "dollar_amount",
-      "number": 2400,
-      "minimum": 600,
-      "maximum": 2400
+      "number": 2040,
+      "minimum": 510,
+      "maximum": 2040
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $2,400 instant rebate from qualifying distributors when you replace your old air condition system with an air source heat pump.",
-      "es": "Un reembolso instantáneo de hasta $2,400 dólares de distribuidores certificados cuando sustituya su antiguo sistema de aire acondicionado por una bomba de calor con fuente de aire."
+      "en": "Up to $2,040 instant rebate from qualifying distributors when you replace your old air condition system with an air source heat pump.",
+      "es": "Un reembolso instantáneo de hasta $2,040 dólares de distribuidores certificados cuando sustituya su antiguo sistema de aire acondicionado por una bomba de calor con fuente de aire."
     }
   },
   {
@@ -437,17 +437,17 @@
       "pos_rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "nv_nVEnergy_residentialAirconditioningProgram",
+    "program": "nv_nVEnergy_nVEnergyResidentialAirConditioning",
     "amount": {
       "type": "dollar_amount",
-      "number": 1600
+      "number": 1360
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,600 discount from qualifying distributors when your replace your old air conditioning system with a ductless heat pump.",
-      "es": "Hasta $1,600 dólares de descuento de distribuidores certificados cuando sustituya su antiguo sistema de aire acondicionado por una bomba de calor sin ductos."
+      "en": "Up to $1,360 discount from qualifying distributors when your replace your old air conditioning system with a ductless heat pump.",
+      "es": "Hasta $1,360 dólares de descuento de distribuidores certificados cuando sustituya su antiguo sistema de aire acondicionado por una bomba de calor sin ductos."
     }
   },
   {
@@ -458,21 +458,21 @@
       "pos_rebate"
     ],
     "item": "other",
-    "program": "nv_nVEnergy_residentialAirconditioningProgram",
+    "program": "nv_nVEnergy_nVEnergyResidentialAirConditioning",
     "amount": {
       "type": "dollar_amount",
-      "number": 3600,
-      "minimum": 1700,
-      "maximum": 3600
+      "number": 3060,
+      "minimum": 1445,
+      "maximum": 3060
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $3,600 income qualified instant rebate when you replace your old air condition system with higher efficiency equipment.",
-      "es": "Un reembolso instantáneo de hasta $3,600 dólares que cumpla con el nivel de ingresos cuando sustituya su viejo sistema de aire acondicionado por un equipo de eficiencia superior. "
+      "en": "Up to $3,060 income qualified instant rebate when you replace your old air condition system with higher efficiency equipment.",
+      "es": "Un reembolso instantáneo de hasta $3,060 dólares que cumpla con el nivel de ingresos cuando sustituya su viejo sistema de aire acondicionado por un equipo de eficiencia superior. "
     },
-    "low_income": "nv-nv-energy"
+    "low_income": "nv-nv-energy-residential-air-conditioning"
   },
   {
     "id": "NV-24",
@@ -482,21 +482,21 @@
       "pos_rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "nv_nVEnergy_residentialAirconditioningProgram",
+    "program": "nv_nVEnergy_nVEnergyResidentialAirConditioning",
     "amount": {
       "type": "dollar_amount",
-      "number": 4000,
-      "minimum": 2000,
-      "maximum": 4000
+      "number": 3400,
+      "minimum": 1700,
+      "maximum": 3400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $4,000 income qualified instant rebate from qualifying distributors when you replace old air condition system with an air source heat pump.",
-      "es": "Un reembolso instantáneo de hasta $4,000 dólares si cumple con el nivel de ingresos por distribuidores certificados para reemplazar su antiguo sistema de aire acondicionado por una bomba de calor con fuente de aire. "
+      "en": "Up to $3,400 income qualified instant rebate from qualifying distributors when you replace old air conditioning system with an air source heat pump.",
+      "es": "Un reembolso instantáneo de hasta $3,400 dólares si cumple con el nivel de ingresos por distribuidores certificados para reemplazar su antiguo sistema de aire acondicionado por una bomba de calor con fuente de aire. "
     },
-    "low_income": "nv-nv-energy"
+    "low_income": "nv-nv-energy-residential-air-conditioning"
   },
   {
     "id": "NV-25",
@@ -506,19 +506,19 @@
       "pos_rebate"
     ],
     "item": "heat_pump_air_conditioner_heater",
-    "program": "nv_nVEnergy_residentialAirconditioningProgram",
+    "program": "nv_nVEnergy_nVEnergyResidentialAirConditioning",
     "amount": {
       "type": "dollar_amount",
-      "number": 3200
+      "number": 2720
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $3,200 income qualified discount from qualifying distributors when your replace your old air conditioning system with a ductless heat pump.",
-      "es": "Hasta $3,200 dólares de descuento si cumple con requisitos de nivel de ingresos de distribuidores certificados cuando sustituya su antiguo sistema de aire acondicionado por una bomba de calor sin ductos."
+      "en": "Up to $2,720 income qualified discount from qualifying distributors when your replace your old air conditioning system with a ductless heat pump.",
+      "es": "Hasta $2,720 dólares de descuento si cumple con requisitos de nivel de ingresos de distribuidores certificados cuando sustituya su antiguo sistema de aire acondicionado por una bomba de calor sin ductos."
     },
-    "low_income": "nv-nv-energy"
+    "low_income": "nv-nv-energy-residential-air-conditioning"
   },
   {
     "id": "NV-26",
@@ -528,7 +528,7 @@
       "assistance_program"
     ],
     "item": "smart_thermostat",
-    "program": "nv_nVEnergy_residentialSmartThermostatProgram",
+    "program": "nv_nVEnergy_nVEnergyResidentialSmartThermostatProgram",
     "amount": {
       "type": "percent",
       "number": 1,
@@ -1693,7 +1693,7 @@
       "rebate"
     ],
     "item": "weatherization",
-    "program": "nv_nVEnergy_homeEnergySaver",
+    "program": "nv_nVEnergy_nVEnergyHomeImprovements",
     "amount": {
       "type": "dollar_amount",
       "number": 400,

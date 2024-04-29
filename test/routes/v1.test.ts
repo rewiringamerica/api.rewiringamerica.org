@@ -58,26 +58,13 @@ test('response is valid and correct', async t => {
   await validateResponse(
     t,
     {
-      zip: '80212',
+      zip: '84106',
       owner_status: 'homeowner',
       household_income: 80000,
       tax_filing: 'joint',
       household_size: 4,
     },
-    './test/fixtures/v1-80212-homeowner-80000-joint-4.json',
-  );
-
-  // Same request but with location passed differently
-  await validateResponse(
-    t,
-    {
-      zip: '80212',
-      owner_status: 'homeowner',
-      household_income: 80000,
-      tax_filing: 'joint',
-      household_size: 4,
-    },
-    './test/fixtures/v1-80212-homeowner-80000-joint-4.json',
+    './test/fixtures/v1-84106-homeowner-80000-joint-4.json',
   );
 });
 
@@ -89,11 +76,11 @@ test('parent ZCTA is used', async t => {
       // is 15213, which does.
       zip: '15289',
       owner_status: 'homeowner',
-      household_income: 80000,
+      household_income: 85000,
       tax_filing: 'joint',
       household_size: 4,
     },
-    './test/fixtures/v1-15289-homeowner-80000-joint-4.json',
+    './test/fixtures/v1-15289-homeowner-85000-joint-4.json',
   );
 });
 
@@ -218,8 +205,6 @@ test('CO low income response with state and utility filtering is valid and corre
       tax_filing: 'joint',
       authority_types: ['state', 'utility', 'other'],
       utility: 'co-xcel-energy',
-      // TODO: Remove when CO is fully launched.
-      include_beta_states: true,
     },
     './test/fixtures/v1-co-81657-state-utility-lowincome.json',
   );
@@ -239,8 +224,6 @@ test('CO incentive for PRPA shows up as intended', async t => {
       items: ['heat_pump_water_heater'],
       // Not in PRPA; incentives should not show up
       utility: 'co-xcel-energy',
-      // TODO: Remove when CO is fully launched.
-      include_beta_states: true,
     },
     './test/fixtures/v1-80517-xcel.json',
   );
@@ -256,8 +239,6 @@ test('CO incentive for PRPA shows up as intended', async t => {
       items: ['heat_pump_water_heater'],
       // Is in PRPA; incentives should show up
       utility: 'co-estes-park-power-and-communications',
-      // TODO: Remove when CO is fully launched.
-      include_beta_states: true,
     },
     './test/fixtures/v1-80517-estes-park.json',
   );
@@ -294,8 +275,6 @@ test('DC low income response with state and city filtering is valid and correct'
       tax_filing: 'joint',
       authority_types: ['state', 'city'],
       authority: 'dc-dc-sustainable-energy-utility',
-      // TODO: Remove when DC is fully launched.
-      include_beta_states: true,
     },
     './test/fixtures/v1-dc-20303-state-city-lowincome.json',
   );
@@ -332,10 +311,23 @@ test('IL low income response with state and utility filtering is valid and corre
       tax_filing: 'joint',
       authority_types: ['state'],
       authority: 'il-state-of-illinois',
-      // TODO: Remove when IL is fully launched.
-      include_beta_states: true,
     },
     './test/fixtures/il-60304-state-utility-lowincome.json',
+  );
+});
+
+test('IL low income response with city authority filtering is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      zip: '60202',
+      owner_status: 'homeowner',
+      household_size: 2,
+      household_income: 10000,
+      tax_filing: 'single',
+      authority_types: ['city'],
+    },
+    './test/fixtures/v1-il-60202-city-lowincome.json',
   );
 });
 
@@ -352,9 +344,25 @@ test('MI response with state and utility is valid and correct', async t => {
       tax_filing: 'joint',
       authority_types: ['utility'],
       utility: 'mi-dte',
-      include_beta_states: true,
     },
     './test/fixtures/v1-mi-48103-state-utility-lowincome.json',
+  );
+});
+
+test('MI response with state and utility is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      zip: '48825',
+      owner_status: 'homeowner',
+      household_size: 2,
+      household_income: 10000,
+      tax_filing: 'single',
+      authority_types: ['utility'],
+      utility: 'mi-lansing-board-of-water-and-light',
+      include_beta_states: true,
+    },
+    './test/fixtures/v1-mi-48825-city-lowincome.json',
   );
 });
 
@@ -370,8 +378,6 @@ test('NV low income response with state and utility filtering is valid and corre
       tax_filing: 'joint',
       authority_types: ['utility'],
       utility: 'nv-nv-energy',
-      // TODO: Remove when NV is fully launched.
-      include_beta_states: true,
     },
     './test/fixtures/v1-nv-89108-state-utility-lowincome.json',
   );
@@ -408,8 +414,6 @@ test('PA low income response with state and utility filtering is valid and corre
       tax_filing: 'joint',
       authority_types: ['state', 'utility', 'other'],
       utility: 'pa-met-ed',
-      // TODO: Remove when PA is fully launched.
-      include_beta_states: true,
     },
     './test/fixtures/v1-pa-17555-state-lowincome.json',
   );
@@ -465,10 +469,25 @@ test('VT low income response with state and utility filtering is valid and corre
       tax_filing: 'joint',
       authority_types: ['state', 'utility'],
       utility: 'vt-burlington-electric-department',
-      // TODO: Remove when VT is fully launched.
-      include_beta_states: true,
     },
     './test/fixtures/v1-vt-05401-state-utility-lowincome.json',
+  );
+});
+
+// VT electric vehicles complexity
+test('VT low income EV incentives are correct', async t => {
+  await validateResponse(
+    t,
+    {
+      zip: '05845',
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 40000,
+      tax_filing: 'single',
+      utility: 'vt-vermont-electric-cooperative',
+      items: ['new_electric_vehicle', 'used_electric_vehicle'],
+    },
+    './test/fixtures/v1-vt-05845-vec-ev-low-income.json',
   );
 });
 
@@ -645,12 +664,12 @@ const BAD_QUERIES = [
     utility: 'nonexistent-utility',
   },
   {
-    zip: '80212',
+    zip: '84106',
     owner_status: 'homeowner',
     household_income: 80000,
     tax_filing: 'joint',
     household_size: 4,
-    // We don't have coverage in 80212 (Colorado)
+    // We don't have coverage in 84106 (Utah)
     utility: 'ri-rhode-island-energy',
   },
 ];
@@ -711,7 +730,6 @@ test('non-existent zips', async t => {
 const UTILITIES = [
   [
     '02807',
-    false,
     {
       location: { state: 'RI' },
       utilities: {
@@ -721,7 +739,6 @@ const UTILITIES = [
   ],
   [
     '02814',
-    false,
     {
       location: { state: 'RI' },
       utilities: {
@@ -732,7 +749,6 @@ const UTILITIES = [
   ],
   [
     '02905',
-    false,
     {
       location: { state: 'RI' },
       utilities: { 'ri-rhode-island-energy': { name: 'Rhode Island Energy' } },
@@ -740,7 +756,6 @@ const UTILITIES = [
   ],
   [
     '06360',
-    true,
     {
       location: { state: 'CT' },
       utilities: {
@@ -756,16 +771,18 @@ const UTILITIES = [
       },
     },
   ],
-  ['06360', false, { location: { state: 'CT' }, utilities: {} }],
   [
-    '80212',
-    false,
+    '84106',
     {
-      location: { state: 'CO' },
-      utilities: {},
+      location: { state: 'UT' },
+      utilities: {
+        'ut-rocky-mountain-power': {
+          name: 'Rocky Mountain Power',
+        },
+      },
     },
   ],
-];
+] as const;
 
 test('/utilities', async t => {
   const app = await build(t);
@@ -778,11 +795,8 @@ test('/utilities', async t => {
   });
   const validator = ajv.getSchema('APIUtilitiesResponse')!;
 
-  for (const [zip, beta, expectedResponse] of UTILITIES) {
-    const searchParams = qs.stringify(
-      { zip, include_beta_states: beta },
-      { encodeValuesOnly: true },
-    );
+  for (const [zip, expectedResponse] of UTILITIES) {
+    const searchParams = qs.stringify({ zip }, { encodeValuesOnly: true });
     const res = await app.inject({ url: `/api/v1/utilities?${searchParams}` });
     t.equal(res.statusCode, 200);
 

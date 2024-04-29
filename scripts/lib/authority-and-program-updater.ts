@@ -368,7 +368,11 @@ export class AuthorityAndProgramUpdater {
       fs.readFileSync(filepath, 'utf-8'),
     );
     const updated = updateAuthorities(json, this.authorityMap);
-    fs.writeFileSync(filepath, JSON.stringify(updated, null, 2), 'utf-8');
+    fs.writeFileSync(
+      filepath,
+      JSON.stringify(updated, null, 2) + '\n',
+      'utf-8',
+    );
   }
 
   async updatePrograms() {

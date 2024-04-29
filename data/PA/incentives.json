@@ -2,12 +2,12 @@
   {
     "id": "PA-1",
     "authority_type": "state",
-    "authority": "pa-department-of-community-and-economic-development",
+    "authority": "pa-pennsylvania-department-of-community-and-economic-development",
     "payment_methods": [
       "assistance_program"
     ],
     "item": "weatherization",
-    "program": "pa_departmentOfCommunityAndEconomicDevelopment_pennsylvaniaWeatherizationAssistanceProgram",
+    "program": "pa_pennsylvaniaDepartmentOfCommunityAndEconomicDevelopment_pennsylvaniaWeatherizationAssistanceProgram",
     "amount": {
       "type": "percent",
       "number": 1
@@ -220,111 +220,14 @@
     "program": "pa_duquesneLightCompany_duquesneEnergyEfficiencyRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 400,
-      "maximum": 400
+      "number": 2000,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $400 rebate for home air sealing. The rebate value rises in proportion to the reduction in kilowatt-hour (kWh) usage.",
-      "es": "Reembolso de hasta $400 dólares por el sellado hermético de la vivienda. El monto del reembolso se eleva en proporción a la reducción del consumo de kilowatts por hora (kWh)."
-    },
-    "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
-  },
-  {
-    "id": "PA-11",
-    "authority_type": "utility",
-    "authority": "pa-duquesne-light-company",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "weatherization",
-    "program": "pa_duquesneLightCompany_duquesneEnergyEfficiencyRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400,
-      "maximum": 400
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $400 rebate for duct insulation. The rebate value rises in proportion to the reduction in kilowatt-hour (kWh) usage.",
-      "es": "Reembolso de hasta $400 dólares por aislamiento térmico de ductos. El monto del reembolso se eleva en proporción a la reducción del consumo de kilowatts por hora (kWh)."
-    },
-    "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
-  },
-  {
-    "id": "PA-12",
-    "authority_type": "utility",
-    "authority": "pa-duquesne-light-company",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "weatherization",
-    "program": "pa_duquesneLightCompany_duquesneEnergyEfficiencyRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400,
-      "maximum": 400
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $400 rebate for attic insulation. The rebate value rises in proportion to the reduction in kilowatt-hour (kWh) usage.",
-      "es": "Reembolso de hasta $400 dólares por aislamiento térmico del desván. El monto del reembolso se eleva en proporción a la reducción del consumo de kilowatts por hora (kWh)."
-    },
-    "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
-  },
-  {
-    "id": "PA-13",
-    "authority_type": "utility",
-    "authority": "pa-duquesne-light-company",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "weatherization",
-    "program": "pa_duquesneLightCompany_duquesneEnergyEfficiencyRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400,
-      "maximum": 400
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $400 rebate for basement/crawl space wall insulation. The rebate value rises in proportion to the reduction in kilowatt-hour (kWh) usage.",
-      "es": "Reembolso de hasta $400 dólares por aislamiento térmico de muros en sótanos y espacios reducidos. El monto del reembolso se eleva en proporción a la reducción del consumo de kilowatts por hora (kWh)."
-    },
-    "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
-  },
-  {
-    "id": "PA-14",
-    "authority_type": "utility",
-    "authority": "pa-duquesne-light-company",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "weatherization",
-    "program": "pa_duquesneLightCompany_duquesneEnergyEfficiencyRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400,
-      "maximum": 400
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $400 rebate for knee wall insulation. The rebate value rises in proportion to the reduction in kilowatt-hour (kWh) usage.",
-      "es": "Reembolso de hasta $400 dólares por aislamiento térmico de muros. El monto del reembolso se eleva en proporción a la reducción del consumo de kilowatts por hora (kWh)."
+      "en": "Up to $2,000 rebate for weatherization. Up to $400 each for air sealing, duct, attic, basement/crawl space and knee wall insulation."
     },
     "start_date": "2021-06-01",
     "end_date": "2026-05-31"
@@ -983,5 +886,173 @@
     },
     "start_date": "2024-01-01",
     "end_date": "2024-12-31"
+  },
+  {
+    "id": "PA-47",
+    "authority_type": "state",
+    "authority": "pa-pennsylvania-department-of-environmental-protection",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "new_electric_vehicle",
+    "program": "pa_pennsylvaniaDepartmentOfEnvironmentalProtection_alternativeFuelVehicleRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "minimum": 1500,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Income-qualified rebate for purchase or lease of new electric vehicles. $2,000 for battery EVs; $1,500 for plug-in hybrid EVs."
+    },
+    "start_date": "2023-07-01",
+    "end_date": "2024-06-30",
+    "bonus_available": true,
+    "low_income": "pa-pennsylvania-department-of-environmental-protection"
+  },
+  {
+    "id": "PA-48",
+    "authority_type": "state",
+    "authority": "pa-pennsylvania-department-of-environmental-protection",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "used_electric_vehicle",
+    "program": "pa_pennsylvaniaDepartmentOfEnvironmentalProtection_alternativeFuelVehicleRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "minimum": 1500,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Income-qualified rebate for purchase of eligible used electric vehicles. $2,000 rebate for battery EVs; $1,500 rebate for plug-in hybrid EVs."
+    },
+    "start_date": "2023-07-01",
+    "end_date": "2024-06-30",
+    "bonus_available": true,
+    "low_income": "pa-pennsylvania-department-of-environmental-protection"
+  },
+  {
+    "id": "PA-49",
+    "authority_type": "state",
+    "authority": "pa-pennsylvania-department-of-environmental-protection",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "new_electric_vehicle",
+    "program": "pa_pennsylvaniaDepartmentOfEnvironmentalProtection_alternativeFuelVehicleRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000,
+      "minimum": 2500,
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Income-qualified rebate for purchase or lease of new electric vehicles. $3,000 for battery EVs; $2,500 for plug-in hybrid EVs."
+    },
+    "start_date": "2023-07-01",
+    "end_date": "2024-06-30",
+    "low_income": "pa-pennsylvania-department-of-environmental-protection-bonus"
+  },
+  {
+    "id": "PA-50",
+    "authority_type": "state",
+    "authority": "pa-pennsylvania-department-of-environmental-protection",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "used_electric_vehicle",
+    "program": "pa_pennsylvaniaDepartmentOfEnvironmentalProtection_alternativeFuelVehicleRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000,
+      "minimum": 2500,
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Income-qualified rebate for purchase of eligible used electric vehicles. $3,000 rebate for battery EVs; $2,500 rebate for plug-in hybrid EVs."
+    },
+    "start_date": "2023-07-01",
+    "end_date": "2024-06-30",
+    "low_income": "pa-pennsylvania-department-of-environmental-protection-bonus"
+  },
+  {
+    "id": "PA-51",
+    "authority_type": "utility",
+    "authority": "pa-ugi-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "pa_uGIUtilities_equipmentRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1250,
+      "minimum": 150,
+      "maximum": 1250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,250 rebate for ENERGY STAR® certified mini-split heat pumps. Rebate amount varies depending on heat pump efficiency and capacity."
+    }
+  },
+  {
+    "id": "PA-52",
+    "authority_type": "utility",
+    "authority": "pa-ugi-utilities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "smart_thermostat",
+    "program": "pa_uGIUtilities_applianceRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for ENERGY STAR® certified smart thermostats."
+    }
+  },
+  {
+    "id": "PA-53",
+    "authority_type": "utility",
+    "authority": "pa-peco",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "new_electric_vehicle",
+    "program": "pa_pECO_pECODriverRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for purchasing a plug-in EV."
+    }
   }
 ]

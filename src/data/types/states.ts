@@ -55,23 +55,23 @@ export const STATES_PLUS_DC = [
 export const BETA_STATES: string[] = [
   'AZ',
   'CA',
-  'CO',
   'CT',
   'GA',
-  'IL',
-  'MI',
-  'NV',
   'NY',
   'OR',
-  'PA',
-  'VT',
   'WI',
 ];
 
 export const LAUNCHED_STATES: string[] = [
+  'CO',
   'DC',
+  'IL',
+  'MI',
+  'NV',
+  'PA',
   'RI',
   'VA',
+  'VT',
 ];
 
 export const isStateIncluded = (

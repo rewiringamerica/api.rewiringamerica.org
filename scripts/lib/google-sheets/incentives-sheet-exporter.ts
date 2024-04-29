@@ -3,9 +3,10 @@ import util from 'util';
 import { CollectedIncentive } from '../../../src/data/state_incentives';
 import {
   SpreadsheetData,
+  colToLetter,
   collectedIncentivesToSpreadsheet,
 } from '../format-converter';
-import { AliasMap } from '../spreadsheet-mappings';
+import { AliasMap, FieldMetadata } from '../spreadsheet-mappings';
 
 const REBATE_AMOUNT_FIELDS_START = 15; // inclusive
 const REBATE_AMOUNT_FIELDS_END = 22; // exclusive
@@ -91,26 +92,81 @@ function createCellValue(
   return valToWrite;
 }
 
+function createCellDataValidation(
+  col: string,
+  fieldsWithEnums: FieldMetadata[],
+): sheets_v4.Schema$DataValidationRule | undefined {
+  for (const [ind, field] of fieldsWithEnums.entries()) {
+    if (col === field.column_aliases[0]) {
+      const columnLetter = colToLetter(ind * 3 + 1);
+      const lastEnumRow = Object.keys(field.values!).length + 1;
+      return {
+        strict: true,
+        // Make Google Sheets to show a dropdown UI element. Unfortunately,
+        // it's not possible in the API to force the "chip" version, just a
+        // regular list.
+        showCustomUi: true,
+        condition: {
+          type: 'ONE_OF_RANGE',
+          values: [
+            {
+              userEnteredValue: `='Standardized Enum List Values'!$${columnLetter}$2:$${columnLetter}$${lastEnumRow}`,
+            },
+          ],
+        },
+      };
+    }
+  }
+  return undefined;
+}
+
 export function collectedIncentiveToGoogleSheet(
   incentives: CollectedIncentive[],
   fieldMappings: AliasMap,
   useStandardHeader: boolean,
+  descriptionColumnName?: string,
+  fieldMetadata?: FieldMetadata[],
 ) {
   const spreadsheetData = collectedIncentivesToSpreadsheet(
     incentives,
     fieldMappings,
   );
-  return spreadsheetToGoogleSheet(spreadsheetData, useStandardHeader);
+  return spreadsheetToGoogleSheet(
+    spreadsheetData,
+    useStandardHeader,
+    descriptionColumnName,
+    fieldMetadata,
+  );
 }
 
+// descriptionColumnName is used to add formulas that depend on that column.
+// It's not required if you don't want them added.
 export function spreadsheetToGoogleSheet(
   spreadsheet: SpreadsheetData,
   useStandardHeader: boolean,
+  descriptionColumnName?: string,
+  fieldMetadata?: FieldMetadata[],
 ) {
   const { records, headers } = spreadsheet;
 
+  let descCol: string;
+  if (descriptionColumnName) {
+    if (!headers.includes(descriptionColumnName)) {
+      throw new Error(
+        `Formula columns requested, but couldn't find the short_description column. Expected column name: ${descriptionColumnName}`,
+      );
+    } else {
+      descCol = colToLetter(1 + headers.indexOf(descriptionColumnName));
+    }
+  }
+  const numHeaders = useStandardHeader ? 2 : 1;
+
+  // Filter to FieldMetadata with value restrictions.
+  fieldMetadata = fieldMetadata ? fieldMetadata : [];
+  const fieldsWithEnums = fieldMetadata.filter(metadata => metadata.values);
+
   let rowData: sheets_v4.Schema$RowData[] = [];
-  records.forEach(record => {
+  records.forEach((record, rowInd) => {
     const rowValues: sheets_v4.Schema$CellData[] = [];
     for (const col of headers) {
       const cell: sheets_v4.Schema$CellData = {
@@ -119,7 +175,30 @@ export function spreadsheetToGoogleSheet(
       if (col in record) {
         cell.userEnteredValue = createCellValue(col, record[col]);
       }
+      const maybeDataValidation = createCellDataValidation(
+        col,
+        fieldsWithEnums,
+      );
+      if (maybeDataValidation) {
+        cell.dataValidation = maybeDataValidation;
+      }
+
       rowValues.push(cell);
+    }
+    if (descriptionColumnName) {
+      const descCellAddress = `${descCol}${rowInd + numHeaders + 1}`;
+      rowValues.push({
+        userEnteredFormat: standardValueCellFormat,
+        userEnteredValue: {
+          formulaValue: `=LEN(${descCellAddress})`,
+        },
+      });
+      rowValues.push({
+        userEnteredFormat: standardValueCellFormat,
+        userEnteredValue: {
+          formulaValue: `=IF(${descCellAddress}="","",COUNTA(SPLIT(${descCellAddress}," ")))`,
+        },
+      });
     }
     rowData.push({ values: rowValues });
   });
@@ -183,6 +262,16 @@ export function spreadsheetToGoogleSheet(
       userEnteredFormat: format,
     });
   });
+  if (descriptionColumnName) {
+    primaryHeaderRow.push({
+      userEnteredFormat: headerBaseFormat,
+      userEnteredValue: { stringValue: 'Description character count' },
+    });
+    primaryHeaderRow.push({
+      userEnteredFormat: headerBaseFormat,
+      userEnteredValue: { stringValue: 'Description word count' },
+    });
+  }
   headerRows.push({ values: primaryHeaderRow });
   rowData = [...headerRows, ...rowData];
   const output: sheets_v4.Schema$Sheet = {

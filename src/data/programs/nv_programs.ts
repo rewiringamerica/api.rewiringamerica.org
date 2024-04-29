@@ -1,34 +1,50 @@
 export const NV_PROGRAMS = {
-  nv_nVEnergy_homeEnergySaver: {
+  nv_nVEnergy_nVEnergyResidentialAppliancesAndProducts: {
     name: {
-      en: 'Home Energy Saver',
+      en: 'NV Energy Residential Appliances and Products',
     },
     url: {
-      en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver',
+      en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver/retail-appliances-and-products',
     },
   },
-  nv_nVEnergy_qualifiedApplianceReplacementProgram: {
+  nv_nVEnergy_nVEnergyHeatPumpWaterHeating: {
     name: {
-      en: 'Qualified Appliance Replacement program',
+      en: 'NV Energy Heat Pump Water Heating',
+    },
+    url: {
+      en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver/residential-ac-and-mid-stream/water-heating',
+    },
+  },
+  nv_nVEnergy_nVEnergyQualifiedApplianceReplacementProgram: {
+    name: {
+      en: 'NV Energy Qualified Appliance Replacement program',
     },
     url: {
       en: 'https://www.nvenergy.com/save-with-powershift/qualified-appliance-replacement',
     },
   },
-  nv_nVEnergy_residentialAirconditioningProgram: {
+  nv_nVEnergy_nVEnergyResidentialAirConditioning: {
     name: {
-      en: 'Residential Airconditioning program',
+      en: 'NV Energy Residential Air Conditioning',
     },
     url: {
       en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver/residential-ac-and-mid-stream/residential-air-conditioning',
     },
   },
-  nv_nVEnergy_residentialSmartThermostatProgram: {
+  nv_nVEnergy_nVEnergyResidentialSmartThermostatProgram: {
     name: {
-      en: 'Residential Smart Thermostat Program',
+      en: 'NV Energy Residential Smart Thermostat Program',
     },
     url: {
       en: 'https://www.nvenergy.com/save-with-powershift/smart-thermostat',
+    },
+  },
+  nv_nVEnergy_nVEnergyHomeImprovements: {
+    name: {
+      en: 'NV Energy Home Improvements',
+    },
+    url: {
+      en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver/home-improvements',
     },
   },
   'nv_wellsRuralElectric_saveEnergy,SaveMoney': {

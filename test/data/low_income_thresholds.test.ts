@@ -23,10 +23,14 @@ test('low-income thresholds are equivalent in JSON config and incentives', async
       for (const [identifier, thresholds] of Object.entries(stateThresholds)) {
         for (const incentiveId of thresholds.incentives) {
           const incentive = map[incentiveId];
-          if (!incentive?.low_income) {
-            console.log(incentive, '🌈', identifier);
+          if (incentive) {
+            t.equal(incentive.low_income, identifier);
+          } else {
+            t.fail(
+              `low income thresholds ${identifier} reference nonexistent ` +
+                `incentive ${incentiveId}`,
+            );
           }
-          t.equal(incentive.low_income, identifier);
         }
       }
     },

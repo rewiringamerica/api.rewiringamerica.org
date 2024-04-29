@@ -3,14 +3,13 @@ import { FastifyInstance } from 'fastify';
 import { Database } from 'sqlite';
 import { LOCALES } from '../data/locale';
 import { PROGRAMS, Programs } from '../data/programs';
-import { InvalidInputError, UnexpectedInputError } from '../lib/error';
-import fetchAMIsForAddress from '../lib/fetch-amis-for-address';
-import fetchAMIsForZip from '../lib/fetch-amis-for-zip';
+import { computeAMIAndEVCreditEligibility } from '../lib/ami-evcredit-calculation';
+import { InvalidInputError } from '../lib/error';
 import { t, tr } from '../lib/i18n';
 import calculateIncentives, {
   CalculatedIncentive,
 } from '../lib/incentives-calculation';
-import { IncomeInfo, isCompleteIncomeInfo } from '../lib/income-info';
+import { resolveLocation } from '../lib/location';
 import { getUtilitiesForLocation } from '../lib/utilities-for-location';
 import { ERROR_SCHEMA } from '../schemas/error';
 import {
@@ -27,13 +26,13 @@ function transformIncentives(
   return incentives.map(incentive => ({
     ...incentive,
 
+    // Synthesize multi-valued items field
+    items: [incentive.item],
+
     // Localize localizable fields
     item: {
       type: incentive.item,
       name: t('items', incentive.item, language),
-      url: incentive.more_info_url
-        ? tr(incentive.more_info_url, language)
-        : t('urls', incentive.item, language),
     },
     program: tr(PROGRAMS[incentive.program as keyof Programs].name, language),
     program_url: tr(
@@ -50,23 +49,6 @@ function transformIncentives(
 export default async function (
   fastify: FastifyInstance & { sqlite: Database },
 ) {
-  async function fetchAMIsForLocation(
-    zip: string | undefined,
-    address: string | undefined,
-  ): Promise<IncomeInfo | null> {
-    if (address) {
-      // TODO: make sure bad addresses are handled here, and don't return anything
-      return await fetchAMIsForAddress(fastify.sqlite, address);
-    } else if (zip) {
-      return await fetchAMIsForZip(fastify.sqlite, zip);
-    } else {
-      // NOTE: this should never happen, APICalculatorSchema should block it:
-      throw new UnexpectedInputError(
-        'location.address or location.zip required',
-      );
-    }
-  }
-
   // Add any schemas that are referred to by $id
   const server = fastify.withTypeProvider<
     JsonSchemaToTsProvider<{
@@ -83,12 +65,9 @@ export default async function (
     { schema: API_CALCULATOR_SCHEMA },
     async (request, reply) => {
       const language = request.query.language ?? 'en';
-      const incomeInfo = await fetchAMIsForLocation(
-        request.query.zip,
-        request.query.address,
-      );
+      const location = await resolveLocation(fastify.sqlite, request.query);
 
-      if (!incomeInfo) {
+      if (!location) {
         throw fastify.httpErrors.createError(
           404,
           request.query.zip
@@ -98,7 +77,12 @@ export default async function (
         );
       }
 
-      if (!isCompleteIncomeInfo(incomeInfo)) {
+      const amiAndEvCreditEligibility = await computeAMIAndEVCreditEligibility(
+        fastify.sqlite,
+        location,
+        request.query.household_size,
+      );
+      if (!amiAndEvCreditEligibility) {
         throw fastify.httpErrors.createError(
           404,
           t('errors', 'no_data_for_location', language),
@@ -107,7 +91,11 @@ export default async function (
       }
 
       try {
-        const result = calculateIncentives(incomeInfo, { ...request.query });
+        const result = calculateIncentives(
+          location,
+          amiAndEvCreditEligibility,
+          { ...request.query },
+        );
         const translated = {
           ...result,
           incentives: transformIncentives(result.incentives, language),
@@ -134,9 +122,7 @@ export default async function (
     { schema: API_UTILITIES_SCHEMA },
     async (request, reply) => {
       const language = request.query.language ?? 'en';
-      const location = (
-        await fetchAMIsForLocation(request.query.zip, request.query.address)
-      )?.location;
+      const location = await resolveLocation(fastify.sqlite, request.query);
 
       if (!location) {
         throw fastify.httpErrors.createError(
@@ -155,12 +141,8 @@ export default async function (
           .status(200)
           .type('application/json')
           .send({
-            location: { state: location.state_id },
-            utilities: await getUtilitiesForLocation(
-              fastify.sqlite,
-              location,
-              request.query.include_beta_states ?? false,
-            ),
+            location: { state: location.state },
+            utilities: await getUtilitiesForLocation(fastify.sqlite, location),
           });
       } catch (error) {
         if (error instanceof InvalidInputError) {

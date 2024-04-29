@@ -2,7 +2,11 @@
   "is_under_80_ami": false,
   "is_under_150_ami": true,
   "is_over_150_ami": false,
-  "authorities": {},
+  "authorities": {
+    "co-xcel-energy": {
+      "name": "Xcel Energy"
+    }
+  },
   "coverage": {
     "state": "CO",
     "utility": "co-xcel-energy"
@@ -13,5 +17,32 @@
     "county": "Larimer"
   },
   "data_partners": {},
-  "incentives": []
+  "incentives": [
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-xcel-energy",
+      "program": "Xcel Energy Heat Pump Water Heater Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/home-rebates/water-heaters",
+      "item": {
+        "type": "heat_pump_water_heater",
+        "name": "Heat Pump Water Heater"
+      },
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 800
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$800 off qualifying new heat pump water heaters for Xcel customers. Must be installed by registered contractor and may not exceed 80 gallons."
+    }
+  ]
 }

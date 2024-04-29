@@ -1,14 +1,40 @@
 import _ from 'lodash';
 import { FilingStatus, TAX_BRACKETS } from '../data/tax_brackets';
+import { TaxEstimate } from '../data/types/tax';
+import { roundCents } from './rounding';
 
-function roundCents(dollars: number): number {
-  return Math.round(dollars * 100) / 100;
+/**
+ * Formula to calculate tax owed to states
+ */
+export function estimateStateTaxAmount(
+  householdIncome: number,
+  stateCode: string,
+): TaxEstimate | null {
+  let taxOwed = null;
+  let effectiveRate = null;
+
+  switch (stateCode) {
+    /**
+     * Colorado has a flat income tax rate of 4.4% on all income earners.
+     * The state does not offer a standard deduction.
+     */
+    case 'CO': {
+      effectiveRate = 4.4;
+      taxOwed = Math.ceil(householdIncome * (effectiveRate / 100));
+      break;
+    }
+    default: {
+      return null;
+    }
+  }
+
+  return { taxOwed, effectiveRate };
 }
 
-export default function estimateTaxAmount(
+export function estimateFederalTaxAmount(
   filing_status: FilingStatus,
   household_income: number,
-): { tax_owed: number; effective_rate: number } {
+): TaxEstimate {
   // Note: this could be simplified to hardcoded value lookup
   const tax_brackets = TAX_BRACKETS.filter(
     row => filing_status === row.filing_status,
@@ -65,7 +91,12 @@ export default function estimateTaxAmount(
   console.log('Step 7: effective rate', effectiveRate);*/
 
   return {
-    tax_owed: Math.ceil(taxOwed), // Math.ceil rounds up any decimal
-    effective_rate: effectiveRate,
+    taxOwed: Math.ceil(taxOwed), // Math.ceil rounds up any decimal
+    effectiveRate,
   };
 }
+
+export default {
+  estimateFederalTaxAmount,
+  estimateStateTaxAmount,
+};
