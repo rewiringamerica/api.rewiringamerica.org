@@ -19,7 +19,7 @@ const LOCATION: ResolvedLocation = {
   state: 'RI',
   zcta: '02903',
   city: 'Providence',
-  county: 'Providence County',
+  countyFips: '44007',
 };
 
 // This is a basic test to set up supplying test data to the calculator logic.
