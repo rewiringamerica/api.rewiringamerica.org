@@ -98,7 +98,7 @@ export const CA_PROGRAMS = {
   },
   ca_imperialIrrigationDistrict_iIDEnergyRewardsProgram: {
     name: {
-      en: 'IID Energy Rewards Program ',
+      en: 'IID Energy Rewards Program',
     },
     url: {
       en: 'https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates',
@@ -198,7 +198,7 @@ export const CA_PROGRAMS = {
       en: 'Incentives for Heating and Cooling',
     },
     url: {
-      en: 'https://wattsmartsavings.net/california-residential/find-savings-heating-and-cooling/',
+      en: 'https://wattsmartsavings.net/california-residential/find-savings-heating-and-cooling/smart-thermostat/',
     },
   },
   ca_pacificPower_heatPumps: {
@@ -285,25 +285,25 @@ export const CA_PROGRAMS = {
       en: 'https://www.psrec.coop/energy/rebates/ground-source-heat-pumps/',
     },
   },
-  'ca_plumas-SierraRuralElectricCooperative_$500RebateForThePurchaseOfAnEV': {
+  'ca_plumas-SierraRuralElectricCooperative_electricVehicleRebate': {
     name: {
-      en: '$500 rebate for the purchase of an EV',
+      en: 'Electric Vehicle Rebate',
     },
     url: {
-      en: 'https://www.psrec.coop/energy/electric-vehicles/',
+      en: 'https://www.psrec.coop/wp-content/uploads/Electric-Vehicle_Rebate.pdf',
     },
   },
-  ca_southernCaliforniaEdison_saveUpTo$115WithASmartThermostat: {
+  ca_southernCaliforniaEdison_smartEnergyProgram: {
     name: {
-      en: 'Save up to $115 with a Smart Thermostat',
+      en: 'Smart Energy Program',
     },
     url: {
       en: 'https://www.sce.com/residential/demand-response/smart-energy-program',
     },
   },
-  'ca_southernCaliforniaEdison_pRE-OWNEDELECTRICVEHICLEREBATEPROGRAM': {
+  'ca_southernCaliforniaEdison_pre-OwnedElectricVehicleProgram': {
     name: {
-      en: 'PRE-OWNED ELECTRIC VEHICLE REBATE PROGRAM',
+      en: 'Pre-Owned Electric Vehicle Program',
     },
     url: {
       en: 'https://evrebates.sce.com/',
@@ -330,7 +330,7 @@ export const CA_PROGRAMS = {
       en: 'Appliance Rebates',
     },
     url: {
-      en: 'https://www.smud.org/HVAC',
+      en: 'https://www.smud.org/en/Rebates-and-Savings-Tips/Rebates-for-My-Home/Home-Appliances-and-Electronics-Rebates',
     },
   },
   ca_siliconValleyPower_rebates: {
@@ -352,6 +352,22 @@ export const CA_PROGRAMS = {
   ca_riversidePublicUtilities_residentialRebates: {
     name: {
       en: 'Residential Rebates',
+    },
+    url: {
+      en: 'https://riversideca.gov/utilities/residents/rebates/about',
+    },
+  },
+  ca_riversidePublicUtilities_newTechnologyEnergyStarProductRebateProgram: {
+    name: {
+      en: 'New Technology Energy Star Product Rebate Program',
+    },
+    url: {
+      en: 'https://riversideca.gov/utilities/residents/rebates/about',
+    },
+  },
+  ca_riversidePublicUtilities_electrifyYourRideEVRebates: {
+    name: {
+      en: 'Electrify Your Ride EV Rebates',
     },
     url: {
       en: 'https://riversideca.gov/utilities/residents/rebates/about',
