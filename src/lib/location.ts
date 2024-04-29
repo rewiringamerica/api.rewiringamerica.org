@@ -5,7 +5,7 @@ export type ResolvedLocation = {
   state: string;
   zcta: string;
   city: string;
-  county: string;
+  countyFips: string;
   tractGeoid?: string;
 };
 
@@ -31,7 +31,7 @@ async function zipLookup(
       COALESCE(NULLIF(parent_zcta, ''), zip) as zcta,
       state_id AS state,
       city,
-      county_name AS county
+      county_fips AS countyFips
     FROM zips
     WHERE zip = ?`,
     zip,
@@ -53,9 +53,7 @@ export async function resolveLocation(
       return null;
     }
 
-    const censusInfo = GEOCODIO_LOW_PRECISION.has(result.accuracy_type)
-      ? null
-      : result.fields.census['2020'];
+    const censusInfo = result.fields.census['2020'];
 
     return {
       state: result.address_components.state,
@@ -63,17 +61,10 @@ export async function resolveLocation(
         (await zipLookup(db, result.address_components.zip))?.zcta ??
         result.address_components.zip,
       city: result.address_components.city,
-      // TODO these look like "Blah County" or "Blah Parish" etc. However,
-      // county authorities are defined without those suffixes, and that's how
-      // county-level incentives are matched against location lookups. The
-      // solution will be to switch to defining authorities with county FIPS
-      // codes instead. Using the suffixed names here is OK for the immediate
-      // term since the calculator does not use the "address" param and thus
-      // won't use this code path.
-      county: result.address_components.county,
-      tractGeoid: censusInfo
-        ? censusInfo.county_fips + censusInfo.tract_code
-        : undefined,
+      countyFips: censusInfo.county_fips,
+      tractGeoid: GEOCODIO_LOW_PRECISION.has(result.accuracy_type)
+        ? undefined
+        : censusInfo.county_fips + censusInfo.tract_code,
     };
   }
 }
