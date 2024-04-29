@@ -36,33 +36,35 @@ Filling out an entry for `incentive-spreadsheet-registry.ts` consists of creatin
 - Optionally declaring the header row number, if not the top row of the spreadsheet, in `headerRowNumber`
 - Optionally naming a filepath where _collected_ incentives will be written in `collectedFilepath`. We recommend using `data/<state_id>/collected.json`. This is experimental and also requires some setup to authenticate with the Google API. See [JSON To Spreadsheet](#json-to-spreadsheet) for more details before proceeding.
 
-First, look at the `authorities.json` in your state's subdirectory of `data/`. The state's utilities are populated there, by the script `generate-utility-data.ts`. Follow the [instructions below](#utility-data) to vet the utility data, and update/rerun the script to clean up the utility data as appropriate.
+1. First, look at the `authorities.json` in your state's subdirectory of `data/`. The state's utilities are populated there, by the script `generate-utility-data.ts`. Follow the [instructions below](#utility-data) to vet the utility data, and update/rerun the script to clean up the utility data as appropriate.
 
-[`generate-misc-state-data.ts`](generate-misc-state-data.ts) adds values to ancillary files to reflect the programs and authorities that will be needed for the JSON. This needs to happen first because our data schemas actually require an incentive's program/authority to be one of the listed members, and if that's not the case, the incentive will fail validation.
+2. [`generate-misc-state-data.ts`](generate-misc-state-data.ts) adds values to ancillary files to reflect the programs and authorities that will be needed for the JSON. This needs to happen first because our data schemas actually require an incentive's program/authority to be one of the listed members, and if that's not the case, the incentive will fail validation.
 
-This script covers:
+   This script covers:
 
-- data/authorities.json
-- src/data/programs.ts
+   - `data/<state>/authorities.json`
+   - `src/data/programs.ts`
 
-Usage:
-`node build/scripts/generate-misc-state-data.js <state_id>`
+   Usage:
+   `node build/scripts/generate-misc-state-data.js <state_id>`
 
-It's recommended to also define low-income thresholds in `data/low_income_thresholds.json` and geo groups in `data/geo_groups.json` for your state to save time in the next step.
+   If the state has city- or county-level incentives, you will need to add `city` and `county_fips` keys (respectively) to the entries that get generated in the state's `authorities.json`. This is what lets the runtime code know which authority applies to the user's actual location. `city` values have to match `zips.city` in the SQLite database. `county_fips` must be a county FIPS code ([list here](https://transition.fcc.gov/oet/info/maps/census/fips/fips.txt)).
 
-1. [`incentive-spreadsheet-to-json.ts`](incentive-spreadsheet-to-json.ts) reads the spreadsheet and tries to convert it to JSON. This can be a messy process – spreadsheets may not have the correct column names or values. The script tries to handle small string discrepancies itself because making edits to Google sheets has a 5-minute delay before changes are reflected, but ultimately even with the script's help, this may be a painstaking process.
+   It's recommended to also define low-income thresholds in `data/low_income_thresholds.json` and geo groups in `data/geo_groups.json` for your state to save time in the next step.
 
-Usage:
-`node build/scripts/incentive-spreadsheet-to-json.js --strict CO`
+3. [`incentive-spreadsheet-to-json.ts`](incentive-spreadsheet-to-json.ts) reads the spreadsheet and tries to convert it to JSON. This can be a messy process – spreadsheets may not have the correct column names or values. The script tries to handle small string discrepancies itself because making edits to Google sheets has a 5-minute delay before changes are reflected, but ultimately even with the script's help, this may be a painstaking process.
 
-`--strict` is recommended since it will throw an error for any misnamed columns. You can correct these or errors in cell values by remapping them: use the [spreadsheet-mappings](lib/spreadsheet-mappings.ts) file.
+   Usage:
+   `node build/scripts/incentive-spreadsheet-to-json.js --strict CO`
 
-All valid records according to our schema will be written to the location you specified in the [incentive-spreadsheet-registry.ts](incentive-spreadsheet-registry.ts). Invalid records will be in an adjacent file with the suffix `_invalid.json`. There should be a rationale for the invalidation in the `errors` key to help you fix it. It may require multiple passes to get all JSON records produced.
+   `--strict` is recommended since it will throw an error for any misnamed columns. You can correct these or errors in cell values by remapping them: use the [spreadsheet-mappings](lib/spreadsheet-mappings.ts) file.
 
-Note that even after running these, there are still files you must edit manually to get the JSON in. Follow a recent CL example.
-Eg: https://github.com/rewiringamerica/api.rewiringamerica.org/pull/209/files
+   All valid records according to our schema will be written to the location you specified in the [incentive-spreadsheet-registry.ts](incentive-spreadsheet-registry.ts). Invalid records will be in an adjacent file with the suffix `_invalid.json`. There should be a rationale for the invalidation in the `errors` key to help you fix it. It may require multiple passes to get all JSON records produced.
 
-To encode relationships between incentives, see the [`relationships-README`](https://github.com/rewiringamerica/api.rewiringamerica.org/blob/main/docs/relationships-README.md).
+   Note that even after running these, there are still files you must edit manually to get the JSON in. Follow a recent CL example.
+   Eg: https://github.com/rewiringamerica/api.rewiringamerica.org/pull/209/files
+
+   To encode relationships between incentives, see the [`relationships-README`](https://github.com/rewiringamerica/api.rewiringamerica.org/blob/main/docs/relationships-README.md).
 
 ## JSON to Spreadsheet
 
