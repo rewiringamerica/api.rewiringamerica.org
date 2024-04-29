@@ -23,28 +23,28 @@ const AS_LOCATION: ResolvedLocation = {
   zcta: '96799',
   state: 'AS',
   city: 'Pago Pago',
-  county: 'Western',
+  countyFips: '60010',
   tractGeoid: '60010950600',
 };
 const GU_LOCATION: ResolvedLocation = {
   zcta: '96913',
   state: 'GU',
   city: 'Barrigada',
-  county: 'Guam',
+  countyFips: '66010',
   tractGeoid: '66010951100',
 };
 const MP_LOCATION: ResolvedLocation = {
   zcta: '96950',
   state: 'MP',
   city: 'Saipan',
-  county: 'Saipan',
+  countyFips: '69110',
   tractGeoid: '69110001700',
 };
 const VI_LOCATION: ResolvedLocation = {
   zcta: '00840',
   state: 'VI',
   city: 'Frederiksted',
-  county: 'St. Croix',
+  countyFips: '78010',
   tractGeoid: '78010971000',
 };
 
@@ -75,7 +75,7 @@ test('territories other than PR', async t => {
 const NY_TRACT = '36099950200';
 const NY_LOCATION: ResolvedLocation = {
   city: 'Seneca Falls',
-  county: 'Seneca',
+  countyFips: '36099',
   state: 'NY',
   zcta: '13148',
 };
@@ -83,7 +83,7 @@ const NY_LOCATION: ResolvedLocation = {
 const DC_TRACT = '11001010700';
 const DC_LOCATION: ResolvedLocation = {
   city: 'Washington',
-  county: 'District of Columbia',
+  countyFips: '11001',
   state: 'DC',
   zcta: '20036',
 };
@@ -91,7 +91,7 @@ const DC_LOCATION: ResolvedLocation = {
 const PR_TRACT = '72127002100';
 const PR_LOCATION: ResolvedLocation = {
   city: 'San Juan',
-  county: 'San Juan',
+  countyFips: '72127',
   state: 'PR',
   zcta: '00907',
 };
@@ -166,7 +166,7 @@ test('EV charger eligibility', async t => {
     zcta: '11211',
     state: 'NY',
     city: 'Brooklyn',
-    county: 'Kings',
+    countyFips: '36047',
   };
   t.notOk(
     (await computeAMIAndEVCreditEligibility(db, brooklyn, 4))!.evCreditEligible,

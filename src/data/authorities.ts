@@ -32,7 +32,7 @@ export const API_AUTHORITY_SCHEMA = {
     name: { type: 'string' },
     logo: API_IMAGE_SCHEMA,
     city: { type: 'string' },
-    county: { type: 'string' },
+    county_fips: { type: 'string' },
   },
   required: ['name'],
   additionalProperties: false,

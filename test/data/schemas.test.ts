@@ -199,15 +199,15 @@ test('state incentives JSON files match schemas', async tap => {
       if (incentive.authority_type === AuthorityType.County) {
         tap.hasProp(
           authorities[incentive.authority_type]![incentive.authority],
-          'county',
-          `must define county attribute on corresponding authority ${incentive.authority} for incentives with county authority type`,
+          'county_fips',
+          `must define county_fips attribute on corresponding authority ${incentive.authority} for incentives with county authority type`,
         );
       }
       if (incentive.authority_type === AuthorityType.City) {
         tap.hasProp(
           authorities[incentive.authority_type]![incentive.authority],
-          'county',
-          `must define county attribute on corresponding authority ${incentive.authority} for incentives with city authority type (county is used for matching)`,
+          'county_fips',
+          `must define county_fips attribute on corresponding authority ${incentive.authority} for incentives with city authority type (county is used for matching)`,
         );
         tap.hasProp(
           authorities[incentive.authority_type]![incentive.authority],
