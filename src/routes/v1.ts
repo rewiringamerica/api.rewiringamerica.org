@@ -26,6 +26,9 @@ function transformIncentives(
   return incentives.map(incentive => ({
     ...incentive,
 
+    // Synthesize multi-valued items field
+    items: [incentive.item],
+
     // Localize localizable fields
     item: {
       type: incentive.item,
