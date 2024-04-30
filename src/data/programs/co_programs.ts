@@ -249,6 +249,14 @@ export const CO_PROGRAMS = {
       en: 'https://energyoffice.colorado.gov/vehicle-exchange-colorado',
     },
   },
+  co_coloradoEnergyOffice_coloradoHeatPumpTaxCredits: {
+    name: {
+      en: 'Colorado Heat Pump Tax Credits',
+    },
+    url: {
+      en: 'https://energyoffice.colorado.gov/hptc',
+    },
+  },
   co_stateOfColorado_coloradoHeatPumpIncentives: {
     name: {
       en: 'Colorado Heat Pump Incentives',
