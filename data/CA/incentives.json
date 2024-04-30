@@ -33,8 +33,8 @@
     "amount": {
       "type": "dollar_amount",
       "number": 75,
-      "minimum": 1,
-      "maximum": 2
+      "minimum": 50,
+      "maximum": 75
     },
     "owner_status": [
       "homeowner",
@@ -84,7 +84,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate for home weatherization measures."
+      "en": "$0.15/sq ft Rebate for attic insulation. Minimum requirements of R-30 or R-19 for attics with less than 24 in clearance. No new construction."
     }
   },
   {
@@ -106,7 +106,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate for home weatherization measures."
+      "en": "$0.15/sq ft Rebate for wall insulation. Minimum requirements of R-13. No new construction."
     }
   },
   {
@@ -128,7 +128,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,000 per ton for a central heat pump."
+      "en": "$1,000/ton for a central heat pump."
     }
   },
   {
@@ -150,7 +150,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,000 per ton for a ductless mini split heat pump."
+      "en": "$1,000/ton for a ductless mini split heat pump."
     }
   },
   {
@@ -192,7 +192,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $200 for a heat pump clothers dryer."
+      "en": "Up to $200 for a heat pump clothes dryer."
     }
   },
   {
@@ -300,7 +300,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate on installation of new ENERGY STAR-certified electric clothes dryer in current residence."
+      "en": "$50 rebate on purchase of new ENERGY STAR-certified electric clothes dryer in current residence."
     }
   },
   {
@@ -366,27 +366,6 @@
       "en": "$500 rebate for income qualified AMP customers installing solar in their homes."
     },
     "low_income": "ca-alameda-municipal-power"
-  },
-  {
-    "id": "CA-18",
-    "authority_type": "utility",
-    "authority": "ca-alameda-municipal-power",
-    "payment_methods": [
-      "rebate"
-    ],
-    "item": "smart_thermostat",
-    "program": "ca_alamedaMunicipalPower_aMPOffers",
-    "amount": {
-      "type": "percent",
-      "number": 100
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Variable rebates for Smart Thermostats while supplies last."
-    }
   },
   {
     "id": "CA-19",
@@ -494,7 +473,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $400 rebate on replacing your water heater with a new, ENERGY STAR Certified electric storage water heater."
+      "en": "$400 rebate when replacing your water heater with a new, ENERGY STAR certified heat pump water heater."
     },
     "bonus_available": true
   },
@@ -516,7 +495,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $3,000 rebate on eligible UL Certified energy storage system."
+      "en": "Up to $3,000 rebate on eligible UL Certified energy storage system. Must participate in NEM 2.0."
     },
     "bonus_available": true
   },
@@ -599,8 +578,8 @@
     "item": "weatherization",
     "program": "ca_anaheimPublicUtilities_energyRebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 300,
+      "type": "percent",
+      "number": 0.5,
       "maximum": 300
     },
     "owner_status": [
@@ -654,7 +633,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$200 per Ton rebate for a qualified heat pump HVAC."
+      "en": "$200 per ton rebate for a qualified ducted heat pump. Minimum 15+ SEER rating."
     },
     "bonus_available": true
   },
@@ -669,15 +648,14 @@
     "program": "ca_anaheimPublicUtilities_energyRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 50,
-      "maximum": 100
+      "number": 50
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate for ENERGY STAR Certified smart thermostat."
+      "en": "$50 rebate for ENERGY STAR Certified smart thermostat.  Maximum of two."
     },
     "bonus_available": true
   },
@@ -789,7 +767,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Earn a $250 per ton rebate up to 100% of the cost to purchase and install a new qualifying air source heat pump."
+      "en": "Earn a $250 per ton rebate up to 100% of the cost to purchase and install a new qualifying ducted heat pump."
     }
   },
   {
@@ -811,7 +789,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Earn a $250 per ton rebate up to 100% of the cost to purchase and install a new qualifying air source heat pump."
+      "en": "Earn a $250 per ton rebate up to 100% of the cost to purchase and install a new qualifying ductless heat pump."
     }
   },
   {
@@ -825,15 +803,14 @@
     "program": "ca_cityOfLompoc_rebateAndConservationProgram",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 50,
-      "maximum": 100
+      "number": 50
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Earn up to $50 as a rebate for the purchase and installation of a new qualifying smart thermostat to replace an existing non-connected, manual, or programmable thermostat.  Limit 2 per household.."
+      "en": "Earn up to $50 as a rebate for the purchase and installation of a new qualifying smart thermostat to replace an existing non-connected, manual, or programmable thermostat. Limit two per household."
     }
   },
   {
@@ -847,8 +824,7 @@
     "program": "ca_californiaPublicUtilitiesCommission_goldenStateRebatesProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 500
     },
     "owner_status": [
       "homeowner",
@@ -1025,7 +1001,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate up to $2/sq.ft. for Energy Star certified dual-pane windows."
+      "en": "Rebate up to $2/sq ft for Energy Star certified dual-pane windows."
     }
   },
   {
@@ -1061,14 +1037,15 @@
     "program": "ca_imperialIrrigationDistrict_iIDEnergyRewardsProgram",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 200
+      "number": 200,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Earn up to $200/unit for a ductless mini-split system."
+      "en": "Earn up to $200/ton for a ductless mini-split system. Minimum 17.1 SEER2 and AHRI certified. Must use participating contractor."
     }
   },
   {
@@ -1090,7 +1067,29 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $300/ton rebate for switching HVAC from gas to electric."
+      "en": "Up to $300/ton rebate for HVAC system. Minimum HSPF2 6.7. Must use participating contractor."
+    }
+  },
+  {
+    "id": "CA-138",
+    "authority_type": "utility",
+    "authority": "ca-imperial-irrigation-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_air_conditioner_heater",
+    "program": "ca_imperialIrrigationDistrict_iIDEnergyRewardsProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 400,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $400/ton rebate for switching HVAC from gas to electric. Minimum HSPF2 7.2. Must use participating contractor."
     }
   },
   {
@@ -1192,15 +1191,14 @@
     "program": "ca_lassenMunicipalUtilityDistrict_residentialRebates",
     "amount": {
       "type": "percent",
-      "number": 50,
-      "maximum": 50
+      "number": 0.5
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Rebate for up to 50% of the cost for a qualified ENERGY STAR certified Smart Thermostat."
+      "en": "Rebate for up to 50% of the cost for a qualified ENERGY STAR certified Smart Thermostat. Maximum $50."
     }
   },
   {
@@ -1301,8 +1299,9 @@
     "item": "heat_pump_clothes_dryer",
     "program": "ca_lodiElectricUtility_residentialRebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 100
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 100
     },
     "owner_status": [
       "homeowner",
@@ -1322,8 +1321,9 @@
     "item": "heat_pump_water_heater",
     "program": "ca_lodiElectricUtility_residentialRebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 200
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 200
     },
     "owner_status": [
       "homeowner",
@@ -1388,8 +1388,8 @@
     "item": "weatherization",
     "program": "ca_lodiElectricUtility_residentialRebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 150,
+      "type": "percent",
+      "number": 0.5,
       "maximum": 150
     },
     "owner_status": [
@@ -1611,7 +1611,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $2,000 per single-family household for panel upgrades completed by the program’s licensed electricians, Synergy Companies."
+      "en": "Up to $2,000 per single-family household for panel upgrades completed by the program’s licensed electricians, Synergy Companies. Income qualified."
     },
     "low_income": "ca-pacific-gas-and-electric"
   },
@@ -1642,7 +1642,7 @@
     "authority_type": "utility",
     "authority": "ca-modesto-irrigation-district",
     "payment_methods": [
-      "pos_rebate"
+      "account_credit"
     ],
     "item": "electric_vehicle_charger",
     "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
@@ -1654,7 +1654,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 rebate per charger for Level 2 electric vehicle charger. Limit two per houseehold."
+      "en": "Up to $500 rebate per charger for Level 2 electric vehicle charger. Limit two per household."
     }
   },
   {
@@ -1942,7 +1942,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Upgrade your home’s exterior wall insulation and receive up to $0.10 per square foot. Additional savings available for qualifying projects."
+      "en": "Upgrade your home’s exterior wall insulation and receive up to $0.10 per square foot."
     },
     "bonus_available": true
   },
@@ -1965,7 +1965,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Upgrade your home’s ceiling insulation and receive up to $0.10 per square foot. Additional savings available for qualifying projects."
+      "en": "Upgrade your home’s ceiling insulation and receive up to $0.10 per square foot."
     },
     "bonus_available": true
   },
@@ -1979,9 +1979,8 @@
     "item": "smart_thermostat",
     "program": "ca_pasadenaWaterAndPower_residentialPrograms-Heating&CoolingSystems-SmartThermostatRebate",
     "amount": {
-      "type": "dollars_per_unit",
-      "number": 50,
-      "maximum": 60
+      "type": "dollar_amount",
+      "number": 50
     },
     "owner_status": [
       "homeowner",
@@ -2227,7 +2226,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,000 rebate for a new electric panel upgrade."
+      "en": "Up to $1,000 rebate for a new electric panel upgrade. Must be new and be a minimum of 200 amps."
     }
   },
   {
@@ -2389,7 +2388,7 @@
     "item": "ebike",
     "program": "ca_siliconValleyPower_rebates",
     "amount": {
-      "type": "dollar_amount",
+      "type": "percent",
       "number": 0.1,
       "maximum": 300
     },
@@ -2414,7 +2413,27 @@
     "program": "ca_siliconValleyPower_rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for the installation of an electric heat pump water heater if replacing an electric resistance water heater."
+    }
+  },
+  {
+    "id": "CA-139",
+    "authority_type": "utility",
+    "authority": "ca-silicon-valley-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "item": "heat_pump_water_heater",
+    "program": "ca_siliconValleyPower_rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
       "minimum": 500,
       "maximum": 1000
     },
@@ -2422,7 +2441,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for the installation of an electric heat pump water heater if replacing an electric resistance water heater."
+      "en": "$1,000 rebate for the installation of an electric heat pump water heater if replacing an electric resistance water heater."
     }
   },
   {
