@@ -64,32 +64,35 @@ function calculateFederalIncentivesAndSavings(
   const ineligibleIncentives: CalculatedIncentive[] = [];
 
   // Loop through each of the incentives, running several tests to see if visitor is eligible
-  for (const item of IRA_INCENTIVES) {
+  for (const incentive of IRA_INCENTIVES) {
     let eligible = true;
+
+    // IRA incentives are required to have only one item
+    const item = incentive.items[0];
 
     // Don't include an incentive at all if the query is filtering by item and
     // this doesn't match.
-    if (items && !items.includes(item.item)) {
+    if (items && !items.includes(item)) {
       continue;
     }
 
     //
     // 1) Verify that the selected homeowner status qualifies
     //
-    if (!item.owner_status.includes(owner_status as OwnerStatus)) {
+    if (!incentive.owner_status.includes(owner_status as OwnerStatus)) {
       eligible = false;
     }
 
     //
     // 2) Verify that the given income falls within defined AMI limits, if defined
     //
-    if (item.ami_qualification) {
+    if (incentive.ami_qualification) {
       if (
-        (item.ami_qualification === 'less_than_80_ami' &&
+        (incentive.ami_qualification === 'less_than_80_ami' &&
           household_income >= amiAndEvCreditEligibility.computedAMI80) ||
-        (item.ami_qualification === 'more_than_80_ami' &&
+        (incentive.ami_qualification === 'more_than_80_ami' &&
           household_income < amiAndEvCreditEligibility.computedAMI80) ||
-        (item.ami_qualification === 'less_than_150_ami' &&
+        (incentive.ami_qualification === 'less_than_150_ami' &&
           (household_income < amiAndEvCreditEligibility.computedAMI80 ||
             household_income >= amiAndEvCreditEligibility.computedAMI150))
       ) {
@@ -100,8 +103,8 @@ function calculateFederalIncentivesAndSavings(
     //
     // 3) Verify that overall income limits not exceeded
     //
-    if (item.agi_max_limit) {
-      if (Number(household_income) >= Number(item.agi_max_limit)) {
+    if (incentive.agi_max_limit) {
+      if (Number(household_income) >= Number(incentive.agi_max_limit)) {
         eligible = false;
       }
     }
@@ -109,8 +112,8 @@ function calculateFederalIncentivesAndSavings(
     //
     // 4) Verify tax filing status is eligible for benefit
     //
-    if (item.filing_status) {
-      if (item.filing_status !== tax_filing) {
+    if (incentive.filing_status) {
+      if (incentive.filing_status !== tax_filing) {
         eligible = false;
       }
     }
@@ -118,18 +121,18 @@ function calculateFederalIncentivesAndSavings(
     //
     // 5) Add the Rooftop Solar Credit amount
     //
-    const amount = { ...item.amount };
-    if (item.item === 'rooftop_solar_installation') {
+    const amount = { ...incentive.amount };
+    if (item === 'rooftop_solar_installation') {
       amount.representative = roundCents(solarSystemCost * amount.number!);
     }
 
     // EV charger credit has some special eligibility rules
-    if (item.item === 'electric_vehicle_charger') {
+    if (item === 'electric_vehicle_charger') {
       eligible = amiAndEvCreditEligibility.evCreditEligible;
     }
 
     const newItem = {
-      ...item,
+      ...incentive,
       amount,
       eligible,
     };
@@ -144,10 +147,10 @@ function calculateFederalIncentivesAndSavings(
   const dedupedIneligibleIncentives = _.uniqBy(
     ineligibleIncentives.filter(item => {
       // Note: using _ here because it finds by matching properties, not by equality
-      const key = { item: item.item, type: item.payment_methods[0] };
+      const key = { item: item.items, type: item.payment_methods[0] };
       return _.find(eligibleIncentives, key) === undefined;
     }),
-    item => item.item + item.payment_methods[0],
+    item => item.items + item.payment_methods[0],
   );
 
   const calculatedIncentives = [

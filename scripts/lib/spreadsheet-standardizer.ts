@@ -9,7 +9,7 @@ import {
   VALUE_MAPPINGS,
 } from './spreadsheet-mappings';
 
-const ARRAY_FIELDS = ['payment_methods', 'owner_status'];
+const ARRAY_FIELDS = ['payment_methods', 'owner_status', 'items'];
 const DOLLAR_FIELDS = [
   'amount.number',
   'amount.minimum',

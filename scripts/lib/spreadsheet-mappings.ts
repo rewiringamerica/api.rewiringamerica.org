@@ -90,7 +90,7 @@ export const FIELD_METADATA: Record<
     description:
       'This will be the link that is shared with the consumers as "Learn More" when they see an incentive that interests them. It can be a link to the incentive program page, or a PDF for the rebate form.\n\nTip: Try to identify the best resource to send users to when they want to "Learn More" about the incentive. When in doubt, capture both.',
   },
-  item: {
+  items: {
     column_aliases: ['Technology *'],
     description:
       'The technology (appliance or product) for which the rebate applies',
@@ -128,6 +128,7 @@ export const FIELD_METADATA: Record<
       electric_panel: { value_aliases: ['Electric Panel', 'Electric Wiring'] },
       electric_outdoor_equipment: {
         value_aliases: [
+          'Electric outdoor equipment',
           'Electric Lawn Equipment (Mower, Edger, Leaf Blower, Weedwacker)',
           'Electric Lawn Equipment (Mower, Edger, Leaf Blower, Weedwhacker)',
         ],

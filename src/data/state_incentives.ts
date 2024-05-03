@@ -38,7 +38,7 @@ export type CollectedIncentive = {
   geo_eligibility?: string;
   program_title: string;
   program_url: string;
-  item: Item;
+  items: Item[];
   item_if_selected_other?: string;
   short_description: LocalizableString;
   program_status: string;
@@ -70,7 +70,10 @@ const collectedIncentivePropertySchema = {
   geo_eligibility: { type: 'string', nullable: true },
   program_title: { type: 'string' },
   program_url: { type: 'string' },
-  item: { type: 'string', enum: ALL_ITEMS },
+  items: {
+    type: 'array',
+    items: { type: 'string', enum: ALL_ITEMS },
+  },
   item_if_selected_other: { type: 'string', nullable: true },
   short_description: { $ref: 'LocalizableString' },
   program_status: { type: 'string' },
@@ -120,7 +123,7 @@ const requiredCollectedFields = [
   'authority_name',
   'program_title',
   'program_url',
-  'item',
+  'items',
   'short_description',
   'program_status',
   'payment_methods',
@@ -164,7 +167,7 @@ export const PASS_THROUGH_FIELDS = [
   'id',
   'authority_type',
   'payment_methods',
-  'item',
+  'items',
   'start_date',
   'end_date',
   'amount',
@@ -203,7 +206,7 @@ const fieldOrder: {
   authority: undefined,
   eligible_geo_group: undefined,
   payment_methods: undefined,
-  item: undefined,
+  items: undefined,
   program: undefined,
   amount: undefined,
   owner_status: undefined,
@@ -222,7 +225,7 @@ const requiredProperties = [
   'authority',
   'authority_type',
   'payment_methods',
-  'item',
+  'items',
   'program',
   'amount',
   'owner_status',

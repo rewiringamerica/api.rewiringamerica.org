@@ -236,7 +236,7 @@ test('CollectedIncentives are converted into spreadsheet format', tap => {
       data_urls: ['appalachia.com'],
       authority_name: 'Appalachian Power',
       authority_type: AuthorityType.Utility,
-      item: 'heat_pump_clothes_dryer',
+      items: ['heat_pump_clothes_dryer'],
       program_title: 'The Appalachian Program',
       program_url: 'appalachianprogram.com',
       program_status: 'Active',

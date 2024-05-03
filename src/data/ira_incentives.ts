@@ -24,7 +24,7 @@ export interface IRAIncentive {
   authority_type: AuthorityType.Federal;
   end_date: string;
   filing_status?: FilingStatus;
-  item: IRAItem;
+  items: IRAItem[];
   owner_status: OwnerStatus[];
   program: string;
   start_date: string;
@@ -64,7 +64,11 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
       },
       program: { type: 'string', enum: Object.keys(PROGRAMS) },
       authority_type: { type: 'string', const: AuthorityType.Federal },
-      item: { type: 'string', enum: IRA_ITEMS },
+      items: {
+        type: 'array',
+        maxItems: 1,
+        items: { type: 'string', enum: IRA_ITEMS },
+      },
       amount: AMOUNT_SCHEMA,
       owner_status: {
         type: 'array',
@@ -103,7 +107,7 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
       'amount',
       'authority_type',
       'end_date',
-      'item',
+      'items',
       'owner_status',
       'program',
       'start_date',

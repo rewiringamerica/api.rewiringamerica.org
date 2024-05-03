@@ -173,7 +173,7 @@ test('correctly evaluates scenario "Single w/ $120k Household income in Brooklyn
   // count the incentives by key used to de-dupe in UI:
   const rebateCounts = _.countBy(
     pos_rebate_incentives,
-    i => i.item + i.payment_methods[0],
+    i => i.items + i.payment_methods[0],
   );
   t.equal(
     Object.values(rebateCounts).every(c => c === 1),
@@ -181,7 +181,7 @@ test('correctly evaluates scenario "Single w/ $120k Household income in Brooklyn
   );
   const taxCreditCounts = _.countBy(
     tax_credit_incentives,
-    i => i.item + i.payment_methods[0],
+    i => i.items + i.payment_methods[0],
   );
   t.equal(
     Object.values(taxCreditCounts).every(c => c === 1),
@@ -283,7 +283,7 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
   // count the incentives by key used to de-dupe in UI:
   const rebateCounts = _.countBy(
     pos_rebate_incentives,
-    i => i.item + i.payment_methods[0],
+    i => i.items + i.payment_methods[0],
   );
   t.equal(
     Object.values(rebateCounts).every(c => c === 1),
@@ -291,7 +291,7 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
   );
   const taxCreditCounts = _.countBy(
     tax_credit_incentives,
-    i => i.item + i.payment_methods[0],
+    i => i.items + i.payment_methods[0],
   );
   t.equal(
     Object.values(taxCreditCounts).every(c => c === 1),
@@ -393,7 +393,7 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
   // count the incentives by key used to de-dupe in UI:
   const rebateCounts = _.countBy(
     pos_rebate_incentives,
-    i => i.item + i.payment_methods[0],
+    i => i.items + i.payment_methods[0],
   );
   t.equal(
     Object.values(rebateCounts).every(c => c === 1),
@@ -401,7 +401,7 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
   );
   const taxCreditCounts = _.countBy(
     tax_credit_incentives,
-    i => i.item + i.payment_methods[0],
+    i => i.items + i.payment_methods[0],
   );
   t.equal(
     Object.values(taxCreditCounts).every(c => c === 1),
@@ -508,7 +508,7 @@ test('correct filtering of county incentives', async t => {
     start_date: '2023',
     end_date: '2024',
     payment_methods: [PaymentMethod.AccountCredit],
-    item: 'heat_pump_air_conditioner_heater',
+    items: ['ducted_heat_pump'],
     program: 'ri_hvacAndWaterHeaterIncentives',
     amount: {
       type: AmountType.DollarAmount,
@@ -570,7 +570,7 @@ test('correct filtering of city incentives', async t => {
     start_date: '2023',
     end_date: '2024',
     payment_methods: [PaymentMethod.AccountCredit],
-    item: 'heat_pump_air_conditioner_heater',
+    items: ['ducted_heat_pump'],
     program: 'ri_hvacAndWaterHeaterIncentives',
     amount: {
       type: AmountType.DollarAmount,
@@ -633,7 +633,7 @@ test('correctly evaluates savings when state tax liability is lower than max sav
     start_date: '2023',
     end_date: '2024',
     payment_methods: [PaymentMethod.TaxCredit],
-    item: 'heat_pump_air_conditioner_heater',
+    items: ['ducted_heat_pump'],
     program: 'co_hvacAndWaterHeaterIncentives',
     amount: {
       type: AmountType.DollarAmount,

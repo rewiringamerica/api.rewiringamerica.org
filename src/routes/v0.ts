@@ -30,16 +30,16 @@ function translateIncentives(incentives: IRAIncentive[]): WebsiteIncentive[] {
     ...incentive,
     start_date: parseInt(incentive.start_date),
     end_date: parseInt(incentive.end_date),
-    item_es: t('items', incentive.item, 'es'),
-    item: t('items', incentive.item, 'en'),
+    item_es: t('items', incentive.items[0], 'es'),
+    item: t('items', incentive.items[0], 'en'),
     program_es: tr(PROGRAMS[incentive.program as keyof Programs].name, 'es'),
     program: tr(PROGRAMS[incentive.program as keyof Programs].name, 'en'),
     // strip domain from v0 links:
-    more_info_url_es: t('urls', incentive.item, 'es').replace(
+    more_info_url_es: t('urls', incentive.items[0], 'es').replace(
       'https://www.rewiringamerica.org',
       '',
     ),
-    more_info_url: t('urls', incentive.item, 'en').replace(
+    more_info_url: t('urls', incentive.items[0], 'en').replace(
       'https://www.rewiringamerica.org',
       '',
     ),
@@ -54,9 +54,9 @@ function translateIncentives(incentives: IRAIncentive[]): WebsiteIncentive[] {
 
     // Reconstruct item_type
     item_type:
-      incentive.item === 'rooftop_solar_installation'
+      incentive.items[0] === 'rooftop_solar_installation'
         ? 'solar_tax_credit'
-        : incentive.item === 'electric_vehicle_charger'
+        : incentive.items[0] === 'electric_vehicle_charger'
         ? 'ev_charger_credit'
         : incentive.type,
 
@@ -169,7 +169,7 @@ export default async function (
 
         // 1.1) Overwrite solar tax credit amount with representative_amount:
         const solarTaxCredit = tax_credit_incentives.find(
-          incentive => incentive.item === 'rooftop_solar_installation',
+          incentive => incentive.items[0] === 'rooftop_solar_installation',
         );
 
         if (solarTaxCredit) {
