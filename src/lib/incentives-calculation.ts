@@ -122,7 +122,7 @@ function calculateFederalIncentivesAndSavings(
     // 5) Add the Rooftop Solar Credit amount
     //
     const amount = { ...incentive.amount };
-    if (item === 'rooftop_solar_installation') {
+    if (item === 'rooftop_solar_installation' && !isNaN(solarSystemCost)) {
       amount.representative = roundCents(solarSystemCost * amount.number!);
     }
 
@@ -238,13 +238,6 @@ export default function calculateIncentives(
     );
   }
 
-  const solarSystemCost = SOLAR_PRICES[state_id]?.system_cost;
-  if (isNaN(solarSystemCost)) {
-    throw new InvalidInputError(
-      'Invalid state id provided. Must be US state code or DC.',
-    );
-  }
-
   // Throw an error if the request specifically asks for utility incentives and
   // doesn't include a utility.
   if (
@@ -291,7 +284,7 @@ export default function calculateIncentives(
   if (!authority_types || authority_types.includes(AuthorityType.Federal)) {
     const federal = calculateFederalIncentivesAndSavings(
       amiAndEvCreditEligibility,
-      solarSystemCost,
+      SOLAR_PRICES[state_id]?.system_cost,
       request,
     );
     incentives.push(...federal.federalIncentives);
@@ -322,6 +315,7 @@ export default function calculateIncentives(
 
   // Get tax owed to determine max potential tax savings
   const tax = estimateFederalTaxAmount(
+    location.state,
     tax_filing as FilingStatus,
     household_income,
   );

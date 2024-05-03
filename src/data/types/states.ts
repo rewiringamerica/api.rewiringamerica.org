@@ -52,6 +52,14 @@ export const STATES_PLUS_DC = [
   'DC',
 ] as const;
 
+export const TERRITORIES = [
+  'PR',
+  'GU',
+  'MP',
+  'VI',
+  'AS',
+] as const;
+
 export const BETA_STATES: string[] = [
   'AZ',
   'CT',

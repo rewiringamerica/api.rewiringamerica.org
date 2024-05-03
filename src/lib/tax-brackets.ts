@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import { FilingStatus, TAX_BRACKETS } from '../data/tax_brackets';
+import { TERRITORIES } from '../data/types/states';
 import { TaxEstimate } from '../data/types/tax';
 import { roundCents } from './rounding';
 
@@ -32,9 +33,18 @@ export function estimateStateTaxAmount(
 }
 
 export function estimateFederalTaxAmount(
+  state: string,
   filing_status: FilingStatus,
   household_income: number,
 ): TaxEstimate {
+  // Bona fide residents of the territories don't pay federal income tax on
+  // territory-sourced income. We conservatively assume that the user is a bona
+  // fide resident and has only territory-sourced income. This means we'll
+  // calculate $0 of possible savings from tax credits.
+  if ((TERRITORIES as readonly string[]).includes(state)) {
+    return { taxOwed: 0, effectiveRate: 0 };
+  }
+
   // Note: this could be simplified to hardcoded value lookup
   const tax_brackets = TAX_BRACKETS.filter(
     row => filing_status === row.filing_status,
