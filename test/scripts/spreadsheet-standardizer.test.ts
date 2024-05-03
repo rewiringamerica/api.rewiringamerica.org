@@ -119,7 +119,7 @@ test('representative example', tap => {
     'Program Title*': 'Take Charge Virginia Efficient Products Program',
     'Program URL':
       'https://takechargeva.com/programs/for-your-home/efficient-products-program-appliances',
-    'Technology*': 'Heat Pump Dryers / Clothes Dryer',
+    'Technology*': 'Heat Pump Dryers / Clothes Dryer,Induction Cooktop',
     "Technology (If selected 'Other')": '',
     'Program Description (guideline)':
       'Receive up to $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',
@@ -155,7 +155,7 @@ test('representative example', tap => {
     program_title: 'Take Charge Virginia Efficient Products Program',
     program_url:
       'https://takechargeva.com/programs/for-your-home/efficient-products-program-appliances',
-    item: 'heat_pump_clothes_dryer',
+    items: 'heat_pump_clothes_dryer,electric_stove',
     item_if_selected_other: '',
     'short_description.en':
       'Receive up to $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',

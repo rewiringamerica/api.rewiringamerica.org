@@ -145,12 +145,15 @@ function calculateFederalIncentivesAndSavings(
 
   // Remove items in ineligible section that display in eligible section
   const dedupedIneligibleIncentives = _.uniqBy(
-    ineligibleIncentives.filter(item => {
+    ineligibleIncentives.filter(incentive => {
       // Note: using _ here because it finds by matching properties, not by equality
-      const key = { item: item.items, type: item.payment_methods[0] };
+      const key = {
+        items: incentive.items,
+        type: incentive.payment_methods[0],
+      };
       return _.find(eligibleIncentives, key) === undefined;
     }),
-    item => item.items + item.payment_methods[0],
+    incentive => incentive.items[0] + incentive.payment_methods[0],
   );
 
   const calculatedIncentives = [

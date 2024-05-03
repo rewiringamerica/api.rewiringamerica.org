@@ -188,7 +188,7 @@ test('correctly evaluates scenario "Single w/ $120k Household income in Brooklyn
     true,
   );
 
-  const posRebates = _.keyBy(pos_rebate_incentives, 'item');
+  const posRebates = _.keyBy(pos_rebate_incentives, i => i.items[0]);
   t.equal(posRebates['electric_panel'].eligible, true);
   t.equal(posRebates['electric_panel'].amount.number, 4000);
   t.equal(posRebates['electric_panel'].start_date, '2025');
@@ -215,7 +215,7 @@ test('correctly evaluates scenario "Single w/ $120k Household income in Brooklyn
   t.equal(performance_rebate_incentives[0].amount.number, 4000);
   t.equal(performance_rebate_incentives[0].start_date, '2025');
 
-  const taxCredits = _.keyBy(tax_credit_incentives, 'item');
+  const taxCredits = _.keyBy(tax_credit_incentives, i => i.items[0]);
   t.equal(taxCredits['battery_storage_installation'].eligible, true);
   t.equal(taxCredits['battery_storage_installation'].amount.number, 0.3); // will be displayed as 30%
   t.equal(taxCredits['battery_storage_installation'].start_date, '2023');
@@ -298,7 +298,7 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
     true,
   );
 
-  const posRebates = _.keyBy(pos_rebate_incentives, 'item');
+  const posRebates = _.keyBy(pos_rebate_incentives, i => i.items[0]);
   t.equal(posRebates['electric_panel'].eligible, true);
   t.equal(posRebates['electric_panel'].amount.number, 4000);
   t.equal(posRebates['electric_panel'].start_date, '2025');
@@ -325,7 +325,7 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
   t.equal(performance_rebate_incentives[0].amount.number, 4000);
   t.equal(performance_rebate_incentives[0].start_date, '2025');
 
-  const taxCredits = _.keyBy(tax_credit_incentives, 'item');
+  const taxCredits = _.keyBy(tax_credit_incentives, i => i.items[0]);
   t.equal(taxCredits['battery_storage_installation'].eligible, true);
   t.equal(taxCredits['battery_storage_installation'].amount.number, 0.3); // will be displayed as 30%
   t.equal(taxCredits['battery_storage_installation'].start_date, '2023');
@@ -408,7 +408,7 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
     true,
   );
 
-  const posRebates = _.keyBy(pos_rebate_incentives, 'item');
+  const posRebates = _.keyBy(pos_rebate_incentives, i => i.items[0]);
   t.equal(posRebates['electric_panel'].eligible, false);
   t.equal(posRebates['electric_panel'].amount.number, 4000);
   t.equal(posRebates['electric_panel'].start_date, '2025');
@@ -436,7 +436,7 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
   t.equal(performance_rebate_incentives[0].amount.number, 4000);
   t.equal(performance_rebate_incentives[0].start_date, '2025');
 
-  const taxCredits = _.keyBy(tax_credit_incentives, 'item');
+  const taxCredits = _.keyBy(tax_credit_incentives, i => i.items[0]);
   t.equal(taxCredits['battery_storage_installation'].eligible, true);
   t.equal(taxCredits['battery_storage_installation'].amount.number, 0.3); // will be displayed as 30%
   t.equal(taxCredits['battery_storage_installation'].start_date, '2023');
