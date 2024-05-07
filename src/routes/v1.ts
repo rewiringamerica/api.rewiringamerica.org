@@ -18,6 +18,8 @@ import {
 } from '../schemas/v1/calculator-endpoint';
 import { APIIncentive, API_INCENTIVE_SCHEMA } from '../schemas/v1/incentive';
 import { API_UTILITIES_SCHEMA } from '../schemas/v1/utilities-endpoint';
+import { API_STATES_SCHEMA } from '../schemas/v1/states-endpoint';
+import { statesWithStatus } from '../lib/states';
 
 function transformIncentives(
   incentives: CalculatedIncentive[],
@@ -155,4 +157,15 @@ export default async function (
       }
     },
   );
+
+  //
+  // Returns a list of states and DC with their status.
+  //
+  server.get(
+    '/api/v1/states',
+    { schema: API_STATES_SCHEMA },
+    async (request, reply) => {
+      reply.status(200).type('application/json').send(statesWithStatus)
+    }
+  )
 }

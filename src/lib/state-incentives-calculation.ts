@@ -14,7 +14,6 @@ import {
 import { AmountType } from '../data/types/amount';
 import { APICoverage } from '../data/types/coverage';
 import { OwnerStatus } from '../data/types/owner-status';
-import { isStateIncluded } from '../data/types/states';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
 import {
   CombinedValue,
@@ -28,6 +27,7 @@ import {
 } from './incentive-relationship-calculation';
 import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
 import { ResolvedLocation } from './location';
+import { isStateIncluded } from './states';
 import { estimateStateTaxAmount } from './tax-brackets';
 
 export function getAllStateIncentives(
