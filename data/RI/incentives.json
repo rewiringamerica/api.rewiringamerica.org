@@ -6,12 +6,17 @@
     "payment_methods": [
       "account_credit"
     ],
-    "items": ["heat_pump_air_conditioner_heater"],
-    "program": "ri_hvacAndWaterHeaterIncentives",
+    "items": [
+      "geothermal_heating_installation",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ri_pascoagUtilityDistrict_hVAC&WaterHeaterIncentives",
     "amount": {
       "type": "dollars_per_unit",
-      "unit": "ton",
       "number": 350,
+      "unit": "ton",
+      "maximum": 700,
       "representative": 700
     },
     "owner_status": [
@@ -29,11 +34,14 @@
     "payment_methods": [
       "account_credit"
     ],
-    "items": ["heat_pump_water_heater"],
-    "program": "ri_hvacAndWaterHeaterIncentives",
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ri_pascoagUtilityDistrict_hVAC&WaterHeaterIncentives",
     "amount": {
       "type": "dollar_amount",
       "number": 450,
+      "minimum": 150,
       "maximum": 450
     },
     "owner_status": [
@@ -51,8 +59,10 @@
     "payment_methods": [
       "account_credit"
     ],
-    "items": ["heat_pump_clothes_dryer"],
-    "program": "ri_residentialEnergyStarOfferings",
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ri_pascoagUtilityDistrict_residentialEnergyStarOfferings",
     "amount": {
       "type": "dollar_amount",
       "number": 75
@@ -70,10 +80,13 @@
     "authority_type": "utility",
     "authority": "ri-pascoag-utility-district",
     "payment_methods": [
-      "account_credit"
+      "rebate"
     ],
-    "items": ["weatherization"],
-    "program": "ri_residentialEnergyAuditWeatherization",
+    "items": [
+      "air_sealing",
+      "other_insulation"
+    ],
+    "program": "ri_pascoagUtilityDistrict_residentialEnergyAudit-WeatherizationIncentives",
     "amount": {
       "type": "percent",
       "number": 1,
@@ -95,19 +108,23 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_air_conditioner_heater"],
-    "program": "ri_blockIslandEnergyEfficiency",
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ri_blockIslandPowerCompany_blockIslandUtilityDistrictEnergyEfficiencyProgram",
     "amount": {
-      "type": "dollar_amount",
-      "number": 750,
-      "maximum": 750
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton",
+      "maximum": 750,
+      "representative": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $750 back after purchase and installation of qualifying heat pumps and mini-splits, depending on size.",
-      "es": "Reembolsos hasta $750 después de la compra e instalación de bombas de calor y mini-splits calificados, según el tamaño."
+      "en": "Up to $750 back after purchase and installation of qualifying ducted heat pumps and mini-splits.",
+      "es": "Reembolsos hasta $750 después de la compra e instalación de bombas de calor con ductos calificados, según el tamaño."
     }
   },
   {
@@ -117,11 +134,14 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_water_heater"],
-    "program": "ri_blockIslandEnergyEfficiency",
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ri_blockIslandPowerCompany_blockIslandUtilityDistrictEnergyEfficiencyProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 300,
+      "minimum": 150,
       "maximum": 300
     },
     "owner_status": [
@@ -139,21 +159,25 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["weatherization"],
-    "program": "ri_blockIslandEnergyEfficiency",
+    "items": [
+      "air_sealing",
+      "duct_sealing",
+      "other_insulation"
+    ],
+    "program": "ri_blockIslandPowerCompany_blockIslandUtilityDistrictEnergyEfficiencyProgram",
     "amount": {
       "type": "percent",
       "number": 1,
       "maximum": 2000
     },
-    "bonus_available": true,
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
       "en": "100% of weatherization costs, including air/duct sealing and insulation, up to $2,000.",
       "es": "El total de los costos de la impermeabilización, hasta $2000, incluyendo el sellado de conductos de aire y el aislamiento."
-    }
+    },
+    "bonus_available": true
   },
   {
     "id": "RI-9",
@@ -162,11 +186,15 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["new_electric_vehicle"],
-    "program": "ri_drive",
+    "items": [
+      "new_electric_vehicle"
+    ],
+    "program": "ri_oER_dRIVE",
     "amount": {
       "type": "dollar_amount",
-      "number": 1500
+      "number": 1500,
+      "minimum": 1000,
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner",
@@ -178,40 +206,21 @@
     }
   },
   {
-    "id": "RI-11",
-    "authority_type": "state",
-    "authority": "ri-oer",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": ["new_electric_vehicle"],
-    "program": "ri_drive_plus",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1500
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "low_income": "default",
-    "short_description": {
-      "en": "Additional $1,500 back after purchase or lease of a new EV from a licensed Rhode Island or qualified out-of-state dealership for LIHEAP-qualifiers.",
-      "es": "Un reembolso adicional de $1,500 por la compra o arrendamiento de un vehículo eléctrico nuevo para los calificadores de LIHEAP."
-    }
-  },
-  {
     "id": "RI-10",
     "authority_type": "state",
     "authority": "ri-oer",
     "payment_methods": [
       "rebate"
     ],
-    "items": ["used_electric_vehicle"],
-    "program": "ri_drive",
+    "items": [
+      "used_electric_vehicle"
+    ],
+    "program": "ri_oER_dRIVE",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000
+      "number": 1000,
+      "minimum": 750,
+      "maximum": 1000
     },
     "owner_status": [
       "homeowner",
@@ -223,27 +232,58 @@
     }
   },
   {
+    "id": "RI-11",
+    "authority_type": "state",
+    "authority": "ri-oer",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "new_electric_vehicle"
+    ],
+    "program": "ri_oER_dRIVE+",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "minimum": 1000,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Additional $1,500 back after purchase or lease of a new EV from a licensed Rhode Island or qualified out-of-state dealership for LIHEAP-qualifiers.",
+      "es": "Un reembolso adicional de $1,500 por la compra o arrendamiento de un vehículo eléctrico nuevo para los calificadores de LIHEAP."
+    },
+    "low_income": "default"
+  },
+  {
     "id": "RI-12",
     "authority_type": "state",
     "authority": "ri-oer",
     "payment_methods": [
       "rebate"
     ],
-    "items": ["used_electric_vehicle"],
-    "program": "ri_drive_plus",
+    "items": [
+      "used_electric_vehicle"
+    ],
+    "program": "ri_oER_dRIVE+",
     "amount": {
       "type": "dollar_amount",
-      "number": 1500
+      "number": 1500,
+      "minimum": 750,
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
-    "low_income": "default",
     "short_description": {
       "en": "Additional $1,500 towards a used EV from a licensed Rhode Island or qualified out-of-state dealership for LIHEAP-qualifiers. First-come, first-served.",
       "es": "Un reembolso adicional de $1,500 por un vehículo eléctrico usado para los calificadores de LIHEAP. Por orden de llegada."
-    }
+    },
+    "low_income": "default"
   },
   {
     "id": "RI-13",
@@ -252,8 +292,10 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["ebike"],
-    "program": "ri_erikaNiedowskiMemorialEBikeRebateProgram",
+    "items": [
+      "ebike"
+    ],
+    "program": "ri_oER_erikaNiedowskiMemorialElectricBicycleRebateProgram",
     "amount": {
       "type": "percent",
       "number": 0.3,
@@ -263,34 +305,59 @@
       "homeowner",
       "renter"
     ],
-    "low_income": "default",
     "short_description": {
       "en": "30% up to $350 back on the final purchase of an e-bike or e-cargo bike.",
       "es": "Devolución del 30% hasta $350 dólares en la compra final de una bicicleta e-bike o una e-cargo bike."
-    }
+    },
+    "start_date": "2022-10-24",
+    "low_income": "default"
   },
   {
-    "id": "RI-43",
+    "id": "RI-14",
     "authority_type": "state",
-    "authority": "ri-oer",
+    "authority": "ri-dhs",
     "payment_methods": [
-      "rebate"
+      "assistance_program"
     ],
-    "items": ["ebike"],
-    "program": "ri_erikaNiedowskiMemorialEBikeRebateProgram",
+    "items": [
+      "other_weatherization"
+    ],
+    "program": "ri_dHS_weatherizationAssistanceProgram",
     "amount": {
       "type": "percent",
-      "number": 0.75,
-      "maximum": 750
+      "number": 1
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
-    "low_income": "default",
     "short_description": {
-      "en": "75% up to $750 back on the final purchase of an e-bike or e-cargo bike for income qualified residents.",
-      "es": "Devolución del 75% hasta $750 dólares en la compra final de una bicicleta e-bike o una e-cargo bike para residentes que cumplan con el nivel de ingresos."
+      "en": "Weatherization Assistance Program reduces energy costs for households that meet LIHEAP criteria. If you qualify, there's no cost to you.",
+      "es": "Este programa tiene el objetivo de reducir los costes de calefacción y refrigeración para los dueños de hogares y arrendatarios que califican para LIHEAP."
+    },
+    "low_income": "ri-dhs"
+  },
+  {
+    "id": "RI-19",
+    "authority_type": "utility",
+    "authority": "ri-rhode-island-energy",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ri_rhodeIslandEnergy_rhodeIslandENERGYSTAR®CertifiedElectricClothesDryerRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 back on ENERGY STAR® certified electric clothes dryer purchased in 2023. Rebate requests must be completed within 90 days of purchase.",
+      "es": "$50 de reembolso en secadoras de ropa eléctricas certificadas por ENERGY STAR y compradas en 2023. Solicita dentro de los 90 días posteriores a la compra."
     }
   },
   {
@@ -300,13 +367,14 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_water_heater"],
-    "program": "ri_residentialHeatPumpWaterHeater",
-    "start_date": "2024",
-    "end_date": "2024",
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ri_rhodeIslandEnergy_residentialHeatPumpWaterHeaterRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 600,
+      "minimum": 150,
       "maximum": 600
     },
     "owner_status": [
@@ -315,7 +383,9 @@
     "short_description": {
       "en": "Up to $600 back on a qualifying electric heat pump water heater when replacing an existing electric water heater or installing in a new home.",
       "es": "Reembolso hasta $600 cuando reemplaza un calentador de agua eléctrico con calentador de agua con bomba de calor calificado o al instalarlo en una casa nueva."
-    }
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   },
   {
     "id": "RI-21",
@@ -324,16 +394,17 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["rooftop_solar_installation"],
-    "program": "ri_smallScaleSolar",
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "ri_commerceCorp_smallScaleSolarProgram",
     "amount": {
       "type": "dollars_per_unit",
-      "unit": "watt",
-      "number": 0.65,
+      "number": 650,
+      "unit": "kilowatt",
       "maximum": 5000,
-      "representative": 3000
+      "representative": 5000
     },
-    "bonus_available": true,
     "owner_status": [
       "homeowner"
     ],
@@ -343,39 +414,16 @@
     }
   },
   {
-    "id": "RI-22",
-    "authority_type": "utility",
-    "authority": "ri-rhode-island-energy",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": ["heat_pump_air_conditioner_heater"],
-    "program": "ri_electricHeatingAndCoolingRebates",
-    "start_date": "2024",
-    "end_date": "2024",
-    "amount": {
-      "type": "dollars_per_unit",
-      "unit": "ton",
-      "number": 350,
-      "representative": 700
-    },
-    "bonus_available": true,
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$150+ back on installation of heat pump, depending on size. Additional funding available to replace electric baseboard resistance heating."
-    }
-  },
-  {
     "id": "RI-27",
     "authority_type": "utility",
     "authority": "ri-rhode-island-energy",
     "payment_methods": [
       "assistance_program"
     ],
-    "items": ["weatherization"],
-    "program": "ri_incomeEligibleEnergySavings",
+    "items": [
+      "other_weatherization"
+    ],
+    "program": "ri_rhodeIslandEnergy_incomeEligibleEnergySavingsProgram",
     "amount": {
       "type": "percent",
       "number": 1
@@ -383,34 +431,11 @@
     "owner_status": [
       "homeowner"
     ],
-    "low_income": "ri-rhode-island-energy",
     "short_description": {
       "en": "Income-Eligible Energy Savings Program makes your home healthier, more comfortable and more affordable. If you qualify, there's no cost to you.",
       "es": "Este programa hace que su hogar sea más saludable, cómodo y económico. Si califica, no hay costo para usted."
-    }
-  },
-  {
-    "id": "RI-14",
-    "authority_type": "state",
-    "authority": "ri-dhs",
-    "payment_methods": [
-      "assistance_program"
-    ],
-    "items": ["weatherization"],
-    "program": "ri_dhsWeatherizationAssistanceProgram",
-    "amount": {
-      "type": "percent",
-      "number": 1
     },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "low_income": "ri-dhs",
-    "short_description": {
-      "en": "Weatherization Assistance Program reduces energy costs for households that meet LIHEAP criteria. If you qualify, there's no cost to you.",
-      "es": "Este programa tiene el objetivo de reducir los costes de calefacción y refrigeración para los dueños de hogares y arrendatarios que califican para LIHEAP."
-    }
+    "low_income": "ri-rhode-island-energy"
   },
   {
     "id": "RI-30",
@@ -419,13 +444,16 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_air_conditioner_heater"],
-    "program": "ri_cleanHeat",
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ri_oER_cleanHeatRhodeIslandResidentialIncentive",
     "amount": {
       "type": "dollars_per_unit",
       "number": 1000,
-      "representative": 2500,
-      "unit": "ton"
+      "unit": "ton",
+      "maximum": 10000
     },
     "owner_status": [
       "homeowner"
@@ -442,13 +470,15 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["geothermal_heating_installation"],
-    "program": "ri_cleanHeat",
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ri_oER_cleanHeatRhodeIslandResidentialIncentive",
     "amount": {
       "type": "dollars_per_unit",
       "number": 1250,
-      "representative": 2500,
-      "unit": "ton"
+      "unit": "ton",
+      "maximum": 10000
     },
     "owner_status": [
       "homeowner"
@@ -465,8 +495,10 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["electric_panel"],
-    "program": "ri_cleanHeat",
+    "items": [
+      "other"
+    ],
+    "program": "ri_oER_cleanHeatRhodeIslandResidentialIncentive",
     "amount": {
       "type": "dollar_amount",
       "number": 500
@@ -486,11 +518,15 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_water_heater"],
-    "program": "ri_cleanHeat",
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ri_oER_cleanHeatRhodeIslandResidentialIncentive",
     "amount": {
       "type": "dollar_amount",
-      "number": 750
+      "number": 1500,
+      "minimum": 750,
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner"
@@ -507,8 +543,11 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_air_conditioner_heater"],
-    "program": "ri_cleanHeat",
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ri_oER_cleanHeatRhodeIslandResidentialIncome-EligibleIncentive",
     "amount": {
       "type": "percent",
       "number": 1
@@ -516,11 +555,12 @@
     "owner_status": [
       "homeowner"
     ],
-    "low_income": "default",
     "short_description": {
       "en": "Depending on your income, 100% of the cost to install an air source heat pump, including up to $3,000 towards related electric service upgrades.",
       "es": "Según sus ingresos, el costo total de instalar una aerotermia. Incluye hasta $3,000 para mejoras eléctricas relacionadas."
-    }
+    },
+    "bonus_available": true,
+    "low_income": "default"
   },
   {
     "id": "RI-35",
@@ -529,8 +569,10 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_water_heater"],
-    "program": "ri_cleanHeat",
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ri_oER_cleanHeatRhodeIslandResidentialIncome-EligibleIncentive",
     "amount": {
       "type": "percent",
       "number": 1,
@@ -539,33 +581,117 @@
     "owner_status": [
       "homeowner"
     ],
-    "low_income": "default",
     "short_description": {
       "en": "Depending on your income, 100% of the cost to install a heat pump water heater, including up to $3,000 towards related electric service upgrades.",
       "es": "Según sus ingresos, el costo total de instalar un calentador de agua con bomba de calor. Incluye hasta $3,000 para mejoras eléctricas relacionadas."
-    }
+    },
+    "low_income": "default"
   },
   {
-    "id": "RI-41",
+    "id": "RI-37",
     "authority_type": "utility",
-    "authority": "ri-pascoag-utility-district",
+    "authority": "ri-rhode-island-energy",
     "payment_methods": [
       "rebate"
     ],
-    "items": ["smart_thermostat"],
-    "program": "ri_residentialEnergyAuditWeatherization",
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ri_rhodeIslandEnergy_electricHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 350,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350+ back on qualifying ducted central heat pump, depending on size. Additional funding available for replacing baseboard resistance heating.",
+      "es": "$350+ de reembolso para la instalación de una bomba de calor central por conductos y más para reemplazar la calefacción eléctrica a base de resistencias."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31",
+    "bonus_available": true
+  },
+  {
+    "id": "RI-39",
+    "authority_type": "utility",
+    "authority": "ri-rhode-island-energy",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "ri_rhodeIslandEnergy_electricHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 150,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150+ back on qualifying mini-split non-ducted heat pump, depending on size. Additional funding available for replacing baseboard resistance heating.",
+      "es": "$150+ de reembolso para una bomba de calor mini-split sin conductos. Reembolso adicional para reemplazar la calefacción eléctrica a base de resistencias."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31",
+    "bonus_available": true
+  },
+  {
+    "id": "RI-40",
+    "authority_type": "utility",
+    "authority": "ri-rhode-island-energy",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ri_rhodeIslandEnergy_electricHeatingAndCoolingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 100,
-      "maximum": 100
+      "number": 75
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$100 back on a programmable wireless connection enabled thermostat. $25 back on a programmable non-wireless thermostat.",
-      "es": "$100 dólares de devolución en termostato programable con conexión inalámbrica. $25 dólares de devolución en termostato programable no inalámbrico."
-    }
+      "en": "$75 back on ENERGY STAR certified, wireless connection enabled Smart Thermostat.",
+      "es": "$75 de reembolso en un termostato inteligente certificado por ENERGY STAR con conexión inalámbrica."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "RI-43",
+    "authority_type": "state",
+    "authority": "ri-oer",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ebike"
+    ],
+    "program": "ri_oER_erikaNiedowskiMemorialElectricBicycleRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "75% up to $750 back on the final purchase of an e-bike or e-cargo bike for income qualified residents.",
+      "es": "Devolución del 75% hasta $750 dólares en la compra final de una bicicleta e-bike o una e-cargo bike para residentes que cumplan con el nivel de ingresos."
+    },
+    "start_date": "2022-10-24",
+    "low_income": "default"
   }
 ]
