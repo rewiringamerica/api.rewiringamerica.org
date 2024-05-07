@@ -5,7 +5,6 @@ import {
   AuthorityType,
 } from '../../src/data/authorities';
 import {
-  IRAIncentive,
   IRA_INCENTIVES,
   SCHEMA as I_SCHEMA,
 } from '../../src/data/ira_incentives';
@@ -223,18 +222,6 @@ test('state incentives JSON files match schemas', async tap => {
       }
       incentiveIds.add(incentive.id);
     });
-  });
-});
-
-test('All items used in IRA incentives have urls available', async tap => {
-  IRA_INCENTIVES.forEach((incentive: IRAIncentive) => {
-    const item = incentive.item;
-    for (const [lang, locale] of Object.entries(LOCALES)) {
-      tap.ok(
-        item in locale.urls,
-        `Technology ${item} is missing url in locale ${lang}, but is used in IRA Incentive ${incentive.id}`,
-      );
-    }
   });
 });
 

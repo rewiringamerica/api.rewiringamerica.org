@@ -17,7 +17,7 @@ const ajv = new Ajv({ allErrors: true, coerceTypes: 'array' });
 
 // TODO: consolidate with spreadsheet-standardizer.ts constant
 // and generate both directly from CollectedIncentive schema.
-const ARRAY_FIELDS = ['data_urls', 'payment_methods', 'owner_status'];
+const ARRAY_FIELDS = ['data_urls', 'payment_methods', 'owner_status', 'items'];
 const BOOL_FIELDS = ['omit_from_api'];
 const IGNORE_FIELDS = ['Description character count', 'Description word count'];
 
