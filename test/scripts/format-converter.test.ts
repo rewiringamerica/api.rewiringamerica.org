@@ -98,7 +98,7 @@ test('validation works', tap => {
     program_title: 'Take Charge Virginia Efficient Products Program',
     program_url:
       'https://takechargeva.com/programs/for-your-home/efficient-products-program-appliances',
-    item: 'heat_pump_clothes_dryer',
+    items: 'heat_pump_clothes_dryer,electric_stove',
     item_if_selected_other: '',
     'short_description.en':
       'Receive up to $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',
@@ -236,7 +236,7 @@ test('CollectedIncentives are converted into spreadsheet format', tap => {
       data_urls: ['appalachia.com'],
       authority_name: 'Appalachian Power',
       authority_type: AuthorityType.Utility,
-      item: 'heat_pump_clothes_dryer',
+      items: ['heat_pump_clothes_dryer', 'electric_stove'],
       program_title: 'The Appalachian Program',
       program_url: 'appalachianprogram.com',
       program_status: 'Active',
@@ -267,7 +267,10 @@ test('CollectedIncentives are converted into spreadsheet format', tap => {
         'Data Source URL(s)': ['appalachia.com'],
         'Authority (Name) *': 'Appalachian Power',
         'Authority Level *': 'Utility',
-        'Technology *': 'Heat Pump Dryers / Clothes Dryer',
+        'Technology *': [
+          'Heat Pump Dryers / Clothes Dryer',
+          'Induction Cooktop',
+        ],
         'Program Title *': 'The Appalachian Program',
         'Program URL': 'appalachianprogram.com',
         'Program Status': 'Active',

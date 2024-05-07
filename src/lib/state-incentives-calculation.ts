@@ -238,28 +238,31 @@ function transformItems(
 }
 
 function skipBasedOnRequestParams(
-  item: StateIncentive,
+  incentive: StateIncentive,
   request: CalculateParams,
   location: ResolvedLocation,
   stateAuthorities: AuthoritiesByType,
 ) {
   if (
     request.authority_types &&
-    !request.authority_types.includes(item.authority_type)
+    !request.authority_types.includes(incentive.authority_type)
   ) {
     // Skip all utilities that are not of the requested authority type(s).
     return true;
   }
 
-  if (request.items && !request.items.includes(item.item)) {
-    // Don't include an incentive at all if the query is filtering by item and
-    // this doesn't match.
-    return true;
+  if (request.items) {
+    const requestItems = request.items;
+    if (incentive.items.every(item => !requestItems.includes(item))) {
+      // Don't include an incentive at all if the query is filtering by item and
+      // this incentive's items don't overlap
+      return true;
+    }
   }
 
   if (
-    item.authority_type === AuthorityType.Utility &&
-    item.authority !== request.utility
+    incentive.authority_type === AuthorityType.Utility &&
+    incentive.authority !== request.utility
   ) {
     // Don't include utility incentives at all if they weren't requested, or
     // if they're for the wrong utility.
@@ -271,18 +274,18 @@ function skipBasedOnRequestParams(
   // and cities.
   // https://app.asana.com/0/1204738794846444/1206454407609847
   // tracks long-term work in this space.
-  if (item.authority_type === AuthorityType.County) {
+  if (incentive.authority_type === AuthorityType.County) {
     // Skip if we didn't get location data.
     if (location.countyFips === undefined) return true;
 
     // We have tests to ensure county authorities are registered.
-    const authorityDetails = stateAuthorities.county![item.authority];
+    const authorityDetails = stateAuthorities.county![incentive.authority];
     if (authorityDetails.county_fips !== location.countyFips) {
       return true;
     }
   }
 
-  if (item.authority_type === AuthorityType.City) {
+  if (incentive.authority_type === AuthorityType.City) {
     // We have to match on both city and county since more than one
     // municipalities can have the same name within the same state.
 
@@ -292,7 +295,7 @@ function skipBasedOnRequestParams(
     }
 
     // We have tests to ensure city authorities are registered.
-    const authorityDetails = stateAuthorities.city![item.authority];
+    const authorityDetails = stateAuthorities.city![incentive.authority];
 
     if (
       authorityDetails.city !== location.city ||
@@ -302,9 +305,10 @@ function skipBasedOnRequestParams(
     }
   }
 
-  if (item.eligible_geo_group) {
+  if (incentive.eligible_geo_group) {
     // A test ensures that geo groups are registered.
-    const group = GEO_GROUPS_BY_STATE[location.state]![item.eligible_geo_group];
+    const group =
+      GEO_GROUPS_BY_STATE[location.state]![incentive.eligible_geo_group];
 
     // The request params must match ALL of the keys the geo group defines
     if (

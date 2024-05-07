@@ -28,13 +28,11 @@ function transformIncentives(
   return incentives.map(incentive => ({
     ...incentive,
 
-    // Synthesize multi-valued items field
-    items: [incentive.item],
-
     // Localize localizable fields
+    // TODO remove this field once all clients use "items" exclusively
     item: {
-      type: incentive.item,
-      name: t('items', incentive.item, language),
+      type: incentive.items[0],
+      name: t('items', incentive.items[0], language),
     },
     program: tr(PROGRAMS[incentive.program as keyof Programs].name, language),
     program_url: tr(
