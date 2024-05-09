@@ -2,8 +2,15 @@ import Ajv from 'ajv';
 import fs from 'fs';
 import qs from 'qs';
 import { beforeEach, test, Test } from 'tap';
+import { StateStatus } from '../../src/data/types/state-status';
+import {
+  BETA_STATES,
+  LAUNCHED_STATES,
+  STATES_PLUS_DC,
+} from '../../src/data/types/states';
 import { API_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v1/calculator-endpoint';
 import { API_INCENTIVE_SCHEMA } from '../../src/schemas/v1/incentive';
+import { API_STATES_RESPONSE_SCHEMA } from '../../src/schemas/v1/states-endpoint';
 import { API_UTILITIES_RESPONSE_SCHEMA } from '../../src/schemas/v1/utilities-endpoint';
 import { build } from '../helper';
 
@@ -770,4 +777,38 @@ test('/utilities', async t => {
 
     t.strictSame(utilitiesResponse, expectedResponse);
   }
+});
+
+test('/states', async t => {
+  const app = await build(t);
+  const ajv = new Ajv({
+    schemas: [API_STATES_RESPONSE_SCHEMA],
+    coerceTypes: true,
+    useDefaults: true,
+    removeAdditional: true,
+    allErrors: false,
+  });
+  const validator = ajv.getSchema('APIStatesResponse')!;
+
+  const res = await app.inject({ url: '/api/v1/states' });
+  t.equal(res.statusCode, 200);
+
+  const statesResponse = JSON.parse(res.payload);
+
+  await validator(statesResponse);
+  t.equal(validator.errors, null);
+
+  LAUNCHED_STATES.forEach(state => {
+    t.strictSame(statesResponse[state].status, StateStatus.Launched);
+  });
+
+  BETA_STATES.forEach(state => {
+    t.strictSame(statesResponse[state].status, StateStatus.Beta);
+  });
+
+  STATES_PLUS_DC.filter(
+    state => !LAUNCHED_STATES.includes(state) && !BETA_STATES.includes(state),
+  ).forEach(state => {
+    t.strictSame(statesResponse[state].status, StateStatus.None);
+  });
 });

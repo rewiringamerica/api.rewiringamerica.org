@@ -10,6 +10,7 @@ import calculateIncentives, {
   CalculatedIncentive,
 } from '../lib/incentives-calculation';
 import { resolveLocation } from '../lib/location';
+import { statesWithStatus } from '../lib/states';
 import { getUtilitiesForLocation } from '../lib/utilities-for-location';
 import { ERROR_SCHEMA } from '../schemas/error';
 import {
@@ -17,6 +18,7 @@ import {
   API_CALCULATOR_SCHEMA,
 } from '../schemas/v1/calculator-endpoint';
 import { APIIncentive, API_INCENTIVE_SCHEMA } from '../schemas/v1/incentive';
+import { API_STATES_SCHEMA } from '../schemas/v1/states-endpoint';
 import { API_UTILITIES_SCHEMA } from '../schemas/v1/utilities-endpoint';
 
 function transformIncentives(
@@ -151,6 +153,17 @@ export default async function (
           throw error;
         }
       }
+    },
+  );
+
+  //
+  // Returns a list of states and DC with their status.
+  //
+  server.get(
+    '/api/v1/states',
+    { schema: API_STATES_SCHEMA },
+    async (request, reply) => {
+      reply.status(200).type('application/json').send(statesWithStatus);
     },
   );
 }
