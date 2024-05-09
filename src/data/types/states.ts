@@ -72,10 +72,3 @@ export const LAUNCHED_STATES: string[] = [
   'VA',
   'VT',
 ];
-
-export const isStateIncluded = (
-  stateId: string,
-  includeBeta: boolean,
-): boolean =>
-  LAUNCHED_STATES.includes(stateId) ||
-  (includeBeta && BETA_STATES.includes(stateId));
