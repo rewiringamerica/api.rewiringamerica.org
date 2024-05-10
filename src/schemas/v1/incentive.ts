@@ -15,7 +15,6 @@ export const API_INCENTIVE_SCHEMA = {
     'authority_type',
     'program',
     'program_url',
-    'item',
     'items',
     'amount',
     'owner_status',
@@ -44,20 +43,6 @@ export const API_INCENTIVE_SCHEMA = {
     },
     more_info_url: {
       type: 'string',
-    },
-    item: {
-      type: 'object',
-      properties: {
-        type: {
-          type: 'string',
-          enum: ALL_ITEMS,
-        },
-        name: {
-          type: 'string',
-        },
-      },
-      required: ['type'],
-      additionalProperties: false,
     },
     items: {
       type: 'array',
