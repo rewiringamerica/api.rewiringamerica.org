@@ -38,5 +38,6 @@ COPY data data
 COPY locales locales
 
 # go!
+ENV NODE_ENV=production
 ENV PORT=8080
 CMD yarn start
