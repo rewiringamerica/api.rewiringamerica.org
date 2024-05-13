@@ -8,6 +8,9 @@
     },
     "co-colorado-energy-office": {
       "name": "Colorado Energy Office"
+    },
+    "co-state-of-colorado": {
+      "name": "State of Colorado"
     }
   },
   "coverage": {
@@ -68,6 +71,32 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "Up to $900 off a heat pump water heater UEF 3.3. ENERGY STAR certified with CTA-2045 certified communication control."
+    },
+    {
+      "payment_methods": [
+        "tax_credit"
+      ],
+      "authority_type": "state",
+      "authority": "co-state-of-colorado",
+      "program": "Colorado Heat Pump Incentives",
+      "program_url": "https://energysmartcolorado.org/tax-credits-incentives/",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump",
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.129
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2023-01-01",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "12.9% discount on the equipment price of heat pumps and heat pump water heaters, through Colorado State tax credit and sales tax exemption."
     }
   ]
 }
