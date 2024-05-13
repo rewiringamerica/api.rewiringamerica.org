@@ -29,11 +29,6 @@ function transformIncentives(
     ...incentive,
 
     // Localize localizable fields
-    // TODO remove this field once all clients use "items" exclusively
-    item: {
-      type: incentive.items[0],
-      name: t('items', incentive.items[0], language),
-    },
     program: tr(PROGRAMS[incentive.program as keyof Programs].name, language),
     program_url: tr(
       PROGRAMS[incentive.program as keyof Programs].url,
