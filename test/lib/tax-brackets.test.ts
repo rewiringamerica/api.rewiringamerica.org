@@ -34,57 +34,58 @@ test('defaults to a null state tax obligation for unsupported states', async t =
  */
 
 test('correctly evaluates scenerio: $112,500 hoh', async t => {
-  const data = estimateFederalTaxAmount(FilingStatus.HoH, 112500);
+  const data = estimateFederalTaxAmount('CA', FilingStatus.HoH, 112500);
   t.equal(data.taxOwed, 13875);
 });
 
 test('correctly evaluates scenerio: $53,100 single', async t => {
-  const data = estimateFederalTaxAmount(FilingStatus.Single, 53100);
+  const data = estimateFederalTaxAmount('CA', FilingStatus.Single, 53100);
   t.equal(data.taxOwed, 4490);
 });
 
 test('correctly evaluates scenerio: $300,000 hoh', async t => {
-  const data = estimateFederalTaxAmount(FilingStatus.HoH, 300000);
+  const data = estimateFederalTaxAmount('CA', FilingStatus.HoH, 300000);
   t.equal(data.taxOwed, 68009);
 });
 
 test('correctly evaluates scenerio: $300,000 single', async t => {
-  const data = estimateFederalTaxAmount(FilingStatus.Single, 300000);
+  const data = estimateFederalTaxAmount('CA', FilingStatus.Single, 300000);
   t.equal(data.taxOwed, 72047);
 });
 
 test('correctly evaluates scenerio: $94,000 joint', async t => {
-  const data = estimateFederalTaxAmount(FilingStatus.Joint, 94000);
+  const data = estimateFederalTaxAmount('CA', FilingStatus.Joint, 94000);
   t.equal(data.taxOwed, 7516);
 });
 
 test('correctly evaluates scenerio: $1,000,000 joint', async t => {
-  const data = estimateFederalTaxAmount(FilingStatus.Joint, 1000000);
+  const data = estimateFederalTaxAmount('CA', FilingStatus.Joint, 1000000);
   t.equal(data.taxOwed, 289665);
 });
 
 test('correctly evaluates scenerio: $8,000 single', async t => {
-  const data = estimateFederalTaxAmount(FilingStatus.Single, 8000);
+  const data = estimateFederalTaxAmount('CA', FilingStatus.Single, 8000);
   t.equal(data.taxOwed, 0);
 });
 
 test('correctly evaluates income at standard deduction', async t => {
-  const data = estimateFederalTaxAmount(FilingStatus.Joint, 13850);
+  const data = estimateFederalTaxAmount('CA', FilingStatus.Joint, 13850);
   t.equal(data.taxOwed, 0);
 });
 
 test('correctly evaluates income below standard deduction', async t => {
-  const data = estimateFederalTaxAmount(FilingStatus.Joint, 5000);
+  const data = estimateFederalTaxAmount('CA', FilingStatus.Joint, 5000);
   t.equal(data.taxOwed, 0);
 });
 
 test('correctly evaluates $0 income', async t => {
-  const data = estimateFederalTaxAmount(FilingStatus.Single, 0);
+  const data = estimateFederalTaxAmount('CA', FilingStatus.Single, 0);
   t.equal(data.taxOwed, 0);
 });
 
 test('correctly evaluates scenario: $500,000 married-separate', async t => {
   const data = estimateFederalTaxAmount(
+    'CA',
     FilingStatus.MarriedFilingSeparately,
     500000,
   );
@@ -93,6 +94,7 @@ test('correctly evaluates scenario: $500,000 married-separate', async t => {
 
 test('correctly evaluates scenario: $53,100 married-separate', async t => {
   const data = estimateFederalTaxAmount(
+    'CA',
     FilingStatus.MarriedFilingSeparately,
     53100,
   );

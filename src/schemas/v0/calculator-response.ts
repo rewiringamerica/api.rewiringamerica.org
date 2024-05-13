@@ -33,7 +33,7 @@ export const WEBSITE_CALCULATOR_RESPONSE_SCHEMA = {
     tax_savings: {
       type: 'integer',
       description:
-        'You can’t save more than tax owed. Uses the lesser of tax owed vs tax savings.',
+        'You can’t save more than tax owed. Uses the lesser of tax owed vs tax savings. Residents of US territories are assumed to owe no federal income tax.',
     },
     performance_rebate_savings: {
       type: 'integer',

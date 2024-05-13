@@ -172,8 +172,8 @@ export default async function (
           incentive => incentive.items[0] === 'rooftop_solar_installation',
         );
 
-        if (solarTaxCredit) {
-          solarTaxCredit.amount.number = solarTaxCredit.amount.representative!;
+        if (solarTaxCredit && solarTaxCredit.amount.representative) {
+          solarTaxCredit.amount.number = solarTaxCredit.amount.representative;
           delete solarTaxCredit.amount.representative;
 
           // 1.2) Re-sort incentives per https://app.asana.com/0/0/1204275945510481/f
@@ -199,7 +199,8 @@ export default async function (
 
           // 2) Add annual savings from pregenerated model
           estimated_annual_savings:
-            IRA_STATE_SAVINGS[location.state].estimated_savings_heat_pump_ev,
+            IRA_STATE_SAVINGS[location.state]?.estimated_savings_heat_pump_ev ??
+            IRA_STATE_SAVINGS['US'].estimated_savings_heat_pump_ev,
 
           // 3) Populate the expected English and Spanish strings
           pos_rebate_incentives: translateIncentives(pos_rebate_incentives),
