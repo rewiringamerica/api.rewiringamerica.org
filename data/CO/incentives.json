@@ -7354,8 +7354,7 @@
     ],
     "items": [
       "ducted_heat_pump",
-      "ductless_heat_pump",
-      "heat_pump_water_heater"
+      "ductless_heat_pump"
     ],
     "program": "co_stateOfColorado_coloradoHeatPumpIncentives",
     "amount": {
@@ -7367,8 +7366,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "12.9% discount on the equipment price of heat pumps and heat pump water heaters, through Colorado State tax credit and sales tax exemption.",
-      "es": "Un descuento del 12.9% sobre el precio del equipamiento de bombas de calor y calentadores de agua con bomba de calor, gracias a una condonación fiscal del estado de Colorado y una bonificación del impuesto sobre las ventas."
+      "en": "12.9% discount on the equipment price of heat pumps, through Colorado State tax credit and sales tax exemption.",
+      "es": "Un descuento del 12.9% sobre el precio del equipamiento de bombas de calor, gracias a una condonación fiscal del estado de Colorado y una bonificación del impuesto sobre las ventas."
     },
     "start_date": "2023-01-01",
     "bonus_available": true
@@ -12883,5 +12882,31 @@
     "short_description": {
       "en": "$800 off qualifying new heat pump water heaters for Xcel customers. Must be installed by registered contractor and may not exceed 80 gallons."
     }
+  },
+  {
+    "id": "CO-548",
+    "authority_type": "state",
+    "authority": "co-state-of-colorado",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "co_stateOfColorado_coloradoHeatPumpIncentives",
+    "amount": {
+      "type": "percent",
+      "number": 0.129
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "12.9% discount on the equipment price of heat pump water heaters, through Colorado State tax credit and sales tax exemption.",
+      "es": "Un descuento del 12.9% sobre el precio del equipamiento de calentadores de agua con bomba de calor, gracias a una condonación fiscal del estado de Colorado y una bonificación del impuesto sobre las ventas."
+    },
+    "start_date": "2023-01-01",
+    "bonus_available": true
   }
 ]
