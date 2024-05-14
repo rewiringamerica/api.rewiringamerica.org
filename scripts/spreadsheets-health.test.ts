@@ -29,7 +29,9 @@ function filterToKeyFields(
 
 test('registered spreadsheets are in sync with checked-in JSON files', async tap => {
   for (const [state, file] of Object.entries(FILES)) {
-    if (!file.runSpreadsheetHealthCheck) continue;
+    if (!file.runSpreadsheetHealthCheck) {
+      continue;
+    }
     try {
       const response = await fetch(file.sheetUrl);
       const csvContent = await response.text();

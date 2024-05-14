@@ -12,10 +12,11 @@ import { FIELD_MAPPINGS, FIELD_METADATA } from './lib/spreadsheet-mappings';
 const INCENTIVE_SHEET_NAME = 'Incentives Data';
 
 async function exportToGoogleSheets(state: string, file: IncentiveFile) {
-  if (!file.collectedFilepath)
+  if (!file.collectedFilepath) {
     throw new Error(
       `No collected data defined for state ${state}; modify spreadsheet registry.`,
     );
+  }
 
   const collected: CollectedIncentive[] = JSON.parse(
     fs.readFileSync(file.collectedFilepath!, 'utf-8'),

@@ -6,5 +6,6 @@ module.exports = {
   root: true,
   rules: {
     eqeqeq: ['error', 'always'],
+    curly: ['error', 'all'],
   },
 };

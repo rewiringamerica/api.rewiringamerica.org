@@ -129,8 +129,9 @@ async function logTranslations(file: IncentiveFile, model_family: string) {
       [EXAMPLE_USER, EXAMPLE_RESPONSE],
     ]);
     const resp = await queryGpt(prompt, model_family);
-    if (resp === undefined)
+    if (resp === undefined) {
       throw new Error('Undefined response received from GPT');
+    }
     const spanish = resp.split('\n');
     if (spanish.length !== english.length) {
       throw new Error(

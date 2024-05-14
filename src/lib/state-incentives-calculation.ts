@@ -276,7 +276,9 @@ function skipBasedOnRequestParams(
   // tracks long-term work in this space.
   if (incentive.authority_type === AuthorityType.County) {
     // Skip if we didn't get location data.
-    if (location.countyFips === undefined) return true;
+    if (location.countyFips === undefined) {
+      return true;
+    }
 
     // We have tests to ensure county authorities are registered.
     const authorityDetails = stateAuthorities.county![incentive.authority];

@@ -13,8 +13,11 @@ export const isStateIncluded = (
   (includeBeta && BETA_STATES.includes(stateId));
 
 const getStatus = (state: string) => {
-  if (LAUNCHED_STATES.includes(state)) return StateStatus.Launched;
-  else if (BETA_STATES.includes(state)) return StateStatus.Beta;
+  if (LAUNCHED_STATES.includes(state)) {
+    return StateStatus.Launched;
+  } else if (BETA_STATES.includes(state)) {
+    return StateStatus.Beta;
+  }
   return StateStatus.None;
 };
 
