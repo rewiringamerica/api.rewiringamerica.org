@@ -57,8 +57,9 @@ export function createAuthorityName(
   state: string,
   authorityName: string,
 ): string {
-  if (authorityName === undefined)
+  if (authorityName === undefined) {
     throw new Error('Undefined authority: check input file');
+  }
   return (
     state.toLowerCase() + '-' + kebabCase(authorityName.replaceAll('.', ''))
   );
@@ -69,10 +70,12 @@ export function createProgramName(
   authorityName: string,
   programName: string,
 ): string {
-  if (authorityName === undefined)
+  if (authorityName === undefined) {
     throw new Error('Undefined authority: check input file');
-  if (programName === undefined)
+  }
+  if (programName === undefined) {
     throw new Error('Undefined program title: check input file');
+  }
   return (
     state.toLowerCase() +
     '_' +
@@ -221,9 +224,13 @@ export function maybeUpdateProgramsTsFile(
   let lastStateImport = 0;
   for (const [ind, importDec] of sourceFile.getImportDeclarations().entries()) {
     const defaultImport = importDec.getDefaultImport();
-    if (!defaultImport) continue;
+    if (!defaultImport) {
+      continue;
+    }
     // Skip non-state imports.
-    if (!defaultImport!.getText().endsWith('_PROGRAMS')) continue;
+    if (!defaultImport!.getText().endsWith('_PROGRAMS')) {
+      continue;
+    }
     lastStateImport = ind;
     // If the current import is alphabetically greater than the new one,
     // insert a new import and exit the loop.
@@ -257,7 +264,9 @@ export function maybeUpdateProgramsTsFile(
   // See tests for how this string-hacking is supposed to work.
   const components = varInitializer.getText().split(',\n');
   for (const [ind, component] of components.entries()) {
-    if (ind === 0) continue; // skip ira_incentives
+    if (ind === 0) {
+      continue;
+    } // skip ira_incentives
     // This still works for the last component since it starts with }
     if (component > `  ...${newDefaultImport}`) {
       components.splice(ind, 0, `  ...${newDefaultImport}`);

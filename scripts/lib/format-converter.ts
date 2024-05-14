@@ -92,9 +92,13 @@ export function flatToNested(
   for (const row of rows) {
     const output: NestedKeyVal = {};
     for (const columnName in row) {
-      if (ignoreCols.includes(columnName)) continue;
+      if (ignoreCols.includes(columnName)) {
+        continue;
+      }
       let val = row[columnName];
-      if (val === '') continue;
+      if (val === '') {
+        continue;
+      }
       if (arrayCols.includes(columnName)) {
         // Assume comma-delimited array and split into components.
         val = val.split(',').map((s: string) => s.trim());
@@ -132,8 +136,12 @@ export function flatToNested(
 // values. Any other value will (appropriately) cause the schema validation to
 // fail, so we don't deal with errors here.
 function coerceToBoolean(input: string): boolean | string {
-  if (input.toLowerCase() === 'true') return true;
-  if (input.toLowerCase() === 'false') return false;
+  if (input.toLowerCase() === 'true') {
+    return true;
+  }
+  if (input.toLowerCase() === 'false') {
+    return false;
+  }
   return input;
 }
 
@@ -184,13 +192,17 @@ export function googleSheetToFlatData(
   convertLinks: LinkMode,
   headerRow: number,
 ): Record<string, string>[] {
-  if (!incentives.data) throw new Error('No grid data in GoogleSheet');
+  if (!incentives.data) {
+    throw new Error('No grid data in GoogleSheet');
+  }
 
   const cellAddressToHyperlinks: { [index: string]: string[] } = {};
   const records: Record<string, string>[] = [];
   const headers: string[] = [];
   incentives.data[0].rowData!.forEach((row, rIndex) => {
-    if (rIndex < headerRow - 1) return; // skip pre-header rows
+    if (rIndex < headerRow - 1) {
+      return;
+    } // skip pre-header rows
     if (rIndex === headerRow - 1) {
       if (!row.values) {
         throw new Error(
@@ -220,7 +232,9 @@ export function googleSheetToFlatData(
       });
       // This targets spreadsheet rows where we only have the ID and nothing
       // else is populated. We have this in some spreadsheets for convenience.
-      if (Object.keys(record).length < 2) return;
+      if (Object.keys(record).length < 2) {
+        return;
+      }
       records.push(record);
     }
   });
@@ -249,7 +263,9 @@ export type StringKeyed = { [index: string]: any };
 export function nestedToFlat(input: StringKeyed): StringKeyed {
   const output: StringKeyed = {};
   for (const [fieldName, fieldValue] of Object.entries(input)) {
-    if (fieldValue === undefined) continue;
+    if (fieldValue === undefined) {
+      continue;
+    }
     if (typeof fieldValue === 'object' && !Array.isArray(fieldValue)) {
       for (const [nestedKey, nestedVal] of Object.entries(
         nestedToFlat(fieldValue),

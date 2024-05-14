@@ -58,7 +58,9 @@ function updateJsonFiles(
   deleteEmpty: boolean = true,
 ) {
   const dir = path.dirname(filepath);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir);
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir);
+  }
   if (records.length === 0 && deleteEmpty) {
     safeDeleteFiles(filepath);
   } else {
@@ -132,7 +134,9 @@ const urlRegex = new RegExp(
 );
 export function extractIdsFromUrl(url: string): UrlParts {
   const match = url.match(urlRegex);
-  if (!match) throw new Error(`Could not extract IDs from URL: ${url}`);
+  if (!match) {
+    throw new Error(`Could not extract IDs from URL: ${url}`);
+  }
   return {
     spreadsheetId: match[1],
     incentiveDataSheetId: +match[2],
@@ -191,10 +195,11 @@ async function convertToJson(
   let rows: Record<string, string>[];
   if (file.collectedFilepath) {
     const auth = await authorize();
-    if (!auth)
+    if (!auth) {
       throw new Error(
         'Unable to authenticate to Google Sheets API. Confirm you have credentials in the secrets/ folder.',
       );
+    }
     const sheetsClient = google.sheets({ version: 'v4', auth: auth });
     const data = await retrieveGoogleSheet(file, sheetsClient);
     rows = googleSheetToFlatData(
