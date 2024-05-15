@@ -100,19 +100,19 @@ export const FIELD_METADATA: Record<
           'Ground Source Heat Pump (GSHP) / Geothermal HP',
         ],
       },
-      heat_pump_air_conditioner_heater: {
-        value_aliases: [
-          'HVAC - Air Source Heat Pump',
-          'HVAC - Air to Water Heat Pump',
-          'HVAC - Ducted Heat Pump',
-          'HVAC - Ductless Heat Pump',
-        ],
+      air_to_water_heat_pump: {
+        value_aliases: ['HVAC - Air to Water Heat Pump'],
       },
+      central_air_conditioner: { value_aliases: ['Central Air Conditioner'] },
+      ducted_heat_pump: { value_aliases: ['HVAC - Ducted Heat Pump'] },
+      ductless_heat_pump: { value_aliases: ['HVAC - Ductless Heat Pump'] },
       heat_pump_water_heater: {
         value_aliases: ['Heat Pump Water Heater (HPWH)'],
       },
       new_electric_vehicle: { value_aliases: ['New Electric Vehicle'] },
       used_electric_vehicle: { value_aliases: ['Used Electric Vehicle'] },
+      new_plugin_hybrid_vehicle: { value_aliases: ['New Plug-in Hybrid'] },
+      used_plugin_hybrid_vehicle: { value_aliases: ['Used Plug-in Hybrid'] },
       electric_vehicle_charger: { value_aliases: ['Electric Vehicle Charger'] },
       rooftop_solar_installation: { value_aliases: ['Rooftop Solar'] },
       battery_storage_installation: { value_aliases: ['Battery Storage'] },
@@ -122,9 +122,18 @@ export const FIELD_METADATA: Record<
       electric_stove: {
         value_aliases: ['Induction Cooktop', 'Electric Stove'],
       },
-      weatherization: {
-        value_aliases: ['Weatherization (Insulation and Air Sealing)'],
-      },
+      air_sealing: { value_aliases: ['Air Sealing'] },
+      duct_sealing: { value_aliases: ['Duct Sealing'] },
+      attic_or_roof_insulation: { value_aliases: ['Insulation - Attic/Roof'] },
+      basement_insulation: { value_aliases: ['Insulation - Basement'] },
+      crawlspace_insulation: { value_aliases: ['Insulation - Crawlspace'] },
+      floor_insulation: { value_aliases: ['Insulation - Floor'] },
+      other_insulation: { value_aliases: ['Insulation - Other'] },
+      wall_insulation: { value_aliases: ['Insulation - Wall'] },
+      door_replacement: { value_aliases: ['Door Replacement'] },
+      window_replacement: { value_aliases: ['Window Replacement'] },
+      other_weatherization: { value_aliases: ['Other Weatherization'] },
+      energy_audit: { value_aliases: ['Energy Audit/Assessment'] },
       electric_panel: { value_aliases: ['Electric Panel', 'Electric Wiring'] },
       electric_outdoor_equipment: {
         value_aliases: [
@@ -219,7 +228,7 @@ export const FIELD_METADATA: Record<
     critical: true,
     values: {
       rebate: {
-        value_aliases: ['Rebate (Post Purchase)'],
+        value_aliases: ['Rebate (Post Purchase)', 'Rebate'],
         description: 'After purchase rebate',
       },
       pos_rebate: {

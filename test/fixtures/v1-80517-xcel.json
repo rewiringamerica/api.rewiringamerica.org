@@ -8,6 +8,9 @@
     },
     "co-xcel-energy": {
       "name": "Xcel Energy"
+    },
+    "co-state-of-colorado": {
+      "name": "State of Colorado"
     }
   },
   "coverage": {
@@ -65,6 +68,30 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "$800 off qualifying new heat pump water heaters for Xcel customers. Must be installed by registered contractor and may not exceed 80 gallons."
+    },
+    {
+      "payment_methods": [
+        "tax_credit"
+      ],
+      "authority_type": "state",
+      "authority": "co-state-of-colorado",
+      "program": "Colorado Heat Pump Incentives",
+      "program_url": "https://energysmartcolorado.org/tax-credits-incentives/",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.129
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2023-01-01",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "12.9% discount on the equipment price of heat pump water heaters, through Colorado State tax credit and sales tax exemption."
     }
   ]
 }

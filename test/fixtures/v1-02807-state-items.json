@@ -24,39 +24,15 @@
   "incentives": [
     {
       "payment_methods": [
-        "pos_rebate"
-      ],
-      "authority_type": "federal",
-      "program": "Federal Home Electrification and Appliance Rebates (HEAR)",
-      "program_url": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "items": [
-        "heat_pump_air_conditioner_heater"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 8000
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2025",
-      "end_date": "2032",
-      "ami_qualification": "less_than_80_ami",
-      "eligible": true,
-      "short_description": "Low-income households get a 100% rebate on heat pumps up to $8,000; moderate-income households get 50% up to $8,000."
-    },
-    {
-      "payment_methods": [
         "rebate"
       ],
       "authority_type": "state",
       "authority": "ri-oer",
-      "program": "RI Office of Energy Resources Clean Heat RI",
+      "program": "RI Office of Energy Resources Clean Heat RI Income-Eligible Incentive",
       "program_url": "https://cleanheatri.com/",
       "items": [
-        "heat_pump_air_conditioner_heater"
+        "ducted_heat_pump",
+        "ductless_heat_pump"
       ],
       "amount": {
         "type": "percent",
@@ -78,12 +54,13 @@
       "program": "RI Office of Energy Resources Clean Heat RI",
       "program_url": "https://cleanheatri.com/",
       "items": [
-        "heat_pump_air_conditioner_heater"
+        "ducted_heat_pump",
+        "ductless_heat_pump"
       ],
       "amount": {
         "type": "dollars_per_unit",
         "number": 1000,
-        "representative": 2500,
+        "maximum": 10000,
         "unit": "ton"
       },
       "owner_status": [
@@ -106,7 +83,8 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 1500
+        "number": 1500,
+        "maximum": 1500
       },
       "owner_status": [
         "homeowner",
@@ -129,7 +107,8 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 1500
+        "number": 1500,
+        "maximum": 1500
       },
       "owner_status": [
         "homeowner",
@@ -165,30 +144,6 @@
       "filing_status": "joint",
       "eligible": true,
       "short_description": "Tax credit (up to $7,500) for new EVs with a maximum MSRP of $55,000 and vans, pickup trucks, and SUVs with a maximum MSRP of $80,000."
-    },
-    {
-      "payment_methods": [
-        "tax_credit"
-      ],
-      "authority_type": "federal",
-      "program": "Federal Energy Efficient Home Improvement Credit (25C)",
-      "program_url": "https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit",
-      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25c-heat-pump-tax-credits",
-      "items": [
-        "heat_pump_air_conditioner_heater"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 2000
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2023",
-      "end_date": "2032",
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "30% tax credit (up to $2,000) for heat pumps and heat pump water heaters. Yearly reset."
     }
   ]
 }

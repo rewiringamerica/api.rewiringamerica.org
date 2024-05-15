@@ -81,6 +81,18 @@ export class SpreadsheetStandardizer {
     if (colName === 'owner_status' && val === 'Both') {
       val = 'homeowner, renter';
     }
+
+    // Spreadsheets use "air source heat pump" as a shorthand for ducted or
+    // ductless air-source.
+    if (
+      colName === 'items' &&
+      val.indexOf('HVAC - Air Source Heat Pump') !== -1
+    ) {
+      val = val.replace(
+        'HVAC - Air Source Heat Pump',
+        'ducted_heat_pump, ductless_heat_pump',
+      );
+    }
     return val;
   }
 
