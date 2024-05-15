@@ -686,3 +686,25 @@ test('correctly evaluates savings when state tax liability is lower than max sav
   t.equal(result.stateIncentives[0].amount.number, 5000);
   t.equal(result.savings.tax_credit, 4400);
 });
+
+test('correctly excludes IRA rebates', async t => {
+  const data = calculateIncentives(
+    ...LOCATION_AND_AMIS['11211'],
+    {
+      owner_status: OwnerStatus.Homeowner,
+      household_income: 120000,
+      tax_filing: FilingStatus.Single,
+      household_size: 1,
+    },
+    true,
+  );
+
+  t.equal(data.incentives.length, 10);
+  t.equal(
+    data.incentives.filter(i => i.payment_methods[0] === 'tax_credit').length,
+    10,
+  );
+  t.equal(data.savings.pos_rebate, 0);
+  t.equal(data.savings.performance_rebate, 0);
+  t.equal(data.savings.tax_credit, 18876);
+});
