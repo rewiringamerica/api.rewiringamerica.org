@@ -30,7 +30,7 @@ curl \
 &household_size=4\
 &authority_types=state\
 &authority_types=federal\
-&items=heat_pump_air_conditioner_heater\
+&items=ductless_heat_pump\
 &items=new_electric_vehicle" \
   | jq . > test/fixtures/v1-02807-state-items.json
 

@@ -6,7 +6,7 @@
     "payment_methods": [
       "assistance_program"
     ],
-    "items": ["weatherization"],
+    "items": ["other_weatherization"],
     "program": "ct_energizeCtHomeEnergySolutions",
     "amount": {
       "type": "percent",
@@ -77,7 +77,7 @@
     "payment_methods": [
       "assistance_program"
     ],
-    "items": ["weatherization"],
+    "items": ["other_weatherization"],
     "program": "ct_energizeCtHomeEnergySolutions",
     "amount": {
       "type": "percent",
@@ -100,7 +100,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["weatherization"],
+    "items": ["attic_or_roof_insulation"],
     "program": "ct_atticInsulationRebate",
     "amount": {
       "type": "dollars_per_unit",
@@ -149,7 +149,7 @@
     "payment_methods": [
       "assistance_program"
     ],
-    "items": ["weatherization"],
+    "items": ["energy_audit"],
     "program": "ct_residentialHomeEnergySavingsProgram",
     "amount": {
       "type": "percent",
@@ -193,7 +193,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["weatherization"],
+    "items": ["wall_insulation"],
     "program": "ct_wallOrAtticInsulationProgram",
     "amount": {
       "type": "dollars_per_unit",
@@ -218,7 +218,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["weatherization"],
+    "items": ["attic_or_roof_insulation"],
     "program": "ct_wallOrAtticInsulationProgram",
     "amount": {
       "type": "dollars_per_unit",
@@ -243,7 +243,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_air_conditioner_heater"],
+    "items": ["ducted_heat_pump", "ductless_heat_pump"],
     "program": "ct_coolChoiceProgram",
     "amount": {
       "type": "dollars_per_unit",
@@ -268,7 +268,11 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_air_conditioner_heater"],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "geothermal_heating_installation"
+    ],
     "program": "ct_coolingAndHeatingIncentivePilotProgram",
     "amount": {
       "type": "dollars_per_unit",
@@ -316,7 +320,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_air_conditioner_heater"],
+    "items": ["ducted_heat_pump", "ductless_heat_pump"],
     "program": "ct_residentialAirSourceHeatPumpIncentive",
     "amount": {
       "type": "dollars_per_unit",
@@ -389,7 +393,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_air_conditioner_heater"],
+    "items": ["ducted_heat_pump", "ductless_heat_pump"],
     "program": "ct_residentialAirSourceHeatPumpIncentive",
     "amount": {
       "type": "dollars_per_unit",
@@ -406,31 +410,6 @@
     },
     "start_date": "2023",
     "end_date": "2024-12-31"
-  },
-  {
-    "id": "CT-24",
-    "authority_type": "utility",
-    "authority": "ct-norwich-public-utilities",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": ["geothermal_heating_installation"],
-    "program": "ct_coolingAndHeatingIncentivePilotProgram",
-    "amount": {
-      "type": "dollars_per_unit",
-      "unit": "ton",
-      "number": 1200,
-      "maximum": 20000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Size dependent rebate off qualifying ground source heat pumps, up to $20,000.",
-      "es": "Un reembolso de hasta $20,000 dólares en bombas de calor geotérmicas que cumplan los requisitos, y según su tamaño."
-    },
-    "start_date": "2023",
-    "end_date": "2024-06-30"
   },
   {
     "id": "CT-25",
@@ -462,7 +441,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_air_conditioner_heater"],
+    "items": ["ducted_heat_pump", "ductless_heat_pump"],
     "program": "ct_residentialAirSourceHeatPumpIncentive",
     "amount": {
       "type": "dollar_amount",
@@ -485,7 +464,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_air_conditioner_heater"],
+    "items": ["ducted_heat_pump", "ductless_heat_pump"],
     "program": "ct_residentialAirSourceHeatPumpIncentive",
     "amount": {
       "type": "dollar_amount",
