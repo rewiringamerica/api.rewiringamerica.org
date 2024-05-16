@@ -11,6 +11,9 @@
         "height": 100
       }
     },
+    "ri-dhs": {
+      "name": "Rhode Island Department of Human Services"
+    },
     "ri-rhode-island-energy": {
       "name": "Rhode Island Energy",
       "logo": {
@@ -21,9 +24,6 @@
     },
     "ri-commerce-corp": {
       "name": "Rhode Island Commerce Corporation"
-    },
-    "ri-dhs": {
-      "name": "Rhode Island Department of Human Services"
     }
   },
   "coverage": {
@@ -45,7 +45,7 @@
       "program": "RI Department of Human Services Weatherization Assistance Program",
       "program_url": "https://dhs.ri.gov/programs-and-services/energy-assistance-programs/weatherization-assistance-program-wap",
       "items": [
-        "weatherization"
+        "other_weatherization"
       ],
       "amount": {
         "type": "percent",
@@ -68,7 +68,7 @@
       "program": "Rhode Island Energy Income-Eligible Energy Savings Program",
       "program_url": "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Income-Eligible-Services",
       "items": [
-        "weatherization"
+        "other_weatherization"
       ],
       "amount": {
         "type": "percent",
@@ -87,10 +87,11 @@
       ],
       "authority_type": "state",
       "authority": "ri-oer",
-      "program": "RI Office of Energy Resources Clean Heat RI",
+      "program": "RI Office of Energy Resources Clean Heat RI Income-Eligible Incentive",
       "program_url": "https://cleanheatri.com/",
       "items": [
-        "heat_pump_air_conditioner_heater"
+        "ducted_heat_pump",
+        "ductless_heat_pump"
       ],
       "amount": {
         "type": "percent",
@@ -109,7 +110,7 @@
       ],
       "authority_type": "state",
       "authority": "ri-oer",
-      "program": "RI Office of Energy Resources Clean Heat RI",
+      "program": "RI Office of Energy Resources Clean Heat RI Income-Eligible Incentive",
       "program_url": "https://cleanheatri.com/",
       "items": [
         "heat_pump_water_heater"
@@ -146,6 +147,7 @@
         "homeowner",
         "renter"
       ],
+      "start_date": "2022-10-24",
       "ami_qualification": null,
       "eligible": true,
       "short_description": "75% up to $750 back on the final purchase of an e-bike or e-cargo bike for income qualified residents."
@@ -170,6 +172,7 @@
         "homeowner",
         "renter"
       ],
+      "start_date": "2022-10-24",
       "ami_qualification": null,
       "eligible": false,
       "short_description": "30% up to $350 back on the final purchase of an e-bike or e-cargo bike."
@@ -188,7 +191,7 @@
       "amount": {
         "type": "dollars_per_unit",
         "number": 1250,
-        "representative": 2500,
+        "maximum": 10000,
         "unit": "ton"
       },
       "owner_status": [
@@ -207,12 +210,13 @@
       "program": "RI Office of Energy Resources Clean Heat RI",
       "program_url": "https://cleanheatri.com/",
       "items": [
-        "heat_pump_air_conditioner_heater"
+        "ducted_heat_pump",
+        "ductless_heat_pump"
       ],
       "amount": {
         "type": "dollars_per_unit",
         "number": 1000,
-        "representative": 2500,
+        "maximum": 10000,
         "unit": "ton"
       },
       "owner_status": [
@@ -221,32 +225,6 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "Up to $10,000 for installation of an air source heat pump, depending on size. Typical heat pump installations will receive $2,500-$3,000."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "ri-rhode-island-energy",
-      "program": "Rhode Island Energy residential electric heating and cooling rebates",
-      "program_url": "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Heat-Pump-Incentives",
-      "items": [
-        "heat_pump_air_conditioner_heater"
-      ],
-      "amount": {
-        "type": "dollars_per_unit",
-        "number": 350,
-        "representative": 700,
-        "unit": "ton"
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2024",
-      "end_date": "2024",
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "$150+ back on installation of heat pump, depending on size. Additional funding available to replace electric baseboard resistance heating."
     },
     {
       "payment_methods": [
@@ -261,10 +239,10 @@
       ],
       "amount": {
         "type": "dollars_per_unit",
-        "number": 0.65,
+        "number": 650,
         "maximum": 5000,
-        "representative": 3000,
-        "unit": "watt"
+        "representative": 5000,
+        "unit": "kilowatt"
       },
       "owner_status": [
         "homeowner"
@@ -272,6 +250,56 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "10-25% back on installation costs up to $5,000. Includes electricity-generating solar panels and solar domestic hot water technologies."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ri-rhode-island-energy",
+      "program": "Rhode Island Energy Electric Heating and Cooling Rebates",
+      "program_url": "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Heat-Pump-Incentives",
+      "items": [
+        "ducted_heat_pump"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 350,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$350+ back on qualifying ducted central heat pump, depending on size. Additional funding available for replacing baseboard resistance heating."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ri-rhode-island-energy",
+      "program": "Rhode Island Energy Electric Heating and Cooling Rebates",
+      "program_url": "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Heat-Pump-Incentives",
+      "items": [
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 150,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$150+ back on qualifying mini-split non-ducted heat pump, depending on size. Additional funding available for replacing baseboard resistance heating."
     },
     {
       "payment_methods": [
@@ -286,7 +314,8 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 1500
+        "number": 1500,
+        "maximum": 1500
       },
       "owner_status": [
         "homeowner",
@@ -309,7 +338,8 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 1500
+        "number": 1500,
+        "maximum": 1500
       },
       "owner_status": [
         "homeowner",
@@ -332,7 +362,8 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 1500
+        "number": 1500,
+        "maximum": 1500
       },
       "owner_status": [
         "homeowner",
@@ -348,6 +379,29 @@
       ],
       "authority_type": "state",
       "authority": "ri-oer",
+      "program": "RI Office of Energy Resources Clean Heat RI",
+      "program_url": "https://cleanheatri.com/",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1500,
+        "maximum": 1500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$750 rebate after the installation of a heat pump water heater. $1,500 for split system heat pump water heaters."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "ri-oer",
       "program": "RI Office of Energy Resources DRIVE EV",
       "program_url": "https://drive.ri.gov/ev-programs/drive-ev",
       "items": [
@@ -355,7 +409,8 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 1000
+        "number": 1000,
+        "maximum": 1000
       },
       "owner_status": [
         "homeowner",
@@ -364,28 +419,6 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "Up to $1,000 back after purchase or lease of a used EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "ri-oer",
-      "program": "RI Office of Energy Resources Clean Heat RI",
-      "program_url": "https://cleanheatri.com/",
-      "items": [
-        "heat_pump_water_heater"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 750
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "ami_qualification": null,
-      "eligible": true,
-      "short_description": "$750 rebate after the installation of a heat pump water heater. $1,500 for split system heat pump water heaters."
     },
     {
       "payment_methods": [
@@ -406,8 +439,8 @@
       "owner_status": [
         "homeowner"
       ],
-      "start_date": "2024",
-      "end_date": "2024",
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
       "ami_qualification": null,
       "eligible": true,
       "short_description": "Up to $600 back on a qualifying electric heat pump water heater when replacing an existing electric water heater or installing in a new home."
@@ -421,7 +454,7 @@
       "program": "RI Office of Energy Resources Clean Heat RI",
       "program_url": "https://cleanheatri.com/",
       "items": [
-        "electric_panel"
+        "other"
       ],
       "amount": {
         "type": "dollar_amount",
@@ -433,6 +466,53 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "Additional $500 for an electrical service upgrade at the same time as installation of a heat pump or heat pump water heater."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ri-rhode-island-energy",
+      "program": "Rhode Island Energy Electric Heating and Cooling Rebates",
+      "program_url": "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Heat-Pump-Incentives",
+      "items": [
+        "smart_thermostat"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 75
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$75 back on ENERGY STAR certified, wireless connection enabled Smart Thermostat."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ri-rhode-island-energy",
+      "program": "Rhode Island Energy ENERGY STAR® Certified Electric Clothes Dryer Rebate",
+      "program_url": "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/rebate-programs",
+      "items": [
+        "heat_pump_clothes_dryer"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 50
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "$50 back on ENERGY STAR® certified electric clothes dryer purchased in 2023. Rebate requests must be completed within 90 days of purchase."
     }
   ]
 }

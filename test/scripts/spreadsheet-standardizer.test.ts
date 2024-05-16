@@ -162,7 +162,7 @@ test('representative example', tap => {
     program_status: 'active',
     start_date: '2022-01-01',
     end_date: '2026-12-31',
-    payment_methods: 'Rebate',
+    payment_methods: 'rebate',
     rebate_value: '$50',
     'amount.type': 'dollar_amount',
     'amount.number': '',

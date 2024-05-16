@@ -1,5 +1,5 @@
 export const RI_PROGRAMS = {
-  ri_hvacAndWaterHeaterIncentives: {
+  'ri_pascoagUtilityDistrict_hVAC&WaterHeaterIncentives': {
     name: {
       en: 'Pascoag Utility District HVAC & Water Heater Incentives',
     },
@@ -7,7 +7,7 @@ export const RI_PROGRAMS = {
       en: 'https://pud-ri.org/conservation/download-rebate-forms',
     },
   },
-  ri_residentialEnergyStarOfferings: {
+  ri_pascoagUtilityDistrict_residentialEnergyStarOfferings: {
     name: {
       en: 'Pascoag Utility District Residential Energy Star Offerings',
     },
@@ -15,7 +15,7 @@ export const RI_PROGRAMS = {
       en: 'https://pud-ri.org/conservation/download-rebate-forms',
     },
   },
-  ri_residentialEnergyAuditWeatherization: {
+  'ri_pascoagUtilityDistrict_residentialEnergyAudit-WeatherizationIncentives': {
     name: {
       en: 'Pascoag Utility District Residential Energy Audit-Weatherization Incentives',
     },
@@ -23,15 +23,16 @@ export const RI_PROGRAMS = {
       en: 'https://pud-ri.org/conservation/download-rebate-forms',
     },
   },
-  ri_blockIslandEnergyEfficiency: {
-    name: {
-      en: 'Block Island Utility District Energy Efficiency Program',
+  ri_blockIslandPowerCompany_blockIslandUtilityDistrictEnergyEfficiencyProgram:
+    {
+      name: {
+        en: 'Block Island Utility District Energy Efficiency Program',
+      },
+      url: {
+        en: 'https://blockislandpowercompany.com/efficiency-program/',
+      },
     },
-    url: {
-      en: 'https://blockislandpowercompany.com/efficiency-program/',
-    },
-  },
-  ri_drive: {
+  ri_oER_dRIVE: {
     name: {
       en: 'RI Office of Energy Resources DRIVE EV',
     },
@@ -39,7 +40,7 @@ export const RI_PROGRAMS = {
       en: 'https://drive.ri.gov/ev-programs/drive-ev',
     },
   },
-  ri_drive_plus: {
+  'ri_oER_dRIVE+': {
     name: {
       en: 'RI Office of Energy Resources DRIVE+',
     },
@@ -47,7 +48,7 @@ export const RI_PROGRAMS = {
       en: 'https://drive.ri.gov/ev-programs/drive-plus',
     },
   },
-  ri_smallScaleSolar: {
+  ri_commerceCorp_smallScaleSolarProgram: {
     name: {
       en: 'Rhode Island Commerce Corp. Small-Scale Solar Program',
     },
@@ -55,7 +56,7 @@ export const RI_PROGRAMS = {
       en: 'https://energy.ri.gov/sites/g/files/xkgbur741/files/2023-03/REF-Small-Scale-Flyer-1.18.22.pdf',
     },
   },
-  ri_cleanHeat: {
+  ri_oER_cleanHeatRhodeIslandResidentialIncentive: {
     name: {
       en: 'RI Office of Energy Resources Clean Heat RI',
     },
@@ -63,15 +64,32 @@ export const RI_PROGRAMS = {
       en: 'https://cleanheatri.com/',
     },
   },
-  ri_energyStarClothesDryer: {
+  'ri_oER_cleanHeatRhodeIslandResidentialIncome-EligibleIncentive': {
     name: {
-      en: 'Rhode Island Energy ENERGY STAR® Certified Electric Clothes Dryer Rebate',
+      en: 'RI Office of Energy Resources Clean Heat RI Income-Eligible Incentive',
     },
     url: {
-      en: 'https://www.rienergy.com/RI-Home/Energy-Saving-Programs/rebate-programs',
+      en: 'https://cleanheatri.com/',
     },
   },
-  ri_residentialHeatPumpWaterHeater: {
+  ri_oER_erikaNiedowskiMemorialElectricBicycleRebateProgram: {
+    name: {
+      en: 'Erika Niedowski Memorial Electric Bicycle Rebate Program',
+    },
+    url: {
+      en: 'https://drive.ri.gov/erika-niedowski-memorial-electric-bicycle-rebate-program',
+    },
+  },
+  'ri_rhodeIslandEnergy_rhodeIslandENERGYSTAR®CertifiedElectricClothesDryerRebate':
+    {
+      name: {
+        en: 'Rhode Island Energy ENERGY STAR® Certified Electric Clothes Dryer Rebate',
+      },
+      url: {
+        en: 'https://www.rienergy.com/RI-Home/Energy-Saving-Programs/rebate-programs',
+      },
+    },
+  ri_rhodeIslandEnergy_residentialHeatPumpWaterHeaterRebate: {
     name: {
       en: 'Rhode Island Energy residential heat pump water heater rebates',
     },
@@ -79,15 +97,15 @@ export const RI_PROGRAMS = {
       en: 'https://www.rienergy.com/RI-Home/Energy-Saving-Programs/rebate-programs',
     },
   },
-  ri_electricHeatingAndCoolingRebates: {
+  ri_rhodeIslandEnergy_electricHeatingAndCoolingRebates: {
     name: {
-      en: 'Rhode Island Energy residential electric heating and cooling rebates',
+      en: 'Rhode Island Energy Electric Heating and Cooling Rebates',
     },
     url: {
       en: 'https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Heat-Pump-Incentives',
     },
   },
-  ri_incomeEligibleEnergySavings: {
+  ri_rhodeIslandEnergy_incomeEligibleEnergySavingsProgram: {
     name: {
       en: 'Rhode Island Energy Income-Eligible Energy Savings Program',
     },
@@ -95,7 +113,7 @@ export const RI_PROGRAMS = {
       en: 'https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Income-Eligible-Services',
     },
   },
-  ri_dhsWeatherizationAssistanceProgram: {
+  ri_dHS_weatherizationAssistanceProgram: {
     name: {
       en: 'RI Department of Human Services Weatherization Assistance Program',
     },

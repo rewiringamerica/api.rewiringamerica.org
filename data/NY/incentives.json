@@ -50,7 +50,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_air_conditioner_heater"],
+    "items": ["ducted_heat_pump", "ductless_heat_pump"],
     "program": "ny_cleanHeatIncentives",
     "amount": {
       "type": "dollars_per_unit",
@@ -93,7 +93,7 @@
     "payment_methods": [
       "pos_rebate"
     ],
-    "items": ["heat_pump_air_conditioner_heater"],
+    "items": ["ducted_heat_pump", "ductless_heat_pump"],
     "program": "ny_consolidatedEdisonRebates",
     "amount": {
       "type": "dollar_amount",
@@ -137,7 +137,7 @@
     "payment_methods": [
       "assistance_program"
     ],
-    "items": ["weatherization"],
+    "items": ["other_weatherization"],
     "program": "ny_consolidatedEdisonRebates",
     "amount": {
       "type": "percent",
@@ -179,7 +179,7 @@
     "payment_methods": [
       "pos_rebate"
     ],
-    "items": ["heat_pump_air_conditioner_heater"],
+    "items": ["ducted_heat_pump", "ductless_heat_pump"],
     "program": "ny_allElectricHomesProgram",
     "amount": {
       "type": "dollar_amount",
@@ -201,7 +201,7 @@
     "payment_methods": [
       "pos_rebate"
     ],
-    "items": ["heat_pump_air_conditioner_heater"],
+    "items": ["ductless_heat_pump"],
     "program": "ny_allElectricHomesProgram",
     "amount": {
       "type": "dollar_amount",
@@ -241,7 +241,7 @@
     "payment_methods": [
       "pos_rebate"
     ],
-    "items": ["heat_pump_air_conditioner_heater"],
+    "items": ["ducted_heat_pump"],
     "program": "ny_allElectricHomesProgram",
     "amount": {
       "type": "dollar_amount",
@@ -261,7 +261,7 @@
     "payment_methods": [
       "assistance_program"
     ],
-    "items": ["weatherization"],
+    "items": ["other_weatherization"],
     "program": "ny_allElectricHomesProgram",
     "amount": {
       "type": "percent",
@@ -491,7 +491,7 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["weatherization"],
+    "items": ["air_sealing", "other_insulation"],
     "program": "ny_comfortHomeProgram",
     "amount": {
       "type": "dollar_amount",
