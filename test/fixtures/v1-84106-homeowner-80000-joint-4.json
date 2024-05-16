@@ -151,7 +151,9 @@
       "program_url": "https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit",
       "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25c-heat-pump-tax-credits",
       "items": [
-        "heat_pump_air_conditioner_heater"
+        "air_to_water_heat_pump",
+        "ducted_heat_pump",
+        "ductless_heat_pump"
       ],
       "amount": {
         "type": "dollar_amount",
@@ -199,7 +201,10 @@
       "program_url": "https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit",
       "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25c-weatherization-tax-credits",
       "items": [
-        "weatherization"
+        "air_sealing",
+        "door_replacement",
+        "window_replacement",
+        "other_insulation"
       ],
       "amount": {
         "type": "dollar_amount",
@@ -212,7 +217,7 @@
       "end_date": "2032",
       "ami_qualification": null,
       "eligible": true,
-      "short_description": "30% tax credit (up to $1,200) for weatherization projects: insulation, air sealing, doors, windows, and energy audits. Yearly reset."
+      "short_description": "30% tax credit (up to $1,200) for weatherization projects: insulation, air sealing, doors, windows. Yearly reset."
     },
     {
       "payment_methods": [
@@ -262,6 +267,30 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "30% tax credit (up to $600) for electrical panel upgrade when done with another 25C or 25D upgrade. Yearly reset."
+    },
+    {
+      "payment_methods": [
+        "tax_credit"
+      ],
+      "authority_type": "federal",
+      "program": "Federal Energy Efficient Home Improvement Credit (25C)",
+      "program_url": "https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit",
+      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25c-weatherization-tax-credits",
+      "items": [
+        "energy_audit"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 150
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023",
+      "end_date": "2032",
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "Tax credit of up to $150 for an energy audit. Yearly reset."
     }
   ]
 }

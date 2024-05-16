@@ -28,7 +28,6 @@ export const ITEMS_SCHEMA = {
   evaporative_cooler: { type: 'string' },
   floor_insulation: { type: 'string' },
   geothermal_heating_installation: { type: 'string' },
-  heat_pump_air_conditioner_heater: { type: 'string' }, // TODO remove
   heat_pump_clothes_dryer: { type: 'string' },
   heat_pump_water_heater: { type: 'string' },
   new_electric_vehicle: { type: 'string' },
@@ -44,31 +43,38 @@ export const ITEMS_SCHEMA = {
   used_electric_vehicle: { type: 'string' },
   used_plugin_hybrid_vehicle: { type: 'string' },
   wall_insulation: { type: 'string' },
-  weatherization: { type: 'string' }, // TODO remove
   whole_house_fan: { type: 'string' },
   window_replacement: { type: 'string' },
 } as const;
 
 export type Item = keyof typeof ITEMS_SCHEMA;
 
-/** Only these items appear in the IRA incentives (and thus in API v0). */
-export const IRA_ITEMS = [
-  'battery_storage_installation',
-  'efficiency_rebates',
-  'electric_panel',
-  'electric_stove',
-  'electric_vehicle_charger',
-  'electric_wiring',
-  'geothermal_heating_installation',
-  'heat_pump_air_conditioner_heater',
-  'heat_pump_clothes_dryer',
-  'heat_pump_water_heater',
-  'new_electric_vehicle',
-  'rooftop_solar_installation',
-  'used_electric_vehicle',
-  'weatherization',
-] as const satisfies readonly Item[];
+/**
+ * These items are for the legacy v0 API, and only used with IRA incentives.
+ *
+ * Note that this contains two items that don't appear above: weatherization and
+ * heat_pump_air_conditioner_heater. In v1 (and state and utility incentives),
+ * these are broken up into more granular categories.
+ */
+export const IRA_ITEMS_SCHEMA = {
+  battery_storage_installation: { type: 'string' },
+  efficiency_rebates: { type: 'string' },
+  electric_panel: { type: 'string' },
+  electric_stove: { type: 'string' },
+  electric_vehicle_charger: { type: 'string' },
+  electric_wiring: { type: 'string' },
+  geothermal_heating_installation: { type: 'string' },
+  heat_pump_air_conditioner_heater: { type: 'string' },
+  heat_pump_clothes_dryer: { type: 'string' },
+  heat_pump_water_heater: { type: 'string' },
+  new_electric_vehicle: { type: 'string' },
+  rooftop_solar_installation: { type: 'string' },
+  used_electric_vehicle: { type: 'string' },
+  weatherization: { type: 'string' },
+} as const;
 
-export type IRAItem = (typeof IRA_ITEMS)[number];
+export type IRAItem = keyof typeof IRA_ITEMS_SCHEMA;
 
 export const ALL_ITEMS = Object.keys(ITEMS_SCHEMA) as unknown as Item[];
+
+export const IRA_ITEMS = Object.keys(IRA_ITEMS_SCHEMA) as unknown as IRAItem[];
