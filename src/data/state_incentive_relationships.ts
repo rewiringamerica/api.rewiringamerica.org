@@ -53,6 +53,7 @@ export const INCENTIVE_RELATIONSHIPS_SCHEMA = {
       },
     },
   },
+  additionalProperties: false,
 } as const;
 
 export type IncentivePrerequisites = FromSchema<typeof prerequisiteSchema>;

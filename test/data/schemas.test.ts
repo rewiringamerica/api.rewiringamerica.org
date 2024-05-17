@@ -19,15 +19,8 @@ import {
 } from '../../src/data/low_income_thresholds';
 import { SOLAR_PRICES, SCHEMA as SP_SCHEMA } from '../../src/data/solar_prices';
 import {
-  CO_RELATIONSHIPS,
-  CT_RELATIONSHIPS,
-  GA_RELATIONSHIPS,
+  INCENTIVE_RELATIONSHIPS_BY_STATE,
   INCENTIVE_RELATIONSHIPS_SCHEMA,
-  IncentiveRelationships,
-  OR_RELATIONSHIPS,
-  PA_RELATIONSHIPS,
-  VT_RELATIONSHIPS,
-  WI_RELATIONSHIPS,
 } from '../../src/data/state_incentive_relationships';
 import {
   AZ_INCENTIVES,
@@ -123,16 +116,6 @@ const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
   ['VA', VA_INCENTIVES_SCHEMA, VA_INCENTIVES],
   ['VT', VT_INCENTIVES_SCHEMA, VT_INCENTIVES],
   ['WI', WI_INCENTIVES_SCHEMA, WI_INCENTIVES],
-];
-
-const STATE_INCENTIVE_RELATIONSHIP_TESTS: [string, IncentiveRelationships][] = [
-  ['CO', CO_RELATIONSHIPS],
-  ['CT', CT_RELATIONSHIPS],
-  ['GA', GA_RELATIONSHIPS],
-  ['PA', PA_RELATIONSHIPS],
-  ['OR', OR_RELATIONSHIPS],
-  ['VT', VT_RELATIONSHIPS],
-  ['WI', WI_RELATIONSHIPS],
 ];
 
 /**
@@ -265,20 +248,22 @@ test('locale URLs are valid', async tap => {
 test('state incentive relationships JSON files match schemas', async tap => {
   const ajv = new Ajv();
 
-  STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([stateId, data]) => {
-    if (
-      !tap.ok(
-        ajv.validate(INCENTIVE_RELATIONSHIPS_SCHEMA, data),
-        `${stateId} incentive relationships invalid`,
-      )
-    ) {
-      console.error(ajv.errors);
-    }
-  });
+  Object.entries(INCENTIVE_RELATIONSHIPS_BY_STATE).forEach(
+    ([stateId, data]) => {
+      if (
+        !tap.ok(
+          ajv.validate(INCENTIVE_RELATIONSHIPS_SCHEMA, data),
+          `${stateId} incentive relationships invalid`,
+        )
+      ) {
+        console.error(ajv.errors);
+      }
+    },
+  );
 });
 
 test('state incentive relationships contain no circular dependencies', async tap => {
-  STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([, data]) => {
+  Object.entries(INCENTIVE_RELATIONSHIPS_BY_STATE).forEach(([, data]) => {
     // Check that there are no circular dependencies in the relationships.
     const relationshipGraph = buildRelationshipGraph(data);
     tap.equal(incentiveRelationshipsContainCycle(relationshipGraph), false);
@@ -298,62 +283,64 @@ test('state incentive relationships only reference real IDs', async tap => {
   });
 
   // Check that all of the incentive relationships reference IDs that exist.
-  STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([stateId, data]) => {
-    // Must have incentives for this state in order to have relationships.
-    tap.equal(incentiveIds.has(stateId), true);
+  Object.entries(INCENTIVE_RELATIONSHIPS_BY_STATE).forEach(
+    ([stateId, data]) => {
+      // Must have incentives for this state in order to have relationships.
+      tap.equal(incentiveIds.has(stateId), true);
 
-    const incentivesForState = incentiveIds.get(stateId);
-    if (incentivesForState !== undefined) {
-      if (data.prerequisites !== undefined) {
-        for (const [incentiveId, prerequisites] of Object.entries(
-          data.prerequisites,
-        )) {
-          tap.ok(
-            incentivesForState.has(incentiveId),
-            `ID ${incentiveId} (in prereq map) does not exist`,
-          );
-          const prerequisiteIds = new Set<string>();
-          addPrerequisites(prerequisites, prerequisiteIds);
-          for (const id of prerequisiteIds) {
+      const incentivesForState = incentiveIds.get(stateId);
+      if (incentivesForState !== undefined) {
+        if (data.prerequisites !== undefined) {
+          for (const [incentiveId, prerequisites] of Object.entries(
+            data.prerequisites,
+          )) {
             tap.ok(
-              incentivesForState.has(id),
-              `ID ${id} (prereq of ${incentiveId}) does not exist`,
+              incentivesForState.has(incentiveId),
+              `ID ${incentiveId} (in prereq map) does not exist`,
             );
+            const prerequisiteIds = new Set<string>();
+            addPrerequisites(prerequisites, prerequisiteIds);
+            for (const id of prerequisiteIds) {
+              tap.ok(
+                incentivesForState.has(id),
+                `ID ${id} (prereq of ${incentiveId}) does not exist`,
+              );
+            }
           }
         }
-      }
-      if (data.exclusions !== undefined) {
-        for (const [incentiveId, supersededIds] of Object.entries(
-          data.exclusions,
-        )) {
-          tap.ok(
-            incentivesForState.has(incentiveId),
-            `ID ${incentiveId} (in exclusions map) does not exist`,
-          );
-          for (const id of supersededIds) {
+        if (data.exclusions !== undefined) {
+          for (const [incentiveId, supersededIds] of Object.entries(
+            data.exclusions,
+          )) {
             tap.ok(
-              incentivesForState.has(id),
-              `ID ${id} (superseded by ${incentiveId}) does not exist`,
+              incentivesForState.has(incentiveId),
+              `ID ${incentiveId} (in exclusions map) does not exist`,
             );
+            for (const id of supersededIds) {
+              tap.ok(
+                incentivesForState.has(id),
+                `ID ${id} (superseded by ${incentiveId}) does not exist`,
+              );
+            }
+          }
+        }
+        if (data.combinations !== undefined) {
+          for (const relationship of data.combinations) {
+            for (const id of relationship.ids) {
+              tap.ok(incentivesForState.has(id), `ID ${id} does not exist`);
+            }
           }
         }
       }
-      if (data.combinations !== undefined) {
-        for (const relationship of data.combinations) {
-          for (const id of relationship.ids) {
-            tap.ok(incentivesForState.has(id), `ID ${id} does not exist`);
-          }
-        }
-      }
-    }
-  });
+    },
+  );
 });
 
 // For simplicity, an incentive can only be included in one max value grouping. Otherwise,
 // the order of evaluation could affect the total eligible savings.
 // Also, enforce that a single incentive ID is not included twice within the same grouping.
 test('incentive combined value groupings contain no duplicate IDs', async tap => {
-  STATE_INCENTIVE_RELATIONSHIP_TESTS.forEach(([, data]) => {
+  Object.entries(INCENTIVE_RELATIONSHIPS_BY_STATE).forEach(([, data]) => {
     if (data.combinations !== undefined) {
       const incentiveIds = new Set<string>();
       for (const relationship of data.combinations) {
