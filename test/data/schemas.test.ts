@@ -14,7 +14,7 @@ import {
 } from '../../src/data/ira_state_savings';
 import { LOCALES, SCHEMA as L_SCHEMA } from '../../src/data/locale';
 import {
-  LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
+  LOW_INCOME_THRESHOLDS_BY_STATE,
   SCHEMA as LOW_INCOME_THRESHOLDS_SCHEMA,
 } from '../../src/data/low_income_thresholds';
 import { SOLAR_PRICES, SCHEMA as SP_SCHEMA } from '../../src/data/solar_prices';
@@ -90,7 +90,7 @@ const TESTS = [
   [AUTHORITIES_SCHEMA, AUTHORITIES_BY_STATE, 'authorities'],
   [
     LOW_INCOME_THRESHOLDS_SCHEMA,
-    LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
+    LOW_INCOME_THRESHOLDS_BY_STATE,
     'State low income',
   ],
   [GEO_GROUPS_SCHEMA, GEO_GROUPS_BY_STATE, 'geo_groups'],

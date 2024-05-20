@@ -2,7 +2,7 @@ import { min } from 'lodash';
 import { AuthoritiesByType, AuthorityType } from '../data/authorities';
 import { DATA_PARTNERS_BY_STATE } from '../data/data_partners';
 import { GEO_GROUPS_BY_STATE } from '../data/geo_groups';
-import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../data/low_income_thresholds';
+import { LOW_INCOME_THRESHOLDS_BY_STATE } from '../data/low_income_thresholds';
 import {
   INCENTIVE_RELATIONSHIPS_BY_STATE,
   IncentiveRelationships,
@@ -27,6 +27,7 @@ import {
 } from './incentive-relationship-calculation';
 import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
 import { ResolvedLocation } from './location';
+import { isLowIncome } from './low-income';
 import { isStateIncluded } from './states';
 import { estimateStateTaxAmount } from './tax-brackets';
 
@@ -90,21 +91,18 @@ export function calculateStateIncentivesAndSavings(
       eligible = false;
     }
 
-    if (!LOW_INCOME_THRESHOLDS_BY_AUTHORITY[stateId]) {
-      console.log('No income thresholds defined for ', stateId);
-    }
-    const thresholds_map = LOW_INCOME_THRESHOLDS_BY_AUTHORITY[stateId];
-
-    if (typeof thresholds_map !== 'undefined') {
-      if (
-        item.low_income &&
-        thresholds_map[item.low_income] &&
-        request.household_income >
-          thresholds_map[item.low_income].thresholds[request.household_size]
-      ) {
-        {
-          eligible = false;
-        }
+    if (item.low_income) {
+      const thresholds =
+        LOW_INCOME_THRESHOLDS_BY_STATE[stateId]?.[item.low_income];
+      if (!thresholds) {
+        console.log(
+          `No income thresholds defined for ${item.low_income} in ${stateId}`,
+        );
+        // The incentive is income-qualified but we don't know the thresholds;
+        // be conservative and exclude it.
+        eligible = false;
+      } else if (!isLowIncome(request, thresholds, location)) {
+        eligible = false;
       }
     }
 
