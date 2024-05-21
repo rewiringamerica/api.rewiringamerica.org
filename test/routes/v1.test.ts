@@ -461,6 +461,31 @@ test('VT low income EV incentives are correct', async t => {
   );
 });
 
+// VT per-county low income
+test('VT uses per-county low income thresholds', async t => {
+  const baseQuery = {
+    // Low income in Addison County, but not in Bennington County.
+    // Addison has thresholds defined; Bennington will use fallback
+    household_income: 60000,
+    owner_status: 'homeowner',
+    household_size: 1,
+    tax_filing: 'single',
+    authority_types: 'state',
+    items: ['heat_pump_water_heater'],
+  };
+
+  await validateResponse(
+    t,
+    { ...baseQuery, zip: '05753' },
+    './test/fixtures/v1-vt-addison-co-low-income.json',
+  );
+  await validateResponse(
+    t,
+    { ...baseQuery, zip: '05201' },
+    './test/fixtures/v1-vt-bennington-co-not-low-income.json',
+  );
+});
+
 // WI low income test
 test('WI low income response with state and utility filtering is valid and correct', async t => {
   await validateResponse(
