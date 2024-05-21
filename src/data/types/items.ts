@@ -45,6 +45,9 @@ export const ITEMS_SCHEMA = {
   wall_insulation: { type: 'string' },
   whole_house_fan: { type: 'string' },
   window_replacement: { type: 'string' },
+  // TODO remove the two below once frontends are not using them anymore
+  heat_pump_air_conditioner_heater: { type: 'string' },
+  weatherization: { type: 'string' },
 } as const;
 
 export type Item = keyof typeof ITEMS_SCHEMA;
