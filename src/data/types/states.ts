@@ -62,6 +62,7 @@ export const TERRITORIES = [
 
 export const BETA_STATES: string[] = [
   'AZ',
+  'CA',
   'CT',
   'GA',
   'NY',

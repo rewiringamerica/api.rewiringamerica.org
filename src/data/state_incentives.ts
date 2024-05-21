@@ -3,6 +3,7 @@ import fs from 'fs';
 import _ from 'lodash';
 import { AuthorityType } from './authorities';
 import {
+  CALowIncomeAuthority,
   COLowIncomeAuthority,
   ILIncomeAuthority,
   NVLowIncomeAuthority,
@@ -21,6 +22,7 @@ import { OwnerStatus } from './types/owner-status';
 
 export type LowIncomeAuthority =
   | 'default'
+  | CALowIncomeAuthority
   | COLowIncomeAuthority
   | ILIncomeAuthority
   | NVLowIncomeAuthority
@@ -269,6 +271,15 @@ export const AZ_INCENTIVES: StateIncentive[] = JSON.parse(
   fs.readFileSync('./data/AZ/incentives.json', 'utf-8'),
 );
 
+export const CA_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
+  type: 'array',
+  items: STATE_SCHEMA,
+} as const;
+
+export const CA_INCENTIVES: StateIncentive[] = JSON.parse(
+  fs.readFileSync('./data/CA/incentives.json', 'utf-8'),
+);
+
 export const CO_INCENTIVES_SCHEMA: JSONSchemaType<StateIncentive[]> = {
   type: 'array',
   items: {
@@ -494,6 +505,7 @@ export const WI_INCENTIVES: StateIncentive[] = JSON.parse(
 
 export const STATE_INCENTIVES_BY_STATE: StateIncentivesMap = {
   AZ: AZ_INCENTIVES,
+  CA: CA_INCENTIVES,
   CO: CO_INCENTIVES,
   CT: CT_INCENTIVES,
   DC: DC_INCENTIVES,
