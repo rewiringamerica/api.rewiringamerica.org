@@ -22,8 +22,6 @@ export function isLowIncome(
         thresholds.thresholds['other'];
   const threshold = bySize?.[household_size];
 
-  console.log(location, bySize);
-
   // The only way the threshold should be missing is if they are defined by
   // county, the user's county doesn't have thresholds defined, and there's no
   // "other" fallback. (All possible input HH sizes should be present in the
