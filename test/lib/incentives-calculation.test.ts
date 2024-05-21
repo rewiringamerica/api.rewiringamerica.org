@@ -40,6 +40,13 @@ const LOCATION_AND_AMIS = {
   ],
 } as const;
 
+const IRA_HVAC_ITEMS =
+  'air_to_water_heat_pump,ducted_heat_pump,ductless_heat_pump';
+const IRA_25C_WEATHERIZATION_ITEMS =
+  'air_sealing,door_replacement,window_replacement,other_insulation';
+const IRA_HEAR_WEATHERIZATION_ITEMS =
+  'air_sealing,other_insulation,other_weatherization';
+
 beforeEach(async t => {
   t.context.db = await open({
     filename: './incentives-api.db',
@@ -167,7 +174,7 @@ test('correctly evaluates scenario "Single w/ $120k Household income in Brooklyn
   );
 
   t.equal(pos_rebate_incentives.length, 7);
-  t.equal(tax_credit_incentives.length, 10);
+  t.equal(tax_credit_incentives.length, 11);
   t.equal(performance_rebate_incentives.length, 1);
 
   // count the incentives by key used to de-dupe in UI:
@@ -188,7 +195,7 @@ test('correctly evaluates scenario "Single w/ $120k Household income in Brooklyn
     true,
   );
 
-  const posRebates = _.keyBy(pos_rebate_incentives, i => i.items[0]);
+  const posRebates = _.keyBy(pos_rebate_incentives, i => i.items.join(','));
   t.equal(posRebates['electric_panel'].eligible, true);
   t.equal(posRebates['electric_panel'].amount.number, 4000);
   t.equal(posRebates['electric_panel'].start_date, '2025');
@@ -201,21 +208,21 @@ test('correctly evaluates scenario "Single w/ $120k Household income in Brooklyn
   t.equal(posRebates['heat_pump_water_heater'].eligible, true);
   t.equal(posRebates['heat_pump_water_heater'].amount.number, 1750);
   t.equal(posRebates['heat_pump_water_heater'].start_date, '2025');
-  t.equal(posRebates['heat_pump_air_conditioner_heater'].eligible, true);
-  t.equal(posRebates['heat_pump_air_conditioner_heater'].amount.number, 8000);
-  t.equal(posRebates['heat_pump_air_conditioner_heater'].start_date, '2025');
+  t.equal(posRebates[IRA_HVAC_ITEMS].eligible, true);
+  t.equal(posRebates[IRA_HVAC_ITEMS].amount.number, 8000);
+  t.equal(posRebates[IRA_HVAC_ITEMS].start_date, '2025');
   t.equal(posRebates['heat_pump_clothes_dryer'].eligible, true);
   t.equal(posRebates['heat_pump_clothes_dryer'].amount.number, 840);
   t.equal(posRebates['heat_pump_clothes_dryer'].start_date, '2025');
-  t.equal(posRebates['weatherization'].eligible, true);
-  t.equal(posRebates['weatherization'].amount.number, 1600);
-  t.equal(posRebates['weatherization'].start_date, '2025');
+  t.equal(posRebates[IRA_HEAR_WEATHERIZATION_ITEMS].eligible, true);
+  t.equal(posRebates[IRA_HEAR_WEATHERIZATION_ITEMS].amount.number, 1600);
+  t.equal(posRebates[IRA_HEAR_WEATHERIZATION_ITEMS].start_date, '2025');
 
   t.equal(performance_rebate_incentives[0].eligible, true);
   t.equal(performance_rebate_incentives[0].amount.number, 4000);
   t.equal(performance_rebate_incentives[0].start_date, '2025');
 
-  const taxCredits = _.keyBy(tax_credit_incentives, i => i.items[0]);
+  const taxCredits = _.keyBy(tax_credit_incentives, i => i.items.join(','));
   t.equal(taxCredits['battery_storage_installation'].eligible, true);
   t.equal(taxCredits['battery_storage_installation'].amount.number, 0.3); // will be displayed as 30%
   t.equal(taxCredits['battery_storage_installation'].start_date, '2023');
@@ -231,9 +238,9 @@ test('correctly evaluates scenario "Single w/ $120k Household income in Brooklyn
   t.equal(taxCredits['new_electric_vehicle'].eligible, true);
   t.equal(taxCredits['new_electric_vehicle'].amount.number, 7500);
   t.equal(taxCredits['new_electric_vehicle'].start_date, '2023');
-  t.equal(taxCredits['heat_pump_air_conditioner_heater'].eligible, true);
-  t.equal(taxCredits['heat_pump_air_conditioner_heater'].amount.number, 2000);
-  t.equal(taxCredits['heat_pump_air_conditioner_heater'].start_date, '2023');
+  t.equal(taxCredits[IRA_HVAC_ITEMS].eligible, true);
+  t.equal(taxCredits[IRA_HVAC_ITEMS].amount.number, 2000);
+  t.equal(taxCredits[IRA_HVAC_ITEMS].start_date, '2023');
   t.equal(taxCredits['heat_pump_water_heater'].eligible, true);
   t.equal(taxCredits['heat_pump_water_heater'].amount.number, 2000);
   t.equal(taxCredits['heat_pump_water_heater'].start_date, '2023');
@@ -241,9 +248,9 @@ test('correctly evaluates scenario "Single w/ $120k Household income in Brooklyn
   t.equal(taxCredits['rooftop_solar_installation'].amount.number, 0.3);
   t.equal(taxCredits['rooftop_solar_installation'].amount.representative, 4770);
   t.equal(taxCredits['rooftop_solar_installation'].start_date, '2022');
-  t.equal(taxCredits['weatherization'].eligible, true);
-  t.equal(taxCredits['weatherization'].amount.number, 1200);
-  t.equal(taxCredits['weatherization'].start_date, '2023');
+  t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].eligible, true);
+  t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].amount.number, 1200);
+  t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].start_date, '2023');
   // everything except used EV should be eligible for tax credit (agi limit is 75k)
   t.equal(taxCredits['used_electric_vehicle'].eligible, false);
   t.equal(taxCredits['used_electric_vehicle'].amount.number, 4000);
@@ -263,7 +270,7 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
   t.equal(data.is_over_150_ami, false);
 
   t.equal(data.savings.pos_rebate, 14000);
-  t.equal(data.savings.tax_credit, 29872);
+  t.equal(data.savings.tax_credit, 30022);
   t.equal(data.savings.performance_rebate, 4000);
 
   const pos_rebate_incentives = data.incentives.filter(
@@ -277,7 +284,7 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
   );
 
   t.equal(pos_rebate_incentives.length, 7);
-  t.equal(tax_credit_incentives.length, 10);
+  t.equal(tax_credit_incentives.length, 11);
   t.equal(performance_rebate_incentives.length, 1);
 
   // count the incentives by key used to de-dupe in UI:
@@ -298,7 +305,7 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
     true,
   );
 
-  const posRebates = _.keyBy(pos_rebate_incentives, i => i.items[0]);
+  const posRebates = _.keyBy(pos_rebate_incentives, i => i.items.join(','));
   t.equal(posRebates['electric_panel'].eligible, true);
   t.equal(posRebates['electric_panel'].amount.number, 4000);
   t.equal(posRebates['electric_panel'].start_date, '2025');
@@ -311,21 +318,21 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
   t.equal(posRebates['heat_pump_water_heater'].eligible, true);
   t.equal(posRebates['heat_pump_water_heater'].amount.number, 1750);
   t.equal(posRebates['heat_pump_water_heater'].start_date, '2025');
-  t.equal(posRebates['heat_pump_air_conditioner_heater'].eligible, true);
-  t.equal(posRebates['heat_pump_air_conditioner_heater'].amount.number, 8000);
-  t.equal(posRebates['heat_pump_air_conditioner_heater'].start_date, '2025');
+  t.equal(posRebates[IRA_HVAC_ITEMS].eligible, true);
+  t.equal(posRebates[IRA_HVAC_ITEMS].amount.number, 8000);
+  t.equal(posRebates[IRA_HVAC_ITEMS].start_date, '2025');
   t.equal(posRebates['heat_pump_clothes_dryer'].eligible, true);
   t.equal(posRebates['heat_pump_clothes_dryer'].amount.number, 840);
   t.equal(posRebates['heat_pump_clothes_dryer'].start_date, '2025');
-  t.equal(posRebates['weatherization'].eligible, true);
-  t.equal(posRebates['weatherization'].amount.number, 1600);
-  t.equal(posRebates['weatherization'].start_date, '2025');
+  t.equal(posRebates[IRA_HEAR_WEATHERIZATION_ITEMS].eligible, true);
+  t.equal(posRebates[IRA_HEAR_WEATHERIZATION_ITEMS].amount.number, 1600);
+  t.equal(posRebates[IRA_HEAR_WEATHERIZATION_ITEMS].start_date, '2025');
 
   t.equal(performance_rebate_incentives[0].eligible, true);
   t.equal(performance_rebate_incentives[0].amount.number, 4000);
   t.equal(performance_rebate_incentives[0].start_date, '2025');
 
-  const taxCredits = _.keyBy(tax_credit_incentives, i => i.items[0]);
+  const taxCredits = _.keyBy(tax_credit_incentives, i => i.items.join(','));
   t.equal(taxCredits['battery_storage_installation'].eligible, true);
   t.equal(taxCredits['battery_storage_installation'].amount.number, 0.3); // will be displayed as 30%
   t.equal(taxCredits['battery_storage_installation'].start_date, '2023');
@@ -341,9 +348,9 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
   t.equal(taxCredits['new_electric_vehicle'].eligible, true);
   t.equal(taxCredits['new_electric_vehicle'].amount.number, 7500);
   t.equal(taxCredits['new_electric_vehicle'].start_date, '2023');
-  t.equal(taxCredits['heat_pump_air_conditioner_heater'].eligible, true);
-  t.equal(taxCredits['heat_pump_air_conditioner_heater'].amount.number, 2000);
-  t.equal(taxCredits['heat_pump_air_conditioner_heater'].start_date, '2023');
+  t.equal(taxCredits[IRA_HVAC_ITEMS].eligible, true);
+  t.equal(taxCredits[IRA_HVAC_ITEMS].amount.number, 2000);
+  t.equal(taxCredits[IRA_HVAC_ITEMS].start_date, '2023');
   t.equal(taxCredits['heat_pump_water_heater'].eligible, true);
   t.equal(taxCredits['heat_pump_water_heater'].amount.number, 2000);
   t.equal(taxCredits['heat_pump_water_heater'].start_date, '2023');
@@ -351,9 +358,9 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
   t.equal(taxCredits['rooftop_solar_installation'].amount.number, 0.3);
   t.equal(taxCredits['rooftop_solar_installation'].amount.representative, 4572);
   t.equal(taxCredits['rooftop_solar_installation'].start_date, '2022');
-  t.equal(taxCredits['weatherization'].eligible, true);
-  t.equal(taxCredits['weatherization'].amount.number, 1200);
-  t.equal(taxCredits['weatherization'].start_date, '2023');
+  t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].eligible, true);
+  t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].amount.number, 1200);
+  t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].start_date, '2023');
   // everything except used EV should be eligible for tax credit (agi limit is 75k)
   t.equal(taxCredits['used_electric_vehicle'].eligible, false);
   t.equal(taxCredits['used_electric_vehicle'].amount.number, 4000);
@@ -373,7 +380,7 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
   t.equal(data.is_over_150_ami, true);
 
   t.equal(data.savings.pos_rebate, 0);
-  t.equal(data.savings.tax_credit, 22228.9);
+  t.equal(data.savings.tax_credit, 22378.9);
   t.equal(data.savings.performance_rebate, 4000);
 
   const pos_rebate_incentives = data.incentives.filter(
@@ -387,7 +394,7 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
   );
 
   t.equal(pos_rebate_incentives.length, 7);
-  t.equal(tax_credit_incentives.length, 10);
+  t.equal(tax_credit_incentives.length, 11);
   t.equal(performance_rebate_incentives.length, 1);
 
   // count the incentives by key used to de-dupe in UI:
@@ -408,7 +415,7 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
     true,
   );
 
-  const posRebates = _.keyBy(pos_rebate_incentives, i => i.items[0]);
+  const posRebates = _.keyBy(pos_rebate_incentives, i => i.items.join(','));
   t.equal(posRebates['electric_panel'].eligible, false);
   t.equal(posRebates['electric_panel'].amount.number, 4000);
   t.equal(posRebates['electric_panel'].start_date, '2025');
@@ -421,22 +428,22 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
   t.equal(posRebates['heat_pump_water_heater'].eligible, false);
   t.equal(posRebates['heat_pump_water_heater'].amount.number, 1750);
   t.equal(posRebates['heat_pump_water_heater'].start_date, '2025');
-  t.equal(posRebates['heat_pump_air_conditioner_heater'].eligible, false);
-  t.equal(posRebates['heat_pump_air_conditioner_heater'].amount.number, 8000);
-  t.equal(posRebates['heat_pump_air_conditioner_heater'].start_date, '2025');
+  t.equal(posRebates[IRA_HVAC_ITEMS].eligible, false);
+  t.equal(posRebates[IRA_HVAC_ITEMS].amount.number, 8000);
+  t.equal(posRebates[IRA_HVAC_ITEMS].start_date, '2025');
   t.equal(posRebates['heat_pump_clothes_dryer'].eligible, false);
   t.equal(posRebates['heat_pump_clothes_dryer'].amount.number, 840);
   t.equal(posRebates['heat_pump_clothes_dryer'].start_date, '2025');
-  t.equal(posRebates['weatherization'].eligible, false);
-  t.equal(posRebates['weatherization'].amount.number, 1600);
-  t.equal(posRebates['weatherization'].start_date, '2025');
+  t.equal(posRebates[IRA_HEAR_WEATHERIZATION_ITEMS].eligible, false);
+  t.equal(posRebates[IRA_HEAR_WEATHERIZATION_ITEMS].amount.number, 1600);
+  t.equal(posRebates[IRA_HEAR_WEATHERIZATION_ITEMS].start_date, '2025');
 
   // only items.efficiency_rebates are eligible here:
   t.equal(performance_rebate_incentives[0].eligible, true);
   t.equal(performance_rebate_incentives[0].amount.number, 4000);
   t.equal(performance_rebate_incentives[0].start_date, '2025');
 
-  const taxCredits = _.keyBy(tax_credit_incentives, i => i.items[0]);
+  const taxCredits = _.keyBy(tax_credit_incentives, i => i.items.join(','));
   t.equal(taxCredits['battery_storage_installation'].eligible, true);
   t.equal(taxCredits['battery_storage_installation'].amount.number, 0.3); // will be displayed as 30%
   t.equal(taxCredits['battery_storage_installation'].start_date, '2023');
@@ -449,9 +456,9 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
   t.equal(taxCredits['electric_vehicle_charger'].eligible, false);
   t.equal(taxCredits['electric_vehicle_charger'].amount.number, 1000);
   t.equal(taxCredits['electric_vehicle_charger'].start_date, '2023');
-  t.equal(taxCredits['heat_pump_air_conditioner_heater'].eligible, true);
-  t.equal(taxCredits['heat_pump_air_conditioner_heater'].amount.number, 2000);
-  t.equal(taxCredits['heat_pump_air_conditioner_heater'].start_date, '2023');
+  t.equal(taxCredits[IRA_HVAC_ITEMS].eligible, true);
+  t.equal(taxCredits[IRA_HVAC_ITEMS].amount.number, 2000);
+  t.equal(taxCredits[IRA_HVAC_ITEMS].start_date, '2023');
   t.equal(taxCredits['heat_pump_water_heater'].eligible, true);
   t.equal(taxCredits['heat_pump_water_heater'].amount.number, 2000);
   t.equal(taxCredits['heat_pump_water_heater'].start_date, '2023');
@@ -462,9 +469,9 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
     4428.9,
   );
   t.equal(taxCredits['rooftop_solar_installation'].start_date, '2022');
-  t.equal(taxCredits['weatherization'].eligible, true);
-  t.equal(taxCredits['weatherization'].amount.number, 1200);
-  t.equal(taxCredits['weatherization'].start_date, '2023');
+  t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].eligible, true);
+  t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].amount.number, 1200);
+  t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].start_date, '2023');
   // new and used EVs should not be eligible:
   t.equal(taxCredits['new_electric_vehicle'].eligible, false);
   t.equal(taxCredits['new_electric_vehicle'].amount.number, 7500);
@@ -699,10 +706,10 @@ test('correctly excludes IRA rebates', async t => {
     true,
   );
 
-  t.equal(data.incentives.length, 10);
+  t.equal(data.incentives.length, 11);
   t.equal(
     data.incentives.filter(i => i.payment_methods[0] === 'tax_credit').length,
-    10,
+    11,
   );
   t.equal(data.savings.pos_rebate, 0);
   t.equal(data.savings.performance_rebate, 0);
