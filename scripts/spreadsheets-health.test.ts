@@ -29,7 +29,7 @@ function filterToKeyFields(
 
 test('registered spreadsheets are in sync with checked-in JSON files', async tap => {
   for (const [state, file] of Object.entries(FILES)) {
-    if (!file.runSpreadsheetHealthCheck) {
+    if (file.skipSpreadsheetHealthCheck) {
       continue;
     }
     try {
