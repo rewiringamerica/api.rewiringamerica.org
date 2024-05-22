@@ -47,4 +47,12 @@ export const NY_PROGRAMS = {
       en: 'https://www.nyserda.ny.gov/All-Programs/Drive-Clean-Rebate-For-Electric-Cars-Program/How-it-Works',
     },
   },
+  'ny_empower+': {
+    name: {
+      en: 'EmPower+',
+    },
+    url: {
+      en: 'https://www.nyserda.ny.gov/All-Programs/EmPower-New-York-Program',
+    },
+  },
 } as const;

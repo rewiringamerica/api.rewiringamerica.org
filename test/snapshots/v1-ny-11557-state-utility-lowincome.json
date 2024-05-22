@@ -3,12 +3,6 @@
   "is_under_150_ami": true,
   "is_over_150_ami": false,
   "authorities": {
-    "ny-pseg-long-island": {
-      "name": "PSEG Long Island"
-    },
-    "ny-state-of-ny": {
-      "name": "State of NY"
-    },
     "ny-nyserda": {
       "name": "New York State Energy Research and Development Authority"
     }
@@ -25,192 +19,25 @@
   "incentives": [
     {
       "payment_methods": [
-        "assistance_program"
+        "pos_rebate"
       ],
-      "authority_type": "utility",
-      "authority": "ny-pseg-long-island",
-      "program": "All Electric Homes Program",
-      "program_url": "https://homeenergy.pseg.com",
+      "authority_type": "state",
+      "authority": "ny-nyserda",
+      "program": "EmPower+",
+      "program_url": "https://www.nyserda.ny.gov/All-Programs/EmPower-New-York-Program",
       "items": [
-        "other_weatherization"
+        "efficiency_rebates"
       ],
       "amount": {
         "type": "percent",
         "number": 1,
-        "maximum": 7500
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Up to $7,500 in weatherization and health and safety services for income eligible households."
-    },
-    {
-      "payment_methods": [
-        "pos_rebate"
-      ],
-      "authority_type": "state",
-      "authority": "ny-state-of-ny",
-      "program": "NY State Drive Clean Program",
-      "program_url": "https://www.nyserda.ny.gov/All-Programs/Drive-Clean-Rebate-For-Electric-Cars-Program/How-it-Works",
-      "items": [
-        "new_electric_vehicle"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 2000,
-        "maximum": 2000
+        "maximum": 19000
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "short_description": "Instant rebate for $500-$2,000 off a new electric vehicle when purchased from a participating dealer. Can be combined with the federal tax credit."
-    },
-    {
-      "payment_methods": [
-        "pos_rebate",
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "ny-pseg-long-island",
-      "program": "All Electric Homes Program",
-      "program_url": "https://homeenergy.pseg.com",
-      "items": [
-        "heat_pump_water_heater"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 1000
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Instant or mail-in rebate for $1,000 off an eligible Energy Star certified heat pump water heater when purchased at a participating retailer."
-    },
-    {
-      "payment_methods": [
-        "pos_rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "ny-pseg-long-island",
-      "program": "All Electric Homes Program",
-      "program_url": "https://homeenergy.pseg.com",
-      "items": [
-        "ducted_heat_pump",
-        "ductless_heat_pump"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 600,
-        "maximum": 600
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "$450 to $600 off an Energy Star certified air source heat pump when installed by an eligible contractor."
-    },
-    {
-      "payment_methods": [
-        "pos_rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "ny-pseg-long-island",
-      "program": "All Electric Homes Program",
-      "program_url": "https://homeenergy.pseg.com",
-      "items": [
-        "heat_pump_water_heater"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 600
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "$600 off an Energy Star certified heat pump water heater when installed by a participating contractor."
-    },
-    {
-      "payment_methods": [
-        "pos_rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "ny-pseg-long-island",
-      "program": "All Electric Homes Program",
-      "program_url": "https://homeenergy.pseg.com",
-      "items": [
-        "ducted_heat_pump"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 600
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "$600 off an eligible high efficiency cold climate ducted heat pump system, when installed by a participating contractor."
-    },
-    {
-      "payment_methods": [
-        "pos_rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "ny-pseg-long-island",
-      "program": "All Electric Homes Program",
-      "program_url": "https://homeenergy.pseg.com",
-      "items": [
-        "ductless_heat_pump"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 240
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Up to $240 off an Energy Star certified ductless mini-split heat pump system when installed by a participating contractor."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "ny-nyserda",
-      "program": "New York State Comfort Home Program",
-      "program_url": "https://www.nyserda.ny.gov/All-Programs/Comfort-Home-Program",
-      "items": [
-        "air_sealing",
-        "other_insulation"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 1000,
-        "maximum": 4000
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "$1,000 to $4,000 in incentives available for seal and insulate packages to improve your home's comfort."
-    },
-    {
-      "payment_methods": [
-        "tax_credit"
-      ],
-      "authority_type": "state",
-      "authority": "ny-state-of-ny",
-      "program": "NY State Residential Tax Credit",
-      "program_url": "https://www.tax.ny.gov/pit/credits/geothermal-energy-system-credit.htm",
-      "items": [
-        "geothermal_heating_installation"
-      ],
-      "amount": {
-        "type": "percent",
-        "number": 0.25,
-        "maximum": 5000
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Tax credit for 25% of the cost for a qualifying geothermal energy system, including installation costs, up to $5,000."
+      "short_description": "No-cost energy audit and efficiency upgrades, up to $19,000, including weatherization, heat pumps, and electrical upgrades for qualified homes."
     }
   ]
 }
