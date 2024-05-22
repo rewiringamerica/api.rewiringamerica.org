@@ -9,7 +9,7 @@ import path from 'path';
 import { GaxiosPromise } from 'gaxios';
 import { GEO_GROUPS_BY_STATE, GeoGroupsByState } from '../src/data/geo_groups';
 import {
-  LOW_INCOME_THRESHOLDS_BY_AUTHORITY,
+  LOW_INCOME_THRESHOLDS_BY_STATE,
   LowIncomeThresholdsMap,
 } from '../src/data/low_income_thresholds';
 import {
@@ -186,7 +186,7 @@ async function convertToJson(
   lowIncome: boolean,
   geoGroups: boolean,
 ) {
-  if (lowIncome && !(state in LOW_INCOME_THRESHOLDS_BY_AUTHORITY)) {
+  if (lowIncome && !(state in LOW_INCOME_THRESHOLDS_BY_STATE)) {
     throw new Error(
       `No low-income thresholds defined for ${state} - define them or turn off strict mode.`,
     );
@@ -225,7 +225,7 @@ async function convertToJson(
     state,
     rows,
     strict,
-    lowIncome ? LOW_INCOME_THRESHOLDS_BY_AUTHORITY : null,
+    lowIncome ? LOW_INCOME_THRESHOLDS_BY_STATE : null,
     geoGroups ? GEO_GROUPS_BY_STATE : null,
   );
 

@@ -220,6 +220,28 @@ curl \
 &utility=vt-vermont-electric-cooperative" \
   | jq . > test/fixtures/v1-vt-05845-vec-ev-low-income.json
 
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?zip=05753\
+&owner_status=homeowner\
+&household_income=60000\
+&tax_filing=single\
+&household_size=1\
+&authority_types=state\
+&items=heat_pump_water_heater" \
+  | jq . > test/fixtures/v1-vt-addison-co-low-income.json
+
+curl \
+  "http://localhost:3000/api/v1/calculator\
+?zip=05201\
+&owner_status=homeowner\
+&household_income=60000\
+&tax_filing=single\
+&household_size=1\
+&authority_types=state\
+&items=heat_pump_water_heater" \
+  | jq . > test/fixtures/v1-vt-bennington-co-not-low-income.json
+
 # TODO: Remove beta states argument when CO is fully launched.
 curl \
   "http://localhost:3000/api/v1/calculator\

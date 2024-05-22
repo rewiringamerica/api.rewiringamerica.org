@@ -15,6 +15,7 @@ import {
   VALUE_MAPPINGS,
 } from '../../scripts/lib/spreadsheet-mappings';
 import { SpreadsheetStandardizer } from '../../scripts/lib/spreadsheet-standardizer';
+import { LowIncomeThresholdsMap } from '../../src/data/low_income_thresholds';
 
 test('correct row to record transformation', tap => {
   const testCases: {
@@ -86,9 +87,10 @@ test('correct row to record transformation', tap => {
     },
   ];
 
-  const fakeIncomeThresholds = {
+  const fakeIncomeThresholds: LowIncomeThresholdsMap = {
     va: {
       'va-appalachian-power': {
+        type: 'hhsize',
         source_url: 'url',
         thresholds: {},
         incentives: ['VA-1'],

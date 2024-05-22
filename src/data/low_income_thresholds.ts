@@ -1,23 +1,10 @@
-import { JSONSchemaType } from 'ajv';
 import fs from 'fs';
+import { FromSchema } from 'json-schema-to-ts';
 
-export type LowIncomeThresholdsMap = {
-  [state: string]: StateLowIncomeThresholds;
-};
-
-export type StateLowIncomeThresholds = {
-  [authority_name: string]: LowIncomeThresholdsAuthority;
-};
-
-export type LowIncomeThresholdsAuthority = {
-  source_url: string;
-  thresholds: LowIncomeThresholds;
-  incentives: string[];
-};
-
-export type LowIncomeThresholds = {
-  [hhSize: string]: number;
-};
+export enum LowIncomeThresholdsType {
+  HH_SIZE = 'hh-size',
+  COUNTY_AND_HH_SIZE = 'county-and-hh-size',
+}
 
 // Add custom state low income authorities here
 export enum COLowIncomeAuthority {
@@ -44,73 +31,95 @@ export enum RILowIncomeAuthority {
   ENERGY = 'ri-rhode-island-energy',
 }
 
-export const AUTHORITY_THRESHOLDS_SCHEMA: JSONSchemaType<LowIncomeThresholds> =
-  {
-    type: 'object',
-    required: ['1', '2', '3', '4', '5', '6', '7', '8'],
-    additionalProperties: {
-      type: 'number',
-    },
-  } as const;
-
-export const AUTHORITY_INFO_SCHEMA: JSONSchemaType<LowIncomeThresholdsAuthority> =
-  {
-    type: 'object',
-    properties: {
-      source_url: { type: 'string' },
-      thresholds: AUTHORITY_THRESHOLDS_SCHEMA,
-      incentives: {
-        type: 'array',
-        items: { type: 'string' },
-        minItems: 1,
-        uniqueItems: true,
-      },
-    },
-    required: ['source_url', 'thresholds', 'incentives'],
-  } as const;
-
-export const STATE_THRESHOLDS_SCHEMA: JSONSchemaType<StateLowIncomeThresholds> =
-  {
-    type: 'object',
-    required: [],
-    dependentSchemas: {
-      CO: {
-        required: Object.values(COLowIncomeAuthority),
-      },
-      IL: {
-        required: Object.values(ILIncomeAuthority),
-      },
-      NV: {
-        required: Object.values(NVLowIncomeAuthority),
-      },
-      RI: {
-        required: Object.values(RILowIncomeAuthority),
-      },
-    },
-    additionalProperties: AUTHORITY_INFO_SCHEMA,
-  };
-
-// Keep states in alphabetic order.
-export const SCHEMA: JSONSchemaType<LowIncomeThresholdsMap> = {
+export const HHSIZE_THRESHOLDS_SCHEMA = {
   type: 'object',
-  required: [
-    'AZ',
-    'CO',
-    'CT',
-    'GA',
-    'IL',
-    'MI',
-    'NV',
-    'NY',
-    'OR',
-    'PA',
-    'RI',
-    'VA',
-    'VT',
-    'WI',
-  ],
-  additionalProperties: STATE_THRESHOLDS_SCHEMA,
-};
+  patternProperties: {
+    '^[1-9][0-9]*$': { type: 'number' },
+  },
+  additionalProperties: false,
+} as const;
 
-export const LOW_INCOME_THRESHOLDS_BY_AUTHORITY: LowIncomeThresholdsMap =
+export const AUTHORITY_INFO_SCHEMA = {
+  type: 'object',
+  properties: {
+    source_url: { type: 'string' },
+    incentives: {
+      type: 'array',
+      items: { type: 'string' },
+      minItems: 1,
+      uniqueItems: true,
+    },
+  },
+  required: ['source_url', 'incentives'],
+  oneOf: [
+    {
+      properties: {
+        type: {
+          type: 'string',
+          const: 'hhsize',
+        },
+        thresholds: HHSIZE_THRESHOLDS_SCHEMA,
+      },
+      required: ['type', 'thresholds'],
+    },
+    {
+      properties: {
+        type: {
+          type: 'string',
+          const: 'county-hhsize',
+        },
+        thresholds: {
+          type: 'object',
+          patternProperties: {
+            // Keys are county FIPS codes: 5-digit numbers.
+            '^\\d{5}$': HHSIZE_THRESHOLDS_SCHEMA,
+            // Allow "other" as a fallback.
+            '^other$': HHSIZE_THRESHOLDS_SCHEMA,
+          },
+          additionalProperties: false,
+        },
+      },
+      required: ['type', 'thresholds'],
+    },
+  ],
+} as const;
+
+export const STATE_THRESHOLDS_SCHEMA = {
+  type: 'object',
+  required: [],
+  dependentSchemas: {
+    CO: {
+      required: Object.values(COLowIncomeAuthority),
+    },
+    IL: {
+      required: Object.values(ILIncomeAuthority),
+    },
+    NV: {
+      required: Object.values(NVLowIncomeAuthority),
+    },
+    RI: {
+      required: Object.values(RILowIncomeAuthority),
+    },
+  },
+  additionalProperties: AUTHORITY_INFO_SCHEMA,
+} as const;
+
+export const SCHEMA = {
+  type: 'object',
+  additionalProperties: STATE_THRESHOLDS_SCHEMA,
+} as const;
+
+export type LowIncomeThresholdsMap = FromSchema<typeof SCHEMA>;
+
+export type StateLowIncomeThresholds = FromSchema<
+  typeof STATE_THRESHOLDS_SCHEMA
+>;
+
+export type LowIncomeThresholdsAuthority = FromSchema<
+  typeof AUTHORITY_INFO_SCHEMA
+>;
+
+export type HHSizeThresholds = FromSchema<typeof HHSIZE_THRESHOLDS_SCHEMA>;
+
+export const LOW_INCOME_THRESHOLDS_BY_STATE: LowIncomeThresholdsMap =
   JSON.parse(fs.readFileSync('./data/low_income_thresholds.json', 'utf-8'));

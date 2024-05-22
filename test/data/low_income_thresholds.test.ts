@@ -1,5 +1,5 @@
 import { test } from 'tap';
-import { LOW_INCOME_THRESHOLDS_BY_AUTHORITY } from '../../src/data/low_income_thresholds';
+import { LOW_INCOME_THRESHOLDS_BY_STATE } from '../../src/data/low_income_thresholds';
 import {
   STATE_INCENTIVES_BY_STATE,
   StateIncentive,
@@ -18,7 +18,7 @@ test('low-income thresholds are equivalent in JSON config and incentives', async
   const map = computeIdToIncentiveMap(
     Object.values(STATE_INCENTIVES_BY_STATE).flat(),
   );
-  Object.entries(LOW_INCOME_THRESHOLDS_BY_AUTHORITY).forEach(
+  Object.entries(LOW_INCOME_THRESHOLDS_BY_STATE).forEach(
     ([, stateThresholds]) => {
       for (const [identifier, thresholds] of Object.entries(stateThresholds)) {
         for (const incentiveId of thresholds.incentives) {
@@ -41,13 +41,32 @@ test('low-income thresholds are equivalent in JSON config and incentives', async
   )) {
     for (const incentive of stateIncentives) {
       if (incentive.low_income) {
-        const stateThresholds = LOW_INCOME_THRESHOLDS_BY_AUTHORITY[stateId];
+        const stateThresholds = LOW_INCOME_THRESHOLDS_BY_STATE[stateId];
         t.hasProp(stateThresholds, incentive.low_income);
         t.ok(
           stateThresholds[incentive.low_income].incentives.includes(
             incentive.id,
           ),
         );
+      }
+    }
+  }
+});
+
+test('low-income thresholds have HH sizes 1-8', async t => {
+  const hasRequiredKeys = (obj: Record<string, unknown>) => {
+    const keys = Object.keys(obj);
+    return [1, 2, 3, 4, 5, 6, 7, 8].every(num => keys.includes(num.toString()));
+  };
+
+  for (const stateThresholds of Object.values(LOW_INCOME_THRESHOLDS_BY_STATE)) {
+    for (const thresholds of Object.values(stateThresholds)) {
+      if (thresholds.type === 'hhsize') {
+        t.ok(hasRequiredKeys(thresholds.thresholds));
+      } else {
+        for (const countyThresholds of Object.values(thresholds.thresholds)) {
+          t.ok(hasRequiredKeys(countyThresholds));
+        }
       }
     }
   }

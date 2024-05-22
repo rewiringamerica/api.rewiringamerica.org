@@ -668,6 +668,54 @@
     "end_date": "2024-12-31"
   },
   {
+    "id": "RI-41",
+    "authority_type": "utility",
+    "authority": "ri-pascoag-utility-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ri_pascoagUtilityDistrict_residentialEnergyAudit-WeatherizationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 back on programmable wireless connection enabled thermostat.",
+      "es": "$100 dólares de devolución en termostato programable con conexión inalámbrica."
+    }
+  },
+  {
+    "id": "RI-42",
+    "authority_type": "utility",
+    "authority": "ri-pascoag-utility-district",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ri_pascoagUtilityDistrict_residentialEnergyAudit-WeatherizationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$25 back on programmable non-wireless thermostat.",
+      "es": "$25 dólares de devolución en termostato programable no inalámbrico."
+    }
+  },
+  {
     "id": "RI-43",
     "authority_type": "state",
     "authority": "ri-oer",

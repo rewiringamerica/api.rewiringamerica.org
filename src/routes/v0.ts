@@ -26,48 +26,50 @@ import {
 IRA_INCENTIVES.forEach(incentive => Object.freeze(incentive));
 
 function translateIncentives(incentives: IRAIncentive[]): WebsiteIncentive[] {
-  return incentives.map(incentive => ({
-    ...incentive,
-    start_date: parseInt(incentive.start_date),
-    end_date: parseInt(incentive.end_date),
-    item_es: t('items', incentive.items[0], 'es'),
-    item: t('items', incentive.items[0], 'en'),
-    program_es: tr(PROGRAMS[incentive.program as keyof Programs].name, 'es'),
-    program: tr(PROGRAMS[incentive.program as keyof Programs].name, 'en'),
-    // strip domain from v0 links:
-    more_info_url_es: t('urls', incentive.items[0], 'es').replace(
-      'https://www.rewiringamerica.org',
-      '',
-    ),
-    more_info_url: t('urls', incentive.items[0], 'en').replace(
-      'https://www.rewiringamerica.org',
-      '',
-    ),
-    // TODO: remove when PEP is migrated to v1 API
-    more_info_url_internal: tr(incentive.more_info_url, 'en'),
-    short_description: tr(incentive.short_description, 'en'),
+  return incentives
+    .filter(incentive => incentive.v0_item !== null)
+    .map(incentive => ({
+      ...incentive,
+      start_date: parseInt(incentive.start_date),
+      end_date: parseInt(incentive.end_date),
+      item_es: t('items', incentive.v0_item!, 'es'),
+      item: t('items', incentive.v0_item!, 'en'),
+      program_es: tr(PROGRAMS[incentive.program as keyof Programs].name, 'es'),
+      program: tr(PROGRAMS[incentive.program as keyof Programs].name, 'en'),
+      // strip domain from v0 links:
+      more_info_url_es: t('urls', incentive.v0_item!, 'es').replace(
+        'https://www.rewiringamerica.org',
+        '',
+      ),
+      more_info_url: t('urls', incentive.v0_item!, 'en').replace(
+        'https://www.rewiringamerica.org',
+        '',
+      ),
+      // TODO: remove when PEP is migrated to v1 API
+      more_info_url_internal: tr(incentive.more_info_url, 'en'),
+      short_description: tr(incentive.short_description, 'en'),
 
-    type:
-      incentive.type === PaymentMethod.PerformanceRebate
-        ? PaymentMethod.PosRebate
-        : incentive.type,
+      type:
+        incentive.type === PaymentMethod.PerformanceRebate
+          ? PaymentMethod.PosRebate
+          : incentive.type,
 
-    // Reconstruct item_type
-    item_type:
-      incentive.items[0] === 'rooftop_solar_installation'
-        ? 'solar_tax_credit'
-        : incentive.items[0] === 'electric_vehicle_charger'
-        ? 'ev_charger_credit'
-        : incentive.type,
+      // Reconstruct item_type
+      item_type:
+        incentive.items[0] === 'rooftop_solar_installation'
+          ? 'solar_tax_credit'
+          : incentive.items[0] === 'electric_vehicle_charger'
+          ? 'ev_charger_credit'
+          : incentive.type,
 
-    // Transform amounts from v1 to v0 format
-    amount: incentive.amount.number,
-    amount_type: incentive.amount.type as 'dollar_amount' | 'percent',
-    representative_amount: incentive.amount.representative ?? 0,
+      // Transform amounts from v1 to v0 format
+      amount: incentive.amount.number,
+      amount_type: incentive.amount.type as 'dollar_amount' | 'percent',
+      representative_amount: incentive.amount.representative ?? 0,
 
-    // agi_max_limit is not nullable
-    agi_max_limit: incentive.agi_max_limit ?? 0,
-  }));
+      // agi_max_limit is not nullable
+      agi_max_limit: incentive.agi_max_limit ?? 0,
+    }));
 }
 
 const CalculatorSchema = {

@@ -11,6 +11,7 @@ test('correctly associates low-income thresholds with record', tap => {
   const thresholds: LowIncomeThresholdsMap = {
     CT: {
       'ct-low-income-program': {
+        type: 'hhsize',
         incentives: ['CT-1'],
         source_url: 'foo.com',
         thresholds: {},

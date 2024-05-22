@@ -55,6 +55,7 @@ export type CalculateParams = Omit<APICalculatorRequest, 'location'>;
 function calculateFederalIncentivesAndSavings(
   amiAndEvCreditEligibility: AMIAndEVCreditEligibility,
   solarSystemCost: number,
+  excludeIRARebates: boolean,
   { tax_filing, owner_status, household_income, items }: CalculateParams,
 ): {
   federalIncentives: CalculatedIncentive[];
@@ -73,6 +74,14 @@ function calculateFederalIncentivesAndSavings(
     // Don't include an incentive at all if the query is filtering by item and
     // this doesn't match.
     if (items && !items.includes(item)) {
+      continue;
+    }
+
+    if (
+      excludeIRARebates &&
+      (incentive.payment_methods[0] === PaymentMethod.PosRebate ||
+        incentive.payment_methods[0] === PaymentMethod.PerformanceRebate)
+    ) {
       continue;
     }
 
@@ -190,7 +199,7 @@ function calculateFederalIncentivesAndSavings(
   savings.pos_rebate =
     household_income < amiAndEvCreditEligibility.computedAMI150 &&
     owner_status !== 'renter'
-      ? MAX_POS_SAVINGS
+      ? Math.min(MAX_POS_SAVINGS, savings.pos_rebate)
       : 0;
 
   return {
@@ -203,6 +212,7 @@ export default function calculateIncentives(
   location: ResolvedLocation,
   amiAndEvCreditEligibility: AMIAndEVCreditEligibility,
   request: CalculateParams,
+  excludeIRARebates: boolean = false,
 ): CalculatedIncentives {
   const {
     owner_status,
@@ -285,6 +295,7 @@ export default function calculateIncentives(
     const federal = calculateFederalIncentivesAndSavings(
       amiAndEvCreditEligibility,
       SOLAR_PRICES[state_id]?.system_cost,
+      excludeIRARebates,
       request,
     );
     incentives.push(...federal.federalIncentives);
