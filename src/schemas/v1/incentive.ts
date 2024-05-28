@@ -107,9 +107,6 @@ export const API_INCENTIVE_SCHEMA = {
       nullable: true,
       enum: [...Object.values(FilingStatus), null],
     },
-    eligible: {
-      type: 'boolean',
-    },
     short_description: {
       type: 'string',
       description:
