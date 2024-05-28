@@ -92,12 +92,10 @@ export default async function (
           { ...request.query },
           true,
         );
+        const eligibleIncentives = result.incentives.filter(i => i.eligible);
         const translated = {
           ...result,
-          incentives: transformIncentives(
-            result.incentives.filter(i => i.eligible),
-            language,
-          ),
+          incentives: transformIncentives(eligibleIncentives, language),
         };
 
         reply.status(200).type('application/json').send(translated);
