@@ -31,7 +31,7 @@ async function getCalculatorResponse(t: Test, query: Record<string, unknown>) {
 async function validateResponse(
   t: Test,
   query: Record<string, unknown>,
-  fixtureFile: string,
+  snapshotFile: string,
 ) {
   const res = await getCalculatorResponse(t, query);
   t.equal(res.statusCode, 200);
@@ -52,13 +52,20 @@ async function validateResponse(
   await responseValidator(calculatorResponse);
   t.equal(responseValidator.errors, null);
 
-  // Verify the specific content of the response
-  const expectedResponse = JSON.parse(fs.readFileSync(fixtureFile, 'utf-8'));
-  t.strictSame(
-    calculatorResponse,
-    expectedResponse,
-    `response does not match ${fixtureFile}`,
-  );
+  if (process.env.UPDATE_SNAPSHOTS) {
+    fs.writeFileSync(
+      snapshotFile,
+      JSON.stringify(calculatorResponse, null, 2) + '\n',
+    );
+  } else {
+    // Verify the specific content of the response
+    const expectedResponse = JSON.parse(fs.readFileSync(snapshotFile, 'utf-8'));
+    t.strictSame(
+      calculatorResponse,
+      expectedResponse,
+      `response does not match ${snapshotFile}`,
+    );
+  }
 }
 
 test('response is valid and correct', async t => {
@@ -71,7 +78,7 @@ test('response is valid and correct', async t => {
       tax_filing: 'joint',
       household_size: 4,
     },
-    './test/fixtures/v1-84106-homeowner-80000-joint-4.json',
+    './test/snapshots/v1-84106-homeowner-80000-joint-4.json',
   );
 });
 
@@ -87,7 +94,7 @@ test('parent ZCTA is used', async t => {
       tax_filing: 'joint',
       household_size: 4,
     },
-    './test/fixtures/v1-15289-homeowner-85000-joint-4.json',
+    './test/snapshots/v1-15289-homeowner-85000-joint-4.json',
   );
 });
 
@@ -104,7 +111,7 @@ test('response with state and utility is valid and correct', async t => {
       authority_types: ['state', 'utility'],
       utility: 'ri-rhode-island-energy',
     },
-    './test/fixtures/v1-02903-state-utility-lowincome.json',
+    './test/snapshots/v1-02903-state-utility-lowincome.json',
   );
 });
 
@@ -120,7 +127,7 @@ test('response with state and item filtering is valid and correct', async t => {
       authority_types: ['federal', 'state'],
       items: ['ductless_heat_pump', 'new_electric_vehicle'],
     },
-    './test/fixtures/v1-02807-state-items.json',
+    './test/snapshots/v1-02807-state-items.json',
   );
 });
 
@@ -139,7 +146,7 @@ test('AZ low income response with state and utility filtering for Tuscon Electri
       // TODO: Remove when AZ is fully launched.
       include_beta_states: true,
     },
-    './test/fixtures/v1-az-85701-state-utility-lowincome.json',
+    './test/snapshots/v1-az-85701-state-utility-lowincome.json',
   );
 });
 
@@ -158,7 +165,7 @@ test('AZ low income response with state and utility filtering for UniSource is v
       // TODO: Remove when AZ is fully launched.
       include_beta_states: true,
     },
-    './test/fixtures/v1-az-85702-state-utility-lowincome.json',
+    './test/snapshots/v1-az-85702-state-utility-lowincome.json',
   );
 });
 
@@ -176,7 +183,7 @@ test('CO low income response with state and utility filtering is valid and corre
       authority_types: ['state', 'utility', 'other'],
       utility: 'co-xcel-energy',
     },
-    './test/fixtures/v1-co-81657-state-utility-lowincome.json',
+    './test/snapshots/v1-co-81657-state-utility-lowincome.json',
   );
 });
 
@@ -195,7 +202,7 @@ test('CO incentive for PRPA shows up as intended', async t => {
       // Not in PRPA; incentives should not show up
       utility: 'co-xcel-energy',
     },
-    './test/fixtures/v1-80517-xcel.json',
+    './test/snapshots/v1-80517-xcel.json',
   );
   await validateResponse(
     t,
@@ -210,7 +217,7 @@ test('CO incentive for PRPA shows up as intended', async t => {
       // Is in PRPA; incentives should show up
       utility: 'co-estes-park-power-and-communications',
     },
-    './test/fixtures/v1-80517-estes-park.json',
+    './test/snapshots/v1-80517-estes-park.json',
   );
 });
 
@@ -229,7 +236,7 @@ test('CT low income response with state and utility filtering is valid and corre
       // TODO: Remove when CT is fully launched.
       include_beta_states: true,
     },
-    './test/fixtures/v1-ct-06002-state-utility-lowincome.json',
+    './test/snapshots/v1-ct-06002-state-utility-lowincome.json',
   );
 });
 
@@ -246,7 +253,7 @@ test('DC low income response with state and city filtering is valid and correct'
       authority_types: ['state', 'city'],
       authority: 'dc-dc-sustainable-energy-utility',
     },
-    './test/fixtures/v1-dc-20303-state-city-lowincome.json',
+    './test/snapshots/v1-dc-20303-state-city-lowincome.json',
   );
 });
 
@@ -265,7 +272,7 @@ test('GA response with utility filtering is valid and correct', async t => {
       // TODO: Remove when GA is fully launched.
       include_beta_states: true,
     },
-    './test/fixtures/v1-ga-30033-utility.json',
+    './test/snapshots/v1-ga-30033-utility.json',
   );
 });
 
@@ -282,7 +289,7 @@ test('IL low income response with state and utility filtering is valid and corre
       authority_types: ['state'],
       authority: 'il-state-of-illinois',
     },
-    './test/fixtures/il-60304-state-utility-lowincome.json',
+    './test/snapshots/il-60304-state-utility-lowincome.json',
   );
 });
 
@@ -297,7 +304,7 @@ test('IL low income response with city authority filtering is valid and correct'
       tax_filing: 'single',
       authority_types: ['city'],
     },
-    './test/fixtures/v1-il-60202-city-lowincome.json',
+    './test/snapshots/v1-il-60202-city-lowincome.json',
   );
 });
 
@@ -315,7 +322,7 @@ test('MI response with state and utility is valid and correct', async t => {
       authority_types: ['utility'],
       utility: 'mi-dte',
     },
-    './test/fixtures/v1-mi-48103-state-utility-lowincome.json',
+    './test/snapshots/v1-mi-48103-state-utility-lowincome.json',
   );
 });
 
@@ -332,7 +339,7 @@ test('MI response with state and utility is valid and correct', async t => {
       utility: 'mi-lansing-board-of-water-and-light',
       include_beta_states: true,
     },
-    './test/fixtures/v1-mi-48825-city-lowincome.json',
+    './test/snapshots/v1-mi-48825-city-lowincome.json',
   );
 });
 
@@ -349,7 +356,7 @@ test('NV low income response with state and utility filtering is valid and corre
       authority_types: ['utility'],
       utility: 'nv-nv-energy',
     },
-    './test/fixtures/v1-nv-89108-state-utility-lowincome.json',
+    './test/snapshots/v1-nv-89108-state-utility-lowincome.json',
   );
 });
 
@@ -368,7 +375,7 @@ test('OR low income response with state and utility filtering is valid and corre
       // TODO: Remove when OR is fully launched.
       include_beta_states: true,
     },
-    './test/fixtures/v1-or-97001-state-lowincome.json',
+    './test/snapshots/v1-or-97001-state-lowincome.json',
   );
 });
 
@@ -385,7 +392,7 @@ test('PA low income response with state and utility filtering is valid and corre
       authority_types: ['state', 'utility', 'other'],
       utility: 'pa-met-ed',
     },
-    './test/fixtures/v1-pa-17555-state-lowincome.json',
+    './test/snapshots/v1-pa-17555-state-lowincome.json',
   );
 });
 
@@ -404,7 +411,7 @@ test('NY response with state and utility is valid and correct', async t => {
       utility: 'ny-pseg-long-island',
       include_beta_states: true,
     },
-    './test/fixtures/v1-ny-11557-state-utility-lowincome.json',
+    './test/snapshots/v1-ny-11557-state-utility-lowincome.json',
   );
 });
 
@@ -423,7 +430,7 @@ test('VA low income response with state and utility filtering is valid and corre
       // TODO: Remove when VA is fully launched.
       include_beta_states: true,
     },
-    './test/fixtures/v1-va-22030-state-utility-lowincome.json',
+    './test/snapshots/v1-va-22030-state-utility-lowincome.json',
   );
 });
 
@@ -440,7 +447,7 @@ test('VT low income response with state and utility filtering is valid and corre
       authority_types: ['state', 'utility'],
       utility: 'vt-burlington-electric-department',
     },
-    './test/fixtures/v1-vt-05401-state-utility-lowincome.json',
+    './test/snapshots/v1-vt-05401-state-utility-lowincome.json',
   );
 });
 
@@ -457,7 +464,7 @@ test('VT low income EV incentives are correct', async t => {
       utility: 'vt-vermont-electric-cooperative',
       items: ['new_electric_vehicle', 'used_electric_vehicle'],
     },
-    './test/fixtures/v1-vt-05845-vec-ev-low-income.json',
+    './test/snapshots/v1-vt-05845-vec-ev-low-income.json',
   );
 });
 
@@ -477,12 +484,12 @@ test('VT uses per-county low income thresholds', async t => {
   await validateResponse(
     t,
     { ...baseQuery, zip: '05753' },
-    './test/fixtures/v1-vt-addison-co-low-income.json',
+    './test/snapshots/v1-vt-addison-co-low-income.json',
   );
   await validateResponse(
     t,
     { ...baseQuery, zip: '05201' },
-    './test/fixtures/v1-vt-bennington-co-not-low-income.json',
+    './test/snapshots/v1-vt-bennington-co-not-low-income.json',
   );
 });
 
@@ -502,7 +509,7 @@ test('WI low income response with state and utility filtering is valid and corre
       // TODO: Remove when WI is fully launched.
       include_beta_states: true,
     },
-    './test/fixtures/v1-wi-53703-state-utility-lowincome.json',
+    './test/snapshots/v1-wi-53703-state-utility-lowincome.json',
   );
 });
 
