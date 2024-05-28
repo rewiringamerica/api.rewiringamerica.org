@@ -22,83 +22,6 @@
   "incentives": [
     {
       "payment_methods": [
-        "assistance_program"
-      ],
-      "authority_type": "state",
-      "authority": "pa-pennsylvania-department-of-community-and-economic-development",
-      "program": "Pennsylvania Weatherization Assistance Program",
-      "program_url": "https://dced.pa.gov/programs/weatherization-assistance-program-wap/",
-      "items": [
-        "energy_audit",
-        "other_weatherization"
-      ],
-      "amount": {
-        "type": "percent",
-        "number": 1
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "ami_qualification": null,
-      "eligible": false,
-      "short_description": "Free energy audit and weatherization services for income-qualified residents. Average value per household is $7,669 depending on results."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "pa-pennsylvania-department-of-environmental-protection",
-      "program": "Alternative Fuel Vehicle Rebates",
-      "program_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
-      "items": [
-        "new_electric_vehicle",
-        "new_plugin_hybrid_vehicle"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 3000,
-        "maximum": 3000
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2023-07-01",
-      "end_date": "2024-06-30",
-      "ami_qualification": null,
-      "eligible": false,
-      "short_description": "Income-qualified rebate for purchase or lease of new electric vehicles. $3,000 for battery EVs; $2,500 for plug-in hybrid EVs."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "pa-pennsylvania-department-of-environmental-protection",
-      "program": "Alternative Fuel Vehicle Rebates",
-      "program_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
-      "items": [
-        "used_electric_vehicle",
-        "used_plugin_hybrid_vehicle"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 3000,
-        "maximum": 3000
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2023-07-01",
-      "end_date": "2024-06-30",
-      "ami_qualification": null,
-      "eligible": false,
-      "short_description": "Income-qualified rebate for purchase of eligible used electric vehicles. $3,000 rebate for battery EVs; $2,500 rebate for plug-in hybrid EVs."
-    },
-    {
-      "payment_methods": [
         "rebate"
       ],
       "authority_type": "state",
@@ -356,31 +279,6 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "30% tax credit (up to $1,200) for weatherization projects: insulation, air sealing, doors, windows. Yearly reset."
-    },
-    {
-      "payment_methods": [
-        "tax_credit"
-      ],
-      "authority_type": "federal",
-      "program": "Federal Alternative Fuel Vehicle Refueling Property Credit (30C)",
-      "program_url": "https://www.irs.gov/credits-deductions/alternative-fuel-vehicle-refueling-property-credit",
-      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/30c-ev-charger-tax-credit",
-      "items": [
-        "electric_vehicle_charger"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 1000
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2023",
-      "end_date": "2032",
-      "ami_qualification": null,
-      "eligible": false,
-      "short_description": "Tax credit (up to $1,000) for EV chargers. Available in rural or low-income communities."
     },
     {
       "payment_methods": [

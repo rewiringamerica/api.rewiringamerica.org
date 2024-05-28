@@ -94,7 +94,10 @@ export default async function (
         );
         const translated = {
           ...result,
-          incentives: transformIncentives(result.incentives, language),
+          incentives: transformIncentives(
+            result.incentives.filter(i => i.eligible),
+            language,
+          ),
         };
 
         reply.status(200).type('application/json').send(translated);
