@@ -120,30 +120,6 @@
     },
     {
       "payment_methods": [
-        "pos_rebate"
-      ],
-      "authority_type": "other",
-      "authority": "pa-first-energy",
-      "program": "Residential Products Rebate Program",
-      "program_url": "https://rebates.energysavepa.com/",
-      "items": [
-        "smart_thermostat"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 50
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2021-06-01",
-      "end_date": "2026-05-31",
-      "ami_qualification": null,
-      "eligible": false,
-      "short_description": "$50 rebate for ENERGY STAR® certified smart thermostats."
-    },
-    {
-      "payment_methods": [
         "rebate"
       ],
       "authority_type": "state",
@@ -195,60 +171,6 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "Income-qualified rebate for purchase of eligible used electric vehicles. $3,000 rebate for battery EVs; $2,500 rebate for plug-in hybrid EVs."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "pa-pennsylvania-department-of-environmental-protection",
-      "program": "Alternative Fuel Vehicle Rebates",
-      "program_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
-      "items": [
-        "new_electric_vehicle",
-        "new_plugin_hybrid_vehicle"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 2000,
-        "maximum": 2000
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2023-07-01",
-      "end_date": "2024-06-30",
-      "ami_qualification": null,
-      "eligible": false,
-      "short_description": "Income-qualified rebate for purchase or lease of new electric vehicles. $2,000 for battery EVs; $1,500 for plug-in hybrid EVs."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "pa-pennsylvania-department-of-environmental-protection",
-      "program": "Alternative Fuel Vehicle Rebates",
-      "program_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
-      "items": [
-        "used_electric_vehicle",
-        "used_plugin_hybrid_vehicle"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 2000,
-        "maximum": 2000
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2023-07-01",
-      "end_date": "2024-06-30",
-      "ami_qualification": null,
-      "eligible": false,
-      "short_description": "Income-qualified rebate for purchase of eligible used electric vehicles. $2,000 rebate for battery EVs; $1,500 rebate for plug-in hybrid EVs."
     },
     {
       "payment_methods": [
@@ -396,31 +318,6 @@
       "ami_qualification": null,
       "eligible": true,
       "short_description": "$75 rebate for ENERGY STAR® certified clothes dryer for income-qualified residents."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "other",
-      "authority": "pa-first-energy",
-      "program": "Residential Products Rebate Program",
-      "program_url": "https://rebates.energysavepa.com/",
-      "items": [
-        "heat_pump_clothes_dryer"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 50,
-        "maximum": 50
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2021-06-01",
-      "end_date": "2026-05-31",
-      "ami_qualification": null,
-      "eligible": false,
-      "short_description": "$50 rebate for ENERGY STAR® certified clothes dryer."
     }
   ]
 }
