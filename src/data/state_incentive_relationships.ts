@@ -8,7 +8,7 @@ export const anyOrAllSchema = {
 
 export const prerequisiteSchema = {
   $id: 'IncentivePrerequisites',
-  oneOf: [
+  anyOf: [
     { type: 'string' },
     {
       type: 'object',
