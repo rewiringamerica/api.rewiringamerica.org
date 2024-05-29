@@ -3,7 +3,7 @@ import { FromSchema } from 'json-schema-to-ts';
 
 export const anyOrAllSchema = {
   type: 'array',
-  items: { $ref: 'IncentivePrerequisites' },
+  items: { type: 'string' },
 } as const;
 
 export const prerequisiteSchema = {
@@ -12,14 +12,7 @@ export const prerequisiteSchema = {
     { type: 'string' },
     {
       type: 'object',
-      properties: { anyOf: anyOrAllSchema },
-      required: ['anyOf'],
-      additionalProperties: false,
-    },
-    {
-      type: 'object',
-      properties: { allOf: anyOrAllSchema },
-      required: ['allOf'],
+      properties: { allOf: anyOrAllSchema, anyOf: anyOrAllSchema },
       additionalProperties: false,
     },
   ],
