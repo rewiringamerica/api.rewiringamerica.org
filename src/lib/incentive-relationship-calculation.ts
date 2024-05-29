@@ -29,11 +29,11 @@ export function addPrerequisites(
 ) {
   if (typeof prerequisites === 'string') {
     prerequisitesSet.add(prerequisites as string);
-  } else if ('anyOf' in prerequisites) {
+  } else if ('anyOf' in prerequisites && prerequisites.anyOf) {
     for (const prerequisite of prerequisites.anyOf) {
       addPrerequisites(prerequisite, prerequisitesSet);
     }
-  } else if ('allOf' in prerequisites) {
+  } else if ('allOf' in prerequisites && prerequisites.allOf) {
     for (const prerequisite of prerequisites.allOf) {
       addPrerequisites(prerequisite, prerequisitesSet);
     }
@@ -132,14 +132,14 @@ function meetsNestedPrerequisites(
 ) {
   if (typeof prerequisite === 'string') {
     return maps.eligibleIncentives.has(prerequisite);
-  } else if ('anyOf' in prerequisite) {
+  } else if ('anyOf' in prerequisite && prerequisite.anyOf) {
     for (const child of prerequisite.anyOf) {
       if (meetsNestedPrerequisites(incentiveId, child, maps)) {
         return true;
       }
     }
     return false;
-  } else if ('allOf' in prerequisite) {
+  } else if ('allOf' in prerequisite && prerequisite.allOf) {
     for (const child of prerequisite.allOf) {
       if (!meetsNestedPrerequisites(incentiveId, child, maps)) {
         return false;
