@@ -9,7 +9,12 @@
   ],
   "overrides": [
     {
-      "files": ["data/*.json", "schemas/**/*.json", "test/fixtures/*.json"],
+      "files": [
+        "data/*.json",
+        "schemas/**/*.json",
+        "test/fixtures/*.json",
+        "test/snapshots/*.json"
+      ],
       "options": {
         "multilineArraysWrapThreshold": 0
       }

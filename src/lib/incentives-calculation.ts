@@ -36,7 +36,7 @@ const TAX_FILINGS = new Set(Object.values(FilingStatus));
 IRA_INCENTIVES.forEach(incentive => Object.freeze(incentive));
 
 export type CalculatedIncentive = (IRAIncentive | StateIncentive) & {
-  eligible?: boolean;
+  eligible: boolean;
 };
 
 /**

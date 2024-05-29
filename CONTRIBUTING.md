@@ -81,7 +81,7 @@ We use Prettier and ESLint; both are run for every PR and are required to report
 
 The codebase has fairly comprehensive test coverage, and we expect all changes to be well-covered. There are:
 
-- End-to-end tests of the API endpoints, in `test/routes`. These compare live output against fixtures in `test/fixtures`.
-  - There's a script to update the fixtures to match the output of a local instance of the server, in `scripts/update-fixtures.sh`. If you add a new fixture, make sure to add it to the script.
+- End-to-end tests of the API endpoints, in `test/routes`. These compare live output against snapshots in `test/snapshots`.
+  - To update the snapshots from the live output, run `yarn update-snapshots`. You can also use this command to create the initial snapshot for a new test.
 - Unit tests of various business logic modules, in `test/lib`.
 - Unit tests that validate the static data files against JSON Schema, in `test/data`.

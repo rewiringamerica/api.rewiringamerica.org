@@ -1,0 +1,53 @@
+{
+  "is_under_80_ami": true,
+  "is_under_150_ami": true,
+  "is_over_150_ami": false,
+  "authorities": {
+    "vt-efficiency-vermont": {
+      "name": "Efficiency Vermont"
+    }
+  },
+  "coverage": {
+    "state": "VT",
+    "utility": null
+  },
+  "location": {
+    "state": "VT",
+    "city": "Middlebury"
+  },
+  "data_partners": {
+    "vt-efficiency-vermont": {
+      "name": "Efficiency Vermont",
+      "logo": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/vt-efficiency-vermont-color.png",
+        "width": 300,
+        "height": 200
+      }
+    }
+  },
+  "incentives": [
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "vt-efficiency-vermont",
+      "program": "Efficiency Vermont Heat Pump Water Heater Rebate Program",
+      "program_url": "https://www.efficiencyvermont.com/rebates/list/heat-pump-water-heaters",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 1,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "ami_qualification": null,
+      "eligible": true,
+      "short_description": "100% off a heat pump water heater, up to $5,000, for low-income customers."
+    }
+  ]
+}
