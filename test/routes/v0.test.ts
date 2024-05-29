@@ -59,21 +59,24 @@ test('response is valid and correct', async t => {
   t.equal(calculatorResponse.pos_rebate_incentives.length, 8);
   t.equal(calculatorResponse.tax_credit_incentives.length, 10);
 
-  const expectedResponse = JSON.parse(
-    fs.readFileSync(
-      './test/fixtures/v0-80212-homeowner-80000-joint-4.json',
-      'utf-8',
-    ),
-  );
+  const snapshotPath = './test/snapshots/v0-80212-homeowner-80000-joint-4.json';
+  if (process.env.UPDATE_SNAPSHOTS) {
+    fs.writeFileSync(
+      snapshotPath,
+      JSON.stringify(calculatorResponse, null, 2) + '\n',
+    );
+  } else {
+    const expectedResponse = JSON.parse(fs.readFileSync(snapshotPath, 'utf-8'));
 
-  t.strictSame(
-    calculatorResponse.pos_rebate_incentives,
-    expectedResponse.pos_rebate_incentives,
-  );
-  t.strictSame(
-    calculatorResponse.tax_credit_incentives,
-    expectedResponse.tax_credit_incentives,
-  );
+    t.strictSame(
+      calculatorResponse.pos_rebate_incentives,
+      expectedResponse.pos_rebate_incentives,
+    );
+    t.strictSame(
+      calculatorResponse.tax_credit_incentives,
+      expectedResponse.tax_credit_incentives,
+    );
+  }
 });
 
 const BAD_QUERIES = [
