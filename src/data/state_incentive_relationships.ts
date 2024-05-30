@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { FromSchema } from 'json-schema-to-ts';
+import { STATES_PLUS_DC } from './types/states';
 
 export const anyOrAllSchema = {
   type: 'array',
@@ -66,46 +67,14 @@ export type IncentiveRelationshipsMap = {
   [stateId: string]: IncentiveRelationships;
 };
 
-export const CO_RELATIONSHIPS: IncentiveRelationships = JSON.parse(
-  fs.readFileSync('./data/CO/incentive_relationships.json', 'utf-8'),
-);
-
-export const CT_RELATIONSHIPS: IncentiveRelationships = JSON.parse(
-  fs.readFileSync('./data/CT/incentive_relationships.json', 'utf-8'),
-);
-
-export const GA_RELATIONSHIPS: IncentiveRelationships = JSON.parse(
-  fs.readFileSync('./data/GA/incentive_relationships.json', 'utf-8'),
-);
-
-export const OR_RELATIONSHIPS: IncentiveRelationships = JSON.parse(
-  fs.readFileSync('./data/OR/incentive_relationships.json', 'utf-8'),
-);
-
-export const PA_RELATIONSHIPS: IncentiveRelationships = JSON.parse(
-  fs.readFileSync('./data/PA/incentive_relationships.json', 'utf-8'),
-);
-
-export const RI_RELATIONSHIPS: IncentiveRelationships = JSON.parse(
-  fs.readFileSync('./data/RI/incentive_relationships.json', 'utf-8'),
-);
-
-export const VT_RELATIONSHIPS: IncentiveRelationships = JSON.parse(
-  fs.readFileSync('./data/VT/incentive_relationships.json', 'utf-8'),
-);
-
-export const WI_RELATIONSHIPS: IncentiveRelationships = JSON.parse(
-  fs.readFileSync('./data/WI/incentive_relationships.json', 'utf-8'),
-);
-
-export const INCENTIVE_RELATIONSHIPS_BY_STATE: IncentiveRelationshipsMap = {
-  CO: CO_RELATIONSHIPS,
-  CT: CT_RELATIONSHIPS,
-  GA: GA_RELATIONSHIPS,
-  NY: {},
-  OR: OR_RELATIONSHIPS,
-  PA: PA_RELATIONSHIPS,
-  RI: RI_RELATIONSHIPS,
-  VT: VT_RELATIONSHIPS,
-  WI: WI_RELATIONSHIPS,
-};
+export const INCENTIVE_RELATIONSHIPS_BY_STATE: IncentiveRelationshipsMap =
+  (() => {
+    const result: IncentiveRelationshipsMap = {};
+    for (const state of STATES_PLUS_DC) {
+      const filepath = `./data/${state}/incentive_relationships.json`;
+      if (fs.existsSync(filepath)) {
+        result[state] = JSON.parse(fs.readFileSync(filepath, 'utf-8'));
+      }
+    }
+    return result;
+  })();
