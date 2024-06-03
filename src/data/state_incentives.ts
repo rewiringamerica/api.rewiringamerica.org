@@ -138,8 +138,6 @@ const requiredCollectedFields = [
 // fitting to an enum or converting from string to number with minor cleanup,
 // it should have a separate collected and derived version.
 export type DerivedFields = {
-  agi_max_limit?: number;
-  agi_min_limit?: number;
   authority: string;
   eligible_geo_group?: string;
   program: string;
@@ -149,8 +147,6 @@ export type DerivedFields = {
 };
 
 const derivedIncentivePropertySchema = {
-  agi_max_limit: { type: 'integer', nullable: true },
-  agi_min_limit: { type: 'integer', nullable: true },
   authority: { type: 'string' },
   eligible_geo_group: { type: 'string', nullable: true },
   program: { type: 'string', enum: Object.keys(PROGRAMS) },
@@ -173,7 +169,6 @@ export const PASS_THROUGH_FIELDS = [
   'amount',
   'owner_status',
   'short_description',
-  'filing_status',
 ] as const;
 type PassThroughField = (typeof PASS_THROUGH_FIELDS)[number];
 
@@ -200,8 +195,6 @@ const fieldOrder: {
   [Key in keyof typeof incentivePropertySchema]: undefined;
 } = {
   id: undefined,
-  agi_max_limit: undefined,
-  agi_min_limit: undefined,
   authority_type: undefined,
   authority: undefined,
   eligible_geo_group: undefined,
@@ -215,7 +208,6 @@ const fieldOrder: {
   end_date: undefined,
   bonus_available: undefined,
   low_income: undefined,
-  filing_status: undefined,
   more_info_url: undefined,
 } as const;
 export const FIELD_ORDER = Object.keys(fieldOrder);

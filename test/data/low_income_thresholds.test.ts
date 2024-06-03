@@ -63,7 +63,7 @@ test('low-income thresholds have HH sizes 1-8', async t => {
     for (const thresholds of Object.values(stateThresholds)) {
       if (thresholds.type === 'hhsize') {
         t.ok(hasRequiredKeys(thresholds.thresholds));
-      } else {
+      } else if (thresholds.type === 'county-hhsize') {
         for (const countyThresholds of Object.values(thresholds.thresholds)) {
           t.ok(hasRequiredKeys(countyThresholds));
         }

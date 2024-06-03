@@ -106,25 +106,6 @@ export function calculateStateIncentivesAndSavings(
       }
     }
 
-    if (
-      item.agi_max_limit &&
-      Number(request.household_income) >= item.agi_max_limit
-    ) {
-      eligible = false;
-    }
-    if (
-      item.agi_min_limit &&
-      Number(request.household_income) < item.agi_min_limit
-    ) {
-      eligible = false;
-    }
-
-    if (item.filing_status) {
-      if (item.filing_status !== request.tax_filing) {
-        eligible = false;
-      }
-    }
-
     if (eligible) {
       eligibleIncentives.set(item.id, item);
     } else {
