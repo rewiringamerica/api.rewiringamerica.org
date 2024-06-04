@@ -355,13 +355,8 @@ export default function calculateIncentives(
   if (stateAuthorities) {
     incentives.forEach(i => {
       if ('authority' in i && i.authority && i.authority_type !== 'federal') {
-        // Just return the name and logo; omit stuff that specifies location
-        // since it's not part of the public API.
-        authorities[i.authority] = _.pick(
-          stateAuthorities[i.authority_type]![i.authority],
-          'name',
-          'logo',
-        );
+        authorities[i.authority] =
+          stateAuthorities[i.authority_type]![i.authority];
       }
     });
   }

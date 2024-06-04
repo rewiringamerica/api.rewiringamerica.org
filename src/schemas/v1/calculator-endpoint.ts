@@ -14,20 +14,20 @@ const API_CALCULATOR_REQUEST_SCHEMA = {
   properties: {
     zip: {
       type: 'string',
-      description:
-        'Your zip code helps us estimate the amount of discounts and tax credits you qualify for by finding representative census tracts in your area.',
+      description: `Find incentives that may be available in this ZIP code. \
+Exactly one of this and "address" is required.`,
       maxLength: 5,
       minLength: 5,
     },
     address: {
       type: 'string',
-      description:
-        "Your address can determine the precise census tract you're in that determines the correct amount of discounts and tax credits you qualify for.",
+      description: `Find incentives that may be available at this address. \
+Exactly one of this and "zip" is required.`,
     },
     authority_types: {
       type: 'array',
-      description:
-        'Which types of authority to fetch incentives for: "federal", "state", or "utility".',
+      description: `Find incentives offered by these types of authorities. \
+If absent, incentives from all types of authorities will be considered.`,
       items: {
         type: 'string',
         enum: Object.values(AuthorityType),
@@ -37,14 +37,14 @@ const API_CALCULATOR_REQUEST_SCHEMA = {
     },
     utility: {
       type: 'string',
-      description:
-        'The ID of your utility company, as returned from /utilities. ' +
-        'Required if authority_types includes "utility".',
+      description: `The ID of your utility company, as returned from \
+\`/api/v1/utilities\`. Required if authority_types includes "utility". If \
+absent, no incentives offered by utilities will be returned.`,
     },
     items: {
       type: 'array',
-      description:
-        'Which types of product or project to fetch incentives for. If absent, include all products/projects.',
+      description: `Which types of product or service to fetch incentives for. \
+If absent, include incentives for all products and services.`,
       items: {
         type: 'string',
         enum: ALL_ITEMS,
@@ -54,13 +54,15 @@ const API_CALCULATOR_REQUEST_SCHEMA = {
     },
     owner_status: {
       type: 'string',
-      description: 'Homeowners and renters qualify for different incentives.',
+      description: 'Whether the consumer owns or rents their home.',
       enum: Object.values(OwnerStatus),
     },
     household_income: {
       type: 'integer',
-      description:
-        'Enter your gross income (income before taxes). Include wages and salary plus other forms of income, including pensions, interest, dividends, and rental income. If you are married and file jointly, include your spouse’s income.',
+      description: `The consumer's gross income (pre-tax). Include wages and \
+salary plus other forms of income, including pensions, interest, dividends, \
+and rental income. Married taxpayers filing jointly should include their \
+spouse's income.`,
       minimum: 0,
       maximum: 100000000,
       examples: [
@@ -70,13 +72,14 @@ const API_CALCULATOR_REQUEST_SCHEMA = {
     tax_filing: {
       type: 'string',
       description:
-        'Select "Head of Household" if you have a child or relative living with you, and you pay more than half the costs of your home. Select "Joint" if you file your taxes as a married couple.',
+        'The status under which the consumer files their federal taxes.',
       enum: Object.values(FilingStatus),
     },
     household_size: {
       type: 'integer',
-      description:
-        'Include anyone you live with who you claim as a dependent on your taxes, and your spouse or partner if you file taxes together.',
+      description: `The consumer's household size for tax purposes. Should \
+include anyone the consumer lives with who they claim as a dependent on their \
+taxes, and their spouse if they file taxes jointly.`,
       minimum: 1,
       maximum: 8,
       examples: [
@@ -85,8 +88,7 @@ const API_CALCULATOR_REQUEST_SCHEMA = {
     },
     language: {
       type: 'string',
-      description:
-        'Optional choice of language for `item`, `program` and `item_url` properties.',
+      description: 'Optional choice of language for user-visible strings.',
       enum: [
         'en',
         'es',
@@ -128,21 +130,31 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
   properties: {
     is_under_80_ami: {
       type: 'boolean',
+      description: `Whether the given household income is below the "80% of \
+Area Median Income" level for the given household size and location.`,
     },
     is_under_150_ami: {
       type: 'boolean',
+      description: `Whether the given household income is below the "150% of \
+Area Median Income" level for the given household size and location.`,
     },
     is_over_150_ami: {
       type: 'boolean',
+      description: `Whether the given household income is above the "150% of \
+Area Median Income" level for the given household size and location.`,
     },
     authorities: {
       type: 'object',
+      description: `Information on the entities (government agencies, \
+companies, other organizations) that offer incentives in this result set.`,
       additionalProperties: API_AUTHORITY_SCHEMA,
     },
     coverage: API_COVERAGE_SCHEMA,
     location: API_RESPONSE_LOCATION_SCHEMA,
     data_partners: {
       type: 'object',
+      description: `Information on organizations that assist in collecting, \
+verifying, and maintaining incentive data included in this result set.`,
       additionalProperties: API_DATA_PARTNER_SCHEMA,
     },
     incentives: {
@@ -154,8 +166,10 @@ export const API_CALCULATOR_RESPONSE_SCHEMA = {
 } as const;
 
 export const API_CALCULATOR_SCHEMA = {
-  description:
-    'How much money will your customer get with the Inflation Reduction Act?',
+  summary: 'Find eligible incentives',
+  description: `Compute incentives for which the user is eligible, given the \
+criteria in the request parameters.`,
+  operationId: 'getCalculatedIncentives',
   querystring: API_CALCULATOR_REQUEST_SCHEMA,
   response: {
     200: {

@@ -1,5 +1,5 @@
 import { Database } from 'sqlite';
-import { AUTHORITIES_BY_STATE, Authority } from '../data/authorities';
+import { APIAuthority, AUTHORITIES_BY_STATE } from '../data/authorities';
 import { ResolvedLocation } from './location';
 
 /** Models the zip_to_utility table in sqlite. */
@@ -22,7 +22,7 @@ export async function getUtilitiesForLocation(
   db: Database,
   location: ResolvedLocation,
 ): Promise<{
-  [id: string]: Authority;
+  [id: string]: APIAuthority;
 }> {
   const stateUtilities = AUTHORITIES_BY_STATE[location.state]?.utility;
 

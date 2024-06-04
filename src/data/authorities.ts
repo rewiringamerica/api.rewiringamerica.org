@@ -26,7 +26,7 @@ export enum AuthorityType {
   Other = 'other',
 }
 
-export const API_AUTHORITY_SCHEMA = {
+const AUTHORITY_SCHEMA = {
   type: 'object',
   properties: {
     name: { type: 'string' },
@@ -38,11 +38,25 @@ export const API_AUTHORITY_SCHEMA = {
   additionalProperties: false,
 } as const;
 
-export type Authority = FromSchema<typeof API_AUTHORITY_SCHEMA>;
+/**
+ * The same as the above, but with only the name and logo fields; this is what
+ * is exposed via the API.
+ */
+export const API_AUTHORITY_SCHEMA = {
+  type: 'object',
+  properties: {
+    name: { type: 'string' },
+    logo: API_IMAGE_SCHEMA,
+  },
+  required: ['name'],
+  additionalProperties: false,
+} as const;
+
+export type APIAuthority = FromSchema<typeof API_AUTHORITY_SCHEMA>;
 
 const authoritiesMapSchema = {
   type: 'object',
-  additionalProperties: API_AUTHORITY_SCHEMA,
+  additionalProperties: AUTHORITY_SCHEMA,
   required: [],
 } as const;
 

@@ -10,21 +10,23 @@ import { FromSchema } from 'json-schema-to-ts';
  */
 export const API_RESPONSE_LOCATION_SCHEMA = {
   type: 'object',
+  description:
+    'The computed location of the request\'s "zip" or "address" parameter.',
   properties: {
     state: {
       type: 'string',
-      description:
-        'The two-letter abbreviation for the state, district, or territory of the location submitted in the request.',
+      description: `The two-letter abbreviation for the state, district, or \
+territory of the location submitted in the request.`,
     },
     city: {
       type: 'string',
       description:
-        'The city name as determined by looking up the zip code in our database.',
+        'The city name as determined by looking up the ZIP code in our database.',
     },
     county: {
       type: 'string',
       description:
-        'The county name as determined by looking up the zip code in our database.',
+        'The county name as determined by looking up the ZIP code in our database.',
     },
   },
   required: ['state'],

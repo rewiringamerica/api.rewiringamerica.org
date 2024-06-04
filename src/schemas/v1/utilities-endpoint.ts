@@ -7,10 +7,15 @@ export const API_UTILITIES_RESPONSE_SCHEMA = {
     location: API_RESPONSE_LOCATION_SCHEMA,
     utilities: {
       type: 'object',
+      description: 'A map of utility IDs to info about each utility.',
       additionalProperties: {
         type: 'object',
         properties: {
-          name: { type: 'string' },
+          name: {
+            type: 'string',
+            description: `The customer-facing brand name of the utility. This \
+may differ from the name of the utility's legal entity.`,
+          },
         },
       },
     },
@@ -20,21 +25,26 @@ export const API_UTILITIES_RESPONSE_SCHEMA = {
 };
 
 export const API_UTILITIES_SCHEMA = {
-  description: 'Which utilities might serve a given location?',
+  summary: 'Find utilities by location',
+  description: `Returns the electric utilities that may serve the given \
+location. Because the location is imprecise, and because utility service \
+territories aren't precisely defined, there may be multiple results, including \
+utilities that don't actually serve the given location.`,
+  operationId: 'getUtilities',
   querystring: {
     type: 'object',
     properties: {
       zip: {
         type: 'string',
-        description:
-          'Your zip code helps us estimate the amount of discounts and tax credits you qualify for by finding representative census tracts in your area.',
+        description: `Find utilities that may serve this ZIP code. Exactly one \
+of this or "address" is required.`,
         maxLength: 5,
         minLength: 5,
       },
       address: {
         type: 'string',
-        description:
-          "Your address can determine the precise census tract you're in that determines the correct amount of discounts and tax credits you qualify for.",
+        description: `Find utilities that may serve this address. Exactly one \
+of this or "zip" is required.`,
       },
       language: {
         type: 'string',
@@ -44,12 +54,6 @@ export const API_UTILITIES_SCHEMA = {
           'es',
         ],
         default: 'en',
-      },
-      include_beta_states: {
-        type: 'boolean',
-        description:
-          'Option to include states which are in development and not fully launched.',
-        default: 'false',
       },
     },
     oneOf: [
