@@ -158,19 +158,23 @@ available. Format is the same as for \`start_date\`.`,
       type: 'string',
       nullable: true,
       enum: [...Object.values(AmiQualification), null],
+      deprecated: true,
     },
     agi_max_limit: {
       type: 'number',
       nullable: true,
+      deprecated: true,
     },
     agi_min_limit: {
       type: 'number',
       nullable: true,
+      deprecated: true,
     },
     filing_status: {
       type: 'string',
       nullable: true,
       enum: [...Object.values(FilingStatus), null],
+      deprecated: true,
     },
     short_description: {
       type: 'string',

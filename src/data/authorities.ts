@@ -39,8 +39,8 @@ const AUTHORITY_SCHEMA = {
 } as const;
 
 /**
- * The same as the above, but with only the name and logo fields; this is what
- * is exposed via the API.
+ * The same as AUTHORITY_SCHEMA, but with only the name and logo fields; this is
+ * what is exposed via the API.
  */
 export const API_AUTHORITY_SCHEMA = {
   type: 'object',
