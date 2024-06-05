@@ -12,6 +12,8 @@ export const API_STATES_RESPONSE_SCHEMA = {
         properties: {
           status: { type: 'string', enum: Object.values(StateStatus) },
         },
+        required: ['status'],
+        additionalProperties: false,
       },
     ]),
   ),
@@ -19,7 +21,17 @@ export const API_STATES_RESPONSE_SCHEMA = {
 };
 
 export const API_STATES_SCHEMA = {
-  description: 'What is the rollout status of each state?',
+  summary: 'Get state rollout status',
+  description: `For each state (and Washington, DC), return the development \
+status of its state-, utility-, and local-level incentive data. (Note that \
+federal-level incentive data is available regardless of location.)
+
+\`none\` means that state, local, and utility (SLU) incentives \
+for the state are not in the API at all. \`beta\` means that SLU incentives \
+have not been fully vetted, and will be returned from \`/api/v1/calculator\` \
+only if the \`include_beta_states\` request parameter is true. \`launched\` \
+means that SLU incentives are fully vetted and returned in the API.`,
+  operationId: 'getStateStatus',
   response: {
     200: {
       ...API_STATES_RESPONSE_SCHEMA,

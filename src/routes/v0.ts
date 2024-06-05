@@ -73,7 +73,11 @@ function translateIncentives(incentives: IRAIncentive[]): WebsiteIncentive[] {
 }
 
 const CalculatorSchema = {
-  description: 'How much money will you get with the Inflation Reduction Act?',
+  summary: '(Deprecated) Find eligible incentives',
+  description: `Compute incentives for which the user is eligible, given the \
+criteria in the request parameters.`,
+  deprecated: true,
+  operationId: 'calculator-get',
   querystring: WEBSITE_CALCULATOR_REQUEST_SCHEMA,
   response: {
     200: {
@@ -89,7 +93,13 @@ const CalculatorSchema = {
 } as const;
 
 const IncentivesSchema = {
-  description: 'What are all the incentives from the Inflation Reduction Act?',
+  summary: '(Deprecated) List all incentives',
+  description: `List all available incentives, before applying eligibility \
+criteria. Note that there will be duplicates with only subtle differences \
+between eligibility tiers. Use the calculator endpoint to get de-duped \
+incentives.`,
+  deprecated: true,
+  operationId: 'incentives-get',
   response: {
     200: {
       description: 'Successful response',
@@ -105,7 +115,7 @@ const IncentivesSchema = {
       },
     },
   },
-};
+} as const;
 
 export default async function (
   fastify: FastifyInstance & { sqlite: Database },

@@ -5,12 +5,15 @@ export const API_IMAGE_SCHEMA = {
   properties: {
     src: {
       type: 'string',
+      description: 'The URL to fetch the image from.',
     },
     width: {
       type: 'number',
+      description: "The image's width in pixels.",
     },
     height: {
       type: 'number',
+      description: "The image's height in pixels.",
     },
   },
   required: ['src', 'width', 'height'],
