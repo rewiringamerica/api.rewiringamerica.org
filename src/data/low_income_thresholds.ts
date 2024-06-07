@@ -44,6 +44,7 @@ export const RANGE_SCHEMA = {
   type: 'array',
   items: {
     type: 'number',
+    minimum: 0,
   },
   minItems: 2,
   maxItems: 2,
