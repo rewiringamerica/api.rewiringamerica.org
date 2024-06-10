@@ -29,7 +29,7 @@ test('basic test for supplying test incentive data to calculation logic', async 
     LOCATION,
     {
       owner_status: OwnerStatus.Homeowner,
-      household_income: 120000,
+      household_income: 30000,
       tax_filing: FilingStatus.Single,
       household_size: 1,
       authority_types: [AuthorityType.Utility],
@@ -54,7 +54,7 @@ test('test calculation with no incentives', async t => {
     LOCATION,
     {
       owner_status: OwnerStatus.Homeowner,
-      household_income: 120000,
+      household_income: 30000,
       tax_filing: FilingStatus.Single,
       household_size: 1,
       authority_types: [AuthorityType.Utility],
@@ -83,7 +83,7 @@ test('test incentive relationship logic', async t => {
     LOCATION,
     {
       owner_status: OwnerStatus.Renter,
-      household_income: 120000,
+      household_income: 30000,
       tax_filing: FilingStatus.Single,
       household_size: 1,
       authority_types: [AuthorityType.Utility],
@@ -120,7 +120,7 @@ test('test more complex incentive relationship logic', async t => {
     LOCATION,
     {
       owner_status: OwnerStatus.Renter,
-      household_income: 120000,
+      household_income: 30000,
       tax_filing: FilingStatus.Single,
       household_size: 1,
       authority_types: [AuthorityType.Utility],
@@ -160,7 +160,7 @@ test('test incentive relationship and combined max value logic', async t => {
     LOCATION,
     {
       owner_status: OwnerStatus.Renter,
-      household_income: 120000,
+      household_income: 30000,
       tax_filing: FilingStatus.Single,
       household_size: 1,
       authority_types: [AuthorityType.Utility],
@@ -242,7 +242,7 @@ test('test nested incentive relationship logic', async t => {
     LOCATION,
     {
       owner_status: OwnerStatus.Renter,
-      household_income: 120000,
+      household_income: 30000,
       tax_filing: FilingStatus.Single,
       household_size: 1,
       authority_types: [AuthorityType.Utility],
@@ -272,7 +272,7 @@ test('test combined maximum savings logic', async t => {
     LOCATION,
     {
       owner_status: OwnerStatus.Renter,
-      household_income: 120000,
+      household_income: 30000,
       tax_filing: FilingStatus.Single,
       household_size: 1,
       authority_types: [AuthorityType.Utility],

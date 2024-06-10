@@ -203,11 +203,7 @@ test('state incentives JSON files match schemas', async tap => {
         );
       }
 
-      // Allow duplicate incentive IDs if we split one incentive into multiple due
-      // to tax filing status
-      if (incentive.filing_status === null) {
-        tap.equal(incentiveIds.has(incentive.id), false);
-      }
+      tap.equal(incentiveIds.has(incentive.id), false);
       incentiveIds.add(incentive.id);
     });
   });

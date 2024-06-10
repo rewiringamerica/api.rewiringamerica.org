@@ -916,6 +916,64 @@
         }
       }
     },
+    "vt-ev-low": {
+      "type": "filing-status",
+      "incentives": [
+        "VT-75"
+      ],
+      "source_url": "https://www.driveelectricvt.com/incentives/vermont-state-incentives",
+      "thresholds": {
+        "single": [
+          0,
+          60000
+        ],
+        "hoh": [
+          0,
+          75000
+        ],
+        "qualifying_widower_with_dependent_child": [
+          0,
+          90000
+        ],
+        "joint": [
+          0,
+          90000
+        ],
+        "married_filing_separately": [
+          0,
+          60000
+        ]
+      }
+    },
+    "vt-ev-moderate": {
+      "type": "filing-status",
+      "incentives": [
+        "VT-76"
+      ],
+      "source_url": "https://www.driveelectricvt.com/incentives/vermont-state-incentives",
+      "thresholds": {
+        "single": [
+          60001,
+          100000
+        ],
+        "hoh": [
+          75001,
+          125000
+        ],
+        "qualifying_widower_with_dependent_child": [
+          90001,
+          150000
+        ],
+        "joint": [
+          90001,
+          150000
+        ],
+        "married_filing_separately": [
+          60001,
+          100000
+        ]
+      }
+    },
     "vt-burlington-electric-department": {
       "type": "hhsize",
       "incentives": [
