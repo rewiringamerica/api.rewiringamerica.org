@@ -1,7 +1,5 @@
 import { FromSchema } from 'json-schema-to-ts';
 import { AuthorityType } from '../../data/authorities';
-import { AmiQualification } from '../../data/ira_incentives';
-import { FilingStatus } from '../../data/tax_brackets';
 import { AmountType, AmountUnit } from '../../data/types/amount';
 import { PaymentMethod } from '../../data/types/incentive-types';
 import { ALL_ITEMS } from '../../data/types/items';
@@ -154,28 +152,6 @@ modifications and additions. Examples:
       type: 'string',
       description: `The date when the incentive stopped, or will stop, being \
 available. Format is the same as for \`start_date\`.`,
-    },
-    ami_qualification: {
-      type: 'string',
-      nullable: true,
-      enum: [...Object.values(AmiQualification), null],
-      deprecated: true,
-    },
-    agi_max_limit: {
-      type: 'number',
-      nullable: true,
-      deprecated: true,
-    },
-    agi_min_limit: {
-      type: 'number',
-      nullable: true,
-      deprecated: true,
-    },
-    filing_status: {
-      type: 'string',
-      nullable: true,
-      enum: [...Object.values(FilingStatus), null],
-      deprecated: true,
     },
     short_description: {
       type: 'string',

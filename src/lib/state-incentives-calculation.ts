@@ -206,10 +206,6 @@ function transformItems(
     const transformedItem = {
       ...item,
       eligible,
-
-      // Fill in fields expected for IRA incentive.
-      // TODO: don't require these on APIIncentive
-      ami_qualification: null,
     };
     transformed.push(transformedItem);
   }
