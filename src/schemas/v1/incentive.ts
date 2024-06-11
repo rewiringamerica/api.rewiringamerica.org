@@ -84,11 +84,8 @@ from this incentive.
 
 This format does not capture the full range of possible incentive structures, \
 which can be very complex and dependent on a wide range of factors. It is a \
-simplification in many cases.`,
-      properties: {
-        type: {
-          type: 'string',
-          description: `The structure of the amount.
+simplification in many cases. There are three amount structures, distinguished \
+by the \`type\` field:
 
 - \`dollar_amount\`: a flat amount. This value is also used as a catchall for \
 amount structures that don't fit into the other categories; in such cases, the \
@@ -97,6 +94,10 @@ aim is to at least capture the maximum value the incentive can have.
 equipment.
 - \`percent\`: an amount that is a percentage of the cost of the product or \
 service.`,
+      properties: {
+        type: {
+          type: 'string',
+          description: 'The structure of the amount.',
           enum: Object.values(AmountType),
         },
         number: {
