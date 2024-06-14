@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { FromSchema } from 'json-schema-to-ts';
 import { API_IMAGE_SCHEMA } from '../schemas/v1/image';
-import { STATES_PLUS_DC } from './types/states';
+import { STATES_AND_TERRITORIES } from './types/states';
 
 /**
  * An authority is a government agency, utility, or other organization that
@@ -66,7 +66,7 @@ export const SCHEMA = {
   type: 'object',
   propertyNames: {
     type: 'string',
-    enum: STATES_PLUS_DC,
+    enum: STATES_AND_TERRITORIES,
   },
   additionalProperties: {
     type: 'object',
@@ -88,7 +88,7 @@ export type AuthoritiesByState = FromSchema<typeof SCHEMA>;
 
 export const AUTHORITIES_BY_STATE: AuthoritiesByState = (() => {
   const result: AuthoritiesByState = {};
-  for (const state of STATES_PLUS_DC) {
+  for (const state of STATES_AND_TERRITORIES) {
     const filepath = `./data/${state}/authorities.json`;
     if (fs.existsSync(filepath)) {
       result[state] = JSON.parse(fs.readFileSync(filepath, 'utf-8'));

@@ -2,7 +2,7 @@ import { StateStatus } from '../data/types/state-status';
 import {
   BETA_STATES,
   LAUNCHED_STATES,
-  STATES_PLUS_DC,
+  STATES_AND_TERRITORIES,
 } from '../data/types/states';
 
 export const isStateIncluded = (
@@ -22,5 +22,5 @@ const getStatus = (state: string) => {
 };
 
 export const statesWithStatus = Object.fromEntries(
-  STATES_PLUS_DC.map(state => [state, { status: getStatus(state) }]),
+  STATES_AND_TERRITORIES.map(state => [state, { status: getStatus(state) }]),
 );
