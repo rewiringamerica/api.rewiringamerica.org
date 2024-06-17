@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { FromSchema } from 'json-schema-to-ts';
 import { API_IMAGE_SCHEMA } from '../schemas/v1/image';
-import { STATES_PLUS_DC } from './types/states';
+import { STATES_AND_TERRITORIES } from './types/states';
 
 /**
  * A data partner is a partner organization that has helped gather
@@ -36,7 +36,7 @@ export const SCHEMA = {
   type: 'object',
   propertyNames: {
     type: 'string',
-    enum: STATES_PLUS_DC,
+    enum: STATES_AND_TERRITORIES,
   },
   additionalProperties: dataPartnerMapSchema,
   required: [],

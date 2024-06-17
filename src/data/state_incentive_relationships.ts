@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { FromSchema } from 'json-schema-to-ts';
-import { STATES_PLUS_DC } from './types/states';
+import { STATES_AND_TERRITORIES } from './types/states';
 
 export const anyOrAllSchema = {
   type: 'array',
@@ -70,7 +70,7 @@ export type IncentiveRelationshipsMap = {
 export const INCENTIVE_RELATIONSHIPS_BY_STATE: IncentiveRelationshipsMap =
   (() => {
     const result: IncentiveRelationshipsMap = {};
-    for (const state of STATES_PLUS_DC) {
+    for (const state of STATES_AND_TERRITORIES) {
       const filepath = `./data/${state}/incentive_relationships.json`;
       if (fs.existsSync(filepath)) {
         result[state] = JSON.parse(fs.readFileSync(filepath, 'utf-8'));
