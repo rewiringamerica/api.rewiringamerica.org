@@ -527,7 +527,7 @@ export const VT_PROGRAMS = {
       en: 'https://vgsvt.com/savings/residentialrebate/weatherization-rebates/',
     },
   },
-  vt_stoweElectricDepartment_stoweElectricRebates&Incentives: {
+  'vt_stoweElectricDepartment_stoweElectricRebates&Incentives': {
     name: {
       en: 'Stowe Electric Rebates & Incentives',
     },

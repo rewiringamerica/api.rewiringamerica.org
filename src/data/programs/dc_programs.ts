@@ -39,7 +39,7 @@ export const DC_PROGRAMS = {
       en: 'https://doee.dc.gov/solarforall',
     },
   },
-  dc_dCDepartmentOfEnergyAndEnvironment_LowIncomeHomeEnergyAssistanceProgram(LIHEAP): {
+  'dc_dCDepartmentOfEnergyAndEnvironment_LowIncomeHomeEnergyAssistanceProgram(LIHEAP)': {
     name: {
       en: ' Low Income Home Energy Assistance Program (LIHEAP)',
     },

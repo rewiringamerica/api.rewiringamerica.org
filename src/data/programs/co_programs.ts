@@ -247,7 +247,7 @@ export const CO_PROGRAMS = {
       en: 'https://energyoffice.colorado.gov/transportation/grants-incentives/electric-vehicle-tax-credits',
     },
   },
-  co_coloradoEnergyOffice_vehicleExchangeColorado(VXC)Program: {
+  'co_coloradoEnergyOffice_vehicleExchangeColorado(VXC)Program': {
     name: {
       en: 'Vehicle Exchange Colorado (VXC) Program',
     },
@@ -359,7 +359,7 @@ export const CO_PROGRAMS = {
       en: 'https://www.myelectric.coop/energy-efficiency/energy-efficiency-credit-programs/',
     },
   },
-  co_sangreDeCristoElectricAssociation_saveEnergy&Money: {
+  'co_sangreDeCristoElectricAssociation_saveEnergy&Money': {
     name: {
       en: 'Sangre de Cristo Electric Association - Save Energy & Money',
     },
@@ -415,7 +415,7 @@ export const CO_PROGRAMS = {
       en: 'https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/',
     },
   },
-  co_walkingMountains_rebates&Incentives: {
+  'co_walkingMountains_rebates&Incentives': {
     name: {
       en: 'Walking Mountains Rebates & Incentives',
     },

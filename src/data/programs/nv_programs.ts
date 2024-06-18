@@ -47,7 +47,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver/home-improvements',
     },
   },
-  nv_wellsRuralElectric_saveEnergy,SaveMoney: {
+  'nv_wellsRuralElectric_saveEnergy,SaveMoney': {
     name: {
       en: 'Save Energy, Save Money',
     },

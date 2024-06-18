@@ -7,7 +7,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.cvecoop.com/rebates.php',
     },
   },
-  wi_focusOnEnergy_dIYInsulation&AirSealingRebates: {
+  'wi_focusOnEnergy_dIYInsulation&AirSealingRebates': {
     name: {
       en: 'DIY Insulation & Air Sealing Rebates',
     },
@@ -39,7 +39,7 @@ export const WI_PROGRAMS = {
       en: 'https://focusonenergy.com/residential/smart-thermostats',
     },
   },
-  wi_focusOnEnergy_heating&CoolingRebates: {
+  'wi_focusOnEnergy_heating&CoolingRebates': {
     name: {
       en: 'Heating & Cooling Rebates',
     },
@@ -47,7 +47,7 @@ export const WI_PROGRAMS = {
       en: 'https://focusonenergy.com/residential/heating-and-cooling',
     },
   },
-  wi_focusOnEnergy_insulation&AirSealingRebates: {
+  'wi_focusOnEnergy_insulation&AirSealingRebates': {
     name: {
       en: 'Insulation & Air Sealing Rebates',
     },
@@ -55,7 +55,7 @@ export const WI_PROGRAMS = {
       en: 'https://focusonenergy.com/residential/insulation-and-air-sealing',
     },
   },
-  wi_barronElectricCooperative_energySavingsRebates:EVChargers: {
+  'wi_barronElectricCooperative_energySavingsRebates:EVChargers': {
     name: {
       en: 'Energy Savings Rebates: EV Chargers',
     },
@@ -63,7 +63,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.barronelectric.com/2024-energy-rebates',
     },
   },
-  wi_barronElectricCooperative_energySavingsRebates:HVAC: {
+  'wi_barronElectricCooperative_energySavingsRebates:HVAC': {
     name: {
       en: 'Energy Savings Rebates: HVAC',
     },
@@ -71,7 +71,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.barronelectric.com/2024-energy-rebates',
     },
   },
-  wi_barronElectricCooperative_energySavingsRebates:WaterHeaters: {
+  'wi_barronElectricCooperative_energySavingsRebates:WaterHeaters': {
     name: {
       en: 'Energy Savings Rebates: Water Heaters',
     },
@@ -79,7 +79,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.barronelectric.com/2024-energy-rebates',
     },
   },
-  wi_barronElectricCooperative_energySavingsRebates:EnergyStarAppliances: {
+  'wi_barronElectricCooperative_energySavingsRebates:EnergyStarAppliances': {
     name: {
       en: 'Energy Savings Rebates: Energy Star Appliances',
     },
@@ -87,7 +87,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.barronelectric.com/2024-energy-rebates',
     },
   },
-  wi_barronElectricCooperative_energySavingsRebates:AuditRecommendedImprovements: {
+  'wi_barronElectricCooperative_energySavingsRebates:AuditRecommendedImprovements': {
     name: {
       en: 'Energy Savings Rebates: Audit Recommended Improvements',
     },
@@ -231,7 +231,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.jackelec.com/rebates-and-incentives',
     },
   },
-  wi_madisonGasAndElectric_charge@Home: {
+  'wi_madisonGasAndElectric_charge@Home': {
     name: {
       en: 'Charge@Home',
     },
@@ -327,7 +327,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.polkburnett.com/rebates',
     },
   },
-  wi_priceElectricCooperative_pECSmartSenseRebates:HVAC: {
+  'wi_priceElectricCooperative_pECSmartSenseRebates:HVAC': {
     name: {
       en: 'PEC Smart Sense Rebates: HVAC',
     },
@@ -335,7 +335,7 @@ export const WI_PROGRAMS = {
       en: 'https://priceelectric.coop/smart-sense-rebates',
     },
   },
-  wi_priceElectricCooperative_pECSmartSenseRebates:Appliances: {
+  'wi_priceElectricCooperative_pECSmartSenseRebates:Appliances': {
     name: {
       en: 'PEC Smart Sense Rebates: Appliances',
     },
@@ -343,7 +343,7 @@ export const WI_PROGRAMS = {
       en: 'https://priceelectric.coop/smart-sense-rebates',
     },
   },
-  wi_priceElectricCooperative_pECSmartSenseRebates:WaterHeaters: {
+  'wi_priceElectricCooperative_pECSmartSenseRebates:WaterHeaters': {
     name: {
       en: 'PEC Smart Sense Rebates: Water Heaters',
     },
@@ -351,7 +351,7 @@ export const WI_PROGRAMS = {
       en: 'https://priceelectric.coop/smart-sense-rebates',
     },
   },
-  wi_priceElectricCooperative_pECSmartSenseRebates:Solar: {
+  'wi_priceElectricCooperative_pECSmartSenseRebates:Solar': {
     name: {
       en: 'PEC Smart Sense Rebates: Solar',
     },

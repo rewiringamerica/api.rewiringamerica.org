@@ -1,5 +1,5 @@
 export const RI_PROGRAMS = {
-  ri_pascoagUtilityDistrict_hVAC&WaterHeaterIncentives: {
+  'ri_pascoagUtilityDistrict_hVAC&WaterHeaterIncentives': {
     name: {
       en: 'Pascoag Utility District HVAC & Water Heater Incentives',
     },
@@ -39,7 +39,7 @@ export const RI_PROGRAMS = {
       en: 'https://drive.ri.gov/ev-programs/drive-ev',
     },
   },
-  ri_oER_dRIVE+: {
+  'ri_oER_dRIVE+': {
     name: {
       en: 'RI Office of Energy Resources DRIVE+',
     },
@@ -79,7 +79,7 @@ export const RI_PROGRAMS = {
       en: 'https://drive.ri.gov/erika-niedowski-memorial-electric-bicycle-rebate-program',
     },
   },
-  ri_rhodeIslandEnergy_rhodeIslandENERGYSTAR®CertifiedElectricClothesDryerRebate: {
+  'ri_rhodeIslandEnergy_rhodeIslandENERGYSTAR®CertifiedElectricClothesDryerRebate': {
     name: {
       en: 'Rhode Island Energy ENERGY STAR® Certified Electric Clothes Dryer Rebate',
     },

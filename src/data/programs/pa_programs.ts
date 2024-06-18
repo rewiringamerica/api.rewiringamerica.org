@@ -1,5 +1,5 @@
 export const PA_PROGRAMS = {
-  pa_pPLElectricUtilitiesCorp_products&Rebates: {
+  'pa_pPLElectricUtilitiesCorp_products&Rebates': {
     name: {
       en: 'Products & Rebates',
     },
@@ -71,7 +71,7 @@ export const PA_PROGRAMS = {
       en: 'https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/water-heater-rebates',
     },
   },
-  pa_pECO_heating&CoolingRebates: {
+  'pa_pECO_heating&CoolingRebates': {
     name: {
       en: 'Heating & Cooling Rebates',
     },
