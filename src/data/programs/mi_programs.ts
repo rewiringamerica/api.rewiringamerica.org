@@ -1,5 +1,5 @@
 export const MI_PROGRAMS = {
-  'mi_consumersEnergy_residentialHeating,CoolingAndWaterHeatingProgram': {
+  mi_consumersEnergy_residentialHeating,CoolingAndWaterHeatingProgram: {
     name: {
       en: 'Residential Heating, Cooling and Water Heating Program',
     },
@@ -31,7 +31,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.consumersenergy.com/residential/save-money-and-energy/rebates/windows-and-insulation#inwin-windows-door',
     },
   },
-  'mi_consumersEnergy_powerMIDrive™HomeChargerInstallationRebates': {
+  mi_consumersEnergy_powerMIDrive™HomeChargerInstallationRebates: {
     name: {
       en: 'PowerMIDrive™ Home Charger Installation Rebates',
     },
@@ -55,7 +55,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/air-conditioners.html',
     },
   },
-  'mi_dTE_wi-FiEnabledThermostats': {
+  mi_dTE_wi-FiEnabledThermostats: {
     name: {
       en: 'Wi-Fi Enabled Thermostats',
     },
@@ -63,7 +63,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/wi-fi-enabled-thermostats.html',
     },
   },
-  'mi_dTE_insulation&Windows': {
+  mi_dTE_insulation&Windows: {
     name: {
       en: 'Insulation & Windows',
     },
@@ -71,7 +71,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html',
     },
   },
-  'mi_dTE_washers&Dryers': {
+  mi_dTE_washers&Dryers: {
     name: {
       en: 'Washers & Dryers',
     },
@@ -111,7 +111,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.gtlakes.com/energy-wise/',
     },
   },
-  'mi_indianaMichiganPower_i&MMarketplace': {
+  mi_indianaMichiganPower_i&MMarketplace: {
     name: {
       en: 'I&M Marketplace',
     },
@@ -127,7 +127,7 @@ export const MI_PROGRAMS = {
       en: 'https://ee.uppco.com/uppco-heat-pump/',
     },
   },
-  'mi_upperPeninsulaPowerCompany_uPPCOENERGYSTAR®Program': {
+  mi_upperPeninsulaPowerCompany_uPPCOENERGYSTAR®Program: {
     name: {
       en: 'UPPCO ENERGY STAR ® Program',
     },
@@ -159,7 +159,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.lbwl.com/hvac',
     },
   },
-  'mi_lansingBoardOfWaterAndLight_lansingBWLPlug-InElectricVehicleRebates': {
+  mi_lansingBoardOfWaterAndLight_lansingBWLPlug-InElectricVehicleRebates: {
     name: {
       en: 'Lansing BWL Plug-in Electric Vehicle Rebates',
     },

@@ -47,7 +47,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver/home-improvements',
     },
   },
-  'nv_wellsRuralElectric_saveEnergy,SaveMoney': {
+  nv_wellsRuralElectric_saveEnergy,SaveMoney: {
     name: {
       en: 'Save Energy, Save Money',
     },
@@ -55,15 +55,14 @@ export const NV_PROGRAMS = {
       en: 'https://www.wrec.coop/save-energy-save-money/rebates/',
     },
   },
-  nv_lincolnCountyPowerDistrictNo1_residentialAndCommercialHighEfficiencyAirConditioningAndHeatPumpRebate:
-    {
-      name: {
-        en: 'Residential and Commercial High Efficiency Air Conditioning and Heat Pump Rebate',
-      },
-      url: {
-        en: 'https://lcpd1.com/form/hvac-rebate-application',
-      },
+  nv_lincolnCountyPowerDistrictNo1_residentialAndCommercialHighEfficiencyAirConditioningAndHeatPumpRebate: {
+    name: {
+      en: 'Residential and Commercial High Efficiency Air Conditioning and Heat Pump Rebate',
     },
+    url: {
+      en: 'https://lcpd1.com/form/hvac-rebate-application',
+    },
+  },
   nv_mtWheelerPower_windowsAndInsulationRebates: {
     name: {
       en: 'Windows and Insulation Rebates',
@@ -120,7 +119,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.rrelectric.com/member-services/energy-efficiency/energy-efficiency-rebates/',
     },
   },
-  'nv_plumas-SierraRuralElectricCooperative_rebates': {
+  nv_plumas-SierraRuralElectricCooperative_rebates: {
     name: {
       en: 'Rebates',
     },

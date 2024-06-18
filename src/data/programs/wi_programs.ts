@@ -1,5 +1,13 @@
 export const WI_PROGRAMS = {
-  'wi_focusOnEnergy_dIYInsulation&AirSealingRebates': {
+  wi_chippewaValleyElectricCooperative_hVACIncentives: {
+    name: {
+      en: 'HVAC Incentives',
+    },
+    url: {
+      en: 'https://www.cvecoop.com/rebates.php',
+    },
+  },
+  wi_focusOnEnergy_dIYInsulation&AirSealingRebates: {
     name: {
       en: 'DIY Insulation & Air Sealing Rebates',
     },
@@ -31,7 +39,7 @@ export const WI_PROGRAMS = {
       en: 'https://focusonenergy.com/residential/smart-thermostats',
     },
   },
-  'wi_focusOnEnergy_heating&CoolingRebates': {
+  wi_focusOnEnergy_heating&CoolingRebates: {
     name: {
       en: 'Heating & Cooling Rebates',
     },
@@ -39,7 +47,7 @@ export const WI_PROGRAMS = {
       en: 'https://focusonenergy.com/residential/heating-and-cooling',
     },
   },
-  'wi_focusOnEnergy_insulation&AirSealingRebates': {
+  wi_focusOnEnergy_insulation&AirSealingRebates: {
     name: {
       en: 'Insulation & Air Sealing Rebates',
     },
@@ -47,7 +55,7 @@ export const WI_PROGRAMS = {
       en: 'https://focusonenergy.com/residential/insulation-and-air-sealing',
     },
   },
-  'wi_barronElectricCooperative_energySavingsRebates:EVChargers': {
+  wi_barronElectricCooperative_energySavingsRebates:EVChargers: {
     name: {
       en: 'Energy Savings Rebates: EV Chargers',
     },
@@ -55,7 +63,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.barronelectric.com/2024-energy-rebates',
     },
   },
-  'wi_barronElectricCooperative_energySavingsRebates:HVAC': {
+  wi_barronElectricCooperative_energySavingsRebates:HVAC: {
     name: {
       en: 'Energy Savings Rebates: HVAC',
     },
@@ -63,7 +71,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.barronelectric.com/2024-energy-rebates',
     },
   },
-  'wi_barronElectricCooperative_energySavingsRebates:WaterHeaters': {
+  wi_barronElectricCooperative_energySavingsRebates:WaterHeaters: {
     name: {
       en: 'Energy Savings Rebates: Water Heaters',
     },
@@ -71,7 +79,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.barronelectric.com/2024-energy-rebates',
     },
   },
-  'wi_barronElectricCooperative_energySavingsRebates:EnergyStarAppliances': {
+  wi_barronElectricCooperative_energySavingsRebates:EnergyStarAppliances: {
     name: {
       en: 'Energy Savings Rebates: Energy Star Appliances',
     },
@@ -79,15 +87,14 @@ export const WI_PROGRAMS = {
       en: 'https://www.barronelectric.com/2024-energy-rebates',
     },
   },
-  'wi_barronElectricCooperative_energySavingsRebates:AuditRecommendedImprovements':
-    {
-      name: {
-        en: 'Energy Savings Rebates: Audit Recommended Improvements',
-      },
-      url: {
-        en: 'https://www.barronelectric.com/2024-energy-rebates',
-      },
+  wi_barronElectricCooperative_energySavingsRebates:AuditRecommendedImprovements: {
+    name: {
+      en: 'Energy Savings Rebates: Audit Recommended Improvements',
     },
+    url: {
+      en: 'https://www.barronelectric.com/2024-energy-rebates',
+    },
+  },
   wi_bayfieldElectricCooperative_eVChargerRebates: {
     name: {
       en: 'EV Charger Rebates',
@@ -128,18 +135,9 @@ export const WI_PROGRAMS = {
       en: 'https://www.bayfieldelectric.com/rebates',
     },
   },
-  wi_chippewaValleyElectricCooperative_electricVehicleChargingStationIncentives:
-    {
-      name: {
-        en: 'Electric Vehicle Charging Station Incentives',
-      },
-      url: {
-        en: 'https://www.cvecoop.com/rebates.php',
-      },
-    },
-  wi_chippewaValleyElectricCooperative_hVACIncentives: {
+  wi_chippewaValleyElectricCooperative_electricVehicleChargingStationIncentives: {
     name: {
-      en: 'HVAC Incentives',
+      en: 'Electric Vehicle Charging Station Incentives',
     },
     url: {
       en: 'https://www.cvecoop.com/rebates.php',
@@ -233,7 +231,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.jackelec.com/rebates-and-incentives',
     },
   },
-  'wi_madisonGasAndElectric_charge@Home': {
+  wi_madisonGasAndElectric_charge@Home: {
     name: {
       en: 'Charge@Home',
     },
@@ -249,7 +247,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.piercepepin.coop/programs-rebates',
     },
   },
-  'wi_piercePepinCooperativeServices_hVAC-HeatPumps': {
+  wi_piercePepinCooperativeServices_hVAC-HeatPumps: {
     name: {
       en: 'HVAC-Heat Pumps',
     },
@@ -281,7 +279,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.piercepepin.coop/programs-rebates',
     },
   },
-  'wi_polk-BurnettElectricCooperative_eVChargerRebates': {
+  wi_polk-BurnettElectricCooperative_eVChargerRebates: {
     name: {
       en: 'EV Charger Rebates',
     },
@@ -289,7 +287,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.polkburnett.com/rebates',
     },
   },
-  'wi_polk-BurnettElectricCooperative_hVACRebates': {
+  wi_polk-BurnettElectricCooperative_hVACRebates: {
     name: {
       en: 'HVAC Rebates',
     },
@@ -297,7 +295,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.polkburnett.com/rebates',
     },
   },
-  'wi_polk-BurnettElectricCooperative_applianceRebates': {
+  wi_polk-BurnettElectricCooperative_applianceRebates: {
     name: {
       en: 'Appliance Rebates',
     },
@@ -305,7 +303,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.polkburnett.com/rebates',
     },
   },
-  'wi_polk-BurnettElectricCooperative_waterHeaterRebates': {
+  wi_polk-BurnettElectricCooperative_waterHeaterRebates: {
     name: {
       en: 'Water Heater Rebates',
     },
@@ -313,7 +311,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.polkburnett.com/rebates',
     },
   },
-  'wi_polk-BurnettElectricCooperative_renewableSolarRebates': {
+  wi_polk-BurnettElectricCooperative_renewableSolarRebates: {
     name: {
       en: 'Renewable Solar Rebates',
     },
@@ -321,7 +319,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.polkburnett.com/rebates',
     },
   },
-  'wi_polk-BurnettElectricCooperative_homeImprovementMeasureRebates': {
+  wi_polk-BurnettElectricCooperative_homeImprovementMeasureRebates: {
     name: {
       en: 'Home Improvement Measure Rebates',
     },
@@ -329,7 +327,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.polkburnett.com/rebates',
     },
   },
-  'wi_priceElectricCooperative_pECSmartSenseRebates:HVAC': {
+  wi_priceElectricCooperative_pECSmartSenseRebates:HVAC: {
     name: {
       en: 'PEC Smart Sense Rebates: HVAC',
     },
@@ -337,7 +335,7 @@ export const WI_PROGRAMS = {
       en: 'https://priceelectric.coop/smart-sense-rebates',
     },
   },
-  'wi_priceElectricCooperative_pECSmartSenseRebates:Appliances': {
+  wi_priceElectricCooperative_pECSmartSenseRebates:Appliances: {
     name: {
       en: 'PEC Smart Sense Rebates: Appliances',
     },
@@ -345,7 +343,7 @@ export const WI_PROGRAMS = {
       en: 'https://priceelectric.coop/smart-sense-rebates',
     },
   },
-  'wi_priceElectricCooperative_pECSmartSenseRebates:WaterHeaters': {
+  wi_priceElectricCooperative_pECSmartSenseRebates:WaterHeaters: {
     name: {
       en: 'PEC Smart Sense Rebates: Water Heaters',
     },
@@ -353,7 +351,7 @@ export const WI_PROGRAMS = {
       en: 'https://priceelectric.coop/smart-sense-rebates',
     },
   },
-  'wi_priceElectricCooperative_pECSmartSenseRebates:Solar': {
+  wi_priceElectricCooperative_pECSmartSenseRebates:Solar: {
     name: {
       en: 'PEC Smart Sense Rebates: Solar',
     },
@@ -361,15 +359,14 @@ export const WI_PROGRAMS = {
       en: 'https://priceelectric.coop/smart-sense-rebates',
     },
   },
-  'wi_priceElectricCooperative_pECSmartSenseRebates:EnergyAudit-RecommendedImprovements':
-    {
-      name: {
-        en: 'PEC Smart Sense Rebates: Energy Audit-Recommended Improvements',
-      },
-      url: {
-        en: 'https://priceelectric.coop/smart-sense-rebates',
-      },
+  wi_priceElectricCooperative_pECSmartSenseRebates:EnergyAudit-RecommendedImprovements: {
+    name: {
+      en: 'PEC Smart Sense Rebates: Energy Audit-Recommended Improvements',
     },
+    url: {
+      en: 'https://priceelectric.coop/smart-sense-rebates',
+    },
+  },
   wi_riverlandEnergyCooperative_eVChargingRebates: {
     name: {
       en: 'EV Charging Rebates',
