@@ -55,7 +55,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/air-conditioners.html',
     },
   },
-  mi_dTE_wi_FiEnabledThermostats: {
+  'mi_dTE_wi-FiEnabledThermostats': {
     name: {
       en: 'Wi-Fi Enabled Thermostats',
     },
@@ -159,7 +159,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.lbwl.com/hvac',
     },
   },
-  mi_lansingBoardOfWaterAndLight_lansingBWLPlug_InElectricVehicleRebates: {
+  'mi_lansingBoardOfWaterAndLight_lansingBWLPlug-InElectricVehicleRebates': {
     name: {
       en: 'Lansing BWL Plug-in Electric Vehicle Rebates',
     },

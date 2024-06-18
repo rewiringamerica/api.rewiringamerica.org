@@ -47,7 +47,7 @@ export const IL_PROGRAMS = {
       en: 'https://epa.illinois.gov/topics/ceja/electric-vehicle-rebates.html',
     },
   },
-  il_jo_CarrollEnergyCooperative_jCECo_OpEnergyEfficiencyIncentives: {
+  'il_jo-CarrollEnergyCooperative_jCECo-OpEnergyEfficiencyIncentives': {
     name: {
       en: 'JCE Co-op Energy Efficiency Incentives',
     },
@@ -71,7 +71,7 @@ export const IL_PROGRAMS = {
       en: 'https://www.illinoissfa.com/programs/for-homeowners-and-building-owners/',
     },
   },
-  il_amerenIllinois_amerenEnergy_EfficientProductDiscountsAndRebates: {
+  'il_amerenIllinois_amerenEnergy-EfficientProductDiscountsAndRebates': {
     name: {
       en: 'Ameren Energy-Efficient Product Discounts and Rebates',
     },

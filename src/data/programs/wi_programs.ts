@@ -247,7 +247,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.piercepepin.coop/programs-rebates',
     },
   },
-  wi_piercePepinCooperativeServices_hVAC_HeatPumps: {
+  'wi_piercePepinCooperativeServices_hVAC-HeatPumps': {
     name: {
       en: 'HVAC-Heat Pumps',
     },
@@ -279,7 +279,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.piercepepin.coop/programs-rebates',
     },
   },
-  wi_polk_BurnettElectricCooperative_eVChargerRebates: {
+  'wi_polk-BurnettElectricCooperative_eVChargerRebates': {
     name: {
       en: 'EV Charger Rebates',
     },
@@ -287,7 +287,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.polkburnett.com/rebates',
     },
   },
-  wi_polk_BurnettElectricCooperative_hVACRebates: {
+  'wi_polk-BurnettElectricCooperative_hVACRebates': {
     name: {
       en: 'HVAC Rebates',
     },
@@ -295,7 +295,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.polkburnett.com/rebates',
     },
   },
-  wi_polk_BurnettElectricCooperative_applianceRebates: {
+  'wi_polk-BurnettElectricCooperative_applianceRebates': {
     name: {
       en: 'Appliance Rebates',
     },
@@ -303,7 +303,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.polkburnett.com/rebates',
     },
   },
-  wi_polk_BurnettElectricCooperative_waterHeaterRebates: {
+  'wi_polk-BurnettElectricCooperative_waterHeaterRebates': {
     name: {
       en: 'Water Heater Rebates',
     },
@@ -311,7 +311,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.polkburnett.com/rebates',
     },
   },
-  wi_polk_BurnettElectricCooperative_renewableSolarRebates: {
+  'wi_polk-BurnettElectricCooperative_renewableSolarRebates': {
     name: {
       en: 'Renewable Solar Rebates',
     },
@@ -319,7 +319,7 @@ export const WI_PROGRAMS = {
       en: 'https://www.polkburnett.com/rebates',
     },
   },
-  wi_polk_BurnettElectricCooperative_homeImprovementMeasureRebates: {
+  'wi_polk-BurnettElectricCooperative_homeImprovementMeasureRebates': {
     name: {
       en: 'Home Improvement Measure Rebates',
     },
@@ -359,7 +359,7 @@ export const WI_PROGRAMS = {
       en: 'https://priceelectric.coop/smart-sense-rebates',
     },
   },
-  wi_priceElectricCooperative_pECSmartSenseRebates:EnergyAudit_RecommendedImprovements: {
+  'wi_priceElectricCooperative_pECSmartSenseRebates:EnergyAudit-RecommendedImprovements': {
     name: {
       en: 'PEC Smart Sense Rebates: Energy Audit-Recommended Improvements',
     },

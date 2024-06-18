@@ -79,7 +79,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/rebates/list/heat-pump-water-heaters',
     },
   },
-  vt_efficiencyVermont_efficiencyVermont_ResidentialEnergyEfficiencyRebateProgram(DIYWeatherization): {
+  'vt_efficiencyVermont_efficiencyVermont-ResidentialEnergyEfficiencyRebateProgram(DIYWeatherization)': {
     name: {
       en: 'Efficiency Vermont - Residential Energy Efficiency Rebate Program (DIY Weatherization)',
     },
@@ -95,7 +95,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/rebates/list/home-performance-with-energy-star',
     },
   },
-  vt_efficiencyVermont_efficiencyVermont_SmartThermostats: {
+  'vt_efficiencyVermont_efficiencyVermont-SmartThermostats': {
     name: {
       en: 'Efficiency Vermont - Smart Thermostats',
     },
@@ -103,7 +103,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/efficiency-vermont-smart-therm-rebate-form.pdf, https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/efficiency-vermont-smart-therm-rebate-form.pdf',
     },
   },
-  vt_efficiencyVermont_efficiencyVermont_DehumidifierRebate: {
+  'vt_efficiencyVermont_efficiencyVermont-DehumidifierRebate': {
     name: {
       en: 'Efficiency Vermont - Dehumidifier Rebate',
     },
@@ -111,7 +111,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/rebates/list/dehumidifiers',
     },
   },
-  vt_efficiencyVermont_efficiencyVermont_CentralWoodPelletBoilerRebate: {
+  'vt_efficiencyVermont_efficiencyVermont-CentralWoodPelletBoilerRebate': {
     name: {
       en: 'Efficiency Vermont - Central Wood Pellet Boiler Rebate',
     },
@@ -119,7 +119,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/rebates/list/central-wood-pellet-furnaces-boilers-business',
     },
   },
-  vt_efficiencyVermont_efficiencyVermont_High_PerformanceCirculatorPumpRebate: {
+  'vt_efficiencyVermont_efficiencyVermont-High-PerformanceCirculatorPumpRebate': {
     name: {
       en: 'Efficiency Vermont - High-Performance Circulator Pump Rebate',
     },
@@ -127,7 +127,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/rebates/list/high-performance-circulator-pumps',
     },
   },
-  vt_efficiencyVermont_efficiencyVermont_ResidentialEnergyEfficiencyRebateProgram: {
+  'vt_efficiencyVermont_efficiencyVermont-ResidentialEnergyEfficiencyRebateProgram': {
     name: {
       en: 'Efficiency Vermont - Residential Energy Efficiency Rebate Program',
     },
@@ -135,7 +135,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/rebates/list/integrated-controls',
     },
   },
-  vt_efficiencyVermont_efficiencyVermont_LEDsForIndoorGrowing: {
+  'vt_efficiencyVermont_efficiencyVermont-LEDsForIndoorGrowing': {
     name: {
       en: 'Efficiency Vermont - LEDs for Indoor Growing',
     },
@@ -143,7 +143,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/rebates/list/led-indoor-growing',
     },
   },
-  vt_efficiencyVermont_efficiencyVermont_FreeProductForLow_IncomeVermonters: {
+  'vt_efficiencyVermont_efficiencyVermont-FreeProductForLow-IncomeVermonters': {
     name: {
       en: 'Efficiency Vermont - Free Product for Low-Income Vermonters',
     },
@@ -151,7 +151,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/free-products',
     },
   },
-  vt_efficiencyVermont_efficiencyVermont_Washer&DryerRebate: {
+  'vt_efficiencyVermont_efficiencyVermont-Washer&DryerRebate': {
     name: {
       en: 'Efficiency Vermont - Washer & Dryer Rebate',
     },
@@ -159,7 +159,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/rebates/list/washer-dryer',
     },
   },
-  vt_efficiencyVermont_efficiencyVermont_WindowAirConditionerRebate: {
+  'vt_efficiencyVermont_efficiencyVermont-WindowAirConditionerRebate': {
     name: {
       en: 'Efficiency Vermont - Window Air Conditioner Rebate',
     },
@@ -167,7 +167,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/rebates/list/window-air-conditioners',
     },
   },
-  vt_efficiencyVermont_efficiencyVermont_Wood&PelletStoveRebate: {
+  'vt_efficiencyVermont_efficiencyVermont-Wood&PelletStoveRebate': {
     name: {
       en: 'Efficiency Vermont - Wood & Pellet Stove Rebate',
     },
@@ -175,7 +175,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/rebates/list/wood-stoves',
     },
   },
-  vt_burlingtonElectricDepartment_burlingtonElectricDepartment_RebateForAir_To_WaterHeatPump: {
+  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForAir-To-WaterHeatPump': {
     name: {
       en: 'Burlington Electric Department - Rebate for Air-to-Water Heat Pump',
     },
@@ -183,7 +183,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.burlingtonelectric.com/rebate-form',
     },
   },
-  vt_burlingtonElectricDepartment_burlingtonElectricDepartment_RebateForDuctedHeatPump: {
+  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForDuctedHeatPump': {
     name: {
       en: 'Burlington Electric Department - Rebate for Ducted Heat Pump',
     },
@@ -191,7 +191,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.burlingtonelectric.com/heatpumps',
     },
   },
-  vt_burlingtonElectricDepartment_burlingtonElectricDepartment_RebateForDuctlessHeatPump: {
+  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForDuctlessHeatPump': {
     name: {
       en: 'Burlington Electric Department - Rebate for Ductless Heat Pump',
     },
@@ -199,7 +199,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.burlingtonelectric.com/rebate-form?item_purchased=Mini-Split%20Heat%20Pump',
     },
   },
-  vt_burlingtonElectricDepartment_burlingtonElectricDepartment_ResidentialEVChargerRebate: {
+  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-ResidentialEVChargerRebate': {
     name: {
       en: 'Burlington Electric Department - Residential EV Charger Rebate',
     },
@@ -207,7 +207,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.burlingtonelectric.com/evchargers#',
     },
   },
-  vt_burlingtonElectricDepartment_burlingtonElectricDepartment_RebateForGroundSourceHeatPump: {
+  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForGroundSourceHeatPump': {
     name: {
       en: 'Burlington Electric Department - Rebate for Ground Source Heat Pump',
     },
@@ -215,7 +215,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.burlingtonelectric.com/gshp',
     },
   },
-  vt_burlingtonElectricDepartment_burlingtonElectricDepartment_RebateForHeatPumpWaterHeater: {
+  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForHeatPumpWaterHeater': {
     name: {
       en: 'Burlington Electric Department - Rebate for Heat Pump Water Heater',
     },
@@ -223,7 +223,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.burlingtonelectric.com/waterheaters',
     },
   },
-  vt_burlingtonElectricDepartment_burlingtonElectricDepartment_HeatPumpRebates_IncomeBonus: {
+  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-HeatPumpRebates-IncomeBonus': {
     name: {
       en: 'Burlington Electric Department - Heat Pump Rebates - Income Bonus',
     },
@@ -231,7 +231,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.burlingtonelectric.com/waterheaters',
     },
   },
-  vt_burlingtonElectricDepartment_burlingtonElectricDepartment_RebateForInductionCooktop: {
+  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForInductionCooktop': {
     name: {
       en: 'Burlington Electric Department - Rebate for Induction Cooktop',
     },
@@ -239,7 +239,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.burlingtonelectric.com/rebate-form?item_purchased=Induction%20Cooktop',
     },
   },
-  vt_burlingtonElectricDepartment_burlingtonElectricDepartment_LawnCare_ResidentialRebate: {
+  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-LawnCare-ResidentialRebate': {
     name: {
       en: 'Burlington Electric Department - Lawn Care - Residential Rebate',
     },
@@ -263,7 +263,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.burlingtonelectric.com/evrebates/',
     },
   },
-  vt_washingtonElectricCooperative_buttonUpWEC_AirToWaterHeatPumpRebate: {
+  'vt_washingtonElectricCooperative_buttonUpWEC-AirToWaterHeatPumpRebate': {
     name: {
       en: 'Button Up WEC - Air to Water Heat Pump Rebate',
     },
@@ -271,7 +271,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.washingtonelectric.coop/wp-content/uploads/2024/01/1-2024-WEC-Button-Up-Thermal-incentives.pdf',
     },
   },
-  vt_washingtonElectricCooperative_buttonUpWEC_DuctedHeatPumpRebate: {
+  'vt_washingtonElectricCooperative_buttonUpWEC-DuctedHeatPumpRebate': {
     name: {
       en: 'Button Up WEC - Ducted Heat Pump Rebate',
     },
@@ -279,7 +279,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.washingtonelectric.coop/wp-content/uploads/2023/06/5-2023-WEC-Button-Up-Thermal-incentives.pdf',
     },
   },
-  vt_washingtonElectricCooperative_buttonUpWEC_DuctlessHeatPumpRebate: {
+  'vt_washingtonElectricCooperative_buttonUpWEC-DuctlessHeatPumpRebate': {
     name: {
       en: 'Button Up WEC - Ductless Heat Pump Rebate',
     },
@@ -287,7 +287,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.washingtonelectric.coop/wp-content/uploads/2023/06/5-2023-WEC-Button-Up-Thermal-incentives.pdf',
     },
   },
-  vt_washingtonElectricCooperative_washingtonElectricCo_Op_PowerShift: {
+  'vt_washingtonElectricCooperative_washingtonElectricCo-Op-PowerShift': {
     name: {
       en: 'Washington Electric Co-op - PowerShift',
     },
@@ -295,7 +295,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/powershift',
     },
   },
-  vt_washingtonElectricCooperative_buttonUpWEC_GroundSourceHeatPumpRebate: {
+  'vt_washingtonElectricCooperative_buttonUpWEC-GroundSourceHeatPumpRebate': {
     name: {
       en: 'Button Up WEC - Ground Source Heat Pump Rebate',
     },
@@ -303,7 +303,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.washingtonelectric.coop/wp-content/uploads/2024/01/1-2024-WEC-Button-Up-Thermal-incentives.pdf',
     },
   },
-  vt_washingtonElectricCooperative_buttonUpWEC_HeatPumpWaterHeaterRebate: {
+  'vt_washingtonElectricCooperative_buttonUpWEC-HeatPumpWaterHeaterRebate': {
     name: {
       en: 'Button Up WEC - Heat Pump Water Heater Rebate',
     },
@@ -311,7 +311,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.washingtonelectric.coop/wp-content/uploads/2024/01/1-2024-WEC-Button-Up-Thermal-incentives.pdf',
     },
   },
-  vt_washingtonElectricCooperative_buttonUpWEC_WeatherizationProgram: {
+  'vt_washingtonElectricCooperative_buttonUpWEC-WeatherizationProgram': {
     name: {
       en: 'Button Up WEC - Weatherization Program',
     },
@@ -351,7 +351,7 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/green-mountain-power-income-bonus-form.pdf',
     },
   },
-  vt_greenMountainPower_greenMountainPower_FreeLevel2EVCharger: {
+  'vt_greenMountainPower_greenMountainPower-FreeLevel2EVCharger': {
     name: {
       en: 'Green Mountain Power - Free Level 2 EV Charger',
     },
@@ -359,7 +359,7 @@ export const VT_PROGRAMS = {
       en: 'https://greenmountainpower.com/rebates-programs/electric-vehicles/in-home-ev-charger/',
     },
   },
-  vt_greenMountainPower_greenMountainPower_RebateForInductionCooktop: {
+  'vt_greenMountainPower_greenMountainPower-RebateForInductionCooktop': {
     name: {
       en: 'Green Mountain Power - Rebate for Induction Cooktop',
     },
@@ -367,7 +367,7 @@ export const VT_PROGRAMS = {
       en: 'https://greenmountainpower.com/rebates-programs/home-and-yard/induction-cooktop-rebate/',
     },
   },
-  vt_greenMountainPower_greenMountainPower_YardCareRebates: {
+  'vt_greenMountainPower_greenMountainPower-YardCareRebates': {
     name: {
       en: 'Green Mountain Power - Yard care rebates',
     },
@@ -415,7 +415,7 @@ export const VT_PROGRAMS = {
       en: 'http://vppsa.com/wp-content/uploads/2021/01/2021-Weatherized-Heat-Pump-REBATE.pdf',
     },
   },
-  vt_vPPSA_vPPSA_PowerShift: {
+  'vt_vPPSA_vPPSA-PowerShift': {
     name: {
       en: 'VPPSA - PowerShift',
     },
@@ -439,7 +439,7 @@ export const VT_PROGRAMS = {
       en: 'https://eternityweb.formstack.com/forms/vermont_electric_coop_thermal_efficiency_bonus',
     },
   },
-  vt_vermontElectricCooperative_vermontElectricCoop_FreeLevel2EVCharger: {
+  'vt_vermontElectricCooperative_vermontElectricCoop-FreeLevel2EVCharger': {
     name: {
       en: 'Vermont Electric Coop - Free Level 2 EV Charger',
     },
@@ -447,7 +447,7 @@ export const VT_PROGRAMS = {
       en: 'https://vermontelectric.coop/energy-transformation-programs',
     },
   },
-  vt_vermontElectricCooperative_vermontElectricCoop_BillCreditForLevel2HomeEVChargingEquipment: {
+  'vt_vermontElectricCooperative_vermontElectricCoop-BillCreditForLevel2HomeEVChargingEquipment': {
     name: {
       en: 'Vermont Electric Coop - Bill Credit for Level 2 Home EV Charging Equipment',
     },
@@ -455,7 +455,7 @@ export const VT_PROGRAMS = {
       en: 'https://vermontelectric.coop/energy-transformation-programs',
     },
   },
-  vt_vermontElectricCooperative_vermontElectric_BillCreditForInductionCooktop: {
+  'vt_vermontElectricCooperative_vermontElectric-BillCreditForInductionCooktop': {
     name: {
       en: 'Vermont Electric - Bill Credit for Induction Cooktop',
     },
@@ -471,7 +471,7 @@ export const VT_PROGRAMS = {
       en: 'https://vermontelectric.coop/energy-transformation-programs',
     },
   },
-  vt_vermontElectricCooperative_vermontElectricCo_OpEnergyTransformationIncentives: {
+  'vt_vermontElectricCooperative_vermontElectricCo-OpEnergyTransformationIncentives': {
     name: {
       en: 'Vermont Electric Co-op Energy Transformation Incentives',
     },
@@ -519,7 +519,7 @@ export const VT_PROGRAMS = {
       en: 'https://vgsvt.com/savings/residentialrebate/energy-audits-weatherization/',
     },
   },
-  vt_vGS_vGSWeatherizationRebatesForIncome_QualifiedHomeowners: {
+  'vt_vGS_vGSWeatherizationRebatesForIncome-QualifiedHomeowners': {
     name: {
       en: 'VGS Weatherization Rebates for Income-Qualified Homeowners',
     },

@@ -119,7 +119,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.rrelectric.com/member-services/energy-efficiency/energy-efficiency-rebates/',
     },
   },
-  nv_plumas_SierraRuralElectricCooperative_rebates: {
+  'nv_plumas-SierraRuralElectricCooperative_rebates': {
     name: {
       en: 'Rebates',
     },

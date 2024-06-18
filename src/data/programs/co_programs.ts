@@ -31,7 +31,7 @@ export const CO_PROGRAMS = {
       en: 'https://www.csu.org/Pages/ResidentialRebates.aspx',
     },
   },
-  co_cityAndCountyOfDenver_denverClimateActionRebateProgram_HomeEnergyRebates: {
+  'co_cityAndCountyOfDenver_denverClimateActionRebateProgram-HomeEnergyRebates': {
     name: {
       en: 'Denver Climate Action Rebate Program-Home Energy Rebates',
     },
@@ -39,7 +39,7 @@ export const CO_PROGRAMS = {
       en: 'https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Cutting-Denvers-Carbon-Pollution/High-Performance-Buildings-and-Homes/Electrify-Your-Home',
     },
   },
-  co_cityAndCountyOfDenver_denverClimateActionRebateProgram_RebatesForRenewables: {
+  'co_cityAndCountyOfDenver_denverClimateActionRebateProgram-RebatesForRenewables': {
     name: {
       en: 'Denver Climate Action Rebate Program - Rebates for Renewables',
     },
@@ -47,7 +47,7 @@ export const CO_PROGRAMS = {
       en: 'https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Cutting-Denvers-Carbon-Pollution/High-Performance-Buildings-and-Homes/Electrify-Your-Home/Home-Solar/Rebates-for-Renewables',
     },
   },
-  co_cityAndCountyOfDenver_denverClimateActionRebateProgram_E_BikeAndE_CargoBikeRebateVouchers: {
+  'co_cityAndCountyOfDenver_denverClimateActionRebateProgram-E-BikeAndE-CargoBikeRebateVouchers': {
     name: {
       en: 'Denver Climate Action Rebate Program - E-Bike and E-Cargo Bike Rebate Vouchers',
     },
@@ -71,7 +71,7 @@ export const CO_PROGRAMS = {
       en: 'https://www.fcgov.com/utilities/residential/renewables/solar-rebates',
     },
   },
-  co_fortCollinsUtilities_solarRebates_ResidentialBatteryStorageProgram: {
+  'co_fortCollinsUtilities_solarRebates-ResidentialBatteryStorageProgram': {
     name: {
       en: 'Fort Collins Utilities Residential Battery Storage Program',
     },
@@ -151,7 +151,7 @@ export const CO_PROGRAMS = {
       en: 'https://lpea.coop/electrify',
     },
   },
-  co_morganCountyREA_tri_StateG&T: {
+  'co_morganCountyREA_tri-StateG&T': {
     name: {
       en: 'Morgan County REA Energy Efficiency Rebates',
     },
@@ -199,7 +199,7 @@ export const CO_PROGRAMS = {
       en: 'https://www.smpa.com/content/renewable-rebates',
     },
   },
-  co_southeastColoradoPowerAssociation_tri_StateG&T: {
+  'co_southeastColoradoPowerAssociation_tri-StateG&T': {
     name: {
       en: 'Southeast Colorado Power Association Rebates',
     },
@@ -207,7 +207,7 @@ export const CO_PROGRAMS = {
       en: 'https://www.secpa.com/rebates',
     },
   },
-  co_tri_StateG&T_tri_StateG&T: {
+  'co_tri-StateG&T_tri-StateG&T': {
     name: {
       en: 'United Power Heat Pump Rebates',
     },
@@ -215,7 +215,7 @@ export const CO_PROGRAMS = {
       en: 'https://www.unitedpower.com/heat-pumps',
     },
   },
-  co_unitedPower_tri_StateG&T: {
+  'co_unitedPower_tri-StateG&T': {
     name: {
       en: 'United Power Rebates & Programs',
     },
@@ -407,7 +407,7 @@ export const CO_PROGRAMS = {
       en: 'https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/',
     },
   },
-  co_walkingMountains_low_ModerateIncomeProgram: {
+  'co_walkingMountains_low-ModerateIncomeProgram': {
     name: {
       en: 'Walking Mountains Low-Moderate Income Program',
     },
@@ -431,7 +431,7 @@ export const CO_PROGRAMS = {
       en: 'https://www.wrea.org/rebates',
     },
   },
-  co_y_WElectricAssociation_rebateProgram: {
+  'co_y-WElectricAssociation_rebateProgram': {
     name: {
       en: 'Y-W Electric Association Rebate Program',
     },
