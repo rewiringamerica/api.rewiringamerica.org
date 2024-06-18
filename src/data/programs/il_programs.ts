@@ -1,5 +1,5 @@
 export const IL_PROGRAMS = {
-  'il_commonwealthEdison_comEdApplianceRebates': {
+  il_commonwealthEdison_comEdApplianceRebates: {
     name: {
       en: 'ComEd Appliance Rebates',
     },
@@ -7,7 +7,7 @@ export const IL_PROGRAMS = {
       en: 'https://www.comed.com/WaysToSave/ForYourHome/Pages/ApplianceRebates.aspx',
     },
   },
-  'il_commonwealthEdison_comEdSingleFamilyHomeEnergySavings': {
+  il_commonwealthEdison_comEdSingleFamilyHomeEnergySavings: {
     name: {
       en: 'ComEd Single Family Home Energy Savings',
     },
@@ -15,7 +15,7 @@ export const IL_PROGRAMS = {
       en: 'https://www.comed.com/ways-to-save/for-your-home/home-energy-savings/single-family',
     },
   },
-  'il_commonwealthEdison_comEdElectricVehicleChargerAndInstallationRebate': {
+  il_commonwealthEdison_comEdElectricVehicleChargerAndInstallationRebate: {
     name: {
       en: 'ComEd Electric Vehicle Charger and Installation Rebate',
     },
@@ -23,7 +23,7 @@ export const IL_PROGRAMS = {
       en: 'https://www.comed.com/about-us/clean-energy/electric-vehicle-charger-and-installation-rebate',
     },
   },
-  'il_cornBeltEnergy_cornBeltEnergyRebateProgram': {
+  il_cornBeltEnergy_cornBeltEnergyRebateProgram: {
     name: {
       en: 'Corn Belt Energy Rebate Program',
     },
@@ -31,7 +31,7 @@ export const IL_PROGRAMS = {
       en: 'https://www.cornbeltenergy.com/programs-services/rebate-program',
     },
   },
-  'il_stateOfIllinois_illinoisHomeWeatherization': {
+  il_stateOfIllinois_illinoisHomeWeatherization: {
     name: {
       en: 'Illinois Home Weatherization',
     },
@@ -39,7 +39,7 @@ export const IL_PROGRAMS = {
       en: 'https://dceo.illinois.gov/communityservices/homeweatherization/howtoapply.html',
     },
   },
-  'il_stateOfIllinois_illinoisElectricVehicleRebateProgram': {
+  il_stateOfIllinois_illinoisElectricVehicleRebateProgram: {
     name: {
       en: 'Illinois Electric Vehicle Rebate Program',
     },
@@ -47,7 +47,7 @@ export const IL_PROGRAMS = {
       en: 'https://epa.illinois.gov/topics/ceja/electric-vehicle-rebates.html',
     },
   },
-  'il_jo_CarrollEnergyCooperative_jCECo_OpEnergyEfficiencyIncentives': {
+  il_jo_CarrollEnergyCooperative_jCECo_OpEnergyEfficiencyIncentives: {
     name: {
       en: 'JCE Co-op Energy Efficiency Incentives',
     },
@@ -55,7 +55,7 @@ export const IL_PROGRAMS = {
       en: 'https://jcecoop.com/incentives',
     },
   },
-  'il_midAmericanEnergy_midAmericanEnergyResidentialInstantRebates': {
+  il_midAmericanEnergy_midAmericanEnergyResidentialInstantRebates: {
     name: {
       en: 'MidAmerican Energy Residential Instant Rebates',
     },
@@ -63,7 +63,7 @@ export const IL_PROGRAMS = {
       en: 'https://www.midamericanenergy.com/il-residential-rebates',
     },
   },
-  'il_illinoisSolarForAll_iLSFAResidentialSolarProgram': {
+  il_illinoisSolarForAll_iLSFAResidentialSolarProgram: {
     name: {
       en: 'ILSFA Residential Solar Program',
     },
@@ -71,7 +71,7 @@ export const IL_PROGRAMS = {
       en: 'https://www.illinoissfa.com/programs/for-homeowners-and-building-owners/',
     },
   },
-  'il_amerenIllinois_amerenEnergy_EfficientProductDiscountsAndRebates': {
+  il_amerenIllinois_amerenEnergy_EfficientProductDiscountsAndRebates: {
     name: {
       en: 'Ameren Energy-Efficient Product Discounts and Rebates',
     },
@@ -79,7 +79,7 @@ export const IL_PROGRAMS = {
       en: 'https://www.amerenillinoissavings.com/residential/energy-efficient-product-incentives/',
     },
   },
-  'il_amerenIllinois_amerenInstantIncentives': {
+  il_amerenIllinois_amerenInstantIncentives: {
     name: {
       en: 'Ameren Instant Incentives',
     },
@@ -87,7 +87,7 @@ export const IL_PROGRAMS = {
       en: 'https://www.amerenillinoissavings.com/res-incentives/',
     },
   },
-  'il_evanstonDevelopmentCooperative_evanstonGreenHomesPilotProgram': {
+  il_evanstonDevelopmentCooperative_evanstonGreenHomesPilotProgram: {
     name: {
       en: 'Evanston Green Homes Pilot Program',
     },

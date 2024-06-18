@@ -1,5 +1,5 @@
 export const NV_PROGRAMS = {
-  'nv_nVEnergy_nVEnergyResidentialAppliancesAndProducts': {
+  nv_nVEnergy_nVEnergyResidentialAppliancesAndProducts: {
     name: {
       en: 'NV Energy Residential Appliances and Products',
     },
@@ -7,7 +7,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver/retail-appliances-and-products',
     },
   },
-  'nv_nVEnergy_nVEnergyHeatPumpWaterHeating': {
+  nv_nVEnergy_nVEnergyHeatPumpWaterHeating: {
     name: {
       en: 'NV Energy Heat Pump Water Heating',
     },
@@ -15,7 +15,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver/residential-ac-and-mid-stream/water-heating',
     },
   },
-  'nv_nVEnergy_nVEnergyQualifiedApplianceReplacementProgram': {
+  nv_nVEnergy_nVEnergyQualifiedApplianceReplacementProgram: {
     name: {
       en: 'NV Energy Qualified Appliance Replacement program',
     },
@@ -23,7 +23,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.nvenergy.com/save-with-powershift/qualified-appliance-replacement',
     },
   },
-  'nv_nVEnergy_nVEnergyResidentialAirConditioning': {
+  nv_nVEnergy_nVEnergyResidentialAirConditioning: {
     name: {
       en: 'NV Energy Residential Air Conditioning',
     },
@@ -31,7 +31,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver/residential-ac-and-mid-stream/residential-air-conditioning',
     },
   },
-  'nv_nVEnergy_nVEnergyResidentialSmartThermostatProgram': {
+  nv_nVEnergy_nVEnergyResidentialSmartThermostatProgram: {
     name: {
       en: 'NV Energy Residential Smart Thermostat Program',
     },
@@ -39,7 +39,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.nvenergy.com/save-with-powershift/smart-thermostat',
     },
   },
-  'nv_nVEnergy_nVEnergyHomeImprovements': {
+  nv_nVEnergy_nVEnergyHomeImprovements: {
     name: {
       en: 'NV Energy Home Improvements',
     },
@@ -47,7 +47,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.nvenergy.com/save-with-powershift/home-energy-saver/home-improvements',
     },
   },
-  'nv_wellsRuralElectric_saveEnergy,SaveMoney': {
+  nv_wellsRuralElectric_saveEnergy,SaveMoney: {
     name: {
       en: 'Save Energy, Save Money',
     },
@@ -55,7 +55,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.wrec.coop/save-energy-save-money/rebates/',
     },
   },
-  'nv_lincolnCountyPowerDistrictNo1_residentialAndCommercialHighEfficiencyAirConditioningAndHeatPumpRebate': {
+  nv_lincolnCountyPowerDistrictNo1_residentialAndCommercialHighEfficiencyAirConditioningAndHeatPumpRebate: {
     name: {
       en: 'Residential and Commercial High Efficiency Air Conditioning and Heat Pump Rebate',
     },
@@ -63,7 +63,7 @@ export const NV_PROGRAMS = {
       en: 'https://lcpd1.com/form/hvac-rebate-application',
     },
   },
-  'nv_mtWheelerPower_windowsAndInsulationRebates': {
+  nv_mtWheelerPower_windowsAndInsulationRebates: {
     name: {
       en: 'Windows and Insulation Rebates',
     },
@@ -71,7 +71,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.mwpower.net/sites/default/files/WINDOW%20%26%20INSULATION%20REBATE%20Application%20revised%209-2022.pdf',
     },
   },
-  'nv_mtWheelerPower_appliancesRebates': {
+  nv_mtWheelerPower_appliancesRebates: {
     name: {
       en: 'Appliances Rebates',
     },
@@ -79,7 +79,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.mwpower.net/sites/default/files/Appliances%20Rebate%20Application%20-%20updated%209-2022.pdf',
     },
   },
-  'nv_mtWheelerPower_hybridWaterHeaterRebate': {
+  nv_mtWheelerPower_hybridWaterHeaterRebate: {
     name: {
       en: 'Hybrid Water Heater Rebate',
     },
@@ -87,7 +87,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.mwpower.net/sites/default/files/Hybrid%20Water%20Heater%20Rebate%20Application%20updated%20%2011-2022.pdf',
     },
   },
-  'nv_mtWheelerPower_airAndHeatRebates': {
+  nv_mtWheelerPower_airAndHeatRebates: {
     name: {
       en: 'Air and Heat Rebates',
     },
@@ -95,7 +95,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.mwpower.net/sites/default/files/Air%20%26%20Heat%20Rebate%20Application%20revised%201-2024_0.pdf',
     },
   },
-  'nv_mtWheelerPower_renewableEnergyGenerationRebates': {
+  nv_mtWheelerPower_renewableEnergyGenerationRebates: {
     name: {
       en: 'Renewable Energy Generation Rebates',
     },
@@ -103,7 +103,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.mwpower.net/sites/default/files/Renewable%20Energy%20Generation%20Rebate%20Application%20-revised%209-2022.pdf',
     },
   },
-  'nv_cityOfBoulderCity_utilityRebateProgram': {
+  nv_cityOfBoulderCity_utilityRebateProgram: {
     name: {
       en: 'Utility Rebate Program',
     },
@@ -111,7 +111,7 @@ export const NV_PROGRAMS = {
       en: 'https://bcnv.org/284/Utility-Rebate-Program',
     },
   },
-  'nv_raftRuralElectricCooperative_energyEfficiencyRebate': {
+  nv_raftRuralElectricCooperative_energyEfficiencyRebate: {
     name: {
       en: 'Energy Efficiency Rebate',
     },
@@ -119,7 +119,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.rrelectric.com/member-services/energy-efficiency/energy-efficiency-rebates/',
     },
   },
-  'nv_plumas_SierraRuralElectricCooperative_rebates': {
+  nv_plumas_SierraRuralElectricCooperative_rebates: {
     name: {
       en: 'Rebates',
     },
@@ -127,7 +127,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.psrec.coop/energy/rebates/',
     },
   },
-  'nv_cSAReno_weatherizationAssistanceProgram': {
+  nv_cSAReno_weatherizationAssistanceProgram: {
     name: {
       en: 'Weatherization Assistance Program',
     },
@@ -135,7 +135,7 @@ export const NV_PROGRAMS = {
       en: 'https://www.csareno.org/Energy-Efficiency-Weatherization',
     },
   },
-  'nv_ruralNevadaDevelopmentCorporation_weatherizationAssistanceProgram': {
+  nv_ruralNevadaDevelopmentCorporation_weatherizationAssistanceProgram: {
     name: {
       en: 'Weatherization Assistance Program',
     },
@@ -143,7 +143,7 @@ export const NV_PROGRAMS = {
       en: 'https://rndcnv.org/weatherization-services-rural-nevada-development-corporation/',
     },
   },
-  'nv_nevadaRuralHousing_weatherizationAssistanceProgram': {
+  nv_nevadaRuralHousing_weatherizationAssistanceProgram: {
     name: {
       en: 'Weatherization Assistance Program',
     },
@@ -151,7 +151,7 @@ export const NV_PROGRAMS = {
       en: 'https://nvrural.org/programs/weatherization/',
     },
   },
-  'nv_hELPOfSouthernNevada_weatherizationAssistanceProgram': {
+  nv_hELPOfSouthernNevada_weatherizationAssistanceProgram: {
     name: {
       en: 'Weatherization Assistance Program',
     },

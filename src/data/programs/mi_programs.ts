@@ -1,5 +1,5 @@
 export const MI_PROGRAMS = {
-  'mi_consumersEnergy_residentialHeating,CoolingAndWaterHeatingProgram': {
+  mi_consumersEnergy_residentialHeating,CoolingAndWaterHeatingProgram: {
     name: {
       en: 'Residential Heating, Cooling and Water Heating Program',
     },
@@ -7,7 +7,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.consumersenergy.com/-/media/CE/Documents/residential/save-money-and-energy/rebates/hvac/res-programs.pdf',
     },
   },
-  'mi_consumersEnergy_residentialApplianceRebateProgram': {
+  mi_consumersEnergy_residentialApplianceRebateProgram: {
     name: {
       en: 'Residential Appliance Rebate Program',
     },
@@ -15,7 +15,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.consumersenergy.com/-/media/CE/Documents/save%20money%20and%20energy/2020-appliance-application.pdf',
     },
   },
-  'mi_consumersEnergy_windowsAndInsulationRebates': {
+  mi_consumersEnergy_windowsAndInsulationRebates: {
     name: {
       en: 'Windows and Insulation Rebates',
     },
@@ -23,7 +23,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.consumersenergy.com/residential/save-money-and-energy/rebates/windows-and-insulation#insulation-rebates',
     },
   },
-  'mi_consumersEnergy_windowAndDoorRebates': {
+  mi_consumersEnergy_windowAndDoorRebates: {
     name: {
       en: 'Window and Door Rebates',
     },
@@ -31,7 +31,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.consumersenergy.com/residential/save-money-and-energy/rebates/windows-and-insulation#inwin-windows-door',
     },
   },
-  'mi_consumersEnergy_powerMIDrive™HomeChargerInstallationRebates': {
+  mi_consumersEnergy_powerMIDrive™HomeChargerInstallationRebates: {
     name: {
       en: 'PowerMIDrive™ Home Charger Installation Rebates',
     },
@@ -39,7 +39,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.consumersenergy.com/residential/programs-and-services/electric-vehicles#savings',
     },
   },
-  'mi_consumersEnergy_heatingAndCoolingRebates': {
+  mi_consumersEnergy_heatingAndCoolingRebates: {
     name: {
       en: 'Heating and Cooling Rebates',
     },
@@ -47,7 +47,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.consumersenergy.com/residential/save-money-and-energy/rebates/heating-and-cooling',
     },
   },
-  'mi_dTE_airConditioners': {
+  mi_dTE_airConditioners: {
     name: {
       en: 'Air Conditioners',
     },
@@ -55,7 +55,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/air-conditioners.html',
     },
   },
-  'mi_dTE_wi_FiEnabledThermostats': {
+  mi_dTE_wi_FiEnabledThermostats: {
     name: {
       en: 'Wi-Fi Enabled Thermostats',
     },
@@ -63,7 +63,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/wi-fi-enabled-thermostats.html',
     },
   },
-  'mi_dTE_insulation&Windows': {
+  mi_dTE_insulation&Windows: {
     name: {
       en: 'Insulation & Windows',
     },
@@ -71,7 +71,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html',
     },
   },
-  'mi_dTE_washers&Dryers': {
+  mi_dTE_washers&Dryers: {
     name: {
       en: 'Washers & Dryers',
     },
@@ -79,7 +79,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/washers-dryers.html#tabs-f1a15f985f-item-83a9b1fa23',
     },
   },
-  'mi_dTE_homeEVChargerRebate': {
+  mi_dTE_homeEVChargerRebate: {
     name: {
       en: 'Home EV Charger Rebate',
     },
@@ -87,7 +87,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.dteenergy.com/us/en/residential/service-request/pev/home-ev-charger-rebate.html',
     },
   },
-  'mi_dTE_electricVehicleRebate': {
+  mi_dTE_electricVehicleRebate: {
     name: {
       en: 'Electric Vehicle Rebate',
     },
@@ -95,7 +95,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.dteenergy.com/us/en/residential/service-request/pev/electric-vehicle-rebate.html',
     },
   },
-  'mi_dTE_waterHeaters': {
+  mi_dTE_waterHeaters: {
     name: {
       en: 'Water Heaters',
     },
@@ -103,7 +103,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/water-heaters.html',
     },
   },
-  'mi_greatLakesEnergyCooperative_energyWise': {
+  mi_greatLakesEnergyCooperative_energyWise: {
     name: {
       en: 'Energy Wise',
     },
@@ -111,7 +111,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.gtlakes.com/energy-wise/',
     },
   },
-  'mi_indianaMichiganPower_i&MMarketplace': {
+  mi_indianaMichiganPower_i&MMarketplace: {
     name: {
       en: 'I&M Marketplace',
     },
@@ -119,7 +119,7 @@ export const MI_PROGRAMS = {
       en: 'https://electricideas.com/at-home/rebates-products/marketplace/',
     },
   },
-  'mi_upperPeninsulaPowerCompany_uPPCOHeatPumpRebates': {
+  mi_upperPeninsulaPowerCompany_uPPCOHeatPumpRebates: {
     name: {
       en: 'UPPCO Heat Pump Rebates',
     },
@@ -127,7 +127,7 @@ export const MI_PROGRAMS = {
       en: 'https://ee.uppco.com/uppco-heat-pump/',
     },
   },
-  'mi_upperPeninsulaPowerCompany_uPPCOENERGYSTAR®Program': {
+  mi_upperPeninsulaPowerCompany_uPPCOENERGYSTAR®Program: {
     name: {
       en: 'UPPCO ENERGY STAR ® Program',
     },
@@ -135,7 +135,7 @@ export const MI_PROGRAMS = {
       en: 'https://ee.uppco.com/uppco-energy-star/',
     },
   },
-  'mi_lansingBoardOfWaterAndLight_lansingBWLElectrificationPrograms': {
+  mi_lansingBoardOfWaterAndLight_lansingBWLElectrificationPrograms: {
     name: {
       en: 'Lansing BWL Electrification Programs',
     },
@@ -143,7 +143,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.lbwl.com/customers/save-money-energy/electrification-programs',
     },
   },
-  'mi_lansingBoardOfWaterAndLight_lansingBWLENERGYSTARApplianceRebates': {
+  mi_lansingBoardOfWaterAndLight_lansingBWLENERGYSTARApplianceRebates: {
     name: {
       en: 'Lansing BWL ENERGY STAR Appliance Rebates',
     },
@@ -151,7 +151,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.lbwl.com/appliances',
     },
   },
-  'mi_lansingBoardOfWaterAndLight_lansingBWLHeatingAndCoolingRebates': {
+  mi_lansingBoardOfWaterAndLight_lansingBWLHeatingAndCoolingRebates: {
     name: {
       en: 'Lansing BWL Heating and Cooling Rebates',
     },
@@ -159,7 +159,7 @@ export const MI_PROGRAMS = {
       en: 'https://www.lbwl.com/hvac',
     },
   },
-  'mi_lansingBoardOfWaterAndLight_lansingBWLPlug_InElectricVehicleRebates': {
+  mi_lansingBoardOfWaterAndLight_lansingBWLPlug_InElectricVehicleRebates: {
     name: {
       en: 'Lansing BWL Plug-in Electric Vehicle Rebates',
     },

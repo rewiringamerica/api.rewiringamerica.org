@@ -1,5 +1,5 @@
 export const VA_PROGRAMS = {
-  'va_takeChargeVirginiaEfficientProductsProgram': {
+  va_takeChargeVirginiaEfficientProductsProgram: {
     name: {
       en: 'Take Charge Virginia Efficient Products Program',
     },
@@ -7,7 +7,7 @@ export const VA_PROGRAMS = {
       en: 'https://takechargeva.com/programs/for-your-home/efficient-products-program-appliances',
     },
   },
-  'va_takeChargeVirginiaHomePerformanceProgram': {
+  va_takeChargeVirginiaHomePerformanceProgram: {
     name: {
       en: 'Take Charge Virginia Home Performance Program',
     },
@@ -15,7 +15,7 @@ export const VA_PROGRAMS = {
       en: 'https://takechargeva.com/resources/docs/hp-2023.pdf',
     },
   },
-  'va_energyStarRebates': {
+  va_energyStarRebates: {
     name: {
       en: 'Energy Star Rebates',
     },
@@ -23,7 +23,7 @@ export const VA_PROGRAMS = {
       en: 'https://www.dominionenergy.com/virginia/save-energy/energy-star-products',
     },
   },
-  'va_waterEnergySavingsProgram': {
+  va_waterEnergySavingsProgram: {
     name: {
       en: 'Water Energy Savings Program',
     },
@@ -31,7 +31,7 @@ export const VA_PROGRAMS = {
       en: 'https://cdn-dominionenergy-prd-001.azureedge.net/-/media/pdfs/virginia/save-energy/residential-water-energy--savings-program-measures.pdf',
     },
   },
-  'va_evChargerRewards': {
+  va_evChargerRewards: {
     name: {
       en: 'EV Charger Rewards',
     },
@@ -39,7 +39,7 @@ export const VA_PROGRAMS = {
       en: 'https://www.dominionenergy.com/virginia/save-energy/ev-charger-rewards',
     },
   },
-  'va_incomeAndAgeQualifyingEnergyEfficiencyProgram': {
+  va_incomeAndAgeQualifyingEnergyEfficiencyProgram: {
     name: {
       en: 'Income and Age Qualifying Energy Efficiency Program',
     },
@@ -47,7 +47,7 @@ export const VA_PROGRAMS = {
       en: 'https://www.dominionenergy.com/virginia/save-energy/income-and-age-qualifying-home-improvements',
     },
   },
-  'va_controlYourHeatingAndCoolingProgram': {
+  va_controlYourHeatingAndCoolingProgram: {
     name: {
       en: 'Control Your Heating and Cooling Program',
     },

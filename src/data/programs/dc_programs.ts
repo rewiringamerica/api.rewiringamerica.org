@@ -1,5 +1,5 @@
 export const DC_PROGRAMS = {
-  'dc_dCSustainableEnergyUtility_dCResidentialRebates': {
+  dc_dCSustainableEnergyUtility_dCResidentialRebates: {
     name: {
       en: 'DC Residential Rebates',
     },
@@ -7,7 +7,7 @@ export const DC_PROGRAMS = {
       en: 'https://www.dcseu.com/homes/appliance-rebates',
     },
   },
-  'dc_dCSustainableEnergyUtility_affordableHomeElectrificationProgram': {
+  dc_dCSustainableEnergyUtility_affordableHomeElectrificationProgram: {
     name: {
       en: 'Affordable Home Electrification Program',
     },
@@ -15,7 +15,7 @@ export const DC_PROGRAMS = {
       en: 'https://www.dcseu.com/affordable-home-electrification',
     },
   },
-  'dc_dCSustainableEnergyUtility_solarForAllSingle_FamilyProgram': {
+  dc_dCSustainableEnergyUtility_solarForAllSingle_FamilyProgram: {
     name: {
       en: 'Solar for All Single- Family Program',
     },
@@ -23,7 +23,7 @@ export const DC_PROGRAMS = {
       en: 'https://www.dcseu.com/solar-for-all',
     },
   },
-  'dc_dCDepartmentOfEnergyAndEnvironment_weatherizationAssistanceProgram': {
+  dc_dCDepartmentOfEnergyAndEnvironment_weatherizationAssistanceProgram: {
     name: {
       en: 'Weatherization Assistance Program',
     },
@@ -31,7 +31,7 @@ export const DC_PROGRAMS = {
       en: 'https://doee.dc.gov/service/wap',
     },
   },
-  'dc_dCDepartmentOfEnergyAndEnvironment_solarForAll_CommunitySolar': {
+  dc_dCDepartmentOfEnergyAndEnvironment_solarForAll_CommunitySolar: {
     name: {
       en: 'Solar for All - Community Solar',
     },
@@ -39,7 +39,7 @@ export const DC_PROGRAMS = {
       en: 'https://doee.dc.gov/solarforall',
     },
   },
-  'dc_dCDepartmentOfEnergyAndEnvironment_LowIncomeHomeEnergyAssistanceProgram(LIHEAP)': {
+  dc_dCDepartmentOfEnergyAndEnvironment_LowIncomeHomeEnergyAssistanceProgram(LIHEAP): {
     name: {
       en: ' Low Income Home Energy Assistance Program (LIHEAP)',
     },
