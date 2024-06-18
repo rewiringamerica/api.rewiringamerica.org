@@ -1,5 +1,5 @@
 export const PA_PROGRAMS = {
-  pa_pPLElectricUtilitiesCorp_products&Rebates: {
+  'pa_pPLElectricUtilitiesCorp_products&Rebates': {
     name: {
       en: 'Products & Rebates',
     },
@@ -7,7 +7,7 @@ export const PA_PROGRAMS = {
       en: 'https://www.pplelectricsavings.com/ppl/homeequipment/products',
     },
   },
-  pa_pECO_applianceRebates: {
+  'pa_pECO_applianceRebates': {
     name: {
       en: 'Appliance Rebates',
     },
@@ -15,7 +15,7 @@ export const PA_PROGRAMS = {
       en: 'https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/appliance-rebates',
     },
   },
-  pa_pennsylvaniaDepartmentOfCommunityAndEconomicDevelopment_pennsylvaniaWeatherizationAssistanceProgram: {
+  'pa_pennsylvaniaDepartmentOfCommunityAndEconomicDevelopment_pennsylvaniaWeatherizationAssistanceProgram': {
     name: {
       en: 'Pennsylvania Weatherization Assistance Program',
     },
@@ -23,7 +23,7 @@ export const PA_PROGRAMS = {
       en: 'https://dced.pa.gov/programs/weatherization-assistance-program-wap/',
     },
   },
-  pa_duquesneLightCompany_duquesneHomeWeatherization: {
+  'pa_duquesneLightCompany_duquesneHomeWeatherization': {
     name: {
       en: 'Duquesne Home Weatherization',
     },
@@ -31,7 +31,7 @@ export const PA_PROGRAMS = {
       en: 'https://duquesnelight.com/account-billing/payment-assistance/income-eligible-energy-assessment',
     },
   },
-  pa_duquesneLightCompany_duquesneEnergyEfficiencyRebateProgram: {
+  'pa_duquesneLightCompany_duquesneEnergyEfficiencyRebateProgram': {
     name: {
       en: 'Duquesne Energy Efficiency Rebate Program',
     },
@@ -39,7 +39,7 @@ export const PA_PROGRAMS = {
       en: 'https://duquesne.clearesult.com/',
     },
   },
-  pa_duquesneLightCompany_dLCEVRegistrationIncentive: {
+  'pa_duquesneLightCompany_dLCEVRegistrationIncentive': {
     name: {
       en: 'DLC EV Registration Incentive',
     },
@@ -47,7 +47,7 @@ export const PA_PROGRAMS = {
       en: 'https://frontdoor.portal.poweredbyefi.org/initiative/duqpev',
     },
   },
-  pa_firstEnergy_residentialProductsRebateProgram: {
+  'pa_firstEnergy_residentialProductsRebateProgram': {
     name: {
       en: 'Residential Products Rebate Program',
     },
@@ -55,7 +55,7 @@ export const PA_PROGRAMS = {
       en: 'https://rebates.energysavepa.com/',
     },
   },
-  pa_firstEnergy_firstEnergyWARMProgram: {
+  'pa_firstEnergy_firstEnergyWARMProgram': {
     name: {
       en: 'First Energy WARM Program',
     },
@@ -63,7 +63,7 @@ export const PA_PROGRAMS = {
       en: 'https://www.firstenergycorp.com/save_energy/save_energy_pennsylvania/met_ed/for_your_home/warm-info.html',
     },
   },
-  pa_pECO_waterHeatingRebates: {
+  'pa_pECO_waterHeatingRebates': {
     name: {
       en: 'Water Heating Rebates',
     },
@@ -71,7 +71,7 @@ export const PA_PROGRAMS = {
       en: 'https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/water-heater-rebates',
     },
   },
-  pa_pECO_heating&CoolingRebates: {
+  'pa_pECO_heating&CoolingRebates': {
     name: {
       en: 'Heating & Cooling Rebates',
     },
@@ -79,7 +79,7 @@ export const PA_PROGRAMS = {
       en: 'https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/heating-cooling-rebates',
     },
   },
-  pa_pECO_pECODriverRebates: {
+  'pa_pECO_pECODriverRebates': {
     name: {
       en: 'PECO Driver Rebates',
     },
@@ -87,7 +87,7 @@ export const PA_PROGRAMS = {
       en: 'https://www.peco.com/smart-energy/innovation-technology/electric-vehicles-l3',
     },
   },
-  pa_pennsylvaniaDepartmentOfEnvironmentalProtection_alternativeFuelVehicleRebates: {
+  'pa_pennsylvaniaDepartmentOfEnvironmentalProtection_alternativeFuelVehicleRebates': {
     name: {
       en: 'Alternative Fuel Vehicle Rebates',
     },
@@ -95,7 +95,7 @@ export const PA_PROGRAMS = {
       en: 'https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx',
     },
   },
-  pa_uGIUtilities_equipmentRebateProgram: {
+  'pa_uGIUtilities_equipmentRebateProgram': {
     name: {
       en: 'Equipment Rebate Program',
     },
@@ -103,7 +103,7 @@ export const PA_PROGRAMS = {
       en: 'https://www.ugi.com/rebates-for-home/electric/equipment-rebate-program',
     },
   },
-  pa_uGIUtilities_applianceRebateProgram: {
+  'pa_uGIUtilities_applianceRebateProgram': {
     name: {
       en: 'Appliance Rebate Program',
     },

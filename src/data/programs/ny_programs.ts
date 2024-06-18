@@ -1,5 +1,5 @@
 export const NY_PROGRAMS = {
-  ny_cleanHeatIncentives: {
+  'ny_cleanHeatIncentives': {
     name: {
       en: 'New York State Clean Heat Program',
     },
@@ -7,7 +7,7 @@ export const NY_PROGRAMS = {
       en: 'https://cleanheat.ny.gov',
     },
   },
-  ny_consolidatedEdisonRebates: {
+  'ny_consolidatedEdisonRebates': {
     name: {
       en: 'Consolidated Edison Rebates',
     },
@@ -15,7 +15,7 @@ export const NY_PROGRAMS = {
       en: 'https://www.coned.com/en/save-money/rebates-incentives-tax-credits/rebates-incentives-tax-credits-for-residential-customers',
     },
   },
-  ny_allElectricHomesProgram: {
+  'ny_allElectricHomesProgram': {
     name: {
       en: 'All Electric Homes Program',
     },
@@ -23,7 +23,7 @@ export const NY_PROGRAMS = {
       en: 'https://homeenergy.pseg.com',
     },
   },
-  ny_comfortHomeProgram: {
+  'ny_comfortHomeProgram': {
     name: {
       en: 'New York State Comfort Home Program',
     },
@@ -31,7 +31,7 @@ export const NY_PROGRAMS = {
       en: 'https://www.nyserda.ny.gov/All-Programs/Comfort-Home-Program',
     },
   },
-  ny_nyStateResidentialTaxCredit: {
+  'ny_nyStateResidentialTaxCredit': {
     name: {
       en: 'NY State Residential Tax Credit',
     },
@@ -39,7 +39,7 @@ export const NY_PROGRAMS = {
       en: 'https://www.tax.ny.gov/pit/credits/geothermal-energy-system-credit.htm',
     },
   },
-  ny_nyStateDriveCleanProgram: {
+  'ny_nyStateDriveCleanProgram': {
     name: {
       en: 'NY State Drive Clean Program',
     },

@@ -1,5 +1,5 @@
 export const GA_PROGRAMS = {
-  ga_georgiaPower_homeEnergyImprovementProgram: {
+  'ga_georgiaPower_homeEnergyImprovementProgram': {
     name: {
       en: 'Home Energy Improvement Program',
     },
@@ -7,7 +7,7 @@ export const GA_PROGRAMS = {
       en: 'https://www.georgiapower.com/residential/save-money-and-energy/products-programs/home-energy-efficiency-programs/home-energy-improvementprogram.html',
     },
   },
-  ga_jeffersonEnergyCooperative_heatPumpRebateProgram: {
+  'ga_jeffersonEnergyCooperative_heatPumpRebateProgram': {
     name: {
       en: 'Heat Pump Rebate Program',
     },
