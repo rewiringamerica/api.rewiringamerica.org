@@ -3315,32 +3315,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Free Level 2 plug-in charger for home use ($700 value), plus up to $500 rebate for installation costs.",
-      "es": "Cargador de enchufe gratuito de nivel 2 para uso doméstico (valorado en $700 dólares), más un reembolso de hasta $500 dólares por los costos de instalación."
-    }
-  },
-  {
-    "id": "CO-162",
-    "authority_type": "utility",
-    "authority": "co-la-plata-electric-association",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_vehicle_charger"
-    ],
-    "program": "co_laPlataElectricAssociation_electrifyAndSave",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $500 rebate for installation & labor costs for 240V, 50A EV outlet.",
-      "es": "Un reembolso de hasta $500 dólares por los costos de instalación y mano de obra de una toma para VEs de 240 V y 50 A."
+      "en": "Free Level 2 plug-in charger for home use ($700 value), plus 50% rebate for installation costs, up to $500.",
+      "es": "Cargador de enchufe gratuito de nivel 2 para uso doméstico (valorado en $700 dólares), más un reembolso del 50% por los costos de instalación, hasta $500."
     }
   },
   {
@@ -3355,16 +3331,16 @@
     ],
     "program": "co_laPlataElectricAssociation_electrifyAndSave",
     "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 rebate for the independent purchase of a Level 2 charger and its installation.",
-      "es": "Un reembolso de hasta $500 dólares por la compra independiente de un cargador de nivel 2 y su instalación."
+      "en": "50% rebate, up to $250, for the independent purchase and installation of a Level 2 charger.",
+      "es": "Un reembolso del 50%, hasta $250, por la compra independiente de un cargador de nivel 2 y su instalación."
     }
   },
   {
@@ -6795,108 +6771,6 @@
     "short_description": {
       "en": "50% of equipment and installation costs for electric chargers, up to $500 for non-managed chargers and $1,000 for Member System managed chargers.",
       "es": "50% de los costos de equipamiento e instalación de cargadores eléctricos, hasta $500 dólares para cargadores sin sistema de control y $1,000 dólares para miembros del sistema de control."
-    }
-  },
-  {
-    "id": "CO-301",
-    "authority_type": "other",
-    "authority": "co-tri-state-g-and-t",
-    "eligible_geo_group": "co-group-tri-state-g-and-t",
-    "payment_methods": [
-      "account_credit"
-    ],
-    "items": [
-      "geothermal_heating_installation"
-    ],
-    "program": "co_tri-StateG&T_tri-StateG&T",
-    "amount": {
-      "type": "dollars_per_unit",
-      "number": 500,
-      "unit": "ton"
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $500 per ton for qualifying Ground Source Heat Pumps.",
-      "es": "Hasta $500 dólares por tonelada para bombas de calor geotérmicas que cumplan los requisitos."
-    }
-  },
-  {
-    "id": "CO-302",
-    "authority_type": "other",
-    "authority": "co-tri-state-g-and-t",
-    "eligible_geo_group": "co-group-tri-state-g-and-t",
-    "payment_methods": [
-      "account_credit"
-    ],
-    "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
-    ],
-    "program": "co_tri-StateG&T_tri-StateG&T",
-    "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 1800
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "50% of cost up to $1800 off qualifying Standard Air-Source Heat Pump.",
-      "es": "Un descuento del 50% del costo  en bomba de calor de fuente de aire estándar certificada, hasta $1,800 dólares."
-    }
-  },
-  {
-    "id": "CO-303",
-    "authority_type": "other",
-    "authority": "co-tri-state-g-and-t",
-    "eligible_geo_group": "co-group-tri-state-g-and-t",
-    "payment_methods": [
-      "account_credit"
-    ],
-    "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
-    ],
-    "program": "co_tri-StateG&T_tri-StateG&T",
-    "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 2400
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "50% of cost up to $2400 off qualifying Cold Climate Air-Source Heat Pump.",
-      "es": "Un descuento del 50% del costo de una bomba de calor de fuente de aire de clima frío certificada, hasta $2,400 dólares."
-    }
-  },
-  {
-    "id": "CO-304",
-    "authority_type": "other",
-    "authority": "co-tri-state-g-and-t",
-    "eligible_geo_group": "co-group-tri-state-g-and-t",
-    "payment_methods": [
-      "account_credit"
-    ],
-    "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
-    ],
-    "program": "co_tri-StateG&T_tri-StateG&T",
-    "amount": {
-      "type": "percent",
-      "number": 0.5
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "50% of cost up to $100/unit off Integrated Controlled Electric Thermal Storage Backup with Air Source Heat Pump.",
-      "es": "Un descuento del 50% del costo de almacenamiento térmico eléctrico integrado y con sistema de control de bomba de calor de fuente de aire, hasta $100 dólares/unidad."
     }
   },
   {
