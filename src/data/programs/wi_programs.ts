@@ -1,4 +1,12 @@
 export const WI_PROGRAMS = {
+  wi_chippewaValleyElectricCooperative_hVACIncentives: {
+    name: {
+      en: 'HVAC Incentives',
+    },
+    url: {
+      en: 'https://www.cvecoop.com/rebates.php',
+    },
+  },
   'wi_focusOnEnergy_dIYInsulation&AirSealingRebates': {
     name: {
       en: 'DIY Insulation & Air Sealing Rebates',
@@ -137,14 +145,6 @@ export const WI_PROGRAMS = {
         en: 'https://www.cvecoop.com/rebates.php',
       },
     },
-  wi_chippewaValleyElectricCooperative_hVACIncentives: {
-    name: {
-      en: 'HVAC Incentives',
-    },
-    url: {
-      en: 'https://www.cvecoop.com/rebates.php',
-    },
-  },
   wi_chippewaValleyElectricCooperative_applianceIncentives: {
     name: {
       en: 'Appliance Incentives',
@@ -249,14 +249,6 @@ export const WI_PROGRAMS = {
       en: 'https://www.piercepepin.coop/programs-rebates',
     },
   },
-  'wi_piercePepinCooperativeServices_hVAC-HeatPumps': {
-    name: {
-      en: 'HVAC-Heat Pumps',
-    },
-    url: {
-      en: 'https://www.piercepepin.coop/programs-rebates',
-    },
-  },
   wi_piercePepinCooperativeServices_applianceRebates: {
     name: {
       en: 'Appliance Rebates',
@@ -279,54 +271,6 @@ export const WI_PROGRAMS = {
     },
     url: {
       en: 'https://www.piercepepin.coop/programs-rebates',
-    },
-  },
-  'wi_polk-BurnettElectricCooperative_eVChargerRebates': {
-    name: {
-      en: 'EV Charger Rebates',
-    },
-    url: {
-      en: 'https://www.polkburnett.com/rebates',
-    },
-  },
-  'wi_polk-BurnettElectricCooperative_hVACRebates': {
-    name: {
-      en: 'HVAC Rebates',
-    },
-    url: {
-      en: 'https://www.polkburnett.com/rebates',
-    },
-  },
-  'wi_polk-BurnettElectricCooperative_applianceRebates': {
-    name: {
-      en: 'Appliance Rebates',
-    },
-    url: {
-      en: 'https://www.polkburnett.com/rebates',
-    },
-  },
-  'wi_polk-BurnettElectricCooperative_waterHeaterRebates': {
-    name: {
-      en: 'Water Heater Rebates',
-    },
-    url: {
-      en: 'https://www.polkburnett.com/rebates',
-    },
-  },
-  'wi_polk-BurnettElectricCooperative_renewableSolarRebates': {
-    name: {
-      en: 'Renewable Solar Rebates',
-    },
-    url: {
-      en: 'https://www.polkburnett.com/rebates',
-    },
-  },
-  'wi_polk-BurnettElectricCooperative_homeImprovementMeasureRebates': {
-    name: {
-      en: 'Home Improvement Measure Rebates',
-    },
-    url: {
-      en: 'https://www.polkburnett.com/rebates',
     },
   },
   'wi_priceElectricCooperative_pECSmartSenseRebates:HVAC': {
@@ -361,15 +305,6 @@ export const WI_PROGRAMS = {
       en: 'https://priceelectric.coop/smart-sense-rebates',
     },
   },
-  'wi_priceElectricCooperative_pECSmartSenseRebates:EnergyAudit-RecommendedImprovements':
-    {
-      name: {
-        en: 'PEC Smart Sense Rebates: Energy Audit-Recommended Improvements',
-      },
-      url: {
-        en: 'https://priceelectric.coop/smart-sense-rebates',
-      },
-    },
   wi_riverlandEnergyCooperative_eVChargingRebates: {
     name: {
       en: 'EV Charging Rebates',

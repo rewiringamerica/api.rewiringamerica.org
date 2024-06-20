@@ -31,33 +31,6 @@ export const CO_PROGRAMS = {
       en: 'https://www.csu.org/Pages/ResidentialRebates.aspx',
     },
   },
-  'co_cityAndCountyOfDenver_denverClimateActionRebateProgram-HomeEnergyRebates':
-    {
-      name: {
-        en: 'Denver Climate Action Rebate Program-Home Energy Rebates',
-      },
-      url: {
-        en: 'https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Cutting-Denvers-Carbon-Pollution/High-Performance-Buildings-and-Homes/Electrify-Your-Home',
-      },
-    },
-  'co_cityAndCountyOfDenver_denverClimateActionRebateProgram-RebatesForRenewables':
-    {
-      name: {
-        en: 'Denver Climate Action Rebate Program - Rebates for Renewables',
-      },
-      url: {
-        en: 'https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Cutting-Denvers-Carbon-Pollution/High-Performance-Buildings-and-Homes/Electrify-Your-Home/Home-Solar/Rebates-for-Renewables',
-      },
-    },
-  'co_cityAndCountyOfDenver_denverClimateActionRebateProgram-E-BikeAndE-CargoBikeRebateVouchers':
-    {
-      name: {
-        en: 'Denver Climate Action Rebate Program - E-Bike and E-Cargo Bike Rebate Vouchers',
-      },
-      url: {
-        en: 'https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Sustainable-Transportation/Electric-Bikes-E-Bikes-Rebates',
-      },
-    },
   co_fortCollinsUtilities_efficiencyWorks: {
     name: {
       en: 'Efficiency Works',
@@ -72,14 +45,6 @@ export const CO_PROGRAMS = {
     },
     url: {
       en: 'https://www.fcgov.com/utilities/residential/renewables/solar-rebates',
-    },
-  },
-  'co_fortCollinsUtilities_solarRebates-ResidentialBatteryStorageProgram': {
-    name: {
-      en: 'Fort Collins Utilities Residential Battery Storage Program',
-    },
-    url: {
-      en: 'https://www.fcgov.com/utilities/residential-battery-storage-program',
     },
   },
   co_longmontPowerAndCommunications_efficiencyWorks: {
@@ -154,14 +119,6 @@ export const CO_PROGRAMS = {
       en: 'https://lpea.coop/electrify',
     },
   },
-  'co_morganCountyREA_tri-StateG&T': {
-    name: {
-      en: 'Morgan County REA Energy Efficiency Rebates',
-    },
-    url: {
-      en: 'https://www.mcrea.org/energy-efficiency-rebates',
-    },
-  },
   co_mountainViewElectricAssociation_rebates: {
     name: {
       en: 'Mountain View Electric Association Rebates',
@@ -200,30 +157,6 @@ export const CO_PROGRAMS = {
     },
     url: {
       en: 'https://www.smpa.com/content/renewable-rebates',
-    },
-  },
-  'co_southeastColoradoPowerAssociation_tri-StateG&T': {
-    name: {
-      en: 'Southeast Colorado Power Association Rebates',
-    },
-    url: {
-      en: 'https://www.secpa.com/rebates',
-    },
-  },
-  'co_tri-StateG&T_tri-StateG&T': {
-    name: {
-      en: 'United Power Heat Pump Rebates',
-    },
-    url: {
-      en: 'https://www.unitedpower.com/heat-pumps',
-    },
-  },
-  'co_unitedPower_tri-StateG&T': {
-    name: {
-      en: 'United Power Rebates & Programs',
-    },
-    url: {
-      en: 'https://www.unitedpower.com/rebates',
     },
   },
   co_xcelEnergy_heatPumpRebates: {
@@ -410,14 +343,6 @@ export const CO_PROGRAMS = {
       en: 'https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/',
     },
   },
-  'co_walkingMountains_low-ModerateIncomeProgram': {
-    name: {
-      en: 'Walking Mountains Low-Moderate Income Program',
-    },
-    url: {
-      en: 'https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/',
-    },
-  },
   'co_walkingMountains_rebates&Incentives': {
     name: {
       en: 'Walking Mountains Rebates & Incentives',
@@ -432,14 +357,6 @@ export const CO_PROGRAMS = {
     },
     url: {
       en: 'https://www.wrea.org/rebates',
-    },
-  },
-  'co_y-WElectricAssociation_rebateProgram': {
-    name: {
-      en: 'Y-W Electric Association Rebate Program',
-    },
-    url: {
-      en: 'https://www.ywelectric.coop/rebate-program-information',
     },
   },
 } as const;

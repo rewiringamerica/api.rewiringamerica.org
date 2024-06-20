@@ -15,14 +15,6 @@ export const RI_PROGRAMS = {
       en: 'https://pud-ri.org/conservation/download-rebate-forms',
     },
   },
-  'ri_pascoagUtilityDistrict_residentialEnergyAudit-WeatherizationIncentives': {
-    name: {
-      en: 'Pascoag Utility District Residential Energy Audit-Weatherization Incentives',
-    },
-    url: {
-      en: 'https://pud-ri.org/conservation/download-rebate-forms',
-    },
-  },
   ri_blockIslandPowerCompany_blockIslandUtilityDistrictEnergyEfficiencyProgram:
     {
       name: {
@@ -59,14 +51,6 @@ export const RI_PROGRAMS = {
   ri_oER_cleanHeatRhodeIslandResidentialIncentive: {
     name: {
       en: 'RI Office of Energy Resources Clean Heat RI',
-    },
-    url: {
-      en: 'https://cleanheatri.com/',
-    },
-  },
-  'ri_oER_cleanHeatRhodeIslandResidentialIncome-EligibleIncentive': {
-    name: {
-      en: 'RI Office of Energy Resources Clean Heat RI Income-Eligible Incentive',
     },
     url: {
       en: 'https://cleanheatri.com/',
