@@ -79,15 +79,14 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/rebates/list/heat-pump-water-heaters',
     },
   },
-  'vt_efficiencyVermont_efficiencyVermont-ResidentialEnergyEfficiencyRebateProgram(DIYWeatherization)':
-    {
-      name: {
-        en: 'Efficiency Vermont - Residential Energy Efficiency Rebate Program (DIY Weatherization)',
-      },
-      url: {
-        en: 'https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/efficiency-vermont-residential-diy-weatherization-rebate-form.pdf',
-      },
+  'vt_efficiencyVermont_efficiencyVermont-ResidentialEnergyEfficiencyRebateProgram(DIYWeatherization)': {
+    name: {
+      en: 'Efficiency Vermont - Residential Energy Efficiency Rebate Program (DIY Weatherization)',
     },
+    url: {
+      en: 'https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/efficiency-vermont-residential-diy-weatherization-rebate-form.pdf',
+    },
+  },
   vt_efficiencyVermont_homePerformanceWithENERGYSTAR: {
     name: {
       en: 'Home performance with ENERGY STAR',
@@ -120,24 +119,22 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/rebates/list/central-wood-pellet-furnaces-boilers-business',
     },
   },
-  'vt_efficiencyVermont_efficiencyVermont-High-PerformanceCirculatorPumpRebate':
-    {
-      name: {
-        en: 'Efficiency Vermont - High-Performance Circulator Pump Rebate',
-      },
-      url: {
-        en: 'https://www.efficiencyvermont.com/rebates/list/high-performance-circulator-pumps',
-      },
+  'vt_efficiencyVermont_efficiencyVermont-High-PerformanceCirculatorPumpRebate': {
+    name: {
+      en: 'Efficiency Vermont - High-Performance Circulator Pump Rebate',
     },
-  'vt_efficiencyVermont_efficiencyVermont-ResidentialEnergyEfficiencyRebateProgram':
-    {
-      name: {
-        en: 'Efficiency Vermont - Residential Energy Efficiency Rebate Program',
-      },
-      url: {
-        en: 'https://www.efficiencyvermont.com/rebates/list/integrated-controls',
-      },
+    url: {
+      en: 'https://www.efficiencyvermont.com/rebates/list/high-performance-circulator-pumps',
     },
+  },
+  'vt_efficiencyVermont_efficiencyVermont-ResidentialEnergyEfficiencyRebateProgram': {
+    name: {
+      en: 'Efficiency Vermont - Residential Energy Efficiency Rebate Program',
+    },
+    url: {
+      en: 'https://www.efficiencyvermont.com/rebates/list/integrated-controls',
+    },
+  },
   'vt_efficiencyVermont_efficiencyVermont-LEDsForIndoorGrowing': {
     name: {
       en: 'Efficiency Vermont - LEDs for Indoor Growing',
@@ -178,105 +175,94 @@ export const VT_PROGRAMS = {
       en: 'https://www.efficiencyvermont.com/rebates/list/wood-stoves',
     },
   },
-  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForAir-To-WaterHeatPump':
-    {
-      name: {
-        en: 'Burlington Electric Department - Rebate for Air-to-Water Heat Pump',
-      },
-      url: {
-        en: 'https://www.burlingtonelectric.com/rebate-form',
-      },
+  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForAir-To-WaterHeatPump': {
+    name: {
+      en: 'Burlington Electric Department - Rebate for Air-to-Water Heat Pump',
     },
-  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForDuctedHeatPump':
-    {
-      name: {
-        en: 'Burlington Electric Department - Rebate for Ducted Heat Pump',
-      },
-      url: {
-        en: 'https://www.burlingtonelectric.com/heatpumps',
-      },
+    url: {
+      en: 'https://www.burlingtonelectric.com/rebate-form',
     },
-  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForDuctlessHeatPump':
-    {
-      name: {
-        en: 'Burlington Electric Department - Rebate for Ductless Heat Pump',
-      },
-      url: {
-        en: 'https://www.burlingtonelectric.com/rebate-form?item_purchased=Mini-Split%20Heat%20Pump',
-      },
+  },
+  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForDuctedHeatPump': {
+    name: {
+      en: 'Burlington Electric Department - Rebate for Ducted Heat Pump',
     },
-  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-ResidentialEVChargerRebate':
-    {
-      name: {
-        en: 'Burlington Electric Department - Residential EV Charger Rebate',
-      },
-      url: {
-        en: 'https://www.burlingtonelectric.com/evchargers#',
-      },
+    url: {
+      en: 'https://www.burlingtonelectric.com/heatpumps',
     },
-  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForGroundSourceHeatPump':
-    {
-      name: {
-        en: 'Burlington Electric Department - Rebate for Ground Source Heat Pump',
-      },
-      url: {
-        en: 'https://www.burlingtonelectric.com/gshp',
-      },
+  },
+  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForDuctlessHeatPump': {
+    name: {
+      en: 'Burlington Electric Department - Rebate for Ductless Heat Pump',
     },
-  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForHeatPumpWaterHeater':
-    {
-      name: {
-        en: 'Burlington Electric Department - Rebate for Heat Pump Water Heater',
-      },
-      url: {
-        en: 'https://www.burlingtonelectric.com/waterheaters',
-      },
+    url: {
+      en: 'https://www.burlingtonelectric.com/rebate-form?item_purchased=Mini-Split%20Heat%20Pump',
     },
-  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-HeatPumpRebates-IncomeBonus':
-    {
-      name: {
-        en: 'Burlington Electric Department - Heat Pump Rebates - Income Bonus',
-      },
-      url: {
-        en: 'https://www.burlingtonelectric.com/waterheaters',
-      },
+  },
+  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-ResidentialEVChargerRebate': {
+    name: {
+      en: 'Burlington Electric Department - Residential EV Charger Rebate',
     },
-  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForInductionCooktop':
-    {
-      name: {
-        en: 'Burlington Electric Department - Rebate for Induction Cooktop',
-      },
-      url: {
-        en: 'https://www.burlingtonelectric.com/rebate-form?item_purchased=Induction%20Cooktop',
-      },
+    url: {
+      en: 'https://www.burlingtonelectric.com/evchargers#',
     },
-  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-LawnCare-ResidentialRebate':
-    {
-      name: {
-        en: 'Burlington Electric Department - Lawn Care - Residential Rebate',
-      },
-      url: {
-        en: 'https://www.burlingtonelectric.com/lawnmowers',
-      },
+  },
+  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForGroundSourceHeatPump': {
+    name: {
+      en: 'Burlington Electric Department - Rebate for Ground Source Heat Pump',
     },
-  vt_burlingtonElectricDepartment_burlingtonElectricDepartmentElectricVehicleRebates:
-    {
-      name: {
-        en: 'Burlington Electric Department Electric Vehicle Rebates',
-      },
-      url: {
-        en: 'https://www.burlingtonelectric.com/evrebates/',
-      },
+    url: {
+      en: 'https://www.burlingtonelectric.com/gshp',
     },
-  vt_burlingtonElectricDepartment_burlingtonElectricDepartmentElectricVehicleRebateIncomeBonus:
-    {
-      name: {
-        en: 'Burlington Electric Department Electric Vehicle Rebate Income Bonus',
-      },
-      url: {
-        en: 'https://www.burlingtonelectric.com/evrebates/',
-      },
+  },
+  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForHeatPumpWaterHeater': {
+    name: {
+      en: 'Burlington Electric Department - Rebate for Heat Pump Water Heater',
     },
+    url: {
+      en: 'https://www.burlingtonelectric.com/waterheaters',
+    },
+  },
+  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-HeatPumpRebates-IncomeBonus': {
+    name: {
+      en: 'Burlington Electric Department - Heat Pump Rebates - Income Bonus',
+    },
+    url: {
+      en: 'https://www.burlingtonelectric.com/waterheaters',
+    },
+  },
+  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForInductionCooktop': {
+    name: {
+      en: 'Burlington Electric Department - Rebate for Induction Cooktop',
+    },
+    url: {
+      en: 'https://www.burlingtonelectric.com/rebate-form?item_purchased=Induction%20Cooktop',
+    },
+  },
+  'vt_burlingtonElectricDepartment_burlingtonElectricDepartment-LawnCare-ResidentialRebate': {
+    name: {
+      en: 'Burlington Electric Department - Lawn Care - Residential Rebate',
+    },
+    url: {
+      en: 'https://www.burlingtonelectric.com/lawnmowers',
+    },
+  },
+  vt_burlingtonElectricDepartment_burlingtonElectricDepartmentElectricVehicleRebates: {
+    name: {
+      en: 'Burlington Electric Department Electric Vehicle Rebates',
+    },
+    url: {
+      en: 'https://www.burlingtonelectric.com/evrebates/',
+    },
+  },
+  vt_burlingtonElectricDepartment_burlingtonElectricDepartmentElectricVehicleRebateIncomeBonus: {
+    name: {
+      en: 'Burlington Electric Department Electric Vehicle Rebate Income Bonus',
+    },
+    url: {
+      en: 'https://www.burlingtonelectric.com/evrebates/',
+    },
+  },
   'vt_washingtonElectricCooperative_buttonUpWEC-AirToWaterHeatPumpRebate': {
     name: {
       en: 'Button Up WEC - Air to Water Heat Pump Rebate',
@@ -461,24 +447,22 @@ export const VT_PROGRAMS = {
       en: 'https://vermontelectric.coop/energy-transformation-programs',
     },
   },
-  'vt_vermontElectricCooperative_vermontElectricCoop-BillCreditForLevel2HomeEVChargingEquipment':
-    {
-      name: {
-        en: 'Vermont Electric Coop - Bill Credit for Level 2 Home EV Charging Equipment',
-      },
-      url: {
-        en: 'https://vermontelectric.coop/energy-transformation-programs',
-      },
+  'vt_vermontElectricCooperative_vermontElectricCoop-BillCreditForLevel2HomeEVChargingEquipment': {
+    name: {
+      en: 'Vermont Electric Coop - Bill Credit for Level 2 Home EV Charging Equipment',
     },
-  'vt_vermontElectricCooperative_vermontElectric-BillCreditForInductionCooktop':
-    {
-      name: {
-        en: 'Vermont Electric - Bill Credit for Induction Cooktop',
-      },
-      url: {
-        en: 'https://vermontelectric.coop/client_media/files/Induction_cooktop_incentive_form_9_1_22_Fillable.pdf',
-      },
+    url: {
+      en: 'https://vermontelectric.coop/energy-transformation-programs',
     },
+  },
+  'vt_vermontElectricCooperative_vermontElectric-BillCreditForInductionCooktop': {
+    name: {
+      en: 'Vermont Electric - Bill Credit for Induction Cooktop',
+    },
+    url: {
+      en: 'https://vermontelectric.coop/client_media/files/Induction_cooktop_incentive_form_9_1_22_Fillable.pdf',
+    },
+  },
   vt_vermontElectricCooperative_energyTransformationIncentives: {
     name: {
       en: 'Energy Transformation Incentives',
@@ -487,15 +471,14 @@ export const VT_PROGRAMS = {
       en: 'https://vermontelectric.coop/energy-transformation-programs',
     },
   },
-  'vt_vermontElectricCooperative_vermontElectricCo-OpEnergyTransformationIncentives':
-    {
-      name: {
-        en: 'Vermont Electric Co-op Energy Transformation Incentives',
-      },
-      url: {
-        en: 'https://vermontelectric.coop/energy-transformation-programs',
-      },
+  'vt_vermontElectricCooperative_vermontElectricCo-OpEnergyTransformationIncentives': {
+    name: {
+      en: 'Vermont Electric Co-op Energy Transformation Incentives',
     },
+    url: {
+      en: 'https://vermontelectric.coop/energy-transformation-programs',
+    },
+  },
   vt_stateOfVermont_stateOfVermontIncentivesForNewElectricVehicles: {
     name: {
       en: 'State of Vermont Incentives for New Electric Vehicles',

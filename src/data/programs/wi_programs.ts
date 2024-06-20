@@ -1,4 +1,12 @@
 export const WI_PROGRAMS = {
+  wi_chippewaValleyElectricCooperative_hVACIncentives: {
+    name: {
+      en: 'HVAC Incentives',
+    },
+    url: {
+      en: 'https://www.cvecoop.com/rebates.php',
+    },
+  },
   'wi_focusOnEnergy_dIYInsulation&AirSealingRebates': {
     name: {
       en: 'DIY Insulation & Air Sealing Rebates',
@@ -79,15 +87,14 @@ export const WI_PROGRAMS = {
       en: 'https://www.barronelectric.com/2024-energy-rebates',
     },
   },
-  'wi_barronElectricCooperative_energySavingsRebates:AuditRecommendedImprovements':
-    {
-      name: {
-        en: 'Energy Savings Rebates: Audit Recommended Improvements',
-      },
-      url: {
-        en: 'https://www.barronelectric.com/2024-energy-rebates',
-      },
+  'wi_barronElectricCooperative_energySavingsRebates:AuditRecommendedImprovements': {
+    name: {
+      en: 'Energy Savings Rebates: Audit Recommended Improvements',
     },
+    url: {
+      en: 'https://www.barronelectric.com/2024-energy-rebates',
+    },
+  },
   wi_bayfieldElectricCooperative_eVChargerRebates: {
     name: {
       en: 'EV Charger Rebates',
@@ -128,18 +135,9 @@ export const WI_PROGRAMS = {
       en: 'https://www.bayfieldelectric.com/rebates',
     },
   },
-  wi_chippewaValleyElectricCooperative_electricVehicleChargingStationIncentives:
-    {
-      name: {
-        en: 'Electric Vehicle Charging Station Incentives',
-      },
-      url: {
-        en: 'https://www.cvecoop.com/rebates.php',
-      },
-    },
-  wi_chippewaValleyElectricCooperative_hVACIncentives: {
+  wi_chippewaValleyElectricCooperative_electricVehicleChargingStationIncentives: {
     name: {
-      en: 'HVAC Incentives',
+      en: 'Electric Vehicle Charging Station Incentives',
     },
     url: {
       en: 'https://www.cvecoop.com/rebates.php',
@@ -361,15 +359,14 @@ export const WI_PROGRAMS = {
       en: 'https://priceelectric.coop/smart-sense-rebates',
     },
   },
-  'wi_priceElectricCooperative_pECSmartSenseRebates:EnergyAudit-RecommendedImprovements':
-    {
-      name: {
-        en: 'PEC Smart Sense Rebates: Energy Audit-Recommended Improvements',
-      },
-      url: {
-        en: 'https://priceelectric.coop/smart-sense-rebates',
-      },
+  'wi_priceElectricCooperative_pECSmartSenseRebates:EnergyAudit-RecommendedImprovements': {
+    name: {
+      en: 'PEC Smart Sense Rebates: Energy Audit-Recommended Improvements',
     },
+    url: {
+      en: 'https://priceelectric.coop/smart-sense-rebates',
+    },
+  },
   wi_riverlandEnergyCooperative_eVChargingRebates: {
     name: {
       en: 'EV Charging Rebates',

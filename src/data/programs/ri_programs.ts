@@ -23,15 +23,14 @@ export const RI_PROGRAMS = {
       en: 'https://pud-ri.org/conservation/download-rebate-forms',
     },
   },
-  ri_blockIslandPowerCompany_blockIslandUtilityDistrictEnergyEfficiencyProgram:
-    {
-      name: {
-        en: 'Block Island Utility District Energy Efficiency Program',
-      },
-      url: {
-        en: 'https://blockislandpowercompany.com/efficiency-program/',
-      },
+  ri_blockIslandPowerCompany_blockIslandUtilityDistrictEnergyEfficiencyProgram: {
+    name: {
+      en: 'Block Island Utility District Energy Efficiency Program',
     },
+    url: {
+      en: 'https://blockislandpowercompany.com/efficiency-program/',
+    },
+  },
   ri_oER_dRIVE: {
     name: {
       en: 'RI Office of Energy Resources DRIVE EV',
@@ -80,15 +79,14 @@ export const RI_PROGRAMS = {
       en: 'https://drive.ri.gov/erika-niedowski-memorial-electric-bicycle-rebate-program',
     },
   },
-  'ri_rhodeIslandEnergy_rhodeIslandENERGYSTAR®CertifiedElectricClothesDryerRebate':
-    {
-      name: {
-        en: 'Rhode Island Energy ENERGY STAR® Certified Electric Clothes Dryer Rebate',
-      },
-      url: {
-        en: 'https://www.rienergy.com/RI-Home/Energy-Saving-Programs/rebate-programs',
-      },
+  'ri_rhodeIslandEnergy_rhodeIslandENERGYSTAR®CertifiedElectricClothesDryerRebate': {
+    name: {
+      en: 'Rhode Island Energy ENERGY STAR® Certified Electric Clothes Dryer Rebate',
     },
+    url: {
+      en: 'https://www.rienergy.com/RI-Home/Energy-Saving-Programs/rebate-programs',
+    },
+  },
   ri_rhodeIslandEnergy_residentialHeatPumpWaterHeaterRebate: {
     name: {
       en: 'Rhode Island Energy residential heat pump water heater rebates',

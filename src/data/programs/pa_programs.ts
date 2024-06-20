@@ -1,13 +1,28 @@
 export const PA_PROGRAMS = {
-  pa_pennsylvaniaDepartmentOfCommunityAndEconomicDevelopment_pennsylvaniaWeatherizationAssistanceProgram:
-    {
-      name: {
-        en: 'Pennsylvania Weatherization Assistance Program',
-      },
-      url: {
-        en: 'https://dced.pa.gov/programs/weatherization-assistance-program-wap/',
-      },
+  'pa_pPLElectricUtilitiesCorp_products&Rebates': {
+    name: {
+      en: 'Products & Rebates',
     },
+    url: {
+      en: 'https://www.pplelectricsavings.com/ppl/homeequipment/products',
+    },
+  },
+  pa_pECO_applianceRebates: {
+    name: {
+      en: 'Appliance Rebates',
+    },
+    url: {
+      en: 'https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/appliance-rebates',
+    },
+  },
+  pa_pennsylvaniaDepartmentOfCommunityAndEconomicDevelopment_pennsylvaniaWeatherizationAssistanceProgram: {
+    name: {
+      en: 'Pennsylvania Weatherization Assistance Program',
+    },
+    url: {
+      en: 'https://dced.pa.gov/programs/weatherization-assistance-program-wap/',
+    },
+  },
   pa_duquesneLightCompany_duquesneHomeWeatherization: {
     name: {
       en: 'Duquesne Home Weatherization',
@@ -48,22 +63,6 @@ export const PA_PROGRAMS = {
       en: 'https://www.firstenergycorp.com/save_energy/save_energy_pennsylvania/met_ed/for_your_home/warm-info.html',
     },
   },
-  'pa_pPLElectricUtilitiesCorp_products&Rebates': {
-    name: {
-      en: 'Products & Rebates',
-    },
-    url: {
-      en: 'https://www.pplelectricsavings.com/ppl/homeequipment/products',
-    },
-  },
-  pa_pECO_applianceRebates: {
-    name: {
-      en: 'Appliance Rebates',
-    },
-    url: {
-      en: 'https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/appliance-rebates',
-    },
-  },
   pa_pECO_waterHeatingRebates: {
     name: {
       en: 'Water Heating Rebates',
@@ -88,15 +87,14 @@ export const PA_PROGRAMS = {
       en: 'https://www.peco.com/smart-energy/innovation-technology/electric-vehicles-l3',
     },
   },
-  pa_pennsylvaniaDepartmentOfEnvironmentalProtection_alternativeFuelVehicleRebates:
-    {
-      name: {
-        en: 'Alternative Fuel Vehicle Rebates',
-      },
-      url: {
-        en: 'https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx',
-      },
+  pa_pennsylvaniaDepartmentOfEnvironmentalProtection_alternativeFuelVehicleRebates: {
+    name: {
+      en: 'Alternative Fuel Vehicle Rebates',
     },
+    url: {
+      en: 'https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx',
+    },
+  },
   pa_uGIUtilities_equipmentRebateProgram: {
     name: {
       en: 'Equipment Rebate Program',

@@ -55,15 +55,14 @@ export const NV_PROGRAMS = {
       en: 'https://www.wrec.coop/save-energy-save-money/rebates/',
     },
   },
-  nv_lincolnCountyPowerDistrictNo1_residentialAndCommercialHighEfficiencyAirConditioningAndHeatPumpRebate:
-    {
-      name: {
-        en: 'Residential and Commercial High Efficiency Air Conditioning and Heat Pump Rebate',
-      },
-      url: {
-        en: 'https://lcpd1.com/form/hvac-rebate-application',
-      },
+  nv_lincolnCountyPowerDistrictNo1_residentialAndCommercialHighEfficiencyAirConditioningAndHeatPumpRebate: {
+    name: {
+      en: 'Residential and Commercial High Efficiency Air Conditioning and Heat Pump Rebate',
     },
+    url: {
+      en: 'https://lcpd1.com/form/hvac-rebate-application',
+    },
+  },
   nv_mtWheelerPower_windowsAndInsulationRebates: {
     name: {
       en: 'Windows and Insulation Rebates',
