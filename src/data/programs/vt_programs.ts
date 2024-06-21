@@ -341,9 +341,9 @@ export const VT_PROGRAMS = {
       en: 'https://www.washingtonelectric.coop/wp-content/uploads/2024/02/2-2024-WEC-Button-Up-Transportation-sheet.pdf',
     },
   },
-  vt_greenMountainPower_greenMountainPowerHeatPumpRebate: {
+  vt_greenMountainPower_greenMountainPowerDuctedHeatPumpRebate: {
     name: {
-      en: 'Green Mountain Power Heat Pump Rebate',
+      en: 'Green Mountain Power Ducted Heat Pump Rebate',
     },
     url: {
       en: 'https://greenmountainpower.com/rebates-programs/home-and-yard/heat-pump/',
