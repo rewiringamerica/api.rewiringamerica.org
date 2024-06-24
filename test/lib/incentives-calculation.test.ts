@@ -13,9 +13,9 @@ import calculateIncentives from '../../src/lib/incentives-calculation';
 import { calculateStateIncentivesAndSavings } from '../../src/lib/state-incentives-calculation';
 
 const LOCATION_AND_AMIS = {
-  '11211': [
-    { zcta: '11211', city: 'Brooklyn', state: 'NY', countyFips: '36047' },
-    { computedAMI80: 87080, computedAMI150: 163065, evCreditEligible: false },
+  '07083': [
+    { zcta: '07083', city: 'Union', state: 'NJ', countyFips: '34039' },
+    { computedAMI80: 97800, computedAMI150: 195450, evCreditEligible: false },
   ],
   '94117': [
     {
@@ -59,7 +59,7 @@ afterEach(async t => {
 });
 
 test('correctly evaluates scenario "Single w/ $120k Household income"', async t => {
-  const data = calculateIncentives(...LOCATION_AND_AMIS['11211'], {
+  const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
     tax_filing: FilingStatus.Single,
@@ -118,7 +118,7 @@ test('correctly evaluates state incentives for beta states', async t => {
 });
 
 test('correctly evaluates scenario "Joint w/ 5 persons and $60k Household income"', async t => {
-  const data = calculateIncentives(...LOCATION_AND_AMIS['11211'], {
+  const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 60000,
     tax_filing: FilingStatus.Joint,
@@ -128,7 +128,7 @@ test('correctly evaluates scenario "Joint w/ 5 persons and $60k Household income
 });
 
 test('correctly evaluates scenario "Joint w/ $300k Household income"', async t => {
-  const data = calculateIncentives(...LOCATION_AND_AMIS['11211'], {
+  const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 300000,
     tax_filing: FilingStatus.Joint,
@@ -138,7 +138,7 @@ test('correctly evaluates scenario "Joint w/ $300k Household income"', async t =
 });
 
 test('correctly evaluates scenario "MFS w/ $100k Household income"', async t => {
-  const data = calculateIncentives(...LOCATION_AND_AMIS['11211'], {
+  const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 100000,
     tax_filing: FilingStatus.MarriedFilingSeparately,
@@ -147,8 +147,8 @@ test('correctly evaluates scenario "MFS w/ $100k Household income"', async t => 
   t.ok(data);
 });
 
-test('correctly evaluates scenario "Single w/ $120k Household income in Brooklyn"', async t => {
-  const data = calculateIncentives(...LOCATION_AND_AMIS['11211'], {
+test('correctly evaluates scenario "Single w/ $120k Household income in NJ"', async t => {
+  const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
     tax_filing: FilingStatus.Single,
@@ -246,7 +246,7 @@ test('correctly evaluates scenario "Single w/ $120k Household income in Brooklyn
   t.equal(taxCredits['heat_pump_water_heater'].start_date, '2023');
   t.equal(taxCredits['rooftop_solar_installation'].eligible, true);
   t.equal(taxCredits['rooftop_solar_installation'].amount.number, 0.3);
-  t.equal(taxCredits['rooftop_solar_installation'].amount.representative, 4770);
+  t.equal(taxCredits['rooftop_solar_installation'].amount.representative, 4356);
   t.equal(taxCredits['rooftop_solar_installation'].start_date, '2022');
   t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].eligible, true);
   t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].amount.number, 1200);
@@ -482,7 +482,7 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
 });
 
 test('correctly sorts incentives', async t => {
-  const data = calculateIncentives(...LOCATION_AND_AMIS['11211'], {
+  const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
     tax_filing: FilingStatus.Single,
@@ -696,7 +696,7 @@ test('correctly evaluates savings when state tax liability is lower than max sav
 
 test('correctly excludes IRA rebates', async t => {
   const data = calculateIncentives(
-    ...LOCATION_AND_AMIS['11211'],
+    ...LOCATION_AND_AMIS['07083'],
     {
       owner_status: OwnerStatus.Homeowner,
       household_income: 120000,
