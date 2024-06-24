@@ -40,7 +40,6 @@ async function main() {
     filename: path.join(__dirname, '../incentives-api.db'),
     driver: sqlite3.Database,
   });
-  console.log(db);
 
   const thresholdsPath = path.join(
     __dirname,
@@ -66,10 +65,9 @@ async function main() {
     }
 
     const fips = await getCountyFips(db, countyName);
-    console.log(countyName, fips);
+    console.log(fips, countyName);
     moderateThresholds[fips] = convertToObject(raw);
   }
-  console.log(moderateThresholds);
 
   nyJson[MODERATE_INCOME_THRESHOLDS_NAME] = {
     type: 'county-hhsize',
