@@ -186,3 +186,7 @@ As above, rerun the spreadsheet-to-json flow, starting with the `incentive-sprea
 You should almost never _add_ error rows – that means you are increasing the distance between the spreadsheets and what's checked in. Similarly, you should almost never move rows from category #3 to #2, or #2 to #1 above – that represents data regression.
 
 See the tips above. Usually, someone changed a spreadsheet and didn't update the data, or vice versa. See whichever version seems more recent/authoritative and make them agree.
+
+## ny-empower-income-limits.ts
+
+This script generates the low-income thresholds for New York's EmPower+ program. The income thresholds are expressed in a JavaScript variable on the program's "eligibility calculator" page. Paste that variable into the script and rerun it to regenerate the thresholds JSON.
