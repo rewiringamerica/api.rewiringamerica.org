@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package.json .
 COPY tsconfig.json .
 COPY yarn.lock .
-RUN yarn
+RUN yarn --frozen-lockfile
 
 # Compile Typescript
 COPY src src
@@ -27,7 +27,7 @@ WORKDIR /app
 # install node dependencies (without dev)
 COPY package.json .
 COPY yarn.lock .
-RUN yarn --production
+RUN yarn --frozen-lockfile --production
 
 # Copy build products
 COPY --from=builder /app/build build
