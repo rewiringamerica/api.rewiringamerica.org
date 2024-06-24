@@ -2,6 +2,7 @@ import axios, { AxiosError, AxiosResponse } from 'axios';
 import axiosRetry from 'axios-retry';
 import * as cheerio from 'cheerio';
 import { createHash } from 'node:crypto';
+import pdf from 'pdf-parse';
 
 // Returns URL data, with additional parameters added if the URL is pointed to a PDF.
 export async function retrieveWebContent(
@@ -58,6 +59,40 @@ export function cleanWebsiteData(response: string): string {
   return $.html().trim();
 }
 
+// Parse response, and retry for PDFs if response itself shows that it could be a PDF.
+export function parseWebContent(
+  link: string,
+  response: AxiosResponse,
+): string | undefined {
+  if (response.data === null || response.data === undefined) {
+    console.log(
+      link + "'s returned content is empty. Unable to return any content.",
+    );
+    return undefined;
+  }
+  if (isPdf(link, response.data)) {
+    try {
+      // PDF call here and return text data.
+      pdf(response.data)
+        .then(function (data) {
+          return data.toString();
+        })
+        .catch(e => {
+          console.log('Error occurred while parsing PDF: ' + e);
+        });
+    } catch (e) {
+      console.log(
+        'Error when attempting to parse: ' +
+          link +
+          ' as PDF. Link content may need to be re-retrieved as PDF.',
+      );
+      return undefined;
+    }
+  } else {
+    return cleanWebsiteData(response.data);
+  }
+}
+
 // Check whether a link is for a pdf or a website page.
 export function isPdf(link: string, response: string): boolean {
   if (link.endsWith('.pdf')) {
@@ -74,6 +109,7 @@ export function isPdf(link: string, response: string): boolean {
   return false;
 }
 
+// Refactor this to only do hashing.
 // Given a website link and its html, return a hash of the cleaned website. Do not return a hash if the site is for a PDF.
 export function checkWebsiteAndReturnHash(
   link: string,
