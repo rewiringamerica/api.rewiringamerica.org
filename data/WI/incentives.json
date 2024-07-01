@@ -17,7 +17,8 @@
       "number": 200
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$200 rebate for DIY attic insulation and air sealing, must meet R42 insulation level."
@@ -42,7 +43,8 @@
       "number": 300
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Instant discounts starting at $300 for ENERGY STAR® certified electric heat pump water heaters."
@@ -54,7 +56,7 @@
     "authority": "wi-focus-on-energy",
     "eligible_geo_group": "wi-group-focus-on-energy",
     "payment_methods": [
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "rooftop_solar_installation"
@@ -67,13 +69,15 @@
       "maximum": 1000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $500 rebate for residential solar PV systems, additional $500 for rural areas."
     },
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2024-12-31",
+    "bonus_available": true
   },
   {
     "id": "WI-21",
@@ -81,8 +85,7 @@
     "authority": "wi-focus-on-energy",
     "eligible_geo_group": "wi-group-focus-on-energy",
     "payment_methods": [
-      "rebate",
-      "pos_rebate"
+      "rebate"
     ],
     "items": [
       "smart_thermostat"
@@ -93,12 +96,14 @@
       "number": 50
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$50 rebate for qualified smart thermostats. Available as instant discounts in the online marketplace or as rebates."
     },
-    "start_date": "2024-01-01"
+    "start_date": "2024-01-01",
+    "bonus_available": true
   },
   {
     "id": "WI-22",
@@ -118,7 +123,8 @@
       "number": 1000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$1,000 rebate for air source heat pumps replacing natural gas or electric resistance."
@@ -144,7 +150,8 @@
       "number": 400
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$400 rebate for air source heat pumps replacing propane, oil, existing heat pump, etc."
@@ -171,7 +178,8 @@
       "maximum": 1000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$750 rebate for certified geothermal heat pumps without natural gas service or $1000 with natural gas service."
@@ -196,7 +204,8 @@
       "number": 675
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $675 rebate for ENERGY STAR® Qualified Air Sealing, assessment required."
@@ -210,7 +219,7 @@
     "authority": "wi-focus-on-energy",
     "eligible_geo_group": "wi-group-focus-on-energy",
     "payment_methods": [
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "air_sealing"
@@ -221,7 +230,8 @@
       "number": 1125
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $1,125 rebate for ENERGY STAR® Qualified Air Sealing, assessment required. For income-qualified customers."
@@ -247,13 +257,15 @@
       "number": 525
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $525 rebate for attic insulation."
     },
     "start_date": "2024-01-01",
-    "end_date": "2024-05-31"
+    "end_date": "2024-05-31",
+    "bonus_available": true
   },
   {
     "id": "WI-28",
@@ -261,7 +273,7 @@
     "authority": "wi-focus-on-energy",
     "eligible_geo_group": "wi-group-focus-on-energy",
     "payment_methods": [
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "attic_or_roof_insulation"
@@ -272,13 +284,15 @@
       "number": 675
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $675 rebate for attic insulation. For income-qualified customers."
     },
     "start_date": "2024-01-01",
     "end_date": "2024-05-31",
+    "bonus_available": true,
     "low_income": "wi-focus-on-energy"
   },
   {
@@ -298,13 +312,15 @@
       "number": 150
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $150 rebate for foundation insulation."
     },
     "start_date": "2024-01-01",
-    "end_date": "2024-05-31"
+    "end_date": "2024-05-31",
+    "bonus_available": true
   },
   {
     "id": "WI-30",
@@ -312,7 +328,7 @@
     "authority": "wi-focus-on-energy",
     "eligible_geo_group": "wi-group-focus-on-energy",
     "payment_methods": [
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "other_insulation"
@@ -323,13 +339,15 @@
       "number": 225
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $225 rebate for foundation insulation. For income-qualified customers."
     },
     "start_date": "2024-01-01",
     "end_date": "2024-05-31",
+    "bonus_available": true,
     "low_income": "wi-focus-on-energy"
   },
   {
@@ -349,13 +367,15 @@
       "number": 450
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $450 rebate for wall insulation."
     },
     "start_date": "2024-01-01",
-    "end_date": "2024-05-31"
+    "end_date": "2024-05-31",
+    "bonus_available": true
   },
   {
     "id": "WI-32",
@@ -374,13 +394,15 @@
       "number": 75
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $75 rebate for duct sealing & insulation."
     },
     "start_date": "2024-01-01",
-    "end_date": "2024-05-31"
+    "end_date": "2024-05-31",
+    "bonus_available": true
   },
   {
     "id": "WI-34",
@@ -2718,5 +2740,59 @@
       "en": "$25 rebate for ENERGY STAR® induction ranges."
     },
     "end_date": "2024-12-31"
+  },
+  {
+    "id": "WI-135",
+    "authority_type": "other",
+    "authority": "wi-focus-on-energy",
+    "eligible_geo_group": "wi-group-focus-on-energy",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "wi_focusOnEnergy_heating&CoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,300 rebate for cold climate air source heat pumps replacing natural gas or electric resistance."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-05-31"
+  },
+  {
+    "id": "WI-136",
+    "authority_type": "other",
+    "authority": "wi-focus-on-energy",
+    "eligible_geo_group": "wi-group-focus-on-energy",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "wi_focusOnEnergy_heating&CoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for cold climate air source heat pumps replacing propane, oil, existing heat pump, etc."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-05-31"
   }
 ]

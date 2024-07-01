@@ -23,26 +23,6 @@
       ],
       "authority_type": "other",
       "authority": "wi-focus-on-energy",
-      "program": "Water Heating Rebates",
-      "program_url": "https://focusonenergy.com/residential/water-heating",
-      "items": [
-        "heat_pump_water_heater"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 300
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Instant discounts starting at $300 for ENERGY STAR® certified electric heat pump water heaters."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "other",
-      "authority": "wi-focus-on-energy",
       "program": "Insulation & Air Sealing Rebates",
       "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing",
       "items": [
@@ -53,11 +33,127 @@
         "number": 1125
       },
       "owner_status": [
-        "homeowner"
+        "homeowner",
+        "renter"
       ],
       "start_date": "2024-01-01",
       "end_date": "2024-05-31",
       "short_description": "Up to $1,125 rebate for ENERGY STAR® Qualified Air Sealing, assessment required. For income-qualified customers."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "other",
+      "authority": "wi-focus-on-energy",
+      "program": "Insulation & Air Sealing Rebates",
+      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing",
+      "items": [
+        "attic_or_roof_insulation"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 675
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2024-01-01",
+      "end_date": "2024-05-31",
+      "short_description": "Up to $675 rebate for attic insulation. For income-qualified customers."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "other",
+      "authority": "wi-focus-on-energy",
+      "program": "Solar for Homes",
+      "program_url": "https://focusonenergy.com/residential/solar-for-homes",
+      "items": [
+        "rooftop_solar_installation"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 500,
+        "maximum": 1000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31",
+      "short_description": "Up to $500 rebate for residential solar PV systems, additional $500 for rural areas."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "other",
+      "authority": "wi-focus-on-energy",
+      "program": "Water Heating Rebates",
+      "program_url": "https://focusonenergy.com/residential/water-heating",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 300
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "Instant discounts starting at $300 for ENERGY STAR® certified electric heat pump water heaters."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "other",
+      "authority": "wi-focus-on-energy",
+      "program": "Insulation & Air Sealing Rebates",
+      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing",
+      "items": [
+        "other_insulation"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 225
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2024-01-01",
+      "end_date": "2024-05-31",
+      "short_description": "Up to $225 rebate for foundation insulation. For income-qualified customers."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "other",
+      "authority": "wi-focus-on-energy",
+      "program": "Heating & Cooling Rebates",
+      "program_url": "https://focusonenergy.com/residential/heating-and-cooling",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1300
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2024-01-01",
+      "end_date": "2024-05-31",
+      "short_description": "$1,300 rebate for cold climate air source heat pumps replacing natural gas or electric resistance."
     },
     {
       "payment_methods": [
@@ -76,7 +172,8 @@
         "number": 1000
       },
       "owner_status": [
-        "homeowner"
+        "homeowner",
+        "renter"
       ],
       "start_date": "2024-01-01",
       "end_date": "2024-05-31",
@@ -99,7 +196,8 @@
         "maximum": 1000
       },
       "owner_status": [
-        "homeowner"
+        "homeowner",
+        "renter"
       ],
       "start_date": "2024-01-01",
       "end_date": "2024-05-31",
@@ -111,44 +209,23 @@
       ],
       "authority_type": "other",
       "authority": "wi-focus-on-energy",
-      "program": "Insulation & Air Sealing Rebates",
-      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing",
+      "program": "Heating & Cooling Rebates",
+      "program_url": "https://focusonenergy.com/residential/heating-and-cooling",
       "items": [
-        "attic_or_roof_insulation"
+        "ducted_heat_pump",
+        "ductless_heat_pump"
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 675
+        "number": 500
       },
       "owner_status": [
-        "homeowner"
+        "homeowner",
+        "renter"
       ],
       "start_date": "2024-01-01",
       "end_date": "2024-05-31",
-      "short_description": "Up to $675 rebate for attic insulation. For income-qualified customers."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "other",
-      "authority": "wi-focus-on-energy",
-      "program": "Solar for Homes",
-      "program_url": "https://focusonenergy.com/residential/solar-for-homes",
-      "items": [
-        "rooftop_solar_installation"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 500,
-        "maximum": 1000
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2024-01-01",
-      "end_date": "2024-12-31",
-      "short_description": "Up to $500 rebate for residential solar PV systems, additional $500 for rural areas."
+      "short_description": "$500 rebate for cold climate air source heat pumps replacing propane, oil, existing heat pump, etc."
     },
     {
       "payment_methods": [
@@ -166,7 +243,8 @@
         "number": 450
       },
       "owner_status": [
-        "homeowner"
+        "homeowner",
+        "renter"
       ],
       "start_date": "2024-01-01",
       "end_date": "2024-05-31",
@@ -189,33 +267,12 @@
         "number": 400
       },
       "owner_status": [
-        "homeowner"
+        "homeowner",
+        "renter"
       ],
       "start_date": "2024-01-01",
       "end_date": "2024-05-31",
       "short_description": "$400 rebate for air source heat pumps replacing propane, oil, existing heat pump, etc."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "other",
-      "authority": "wi-focus-on-energy",
-      "program": "Insulation & Air Sealing Rebates",
-      "program_url": "https://focusonenergy.com/residential/insulation-and-air-sealing",
-      "items": [
-        "other_insulation"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 225
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2024-01-01",
-      "end_date": "2024-05-31",
-      "short_description": "Up to $225 rebate for foundation insulation. For income-qualified customers."
     },
     {
       "payment_methods": [
@@ -234,7 +291,8 @@
         "number": 200
       },
       "owner_status": [
-        "homeowner"
+        "homeowner",
+        "renter"
       ],
       "start_date": "2024-01-01",
       "end_date": "2024-12-31",
@@ -256,7 +314,8 @@
         "number": 75
       },
       "owner_status": [
-        "homeowner"
+        "homeowner",
+        "renter"
       ],
       "start_date": "2024-01-01",
       "end_date": "2024-05-31",
@@ -264,8 +323,7 @@
     },
     {
       "payment_methods": [
-        "rebate",
-        "pos_rebate"
+        "rebate"
       ],
       "authority_type": "other",
       "authority": "wi-focus-on-energy",
@@ -279,7 +337,8 @@
         "number": 50
       },
       "owner_status": [
-        "homeowner"
+        "homeowner",
+        "renter"
       ],
       "start_date": "2024-01-01",
       "short_description": "$50 rebate for qualified smart thermostats. Available as instant discounts in the online marketplace or as rebates."
