@@ -293,6 +293,8 @@ export const OVERRIDES = new Map<string | number, string>([
   [14109, 'Oregon Trail Electric Cooperative'],
   [18917, "Tillamook People's Utility District"],
   [1736, 'Blachly-Lane Electric Cooperative'],
+  [6022, 'EWEB'], // Eugene Water & Electric Board
+  [430373, 'EWEB'],
 
   // PA
   [12390, 'Met-Ed'],
