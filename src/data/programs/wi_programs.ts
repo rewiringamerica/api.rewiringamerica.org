@@ -1,4 +1,12 @@
 export const WI_PROGRAMS = {
+  wi_chippewaValleyElectricCooperative_hVACIncentives: {
+    name: {
+      en: 'HVAC Incentives',
+    },
+    url: {
+      en: 'https://www.cvecoop.com/rebates.php',
+    },
+  },
   'wi_focusOnEnergy_dIYInsulation&AirSealingRebates': {
     name: {
       en: 'DIY Insulation & Air Sealing Rebates',
@@ -137,14 +145,6 @@ export const WI_PROGRAMS = {
         en: 'https://www.cvecoop.com/rebates.php',
       },
     },
-  wi_chippewaValleyElectricCooperative_hVACIncentives: {
-    name: {
-      en: 'HVAC Incentives',
-    },
-    url: {
-      en: 'https://www.cvecoop.com/rebates.php',
-    },
-  },
   wi_chippewaValleyElectricCooperative_applianceIncentives: {
     name: {
       en: 'Appliance Incentives',
