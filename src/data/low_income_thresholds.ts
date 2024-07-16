@@ -4,6 +4,7 @@ import { FromSchema } from 'json-schema-to-ts';
 export enum LowIncomeThresholdsType {
   HH_SIZE = 'hh-size',
   COUNTY_AND_HH_SIZE = 'county-and-hh-size',
+  FILING_STATUS = 'filing-status',
 }
 
 // Add custom state low income authorities here
@@ -37,6 +38,16 @@ export const HHSIZE_THRESHOLDS_SCHEMA = {
     '^[1-9][0-9]*$': { type: 'number' },
   },
   additionalProperties: false,
+} as const;
+
+export const RANGE_SCHEMA = {
+  type: 'array',
+  items: {
+    type: 'number',
+    minimum: 0,
+  },
+  minItems: 2,
+  maxItems: 2,
 } as const;
 
 export const AUTHORITY_INFO_SCHEMA = {
@@ -76,6 +87,33 @@ export const AUTHORITY_INFO_SCHEMA = {
             // Allow "other" as a fallback.
             '^other$': HHSIZE_THRESHOLDS_SCHEMA,
           },
+          additionalProperties: false,
+        },
+      },
+      required: ['type', 'thresholds'],
+    },
+    {
+      properties: {
+        type: {
+          type: 'string',
+          const: 'filing-status',
+        },
+        thresholds: {
+          type: 'object',
+          properties: {
+            single: RANGE_SCHEMA,
+            joint: RANGE_SCHEMA,
+            married_filing_separately: RANGE_SCHEMA,
+            hoh: RANGE_SCHEMA,
+            qualifying_widower_with_dependent_child: RANGE_SCHEMA,
+          },
+          required: [
+            'single',
+            'joint',
+            'married_filing_separately',
+            'hoh',
+            'qualifying_widower_with_dependent_child',
+          ],
           additionalProperties: false,
         },
       },

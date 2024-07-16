@@ -6,7 +6,7 @@ import { StateStatus } from '../../src/data/types/state-status';
 import {
   BETA_STATES,
   LAUNCHED_STATES,
-  STATES_PLUS_DC,
+  STATES_AND_TERRITORIES,
 } from '../../src/data/types/states';
 import { API_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v1/calculator-endpoint';
 import { API_INCENTIVE_SCHEMA } from '../../src/schemas/v1/incentive';
@@ -838,7 +838,7 @@ test('/states', async t => {
     t.strictSame(statesResponse[state].status, StateStatus.Beta);
   });
 
-  STATES_PLUS_DC.filter(
+  STATES_AND_TERRITORIES.filter(
     state => !LAUNCHED_STATES.includes(state) && !BETA_STATES.includes(state),
   ).forEach(state => {
     t.strictSame(statesResponse[state].status, StateStatus.None);

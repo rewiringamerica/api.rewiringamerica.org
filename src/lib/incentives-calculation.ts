@@ -68,13 +68,12 @@ function calculateFederalIncentivesAndSavings(
   for (const incentive of IRA_INCENTIVES) {
     let eligible = true;
 
-    // IRA incentives are required to have only one item
-    const item = incentive.items[0];
-
-    // Don't include an incentive at all if the query is filtering by item and
-    // this doesn't match.
-    if (items && !items.includes(item)) {
-      continue;
+    if (items) {
+      if (incentive.items.every(item => !items.includes(item))) {
+        // Don't include an incentive at all if the query is filtering by item
+        // and this incentive's items don't overlap
+        continue;
+      }
     }
 
     if (
@@ -131,12 +130,15 @@ function calculateFederalIncentivesAndSavings(
     // 5) Add the Rooftop Solar Credit amount
     //
     const amount = { ...incentive.amount };
-    if (item === 'rooftop_solar_installation' && !isNaN(solarSystemCost)) {
+    if (
+      incentive.items.includes('rooftop_solar_installation') &&
+      !isNaN(solarSystemCost)
+    ) {
       amount.representative = roundCents(solarSystemCost * amount.number!);
     }
 
     // EV charger credit has some special eligibility rules
-    if (item === 'electric_vehicle_charger') {
+    if (incentive.items.includes('electric_vehicle_charger')) {
       eligible = amiAndEvCreditEligibility.evCreditEligible;
     }
 
@@ -355,13 +357,8 @@ export default function calculateIncentives(
   if (stateAuthorities) {
     incentives.forEach(i => {
       if ('authority' in i && i.authority && i.authority_type !== 'federal') {
-        // Just return the name and logo; omit stuff that specifies location
-        // since it's not part of the public API.
-        authorities[i.authority] = _.pick(
-          stateAuthorities[i.authority_type]![i.authority],
-          'name',
-          'logo',
-        );
+        authorities[i.authority] =
+          stateAuthorities[i.authority_type]![i.authority];
       }
     });
   }

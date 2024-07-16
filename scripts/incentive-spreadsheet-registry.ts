@@ -62,6 +62,9 @@ export const FILES: { [ident: string]: IncentiveFile } = {
       'https://docs.google.com/spreadsheets/d/e/2PACX-1vTmxGiQVAxehqTk76ej-y5BwoqmnLiE7Cq_1QGnaGokKG3-EYlZIFoZEa3KAv7HK3xdN2AxvGggFLAK/pub?gid=995688950&single=true&output=csv',
     headerRowNumber: 2,
   },
+  // NY is deliberately omitted; the sheet and JSON are intentionally out of
+  // sync for now. We wanted to start showing NY's EmPower+ program before QAing
+  // all the incentives collected in the sheet.
   OR: {
     filepath: 'data/OR/incentives.json',
     sheetUrl:

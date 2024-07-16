@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { FromSchema } from 'json-schema-to-ts';
-import { STATES_PLUS_DC } from './types/states';
+import { STATES_AND_TERRITORIES } from './types/states';
 
 const GEO_GROUP_SCHEMA = {
   type: 'object',
@@ -25,7 +25,7 @@ export const GEO_GROUPS_SCHEMA = {
   type: 'object',
   propertyNames: {
     type: 'string',
-    enum: STATES_PLUS_DC,
+    enum: STATES_AND_TERRITORIES,
   },
   additionalProperties: {
     type: 'object',

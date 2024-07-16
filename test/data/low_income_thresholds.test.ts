@@ -63,9 +63,22 @@ test('low-income thresholds have HH sizes 1-8', async t => {
     for (const thresholds of Object.values(stateThresholds)) {
       if (thresholds.type === 'hhsize') {
         t.ok(hasRequiredKeys(thresholds.thresholds));
-      } else {
+      } else if (thresholds.type === 'county-hhsize') {
         for (const countyThresholds of Object.values(thresholds.thresholds)) {
           t.ok(hasRequiredKeys(countyThresholds));
+        }
+      }
+    }
+  }
+});
+
+test('filing-status thresholds have consistent min and max', async t => {
+  for (const stateThresholds of Object.values(LOW_INCOME_THRESHOLDS_BY_STATE)) {
+    for (const thresholds of Object.values(stateThresholds)) {
+      if (thresholds.type === 'filing-status') {
+        for (const statusThresholds of Object.values(thresholds.thresholds)) {
+          const [min, max] = statusThresholds;
+          t.ok(min < max);
         }
       }
     }

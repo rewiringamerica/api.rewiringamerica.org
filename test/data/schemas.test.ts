@@ -128,7 +128,7 @@ function isIncentiveAmountValid<T extends StateIncentive>(
   const { amount } = incentive;
   switch (amount.type) {
     case 'dollar_amount':
-      return !amount.unit && !amount.representative;
+      return !amount.unit && !amount.representative && isValidMaximum(amount);
     case 'percent':
       return amount.number >= 0 && amount.number <= 1 && !amount.unit;
     case 'dollars_per_unit':
@@ -136,6 +136,11 @@ function isIncentiveAmountValid<T extends StateIncentive>(
     default:
       return false;
   }
+}
+
+// If amount.type is 'dollar_amount', then amount.maximum must be greater than or equal to amount.number.
+function isValidMaximum(amount: StateIncentive['amount']): boolean {
+  return amount.maximum ? amount.maximum >= amount.number : true;
 }
 
 test('state incentives JSON files match schemas', async tap => {
@@ -198,11 +203,7 @@ test('state incentives JSON files match schemas', async tap => {
         );
       }
 
-      // Allow duplicate incentive IDs if we split one incentive into multiple due
-      // to tax filing status
-      if (incentive.filing_status === null) {
-        tap.equal(incentiveIds.has(incentive.id), false);
-      }
+      tap.equal(incentiveIds.has(incentive.id), false);
       incentiveIds.add(incentive.id);
     });
   });
