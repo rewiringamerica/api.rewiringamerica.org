@@ -242,7 +242,6 @@
       }
     },
     "dc-dc-department-of-energy-and-environment-60-ami": {
-      "/": "DOEE's Weatherization Assistance Program's threshold is 60% AMI",
       "type": "hhsize",
       "incentives": [
         "DC-21"
@@ -260,7 +259,6 @@
       }
     }
   },
-  "GA": {},
   "IL": {
     "il-home-weatherization": {
       "type": "hhsize",
@@ -587,10 +585,10 @@
   "NY": {
     "ny-empower-low": {
       "type": "hhsize",
-      "source_url": "https://www.nyserda.ny.gov/All-Programs/EmPower-New-York-Program/Eligibility-Guidelines",
       "incentives": [
         "NY-27"
       ],
+      "source_url": "https://www.nyserda.ny.gov/All-Programs/EmPower-New-York-Program/Eligibility-Guidelines",
       "thresholds": {
         "1": 36420,
         "2": 47640,
@@ -606,10 +604,10 @@
     },
     "ny-empower-moderate": {
       "type": "county-hhsize",
-      "source_url": "https://www.nyserda.ny.gov/All-Programs/EmPower-New-York-Program/Eligibility-Guidelines",
       "incentives": [
         "NY-28"
       ],
+      "source_url": "https://www.nyserda.ny.gov/All-Programs/EmPower-New-York-Program/Eligibility-Guidelines",
       "thresholds": {
         "36001": {
           "1": 62850,
@@ -1438,9 +1436,9 @@
         "RI-11",
         "RI-12",
         "RI-13",
-        "RI-43",
         "RI-34",
-        "RI-35"
+        "RI-35",
+        "RI-43"
       ],
       "source_url": "https://dhs.ri.gov/programs-and-services/energy-and-water-assistance-programs/ffy-2023-low-income-guidelines",
       "thresholds": {
@@ -1679,25 +1677,25 @@
       ],
       "source_url": "https://www.driveelectricvt.com/incentives/vermont-state-incentives",
       "thresholds": {
-        "single": [
-          0,
-          60000
-        ],
         "hoh": [
           0,
           75000
-        ],
-        "qualifying_widower_with_dependent_child": [
-          0,
-          90000
         ],
         "joint": [
           0,
           90000
         ],
+        "single": [
+          0,
+          60000
+        ],
         "married_filing_separately": [
           0,
           60000
+        ],
+        "qualifying_widower_with_dependent_child": [
+          0,
+          90000
         ]
       }
     },
@@ -1708,25 +1706,25 @@
       ],
       "source_url": "https://www.driveelectricvt.com/incentives/vermont-state-incentives",
       "thresholds": {
-        "single": [
-          60001,
-          100000
-        ],
         "hoh": [
           75001,
           125000
-        ],
-        "qualifying_widower_with_dependent_child": [
-          90001,
-          150000
         ],
         "joint": [
           90001,
           150000
         ],
+        "single": [
+          60001,
+          100000
+        ],
         "married_filing_separately": [
           60001,
           100000
+        ],
+        "qualifying_widower_with_dependent_child": [
+          90001,
+          150000
         ]
       }
     },
@@ -1842,9 +1840,9 @@
     "wi-focus-on-energy": {
       "type": "hhsize",
       "incentives": [
-        "WI-26",
         "WI-28",
-        "WI-30"
+        "WI-30",
+        "WI-26"
       ],
       "source_url": "https://focusonenergy.com/income-qualified",
       "thresholds": {

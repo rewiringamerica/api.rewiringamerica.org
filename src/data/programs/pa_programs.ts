@@ -1,4 +1,20 @@
 export const PA_PROGRAMS = {
+  'pa_pPLElectricUtilitiesCorp_products&Rebates': {
+    name: {
+      en: 'Products & Rebates',
+    },
+    url: {
+      en: 'https://www.pplelectricsavings.com/ppl/homeequipment/products',
+    },
+  },
+  pa_pECO_applianceRebates: {
+    name: {
+      en: 'Appliance Rebates',
+    },
+    url: {
+      en: 'https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/appliance-rebates',
+    },
+  },
   pa_pennsylvaniaDepartmentOfCommunityAndEconomicDevelopment_pennsylvaniaWeatherizationAssistanceProgram:
     {
       name: {
@@ -46,22 +62,6 @@ export const PA_PROGRAMS = {
     },
     url: {
       en: 'https://www.firstenergycorp.com/save_energy/save_energy_pennsylvania/met_ed/for_your_home/warm-info.html',
-    },
-  },
-  'pa_pPLElectricUtilitiesCorp_products&Rebates': {
-    name: {
-      en: 'Products & Rebates',
-    },
-    url: {
-      en: 'https://www.pplelectricsavings.com/ppl/homeequipment/products',
-    },
-  },
-  pa_pECO_applianceRebates: {
-    name: {
-      en: 'Appliance Rebates',
-    },
-    url: {
-      en: 'https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/appliance-rebates',
     },
   },
   pa_pECO_waterHeatingRebates: {
