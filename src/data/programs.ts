@@ -1,19 +1,7 @@
-import { AZ_PROGRAMS } from './programs/az_programs';
-import { CO_PROGRAMS } from './programs/co_programs';
-import { CT_PROGRAMS } from './programs/ct_programs';
-import { DC_PROGRAMS } from './programs/dc_programs';
-import { GA_PROGRAMS } from './programs/ga_programs';
-import { IL_PROGRAMS } from './programs/il_programs';
-import { MI_PROGRAMS } from './programs/mi_programs';
-import { NV_PROGRAMS } from './programs/nv_programs';
-import { NY_PROGRAMS } from './programs/ny_programs';
-import { OR_PROGRAMS } from './programs/or_programs';
-import { PA_PROGRAMS } from './programs/pa_programs';
-import { RI_PROGRAMS } from './programs/ri_programs';
-import { VA_PROGRAMS } from './programs/va_programs';
-import { VT_PROGRAMS } from './programs/vt_programs';
-import { WI_PROGRAMS } from './programs/wi_programs';
+import fs from 'fs';
 import { LocalizableString } from './types/localizable-string';
+
+const PROGRAMS_DIR = 'data';
 
 export type Program = {
   name: LocalizableString;
@@ -97,6 +85,22 @@ const ira_programs = {
   },
 } as const;
 
+const AZ_PROGRAMS = parseProgramJSON('AZ');
+const CO_PROGRAMS = parseProgramJSON('CO');
+const CT_PROGRAMS = parseProgramJSON('CT');
+const DC_PROGRAMS = parseProgramJSON('DC');
+const GA_PROGRAMS = parseProgramJSON('GA');
+const IL_PROGRAMS = parseProgramJSON('IL');
+const MI_PROGRAMS = parseProgramJSON('MI');
+const NV_PROGRAMS = parseProgramJSON('NV');
+const NY_PROGRAMS = parseProgramJSON('NY');
+const OR_PROGRAMS = parseProgramJSON('OR');
+const PA_PROGRAMS = parseProgramJSON('PA');
+const RI_PROGRAMS = parseProgramJSON('RI');
+const VA_PROGRAMS = parseProgramJSON('VA');
+const VT_PROGRAMS = parseProgramJSON('VT');
+const WI_PROGRAMS = parseProgramJSON('WI');
+
 const all_programs = {
   ...ira_programs,
   ...AZ_PROGRAMS,
@@ -119,3 +123,9 @@ const all_programs = {
 
 export type Programs = { [Key in keyof typeof all_programs]: Program };
 export const PROGRAMS: Programs = all_programs;
+
+function parseProgramJSON(state: string) {
+  return JSON.parse(
+    fs.readFileSync(`${PROGRAMS_DIR}/${state}/programs.json`, 'utf-8'),
+  );
+}

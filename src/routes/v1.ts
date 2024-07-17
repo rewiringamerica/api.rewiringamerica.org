@@ -2,7 +2,7 @@ import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts
 import { FastifyInstance } from 'fastify';
 import { Database } from 'sqlite';
 import { LOCALES } from '../data/locale';
-import { PROGRAMS, Programs } from '../data/programs';
+import { PROGRAMS } from '../data/programs';
 import { computeAMIAndEVCreditEligibility } from '../lib/ami-evcredit-calculation';
 import { InvalidInputError } from '../lib/error';
 import { t, tr } from '../lib/i18n';
@@ -29,11 +29,8 @@ function transformIncentives(
     ...incentive,
 
     // Localize localizable fields
-    program: tr(PROGRAMS[incentive.program as keyof Programs].name, language),
-    program_url: tr(
-      PROGRAMS[incentive.program as keyof Programs].url,
-      language,
-    ),
+    program: tr(PROGRAMS[incentive.program].name, language),
+    program_url: tr(PROGRAMS[incentive.program].url, language),
     more_info_url: incentive.more_info_url
       ? tr(incentive.more_info_url, language)
       : undefined,
