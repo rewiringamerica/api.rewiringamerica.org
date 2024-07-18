@@ -312,12 +312,12 @@ export class AuthorityAndProgramUpdater {
       throw new Error(`Could not retrieve Prettier config for ${filePath}`);
     }
     formatOptions.filepath = filePath;
-    const JSONFileContent = await createProgramsContent(
+    const jsonFileContent = await createProgramsContent(
       this.state,
       this.authorityMap,
       formatOptions,
     );
-    fs.writeFileSync(filePath, JSONFileContent);
+    fs.writeFileSync(filePath, jsonFileContent);
   }
 
   updateGeoGroupsJson() {
