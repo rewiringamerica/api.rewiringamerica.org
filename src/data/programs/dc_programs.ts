@@ -17,7 +17,7 @@ export const DC_PROGRAMS = {
   },
   'dc_dCSustainableEnergyUtility_solarForAllSingle-FamilyProgram': {
     name: {
-      en: 'Solar for All Single- Family Program',
+      en: 'Solar for All Single-Family Program',
     },
     url: {
       en: 'https://www.dcseu.com/solar-for-all',
