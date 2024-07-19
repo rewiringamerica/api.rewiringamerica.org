@@ -53,6 +53,7 @@
     "authority_type": "utility",
     "authority": "il-commonwealth-edison",
     "payment_methods": [
+      "pos_rebate",
       "rebate"
     ],
     "items": [
@@ -165,7 +166,9 @@
     "short_description": {
       "en": "Up to $3,750 towards purchase and installation of a lvl 2 smart charger. Requires enrolling in supply rate options program.",
       "es": "Hasta $3,750 para la compra e instalación de un cargador inteligente lvl 2. Se requiere la inscripción en el programa de opciones para tarifas de suministro."
-    }
+    },
+    "start_date": "2024-02-01",
+    "low_income": "il-comEd-ev-charger"
   },
   {
     "id": "IL-8",
@@ -229,16 +232,16 @@
     "program": "il_cornBeltEnergy_cornBeltEnergyRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 1500,
+      "number": 1800,
       "minimum": 750,
-      "maximum": 1500
+      "maximum": 1800
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,500 rebate for All-Electric Cold Climate Air Source Heat Pump. Minimum efficiency of 15.2 SEER2 & 7.6 HSPF2.",
-      "es": "Un reembolso de hasta $1,500 para una bomba de calor de fuente de aire de clima frío totalmente eléctrica. Eficiencia mínima de 15.2 SEER2 y 7.6 HSPF2."
+      "en": "Up to $1,800 rebate for All-Electric Cold Climate Air Source Heat Pump. Minimum efficiency of 15.2 SEER2 & 7.6 HSPF2.",
+      "es": "Un reembolso de hasta $1,800 para una bomba de calor de fuente de aire de clima frío totalmente eléctrica. Eficiencia mínima de 15.2 SEER2 y 7.6 HSPF2."
     }
   },
   {
@@ -280,16 +283,16 @@
     "program": "il_cornBeltEnergy_cornBeltEnergyRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 600,
+      "number": 800,
       "minimum": 250,
-      "maximum": 600
+      "maximum": 800
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $600 rebate for Mini Split Cold Climate Air Source Heat Pump. Minimum efficiency of at least 15.2 SEER2 & 7.6 HSPF2.",
-      "es": "Un reembolso de hasta $600 para una bomba de calor mini split de clima frío con fuente de aire. Eficiencia mínima de al menos 15.2 SEER2 y 7.6 HSPF2"
+      "en": "Up to $800 rebate for Mini Split Cold Climate Air Source Heat Pump. Minimum efficiency of at least 15.2 SEER2 & 7.6 HSPF2.",
+      "es": "Un reembolso de hasta $800 para una bomba de calor mini split de clima frío con fuente de aire. Eficiencia mínima de al menos 15.2 SEER2 y 7.6 HSPF2"
     }
   },
   {
@@ -354,16 +357,16 @@
     "program": "il_stateOfIllinois_illinoisHomeWeatherization",
     "amount": {
       "type": "dollar_amount",
-      "number": 18500,
-      "maximum": 18500
+      "number": 16000,
+      "maximum": 16000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $18,500 for weatherization projects, excluding windows, siding, roofing and plumbing. Income qualified. Limited yearly funding available.",
-      "es": "Hasta $18,500 para proyectos de climatización, excluyendo ventanas, revestimientos, techos y fontanería. Cumplir requisitos de ingresos. Financiamiento anual limitado disponible."
+      "en": "Up to $16,000 for weatherization projects, excluding windows, siding, roofing and plumbing. Income qualified. Limited yearly funding available.",
+      "es": "Hasta $16,000 para proyectos de climatización, excluyendo ventanas, revestimientos, techos y fontanería. Cumplir requisitos de ingresos. Financiamiento anual limitado disponible."
     },
     "low_income": "il-home-weatherization"
   },
@@ -587,6 +590,7 @@
       "account_credit"
     ],
     "items": [
+      "heat_pump_water_heater",
       "non_heat_pump_water_heater"
     ],
     "program": "il_jo-CarrollEnergyCooperative_jCECo-OpEnergyEfficiencyIncentives",
@@ -725,8 +729,8 @@
     "program": "il_midAmericanEnergy_midAmericanEnergyResidentialInstantRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 75,
-      "maximum": 75
+      "number": 100,
+      "maximum": 100
     },
     "owner_status": [
       "homeowner",
@@ -877,14 +881,14 @@
     "program": "il_amerenIllinois_amerenEnergy-EfficientProductDiscountsAndRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 1300
+      "number": 1150
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,300 instant discount when HPWH is installed by a trusted Program Ally contractor.",
-      "es": "Hasta $1,300 de descuento instantáneo cuando la HPWH haya sido instalada por un contratista de confianza de Program Ally."
+      "en": "Up to $1,150 instant discount when HPWH is installed by a trusted Program Ally contractor.",
+      "es": "Hasta $1,150 de descuento instantáneo cuando la HPWH haya sido instalada por un contratista de confianza de Program Ally."
     }
   },
   {
@@ -923,14 +927,14 @@
     "program": "il_amerenIllinois_amerenInstantIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 700
+      "number": 630
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $700 discount for air source heat pump. Must be 15.2 SEER2 and 8.1 HSPF2 or greater as confirmed by AHRI. Must utilize Program Ally Contractor.",
-      "es": "Hasta $700 de descuento por bomba de calor de fuente de aire. Debe ser de 15.2 SEER2 y 8.1 HSPF2 o superior según lo confirme AHRI. Debe utilizar un contratista de Program Ally."
+      "en": "Up to $630 discount for air source heat pump. Must be 15.2 SEER2 and 8.1 HSPF2 or greater as confirmed by AHRI. Must utilize Program Ally Contractor.",
+      "es": "Hasta $630 de descuento por bomba de calor de fuente de aire. Debe ser de 15.2 SEER2 y 8.1 HSPF2 o superior según lo confirme AHRI. Debe utilizar un contratista de Program Ally."
     }
   },
   {
@@ -946,14 +950,14 @@
     "program": "il_amerenIllinois_amerenInstantIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 700
+      "number": 630
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $700 discount for air source heat pump. Must be 16 SEER2 and 8.55 HSPF2 or greater as confirmed by AHRI. Must utilize Program Ally Contractor.",
-      "es": "Hasta $700 de descuento por bomba de calor de fuente de aire. Debe ser de 16 SEER2 y 8.55 HSPF2 o superior según lo confirme AHRI. Debe utilizar un contratista de Program Ally."
+      "en": "Up to $630 discount for air source heat pump. Must be 16 SEER2 and 8.55 HSPF2 or greater as confirmed by AHRI. Must utilize Program Ally Contractor.",
+      "es": "Hasta $630 de descuento por bomba de calor de fuente de aire. Debe ser de 16 SEER2 y 8.55 HSPF2 o superior según lo confirme AHRI. Debe utilizar un contratista de Program Ally."
     }
   },
   {
