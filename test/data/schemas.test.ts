@@ -250,6 +250,14 @@ test('program JSON files match schemas', async tap => {
   );
 });
 
+test("invalid program JSON files don't match schemas", async tap => {
+  const ajv = new Ajv();
+  tap.ok(
+    !ajv.validate(PROGRAM_SCHEMA, { invalid_schema: 'invalid' }),
+    `invalid program passed: ${ajv.errors}`,
+  );
+});
+
 test('locale URLs are valid', async tap => {
   for (const [lang, locale] of Object.entries(LOCALES)) {
     for (const [key, url] of Object.entries(locale.urls)) {
