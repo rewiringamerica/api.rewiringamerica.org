@@ -246,7 +246,7 @@ test('program JSON files match schemas', async tap => {
   const ajv = new Ajv();
   tap.ok(
     ajv.validate(PROGRAM_SCHEMA, PROGRAMS),
-    `ira programs invalid: ${ajv.errors}`,
+    `programs invalid: ${ajv.errors}`,
   );
 });
 
