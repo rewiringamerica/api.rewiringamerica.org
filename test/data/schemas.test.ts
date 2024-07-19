@@ -63,7 +63,7 @@ import {
   GEO_GROUPS_BY_STATE,
   GEO_GROUPS_SCHEMA,
 } from '../../src/data/geo_groups';
-import { PROGRAMS } from '../../src/data/programs';
+import { PROGRAMS, PROGRAM_SCHEMA } from '../../src/data/programs';
 import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
 import { LAUNCHED_STATES } from '../../src/data/types/states';
@@ -236,6 +236,14 @@ test('all programs have valid URLs', async tap => {
       tap.ok(isURLValid(url), `${programId} has invalid URL`);
     }
   }
+});
+
+test('program JSON files match schemas', async tap => {
+  const ajv = new Ajv();
+  tap.ok(
+    ajv.validate(PROGRAM_SCHEMA, PROGRAMS),
+    `ira programs invalid: ${ajv.errors}`,
+  );
 });
 
 test('locale URLs are valid', async tap => {

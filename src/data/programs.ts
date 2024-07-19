@@ -1,14 +1,43 @@
 import fs from 'fs';
-import { LocalizableString } from './types/localizable-string';
+import { FromSchema } from 'json-schema-to-ts';
+import { STATES_AND_TERRITORIES } from './types/states';
 
 const PROGRAMS_DIR = 'data';
 
-export type Program = {
-  name: LocalizableString;
-  url: LocalizableString;
-};
+export const PROGRAM_SCHEMA = {
+  title: 'Program',
+  type: 'object',
+  patternProperties: {
+    '^[a-zA-Z]': {
+      // Dynamic key pattern
+      type: 'object',
+      properties: {
+        name: {
+          type: 'object',
+          properties: {
+            en: { type: 'string' },
+            es: { type: 'string' },
+          },
+          required: ['en'],
+        },
+        url: {
+          type: 'object',
+          properties: {
+            en: { type: 'string' },
+            es: { type: 'string' },
+          },
+          required: ['en'],
+        },
+      },
+      required: ['name', 'url'],
+      additionalProperties: false,
+    },
+  },
+  additionalProperties: false,
+} as const;
+type ProgramsMap = FromSchema<typeof PROGRAM_SCHEMA>;
 
-const ira_programs = {
+export const ira_programs = {
   alternativeFuelVehicleRefuelingPropertyCredit: {
     name: {
       en: 'Federal Alternative Fuel Vehicle Refueling Property Credit (30C)',
@@ -85,47 +114,24 @@ const ira_programs = {
   },
 } as const;
 
-const AZ_PROGRAMS = parseProgramJSON('AZ');
-const CO_PROGRAMS = parseProgramJSON('CO');
-const CT_PROGRAMS = parseProgramJSON('CT');
-const DC_PROGRAMS = parseProgramJSON('DC');
-const GA_PROGRAMS = parseProgramJSON('GA');
-const IL_PROGRAMS = parseProgramJSON('IL');
-const MI_PROGRAMS = parseProgramJSON('MI');
-const NV_PROGRAMS = parseProgramJSON('NV');
-const NY_PROGRAMS = parseProgramJSON('NY');
-const OR_PROGRAMS = parseProgramJSON('OR');
-const PA_PROGRAMS = parseProgramJSON('PA');
-const RI_PROGRAMS = parseProgramJSON('RI');
-const VA_PROGRAMS = parseProgramJSON('VA');
-const VT_PROGRAMS = parseProgramJSON('VT');
-const WI_PROGRAMS = parseProgramJSON('WI');
+const all_programs = STATES_AND_TERRITORIES.reduce((acc, state) => {
+  try {
+    const statePrograms = parseProgramJSON(state);
+    return { ...acc, ...statePrograms };
+  } catch (error) {
+    console.error(`Error parsing programs for state ${state}:`, error);
+    return acc;
+  }
+}, ira_programs);
 
-const all_programs = {
-  ...ira_programs,
-  ...AZ_PROGRAMS,
-  ...CO_PROGRAMS,
-  ...CT_PROGRAMS,
-  ...DC_PROGRAMS,
-  ...GA_PROGRAMS,
-  ...IL_PROGRAMS,
-  ...MI_PROGRAMS,
-  ...NV_PROGRAMS,
-  ...NY_PROGRAMS,
-  ...NY_PROGRAMS,
-  ...OR_PROGRAMS,
-  ...PA_PROGRAMS,
-  ...RI_PROGRAMS,
-  ...VA_PROGRAMS,
-  ...VT_PROGRAMS,
-  ...WI_PROGRAMS,
-} as const;
-
-export type Programs = { [Key in keyof typeof all_programs]: Program };
-export const PROGRAMS: Programs = all_programs;
+export const PROGRAMS: ProgramsMap = all_programs;
 
 function parseProgramJSON(state: string) {
-  return JSON.parse(
-    fs.readFileSync(`${PROGRAMS_DIR}/${state}/programs.json`, 'utf-8'),
-  );
+  let result: ProgramsMap = {};
+  const filepath = `${PROGRAMS_DIR}/${state}/programs.json`;
+  if (fs.existsSync(filepath)) {
+    result = JSON.parse(fs.readFileSync(filepath, 'utf-8'));
+  }
+
+  return result;
 }
