@@ -233,7 +233,11 @@ const isURLValid = (url: string): boolean => {
 test('all programs have valid URLs', async tap => {
   for (const [programId, data] of Object.entries(PROGRAMS)) {
     for (const url of Object.values(data.url ?? [])) {
-      tap.ok(isURLValid(url), `${programId} has invalid URL`);
+      if (typeof url === 'string') {
+        tap.ok(isURLValid(url), `${programId} has invalid URL`);
+      } else {
+        tap.ok(false, `${programId} has invalid URL`);
+      }
     }
   }
 });
