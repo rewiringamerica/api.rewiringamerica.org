@@ -1,4 +1,21 @@
 {
+  "exclusions": {
+    "CO-376": [
+      "CO-375"
+    ]
+  },
+  "prerequisites": {
+    "CO-542": {
+      "allOf": [
+        "CO-457"
+      ]
+    },
+    "CO-541": {
+      "allOf": [
+        "CO-455"
+      ]
+    }
+  },
   "combinations": [
     {
       "ids": [
@@ -13,12 +30,5 @@
       ],
       "max_value": 5000
     }
-  ],
-  "exclusions": {
-    "CO-376": ["CO-375"]
-  },
-  "prerequisites": {
-    "CO-541": "CO-455",
-    "CO-542": "CO-457"
-  }
+  ]
 }
