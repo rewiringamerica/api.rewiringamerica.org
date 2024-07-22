@@ -1,41 +1,17 @@
 import fs from 'fs';
-import { FromSchema } from 'json-schema-to-ts';
+import { LocalizableString } from './types/localizable-string';
 import { STATES_AND_TERRITORIES } from './types/states';
 
 const PROGRAMS_DIR = 'data';
 
-export const PROGRAM_SCHEMA = {
-  title: 'Program',
-  type: 'object',
-  patternProperties: {
-    '^[a-zA-Z]': {
-      // Dynamic key pattern
-      type: 'object',
-      properties: {
-        name: {
-          type: 'object',
-          properties: {
-            en: { type: 'string' },
-            es: { type: 'string' },
-          },
-          required: ['en'],
-        },
-        url: {
-          type: 'object',
-          properties: {
-            en: { type: 'string' },
-            es: { type: 'string' },
-          },
-          required: ['en'],
-        },
-      },
-      required: ['name', 'url'],
-      additionalProperties: false,
-    },
-  },
-  additionalProperties: false,
-} as const;
-type ProgramsMap = FromSchema<typeof PROGRAM_SCHEMA>;
+interface Program {
+  name: LocalizableString;
+  url: LocalizableString;
+}
+
+interface Programs {
+  [key: string]: Program;
+}
 
 export const ira_programs = {
   alternativeFuelVehicleRefuelingPropertyCredit: {
@@ -124,10 +100,10 @@ const all_programs = STATES_AND_TERRITORIES.reduce((acc, state) => {
   }
 }, ira_programs);
 
-export const PROGRAMS: ProgramsMap = all_programs;
+export const PROGRAMS: Programs = all_programs;
 
 function parseProgramJSON(state: string) {
-  let result: ProgramsMap = {};
+  let result: Programs = {};
   const filepath = `${PROGRAMS_DIR}/${state}/programs.json`;
   if (fs.existsSync(filepath)) {
     result = JSON.parse(fs.readFileSync(filepath, 'utf-8'));

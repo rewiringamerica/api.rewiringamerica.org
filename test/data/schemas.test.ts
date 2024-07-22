@@ -63,9 +63,10 @@ import {
   GEO_GROUPS_BY_STATE,
   GEO_GROUPS_SCHEMA,
 } from '../../src/data/geo_groups';
-import { PROGRAMS, PROGRAM_SCHEMA } from '../../src/data/programs';
+import { PROGRAMS } from '../../src/data/programs';
 import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
+import { PROGRAMS_SCHEMA, PROGRAM_SCHEMA } from '../../src/data/types/program';
 import { LAUNCHED_STATES } from '../../src/data/types/states';
 import {
   addPrerequisites,
@@ -233,27 +234,23 @@ const isURLValid = (url: string): boolean => {
 test('all programs have valid URLs', async tap => {
   for (const [programId, data] of Object.entries(PROGRAMS)) {
     for (const url of Object.values(data.url ?? [])) {
-      if (typeof url === 'string') {
-        tap.ok(isURLValid(url), `${programId} has invalid URL`);
-      } else {
-        tap.ok(false, `${programId} has invalid URL`);
-      }
+      tap.ok(isURLValid(url), `${programId} has invalid URL`);
     }
   }
 });
 
 test('program JSON files match schemas', async tap => {
-  const ajv = new Ajv();
+  const ajv = new Ajv({ schemas: [LOCALIZABLE_STRING_SCHEMA, PROGRAM_SCHEMA] });
   tap.ok(
-    ajv.validate(PROGRAM_SCHEMA, PROGRAMS),
+    ajv.validate(PROGRAMS_SCHEMA, PROGRAMS),
     `programs invalid: ${ajv.errors}`,
   );
 });
 
 test("invalid program JSON files don't match schemas", async tap => {
-  const ajv = new Ajv();
+  const ajv = new Ajv({ schemas: [LOCALIZABLE_STRING_SCHEMA, PROGRAM_SCHEMA] });
   tap.ok(
-    !ajv.validate(PROGRAM_SCHEMA, { invalid_schema: 'invalid' }),
+    !ajv.validate(PROGRAMS_SCHEMA, { invalid_schema: 'invalid' }),
     `invalid program passed: ${ajv.errors}`,
   );
 });
