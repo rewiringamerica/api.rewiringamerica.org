@@ -2,25 +2,15 @@ import fs from 'fs';
 import _ from 'lodash';
 import path from 'path';
 import * as prettier from 'prettier';
-import { Project, SourceFile } from 'ts-morph';
 import { GeoGroup } from '../../src/data/geo_groups';
 
-const PROGRAMS_DIR = 'src/data/programs/';
-const PROGRAMS_TS_FILE = 'src/data/programs.ts';
+const PROGRAMS_DIR = 'data/';
 const GEOGROUPS_JSON_FILE = 'data/geo_groups.json';
 
 const wordSeparators =
   /[\s\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-./:;<=>?@[\]^_`{|}~]+/g;
 const capital_plus_lower = /[A-ZÀ-Ý\u00C0-\u00D6\u00D9-\u00DD][a-zà-ÿ]/g;
 const capitals = /[A-ZÀ-Ý\u00C0-\u00D6\u00D9-\u00DD]+/g;
-
-function getProgramSourceFile() {
-  const project = new Project({
-    tsConfigFilePath: 'tsconfig.json',
-  });
-  project.addSourceFileAtPath(PROGRAMS_TS_FILE);
-  return project.getSourceFileOrThrow(PROGRAMS_TS_FILE);
-}
 
 function kebabCase(str: string) {
   // replace word starts with space + lower case equivalent for later parsing
@@ -174,27 +164,30 @@ export function updateGeoGroups(
   return sortMapByKey(json);
 }
 
+type Program = { name: { en: string }; url: { en: string } };
+
 export async function createProgramsContent(
   state: string,
   authorityMap: AuthorityMap,
   formatOptions: prettier.Options,
 ) {
-  // We don't need to worry too much about formatting because we
-  // programmtically invoke prettier at the end.
-  let output = `export const ${state.toUpperCase()}_PROGRAMS = {\n`;
+  const programs: Record<string, Program> = {};
+
   for (const authority of Object.values(authorityMap)) {
     for (const [programShort, program] of Object.entries(authority.programs)) {
-      output += `'${programShort}': {\n`;
-      output += 'name: {\n';
-      output += `en: '${program.name}',\n`;
-      output += '},\n';
-      output += 'url: {\n';
-      output += `en: '${program.url}',\n`;
-      output += '},\n';
-      output += '},\n';
+      programs[programShort] = {
+        name: {
+          en: program.name,
+        },
+        url: {
+          en: program.url,
+        },
+      };
     }
   }
-  output += '} as const;';
+
+  const output = JSON.stringify(programs, null, 2) + '\n';
+
   try {
     return await prettier.format(output, formatOptions);
   } catch (e) {
@@ -202,80 +195,6 @@ export async function createProgramsContent(
       `Error while trying to run prettier on programs.ts. Fix errors manually and reformat.`,
     );
     return output;
-  }
-}
-
-export function maybeUpdateProgramsTsFile(
-  state: string,
-  sourceFile: SourceFile,
-  save: boolean = true,
-) {
-  // If there is an existing import for this state in PROGRAMS_TS_FILE, it's
-  // already configured and we don't need to do anything.
-  const moduleSpecifier = `./programs/${state.toLowerCase()}_programs`;
-  if (sourceFile.getImportDeclaration(moduleSpecifier)) {
-    return;
-  }
-
-  // Otherwise
-  // 1. Insert an import in between the right states alphabetically.
-  const newDefaultImport = `${state.toUpperCase()}_PROGRAMS`;
-  let inserted = false;
-  let lastStateImport = 0;
-  for (const [ind, importDec] of sourceFile.getImportDeclarations().entries()) {
-    const defaultImport = importDec.getDefaultImport();
-    if (!defaultImport) {
-      continue;
-    }
-    // Skip non-state imports.
-    if (!defaultImport!.getText().endsWith('_PROGRAMS')) {
-      continue;
-    }
-    lastStateImport = ind;
-    // If the current import is alphabetically greater than the new one,
-    // insert a new import and exit the loop.
-    if (defaultImport!.getText() > newDefaultImport) {
-      sourceFile.insertImportDeclaration(ind, {
-        defaultImport: newDefaultImport,
-        moduleSpecifier: `${moduleSpecifier}`,
-      });
-      inserted = true;
-      break;
-    }
-  }
-  if (!inserted) {
-    sourceFile.insertImportDeclaration(lastStateImport + 1, {
-      defaultImport: newDefaultImport,
-      moduleSpecifier: `${moduleSpecifier}`,
-    });
-  }
-
-  // 2. Find all_programs definition and insert programs similar to the above.
-  const programsDef = sourceFile.getVariableStatement('all_programs');
-  if (!programsDef) {
-    throw new Error(
-      `Could not find all_programs variable definition in ${PROGRAMS_TS_FILE}`,
-    );
-  }
-  const varInitializer = programsDef
-    .getDeclarations()[0]
-    .getInitializerOrThrow();
-
-  // See tests for how this string-hacking is supposed to work.
-  const components = varInitializer.getText().split(',\n');
-  for (const [ind, component] of components.entries()) {
-    if (ind === 0) {
-      continue;
-    } // skip ira_incentives
-    // This still works for the last component since it starts with }
-    if (component > `  ...${newDefaultImport}`) {
-      components.splice(ind, 0, `  ...${newDefaultImport}`);
-      break;
-    }
-  }
-  varInitializer.replaceWithText(components.join(',\n'));
-  if (save) {
-    sourceFile.save();
   }
 }
 
@@ -386,20 +305,19 @@ export class AuthorityAndProgramUpdater {
 
   async updatePrograms() {
     // Create program content and (over)write file.
-    const filePath = PROGRAMS_DIR + `${this.state.toLowerCase()}_programs.ts`;
+    const filePath =
+      PROGRAMS_DIR + '/' + this.state.toUpperCase() + '/programs.json';
     const formatOptions = await prettier.resolveConfig(filePath);
     if (!formatOptions) {
       throw new Error(`Could not retrieve Prettier config for ${filePath}`);
     }
     formatOptions.filepath = filePath;
-    const tsFileContent = await createProgramsContent(
+    const jsonFileContent = await createProgramsContent(
       this.state,
       this.authorityMap,
       formatOptions,
     );
-    fs.writeFileSync(filePath, tsFileContent);
-
-    maybeUpdateProgramsTsFile(this.state, getProgramSourceFile());
+    fs.writeFileSync(filePath, jsonFileContent);
   }
 
   updateGeoGroupsJson() {

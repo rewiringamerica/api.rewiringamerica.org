@@ -43,12 +43,14 @@ Filling out an entry for `incentive-spreadsheet-registry.ts` consists of creatin
    This script covers:
 
    - `data/<state>/authorities.json`
-   - `src/data/programs.ts`
+   - `data/<state>/programs.json`
 
    Usage:
    `node build/scripts/generate-misc-state-data.js <state_id>`
 
    If the state has city- or county-level incentives, you will need to add `city` and `county_fips` keys (respectively) to the entries that get generated in the state's `authorities.json`. This is what lets the runtime code know which authority applies to the user's actual location. `city` values have to match `zips.city` in the SQLite database. `county_fips` must be a county FIPS code ([list here](https://transition.fcc.gov/oet/info/maps/census/fips/fips.txt)).
+
+   If you are adding programs for a state that isn't already included you will also need to define the state program in `all_programs` in `src/data/programs.ts` after the file is generated with the script.
 
    It's recommended to also define low-income thresholds in `data/low_income_thresholds.json` and geo groups in `data/geo_groups.json` for your state to save time in the next step.
 

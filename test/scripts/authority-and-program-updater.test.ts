@@ -1,13 +1,11 @@
 import * as prettier from 'prettier';
 import { test } from 'tap';
-import { Project, QuoteKind } from 'ts-morph';
 import {
   AuthorityMap,
   AuthorityTypeMap,
   StateToAuthorityTypeMap,
   StateToGeoGroupMap,
   createProgramsContent,
-  maybeUpdateProgramsTsFile,
   sortMapByKey,
   updateAuthorities,
   updateGeoGroups,
@@ -61,20 +59,6 @@ const unorderedFixture: StateToAuthorityTypeMap = {
     },
   },
 };
-
-const baseSourceFile = `import SomeClass from './some_file';
-import CT_PROGRAMS from './programs/ct_programs';
-import NY_PROGRAMS from './programs/ny_programs';
-import OtherClass from './other_file';
-
-const var = 'foo';
-
-const all_programs = {
-  ...ira_programs,
-  ...CT_PROGRAMS,
-  ...NY_PROGRAMS,
-} as const;
-`;
 
 test('correctly sort state authority information by state', tap => {
   const ordered_json: StateToAuthorityTypeMap = {
@@ -248,161 +232,57 @@ test('generate state program content', async tap => {
     },
   };
 
-  const expected = `export const DE_PROGRAMS = {
-  de_delawareStateEnergy_foo: {
-    name: {
-      en: 'foo',
+  const expected = {
+    de_delawareStateEnergy_foo: {
+      name: {
+        en: 'foo',
+      },
+      url: {
+        en: 'foo.com',
+      },
     },
-    url: {
-      en: 'foo.com',
+    de_delawareStateEnergy_bar: {
+      name: {
+        en: 'bar',
+      },
+      url: {
+        en: 'bar.com',
+      },
     },
-  },
-  de_delawareStateEnergy_bar: {
-    name: {
-      en: 'bar',
+    de_delawareUtility_baz: {
+      name: {
+        en: 'baz',
+      },
+      url: {
+        en: 'baz.com',
+      },
     },
-    url: {
-      en: 'bar.com',
+    de_delawareUtility_qux: {
+      name: {
+        en: 'qux',
+      },
+      url: {
+        en: 'qux.com',
+      },
     },
-  },
-  de_delawareUtility_baz: {
-    name: {
-      en: 'baz',
-    },
-    url: {
-      en: 'baz.com',
-    },
-  },
-  de_delawareUtility_qux: {
-    name: {
-      en: 'qux',
-    },
-    url: {
-      en: 'qux.com',
-    },
-  },
-} as const;
-`;
+  };
 
-  const filepath = 'src/data/programs/de_programs.ts';
+  const filepath = 'data/DE/programs.json';
   const formatOptions = await prettier.resolveConfig(filepath);
-  if (!formatOptions) {
-    tap.fail('No prettier options retrieved');
-    return;
+  if (formatOptions) {
+    formatOptions.filepath = filepath;
+
+    const result = await createProgramsContent(
+      'DE',
+      authorityMap,
+      formatOptions,
+    );
+    const resultParsed = JSON.parse(result);
+
+    tap.matchOnly(resultParsed, expected);
+  } else {
+    tap.fail('Could not resolve prettier config');
   }
-  formatOptions.filepath = filepath;
-  tap.matchOnly(
-    await createProgramsContent('DE', authorityMap, formatOptions),
-    expected,
-  );
-});
-
-test('update .ts source file with first program', async tap => {
-  const project = new Project({
-    tsConfigFilePath: 'tsconfig.json',
-    skipAddingFilesFromTsConfig: true,
-    manipulationSettings: {
-      quoteKind: QuoteKind.Single,
-    },
-  });
-  const unusedPath = 'test/unused.ts';
-  project.createSourceFile(unusedPath, baseSourceFile);
-
-  const expected = `import SomeClass from './some_file';
-import AZ_PROGRAMS from './programs/az_programs';
-import CT_PROGRAMS from './programs/ct_programs';
-import NY_PROGRAMS from './programs/ny_programs';
-import OtherClass from './other_file';
-
-const var = 'foo';
-
-const all_programs = {
-  ...ira_programs,
-  ...AZ_PROGRAMS,
-  ...CT_PROGRAMS,
-  ...NY_PROGRAMS,
-} as const;
-`;
-
-  maybeUpdateProgramsTsFile(
-    'AZ',
-    project.getSourceFileOrThrow(unusedPath),
-    false,
-  );
-
-  tap.matchOnly(project.getSourceFileOrThrow(unusedPath).getText(), expected);
-});
-
-test('update .ts source file with middle program', async tap => {
-  const project = new Project({
-    tsConfigFilePath: 'tsconfig.json',
-    skipAddingFilesFromTsConfig: true,
-    manipulationSettings: {
-      quoteKind: QuoteKind.Single,
-    },
-  });
-  const unusedPath = 'test/unused.ts';
-  project.createSourceFile(unusedPath, baseSourceFile);
-
-  const expected = `import SomeClass from './some_file';
-import CT_PROGRAMS from './programs/ct_programs';
-import IL_PROGRAMS from './programs/il_programs';
-import NY_PROGRAMS from './programs/ny_programs';
-import OtherClass from './other_file';
-
-const var = 'foo';
-
-const all_programs = {
-  ...ira_programs,
-  ...CT_PROGRAMS,
-  ...IL_PROGRAMS,
-  ...NY_PROGRAMS,
-} as const;
-`;
-
-  maybeUpdateProgramsTsFile(
-    'IL',
-    project.getSourceFileOrThrow(unusedPath),
-    false,
-  );
-
-  tap.matchOnly(project.getSourceFileOrThrow(unusedPath).getText(), expected);
-});
-
-test('update .ts source file with final program', async tap => {
-  const project = new Project({
-    tsConfigFilePath: 'tsconfig.json',
-    skipAddingFilesFromTsConfig: true,
-    manipulationSettings: {
-      quoteKind: QuoteKind.Single,
-    },
-  });
-  const unusedPath = 'test/unused.ts';
-  project.createSourceFile(unusedPath, baseSourceFile);
-
-  const expected = `import SomeClass from './some_file';
-import CT_PROGRAMS from './programs/ct_programs';
-import NY_PROGRAMS from './programs/ny_programs';
-import WA_PROGRAMS from './programs/wa_programs';
-import OtherClass from './other_file';
-
-const var = 'foo';
-
-const all_programs = {
-  ...ira_programs,
-  ...CT_PROGRAMS,
-  ...NY_PROGRAMS,
-  ...WA_PROGRAMS,
-} as const;
-`;
-
-  maybeUpdateProgramsTsFile(
-    'WA',
-    project.getSourceFileOrThrow(unusedPath),
-    false,
-  );
-
-  tap.matchOnly(project.getSourceFileOrThrow(unusedPath).getText(), expected);
 });
 
 test('add geo groups for new state', async tap => {
