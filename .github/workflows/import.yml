@@ -26,7 +26,6 @@ jobs:
           INCENTIVE_ADMIN_HOST: 'https://incentive-admin-staging.rewiringamerica.org/api/export'
         run: |
           npx ts-node scripts/incentive-admin-import.ts
-
       - name: Check for changes
         id: git_diff
         run: |
@@ -34,3 +33,11 @@ jobs:
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add data/
           git diff --cached --exit-code || echo "changes"
+      - name: Create Pull Request
+        if: steps.git_diff.outputs.result == 'changes'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: Incentive Admin Update
+          branch: incentive-admin-update
+          title: Incentive Admin Update
+          body: This PR updates the API data files, using data provided by the incentive admin.
