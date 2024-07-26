@@ -7,7 +7,7 @@ type StateGroupedData = {
 };
 
 const INCENTIVE_ADMIN_HOST =
-  'https://incentive-admin-staging.rewiringamerica.org/api/export';
+  process.env.INCENTIVE_ADMIN_HOST || 'http://localhost:3000/api/export';
 
 const STATE_IMPORTS = [
   '/authorities',

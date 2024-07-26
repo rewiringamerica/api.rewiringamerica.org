@@ -21,6 +21,9 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
       - name: Run transformation script
+        env:
+          # TODO: Update this to the PROD API endpoint once we're ready to go live.
+          INCENTIVE_ADMIN_HOST: 'https://incentive-admin-staging.rewiringamerica.org/api/export'
         run: |
           npx ts-node scripts/incentive-admin-import.ts
 
