@@ -1,12 +1,10 @@
 name: Manual API Data Update
 
 on:
-  push:
-    branches: asa/add-import-workflow
   workflow_dispatch:
 
 jobs:
-  update-api-data:
+  incentive-admin-data-update:
     runs-on: ubuntu-latest
 
     steps:
