@@ -15,7 +15,7 @@ import { API_INCENTIVE_SCHEMA } from './schemas/v1/incentive';
 // These are the options described here:
 // https://fastify.dev/docs/latest/Reference/Server
 export const options = {
-  querystringParser: (str: string) => qs.parse(str, { allowDots: true }),
+  querystringParser: (str: string) => qs.parse(str, { comma: true }),
   disableRequestLogging: true,
 };
 
