@@ -1,6 +1,8 @@
 name: Manual API Data Update
 
 on:
+  push:
+    branches: 'asa/add-import-workflow'
   workflow_dispatch:
 
 jobs:
@@ -44,5 +46,5 @@ jobs:
           commit-message: Incentive Admin Update
           branch: incentive-admin-update
           title: Incentive Admin Update
-          body: This PR updates the API data files, using data provided by the incentive admin.
+          body: This PR updates the API data files, using data maintained by the [Incentive Admin](https://github.com/rewiringamerica/incentive_admin).
           base: main
