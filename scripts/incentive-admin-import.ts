@@ -31,7 +31,6 @@ async function saveIncentiveDataToDisk() {
     for (const path of GENERAL_IMPORTS) {
       const writeDirAndFilename = `data/${pathToFileName(path)}`;
       const data = await fetchData(path);
-      console.log(data, 'data');
       writeFileSync(writeDirAndFilename, JSON.stringify(data, null, 2) + '\n');
       console.log(`Exported ${writeDirAndFilename}....`);
     }
