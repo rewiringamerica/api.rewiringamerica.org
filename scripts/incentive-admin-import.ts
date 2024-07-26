@@ -53,10 +53,7 @@ async function fetchData(path: string) {
 }
 
 // Write data to states directory, expects data is organized by state.
-export function writeDataToStatesDirectory(
-  data: StateGroupedData,
-  fileName: string,
-) {
+function writeDataToStatesDirectory(data: StateGroupedData, fileName: string) {
   const writeDir = 'data/';
   // iterate over states
   for (const [currentState, records] of Object.entries(data)) {
