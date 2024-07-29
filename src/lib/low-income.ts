@@ -35,7 +35,7 @@ export function isLowIncome(
     const [min, max] = thresholds.thresholds[tax_filing];
     return household_income >= min && household_income <= max;
   } else if (thresholds.type === 'ami-percentage') {
-    const percentage = thresholds.percentage;
+    const percentage: 80 | 150 = thresholds.thresholds.percentage;
     const threshold =
       percentage === 80
         ? amiAndEvCreditEligibility.computedAMI80

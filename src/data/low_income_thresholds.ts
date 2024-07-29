@@ -125,12 +125,19 @@ export const AUTHORITY_INFO_SCHEMA = {
           type: 'string',
           const: 'ami-percentage',
         },
-        percentage: {
-          type: 'number',
-          enum: [80, 150],
+        thresholds: {
+          type: 'object',
+          properties: {
+            percentage: {
+              type: 'number',
+              enum: [80, 150],
+            },
+          },
+          required: ['percentage'],
+          additionalProperties: false,
         },
       },
-      required: ['type', 'percentage'],
+      required: ['type', 'thresholds'],
     },
   ],
 } as const;
