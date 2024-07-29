@@ -554,6 +554,7 @@ test('correct filtering of county incentives', async t => {
     [incentive],
     {},
     authorities,
+    { computedAMI80: 80000, computedAMI150: 150000, evCreditEligible: false },
   );
   t.ok(shouldFind);
   t.equal(shouldFind.stateIncentives.length, 1);
@@ -564,6 +565,7 @@ test('correct filtering of county incentives', async t => {
     [incentive],
     {},
     authorities,
+    { computedAMI80: 80000, computedAMI150: 150000, evCreditEligible: false },
   );
   t.ok(shouldNotFind);
   t.equal(shouldNotFind.stateIncentives.length, 0);
@@ -617,6 +619,7 @@ test('correct filtering of city incentives', async t => {
     [incentive],
     {},
     authorities,
+    { computedAMI80: 80000, computedAMI150: 150000, evCreditEligible: false },
   );
   t.ok(shouldFind);
   t.equal(shouldFind.stateIncentives.length, 1);
@@ -627,6 +630,7 @@ test('correct filtering of city incentives', async t => {
     [incentive],
     {},
     authorities,
+    { computedAMI80: 80000, computedAMI150: 150000, evCreditEligible: false },
   );
   t.ok(shouldNotFindWithPartialMatch);
   t.equal(shouldNotFindWithPartialMatch.stateIncentives.length, 0);
@@ -686,6 +690,7 @@ test('correctly evaluates savings when state tax liability is lower than max sav
     [incentive],
     {},
     authorities,
+    { computedAMI80: 80000, computedAMI150: 150000, evCreditEligible: false },
   );
 
   t.ok(result);

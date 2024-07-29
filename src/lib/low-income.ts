@@ -2,6 +2,7 @@ import {
   HHSizeThresholds,
   LowIncomeThresholdsAuthority,
 } from '../data/low_income_thresholds';
+import { AMIAndEVCreditEligibility } from './ami-evcredit-calculation';
 import { CalculateParams } from './incentives-calculation';
 import { ResolvedLocation } from './location';
 
@@ -14,6 +15,7 @@ export function isLowIncome(
   { household_size, household_income, tax_filing }: CalculateParams,
   thresholds: LowIncomeThresholdsAuthority,
   location: ResolvedLocation,
+  amiAndEvCreditEligibility: AMIAndEVCreditEligibility,
 ): boolean {
   if (thresholds.type === 'hhsize' || thresholds.type === 'county-hhsize') {
     const bySize: HHSizeThresholds =
@@ -32,8 +34,21 @@ export function isLowIncome(
   } else if (thresholds.type === 'filing-status') {
     const [min, max] = thresholds.thresholds[tax_filing];
     return household_income >= min && household_income <= max;
+  } else if (thresholds.type === 'ami-percentage') {
+    const percentage = thresholds.percentage;
+    const threshold =
+      percentage === 80
+        ? amiAndEvCreditEligibility.computedAMI80
+        : percentage === 150
+        ? amiAndEvCreditEligibility.computedAMI150
+        : // If the percentage is an unknown value, use a negative threshold so
+          // all incomes are greater than it.
+          -1;
+
+    return household_income <= threshold;
   } else {
-    console.error('Unknown income threshold type', thresholds);
+    const t: never = thresholds;
+    console.error('Unknown income threshold type', t);
     return false;
   }
 }

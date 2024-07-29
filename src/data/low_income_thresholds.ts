@@ -119,6 +119,19 @@ export const AUTHORITY_INFO_SCHEMA = {
       },
       required: ['type', 'thresholds'],
     },
+    {
+      properties: {
+        type: {
+          type: 'string',
+          const: 'ami-percentage',
+        },
+        percentage: {
+          type: 'number',
+          enum: [80, 150],
+        },
+      },
+      required: ['type', 'percentage'],
+    },
   ],
 } as const;
 

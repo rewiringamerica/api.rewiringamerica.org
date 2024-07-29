@@ -320,6 +320,7 @@ export default function calculateIncentives(
       allStateIncentives,
       stateIncentiveRelationships,
       stateAuthorities,
+      amiAndEvCreditEligibility,
     );
     incentives.push(...state.stateIncentives);
     savings = addSavings(savings, state.savings);

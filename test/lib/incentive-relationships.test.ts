@@ -22,6 +22,12 @@ const LOCATION: ResolvedLocation = {
   countyFips: '44007',
 };
 
+const AMIS = {
+  computedAMI80: 89900,
+  computedAMI150: 168600,
+  evCreditEligible: false,
+};
+
 // This is a basic test to set up supplying test data to the calculator logic.
 // This checks incentive eligibility with no relationship logic included.
 test('basic test for supplying test incentive data to calculation logic', async t => {
@@ -39,6 +45,7 @@ test('basic test for supplying test incentive data to calculation logic', async 
     TEST_INCENTIVES,
     {},
     {},
+    AMIS,
   );
   t.ok(data);
   // This user is eligible for all of the incentives.
@@ -64,6 +71,7 @@ test('test calculation with no incentives', async t => {
     [],
     TEST_INCENTIVE_RELATIONSHIPS,
     {},
+    AMIS,
   );
   t.ok(data);
   t.equal(data.stateIncentives.length, 0);
@@ -93,6 +101,7 @@ test('test incentive relationship logic', async t => {
     TEST_INCENTIVES,
     TEST_INCENTIVE_RELATIONSHIPS,
     {},
+    AMIS,
   );
   t.ok(data);
   t.equal(data.stateIncentives.length, 6);
@@ -130,6 +139,7 @@ test('test more complex incentive relationship logic', async t => {
     TEST_INCENTIVES,
     TEST_INCENTIVE_RELATIONSHIPS_2,
     {},
+    AMIS,
   );
   t.ok(data);
   t.equal(data.stateIncentives.length, 6);
@@ -170,6 +180,7 @@ test('test incentive relationship and combined max value logic', async t => {
     TEST_INCENTIVES,
     TEST_INCENTIVE_RELATIONSHIPS_3,
     {},
+    AMIS,
   );
   t.ok(data);
   t.equal(data.stateIncentives.length, 6);
@@ -212,6 +223,7 @@ test('test incentive relationship and permanent ineligibility criteria', async t
     TEST_INCENTIVES,
     TEST_INCENTIVE_RELATIONSHIPS_3,
     {},
+    AMIS,
   );
 
   t.ok(data);
@@ -252,6 +264,7 @@ test('test nested incentive relationship logic', async t => {
     TEST_INCENTIVES,
     TEST_NESTED_INCENTIVE_RELATIONSHIPS,
     {},
+    AMIS,
   );
   t.ok(data);
   for (const incentive of data.stateIncentives) {
@@ -282,6 +295,7 @@ test('test combined maximum savings logic', async t => {
     TEST_INCENTIVES,
     TEST_INCENTIVE_RELATIONSHIPS_3,
     {},
+    AMIS,
   );
   t.ok(data);
   // Check that the user is eligible for B, E, and F.

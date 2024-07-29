@@ -15,6 +15,7 @@ import { AmountType } from '../data/types/amount';
 import { APICoverage } from '../data/types/coverage';
 import { OwnerStatus } from '../data/types/owner-status';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
+import { AMIAndEVCreditEligibility } from './ami-evcredit-calculation';
 import {
   CombinedValue,
   RelationshipMaps,
@@ -63,6 +64,7 @@ export function calculateStateIncentivesAndSavings(
   incentives: StateIncentive[],
   incentiveRelationships: IncentiveRelationships,
   stateAuthorities: AuthoritiesByType,
+  amiAndEvCreditEligibility: AMIAndEVCreditEligibility,
 ): {
   stateIncentives: CalculatedIncentive[];
   savings: APISavings;
@@ -101,7 +103,9 @@ export function calculateStateIncentivesAndSavings(
         // The incentive is income-qualified but we don't know the thresholds;
         // be conservative and exclude it.
         eligible = false;
-      } else if (!isLowIncome(request, thresholds, location)) {
+      } else if (
+        !isLowIncome(request, thresholds, location, amiAndEvCreditEligibility)
+      ) {
         eligible = false;
       }
     }
