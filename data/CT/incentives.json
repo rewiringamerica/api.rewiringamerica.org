@@ -6,7 +6,9 @@
     "payment_methods": [
       "assistance_program"
     ],
-    "items": ["other_weatherization"],
+    "items": [
+      "other_weatherization"
+    ],
     "program": "ct_energizeCtHomeEnergySolutions",
     "amount": {
       "type": "percent",
@@ -16,11 +18,11 @@
       "homeowner",
       "renter"
     ],
-    "low_income": "ct-default",
     "short_description": {
       "en": "The Home Energy Solutions program provides income-eligible households with no-cost energy assessments and incentives for weatherization services.",
       "es": "El programa Home Energy Solutions (Soluciones Energéticas para el Hogar) ofrece a los hogares que cumplen los requisitos de ingresos, evaluaciones de consumo de energía sin costo además de incentivos para diversos servicios de climatización."
-    }
+    },
+    "low_income": "ct-default"
   },
   {
     "id": "CT-2",
@@ -29,12 +31,14 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["geothermal_heating_installation"],
+    "items": [
+      "geothermal_heating_installation"
+    ],
     "program": "ct_residentialGroundSourceHeatPumpIncentive",
     "amount": {
       "type": "dollars_per_unit",
-      "unit": "ton",
       "number": 1500,
+      "unit": "ton",
       "maximum": 15000
     },
     "owner_status": [
@@ -54,7 +58,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_water_heater"],
+    "items": [
+      "heat_pump_water_heater"
+    ],
     "program": "ct_residentialHeatPumpWaterHeaterIncentive",
     "amount": {
       "type": "dollar_amount",
@@ -77,7 +83,9 @@
     "payment_methods": [
       "assistance_program"
     ],
-    "items": ["other_weatherization"],
+    "items": [
+      "other_weatherization"
+    ],
     "program": "ct_energizeCtHomeEnergySolutions",
     "amount": {
       "type": "percent",
@@ -87,11 +95,11 @@
       "homeowner",
       "renter"
     ],
-    "low_income": "ct-default",
     "short_description": {
       "en": "The Home Energy Solutions program provides income-eligible households with no-cost energy assessments and incentives for weatherization services.",
       "es": "El programa Home Energy Solutions brinda a los hogares que cumplan los requisitos de ingresos una evaluación de sus necesidades de energía al igual que incentivos para recibir servicios de climatización."
-    }
+    },
+    "low_income": "ct-default"
   },
   {
     "id": "CT-5",
@@ -100,12 +108,14 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["attic_or_roof_insulation"],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
     "program": "ct_atticInsulationRebate",
     "amount": {
       "type": "dollars_per_unit",
-      "unit": "square_foot",
       "number": 2.5,
+      "unit": "square_foot",
       "minimum": 2000,
       "maximum": 5000
     },
@@ -126,7 +136,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_water_heater"],
+    "items": [
+      "heat_pump_water_heater"
+    ],
     "program": "ct_residentialHeatPumpWaterHeaterRebate",
     "amount": {
       "type": "dollar_amount",
@@ -149,7 +161,9 @@
     "payment_methods": [
       "assistance_program"
     ],
-    "items": ["energy_audit"],
+    "items": [
+      "energy_audit"
+    ],
     "program": "ct_residentialHomeEnergySavingsProgram",
     "amount": {
       "type": "percent",
@@ -170,7 +184,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_clothes_dryer"],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
     "program": "ct_electricApplianceRebateProgram",
     "amount": {
       "type": "dollar_amount",
@@ -193,12 +209,14 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["wall_insulation"],
+    "items": [
+      "wall_insulation"
+    ],
     "program": "ct_wallOrAtticInsulationProgram",
     "amount": {
       "type": "dollars_per_unit",
-      "unit": "square_foot",
-      "number": 1
+      "number": 1,
+      "unit": "square_foot"
     },
     "owner_status": [
       "homeowner",
@@ -218,12 +236,14 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["attic_or_roof_insulation"],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
     "program": "ct_wallOrAtticInsulationProgram",
     "amount": {
       "type": "dollars_per_unit",
-      "unit": "square_foot",
-      "number": 1.5
+      "number": 1.5,
+      "unit": "square_foot"
     },
     "owner_status": [
       "homeowner",
@@ -243,12 +263,15 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["ducted_heat_pump", "ductless_heat_pump"],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
     "program": "ct_coolChoiceProgram",
     "amount": {
       "type": "dollars_per_unit",
-      "unit": "ton",
       "number": 300,
+      "unit": "ton",
       "representative": 900
     },
     "owner_status": [
@@ -276,8 +299,8 @@
     "program": "ct_coolingAndHeatingIncentivePilotProgram",
     "amount": {
       "type": "dollars_per_unit",
-      "unit": "ton",
       "number": 1200,
+      "unit": "ton",
       "maximum": 20000
     },
     "owner_status": [
@@ -297,7 +320,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_water_heater"],
+    "items": [
+      "heat_pump_water_heater"
+    ],
     "program": "ct_coolingAndHeatingIncentivePilotProgram",
     "amount": {
       "type": "dollar_amount",
@@ -320,12 +345,15 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["ducted_heat_pump", "ductless_heat_pump"],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
     "program": "ct_residentialAirSourceHeatPumpIncentive",
     "amount": {
       "type": "dollars_per_unit",
-      "unit": "ton",
       "number": 750,
+      "unit": "ton",
       "maximum": 15000
     },
     "owner_status": [
@@ -345,12 +373,14 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["geothermal_heating_installation"],
+    "items": [
+      "geothermal_heating_installation"
+    ],
     "program": "ct_residentialGroundSourceHeatPumpIncentive",
     "amount": {
       "type": "dollars_per_unit",
-      "unit": "ton",
       "number": 1500,
+      "unit": "ton",
       "maximum": 15000
     },
     "owner_status": [
@@ -370,7 +400,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_water_heater"],
+    "items": [
+      "heat_pump_water_heater"
+    ],
     "program": "ct_residentialHeatPumpWaterHeaterIncentive",
     "amount": {
       "type": "dollar_amount",
@@ -393,12 +425,15 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["ducted_heat_pump", "ductless_heat_pump"],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
     "program": "ct_residentialAirSourceHeatPumpIncentive",
     "amount": {
       "type": "dollars_per_unit",
-      "unit": "ton",
       "number": 750,
+      "unit": "ton",
       "maximum": 15000
     },
     "owner_status": [
@@ -418,7 +453,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["geothermal_heating_installation"],
+    "items": [
+      "geothermal_heating_installation"
+    ],
     "program": "ct_residentialGroundSourceHeatPumpIncentive",
     "amount": {
       "type": "dollar_amount",
@@ -441,7 +478,10 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["ducted_heat_pump", "ductless_heat_pump"],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
     "program": "ct_residentialAirSourceHeatPumpIncentive",
     "amount": {
       "type": "dollar_amount",
@@ -464,7 +504,10 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["ducted_heat_pump", "ductless_heat_pump"],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
     "program": "ct_residentialAirSourceHeatPumpIncentive",
     "amount": {
       "type": "dollar_amount",
@@ -487,7 +530,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["geothermal_heating_installation"],
+    "items": [
+      "geothermal_heating_installation"
+    ],
     "program": "ct_residentialGroundSourceHeatPumpIncentive",
     "amount": {
       "type": "dollar_amount",
@@ -510,7 +555,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["new_electric_vehicle"],
+    "items": [
+      "new_electric_vehicle"
+    ],
     "program": "ct_electricVehicleAndChargingRebateProgram",
     "amount": {
       "type": "dollar_amount",
@@ -534,7 +581,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["used_electric_vehicle"],
+    "items": [
+      "used_electric_vehicle"
+    ],
     "program": "ct_electricVehicleAndChargingRebateProgram",
     "amount": {
       "type": "dollar_amount",
@@ -558,7 +607,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["electric_vehicle_charger"],
+    "items": [
+      "electric_vehicle_charger"
+    ],
     "program": "ct_electricVehicleAndChargingRebateProgram",
     "amount": {
       "type": "dollar_amount",
@@ -581,7 +632,9 @@
     "payment_methods": [
       "pos_rebate"
     ],
-    "items": ["new_electric_vehicle"],
+    "items": [
+      "new_electric_vehicle"
+    ],
     "program": "ct_cheapr",
     "amount": {
       "type": "dollar_amount",
@@ -603,7 +656,9 @@
     "payment_methods": [
       "pos_rebate"
     ],
-    "items": ["new_electric_vehicle"],
+    "items": [
+      "new_electric_vehicle"
+    ],
     "program": "ct_cheapr",
     "amount": {
       "type": "dollar_amount",
@@ -613,11 +668,11 @@
       "homeowner",
       "renter"
     ],
-    "low_income": "ct-cheapr",
     "short_description": {
       "en": "Bonus $2,000 off a qualifying new electric vehicle for income-eligible individuals.",
       "es": "Una rebaja extra de $2,000 dólares para un nuevo vehículo eléctrico elegible para individuos que cumplan con los requisitos de ingresos."
-    }
+    },
+    "low_income": "ct-cheapr"
   },
   {
     "id": "CT-34",
@@ -627,7 +682,9 @@
       "pos_rebate",
       "rebate"
     ],
-    "items": ["used_electric_vehicle"],
+    "items": [
+      "used_electric_vehicle"
+    ],
     "program": "ct_cheapr",
     "amount": {
       "type": "dollar_amount",
@@ -637,10 +694,10 @@
       "homeowner",
       "renter"
     ],
-    "low_income": "ct-cheapr",
     "short_description": {
       "en": "$3,000 rebate for a qualifying used electric vehicle for income-qualifying individuals.",
       "es": "Un reembolso de $3,000 dólares por un vehículo eléctrico usado elegible para personas que reúnan los requisitos de ingresos."
-    }
+    },
+    "low_income": "ct-cheapr"
   }
 ]

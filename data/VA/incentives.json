@@ -6,7 +6,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_clothes_dryer"],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
     "program": "va_takeChargeVirginiaEfficientProductsProgram",
     "amount": {
       "type": "dollar_amount",
@@ -29,12 +31,14 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["attic_or_roof_insulation"],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
     "program": "va_takeChargeVirginiaHomePerformanceProgram",
     "amount": {
       "type": "dollars_per_unit",
-      "unit": "square_foot",
       "number": 0.1,
+      "unit": "square_foot",
       "maximum": 1500
     },
     "owner_status": [
@@ -52,7 +56,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["electric_vehicle_charger"],
+    "items": [
+      "electric_vehicle_charger"
+    ],
     "program": "va_takeChargeVirginiaEfficientProductsProgram",
     "amount": {
       "type": "dollar_amount",
@@ -75,12 +81,14 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["attic_or_roof_insulation"],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
     "program": "va_takeChargeVirginiaHomePerformanceProgram",
     "amount": {
       "type": "dollars_per_unit",
-      "unit": "square_foot",
       "number": 0.125,
+      "unit": "square_foot",
       "maximum": 1500
     },
     "owner_status": [
@@ -98,7 +106,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["ductless_heat_pump"],
+    "items": [
+      "ductless_heat_pump"
+    ],
     "program": "va_takeChargeVirginiaHomePerformanceProgram",
     "amount": {
       "type": "dollar_amount",
@@ -119,7 +129,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["ductless_heat_pump"],
+    "items": [
+      "ductless_heat_pump"
+    ],
     "program": "va_takeChargeVirginiaEfficientProductsProgram",
     "amount": {
       "type": "dollar_amount",
@@ -142,7 +154,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["air_sealing"],
+    "items": [
+      "air_sealing"
+    ],
     "program": "va_takeChargeVirginiaHomePerformanceProgram",
     "amount": {
       "type": "dollar_amount",
@@ -163,7 +177,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_water_heater"],
+    "items": [
+      "heat_pump_water_heater"
+    ],
     "program": "va_takeChargeVirginiaEfficientProductsProgram",
     "amount": {
       "type": "dollar_amount",
@@ -186,12 +202,14 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["attic_or_roof_insulation"],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
     "program": "va_takeChargeVirginiaHomePerformanceProgram",
     "amount": {
       "type": "dollars_per_unit",
-      "unit": "square_foot",
       "number": 0.55,
+      "unit": "square_foot",
       "maximum": 1500
     },
     "owner_status": [
@@ -209,7 +227,9 @@
     "payment_methods": [
       "assistance_program"
     ],
-    "items": ["other_insulation"],
+    "items": [
+      "other_insulation"
+    ],
     "program": "va_takeChargeVirginiaHomePerformanceProgram",
     "amount": {
       "type": "percent",
@@ -231,7 +251,9 @@
     "payment_methods": [
       "assistance_program"
     ],
-    "items": ["other_insulation"],
+    "items": [
+      "other_insulation"
+    ],
     "program": "va_takeChargeVirginiaHomePerformanceProgram",
     "amount": {
       "type": "percent",
@@ -253,7 +275,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_clothes_dryer"],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
     "program": "va_energyStarRebates",
     "amount": {
       "type": "dollar_amount",
@@ -275,7 +299,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["heat_pump_water_heater"],
+    "items": [
+      "heat_pump_water_heater"
+    ],
     "program": "va_waterEnergySavingsProgram",
     "amount": {
       "type": "dollar_amount",
@@ -298,7 +324,9 @@
     "payment_methods": [
       "rebate"
     ],
-    "items": ["electric_vehicle_charger"],
+    "items": [
+      "electric_vehicle_charger"
+    ],
     "program": "va_evChargerRewards",
     "amount": {
       "type": "dollar_amount",
@@ -319,19 +347,21 @@
     "payment_methods": [
       "assistance_program"
     ],
-    "items": ["other_weatherization"],
-    "program": "va_incomeAndAgeQualifyingEnergyEfficiencyProgram",
-    "owner_status": [
-      "homeowner"
+    "items": [
+      "other_weatherization"
     ],
+    "program": "va_incomeAndAgeQualifyingEnergyEfficiencyProgram",
     "amount": {
       "type": "percent",
       "number": 1
     },
-    "low_income": "va-default",
+    "owner_status": [
+      "homeowner"
+    ],
     "short_description": {
       "en": "Receive no cost energy efficient weatherization upgrades for qualified income and age levels by qualified service providers.",
       "es": "Reciba sin costo alguno actualizaciones de sus instalaciones de climatización si cumple los requisitos de nivel de ingresos o de edad realizados por proveedores de servicios competentes."
-    }
+    },
+    "low_income": "va-default"
   }
 ]
