@@ -44,7 +44,13 @@ absent, no incentives offered by utilities will be returned.`,
     items: {
       type: 'array',
       description: `Which types of product or service to fetch incentives for. \
-If absent, include incentives for all products and services.`,
+If absent, include incentives for all products and services. Pass multiple \
+values either comma-separated \
+(\`items=new_electric_vehicle,used_electric_vehicle\`), or as the same GET \
+parameter multiple times \
+(\`items=new_electric_vehicle&items=used_electric_vehicle\`), or using empty \
+square bracket notation \
+(\`items[]=new_electric_vehicle&items[]=used_electric_vehicle\`).`,
       items: {
         type: 'string',
         enum: ALL_ITEMS,
