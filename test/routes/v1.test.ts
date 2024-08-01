@@ -513,6 +513,31 @@ test('WI low income response with state and utility filtering is valid and corre
   );
 });
 
+test('WI low income threshold', async t => {
+  // AMI for hhsize = 1 here is $48,500.
+  const baseQuery = {
+    zip: '53910',
+    owner_status: 'homeowner',
+    household_size: 1,
+    tax_filing: 'single',
+    authority_types: ['utility', 'other'],
+    utility: 'wi-adams-columbia-electric-cooperative',
+    items: ['air_sealing'],
+    // TODO: Remove when WI is fully launched.
+    include_beta_states: true,
+  };
+  await validateResponse(
+    t,
+    { ...baseQuery, household_income: 48000 },
+    './test/snapshots/v1-wi-53910-lowincome.json',
+  );
+  await validateResponse(
+    t,
+    { ...baseQuery, household_income: 50000 },
+    './test/snapshots/v1-wi-53910-not-lowincome.json',
+  );
+});
+
 const BAD_QUERIES = [
   // bad location:
   {
