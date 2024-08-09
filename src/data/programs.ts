@@ -1,26 +1,19 @@
-import { AZ_PROGRAMS } from './programs/az_programs';
-import { CO_PROGRAMS } from './programs/co_programs';
-import { CT_PROGRAMS } from './programs/ct_programs';
-import { DC_PROGRAMS } from './programs/dc_programs';
-import { GA_PROGRAMS } from './programs/ga_programs';
-import { IL_PROGRAMS } from './programs/il_programs';
-import { MI_PROGRAMS } from './programs/mi_programs';
-import { NV_PROGRAMS } from './programs/nv_programs';
-import { NY_PROGRAMS } from './programs/ny_programs';
-import { OR_PROGRAMS } from './programs/or_programs';
-import { PA_PROGRAMS } from './programs/pa_programs';
-import { RI_PROGRAMS } from './programs/ri_programs';
-import { VA_PROGRAMS } from './programs/va_programs';
-import { VT_PROGRAMS } from './programs/vt_programs';
-import { WI_PROGRAMS } from './programs/wi_programs';
+import fs from 'fs';
 import { LocalizableString } from './types/localizable-string';
+import { STATES_AND_TERRITORIES } from './types/states';
 
-export type Program = {
+const PROGRAMS_DIR = 'data';
+
+interface Program {
   name: LocalizableString;
   url: LocalizableString;
-};
+}
 
-const ira_programs = {
+interface Programs {
+  [key: string]: Program;
+}
+
+export const ira_programs = {
   alternativeFuelVehicleRefuelingPropertyCredit: {
     name: {
       en: 'Federal Alternative Fuel Vehicle Refueling Property Credit (30C)',
@@ -97,25 +90,24 @@ const ira_programs = {
   },
 } as const;
 
-const all_programs = {
-  ...ira_programs,
-  ...AZ_PROGRAMS,
-  ...CO_PROGRAMS,
-  ...CT_PROGRAMS,
-  ...DC_PROGRAMS,
-  ...GA_PROGRAMS,
-  ...IL_PROGRAMS,
-  ...MI_PROGRAMS,
-  ...NV_PROGRAMS,
-  ...NY_PROGRAMS,
-  ...NY_PROGRAMS,
-  ...OR_PROGRAMS,
-  ...PA_PROGRAMS,
-  ...RI_PROGRAMS,
-  ...VA_PROGRAMS,
-  ...VT_PROGRAMS,
-  ...WI_PROGRAMS,
-} as const;
+const all_programs = STATES_AND_TERRITORIES.reduce((acc, state) => {
+  try {
+    const statePrograms = parseProgramJSON(state);
+    return { ...acc, ...statePrograms };
+  } catch (error) {
+    console.error(`Error parsing programs for state ${state}:`, error);
+    return acc;
+  }
+}, ira_programs);
 
-export type Programs = { [Key in keyof typeof all_programs]: Program };
 export const PROGRAMS: Programs = all_programs;
+
+function parseProgramJSON(state: string) {
+  let result: Programs = {};
+  const filepath = `${PROGRAMS_DIR}/${state}/programs.json`;
+  if (fs.existsSync(filepath)) {
+    result = JSON.parse(fs.readFileSync(filepath, 'utf-8'));
+  }
+
+  return result;
+}

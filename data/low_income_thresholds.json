@@ -296,6 +296,23 @@
         "8": 116500
       }
     },
+    "il-comEd-ev-charger": {
+      "type": "hhsize",
+      "incentives": [
+        "IL-7"
+      ],
+      "source_url": "https://www.huduser.gov/portal/datasets/il/il2023/2023summary.odn?inputname=STTLT*1799999999%2BIllinois&selection_type=county&stname=Illinois&statefp=17.0&year=2023",
+      "thresholds": {
+        "1": 56400,
+        "2": 64450,
+        "3": 72500,
+        "4": 80600,
+        "5": 87050,
+        "6": 93500,
+        "7": 99900,
+        "8": 106350
+      }
+    },
     "il-solar-for-all": {
       "type": "hhsize",
       "incentives": [
@@ -1840,7 +1857,7 @@
   },
   "WI": {
     "wi-focus-on-energy": {
-      "type": "hhsize",
+      "type": "ami-percentage",
       "incentives": [
         "WI-26",
         "WI-28",
@@ -1848,14 +1865,7 @@
       ],
       "source_url": "https://focusonenergy.com/income-qualified",
       "thresholds": {
-        "1": 66300,
-        "2": 75750,
-        "3": 85200,
-        "4": 94650,
-        "5": 102250,
-        "6": 109800,
-        "7": 117400,
-        "8": 124950
+        "percentage": 80
       }
     }
   }

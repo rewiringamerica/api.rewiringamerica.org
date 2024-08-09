@@ -66,6 +66,7 @@ import {
 import { PROGRAMS } from '../../src/data/programs';
 import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { LOCALIZABLE_STRING_SCHEMA } from '../../src/data/types/localizable-string';
+import { PROGRAMS_SCHEMA, PROGRAM_SCHEMA } from '../../src/data/types/program';
 import { LAUNCHED_STATES } from '../../src/data/types/states';
 import {
   addPrerequisites,
@@ -236,6 +237,22 @@ test('all programs have valid URLs', async tap => {
       tap.ok(isURLValid(url), `${programId} has invalid URL`);
     }
   }
+});
+
+test('program JSON files match schemas', async tap => {
+  const ajv = new Ajv({ schemas: [LOCALIZABLE_STRING_SCHEMA, PROGRAM_SCHEMA] });
+  tap.ok(
+    ajv.validate(PROGRAMS_SCHEMA, PROGRAMS),
+    `programs invalid: ${ajv.errors}`,
+  );
+});
+
+test("invalid program JSON files don't match schemas", async tap => {
+  const ajv = new Ajv({ schemas: [LOCALIZABLE_STRING_SCHEMA, PROGRAM_SCHEMA] });
+  tap.ok(
+    !ajv.validate(PROGRAMS_SCHEMA, { invalid_schema: 'invalid' }),
+    `invalid program passed: ${ajv.errors}`,
+  );
 });
 
 test('locale URLs are valid', async tap => {
