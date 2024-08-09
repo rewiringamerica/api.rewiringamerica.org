@@ -26,7 +26,8 @@
       "program": "Electric Vehicle Rebate",
       "program_url": "https://www.dteenergy.com/us/en/residential/service-request/pev/electric-vehicle-rebate.html",
       "items": [
-        "new_electric_vehicle"
+        "new_electric_vehicle",
+        "used_electric_vehicle"
       ],
       "amount": {
         "type": "dollar_amount",
@@ -37,7 +38,7 @@
         "renter"
       ],
       "start_date": "2022-12-01",
-      "short_description": "$1,500 rebate on a purchased or leased new electric vehicle."
+      "short_description": "$1,500 rebate on a purchased or leased new or used electric vehicle."
     },
     {
       "payment_methods": [
@@ -128,6 +129,50 @@
       ],
       "authority_type": "utility",
       "authority": "mi-dte",
+      "program": "Insulation & Windows",
+      "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html",
+      "items": [
+        "attic_or_roof_insulation"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 400
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2024-08-01",
+      "end_date": "2024-12-01",
+      "short_description": "$400 for roof & attic insulation. Must insulate a minimum of 500 square feet of attic area."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "mi-dte",
+      "program": "Insulation & Windows",
+      "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html",
+      "items": [
+        "wall_insulation"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 400
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2024-08-01",
+      "end_date": "2024-12-01",
+      "short_description": "$400 for above-grade wall insulation. Must insulate a minimum of 250 square feet of attic area."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "mi-dte",
       "program": "Washers & Dryers",
       "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/washers-dryers.html#tabs-f1a15f985f-item-83a9b1fa23",
       "items": [
@@ -150,46 +195,6 @@
       ],
       "authority_type": "utility",
       "authority": "mi-dte",
-      "program": "Insulation & Windows",
-      "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html",
-      "items": [
-        "attic_or_roof_insulation"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 125
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "$125 for roof & attic insulation. Must insulate a minimum of 500 square feet of attic area."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "mi-dte",
-      "program": "Insulation & Windows",
-      "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html",
-      "items": [
-        "wall_insulation"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 125
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "$125 for above-grade wall insulation. Must insulate a minimum of 250 square feet of attic area."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "mi-dte",
       "program": "Wi-Fi Enabled Thermostats",
       "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/wi-fi-enabled-thermostats.html",
       "items": [
@@ -202,6 +207,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "start_date": "2024-01-01",
       "short_description": "$50 for new Wi-Fi enabled thermostat."
     },
     {
