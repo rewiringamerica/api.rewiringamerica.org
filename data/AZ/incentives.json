@@ -1,28 +1,5 @@
 [
   {
-    "id": "AZ-1",
-    "authority_type": "utility",
-    "authority": "az-mohave-electric-cooperative",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_vehicle_charger"
-    ],
-    "program": "az_mohaveElectricCooperative_mohaveChargedRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Rebate of $1,000 will be available for each qualifying charging station.",
-      "es": "Un reembolso de $1,000 dólares estará disponible para cada estación de recarga que cumpla los requisitos."
-    }
-  },
-  {
     "id": "AZ-2",
     "authority_type": "utility",
     "authority": "az-mohave-electric-cooperative",
@@ -164,7 +141,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for at least 2.8 UEW HPWH installed by contractor licensed in Arizona between July 1, 2023 and April 30, 2024.",
+      "en": "$500 rebate for at least 2.8 UEW HPWH installed by contractor licensed in Arizona between July 1, 2023 and April 30, 2025.",
       "es": "Un reembolso de $500 para un calentador de agua con bomba de calor y capacidad mínima de 2.8 instalado por un contratista de UEW certificado en Arizona entre el 1 de julio y el 30 de abril del 2024."
     }
   },
@@ -238,6 +215,52 @@
     }
   },
   {
+    "id": "AZ-12",
+    "authority_type": "utility",
+    "authority": "az-sulphur-springs-valley-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_sulphurSpringsValleyElectricCooperative_heatPumpRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for all electric package heat pump with a 14.3 SEER2/6.7 HSPF2 minimum rating.",
+      "es": "Un reembolso de $500 dólares para bombas de calor con sistema eléctrico integral de 14.3 SEER2/6.7 HSPF2 como mínimo."
+    }
+  },
+  {
+    "id": "AZ-13",
+    "authority_type": "utility",
+    "authority": "az-sulphur-springs-valley-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_sulphurSpringsValleyElectricCooperative_heatPumpRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for all electric split system heat pump with a 15.2 SEER2/7.5 HSPF2 minimum rating.",
+      "es": "Un reembolso de $500 dólares para todas las bombas de calor eléctricas de sistema dividido con una calificación mínima de 15.2 SEER2/7.5 HSPF2."
+    }
+  },
+  {
     "id": "AZ-14",
     "authority_type": "utility",
     "authority": "az-sulphur-springs-valley-electric-cooperative",
@@ -258,6 +281,53 @@
     "short_description": {
       "en": "$500 rebate for all electric ductless heat pump with a minimum 2 tons and must have 15.2 SEER2/7.5 HSPF2 minimum rating.",
       "es": "Un reembolso de $500 dólares para todas las bombas de calor eléctricas sin ductos de un mínimo de 2 toneladas y una calificación mínima de 15.2 SEER2/7.5 HSPF2."
+    }
+  },
+  {
+    "id": "AZ-15",
+    "authority_type": "utility",
+    "authority": "az-sulphur-springs-valley-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_sulphurSpringsValleyElectricCooperative_heatPumpRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 rebate for an electric heat pump with a 15.2 SEER2/7.5 HSPF2 minimum rating paired with a gas furnace with minimum 81% efficiency.",
+      "es": "Un reembolso de $200 dólares para una bomba de calor eléctrica con una clasificación mínima de 15.2 SEER2/7.5 HSPF2 combinada con un calefactor de gas de una eficiencia mínima del 81%."
+    }
+  },
+  {
+    "id": "AZ-17",
+    "authority_type": "utility",
+    "authority": "az-tucson-electric-power",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_tucsonElectricPower_efficientHomeProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $900 rebate for heat pump quality installation.",
+      "es": "Un reembolso de hasta $900 dólares por la instalación de una bomba de calor de calidad."
     }
   },
   {
@@ -334,30 +404,6 @@
     "low_income": "az-default"
   },
   {
-    "id": "AZ-22",
-    "authority_type": "utility",
-    "authority": "az-uni-source-energy-services",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
-    ],
-    "program": "az_uniSourceEnergyServices_efficientHomeProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 900
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $900 rebate for retiring an existing, qualified system and installing an Energy Star heat pump/AC purchase via a qualified contractor.",
-      "es": "Un reembolso de hasta $900 dólares por la instalación de una bomba de calor de calidad con retiro anticipado de un sistema existente que cumple los requisitos."
-    }
-  },
-  {
     "id": "AZ-23",
     "authority_type": "utility",
     "authority": "az-uni-source-energy-services",
@@ -371,14 +417,14 @@
     "program": "az_uniSourceEnergyServices_efficientHomeProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 650
+      "number": 450
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $650 rebate for an Energy Star heat pump/AC purchase and installation through a qualified contractor.",
-      "es": "Un reembolso de hasta $650 dólares por la compra e instalación de una bomba de calor."
+      "en": "Up to $450 rebate for an Energy Star heat pump/AC purchase and installation through a qualified contractor.",
+      "es": "Un reembolso de hasta $450 dólares por la compra e instalación de una bomba de calor."
     }
   }
 ]

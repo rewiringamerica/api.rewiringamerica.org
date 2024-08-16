@@ -1,0 +1,1844 @@
+[
+  {
+    "id": "AZ-25",
+    "data_urls": [
+      "https://www.srpnet.com/energy-savings-rebates/home/rebates/air-conditioner"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Salt River Project",
+    "program_title": "Air-conditioning Rebate",
+    "program_url": "https://www.srpnet.com/energy-savings-rebates/home/rebates/air-conditioner",
+    "items": [
+      "other"
+    ],
+    "item_if_selected_other": "Central AC, heat pump and mini split packages",
+    "short_description": {
+      "en": "Rebate of up to $1,125 back on initial investment for qualifying energy-efficient central AC units, heat pumps or heat pump mini splits."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "Up to $1,125",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1125,
+      "maximum": 1125
+    },
+    "equipment_standards_restrictions": "Only SEER2 systems\n15 or higher are eligible",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-26",
+    "data_urls": [
+      "https://www.srpnet.com/energy-savings-rebates/home/rebates/smart-thermostat"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Salt River Project",
+    "program_title": "Smart thermostat rebates",
+    "program_url": "https://www.srpnet.com/energy-savings-rebates/home/rebates/smart-thermostat",
+    "items": [
+      "smart_thermostat"
+    ],
+    "short_description": {
+      "en": "Up to $100 off your SRP bill when you join the SRP Bring your Own Thermostat Program - thermostat will automatically adjust a few degress higher during periods of high power demand."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "rebate_value": "Up to $100",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "other_restrictions": "Must be SRP residential electric cusomter",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-27",
+    "data_urls": [
+      "https://www.srpnet.com/energy-savings-rebates/home/rebates/duct-test-repair"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Salt River Project",
+    "program_title": "Duct test and repair rebate",
+    "program_url": "https://www.srpnet.com/energy-savings-rebates/home/rebates/duct-test-repair",
+    "items": [
+      "duct_sealing"
+    ],
+    "short_description": {
+      "en": "Up to $400 off of duct testing and qualified repair costs, or 75% of costs."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "Up to $400 or 75% of costs",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "maximum": 400
+    },
+    "contractor_restrictions": "Tests and repairs must be completed by a BPI-certified contractor",
+    "other_restrictions": "Must be SRP residential electric customer",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-28",
+    "data_urls": [
+      "https://www.srpnet.com/energy-savings-rebates/home/rebates/cool-roof"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Salt River Project",
+    "program_title": "SRP Cool Roof Rebate",
+    "program_url": "https://www.srpnet.com/energy-savings-rebates/home/rebates/cool-roof",
+    "items": [
+      "other"
+    ],
+    "item_if_selected_other": "Cool roofing material",
+    "short_description": {
+      "en": "A rebate of $0.30 / square foot (up to $600) on installed cool roofing material."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$0.30/square foot, up to $600",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "maximum": 600
+    },
+    "equipment_standards_restrictions": "Products must have a CRRC 3-year Solar Reflectance Index of greater than or equal to 86, or an initial solar reflectance number greater than or equal to 0.83, or a 3-year SRI greater than or equal to 0.70",
+    "other_restrictions": "Must be SRP residential electric customer, new construction homes and installations over non-inhabitable spaces of the home do not qualify",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-29",
+    "data_urls": [
+      "https://www.srpnet.com/energy-savings-rebates/home/rebates/shade-screen"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Salt River Project",
+    "program_title": "Shade screen and window film rebate",
+    "program_url": "https://www.srpnet.com/energy-savings-rebates/home/rebates/shade-screen",
+    "items": [
+      "other"
+    ],
+    "item_if_selected_other": "Shade screen and window film",
+    "short_description": {
+      "en": "$1/square foot rebate on professionally installed shade screens or window film."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$1/square foot",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1,
+      "unit": "square_foot"
+    },
+    "equipment_standards_restrictions": "Shade screens must block at least 80% of solar heat gain on sunstruck windows only, install screens on the exterior of clear glass windows that enclost an air-conditioned space",
+    "other_restrictions": "Must be permanent SRP residential electric cusomter and live in a single-family detached, attached or mobile home or an apartment/condo",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-30",
+    "data_urls": [
+      "https://www.srpnet.com/energy-savings-rebates/home/rebates/window-replacement"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Salt River Project",
+    "program_title": "Window replacement rebate",
+    "program_url": "https://www.srpnet.com/energy-savings-rebates/home/rebates/window-replacement",
+    "items": [
+      "window_replacement"
+    ],
+    "short_description": {
+      "en": "Rebate of $3/square foot on professionally installed ENERGY STAR rated replacement windows."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$3/square foot",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3,
+      "unit": "square_foot"
+    },
+    "equipment_standards_restrictions": "ENERGY STAR rated windows with a U-factor of less than or equal to 0.32 and a SHGC of less than or equal to 0.23.",
+    "other_restrictions": "Must be a permanent SRP residential electric cusomter living in a single-family detached home, mobile home or condominium/townhouse.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-31",
+    "data_urls": [
+      "https://www.srpnet.com/energy-savings-rebates/home/home-energy-savings-audit"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Salt River Project",
+    "program_title": "Home Energy Audit",
+    "program_url": "https://www.srpnet.com/energy-savings-rebates/home/home-energy-savings-audit",
+    "items": [
+      "energy_audit"
+    ],
+    "short_description": {
+      "en": "Up to $100 rebate on an in-person Home Energy Audit by an independent Home Performance contractor."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$100",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "contractor_restrictions": "Energy audit must be performed by a participating BPI-certified professional who is licensed in Arizona and included on the SRP list of available contractors in the audit program.",
+    "other_restrictions": "Must be a current SRP residential electric customer who lives in a single-family detached or attached home or apartment/condo.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-32",
+    "data_urls": [
+      "https://www.srpnet.com/energy-savings-rebates/home/rebates/demand-management-solar"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Salt River Project",
+    "program_title": "Demand Management System Rebate",
+    "program_url": "https://www.srpnet.com/energy-savings-rebates/home/rebates/demand-management-solar",
+    "items": [
+      "other"
+    ],
+    "item_if_selected_other": "Demand management system",
+    "short_description": {
+      "en": "$250 rebate on the purchase and installation of a demand installation system, available for SRP customers installing a new rooftop solar system."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$250",
+    "amount": {
+      "type": "dollar_amount"
+    },
+    "contractor_restrictions": "Solar system must be installed by an SRP preferred solar installer.",
+    "other_restrictions": "Limited to one rebate per household.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-33",
+    "data_urls": [
+      "https://www.tep.com/efficient-home-program/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Tucson Electric Power",
+    "program_title": "Efficient Home Program",
+    "program_url": "https://www.tep.com/efficient-home-program/",
+    "items": [
+      "central_air_conditioner"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate for air conditioner quality installation."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "rebate_value": "$750",
+    "amount": {
+      "type": "dollar_amount",
+      "maximum": 750
+    },
+    "contractor_restrictions": "Must use a participating Efficient Home Program contractor.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-34",
+    "data_urls": [
+      "https://www.tep.com/efficient-home-program/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Tucson Electric Power",
+    "program_title": "Efficient Home Program",
+    "program_url": "https://www.tep.com/efficient-home-program/",
+    "items": [
+      "duct_sealing"
+    ],
+    "short_description": {
+      "en": "Up to $300 rebate on duct sealing (varies based on actual leakage reduced)."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "rebate_value": "$300",
+    "amount": {
+      "type": "dollar_amount",
+      "maximum": 300
+    },
+    "contractor_restrictions": "Must use a participating Efficient Home Program contractor.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      },
+      {
+        "instancePath": "/amount",
+        "schemaPath": "#/properties/amount/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "number"
+        },
+        "message": "must have required property 'number'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-35",
+    "data_urls": [
+      "https://www.tep.com/efficient-home-program/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Tucson Electric Power",
+    "program_title": "Efficient Home Program",
+    "program_url": "https://www.tep.com/efficient-home-program/",
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "short_description": {
+      "en": "Up to $120/ton rebate on mini split heat pump or air conditioner."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "rebate_value": "$120",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 120,
+      "unit": "ton"
+    },
+    "contractor_restrictions": "Must use a participating Efficient Home Program contractor.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-36",
+    "data_urls": [
+      "https://www.tep.com/efficient-home-program/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Tucson Electric Power",
+    "program_title": "Efficient Home Program",
+    "program_url": "https://www.tep.com/efficient-home-program/",
+    "items": [
+      "other"
+    ],
+    "item_if_selected_other": "AC tuneup (including repair and cleaning)",
+    "short_description": {
+      "en": "Up to $175 rebate on AC tuneup, including refrigerant charge repair, indoor coil cleaning, and outdoor coil cleaning."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "rebate_value": "$175",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 175,
+      "maximum": 175
+    },
+    "contractor_restrictions": "Must use a participating Efficient Home Program contractor.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-37",
+    "data_urls": [
+      "https://www.tep.com/smart-thermostat-rebate/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Tucson Electric Power",
+    "program_title": "Smart Thermostat Rebate",
+    "program_url": "https://www.tep.com/smart-thermostat-rebate/",
+    "items": [
+      "smart_thermostat"
+    ],
+    "short_description": {
+      "en": "Up to $35 rebate for qualified smart thermostat."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$35",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 35,
+      "maximum": 35
+    },
+    "equipment_standards_restrictions": "Must come from list of qualified thermostats.",
+    "other_restrictions": "For TEP residential customers only.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-38",
+    "data_urls": [
+      "https://www.uesaz.com/efficient-home-program/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "UniSource Energy Services",
+    "program_title": "Efficient Home Program",
+    "program_url": "https://www.uesaz.com/efficient-home-program/",
+    "items": [
+      "central_air_conditioner"
+    ],
+    "short_description": {
+      "en": "Up to $375 rebate for air conditioner quality installation."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$375",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 375,
+      "maximum": 375
+    },
+    "contractor_restrictions": "Must be installed by licensed UniSource Efficient Home Program participating contractors.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-39",
+    "data_urls": [
+      "https://www.uesaz.com/efficient-home-program/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "UniSource Energy Services",
+    "program_title": "Efficient Home Program",
+    "program_url": "https://www.uesaz.com/efficient-home-program/",
+    "items": [
+      "duct_sealing"
+    ],
+    "short_description": {
+      "en": "Up to $150 rebate on duct sealing, varies based on actual leakage reduced."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$150",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150,
+      "maximum": 150
+    },
+    "contractor_restrictions": "Work must be performed by licensed UniSource Efficient Home Program participating contractor.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-40",
+    "data_urls": [
+      "https://www.uesaz.com/efficient-home-program/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "UniSource Energy Services",
+    "program_title": "Efficient Home Program",
+    "program_url": "https://www.uesaz.com/efficient-home-program/",
+    "items": [
+      "other"
+    ],
+    "item_if_selected_other": "Advanced AC tuneup",
+    "short_description": {
+      "en": "Up to $200 on AC tuneup, including refrigerant charge repair, indoor coil cleaning, and outdoor coil cleaning."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$200",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 200
+    },
+    "contractor_restrictions": "Work must be performed by licensed UniSource Efficient Home Program participating contractor.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-41",
+    "data_urls": [
+      "https://azdor.gov/forms/tax-credits-forms/credit-solar-energy-devices"
+    ],
+    "authority_type": "state",
+    "authority_name": "State of Arizona",
+    "program_title": "Credit for Solar Energy Devices",
+    "program_url": "https://azdor.gov/forms/tax-credits-forms/credit-solar-energy-devices",
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "short_description": {
+      "en": "Tax credit for up to 25% of the cost of a residential solar system, up to $1,000."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "rebate_value": "25%, up to $1,000",
+    "amount": {
+      "type": "percent",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-42",
+    "data_urls": [
+      "https://www.columbusco-op.org/rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Columbus Electric Cooperative",
+    "program_title": "Appliance and Recycling Rebates",
+    "program_url": "https://www.columbusco-op.org/rebates",
+    "items": [
+      "other"
+    ],
+    "item_if_selected_other": "Refrigerator and/or freezer recycling",
+    "short_description": {
+      "en": "Rebate of %60 per unit for recycled refrigerators or freezers."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$60",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 60
+    },
+    "other_restrictions": "Limit of two refrigerator or freezer recycle rebates per consumer per year. Must be a CEC active member.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-43",
+    "data_urls": [
+      "https://www.columbusco-op.org/rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Columbus Electric Cooperative",
+    "program_title": "Appliance and Recycling Rebates",
+    "program_url": "https://www.columbusco-op.org/rebates",
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "short_description": {
+      "en": "$30 rebate for non-heat pump clothes dryers, $90 rebate per unit for a vent-less heat pump clothes dryer."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$90",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 90,
+      "minimum": 30,
+      "maximum": 90
+    },
+    "equipment_standards_restrictions": "Must be ENERGY STAR rated.",
+    "other_restrictions": "Must be a CEC active member.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-44",
+    "data_urls": [
+      "https://www.columbusco-op.org/rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Columbus Electric Cooperative",
+    "program_title": "Appliance and Recycling Rebates",
+    "program_url": "https://www.columbusco-op.org/rebates",
+    "items": [
+      "electric_stove"
+    ],
+    "short_description": {
+      "en": "Rebate for induction cooktops/ranges measuring 30\" or larger. $100 rebate for electric-to-induction replacements, $350 for gas-to-induction replacement or new construction."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$350",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "minimum": 100,
+      "maximum": 350
+    },
+    "other_restrictions": "Must be a CEC active member.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-45",
+    "data_urls": [
+      "https://www.columbusco-op.org/rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Columbus Electric Cooperative",
+    "program_title": "Appliance and Recycling Rebates",
+    "program_url": "https://www.columbusco-op.org/rebates",
+    "items": [
+      "smart_thermostat"
+    ],
+    "short_description": {
+      "en": "$25 rebate for smart thermostats."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$25",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "equipment_standards_restrictions": "Must be ENERGY STAR rated.",
+    "other_restrictions": "Must be a CEC active member.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-46",
+    "data_urls": [
+      "https://www.columbusco-op.org/rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Columbus Electric Cooperative",
+    "program_title": "Heat Pump Rebates",
+    "program_url": "https://www.columbusco-op.org/rebates",
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "item_if_selected_other": "Non-cold-climate",
+    "short_description": {
+      "en": "Rebate for $250/ton off ductless air-source heat pumps, up to 5 tons. Cannot exceed 50% of equipment cost."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$250",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
+    },
+    "equipment_standards_restrictions": "ENERGY STAR version 6.1, minimum standard 7.8 HSPF2",
+    "other_restrictions": "Must be a CEC active member.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-47",
+    "data_urls": [
+      "https://www.columbusco-op.org/rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Columbus Electric Cooperative",
+    "program_title": "Heat Pump Rebates",
+    "program_url": "https://www.columbusco-op.org/rebates",
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "item_if_selected_other": "Cold climate heat pump",
+    "short_description": {
+      "en": "Rebate for $500/ton off ductless air-source cold-climate heat pumps, up to 5 tons. $250/ton for additional capacity over 5 tons. Cannot exceed 50% of equipment cost."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$500",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "equipment_standards_restrictions": "ENERGY STAR version 6.1 cold climate. 8.5 HSPF2, 70% capacity and COP of 1.75 at 5P.",
+    "other_restrictions": "Must be a CEC active member.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-48",
+    "data_urls": [
+      "https://www.columbusco-op.org/rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Columbus Electric Cooperative",
+    "program_title": "Heat Pump Rebates",
+    "program_url": "https://www.columbusco-op.org/rebates",
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "item_if_selected_other": "Non-cold climate",
+    "short_description": {
+      "en": "Rebate for $250/ton off ducted air source heat pumps, up to 5 tons. $125/ton for additional capacity over 5 tons and a $500 bonus for dual-ful with propane."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$250",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
+    },
+    "equipment_standards_restrictions": "ENERGY STAR version 6.1 minimum standard 7.8 HSPF2",
+    "other_restrictions": "Must be a CEC active member.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-49",
+    "data_urls": [
+      "https://www.columbusco-op.org/rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Columbus Electric Cooperative",
+    "program_title": "Heat Pump Rebates",
+    "program_url": "https://www.columbusco-op.org/rebates",
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "item_if_selected_other": "Cold-climate heat pump",
+    "short_description": {
+      "en": "Rebate for $500/ton off ducted, cold-climate air source heat pumps. $250/ton for additional capacity over 5 tons and a $500 bonus for dual-fuel with propane."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$500",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "equipment_standards_restrictions": "ENERGY STAR version 6.1 cold climate. 8.1 HSPF2, 70% capacity and COP of 1.75 at 5P.",
+    "other_restrictions": "Must be a CEC active member.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-50",
+    "data_urls": [
+      "https://www.columbusco-op.org/rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Columbus Electric Cooperative",
+    "program_title": "Heat Pump Rebates",
+    "program_url": "https://www.columbusco-op.org/rebates",
+    "items": [
+      "air_to_water_heat_pump"
+    ],
+    "short_description": {
+      "en": "Rebate for $500/ton off of air to water heat pumps, up to 5 tons. $250/ton for additional capacity over 5 tons."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$500",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "other_restrictions": "Must be a CEC active member.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-51",
+    "data_urls": [
+      "https://www.columbusco-op.org/rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Columbus Electric Cooperative",
+    "program_title": "Heat Pump Rebates",
+    "program_url": "https://www.columbusco-op.org/rebates",
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "short_description": {
+      "en": "Rebate for $500/ton off of new ground source heat pump systems. $250/ton for replacement systems, and $100 per unit for ground source heat pump powered hot water."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$500",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "other_restrictions": "Must be a CEC active member.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-52",
+    "data_urls": [
+      "https://www.columbusco-op.org/rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Columbus Electric Cooperative",
+    "program_title": "Incentive for Whole House Fans",
+    "program_url": "https://www.columbusco-op.org/rebates",
+    "items": [
+      "other"
+    ],
+    "item_if_selected_other": "Whole House Fan",
+    "short_description": {
+      "en": "$100 rebate for replacement or new installation of a whole house fan."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$100",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "other_restrictions": "Must be a CEC active member. Limit of 2 whole house fans per member account.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-53",
+    "data_urls": [
+      "https://www.columbusco-op.org/rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Columbus Electric Cooperative",
+    "program_title": "Incentive for Evaporative Cooler",
+    "program_url": "https://www.columbusco-op.org/rebates",
+    "items": [
+      "other"
+    ],
+    "item_if_selected_other": "Evaporative Cooler",
+    "short_description": {
+      "en": "$200 rebate for replacement or new installation of an evaporative cooler."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$200",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "other_restrictions": "Must be a CEC active member. Limit of 2 evaporative coolers per member account.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-54",
+    "data_urls": [
+      "https://www.columbusco-op.org/rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Columbus Electric Cooperative",
+    "program_title": "Incentive for ENERGY STAR Rated Split System Air-Conditioners",
+    "program_url": "https://www.columbusco-op.org/rebates",
+    "items": [
+      "other"
+    ],
+    "item_if_selected_other": "Split System Air-Conditioners",
+    "short_description": {
+      "en": "$100 rebate for an ENERGY STAR rated split system air-conditioning unit."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$100",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "equipment_standards_restrictions": "Must be ENERGY STAR rated, minimum 16 SEER or 15.2 SEER 2, minimum size of 1 ton.",
+    "other_restrictions": "Must be a CEC active member. Window and/or portable units do not qualify.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-55",
+    "data_urls": [
+      "https://www.columbusco-op.org/rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Columbus Electric Cooperative",
+    "program_title": "Outdoor Power Equpiment Electrification Rebates",
+    "program_url": "https://www.columbusco-op.org/rebates",
+    "items": [
+      "other"
+    ],
+    "item_if_selected_other": "Rebates on new electric outdoor power equipment, including electric mowers, snow blowers, trimmers, chainsaws, power washers, pruners, blowers, and forklifts.",
+    "short_description": {
+      "en": "25-50% rebate on electric outdoor power equipment with caps up to $5,000, dependent on the technology.,"
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$5,000",
+    "amount": {
+      "type": "percent",
+      "number": 5000,
+      "minimum": 25,
+      "maximum": 5000
+    },
+    "other_restrictions": "Must be a CEC active member.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-56",
+    "data_urls": [
+      "https://www.columbusco-op.org/rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Columbus Electric Cooperative",
+    "program_title": "Outdoor Power Equpiment Electrification Rebates",
+    "program_url": "https://www.columbusco-op.org/rebates",
+    "items": [
+      "ebike"
+    ],
+    "short_description": {
+      "en": "Rebate of 25% of the cost of an electric bicycle, up to $150."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$150",
+    "amount": {
+      "type": "percent",
+      "number": 150,
+      "maximum": 150
+    },
+    "other_restrictions": "Must be a CEC active member.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-57",
+    "data_urls": [
+      "https://www.dixiepower.com/services/rebates/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Dixie Power",
+    "program_title": "Smart Thermostat Rebate",
+    "program_url": "https://www.dixiepower.com/services/rebates/",
+    "items": [
+      "smart_thermostat"
+    ],
+    "short_description": {
+      "en": "Rebate of $150 per smart thermostat, up to two units."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$150",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150,
+      "maximum": 300
+    },
+    "equipment_standards_restrictions": "Must be ENERGY STAR certified and listed on the Approved Smart Thermostats list.",
+    "other_restrictions": "Must be a Dixie Power Member with current residential service. Must be signed up on the Time of Day Optional Rate.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-58",
+    "data_urls": [
+      "https://www.dixiepower.com/services/rebates/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Dixie Power",
+    "program_title": "Heat Pump Rebate",
+    "program_url": "https://www.dixiepower.com/services/rebates/",
+    "items": [
+      "other"
+    ],
+    "item_if_selected_other": "Electric, dual fuel, or ground source heat pumps.",
+    "short_description": {
+      "en": "Rebate of $200/ton for electric heat pumps with electric backup or dual fuel, and ground source heat pumps (with electric backup)."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$200",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 200,
+      "unit": "ton"
+    },
+    "equipment_standards_restrictions": "14 SEER minimum, 2-ton minimum.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-59",
+    "data_urls": [
+      "https://www.dixiepower.com/services/rebates/"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Dixie Power",
+    "program_title": "Rebate for 400 Amp Services",
+    "program_url": "https://www.dixiepower.com/services/rebates/",
+    "items": [
+      "electric_panel"
+    ],
+    "short_description": {
+      "en": "Rebate up to $1,475 for a 400 amp service. Available when providing the installation of an all-electric or hybrid heat pump caused the need for the 400 amp service."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$1,475",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1475,
+      "minimum": 750,
+      "maximum": 1475
+    },
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-60",
+    "data_urls": [
+      "https://www.ed3online.org/energy-services/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Electrical District No. 3 Pinal County",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.ed3online.org/energy-services/residential-rebates",
+    "items": [
+      "other"
+    ],
+    "item_if_selected_other": "Air Duct Repair",
+    "short_description": {
+      "en": "Up to $300 rebate for air duct repair."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$300",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "maximum": 300
+    },
+    "other_restrictions": "New homes are not eligible.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-61",
+    "data_urls": [
+      "https://www.ed3online.org/energy-services/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Electrical District No. 3 Pinal County",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.ed3online.org/energy-services/residential-rebates",
+    "items": [
+      "other"
+    ],
+    "item_if_selected_other": "ENERGY STAR Variable Speed Pool Pump",
+    "short_description": {
+      "en": "Up to $150 rebate on an ENERGY STAR variable speed pool pump."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$150",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150,
+      "maximum": 150
+    },
+    "equipment_standards_restrictions": "Must be ENERGY STAR rated.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-62",
+    "data_urls": [
+      "https://www.ed3online.org/energy-services/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Electrical District No. 3 Pinal County",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.ed3online.org/energy-services/residential-rebates",
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "short_description": {
+      "en": "Up to $250 rebate on a Level 2 EV charger."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$250",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "equipment_standards_restrictions": "Must be Level 2 charger.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-63",
+    "data_urls": [
+      "https://www.ed3online.org/energy-services/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Electrical District No. 3 Pinal County",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.ed3online.org/energy-services/residential-rebates",
+    "items": [
+      "attic_or_roof_insulation"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of the cost of attic insulation, up to $300."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "rebate_value": "$300",
+    "amount": {
+      "type": "percent",
+      "number": 300,
+      "maximum": 300
+    },
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-64",
+    "data_urls": [
+      "https://www.ed3online.org/energy-services/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Electrical District No. 3 Pinal County",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.ed3online.org/energy-services/residential-rebates",
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "short_description": {
+      "en": "Rebate of up to $250 for replacing current water heater with a heat pump water heater."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$250",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "other_restrictions": "Unit cannot be used, re-furbished, or leased.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-65",
+    "data_urls": [
+      "https://www.ed3online.org/energy-services/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Electrical District No. 3 Pinal County",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.ed3online.org/energy-services/residential-rebates",
+    "items": [
+      "other"
+    ],
+    "item_if_selected_other": "HVAC unit upgrade.",
+    "short_description": {
+      "en": "Rebate of up to $500 for an energy efficient HVAC unit. Rebate increases depending on SEER rating."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$500",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 250,
+      "maximum": 500
+    },
+    "equipment_standards_restrictions": "Minimum 15.2 SEER 2.",
+    "contractor_restrictions": "Must be installed by a licensed contractor.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-66",
+    "data_urls": [
+      "https://www.ed3online.org/energy-services/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Electrical District No. 3 Pinal County",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.ed3online.org/energy-services/residential-rebates",
+    "items": [
+      "electric_stove"
+    ],
+    "short_description": {
+      "en": "Up to $100 rebate for an ENERGY STAR certified induction cooktop/stove."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$100",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "minimum": 50,
+      "maximum": 100
+    },
+    "equipment_standards_restrictions": "Must be ENERGY STAR certified.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-67",
+    "data_urls": [
+      "https://www.ed3online.org/energy-services/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Electrical District No. 3 Pinal County",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.ed3online.org/energy-services/residential-rebates",
+    "items": [
+      "smart_thermostat"
+    ],
+    "short_description": {
+      "en": "Up to $50 rebate for a smart thermostat."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$50",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "other_restrictions": "Limit two per ED3 residential account.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-68",
+    "data_urls": [
+      "https://www.ed3online.org/energy-services/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Electrical District No. 3 Pinal County",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.ed3online.org/energy-services/residential-rebates",
+    "items": [
+      "other"
+    ],
+    "short_description": {
+      "en": "Up to $0.80/square foot rebate for solar shade screens."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$0.80",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.8,
+      "unit": "square_foot"
+    },
+    "equipment_standards_restrictions": "Must block at least 80% of the solar heat gain.",
+    "other_restrictions": "Must be installed on the south, east, or west side of home.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-69",
+    "data_urls": [
+      "https://www.ed3online.org/energy-services/residential-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Electrical District No. 3 Pinal County",
+    "program_title": "Residential Rebates",
+    "program_url": "https://www.ed3online.org/energy-services/residential-rebates",
+    "items": [
+      "other"
+    ],
+    "item_if_selected_other": "Electric washer or dryer.",
+    "short_description": {
+      "en": "Up to $50 rebate for ENERGY STAR certified, electric washer/dryer."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$50",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "equipment_standards_restrictions": "Must be ENERGY STAR certified and electric.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-70",
+    "data_urls": [
+      "https://www.garkaneenergy.com/energy-efficient-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Garkane Energy Cooperative",
+    "program_title": "Energy Efficient Rebates",
+    "program_url": "https://www.garkaneenergy.com/energy-efficient-rebates",
+    "items": [
+      "other"
+    ],
+    "item_if_selected_other": "All energy efficient heat pumps.",
+    "short_description": {
+      "en": "Up to $400/ton rebate for energy efficient heat pumps and groundwater source heat pumps."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$400",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 400,
+      "unit": "ton"
+    },
+    "equipment_standards_restrictions": "Minimum 16 SEER for less than 65,000 btu/hr or 13 SEER for greater than 65,000 btu/hr.",
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  },
+  {
+    "id": "AZ-71",
+    "data_urls": [
+      "https://www.garkaneenergy.com/energy-efficient-rebates"
+    ],
+    "authority_type": "utility",
+    "authority_name": "Garkane Energy Cooperative",
+    "program_title": "Energy Efficient Rebates",
+    "program_url": "https://www.garkaneenergy.com/energy-efficient-rebates",
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "short_description": {
+      "en": "$350 rebate on all qualified heat pump water heaters."
+    },
+    "program_status": "active",
+    "payment_methods": [
+      "rebate"
+    ],
+    "rebate_value": "$350",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350
+    },
+    "errors": [
+      {
+        "instancePath": "",
+        "schemaPath": "#/required",
+        "keyword": "required",
+        "params": {
+          "missingProperty": "owner_status"
+        },
+        "message": "must have required property 'owner_status'"
+      }
+    ]
+  }
+]
