@@ -1,28 +1,5 @@
 [
   {
-    "id": "AZ-1",
-    "authority_type": "utility",
-    "authority": "az-mohave-electric-cooperative",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_vehicle_charger"
-    ],
-    "program": "az_mohaveElectricCooperative_mohaveChargedRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Rebate of $1,000 will be available for each qualifying charging station.",
-      "es": "Un reembolso de $1,000 dólares estará disponible para cada estación de recarga que cumpla los requisitos."
-    }
-  },
-  {
     "id": "AZ-2",
     "authority_type": "utility",
     "authority": "az-mohave-electric-cooperative",
@@ -164,7 +141,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for at least 2.8 UEW HPWH installed by contractor licensed in Arizona between July 1, 2023 and April 30, 2024.",
+      "en": "$500 rebate for at least 2.8 UEW HPWH installed by contractor licensed in Arizona between July 1, 2023 and April 30, 2025.",
       "es": "Un reembolso de $500 para un calentador de agua con bomba de calor y capacidad mínima de 2.8 instalado por un contratista de UEW certificado en Arizona entre el 1 de julio y el 30 de abril del 2024."
     }
   },
@@ -238,6 +215,52 @@
     }
   },
   {
+    "id": "AZ-12",
+    "authority_type": "utility",
+    "authority": "az-sulphur-springs-valley-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_sulphurSpringsValleyElectricCooperative_heatPumpRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for all electric package heat pump with a 14.3 SEER2/6.7 HSPF2 minimum rating.",
+      "es": "Un reembolso de $500 dólares para bombas de calor con sistema eléctrico integral de 14.3 SEER2/6.7 HSPF2 como mínimo."
+    }
+  },
+  {
+    "id": "AZ-13",
+    "authority_type": "utility",
+    "authority": "az-sulphur-springs-valley-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_sulphurSpringsValleyElectricCooperative_heatPumpRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for all electric split system heat pump with a 15.2 SEER2/7.5 HSPF2 minimum rating.",
+      "es": "Un reembolso de $500 dólares para todas las bombas de calor eléctricas de sistema dividido con una calificación mínima de 15.2 SEER2/7.5 HSPF2."
+    }
+  },
+  {
     "id": "AZ-14",
     "authority_type": "utility",
     "authority": "az-sulphur-springs-valley-electric-cooperative",
@@ -258,6 +281,53 @@
     "short_description": {
       "en": "$500 rebate for all electric ductless heat pump with a minimum 2 tons and must have 15.2 SEER2/7.5 HSPF2 minimum rating.",
       "es": "Un reembolso de $500 dólares para todas las bombas de calor eléctricas sin ductos de un mínimo de 2 toneladas y una calificación mínima de 15.2 SEER2/7.5 HSPF2."
+    }
+  },
+  {
+    "id": "AZ-15",
+    "authority_type": "utility",
+    "authority": "az-sulphur-springs-valley-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_sulphurSpringsValleyElectricCooperative_heatPumpRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 rebate for an electric heat pump with a 15.2 SEER2/7.5 HSPF2 minimum rating paired with a gas furnace with minimum 81% efficiency.",
+      "es": "Un reembolso de $200 dólares para una bomba de calor eléctrica con una clasificación mínima de 15.2 SEER2/7.5 HSPF2 combinada con un calefactor de gas de una eficiencia mínima del 81%."
+    }
+  },
+  {
+    "id": "AZ-17",
+    "authority_type": "utility",
+    "authority": "az-tucson-electric-power",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_tucsonElectricPower_efficientHomeProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $900 rebate for heat pump quality installation.",
+      "es": "Un reembolso de hasta $900 dólares por la instalación de una bomba de calor de calidad."
     }
   },
   {
@@ -334,30 +404,6 @@
     "low_income": "az-default"
   },
   {
-    "id": "AZ-22",
-    "authority_type": "utility",
-    "authority": "az-uni-source-energy-services",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
-    ],
-    "program": "az_uniSourceEnergyServices_efficientHomeProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 900
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $900 rebate for retiring an existing, qualified system and installing an Energy Star heat pump/AC purchase via a qualified contractor.",
-      "es": "Un reembolso de hasta $900 dólares por la instalación de una bomba de calor de calidad con retiro anticipado de un sistema existente que cumple los requisitos."
-    }
-  },
-  {
     "id": "AZ-23",
     "authority_type": "utility",
     "authority": "az-uni-source-energy-services",
@@ -371,14 +417,1093 @@
     "program": "az_uniSourceEnergyServices_efficientHomeProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 650
+      "number": 450
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $650 rebate for an Energy Star heat pump/AC purchase and installation through a qualified contractor.",
-      "es": "Un reembolso de hasta $650 dólares por la compra e instalación de una bomba de calor."
+      "en": "Up to $450 rebate for an Energy Star heat pump/AC purchase and installation through a qualified contractor.",
+      "es": "Un reembolso de hasta $450 dólares por la compra e instalación de una bomba de calor."
+    }
+  },
+  {
+    "id": "AZ-25",
+    "authority_type": "utility",
+    "authority": "az-salt-river-project",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_saltRiverProject_air-ConditioningRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1125,
+      "maximum": 1125
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate of up to $1,125 back on initial investment for qualifying energy-efficient central AC units, heat pumps or heat pump mini splits."
+    }
+  },
+  {
+    "id": "AZ-26",
+    "authority_type": "utility",
+    "authority": "az-salt-river-project",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "az_saltRiverProject_smartThermostatRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $100 off your bill when you allow your thermostat to automatically adjust a few degress higher during periods of high demand."
+    }
+  },
+  {
+    "id": "AZ-27",
+    "authority_type": "utility",
+    "authority": "az-salt-river-project",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_sealing"
+    ],
+    "program": "az_saltRiverProject_ductTestAndRepairRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400 off of duct testing and qualified repair costs, or 75% of costs."
+    }
+  },
+  {
+    "id": "AZ-28",
+    "authority_type": "utility",
+    "authority": "az-salt-river-project",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_saltRiverProject_sRPCoolRoofRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "A rebate of $0.30 / square foot (up to $600) on installed cool roofing material."
+    }
+  },
+  {
+    "id": "AZ-29",
+    "authority_type": "utility",
+    "authority": "az-salt-river-project",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_saltRiverProject_shadeScreenAndWindowFilmRebate",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1/square foot rebate on professionally installed shade screens or window film."
+    }
+  },
+  {
+    "id": "AZ-30",
+    "authority_type": "utility",
+    "authority": "az-salt-river-project",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "az_saltRiverProject_windowReplacementRebate",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate of $3/square foot on professionally installed ENERGY STAR rated replacement windows."
+    }
+  },
+  {
+    "id": "AZ-31",
+    "authority_type": "utility",
+    "authority": "az-salt-river-project",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "az_saltRiverProject_homeEnergyAudit",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $100 rebate on an in-person Home Energy Audit by an independent Home Performance contractor."
+    }
+  },
+  {
+    "id": "AZ-32",
+    "authority_type": "utility",
+    "authority": "az-salt-river-project",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_saltRiverProject_demandManagementSystemRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate on the purchase and installation of a demand installation system, available for SRP customers installing a new rooftop solar system."
+    }
+  },
+  {
+    "id": "AZ-33",
+    "authority_type": "utility",
+    "authority": "az-tucson-electric-power",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "az_tucsonElectricPower_efficientHomeProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate for air conditioner quality installation."
+    }
+  },
+  {
+    "id": "AZ-34",
+    "authority_type": "utility",
+    "authority": "az-tucson-electric-power",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "duct_sealing"
+    ],
+    "program": "az_tucsonElectricPower_efficientHomeProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $300 rebate on duct sealing (varies based on actual leakage reduced)."
+    }
+  },
+  {
+    "id": "AZ-35",
+    "authority_type": "utility",
+    "authority": "az-tucson-electric-power",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "az_tucsonElectricPower_efficientHomeProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 120,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $120/ton rebate on mini split heat pump or air conditioner."
+    }
+  },
+  {
+    "id": "AZ-36",
+    "authority_type": "utility",
+    "authority": "az-tucson-electric-power",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_tucsonElectricPower_efficientHomeProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 175,
+      "maximum": 175
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $175 rebate on AC tuneup, including refrigerant charge repair, indoor coil cleaning, and outdoor coil cleaning."
+    }
+  },
+  {
+    "id": "AZ-37",
+    "authority_type": "utility",
+    "authority": "az-tucson-electric-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "az_tucsonElectricPower_smartThermostatRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 35,
+      "maximum": 35
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $35 rebate for qualified smart thermostat."
+    }
+  },
+  {
+    "id": "AZ-38",
+    "authority_type": "utility",
+    "authority": "az-uni-source-energy-services",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "az_uniSourceEnergyServices_efficientHomeProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 375,
+      "maximum": 375
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $375 rebate for air conditioner quality installation."
+    }
+  },
+  {
+    "id": "AZ-39",
+    "authority_type": "utility",
+    "authority": "az-uni-source-energy-services",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_sealing"
+    ],
+    "program": "az_uniSourceEnergyServices_efficientHomeProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $150 rebate on duct sealing, varies based on actual leakage reduced."
+    }
+  },
+  {
+    "id": "AZ-40",
+    "authority_type": "utility",
+    "authority": "az-uni-source-energy-services",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_uniSourceEnergyServices_efficientHomeProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $200 on AC tuneup, including refrigerant charge repair, indoor coil cleaning, and outdoor coil cleaning."
+    }
+  },
+  {
+    "id": "AZ-41",
+    "authority_type": "state",
+    "authority": "az-state-of-arizona",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "az_stateOfArizona_creditForSolarEnergyDevices",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Tax credit for up to 25% of the cost of a residential solar system, up to $1,000."
+    }
+  },
+  {
+    "id": "AZ-42",
+    "authority_type": "utility",
+    "authority": "az-columbus-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_columbusElectricCooperative_applianceAndRecyclingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 60
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate of %60 per unit for recycled refrigerators or freezers."
+    }
+  },
+  {
+    "id": "AZ-43",
+    "authority_type": "utility",
+    "authority": "az-columbus-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "az_columbusElectricCooperative_applianceAndRecyclingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 90,
+      "minimum": 30,
+      "maximum": 90
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$30 rebate for non-heat pump clothes dryers, $90 rebate per unit for a vent-less heat pump clothes dryer."
+    }
+  },
+  {
+    "id": "AZ-44",
+    "authority_type": "utility",
+    "authority": "az-columbus-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "az_columbusElectricCooperative_applianceAndRecyclingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "minimum": 100,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for electric-to-induction range replacements, $350 for gas-to-induction range replacement or new construction. Must be 30\" or larger."
+    }
+  },
+  {
+    "id": "AZ-45",
+    "authority_type": "utility",
+    "authority": "az-columbus-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "az_columbusElectricCooperative_applianceAndRecyclingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$25 rebate for smart thermostats."
+    }
+  },
+  {
+    "id": "AZ-46",
+    "authority_type": "utility",
+    "authority": "az-columbus-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "az_columbusElectricCooperative_heatPumpRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for $250/ton off ductless air-source heat pumps, up to 5 tons. Cannot exceed 50% of equipment cost."
+    }
+  },
+  {
+    "id": "AZ-47",
+    "authority_type": "utility",
+    "authority": "az-columbus-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "az_columbusElectricCooperative_heatPumpRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for $500/ton off ductless air source cold-climate pumps, up to 5 tons. $250/ton for additional capacity. Cannot exceed 50% of equipment cost."
+    }
+  },
+  {
+    "id": "AZ-48",
+    "authority_type": "utility",
+    "authority": "az-columbus-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "az_columbusElectricCooperative_heatPumpRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for $250/ton off ducted air source cold-climate heat pumps, up to 5 tons. $125/ton for additional capacity. $500 bonus for propane dual-fuel."
+    }
+  },
+  {
+    "id": "AZ-49",
+    "authority_type": "utility",
+    "authority": "az-columbus-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "az_columbusElectricCooperative_heatPumpRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for $500/ton off ducted cold-climate air source heat pumps, up to 5 tons. $250/ton for additional capacity. $500 bonus for propane dual-fuel."
+    }
+  },
+  {
+    "id": "AZ-50",
+    "authority_type": "utility",
+    "authority": "az-columbus-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_to_water_heat_pump"
+    ],
+    "program": "az_columbusElectricCooperative_heatPumpRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for $500/ton off of air to water heat pumps, up to 5 tons. $250/ton for additional capacity over 5 tons."
+    }
+  },
+  {
+    "id": "AZ-51",
+    "authority_type": "utility",
+    "authority": "az-columbus-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "az_columbusElectricCooperative_heatPumpRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for $500/ton off of new ground source heat pump systems. $250/ton for replacement systems. $100 per unit for hot water systems."
+    }
+  },
+  {
+    "id": "AZ-52",
+    "authority_type": "utility",
+    "authority": "az-columbus-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_columbusElectricCooperative_incentiveForWholeHouseFans",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for replacement or new installation of a whole house fan."
+    }
+  },
+  {
+    "id": "AZ-53",
+    "authority_type": "utility",
+    "authority": "az-columbus-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_columbusElectricCooperative_incentiveForEvaporativeCooler",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 rebate for replacement or new installation of an evaporative cooler."
+    }
+  },
+  {
+    "id": "AZ-54",
+    "authority_type": "utility",
+    "authority": "az-columbus-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_columbusElectricCooperative_incentiveForENERGYSTARRatedSplitSystemAir-Conditioners",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an ENERGY STAR rated split system air-conditioning unit."
+    }
+  },
+  {
+    "id": "AZ-55",
+    "authority_type": "utility",
+    "authority": "az-columbus-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_columbusElectricCooperative_outdoorPowerEqupimentElectrificationRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "minimum": 25,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25-50% rebate on electric outdoor power equipment with caps up to $5,000, dependent on the technology.,."
+    }
+  },
+  {
+    "id": "AZ-56",
+    "authority_type": "utility",
+    "authority": "az-columbus-electric-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ebike"
+    ],
+    "program": "az_columbusElectricCooperative_outdoorPowerEqupimentElectrificationRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate of 25% of the cost of an electric bicycle, up to $150."
+    }
+  },
+  {
+    "id": "AZ-57",
+    "authority_type": "utility",
+    "authority": "az-dixie-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "az_dixiePower_smartThermostatRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate of $150 per smart thermostat, up to two units."
+    }
+  },
+  {
+    "id": "AZ-58",
+    "authority_type": "utility",
+    "authority": "az-dixie-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_dixiePower_heatPumpRebate",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 200,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate of $200/ton for electric heat pumps with electric backup or dual fuel, and ground source heat pumps (with electric backup)."
+    }
+  },
+  {
+    "id": "AZ-59",
+    "authority_type": "utility",
+    "authority": "az-dixie-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "az_dixiePower_rebateFor400AmpServices",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1475,
+      "minimum": 750,
+      "maximum": 1475
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate up to $1,475 for a 400 amp service. Available when providing the installation of an all-electric or hybrid heat pump necesitates the service."
+    }
+  },
+  {
+    "id": "AZ-60",
+    "authority_type": "utility",
+    "authority": "az-electrical-district-no-3-pinal-county",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_electricalDistrictNo3PinalCounty_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $300 rebate for air duct repair."
+    }
+  },
+  {
+    "id": "AZ-61",
+    "authority_type": "utility",
+    "authority": "az-electrical-district-no-3-pinal-county",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_electricalDistrictNo3PinalCounty_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $150 rebate on an ENERGY STAR variable speed pool pump."
+    }
+  },
+  {
+    "id": "AZ-62",
+    "authority_type": "utility",
+    "authority": "az-electrical-district-no-3-pinal-county",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "az_electricalDistrictNo3PinalCounty_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $250 rebate on a Level 2 EV charger."
+    }
+  },
+  {
+    "id": "AZ-63",
+    "authority_type": "utility",
+    "authority": "az-electrical-district-no-3-pinal-county",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
+    "program": "az_electricalDistrictNo3PinalCounty_residentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of the cost of attic insulation, up to $300."
+    }
+  },
+  {
+    "id": "AZ-64",
+    "authority_type": "utility",
+    "authority": "az-electrical-district-no-3-pinal-county",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "az_electricalDistrictNo3PinalCounty_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate of up to $250 for replacing current water heater with a heat pump water heater."
+    }
+  },
+  {
+    "id": "AZ-65",
+    "authority_type": "utility",
+    "authority": "az-electrical-district-no-3-pinal-county",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_electricalDistrictNo3PinalCounty_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 250,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate of up to $500 for an energy efficient HVAC unit. Rebate increases depending on SEER rating."
+    }
+  },
+  {
+    "id": "AZ-66",
+    "authority_type": "utility",
+    "authority": "az-electrical-district-no-3-pinal-county",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "az_electricalDistrictNo3PinalCounty_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "minimum": 50,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $100 rebate for an ENERGY STAR certified induction cooktop/stove."
+    }
+  },
+  {
+    "id": "AZ-67",
+    "authority_type": "utility",
+    "authority": "az-electrical-district-no-3-pinal-county",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "az_electricalDistrictNo3PinalCounty_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $50 rebate for a smart thermostat."
+    }
+  },
+  {
+    "id": "AZ-68",
+    "authority_type": "utility",
+    "authority": "az-electrical-district-no-3-pinal-county",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_electricalDistrictNo3PinalCounty_residentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.8,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $0.80/square foot rebate for solar shade screens."
+    }
+  },
+  {
+    "id": "AZ-69",
+    "authority_type": "utility",
+    "authority": "az-electrical-district-no-3-pinal-county",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_electricalDistrictNo3PinalCounty_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $50 rebate for ENERGY STAR certified, electric washer/dryer."
+    }
+  },
+  {
+    "id": "AZ-70",
+    "authority_type": "utility",
+    "authority": "az-garkane-energy-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_garkaneEnergyCooperative_energyEfficientRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 400,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400/ton rebate for energy efficient heat pumps and groundwater source heat pumps."
+    }
+  },
+  {
+    "id": "AZ-71",
+    "authority_type": "utility",
+    "authority": "az-garkane-energy-cooperative",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "az_garkaneEnergyCooperative_energyEfficientRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350 rebate on all qualified heat pump water heaters."
     }
   }
 ]
