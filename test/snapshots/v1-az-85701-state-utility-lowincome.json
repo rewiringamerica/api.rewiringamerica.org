@@ -5,6 +5,9 @@
   "authorities": {
     "az-tucson-electric-power": {
       "name": "Tucson Electric Power"
+    },
+    "az-state-of-arizona": {
+      "name": "State of Arizona"
     }
   },
   "coverage": {
@@ -39,6 +42,111 @@
     },
     {
       "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "az-tucson-electric-power",
+      "program": "Efficient Home Program",
+      "program_url": "https://www.tep.com/efficient-home-program/",
+      "items": [
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 120,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $120/ton rebate on mini split heat pump or air conditioner."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "az-tucson-electric-power",
+      "program": "Efficient Home Program",
+      "program_url": "https://www.tep.com/efficient-home-program/",
+      "items": [
+        "other"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 900,
+        "maximum": 900
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $900 rebate for heat pump quality installation."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "az-tucson-electric-power",
+      "program": "Efficient Home Program",
+      "program_url": "https://www.tep.com/efficient-home-program/",
+      "items": [
+        "central_air_conditioner"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 750,
+        "maximum": 750
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $750 rebate for air conditioner quality installation."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "az-tucson-electric-power",
+      "program": "Efficient Home Program",
+      "program_url": "https://www.tep.com/efficient-home-program/",
+      "items": [
+        "duct_sealing"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 300,
+        "maximum": 300
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $300 rebate on duct sealing (varies based on actual leakage reduced)."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "az-tucson-electric-power",
+      "program": "Efficient Home Program",
+      "program_url": "https://www.tep.com/efficient-home-program/",
+      "items": [
+        "other"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 175,
+        "maximum": 175
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $175 rebate on AC tuneup, including refrigerant charge repair, indoor coil cleaning, and outdoor coil cleaning."
+    },
+    {
+      "payment_methods": [
         "rebate"
       ],
       "authority_type": "utility",
@@ -58,6 +166,48 @@
       "start_date": "2023-01-01",
       "end_date": "2023-12-31",
       "short_description": "$400 rebate for TEP residential customers who purchase and install an Energy Star HPWH equipped with a wireless, programmable controller."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "az-tucson-electric-power",
+      "program": "Smart Thermostat Rebate",
+      "program_url": "https://www.tep.com/smart-thermostat-rebate/",
+      "items": [
+        "smart_thermostat"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 35,
+        "maximum": 35
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $35 rebate for qualified smart thermostat."
+    },
+    {
+      "payment_methods": [
+        "tax_credit"
+      ],
+      "authority_type": "state",
+      "authority": "az-state-of-arizona",
+      "program": "Credit for Solar Energy Devices",
+      "program_url": "https://azdor.gov/forms/tax-credits-forms/credit-solar-energy-devices",
+      "items": [
+        "rooftop_solar_installation"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.25,
+        "maximum": 1000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Tax credit for up to 25% of the cost of a residential solar system, up to $1,000."
     }
   ]
 }
