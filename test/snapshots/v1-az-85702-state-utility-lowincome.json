@@ -5,6 +5,9 @@
   "authorities": {
     "az-uni-source-energy-services": {
       "name": "UniSource Energy Services"
+    },
+    "az-state-of-arizona": {
+      "name": "State of Arizona"
     }
   },
   "coverage": {
@@ -51,33 +54,96 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 900
+        "number": 450
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Up to $900 rebate for retiring an existing, qualified system and installing an Energy Star heat pump/AC purchase via a qualified contractor."
+      "short_description": "Up to $450 rebate for an Energy Star heat pump/AC purchase and installation through a qualified contractor."
     },
     {
       "payment_methods": [
-        "pos_rebate"
+        "rebate"
       ],
       "authority_type": "utility",
       "authority": "az-uni-source-energy-services",
       "program": "Efficient Home Program",
       "program_url": "https://www.uesaz.com/efficient-home-program/",
       "items": [
-        "ducted_heat_pump",
-        "ductless_heat_pump"
+        "central_air_conditioner"
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 650
+        "number": 375,
+        "maximum": 375
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Up to $650 rebate for an Energy Star heat pump/AC purchase and installation through a qualified contractor."
+      "short_description": "Up to $375 rebate for air conditioner quality installation."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "az-uni-source-energy-services",
+      "program": "Efficient Home Program",
+      "program_url": "https://www.uesaz.com/efficient-home-program/",
+      "items": [
+        "other"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 200,
+        "maximum": 200
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $200 on AC tuneup, including refrigerant charge repair, indoor coil cleaning, and outdoor coil cleaning."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "az-uni-source-energy-services",
+      "program": "Efficient Home Program",
+      "program_url": "https://www.uesaz.com/efficient-home-program/",
+      "items": [
+        "duct_sealing"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 150,
+        "maximum": 150
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $150 rebate on duct sealing, varies based on actual leakage reduced."
+    },
+    {
+      "payment_methods": [
+        "tax_credit"
+      ],
+      "authority_type": "state",
+      "authority": "az-state-of-arizona",
+      "program": "Credit for Solar Energy Devices",
+      "program_url": "https://azdor.gov/forms/tax-credits-forms/credit-solar-energy-devices",
+      "items": [
+        "rooftop_solar_installation"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.25,
+        "maximum": 1000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Tax credit for up to 25% of the cost of a residential solar system, up to $1,000."
     }
   ]
 }
