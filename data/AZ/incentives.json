@@ -1505,5 +1505,161 @@
     "short_description": {
       "en": "$350 rebate on all qualified heat pump water heaters."
     }
+  },
+  {
+    "id": "AZ-72",
+    "authority_type": "utility",
+    "authority": "az-arizona-public-service",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "az_arizonaPublicService_homePerformanceProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Free virtual energy checkup from an Arizona Public Service energy advisor. Can also pay $99 for an in-person home performance checkup."
+    }
+  },
+  {
+    "id": "AZ-73",
+    "authority_type": "utility",
+    "authority": "az-arizona-public-service",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_sealing"
+    ],
+    "program": "az_arizonaPublicService_homePerformanceProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for duct repair and sealing."
+    }
+  },
+  {
+    "id": "AZ-74",
+    "authority_type": "utility",
+    "authority": "az-arizona-public-service",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_insulation"
+    ],
+    "program": "az_arizonaPublicService_homePerformanceProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for instulation - attic, walls, crawl spaces, etc."
+    }
+  },
+  {
+    "id": "AZ-75",
+    "authority_type": "utility",
+    "authority": "az-arizona-public-service",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_arizonaPublicService_homePerformanceProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for a qualified home energy monitor."
+    }
+  },
+  {
+    "id": "AZ-76",
+    "authority_type": "utility",
+    "authority": "az-arizona-public-service",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_arizonaPublicService_homePerformanceProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 rebate for a water heater timer."
+    }
+  },
+  {
+    "id": "AZ-77",
+    "authority_type": "utility",
+    "authority": "az-arizona-public-service",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "az_arizonaPublicService_homePerformanceProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 30,
+      "maximum": 115
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$30 rebate for a qualifying smart thermostat. Get an additional $85 rebate on select thermostats when you enroll in APS's Cool Rewards program."
+    }
+  },
+  {
+    "id": "AZ-78",
+    "authority_type": "utility",
+    "authority": "az-arizona-public-service",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "az_arizonaPublicService_homePerformanceProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 1200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 rebate for replacing an old or broken air conditioner with a new one. Customers enrolled in the Energy Support program can get up to $1,200."
+    }
   }
 ]

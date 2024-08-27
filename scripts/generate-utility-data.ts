@@ -103,6 +103,31 @@ enum Col {
     cellText: false,
   }).Sheets['Public Utility Map'];
 
+  /** manually-updated list of utilities that aren't in the Energy Star database
+   * editable source: https://docs.google.com/spreadsheets/d/1WW0RHpKCoYsrOUuWFlEaeQpwwpMFSKLBk_pN8WG3jbU/edit?usp=sharing
+   * TODO(veekas): determine if we can upstream this to the CUBE
+   */
+  const rawAdditionalUtilityMapping = fs.readFileSync(
+    require.resolve('../scripts/lib/additional-utility-zips.xlsx'),
+  );
+
+  const additionalUtilityMapping = xlsx.read(rawAdditionalUtilityMapping, {
+    sheets: 0,
+    dense: true,
+    cellHTML: false,
+    cellText: false,
+  }).Sheets['Additional Utility Map'];
+
+  // convert data to JSON and remove duplicate header rows
+  const additionalUtilityMappingData = xlsx.utils
+    .sheet_to_json(additionalUtilityMapping, { header: 1 })
+    .slice(3) as unknown[][];
+
+  // append additional utility mapping data to the Energy Star sheet
+  xlsx.utils.sheet_add_aoa(sheet, additionalUtilityMappingData, {
+    origin: -1,
+  });
+
   type Cell = { v: string };
   const header = sheet[2].map((c: Cell) => c.v);
 
