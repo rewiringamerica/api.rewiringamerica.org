@@ -5,9 +5,6 @@
   "authorities": {
     "az-uni-source-energy-services": {
       "name": "UniSource Energy Services"
-    },
-    "az-state-of-arizona": {
-      "name": "State of Arizona"
     }
   },
   "coverage": {
@@ -123,27 +120,6 @@
         "homeowner"
       ],
       "short_description": "Up to $150 rebate on duct sealing, varies based on actual leakage reduced."
-    },
-    {
-      "payment_methods": [
-        "tax_credit"
-      ],
-      "authority_type": "state",
-      "authority": "az-state-of-arizona",
-      "program": "Credit for Solar Energy Devices",
-      "program_url": "https://azdor.gov/forms/tax-credits-forms/credit-solar-energy-devices",
-      "items": [
-        "rooftop_solar_installation"
-      ],
-      "amount": {
-        "type": "percent",
-        "number": 0.25,
-        "maximum": 1000
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Tax credit for up to 25% of the cost of a residential solar system, up to $1,000."
     }
   ]
 }
