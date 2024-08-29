@@ -14,6 +14,7 @@ export enum COLowIncomeAuthority {
   ENERGY_OFFICE = 'co-colorado-energy-office',
   BOULDER = 'co-city-of-boulder',
   WALKING_MOUNTAINS = 'co-walking-mountains',
+  XCEL_ENERGY = 'co-xcel-energy-ev',
 }
 
 export enum ILIncomeAuthority {
