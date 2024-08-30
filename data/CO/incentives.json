@@ -12927,5 +12927,53 @@
       "en": "Free test of your home's air quality for low-to-moderate-income Denver residents with a respiratory condition."
     },
     "low_income": "co-city-and-county-of-denver"
+  },
+  {
+    "id": "CO-567",
+    "authority_type": "utility",
+    "authority": "co-xcel-energy",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "new_electric_vehicle"
+    ],
+    "program": "co_xcelEnergy_eVRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 5500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Income-qualified customers can receive $5,500 off a new EV when you buy or lease from a Colorado-based car dealer."
+    },
+    "low_income": "co-xcel-energy-ev"
+  },
+  {
+    "id": "CO-568",
+    "authority_type": "utility",
+    "authority": "co-xcel-energy",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "used_electric_vehicle"
+    ],
+    "program": "co_xcelEnergy_eVRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Income-qualified customers can receive $3,000 off a new EV when you buy or lease from a Colorado-based car dealer."
+    },
+    "low_income": "co-xcel-energy-ev"
   }
 ]
