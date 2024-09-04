@@ -21,8 +21,7 @@
       "en": "$75 rebate for heat pump clothes dryer (electric customers only).",
       "es": "Un reembolso de $75 por secadora de ropa con bomba de calor (sólo clientes del servicio eléctrico)."
     },
-    "start_date": "2022-12-01",
-    "end_date": "2024-12-31"
+    "start_date": "2022-12-01"
   },
   {
     "id": "MI-20",
@@ -141,8 +140,7 @@
     "short_description": {
       "en": "$50 for new Wi-Fi enabled thermostat.",
       "es": "$50 por un nuevo termostato con Wi-Fi."
-    },
-    "start_date": "2024-01-01"
+    }
   },
   {
     "id": "MI-28",
@@ -157,17 +155,15 @@
     "program": "mi_dTE_insulation&Windows",
     "amount": {
       "type": "dollar_amount",
-      "number": 400
+      "number": 125
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 for roof & attic insulation. Must insulate a minimum of 500 square feet of attic area.",
-      "es": "$400 por aislamiento térmico del techo y del desván. Debe aislar un mínimo de 500 pies cuadrados de superficie del desván."
-    },
-    "start_date": "2024-08-01",
-    "end_date": "2024-12-01"
+      "en": "$125 for roof & attic insulation. Must insulate a minimum of 500 square feet of attic area.",
+      "es": "$125 por aislamiento térmico del techo y del desván. Debe aislar un mínimo de 500 pies cuadrados de superficie del desván."
+    }
   },
   {
     "id": "MI-29",
@@ -182,17 +178,15 @@
     "program": "mi_dTE_insulation&Windows",
     "amount": {
       "type": "dollar_amount",
-      "number": 400
+      "number": 125
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 for above-grade wall insulation. Must insulate a minimum of 250 square feet of attic area.",
-      "es": "$400 por aislamiento térmico de muros por encima del nivel del suelo. Debe aislar un mínimo de 250 pies cuadrados de superficie del desván."
-    },
-    "start_date": "2024-08-01",
-    "end_date": "2024-12-01"
+      "en": "$125 for above-grade wall insulation. Must insulate a minimum of 250 square feet of attic area.",
+      "es": "$125 por aislamiento térmico de muros por encima del nivel del suelo. Debe aislar un mínimo de 250 pies cuadrados de superficie del desván."
+    }
   },
   {
     "id": "MI-30",
@@ -367,8 +361,7 @@
       "rebate"
     ],
     "items": [
-      "new_electric_vehicle",
-      "used_electric_vehicle"
+      "new_electric_vehicle"
     ],
     "program": "mi_dTE_electricVehicleRebate",
     "amount": {
@@ -380,7 +373,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$1,500 rebate on a purchased or leased new or used electric vehicle.",
+      "en": "$1,500 rebate on a purchased or leased new electric vehicle.",
       "es": "Un reembolso de $1,500 en un vehículo eléctrico nuevo comprado o alquilado."
     },
     "start_date": "2022-12-01",
@@ -832,7 +825,7 @@
     "program": "mi_indianaMichiganPower_i&MMarketplace",
     "amount": {
       "type": "dollar_amount",
-      "number": 35,
+      "number": 25,
       "minimum": 15,
       "maximum": 80
     },
@@ -840,8 +833,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$35 rebate for smart thermostats. Limit 2 of each kind per account lifetime. Household must have electric heat.",
-      "es": "Un reembolso de $35 por termostatos inteligentes. Límite de 2 de cada tipo por cuenta de por vida. La vivienda debe tener calefacción eléctrica."
+      "en": "$25 rebate for smart thermostats and $15 rebate for Wi-Fi thermostats. Limit 2 of each kind per account lifetime. Household must have electric heat.",
+      "es": "Un reembolso de $25 por termostatos inteligentes y de $15 por termostatos Wi-Fi. Límite de 2 de cada tipo por cuenta de por vida. La vivienda debe tener calefacción eléctrica."
     },
     "bonus_available": true
   },
@@ -955,7 +948,7 @@
       "rebate"
     ],
     "items": [
-      "non_heat_pump_clothes_dryer"
+      "heat_pump_clothes_dryer"
     ],
     "program": "mi_upperPeninsulaPowerCompany_uPPCOENERGYSTAR®Program",
     "amount": {
@@ -1084,15 +1077,15 @@
     "program": "mi_lansingBoardOfWaterAndLight_lansingBWLElectrificationPrograms",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 1000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate. Must include no less than three elements. Cooktop or range must be at least 24 inches in both length and width. Limit 1.",
-      "es": "Un reembolso de $500 . Debe incluir no menos de tres elementos. La parrilla o la estufa debe medir al menos 24 pulgadas x 24 pulgadas LW. Límite 1."
+      "en": "$1,000 rebate. Must include no less than three elements. Cooktop or range must be at least 24in x 24in LW. Limit 1.",
+      "es": "Un reembolso de $1,000 . Debe incluir no menos de tres elementos. La parrilla o la estufa debe medir al menos 24 pulgadas x 24 pulgadas LW. Límite 1."
     }
   },
   {
@@ -1119,6 +1112,30 @@
     "short_description": {
       "en": "Up to $150 rebate for electric lawn equipment. Includes rebates for mowers, trimmers, chainsaws and blowers.",
       "es": "Un reembolso de hasta $150 para equipos eléctricos de jardinería. Un reembolso que incluye podadoras, recortadoras, motosierras y sopladores."
+    }
+  },
+  {
+    "id": "MI-76",
+    "authority_type": "utility",
+    "authority": "mi-lansing-board-of-water-and-light",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater"
+    ],
+    "program": "mi_lansingBoardOfWaterAndLight_lansingBWLENERGYSTARApplianceRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$25 rebate on an electric clothes dryer. Must be ENERGY STAR certified. Limit 1.",
+      "es": "Un reembolso de $25 en una secadora de ropa eléctrica. Debe tener la certificación ENERGY STAR. Límite 1."
     }
   },
   {
