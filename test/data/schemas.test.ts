@@ -327,13 +327,17 @@ test('state incentive relationships only reference real IDs', async tap => {
           }
         }
         if (data.exclusions !== undefined) {
-          for (const [incentiveId, supersededIds] of Object.entries(
+          for (const [incentiveId, supersededIdsOrObject] of Object.entries(
             data.exclusions,
           )) {
             tap.ok(
               incentivesForState.has(incentiveId),
               `ID ${incentiveId} (in exclusions map) does not exist`,
             );
+
+            const supersededIds = Array.isArray(supersededIdsOrObject)
+              ? supersededIdsOrObject
+              : supersededIdsOrObject.ids;
             for (const id of supersededIds) {
               tap.ok(
                 incentivesForState.has(id),

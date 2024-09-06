@@ -82,9 +82,12 @@ export function buildExclusionMaps(
   const supersedesMap = new Map<string, Set<string>>();
   const supersededByMap = new Map<string, Set<string>>();
   if (incentiveRelationships.exclusions !== undefined) {
-    for (const [incentiveId, supersededIds] of Object.entries(
+    for (const [incentiveId, supersededIdsOrObject] of Object.entries(
       incentiveRelationships.exclusions,
     )) {
+      const supersededIds = Array.isArray(supersededIdsOrObject)
+        ? supersededIdsOrObject
+        : supersededIdsOrObject.ids;
       supersedesMap.set(incentiveId, new Set(supersededIds));
 
       for (const supersededId of supersededIds) {
