@@ -5,6 +5,12 @@
   "authorities": {
     "az-uni-source-energy-services": {
       "name": "UniSource Energy Services"
+    },
+    "az-wildfire": {
+      "name": "Wildfire"
+    },
+    "az-efficiency-arizona": {
+      "name": "Efficiency Arizona"
     }
   },
   "coverage": {
@@ -39,6 +45,28 @@
     },
     {
       "payment_methods": [
+        "assistance_program"
+      ],
+      "authority_type": "state",
+      "authority": "az-wildfire",
+      "program": "HEAR Program",
+      "program_url": "https://efficiencyarizona.com/",
+      "items": [
+        "other"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 1,
+        "maximum": 14000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "Air-conditioning replacement program through Community Action Agencies across Arizona, 100% of project cost available for households under 80% AMI. Future phases to roll out over the next few months."
+    },
+    {
+      "payment_methods": [
         "pos_rebate"
       ],
       "authority_type": "utility",
@@ -57,6 +85,161 @@
         "homeowner"
       ],
       "short_description": "Up to $450 rebate for an Energy Star heat pump/AC purchase and installation through a qualified contractor."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "az-efficiency-arizona",
+      "program": "HEAR Program",
+      "program_url": "https://efficiencyarizona.com/",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 1,
+        "maximum": 1750
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "Rebate of 100% of ENERGY STAR heat pump water heater costs for households below 80% AMI, up to $1,750."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "az-efficiency-arizona",
+      "program": "HEAR Program",
+      "program_url": "https://efficiencyarizona.com/",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 1,
+        "maximum": 8000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "Rebate of 100% of ENERGY STAR air source heat pump costs for households below 80% AMI, up to $8,000."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "az-efficiency-arizona",
+      "program": "HEAR Program",
+      "program_url": "https://efficiencyarizona.com/",
+      "items": [
+        "heat_pump_clothes_dryer"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 1,
+        "maximum": 840
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "Rebate of 100% of ENERGY STAR heat pump clothes dryer costs for households under 80% AMI, up to $840."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "az-efficiency-arizona",
+      "program": "HEAR Program",
+      "program_url": "https://efficiencyarizona.com/",
+      "items": [
+        "electric_stove"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 1,
+        "maximum": 840
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "Rebate of 100% of ENERGY STAR electric stove, cooktop, range, or oven costs for households under 80% AMI, up to $840."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "az-efficiency-arizona",
+      "program": "HEAR Program",
+      "program_url": "https://efficiencyarizona.com/",
+      "items": [
+        "electric_panel"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 1,
+        "maximum": 4000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "Rebate of 100% of electrical load service center (electrical panel) costs for households under 80% AMI, up to $4,000."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "az-efficiency-arizona",
+      "program": "HEAR Program",
+      "program_url": "https://efficiencyarizona.com/",
+      "items": [
+        "electric_panel"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 1,
+        "maximum": 2500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "Rebate of 100% of electrical wiring costs for households below 80% AMI, up to $2,500."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "az-efficiency-arizona",
+      "program": "HEAR Program",
+      "program_url": "https://efficiencyarizona.com/",
+      "items": [
+        "other_insulation"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 1,
+        "maximum": 1600
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "Rebate of 100% of insulation, air sealing, and ventilation costs for households under 80% AMI, up to $1,600."
     },
     {
       "payment_methods": [
