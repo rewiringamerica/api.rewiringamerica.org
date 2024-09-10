@@ -8,6 +8,7 @@ export const PROGRAM_SCHEMA = {
     url: {
       $ref: 'LocalizableString',
     },
+    description: { type: 'string' },
   },
   required: ['name', 'url'],
 } as const;

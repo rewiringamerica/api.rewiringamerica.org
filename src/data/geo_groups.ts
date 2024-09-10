@@ -5,6 +5,7 @@ import { STATES_AND_TERRITORIES } from './types/states';
 const GEO_GROUP_SCHEMA = {
   type: 'object',
   properties: {
+    description: { type: 'string' },
     utilities: { type: 'array', items: { type: 'string' }, minItems: 1 },
     cities: { type: 'array', items: { type: 'string' }, minItems: 1 },
     counties: { type: 'array', items: { type: 'string' }, minItems: 1 },
