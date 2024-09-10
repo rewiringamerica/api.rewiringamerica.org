@@ -143,8 +143,6 @@ test('AZ low income response with state and utility filtering for Tuscon Electri
       tax_filing: 'joint',
       authority_types: ['state', 'utility'],
       utility: 'az-tucson-electric-power',
-      // TODO: Remove when AZ is fully launched.
-      include_beta_states: true,
     },
     './test/snapshots/v1-az-85701-state-utility-lowincome.json',
   );
@@ -162,10 +160,25 @@ test('AZ low income response with state and utility filtering for UniSource is v
       tax_filing: 'joint',
       authority_types: ['state', 'utility'],
       utility: 'az-uni-source-energy-services',
-      // TODO: Remove when AZ is fully launched.
-      include_beta_states: true,
     },
     './test/snapshots/v1-az-85702-state-utility-lowincome.json',
+  );
+});
+
+// AZ low income test for APS moderate income.
+test('AZ moderate income response with state and utility filtering for APS is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      zip: '85001',
+      owner_status: 'homeowner',
+      household_size: 2,
+      household_income: 100000,
+      tax_filing: 'joint',
+      authority_types: ['state', 'utility'],
+      utility: 'az-arizona-public-service',
+    },
+    './test/snapshots/v1-az-85001-state-utility-moderateincome.json',
   );
 });
 

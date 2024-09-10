@@ -1,10 +1,10 @@
 {
-  "is_under_80_ami": true,
+  "is_under_80_ami": false,
   "is_under_150_ami": true,
   "is_over_150_ami": false,
   "authorities": {
-    "az-uni-source-energy-services": {
-      "name": "UniSource Energy Services"
+    "az-arizona-public-service": {
+      "name": "Arizona Public Service"
     },
     "az-wildfire": {
       "name": "Wildfire"
@@ -15,11 +15,11 @@
   },
   "coverage": {
     "state": "AZ",
-    "utility": "az-uni-source-energy-services"
+    "utility": "az-arizona-public-service"
   },
   "location": {
     "state": "AZ",
-    "city": "Tucson"
+    "city": "Phoenix"
   },
   "data_partners": {},
   "incentives": [
@@ -28,11 +28,11 @@
         "assistance_program"
       ],
       "authority_type": "utility",
-      "authority": "az-uni-source-energy-services",
-      "program": "Weatherization assistance",
-      "program_url": "https://www.uesaz.com/weatherization-assistance/",
+      "authority": "az-arizona-public-service",
+      "program": "Home Performance Program",
+      "program_url": "https://www.aps.com/en/Residential/Save-Money-and-Energy/Your-Energy-Your-Options/Rebates",
       "items": [
-        "other_insulation"
+        "energy_audit"
       ],
       "amount": {
         "type": "percent",
@@ -41,7 +41,7 @@
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Assistance available for energy efficient retrofitting to homes of income-qualifying customers."
+      "short_description": "Free virtual energy checkup from an Arizona Public Service energy advisor. Can also pay $99 for an in-person home performance checkup."
     },
     {
       "payment_methods": [
@@ -56,35 +56,14 @@
       ],
       "amount": {
         "type": "percent",
-        "number": 1,
+        "number": 0.5,
         "maximum": 14000
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "short_description": "Air-conditioning replacement program through Community Action Agencies across Arizona, 100% of project cost available for households under 80% AMI."
-    },
-    {
-      "payment_methods": [
-        "pos_rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "az-uni-source-energy-services",
-      "program": "Efficient Home Program",
-      "program_url": "https://www.uesaz.com/efficient-home-program/",
-      "items": [
-        "ducted_heat_pump",
-        "ductless_heat_pump"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 450
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Up to $450 rebate for an Energy Star heat pump/AC purchase and installation through a qualified contractor."
+      "short_description": "Air-conditioning replacement program through Community Action Agencies, 50% of project costs available for households between 80% and 150% AMI."
     },
     {
       "payment_methods": [
@@ -99,14 +78,14 @@
       ],
       "amount": {
         "type": "percent",
-        "number": 1,
+        "number": 0.5,
         "maximum": 1750
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "short_description": "Rebate of 100% of ENERGY STAR heat pump water heater costs for households below 80% AMI, up to $1,750."
+      "short_description": "Rebate of 50% of ENERGY STAR heat pump water heater costs for households between 80% and 150% AMI, up to $1,750."
     },
     {
       "payment_methods": [
@@ -122,14 +101,14 @@
       ],
       "amount": {
         "type": "percent",
-        "number": 1,
+        "number": 0.5,
         "maximum": 8000
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "short_description": "Rebate of 100% of ENERGY STAR air source heat pump costs for households below 80% AMI, up to $8,000."
+      "short_description": "Rebate of 50% of ENERGY STAR air source heat pump costs for households between 80% and 150% AMI, up to $8,000."
     },
     {
       "payment_methods": [
@@ -144,14 +123,14 @@
       ],
       "amount": {
         "type": "percent",
-        "number": 1,
+        "number": 0.5,
         "maximum": 840
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "short_description": "Rebate of 100% of ENERGY STAR heat pump clothes dryer costs for households under 80% AMI, up to $840."
+      "short_description": "Rebate of 50% of ENERGY STAR heat pump clothes dryer costs for households between 80% and 150% AMI, up to $840."
     },
     {
       "payment_methods": [
@@ -166,14 +145,14 @@
       ],
       "amount": {
         "type": "percent",
-        "number": 1,
+        "number": 0.5,
         "maximum": 840
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "short_description": "Rebate of 100% of ENERGY STAR electric stove, cooktop, range, or oven costs for households under 80% AMI, up to $840."
+      "short_description": "Rebate of 50% of ENERGY STAR electric stove, cooktop, range, or oven costs for households between 80% and 150% AMI, up to $840."
     },
     {
       "payment_methods": [
@@ -188,14 +167,14 @@
       ],
       "amount": {
         "type": "percent",
-        "number": 1,
+        "number": 0.5,
         "maximum": 4000
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "short_description": "Rebate of 100% of electrical load service center (electrical panel) costs for households under 80% AMI, up to $4,000."
+      "short_description": "Rebate of 50% of electrical load service center (electrical panel) costs for households between 80% and 150% AMI, up to $4,000."
     },
     {
       "payment_methods": [
@@ -210,14 +189,14 @@
       ],
       "amount": {
         "type": "percent",
-        "number": 1,
+        "number": 0.5,
         "maximum": 2500
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "short_description": "Rebate of 100% of electrical wiring costs for households below 80% AMI, up to $2,500."
+      "short_description": "Rebate of 50% of electrical wiring costs for households between 80% and 150% AMI, up to $2,500."
     },
     {
       "payment_methods": [
@@ -232,77 +211,136 @@
       ],
       "amount": {
         "type": "percent",
-        "number": 1,
+        "number": 0.5,
         "maximum": 1600
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "short_description": "Rebate of 100% of insulation, air sealing, and ventilation costs for households under 80% AMI, up to $1,600."
+      "short_description": "Rebate of 50% of insulation, air sealing, and ventilation costs for households between 80% and 150% AMI, up to $1,600."
     },
     {
       "payment_methods": [
         "rebate"
       ],
       "authority_type": "utility",
-      "authority": "az-uni-source-energy-services",
-      "program": "Efficient Home Program",
-      "program_url": "https://www.uesaz.com/efficient-home-program/",
-      "items": [
-        "central_air_conditioner"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 375,
-        "maximum": 375
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Up to $375 rebate for air conditioner quality installation."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "az-uni-source-energy-services",
-      "program": "Efficient Home Program",
-      "program_url": "https://www.uesaz.com/efficient-home-program/",
-      "items": [
-        "other"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 200,
-        "maximum": 200
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Up to $200 on AC tuneup, including refrigerant charge repair, indoor coil cleaning, and outdoor coil cleaning."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "az-uni-source-energy-services",
-      "program": "Efficient Home Program",
-      "program_url": "https://www.uesaz.com/efficient-home-program/",
+      "authority": "az-arizona-public-service",
+      "program": "Home Performance Program",
+      "program_url": "https://www.aps.com/en/Residential/Save-Money-and-Energy/Your-Energy-Your-Options/Rebates",
       "items": [
         "duct_sealing"
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 150,
-        "maximum": 150
+        "number": 250
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Up to $150 rebate on duct sealing, varies based on actual leakage reduced."
+      "short_description": "$250 rebate for duct repair and sealing."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "az-arizona-public-service",
+      "program": "Home Performance Program",
+      "program_url": "https://www.aps.com/en/Residential/Save-Money-and-Energy/Your-Energy-Your-Options/Rebates",
+      "items": [
+        "other_insulation"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 250
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "$250 rebate for instulation - attic, walls, crawl spaces, etc."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "az-arizona-public-service",
+      "program": "Home Performance Program",
+      "program_url": "https://www.aps.com/en/Residential/Save-Money-and-Energy/Your-Energy-Your-Options/Rebates",
+      "items": [
+        "other"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 200
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "$200 rebate for a water heater timer."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "az-arizona-public-service",
+      "program": "Home Performance Program",
+      "program_url": "https://www.aps.com/en/Residential/Save-Money-and-Energy/Your-Energy-Your-Options/Rebates",
+      "items": [
+        "central_air_conditioner"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 200,
+        "maximum": 1200
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "$200 rebate for replacing an old or broken air conditioner with a new one. Customers enrolled in the Energy Support program can get up to $1,200."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "az-arizona-public-service",
+      "program": "Home Performance Program",
+      "program_url": "https://www.aps.com/en/Residential/Save-Money-and-Energy/Your-Energy-Your-Options/Rebates",
+      "items": [
+        "other"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 50
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "$50 rebate for a qualified home energy monitor."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "az-arizona-public-service",
+      "program": "Home Performance Program",
+      "program_url": "https://www.aps.com/en/Residential/Save-Money-and-Energy/Your-Energy-Your-Options/Rebates",
+      "items": [
+        "smart_thermostat"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 30,
+        "maximum": 115
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "$30 rebate for a qualifying smart thermostat. Get an additional $85 rebate on select thermostats when you enroll in APS's Cool Rewards program."
     }
   ]
 }
