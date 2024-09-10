@@ -2,24 +2,30 @@ import fs from 'fs';
 import { FromSchema } from 'json-schema-to-ts';
 import { STATES_AND_TERRITORIES } from './types/states';
 
-export const anyOrAllSchema = {
-  type: 'array',
-  items: { $ref: 'IncentivePrerequisites' },
-} as const;
-
 export const prerequisiteSchema = {
-  $id: 'IncentivePrerequisites',
   oneOf: [
     { type: 'string' },
     {
       type: 'object',
-      properties: { anyOf: anyOrAllSchema },
+      properties: {
+        anyOf: {
+          type: 'array',
+          items: { type: 'string' },
+        },
+        description: { type: 'string' },
+      },
       required: ['anyOf'],
       additionalProperties: false,
     },
     {
       type: 'object',
-      properties: { allOf: anyOrAllSchema },
+      properties: {
+        allOf: {
+          type: 'array',
+          items: { type: 'string' },
+        },
+        description: { type: 'string' },
+      },
       required: ['allOf'],
       additionalProperties: false,
     },
@@ -27,8 +33,26 @@ export const prerequisiteSchema = {
 } as const;
 
 const exclusionSchema = {
-  type: 'array',
-  items: { type: 'string' },
+  oneOf: [
+    {
+      type: 'array',
+      items: { type: 'string' },
+    },
+    {
+      type: 'object',
+      properties: {
+        ids: {
+          type: 'array',
+          items: { type: 'string' },
+        },
+        description: {
+          type: 'string',
+        },
+      },
+      additionalProperties: false,
+      required: ['ids'],
+    },
+  ],
 } as const;
 
 export const INCENTIVE_RELATIONSHIPS_SCHEMA = {
@@ -49,6 +73,7 @@ export const INCENTIVE_RELATIONSHIPS_SCHEMA = {
         properties: {
           ids: { type: 'array', items: { type: 'string' } },
           max_value: { type: 'number' },
+          description: { type: 'string' },
         },
         required: ['ids', 'max_value'],
       },

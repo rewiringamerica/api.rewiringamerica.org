@@ -54,6 +54,7 @@ export const RANGE_SCHEMA = {
 export const AUTHORITY_INFO_SCHEMA = {
   type: 'object',
   properties: {
+    description: { type: 'string' },
     source_url: { type: 'string' },
     incentives: {
       type: 'array',
