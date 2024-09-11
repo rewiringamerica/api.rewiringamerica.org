@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { Programs } from '../../src/data/programs';
 import { StateIncentive } from '../../src/data/state_incentives';
 
 // These are model incentives created for the purpose of testing specific
@@ -6,4 +7,8 @@ import { StateIncentive } from '../../src/data/state_incentives';
 // launched data.
 export const TEST_INCENTIVES: StateIncentive[] = JSON.parse(
   fs.readFileSync('./test/fixtures/test-incentives.json', 'utf-8'),
+);
+
+export const TEST_PROGRAMS: Programs = JSON.parse(
+  fs.readFileSync('./test/fixtures/test-programs.json', 'utf-8'),
 );

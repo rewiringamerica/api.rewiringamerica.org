@@ -148,8 +148,6 @@ test('state incentives JSON files match schemas', async tap => {
   const ajv = new Ajv({ schemas: [LOCALIZABLE_STRING_SCHEMA] });
 
   STATE_INCENTIVE_TESTS.forEach(([stateId, schema, data]) => {
-    const authorities = AUTHORITIES_BY_STATE[stateId as string];
-
     if (!tap.ok(ajv.validate(schema, data), `${stateId} incentives invalid`)) {
       console.error(ajv.errors);
     }
@@ -177,32 +175,6 @@ test('state incentives JSON files match schemas', async tap => {
         isIncentiveAmountValid(incentive),
         `amount is invalid (${stateId}, id ${incentive.id}, index ${index})`,
       );
-      tap.hasProp(
-        authorities[
-          incentive.authority_type as 'state' | 'utility' | 'county' | 'city'
-        ]!,
-        incentive.authority,
-        `nonexistent authority (${stateId}, id ${incentive.id}, index ${index})`,
-      );
-      if (incentive.authority_type === AuthorityType.County) {
-        tap.hasProp(
-          authorities[incentive.authority_type]![incentive.authority],
-          'county_fips',
-          `must define county_fips attribute on corresponding authority ${incentive.authority} for incentives with county authority type`,
-        );
-      }
-      if (incentive.authority_type === AuthorityType.City) {
-        tap.hasProp(
-          authorities[incentive.authority_type]![incentive.authority],
-          'county_fips',
-          `must define county_fips attribute on corresponding authority ${incentive.authority} for incentives with city authority type (county is used for matching)`,
-        );
-        tap.hasProp(
-          authorities[incentive.authority_type]![incentive.authority],
-          'city',
-          `must define city attribute on corresponding authority ${incentive.authority} for incentives with city authority type`,
-        );
-      }
 
       tap.equal(incentiveIds.has(incentive.id), false);
       incentiveIds.add(incentive.id);
@@ -221,6 +193,52 @@ test("launched states do not have any values that we don't support for broader c
       }
     }
   });
+});
+
+test('programs refer to valid authorities', async tap => {
+  for (const [programId, data] of Object.entries(PROGRAMS)) {
+    tap.equal(
+      data.authority === null,
+      data.authority_type === AuthorityType.Federal,
+      `program ${programId}: authority should be null iff type is federal`,
+    );
+
+    if (data.authority === null) {
+      continue;
+    }
+
+    // TODO: we should not be parsing program IDs. Either the authority space
+    // should be flat, or programs should be indexed by state.
+    const state = programId.slice(0, 2).toUpperCase();
+    const authorities = AUTHORITIES_BY_STATE[state];
+
+    tap.hasProp(
+      authorities[
+        data.authority_type as 'state' | 'utility' | 'county' | 'city'
+      ]!,
+      data.authority,
+      `nonexistent authority (program ${programId})`,
+    );
+    if (data.authority_type === AuthorityType.County) {
+      tap.hasProp(
+        authorities[data.authority_type]![data.authority],
+        'county_fips',
+        `must define county_fips attribute on corresponding authority ${data.authority} for incentives with county authority type`,
+      );
+    }
+    if (data.authority_type === AuthorityType.City) {
+      tap.hasProp(
+        authorities[data.authority_type]![data.authority],
+        'county_fips',
+        `must define county_fips attribute on corresponding authority ${data.authority} for incentives with city authority type (county is used for matching)`,
+      );
+      tap.hasProp(
+        authorities[data.authority_type]![data.authority],
+        'city',
+        `must define city attribute on corresponding authority ${data.authority} for incentives with city authority type`,
+      );
+    }
+  }
 });
 
 const isURLValid = (url: string): boolean => {

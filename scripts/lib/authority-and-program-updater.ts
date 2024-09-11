@@ -164,7 +164,12 @@ export function updateGeoGroups(
   return sortMapByKey(json);
 }
 
-type Program = { name: { en: string }; url: { en: string } };
+type Program = {
+  name: { en: string };
+  url: { en: string };
+  authority: string;
+  authority_type: string;
+};
 
 export async function createProgramsContent(
   state: string,
@@ -173,7 +178,7 @@ export async function createProgramsContent(
 ) {
   const programs: Record<string, Program> = {};
 
-  for (const authority of Object.values(authorityMap)) {
+  for (const [authorityId, authority] of Object.entries(authorityMap)) {
     for (const [programShort, program] of Object.entries(authority.programs)) {
       programs[programShort] = {
         name: {
@@ -182,6 +187,8 @@ export async function createProgramsContent(
         url: {
           en: program.url,
         },
+        authority: authorityId,
+        authority_type: authority.authority_type,
       };
     }
   }

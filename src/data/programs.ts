@@ -1,15 +1,11 @@
 import fs from 'fs';
-import { LocalizableString } from './types/localizable-string';
+import { AuthorityType } from './authorities';
+import { Program } from './types/program';
 import { STATES_AND_TERRITORIES } from './types/states';
 
 const PROGRAMS_DIR = 'data';
 
-interface Program {
-  name: LocalizableString;
-  url: LocalizableString;
-}
-
-interface Programs {
+export interface Programs {
   [key: string]: Program;
 }
 
@@ -23,6 +19,8 @@ export const ira_programs = {
       en: 'https://www.irs.gov/credits-deductions/alternative-fuel-vehicle-refueling-property-credit',
       es: 'https://www.irs.gov/es/credits-deductions/alternative-fuel-vehicle-refueling-property-credit',
     },
+    authority_type: AuthorityType.Federal,
+    authority: null,
   },
   cleanVehicleCredit: {
     name: {
@@ -33,6 +31,8 @@ export const ira_programs = {
       en: 'https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after',
       es: 'https://www.irs.gov/es/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after',
     },
+    authority_type: AuthorityType.Federal,
+    authority: null,
   },
   creditForPreviouslyOwnedCleanVehicles: {
     name: {
@@ -43,6 +43,8 @@ export const ira_programs = {
       en: 'https://www.irs.gov/credits-deductions/used-clean-vehicle-credit',
       es: 'https://www.irs.gov/es/credits-deductions/used-clean-vehicle-credit',
     },
+    authority_type: AuthorityType.Federal,
+    authority: null,
   },
   energyEfficientHomeImprovementCredit: {
     name: {
@@ -53,6 +55,8 @@ export const ira_programs = {
       en: 'https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit',
       es: 'https://www.irs.gov/es/credits-deductions/energy-efficient-home-improvement-credit',
     },
+    authority_type: AuthorityType.Federal,
+    authority: null,
   },
   homeElectrificationAndApplianceRebates: {
     name: {
@@ -65,6 +69,8 @@ export const ira_programs = {
       en: 'https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates',
       es: 'https://www.rewiringamerica.org/app/ira-calculator/information/cuadro-electrico',
     },
+    authority_type: AuthorityType.Federal,
+    authority: null,
   },
   homeEfficiencyRebates: {
     name: {
@@ -77,6 +83,8 @@ export const ira_programs = {
       en: 'https://homes.rewiringamerica.org/federal-incentives/home-efficiency-rebates',
       es: 'https://www.rewiringamerica.org/app/ira-calculator/information/climatizacion',
     },
+    authority_type: AuthorityType.Federal,
+    authority: null,
   },
   residentialCleanEnergyCredit: {
     name: {
@@ -87,20 +95,23 @@ export const ira_programs = {
       en: 'https://www.irs.gov/credits-deductions/residential-clean-energy-credit',
       es: 'https://www.irs.gov/es/credits-deductions/residential-clean-energy-credit',
     },
+    authority_type: AuthorityType.Federal,
+    authority: null,
   },
 } as const;
 
-const all_programs = STATES_AND_TERRITORIES.reduce((acc, state) => {
-  try {
-    const statePrograms = parseProgramJSON(state);
-    return { ...acc, ...statePrograms };
-  } catch (error) {
-    console.error(`Error parsing programs for state ${state}:`, error);
-    return acc;
-  }
-}, ira_programs);
-
-export const PROGRAMS: Programs = all_programs;
+export const PROGRAMS: Programs = STATES_AND_TERRITORIES.reduce(
+  (acc, state) => {
+    try {
+      const statePrograms = parseProgramJSON(state);
+      return { ...acc, ...statePrograms };
+    } catch (error) {
+      console.error(`Error parsing programs for state ${state}:`, error);
+      return acc;
+    }
+  },
+  ira_programs,
+);
 
 function parseProgramJSON(state: string) {
   let result: Programs = {};

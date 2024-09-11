@@ -6,6 +6,7 @@ import {
 } from '../data/authorities';
 import { DataPartnersType } from '../data/data_partners';
 import { IRAIncentive, IRA_INCENTIVES } from '../data/ira_incentives';
+import { PROGRAMS } from '../data/programs';
 import { SOLAR_PRICES } from '../data/solar_prices';
 import { StateIncentive } from '../data/state_incentives';
 import { FilingStatus } from '../data/tax_brackets';
@@ -320,6 +321,7 @@ export default function calculateIncentives(
       allStateIncentives,
       stateIncentiveRelationships,
       stateAuthorities,
+      PROGRAMS,
       amiAndEvCreditEligibility,
     );
     incentives.push(...state.stateIncentives);
@@ -357,9 +359,13 @@ export default function calculateIncentives(
   const authorities: AuthoritiesById = {};
   if (stateAuthorities) {
     incentives.forEach(i => {
-      if ('authority' in i && i.authority && i.authority_type !== 'federal') {
-        authorities[i.authority] =
-          stateAuthorities[i.authority_type]![i.authority];
+      const program = PROGRAMS[i.program];
+      if (
+        program.authority !== null &&
+        program.authority_type !== AuthorityType.Federal
+      ) {
+        authorities[program.authority] =
+          stateAuthorities[program.authority_type]![program.authority];
       }
     });
   }

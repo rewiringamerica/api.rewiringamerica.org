@@ -240,6 +240,8 @@ test('generate state program content', async tap => {
       url: {
         en: 'foo.com',
       },
+      authority: 'de-state',
+      authority_type: 'state',
     },
     de_delawareStateEnergy_bar: {
       name: {
@@ -248,6 +250,8 @@ test('generate state program content', async tap => {
       url: {
         en: 'bar.com',
       },
+      authority: 'de-state',
+      authority_type: 'state',
     },
     de_delawareUtility_baz: {
       name: {
@@ -256,6 +260,8 @@ test('generate state program content', async tap => {
       url: {
         en: 'baz.com',
       },
+      authority: 'de-utility',
+      authority_type: 'utility',
     },
     de_delawareUtility_qux: {
       name: {
@@ -264,6 +270,8 @@ test('generate state program content', async tap => {
       url: {
         en: 'qux.com',
       },
+      authority: 'de-utility',
+      authority_type: 'utility',
     },
   };
 
