@@ -17,6 +17,40 @@
         "7": 90840,
         "8": 101120
       }
+    },
+    "az-hear-program-low": {
+      "type": "ami-percentage",
+      "incentives": [
+        "AZ-79",
+        "AZ-81",
+        "AZ-83",
+        "AZ-85",
+        "AZ-87",
+        "AZ-89",
+        "AZ-91",
+        "AZ-93"
+      ],
+      "source_url": "https://efficiencyarizona.com",
+      "thresholds": {
+        "percentage": 80
+      }
+    },
+    "az-hear-program-moderate": {
+      "type": "ami-percentage",
+      "incentives": [
+        "AZ-80",
+        "AZ-82",
+        "AZ-84",
+        "AZ-86",
+        "AZ-88",
+        "AZ-90",
+        "AZ-92",
+        "AZ-94"
+      ],
+      "source_url": "https://efficiencyarizona.com",
+      "thresholds": {
+        "percentage": 150
+      }
     }
   },
   "CO": {

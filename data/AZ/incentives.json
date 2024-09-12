@@ -1638,5 +1638,407 @@
     "short_description": {
       "en": "$200 rebate for replacing an old or broken air conditioner with a new one. Customers enrolled in the Energy Support program can get up to $1,200."
     }
+  },
+  {
+    "id": "AZ-79",
+    "authority_type": "state",
+    "authority": "az-wildfire",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_wildfire_hEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 14000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Air-conditioning replacement program through Community Action Agencies across Arizona, 100% of project cost available for households under 80% AMI."
+    },
+    "low_income": "az-hear-program-low"
+  },
+  {
+    "id": "AZ-80",
+    "authority_type": "state",
+    "authority": "az-wildfire",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "az_wildfire_hEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 14000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Air-conditioning replacement program through Community Action Agencies, 50% of project costs available for households between 80% and 150% AMI."
+    },
+    "low_income": "az-hear-program-moderate"
+  },
+  {
+    "id": "AZ-81",
+    "authority_type": "state",
+    "authority": "az-efficiency-arizona",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "az_efficiencyArizona_hEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 1750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 100% of ENERGY STAR heat pump water heater costs for households below 80% AMI, up to $1,750."
+    },
+    "low_income": "az-hear-program-low"
+  },
+  {
+    "id": "AZ-82",
+    "authority_type": "state",
+    "authority": "az-efficiency-arizona",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "az_efficiencyArizona_hEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 1750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of ENERGY STAR heat pump water heater costs for households between 80% and 150% AMI, up to $1,750."
+    },
+    "low_income": "az-hear-program-moderate"
+  },
+  {
+    "id": "AZ-83",
+    "authority_type": "state",
+    "authority": "az-efficiency-arizona",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "az_efficiencyArizona_hEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 8000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 100% of ENERGY STAR air source heat pump costs for households below 80% AMI, up to $8,000."
+    },
+    "low_income": "az-hear-program-low"
+  },
+  {
+    "id": "AZ-84",
+    "authority_type": "state",
+    "authority": "az-efficiency-arizona",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "az_efficiencyArizona_hEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 8000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of ENERGY STAR air source heat pump costs for households between 80% and 150% AMI, up to $8,000."
+    },
+    "low_income": "az-hear-program-moderate"
+  },
+  {
+    "id": "AZ-85",
+    "authority_type": "state",
+    "authority": "az-efficiency-arizona",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "az_efficiencyArizona_hEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 840
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 100% of ENERGY STAR heat pump clothes dryer costs for households under 80% AMI, up to $840."
+    },
+    "low_income": "az-hear-program-low"
+  },
+  {
+    "id": "AZ-86",
+    "authority_type": "state",
+    "authority": "az-efficiency-arizona",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "az_efficiencyArizona_hEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 840
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of ENERGY STAR heat pump clothes dryer costs for households between 80% and 150% AMI, up to $840."
+    },
+    "low_income": "az-hear-program-moderate"
+  },
+  {
+    "id": "AZ-87",
+    "authority_type": "state",
+    "authority": "az-efficiency-arizona",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "az_efficiencyArizona_hEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 840
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 100% of ENERGY STAR electric stove, cooktop, range, or oven costs for households under 80% AMI, up to $840."
+    },
+    "low_income": "az-hear-program-low"
+  },
+  {
+    "id": "AZ-88",
+    "authority_type": "state",
+    "authority": "az-efficiency-arizona",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "az_efficiencyArizona_hEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 840
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of ENERGY STAR electric stove, cooktop, range, or oven costs for households between 80% and 150% AMI, up to $840."
+    },
+    "low_income": "az-hear-program-moderate"
+  },
+  {
+    "id": "AZ-89",
+    "authority_type": "state",
+    "authority": "az-efficiency-arizona",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "az_efficiencyArizona_hEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 100% of electrical load service center (electrical panel) costs for households under 80% AMI, up to $4,000."
+    },
+    "low_income": "az-hear-program-low"
+  },
+  {
+    "id": "AZ-90",
+    "authority_type": "state",
+    "authority": "az-efficiency-arizona",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "az_efficiencyArizona_hEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of electrical load service center (electrical panel) costs for households between 80% and 150% AMI, up to $4,000."
+    },
+    "low_income": "az-hear-program-moderate"
+  },
+  {
+    "id": "AZ-91",
+    "authority_type": "state",
+    "authority": "az-efficiency-arizona",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "az_efficiencyArizona_hEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 100% of electrical wiring costs for households below 80% AMI, up to $2,500."
+    },
+    "low_income": "az-hear-program-low"
+  },
+  {
+    "id": "AZ-92",
+    "authority_type": "state",
+    "authority": "az-efficiency-arizona",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "az_efficiencyArizona_hEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of electrical wiring costs for households between 80% and 150% AMI, up to $2,500."
+    },
+    "low_income": "az-hear-program-moderate"
+  },
+  {
+    "id": "AZ-93",
+    "authority_type": "state",
+    "authority": "az-efficiency-arizona",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_insulation"
+    ],
+    "program": "az_efficiencyArizona_hEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 1600
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 100% of insulation, air sealing, and ventilation costs for households under 80% AMI, up to $1,600."
+    },
+    "low_income": "az-hear-program-low"
+  },
+  {
+    "id": "AZ-94",
+    "authority_type": "state",
+    "authority": "az-efficiency-arizona",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_insulation"
+    ],
+    "program": "az_efficiencyArizona_hEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 1600
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of insulation, air sealing, and ventilation costs for households between 80% and 150% AMI, up to $1,600."
+    },
+    "low_income": "az-hear-program-moderate"
   }
 ]
