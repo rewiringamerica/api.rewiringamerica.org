@@ -138,7 +138,6 @@ const requiredCollectedFields = [
 // fitting to an enum or converting from string to number with minor cleanup,
 // it should have a separate collected and derived version.
 export type DerivedFields = {
-  authority: string;
   eligible_geo_group?: string;
   program: string;
   bonus_available?: boolean;
@@ -147,7 +146,6 @@ export type DerivedFields = {
 };
 
 const derivedIncentivePropertySchema = {
-  authority: { type: 'string' },
   eligible_geo_group: { type: 'string', nullable: true },
   program: { type: 'string', enum: Object.keys(PROGRAMS) },
   bonus_available: { type: 'boolean', nullable: true },
@@ -161,7 +159,6 @@ const derivedIncentivePropertySchema = {
 // without any modification or processing.
 export const PASS_THROUGH_FIELDS = [
   'id',
-  'authority_type',
   'payment_methods',
   'items',
   'start_date',
@@ -195,8 +192,6 @@ const fieldOrder: {
   [Key in keyof typeof incentivePropertySchema]: undefined;
 } = {
   id: undefined,
-  authority_type: undefined,
-  authority: undefined,
   eligible_geo_group: undefined,
   payment_methods: undefined,
   items: undefined,
@@ -214,8 +209,6 @@ export const FIELD_ORDER = Object.keys(fieldOrder);
 
 const requiredProperties = [
   'id',
-  'authority',
-  'authority_type',
   'payment_methods',
   'items',
   'program',

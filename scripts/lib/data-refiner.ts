@@ -8,10 +8,7 @@ import {
   PASS_THROUGH_FIELDS,
   StateIncentive,
 } from '../../src/data/state_incentives';
-import {
-  createAuthorityName,
-  createProgramName,
-} from './authority-and-program-updater';
+import { createProgramName } from './authority-and-program-updater';
 
 type IncentiveToIdentifierMap = {
   [index: string]: string;
@@ -43,11 +40,9 @@ export class DataRefiner {
     state: string,
     record: CollectedIncentive,
   ): Partial<StateIncentive> {
-    const authorityName = createAuthorityName(state, record.authority_name);
     // Pass-through fields are those in CollectedIncentive that appear in the
     // refined StateIncentive verbatim. Everything else needs some processing.
     const output: Partial<StateIncentive> = _.pick(record, PASS_THROUGH_FIELDS);
-    output.authority = authorityName;
     output.program = createProgramName(
       state,
       record.authority_name,

@@ -4,6 +4,7 @@ import {
   AuthorityType,
 } from '../../src/data/authorities';
 import { GEO_GROUPS_BY_STATE } from '../../src/data/geo_groups';
+import { PROGRAMS } from '../../src/data/programs';
 import {
   STATE_INCENTIVES_BY_STATE,
   StateIncentive,
@@ -75,7 +76,8 @@ test('geo groups are equivalent in JSON config and incentives', async t => {
 test('Only AuthorityType.Other incentives have eligible_geo_group and vice versa', async t => {
   for (const [, stateIncentives] of Object.entries(STATE_INCENTIVES_BY_STATE)) {
     for (const incentive of stateIncentives) {
-      if (incentive.authority_type === AuthorityType.Other) {
+      const program = PROGRAMS[incentive.program];
+      if (program.authority_type === AuthorityType.Other) {
         t.hasProp(
           incentive,
           'eligible_geo_group',

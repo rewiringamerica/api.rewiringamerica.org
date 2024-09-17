@@ -28,6 +28,10 @@ function transformIncentives(
   return incentives.map(incentive => ({
     ...incentive,
 
+    // Transfer authority fields from program
+    authority: PROGRAMS[incentive.program].authority ?? undefined,
+    authority_type: PROGRAMS[incentive.program].authority_type,
+
     // Localize localizable fields
     program: tr(PROGRAMS[incentive.program].name, language),
     program_url: tr(PROGRAMS[incentive.program].url, language),

@@ -62,8 +62,6 @@ test('correct row to record transformation', tap => {
       },
       want: {
         id: 'VA-1',
-        authority_type: 'utility',
-        authority: 'va-appalachian-power',
         items: ['heat_pump_clothes_dryer'],
         payment_methods: ['rebate'],
         program:

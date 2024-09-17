@@ -3,6 +3,7 @@ import { AuthoritiesByType, AuthorityType } from '../data/authorities';
 import { DATA_PARTNERS_BY_STATE } from '../data/data_partners';
 import { GEO_GROUPS_BY_STATE } from '../data/geo_groups';
 import { LOW_INCOME_THRESHOLDS_BY_STATE } from '../data/low_income_thresholds';
+import { Programs } from '../data/programs';
 import {
   INCENTIVE_RELATIONSHIPS_BY_STATE,
   IncentiveRelationships,
@@ -64,6 +65,7 @@ export function calculateStateIncentivesAndSavings(
   incentives: StateIncentive[],
   incentiveRelationships: IncentiveRelationships,
   stateAuthorities: AuthoritiesByType,
+  allPrograms: Programs,
   amiAndEvCreditEligibility: AMIAndEVCreditEligibility,
 ): {
   stateIncentives: CalculatedIncentive[];
@@ -83,7 +85,15 @@ export function calculateStateIncentivesAndSavings(
   const ineligibleIncentives = new Map<string, StateIncentive>();
 
   for (const item of incentives) {
-    if (skipBasedOnRequestParams(item, request, location, stateAuthorities)) {
+    if (
+      skipBasedOnRequestParams(
+        item,
+        request,
+        location,
+        stateAuthorities,
+        allPrograms,
+      )
+    ) {
       continue;
     }
 
@@ -221,10 +231,13 @@ function skipBasedOnRequestParams(
   request: CalculateParams,
   location: ResolvedLocation,
   stateAuthorities: AuthoritiesByType,
+  allPrograms: Programs,
 ) {
+  const program = allPrograms[incentive.program];
+
   if (
     request.authority_types &&
-    !request.authority_types.includes(incentive.authority_type)
+    !request.authority_types.includes(program.authority_type)
   ) {
     // Skip all utilities that are not of the requested authority type(s).
     return true;
@@ -240,8 +253,8 @@ function skipBasedOnRequestParams(
   }
 
   if (
-    incentive.authority_type === AuthorityType.Utility &&
-    incentive.authority !== request.utility
+    program.authority_type === AuthorityType.Utility &&
+    program.authority !== request.utility
   ) {
     // Don't include utility incentives at all if they weren't requested, or
     // if they're for the wrong utility.
@@ -253,20 +266,20 @@ function skipBasedOnRequestParams(
   // and cities.
   // https://app.asana.com/0/1204738794846444/1206454407609847
   // tracks long-term work in this space.
-  if (incentive.authority_type === AuthorityType.County) {
+  if (program.authority_type === AuthorityType.County) {
     // Skip if we didn't get location data.
     if (location.countyFips === undefined) {
       return true;
     }
 
     // We have tests to ensure county authorities are registered.
-    const authorityDetails = stateAuthorities.county![incentive.authority];
+    const authorityDetails = stateAuthorities.county![program.authority!];
     if (authorityDetails.county_fips !== location.countyFips) {
       return true;
     }
   }
 
-  if (incentive.authority_type === AuthorityType.City) {
+  if (program.authority_type === AuthorityType.City) {
     // We have to match on both city and county since more than one
     // municipalities can have the same name within the same state.
 
@@ -276,7 +289,7 @@ function skipBasedOnRequestParams(
     }
 
     // We have tests to ensure city authorities are registered.
-    const authorityDetails = stateAuthorities.city![incentive.authority];
+    const authorityDetails = stateAuthorities.city![program.authority!];
 
     if (
       authorityDetails.city !== location.city ||

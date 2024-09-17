@@ -3,6 +3,7 @@ import { open } from 'sqlite';
 import sqlite3 from 'sqlite3';
 import { afterEach, beforeEach, test } from 'tap';
 import { AuthoritiesByType, AuthorityType } from '../../src/data/authorities';
+import { Programs } from '../../src/data/programs';
 import { StateIncentive } from '../../src/data/state_incentives';
 import { FilingStatus } from '../../src/data/tax_brackets';
 import { AmountType } from '../../src/data/types/amount';
@@ -510,8 +511,6 @@ test('correctly sorts incentives', async t => {
 test('correct filtering of county incentives', async t => {
   const incentive: StateIncentive = {
     id: 'CO',
-    authority_type: AuthorityType.County,
-    authority: 'mock-county-authority',
     start_date: '2023',
     end_date: '2024',
     payment_methods: [PaymentMethod.AccountCredit],
@@ -526,6 +525,15 @@ test('correct filtering of county incentives', async t => {
     ],
     short_description: {
       en: 'This is a model incentive only to be used for testing.',
+    },
+  };
+
+  const programs: Programs = {
+    ri_hvacAndWaterHeaterIncentives: {
+      name: { en: '' },
+      url: { en: '' },
+      authority: 'mock-county-authority',
+      authority_type: AuthorityType.County,
     },
   };
 
@@ -554,6 +562,7 @@ test('correct filtering of county incentives', async t => {
     [incentive],
     {},
     authorities,
+    programs,
     { computedAMI80: 80000, computedAMI150: 150000, evCreditEligible: false },
   );
   t.ok(shouldFind);
@@ -565,6 +574,7 @@ test('correct filtering of county incentives', async t => {
     [incentive],
     {},
     authorities,
+    programs,
     { computedAMI80: 80000, computedAMI150: 150000, evCreditEligible: false },
   );
   t.ok(shouldNotFind);
@@ -574,8 +584,6 @@ test('correct filtering of county incentives', async t => {
 test('correct filtering of city incentives', async t => {
   const incentive: StateIncentive = {
     id: 'CO',
-    authority_type: AuthorityType.City,
-    authority: 'mock-city-authority',
     start_date: '2023',
     end_date: '2024',
     payment_methods: [PaymentMethod.AccountCredit],
@@ -590,6 +598,15 @@ test('correct filtering of city incentives', async t => {
     ],
     short_description: {
       en: 'This is a model incentive only to be used for testing.',
+    },
+  };
+
+  const programs: Programs = {
+    ri_hvacAndWaterHeaterIncentives: {
+      name: { en: '' },
+      url: { en: '' },
+      authority: 'mock-city-authority',
+      authority_type: AuthorityType.City,
     },
   };
 
@@ -619,6 +636,7 @@ test('correct filtering of city incentives', async t => {
     [incentive],
     {},
     authorities,
+    programs,
     { computedAMI80: 80000, computedAMI150: 150000, evCreditEligible: false },
   );
   t.ok(shouldFind);
@@ -630,6 +648,7 @@ test('correct filtering of city incentives', async t => {
     [incentive],
     {},
     authorities,
+    programs,
     { computedAMI80: 80000, computedAMI150: 150000, evCreditEligible: false },
   );
   t.ok(shouldNotFindWithPartialMatch);
@@ -639,8 +658,6 @@ test('correct filtering of city incentives', async t => {
 test('correctly evaluates savings when state tax liability is lower than max savings', async t => {
   const incentive: StateIncentive = {
     id: 'CO',
-    authority_type: AuthorityType.State,
-    authority: 'mock-state-authority',
     start_date: '2023',
     end_date: '2024',
     payment_methods: [PaymentMethod.TaxCredit],
@@ -655,6 +672,15 @@ test('correctly evaluates savings when state tax liability is lower than max sav
     ],
     short_description: {
       en: 'This is a model incentive only to be used for testing.',
+    },
+  };
+
+  const programs: Programs = {
+    co_hvacAndWaterHeaterIncentives: {
+      name: { en: '' },
+      url: { en: '' },
+      authority: 'mock-state-authority',
+      authority_type: AuthorityType.State,
     },
   };
 
@@ -690,6 +716,7 @@ test('correctly evaluates savings when state tax liability is lower than max sav
     [incentive],
     {},
     authorities,
+    programs,
     { computedAMI80: 80000, computedAMI150: 150000, evCreditEligible: false },
   );
 

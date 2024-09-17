@@ -13,7 +13,7 @@ import {
   TEST_INVALID_INCENTIVE_RELATIONSHIPS,
   TEST_NESTED_INCENTIVE_RELATIONSHIPS,
 } from '../mocks/state-incentive-relationships';
-import { TEST_INCENTIVES } from '../mocks/state-incentives';
+import { TEST_INCENTIVES, TEST_PROGRAMS } from '../mocks/state-incentives';
 
 const LOCATION: ResolvedLocation = {
   state: 'RI',
@@ -45,6 +45,7 @@ test('basic test for supplying test incentive data to calculation logic', async 
     TEST_INCENTIVES,
     {},
     {},
+    TEST_PROGRAMS,
     AMIS,
   );
   t.ok(data);
@@ -71,6 +72,7 @@ test('test calculation with no incentives', async t => {
     [],
     TEST_INCENTIVE_RELATIONSHIPS,
     {},
+    TEST_PROGRAMS,
     AMIS,
   );
   t.ok(data);
@@ -101,6 +103,7 @@ test('test incentive relationship logic', async t => {
     TEST_INCENTIVES,
     TEST_INCENTIVE_RELATIONSHIPS,
     {},
+    TEST_PROGRAMS,
     AMIS,
   );
   t.ok(data);
@@ -139,6 +142,7 @@ test('test more complex incentive relationship logic', async t => {
     TEST_INCENTIVES,
     TEST_INCENTIVE_RELATIONSHIPS_2,
     {},
+    TEST_PROGRAMS,
     AMIS,
   );
   t.ok(data);
@@ -180,6 +184,7 @@ test('test incentive relationship and combined max value logic', async t => {
     TEST_INCENTIVES,
     TEST_INCENTIVE_RELATIONSHIPS_3,
     {},
+    TEST_PROGRAMS,
     AMIS,
   );
   t.ok(data);
@@ -223,6 +228,7 @@ test('test incentive relationship and permanent ineligibility criteria', async t
     TEST_INCENTIVES,
     TEST_INCENTIVE_RELATIONSHIPS_3,
     {},
+    TEST_PROGRAMS,
     AMIS,
   );
 
@@ -264,6 +270,7 @@ test('test nested incentive relationship logic', async t => {
     TEST_INCENTIVES,
     TEST_NESTED_INCENTIVE_RELATIONSHIPS,
     {},
+    TEST_PROGRAMS,
     AMIS,
   );
   t.ok(data);
@@ -295,6 +302,7 @@ test('test combined maximum savings logic', async t => {
     TEST_INCENTIVES,
     TEST_INCENTIVE_RELATIONSHIPS_3,
     {},
+    TEST_PROGRAMS,
     AMIS,
   );
   t.ok(data);
