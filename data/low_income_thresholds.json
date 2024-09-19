@@ -1065,7 +1065,7 @@
       }
     },
     "me-moderate-income": {
-      "type": "hhsize",
+      "type": "filing-status",
       "incentives": [
         "ME-2",
         "ME-6",
@@ -1074,14 +1074,26 @@
       ],
       "source_url": "https://www.efficiencymaine.com/docs/Rebates-Income-Eligible-Households.pdf",
       "thresholds": {
-        "1": "70000",
-        "2": "100000",
-        "3": "100000",
-        "4": "100000",
-        "5": "100000",
-        "6": "100000",
-        "7": "100000",
-        "8": "100000"
+        "hoh": [
+          0,
+          70000
+        ],
+        "joint": [
+          0,
+          100000
+        ],
+        "single": [
+          0,
+          70000
+        ],
+        "married_filing_separately": [
+          0,
+          70000
+        ],
+        "qualifying_widower_with_dependent_child": [
+          0,
+          70000
+        ]
       }
     }
   },
