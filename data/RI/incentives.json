@@ -515,8 +515,8 @@
       "en": "Depending on your income, 100% of the cost to install an air source heat pump, including up to $3,000 towards related electric service upgrades.",
       "es": "Según sus ingresos, el costo total de instalar una aerotermia. Incluye hasta $3,000 para mejoras eléctricas relacionadas."
     },
-    "low_income": "ri-default",
-    "bonus_available": true
+    "bonus_available": true,
+    "low_income": "ri-default"
   },
   {
     "id": "RI-35",
@@ -683,5 +683,225 @@
     },
     "start_date": "2022-10-24",
     "low_income": "ri-default"
+  },
+  {
+    "id": "RI-45",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ri_oER_powerUpRI",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of cost for a Level 2 EV charger purchase where no electrical upgrade is needed, up to $350."
+    },
+    "start_date": "2024-08-01"
+  },
+  {
+    "id": "RI-46",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ri_oER_powerUpRI",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of cost for purchase and installation of a Level 2 EV charger where an electrical upgrade is needed, up to $700."
+    },
+    "start_date": "2024-08-02"
+  },
+  {
+    "id": "RI-47",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ri_oER_powerUpRI",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate of 75% of cost for a Level 2 EV charger putchase where no electrical upgrade is needed, up to $500. Available for income qualified residents."
+    },
+    "start_date": "2024-08-03"
+  },
+  {
+    "id": "RI-48",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ri_oER_powerUpRI",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate of 75% of cost for purchase and installation of a Level 2 EV charger where an electrical upgrade is needed, up to $1,000. Available for income qualified residents."
+    },
+    "start_date": "2024-08-04"
+  },
+  {
+    "id": "RI-49",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "ri_oER_rhodeIslandHomeElectrificationAndApplianceRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $4,000 rebate for electrical load service center. Available for low-income residents."
+    }
+  },
+  {
+    "id": "RI-50",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "ri_oER_rhodeIslandHomeElectrificationAndApplianceRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2,000 rebate for electrical load service center. Available for moderate-income residents."
+    }
+  },
+  {
+    "id": "RI-51",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "ri_oER_rhodeIslandHomeElectrificationAndApplianceRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2,500 rebate for electric wiring. Available for low-income residents."
+    }
+  },
+  {
+    "id": "RI-52",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "ri_oER_rhodeIslandHomeElectrificationAndApplianceRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1250,
+      "maximum": 1250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,250 rebate for electric wiring. Available for moderate-income residents."
+    }
+  },
+  {
+    "id": "RI-53",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "ri_oER_rhodeIslandHomeElectrificationAndApplianceRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1840,
+      "maximum": 1840
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,840 rebate for ENERGY STAR certified heat pump clothes dryer and/or electric stove, induction cooktop, range, or oven. Available for low-income residents."
+    }
+  },
+  {
+    "id": "RI-54",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "ri_oER_rhodeIslandHomeElectrificationAndApplianceRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 420,
+      "maximum": 420
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $420 rebate for ENERGY STAR certified heat pump clothes dryer and/or electric stove, induction cooktop, range, or oven. Available for moderate-income residents."
+    }
   }
 ]
