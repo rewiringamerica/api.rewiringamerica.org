@@ -1,50 +1,4 @@
 {
-  "ME": {
-    "me-low-income": {
-      "type": "hhsize",
-      "incentives": [
-        "ME-1",
-        "ME-7",
-        "ME-9",
-        "ME-10",
-        "ME-14",
-        "ME-17",
-        "ME-18"
-      ],
-      "/": "recipients of HEAP, SNAP, TANF, and/or MaineCare qualify; HEAP has the highest income limits of these programs",
-      "source_url": "https://www.mainehousing.org/charts/HEAP-Income-Elibility",
-      "thresholds": {
-        "1": "35336",
-        "2": "46209",
-        "3": "57082",
-        "4": "67955",
-        "5": "78827",
-        "6": "89700",
-        "7": "91739",
-        "8": "93777"
-      }
-    },
-    "me-moderate-income": {
-      "type": "hhsize",
-      "incentives": [
-        "ME-2",
-        "ME-6",
-        "ME-8",
-        "ME-15"
-      ],
-      "source_url": "https://www.efficiencymaine.com/docs/Rebates-Income-Eligible-Households.pdf",
-      "thresholds": {
-        "1": "70000",
-        "2": "100000",
-        "3": "100000",
-        "4": "100000",
-        "5": "100000",
-        "6": "100000",
-        "7": "100000",
-        "8": "100000"
-      }
-    }
-  },
   "AZ": {
     "az-default": {
       "type": "hhsize",
@@ -1082,6 +1036,52 @@
         "6": 102400,
         "7": 109450,
         "8": 116500
+      }
+    }
+  },
+  "ME": {
+    "me-low-income": {
+      "type": "hhsize",
+      "incentives": [
+        "ME-1",
+        "ME-7",
+        "ME-9",
+        "ME-10",
+        "ME-14",
+        "ME-17",
+        "ME-18"
+      ],
+      "/": "recipients of HEAP, SNAP, TANF, and/or MaineCare qualify; HEAP has the highest income limits of these programs",
+      "source_url": "https://www.mainehousing.org/charts/HEAP-Income-Elibility",
+      "thresholds": {
+        "1": "35336",
+        "2": "46209",
+        "3": "57082",
+        "4": "67955",
+        "5": "78827",
+        "6": "89700",
+        "7": "91739",
+        "8": "93777"
+      }
+    },
+    "me-moderate-income": {
+      "type": "hhsize",
+      "incentives": [
+        "ME-2",
+        "ME-6",
+        "ME-8",
+        "ME-15"
+      ],
+      "source_url": "https://www.efficiencymaine.com/docs/Rebates-Income-Eligible-Households.pdf",
+      "thresholds": {
+        "1": "70000",
+        "2": "100000",
+        "3": "100000",
+        "4": "100000",
+        "5": "100000",
+        "6": "100000",
+        "7": "100000",
+        "8": "100000"
       }
     }
   },
