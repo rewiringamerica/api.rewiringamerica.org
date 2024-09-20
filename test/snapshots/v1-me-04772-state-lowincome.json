@@ -202,13 +202,34 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 3500
+        "number": 7500
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "short_description": "$3,500 rebate for new battery electric vehicle. Available for moderate income residents."
+      "short_description": "$7,500 rebate for new battery electric vehicle. Available for low income residents."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Electric Vehicle Rebates",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "new_plugin_hybrid_vehicle"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 3000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$3,000 rebate for new plug-in hybrid electric vehicle. Available for low income residents."
     },
     {
       "payment_methods": [
@@ -251,27 +272,6 @@
         "renter"
       ],
       "short_description": "$2,000 rebate for new battery electric vehicles."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "me-efficiency-maine",
-      "program": "Efficiency Maine Electric Vehicle Rebates",
-      "program_url": "https://www.efficiencymaine.com",
-      "items": [
-        "new_plugin_hybrid_vehicle"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 2000
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "short_description": "$2,000 rebate for new plug-in hybrid electric vehicle. Available for moderate income residents."
     },
     {
       "payment_methods": [
