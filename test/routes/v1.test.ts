@@ -117,7 +117,7 @@ test('RI low income response with state and utility is valid and correct', async
 });
 
 // RI
-test('RI low income response with state and utility is valid and correct', async t => {
+test('RI moderate income response with state and utility is valid and correct', async t => {
   await validateResponse(
     t,
     {
