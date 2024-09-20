@@ -1,0 +1,437 @@
+[
+  {
+    "id": "ME-1",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_insulation"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineInsulationRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.8,
+      "maximum": 8000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate of 80% of project cost for air sealing and/or insulation, up to $8,000. Available for low-income residents."
+    },
+    "low_income": "me-low-income"
+  },
+  {
+    "id": "ME-2",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_insulation"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineInsulationRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.6,
+      "maximum": 6000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate of 60% of project cost for air sealing and/or insulation, up to $6,000. Available for moderate income residents."
+    },
+    "low_income": "me-moderate-income"
+  },
+  {
+    "id": "ME-3",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_insulation"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineInsulationRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.4,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate of 40% of project cost for air sealing and/or insulation, up to $4,000."
+    }
+  },
+  {
+    "id": "ME-4",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "new_electric_vehicle"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineElectricVehicleRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$2,000 rebate for new battery electric vehicles."
+    }
+  },
+  {
+    "id": "ME-5",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "new_plugin_hybrid_vehicle"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineElectricVehicleRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for new plug-in hybrid electric vehicles."
+    }
+  },
+  {
+    "id": "ME-6",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "new_electric_vehicle"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineElectricVehicleRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$3,500 rebate for new battery electric vehicle. Available for moderate income residents."
+    },
+    "low_income": "me-moderate-income"
+  },
+  {
+    "id": "ME-7",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "new_electric_vehicle"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineElectricVehicleRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 7500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$7,500 rebate for new battery electric vehicle. Available for low income residents."
+    },
+    "low_income": "me-low-income"
+  },
+  {
+    "id": "ME-8",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "new_plugin_hybrid_vehicle"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineElectricVehicleRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$2,000 rebate for new plug-in hybrid electric vehicle. Available for moderate income residents."
+    },
+    "low_income": "me-moderate-income"
+  },
+  {
+    "id": "ME-9",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "new_plugin_hybrid_vehicle"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineElectricVehicleRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$3,000 rebate for new plug-in hybrid electric vehicle. Available for low income residents."
+    },
+    "low_income": "me-low-income"
+  },
+  {
+    "id": "ME-10",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_electric_vehicle"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineElectricVehicleRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$2,500 rebate for used battery electric vehicle or plug-in hybrid electric vehicle. Available for low income residents."
+    },
+    "low_income": "me-low-income"
+  },
+  {
+    "id": "ME-11",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineInstantDiscounts",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 instant discount for an ECM circulator pump through participating distributors."
+    }
+  },
+  {
+    "id": "ME-12",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineApplianceRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for ENERGY STAR certified clothes washers."
+    }
+  },
+  {
+    "id": "ME-13",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineHeatingSystemRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.33,
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate for 1/3 of project cost for a geothermal heat pump, up to $3,000."
+    }
+  },
+  {
+    "id": "ME-14",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineResidentialHeatPumpIncentives",
+    "amount": {
+      "type": "percent",
+      "number": 0.8,
+      "maximum": 8000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 80% of project cost for a heat pump, up to $8,000. Available for low income residents."
+    },
+    "low_income": "me-low-income"
+  },
+  {
+    "id": "ME-15",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineResidentialHeatPumpIncentives",
+    "amount": {
+      "type": "percent",
+      "number": 0.6,
+      "maximum": 6000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 60% of project cost for a heat pump, up to $6,000. Available for moderate income residents."
+    },
+    "low_income": "me-moderate-income"
+  },
+  {
+    "id": "ME-16",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineResidentialHeatPumpIncentives",
+    "amount": {
+      "type": "percent",
+      "number": 0.4,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 40% of project cost for a heat pump, up to $4,000."
+    }
+  },
+  {
+    "id": "ME-17",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineResidentialHeatPumpIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 rebate for ducted heat pump, with option to be distributed in monthly payments. Available for low income residents."
+    },
+    "low_income": "me-low-income"
+  },
+  {
+    "id": "ME-18",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineResidentialHeatPumpIncentives",
+    "amount": {
+      "type": "percent",
+      "number": 0.8,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 80% of project cost of a supplemental heat pump, up to $4,000. Available for low-income households."
+    },
+    "low_income": "me-low-income"
+  },
+  {
+    "id": "ME-19",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineWaterHeatingIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,000 discount on heat pump water heaters when bought through Granite Group, Lowe's, or Home Depot."
+    }
+  },
+  {
+    "id": "ME-20",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "me_efficiencyMaine_efficiencyMaineWaterHeatingIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 850
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$850 mail-in rebate for heat pump water heater."
+    }
+  }
+]
