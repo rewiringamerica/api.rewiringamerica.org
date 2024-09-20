@@ -1,0 +1,360 @@
+{
+  "is_under_80_ami": true,
+  "is_under_150_ami": true,
+  "is_over_150_ami": false,
+  "authorities": {
+    "me-efficiency-maine": {
+      "name": "Efficiency Maine"
+    }
+  },
+  "coverage": {
+    "state": "ME",
+    "utility": null
+  },
+  "location": {
+    "state": "ME",
+    "city": "Saint Agatha"
+  },
+  "data_partners": {},
+  "incentives": [
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Water Heating Incentives",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$1,000 discount on heat pump water heaters when bought through Granite Group, Lowe's, or Home Depot."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Instant Discounts",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "other"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 75
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$75 instant discount for an ECM circulator pump through participating distributors."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Insulation Rebates",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "other_insulation"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.8,
+        "maximum": 8000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Rebate of 80% of project cost for air sealing and/or insulation, up to $8,000. Available for low-income residents."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Residential Heat Pump Incentives",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.8,
+        "maximum": 8000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Rebate for 80% of project cost for a heat pump, up to $8,000. Available for low income residents."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Residential Heat Pump Incentives",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.8,
+        "maximum": 4000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Rebate for 80% of project cost of a supplemental heat pump, up to $4,000. Available for low-income households."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Insulation Rebates",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "other_insulation"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.4,
+        "maximum": 4000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Rebate of 40% of project cost for air sealing and/or insulation, up to $4,000."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Residential Heat Pump Incentives",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.4,
+        "maximum": 4000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Rebate for 40% of project cost for a heat pump, up to $4,000."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Heating System Rebates",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "geothermal_heating_installation"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.33,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "Rebate for 1/3 of project cost for a geothermal heat pump, up to $3,000."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Electric Vehicle Rebates",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "new_electric_vehicle"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 7500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$7,500 rebate for new battery electric vehicle. Available for low income residents."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Electric Vehicle Rebates",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "new_plugin_hybrid_vehicle"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 3000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$3,000 rebate for new plug-in hybrid electric vehicle. Available for low income residents."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Electric Vehicle Rebates",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "used_electric_vehicle"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$2,500 rebate for used battery electric vehicle or plug-in hybrid electric vehicle. Available for low income residents."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Electric Vehicle Rebates",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "new_electric_vehicle"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$2,000 rebate for new battery electric vehicles."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Residential Heat Pump Incentives",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "ducted_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "$2,000 rebate for ducted heat pump, with option to be distributed in monthly payments. Available for low income residents."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Electric Vehicle Rebates",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "new_plugin_hybrid_vehicle"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$1,000 rebate for new plug-in hybrid electric vehicles."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Water Heating Incentives",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 850
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$850 mail-in rebate for heat pump water heater."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Appliance Rebate Program",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "other"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 50
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$50 rebate for ENERGY STAR certified clothes washers."
+    }
+  ]
+}

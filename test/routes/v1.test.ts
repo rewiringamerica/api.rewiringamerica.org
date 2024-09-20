@@ -321,6 +321,42 @@ test('IL low income response with city authority filtering is valid and correct'
   );
 });
 
+// ME low income test.
+test('ME response for low income household is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      zip: '04772',
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 35335,
+      tax_filing: 'single',
+      authority_types: ['state'],
+      // utility: 'me-versant-power',
+      include_beta_states: true, // TODO: Remove when ME is fully launched.
+    },
+    './test/snapshots/v1-me-04772-state-lowincome.json',
+  );
+});
+
+// ME moderate income test
+test('ME response for moderate income household is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      zip: '04772',
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 69000,
+      tax_filing: 'single',
+      authority_types: ['state'],
+      // utility: 'me-versant-power',
+      include_beta_states: true, // TODO: Remove when ME is fully launched.
+    },
+    './test/snapshots/v1-me-04772-state-moderateincome.json',
+  );
+});
+
 // MI low income test.
 test('MI response with state and utility is valid and correct', async t => {
   await validateResponse(
