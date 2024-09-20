@@ -2249,7 +2249,8 @@
         "RI-13",
         "RI-34",
         "RI-35",
-        "RI-43"
+        "RI-43",
+        "RI-47"
       ],
       "source_url": "https://dhs.ri.gov/programs-and-services/energy-and-water-assistance-programs/ffy-2023-low-income-guidelines",
       "thresholds": {
@@ -2305,6 +2306,30 @@
         "8": 85626,
         "9": 87488,
         "10": 89349
+      }
+    },
+    "ri-hear-program-low": {
+      "type": "ami-percentage",
+      "incentives": [
+        "RI-49",
+        "RI-51",
+        "RI-53"
+      ],
+      "source_url": "https://energy.ri.gov/energy-incentives/home-energy-rebate-program",
+      "thresholds": {
+        "percentage": 80
+      }
+    },
+    "ri-hear-program-moderate": {
+      "type": "ami-percentage",
+      "incentives": [
+        "RI-50",
+        "RI-52",
+        "RI-54"
+      ],
+      "source_url": "https://energy.ri.gov/energy-incentives/home-energy-rebate-program",
+      "thresholds": {
+        "percentage": 150
       }
     }
   },
