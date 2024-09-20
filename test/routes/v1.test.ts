@@ -98,7 +98,8 @@ test('parent ZCTA is used', async t => {
   );
 });
 
-test('response with state and utility is valid and correct', async t => {
+// RI
+test('RI low income response with state and utility is valid and correct', async t => {
   await validateResponse(
     t,
     {
@@ -112,6 +113,23 @@ test('response with state and utility is valid and correct', async t => {
       utility: 'ri-rhode-island-energy',
     },
     './test/snapshots/v1-02903-state-utility-lowincome.json',
+  );
+});
+
+// RI
+test('RI low income response with state and utility is valid and correct', async t => {
+  await validateResponse(
+    t,
+    {
+      zip: '02903',
+      owner_status: 'homeowner',
+      household_size: 4,
+      household_income: 150000,
+      tax_filing: 'joint',
+      authority_types: ['state', 'utility'],
+      utility: 'ri-rhode-island-energy',
+    },
+    './test/snapshots/v1-02903-state-utility-moderateincome.json',
   );
 });
 
