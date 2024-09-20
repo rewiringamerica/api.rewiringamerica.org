@@ -1,0 +1,297 @@
+{
+  "is_under_80_ami": false,
+  "is_under_150_ami": true,
+  "is_over_150_ami": false,
+  "authorities": {
+    "me-efficiency-maine": {
+      "name": "Efficiency Maine"
+    }
+  },
+  "coverage": {
+    "state": "ME",
+    "utility": null
+  },
+  "location": {
+    "state": "ME",
+    "city": "Saint Agatha"
+  },
+  "data_partners": {},
+  "incentives": [
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Water Heating Incentives",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$1,000 discount on heat pump water heaters when bought through Granite Group, Lowe's, or Home Depot."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Instant Discounts",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "other"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 75
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$75 instant discount for an ECM circulator pump through participating distributors."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Insulation Rebates",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "other_insulation"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.6,
+        "maximum": 6000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Rebate of 60% of project cost for air sealing and/or insulation, up to $6,000. Available for moderate income residents."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Residential Heat Pump Incentives",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.6,
+        "maximum": 6000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Rebate for 60% of project cost for a heat pump, up to $6,000. Available for moderate income residents."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Insulation Rebates",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "other_insulation"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.4,
+        "maximum": 4000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Rebate of 40% of project cost for air sealing and/or insulation, up to $4,000."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Residential Heat Pump Incentives",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.4,
+        "maximum": 4000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Rebate for 40% of project cost for a heat pump, up to $4,000."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Heating System Rebates",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "geothermal_heating_installation"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.33,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "Rebate for 1/3 of project cost for a geothermal heat pump, up to $3,000."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Electric Vehicle Rebates",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "new_electric_vehicle"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 3500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$3,500 rebate for new battery electric vehicle. Available for moderate income residents."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Electric Vehicle Rebates",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "new_electric_vehicle"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$2,000 rebate for new battery electric vehicles."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Electric Vehicle Rebates",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "new_plugin_hybrid_vehicle"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$2,000 rebate for new plug-in hybrid electric vehicle. Available for moderate income residents."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Electric Vehicle Rebates",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "new_plugin_hybrid_vehicle"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$1,000 rebate for new plug-in hybrid electric vehicles."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Water Heating Incentives",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 850
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$850 mail-in rebate for heat pump water heater."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Appliance Rebate Program",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "other"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 50
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$50 rebate for ENERGY STAR certified clothes washers."
+    }
+  ]
+}
