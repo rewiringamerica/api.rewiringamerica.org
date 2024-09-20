@@ -66,7 +66,6 @@ export const BETA_STATES: string[] = [
   'CT',
   'GA',
   'OR',
-  'ME',
 ];
 
 export const LAUNCHED_STATES: string[] = [
