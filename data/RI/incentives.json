@@ -696,63 +696,18 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 350
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Rebate of 50% of cost for a Level 2 EV charger purchase where no electrical upgrade is needed, up to $350."
-    },
-    "start_date": "2024-08-01"
-  },
-  {
-    "id": "RI-46",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_vehicle_charger"
-    ],
-    "program": "ri_oER_powerUpRI",
-    "amount": {
-      "type": "percent",
-      "number": 0.5,
       "maximum": 700
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate of 50% of cost for purchase and installation of a Level 2 EV charger where an electrical upgrade is needed, up to $700."
+      "en": "Rebate of 50% of cost for a Level 2 EV charger, up to $350, or up to $700 if an electrical upgrade is needed."
     },
-    "start_date": "2024-08-02"
+    "start_date": "2024-08-01"
   },
   {
     "id": "RI-47",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_vehicle_charger"
-    ],
-    "program": "ri_oER_powerUpRI",
-    "amount": {
-      "type": "percent",
-      "number": 0.75,
-      "maximum": 500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Rebate of 75% of cost for a Level 2 EV charger putchase where no electrical upgrade is needed, up to $500. Available for income qualified residents."
-    },
-    "start_date": "2024-08-03",
-    "low_income": "ri-default"
-  },
-  {
-    "id": "RI-48",
     "payment_methods": [
       "rebate"
     ],
@@ -769,9 +724,9 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate of 75% of cost for purchase and installation of a Level 2 EV charger where an electrical upgrade is needed, up to $1,000. Income-qualified."
+      "en": "Rebate of 75% of cost for a Level 2 EV charger, up to $500, or up to $1,000 where an electrical upgrade is needed."
     },
-    "start_date": "2024-08-04",
+    "start_date": "2024-08-01",
     "low_income": "ri-default"
   },
   {
