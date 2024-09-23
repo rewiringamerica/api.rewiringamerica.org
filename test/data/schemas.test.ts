@@ -60,7 +60,7 @@ import {
 import { TAX_BRACKETS, SCHEMA as TB_SCHEMA } from '../../src/data/tax_brackets';
 
 import Ajv from 'ajv/dist/2020';
-import { SomeJSONSchema } from 'ajv/dist/types/json-schema';
+import { JSONSchemaType } from 'ajv/dist/types/json-schema';
 import {
   GEO_GROUPS_BY_STATE,
   GEO_GROUPS_SCHEMA,
@@ -103,7 +103,11 @@ test('static JSON files match schema', async tap => {
   });
 });
 
-const STATE_INCENTIVE_TESTS: [string, SomeJSONSchema, StateIncentive[]][] = [
+const STATE_INCENTIVE_TESTS: [
+  string,
+  JSONSchemaType<StateIncentive[]>,
+  StateIncentive[],
+][] = [
   ['AZ', AZ_INCENTIVES_SCHEMA, AZ_INCENTIVES],
   ['CO', CO_INCENTIVES_SCHEMA, CO_INCENTIVES],
   ['CT', CT_INCENTIVES_SCHEMA, CT_INCENTIVES],
