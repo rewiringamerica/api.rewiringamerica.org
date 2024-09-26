@@ -102,7 +102,7 @@ test('validation works', tap => {
     item_if_selected_other: '',
     'short_description.en':
       'Receive up to $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',
-    program_status: 'Active',
+    status: 'active',
     program_start_raw: '1/1/2022',
     program_end_raw: '12/31/2026',
     payment_methods: 'rebate',
@@ -239,7 +239,7 @@ test('CollectedIncentives are converted into spreadsheet format', tap => {
       items: ['heat_pump_clothes_dryer', 'electric_stove'],
       program_title: 'The Appalachian Program',
       program_url: 'appalachianprogram.com',
-      program_status: 'Active',
+      status: 'Active',
       rebate_value: '$50 flat rate',
       payment_methods: [PaymentMethod.Rebate],
       amount: {

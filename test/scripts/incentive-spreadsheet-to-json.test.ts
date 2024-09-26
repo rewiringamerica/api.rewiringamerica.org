@@ -77,10 +77,15 @@ test('correct row to record transformation', tap => {
           en: 'Receive a $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',
           es: 'Unas palabras en español.',
         },
+        status: 'active',
         start_date: '2022-01-01',
         end_date: '2026-12-31',
         bonus_available: true,
         low_income: 'va-appalachian-power',
+        data_urls: ['https://takechargeva.com/programs/for-your-home'],
+        equipment_standards_restrictions: 'Must be ENERGY STAR certified.',
+        other_restrictions:
+          'Customers can only apply for one rebate of this type per calendar year.',
       },
     },
   ];
