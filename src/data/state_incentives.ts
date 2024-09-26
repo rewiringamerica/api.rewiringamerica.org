@@ -14,6 +14,7 @@ import { AMOUNT_SCHEMA } from './types/amount';
 
 import { START_END_DATE_REGEX } from '../lib/dates';
 import { Amount } from './types/amount';
+import { IncentiveStatus } from './types/incentive-status';
 import { PaymentMethod } from './types/incentive-types';
 import { ALL_ITEMS, Item } from './types/items';
 import { LocalizableString } from './types/localizable-string';
@@ -32,7 +33,7 @@ export type LowIncomeAuthority =
 // renames/aliases.
 export type CollectedIncentive = {
   id: string;
-  data_urls: string[];
+  data_urls?: string[];
   authority_type: AuthorityType;
   authority_name: string;
   geo_eligibility?: string;
@@ -41,7 +42,7 @@ export type CollectedIncentive = {
   items: Item[];
   item_if_selected_other?: string;
   short_description: LocalizableString;
-  program_status: string;
+  program_status?: string;
   start_date?: string;
   end_date?: string;
   payment_methods: PaymentMethod[];
@@ -64,7 +65,11 @@ export type CollectedIncentive = {
 
 const collectedIncentivePropertySchema = {
   id: { type: 'string' },
-  data_urls: { type: 'array', items: { type: 'string' } },
+  data_urls: {
+    type: 'array',
+    items: { type: 'string' },
+    nullable: true,
+  },
   authority_type: { type: 'string', enum: Object.values(AuthorityType) },
   authority_name: { type: 'string' },
   geo_eligibility: { type: 'string', nullable: true },
@@ -76,7 +81,11 @@ const collectedIncentivePropertySchema = {
   },
   item_if_selected_other: { type: 'string', nullable: true },
   short_description: { $ref: 'LocalizableString' },
-  program_status: { type: 'string' },
+  program_status: {
+    type: 'string',
+    enum: Object.values(IncentiveStatus),
+    nullable: true,
+  },
   start_date: {
     type: 'string',
     pattern: START_END_DATE_REGEX.source,
@@ -118,14 +127,14 @@ const collectedIncentivePropertySchema = {
 } as const;
 const requiredCollectedFields = [
   'id',
-  'data_urls',
+  //'data_urls',
   'authority_type',
   'authority_name',
   'program_title',
   'program_url',
   'items',
   'short_description',
-  'program_status',
+  //'program_status',
   'payment_methods',
   'rebate_value',
   'amount',
@@ -166,6 +175,15 @@ export const PASS_THROUGH_FIELDS = [
   'amount',
   'owner_status',
   'short_description',
+  'data_urls',
+  'program_status',
+  'equipment_standards_restrictions',
+  'equipment_capacity_restrictions',
+  'contractor_restrictions',
+  'other_restrictions',
+  'stacking_details',
+  'financing_details',
+  'editorial_notes',
 ] as const;
 type PassThroughField = (typeof PASS_THROUGH_FIELDS)[number];
 
@@ -199,11 +217,20 @@ const fieldOrder: {
   amount: undefined,
   owner_status: undefined,
   short_description: undefined,
+  program_status: undefined,
   start_date: undefined,
   end_date: undefined,
   bonus_available: undefined,
   low_income: undefined,
   more_info_url: undefined,
+  data_urls: undefined,
+  equipment_standards_restrictions: undefined,
+  equipment_capacity_restrictions: undefined,
+  contractor_restrictions: undefined,
+  other_restrictions: undefined,
+  stacking_details: undefined,
+  financing_details: undefined,
+  editorial_notes: undefined,
 } as const;
 export const FIELD_ORDER = Object.keys(fieldOrder);
 

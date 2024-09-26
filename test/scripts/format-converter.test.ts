@@ -102,7 +102,7 @@ test('validation works', tap => {
     item_if_selected_other: '',
     'short_description.en':
       'Receive up to $50 rebate for an Energy Star certified electric ventless or vented clothes dryer from an approved retailer.',
-    program_status: 'Active',
+    program_status: 'active',
     program_start_raw: '1/1/2022',
     program_end_raw: '12/31/2026',
     payment_methods: 'rebate',
