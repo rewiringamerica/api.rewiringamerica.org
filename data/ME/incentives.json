@@ -358,14 +358,15 @@
     ],
     "program": "me_efficiencyMaine_efficiencyMaineResidentialHeatPumpIncentives",
     "amount": {
-      "type": "dollar_amount",
-      "number": 2000
+      "type": "percent",
+      "number": 0.85,
+      "maximum": 12900
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,000 rebate for ducted heat pump, with option to be distributed in monthly payments. Available for low income residents."
+      "en": "Up to 85% of the cost of ducted heat pump systems for manufactured (mobile) homes. Available for low-income households. $2,000 co-pay."
     },
     "low_income": "me-low-income"
   },
