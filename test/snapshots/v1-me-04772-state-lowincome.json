@@ -65,6 +65,27 @@
       ],
       "authority_type": "state",
       "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Residential Heat Pump Incentives",
+      "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "ducted_heat_pump"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.85,
+        "maximum": 12900
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to 85% of the cost of ducted heat pump systems for manufactured (mobile) homes. Available for low-income households. $2,000 co-pay."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
       "program": "Efficiency Maine Insulation Rebates",
       "program_url": "https://www.efficiencymaine.com",
       "items": [
@@ -272,26 +293,6 @@
         "renter"
       ],
       "short_description": "$2,000 rebate for new battery electric vehicles."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "me-efficiency-maine",
-      "program": "Efficiency Maine Residential Heat Pump Incentives",
-      "program_url": "https://www.efficiencymaine.com",
-      "items": [
-        "ducted_heat_pump"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 2000
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "$2,000 rebate for ducted heat pump, with option to be distributed in monthly payments. Available for low income residents."
     },
     {
       "payment_methods": [
