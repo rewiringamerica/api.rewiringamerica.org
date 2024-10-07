@@ -12,7 +12,8 @@ The "v0" of this API is still available, but deprecated; we plan to remove it \
 in the near future, and new applications should not use it.
 
 **To generate an API key, click on the "Sign In" button. You can also use \
-[this link](https://www.rewiringamerica.org/api) to sign up if needed**.
+[this link](https://homes.rewiringamerica.org/api/developer-login) to sign up \
+if needed**.
 
 If you have feedback, or if you've stumbled across this page by accident and \
 you'd like to learn more, reach out to us at \
