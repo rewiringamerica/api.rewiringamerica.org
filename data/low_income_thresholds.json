@@ -1039,64 +1039,6 @@
       }
     }
   },
-  "ME": {
-    "me-low-income": {
-      "type": "hhsize",
-      "incentives": [
-        "ME-1",
-        "ME-7",
-        "ME-9",
-        "ME-10",
-        "ME-14",
-        "ME-17",
-        "ME-18"
-      ],
-      "/": "recipients of HEAP, SNAP, TANF, and/or MaineCare qualify; HEAP has the highest income limits of these programs",
-      "source_url": "https://www.mainehousing.org/charts/HEAP-Income-Elibility",
-      "thresholds": {
-        "1": 35336,
-        "2": 46209,
-        "3": 57082,
-        "4": 67955,
-        "5": 78827,
-        "6": 89700,
-        "7": 91739,
-        "8": 93777
-      }
-    },
-    "me-moderate-income": {
-      "type": "filing-status",
-      "incentives": [
-        "ME-2",
-        "ME-6",
-        "ME-8",
-        "ME-15"
-      ],
-      "source_url": "https://www.efficiencymaine.com/docs/Rebates-Income-Eligible-Households.pdf",
-      "thresholds": {
-        "hoh": [
-          0,
-          70000
-        ],
-        "joint": [
-          0,
-          100000
-        ],
-        "single": [
-          0,
-          70000
-        ],
-        "married_filing_separately": [
-          0,
-          70000
-        ],
-        "qualifying_widower_with_dependent_child": [
-          0,
-          100000
-        ]
-      }
-    }
-  },
   "MI": {
     "mi-lbwl": {
       "type": "hhsize",
@@ -1130,6 +1072,38 @@
         "6": 167840,
         "7": 189360,
         "8": 210880
+      }
+    },
+    "mi_a2li": {
+      "type": "ami-percentage",
+      "incentives": [],
+      "source_url": "https://www.a2gov.org/departments/sustainability/Sustainability-Me/Families-Individuals/Pages/Home-Energy-Rebates.aspx",
+      "description": "Ann Arbor 120% AMI",
+      "thresholds": {
+        "percentage": "120"
+      }
+    },
+    "mi-a2zero": {
+      "type": "hhsize",
+      "incentives": [
+        "MI-86",
+        "MI-87",
+        "MI-88",
+        "MI-89",
+        "MI-92",
+        "MI-94"
+      ],
+      "source_url": "https://www.a2gov.org/departments/sustainability/Sustainability-Me/Families-Individuals/Pages/Home-Energy-Rebates.aspx",
+      "description": "Ann Arbor LMI Thresholds",
+      "thresholds": {
+        "1": "104200",
+        "2": "119200",
+        "3": "134000",
+        "4": "148800",
+        "5": "160800",
+        "6": "172800",
+        "7": "184600",
+        "8": "196600"
       }
     }
   },
@@ -2125,6 +2099,7 @@
     "or-energy-trust-of-oregon": {
       "type": "hhsize",
       "incentives": [
+        "OR-25",
         "OR-5",
         "OR-7",
         "OR-13",
@@ -2133,7 +2108,6 @@
         "OR-16",
         "OR-20",
         "OR-23",
-        "OR-25",
         "OR-26",
         "OR-28"
       ],
@@ -2203,8 +2177,7 @@
         "RI-13",
         "RI-34",
         "RI-35",
-        "RI-43",
-        "RI-47"
+        "RI-43"
       ],
       "source_url": "https://dhs.ri.gov/programs-and-services/energy-and-water-assistance-programs/ffy-2023-low-income-guidelines",
       "thresholds": {
@@ -2260,30 +2233,6 @@
         "8": 85626,
         "9": 87488,
         "10": 89349
-      }
-    },
-    "ri-hear-program-low": {
-      "type": "ami-percentage",
-      "incentives": [
-        "RI-49",
-        "RI-51",
-        "RI-53"
-      ],
-      "source_url": "https://energy.ri.gov/energy-incentives/home-energy-rebate-program",
-      "thresholds": {
-        "percentage": 80
-      }
-    },
-    "ri-hear-program-moderate": {
-      "type": "ami-percentage",
-      "incentives": [
-        "RI-50",
-        "RI-52",
-        "RI-54"
-      ],
-      "source_url": "https://energy.ri.gov/energy-incentives/home-energy-rebate-program",
-      "thresholds": {
-        "percentage": 150
       }
     }
   },
