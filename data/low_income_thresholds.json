@@ -99,23 +99,21 @@
         "8": 115200
       }
     },
-    "co-energy-outreach-colorado": {
+    "co-city-of-boulder": {
       "type": "hhsize",
       "incentives": [
-        "CO-103"
+        "CO-335"
       ],
-      "source_url": "https://socgov02.my.site.com/ceoweatherization/resource/Income_Guidelines",
+      "source_url": "https://assets-partners.bouldercounty.gov/wp-content/uploads/sites/2/2023/02/2023-COB-Rebate-Eligible-Upgrades.pdf",
       "thresholds": {
-        "1": 36983,
-        "2": 48362,
-        "3": 59742,
-        "4": 71122,
-        "5": 82501,
-        "6": 93881,
-        "7": 96014,
-        "8": 101120,
-        "9": 111400,
-        "10": 121680
+        "1": 75980,
+        "2": 86845,
+        "3": 97715,
+        "4": 108500,
+        "5": 117240,
+        "6": 117240,
+        "7": 117240,
+        "8": 117240
       }
     },
     "co-colorado-energy-office": {
@@ -138,21 +136,23 @@
         "10": 103120
       }
     },
-    "co-city-of-boulder": {
+    "co-energy-outreach-colorado": {
       "type": "hhsize",
       "incentives": [
-        "CO-335"
+        "CO-103"
       ],
-      "source_url": "https://assets-partners.bouldercounty.gov/wp-content/uploads/sites/2/2023/02/2023-COB-Rebate-Eligible-Upgrades.pdf",
+      "source_url": "https://socgov02.my.site.com/ceoweatherization/resource/Income_Guidelines",
       "thresholds": {
-        "1": 75980,
-        "2": 86845,
-        "3": 97715,
-        "4": 108500,
-        "5": 117240,
-        "6": 117240,
-        "7": 117240,
-        "8": 117240
+        "1": 36983,
+        "2": 48362,
+        "3": 59742,
+        "4": 71122,
+        "5": 82501,
+        "6": 93881,
+        "7": 96014,
+        "8": 101120,
+        "9": 111400,
+        "10": 121680
       }
     },
     "co-glenwood-springs-electric": {
@@ -872,24 +872,6 @@
     }
   },
   "CT": {
-    "ct-default": {
-      "type": "hhsize",
-      "incentives": [
-        "CT-1",
-        "CT-4"
-      ],
-      "source_url": "https://energizect.com/energy-evaluations/income-eligible-options",
-      "thresholds": {
-        "1": 39761,
-        "2": 51996,
-        "3": 64230,
-        "4": 76465,
-        "5": 88699,
-        "6": 100933,
-        "7": 103227,
-        "8": 105521
-      }
-    },
     "ct-cheapr": {
       "type": "hhsize",
       "incentives": [
@@ -907,9 +889,44 @@
         "7": 142020,
         "8": 158160
       }
+    },
+    "ct-default": {
+      "type": "hhsize",
+      "incentives": [
+        "CT-1",
+        "CT-4"
+      ],
+      "source_url": "https://energizect.com/energy-evaluations/income-eligible-options",
+      "thresholds": {
+        "1": 39761,
+        "2": 51996,
+        "3": 64230,
+        "4": 76465,
+        "5": 88699,
+        "6": 100933,
+        "7": 103227,
+        "8": 105521
+      }
     }
   },
   "DC": {
+    "dc-dc-department-of-energy-and-environment-60-ami": {
+      "type": "hhsize",
+      "incentives": [
+        "DC-21"
+      ],
+      "source_url": "https://doee.dc.gov/service/wap",
+      "thresholds": {
+        "1": 49814,
+        "2": 65141,
+        "3": 80469,
+        "4": 95797,
+        "5": 111124,
+        "6": 126452,
+        "7": 129325,
+        "8": 132199
+      }
+    },
     "dc-dc-sustainable-energy-utility": {
       "type": "hhsize",
       "incentives": [
@@ -930,60 +947,9 @@
         "7": 158200,
         "8": 170350
       }
-    },
-    "dc-dc-department-of-energy-and-environment-60-ami": {
-      "type": "hhsize",
-      "incentives": [
-        "DC-21"
-      ],
-      "source_url": "https://doee.dc.gov/service/wap",
-      "thresholds": {
-        "1": 49814,
-        "2": 65141,
-        "3": 80469,
-        "4": 95797,
-        "5": 111124,
-        "6": 126452,
-        "7": 129325,
-        "8": 132199
-      }
     }
   },
   "IL": {
-    "il-home-weatherization": {
-      "type": "hhsize",
-      "incentives": [
-        "IL-16"
-      ],
-      "source_url": "https://dceo.illinois.gov/communityservices/homeweatherization.html",
-      "thresholds": {
-        "1": 29160,
-        "2": 39440,
-        "3": 49720,
-        "4": 60000,
-        "5": 70280,
-        "6": 80560,
-        "7": 90840,
-        "8": 93297
-      }
-    },
-    "il-comEd-single-family-home-energy-savings": {
-      "type": "hhsize",
-      "incentives": [
-        "IL-6"
-      ],
-      "source_url": "https://www.comed.com/ways-to-save/for-your-home/home-energy-savings/single-family",
-      "thresholds": {
-        "1": 61800,
-        "2": 70600,
-        "3": 79450,
-        "4": 88250,
-        "5": 95350,
-        "6": 102400,
-        "7": 109450,
-        "8": 116500
-      }
-    },
     "il-comEd-ev-charger": {
       "type": "hhsize",
       "incentives": [
@@ -1001,21 +967,21 @@
         "8": 106350
       }
     },
-    "il-solar-for-all": {
+    "il-comEd-single-family-home-energy-savings": {
       "type": "hhsize",
       "incentives": [
-        "IL-33"
+        "IL-6"
       ],
-      "source_url": "https://www.illinoissfa.com/programs/for-homeowners-and-building-owners/",
+      "source_url": "https://www.comed.com/ways-to-save/for-your-home/home-energy-savings/single-family",
       "thresholds": {
-        "1": 58350,
-        "2": 66700,
-        "3": 75050,
-        "4": 83350,
-        "5": 90050,
-        "6": 96700,
-        "7": 103400,
-        "8": 110050
+        "1": 61800,
+        "2": 70600,
+        "3": 79450,
+        "4": 88250,
+        "5": 95350,
+        "6": 102400,
+        "7": 109450,
+        "8": 116500
       }
     },
     "il-evanston-green-homes-pilot-program": {
@@ -1037,6 +1003,40 @@
         "7": 109450,
         "8": 116500
       }
+    },
+    "il-home-weatherization": {
+      "type": "hhsize",
+      "incentives": [
+        "IL-16"
+      ],
+      "source_url": "https://dceo.illinois.gov/communityservices/homeweatherization.html",
+      "thresholds": {
+        "1": 29160,
+        "2": 39440,
+        "3": 49720,
+        "4": 60000,
+        "5": 70280,
+        "6": 80560,
+        "7": 90840,
+        "8": 93297
+      }
+    },
+    "il-solar-for-all": {
+      "type": "hhsize",
+      "incentives": [
+        "IL-33"
+      ],
+      "source_url": "https://www.illinoissfa.com/programs/for-homeowners-and-building-owners/",
+      "thresholds": {
+        "1": 58350,
+        "2": 66700,
+        "3": 75050,
+        "4": 83350,
+        "5": 90050,
+        "6": 96700,
+        "7": 103400,
+        "8": 110050
+      }
     }
   },
   "ME": {
@@ -1051,7 +1051,6 @@
         "ME-17",
         "ME-18"
       ],
-      "/": "recipients of HEAP, SNAP, TANF, and/or MaineCare qualify; HEAP has the highest income limits of these programs",
       "source_url": "https://www.mainehousing.org/charts/HEAP-Income-Elibility",
       "thresholds": {
         "1": 35336,
@@ -1098,23 +1097,6 @@
     }
   },
   "MI": {
-    "mi-lbwl": {
-      "type": "hhsize",
-      "incentives": [
-        "MI-73"
-      ],
-      "source_url": "https://www.dteenergy.com/us/en/residential/service-request/pev/electric-vehicle-rebate.html#accordion-2c85f65c90-item-614638b806",
-      "thresholds": {
-        "1": 52500,
-        "2": 60000,
-        "3": 67500,
-        "4": 74950,
-        "5": 80950,
-        "6": 86950,
-        "7": 92950,
-        "8": 98950
-      }
-    },
     "mi-dte": {
       "type": "hhsize",
       "incentives": [
@@ -1131,116 +1113,78 @@
         "7": 189360,
         "8": 210880
       }
-    }
-  },
-  "PA": {
-    "pa-department-of-community-and-economic-development": {
-      "type": "hhsize",
-      "incentives": [
-        "PA-1"
-      ],
-      "source_url": "https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines",
-      "thresholds": {
-        "1": 30120,
-        "2": 40880,
-        "3": 51640,
-        "4": 62400,
-        "5": 73160,
-        "6": 83920,
-        "7": 94680,
-        "8": 105440
-      }
     },
-    "pa-duquesne-light-company": {
+    "mi-lbwl": {
       "type": "hhsize",
       "incentives": [
-        "PA-2"
+        "MI-73"
       ],
-      "source_url": "https://duquesnelight.com/account-billing/payment-assistance/home-weatherization",
+      "source_url": "https://www.dteenergy.com/us/en/residential/service-request/pev/electric-vehicle-rebate.html#accordion-2c85f65c90-item-614638b806",
       "thresholds": {
-        "1": 22596,
-        "2": 30660,
-        "3": 38736,
-        "4": 46800,
-        "5": 54876,
-        "6": 62940,
-        "7": 71016,
-        "8": 79092
-      }
-    },
-    "pa-first-energy": {
-      "type": "hhsize",
-      "incentives": [
-        "PA-21",
-        "PA-25"
-      ],
-      "source_url": "https://rebates.energysavepa.com/enhanced-rebates",
-      "thresholds": {
-        "1": 22590,
-        "2": 30660,
-        "3": 38730,
-        "4": 46800,
-        "5": 54870,
-        "6": 62940,
-        "7": 71010,
-        "8": 79080
-      }
-    },
-    "pa-first-energy-warm": {
-      "type": "hhsize",
-      "incentives": [
-        "PA-26"
-      ],
-      "source_url": "https://www.firstenergycorp.com/save_energy/save_energy_pennsylvania/met_ed/for_your_home/warm-info.html",
-      "thresholds": {
-        "1": 30120,
-        "2": 40880,
-        "3": 51640,
-        "4": 62400,
-        "5": 73160,
-        "6": 83920,
-        "7": 94680,
-        "8": 105440
-      }
-    },
-    "pa-pennsylvania-department-of-environmental-protection": {
-      "type": "hhsize",
-      "incentives": [
-        "PA-47",
-        "PA-48"
-      ],
-      "source_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
-      "thresholds": {
-        "1": 58320,
-        "2": 78880,
-        "3": 99440,
-        "4": 120000,
-        "5": 140560,
-        "6": 161120,
-        "7": 181680,
-        "8": 202240
-      }
-    },
-    "pa-pennsylvania-department-of-environmental-protection-bonus": {
-      "type": "hhsize",
-      "incentives": [
-        "PA-49",
-        "PA-50"
-      ],
-      "source_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
-      "thresholds": {
-        "1": 29160,
-        "2": 39440,
-        "3": 49720,
-        "4": 60000,
-        "5": 70280,
-        "6": 80560,
-        "7": 90840,
-        "8": 101120
+        "1": 52500,
+        "2": 60000,
+        "3": 67500,
+        "4": 74950,
+        "5": 80950,
+        "6": 86950,
+        "7": 92950,
+        "8": 98950
       }
     }
   },
   "NV": {
+    "nv-csa-reno": {
+      "type": "hhsize",
+      "incentives": [
+        "NV-74"
+      ],
+      "source_url": "https://www.csareno.org/Energy-Efficiency-Weatherization",
+      "thresholds": {
+        "1": 27180,
+        "2": 36620,
+        "3": 46060,
+        "4": 55500,
+        "5": 64940,
+        "6": 74380,
+        "7": 83820,
+        "8": 93260
+      }
+    },
+    "nv-help-of-southern-nevada": {
+      "type": "hhsize",
+      "incentives": [
+        "NV-77"
+      ],
+      "source_url": "https://static1.squarespace.com/static/5e91c64d83735c5db90418a6/t/65dd07f61363a972f9bc5e65/1708984310854/WEBSITES+INCOME+SHEET+-+2024+WX.pdf",
+      "thresholds": {
+        "1": 30120,
+        "2": 40880,
+        "3": 51640,
+        "4": 62400,
+        "5": 73160,
+        "6": 83920,
+        "7": 94680,
+        "8": 105440
+      }
+    },
+    "nv-nevada-rural-housing": {
+      "type": "hhsize",
+      "incentives": [
+        "NV-76",
+        "NV-79"
+      ],
+      "source_url": "https://nvrural.org/programs/weatherization/",
+      "thresholds": {
+        "1": 27180,
+        "2": 36620,
+        "3": 46060,
+        "4": 55500,
+        "5": 64940,
+        "6": 74380,
+        "7": 83820,
+        "8": 93260
+      }
+    },
     "nv-nv-energy-appliance-replacement": {
       "type": "hhsize",
       "incentives": [
@@ -1277,23 +1221,6 @@
         "8": 75840
       }
     },
-    "nv-csa-reno": {
-      "type": "hhsize",
-      "incentives": [
-        "NV-74"
-      ],
-      "source_url": "https://www.csareno.org/Energy-Efficiency-Weatherization",
-      "thresholds": {
-        "1": 27180,
-        "2": 36620,
-        "3": 46060,
-        "4": 55500,
-        "5": 64940,
-        "6": 74380,
-        "7": 83820,
-        "8": 93260
-      }
-    },
     "nv-rural-nevada-development-corporation": {
       "type": "hhsize",
       "incentives": [
@@ -1309,41 +1236,6 @@
         "6": 62940,
         "7": 71010,
         "8": 79080
-      }
-    },
-    "nv-nevada-rural-housing": {
-      "type": "hhsize",
-      "incentives": [
-        "NV-76",
-        "NV-79"
-      ],
-      "source_url": "https://nvrural.org/programs/weatherization/",
-      "thresholds": {
-        "1": 27180,
-        "2": 36620,
-        "3": 46060,
-        "4": 55500,
-        "5": 64940,
-        "6": 74380,
-        "7": 83820,
-        "8": 93260
-      }
-    },
-    "nv-help-of-southern-nevada": {
-      "type": "hhsize",
-      "incentives": [
-        "NV-77"
-      ],
-      "source_url": "https://static1.squarespace.com/static/5e91c64d83735c5db90418a6/t/65dd07f61363a972f9bc5e65/1708984310854/WEBSITES+INCOME+SHEET+-+2024+WX.pdf",
-      "thresholds": {
-        "1": 30120,
-        "2": 40880,
-        "3": 51640,
-        "4": 62400,
-        "5": 73160,
-        "6": 83920,
-        "7": 94680,
-        "8": 105440
       }
     }
   },
@@ -2194,6 +2086,113 @@
       }
     }
   },
+  "PA": {
+    "pa-department-of-community-and-economic-development": {
+      "type": "hhsize",
+      "incentives": [
+        "PA-1"
+      ],
+      "source_url": "https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines",
+      "thresholds": {
+        "1": 30120,
+        "2": 40880,
+        "3": 51640,
+        "4": 62400,
+        "5": 73160,
+        "6": 83920,
+        "7": 94680,
+        "8": 105440
+      }
+    },
+    "pa-duquesne-light-company": {
+      "type": "hhsize",
+      "incentives": [
+        "PA-2"
+      ],
+      "source_url": "https://duquesnelight.com/account-billing/payment-assistance/home-weatherization",
+      "thresholds": {
+        "1": 22596,
+        "2": 30660,
+        "3": 38736,
+        "4": 46800,
+        "5": 54876,
+        "6": 62940,
+        "7": 71016,
+        "8": 79092
+      }
+    },
+    "pa-first-energy": {
+      "type": "hhsize",
+      "incentives": [
+        "PA-21",
+        "PA-25"
+      ],
+      "source_url": "https://rebates.energysavepa.com/enhanced-rebates",
+      "thresholds": {
+        "1": 22590,
+        "2": 30660,
+        "3": 38730,
+        "4": 46800,
+        "5": 54870,
+        "6": 62940,
+        "7": 71010,
+        "8": 79080
+      }
+    },
+    "pa-first-energy-warm": {
+      "type": "hhsize",
+      "incentives": [
+        "PA-26"
+      ],
+      "source_url": "https://www.firstenergycorp.com/save_energy/save_energy_pennsylvania/met_ed/for_your_home/warm-info.html",
+      "thresholds": {
+        "1": 30120,
+        "2": 40880,
+        "3": 51640,
+        "4": 62400,
+        "5": 73160,
+        "6": 83920,
+        "7": 94680,
+        "8": 105440
+      }
+    },
+    "pa-pennsylvania-department-of-environmental-protection": {
+      "type": "hhsize",
+      "incentives": [
+        "PA-47",
+        "PA-48"
+      ],
+      "source_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
+      "thresholds": {
+        "1": 58320,
+        "2": 78880,
+        "3": 99440,
+        "4": 120000,
+        "5": 140560,
+        "6": 161120,
+        "7": 181680,
+        "8": 202240
+      }
+    },
+    "pa-pennsylvania-department-of-environmental-protection-bonus": {
+      "type": "hhsize",
+      "incentives": [
+        "PA-49",
+        "PA-50"
+      ],
+      "source_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
+      "thresholds": {
+        "1": 29160,
+        "2": 39440,
+        "3": 49720,
+        "4": 60000,
+        "5": 70280,
+        "6": 80560,
+        "7": 90840,
+        "8": 101120
+      }
+    }
+  },
   "RI": {
     "ri-default": {
       "type": "hhsize",
@@ -2243,25 +2242,6 @@
         "12": 98190
       }
     },
-    "ri-rhode-island-energy": {
-      "type": "hhsize",
-      "incentives": [
-        "RI-27"
-      ],
-      "source_url": "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Income-Eligible-Services#qualify",
-      "thresholds": {
-        "1": 32265,
-        "2": 42193,
-        "3": 52120,
-        "4": 62048,
-        "5": 71976,
-        "6": 81903,
-        "7": 83765,
-        "8": 85626,
-        "9": 87488,
-        "10": 89349
-      }
-    },
     "ri-hear-program-low": {
       "type": "ami-percentage",
       "incentives": [
@@ -2284,6 +2264,25 @@
       "source_url": "https://energy.ri.gov/energy-incentives/home-energy-rebate-program",
       "thresholds": {
         "percentage": 150
+      }
+    },
+    "ri-rhode-island-energy": {
+      "type": "hhsize",
+      "incentives": [
+        "RI-27"
+      ],
+      "source_url": "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Income-Eligible-Services#qualify",
+      "thresholds": {
+        "1": 32265,
+        "2": 42193,
+        "3": 52120,
+        "4": 62048,
+        "5": 71976,
+        "6": 81903,
+        "7": 83765,
+        "8": 85626,
+        "9": 87488,
+        "10": 89349
       }
     }
   },
@@ -2311,6 +2310,44 @@
     }
   },
   "VT": {
+    "vt-burlington-electric-department": {
+      "type": "hhsize",
+      "incentives": [
+        "VT-4",
+        "VT-13",
+        "VT-25",
+        "VT-44"
+      ],
+      "source_url": "https://www.burlingtonelectric.com/rebate-form",
+      "thresholds": {
+        "1": 66600,
+        "2": 76100,
+        "3": 85600,
+        "4": 95100,
+        "5": 102750,
+        "6": 110350,
+        "7": 117950,
+        "8": 125550
+      }
+    },
+    "vt-burlington-electric-department-ev": {
+      "type": "hhsize",
+      "incentives": [
+        "VT-89",
+        "VT-90"
+      ],
+      "source_url": "https://www.burlingtonelectric.com/evrebates/",
+      "thresholds": {
+        "1": 61040,
+        "2": 69760,
+        "3": 78480,
+        "4": 87200,
+        "5": 94176,
+        "6": 101152,
+        "7": 108128,
+        "8": 115104
+      }
+    },
     "vt-default": {
       "type": "county-hhsize",
       "incentives": [
@@ -2516,44 +2553,6 @@
           90001,
           150000
         ]
-      }
-    },
-    "vt-burlington-electric-department": {
-      "type": "hhsize",
-      "incentives": [
-        "VT-4",
-        "VT-13",
-        "VT-25",
-        "VT-44"
-      ],
-      "source_url": "https://www.burlingtonelectric.com/rebate-form",
-      "thresholds": {
-        "1": 66600,
-        "2": 76100,
-        "3": 85600,
-        "4": 95100,
-        "5": 102750,
-        "6": 110350,
-        "7": 117950,
-        "8": 125550
-      }
-    },
-    "vt-burlington-electric-department-ev": {
-      "type": "hhsize",
-      "incentives": [
-        "VT-89",
-        "VT-90"
-      ],
-      "source_url": "https://www.burlingtonelectric.com/evrebates/",
-      "thresholds": {
-        "1": 61040,
-        "2": 69760,
-        "3": 78480,
-        "4": 87200,
-        "5": 94176,
-        "6": 101152,
-        "7": 108128,
-        "8": 115104
       }
     },
     "vt-green-mountain-power-ev": {
