@@ -184,7 +184,7 @@ export const FIELD_METADATA: Record<
         value_aliases: ['Active'],
         description: 'The incentive program is live',
       },
-      expired: {
+      retired: {
         value_aliases: ['Expired'],
         description: 'The incentive program has ended / expired',
       },
@@ -193,16 +193,12 @@ export const FIELD_METADATA: Record<
         description:
           'The incentive program is on pause (eg., when funding is frozen)',
       },
-      other: {
-        value_aliases: ['Other'],
-        description: 'Use when a new/different value is provided',
-      },
       unknown: {
-        value_aliases: ['Unknown'],
+        value_aliases: ['Other', 'Unknown'],
         description:
           'Use only when no information is provided about this on the rebate',
       },
-      planned: {
+      in_development: {
         value_aliases: ['Planned'],
         description:
           'The incentive program is scheduled to start at a future date',
