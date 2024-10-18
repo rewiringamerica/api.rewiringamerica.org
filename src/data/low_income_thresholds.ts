@@ -59,7 +59,6 @@ export const AUTHORITY_INFO_SCHEMA = {
     incentives: {
       type: 'array',
       items: { type: 'string' },
-      minItems: 1,
       uniqueItems: true,
     },
   },

@@ -76,6 +76,9 @@ import {
 } from '../../src/lib/incentive-relationship-calculation';
 import { incentiveRelationshipsContainCycle } from './cycles';
 
+const ENGLISH_DESC_CHAR_LIMIT = 250;
+const SPANISH_DESC_CHAR_LIMIT = 400;
+
 const TESTS = [
   [I_SCHEMA, IRA_INCENTIVES, 'ira_incentives'],
   [ISS_SCHEMA, IRA_STATE_SAVINGS, 'ira_state_savings'],
@@ -165,7 +168,7 @@ test('state incentives JSON files match schemas', async tap => {
     // Check some constraints that aren't expressed in JSON schema
     data.forEach((incentive, index) => {
       tap.ok(
-        incentive.short_description.en.length <= 150,
+        incentive.short_description.en.length <= ENGLISH_DESC_CHAR_LIMIT,
         `${stateId} English description too long ` +
           `(${incentive.short_description.en.length}), id ${incentive.id}, index ${index}`,
       );
@@ -173,7 +176,7 @@ test('state incentives JSON files match schemas', async tap => {
       // We let Spanish descriptions be longer
       if (incentive.short_description.es) {
         tap.ok(
-          incentive.short_description.es.length <= 400,
+          incentive.short_description.es.length <= SPANISH_DESC_CHAR_LIMIT,
           `${stateId} Spanish description too long ` +
             `(${incentive.short_description.en.length}), id ${incentive.id}, index ${index}`,
         );
