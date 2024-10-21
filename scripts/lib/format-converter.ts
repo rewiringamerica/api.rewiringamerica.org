@@ -1,5 +1,6 @@
 import Ajv from 'ajv';
 import { sheets_v4 } from 'googleapis';
+import _ from 'lodash';
 import util from 'util';
 import {
   COLLECTED_DATA_SCHEMA,
@@ -101,7 +102,7 @@ export function flatToNested(
       }
       if (arrayCols.includes(columnName)) {
         // Assume comma-delimited array and split into components.
-        val = val.split(',').map((s: string) => s.trim());
+        val = _.uniq(val.split(',').map((s: string) => s.trim()));
       }
       if (boolCols.includes(columnName)) {
         // Minimal-effort conversion of booleans from string.
