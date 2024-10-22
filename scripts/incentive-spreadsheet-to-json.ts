@@ -7,6 +7,7 @@ import minimist from 'minimist';
 import path from 'path';
 
 import { GaxiosPromise } from 'gaxios';
+import _ from 'lodash';
 import { GEO_GROUPS_BY_STATE, GeoGroupsByState } from '../src/data/geo_groups';
 import {
   LOW_INCOME_THRESHOLDS_BY_STATE,
@@ -116,11 +117,13 @@ export function spreadsheetToJson(
       validStateIncentives.push(refined);
     }
   });
+
+  const getNumber = (row: StateIncentive) => parseInt(row.id.slice(3));
   return {
     invalidCollectedIncentives,
     validCollectedIncentives,
     invalidStateIncentives,
-    validStateIncentives,
+    validStateIncentives: _.sortBy(validStateIncentives, [getNumber]),
   };
 }
 
