@@ -97,8 +97,8 @@
     },
     "start_date": "2021-01-01",
     "end_date": "2024-12-31",
-    "low_income": "vt-burlington-electric-department",
-    "bonus_available": true
+    "bonus_available": true,
+    "low_income": "vt-burlington-electric-department"
   },
   {
     "id": "VT-5",
@@ -424,8 +424,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Customers may receive a rebate up to $2,500 on qualifying ductless heat pumps, or $500 for a second heat pump. Total rebate capped at 75% of the cost. Available through your contractor.",
-      "es": "Los clientes de BED pueden recibir un reembolso de hasta $2,500 en las bombas de calor que cumplan los requisitos, o $500 por una segunda bomba de calor. El reembolso total está limitado al 75% del costo. Disponible a través de su contratista."
+      "en": "Customers may receive a rebate up to $2,500 on qualifying ductless heat pumps, or $500 for a second heat pump.",
+      "es": "Los clientes de BED pueden recibir un reembolso de hasta $2,500 en las bombas de calor que cumplan los requisitos, o $500 por una segunda bomba de calor."
     },
     "start_date": "2022-01-01",
     "end_date": "2024-12-31"
@@ -499,8 +499,8 @@
       "en": "25% of the upfront cost of a used high-efficiency vehicle, up to $5,000, for low and moderate income car buyers.",
       "es": "El Estado de Vermont ha colaborado con Capstone para ofrecer el programa MileageSmart. Éste ofrece a los compradores de automóviles con ingresos bajos y moderados un incentivo que cubre el 25% del costo inicial de un vehículo usado de alta eficiencia, hasta un máximo de $5,000l."
     },
-    "low_income": "vt-default",
-    "bonus_available": true
+    "bonus_available": true,
+    "low_income": "vt-default"
   },
   {
     "id": "VT-31",
@@ -797,7 +797,7 @@
     "program": "vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForHeatPumpWaterHeater",
     "amount": {
       "type": "dollar_amount",
-      "number": 600,
+      "number": 800,
       "minimum": 500,
       "maximum": 800
     },
@@ -805,8 +805,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$600 available from BED through Efficiency VT, available through your contractor.",
-      "es": "Los clientes de BED pueden recibir un reembolso de hasta $600 por un calentador de agua con bomba de calor, disponible a través de su contratista."
+      "en": "Customers may receive upto $800 rebate for a heat pump water heater.",
+      "es": "Los clientes de BED pueden recibir un reembolso de hasta $800 por un calentador de agua con bomba de calor."
     },
     "start_date": "2022-01-01",
     "end_date": "2024-12-31"
@@ -950,7 +950,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Get cash back on materials for three elgibile DIY projects including weather-stripping, insulation, and air sealing. If you are a VGS customer, visit www.vermontgas.com to determine eligibility for further weatherization projects",
+      "en": "Get cash back on materials for three elgibile DIY projects including weather-stripping, insulation, and air sealing.",
       "es": "Reciba dinero en efectivo en materiales para tres proyectos de auto-instalación elegibiles, incluyendo la colocación de sellos, aislamiento y sellado para juntas herméticas."
     },
     "start_date": "2019-09-23"
@@ -1001,8 +1001,8 @@
       "es": "Trabaje con un técnico especialista de la red Efficiency Excellence Network para mejorar el aislamiento y los sellos herméticos de su vivienda, garantizando el confort, la salud y la seguridad de los ocupantes, y obtenga un 75% de descuento en los costos del proyecto, hasta $9,500."
     },
     "start_date": "2023-08-01",
-    "low_income": "vt-default-moderate",
-    "bonus_available": true
+    "bonus_available": true,
+    "low_income": "vt-default-moderate"
   },
   {
     "id": "VT-52",
@@ -1131,15 +1131,15 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "minimum": 40,
+      "minimum": 100,
       "maximum": 300
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $100 back for residential push mower or up to $300 back for a ride-on mower, $50 on electric chainsaws and trimmers, $40 on electric leaf blowers.",
-      "es": "Hasta $100 de devolución por una podadora manual residencial o hasta $300 de reembolso por una podadora de operador a bordo, $50 en motosierras y desbrozadoras eléctricas, $40 en sopladores de hojas eléctricos."
+      "en": "Up to $100 back for residential push mower or up to $300 back for a ride-on mower and $50 on electric chainsaws and trimmers.",
+      "es": "Hasta $100 de devolución por una podadora manual residencial o hasta $300 de reembolso por una podadora de operador a bordo y $50 en motosierras y desbrozadoras eléctricas."
     },
     "start_date": "2022-01-01",
     "end_date": "2024-12-31",
@@ -1459,7 +1459,7 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_clothes_dryer"
+      "other"
     ],
     "program": "vt_efficiencyVermont_efficiencyVermont-Washer&DryerRebate",
     "amount": {
@@ -1505,7 +1505,7 @@
       "pos_rebate"
     ],
     "items": [
-      "electric_stove"
+      "other"
     ],
     "program": "vt_efficiencyVermont_efficiencyVermont-Wood&PelletStoveRebate",
     "amount": {
@@ -1962,78 +1962,5 @@
       "es": "Un 100% de descuento en un calentador de agua con bomba de calor, hasta $5,000, para clientes con bajos ingresos."
     },
     "low_income": "vt-default"
-  },
-  {
-    "id": "VT-99",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_clothes_dryer"
-    ],
-    "program": "vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForClothesDryer",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400,
-      "maximum": 400
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "BED rebate offered through Efficiency Vermont. Apply for a rebate and get up to $400 cash back on qualifying ENERGY STAR® heat pump models.",
-      "es": "BED reembolso ofrecido por Efficiency Vermont. Solicite un reembolso y reciba hasta $400 de devolución en los modelos de bomba de calor ENERGY STAR® que cumplan los requisitos."
-    },
-    "start_date": "2023-10-01"
-  },
-  {
-    "id": "VT-100",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForDuctedHeatPump",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2000,
-      "minimum": 1000,
-      "maximum": 2000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Work with a contractor to install your ducted heat pump and get a $1,000-$2,000 instant discount.",
-      "es": "Trabaje con un contratista para instalar su bomba de calor con ductos y obtenga un descuento instantáneo de entre $1,000 y $2,000."
-    },
-    "start_date": "2021-11-01",
-    "end_date": "2024-12-31"
-  },
-  {
-    "id": "VT-101",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForDuctlessHeatPump",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 450,
-      "minimum": 350,
-      "maximum": 450
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Hire a contractor and get a $350-$450 instant discount on qualifying models of ductless heat pumps at a participating distributor.",
-      "es": "Contrate a un técnico y obtenga un descuento instantáneo de entre $350 y $450 en modelos aprobados de bombas de calor sin ductos de un distribuidor participante."
-    },
-    "start_date": "2021-11-01",
-    "end_date": "2024-12-31"
   }
 ]
