@@ -23,7 +23,12 @@
     "short_description": {
       "en": "Up to $700 applied to your PUD account for purchase and installation of qualifying heat pumps and mini-splits.",
       "es": "Hasta $700 aplicado a su cuenta de PUD para la compra e instalación de bombas de calor y mini-splits calificados."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://pud-ri.org/conservation/download-rebate-forms"
+    ],
+    "equipment_standards_restrictions": "SEER >= 15 (HP HVAC)\nHSPF >= 9 (Central HP, Ducted MSHP)\nHSPF >10 (Ductless MSHP)"
   },
   {
     "id": "RI-2",
@@ -46,7 +51,12 @@
     "short_description": {
       "en": "Up to $450 applied to your PUD account for purchase and installation of a qualifying heat pump water heater, depending on the size of the heater.",
       "es": "Hasta $450 aplicado a su cuenta de PUD para la compra e instalación de un calentador de agua con bomba de calor calificado, según el tamaño del calentador."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://pud-ri.org/conservation/download-rebate-forms"
+    ],
+    "equipment_standards_restrictions": "UEF >= 3.2"
   },
   {
     "id": "RI-3",
@@ -67,7 +77,11 @@
     "short_description": {
       "en": "$75 applied to your PUD account for qualifying heat pump clothes dryers.",
       "es": "$75 aplicado a su cuenta de PUD para las secadoras de ropa con bomba de calor calificadas."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://pud-ri.org/conservation/download-rebate-forms"
+    ]
   },
   {
     "id": "RI-4",
@@ -91,7 +105,12 @@
     "short_description": {
       "en": "Up to $2,250 back on insulation and air sealing your home. Must be recommended in a home energy audit and installed by a BPI certified contractor.",
       "es": "Reembolsos hasta $2,250 por el aislamiento y sellado de aire. Debe ser recomendado en una auditoría energética e instalado por un contratista certificado."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://pud-ri.org/conservation/download-rebate-forms"
+    ],
+    "contractor_restrictions": "Requires Home Energy Audit through ENE. Must use BPI certified weatherization contractor."
   },
   {
     "id": "RI-5",
@@ -115,7 +134,12 @@
     "short_description": {
       "en": "Up to $750 back after purchase and installation of qualifying ducted heat pumps and mini-splits.",
       "es": "Reembolsos hasta $750 después de la compra e instalación de bombas de calor con ductos calificados, según el tamaño."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://blockislandpowercompany.com/efficiency-program/"
+    ],
+    "other_restrictions": "Customers must have received a home energy assessment to be eligible for rebates."
   },
   {
     "id": "RI-6",
@@ -138,7 +162,13 @@
     "short_description": {
       "en": "Up to $300 back after purchase and installation of qualifying heat pump water heaters, depending on the size of the heater.",
       "es": "Reembolsos hasta $300 después de la compra e instalación de calentadores de agua con bomba de calor calificados, según el tamaño del calentador."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://blockislandpowercompany.com/efficiency-program/"
+    ],
+    "equipment_standards_restrictions": "UEF >= 2.0",
+    "other_restrictions": "Customers must have received a home energy assessment to be eligible for rebates."
   },
   {
     "id": "RI-7",
@@ -163,7 +193,12 @@
       "en": "100% of weatherization costs, including air/duct sealing and insulation, up to $2,000.",
       "es": "El total de los costos de la impermeabilización, hasta $2000, incluyendo el sellado de conductos de aire y el aislamiento."
     },
-    "bonus_available": true
+    "status": "active",
+    "bonus_available": true,
+    "data_urls": [
+      "https://blockislandpowercompany.com/efficiency-program/"
+    ],
+    "contractor_restrictions": "Requires Home Energy Audit through ENE"
   },
   {
     "id": "RI-9",
@@ -187,7 +222,12 @@
     "short_description": {
       "en": "Up to $1,500 back after purchase or lease of a new EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served.",
       "es": "Reembolsos hasta $1,500 por la compra o arrendamiento de un vehículo eléctrico nuevo de un concesionario con licencia de RI o calificado de otro estado."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://drive.ri.gov/ev-programs/drive-ev"
+    ],
+    "other_restrictions": "New purchase price <= $60k\n\nFor leases, term must be >= 24mo\n\n-Rebate must be claimed within 120 days of purchase / lease."
   },
   {
     "id": "RI-10",
@@ -211,7 +251,12 @@
     "short_description": {
       "en": "Up to $1,000 back after purchase or lease of a used EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served.",
       "es": "Reembolsos hasta $1,000 por la compra o arrendamiento de un vehículo eléctrico usado de un concesionario con licencia de RI o calificado de otro estado."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://drive.ri.gov/ev-programs/drive-ev"
+    ],
+    "other_restrictions": "Used purchase price <= $40k\n\nFor leases, term must be >= 24mo\n\n-Rebate must be claimed within 120 days of purchase / lease."
   },
   {
     "id": "RI-11",
@@ -236,7 +281,13 @@
       "en": "Additional $1,500 back after purchase or lease of a new EV from a licensed Rhode Island or qualified out-of-state dealership for LIHEAP-qualifiers.",
       "es": "Un reembolso adicional de $1,500 por la compra o arrendamiento de un vehículo eléctrico nuevo para los calificadores de LIHEAP."
     },
-    "low_income": "ri-default"
+    "status": "active",
+    "low_income": "ri-default",
+    "data_urls": [
+      "https://drive.ri.gov/ev-programs/drive-plus"
+    ],
+    "other_restrictions": "New purchase price <= $60k\n\nFor leases, term must be >= 24mo\n\n- Rebate must be claimed within 120 days of purchase / lease.",
+    "stacking_details": "Rebate can be stacked with the regular DRIVE program rebates (RI-9)"
   },
   {
     "id": "RI-12",
@@ -261,7 +312,13 @@
       "en": "Additional $1,500 towards a used EV from a licensed Rhode Island or qualified out-of-state dealership for LIHEAP-qualifiers. First-come, first-served.",
       "es": "Un reembolso adicional de $1,500 por un vehículo eléctrico usado para los calificadores de LIHEAP. Por orden de llegada."
     },
-    "low_income": "ri-default"
+    "status": "active",
+    "low_income": "ri-default",
+    "data_urls": [
+      "https://drive.ri.gov/ev-programs/drive-plus"
+    ],
+    "other_restrictions": "Used purchase price <= $40k\n\nFor leases, term must be >= 24mo\n\n-Rebate must be claimed within 120 days of purchase / lease.",
+    "stacking_details": "Rebate can be stacked with the regular DRIVE program rebates (RI-10)"
   },
   {
     "id": "RI-13",
@@ -285,8 +342,13 @@
       "en": "30% up to $350 back on the final purchase of an e-bike or e-cargo bike.",
       "es": "Devolución del 30% hasta $350 dólares en la compra final de una bicicleta e-bike o una e-cargo bike."
     },
+    "status": "active",
     "start_date": "2022-10-24",
-    "low_income": "ri-default"
+    "low_income": "ri-default",
+    "data_urls": [
+      "https://drive.ri.gov/erika-niedowski-memorial-electric-bicycle-rebate-program"
+    ],
+    "other_restrictions": "- Max 2 rebates per household\n- Apply within 180 days (6 months) of the date listed on the e-bike sales receipt.\n- E-Bikes must be purchased from a retail store physically located in Rhode Island. Online purchases are only valid if the e-bike is purchased from an online retailer with a direct association or prior agreement with a local Rhode Island store."
   },
   {
     "id": "RI-14",
@@ -309,7 +371,11 @@
       "en": "Weatherization Assistance Program reduces energy costs for households that meet LIHEAP criteria. If you qualify, there's no cost to you.",
       "es": "Este programa tiene el objetivo de reducir los costes de calefacción y refrigeración para los dueños de hogares y arrendatarios que califican para LIHEAP."
     },
-    "low_income": "ri-dhs"
+    "status": "active",
+    "low_income": "ri-dhs",
+    "data_urls": [
+      "https://dhs.ri.gov/programs-and-services/energy-assistance-programs/weatherization-assistance-program-wap"
+    ]
   },
   {
     "id": "RI-19",
@@ -330,7 +396,13 @@
     "short_description": {
       "en": "$50 back on ENERGY STAR® certified electric clothes dryer purchased in 2023. Rebate requests must be completed within 90 days of purchase.",
       "es": "$50 de reembolso en secadoras de ropa eléctricas certificadas por ENERGY STAR y compradas en 2023. Solicita dentro de los 90 días posteriores a la compra."
-    }
+    },
+    "status": "on_hold",
+    "data_urls": [
+      "https://www.rienergy.com/media/ri-energy/pdfs/ways-to-save/appliances/electricdryer_rebateform_rie6935.pdf"
+    ],
+    "equipment_standards_restrictions": "ENERGY STAR Certified",
+    "other_restrictions": "Max 2 rebates per resident per calendar year"
   },
   {
     "id": "RI-20",
@@ -354,8 +426,14 @@
       "en": "Up to $600 back on a qualifying electric heat pump water heater when replacing an existing electric water heater or installing in a new home.",
       "es": "Reembolso hasta $600 cuando reemplaza un calentador de agua eléctrico con calentador de agua con bomba de calor calificado o al instalarlo en una casa nueva."
     },
+    "status": "active",
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2024-12-31",
+    "data_urls": [
+      "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/rie-2680081-rebate-form-hpwh.pdf"
+    ],
+    "equipment_standards_restrictions": "$600 <= 55 gallons, UEF >= 2.0\n$150 > 55 gallons, UEF >= 2.7",
+    "other_restrictions": "- Limit three (3) rebates per RI residential electric account.\n- Rebates are not available for replacement of oil, propane, or gas water heating units. \n- The unit must be installed by a licensed plumber \n- Certain equipment models are eligible, and there are restrictions about where the unit can be installed to ensure that it operates at its maximum efficiency."
   },
   {
     "id": "RI-21",
@@ -379,7 +457,12 @@
     "short_description": {
       "en": "10-25% back on installation costs up to $5,000. Includes electricity-generating solar panels and solar domestic hot water technologies.",
       "es": "10-25% de reembolso en costos de instalación hasta $5,000. Incluye paneles solares que generan electricidad y sistemas solares térmicos de agua caliente."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://energy.ri.gov/sites/g/files/xkgbur741/files/2023-03/REF-Small-Scale-Flyer-1.18.22.pdf"
+    ],
+    "financing_details": "https://commerceri.com/financing/renewable-energy-fund/"
   },
   {
     "id": "RI-27",
@@ -401,7 +484,12 @@
       "en": "Income-Eligible Energy Savings Program makes your home healthier, more comfortable and more affordable. If you qualify, there's no cost to you.",
       "es": "Este programa hace que su hogar sea más saludable, cómodo y económico. Si califica, no hay costo para usted."
     },
-    "low_income": "ri-rhode-island-energy"
+    "status": "active",
+    "low_income": "ri-rhode-island-energy",
+    "data_urls": [
+      "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Income-Eligible-Services"
+    ],
+    "equipment_standards_restrictions": "No-cost Services: Attic and wall insulation, Air sealing of leaks, Weather stripping. No-cost Upgrades: Replacement heating system, Replacement refrigerator, Replacement window air conditioning unit, Replacement freezer, Replacement clothes washer, Replacement dehumidifier."
   },
   {
     "id": "RI-30",
@@ -425,7 +513,14 @@
     "short_description": {
       "en": "Up to $10,000 for installation of an air source heat pump, depending on size. Typical heat pump installations will receive $2,500-$3,000.",
       "es": "Hasta $10,000 para la instalación de una aerotermia, según el tamaño. Valor típica de $2,500 a $3,000."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://cleanheatri.com/resources/incentives/"
+    ],
+    "equipment_standards_restrictions": "▪ Central Ducted: AHRI: SEER >= 15, HSPF >= 9; OR SEER2 >=14.3, HSPF2 >=7.7\n▪ Multizone Mix of Ducted and Non-Ducted: AHRI: SEER >= 15, HSPF >= 9;\nOR SEER2 >=14.3, HSPF2 >=7.7\n▪ Non-Ducted: NEEP’s Cold Climate Heat Pump List",
+    "other_restrictions": "Must displace oil, propane, or natural gas heating. Partial fuel displacement is allowed, whole-home displacement is not required.",
+    "stacking_details": "Additional incentive RI-32 for coincident Electrical Service Upgrade.\n\n$10,000 max across the program."
   },
   {
     "id": "RI-31",
@@ -448,7 +543,14 @@
     "short_description": {
       "en": "Up to $10,000 to install a ground source (geothermal) heat pump, depending on size. Typical heat pump installations will receive $2,500-$3,000.",
       "es": "Hasta $10,000 para instalar una bomba de calor geotérmica, según el tamaño. Valor típica de $2,500 a $3,000."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://cleanheatri.com/resources/incentives/"
+    ],
+    "equipment_standards_restrictions": "▪ ENERGY STAR & AHRI Matched Equipment",
+    "other_restrictions": "Must displace oil, propane, or natural gas heating. Partial fuel displacement is allowed, whole-home displacement is not required.",
+    "stacking_details": "Additional incentive RI-32 for coincident Electrical Service Upgrade.\n\n$10,000 max across the program."
   },
   {
     "id": "RI-32",
@@ -469,7 +571,14 @@
     "short_description": {
       "en": "Additional $500 for an electrical service upgrade at the same time as installation of a heat pump or heat pump water heater.",
       "es": "Reembolso adicional de $500 para una mejora del servicio eléctrico al mismo tiempo que instala una bomba de calor o calentador de agua con bomba de calor."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://cleanheatri.com/resources/incentives/"
+    ],
+    "equipment_standards_restrictions": "▪ Minimum upgrade to 150 amp service",
+    "other_restrictions": "N/A",
+    "stacking_details": "Must be coincident with Air Source Heat Pump RI-30, Ground Source Heat Pump RI-31, or Heat Pump Water Heater RI-33.\n\n$10,000 max across the program."
   },
   {
     "id": "RI-33",
@@ -492,7 +601,14 @@
     "short_description": {
       "en": "$750 rebate after the installation of a heat pump water heater. $1,500 for split system heat pump water heaters.",
       "es": "$750 de reembolso después de instalar un calentador de agua con bomba de calor. $1,500 por calentadores de agua con bomba de calor de sistema dividido."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://cleanheatri.com/resources/incentives/"
+    ],
+    "equipment_standards_restrictions": "▪ Heat Pump Water Heater: ENERGY STAR certified UEF 3.30\n▪ Heat Pump Water Heater (120volt/15amp circuit): ENERGY STAR certified UEF 2.20\n▪ Split-System Heat Pump Water Heater: ENERGY STAR certified UEF 2.20",
+    "other_restrictions": "N/A",
+    "stacking_details": "Additional incentive RI-32 for coincident Electrical Service Upgrade.\n\n$10,000 max across the program."
   },
   {
     "id": "RI-34",
@@ -515,8 +631,15 @@
       "en": "Depending on your income, 100% of the cost to install an air source heat pump, including up to $3,000 towards related electric service upgrades.",
       "es": "Según sus ingresos, el costo total de instalar una aerotermia. Incluye hasta $3,000 para mejoras eléctricas relacionadas."
     },
+    "status": "active",
     "low_income": "ri-default",
-    "bonus_available": true
+    "bonus_available": true,
+    "data_urls": [
+      "https://cleanheatri.com/resources/incentives/"
+    ],
+    "equipment_standards_restrictions": "▪ NEEP’s Cold Climate Heat Pump List & Weatherization",
+    "other_restrictions": "Must displace oil or propane heating. Natural gas is not eligible. Partial fuel displacement is allowed; whole-home displacement is not required.",
+    "stacking_details": "N/A"
   },
   {
     "id": "RI-35",
@@ -539,7 +662,14 @@
       "en": "Depending on your income, 100% of the cost to install a heat pump water heater, including up to $3,000 towards related electric service upgrades.",
       "es": "Según sus ingresos, el costo total de instalar un calentador de agua con bomba de calor. Incluye hasta $3,000 para mejoras eléctricas relacionadas."
     },
-    "low_income": "ri-default"
+    "status": "active",
+    "low_income": "ri-default",
+    "data_urls": [
+      "https://cleanheatri.com/resources/incentives/"
+    ],
+    "equipment_standards_restrictions": "▪ Heat Pump Water Heater: ENERGY STAR certified UEF 3.30\n▪ Heat Pump Water Heater (120volt/15amp circuit): ENERGY STAR certified UEF 2.20",
+    "other_restrictions": "Must displace oil or propane heating. Natural gas is not eligible. Partial fuel displacement is allowed; whole-home displacement is not required.",
+    "stacking_details": "N/A"
   },
   {
     "id": "RI-37",
@@ -562,9 +692,15 @@
       "en": "$350+ back on qualifying ducted central heat pump, depending on size. Additional funding available for replacing baseboard resistance heating.",
       "es": "$350+ de reembolso para la instalación de una bomba de calor central por conductos y más para reemplazar la calefacción eléctrica a base de resistencias."
     },
+    "status": "active",
     "start_date": "2024-01-01",
     "end_date": "2024-12-31",
-    "bonus_available": true
+    "bonus_available": true,
+    "data_urls": [
+      "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/ri_electric_heating-cooling_form.pdf"
+    ],
+    "equipment_standards_restrictions": "Central Heat Pump\nAHRI: SEER ≥ 15, HSPF ≥ 9;\nOR AHRI: SEER2 > 14.3, HSPF2 > 7.7",
+    "other_restrictions": "-Max 4 rebates for HVAC\n-Home energy audit required for bonus\n-Licensed contractor must install the equipment"
   },
   {
     "id": "RI-39",
@@ -587,9 +723,15 @@
       "en": "$150+ back on qualifying mini-split non-ducted heat pump, depending on size. Additional funding available for replacing baseboard resistance heating.",
       "es": "$150+ de reembolso para una bomba de calor mini-split sin conductos. Reembolso adicional para reemplazar la calefacción eléctrica a base de resistencias."
     },
+    "status": "active",
     "start_date": "2024-01-01",
     "end_date": "2024-12-31",
-    "bonus_available": true
+    "bonus_available": true,
+    "data_urls": [
+      "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/ri_electric_heating-cooling_form.pdf"
+    ],
+    "equipment_standards_restrictions": "Mini-Split Non-Ducted\nNEEP: SEER ≥ 15, HSPF ≥ 10;\nOR NEEP6\n: SEER2 > 15, HSPF2 > 8.5;\nAND COP at 5°F > 1.75",
+    "other_restrictions": "-Max 4 rebates for HVAC\n-Home energy audit required for bonus\n-Licensed contractor must install the equipment"
   },
   {
     "id": "RI-40",
@@ -612,8 +754,14 @@
       "en": "$75 back on ENERGY STAR certified, wireless connection enabled Smart Thermostat.",
       "es": "$75 de reembolso en un termostato inteligente certificado por ENERGY STAR con conexión inalámbrica."
     },
+    "status": "active",
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2024-12-31",
+    "data_urls": [
+      "https://www.rienergy.com/media/ri-energy/pdfs/energy-efficiency/ri_electric_heating-cooling_form.pdf"
+    ],
+    "equipment_standards_restrictions": "ENERGY STAR certified; wireless connections must be enabled.",
+    "other_restrictions": "Max 2 rebates for thermostat"
   },
   {
     "id": "RI-41",
@@ -635,7 +783,12 @@
     "short_description": {
       "en": "$100 back on programmable wireless connection enabled thermostat.",
       "es": "$100 dólares de devolución en termostato programable con conexión inalámbrica."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://pud-ri.org/wp-content/uploads/2022/01/Residential-Energy-Audit-Weatherization-Incentives.pdf"
+    ],
+    "equipment_standards_restrictions": "Wireless connection enabled"
   },
   {
     "id": "RI-42",
@@ -657,7 +810,11 @@
     "short_description": {
       "en": "$25 back on programmable non-wireless thermostat.",
       "es": "$25 dólares de devolución en termostato programable no inalámbrico."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://pud-ri.org/wp-content/uploads/2022/01/Residential-Energy-Audit-Weatherization-Incentives.pdf"
+    ]
   },
   {
     "id": "RI-43",
@@ -681,8 +838,13 @@
       "en": "75% up to $750 back on the final purchase of an e-bike or e-cargo bike for income qualified residents.",
       "es": "Devolución del 75% hasta $750 dólares en la compra final de una bicicleta e-bike o una e-cargo bike para residentes que cumplan con el nivel de ingresos."
     },
+    "status": "active",
     "start_date": "2022-10-24",
-    "low_income": "ri-default"
+    "low_income": "ri-default",
+    "data_urls": [
+      "https://drive.ri.gov/erika-niedowski-memorial-electric-bicycle-rebate-program"
+    ],
+    "other_restrictions": "- Max 2 rebates per household\n- Apply within 180 days (6 months) of the date listed on the e-bike sales receipt.\n- E-Bikes must be purchased from a retail store physically located in Rhode Island. Online purchases are only valid if the e-bike is purchased from an online retailer with a direct association or prior agreement with a local Rhode Island store."
   },
   {
     "id": "RI-45",
@@ -704,7 +866,12 @@
     "short_description": {
       "en": "Rebate of 50% of cost for a Level 2 EV charger, up to $350, or up to $700 if an electrical upgrade is needed."
     },
-    "start_date": "2024-08-01"
+    "status": "active",
+    "start_date": "2024-08-01",
+    "data_urls": [
+      "https://drive.ri.gov/powerupri"
+    ],
+    "equipment_standards_restrictions": "ENERGY STAR certified"
   },
   {
     "id": "RI-47",
@@ -726,8 +893,13 @@
     "short_description": {
       "en": "Rebate of 75% of cost for a Level 2 EV charger, up to $500, or up to $1,000 where an electrical upgrade is needed."
     },
+    "status": "active",
     "start_date": "2024-08-01",
-    "low_income": "ri-default"
+    "low_income": "ri-default",
+    "data_urls": [
+      "https://drive.ri.gov/powerupri"
+    ],
+    "equipment_standards_restrictions": "ENERGY STAR certified"
   },
   {
     "id": "RI-49",
@@ -750,7 +922,11 @@
     "short_description": {
       "en": "Up to $4,000 rebate for electrical load service center. Available for low-income residents."
     },
-    "low_income": "ri-hear-program-low"
+    "status": "active",
+    "low_income": "ri-hear-program-low",
+    "data_urls": [
+      "https://energy.ri.gov/sites/g/files/xkgbur741/files/2024-09/HEAR%20Flier%20Final_0.pdf"
+    ]
   },
   {
     "id": "RI-50",
@@ -773,7 +949,11 @@
     "short_description": {
       "en": "Up to $2,000 rebate for electrical load service center. Available for moderate-income residents."
     },
-    "low_income": "ri-hear-program-moderate"
+    "status": "active",
+    "low_income": "ri-hear-program-moderate",
+    "data_urls": [
+      "https://energy.ri.gov/sites/g/files/xkgbur741/files/2024-09/HEAR%20Flier%20Final_0.pdf"
+    ]
   },
   {
     "id": "RI-51",
@@ -796,7 +976,11 @@
     "short_description": {
       "en": "Up to $2,500 rebate for electric wiring. Available for low-income residents."
     },
-    "low_income": "ri-hear-program-low"
+    "status": "active",
+    "low_income": "ri-hear-program-low",
+    "data_urls": [
+      "https://energy.ri.gov/sites/g/files/xkgbur741/files/2024-09/HEAR%20Flier%20Final_0.pdf"
+    ]
   },
   {
     "id": "RI-52",
@@ -819,7 +1003,11 @@
     "short_description": {
       "en": "Up to $1,250 rebate for electric wiring. Available for moderate-income residents."
     },
-    "low_income": "ri-hear-program-moderate"
+    "status": "active",
+    "low_income": "ri-hear-program-moderate",
+    "data_urls": [
+      "https://energy.ri.gov/sites/g/files/xkgbur741/files/2024-09/HEAR%20Flier%20Final_0.pdf"
+    ]
   },
   {
     "id": "RI-53",
@@ -843,7 +1031,12 @@
     "short_description": {
       "en": "Up to $1,840 rebate for ENERGY STAR certified heat pump clothes dryer, electric stove, induction cooktop, range, or oven for low-income residents."
     },
-    "low_income": "ri-hear-program-low"
+    "status": "active",
+    "low_income": "ri-hear-program-low",
+    "data_urls": [
+      "https://energy.ri.gov/sites/g/files/xkgbur741/files/2024-09/HEAR%20Flier%20Final_0.pdf"
+    ],
+    "equipment_standards_restrictions": "ENERGY STAR certified"
   },
   {
     "id": "RI-54",
@@ -867,6 +1060,11 @@
     "short_description": {
       "en": "Up to $420 rebate for ENERGY STAR certified heat pump clothes dryer, electric stove, induction cooktop, range, or oven for moderate-income residents."
     },
-    "low_income": "ri-hear-program-moderate"
+    "status": "active",
+    "low_income": "ri-hear-program-moderate",
+    "data_urls": [
+      "https://energy.ri.gov/sites/g/files/xkgbur741/files/2024-09/HEAR%20Flier%20Final_0.pdf"
+    ],
+    "equipment_standards_restrictions": "ENERGY STAR certified"
   }
 ]

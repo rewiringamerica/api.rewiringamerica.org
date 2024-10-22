@@ -20,7 +20,11 @@
       "en": "Free energy audit and weatherization services for income-qualified residents. Average value per household is $7,669 depending on results.",
       "es": "Auditoría de consumo de energía y servicios de climatización gratuitos para residentes que cumplen requisitos de nivel de ingresos. El valor medio por hogar es de $7,669 dependiendo de los resultados."
     },
-    "low_income": "pa-department-of-community-and-economic-development"
+    "status": "active",
+    "low_income": "pa-department-of-community-and-economic-development",
+    "data_urls": [
+      "https://dced.pa.gov/programs/weatherization-assistance-program-wap/"
+    ]
   },
   {
     "id": "PA-2",
@@ -43,7 +47,11 @@
       "en": "Free energy audit and weatherization services for income-qualified residents.",
       "es": "Auditoría de consumo de energía y servicios de climatización gratuitos para residentes que cumplen requisitos de nivel de ingresos."
     },
-    "low_income": "pa-duquesne-light-company"
+    "status": "active",
+    "low_income": "pa-duquesne-light-company",
+    "data_urls": [
+      "https://duquesnelight.com/account-billing/payment-assistance/income-eligible-energy-assessment"
+    ]
   },
   {
     "id": "PA-3",
@@ -68,8 +76,14 @@
       "en": "Up to $425 rebate per unit for air source heat pumps. Rebate depends on model and efficiency.",
       "es": "Reembolso de hasta $425 para bombas de calor de fuente de aire. El reembolso depende del modelo y de la eficiencia."
     },
+    "status": "active",
     "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
+    "end_date": "2026-05-31",
+    "data_urls": [
+      "https://duquesne.clearesult.com/air-source-heat-pump-1"
+    ],
+    "equipment_standards_restrictions": "$375 for SEER ≥ 17.5 < 20, HSPF ≥ 9.7 <10.0 or SEER2 16.3 & HSPF2 8.2+. $425 for SEER ≥ 20.0 , HSPF ≥ 10.0 or SEER2 ≥ 18.3 , HSPF ≥ 8.5",
+    "other_restrictions": "Rebate application must be submitted within 90 days of HVAC installation date and be postmarked or submitted online by June 6, 2026. Must submit one rebate application form per unit."
   },
   {
     "id": "PA-4",
@@ -92,8 +106,14 @@
       "en": "$375 rebate per unit for a cold climate air source heat pump.",
       "es": "Reembolso de $375 por unidad para una bomba de calor de fuente de aire de clima frío."
     },
+    "status": "active",
     "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
+    "end_date": "2026-05-31",
+    "data_urls": [
+      "https://duquesne.clearesult.com/cold-climate-air-source-heat-pump"
+    ],
+    "equipment_standards_restrictions": "SEER >= 16.1 & HSPF ≥ 10.0 or SEER2 >= 15.2 & HSPF ≥ 8.5",
+    "other_restrictions": "Rebate application must be submitted within 90 days of HVAC installation date and be postmarked or submitted online by June 6, 2026. Must submit one rebate application form per unit."
   },
   {
     "id": "PA-5",
@@ -116,8 +136,14 @@
       "en": "$160 rebate per unit for a ductless mini split heat pump.",
       "es": "Reembolso de $160 por unidad para una bomba de calor mini-split sin ductos."
     },
+    "status": "active",
     "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
+    "end_date": "2026-05-31",
+    "data_urls": [
+      "https://duquesne.clearesult.com/ductless-mini-split-heat-pump"
+    ],
+    "equipment_standards_restrictions": "SEER >= 16 & HSPF ≥ 9.6 or SEER2 >= 15.1 & HSPF ≥ 8.1",
+    "other_restrictions": "Rebate application must be submitted within 90 days of HVAC installation date and be postmarked or submitted online by June 6, 2026. Must submit one rebate application form per unit."
   },
   {
     "id": "PA-6",
@@ -139,8 +165,14 @@
       "en": "$150 rebate per unit for an eligible cold climate ductless mini-split heat pump.",
       "es": "Reembolso de $150 por unidad para una bomba de calor mini-split para climas fríos sin ductos que sea elegible."
     },
+    "status": "active",
     "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
+    "end_date": "2026-05-31",
+    "data_urls": [
+      "https://duquesne.clearesult.com/cold-climate-ductless-mini-split-heat-pump"
+    ],
+    "equipment_standards_restrictions": "SEER >= 16.1 & HSPF ≥ 10.0 or for SEER2 >= 15.2 & HSPF ≥ 8.5",
+    "other_restrictions": "Rebate application must be submitted within 90 days of HVAC installation date and be postmarked or submitted online by June 6, 2026. Must submit one rebate application form per unit."
   },
   {
     "id": "PA-7",
@@ -162,8 +194,15 @@
       "en": "$300 rebate per unit for ENERGY STAR® certified heat pump water heater.",
       "es": "Reembolso de $300 por unidad de calentador de agua con bomba de calor con certificación ENERGY STAR®."
     },
+    "status": "active",
     "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
+    "end_date": "2026-05-31",
+    "data_urls": [
+      "https://duquesne.clearesult.com/shop-products/water-heaters"
+    ],
+    "equipment_standards_restrictions": "ENERGY STAR® certified",
+    "equipment_capacity_restrictions": "Integrated HPWH, 120-volt, or split\nsystem HPWH",
+    "other_restrictions": "Rebate application must be submitted within 90 days of HVAC installation date and be postmarked or submitted online by June 6, 2026. Must submit one rebate application form per unit."
   },
   {
     "id": "PA-8",
@@ -185,8 +224,13 @@
       "en": "$50 rebate per ENERGY STAR® certified smart thermostat.",
       "es": "Reembolso de $50 por termostato inteligente con certificación ENERGY STAR®."
     },
+    "status": "active",
     "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
+    "end_date": "2026-05-31",
+    "data_urls": [
+      "https://duquesne.clearesult.com/shop-products/smart-thermostats"
+    ],
+    "other_restrictions": "New installation or replacement of a manual or conventional programmable thermostat with an ENERGY STAR®-certified thermostat."
   },
   {
     "id": "PA-9",
@@ -210,8 +254,13 @@
       "en": "Up to $250 rebate per unit for central air conditioner.",
       "es": "Reembolso de hasta $250 por unidad de aire acondicionado central"
     },
+    "status": "active",
     "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
+    "end_date": "2026-05-31",
+    "data_urls": [
+      "https://duquesne.clearesult.com/shop-products/heating-cooling"
+    ],
+    "other_restrictions": "Rebate application must be submitted within 90 days of HVAC installation date and be postmarked or submitted online by June 6, 2026. Must submit one rebate application form per unit."
   },
   {
     "id": "PA-10",
@@ -238,8 +287,13 @@
       "en": "Up to $2,000 rebate for weatherization. Up to $400 each for air sealing, duct, attic, basement/crawl space and knee wall insulation.",
       "es": "Un reembolso de hasta $2,000 por climatización. Hasta $400 cada uno por sellado hermético, aislamiento de conductos, áticos, sótanos/espacios estrechos y aislamiento térmico de muros."
     },
+    "status": "active",
     "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
+    "end_date": "2026-05-31",
+    "data_urls": [
+      "https://duquesne.clearesult.com/home-air-sealing"
+    ],
+    "other_restrictions": "Rebate application must be submitted within 90 days of HVAC installation date and be postmarked or submitted online by June 6, 2026. Must submit one rebate application form per unit."
   },
   {
     "id": "PA-15",
@@ -262,8 +316,14 @@
       "en": "$200 rebate for ENERGY STAR® certified ductless mini-split AC.",
       "es": "Reembolso de $200 para aire acondicionado mini-split sin ductos con certificación ENERGY STAR®"
     },
+    "status": "active",
     "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
+    "end_date": "2026-05-31",
+    "data_urls": [
+      "https://rebates.energysavepa.com/ductless-mini-split-ac-rebate?hsLang=en"
+    ],
+    "equipment_standards_restrictions": "Must be ENERGY STAR® certified. Single head: SEER2 ≥ 20, EER2 ≥ 12. Multi-head: SEER2 ≥ 18, EER2 ≥ 12",
+    "other_restrictions": "Rebate available for conditioning of domestic living space only."
   },
   {
     "id": "PA-16",
@@ -286,8 +346,14 @@
       "en": "$200 rebate for ENERGY STAR® certified ductless mini-split heat pump.",
       "es": "Reembolso de $200 para una bomba de calor mini-split sin ductos con certificación ENERGY STAR®"
     },
+    "status": "active",
     "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
+    "end_date": "2026-05-31",
+    "data_urls": [
+      "https://rebates.energysavepa.com/ductless-mini-split-hp-rebate?hsLang=en"
+    ],
+    "equipment_standards_restrictions": "Must be ENERGY STAR® certified. Single head: SEER2 ≥20, EER ≥ 2, HSPF ≥ 9. Multi-head: SEER2 ≥ 18, EER2 ≥ 12,HSPF ≥2",
+    "other_restrictions": "Rebate available for conditioning of domestic living space only."
   },
   {
     "id": "PA-17",
@@ -310,8 +376,14 @@
       "en": "$650 rebate for ENERGY STAR® certified geothermal heat pumps.",
       "es": "Reembolso de $650 para bombas de calor geotérmicas con certificación ENERGY STAR®"
     },
+    "status": "active",
     "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
+    "end_date": "2026-05-31",
+    "data_urls": [
+      "https://rebates.energysavepa.com/geothermal-hp-rebate?hsLang=en"
+    ],
+    "equipment_standards_restrictions": "Must be ENERGY STAR® certified and certified by AHRI.",
+    "other_restrictions": "Rebate available for conditioning of domestic living space only."
   },
   {
     "id": "PA-18",
@@ -334,8 +406,14 @@
       "en": "$400 rebate for ENERGY STAR® certified air-to-water heat pumps.",
       "es": "Reembolso de $400 para bombas de calor de aire a agua con certificación ENERGY STAR®."
     },
+    "status": "active",
     "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
+    "end_date": "2026-05-31",
+    "data_urls": [
+      "https://rebates.energysavepa.com/hp-air-to-water-domestic-water-rebate?hsLang=en"
+    ],
+    "equipment_standards_restrictions": "Must be certified by AHRI.",
+    "other_restrictions": "Rebate available for conditioning of domestic living space only."
   },
   {
     "id": "PA-19",
@@ -360,8 +438,14 @@
       "en": "Up to $500 rebate for ENERGY STAR® certified air source heat pumps meeting qualifications. Rebate value depends on efficiency.",
       "es": "Reembolso de hasta $500 para bombas de calor con fuente de aire y certificación ENERGY STAR® que cumplan los requisitos. El monto del reembolso depende de la eficiencia."
     },
+    "status": "active",
     "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
+    "end_date": "2026-05-31",
+    "data_urls": [
+      "https://rebates.energysavepa.com/air-source-heat-pump-rebate?hsLang=en"
+    ],
+    "equipment_standards_restrictions": "Must be ENERGY STAR® certified.\nSplit system tier 1: SEER2 ≥ 15.2, EER2 ≥ 12, HSPF2 ≥ 7.8.\n\nSingle package tier 1: SEER2 ≥ 15.2, EER2 ≥ 11.5, HSPF2 ≥ 7.2\n\nSplit system and single package tier 2: SEER2 ≥ 16.9, EER2 ≥ 12, HSPF2 ≥ 8.2",
+    "other_restrictions": "Rebate available for conditioning of domestic living space only."
   },
   {
     "id": "PA-20",
@@ -384,8 +468,13 @@
       "en": "$50 rebate for ENERGY STAR® certified smart thermostats.",
       "es": "Reembolso de $50 para termostatos inteligentes con certificación ENERGY STAR®."
     },
+    "status": "active",
     "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
+    "end_date": "2026-05-31",
+    "data_urls": [
+      "https://rebates.energysavepa.com/smart-thermostat-rebate"
+    ],
+    "equipment_standards_restrictions": "Must be ENERGY STAR® certified."
   },
   {
     "id": "PA-21",
@@ -409,9 +498,14 @@
       "en": "$75 rebate for ENERGY STAR® certified smart thermostats for income-qualified residents.",
       "es": "Reembolso de $75 por termostatos inteligentes con certificación ENERGY STAR® para residentes que cumplan los requisitos de nivel de ingresos."
     },
+    "status": "active",
     "start_date": "2021-06-01",
     "end_date": "2026-05-31",
-    "low_income": "pa-first-energy"
+    "low_income": "pa-first-energy",
+    "data_urls": [
+      "https://rebates.energysavepa.com/smart-thermostat-rebate"
+    ],
+    "equipment_standards_restrictions": "Must be ENERGY STAR® certified."
   },
   {
     "id": "PA-23",
@@ -434,8 +528,14 @@
       "en": "$500 rebate for ENERGY STAR® certified heat pump water heaters.",
       "es": "Un reembolso de $500 para calentadores de agua con bomba de calor de certificación ENERGY STAR®."
     },
+    "status": "active",
     "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
+    "end_date": "2026-05-31",
+    "data_urls": [
+      "https://rebates.energysavepa.com/heat-pump-water-heater-rebate?hsLang=en"
+    ],
+    "equipment_standards_restrictions": "Must be ENERGY STAR® certified.",
+    "other_restrictions": "Rebates are available to residential customers of FirstEnergy's Pennsylvania electric companies on qualified products purchased between June 1, 2021, and May 31, 2026. Rebate applications must be submitted within 90 days of purchase."
   },
   {
     "id": "PA-24",
@@ -459,8 +559,15 @@
       "en": "$50 rebate for ENERGY STAR® certified clothes dryer.",
       "es": "Reembolso de $50 por una secadora de ropa con certificación ENERGY STAR®."
     },
+    "status": "active",
     "start_date": "2021-06-01",
-    "end_date": "2026-05-31"
+    "end_date": "2026-05-31",
+    "data_urls": [
+      "https://rebates.energysavepa.com/clothes-dryer-rebate"
+    ],
+    "equipment_standards_restrictions": "Must be ENERGY STAR certified. For the $50 rebate, must be ENERGY STAR Most Efficient.",
+    "other_restrictions": "Rebates are available to residential customers of FirstEnergy's Pennsylvania electric companies.",
+    "stacking_details": "Income-eligible customers can apply for an additional $25 rebate."
   },
   {
     "id": "PA-25",
@@ -484,9 +591,16 @@
       "en": "$75 rebate for ENERGY STAR® certified clothes dryer for income-qualified residents.",
       "es": "Reembolso de $75 por una secadora de ropa con certificación ENERGY STAR® para residentes que cumplan requisitos de nivel de ingresos."
     },
+    "status": "active",
     "start_date": "2021-06-01",
     "end_date": "2026-05-31",
-    "low_income": "pa-first-energy"
+    "low_income": "pa-first-energy",
+    "data_urls": [
+      "https://rebates.energysavepa.com/clothes-dryer-rebate"
+    ],
+    "equipment_standards_restrictions": "Must be ENERGY STAR® certified.",
+    "other_restrictions": "Rebates are available to residential customers of FirstEnergy's Pennsylvania electric companies.",
+    "stacking_details": "Income-eligible customers can apply for an additional $25 rebate."
   },
   {
     "id": "PA-26",
@@ -510,7 +624,12 @@
       "en": "Free energy audit and weatherization services for income-qualified residents.",
       "es": "Auditoría de consumo de energía y servicios de climatización gratuitos para residentes que cumplan requisitos de nivel de ingresos."
     },
-    "low_income": "pa-first-energy-warm"
+    "status": "active",
+    "low_income": "pa-first-energy-warm",
+    "data_urls": [
+      "https://www.firstenergycorp.com/save_energy/save_energy_pennsylvania/met_ed/for_your_home/warm-info.html"
+    ],
+    "other_restrictions": "Must have average electric usage of at least 375 kWh per month"
   },
   {
     "id": "PA-27",
@@ -531,7 +650,13 @@
     "short_description": {
       "en": "Up to $350 rebate for an in-home audit for electric heating and/or central A/C.",
       "es": "Reembolso de hasta $350 por una auditoría en su domicilio para calefacción eléctrica y/o aire acondicionado central."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://www.pplelectricsavings.com/ppl/sites/ppl/files/2023-08/2023_PPL_Res_ResReb_3862941_FLY_Q3_PRJ101498.pdf"
+    ],
+    "other_restrictions": "Auditor must be a Building Performance Institute certified Building Analyst.",
+    "stacking_details": "Major upgrades that qualify for Comprehensive Retrofit Bonus rebates are shown in bold."
   },
   {
     "id": "PA-29",
@@ -553,7 +678,12 @@
       "en": "Up to $300 rebate for central air conditioner. $300 for SEER2 16.3 / EER2 12.9. $200 for SEER2 of 15.2 and EER2 of 12.",
       "es": "Un reembolso de hasta $300 por aire acondicionado central. $300 para SEER2 de 16.3 / EER2 de 12.9. $200 para SEER2 de 15.2 y EER2 de 12."
     },
-    "bonus_available": true
+    "status": "active",
+    "bonus_available": true,
+    "data_urls": [
+      "https://www.pplelectricsavings.com/ppl/sites/ppl/files/2023-08/2023_PPL_Res_ResReb_3862941_FLY_Q3_PRJ101498.pdf"
+    ],
+    "equipment_standards_restrictions": "$200: SEER2 16.3 / EER2 12.9 or $300: SEER2 16.3 / EER2 12.9"
   },
   {
     "id": "PA-30",
@@ -577,7 +707,12 @@
       "en": "Rebate for 75% of costs up to $1000 for insulation in an electric heated house. Up to $500 for attic insulation and $500 for basement wall insulation.",
       "es": "Un reembolso del 75% de los costos, hasta $1,000 , para aislamiento térmico de una casa con calefacción eléctrica. Hasta $500 para aislamiento térmico del desván y $500 para aislamiento térmico de muros del sótano."
     },
-    "bonus_available": true
+    "status": "active",
+    "bonus_available": true,
+    "data_urls": [
+      "https://www.pplelectricsavings.com/ppl/sites/ppl/files/2023-08/2023_PPL_Res_ResReb_3862941_FLY_Q3_PRJ101498.pdf"
+    ],
+    "other_restrictions": "Must be in an electric heated home"
   },
   {
     "id": "PA-31",
@@ -601,7 +736,12 @@
       "en": "Rebate for 75% of costs up to $400 for insulation in non-electric heated homes with central AC. Up to $200 for attic and $200 for basement insulation.",
       "es": "Reembolso del 75% de los costos, hasta $400 , para aislamiento en viviendas con calefacción no eléctrica y aire acondicionado central. Hasta $200 para aislamiento térmico del desván y $200 para aislamiento térmico del sótano."
     },
-    "bonus_available": true
+    "status": "active",
+    "bonus_available": true,
+    "data_urls": [
+      "https://www.pplelectricsavings.com/ppl/sites/ppl/files/2023-08/2023_PPL_Res_ResReb_3862941_FLY_Q3_PRJ101498.pdf"
+    ],
+    "other_restrictions": "Must be in a non-electric heated home"
   },
   {
     "id": "PA-34",
@@ -624,7 +764,11 @@
       "en": "$200 rebate for air sealing. Air infiltration reduction (@ CFM50) x $0.25 up to a max of $200.",
       "es": "Reembolso de $200 por sellado hermético. Reducción de la infiltración de aire (@ CFM50) x 0.25 de dólar hasta un máximo de $200 ."
     },
-    "bonus_available": true
+    "status": "active",
+    "bonus_available": true,
+    "data_urls": [
+      "https://www.pplelectricsavings.com/ppl/sites/ppl/files/2023-08/2023_PPL_Res_ResReb_3862941_FLY_Q3_PRJ101498.pdf"
+    ]
   },
   {
     "id": "PA-35",
@@ -645,7 +789,12 @@
     "short_description": {
       "en": "Up to $100 rebate for ENERGY STAR® certified smart thermostat. $50 for self-installed, $100 for professionally installed.",
       "es": "Reembolso de $100 por termostato inteligente con certificación ENERGY STAR®. $50 por autoinstalación, o $100 por instalación profesional."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://www.pplelectricsavings.com/ppl/sites/ppl/files/2023-08/2023_PPL_Res_ResReb_3862941_FLY_Q3_PRJ101498.pdf"
+    ],
+    "equipment_standards_restrictions": "ENERGY STAR® certified"
   },
   {
     "id": "PA-36",
@@ -667,7 +816,12 @@
       "en": "$400 rebate for heat pump water heater with UEF of 3.3.",
       "es": "Reembolso de $400 por un calentador de agua con bomba de calor y un índice de eficiencia energética (o UEF) de 3.3."
     },
-    "bonus_available": true
+    "status": "active",
+    "bonus_available": true,
+    "data_urls": [
+      "https://www.pplelectricsavings.com/ppl/sites/ppl/files/2023-08/2023_PPL_Res_ResReb_3862941_FLY_Q3_PRJ101498.pdf"
+    ],
+    "equipment_standards_restrictions": "Universal Energy Factor (UEF) of 3.3"
   },
   {
     "id": "PA-37",
@@ -691,7 +845,12 @@
       "en": "Up to $450 rebate for air source heat pump. $450 for SEER2 of 16.3, EER2 of 12.9, HSPF2 of 8.2. $350 for SEER2 of 15.2, EER2 of 11.7, HSPF2 of 7.8.",
       "es": "Un reembolso de hasta $450 por bomba de calor de fuente de aire. $450 para SEER2 de 16.3, EER2 de 12.9, HSPF2 de 8.2. $350 para SEER2 de 15.2, EER2 de 11.7, HSPF2 de 7.8."
     },
-    "bonus_available": true
+    "status": "active",
+    "bonus_available": true,
+    "data_urls": [
+      "https://www.pplelectricsavings.com/ppl/sites/ppl/files/2023-08/2023_PPL_Res_ResReb_3862941_FLY_Q3_PRJ101498.pdf"
+    ],
+    "equipment_standards_restrictions": "$350 for SEER2 of 15.2, EER2 of 11.7, HSPF2 of 7.8. $450 for SEER2 of 16.3, EER2 of 12.9, HSPF2 of 8.2."
   },
   {
     "id": "PA-38",
@@ -713,7 +872,12 @@
       "en": "$400 rebate per outdoor unit for ductless mini-split heat pump with SEER2 of 15.2, EER2 of 11.7, and HSPF2 of 7.8.",
       "es": "Reembolso de $400 por unidad exterior para bomba de calor mini-split sin ductos con SEER2 de 15.2, EER2 de 11.7 y HSPF2 de 7.8"
     },
-    "bonus_available": true
+    "status": "active",
+    "bonus_available": true,
+    "data_urls": [
+      "https://www.pplelectricsavings.com/ppl/sites/ppl/files/2023-08/2023_PPL_Res_ResReb_3862941_FLY_Q3_PRJ101498.pdf"
+    ],
+    "equipment_standards_restrictions": "SEER2 of 15.2, EER2 of 11.7, HSPF2 of 7.8"
   },
   {
     "id": "PA-39",
@@ -735,8 +899,13 @@
       "en": "$15 rebate for ENERGY STAR® certified electric clothes dryers.",
       "es": "Reembolso de $15 para secadoras de ropa eléctricas con certificación ENERGY STAR®."
     },
+    "status": "active",
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2024-12-31",
+    "data_urls": [
+      "https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/appliance-rebates"
+    ],
+    "equipment_standards_restrictions": "ENERGY STAR® certified"
   },
   {
     "id": "PA-40",
@@ -758,8 +927,12 @@
       "en": "$75 rebate for heat pump clothes dryers.",
       "es": "Reembolso de $75 para secadoras de ropa con bomba de calor."
     },
+    "status": "active",
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2024-12-31",
+    "data_urls": [
+      "https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/appliance-rebates"
+    ]
   },
   {
     "id": "PA-41",
@@ -781,8 +954,13 @@
       "en": "$350 rebate for ENERGY STAR® certified heat pump hot water heaters.",
       "es": "Reembolso de $350 para calentadores de agua con bomba de calor de certificación ENERGY STAR®."
     },
+    "status": "active",
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2024-12-31",
+    "data_urls": [
+      "https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/water-heater-rebates"
+    ],
+    "equipment_standards_restrictions": "ENERGY STAR® certified"
   },
   {
     "id": "PA-42",
@@ -804,8 +982,13 @@
       "en": "$50 rebate for ENERGY STAR® certified smart thermostats.",
       "es": "Reembolso de $50 para termostatos inteligentes con certificación ENERGY STAR®."
     },
+    "status": "active",
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2024-12-31",
+    "data_urls": [
+      "https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/appliance-rebates"
+    ],
+    "equipment_standards_restrictions": "ENERGY STAR® certified"
   },
   {
     "id": "PA-43",
@@ -829,8 +1012,13 @@
       "en": "Up to $300 rebate for air source heat pumps. Rebate value depends on the equipment efficiency.",
       "es": "Reembolso de hasta $300 para bombas de calor de fuente de aire. El monto del reembolso depende de la eficiencia del equipo."
     },
+    "status": "active",
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2024-12-31",
+    "data_urls": [
+      "https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/heating-cooling-rebates"
+    ],
+    "equipment_standards_restrictions": "$200: 15.2 - 17.0 SEER2, 11.7+ EER2, 7.8+ HSPF2\n\n$300: 17.1+ SEER2, 11.7+ EER2, 7.8+ HSPF2"
   },
   {
     "id": "PA-44",
@@ -853,8 +1041,13 @@
       "en": "Up to $300 rebate for ductless mini-split heat pumps. Rebate value depends on the equipment efficiency.",
       "es": "Reembolso de hasta $300 para bombas de calor mini-splits sin ductos. El monto del reembolso depende de la eficiencia del equipo."
     },
+    "status": "active",
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2024-12-31",
+    "data_urls": [
+      "https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/heating-cooling-rebates"
+    ],
+    "equipment_standards_restrictions": "$150: 15.2 - 17.0 SEER2, 11.7+ EER2, 7.8+ HSPF2\n\n$300: 17.1+ SEER2, 11.7+ EER2, 7.8+ HSPF2"
   },
   {
     "id": "PA-45",
@@ -878,8 +1071,13 @@
       "en": "$50 rebate per new electric vehicle you own or lease. Must be either full electric or plug-in hybrid.",
       "es": "Un reembolso de $50 por vehículo eléctrico nuevo de su propiedad o arrendado. Debe ser totalmente eléctrico o híbrido enchufable."
     },
+    "status": "active",
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2024-12-31",
+    "data_urls": [
+      "https://frontdoor.portal.poweredbyefi.org/initiative/duqpev"
+    ],
+    "equipment_standards_restrictions": "Must be plug-in to qualify. Full electric or plug-in hybrid okay."
   },
   {
     "id": "PA-46",
@@ -903,8 +1101,13 @@
       "en": "$50 rebate per used electric vehicle you own or lease. Must be either full electric or plug-in hybrid.",
       "es": "Un reembolso de $50 por vehículo eléctrico usado de su propiedad o arrendado. Debe ser totalmente eléctrico o híbrido enchufable."
     },
+    "status": "active",
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2024-12-31",
+    "data_urls": [
+      "https://frontdoor.portal.poweredbyefi.org/initiative/duqpev"
+    ],
+    "equipment_standards_restrictions": "Must be plug-in to qualify. Full electric or plug-in hybrid okay."
   },
   {
     "id": "PA-47",
@@ -930,10 +1133,15 @@
       "en": "Income-qualified rebate for purchase or lease of new electric vehicles. $2,000 for battery EVs; $1,500 for plug-in hybrid EVs.",
       "es": "Un reembolso basado en ingresos para compra o alquiler de vehículos eléctricos nuevos. $2,000 para VEs de batería; $1,500 para VEs híbridos enchufables."
     },
+    "status": "active",
     "start_date": "2023-07-01",
     "end_date": "2024-06-30",
     "low_income": "pa-pennsylvania-department-of-environmental-protection",
-    "bonus_available": true
+    "bonus_available": true,
+    "data_urls": [
+      "https://greenport.pa.gov/elibrary/GetDocument?docId=1459887&DocName=ALTERNATIVE%20FUEL%20VEHICLE%20REBATE%20GUIDELINES.PDF"
+    ],
+    "equipment_standards_restrictions": "Must be new EV or PHEV with final purchase price of $50,000 or less."
   },
   {
     "id": "PA-48",
@@ -959,10 +1167,16 @@
       "en": "Income-qualified rebate for purchase of eligible used electric vehicles. $2,000 rebate for battery EVs; $1,500 rebate for plug-in hybrid EVs.",
       "es": "Un reembolso basado en ingresos para la compra de vehículos eléctricos usados que cumplan los requisitos. Un reembolso de $2,000 para VEs de batería; $1,500 para VEs híbridos enchufables."
     },
+    "status": "active",
     "start_date": "2023-07-01",
     "end_date": "2024-06-30",
     "low_income": "pa-pennsylvania-department-of-environmental-protection",
-    "bonus_available": true
+    "bonus_available": true,
+    "data_urls": [
+      "https://greenport.pa.gov/elibrary/GetDocument?docId=1459887&DocName=ALTERNATIVE%20FUEL%20VEHICLE%20REBATE%20GUIDELINES.PDF"
+    ],
+    "equipment_standards_restrictions": "Any one-time preowned AFV that is a maximum of seven years old with 75,000 miles or less and a final purchase price of $50,000 or less (see definitions below) from a retail location or online retail service. (No private sales allowed). OR Any AFV used by a retail location or online retail service for demonstration purposes with a final purchase price of $50,000 or less and an odometer reading of greater than 500 but less than 10,000 miles.",
+    "other_restrictions": "Must be purchased. Leased not eligible"
   },
   {
     "id": "PA-49",
@@ -988,9 +1202,14 @@
       "en": "Income-qualified rebate for purchase or lease of new electric vehicles. $3,000 for battery EVs; $2,500 for plug-in hybrid EVs.",
       "es": "Un reembolso basado en ingresos para compra o alquiler de vehículos eléctricos nuevos. $3,000 para VEs de batería; $2,500 para VEs híbridos enchufables."
     },
+    "status": "active",
     "start_date": "2023-07-01",
     "end_date": "2024-06-30",
-    "low_income": "pa-pennsylvania-department-of-environmental-protection-bonus"
+    "low_income": "pa-pennsylvania-department-of-environmental-protection-bonus",
+    "data_urls": [
+      "https://greenport.pa.gov/elibrary/GetDocument?docId=1459887&DocName=ALTERNATIVE%20FUEL%20VEHICLE%20REBATE%20GUIDELINES.PDF"
+    ],
+    "equipment_standards_restrictions": "Must be new EV or PHEV with final purchase price of $50,000 or less."
   },
   {
     "id": "PA-50",
@@ -1016,9 +1235,15 @@
       "en": "Income-qualified rebate for purchase of eligible used electric vehicles. $3,000 rebate for battery EVs; $2,500 rebate for plug-in hybrid EVs.",
       "es": "Un reembolso basado en ingresos para la compra de vehículos eléctricos usados que cumplan los requisitos. Un reembolso de $3,000 para VEs de batería; $2,500 para VEs híbridos enchufables."
     },
+    "status": "active",
     "start_date": "2023-07-01",
     "end_date": "2024-06-30",
-    "low_income": "pa-pennsylvania-department-of-environmental-protection-bonus"
+    "low_income": "pa-pennsylvania-department-of-environmental-protection-bonus",
+    "data_urls": [
+      "https://greenport.pa.gov/elibrary/GetDocument?docId=1459887&DocName=ALTERNATIVE%20FUEL%20VEHICLE%20REBATE%20GUIDELINES.PDF"
+    ],
+    "equipment_standards_restrictions": "Any one-time preowned AFV that is a maximum of seven years old with 75,000 miles or less and a final purchase price of $50,000 or less (see definitions below) from a retail location or online retail service. (No private sales allowed). OR Any AFV used by a retail location or online retail service for demonstration purposes with a final purchase price of $50,000 or less and an odometer reading of greater than 500 but less than 10,000 miles.",
+    "other_restrictions": "Must be purchased. Leased not eligible"
   },
   {
     "id": "PA-51",
@@ -1041,7 +1266,13 @@
     "short_description": {
       "en": "Up to $1,250 rebate for ENERGY STAR® certified mini-split heat pumps. Rebate amount varies depending on heat pump efficiency and capacity.",
       "es": "Un reembolso de hasta $1,250 para bombas de calor mini-splits con certificación ENERGY STAR®. El monto del reembolso varía según la eficiencia y la capacidad de la bomba de calor."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://www.ugi.com/rebates-for-home/electric/equipment-rebate-program"
+    ],
+    "equipment_standards_restrictions": "ENERGY STAR®",
+    "equipment_capacity_restrictions": "https://www.ugi.com/rebates-for-home/electric/equipment-rebate-program"
   },
   {
     "id": "PA-52",
@@ -1062,7 +1293,12 @@
     "short_description": {
       "en": "$50 rebate for ENERGY STAR® certified smart thermostats.",
       "es": "Un reembolso de $50 para termostatos inteligentes con certificación ENERGY STAR®."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://www.ugi.com/rebates-for-home/electric/appliance-rebate-program"
+    ],
+    "equipment_standards_restrictions": "ENERGY STAR®"
   },
   {
     "id": "PA-53",
@@ -1083,6 +1319,11 @@
     "short_description": {
       "en": "$50 rebate for purchasing a plug-in EV.",
       "es": "Un reembolso de $50 por la compra de un VE enchufable."
-    }
+    },
+    "status": "active",
+    "data_urls": [
+      "https://www.peco.com/smart-energy/innovation-technology/electric-vehicles-l3"
+    ],
+    "equipment_standards_restrictions": "Must be plug-in to qualify."
   }
 ]
