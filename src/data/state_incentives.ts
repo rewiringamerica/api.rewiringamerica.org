@@ -1,11 +1,5 @@
 import { JSONSchemaType } from 'ajv';
 import fs from 'fs';
-import {
-  COLowIncomeAuthority,
-  ILIncomeAuthority,
-  NVLowIncomeAuthority,
-  RILowIncomeAuthority,
-} from './low_income_thresholds';
 import { AMOUNT_SCHEMA } from './types/amount';
 
 import { START_END_DATE_REGEX } from '../lib/dates';
@@ -16,17 +10,6 @@ import { ALL_ITEMS, Item } from './types/items';
 import { LocalizableString } from './types/localizable-string';
 import { OwnerStatus } from './types/owner-status';
 
-export type LowIncomeAuthority =
-  | 'default'
-  | COLowIncomeAuthority
-  | ILIncomeAuthority
-  | NVLowIncomeAuthority
-  | RILowIncomeAuthority;
-
-// CollectedIncentive and its JSON schema represent the data that lives in raw
-// collected form, e.g. spreadsheets. It should match column-for-column to our
-// spreadsheet format aside from nested fields like amount and column
-// renames/aliases.
 export type StateIncentive = {
   id: string;
   items: Item[];
@@ -39,7 +22,7 @@ export type StateIncentive = {
   eligible_geo_group?: string;
   program: string;
   bonus_available?: boolean;
-  low_income?: LowIncomeAuthority;
+  low_income?: string;
   more_info_url?: LocalizableString;
 };
 
