@@ -45,8 +45,7 @@
       "en": "$75 rebate for electric push lawn mowers.",
       "es": "Un reembolso de $75 para podadoras eléctricas de pie."
     },
-    "start_date": "2023-10-01",
-    "end_date": "2024-09-30"
+    "start_date": "2023-10-01"
   },
   {
     "id": "DC-5",
@@ -69,8 +68,7 @@
       "en": "$500 rebate for electric riding lawn mowers.",
       "es": "Un reembolso de $500 para podadoras eléctricas de asiento."
     },
-    "start_date": "2023-10-01",
-    "end_date": "2024-09-30"
+    "start_date": "2023-10-01"
   },
   {
     "id": "DC-7",
@@ -173,8 +171,7 @@
     },
     "start_date": "2023-10-01",
     "end_date": "2024-09-30",
-    "low_income": "dc-dc-department-of-energy-and-environment-60-ami",
-    "bonus_available": true
+    "low_income": "dc-dc-department-of-energy-and-environment-60-ami"
   },
   {
     "id": "DC-24",
@@ -262,18 +259,114 @@
     "program": "dc_dCSustainableEnergyUtility_dCResidentialRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 700,
-      "minimum": 375,
-      "maximum": 700
+      "number": 1500,
+      "minimum": 1000,
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$375-$700 rebate for qualified ducted or ductless heat pump systems.",
-      "es": "Un reembolso de entre $375 y $700 para sistemas de bomba de calor sin ductos o con ductos que cumplan los requisitos."
+      "en": "$1000-$1500 rebate for qualified ducted or ductless heat pump systems.",
+      "es": "Un reembolso de entre $1000 y $1500 para sistemas de bomba de calor sin ductos o con ductos que cumplan los requisitos."
     },
-    "start_date": "2023-12-31",
-    "end_date": "2024-09-30"
+    "start_date": "2023-12-31"
+  },
+  {
+    "id": "DC-30",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "dc_dCSustainableEnergyUtility_dCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "minimum": 175,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$175-$600 rebate for ENERGY STAR® or ENERGY STAR® Most Efficient qualified clothes dryers.",
+      "es": "Un reembolso de entre $175 y $600 para las secadoras de ropa que cumplan los requisitos ENERGY STAR® o ENERGY STAR® Most Efficient."
+    },
+    "start_date": "2024-10-28"
+  },
+  {
+    "id": "DC-31",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "dc_dCSustainableEnergyUtility_dCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "minimum": 400,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate for electric and induction stoves, ranges, and ovens.",
+      "es": "Un reembolso hasta $800 para estufas, cocinas y hornos eléctricos y de inducción."
+    },
+    "start_date": "2024-10-28"
+  },
+  {
+    "id": "DC-32",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "dc_dCSustainableEnergyUtility_dCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 5000,
+      "minimum": 4000,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$4000-$5000 rebate for qualified ducted or ductless heat pump systems when fuel switching.",
+      "es": "Un reembolso de entre $4000 y $5000 para sistemas de bomba de calor sin ductos o con ductos que cumplan los requisitos al cambiar las fuentes de combustible."
+    },
+    "start_date": "2024-10-28"
+  },
+  {
+    "id": "DC-33",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "dc_dCSustainableEnergyUtility_dCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "minimum": 750,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750 to $1500 rebate for a heat pump water heater.",
+      "es": "Un reembolso de entre $750 y $1500 para un calentador de agua con bomba de calor."
+    },
+    "start_date": "2024-10-28"
   }
 ]
