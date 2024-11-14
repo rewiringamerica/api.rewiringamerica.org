@@ -403,5 +403,60 @@
     "short_description": {
       "en": "Rebate of 50% of cost up to $175 for a home energy management system bundle: including ENERGY STAR certified smart thermosat and LED fixture, connected plug load device, and permanently installed occupancy/motion sensor."
     }
+  },
+  {
+    "id": "GA-19",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ga_energy-assistance-for-savings-efficiency",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy assessment for income-qualified residents.",
+      "es": "Una auditoría gratis de consumo de energía doméstica para residentes que cumplan los requisitos de nivel de ingresos."
+    },
+    "start_date": "2023-01-01",
+    "end_date": "2025-12-31",
+    "low_income": "ga-georgia-power-lowincome"
+  },
+  {
+    "id": "GA-20",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "duct_sealing",
+      "smart_thermostat"
+    ],
+    "program": "ga_energy-assistance-for-savings-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 5000,
+      "minimum": 150,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $5000 in weatherization and efficiency updates for income-qualified residents. Requires home audit.",
+      "es": "Hasta $5000 por actualizaciones sobre climatización y eficiencia para residentes que cumplan los requisitos de nivel de ingresos. Requiere una auditoría gratis de consumo de energía doméstica"
+    },
+    "start_date": "2023-01-01",
+    "end_date": "2025-12-31",
+    "low_income": "ga-georgia-power-lowincome"
   }
 ]
