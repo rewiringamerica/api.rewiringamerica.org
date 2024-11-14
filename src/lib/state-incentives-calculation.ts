@@ -226,7 +226,7 @@ function transformItems(
   return transformed;
 }
 
-function skipBasedOnRequestParams(
+export function skipBasedOnRequestParams(
   incentive: StateIncentive,
   request: CalculateParams,
   location: ResolvedLocation,
@@ -304,24 +304,25 @@ function skipBasedOnRequestParams(
     const group =
       GEO_GROUPS_BY_STATE[location.state]![incentive.eligible_geo_group];
 
-    // The request params must match ALL of the keys the geo group defines
+    // The request params must match ANY of the keys the geo group defines
     if (
       (group.utilities &&
-        (!request.utility || !group.utilities.includes(request.utility))) ||
+        request.utility &&
+        group.utilities.includes(request.utility)) ||
       (group.counties &&
-        (!location.countyFips ||
-          !group.counties
-            .map(id => stateAuthorities.county[id].county_fips)
-            .includes(location.countyFips))) ||
+        location.countyFips &&
+        group.counties
+          .map(id => stateAuthorities.county[id].county_fips)
+          .includes(location.countyFips)) ||
       (group.cities &&
-        (!location.city ||
-          !group.cities
-            .map(id => stateAuthorities.city[id].city)
-            .includes(location.city)))
+        location.city &&
+        group.cities
+          .map(id => stateAuthorities.city[id].city)
+          .includes(location.city))
     ) {
-      return true;
+      return false; // Return false if there is any match
     }
-  }
 
-  return false;
+    return true;
+  }
 }

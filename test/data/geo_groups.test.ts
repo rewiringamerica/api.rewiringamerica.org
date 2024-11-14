@@ -9,6 +9,34 @@ import {
   STATE_INCENTIVES_BY_STATE,
   StateIncentive,
 } from '../../src/data/state_incentives';
+import { skipBasedOnRequestParams } from '../../src/lib/state-incentives-calculation';
+
+test('skipBasedOnRequestParams', async t => {
+  const incentive = {
+    eligible_geo_group: {
+      utilities: ['co-city-of-aspen', 'co-holy-cross-energy'],
+      counties: ['co-unincorporated-eagle-county'], // Pitkin as well
+      cities: ['co-city-of-boulder'],
+    },
+  };
+  const requestUtilityMatch = { utility: 'co-holy-cross-energy' };
+  const requestNoMatch = { location: 'ny-con' }; // Eagle County
+  const locationCountyMatch = { countyFips: '08037' };
+  const locationCityMatch = { city: 'co-city-of-boulder' };
+
+  t.equal(
+    skipBasedOnRequestParams(incentive, requestUtilityMatch, location),
+    false,
+  );
+  t.equal(
+    skipBasedOnRequestParams(incentive, requestNoMatch, locationCountyMatch),
+    false,
+  );
+  t.equal(
+    skipBasedOnRequestParams(incentive, requestNoMatch, locationCityMatch),
+    false,
+  );
+});
 
 test('geo groups refer to valid authorities', async t => {
   Object.entries(GEO_GROUPS_BY_STATE).forEach(([state, groups]) => {
