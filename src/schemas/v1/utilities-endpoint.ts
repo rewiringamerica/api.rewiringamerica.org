@@ -7,7 +7,23 @@ export const API_UTILITIES_RESPONSE_SCHEMA = {
     location: API_RESPONSE_LOCATION_SCHEMA,
     utilities: {
       type: 'object',
-      description: 'A map of utility IDs to info about each utility.',
+      description: 'A map of IDs to info about each electric utility.',
+      additionalProperties: {
+        type: 'object',
+        properties: {
+          name: {
+            type: 'string',
+            description: `The customer-facing brand name of the utility. This \
+may differ from the name of the utility's legal entity.`,
+          },
+        },
+      },
+    },
+    gas_utilities: {
+      type: 'object',
+      description: `A map of IDs to info about each gas utility. This may be \
+absent if the user's gas utility does not affect their eligibility for \
+incentives, or if no gas utilities serve the given location.`,
       additionalProperties: {
         type: 'object',
         properties: {
@@ -26,7 +42,7 @@ may differ from the name of the utility's legal entity.`,
 
 export const API_UTILITIES_SCHEMA = {
   summary: 'Find utilities by location',
-  description: `Returns the electric utilities that may serve the given \
+  description: `Returns electric and gas utilities that may serve the given \
 location. Because the location is imprecise, and because utility service \
 territories aren't precisely defined, there may be multiple results, including \
 utilities that don't actually serve the given location.`,

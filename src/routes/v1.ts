@@ -11,7 +11,10 @@ import calculateIncentives, {
 } from '../lib/incentives-calculation';
 import { resolveLocation } from '../lib/location';
 import { statesWithStatus } from '../lib/states';
-import { getUtilitiesForLocation } from '../lib/utilities-for-location';
+import {
+  getElectricUtilitiesForLocation,
+  getGasUtilitiesForLocation,
+} from '../lib/utilities-for-location';
 import { ERROR_SCHEMA } from '../schemas/error';
 import {
   API_CALCULATOR_RESPONSE_SCHEMA,
@@ -140,7 +143,14 @@ export default async function (
           .type('application/json')
           .send({
             location: { state: location.state },
-            utilities: await getUtilitiesForLocation(fastify.sqlite, location),
+            utilities: await getElectricUtilitiesForLocation(
+              fastify.sqlite,
+              location,
+            ),
+            gas_utilities: await getGasUtilitiesForLocation(
+              fastify.sqlite,
+              location,
+            ),
           });
       } catch (error) {
         if (error instanceof InvalidInputError) {

@@ -261,6 +261,17 @@ function skipBasedOnRequestParams(
     return true;
   }
 
+  if (
+    program.authority_type === AuthorityType.GasUtility &&
+    program.authority !== request.gas_utility
+  ) {
+    return true;
+  }
+
+  // TODO further gas utility handling. This isn't exactly the same as electric
+  // utility handling; depending on the state, the gas utility may *prevent*
+  // some electric utility incentives from being eligible.
+
   // County and City incentives are approximate and prone to
   // false positives, since zip codes to not map 1:1 to counties
   // and cities.
