@@ -54,6 +54,23 @@
     }
   },
   "CO": {
+    "co-aspen-CORE-150ami-threshold": {
+      "type": "ami-percentage",
+      "incentives": [
+        "CO-571",
+        "CO-573",
+        "CO-575",
+        "CO-577",
+        "CO-579",
+        "CO-581",
+        "CO-583"
+      ],
+      "source_url": "https://www.aspencore.org/residential-rebates",
+      "description": "150% AMI threshold to qualify as a \"Community Priority Participant\" for the Aspen Community Office for Resource Efficiency's Residential Rebates Program.",
+      "thresholds": {
+        "percentage": 150
+      }
+    },
     "co-black-hills-energy": {
       "type": "hhsize",
       "incentives": [
@@ -1060,6 +1077,33 @@
       }
     }
   },
+  "MA": {
+    "ma-massSave-income-eligible": {
+      "type": "hhsize",
+      "incentives": [
+        "MA-2"
+      ],
+      "source_url": "https://www.masssave.com/en/residential/programs-and-services/income-based-offers",
+      "description": "MassSave Income Eligible Program - Up to 60% SMI",
+      "thresholds": {}
+    },
+    "ma-massSave-incomeEligible-enhanced": {
+      "type": "hhsize",
+      "incentives": [],
+      "source_url": "https://www.masssave.com/en/residential/programs-and-services/income-based-offers",
+      "description": "MassSave Income-Based Enhanced Incentive 60-80% AMI or SMI",
+      "thresholds": {
+        "1": 65595,
+        "2": 85778,
+        "3": 105960,
+        "4": 126144,
+        "5": 146327,
+        "6": 166510,
+        "7": 170294,
+        "8": 174079
+      }
+    }
+  },
   "ME": {
     "me-low-income": {
       "type": "hhsize",
@@ -1300,6 +1344,32 @@
     }
   },
   "NY": {
+    "ny-appliance-low": {
+      "type": "ami-percentage",
+      "incentives": [
+        "NY-29",
+        "NY-31",
+        "NY-33"
+      ],
+      "source_url": "https://www.nyserda.ny.gov/All-Programs/Appliance-Upgrade-Program",
+      "description": "NYSERDA Appliance Upgrade Program Low Income",
+      "thresholds": {
+        "percentage": 80
+      }
+    },
+    "ny-appliance-moderate": {
+      "type": "ami-percentage",
+      "incentives": [
+        "NY-30",
+        "NY-32",
+        "NY-34"
+      ],
+      "source_url": "https://www.nyserda.ny.gov/All-Programs/Appliance-Upgrade-Program",
+      "description": "NYSERDA Appliance Upgrade Program Moderate Income",
+      "thresholds": {
+        "percentage": 150
+      }
+    },
     "ny-empower-low": {
       "type": "hhsize",
       "incentives": [
@@ -2343,6 +2413,19 @@
         "8": 85626,
         "9": 87488,
         "10": 89349
+      }
+    }
+  },
+  "TX": {
+    "tx-austinenergy-80ami-threshold": {
+      "type": "ami-percentage",
+      "incentives": [
+        "TX-8"
+      ],
+      "source_url": "https://savings.austinenergy.com/residential/offerings/home-improvements/weatherization",
+      "description": "80% AMI threshold to qualify for assistance programs through Austin Energy.",
+      "thresholds": {
+        "percentage": 80
       }
     }
   },

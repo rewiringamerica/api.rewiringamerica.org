@@ -44,5 +44,145 @@
       "en": "No-cost energy audit and efficiency upgrades, up to $19,000, including weatherization, heat pumps, and electrical upgrades for qualified homes."
     },
     "low_income": "ny-empower-moderate"
+  },
+  {
+    "id": "NY-29",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ny-appliance-upgrade-program",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 840
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $840 upfront rebate for an ENERGY STAR® certified heat pump clothes dryer through participating retailers.  For income-qualified residents only."
+    },
+    "start_date": "2024-11-19",
+    "low_income": "ny-appliance-low"
+  },
+  {
+    "id": "NY-30",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ny-appliance-upgrade-program",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 840
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $840 upfront rebate for an ENERGY STAR® certified heat pump clothes dryer through participating retailers.  For income-qualified residents only."
+    },
+    "start_date": "2024-11-19",
+    "low_income": "ny-appliance-moderate"
+  },
+  {
+    "id": "NY-31",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "ny-appliance-upgrade-program",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "100% of cost of an electric panel upgrade, up to $4,000 for income-eligible residents. Must use a participating contractor."
+    },
+    "start_date": "2024-11-19",
+    "low_income": "ny-appliance-low"
+  },
+  {
+    "id": "NY-32",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "ny-appliance-upgrade-program",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of cost of an electric panel upgrade, up to $4,000 for income-eligible residents. Must use a participating contractor."
+    },
+    "start_date": "2024-11-19",
+    "low_income": "ny-appliance-moderate"
+  },
+  {
+    "id": "NY-33",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_wiring"
+    ],
+    "program": "ny-appliance-upgrade-program",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "100% of cost of electrical wiring, up to $2,500 for income-eligible residents. Must use a participating contractor."
+    },
+    "start_date": "2024-11-19",
+    "low_income": "ny-appliance-low"
+  },
+  {
+    "id": "NY-34",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_wiring"
+    ],
+    "program": "ny-appliance-upgrade-program",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of cost of electrical wiring, up to $2,500 for income-eligible residents. Must use a participating contractor."
+    },
+    "start_date": "2024-11-19",
+    "low_income": "ny-appliance-moderate"
   }
 ]
