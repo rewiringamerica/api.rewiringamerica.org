@@ -169,6 +169,30 @@
     },
     {
       "payment_methods": [
+        "pos_rebate",
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "vt-burlington-electric-department",
+      "program": "Burlington Electric Department E-Bike Rebate",
+      "program_url": "https://www.burlingtonelectric.com/ebike/",
+      "items": [
+        "ebike"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 300,
+        "maximum": 300
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2022-04-25",
+      "short_description": "$300 rebate on an e-bike."
+    },
+    {
+      "payment_methods": [
         "pos_rebate"
       ],
       "authority_type": "state",

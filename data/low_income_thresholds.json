@@ -54,23 +54,6 @@
     }
   },
   "CO": {
-    "co-aspen-CORE-150ami-threshold": {
-      "type": "ami-percentage",
-      "incentives": [
-        "CO-571",
-        "CO-573",
-        "CO-575",
-        "CO-577",
-        "CO-579",
-        "CO-581",
-        "CO-583"
-      ],
-      "source_url": "https://www.aspencore.org/residential-rebates",
-      "description": "150% AMI threshold to qualify as a \"Community Priority Participant\" for the Aspen Community Office for Resource Efficiency's Residential Rebates Program.",
-      "thresholds": {
-        "percentage": 150
-      }
-    },
     "co-black-hills-energy": {
       "type": "hhsize",
       "incentives": [
@@ -1085,7 +1068,25 @@
       ],
       "source_url": "https://www.masssave.com/en/residential/programs-and-services/income-based-offers",
       "description": "MassSave Income Eligible Program - Up to 60% SMI",
-      "thresholds": {}
+      "thresholds": {
+        "1": 49196,
+        "2": 64333,
+        "3": 79470,
+        "4": 94608,
+        "5": 109745,
+        "6": 124882,
+        "7": 127720,
+        "8": 130559,
+        "9": 133397,
+        "10": 136235,
+        "11": 139073,
+        "12": 141912,
+        "13": 144750,
+        "14": 147588,
+        "15": 150427,
+        "16": 153265,
+        "17": 156103
+      }
     },
     "ma-massSave-incomeEligible-enhanced": {
       "type": "hhsize",
