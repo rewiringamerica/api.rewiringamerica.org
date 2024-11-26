@@ -23,6 +23,7 @@ export enum AuthorityType {
   County = 'county',
   State = 'state',
   Utility = 'utility',
+  GasUtility = 'gas_utility',
   Other = 'other',
 }
 
@@ -75,6 +76,7 @@ export const SCHEMA = {
       utility: authoritiesMapSchema,
       city: authoritiesMapSchema,
       county: authoritiesMapSchema,
+      gas_utility: authoritiesMapSchema,
       other: authoritiesMapSchema,
     },
     required: ['utility'],

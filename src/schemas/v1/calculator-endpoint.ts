@@ -37,9 +37,18 @@ If absent, incentives from all types of authorities will be considered.`,
     },
     utility: {
       type: 'string',
-      description: `The ID of your utility company, as returned from \
+      description: `The ID of your electric utility company, as returned from \
 \`/api/v1/utilities\`. Required if authority_types includes "utility". If \
-absent, no incentives offered by utilities will be returned.`,
+absent, no incentives offered by electric utilities will be returned.`,
+    },
+    gas_utility: {
+      type: 'string',
+      description: `The ID of your gas utility company, as returned from \
+\`/api/v1/utilities\`. Required if authority_types includes "gas_utility". If \
+absent, no incentives offered by gas utilities will be returned. In some \
+jurisdictions, your gas utility can affect your eligibility for incentives \
+offered by other authorities; in such cases, if this parameter is absent, \
+incentives with gas-utility-dependent eligibility will _not_ be returned.`,
     },
     items: {
       type: 'array',
