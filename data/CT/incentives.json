@@ -50,7 +50,7 @@
   {
     "id": "CT-3",
     "payment_methods": [
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "heat_pump_water_heater"
@@ -365,7 +365,7 @@
   {
     "id": "CT-17",
     "payment_methods": [
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "heat_pump_water_heater"
@@ -644,5 +644,29 @@
       "es": "Un reembolso de $3,000 dólares por un vehículo eléctrico usado elegible para personas que reúnan los requisitos de ingresos."
     },
     "low_income": "ct-cheapr"
+  },
+  {
+    "id": "CT-35",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_weatherization",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ct_eversource_energizeCtHomeEnergySolutions",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 bonus rebate when you weatherize and install a heat pump."
+    },
+    "start_date": "2024-01-20"
   }
 ]

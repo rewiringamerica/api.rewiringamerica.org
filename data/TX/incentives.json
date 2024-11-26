@@ -1,0 +1,351 @@
+[
+  {
+    "id": "TX-1",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "tx_AustinEnergy_RebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$800 rebate for a qualifying ENERGY STAR heat pump water heater."
+    }
+  },
+  {
+    "id": "TX-2",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "tx_AustinEnergy_RebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 rebate for qualifying ENERGY STAR variable-speed pool pumps."
+    }
+  },
+  {
+    "id": "TX-3",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "tx_AustinEnergy_RebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $600 for installing an energy efficient central split or mini-split air conditioning system."
+    }
+  },
+  {
+    "id": "TX-4",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "tx_AustinEnergy_RebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate for heat pump and heat pump mini-split systems."
+    }
+  },
+  {
+    "id": "TX-5",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "tx_AustinEnergy_RebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 30,
+      "maximum": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$30 rebate for installing an eligible thermostat. Additional rebate and bill credit available for enrolling a thermostat in the Power Partner program."
+    }
+  },
+  {
+    "id": "TX-6",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "tx_AustinEnergy_RebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for qualifying ENERGY STAR window air conditioners."
+    }
+  },
+  {
+    "id": "TX-7",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "tx_AustinEnergy_RebatesAndIncentives",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of $1/square foot for eligible solar screen fabric."
+    }
+  },
+  {
+    "id": "TX-8",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "duct_sealing",
+      "smart_thermostat",
+      "other"
+    ],
+    "program": "tx_AustinEnergy_RebatesAndIncentives",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home weatherization assistance for qualifying customers with low to moderate incomes, including attic insulation, duct sealing, and more."
+    },
+    "low_income": "tx-austinenergy-80ami-threshold"
+  },
+  {
+    "id": "TX-9",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "tx_AustinEnergy_InstantSavingsForAustinEnergyCustomers",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 coupon for an ENERGY STAR refrigerator through participating retailers."
+    }
+  },
+  {
+    "id": "TX-10",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "tx_AustinEnergy_InstantSavingsForAustinEnergyCustomers",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 coupon for an ENERGY STAR electric clothes dryer purchased through a participating retailer."
+    }
+  },
+  {
+    "id": "TX-11",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "tx_AustinEnergy_InstantSavingsForAustinEnergyCustomers",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 coupon for an ENERGY STAR freezer purchased through a participating retailer."
+    }
+  },
+  {
+    "id": "TX-12",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "tx_AustinEnergy_InstantSavingsForAustinEnergyCustomers",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$800 coupon for an ENERGY STAR heat pump water heater purchased through a participating retailer."
+    }
+  },
+  {
+    "id": "TX-13",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "tx_AustinEnergy_RebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,500 rebate for completing a solar education course and installing a qualifying solar photovoltaic system on your home."
+    }
+  },
+  {
+    "id": "TX-14",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "tx_AustinEnergy_RebatesAndIncentives",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 1200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 50% of the purchase and installation cost of an approved Level 2 (240V) charging station, up to $1,200."
+    }
+  },
+  {
+    "id": "TX-15",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ebike",
+      "other"
+    ],
+    "program": "tx_AustinEnergy_RebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $600 rebate for E-Ride purchases, including E-bikes, scooters, mopeds, and motorcycles."
+    }
+  },
+  {
+    "id": "TX-16",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ebike",
+      "other"
+    ],
+    "program": "tx_AustinEnergy_RebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1300,
+      "maximum": 1300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,300 rebate for E-ride purchases made by Customer Assistance Program Customers, including e-bikes, scooters, mopeds, and motorcycles."
+    }
+  }
+]

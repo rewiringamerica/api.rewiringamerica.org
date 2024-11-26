@@ -1,0 +1,50 @@
+[
+  {
+    "id": "MA-1",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma-massSave-weatherization",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "No-cost virtual or in-person home energy assessment."
+    },
+    "start_date": "2024-01-01",
+    "eligible_geo_group": "ma-massSave"
+  },
+  {
+    "id": "MA-2",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ma-massSave-heating-cooling",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 16000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "100% of total install cost of an air source heat pump (partial or whole home) for income-qualified residents."
+    },
+    "start_date": "2024-01-01",
+    "low_income": "ma-massSave-income-eligible",
+    "eligible_geo_group": "ma-massSave"
+  }
+]

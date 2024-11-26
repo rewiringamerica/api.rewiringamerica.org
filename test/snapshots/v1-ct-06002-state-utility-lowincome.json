@@ -107,6 +107,28 @@
     },
     {
       "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ct-eversource",
+      "program": "Energize CT Residential Heat Pump Water Heater Incentive",
+      "program_url": "https://energizect.com/rebates-incentives/residential-water-heater/heat-pump",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 650
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023",
+      "end_date": "2024-12-31",
+      "short_description": "$650 off eligible Energy Star certified Heat Pump Water Heaters."
+    },
+    {
+      "payment_methods": [
         "rebate"
       ],
       "authority_type": "utility",
@@ -160,28 +182,6 @@
       ],
       "authority_type": "utility",
       "authority": "ct-eversource",
-      "program": "Energize CT Residential Heat Pump Water Heater Incentive",
-      "program_url": "https://energizect.com/rebates-incentives/residential-water-heater/heat-pump",
-      "items": [
-        "heat_pump_water_heater"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 650
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2023",
-      "end_date": "2024-12-31",
-      "short_description": "$650 off eligible Energy Star certified Heat Pump Water Heaters."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "ct-eversource",
       "program": "Energize CT Residential Ground Source Heat Pump Incentive",
       "program_url": "https://energizect.com/rebates-incentives/heating-cooling/heat-pumps/ground-source-residential",
       "items": [
@@ -220,6 +220,30 @@
       "start_date": "2023",
       "end_date": "2024-12-31",
       "short_description": "Bonus $500 off air source heat pump installation if insulation was installed through Energize CT Home Energy Solutions within the prior 12 months."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ct-eversource",
+      "program": "Energize CT Home Energy Solutions",
+      "program_url": "https://energizect.com/energy-evaluations/income-eligible-options",
+      "items": [
+        "other_weatherization",
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 500,
+        "maximum": 500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2024-01-20",
+      "short_description": "$500 bonus rebate when you weatherize and install a heat pump."
     }
   ]
 }

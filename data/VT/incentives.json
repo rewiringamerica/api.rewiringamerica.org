@@ -2020,5 +2020,77 @@
     },
     "start_date": "2021-11-01",
     "end_date": "2024-12-31"
+  },
+  {
+    "id": "VT-102",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "items": [
+      "ebike"
+    ],
+    "program": "vt_burlingtonElectricDepartment_burlingtonElectricDepartmentEbikeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 rebate on an e-bike."
+    },
+    "start_date": "2022-04-25"
+  },
+  {
+    "id": "VT-103",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ebike"
+    ],
+    "program": "vt_greenMountainPower_greenMountainPower-EbikeRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate on an ebike used for commuting."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "VT-104",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ebike"
+    ],
+    "program": "vt_stoweElectricDepartment_stoweElectricRebates&Incentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$150 rebate for a Class 1 e-bike."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
   }
 ]
