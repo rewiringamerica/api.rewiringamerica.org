@@ -40,6 +40,12 @@ async function saveIncentiveDataToDisk() {
       const data = await fetchData(path);
       writeDataToStatesDirectory(data, pathToFileName(path));
     }
+
+    // zip-to-utility.csv
+    const writePath = 'scripts/data/zip-to-utility.csv';
+    const data = await fetchZipToUtility();
+    writeFileSync(writePath, data);
+    console.log(`Exported ${writePath}...`);
   } catch (e) {
     console.error(e);
     console.log(STATE_IMPORTS, 'STATE_IMPORTS');
@@ -50,6 +56,13 @@ async function fetchData(path: string) {
   const data_url = `${INCENTIVE_ADMIN_HOST}${path}`;
   console.log(`fetching data from ${data_url}`);
   return fetch(data_url).then(res => res.json());
+}
+
+async function fetchZipToUtility(): Promise<string> {
+  const dataUrl = `${INCENTIVE_ADMIN_HOST}/zip-to-utility`;
+  console.log(`fetching data from ${dataUrl}`);
+  // The endpoint outputs CSV directly
+  return fetch(dataUrl).then(res => res.text());
 }
 
 // Write data to states directory, expects data is organized by state.
