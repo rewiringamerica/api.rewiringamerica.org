@@ -23,10 +23,10 @@ territory of the location submitted in the request.`,
       description:
         'The city name as determined by looking up the ZIP code in our database.',
     },
-    county: {
+    countyFips: {
       type: 'string',
       description:
-        'The county name as determined by looking up the ZIP code in our database.',
+        'The FIPS code of the county, as determined by looking up the ZIP code in our database.',
     },
   },
   required: ['state'],

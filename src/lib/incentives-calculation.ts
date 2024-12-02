@@ -382,10 +382,7 @@ export default function calculateIncentives(
     authorities,
     coverage,
     data_partners,
-    location: {
-      state: state_id,
-      city: location.city,
-    },
+    location,
     savings,
     incentives: sortedIncentives,
   };

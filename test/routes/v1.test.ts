@@ -825,7 +825,7 @@ const UTILITIES = [
   [
     '02807',
     {
-      location: { state: 'RI' },
+      location: { state: 'RI', city: 'Block Island', countyFips: '44009' },
       utilities: {
         'ri-block-island-power-company': { name: 'Block Island Power Company' },
       },
@@ -834,7 +834,7 @@ const UTILITIES = [
   [
     '02814',
     {
-      location: { state: 'RI' },
+      location: { state: 'RI', city: 'Chepachet', countyFips: '44007' },
       utilities: {
         'ri-rhode-island-energy': { name: 'Rhode Island Energy' },
         'ri-pascoag-utility-district': { name: 'Pascoag Utility District' },
@@ -844,14 +844,14 @@ const UTILITIES = [
   [
     '02905',
     {
-      location: { state: 'RI' },
+      location: { state: 'RI', city: 'Providence', countyFips: '44007' },
       utilities: { 'ri-rhode-island-energy': { name: 'Rhode Island Energy' } },
     },
   ],
   [
     '06360',
     {
-      location: { state: 'CT' },
+      location: { state: 'CT', city: 'Norwich', countyFips: '09011' },
       utilities: {
         'ct-bozrah-light-and-power-company': {
           name: 'Bozrah Light & Power Company',
@@ -868,7 +868,7 @@ const UTILITIES = [
   [
     '84106',
     {
-      location: { state: 'UT' },
+      location: { state: 'UT', city: 'Salt Lake City', countyFips: '49035' },
       utilities: {
         'ut-rocky-mountain-power': {
           name: 'Rocky Mountain Power',
