@@ -142,7 +142,7 @@ export default async function (
           .status(200)
           .type('application/json')
           .send({
-            location: { state: location.state },
+            location,
             utilities: await getElectricUtilitiesForLocation(
               fastify.sqlite,
               location,
