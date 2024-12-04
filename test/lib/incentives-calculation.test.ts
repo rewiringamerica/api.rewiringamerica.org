@@ -15,7 +15,7 @@ import { calculateStateIncentivesAndSavings } from '../../src/lib/state-incentiv
 
 const LOCATION_AND_AMIS = {
   '07083': [
-    { zcta: '07083', city: 'Union', state: 'NJ', countyFips: '34039' },
+    { zcta: '07083', city: 'Union', state: 'NJ', county_fips: '34039' },
     { computedAMI80: 97800, computedAMI150: 195450, evCreditEligible: false },
   ],
   '94117': [
@@ -23,20 +23,20 @@ const LOCATION_AND_AMIS = {
       zcta: '94117',
       city: 'San Francisco',
       state: 'CA',
-      countyFips: '06075',
+      county_fips: '06075',
     },
     { computedAMI80: 156650, computedAMI150: 293700, evCreditEligible: false },
   ],
   '39503': [
-    { zcta: '39503', city: 'Gulfport', state: 'MS', countyFips: '28047' },
+    { zcta: '39503', city: 'Gulfport', state: 'MS', county_fips: '28047' },
     { computedAMI80: 80256, computedAMI150: 150480, evCreditEligible: false },
   ],
   '02861': [
-    { zcta: '02861', city: 'Pawtucket', state: 'RI', countyFips: '44007' },
+    { zcta: '02861', city: 'Pawtucket', state: 'RI', county_fips: '44007' },
     { computedAMI80: 62930, computedAMI150: 118020, evCreditEligible: false },
   ],
   '06002': [
-    { zcta: '06002', city: 'Bloomfield', state: 'CT', countyFips: '09003' },
+    { zcta: '06002', city: 'Bloomfield', state: 'CT', county_fips: '09003' },
     { computedAMI80: 68215, computedAMI150: 127890, evCreditEligible: false },
   ],
 } as const;
@@ -557,7 +557,7 @@ test('correct filtering of county incentives', async t => {
     include_beta_states: true,
   };
   const shouldFind = calculateStateIncentivesAndSavings(
-    { state: 'CO', countyFips: '99999', city: 'Asdf', zcta: '00000' },
+    { state: 'CO', county_fips: '99999', city: 'Asdf', zcta: '00000' },
     request,
     [incentive],
     {},
@@ -569,7 +569,7 @@ test('correct filtering of county incentives', async t => {
   t.equal(shouldFind.stateIncentives.length, 1);
 
   const shouldNotFind = calculateStateIncentivesAndSavings(
-    { state: 'CO', countyFips: '11111', city: 'Asdf', zcta: '00000' },
+    { state: 'CO', county_fips: '11111', city: 'Asdf', zcta: '00000' },
     request,
     [incentive],
     {},
@@ -631,7 +631,7 @@ test('correct filtering of city incentives', async t => {
     include_beta_states: true,
   };
   const shouldFind = calculateStateIncentivesAndSavings(
-    { state: 'CO', city: 'New York', countyFips: '99999', zcta: '00000' },
+    { state: 'CO', city: 'New York', county_fips: '99999', zcta: '00000' },
     request,
     [incentive],
     {},
@@ -643,7 +643,7 @@ test('correct filtering of city incentives', async t => {
   t.equal(shouldFind.stateIncentives.length, 1);
 
   const shouldNotFindWithPartialMatch = calculateStateIncentivesAndSavings(
-    { state: 'CO', city: 'New York', countyFips: '11111', zcta: '00000' },
+    { state: 'CO', city: 'New York', county_fips: '11111', zcta: '00000' },
     request,
     [incentive],
     {},
@@ -709,7 +709,7 @@ test('correctly evaluates savings when state tax liability is lower than max sav
     {
       state: 'CO',
       city: 'Colorado Springs',
-      countyFips: '11111',
+      county_fips: '11111',
       zcta: '80903',
     },
     request,

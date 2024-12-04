@@ -19,7 +19,7 @@ const LOCATION: ResolvedLocation = {
   state: 'RI',
   zcta: '02903',
   city: 'Providence',
-  countyFips: '44007',
+  county_fips: '44007',
 };
 
 const AMIS = {

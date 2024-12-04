@@ -21,7 +21,7 @@ export function isLowIncome(
     const bySize: HHSizeThresholds =
       thresholds.type === 'hhsize'
         ? thresholds.thresholds
-        : thresholds.thresholds[location.countyFips] ??
+        : thresholds.thresholds[location.county_fips] ??
           thresholds.thresholds['other'];
     const threshold = bySize?.[household_size];
 
