@@ -30,6 +30,7 @@ import {
 import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
 import { ResolvedLocation } from './location';
 import { isLowIncome } from './low-income';
+import { isEligibleUnderMassSaveRule } from './mass-save';
 import { isStateIncluded } from './states';
 import { estimateStateTaxAmount } from './tax-brackets';
 
@@ -98,6 +99,17 @@ export function calculateStateIncentivesAndSavings(
     }
 
     let eligible = true;
+
+    if (
+      location.state === 'MA' &&
+      !isEligibleUnderMassSaveRule(
+        allPrograms[item.program],
+        request.utility,
+        request.gas_utility,
+      )
+    ) {
+      eligible = false;
+    }
 
     if (!item.owner_status.includes(request.owner_status as OwnerStatus)) {
       eligible = false;
