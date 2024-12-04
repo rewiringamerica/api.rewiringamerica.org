@@ -766,6 +766,34 @@ const BAD_QUERIES = [
     // We don't have coverage in 84106 (Utah)
     utility: 'ri-rhode-island-energy',
   },
+  {
+    zip: '02130',
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 4,
+    // Must pass gas_utility param if you pass this
+    authority_types: ['gas_utility'],
+  },
+  {
+    zip: '02130',
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 4,
+    authority_types: ['gas_utility'],
+    // Must pass a real gas_utility param
+    gas_utility: 'none',
+  },
+  {
+    zip: '02130',
+    owner_status: 'homeowner',
+    household_income: 80000,
+    tax_filing: 'joint',
+    household_size: 4,
+    // Must be a valid authority ID or "none"
+    gas_utility: 'nonexistent-utility',
+  },
 ];
 
 test('bad queries', async t => {

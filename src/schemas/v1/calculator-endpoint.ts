@@ -1,5 +1,9 @@
 import { FromSchema } from 'json-schema-to-ts';
-import { API_AUTHORITY_SCHEMA, AuthorityType } from '../../data/authorities';
+import {
+  API_AUTHORITY_SCHEMA,
+  AuthorityType,
+  NO_GAS_UTILITY,
+} from '../../data/authorities';
 import { API_DATA_PARTNER_SCHEMA } from '../../data/data_partners';
 import { FilingStatus } from '../../data/tax_brackets';
 import { API_COVERAGE_SCHEMA } from '../../data/types/coverage';
@@ -44,11 +48,14 @@ absent, no incentives offered by electric utilities will be returned.`,
     gas_utility: {
       type: 'string',
       description: `The ID of your gas utility company, as returned from \
-\`/api/v1/utilities\`. Required if authority_types includes "gas_utility". If \
-absent, no incentives offered by gas utilities will be returned. In some \
-jurisdictions, your gas utility can affect your eligibility for incentives \
-offered by other authorities; in such cases, if this parameter is absent, \
-incentives with gas-utility-dependent eligibility will _not_ be returned.`,
+\`/api/v1/utilities\`, or the special string \`${NO_GAS_UTILITY}\` indicating \
+that you do not have gas service. A value other than \`${NO_GAS_UTILITY}\` is \
+required if authority_types includes "gas_utility". If this parameter is \
+absent or \`${NO_GAS_UTILITY}\`, no incentives offered by gas utilities will \
+be returned. In some jurisdictions, your gas utility can affect your \
+eligibility for incentives offered by other authorities; in such cases, if \
+this parameter is absent, incentives with gas-utility-dependent eligibility \
+will _not_ be returned.`,
     },
     items: {
       type: 'array',
