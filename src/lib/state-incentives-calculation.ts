@@ -279,13 +279,13 @@ function skipBasedOnRequestParams(
   // tracks long-term work in this space.
   if (program.authority_type === AuthorityType.County) {
     // Skip if we didn't get location data.
-    if (location.countyFips === undefined) {
+    if (location.county_fips === undefined) {
       return true;
     }
 
     // We have tests to ensure county authorities are registered.
     const authorityDetails = stateAuthorities.county![program.authority!];
-    if (authorityDetails.county_fips !== location.countyFips) {
+    if (authorityDetails.county_fips !== location.county_fips) {
       return true;
     }
   }
@@ -295,7 +295,7 @@ function skipBasedOnRequestParams(
     // municipalities can have the same name within the same state.
 
     // Skip if we didn't get location data.
-    if (location.city === undefined || location.countyFips === undefined) {
+    if (location.city === undefined || location.county_fips === undefined) {
       return true;
     }
 
@@ -304,7 +304,7 @@ function skipBasedOnRequestParams(
 
     if (
       authorityDetails.city !== location.city ||
-      authorityDetails.county_fips !== location.countyFips
+      authorityDetails.county_fips !== location.county_fips
     ) {
       return true;
     }
@@ -320,10 +320,10 @@ function skipBasedOnRequestParams(
       (group.utilities &&
         (!request.utility || !group.utilities.includes(request.utility))) ||
       (group.counties &&
-        (!location.countyFips ||
+        (!location.county_fips ||
           !group.counties
             .map(id => stateAuthorities.county[id].county_fips)
-            .includes(location.countyFips))) ||
+            .includes(location.county_fips))) ||
       (group.cities &&
         (!location.city ||
           !group.cities

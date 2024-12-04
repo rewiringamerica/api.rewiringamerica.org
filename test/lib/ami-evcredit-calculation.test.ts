@@ -23,29 +23,29 @@ const AS_LOCATION: ResolvedLocation = {
   zcta: '96799',
   state: 'AS',
   city: 'Pago Pago',
-  countyFips: '60010',
-  tractGeoid: '60010950600',
+  county_fips: '60010',
+  tract_geoid: '60010950600',
 };
 const GU_LOCATION: ResolvedLocation = {
   zcta: '96913',
   state: 'GU',
   city: 'Barrigada',
-  countyFips: '66010',
-  tractGeoid: '66010951100',
+  county_fips: '66010',
+  tract_geoid: '66010951100',
 };
 const MP_LOCATION: ResolvedLocation = {
   zcta: '96950',
   state: 'MP',
   city: 'Saipan',
-  countyFips: '69110',
-  tractGeoid: '69110001700',
+  county_fips: '69110',
+  tract_geoid: '69110001700',
 };
 const VI_LOCATION: ResolvedLocation = {
   zcta: '00840',
   state: 'VI',
   city: 'Frederiksted',
-  countyFips: '78010',
-  tractGeoid: '78010971000',
+  county_fips: '78010',
+  tract_geoid: '78010971000',
 };
 
 test('territories other than PR', async t => {
@@ -75,7 +75,7 @@ test('territories other than PR', async t => {
 const NY_TRACT = '36099950200';
 const NY_LOCATION: ResolvedLocation = {
   city: 'Seneca Falls',
-  countyFips: '36099',
+  county_fips: '36099',
   state: 'NY',
   zcta: '13148',
 };
@@ -83,7 +83,7 @@ const NY_LOCATION: ResolvedLocation = {
 const DC_TRACT = '11001010700';
 const DC_LOCATION: ResolvedLocation = {
   city: 'Washington',
-  countyFips: '11001',
+  county_fips: '11001',
   state: 'DC',
   zcta: '20036',
 };
@@ -91,7 +91,7 @@ const DC_LOCATION: ResolvedLocation = {
 const PR_TRACT = '72127002100';
 const PR_LOCATION: ResolvedLocation = {
   city: 'San Juan',
-  countyFips: '72127',
+  county_fips: '72127',
   state: 'PR',
   zcta: '00907',
 };
@@ -122,7 +122,7 @@ test('states+DC+PR with tract', async t => {
   t.strictSame(
     await computeAMIAndEVCreditEligibility(
       db,
-      { ...NY_LOCATION, tractGeoid: NY_TRACT },
+      { ...NY_LOCATION, tract_geoid: NY_TRACT },
       4,
     ),
     {
@@ -134,7 +134,7 @@ test('states+DC+PR with tract', async t => {
   t.strictSame(
     await computeAMIAndEVCreditEligibility(
       db,
-      { ...DC_LOCATION, tractGeoid: DC_TRACT },
+      { ...DC_LOCATION, tract_geoid: DC_TRACT },
       4,
     ),
     {
@@ -146,7 +146,7 @@ test('states+DC+PR with tract', async t => {
   t.strictSame(
     await computeAMIAndEVCreditEligibility(
       db,
-      { ...PR_LOCATION, tractGeoid: PR_TRACT },
+      { ...PR_LOCATION, tract_geoid: PR_TRACT },
       4,
     ),
     {
@@ -166,7 +166,7 @@ test('EV charger eligibility', async t => {
     zcta: '11211',
     state: 'NY',
     city: 'Brooklyn',
-    countyFips: '36047',
+    county_fips: '36047',
   };
   t.notOk(
     (await computeAMIAndEVCreditEligibility(db, brooklyn, 4))!.evCreditEligible,
@@ -178,7 +178,7 @@ test('EV charger eligibility', async t => {
       db,
       {
         ...brooklyn,
-        tractGeoid: '36047051700',
+        tract_geoid: '36047051700',
       },
       4,
     ))!.evCreditEligible,
@@ -189,7 +189,7 @@ test('EV charger eligibility', async t => {
       db,
       {
         ...brooklyn,
-        tractGeoid: '36047055300',
+        tract_geoid: '36047055300',
       },
       4,
     ))!.evCreditEligible,

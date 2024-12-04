@@ -5,8 +5,8 @@ export type ResolvedLocation = {
   state: string;
   zcta: string;
   city: string;
-  countyFips: string;
-  tractGeoid?: string;
+  county_fips: string;
+  tract_geoid?: string;
 };
 
 /**
@@ -31,7 +31,7 @@ async function zipLookup(
       COALESCE(NULLIF(parent_zcta, ''), zip) as zcta,
       state_id AS state,
       city,
-      county_fips AS countyFips
+      county_fips
     FROM zips
     WHERE zip = ?`,
     zip,
@@ -61,8 +61,8 @@ export async function resolveLocation(
         (await zipLookup(db, result.address_components.zip))?.zcta ??
         result.address_components.zip,
       city: result.address_components.city,
-      countyFips: censusInfo.county_fips,
-      tractGeoid: GEOCODIO_LOW_PRECISION.has(result.accuracy_type)
+      county_fips: censusInfo.county_fips,
+      tract_geoid: GEOCODIO_LOW_PRECISION.has(result.accuracy_type)
         ? undefined
         : censusInfo.county_fips + censusInfo.tract_code,
     };

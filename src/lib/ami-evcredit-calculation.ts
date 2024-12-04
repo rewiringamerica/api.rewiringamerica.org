@@ -57,19 +57,19 @@ export async function computeAMIAndEVCreditEligibility(
     // The entirety of these territories is non-urban and thus 30C-eligible.
     evCreditEligible = true;
   } else {
-    ami = resolvedLocation.tractGeoid
+    ami = resolvedLocation.tract_geoid
       ? await db.get<AMIRow>(
           'SELECT * FROM ami_by_tract WHERE tract_geoid = ?',
-          resolvedLocation.tractGeoid,
+          resolvedLocation.tract_geoid,
         )
       : await db.get<AMIRow>(
           'SELECT * FROM ami_by_zcta WHERE zcta = ?',
           resolvedLocation.zcta,
         );
-    const ev = resolvedLocation.tractGeoid
+    const ev = resolvedLocation.tract_geoid
       ? await db.get<{ is_eligible: string }>(
           'SELECT is_eligible FROM "30c_eligibility_by_tract" WHERE tract_geoid = ?',
-          resolvedLocation.tractGeoid,
+          resolvedLocation.tract_geoid,
         )
       : await db.get<{ is_eligible: string }>(
           'SELECT is_eligible FROM "30c_eligibility_by_zcta" WHERE zcta = ?',
