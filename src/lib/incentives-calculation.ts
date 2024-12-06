@@ -3,6 +3,7 @@ import {
   AUTHORITIES_BY_STATE,
   AuthoritiesById,
   AuthorityType,
+  NO_GAS_UTILITY,
 } from '../data/authorities';
 import { DataPartnersType } from '../data/data_partners';
 import { IRAIncentive, IRA_INCENTIVES } from '../data/ira_incentives';
@@ -264,6 +265,18 @@ export default function calculateIncentives(
     );
   }
 
+  if (
+    authority_types &&
+    authority_types.includes(AuthorityType.GasUtility) &&
+    (!request.gas_utility || request.gas_utility === NO_GAS_UTILITY)
+  ) {
+    throw new InvalidInputError(
+      `Must include the "gas_utility" field, with a value other than \
+"${NO_GAS_UTILITY}", when requesting gas utility incentives.`,
+      'gas_utility',
+    );
+  }
+
   const stateAuthorities = AUTHORITIES_BY_STATE[state_id];
   if (request.utility) {
     if (!stateAuthorities) {
@@ -277,6 +290,21 @@ export default function calculateIncentives(
       throw new InvalidInputError(
         `Invalid utility: "${request.utility}".`,
         'utility',
+      );
+    }
+  }
+
+  if (request.gas_utility && request.gas_utility !== NO_GAS_UTILITY) {
+    if (!stateAuthorities.gas_utility) {
+      throw new InvalidInputError(
+        `We do not yet have information about gas utilities in ${state_id}.`,
+        'gas_utility',
+      );
+    }
+    if (!stateAuthorities.gas_utility[request.gas_utility]) {
+      throw new InvalidInputError(
+        `Invalid gas utility: "${request.gas_utility}.`,
+        'gas_utility',
       );
     }
   }
