@@ -10,7 +10,9 @@ import { AmountType } from '../../src/data/types/amount';
 import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { OwnerStatus } from '../../src/data/types/owner-status';
 import { BETA_STATES, LAUNCHED_STATES } from '../../src/data/types/states';
-import calculateIncentives from '../../src/lib/incentives-calculation';
+import calculateIncentives, {
+  CalculatedIncentive,
+} from '../../src/lib/incentives-calculation';
 import { calculateStateIncentivesAndSavings } from '../../src/lib/state-incentives-calculation';
 
 const LOCATION_AND_AMIS = {
@@ -38,6 +40,10 @@ const LOCATION_AND_AMIS = {
   '06002': [
     { zcta: '06002', city: 'Bloomfield', state: 'CT', county_fips: '09003' },
     { computedAMI80: 68215, computedAMI150: 127890, evCreditEligible: false },
+  ],
+  '02130': [
+    { zcta: '02130', city: 'Jamaica Plain', state: 'MA', county_fips: '25025' },
+    { computedAMI80: 91175, computedAMI150: 171360, evCreditEligible: false },
   ],
 } as const;
 
@@ -746,4 +752,37 @@ test('correctly excludes IRA rebates', async t => {
   t.equal(data.savings.pos_rebate, 0);
   t.equal(data.savings.performance_rebate, 0);
   t.equal(data.savings.tax_credit, 18876);
+});
+
+test('correctly matches geo groups', async t => {
+  const baseArgs = {
+    include_beta_states: true,
+    owner_status: OwnerStatus.Homeowner,
+    household_income: 0,
+    tax_filing: FilingStatus.Single,
+    household_size: 1,
+  } as const;
+
+  const massSaveFilter = (i: CalculatedIncentive) =>
+    i.program.startsWith('ma-massSave');
+
+  const withElectric = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
+    ...baseArgs,
+    utility: 'ma-eversource',
+  });
+  t.equal(withElectric.incentives.filter(massSaveFilter).length, 2);
+
+  const withGas = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
+    ...baseArgs,
+    utility: 'ma-town-of-wellesley',
+    gas_utility: 'ma-national-grid-gas',
+  });
+  t.equal(withGas.incentives.filter(massSaveFilter).length, 2);
+
+  const withNoMassSave = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
+    ...baseArgs,
+    utility: 'ma-city-of-westfield',
+    gas_utility: 'ma-westfield-gas-and-elec-lt-dep',
+  });
+  t.equal(withNoMassSave.incentives.filter(massSaveFilter).length, 0);
 });

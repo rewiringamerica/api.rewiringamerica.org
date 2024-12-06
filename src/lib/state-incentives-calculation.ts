@@ -315,20 +315,33 @@ function skipBasedOnRequestParams(
     const group =
       GEO_GROUPS_BY_STATE[location.state]![incentive.eligible_geo_group];
 
-    // The request params must match ALL of the keys the geo group defines
+    // The request params must match ANY of the keys the geo group defines
+    const matchesUtility =
+      group.utilities &&
+      request.utility &&
+      group.utilities.includes(request.utility);
+    const matchesGasUtility =
+      group.gas_utilities &&
+      request.gas_utility &&
+      group.gas_utilities.includes(request.gas_utility);
+    const matchesCity =
+      group.cities &&
+      location.city &&
+      group.cities
+        .map(id => stateAuthorities.city[id].city)
+        .includes(location.city);
+    const matchesCounty =
+      group.counties &&
+      location.county_fips &&
+      group.counties
+        .map(id => stateAuthorities.county[id].county_fips)
+        .includes(location.county_fips);
+
     if (
-      (group.utilities &&
-        (!request.utility || !group.utilities.includes(request.utility))) ||
-      (group.counties &&
-        (!location.county_fips ||
-          !group.counties
-            .map(id => stateAuthorities.county[id].county_fips)
-            .includes(location.county_fips))) ||
-      (group.cities &&
-        (!location.city ||
-          !group.cities
-            .map(id => stateAuthorities.city[id].city)
-            .includes(location.city)))
+      !matchesUtility &&
+      !matchesGasUtility &&
+      !matchesCity &&
+      !matchesCounty
     ) {
       return true;
     }
