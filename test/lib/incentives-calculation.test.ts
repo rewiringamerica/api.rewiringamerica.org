@@ -779,6 +779,13 @@ test('correctly matches geo groups', async t => {
   });
   t.equal(withGas.incentives.filter(massSaveFilter).length, 2);
 
+  const withBoth = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
+    ...baseArgs,
+    utility: 'ma-national-grid',
+    gas_utility: 'ma-national-grid-gas',
+  });
+  t.equal(withBoth.incentives.filter(massSaveFilter).length, 2);
+
   const withNoMassSave = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
     ...baseArgs,
     utility: 'ma-city-of-westfield',
