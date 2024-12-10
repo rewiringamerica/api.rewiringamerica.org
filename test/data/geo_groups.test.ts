@@ -18,6 +18,11 @@ test('geo groups refer to valid authorities', async t => {
       group.utilities?.forEach(utility =>
         t.hasProp(authorities.utility, utility),
       );
+      group.gas_utilities?.forEach(
+        gas_utility =>
+          t.ok(authorities.gas_utility) &&
+          t.hasProp(authorities.gas_utility!, gas_utility),
+      );
       group.counties?.forEach(
         county =>
           t.ok(authorities.county) && t.hasProp(authorities.county!, county),

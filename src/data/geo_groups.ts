@@ -7,6 +7,7 @@ const GEO_GROUP_SCHEMA = {
   properties: {
     description: { type: 'string' },
     utilities: { type: 'array', items: { type: 'string' }, minItems: 1 },
+    gas_utilities: { type: 'array', items: { type: 'string' }, minItems: 1 },
     cities: { type: 'array', items: { type: 'string' }, minItems: 1 },
     counties: { type: 'array', items: { type: 'string' }, minItems: 1 },
     incentives: { type: 'array', items: { type: 'string' }, minItems: 1 },
@@ -14,6 +15,7 @@ const GEO_GROUP_SCHEMA = {
   additionalProperties: false,
   anyOf: [
     { required: ['utilities'] },
+    { required: ['gas_utilities'] },
     { required: ['cities'] },
     { required: ['counties'] },
   ],
