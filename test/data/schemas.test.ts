@@ -23,48 +23,13 @@ import {
   INCENTIVE_RELATIONSHIPS_SCHEMA,
 } from '../../src/data/state_incentive_relationships';
 import {
-  AZ_INCENTIVES,
-  AZ_INCENTIVES_SCHEMA,
-  CO_INCENTIVES,
-  CO_INCENTIVES_SCHEMA,
-  CT_INCENTIVES,
-  CT_INCENTIVES_SCHEMA,
-  DC_INCENTIVES,
-  DC_INCENTIVES_SCHEMA,
-  GA_INCENTIVES,
-  GA_INCENTIVES_SCHEMA,
-  IL_INCENTIVES,
-  IL_INCENTIVES_SCHEMA,
-  MA_INCENTIVES,
-  MA_INCENTIVES_SCHEMA,
-  ME_INCENTIVES,
-  ME_INCENTIVES_SCHEMA,
-  MI_INCENTIVES,
-  MI_INCENTIVES_SCHEMA,
-  NV_INCENTIVES,
-  NV_INCENTIVES_SCHEMA,
-  NY_INCENTIVES,
-  NY_INCENTIVES_SCHEMA,
-  OR_INCENTIVES,
-  OR_INCENTIVES_SCHEMA,
-  PA_INCENTIVES,
-  PA_INCENTIVES_SCHEMA,
-  RI_INCENTIVES,
-  RI_INCENTIVES_SCHEMA,
+  STATE_INCENTIVES_BY_STATE,
+  STATE_SCHEMA,
   StateIncentive,
-  TX_INCENTIVES,
-  TX_INCENTIVES_SCHEMA,
-  VA_INCENTIVES,
-  VA_INCENTIVES_SCHEMA,
-  VT_INCENTIVES,
-  VT_INCENTIVES_SCHEMA,
-  WI_INCENTIVES,
-  WI_INCENTIVES_SCHEMA,
 } from '../../src/data/state_incentives';
 import { TAX_BRACKETS, SCHEMA as TB_SCHEMA } from '../../src/data/tax_brackets';
 
 import Ajv from 'ajv/dist/2020';
-import { JSONSchemaType } from 'ajv/dist/types/json-schema';
 import {
   GEO_GROUPS_BY_STATE,
   GEO_GROUPS_SCHEMA,
@@ -110,31 +75,6 @@ test('static JSON files match schema', async tap => {
   });
 });
 
-const STATE_INCENTIVE_TESTS: [
-  string,
-  JSONSchemaType<StateIncentive[]>,
-  StateIncentive[],
-][] = [
-  ['AZ', AZ_INCENTIVES_SCHEMA, AZ_INCENTIVES],
-  ['CO', CO_INCENTIVES_SCHEMA, CO_INCENTIVES],
-  ['CT', CT_INCENTIVES_SCHEMA, CT_INCENTIVES],
-  ['DC', DC_INCENTIVES_SCHEMA, DC_INCENTIVES],
-  ['GA', GA_INCENTIVES_SCHEMA, GA_INCENTIVES],
-  ['IL', IL_INCENTIVES_SCHEMA, IL_INCENTIVES],
-  ['MA', MA_INCENTIVES_SCHEMA, MA_INCENTIVES],
-  ['ME', ME_INCENTIVES_SCHEMA, ME_INCENTIVES],
-  ['MI', MI_INCENTIVES_SCHEMA, MI_INCENTIVES],
-  ['NV', NV_INCENTIVES_SCHEMA, NV_INCENTIVES],
-  ['NY', NY_INCENTIVES_SCHEMA, NY_INCENTIVES],
-  ['OR', OR_INCENTIVES_SCHEMA, OR_INCENTIVES],
-  ['PA', PA_INCENTIVES_SCHEMA, PA_INCENTIVES],
-  ['RI', RI_INCENTIVES_SCHEMA, RI_INCENTIVES],
-  ['TX', TX_INCENTIVES_SCHEMA, TX_INCENTIVES],
-  ['VA', VA_INCENTIVES_SCHEMA, VA_INCENTIVES],
-  ['VT', VT_INCENTIVES_SCHEMA, VT_INCENTIVES],
-  ['WI', WI_INCENTIVES_SCHEMA, WI_INCENTIVES],
-];
-
 /**
  * Checks some invariants of incentives that aren't expressible in schemas.
  */
@@ -163,8 +103,10 @@ function isValidMaximum(amount: StateIncentive['amount']): boolean {
 test('state incentives JSON files match schemas', async tap => {
   const ajv = new Ajv({ schemas: [LOCALIZABLE_STRING_SCHEMA] });
 
-  STATE_INCENTIVE_TESTS.forEach(([stateId, schema, data]) => {
-    if (!tap.ok(ajv.validate(schema, data), `${stateId} incentives invalid`)) {
+  Object.entries(STATE_INCENTIVES_BY_STATE).forEach(([stateId, data]) => {
+    if (
+      !tap.ok(ajv.validate(STATE_SCHEMA, data), `${stateId} incentives invalid`)
+    ) {
       console.error(ajv.errors);
     }
 
@@ -199,7 +141,7 @@ test('state incentives JSON files match schemas', async tap => {
 });
 
 test("launched states do not have any values that we don't support for broader consumption in the API", async tap => {
-  STATE_INCENTIVE_TESTS.forEach(([state, , data]) => {
+  Object.entries(STATE_INCENTIVES_BY_STATE).forEach(([state, data]) => {
     if (LAUNCHED_STATES.includes(state)) {
       for (const incentive of data) {
         tap.notOk(
@@ -325,7 +267,7 @@ test('state incentive relationships contain no circular dependencies', async tap
 test('state incentive relationships only reference real IDs', async tap => {
   // Collect all the incentive IDs we know about.
   const incentiveIds = new Map<string, Set<string>>();
-  STATE_INCENTIVE_TESTS.forEach(([stateId, , data]) => {
+  Object.entries(STATE_INCENTIVES_BY_STATE).forEach(([stateId, data]) => {
     // Check some constraints that aren't expressed in JSON schema
     const ids = new Set<string>();
     data.forEach(incentive => {
