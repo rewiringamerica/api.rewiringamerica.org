@@ -54,6 +54,23 @@
     }
   },
   "CO": {
+    "co-aspen-CORE-150ami-threshold": {
+      "type": "ami-percentage",
+      "incentives": [
+        "CO-571",
+        "CO-573",
+        "CO-575",
+        "CO-577",
+        "CO-579",
+        "CO-581",
+        "CO-583"
+      ],
+      "source_url": "https://www.aspencore.org/residential-rebates",
+      "description": "150% AMI threshold to qualify as a \"Community Priority Participant\" for the Aspen Community Office for Resource Efficiency's Residential Rebates Program.",
+      "thresholds": {
+        "percentage": 150
+      }
+    },
     "co-black-hills-energy": {
       "type": "hhsize",
       "incentives": [
@@ -876,7 +893,9 @@
       "type": "hhsize",
       "incentives": [
         "CT-33",
-        "CT-34"
+        "CT-34",
+        "CT-38",
+        "CT-39"
       ],
       "source_url": "https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines",
       "thresholds": {
@@ -897,6 +916,25 @@
         "CT-4"
       ],
       "source_url": "https://energizect.com/energy-evaluations/income-eligible-options",
+      "description": "",
+      "thresholds": {
+        "1": 45505,
+        "2": 59507,
+        "3": 73509,
+        "4": 87511,
+        "5": 101512,
+        "6": 115514,
+        "7": 118139,
+        "8": 120765
+      }
+    },
+    "ct-energy-storage-solutions-low-incom": {
+      "type": "hhsize",
+      "incentives": [
+        "CT-42"
+      ],
+      "source_url": "https://energystoragect.com/low-income-verification/",
+      "description": "Energy Storage Solutions Low Income Customers",
       "thresholds": {
         "1": 39761,
         "2": 51996,
@@ -967,6 +1005,39 @@
         "6": 83920,
         "7": 94680,
         "8": 105440
+      }
+    },
+    "ga-her-low-income": {
+      "type": "ami-percentage",
+      "incentives": [
+        "GA-21",
+        "GA-23",
+        "GA-24",
+        "GA-25",
+        "GA-26",
+        "GA-27",
+        "GA-28"
+      ],
+      "source_url": "https://energyrebates.georgia.gov/home-efficiency-rebates",
+      "description": "GA HER program low income threshold",
+      "thresholds": {
+        "percentage": 80
+      }
+    },
+    "ga-her-moderate": {
+      "type": "ami-percentage",
+      "incentives": [
+        "GA-29",
+        "GA-30",
+        "GA-31",
+        "GA-32",
+        "GA-33",
+        "GA-34"
+      ],
+      "source_url": "https://energyrebates.georgia.gov/home-electrification-and-appliance-rebates",
+      "description": "GA HEAR program moderate income",
+      "thresholds": {
+        "percentage": 150
       }
     }
   },
@@ -1060,11 +1131,33 @@
       }
     }
   },
+  "IN": {
+    "in-indiana-michigan-power-low-income": {
+      "type": "hhsize",
+      "incentives": [
+        "IN-10",
+        "IN-11"
+      ],
+      "source_url": "https://electricideas.com/at-home/energy-saving-programs/home-energy-checkup/",
+      "description": "200% of federal poverty line",
+      "thresholds": {
+        "1": 30120,
+        "2": 40880,
+        "3": 51640,
+        "4": 62400,
+        "5": 73160,
+        "6": 83920,
+        "7": 94680,
+        "8": 105440
+      }
+    }
+  },
   "MA": {
     "ma-massSave-income-eligible": {
       "type": "hhsize",
       "incentives": [
-        "MA-2"
+        "MA-2",
+        "MA-5"
       ],
       "source_url": "https://www.masssave.com/en/residential/programs-and-services/income-based-offers",
       "description": "MassSave Income Eligible Program - Up to 60% SMI",
@@ -1076,21 +1169,14 @@
         "5": 109745,
         "6": 124882,
         "7": 127720,
-        "8": 130559,
-        "9": 133397,
-        "10": 136235,
-        "11": 139073,
-        "12": 141912,
-        "13": 144750,
-        "14": 147588,
-        "15": 150427,
-        "16": 153265,
-        "17": 156103
+        "8": 130559
       }
     },
     "ma-massSave-incomeEligible-enhanced": {
       "type": "hhsize",
-      "incentives": [],
+      "incentives": [
+        "MA-4"
+      ],
       "source_url": "https://www.masssave.com/en/residential/programs-and-services/income-based-offers",
       "description": "MassSave Income-Based Enhanced Incentive 60-80% AMI or SMI",
       "thresholds": {
@@ -1234,6 +1320,39 @@
         "6": 86950,
         "7": 92950,
         "8": 98950
+      }
+    }
+  },
+  "NM": {
+    "nm-hear-low-income": {
+      "type": "ami-percentage",
+      "incentives": [
+        "NM-1",
+        "NM-2",
+        "NM-3"
+      ],
+      "source_url": "https://clean.energy.nm.gov/landing/appliances/",
+      "description": "New Mexico's HEAR program 80% AMI",
+      "thresholds": {
+        "percentage": 80
+      }
+    },
+    "nm-pnm-income-qualified": {
+      "type": "hhsize",
+      "incentives": [
+        "NM-14"
+      ],
+      "source_url": "https://ev.pnm.com/wp-content/uploads/2024-Residential-Poverty-Guidelines.pdf",
+      "description": "PNM Income Qualified - 200% of federal poverty level",
+      "thresholds": {
+        "1": 30120,
+        "2": 40880,
+        "3": 51640,
+        "4": 62400,
+        "5": 73160,
+        "6": 83920,
+        "7": 94680,
+        "8": 105440
       }
     }
   },

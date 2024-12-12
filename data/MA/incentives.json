@@ -46,5 +46,96 @@
     },
     "start_date": "2024-01-01",
     "low_income": "ma-massSave-income-eligible"
+  },
+  {
+    "id": "MA-3",
+    "eligible_geo_group": "ma-mass-save",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma-massSave-weatherization",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "100% coverage for an in-person or virtual home energy assessment."
+    }
+  },
+  {
+    "id": "MA-4",
+    "eligible_geo_group": "ma-mass-save",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "other_insulation"
+    ],
+    "program": "ma-massSave-weatherization",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "100% coverage for approved insulation improvements after receiving a home energy assessment."
+    },
+    "low_income": "ma-massSave-incomeEligible-enhanced"
+  },
+  {
+    "id": "MA-5",
+    "eligible_geo_group": "ma-mass-save",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "other_insulation"
+    ],
+    "program": "ma-massSave-weatherization",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "100% coverage for approved insulation improvements after receiving a home energy assessment."
+    },
+    "low_income": "ma-massSave-income-eligible"
+  },
+  {
+    "id": "MA-6",
+    "eligible_geo_group": "ma-mass-save",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "air_sealing",
+      "other_insulation"
+    ],
+    "program": "ma-massSave-weatherization",
+    "amount": {
+      "type": "percent",
+      "number": 0.75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "75% off approved insulation and air sealing improvements after receiving a home energy assessment."
+    }
   }
 ]

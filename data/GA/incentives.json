@@ -458,5 +458,370 @@
     "start_date": "2023-01-01",
     "end_date": "2025-12-31",
     "low_income": "ga-georgia-power-lowincome"
+  },
+  {
+    "id": "GA-21",
+    "payment_methods": [
+      "performance_rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_replacement",
+      "duct_sealing",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "efficiency_rebates",
+      "electric_stove",
+      "heat_pump_clothes_dryer",
+      "heat_pump_water_heater",
+      "other_weatherization",
+      "other_insulation"
+    ],
+    "program": "ga-her",
+    "amount": {
+      "type": "percent",
+      "number": 0.98,
+      "maximum": 16000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $16,000 for efficiency measures that have a minimum of 20% modeled energy savings. Covers 98% of project cost. Income-qualified residents only."
+    },
+    "start_date": "2024-10-31",
+    "low_income": "ga-her-low-income"
+  },
+  {
+    "id": "GA-22",
+    "payment_methods": [
+      "performance_rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_replacement",
+      "duct_sealing",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "efficiency_rebates",
+      "electric_stove",
+      "heat_pump_clothes_dryer",
+      "heat_pump_water_heater",
+      "other_weatherization",
+      "other_insulation"
+    ],
+    "program": "ga-her",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $4,000 for efficiency measures that have a minimum of 20% modeled energy savings. Covers 50% of project cost. "
+    },
+    "start_date": "2024-10-31"
+  },
+  {
+    "id": "GA-23",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ga-hear",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 1750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "100% of total cost up to $1,750 for Energy Star qualified heat pump water heater for income-qualified residents. Must use an approved contractor."
+    },
+    "start_date": "2024-10-31",
+    "low_income": "ga-her-low-income"
+  },
+  {
+    "id": "GA-24",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ga-hear",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 8000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "100% of total cost up to $8,000 for Energy Star qualified heat pump for income-qualified residents. Must use an approved contractor."
+    },
+    "start_date": "2024-10-31",
+    "low_income": "ga-her-low-income"
+  },
+  {
+    "id": "GA-25",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ga-hear",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 840
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "100% of total cost up to $840 for Energy Star qualified electric stove, cooktop, range, oven, or heat pump dryer for income-qualified residents. "
+    },
+    "start_date": "2024-10-31",
+    "low_income": "ga-her-low-income"
+  },
+  {
+    "id": "GA-26",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "ga-hear",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "100% of total cost up to $4,000 for a new electrical panel for income-qualified residents. Must use an approved contractor."
+    },
+    "start_date": "2024-10-31",
+    "low_income": "ga-her-low-income"
+  },
+  {
+    "id": "GA-27",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "basement_insulation",
+      "attic_or_roof_insulation",
+      "duct_sealing",
+      "floor_insulation",
+      "other_insulation",
+      "other_weatherization",
+      "wall_insulation"
+    ],
+    "program": "ga-hear",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 1600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "100% of total cost up to $1,600 for insulation, air sealing, and ventilation improvements. Must use an approved contractor."
+    },
+    "start_date": "2024-10-31",
+    "low_income": "ga-her-low-income"
+  },
+  {
+    "id": "GA-28",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_wiring"
+    ],
+    "program": "ga-hear",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "100% of total cost up to $2,500 for electric wiring. Must use an approved contractor."
+    },
+    "start_date": "2024-10-31",
+    "low_income": "ga-her-low-income"
+  },
+  {
+    "id": "GA-29",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ga-hear",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 1750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of total cost up to $1,750 for Energy Star qualified heat pump water heater for income-qualified residents. Must use an approved contractor."
+    },
+    "start_date": "2024-10-31",
+    "low_income": "ga-her-moderate"
+  },
+  {
+    "id": "GA-30",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ga-hear",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 8000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of total cost up to $8,000 for Energy Star qualified heat pump for income-qualified residents. Must use an approved contractor."
+    },
+    "start_date": "2024-10-31",
+    "low_income": "ga-her-moderate"
+  },
+  {
+    "id": "GA-31",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ga-hear",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 840
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of total cost up to $840 for Energy Star qualified electric stove, cooktop, range, oven, or heat pump dryer for income-qualified residents. "
+    },
+    "start_date": "2024-10-31",
+    "low_income": "ga-her-moderate"
+  },
+  {
+    "id": "GA-32",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "ga-hear",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of total cost up to $4,000 for a new electrical panel for income-qualified residents. Must use an approved contractor."
+    },
+    "start_date": "2024-10-31",
+    "low_income": "ga-her-moderate"
+  },
+  {
+    "id": "GA-33",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "basement_insulation",
+      "attic_or_roof_insulation",
+      "duct_sealing",
+      "floor_insulation",
+      "other_insulation",
+      "other_weatherization",
+      "wall_insulation"
+    ],
+    "program": "ga-hear",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 1600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of total cost up to $1,600 for insulation, air sealing, and ventilation improvements. Must use an approved contractor."
+    },
+    "start_date": "2024-10-31",
+    "low_income": "ga-her-moderate"
+  },
+  {
+    "id": "GA-34",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_wiring"
+    ],
+    "program": "ga-hear",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of total cost up to $2,500 for electric wiring. Must use an approved contractor."
+    },
+    "start_date": "2024-10-31",
+    "low_income": "ga-her-moderate"
   }
 ]

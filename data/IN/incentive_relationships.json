@@ -1,0 +1,21 @@
+{
+  "exclusions": {
+    "IN-20": {
+      "ids": [
+        "IN-18",
+        "IN-19",
+        "IN-21"
+      ],
+      "description": ""
+    }
+  },
+  "prerequisites": {
+    "IN-5": {
+      "anyOf": [
+        "IN-6",
+        "IN-7"
+      ],
+      "description": "Smart thermostat rebate when installed with new HVAC"
+    }
+  }
+}
