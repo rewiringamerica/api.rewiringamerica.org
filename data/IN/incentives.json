@@ -1,0 +1,559 @@
+[
+  {
+    "id": "IN-1",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_water_heater",
+      "heat_pump_water_heater"
+    ],
+    "program": "in-jay-county-remc-water-heater",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "minimum": 125,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $200 bill credit on energy efficient water heaters in new structures or replacement of gas water heaters with an electric model."
+    }
+  },
+  {
+    "id": "IN-2",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "in-carroll-white-heat-pump",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "minimum": 300,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate on an air source heat pump."
+    }
+  },
+  {
+    "id": "IN-3",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "in-carroll-white-heat-pump",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "minimum": 500,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,500 rebate on a geothermal heat pump."
+    }
+  },
+  {
+    "id": "IN-4",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "in-sei-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Free ecobee smart thermostat."
+    }
+  },
+  {
+    "id": "IN-5",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "duct_sealing"
+    ],
+    "program": "in-duke-energy-smart-saver",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "minimum": 500,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate for air-source heat pumps with required duct sealing. Up to $300 bonus for early retirement of old system."
+    }
+  },
+  {
+    "id": "IN-6",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "in-duke-energy-smart-saver",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 65,
+      "maximum": 65
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $65 bonus on smart thermostat purchased with corresponding HVAC equipment upgrade."
+    }
+  },
+  {
+    "id": "IN-7",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_sealing",
+      "geothermal_heating_installation"
+    ],
+    "program": "in-duke-energy-smart-saver",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "minimum": 500,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate for ground-source heat pumps with required duct sealing. Up to $200 bonus for early retirement of old system."
+    }
+  },
+  {
+    "id": "IN-8",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "in-duke-energy-smart-saver",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive $350 rebate for a qualifying heat pump water heater."
+    }
+  },
+  {
+    "id": "IN-9",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation"
+    ],
+    "program": "in-duke-energy-smart-saver",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $350 rebate for attic insulation and attic air sealing."
+    }
+  },
+  {
+    "id": "IN-10",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "in-indiana-michigan-electric-ideas",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Income-qualified customers can schedule a no-cost home energy checkup."
+    },
+    "low_income": "in-indiana-michigan-power-low-income"
+  },
+  {
+    "id": "IN-11",
+    "payment_methods": [
+      "assistance_program",
+      "rebate"
+    ],
+    "items": [
+      "wall_insulation",
+      "other_weatherization",
+      "other_insulation",
+      "floor_insulation",
+      "efficiency_rebates",
+      "duct_sealing",
+      "crawlspace_insulation",
+      "basement_insulation",
+      "attic_or_roof_insulation",
+      "air_sealing"
+    ],
+    "program": "in-indiana-michigan-electric-ideas",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "For qualifying homes, rebate of up to 100% of the cost (up to $4,000) to weatherproof the home."
+    },
+    "low_income": "in-indiana-michigan-power-low-income"
+  },
+  {
+    "id": "IN-12",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "in-indiana-michigan-electric-ideas",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$25 rebate for smart thermostats in homes with electric heating only."
+    }
+  },
+  {
+    "id": "IN-13",
+    "eligible_geo_group": "in-wabash-valley-power-alliance",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "in-power-moves",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75,
+      "maximum": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for replacing a non Wi-Fi thermostat with Wi-Fi thermostat."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "IN-14",
+    "eligible_geo_group": "in-wabash-valley-power-alliance",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "in-power-moves",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "minimum": 250,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2000 rebate on a closed loop geothermal heat pump system."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "IN-15",
+    "eligible_geo_group": "in-wabash-valley-power-alliance",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "in-power-moves",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "minimum": 250,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1000 rebate on an open loop geothermal heat pump system."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "IN-16",
+    "eligible_geo_group": "in-wabash-valley-power-alliance",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "in-power-moves",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate on a heat pump water heater."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "IN-17",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_sealing"
+    ],
+    "program": "in-duke-energy-smart-saver",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $100 rebate for duct sealing. Must reduce duct leakage by at least 12%."
+    }
+  },
+  {
+    "id": "IN-18",
+    "eligible_geo_group": "in-wabash-valley-power-alliance",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "in-power-moves",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1800,
+      "minimum": 250,
+      "maximum": 1800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate on a dual fuel heat pump."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "IN-19",
+    "eligible_geo_group": "in-wabash-valley-power-alliance",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "in-power-moves",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "minimum": 250,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate on an air source (partial-home) heat pump. Higher rebate for a cold climate heat pumps."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "IN-20",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "in-noble-remc-residential-rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 150,
+      "unit": "ton",
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 per ton rebate on air-source heat pumps."
+    }
+  },
+  {
+    "id": "IN-21",
+    "eligible_geo_group": "in-wabash-valley-power-alliance",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "in-power-moves",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1800,
+      "minimum": 250,
+      "maximum": 1800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,800 rebate on an air source (whole-home) heat pump. Higher rebate for a cold climate heat pumps."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "IN-22",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "in-noble-remc-residential-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "FREE water heater for new homes; below-cost heat pump water heater when purchased through Noble REMC. Installation and wiring rebates up to $100."
+    }
+  },
+  {
+    "id": "IN-23",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "in-indiana-michigan-electric-ideas",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$75 rebate for efficient electric water heaters."
+    }
+  },
+  {
+    "id": "IN-24",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "in-carroll-white-ev-charger",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate for 50% of the cost of a home charging unit, up to $300. Must enroll in a time of use rate plan."
+    }
+  }
+]

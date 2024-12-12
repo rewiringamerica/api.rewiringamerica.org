@@ -184,7 +184,7 @@
       "es": "Un reembolso por el costo total de hasta $500 dólares para una secadora de ropa con bomba de calor de alta eficiencia que cumpla los requisitos."
     },
     "start_date": "2023",
-    "end_date": "2024-06-30"
+    "end_date": "2024-12-31"
   },
   {
     "id": "CT-9",
@@ -596,7 +596,8 @@
     "short_description": {
       "en": "$2,250 rebate for a qualifying new electric vehicle.",
       "es": "Un reembolso de $2,250 dólares para un vehículo eléctrico nuevo que reúna los requisitos."
-    }
+    },
+    "end_date": "2024-12-31"
   },
   {
     "id": "CT-33",
@@ -619,6 +620,7 @@
       "en": "Bonus $2,000 off a qualifying new electric vehicle for income-eligible individuals.",
       "es": "Una rebaja extra de $2,000 dólares para un nuevo vehículo eléctrico elegible para individuos que cumplan con los requisitos de ingresos."
     },
+    "end_date": "2024-12-31",
     "low_income": "ct-cheapr"
   },
   {
@@ -643,6 +645,7 @@
       "en": "$3,000 rebate for a qualifying used electric vehicle for income-qualifying individuals.",
       "es": "Un reembolso de $3,000 dólares por un vehículo eléctrico usado elegible para personas que reúnan los requisitos de ingresos."
     },
+    "end_date": "2024-12-31",
     "low_income": "ct-cheapr"
   },
   {
@@ -668,5 +671,754 @@
       "en": "$500 bonus rebate when you weatherize and install a heat pump."
     },
     "start_date": "2024-01-20"
+  },
+  {
+    "id": "CT-36",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "new_electric_vehicle"
+    ],
+    "program": "ct_cheapr",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate for a qualifying new electric vehicle.",
+      "es": "Un reembolso de $1,500 dólares para un vehículo eléctrico nuevo que reúna los requisitos."
+    },
+    "start_date": "2025-01-01"
+  },
+  {
+    "id": "CT-37",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ct-residential-thermostat-incentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 85,
+      "maximum": 85
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $85 upfront rebate on a smart thermostat."
+    }
+  },
+  {
+    "id": "CT-38",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "new_electric_vehicle"
+    ],
+    "program": "ct_cheapr",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000,
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Bonus $3,000 off a qualifying new electric vehicle for income-eligible individuals.",
+      "es": "Una rebaja extra de $3,000 dólares para un nuevo vehículo eléctrico elegible para individuos que cumplan con los requisitos de ingresos."
+    },
+    "start_date": "2025-01-01",
+    "low_income": "ct-cheapr"
+  },
+  {
+    "id": "CT-39",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "items": [
+      "used_electric_vehicle"
+    ],
+    "program": "ct_cheapr",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 5000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$5,000 rebate for a qualifying used electric vehicle for income-qualifying individuals.",
+      "es": "Un reembolso de $5,000 dólares por un vehículo eléctrico usado elegible para personas que reúnan los requisitos de ingresos."
+    },
+    "start_date": "2025-01-01",
+    "low_income": "ct-cheapr"
+  },
+  {
+    "id": "CT-40",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "battery_storage_installation"
+    ],
+    "program": "ct-energy-storage-solutions",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "kilowatt",
+      "minimum": 162,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $250 rebate for 10MW installed battery capacity. Additional performance incentives paid 2x yearly."
+    }
+  },
+  {
+    "id": "CT-41",
+    "eligible_geo_group": "ct-distressed-municipalities",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "battery_storage_installation"
+    ],
+    "program": "ct-energy-storage-solutions",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 450,
+      "unit": "kilowatt",
+      "minimum": 450,
+      "maximum": 450
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$450 rebate for 10MW-25MW installed battery capacity for homeowners in underserved communities. Additional performance incentives paid 2x yearly."
+    }
+  },
+  {
+    "id": "CT-42",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "battery_storage_installation"
+    ],
+    "program": "ct-energy-storage-solutions",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "minimum": 600,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$600 rebate for 10MW-25MW installed battery capacity for income-qualified households. Additional performance incentives paid 2x yearly."
+    },
+    "low_income": "ct-energy-storage-solutions-low-incom"
+  },
+  {
+    "id": "CT-43",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "other_insulation",
+      "wall_insulation"
+    ],
+    "program": "ct-residential-insulation",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1.7,
+      "unit": "square_foot",
+      "maximum": 10000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1.70 per square foot or 75% of total cost, up to $10,000 for approved insulation projects using participating installers."
+    }
+  },
+  {
+    "id": "CT-44",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_sealing"
+    ],
+    "program": "ct_eversource_energizeCtHomeEnergySolutions",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1750,
+      "minimum": 1000,
+      "maximum": 1750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,750 for advanced duct sealing for heating or heating & cooling systems. Limit is 2 systems."
+    }
+  },
+  {
+    "id": "CT-45",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ct_electricVehicleAndChargingRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 for purchase and installation of a smart charger. Requires enrolling in managed charging."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "CT-46",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger",
+      "electric_wiring"
+    ],
+    "program": "ct_electricVehicleAndChargingRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1000 for purchase and installation of a smart charger with an electrical wiring upgrade. Requires enrolling in managed charging."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "CT-47",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
+    "program": "ct-jewett-attic-basement-insulation-rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2.5,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2.50 per square foot for attic insulation. Must have participated in the Home Energy Savings program."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CT-48",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "basement_insulation"
+    ],
+    "program": "ct-jewett-attic-basement-insulation-rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1.5,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1.50 per square foot for basement ceiling insulation. Must have participated in the Home Energy Savings program."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CT-50",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ct-jewett-heat-pump-water-heater-rebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 for a qualifying Energy Star heat pump water heater with an energy factor of 3.3 or greater."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CT-51",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ct_residentialHomeEnergySavingsProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $200 for a smart thermostat or the total cost, whichever is lower. Maximum of 3."
+    }
+  },
+  {
+    "id": "CT-52",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "ct_residentialACRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for the full cost up to $5,000 for condenser equipment (installation not included) for HVAC mini-splits."
+    },
+    "start_date": "2022",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CT-53",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit",
+      "other"
+    ],
+    "program": "ct_Norwich_Residential_HES",
+    "amount": {
+      "type": "percent",
+      "number": 0.75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Low cost ($50) home energy analysis including installation of water heating energy-saving measures."
+    }
+  },
+  {
+    "id": "CT-54",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ct_electricApplianceRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate of $500 toward a qualifying heat pump water heater.",
+      "es": "Un reembolso de $1,100 dólares para un calentador de agua con bomba de calor apto."
+    },
+    "start_date": "2024-07-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "CT-55",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ct-snew-residential-cool-choice-heatpump",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1000 rebate for qualifying Level 2 electric vehicle charger."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CT-56",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ct-snew-residential-cool-choice-heatpump",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate for a heat pump water heater with an energy factor 3.0 or greater."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CT-57",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
+    "program": "ct-snew-residential-cool-choice-heatpump",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1.5,
+      "unit": "square_foot",
+      "maximum": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1.50 per square foot rebate for attic insulation. "
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CT-58",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ct-snew-residential-cool-choice-heatpump",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 per unit for AHRI rated ducted or ductless air source heat pumps, not to exceed 50% of project cost."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CT-59",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ct-norwalk-ttd-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 for a qualifying Energy Star heat pump water heater with an energy factor of 3.3 or greater."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CT-60",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "ct-norwalk-ttd-residential-rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1250,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,250 per ton for an AHRI rated ducted or ductless air source heat pump."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CT-61",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
+    "program": "ct-norwalk-ttd-residential-rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2.5,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2.50 per square foot for attic insulation. Must have participated in the Home Energy Savings program."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CT-62",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "basement_insulation"
+    ],
+    "program": "ct-norwalk-ttd-residential-rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1.5,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1.50 per square foot for basement ceiling insulation. Must have participated in the Home Energy Savings program."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CT-63",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ct-norwalk-ttd-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,500 rebate for qualifying Level 2 electric vehicle charger."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CT-64",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ct-norwalk-ttd-residential-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Free energy assessment, with possible weatherization followups.",
+      "es": "Una evaluación del consumo de energía, con posible seguimiento para climatizar."
+    }
+  },
+  {
+    "id": "CT-65",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
+    "program": "ct-bozrah-residential-rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2.5,
+      "unit": "square_foot",
+      "minimum": 2000,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Attic insulation rebate up to $5,000 for homes with electric heating and A/C. Must have a home energy inspection and work with a licensed contractor.",
+      "es": "Un reembolso de hasta $5,000 dólares para aislamiento del ático para hogares equipados con calefacción y aire acondicionado eléctricos. Debe someterse a una inspección de consumo energético de la vivienda y trabajar con un contratista autorizado."
+    },
+    "start_date": "2022",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CT-66",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ct-bozrah-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for the full cost up to $2,500 for a qualifying heat pump water heater. Apply within 30 days of installation and use a licensed contractor.",
+      "es": "Un reembolso del costo total o hasta $2,500 dólares para un calentador de agua con bomba de calor que cumpla los requisitos. Solicítelo en los 30 días siguientes a la instalación y utilice un contratista autorizado."
+    },
+    "start_date": "2022",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CT-67",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ct-bozrah-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $200 for a smart thermostat or the total cost, whichever is lower. Maximum of 3."
+    }
+  },
+  {
+    "id": "CT-68",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "ct-jewett-electric-heating-cooling-rebate",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1250,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,250 per ton for an AHRI rated ducted or ductless air source heat pump."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
   }
 ]

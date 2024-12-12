@@ -1,0 +1,564 @@
+[
+  {
+    "id": "NM-1",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "nm-ecam-hear",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 840,
+      "maximum": 840
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $840 off a qualifying Energy Star certified heat pump clothes dryer for income-qualified residents."
+    },
+    "start_date": "2024-12-01",
+    "low_income": "nm-hear-low-income"
+  },
+  {
+    "id": "NM-2",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nm-ecam-hear",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 840,
+      "maximum": 840
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $840 off a qualifying Energy Star certified electric or induction cooktop, stove, range, or oven, for income-qualified residents."
+    },
+    "start_date": "2024-12-01",
+    "low_income": "nm-hear-low-income"
+  },
+  {
+    "id": "NM-3",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "other_insulation",
+      "wall_insulation"
+    ],
+    "program": "nm-ecam-hear-insulation",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1600,
+      "maximum": 1600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,600 off qualifying insulation products for income-qualified residents."
+    },
+    "start_date": "2024-12-01",
+    "low_income": "nm-hear-low-income"
+  },
+  {
+    "id": "NM-4",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 175,
+      "unit": "ton",
+      "maximum": 945
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $175/ton rebate for qualified ducted or ductless air-source heat pumps."
+    }
+  },
+  {
+    "id": "NM-5",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$700/unit rebate for qualified ground source heat pumps."
+    }
+  },
+  {
+    "id": "NM-6",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300/unit rebate on heat pump water heaters."
+    }
+  },
+  {
+    "id": "NM-7",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate on an Energy Star smart thermostat for homes with refrigerated air conditioning."
+    }
+  },
+  {
+    "id": "NM-8",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate on an induction cooktop."
+    }
+  },
+  {
+    "id": "NM-9",
+    "payment_methods": [
+      "performance_rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "other_weatherization"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.239,
+      "unit": "cfm50"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $0.239/CFM50 rebate on Air Sealing. Rebate amount dependent upon home heating and AC type\n(Gas, Electric resistance, Heat pump)."
+    }
+  },
+  {
+    "id": "NM-10",
+    "payment_methods": [
+      "performance_rebate"
+    ],
+    "items": [
+      "duct_sealing"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 200,
+      "unit": "kilowatt"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $200/kW + $0.19/kWh rebate on duct sealing based on kW and kWh savings."
+    }
+  },
+  {
+    "id": "NM-11",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1.05,
+      "unit": "square_foot",
+      "maximum": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1.05/sqft rebate for ceiling insulation. Amount determined by R-Value and heat type."
+    }
+  },
+  {
+    "id": "NM-12",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "floor_insulation"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.3,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $0.30/sqft rebate for floor insulation. Amount determined by home type and heat type."
+    }
+  },
+  {
+    "id": "NM-13",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "nm-pnm-evcharger-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "minimum": 500,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive up to a $500 rebate on the purchase of a qualified EV charger plus up to $1,500 in installation assistance."
+    },
+    "start_date": "2024-06-01"
+  },
+  {
+    "id": "NM-14",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "nm-pnm-evcharger-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4250,
+      "minimum": 750,
+      "maximum": 4250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive up to a $750 rebate on the purchase of a qualified EV charger plus up to $3,500 in installation assistance."
+    },
+    "start_date": "2024-06-01",
+    "low_income": "nm-pnm-income-qualified"
+  },
+  {
+    "id": "NM-15",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "nm-pnm-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free in-home energy check up or virtual video call appointment."
+    }
+  },
+  {
+    "id": "NM-16",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "evaporative_cooler"
+    ],
+    "program": "nm-pnm-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate on eligible advanced window coolers."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  {
+    "id": "NM-17",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nm-xcel-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate on a heat pump water heater"
+    }
+  },
+  {
+    "id": "NM-18",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nm-xcel-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive an $50 instant rebate on eligible Thermostat Rewards devices at the Xcel Energy Store."
+    }
+  },
+  {
+    "id": "NM-19",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "other",
+      "smart_thermostat"
+    ],
+    "program": "nm-xcel-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75,
+      "maximum": 75
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive a one-time $75 enrollment bill credit for signing up for thermostat rewards."
+    }
+  },
+  {
+    "id": "NM-20",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "used_electric_vehicle",
+      "new_plugin_hybrid_vehicle",
+      "new_electric_vehicle",
+      "used_plugin_hybrid_vehicle"
+    ],
+    "program": "nm-ecam-clean-car-incentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000,
+      "minimum": 2000,
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $3,000 refundable tax credit for purchasing a new or used electric vehicle. "
+    },
+    "start_date": "2024-05-15",
+    "end_date": "2026-12-31"
+  },
+  {
+    "id": "NM-21",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "nm-ecam-clean-car-incentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400 refundable tax credit to install a level 1 or level 2 EV charger at home."
+    },
+    "start_date": "2024-05-15",
+    "end_date": "2030-01-01"
+  },
+  {
+    "id": "NM-22",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.2,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $0.20/sqft rebate for cool roof products, dependent on home cooling type."
+    }
+  },
+  {
+    "id": "NM-23",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1,
+      "unit": "square_foot",
+      "maximum": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1.00/Sqft rebate for solar screens on West and South facing single-pane windows. Must be rated to block minimum 80% of solar heat."
+    }
+  },
+  {
+    "id": "NM-24",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3,
+      "unit": "square_foot",
+      "minimum": 1,
+      "maximum": 3
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $3.00/sqft rebate for ENERGY STAR windows, dependent on home cooling type."
+    }
+  },
+  {
+    "id": "NM-25",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "evaporative_cooler"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$600 rebate for an eligible permanently installed evaporative cooling unit."
+    }
+  }
+]
