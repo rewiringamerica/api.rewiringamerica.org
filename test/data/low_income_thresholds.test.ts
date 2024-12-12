@@ -60,12 +60,20 @@ test('low-income thresholds have HH sizes 1-8', async t => {
   };
 
   for (const stateThresholds of Object.values(LOW_INCOME_THRESHOLDS_BY_STATE)) {
-    for (const thresholds of Object.values(stateThresholds)) {
+    for (const [key, thresholds] of Object.entries(stateThresholds)) {
       if (thresholds.type === 'hhsize') {
-        t.ok(hasRequiredKeys(thresholds.thresholds));
+        t.ok(
+          hasRequiredKeys(thresholds.thresholds),
+          `thresholds ${key} missing hh size(s)`,
+        );
       } else if (thresholds.type === 'county-hhsize') {
-        for (const countyThresholds of Object.values(thresholds.thresholds)) {
-          t.ok(hasRequiredKeys(countyThresholds));
+        for (const [fips, countyThresholds] of Object.entries(
+          thresholds.thresholds,
+        )) {
+          t.ok(
+            hasRequiredKeys(countyThresholds),
+            `thresholds ${key} county ${fips} misisng hh size(s)`,
+          );
         }
       }
     }

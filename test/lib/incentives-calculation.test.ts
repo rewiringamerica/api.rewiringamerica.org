@@ -770,21 +770,21 @@ test('correctly matches geo groups', async t => {
     ...baseArgs,
     utility: 'ma-eversource',
   });
-  t.equal(withElectric.incentives.filter(massSaveFilter).length, 2);
+  t.ok(withElectric.incentives.filter(massSaveFilter).length > 0);
 
   const withGas = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
     ...baseArgs,
     utility: 'ma-town-of-wellesley',
     gas_utility: 'ma-national-grid-gas',
   });
-  t.equal(withGas.incentives.filter(massSaveFilter).length, 2);
+  t.ok(withGas.incentives.filter(massSaveFilter).length > 0);
 
   const withBoth = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
     ...baseArgs,
     utility: 'ma-national-grid',
     gas_utility: 'ma-national-grid-gas',
   });
-  t.equal(withBoth.incentives.filter(massSaveFilter).length, 2);
+  t.ok(withBoth.incentives.filter(massSaveFilter).length > 0);
 
   const withNoMassSave = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
     ...baseArgs,

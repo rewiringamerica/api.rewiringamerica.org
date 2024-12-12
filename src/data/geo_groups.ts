@@ -10,7 +10,7 @@ const GEO_GROUP_SCHEMA = {
     gas_utilities: { type: 'array', items: { type: 'string' }, minItems: 1 },
     cities: { type: 'array', items: { type: 'string' }, minItems: 1 },
     counties: { type: 'array', items: { type: 'string' }, minItems: 1 },
-    incentives: { type: 'array', items: { type: 'string' }, minItems: 1 },
+    incentives: { type: 'array', items: { type: 'string' } },
   },
   additionalProperties: false,
   anyOf: [

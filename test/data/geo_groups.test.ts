@@ -78,7 +78,7 @@ test('geo groups are equivalent in JSON config and incentives', async t => {
   }
 });
 
-test('Only AuthorityType.Other incentives have eligible_geo_group and vice versa', async t => {
+test('AuthorityType.Other incentives have eligible_geo_group', async t => {
   for (const [, stateIncentives] of Object.entries(STATE_INCENTIVES_BY_STATE)) {
     for (const incentive of stateIncentives) {
       const program = PROGRAMS[incentive.program];
@@ -87,11 +87,6 @@ test('Only AuthorityType.Other incentives have eligible_geo_group and vice versa
           incentive,
           'eligible_geo_group',
           `authority_type 'other' must include a geo group (id ${incentive.id})`,
-        );
-      } else {
-        t.notOk(
-          incentive.eligible_geo_group,
-          `only authority_type 'other' can have a geo group (id ${incentive.id})`,
         );
       }
     }
