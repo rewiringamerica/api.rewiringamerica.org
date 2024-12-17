@@ -12,6 +12,7 @@ import calculateIncentives, {
 import { resolveLocation } from '../lib/location';
 import { statesWithStatus } from '../lib/states';
 import {
+  canGasUtilityAffectEligibility,
   getElectricUtilitiesForLocation,
   getGasUtilitiesForLocation,
 } from '../lib/utilities-for-location';
@@ -137,6 +138,14 @@ export default async function (
         );
       }
 
+      const gas_utilities = await getGasUtilitiesForLocation(
+        fastify.sqlite,
+        location,
+      );
+      const gas_utility_affects_incentives = gas_utilities
+        ? canGasUtilityAffectEligibility(location)
+        : undefined;
+
       try {
         reply
           .status(200)
@@ -147,10 +156,8 @@ export default async function (
               fastify.sqlite,
               location,
             ),
-            gas_utilities: await getGasUtilitiesForLocation(
-              fastify.sqlite,
-              location,
-            ),
+            gas_utilities,
+            gas_utility_affects_incentives,
           });
       } catch (error) {
         if (error instanceof InvalidInputError) {
