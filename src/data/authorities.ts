@@ -98,3 +98,10 @@ export const AUTHORITIES_BY_STATE: AuthoritiesByState = (() => {
   }
   return result;
 })();
+
+/**
+ * A special value for the API to allow positively indicating "I don't have gas
+ * service" (as opposed to your gas utility being unknown or unspecified). This
+ * matters for some eligibility decisions, such as with MA's Mass Save program.
+ */
+export const NO_GAS_UTILITY = 'none';
