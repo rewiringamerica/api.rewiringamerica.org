@@ -338,7 +338,9 @@ export default function calculateIncentives(
     authority_types.includes(AuthorityType.State) ||
     authority_types.includes(AuthorityType.Utility) ||
     authority_types.includes(AuthorityType.County) ||
-    authority_types.includes(AuthorityType.City)
+    authority_types.includes(AuthorityType.City) ||
+    authority_types.includes(AuthorityType.GasUtility) ||
+    authority_types.includes(AuthorityType.Other)
   ) {
     const allStateIncentives = getAllStateIncentives(state_id, request);
     const stateIncentiveRelationships =
