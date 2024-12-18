@@ -1,3 +1,5 @@
+import { LocalDate, ZoneId } from '@js-joda/core';
+import '@js-joda/timezone';
 import { min } from 'lodash';
 import { AuthoritiesByType, AuthorityType } from '../data/authorities';
 import { DATA_PARTNERS_BY_STATE } from '../data/data_partners';
@@ -17,6 +19,7 @@ import { APICoverage } from '../data/types/coverage';
 import { OwnerStatus } from '../data/types/owner-status';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
 import { AMIAndEVCreditEligibility } from './ami-evcredit-calculation';
+import { lastDayOf } from './dates';
 import {
   CombinedValue,
   RelationshipMaps,
@@ -128,6 +131,18 @@ export function calculateStateIncentivesAndSavings(
       } else if (
         !isLowIncome(request, thresholds, location, amiAndEvCreditEligibility)
       ) {
+        eligible = false;
+      }
+    }
+
+    if (item.end_date) {
+      const lastValidDay = lastDayOf(item.end_date);
+
+      // Use the current day in Eastern time, the earliest timezone of the
+      // mainland US. This is conservative: when it's 2025-01-01 at 1am in
+      // Eastern time, it will still be 2024 in Pacific time but incentives
+      // whose validity ends on 2024-12-31 will be considered invalid.
+      if (LocalDate.now(ZoneId.of('America/New_York')).isAfter(lastValidDay)) {
         eligible = false;
       }
     }
