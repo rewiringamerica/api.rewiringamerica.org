@@ -137,5 +137,244 @@
     "short_description": {
       "en": "75% off approved insulation and air sealing improvements after receiving a home energy assessment."
     }
+  },
+  {
+    "id": "MA-7",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma-braintree-mlp-energysaving",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free energy assessment for residents with electricity or oil heating systems. Required to receive rebates from BELD."
+    }
+  },
+  {
+    "id": "MA-8",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma-wellesley-mlp-electrification-energy-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy assessment."
+    }
+  },
+  {
+    "id": "MA-9",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma-wellesley-mlp-electrification-energy-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for EnergyStar certified heat pump clothes dryer."
+    },
+    "start_date": "2024-07-01"
+  },
+  {
+    "id": "MA-10",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "ma-braintree-mlp-energysaving",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 4500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate up to $4,500 for ducted or ductless heat pumps. Gas heating customers only."
+    }
+  },
+  {
+    "id": "MA-11",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "ma-braintree-mlp-energysaving",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1250,
+      "unit": "ton",
+      "maximum": 7500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,250/ton rebate up to $7,500 for ducted or ductless heat pumps. Non-gas heating customers only."
+    }
+  },
+  {
+    "id": "MA-12",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-wellesley-mlp-electrification-energy-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 100,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate for electric induction range/cooktop, depending on fuel switching. National Grid gas customers ineligible."
+    },
+    "start_date": "2024-07-01"
+  },
+  {
+    "id": "MA-13",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ma-wellesley-mlp-electrification-energy-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 250,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate for a heat pump water heater, depending on fuel switching. National Grid gas customers ineligible."
+    },
+    "start_date": "2024-07-01"
+  },
+  {
+    "id": "MA-14",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ma-wellesley-mlp-electrification-energy-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for EnergyStar certified smart thermostat."
+    },
+    "start_date": "2024-07-01"
+  },
+  {
+    "id": "MA-15",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ma-wellesley-mlp-electrification-energy-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 rebate for a level 2 electric vehicle charger. Must enroll in managed charging."
+    },
+    "start_date": "2024-07-01"
+  },
+  {
+    "id": "MA-16",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "floor_insulation",
+      "other_insulation",
+      "other_weatherization",
+      "wall_insulation"
+    ],
+    "program": "ma-wellesley-mlp-electrification-energy-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "minimum": 1500,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% up to $2,500 for weatherization measures. National Grid gas customers ineligible."
+    },
+    "start_date": "2024-07-01"
   }
 ]

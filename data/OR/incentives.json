@@ -1,6 +1,7 @@
 [
   {
     "id": "OR-1",
+    "eligible_geo_group": "or-pge-pacific-power",
     "payment_methods": [
       "rebate"
     ],
@@ -44,6 +45,7 @@
   },
   {
     "id": "OR-3",
+    "eligible_geo_group": "or-pge-pacific-power",
     "payment_methods": [
       "rebate"
     ],
@@ -59,12 +61,14 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "PGE and Pacific Power customers are eligible for a $3,000 rebate for an extended capacity heat pump replacing an electric furnace."
+      "en": "$3,000 rebate for an extended capacity heat pump replacing an electric furnace."
     },
-    "start_date": "2023-10-01"
+    "start_date": "2023-10-01",
+    "low_income": "or-energy-trust-of-oregon"
   },
   {
     "id": "OR-4",
+    "eligible_geo_group": "or-pge-pacific-power",
     "payment_methods": [
       "rebate"
     ],
@@ -86,6 +90,7 @@
   },
   {
     "id": "OR-5",
+    "eligible_geo_group": "or-pge-pacific-power",
     "payment_methods": [
       "rebate"
     ],
@@ -109,6 +114,7 @@
   },
   {
     "id": "OR-6",
+    "eligible_geo_group": "or-pge-pacific-power",
     "payment_methods": [
       "rebate"
     ],
@@ -131,6 +137,7 @@
   },
   {
     "id": "OR-7",
+    "eligible_geo_group": "or-pge-pacific-power",
     "payment_methods": [
       "rebate"
     ],
@@ -153,6 +160,7 @@
   },
   {
     "id": "OR-8",
+    "eligible_geo_group": "or-pge-pacific-power",
     "payment_methods": [
       "rebate"
     ],
@@ -183,13 +191,13 @@
     "program": "or_portlandGeneralElectric_solarForYourHome",
     "amount": {
       "type": "dollar_amount",
-      "number": 400
+      "number": 1000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Earn a $400 rebate for installing solar panels on your home. Systems must be installed by an approved Energy Trust solar trade ally contractor."
+      "en": "Earn a $1,000 rebate for installing solar panels on your home. Systems must be installed by an approved Energy Trust solar trade ally contractor."
     }
   },
   {
@@ -203,13 +211,13 @@
     "program": "or_pacificPower_solarForYourHome",
     "amount": {
       "type": "dollar_amount",
-      "number": 450
+      "number": 1000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Earn a $450 rebate for installing solar panels on your home. Systems must be installed by an approved Energy Trust solar trade ally contractor."
+      "en": "Earn a $1,000 rebate for installing solar panels on your home. Systems must be installed by an approved Energy Trust solar trade ally contractor."
     }
   },
   {
@@ -223,15 +231,15 @@
     "program": "or_portlandGeneralElectric_solarForYourHome",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 250,
+      "number": 500,
       "unit": "kilowatt",
-      "maximum": 3000
+      "maximum": 6000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Earn $250/kWh up to $3,000 for your battery storage system. Systems must be installed by an approved Energy Trust solar trade ally contractor."
+      "en": "Earn $500/kWh up to $6,000 for your battery storage system. Systems must be installed by an approved Energy Trust solar trade ally contractor."
     }
   },
   {
@@ -245,15 +253,15 @@
     "program": "or_pacificPower_solarForYourHome",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 250,
+      "number": 500,
       "unit": "kilowatt",
-      "maximum": 3000
+      "maximum": 6000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Earn $250/kWh up to $3,000 for your battery storage system. Systems must be installed by an approved Energy Trust solar trade ally contractor."
+      "en": "Earn $500/kWh up to $6,000 for your battery storage system. Systems must be installed by an approved Energy Trust solar trade ally contractor."
     }
   },
   {
@@ -267,15 +275,15 @@
     "program": "or_portlandGeneralElectric_solarWithinReach",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 0.9,
+      "number": 1.2,
       "unit": "watt",
-      "maximum": 5400
+      "maximum": 7200
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Income-qualified households can earn $0.90/watt up to $5,400 for adding solar panels to your home. An approved solar trade ally must install system."
+      "en": "Income-qualified households can earn $1.20/watt up to $7,200 for adding solar panels to your home. An approved solar trade ally must install system."
     },
     "low_income": "or-energy-trust-of-oregon"
   },
@@ -313,15 +321,15 @@
     "program": "or_portlandGeneralElectric_solarWithinReach",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 750,
+      "number": 1000,
       "unit": "kilowatt",
-      "maximum": 10000
+      "maximum": 13000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Income-qualified households can earn $750/kWh up to $10,000 for home solar battery storage. An approved solar trade ally must install the system."
+      "en": "Income-qualified households can earn $1,000/kWh up to $13,000 for home solar battery storage. An approved solar trade ally must install the system."
     },
     "low_income": "or-energy-trust-of-oregon"
   },
@@ -443,15 +451,16 @@
     "program": "or_energyTrustOfOregon_energyTrustOfOregon",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 0.5,
+      "number": 1.25,
       "unit": "square_foot"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$0.50 per sq ft for qualifying floor insulation measures in manufactured homes. Must insulate to at least R-22 or fill the accessible floor cavity."
-    }
+      "en": "$1.25 per sq ft for qualifying floor insulation measures in manufactured homes. Must insulate to at least R-22 or fill the accessible floor cavity."
+    },
+    "low_income": "or-energy-trust-of-oregon"
   },
   {
     "id": "OR-22",
@@ -464,14 +473,14 @@
     "program": "or_energyTrustOfOregon_energyTrustOfOregon",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 0.5,
+      "number": 0.75,
       "unit": "square_foot"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$0.50 per sq ft for floor insulation measures in qualifying homes. Must insulate to R-30 or greater or fill the accessible floor cavity."
+      "en": "$0.75 per sq ft for floor insulation measures in qualifying homes. Must insulate to R-30 or greater or fill the accessible floor cavity."
     }
   },
   {
@@ -485,14 +494,14 @@
     "program": "or_energyTrustOfOregon_savingsWithinReach",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 0.75,
+      "number": 1,
       "unit": "square_foot"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$0.75 per sq ft for floor insulation for income-qualified customers. Must insulate to R-30 or greater or fill the accessible floor cavity."
+      "en": "$1.00 per sq ft for floor insulation for income-qualified customers. Must insulate to R-30 or greater or fill the accessible floor cavity."
     },
     "low_income": "or-energy-trust-of-oregon"
   },
@@ -507,14 +516,14 @@
     "program": "or_energyTrustOfOregon_energyTrustOfOregon",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 0.5,
+      "number": 1.5,
       "unit": "square_foot"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$0.50 per sq ft of wall insulation. Existing wall insulation must be R-4 or less. Must insulate to R-11 or greater or fill the accessible cavity."
+      "en": "$1.50 per sq ft of wall insulation. Existing wall insulation must be R-4 or less. Must insulate to R-11 or greater or fill the accessible cavity."
     }
   },
   {
@@ -528,14 +537,14 @@
     "program": "or_energyTrustOfOregon_savingsWithinReach",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 0.75,
+      "number": 2.25,
       "unit": "square_foot"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$0.75 per sq ft of wall insulation for income-qualified customers. Existing wall insulation must be R-4 or less. Must insulate to R-11 or greater."
+      "en": "$2.25 per sq ft of wall insulation for income-qualified customers. Existing wall insulation must be R-4 or less. Must insulate to R-11 or greater."
     },
     "low_income": "or-energy-trust-of-oregon"
   },
@@ -622,11 +631,12 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1.25 per sq ft of attic insulation. Existing insulation must be R-18 or less. Must insulate to R-30 or greater."
+      "en": "$1.25 per sq ft of attic insulation. Existing insulation must be R-18 or less. Must insulate to R-38 or greater."
     }
   },
   {
     "id": "OR-32",
+    "eligible_geo_group": "or-pge-pacific-power",
     "payment_methods": [
       "pos_rebate"
     ],
@@ -853,7 +863,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$50 rebate on a Tesla Wall Connector or another Level 2 charger that is not on the qualified charger list. Must join the PGE Smart Charging Program."
+      "en": "$50 rebate for existing Tesla Wall Connector or other Level 2 charger not on the qualified charger list. Must join the PGE Smart Charging Program."
     }
   },
   {
@@ -898,6 +908,7 @@
   },
   {
     "id": "OR-45",
+    "eligible_geo_group": "or-energy-trust-regional-offer",
     "payment_methods": [
       "rebate"
     ],
@@ -918,6 +929,7 @@
   },
   {
     "id": "OR-46",
+    "eligible_geo_group": "or-energy-trust-regional-offer",
     "payment_methods": [
       "rebate"
     ],
@@ -938,6 +950,7 @@
   },
   {
     "id": "OR-47",
+    "eligible_geo_group": "or-energy-trust-regional-offer",
     "payment_methods": [
       "rebate"
     ],
@@ -953,7 +966,1730 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$4,000 incentive for installing a ducted heat pump on your manufactured home."
+      "en": "$4,000 incentive for installing a ducted heat pump in your manufactured home."
     }
+  },
+  {
+    "id": "OR-48",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "or_pacificPower_solarForYourHome",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 450
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Earn a $1,200 rebate for installing solar panels on your home. Systems must be installed by an approved Energy Trust solar trade ally contractor."
+    }
+  },
+  {
+    "id": "OR-49",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit",
+      "other_weatherization"
+    ],
+    "program": "or-portland-general-electric-p2p",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit and weatherization services."
+    }
+  },
+  {
+    "id": "OR-50",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or-eweb-heat-pump-water-heater",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$900 upfront discount on heat pump water heaters through select retailers."
+    }
+  },
+  {
+    "id": "OR-51",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or-eweb-heat-pump-water-heater",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1700,
+      "minimum": 1000,
+      "maximum": 1700
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,700 upfront discount on heat pump water heaters for income-qualified residents."
+    },
+    "low_income": "or-eweb-income-based"
+  },
+  {
+    "id": "OR-52",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_sealing",
+      "ducted_heat_pump"
+    ],
+    "program": "or-eweb-residential-ducted-heat-pump",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1250,
+      "minimum": 1000,
+      "maximum": 1250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate on a ducted heat pump, with $250 rebate for prescriptive duct sealing."
+    }
+  },
+  {
+    "id": "OR-53",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_sealing",
+      "ducted_heat_pump"
+    ],
+    "program": "or-eweb-residential-ducted-heat-pump",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 6500,
+      "minimum": 1500,
+      "maximum": 6500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $6,000 rebate on a ducted heat pump, with $500 rebate for prescriptive duct sealing. For income-qualified residents."
+    },
+    "low_income": "or-eweb-income-based"
+  },
+  {
+    "id": "OR-54",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or-eweb-residential-ductless-heat-pump",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$800 rebate for ductless heat pump."
+    }
+  },
+  {
+    "id": "OR-55",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or-eweb-residential-ductless-heat-pump",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4500,
+      "minimum": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $4,500 rebate for ductless heat pump for income-qualified residents."
+    },
+    "low_income": "or-eweb-income-based"
+  },
+  {
+    "id": "OR-56",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "other_insulation",
+      "wall_insulation"
+    ],
+    "program": "or-eweb-residential-insulation-air-sealing",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1.00/sqft of insulation up to 50% of total project cost."
+    }
+  },
+  {
+    "id": "OR-57",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "other_insulation",
+      "wall_insulation"
+    ],
+    "program": "or-eweb-residential-insulation-air-sealing",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "100% of eligible insulation costs for income-qualified residents."
+    },
+    "low_income": "or-eweb-income-based"
+  },
+  {
+    "id": "OR-58",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing"
+    ],
+    "program": "or-eweb-residential-insulation-air-sealing",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 rebate for air sealing, plus $0.10 per square foot of sealed attic or crawl space."
+    }
+  },
+  {
+    "id": "OR-59",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "or-eweb-residential-insulation-air-sealing",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 4,
+      "unit": "square_foot",
+      "maximum": 4
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $4/sq ft rebate for high-performance windows or glass patio doors."
+    }
+  },
+  {
+    "id": "OR-60",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "or-eweb-residential-insulation-air-sealing",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 20,
+      "unit": "square_foot",
+      "maximum": 20
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $20/sq ft rebate for high-performance windows or glass patio doors, for income-qualified residents."
+    },
+    "low_income": "or-eweb-income-based"
+  },
+  {
+    "id": "OR-61",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer",
+      "other"
+    ],
+    "program": "or_salemElectric_applianceIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate per appliance for qualifying clothes dryers and washers."
+    }
+  },
+  {
+    "id": "OR-62",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_salemElectric_applianceIncentives",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $600 for heat pump water heaters, up to 50% of water heater cost."
+    }
+  },
+  {
+    "id": "OR-63",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "or_salemElectric_heatPumpProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "minimum": 500,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 for ducted or ductless qualifying heat pump systems."
+    }
+  },
+  {
+    "id": "OR-64",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_salemElectric_smartThermostatIncentive",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 125,
+      "minimum": 100,
+      "maximum": 125
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $125 for a smart thermostat."
+    }
+  },
+  {
+    "id": "OR-65",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "energy_audit",
+      "floor_insulation",
+      "other_insulation",
+      "other_weatherization",
+      "wall_insulation"
+    ],
+    "program": "or_salemElectric_weatherizationProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Qualified low-income members who have permanently installed electric heat may qualify for free weatherization."
+    }
+  },
+  {
+    "id": "OR-66",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates",
+      "smart_thermostat"
+    ],
+    "program": "or_oregonHousingAndCommunityServices_stateHomeOilWeatherizationSHOWProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,000 for heating equipment measures such as replacement parts, efficiency measures, and smart thermostats. Must use delivered fuel oil."
+    }
+  },
+  {
+    "id": "OR-67",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates",
+      "smart_thermostat"
+    ],
+    "program": "or_oregonHousingAndCommunityServices_stateHomeOilWeatherizationSHOWProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3200,
+      "maximum": 3200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $3,200 for heating equipment measures such as replacement parts, efficiency measures, and smart thermostats. Income-qualified residents only."
+    },
+    "low_income": "or-show-low-income"
+  },
+  {
+    "id": "OR-68",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "duct_sealing"
+    ],
+    "program": "or_oregonHousingAndCommunityServices_stateHomeOilWeatherizationSHOWProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 for duct sealing and insulation measures for income-qualified residents."
+    },
+    "low_income": "or-show-low-income"
+  },
+  {
+    "id": "OR-69",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "duct_sealing"
+    ],
+    "program": "or_oregonHousingAndCommunityServices_stateHomeOilWeatherizationSHOWProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $600 for duct sealing and insulation measures."
+    }
+  },
+  {
+    "id": "OR-70",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "other_insulation",
+      "wall_insulation"
+    ],
+    "program": "or_oregonHousingAndCommunityServices_stateHomeOilWeatherizationSHOWProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4500,
+      "maximum": 4500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $4,500 for dwelling insulation measures ($1,500 per region of the home) for income-qualified residents."
+    },
+    "low_income": "or-show-low-income"
+  },
+  {
+    "id": "OR-71",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "other_insulation",
+      "wall_insulation"
+    ],
+    "program": "or_oregonHousingAndCommunityServices_stateHomeOilWeatherizationSHOWProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000,
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $3,000 for dwelling insulation measures ($1,000 per region of the home)."
+    }
+  },
+  {
+    "id": "OR-72",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement",
+      "window_replacement"
+    ],
+    "program": "or_oregonHousingAndCommunityServices_stateHomeOilWeatherizationSHOWProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,500 for energy-efficient windows and doors, for income-qualified residents."
+    },
+    "low_income": "or-show-low-income"
+  },
+  {
+    "id": "OR-73",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement",
+      "window_replacement"
+    ],
+    "program": "or_oregonHousingAndCommunityServices_stateHomeOilWeatherizationSHOWProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 for energy-efficient windows and doors."
+    }
+  },
+  {
+    "id": "OR-74",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_consumersPower_energyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$900 upfront rebate for a heat pump water heater. Must replace an existing electric water heater."
+    }
+  },
+  {
+    "id": "OR-75",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_consumersPower_energyEfficiencyRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free Google Nest smart thermostat for residential customers with electric forced-air furnaces or heat pumps."
+    }
+  },
+  {
+    "id": "OR-76",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "or_consumersPower_energyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$400 upfront rebate on a residential electric vehicle charger."
+    }
+  },
+  {
+    "id": "OR-77",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "window_replacement",
+      "door_replacement"
+    ],
+    "program": "or_consumersPower_energyEfficiencyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 6,
+      "unit": "square_foot",
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$6/square foot for energy-efficient windows and patio doors, up to 50% of project cost."
+    }
+  },
+  {
+    "id": "OR-78",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "door_replacement"
+    ],
+    "program": "or_consumersPower_energyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 32,
+      "maximum": 32
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$32 rebate per exterior door, up to 50% of project cost. Primary heat source must be electric."
+    }
+  },
+  {
+    "id": "OR-79",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "wall_insulation"
+    ],
+    "program": "or_consumersPower_energyEfficiencyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2/sqft rebate for insulation, depending on existing and final insulation as well as location (attic, floor, walls). Up to 50% of project cost."
+    }
+  },
+  {
+    "id": "OR-80",
+    "payment_methods": [
+      "account_credit",
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer",
+      "other"
+    ],
+    "program": "or_consumersPower_energyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "minimum": 30,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $50 rebate for an electric clothes dryer or washer."
+    }
+  },
+  {
+    "id": "OR-81",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_consumersPower_energyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 140
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $140 rebate for a smart thermostat for residential customers with electric forced-air furnaces or heat pumps. Cannot exceed 100% of the cost."
+    }
+  },
+  {
+    "id": "OR-82",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_consumersPower_energyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1100,
+      "minimum": 700,
+      "maximum": 1100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,100 rebate for a heat pump water heater, not to exceed 100% of project cost."
+    }
+  },
+  {
+    "id": "OR-83",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "or_consumersPower_energyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate on a residential electric vehicle charger."
+    }
+  },
+  {
+    "id": "OR-84",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_consumersPower_energyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200,
+      "minimum": 1000,
+      "maximum": 1200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,200 for a new air source heat pump that meets efficiency requirements. Only homes with existing electric forced air furnaces qualify."
+    }
+  },
+  {
+    "id": "OR-85",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_consumersPower_energyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 for a new ductless air source heat pump that meets efficiency requirements. Existing heat source must be electric."
+    }
+  },
+  {
+    "id": "OR-86",
+    "eligible_geo_group": "or-energy-trust-regional-offer",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_energyTrustOfOregon_energyTrustOfOregon",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3,500 rebate for a ductless heat pump replacing electric forced air as the primary heat source. Primary unit must be in the main living space."
+    },
+    "start_date": "2023-10-01"
+  },
+  {
+    "id": "OR-87",
+    "eligible_geo_group": "or-energy-trust-regional-offer",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_energyTrustOfOregon_energyTrustOfOregon",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2900,
+      "maximum": 2900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,900 rebate for a ductless heat pump replacing electric zonal heating as the primary heat source. Primary unit must be in the main living space."
+    },
+    "start_date": "2023-10-01"
+  },
+  {
+    "id": "OR-88",
+    "eligible_geo_group": "or-energy-trust-regional-offer",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_energyTrustOfOregon_energyTrustOfOregon",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3500,
+      "maximum": 3500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3,500 rebate for a ductless heat pump replacing electric resistance heat in manufactured homes. Primary unit must be in the main living space."
+    },
+    "start_date": "2023-10-01"
+  },
+  {
+    "id": "OR-89",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_energyTrustOfOregon_savingsWithinReach",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 rebate for a heat pump for income-qualified customers. Applies to single-family and manufactured homes, townhouses, and buildings to 4 units."
+    },
+    "start_date": "2023-10-01",
+    "low_income": "or-energy-trust-of-oregon"
+  },
+  {
+    "id": "OR-90",
+    "eligible_geo_group": "or-pge-pacific-power",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_energyTrustOfOregon_energyTrustOfOregon",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for a ductless heat pump. Must replace electric resistance as the primary heat source and installed in the main living space."
+    },
+    "start_date": "2023-10-01"
+  },
+  {
+    "id": "OR-91",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "or_salemElectric_solarIncentives",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 300,
+      "unit": "kilowatt",
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $300/kW rebate for installed home solar systems, not to exceed 50% of project cost."
+    }
+  },
+  {
+    "id": "OR-92",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "or_salemElectric_electricVehicleIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a ChargePoint Home Flex electric vehicle charger."
+    }
+  },
+  {
+    "id": "OR-93",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "or_cityOfAshland_residentialIncentives",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free energy audit, which is required for other Ashland incentive programs."
+    }
+  },
+  {
+    "id": "OR-94",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_cityOfAshland_residentialIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $900 rebate for a ducted air source heat pump."
+    }
+  },
+  {
+    "id": "OR-95",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_cityOfAshland_residentialIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200,
+      "minimum": 500,
+      "maximum": 1200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,200 rebate for a ductless air source heat pump, depending on fuel switching."
+    }
+  },
+  {
+    "id": "OR-96",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_sealing"
+    ],
+    "program": "or_cityOfAshland_residentialIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "minimum": 250,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $300 rebate for duct sealing where pre-existing heat source is electric."
+    }
+  },
+  {
+    "id": "OR-97",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_cityOfAshland_residentialIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $600 rebate for a qualified heat pump water heater, tier 3 or higher."
+    }
+  },
+  {
+    "id": "OR-98",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "or_cityOfAshland_residentialIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "minimum": 150,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $200 rebate for an induction cooktop or range, depending on fuel switching."
+    }
+  },
+  {
+    "id": "OR-99",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "or_cityOfAshland_residentialIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 for an Energy Star certified electric clothes dryer."
+    }
+  },
+  {
+    "id": "OR-100",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "or_cityOfAshland_residentialIncentives",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 8,
+      "unit": "square_foot",
+      "minimum": 6,
+      "maximum": 8
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $8 per square foot rebate for energy-efficient windows, depending on u-value."
+    }
+  },
+  {
+    "id": "OR-101",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "wall_insulation"
+    ],
+    "program": "or_cityOfAshland_residentialIncentives",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.66,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $0.66 per square foot rebate for insulation, depending on existing R value and area."
+    }
+  },
+  {
+    "id": "OR-102",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_midstateElectricCooperative_residentialConservationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900,
+      "minimum": 800,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $900 rebate for heat pump water heaters."
+    }
+  },
+  {
+    "id": "OR-103",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_midstateElectricCooperative_residentialConservationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200,
+      "minimum": 1000,
+      "maximum": 1200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,200 rebate for an air source heat pump."
+    }
+  },
+  {
+    "id": "OR-104",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "or_midstateElectricCooperative_residentialConservationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000,
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3,000 rebate for a ground source heat pump."
+    }
+  },
+  {
+    "id": "OR-105",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_midstateElectricCooperative_residentialConservationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 rebate for a ductless air source heat pump."
+    }
+  },
+  {
+    "id": "OR-106",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_idahoPower_heatingAndCoolingEfficiencyProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for heat pump water heater of 55 gallons or less."
+    }
+  },
+  {
+    "id": "OR-107",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_columbiaRiverPud_waysToSaveAtHome",
+    "amount": {
+      "type": "percent",
+      "number": 0.7,
+      "minimum": 700,
+      "maximum": 1100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,100 rebate for a heat pump water heater, not to exceed 70% of product cost."
+    },
+    "start_date": "2023-04-01"
+  },
+  {
+    "id": "OR-108",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_columbiaRiverPud_waysToSaveAtHome",
+    "amount": {
+      "type": "percent",
+      "number": 0.7,
+      "minimum": 1000,
+      "maximum": 1200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,200 rebate for a ducted air source heat pump, not to exceed 70% of product cost."
+    },
+    "start_date": "2023-04-01"
+  },
+  {
+    "id": "OR-109",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_columbiaRiverPud_waysToSaveAtHome",
+    "amount": {
+      "type": "percent",
+      "number": 0.7,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $900 rebate for a ductless air source heat pump, not to exceed 70% of product cost. Must have an electric primary heat source."
+    },
+    "start_date": "2023-04-01"
+  },
+  {
+    "id": "OR-110",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_emeraldPeople'SUtilityDistrict_residentialIncentivePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$900 rebate for qualified tier 3 and tier 4 heat pump water heaters."
+    }
+  },
+  {
+    "id": "OR-111",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_emeraldPeople'SUtilityDistrict_residentialIncentivePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "minimum": 500,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 rebate on a ducted air source heat pump, dependent on existing system."
+    }
+  },
+  {
+    "id": "OR-112",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_emeraldPeople'SUtilityDistrict_residentialIncentivePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 rebate on a ductless air source heat pump when replacing an electric furnace or zonal electric heat."
+    }
+  },
+  {
+    "id": "OR-113",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_centralElectricCooperative_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 upfront rebate for a heat pump water heater, total install cost $550. "
+    }
+  },
+  {
+    "id": "OR-114",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_tillamookPeople'SUtilityDistrict_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900,
+      "minimum": 800,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $900 for a Unitary heat pump water heater. Tier 3 or 4 only."
+    }
+  },
+  {
+    "id": "OR-115",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_tillamookPeople'SUtilityDistrict_residentialHeatPumpProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200,
+      "minimum": 500,
+      "maximum": 1200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,200 for a qualified ducted air source heat pump, depending on current heating system."
+    }
+  },
+  {
+    "id": "OR-116",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_tillamookPeople'SUtilityDistrict_residentialHeatPumpProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "minimum": 500,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 for a qualified ductless air source heat pump, depending on current heating system."
+    }
+  },
+  {
+    "id": "OR-117",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_cityOfMonmouth_residentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1100,
+      "minimum": 700,
+      "maximum": 1100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,100 for a heat pump water heater, depending on type and capacity."
+    }
+  },
+  {
+    "id": "OR-118",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_cityOfMonmouth_residentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 for a ductless air source heat pump when switching from electric heating systems."
+    }
+  },
+  {
+    "id": "OR-119",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_cityOfMonmouth_residentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 for a qualified ducted air source heat pump when switching from electric heating systems."
+    }
+  },
+  {
+    "id": "OR-120",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_cityOfMcminnville_energyEfficiencyRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 675,
+      "minimum": 525,
+      "maximum": 675
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $675 for a qualified heat pump water heater, not to exceed 70% of product cost."
+    }
+  },
+  {
+    "id": "OR-121",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_cityOfMcminnville_energyEfficiencyRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2400,
+      "minimum": 900,
+      "maximum": 2400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,400 for a ducted air source heat pump. Homes must have electric heat."
+    },
+    "start_date": "2024-10-01"
+  },
+  {
+    "id": "OR-122",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_cityOfMcminnville_energyEfficiencyRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2100,
+      "minimum": 600,
+      "maximum": 2100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,100 for a ductless air source heat pump. Homes must have electric heat."
+    },
+    "start_date": "2024-10-01"
+  },
+  {
+    "id": "OR-123",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_cityOfMcminnville_energyEfficiencyRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2400,
+      "minimum": 900,
+      "maximum": 2400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,400 for a ducted air source heat pump. Homes must have electric heat."
+    },
+    "start_date": "2024-10-01"
   }
 ]
