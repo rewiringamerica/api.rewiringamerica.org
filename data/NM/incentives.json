@@ -560,5 +560,351 @@
     "short_description": {
       "en": "$600 rebate for an eligible permanently installed evaporative cooling unit."
     }
+  },
+  {
+    "id": "NM-26",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 tax credit for an Energy Star certified air source heat pump."
+    },
+    "start_date": "2021-01-01",
+    "end_date": "2027-12-31"
+  },
+  {
+    "id": "NM-27",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 tax credit for an Energy Star certified air source heat pump, for income-qualified residents."
+    },
+    "start_date": "2021-01-01",
+    "end_date": "2027-12-31",
+    "low_income": "nm-pnm-income-qualified"
+  },
+  {
+    "id": "NM-28",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 tax credit for an Energy Star rated ground source heat pump, for income-qualified residents."
+    },
+    "start_date": "2021-01-01",
+    "end_date": "2027-12-31",
+    "low_income": "nm-pnm-income-qualified"
+  },
+  {
+    "id": "NM-29",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 tax credit for an Energy Star rated ground source heat pump."
+    },
+    "start_date": "2021-01-01",
+    "end_date": "2027-12-31"
+  },
+  {
+    "id": "NM-30",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "window_replacement",
+      "door_replacement"
+    ],
+    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "100% of cost up to $1,000 tax credit for Energy Star rated windows and doors, per product installed. For income-qualified residents."
+    },
+    "start_date": "2021-01-01",
+    "end_date": "2027-12-31",
+    "low_income": "nm-pnm-income-qualified"
+  },
+  {
+    "id": "NM-31",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "window_replacement",
+      "door_replacement"
+    ],
+    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of cost up to $500 tax credit for Energy Star rated windows and doors, per product installed."
+    },
+    "start_date": "2021-01-01",
+    "end_date": "2027-12-31"
+  },
+  {
+    "id": "NM-32",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "other_insulation",
+      "wall_insulation"
+    ],
+    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "100% of cost up to $2,000 tax credit for insulation improvements, per product installed. For income-qualified residents."
+    },
+    "start_date": "2021-01-01",
+    "end_date": "2027-12-31",
+    "low_income": "nm-pnm-income-qualified"
+  },
+  {
+    "id": "NM-33",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "other_insulation",
+      "wall_insulation"
+    ],
+    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of cost up to $1,000 tax credit for insulation improvements, per product installed. "
+    },
+    "start_date": "2021-01-01",
+    "end_date": "2027-12-31"
+  },
+  {
+    "id": "NM-34",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$700 tax credit for an Energy Star rated heat pump water heater, for income-qualified residents."
+    },
+    "start_date": "2021-01-01",
+    "end_date": "2027-12-31",
+    "low_income": "nm-pnm-income-qualified"
+  },
+  {
+    "id": "NM-35",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350 tax credit for an Energy Star rated heat pump water heater."
+    },
+    "start_date": "2021-01-01",
+    "end_date": "2027-12-31"
+  },
+  {
+    "id": "NM-36",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 tax credit for an electric vehicle charger product and installation costs, for income-qualified residents."
+    },
+    "start_date": "2021-01-01",
+    "end_date": "2027-12-31",
+    "low_income": "nm-pnm-income-qualified"
+  },
+  {
+    "id": "NM-37",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 tax credit for an electric vehicle charger product and installation costs."
+    },
+    "start_date": "2021-01-01",
+    "end_date": "2027-12-31"
+  },
+  {
+    "id": "NM-38",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "used_electric_vehicle",
+      "new_plugin_hybrid_vehicle",
+      "new_electric_vehicle",
+      "used_plugin_hybrid_vehicle"
+    ],
+    "program": "nm-ecam-clean-car-incentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2200,
+      "minimum": 1480,
+      "maximum": 2200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2,200 refundable tax credit for purchasing a new or used electric vehicle. "
+    },
+    "start_date": "2027-01-01",
+    "end_date": "2027-12-31"
+  },
+  {
+    "id": "NM-39",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "nm-emnrd-new-solar-market-development",
+    "amount": {
+      "type": "percent",
+      "number": 0.1,
+      "maximum": 6000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "10% of cost of installing home solar, up to $6,000 refundable tax credit."
+    },
+    "start_date": "2020-01-01"
   }
 ]
