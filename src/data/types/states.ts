@@ -65,16 +65,17 @@ export const STATES_AND_TERRITORIES = [...STATES_PLUS_DC, ...TERRITORIES];
 export const BETA_STATES: string[] = [
   'AK',
   'CA',
-  'CT',
   'DE',
+  'IN',
   'MA',
-  'OR',
+  'NM',
   'TX',
 ];
 
 export const LAUNCHED_STATES: string[] = [
   'AZ',
   'CO',
+  'CT',
   'DC',
   'GA',
   'IL',
@@ -82,6 +83,7 @@ export const LAUNCHED_STATES: string[] = [
   'MI',
   'NV',
   'NY',
+  'OR',
   'PA',
   'RI',
   'VA',
