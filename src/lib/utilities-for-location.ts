@@ -1,5 +1,12 @@
 import { Database } from 'sqlite';
-import { APIAuthority, AUTHORITIES_BY_STATE } from '../data/authorities';
+import {
+  APIAuthority,
+  AUTHORITIES_BY_STATE,
+  AuthorityType,
+} from '../data/authorities';
+import { GEO_GROUPS_BY_STATE } from '../data/geo_groups';
+import { PROGRAMS } from '../data/programs';
+import { STATE_INCENTIVES_BY_STATE } from '../data/state_incentives';
 import { ResolvedLocation } from './location';
 
 /** Models the zip_to_utility table in sqlite. */
@@ -34,19 +41,50 @@ export async function getElectricUtilitiesForLocation(
 }
 
 /**
- * Find the gas utilities that may serve the given location.
+ * Find the gas utilities that may serve the given location. Returns undefined
+ * if and only if we don't have the data.
  */
 export async function getGasUtilitiesForLocation(
   db: Database,
   location: ResolvedLocation,
 ): Promise<AuthorityMap | undefined> {
-  // TODO full logic to determine when gas utilities should be returned.
   const stateMap = AUTHORITIES_BY_STATE[location.state]?.gas_utility;
   if (stateMap && Object.keys(stateMap).length > 0) {
     return getUtilitiesForLocation(db, location, stateMap);
   } else {
     return undefined;
   }
+}
+
+/**
+ * Whether someone's gas utility can affect the set of incentives they're
+ * eligible for, in the given location. This can be because there are gas
+ * utilities that offer incentives we track, or because there's some more
+ * complex eligibility rule at play (i.e. Mass Save).
+ */
+export function canGasUtilityAffectEligibility(
+  location: ResolvedLocation,
+): boolean {
+  // Mass Save
+  if (location.state === 'MA') {
+    return true;
+  }
+
+  if (location.state in STATE_INCENTIVES_BY_STATE) {
+    // Find whether the state has any gas utility incentives
+    return !!STATE_INCENTIVES_BY_STATE[location.state].find(
+      incentive =>
+        // Directly from a gas utility
+        PROGRAMS[incentive.program].authority_type ===
+          AuthorityType.GasUtility ||
+        // Via a geo group
+        (incentive.eligible_geo_group &&
+          'gas_utilities' in
+            GEO_GROUPS_BY_STATE[location.state][incentive.eligible_geo_group]),
+    );
+  }
+
+  return false;
 }
 
 async function getUtilitiesForLocation(

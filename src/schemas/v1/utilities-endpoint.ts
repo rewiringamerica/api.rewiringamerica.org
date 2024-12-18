@@ -21,9 +21,9 @@ may differ from the name of the utility's legal entity.`,
     },
     gas_utilities: {
       type: 'object',
-      description: `A map of IDs to info about each gas utility. This may be \
-absent if the user's gas utility does not affect their eligibility for \
-incentives, or if no gas utilities serve the given location.`,
+      description: `A map of IDs to info about each gas utility. If absent, \
+that means we have no information on the gas utilities in the given location. \
+Even if present, may be empty if no gas utilities serve the given location.`,
       additionalProperties: {
         type: 'object',
         properties: {
@@ -34,6 +34,13 @@ may differ from the name of the utility's legal entity.`,
           },
         },
       },
+    },
+    gas_utility_affects_incentives: {
+      type: 'boolean',
+      description: `Whether the user's gas utility may affect the set of \
+incentives they are eligible for. This can be because there are gas utilities \
+that offer incentives we track, or because more complex eligibility rules \
+apply in the user's location.`,
     },
   },
   required: ['location', 'utilities'],

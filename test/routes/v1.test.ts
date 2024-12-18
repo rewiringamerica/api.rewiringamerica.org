@@ -904,6 +904,26 @@ const UTILITIES = [
       },
     },
   ],
+  [
+    '02116',
+    {
+      location: { state: 'MA', city: 'Boston', county_fips: '25025' },
+      utilities: {
+        'ma-eversource': {
+          name: 'Eversource',
+        },
+      },
+      gas_utilities: {
+        'ma-national-grid-gas': {
+          name: 'National Grid',
+        },
+        'ma-nstar-gas-company': {
+          name: 'Eversource',
+        },
+      },
+      gas_utility_affects_incentives: true,
+    },
+  ],
 ] as const;
 
 test('/utilities', async t => {
