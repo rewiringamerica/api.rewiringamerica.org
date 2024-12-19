@@ -1,5 +1,5 @@
 {
-  "is_under_80_ami": false,
+  "is_under_80_ami": true,
   "is_under_150_ami": true,
   "is_over_150_ami": false,
   "authorities": {
@@ -12,7 +12,7 @@
   },
   "coverage": {
     "state": "OR",
-    "utility": null
+    "utility": "or-pacific-power"
   },
   "location": {
     "state": "OR",
@@ -25,7 +25,28 @@
       "payment_methods": [
         "pos_rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "items": [
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023-10-01",
+      "short_description": "$500 discount on a ductless heat pump with additional heating source. The heat pump must replace zonal electric as the primary heat source."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
       "program": "Energy Trust of Oregon",
       "program_url": "https://www.energytrust.org/residential/incentives",
@@ -45,7 +66,7 @@
       "payment_methods": [
         "pos_rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
       "program": "Energy Trust of Oregon",
       "program_url": "https://www.energytrust.org/residential/incentives",
@@ -65,7 +86,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
       "program": "Savings Within Reach",
       "program_url": "https://www.energytrust.org/residential/incentives",
@@ -86,7 +107,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
       "program": "Energy Trust of Oregon",
       "program_url": "https://www.energytrust.org/residential/incentives",
@@ -107,7 +128,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
       "program": "Savings Within Reach",
       "program_url": "https://www.energytrust.org/residential/incentives",
@@ -128,7 +149,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
       "program": "Savings Within Reach",
       "program_url": "https://www.energytrust.org/residential/incentives",
@@ -149,7 +170,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
       "program": "Energy Trust of Oregon",
       "program_url": "https://www.energytrust.org/residential/incentives",
@@ -170,7 +191,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
       "program": "Savings Within Reach",
       "program_url": "https://www.energytrust.org/residential/incentives",
@@ -191,7 +212,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
       "program": "Savings Within Reach",
       "program_url": "https://www.energytrust.org/residential/incentives",
@@ -207,6 +228,97 @@
         "homeowner"
       ],
       "short_description": "Earn $0.75 per sq ft for qualifying floor insulation measures in manufactured homes. Income-qualified customers. Must insulate to at least R-22."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-oregon-housing-and-community-services",
+      "program": "State Home Oil Weatherization (SHOW) Program",
+      "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
+      "items": [
+        "attic_or_roof_insulation",
+        "basement_insulation",
+        "crawlspace_insulation",
+        "floor_insulation",
+        "other_insulation",
+        "wall_insulation"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 4500,
+        "maximum": 4500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $4,500 for dwelling insulation measures ($1,500 per region of the home) for income-qualified residents."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-oregon-housing-and-community-services",
+      "program": "State Home Oil Weatherization (SHOW) Program",
+      "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
+      "items": [
+        "efficiency_rebates",
+        "smart_thermostat"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 3200,
+        "maximum": 3200
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $3,200 for heating equipment measures such as replacement parts, efficiency measures, and smart thermostats. Income-qualified residents only."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "other",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "items": [
+        "ducted_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 3000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023-10-01",
+      "short_description": "$3,000 rebate for an extended capacity heat pump replacing an electric furnace."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "other",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Savings Within Reach",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 3000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023-10-01",
+      "short_description": "$3,000 rebate for a heat pump for income-qualified customers. Must replace an electric forced-air furnace as the primary heating source."
     },
     {
       "payment_methods": [
@@ -260,7 +372,7 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
+      "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
       "program": "Savings Within Reach",
       "program_url": "https://www.energytrust.org/residential/incentives",
@@ -276,6 +388,113 @@
       ],
       "start_date": "2023-10-01",
       "short_description": "$2,000 rebate for a heat pump for income-qualified customers. Applies to single-family and manufactured homes, townhouses, and buildings to 4 units."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "other",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Savings Within Reach",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "items": [
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1800
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023-10-01",
+      "short_description": "$1,800 rebate for a ductless heat pump for income-qualified customers. Must replace electric resistance as the primary heat source."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-oregon-housing-and-community-services",
+      "program": "State Home Oil Weatherization (SHOW) Program",
+      "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
+      "items": [
+        "door_replacement",
+        "window_replacement"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1500,
+        "maximum": 1500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $1,500 for energy-efficient windows and doors, for income-qualified residents."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "other",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "items": [
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023-10-01",
+      "short_description": "$1,000 rebate for a ductless heat pump replacing zonal electric resistance as the primary heat source. Primary unit must be in the main living space."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "other",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Extended Capacity Heat Pump",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "items": [
+        "ducted_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023-10-01",
+      "short_description": "$1,000 rebate for an extended capacity central ducted heat pump. Must be listed on Energy Trust’s list and be the primary heat source."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-oregon-housing-and-community-services",
+      "program": "State Home Oil Weatherization (SHOW) Program",
+      "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
+      "items": [
+        "air_sealing",
+        "duct_sealing"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1000,
+        "maximum": 1000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $1,000 for duct sealing and insulation measures for income-qualified residents."
     },
     {
       "payment_methods": [
@@ -298,6 +517,27 @@
         "homeowner"
       ],
       "short_description": "Up to $1,000 for energy-efficient windows and doors."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "other",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "items": [
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023-10-01",
+      "short_description": "$1,000 rebate for a ductless heat pump. Must replace electric resistance as the primary heat source and installed in the main living space."
     },
     {
       "payment_methods": [
