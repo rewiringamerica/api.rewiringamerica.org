@@ -1,5 +1,6 @@
+import { LocalDate } from '@js-joda/core';
 import { test } from 'tap';
-import { START_END_DATE_REGEX } from '../../src/lib/dates';
+import { lastDayOf, START_END_DATE_REGEX } from '../../src/lib/dates';
 
 const VALID_DATES = [
   '2024',
@@ -35,4 +36,17 @@ test('invalid dates do not match the regex', async t => {
   INVALID_DATES.forEach(date => {
     t.notOk(START_END_DATE_REGEX.test(date), `${date} should be invalid`);
   });
+});
+
+test('lastDayOf is correct', async t => {
+  t.same(lastDayOf('2024'), LocalDate.of(2024, 12, 31));
+  t.same(lastDayOf('2024-11'), LocalDate.of(2024, 11, 30));
+  t.same(lastDayOf('2024-06-07'), LocalDate.of(2024, 6, 7));
+
+  // Leap days
+  t.same(lastDayOf('2024-02'), LocalDate.of(2024, 2, 29));
+  t.same(lastDayOf('2025-02'), LocalDate.of(2025, 2, 28));
+
+  t.same(lastDayOf('2024Q1'), LocalDate.of(2024, 3, 31));
+  t.same(lastDayOf('2025H2'), LocalDate.of(2025, 12, 31));
 });
