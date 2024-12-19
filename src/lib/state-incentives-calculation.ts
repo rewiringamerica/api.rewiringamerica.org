@@ -16,10 +16,11 @@ import {
 } from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
 import { APICoverage } from '../data/types/coverage';
+import { IncentiveStatusToInclude } from '../data/types/incentive-status-to-include';
 import { OwnerStatus } from '../data/types/owner-status';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
 import { AMIAndEVCreditEligibility } from './ami-evcredit-calculation';
-import { lastDayOf } from './dates';
+import { firstDayOf, lastDayOf } from './dates';
 import {
   CombinedValue,
   RelationshipMaps,
@@ -135,6 +136,15 @@ export function calculateStateIncentivesAndSavings(
       }
     }
 
+    // skip if incentive is explicity marked as inactive and the request
+    // specifies only active incentives
+    if (
+      request.status_to_include === IncentiveStatusToInclude.Active &&
+      item.active === false
+    ) {
+      eligible = false;
+    }
+
     if (item.end_date) {
       const lastValidDay = lastDayOf(item.end_date);
 
@@ -148,6 +158,16 @@ export function calculateStateIncentivesAndSavings(
       // their passed-in location, but that would be a lot of effort for fairly
       // marginal gain.
       if (LocalDate.now(ZoneId.of('America/New_York')).isAfter(lastValidDay)) {
+        eligible = false;
+      }
+    }
+
+    if (item.start_date) {
+      const firstValidDay = firstDayOf(item.start_date);
+
+      if (
+        LocalDate.now(ZoneId.of('America/New_York')).isBefore(firstValidDay)
+      ) {
         eligible = false;
       }
     }

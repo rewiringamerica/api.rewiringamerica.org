@@ -25,6 +25,7 @@ export type StateIncentive = {
   bonus_available?: boolean;
   low_income?: string;
   more_info_url?: LocalizableString;
+  active?: boolean;
 };
 
 const incentivePropertySchema = {
@@ -42,6 +43,10 @@ const incentivePropertySchema = {
   end_date: {
     type: 'string',
     pattern: START_END_DATE_REGEX.source,
+    nullable: true,
+  },
+  active: {
+    type: 'boolean',
     nullable: true,
   },
   payment_methods: {
