@@ -140,8 +140,13 @@ export function calculateStateIncentivesAndSavings(
 
       // Use the current day in Eastern time, the earliest timezone of the
       // mainland US. This is conservative: when it's 2025-01-01 at 1am in
-      // Eastern time, it will still be 2024 in Pacific time but incentives
-      // whose validity ends on 2024-12-31 will be considered invalid.
+      // Eastern time, it will still be 2024 in Pacific time, but incentives
+      // whose validity ends on 2024-12-31 will be counted as ineligible
+      // everywhere.
+      //
+      // One possible improvement would be to infer the user's timezone from
+      // their passed-in location, but that would be a lot of effort for fairly
+      // marginal gain.
       if (LocalDate.now(ZoneId.of('America/New_York')).isAfter(lastValidDay)) {
         eligible = false;
       }
