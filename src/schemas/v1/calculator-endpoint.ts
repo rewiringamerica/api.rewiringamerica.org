@@ -7,6 +7,7 @@ import {
 import { API_DATA_PARTNER_SCHEMA } from '../../data/data_partners';
 import { FilingStatus } from '../../data/tax_brackets';
 import { API_COVERAGE_SCHEMA } from '../../data/types/coverage';
+import { IncentiveStatusToInclude } from '../../data/types/incentive-status-to-include';
 import { ALL_ITEMS } from '../../data/types/items';
 import { OwnerStatus } from '../../data/types/owner-status';
 import { API_INCENTIVE_SCHEMA } from './incentive';
@@ -122,6 +123,13 @@ taxes, and their spouse if they file taxes jointly.`,
       description:
         'Option to include states which are in development and not fully launched.',
       default: 'false',
+    },
+    status_to_include: {
+      type: 'string',
+      description: `Option to exclude incentives that has expired in the \
+      past, have yet to start, or are no longer active for another reason.`,
+      enum: Object.values(IncentiveStatusToInclude),
+      default: IncentiveStatusToInclude.All, // TODO: switch to active once unrelated tests are passing
     },
   },
   additionalProperties: false,
