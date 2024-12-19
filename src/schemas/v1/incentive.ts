@@ -153,6 +153,15 @@ modifications and additions. Examples:
       description: `The date when the incentive stopped, or will stop, being \
 available. Format is the same as for \`start_date\`.`,
     },
+    active: {
+      type: 'boolean',
+      description: `Whether the incentive is currently being offered. This \
+      field is independent of the \`start_date\` and \`end_date\` fields, which \
+      are about the time period when the incentive is available to consumers. \
+      For example, this field may be \`false\` if the funding source for an \
+      incentive has run out, even if the incentive is still in the middle of its \
+      availability period.`,
+    },
     short_description: {
       type: 'string',
       description: `A short display description for the incentive, localized \

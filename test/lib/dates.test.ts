@@ -1,6 +1,10 @@
 import { LocalDate } from '@js-joda/core';
 import { test } from 'tap';
-import { lastDayOf, START_END_DATE_REGEX } from '../../src/lib/dates';
+import {
+  firstDayOf,
+  lastDayOf,
+  START_END_DATE_REGEX,
+} from '../../src/lib/dates';
 
 const VALID_DATES = [
   '2024',
@@ -49,4 +53,13 @@ test('lastDayOf is correct', async t => {
 
   t.same(lastDayOf('2024Q1'), LocalDate.of(2024, 3, 31));
   t.same(lastDayOf('2025H2'), LocalDate.of(2025, 12, 31));
+});
+
+test('firstDayOf is correct', async t => {
+  t.same(firstDayOf('2024'), LocalDate.of(2024, 1, 1));
+  t.same(firstDayOf('2024-11'), LocalDate.of(2024, 11, 1));
+  t.same(firstDayOf('2024-06-07'), LocalDate.of(2024, 6, 7));
+
+  t.same(firstDayOf('2024Q3'), LocalDate.of(2024, 7, 1));
+  t.same(firstDayOf('2025H2'), LocalDate.of(2025, 7, 1));
 });

@@ -7,6 +7,7 @@ import { Programs } from '../../src/data/programs';
 import { StateIncentive } from '../../src/data/state_incentives';
 import { FilingStatus } from '../../src/data/tax_brackets';
 import { AmountType } from '../../src/data/types/amount';
+import { IncentiveStatusToInclude } from '../../src/data/types/incentive-status-to-include';
 import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { OwnerStatus } from '../../src/data/types/owner-status';
 import { BETA_STATES, LAUNCHED_STATES } from '../../src/data/types/states';
@@ -792,4 +793,74 @@ test('correctly matches geo groups', async t => {
     gas_utility: 'ma-westfield-gas-and-elec-lt-dep',
   });
   t.equal(withNoMassSave.incentives.filter(massSaveFilter).length, 0);
+});
+
+test('correctly filters out inactive incentive savings', async t => {
+  const inactiveIncentive: StateIncentive = {
+    active: false,
+    id: 'CO',
+    payment_methods: [PaymentMethod.TaxCredit],
+    program: 'co_hvacAndWaterHeaterIncentives',
+    amount: {
+      type: AmountType.DollarAmount,
+      number: 5000,
+    },
+    owner_status: [
+      OwnerStatus.Homeowner,
+    ],
+    items: ['ducted_heat_pump'],
+    short_description: {
+      en: 'This is an inactive incentive that is only to be used for testing.',
+    },
+  };
+
+  const programs: Programs = {
+    co_hvacAndWaterHeaterIncentives: {
+      name: { en: '' },
+      url: { en: '' },
+      authority: 'mock-state-authority',
+      authority_type: AuthorityType.State,
+    },
+  };
+
+  const authorities: AuthoritiesByType = {
+    state: {},
+    utility: {},
+    city: {
+      'mock-state-authority': {
+        name: 'Colorado Mock Department of Energy',
+        city: 'Colorado Springs',
+        county_fips: '11111',
+      },
+    },
+  };
+
+  const request = {
+    include_beta_states: false,
+    owner_status: OwnerStatus.Homeowner,
+    household_income: 100000,
+    tax_filing: FilingStatus.Joint,
+    household_size: 4,
+    authority_types: [AuthorityType.State],
+    status_to_include: IncentiveStatusToInclude.Active,
+  };
+
+  const inactiveResult = calculateStateIncentivesAndSavings(
+    {
+      state: 'CO',
+      city: 'Colorado Springs',
+      county_fips: '11111',
+      zcta: '80903',
+    },
+    request,
+    [inactiveIncentive],
+    {},
+    authorities,
+    programs,
+    { computedAMI80: 80000, computedAMI150: 150000, evCreditEligible: false },
+  );
+
+  t.ok(inactiveResult);
+  t.equal(inactiveResult.stateIncentives[0].eligible, false);
+  t.equal(inactiveResult.savings.tax_credit, 0);
 });
