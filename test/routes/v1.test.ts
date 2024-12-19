@@ -435,10 +435,10 @@ test('OR low income response with state and utility filtering is valid and corre
       zip: '97001',
       owner_status: 'homeowner',
       household_size: 1,
-      household_income: 50000,
+      household_income: 30000,
       tax_filing: 'joint',
-      authority_types: ['state'],
-      authority: 'or-energy-trust-of-oregon',
+      authority_types: ['state', 'other'],
+      utility: 'or-pacific-power',
       // TODO: Remove when OR is fully launched.
       include_beta_states: true,
     },
