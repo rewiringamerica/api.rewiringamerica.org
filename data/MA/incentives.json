@@ -1608,5 +1608,28 @@
     "short_description": {
       "en": "Up to 50% of job cost or $1,000, for weatherization measures recommended by an energy audit."
     }
+  },
+  {
+    "id": "MA-70",
+    "eligible_geo_group": "ma-turnkey-pilots",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ma_masssave_massSaveResidentialTurnkeyProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "No cost heat air source heat pump for income-qualified customers after a home energy audit."
+    },
+    "low_income": "ma-massSave-incomeEligible-enhanced"
   }
 ]
