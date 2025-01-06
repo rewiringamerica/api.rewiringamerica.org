@@ -555,5 +555,38 @@
     "short_description": {
       "en": "Rebate for 50% of the cost of a home charging unit, up to $300. Must enroll in a time of use rate plan."
     }
+  },
+  {
+    "id": "IN-25",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "efficiency_rebates",
+      "energy_audit",
+      "floor_insulation",
+      "other_heat_pump",
+      "other_insulation",
+      "other_weatherization",
+      "duct_sealing",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "wall_insulation"
+    ],
+    "program": "in_indianaOfficeOfEnergyDevelopment_indianaEnergySaverProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 12000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $12,000 for income-qualified residents to make qualified home updates that provide 35% modeled energy savings."
+    },
+    "low_income": "in-state-homes-program"
   }
 ]

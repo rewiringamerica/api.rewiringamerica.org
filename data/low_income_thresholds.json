@@ -1150,6 +1150,17 @@
         "7": 94680,
         "8": 105440
       }
+    },
+    "in-state-homes-program": {
+      "type": "ami-percentage",
+      "incentives": [
+        "IN-25"
+      ],
+      "source_url": "https://www.in.gov/oed/grants-and-funding-opportunities/homeowner-incentives/faq/#What_is_the_difference_between_the_HOMES_and_HEAR_programs_",
+      "description": "Indiana OED HOMES program, 80% of AMI",
+      "thresholds": {
+        "percentage": 80
+      }
     }
   },
   "MA": {
@@ -1157,7 +1168,18 @@
       "type": "hhsize",
       "incentives": [
         "MA-2",
-        "MA-5"
+        "MA-5",
+        "MA-19",
+        "MA-22",
+        "MA-23",
+        "MA-24",
+        "MA-35",
+        "MA-37",
+        "MA-48",
+        "MA-51",
+        "MA-53",
+        "MA-54",
+        "MA-56"
       ],
       "source_url": "https://www.masssave.com/en/residential/programs-and-services/income-based-offers",
       "description": "MassSave Income Eligible Program - Up to 60% SMI",
@@ -1173,21 +1195,21 @@
       }
     },
     "ma-massSave-incomeEligible-enhanced": {
-      "type": "hhsize",
+      "type": "ami-percentage",
       "incentives": [
-        "MA-4"
+        "MA-4",
+        "MA-20",
+        "MA-25",
+        "MA-26",
+        "MA-27",
+        "MA-28",
+        "MA-29",
+        "MA-59"
       ],
       "source_url": "https://www.masssave.com/en/residential/programs-and-services/income-based-offers",
-      "description": "MassSave Income-Based Enhanced Incentive 60-80% AMI or SMI",
+      "description": "MassSave Income-Based Enhanced Incentive 60-80% AMI or SMI. Also known as Enhanced Incentives",
       "thresholds": {
-        "1": 65595,
-        "2": 85778,
-        "3": 105960,
-        "4": 126144,
-        "5": 146327,
-        "6": 166510,
-        "7": 170294,
-        "8": 174079
+        "percentage": 80
       }
     }
   },
@@ -2270,6 +2292,22 @@
     }
   },
   "OR": {
+    "OR-Clatskanie-PUD": {
+      "type": "hhsize",
+      "incentives": [],
+      "source_url": "https://slcceep.wufoo.com/forms/z1qi1aq51qf3h0u/",
+      "description": "Adjusted Gross Income has to be equal to or less than the corresponding family size for your household in order to qualify for this program.",
+      "thresholds": {
+        "1": 33426,
+        "2": 43711,
+        "3": 53996,
+        "4": 64281,
+        "5": 74565,
+        "6": 84850,
+        "7": 86779,
+        "8": 88707
+      }
+    },
     "or-energy-trust-of-oregon": {
       "type": "hhsize",
       "incentives": [
@@ -2312,6 +2350,24 @@
       ],
       "source_url": "https://www.eweb.org/my-account/income-based-assistance/income-guidelines",
       "description": "EWEB Income Based Programs",
+      "thresholds": {
+        "1": 36811,
+        "2": 48138,
+        "3": 59464,
+        "4": 70790,
+        "5": 82117,
+        "6": 93443,
+        "7": 95567,
+        "8": 97690
+      }
+    },
+    "or-liheap": {
+      "type": "hhsize",
+      "incentives": [
+        "OR-230"
+      ],
+      "source_url": "https://www.oregon.gov/ohcs/energy-weatherization/pages/utility-bill-payment-assistance.aspx",
+      "description": "Low Income Home Energy Assistance Program (LIHEAP) OHCS Home Weatherization Funding",
       "thresholds": {
         "1": 36811,
         "2": 48138,
@@ -2378,7 +2434,8 @@
         "OR-70",
         "OR-71",
         "OR-72",
-        "OR-73"
+        "OR-73",
+        "OR-168"
       ],
       "source_url": "https://aspe.hhs.gov/sites/default/files/documents/7240229f28375f54435c5b83a3764cd1/detailed-guidelines-2024.pdf",
       "description": "200% of federal poverty level, used for Oregon's SHOW program.",
@@ -2957,6 +3014,15 @@
       "source_url": "https://focusonenergy.com/income-qualified",
       "thresholds": {
         "percentage": 80
+      }
+    },
+    "wi-focus-on-energy-150": {
+      "type": "ami-percentage",
+      "incentives": [],
+      "source_url": "https://focusonenergy.com/ira-hear",
+      "description": "WI HEAR 150% AMI",
+      "thresholds": {
+        "percentage": 150
       }
     }
   }

@@ -664,8 +664,6 @@ test('correct filtering of city incentives', async t => {
 test('correctly evaluates savings when state tax liability is lower than max savings', async t => {
   const incentive: StateIncentive = {
     id: 'CO',
-    start_date: '2023',
-    end_date: '2024',
     payment_methods: [PaymentMethod.TaxCredit],
     items: ['ducted_heat_pump'],
     program: 'co_hvacAndWaterHeaterIncentives',

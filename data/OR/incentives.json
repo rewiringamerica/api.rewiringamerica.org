@@ -2477,7 +2477,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "or_centralElectricCooperative_residentialRebates",
+    "program": "or_centralElectricCooperative_cECResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 150,
@@ -2498,7 +2498,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "or_tillamookPeople'SUtilityDistrict_residentialRebates",
+    "program": "or_tillamookPeople'SUtilityDistrict_tillamookPUDResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 900,
@@ -2520,7 +2520,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "or_tillamookPeople'SUtilityDistrict_residentialHeatPumpProgram",
+    "program": "or_tillamookPeople'SUtilityDistrict_tillamookPUDResidentialHeatPumpProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 1200,
@@ -2542,7 +2542,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "or_tillamookPeople'SUtilityDistrict_residentialHeatPumpProgram",
+    "program": "or_tillamookPeople'SUtilityDistrict_tillamookPUDResidentialHeatPumpProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 800,
@@ -2710,5 +2710,4170 @@
       "en": "Up to $2,400 for a ducted air source heat pump. Homes must have electric heat."
     },
     "start_date": "2024-10-01"
+  },
+  {
+    "id": "OR-125",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "other_weatherization"
+    ],
+    "program": "or_northernWascoCountyPud_eEUPEnergyEfficiencyUpgradePrograms",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Residential customers with electric heat can complete a Rebate Eligibility Assessment and then obtain a list of rebate offerings for weatherization."
+    }
+  },
+  {
+    "id": "OR-127",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_northernWascoCountyPud_eEUPEnergyEfficiencyUpgradePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 140
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free Google Nest or up to $140 off advanced smart thermostat for customers with forced-air electric furnace or ducted electric heat pump"
+    }
+  },
+  {
+    "id": "OR-131",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "duct_sealing"
+    ],
+    "program": "or_northernWascoCountyPud_eEUPEnergyEfficiencyUpgradePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1900,
+      "minimum": 450,
+      "maximum": 1900
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,900 rebate for new heat pump and duct sealing after work is complete."
+    }
+  },
+  {
+    "id": "OR-132",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "or_northernWascoCountyPud_eEUPEnergyEfficiencyUpgradePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "minimum": 75,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $300 rebate for Energy Star Electric Clothes Dryer."
+    }
+  },
+  {
+    "id": "OR-135",
+    "payment_methods": [
+      "rebate",
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_northernWascoCountyPud_eEUPEnergyEfficiencyUpgradePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900,
+      "minimum": 800,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $900 rebate toward certain 40-80 gallon heat pump water heater after project completion."
+    }
+  },
+  {
+    "id": "OR-144",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement",
+      "window_replacement"
+    ],
+    "program": "or_blachly-LaneElectricCooperative_residentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 8,
+      "unit": "square_foot",
+      "minimum": 6,
+      "maximum": 8
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$6 to $8 per sq foot rebate for window or patio door replacement in existing single-family, multi-family and manufactured homes."
+    }
+  },
+  {
+    "id": "OR-145",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "floor_insulation",
+      "wall_insulation"
+    ],
+    "program": "or_blachly-LaneElectricCooperative_residentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot",
+      "maximum": 2
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2 per sq foot rebate to replace insulation in existing homes."
+    }
+  },
+  {
+    "id": "OR-146",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_replacement",
+      "door_replacement"
+    ],
+    "program": "or_blachly-LaneElectricCooperative_residentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $40 rebate to replace a thermally substandard door in existing homes. "
+    }
+  },
+  {
+    "id": "OR-147",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_blachly-LaneElectricCooperative_residentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 30
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $30 rebate on a new ENERGY STAR® clothes washer."
+    }
+  },
+  {
+    "id": "OR-148",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "or_blachly-LaneElectricCooperative_residentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $50 rebate on a new ENERGY STAR® clothes dryer."
+    }
+  },
+  {
+    "id": "OR-149",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_blachly-LaneElectricCooperative_residentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,100 rebate for a heat pump water heater to replace an electric storage water heater in existing homes."
+    }
+  },
+  {
+    "id": "OR-150",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_blachly-LaneElectricCooperative_residentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 140
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $140 rebate for a qualified smart thermostat in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-151",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_blachly-LaneElectricCooperative_residentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate for a ducted air source heat pump, replacing existing electric heat."
+    }
+  },
+  {
+    "id": "OR-152",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_blachly-LaneElectricCooperative_residentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate for a ductless heat pump, replacing existing electric heating."
+    }
+  },
+  {
+    "id": "OR-153",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_blachly-LaneElectricCooperative_residentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate on a new Northwest Energy Efficiency Manufactured (NEEM) Homes ENERGY STAR® qualified home."
+    }
+  },
+  {
+    "id": "OR-154",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "or_centralElectricCooperative_cECResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Free residential home energy audit for older, electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-155",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "or_centralElectricCooperative_cECResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 5,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $5 per square foot rebate to replace windows that are single-pane or double-pane with metal frame in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-156",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement"
+    ],
+    "program": "or_centralElectricCooperative_cECResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 80
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $80 rebate per pre-hung ENERGY STAR® qualified door to replace un-insulated exterior doors in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-157",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "wall_insulation",
+      "floor_insulation",
+      "attic_or_roof_insulation"
+    ],
+    "program": "or_centralElectricCooperative_cECResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1 per square foot rebate for insulation replacement in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-158",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing"
+    ],
+    "program": "or_centralElectricCooperative_cECResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.1,
+      "unit": "cfm50"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $0.10 rebate per CFM reduction for whole-home air sealing or bonus incentives with home insulation replacement, in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-159",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_centralElectricCooperative_cECResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $3,200 rebate for a ducted air source heat pump in new and existing homes."
+    }
+  },
+  {
+    "id": "OR-160",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_sealing"
+    ],
+    "program": "or_centralElectricCooperative_cECResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.9,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $0.90 rebate per linear foot for duct insulation."
+    }
+  },
+  {
+    "id": "OR-161",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_centralElectricCooperative_cECResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,800 rebate for a ductless heat pump in existing homes with electric heating."
+    }
+  },
+  {
+    "id": "OR-162",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_centralElectricCooperative_cECResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 140
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $140 rebate or free smart thermostat in homes with electric heat or heat pumps."
+    }
+  },
+  {
+    "id": "OR-163",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_centralElectricCooperative_cECResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 80
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $80 rebate for new ENERGY STAR® electric clothes washer."
+    }
+  },
+  {
+    "id": "OR-164",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "or_centralElectricCooperative_cECResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $40 rebate for new ENERGY STAR® electric clothes dryer."
+    }
+  },
+  {
+    "id": "OR-165",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_centralElectricCooperative_cECResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "minimum": 300,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 for a new heat pump water heater in existing homes, and $300 in new homes."
+    }
+  },
+  {
+    "id": "OR-167",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_centralElectricCooperative_cECResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,500 to upgrade new manufactured home to NEEM ENERGY STAR® home."
+    }
+  },
+  {
+    "id": "OR-168",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "efficiency_rebates",
+      "energy_audit",
+      "heat_pump_water_heater",
+      "heat_pump_clothes_dryer",
+      "other_weatherization",
+      "other_insulation",
+      "wall_insulation",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing"
+    ],
+    "program": "or_centralElectricCooperative_cECResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home weatherization, heat pump, washer, dryer, and heat pump water heater for income qualified CEC members."
+    },
+    "low_income": "or-show-low-income"
+  },
+  {
+    "id": "OR-169",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_tillamookPeople'SUtilityDistrict_tillamookPUDResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 140,
+      "maximum": 140
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $140 upfront rebate on smart thermostats available to residential customers with electric furnaces or ducted heat pumps."
+    }
+  },
+  {
+    "id": "OR-170",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement",
+      "window_replacement"
+    ],
+    "program": "or_columbiaBasinElectricCooperative_cBECEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 8,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $8 per square foot rebate for qualifying windows and patio doors in existing homes."
+    }
+  },
+  {
+    "id": "OR-171",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "window_replacement",
+      "floor_insulation",
+      "wall_insulation",
+      "energy_audit"
+    ],
+    "program": "or_tillamookPeople'SUtilityDistrict_tillamookPUDResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Residential customers with electric heat can complete a Rebate Eligibility Assessment and then obtain window and insulation rebates or loans."
+    }
+  },
+  {
+    "id": "OR-172",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement"
+    ],
+    "program": "or_columbiaBasinElectricCooperative_cBECEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $40 rebate for residential exterior door replacement."
+    }
+  },
+  {
+    "id": "OR-173",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "wall_insulation",
+      "floor_insulation",
+      "attic_or_roof_insulation"
+    ],
+    "program": "or_columbiaBasinElectricCooperative_cBECEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2 per square foot rebate for home insulation replacement in existing homes."
+    }
+  },
+  {
+    "id": "OR-174",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "or_columbiaBasinElectricCooperative_cBECEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $50 rebate for new ENERGY STAR® electric clothes dryer."
+    }
+  },
+  {
+    "id": "OR-175",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_columbiaBasinElectricCooperative_cBECEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 30
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $30 rebate for new ENERGY STAR® electric clothes washer."
+    }
+  },
+  {
+    "id": "OR-176",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_columbiaBasinElectricCooperative_cBECEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 140
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $140 rebate for new smart thermostat in an electrically heated home."
+    }
+  },
+  {
+    "id": "OR-177",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_columbiaBasinElectricCooperative_cBECEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1100,
+      "maximum": 1100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,100 for a heat pump water heater, not to exceed 70% of product cost."
+    }
+  },
+  {
+    "id": "OR-178",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_columbiaBasinElectricCooperative_cBECEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,400 for new Northwest Energy Efficiency Manufactured (NEEM) Homes ENERGY STAR® qualified manufactured home."
+    }
+  },
+  {
+    "id": "OR-179",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "wall_insulation",
+      "floor_insulation",
+      "window_replacement",
+      "duct_sealing",
+      "air_sealing",
+      "energy_audit"
+    ],
+    "program": "or_canbyUtilityBoard_canbyUtilityBoardResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Residential customers with electric heat can complete a Rebate Eligibility Assessment and then obtain a list of rebate offerings for weatherization."
+    }
+  },
+  {
+    "id": "OR-180",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_columbiaBasinElectricCooperative_cBECEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200,
+      "maximum": 1200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,200 rebate for a ducted air source heat pump in existing homes."
+    }
+  },
+  {
+    "id": "OR-181",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_columbiaBasinElectricCooperative_cBECEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 for a ductless heat pump in an existing home."
+    }
+  },
+  {
+    "id": "OR-182",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "or_columbiaPowerCooperativeAssociation_communityConnections",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Financial assistance with energy bills for residents of Grant County."
+    }
+  },
+  {
+    "id": "OR-183",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_columbiaRuralElectricAssociation_columbiaREAResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,200 for a ducted heat pump in existing homes."
+    }
+  },
+  {
+    "id": "OR-184",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_canbyUtilityBoard_canbyUtilityBoardResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate for a qualified ductless heat pump in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-185",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_sealing"
+    ],
+    "program": "or_columbiaRuralElectricAssociation_columbiaREAResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for duct sealing in existing homes."
+    }
+  },
+  {
+    "id": "OR-186",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_columbiaRuralElectricAssociation_columbiaREAResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 140
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $140 rebate for a smart thermostat."
+    }
+  },
+  {
+    "id": "OR-187",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_canbyUtilityBoard_canbyUtilityBoardResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $100 rebate toward a smart thermostat for electrically heated homes, not to exceed 70% of cost."
+    }
+  },
+  {
+    "id": "OR-188",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "floor_insulation",
+      "attic_or_roof_insulation",
+      "wall_insulation"
+    ],
+    "program": "or_columbiaRuralElectricAssociation_columbiaREAResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": " Up to $2 per square foot rebate on insulation replacement in existing homes. "
+    }
+  },
+  {
+    "id": "OR-189",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "or_canbyUtilityBoard_canbyUtilityBoardResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 toward ENERGY STAR electric clothes dryer available after purchase"
+    }
+  },
+  {
+    "id": "OR-190",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "or_columbiaRuralElectricAssociation_columbiaREAResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 8,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $8 per square foot rebate for window replacement in existing homes."
+    }
+  },
+  {
+    "id": "OR-191",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "or_canbyUtilityBoard_canbyUtilityBoardResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebates available for windows and patio doors for customers with existing, electric-heated homes"
+    }
+  },
+  {
+    "id": "OR-192",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement"
+    ],
+    "program": "or_columbiaRuralElectricAssociation_columbiaREAResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $40 rebate for exterior door replacement in existing homes."
+    }
+  },
+  {
+    "id": "OR-193",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement"
+    ],
+    "program": "or_canbyUtilityBoard_canbyUtilityBoardResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 toward door replacement offered for customers in most existing, electric-heated homes"
+    }
+  },
+  {
+    "id": "OR-194",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_columbiaRuralElectricAssociation_columbiaREAResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,100 for a heat pump water heater in existing homes."
+    }
+  },
+  {
+    "id": "OR-195",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_columbiaRuralElectricAssociation_columbiaREAResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 35
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $35 rebate on a new ENERGY STAR® clothes washer."
+    }
+  },
+  {
+    "id": "OR-196",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "or_columbiaRuralElectricAssociation_columbiaREAResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $50 rebate on a new ENERGY STAR® clothes dryer."
+    }
+  },
+  {
+    "id": "OR-197",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_columbiaRuralElectricAssociation_columbiaREAResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,400 rebate for new Northwest Energy Efficiency Manufactured (NEEM) Homes ENERGY STAR® qualified manufactured home."
+    }
+  },
+  {
+    "id": "OR-198",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_canbyUtilityBoard_canbyUtilityBoardResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1100,
+      "minimum": 700,
+      "maximum": 1100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1100 toward 40 gallon+ heat pump water heater to replace existing electric water heater, available after installation. Requires pre-approval."
+    }
+  },
+  {
+    "id": "OR-199",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_canbyUtilityBoard_canbyUtilityBoardResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1000 toward air source heat pump available to customers in most existing homes with electric forced air furnace, available after installation. "
+    }
+  },
+  {
+    "id": "OR-200",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "or_umatillaElectricCooperativeAssociation_umatillaElectricCo-OpResidentialRebatesForEnergyEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 for an electric clothes dryer in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-201",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_coos-CurryElectricCooperative_cCECResidentialConservationRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 35
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $35 rebate on a new ENERGY STAR® clothes washer."
+    }
+  },
+  {
+    "id": "OR-202",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_coos-CurryElectricCooperative_cCECResidentialConservationRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 175
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $175 rebate on a new ENERGY STAR® clothes dryer."
+    }
+  },
+  {
+    "id": "OR-203",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_coos-CurryElectricCooperative_cCECResidentialConservationRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 for new air source heat pump in existing homes."
+    }
+  },
+  {
+    "id": "OR-204",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_coos-CurryElectricCooperative_cCECResidentialConservationRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,100 for a heat pump water heater to replace an electric storage water heater in existing homes."
+    }
+  },
+  {
+    "id": "OR-205",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_coos-CurryElectricCooperative_cCECResidentialConservationRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $800 for a ductless heat pump in existing homes."
+    }
+  },
+  {
+    "id": "OR-206",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "floor_insulation",
+      "attic_or_roof_insulation",
+      "wall_insulation"
+    ],
+    "program": "or_coos-CurryElectricCooperative_cCECResidentialConservationRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": " Up to $2 per square foot rebate on insulation replacement in existing homes. "
+    }
+  },
+  {
+    "id": "OR-207",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "or_coos-CurryElectricCooperative_cCECResidentialConservationRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 8,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $8 per square foot for window replacement in existing homes."
+    }
+  },
+  {
+    "id": "OR-208",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement"
+    ],
+    "program": "or_coos-CurryElectricCooperative_cCECResidentialConservationRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $40 for exterior door replacement in existing homes."
+    }
+  },
+  {
+    "id": "OR-209",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_coos-CurryElectricCooperative_cCECResidentialConservationRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,400 for new Northwest Energy Efficiency Manufactured (NEEM) Homes ENERGY STAR® qualified manufactured home."
+    }
+  },
+  {
+    "id": "OR-210",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_umatillaElectricCooperativeAssociation_umatillaElectricCo-OpResidentialRebatesForEnergyEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate for ductless heat pumps in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-211",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_coos-CurryElectricCooperative_cCECResidentialConservationRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $100 rebate for smart thermostat."
+    }
+  },
+  {
+    "id": "OR-212",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_umatillaElectricCooperativeAssociation_umatillaElectricCo-OpResidentialRebatesForEnergyEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 rebate for a ducted heat pump."
+    }
+  },
+  {
+    "id": "OR-213",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement",
+      "window_replacement"
+    ],
+    "program": "or_hoodRiverElectricCooperative_hoodRiverCoopResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 8,
+      "unit": "square_foot",
+      "minimum": 6,
+      "maximum": 8
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$6 to $8 per sq foot rebate for qualifying window or patio door replacement in existing single-family, multi-family and manufactured homes."
+    }
+  },
+  {
+    "id": "OR-214",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_umatillaElectricCooperativeAssociation_umatillaElectricCo-OpResidentialRebatesForEnergyEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "minimum": 700,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate for a heat pump water heater."
+    }
+  },
+  {
+    "id": "OR-215",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement",
+      "window_replacement"
+    ],
+    "program": "or_blachly-LaneElectricCooperative_residentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 8,
+      "unit": "square_foot",
+      "minimum": 6,
+      "maximum": 8
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$6 to $8 per sq foot rebate for qualifying window or patio door replacement in existing single-family, multi-family and manufactured homes."
+    }
+  },
+  {
+    "id": "OR-216",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "floor_insulation",
+      "attic_or_roof_insulation",
+      "wall_insulation"
+    ],
+    "program": "or_hoodRiverElectricCooperative_hoodRiverCoopResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot",
+      "maximum": 2
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": " Up to $2 per square foot rebate on insulation replacement in existing homes. "
+    }
+  },
+  {
+    "id": "OR-217",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement"
+    ],
+    "program": "or_hoodRiverElectricCooperative_hoodRiverCoopResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $40 rebate for residential exterior door replacement."
+    }
+  },
+  {
+    "id": "OR-218",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_hoodRiverElectricCooperative_hoodRiverCoopResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 rebate for an air source heat pump in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-219",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_hoodRiverElectricCooperative_hoodRiverCoopResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate for a ductless heat pump in an electrically heated home."
+    }
+  },
+  {
+    "id": "OR-220",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_hoodRiverElectricCooperative_hoodRiverCoopResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate for a heat pump water heater in an existing home."
+    }
+  },
+  {
+    "id": "OR-221",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_laneElectricCooperative_laneElectricEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for new Northwest Energy Efficiency Manufactured (NEEM) Homes ENERGY STAR® qualified manufactured home."
+    }
+  },
+  {
+    "id": "OR-222",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_laneElectricCooperative_laneElectricEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate for a ductless heat pump in an electrically heated home."
+    }
+  },
+  {
+    "id": "OR-223",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "floor_insulation",
+      "wall_insulation"
+    ],
+    "program": "or_umatillaElectricCooperativeAssociation_umatillaElectricCo-OpResidentialRebatesForEnergyEfficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.5,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $0.50 per square foot rebate for insulation."
+    }
+  },
+  {
+    "id": "OR-224",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "or_umatillaElectricCooperativeAssociation_umatillaElectricCo-OpResidentialRebatesForEnergyEfficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 4,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $4 per square foot rebate for energy-efficiency windows."
+    }
+  },
+  {
+    "id": "OR-225",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_laneElectricCooperative_laneElectricEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate for a new air source heat pump in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-226",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_laneElectricCooperative_laneElectricEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate for a heat pump water heater in an existing home."
+    }
+  },
+  {
+    "id": "OR-227",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement"
+    ],
+    "program": "or_umatillaElectricCooperativeAssociation_umatillaElectricCo-OpResidentialRebatesForEnergyEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $50 rebate per door for qualifying energy-efficient exterior doors."
+    }
+  },
+  {
+    "id": "OR-228",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "or_laneElectricCooperative_laneElectricEnergyEfficiencyRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit."
+    }
+  },
+  {
+    "id": "OR-229",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_umatillaElectricCooperativeAssociation_umatillaElectricCo-OpResidentialRebatesForEnergyEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for a smart thermostat."
+    }
+  },
+  {
+    "id": "OR-230",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "window_replacement",
+      "wall_insulation",
+      "other_weatherization",
+      "floor_insulation",
+      "attic_or_roof_insulation",
+      "duct_sealing"
+    ],
+    "program": "or_laneElectricCooperative_laneElectricEnergyEfficiencyRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Cash grant for home weatherization measures including insulation and windows."
+    },
+    "low_income": "or-liheap"
+  },
+  {
+    "id": "OR-231",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "or_clearwaterPowerCompany_energyEfficiencyRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebates for installing ducted, ductless, or ground source heat pump systems."
+    }
+  },
+  {
+    "id": "OR-232",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_clearwaterPowerCompany_energyEfficiencyRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Upfront rebates on Rheem heat pump water heaters sold through a designated retailer."
+    }
+  },
+  {
+    "id": "OR-233",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_clearwaterPowerCompany_energyEfficiencyRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Free Google Nest thermostat."
+    }
+  },
+  {
+    "id": "OR-234",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_clearwaterPowerCompany_energyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $100 rebate on qualifying smart thermostat."
+    }
+  },
+  {
+    "id": "OR-235",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "or_clearwaterPowerCompany_energyEfficiencyRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate for new ENERGY STAR® electric clothes dryer."
+    }
+  },
+  {
+    "id": "OR-236",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_clearwaterPowerCompany_energyEfficiencyRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate for new ENERGY STAR® electric clothes washer."
+    }
+  },
+  {
+    "id": "OR-237",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_clearwaterPowerCompany_energyEfficiencyRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate for new heat pump water heater."
+    }
+  },
+  {
+    "id": "OR-238",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement",
+      "door_replacement"
+    ],
+    "program": "or_wascoElectricCooperative_wascoElectricCo-OpResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 8,
+      "unit": "square_foot",
+      "minimum": 6,
+      "maximum": 8
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $8 per square foot rebate on energy-efficient windows and doors."
+    },
+    "start_date": "2024-09-12"
+  },
+  {
+    "id": "OR-239",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_clearwaterPowerCompany_energyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,400 for new Northwest Energy Efficiency Manufactured (NEEM) Homes ENERGY STAR® qualified manufactured home."
+    }
+  },
+  {
+    "id": "OR-240",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "wall_insulation",
+      "floor_insulation",
+      "attic_or_roof_insulation"
+    ],
+    "program": "or_clearwaterPowerCompany_energyEfficiencyRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate for insulation replacement in existing homes."
+    }
+  },
+  {
+    "id": "OR-241",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_wascoElectricCooperative_wascoElectricCo-OpResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 140
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $140 per smart thermostat for electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-242",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "or_clearwaterPowerCompany_energyEfficiencyRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate for energy-efficiency window replacement in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-243",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "floor_insulation",
+      "wall_insulation"
+    ],
+    "program": "or_wascoElectricCooperative_wascoElectricCo-OpResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2.3,
+      "unit": "square_foot",
+      "minimum": 1,
+      "maximum": 2
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2.30 per square foot rebate for insulation, depending on location and existing R-value."
+    },
+    "start_date": "2024-09-16"
+  },
+  {
+    "id": "OR-244",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement"
+    ],
+    "program": "or_wascoElectricCooperative_wascoElectricCo-OpResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate per door for exterior doors in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-245",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "or_wascoElectricCooperative_wascoElectricCo-OpResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "minimum": 35,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an ENERGY STAR certified electric clothes dryer for electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-246",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_wascoElectricCooperative_wascoElectricCo-OpResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1100,
+      "minimum": 700,
+      "maximum": 1100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,100 rebate for a heat pump water heater, not to exceed 100% of product cost."
+    },
+    "start_date": "2023-04-01"
+  },
+  {
+    "id": "OR-247",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_wascoElectricCooperative_wascoElectricCo-OpResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "minimum": 800,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for air source heat pumps."
+    }
+  },
+  {
+    "id": "OR-248",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_wascoElectricCooperative_wascoElectricCo-OpResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$800 rebate for a ductless air source heat pump."
+    }
+  },
+  {
+    "id": "OR-249",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "or_westOregonElectricCooperative_westOregonElectricCo-OpResidentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "minimum": 30,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an ENERGY STAR rated electric clothes dryer, in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-250",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement",
+      "door_replacement"
+    ],
+    "program": "or_westOregonElectricCooperative_westOregonElectricCo-OpResidentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 6,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$6 per square foot rebate for energy-efficient windows and exterior doors, in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-251",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "floor_insulation",
+      "wall_insulation"
+    ],
+    "program": "or_westOregonElectricCooperative_westOregonElectricCo-OpResidentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot",
+      "maximum": 2
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2 per square foot rebate for insulation, depending on location and current R value."
+    }
+  },
+  {
+    "id": "OR-252",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement"
+    ],
+    "program": "or_westOregonElectricCooperative_westOregonElectricCo-OpResidentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 per door for exterior doors in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-253",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_westOregonElectricCooperative_westOregonElectricCo-OpResidentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 140,
+      "maximum": 140
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$140 per unit for smart thermostats, up to 2. May not exceed the cost of the equipment."
+    }
+  },
+  {
+    "id": "OR-254",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_westOregonElectricCooperative_westOregonElectricCo-OpResidentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900,
+      "minimum": 600,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $900 rebate for a heat pump water heater."
+    },
+    "start_date": "2023-04-01"
+  },
+  {
+    "id": "OR-255",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_westOregonElectricCooperative_westOregonElectricCo-OpResidentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$800 for a ductless heat pump."
+    }
+  },
+  {
+    "id": "OR-256",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_westOregonElectricCooperative_westOregonElectricCo-OpResidentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200,
+      "minimum": 1000,
+      "maximum": 1200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,200 for a ducted air source heat pump."
+    }
+  },
+  {
+    "id": "OR-257",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement",
+      "door_replacement"
+    ],
+    "program": "or_clatskaniePud_clatskaniePUDResidentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 8,
+      "unit": "square_foot",
+      "minimum": 6,
+      "maximum": 8
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $8 per square foot rebate for energy-efficient windows and doors."
+    },
+    "start_date": "2024-09-12"
+  },
+  {
+    "id": "OR-258",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "floor_insulation",
+      "wall_insulation"
+    ],
+    "program": "or_clatskaniePud_clatskaniePUDResidentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot",
+      "maximum": 2
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2 per square foot rebate for insulation, depending on location and R value."
+    }
+  },
+  {
+    "id": "OR-259",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement"
+    ],
+    "program": "or_clatskaniePud_clatskaniePUDResidentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate per door for exterior doors."
+    }
+  },
+  {
+    "id": "OR-260",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "or_clatskaniePud_clatskaniePUDResidentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 175,
+      "minimum": 50,
+      "maximum": 175
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $175 rebate for ENERGY STAR rated electric dryer."
+    }
+  },
+  {
+    "id": "OR-261",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_clatskaniePud_clatskaniePUDResidentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 140,
+      "maximum": 140
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$140 rebate for a smart thermostat, not to exceed product cost."
+    }
+  },
+  {
+    "id": "OR-262",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_clatskaniePud_clatskaniePUDResidentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1100,
+      "minimum": 700,
+      "maximum": 1100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,100 rebate for a heat pump water heater."
+    },
+    "start_date": "2023-04-01"
+  },
+  {
+    "id": "OR-263",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_clatskaniePud_clatskaniePUDResidentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$800 rebate for a ductless heat pump, plus $100 each additional head."
+    }
+  },
+  {
+    "id": "OR-264",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_clatskaniePud_clatskaniePUDResidentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200,
+      "minimum": 1000,
+      "maximum": 1200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,200 rebate for air source heat pump that meets minimum efficiency requirements."
+    }
+  },
+  {
+    "id": "OR-265",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "or_columbiaRiverPud_waysToSaveAtHome",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit for electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-266",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "or_columbiaRiverPud_waysToSaveAtHome",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "minimum": 30,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for ENERGY STAR rated electric clothes dryer."
+    }
+  },
+  {
+    "id": "OR-267",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "floor_insulation",
+      "wall_insulation"
+    ],
+    "program": "or_columbiaRiverPud_waysToSaveAtHome",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot",
+      "maximum": 2
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2 per square foot rebate for insulation depending on location and R value."
+    }
+  },
+  {
+    "id": "OR-268",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement",
+      "door_replacement"
+    ],
+    "program": "or_columbiaRiverPud_waysToSaveAtHome",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 8,
+      "unit": "square_foot",
+      "minimum": 6,
+      "maximum": 8
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $8 per square foot rebate for energy-efficient windows and patio doors."
+    }
+  },
+  {
+    "id": "OR-269",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement"
+    ],
+    "program": "or_columbiaRiverPud_waysToSaveAtHome",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate per door for exterior doors in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-270",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "or_springfieldUtilityBoard_sUBConservationConnection",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit."
+    }
+  },
+  {
+    "id": "OR-271",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_springfieldUtilityBoard_sUBConservationConnection",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $900 for a heat pump water heater in an existing home."
+    }
+  },
+  {
+    "id": "OR-272",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_springfieldUtilityBoard_sUBConservationConnection",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $900 upfront rebate on Rheem hybrid water heater when purchased through specified retailer."
+    }
+  },
+  {
+    "id": "OR-273",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_springfieldUtilityBoard_sUBConservationConnection",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 for a ductless heat pump in an existing home."
+    }
+  },
+  {
+    "id": "OR-274",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_springfieldUtilityBoard_sUBConservationConnection",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 140
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $140 rebate for a new smart thermostat."
+    }
+  },
+  {
+    "id": "OR-275",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_springfieldUtilityBoard_sUBConservationConnection",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Free Google Nest thermostat."
+    }
+  },
+  {
+    "id": "OR-276",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_springfieldUtilityBoard_sUBConservationConnection",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1400,
+      "minimum": 200,
+      "maximum": 1400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,400 for a new air source heat pump in existing homes."
+    }
+  },
+  {
+    "id": "OR-277",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "or_springfieldUtilityBoard_sUBConservationConnection",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate for a level 2 EV charger."
+    }
+  },
+  {
+    "id": "OR-278",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_springfieldUtilityBoard_sUBConservationConnection",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an ENERGY STAR® electric clothes washer."
+    }
+  },
+  {
+    "id": "OR-279",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "or_springfieldUtilityBoard_sUBConservationConnection",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $100 rebate for a new ENERGY STAR® electric clothes dryer."
+    }
+  },
+  {
+    "id": "OR-280",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "wall_insulation",
+      "floor_insulation",
+      "attic_or_roof_insulation"
+    ],
+    "program": "or_springfieldUtilityBoard_sUBConservationConnection",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to 100% rebate for home insulation improvements for income-qualified residents."
+    }
+  },
+  {
+    "id": "OR-281",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_sealing"
+    ],
+    "program": "or_springfieldUtilityBoard_sUBConservationConnection",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $250 rebate for duct sealing in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-282",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "or_emeraldPeople'SUtilityDistrict_residentialIncentivePrograms",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit."
+    }
+  },
+  {
+    "id": "OR-283",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_cityOfMilton-Freewater_mFCityResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,200 rebate for a new air source heat pump in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-284",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_cityOfMilton-Freewater_mFCityResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate for a ductless heat pump in electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-285",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "wall_insulation",
+      "floor_insulation",
+      "attic_or_roof_insulation"
+    ],
+    "program": "or_cityOfMilton-Freewater_mFCityResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.25,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $0.25 per square foot rebate for home insulation replacement in existing homes."
+    }
+  },
+  {
+    "id": "OR-286",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "or_emeraldPeople'SUtilityDistrict_residentialIncentivePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "minimum": 35,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 for an ENERGY STAR rated electric clothes dryer."
+    }
+  },
+  {
+    "id": "OR-287",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "or_cityOfMilton-Freewater_mFCityResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3 per square foot rebate for energy efficient windows in existing homes."
+    }
+  },
+  {
+    "id": "OR-288",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_cityOfMilton-Freewater_mFCityResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900,
+      "minimum": 600,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $900 for a heat pump water heater in an existing home."
+    }
+  },
+  {
+    "id": "OR-289",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "floor_insulation",
+      "wall_insulation"
+    ],
+    "program": "or_emeraldPeople'SUtilityDistrict_residentialIncentivePrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.5,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$0.50 per square foot rebate for insulation, not to exceed 50% of project cost. Primary heat source must be electric."
+    }
+  },
+  {
+    "id": "OR-291",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement",
+      "door_replacement"
+    ],
+    "program": "or_emeraldPeople'SUtilityDistrict_residentialIncentivePrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 8,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$8 per square foot rebate for windows and $40 rebate per exterior door."
+    }
+  },
+  {
+    "id": "OR-292",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "wall_insulation",
+      "floor_insulation",
+      "attic_or_roof_insulation"
+    ],
+    "program": "or_mcminnvilleWaterAndLight_mC-PowerEnergyEfficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1.5,
+      "unit": "square_foot",
+      "maximum": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1.50 per square foot rebate for home insulation replacement in existing homes."
+    }
+  },
+  {
+    "id": "OR-293",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement"
+    ],
+    "program": "or_mcminnvilleWaterAndLight_mC-PowerEnergyEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 30,
+      "maximum": 30
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$30 rebate per door for residential exterior door replacement."
+    }
+  },
+  {
+    "id": "OR-294",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement",
+      "window_replacement"
+    ],
+    "program": "or_mcminnvilleWaterAndLight_mC-PowerEnergyEfficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 4.5,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$4.50 per square foot rebate for window and patio door replacement in existing homes."
+    }
+  },
+  {
+    "id": "OR-295",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_mcminnvilleWaterAndLight_mC-PowerEnergyEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$600 rebate for a ductless heat pump in an existing home, limited time rebate of additional $1,500."
+    }
+  },
+  {
+    "id": "OR-296",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_mcminnvilleWaterAndLight_mC-PowerEnergyEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 105
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $105 rebate for new smart thermostat, not to exceed 75% of job cost."
+    }
+  },
+  {
+    "id": "OR-297",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_mcminnvilleWaterAndLight_mC-PowerEnergyEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $900 rebate for a new air source heat pump in existing homes, limited time rebate of additional $1,500."
+    }
+  },
+  {
+    "id": "OR-298",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_mcminnvilleWaterAndLight_mC-PowerEnergyEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 675,
+      "maximum": 675
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $675 rebate for a heat pump water heater, not to exceed 75% of product cost."
+    }
+  },
+  {
+    "id": "OR-299",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_mcminnvilleWaterAndLight_mC-PowerEnergyEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1050
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,050 rebate for new Northwest Energy Efficiency Manufactured (NEEM) Homes ENERGY STAR® qualified manufactured home."
+    }
+  },
+  {
+    "id": "OR-300",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "or_mcminnvilleWaterAndLight_mC-PowerEnergyEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 35,
+      "maximum": 35
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $35 rebate for new ENERGY STAR® electric clothes dryer."
+    }
+  },
+  {
+    "id": "OR-301",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_mcminnvilleWaterAndLight_mC-PowerEnergyEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 20
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $20 rebate for new ENERGY STAR® electric clothes washer."
+    }
+  },
+  {
+    "id": "OR-302",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "or_mcminnvilleWaterAndLight_mC-PowerEnergyEfficiency",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit."
+    }
+  },
+  {
+    "id": "OR-303",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_midstateElectricCooperative_midstateResidentialConservationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 30
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $30 rebate for new ENERGY STAR® electric clothes washer."
+    }
+  },
+  {
+    "id": "OR-304",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "or_midstateElectricCooperative_midstateResidentialConservationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $50 rebate for new ENERGY STAR® rated electric clothes dryer."
+    }
+  },
+  {
+    "id": "OR-305",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "geothermal_heating_installation"
+    ],
+    "program": "or_midstateElectricCooperative_midstateResidentialConservationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200,
+      "minimum": 200,
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,200 rebate for an air source heat pump, $3,000 rebate for a ground source heat pump"
+    }
+  },
+  {
+    "id": "OR-306",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_midstateElectricCooperative_midstateResidentialConservationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate for a ductless heat pump in an electrically heated home."
+    }
+  },
+  {
+    "id": "OR-307",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_midstateElectricCooperative_midstateResidentialConservationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $900 rebate for a heat pump water heater in an existing home."
+    }
+  },
+  {
+    "id": "OR-308",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_sealing"
+    ],
+    "program": "or_midstateElectricCooperative_midstateResidentialConservationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $200 rebate for Performance Tested Comfort Systems (PTCS) duct sealing."
+    }
+  },
+  {
+    "id": "OR-309",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement",
+      "window_replacement"
+    ],
+    "program": "or_midstateElectricCooperative_midstateResidentialConservationIncentives",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 8,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $8 per square foot rebate for energy-efficient window or patio door replacement."
+    }
+  },
+  {
+    "id": "OR-310",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement"
+    ],
+    "program": "or_midstateElectricCooperative_midstateResidentialConservationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $40 rebate for residential exterior door replacement."
+    }
+  },
+  {
+    "id": "OR-312",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "floor_insulation",
+      "wall_insulation"
+    ],
+    "program": "or_midstateElectricCooperative_midstateResidentialConservationIncentives",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Home insulation replacement in existing homes. Requires home energy audit."
+    }
+  },
+  {
+    "id": "OR-313",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_midstateElectricCooperative_midstateResidentialConservationIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,200 rebate for new Northwest Energy Efficiency Manufactured (NEEM) Homes ENERGY STAR® qualified manufactured home."
+    }
+  },
+  {
+    "id": "OR-314",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "or_midstateElectricCooperative_midstateResidentialConservationIncentives",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit."
+    }
+  },
+  {
+    "id": "OR-315",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oTECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $100 rebate for new smart thermostat for electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-316",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oTECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 175
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $175 rebate for new ENERGY STAR® electric clothes dryer."
+    }
+  },
+  {
+    "id": "OR-317",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oTECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 35
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $35 rebate for new ENERGY STAR® electric clothes washer."
+    }
+  },
+  {
+    "id": "OR-321",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oTECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $50 rebate for new electric range."
+    }
+  },
+  {
+    "id": "OR-322",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oTECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $25 rebate for a new electric cooktop."
+    }
+  },
+  {
+    "id": "OR-323",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oTECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $25 rebate for new electric oven."
+    }
+  },
+  {
+    "id": "OR-324",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_wiring"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oTECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 10
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $10 rebate for new thermostatically controlled outlet."
+    }
+  },
+  {
+    "id": "OR-325",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oTECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $100 rebate for a heat pump water heater in an existing home."
+    }
+  },
+  {
+    "id": "OR-326",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "other_heat_pump",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oTECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate for an air source heat pump with no wood heating."
+    }
+  },
+  {
+    "id": "OR-327",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oTECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate for an air source heat pump when replacing a wood stove."
+    }
+  },
+  {
+    "id": "OR-328",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oTECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 650
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $650 rebate for an air source heat pump with wood heat retention."
+    }
+  },
+  {
+    "id": "OR-329",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oTECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $250 rebate for an air source heat pump with dual fuel heating."
+    }
+  },
+  {
+    "id": "OR-331",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oTECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $600 rebate for new Northwest Energy Efficiency Manufactured (NEEM) Homes ENERGY STAR® qualified manufactured home."
+    }
+  },
+  {
+    "id": "OR-332",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement",
+      "window_replacement"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oTECRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 5.2,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $5.20 per square foot rebate for energy-efficient window and patio door replacement."
+    }
+  },
+  {
+    "id": "OR-333",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "other_weatherization"
+    ],
+    "program": "or_cityOfForestGrove_forestGroveLightAndPowerResidentialConservationPrograms",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Weatherization and appliance incentives available for residential customers with permanent electric heat."
+    }
+  },
+  {
+    "id": "OR-334",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oTECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 26,
+      "maximum": 26
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $26 rebate for residential exterior door replacement, for electrically heated homes."
+    }
+  },
+  {
+    "id": "OR-335",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "wall_insulation",
+      "floor_insulation",
+      "attic_or_roof_insulation"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oTECRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1.5,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1.50 per square foot rebate for home insulation replacement."
+    }
+  },
+  {
+    "id": "OR-336",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_cityOfForestGrove_forestGroveLightAndPowerResidentialConservationPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$800 rebate after installation for ductless heat pumps in single family homes."
+    },
+    "end_date": "2025-09-30"
+  },
+  {
+    "id": "OR-337",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_cityOfHermiston_hermistonEnergyServicesConservationPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 upfront rebate for a smart thermostat for electrically heated homes."
+    }
   }
 ]
