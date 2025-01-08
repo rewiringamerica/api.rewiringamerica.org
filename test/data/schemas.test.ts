@@ -45,7 +45,7 @@ import {
 } from '../../src/lib/incentive-relationship-calculation';
 import { incentiveRelationshipsContainCycle } from './cycles';
 
-const ENGLISH_DESC_CHAR_LIMIT = 250;
+const ENGLISH_DESC_CHAR_LIMIT = 150;
 const SPANISH_DESC_CHAR_LIMIT = 400;
 
 const TESTS = [

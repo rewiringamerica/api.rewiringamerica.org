@@ -184,5 +184,39 @@
     },
     "start_date": "2024-11-26",
     "low_income": "ny-appliance-moderate"
+  },
+  {
+    "id": "NY-35",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "efficiency_rebates",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "door_replacement",
+      "duct_sealing",
+      "energy_audit",
+      "floor_insulation",
+      "other_insulation",
+      "other_weatherization",
+      "wall_insulation",
+      "window_replacement"
+    ],
+    "program": "ny_stateOfNy_nYWeatherizationAssistanceProgramWAP",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free energy audit and weatherization services potentially including insulation, air sealing, heating system repairs, and window/door replacement."
+    },
+    "low_income": "ny-wap-heap"
   }
 ]
