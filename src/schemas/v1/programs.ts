@@ -1,10 +1,11 @@
+import { FromSchema } from 'json-schema-to-ts';
 import { API_AUTHORITY_SCHEMA, AuthorityType } from '../../data/authorities';
 import { API_COVERAGE_SCHEMA } from '../../data/types/coverage';
 import { ALL_ITEMS } from '../../data/types/items';
 import { API_RESPONSE_LOCATION_SCHEMA } from './location';
-import { API_UTILITIES_RESPONSE_SCHEMA } from './utilities-endpoint';
 
 export const API_PROGRAMS_RESPONSE_SCHEMA = {
+  $id: 'APIProgramsResponse',
   authorities: {
     type: 'object',
     description: `Information on the entities (government agencies, \
@@ -58,56 +59,72 @@ code should gracefully handle unknown values it sees here.`,
   },
 } as const;
 
+const API_PROGRAMS_REQUEST = {
+  type: 'object',
+  properties: {
+    zip: {
+      type: 'string',
+      description: `Find incentives that may be available in this ZIP code. \
+Exactly one of this and "address" is required.`,
+      maxLength: 5,
+      minLength: 5,
+    },
+    address: {
+      type: 'string',
+      description: `Find incentives that may be available at this address. \
+Exactly one of this and "zip" is required.`,
+    },
+    authority_types: {
+      type: 'array',
+      description: `Find incentives offered by these types of authorities. \
+If absent, incentives from all types of authorities will be considered.`,
+      items: {
+        type: 'string',
+        enum: Object.values(AuthorityType),
+      },
+      minItems: 1,
+      uniqueItems: true,
+    },
+    utility: {
+      type: 'string',
+      description: `The ID of your electric utility company, as returned from \
+\`/api/v1/utilities\`. Required if authority_types includes "utility". If \
+absent, no programs offered by electric utilities will be returned.`,
+    },
+    language: {
+      type: 'string',
+      description: 'Optional choice of language for user-visible strings.',
+      enum: [
+        'en',
+        'es',
+      ],
+      default: 'en',
+    },
+  },
+  additionalProperties: false,
+  oneOf: [
+    { required: ['zip'] },
+    { required: ['address'] },
+  ],
+} as const;
+
 export const API_PROGRAMS_REQUEST_SCHEMA = {
   summary: 'Get all programs by location',
   description:
     'Returns all incentive programs by location and optionally, utility',
   operationId: 'getProgramsForLocation',
-  querystring: {
-    type: 'object',
-    properties: {
-      zip: {
-        type: 'string',
-        description: `Find incentives that may be available in this ZIP code. \
-Exactly one of this and "address" is required.`,
-        maxLength: 5,
-        minLength: 5,
-      },
-      address: {
-        type: 'string',
-        description: `Find incentives that may be available at this address. \
-Exactly one of this and "zip" is required.`,
-      },
-      authority_types: {
-        type: 'array',
-        description: `Find incentives offered by these types of authorities. \
-If absent, incentives from all types of authorities will be considered.`,
-        items: {
-          type: 'string',
-          enum: Object.values(AuthorityType),
-        },
-        minItems: 1,
-        uniqueItems: true,
-      },
-      utility: {
-        type: 'string',
-        description: `The ID of your electric utility company, as returned from \
-\`/api/v1/utilities\`. Required if authority_types includes "utility". If \
-absent, no programs offered by electric utilities will be returned.`,
-      },
-    },
-    additionalProperties: false,
-    oneOf: [
-      { required: ['zip'] },
-      { required: ['address'] },
-    ],
-  },
+  querystring: API_PROGRAMS_REQUEST,
   response: {
     200: {
-      ...API_UTILITIES_RESPONSE_SCHEMA,
+      ...API_PROGRAMS_RESPONSE_SCHEMA,
     },
     400: {
       $ref: 'Error',
     },
   },
 } as const;
+
+export type APIProgramsRequest = FromSchema<typeof API_PROGRAMS_REQUEST>;
+export type APIProgramsResponse = FromSchema<
+  typeof API_PROGRAMS_RESPONSE_SCHEMA
+>;
