@@ -2,7 +2,6 @@ import { API_AUTHORITY_SCHEMA, AuthorityType } from '../../data/authorities';
 import { API_COVERAGE_SCHEMA } from '../../data/types/coverage';
 import { ALL_ITEMS } from '../../data/types/items';
 import { API_RESPONSE_LOCATION_SCHEMA } from './location';
-import { API_UTILITIES_RESPONSE_SCHEMA } from './utilities-endpoint';
 
 export const API_PROGRAMS_RESPONSE_SCHEMA = {
   authorities: {
