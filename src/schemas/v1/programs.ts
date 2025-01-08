@@ -104,7 +104,7 @@ absent, no programs offered by electric utilities will be returned.`,
   },
   response: {
     200: {
-      ...API_UTILITIES_RESPONSE_SCHEMA,
+      ...API_PROGRAMS_RESPONSE_SCHEMA,
     },
     400: {
       $ref: 'Error',
