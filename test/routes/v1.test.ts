@@ -2,6 +2,7 @@ import Ajv from 'ajv';
 import fs from 'fs';
 import qs from 'qs';
 import { beforeEach, test, Test } from 'tap';
+import { AuthorityType } from '../../src/data/authorities';
 import { StateStatus } from '../../src/data/types/state-status';
 import {
   BETA_STATES,
@@ -10,6 +11,7 @@ import {
 } from '../../src/data/types/states';
 import { API_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v1/calculator-endpoint';
 import { API_INCENTIVE_SCHEMA } from '../../src/schemas/v1/incentive';
+import { API_PROGRAMS_RESPONSE_SCHEMA } from '../../src/schemas/v1/programs';
 import { API_STATES_RESPONSE_SCHEMA } from '../../src/schemas/v1/states-endpoint';
 import { API_UTILITIES_RESPONSE_SCHEMA } from '../../src/schemas/v1/utilities-endpoint';
 import { build } from '../helper';
@@ -66,6 +68,38 @@ async function validateResponse(
       `response does not match ${snapshotFile}`,
     );
   }
+}
+
+async function validateProgramsResponse(
+  t: Test,
+  query: Record<string, unknown>,
+  snapshotFile: string,
+) {
+  const app = await build(t);
+  const ajv = new Ajv({
+    schemas: [API_PROGRAMS_RESPONSE_SCHEMA],
+    coerceTypes: true,
+    useDefaults: true,
+    removeAdditional: true,
+    allErrors: false,
+  });
+  const searchParams = qs.stringify(query, { encodeValuesOnly: true });
+  const res = await app.inject({
+    url: `/api/v1/incentives/programs?${searchParams}`,
+  });
+  t.equal(res.statusCode, 200);
+
+  const programsResponse = JSON.parse(res.payload);
+  const validator = ajv.getSchema('APIProgramsResponse')!;
+  await validator(programsResponse);
+  const expectedResponse = JSON.parse(
+    fs.readFileSync(`./test/snapshots/${snapshotFile}`, 'utf-8'),
+  );
+  t.strictSame(
+    programsResponse,
+    expectedResponse,
+    `response does not match ${snapshotFile}`,
+  );
 }
 
 test('response is valid and correct', async t => {
@@ -983,4 +1017,67 @@ test('/states', async t => {
   ).forEach(state => {
     t.strictSame(statesResponse[state].status, StateStatus.None);
   });
+});
+
+test('all programs for location', async t => {
+  const zipQuery = {
+    zip: '80301',
+    utility: 'co-xcel-energy',
+  };
+
+  const snapshotFile = 'v1-programs-co-80301-location-utility.json';
+
+  await validateProgramsResponse(t, zipQuery, snapshotFile);
+
+  const authorityTypes = [
+    AuthorityType.Utility,
+    AuthorityType.State,
+    AuthorityType.City,
+    AuthorityType.County,
+  ];
+  await validateProgramsResponse(
+    t,
+    {
+      ...zipQuery,
+      authority_types: authorityTypes,
+    },
+    snapshotFile,
+  );
+
+  const addressQuery = {
+    address: '2865 Madera Ct, Boulder, CO',
+    utility: 'co-xcel-energy',
+  };
+
+  await validateProgramsResponse(t, addressQuery, snapshotFile);
+});
+
+test('only utility programs', async t => {
+  const query = {
+    zip: '80301',
+    utility: 'co-xcel-energy',
+    authority_types: AuthorityType.Utility,
+  };
+
+  await validateProgramsResponse(t, query, 'v1-programs-co-80301-utility.json');
+});
+
+test('only city programs', async t => {
+  const query = {
+    zip: '80301',
+    utility: 'co-xcel-energy',
+    authority_types: AuthorityType.City,
+  };
+
+  await validateProgramsResponse(t, query, 'v1-programs-co-80301-city.json');
+});
+
+test('only county programs', async t => {
+  const query = {
+    zip: '80301',
+    utility: 'co-xcel-energy',
+    authority_types: AuthorityType.County,
+  };
+
+  await validateProgramsResponse(t, query, 'v1-programs-co-80301-county.json');
 });
