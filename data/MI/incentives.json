@@ -1413,5 +1413,184 @@
     },
     "start_date": "2024-07-01",
     "low_income": "mi-a2zero"
+  },
+  {
+    "id": "MI-95",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mi_hillsdaleBoardOfPublicUtilities_efficiencySmartHomeEnergyRebates-Hillsdale",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an ENERGY STAR qualified air source heat pump."
+    },
+    "start_date": "2022-10-01",
+    "end_date": "2025-09-30"
+  },
+  {
+    "id": "MI-96",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mi_hillsdaleBoardOfPublicUtilities_efficiencySmartHomeEnergyRebates-Hillsdale",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$350 rebate for an ENERGY STAR qualified cold climate air source heat pump, less than 2 tons."
+    },
+    "start_date": "2022-10-01",
+    "end_date": "2025-09-30"
+  },
+  {
+    "id": "MI-97",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mi_hillsdaleBoardOfPublicUtilities_efficiencySmartHomeEnergyRebates-Hillsdale",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$750 rebate for an ENERGY STAR qualified cold climate air source heat pump, 2 or more tons."
+    },
+    "start_date": "2022-10-01",
+    "end_date": "2025-09-30"
+  },
+  {
+    "id": "MI-98",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "mi_hillsdaleBoardOfPublicUtilities_efficiencySmartHomeEnergyRebates-Hillsdale",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an ENERGY STAR qualified electric clothes dryer."
+    },
+    "start_date": "2022-10-01",
+    "end_date": "2025-09-30"
+  },
+  {
+    "id": "MI-99",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mi_hillsdaleBoardOfPublicUtilities_efficiencySmartHomeEnergyRebates-Hillsdale",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 rebate for an ENERGY STAR qualified heat pump water heater."
+    },
+    "start_date": "2022-10-01",
+    "end_date": "2025-09-30"
+  },
+  {
+    "id": "MI-100",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "mi_hillsdaleBoardOfPublicUtilities_efficiencySmartHomeEnergyRebates-Hillsdale",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for a smart thermostat."
+    },
+    "start_date": "2022-10-01",
+    "end_date": "2025-09-30"
+  },
+  {
+    "id": "MI-101",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "energy_audit",
+      "floor_insulation",
+      "other_insulation",
+      "other_weatherization",
+      "smart_thermostat",
+      "wall_insulation"
+    ],
+    "program": "mi_michiganDepartmentOfHealthAndHumanServices_mIWeatherizationAssistanceProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit and weatherization services for income-qualified residents."
+    }
   }
 ]
