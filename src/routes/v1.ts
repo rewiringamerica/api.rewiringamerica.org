@@ -1,8 +1,9 @@
 import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts';
 import { FastifyInstance } from 'fastify';
 import { Database } from 'sqlite';
+import { AUTHORITIES_BY_STATE } from '../data/authorities';
 import { LOCALES } from '../data/locale';
-import { PROGRAMS } from '../data/programs';
+import { parseProgramJSON, PROGRAMS } from '../data/programs';
 import { computeAMIAndEVCreditEligibility } from '../lib/ami-evcredit-calculation';
 import { InvalidInputError } from '../lib/error';
 import { t, tr } from '../lib/i18n';
@@ -206,9 +207,12 @@ export default async function (
         );
       }
       try {
+        const programs = parseProgramJSON(location.state);
         const payload: APIProgramsResponse = getProgramsForLocation(
           location,
           request.query,
+          AUTHORITIES_BY_STATE[location.state],
+          programs,
         );
         reply.status(200).type('application/json').send(payload);
       } catch (error) {

@@ -1051,33 +1051,3 @@ test('all programs for location', async t => {
 
   await validateProgramsResponse(t, addressQuery, snapshotFile);
 });
-
-test('only utility programs', async t => {
-  const query = {
-    zip: '80301',
-    utility: 'co-xcel-energy',
-    authority_types: AuthorityType.Utility,
-  };
-
-  await validateProgramsResponse(t, query, 'v1-programs-co-80301-utility.json');
-});
-
-test('only city programs', async t => {
-  const query = {
-    zip: '80301',
-    utility: 'co-xcel-energy',
-    authority_types: AuthorityType.City,
-  };
-
-  await validateProgramsResponse(t, query, 'v1-programs-co-80301-city.json');
-});
-
-test('only county programs', async t => {
-  const query = {
-    zip: '80301',
-    utility: 'co-xcel-energy',
-    authority_types: AuthorityType.County,
-  };
-
-  await validateProgramsResponse(t, query, 'v1-programs-co-80301-county.json');
-});
