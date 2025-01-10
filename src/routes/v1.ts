@@ -26,6 +26,7 @@ import {
 import { API_INCENTIVE_SCHEMA, APIIncentive } from '../schemas/v1/incentive';
 import {
   API_PROGRAMS_REQUEST_SCHEMA,
+  API_PROGRAMS_RESPONSE_SCHEMA,
   APIProgramsResponse,
 } from '../schemas/v1/programs';
 import { API_STATES_SCHEMA } from '../schemas/v1/states-endpoint';
@@ -62,6 +63,7 @@ export default async function (
         typeof ERROR_SCHEMA,
         typeof API_INCENTIVE_SCHEMA,
         typeof API_CALCULATOR_RESPONSE_SCHEMA,
+        typeof API_PROGRAMS_RESPONSE_SCHEMA,
       ];
     }>
   >();
