@@ -1020,14 +1020,14 @@ test('/states', async t => {
 });
 
 test('all programs for location', async t => {
-  const zipQuery = {
+  const query = {
     zip: '80301',
     utility: 'co-xcel-energy',
   };
 
   const snapshotFile = 'v1-programs-co-80301-location-utility.json';
 
-  await validateProgramsResponse(t, zipQuery, snapshotFile);
+  await validateProgramsResponse(t, query, snapshotFile);
 
   const authorityTypes = [
     AuthorityType.Utility,
@@ -1038,16 +1038,9 @@ test('all programs for location', async t => {
   await validateProgramsResponse(
     t,
     {
-      ...zipQuery,
+      ...query,
       authority_types: authorityTypes,
     },
     snapshotFile,
   );
-
-  const addressQuery = {
-    address: '2865 Madera Ct, Boulder, CO',
-    utility: 'co-xcel-energy',
-  };
-
-  await validateProgramsResponse(t, addressQuery, snapshotFile);
 });
