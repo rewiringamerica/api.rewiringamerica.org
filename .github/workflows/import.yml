@@ -1,7 +1,10 @@
-name: Manual API Data Update
+name: Import from HERO
 
 on:
   workflow_dispatch:
+  schedule:
+    # Run every Monday at noon UTC (early morning in US timezones)
+    - cron: '0 12 * * MON'
 
 jobs:
   incentive-admin-data-update:
