@@ -1592,5 +1592,275 @@
     "short_description": {
       "en": "Free home energy audit and weatherization services for income-qualified residents."
     }
+  },
+  {
+    "id": "MI-102",
+    "eligible_geo_group": "mi-egle-pilot",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "efficiency_rebates",
+      "electric_panel",
+      "electric_wiring",
+      "energy_audit",
+      "floor_insulation",
+      "heat_pump_water_heater",
+      "other_insulation",
+      "other_weatherization",
+      "smart_thermostat",
+      "wall_insulation",
+      "window_replacement"
+    ],
+    "program": "mi_michiganDepartmentOfEnvironment,GreatLakes,AndEnergy_michiganHomeEfficiencyRebatesHOMESProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 20000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "100% of costs, up to $20,000, for efficiency improvements based on modeled energy savings for income-qualified customers."
+    },
+    "start_date": "2024-10-29",
+    "low_income": "mi-hear-her-low"
+  },
+  {
+    "id": "MI-103",
+    "eligible_geo_group": "mi-egle-pilot",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "efficiency_rebates",
+      "electric_panel",
+      "electric_wiring",
+      "energy_audit",
+      "floor_insulation",
+      "heat_pump_water_heater",
+      "other_insulation",
+      "other_weatherization",
+      "smart_thermostat",
+      "wall_insulation",
+      "window_replacement"
+    ],
+    "program": "mi_michiganDepartmentOfEnvironment,GreatLakes,AndEnergy_michiganHomeEfficiencyRebatesHOMESProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $4,000 rebate for efficiency improvements based on modeled energy savings, for income-qualified customers."
+    },
+    "start_date": "2024-10-29",
+    "low_income": "mi-hear-high"
+  },
+  {
+    "id": "MI-104",
+    "eligible_geo_group": "mi-egle-pilot",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_replacement",
+      "efficiency_rebates",
+      "other",
+      "duct_sealing"
+    ],
+    "program": "mi_michiganDepartmentOfEnvironment,GreatLakes,AndEnergy_michiganHomeElectrificationAndApplianceRebatesHEARProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1600,
+      "maximum": 1600
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,600 rebate for ventilation improvements for income-qualified residents."
+    },
+    "start_date": "2024-10-29",
+    "low_income": "mi-hear-high"
+  },
+  {
+    "id": "MI-105",
+    "eligible_geo_group": "mi-egle-pilot",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "efficiency_rebates",
+      "other"
+    ],
+    "program": "mi_michiganDepartmentOfEnvironment,GreatLakes,AndEnergy_michiganHomeElectrificationAndApplianceRebatesHEARProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1600,
+      "maximum": 1600
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,600 rebate for air sealing improvements for income-qualified residents."
+    },
+    "start_date": "2024-10-29",
+    "low_income": "mi-hear-high"
+  },
+  {
+    "id": "MI-106",
+    "eligible_geo_group": "mi-egle-pilot",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "other_insulation",
+      "wall_insulation"
+    ],
+    "program": "mi_michiganDepartmentOfEnvironment,GreatLakes,AndEnergy_michiganHomeElectrificationAndApplianceRebatesHEARProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1600,
+      "maximum": 1600
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,600 rebate for insulation improvements for income-qualified residents."
+    },
+    "start_date": "2024-10-29",
+    "low_income": "mi-hear-high"
+  },
+  {
+    "id": "MI-107",
+    "eligible_geo_group": "mi-egle-pilot",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "mi_michiganDepartmentOfEnvironment,GreatLakes,AndEnergy_michiganHomeElectrificationAndApplianceRebatesHEARProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $4,000 rebate for electrical panel improvements for income-qualified residents."
+    },
+    "start_date": "2024-10-29",
+    "low_income": "mi-hear-high"
+  },
+  {
+    "id": "MI-108",
+    "eligible_geo_group": "mi-egle-pilot",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mi_michiganDepartmentOfEnvironment,GreatLakes,AndEnergy_michiganHomeElectrificationAndApplianceRebatesHEARProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1750,
+      "maximum": 1750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,750 rebate for a heat pump water heater for income-qualified residents."
+    },
+    "start_date": "2024-10-29",
+    "low_income": "mi-hear-high"
+  },
+  {
+    "id": "MI-109",
+    "eligible_geo_group": "mi-egle-pilot",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mi_michiganDepartmentOfEnvironment,GreatLakes,AndEnergy_michiganHomeElectrificationAndApplianceRebatesHEARProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 8000,
+      "maximum": 8000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $8,000 rebate for an air source heat pump for income-qualified residents."
+    },
+    "start_date": "2024-10-29",
+    "low_income": "mi-hear-high"
+  },
+  {
+    "id": "MI-110",
+    "eligible_geo_group": "mi-egle-pilot",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "mi_michiganDepartmentOfEnvironment,GreatLakes,AndEnergy_michiganHomeElectrificationAndApplianceRebatesHEARProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 840,
+      "maximum": 840
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $840 rebate for an electric stove, cooktop, range, or oven for income-qualified residents."
+    },
+    "start_date": "2024-10-29",
+    "low_income": "mi-hear-high"
   }
 ]
