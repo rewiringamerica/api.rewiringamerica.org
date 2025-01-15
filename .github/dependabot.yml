@@ -1,11 +1,77 @@
-# To get started with Dependabot version updates, you'll need to specify which
-# package ecosystems to update and where the package manifests are located.
-# Please see the documentation for all configuration options:
-# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
-
 version: 2
 updates:
-  - package-ecosystem: 'npm' # See documentation for possible values
-    directory: '/' # Location of package manifests
+  - package-ecosystem: 'npm'
+    directories:
+      - '**/*'
     schedule:
       interval: 'weekly'
+    commit-message:
+      prefix: 'chore(deps-yarn)'
+    groups:
+      security-version-updates:
+        applies-to: security-updates
+        patterns:
+          - '*'
+        update-types:
+          - 'minor'
+          - 'patch'
+      dep-version-updates:
+        applies-to: version-updates
+        patterns:
+          - '*'
+        update-types:
+          - 'patch'
+    ignore:
+      # For all deps - ignore all major updates
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
+    open-pull-requests-limit: 2
+    labels:
+      - ':robot: Dependabot'
+  - package-ecosystem: 'github-actions'
+    directories:
+      - '/'
+    schedule:
+      interval: 'weekly'
+    commit-message:
+      prefix: 'chore(deps-gh-actions)'
+    open-pull-requests-limit: 1
+    labels:
+      - ':robot: Dependabot'
+  - package-ecosystem: 'docker'
+    directories:
+      - '/'
+    schedule:
+      interval: 'weekly'
+    commit-message:
+      prefix: 'chore(deps-docker)'
+    open-pull-requests-limit: 1
+    labels:
+      - ':robot: Dependabot'
+  - package-ecosystem: 'pip'
+    directories:
+      - '**/*'
+    schedule:
+      interval: 'weekly'
+    commit-message:
+      prefix: 'chore(deps-pip)'
+    groups:
+      security-version-updates:
+        applies-to: security-updates
+        patterns:
+          - '*'
+        update-types:
+          - 'minor'
+          - 'patch'
+      dep-version-updates:
+        applies-to: version-updates
+        patterns:
+          - '*'
+        update-types:
+          - 'patch'
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
+    open-pull-requests-limit: 2
+    labels:
+      - ':robot: Dependabot'
