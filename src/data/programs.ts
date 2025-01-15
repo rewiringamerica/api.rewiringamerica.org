@@ -113,7 +113,7 @@ export const PROGRAMS: Programs = STATES_AND_TERRITORIES.reduce(
   ira_programs,
 );
 
-function parseProgramJSON(state: string) {
+export function parseProgramJSON(state: string) {
   let result: Programs = {};
   const filepath = `${PROGRAMS_DIR}/${state}/programs.json`;
   if (fs.existsSync(filepath)) {

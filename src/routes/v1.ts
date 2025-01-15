@@ -1,8 +1,9 @@
 import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts';
 import { FastifyInstance } from 'fastify';
 import { Database } from 'sqlite';
+import { AUTHORITIES_BY_STATE } from '../data/authorities';
 import { LOCALES } from '../data/locale';
-import { PROGRAMS } from '../data/programs';
+import { parseProgramJSON, PROGRAMS } from '../data/programs';
 import { computeAMIAndEVCreditEligibility } from '../lib/ami-evcredit-calculation';
 import { InvalidInputError } from '../lib/error';
 import { t, tr } from '../lib/i18n';
@@ -10,6 +11,7 @@ import calculateIncentives, {
   CalculatedIncentive,
 } from '../lib/incentives-calculation';
 import { resolveLocation } from '../lib/location';
+import getProgramsForLocation from '../lib/programs-for-location';
 import { statesWithStatus } from '../lib/states';
 import {
   canGasUtilityAffectEligibility,
@@ -21,7 +23,12 @@ import {
   API_CALCULATOR_RESPONSE_SCHEMA,
   API_CALCULATOR_SCHEMA,
 } from '../schemas/v1/calculator-endpoint';
-import { APIIncentive, API_INCENTIVE_SCHEMA } from '../schemas/v1/incentive';
+import { API_INCENTIVE_SCHEMA, APIIncentive } from '../schemas/v1/incentive';
+import {
+  API_PROGRAMS_REQUEST_SCHEMA,
+  API_PROGRAMS_RESPONSE_SCHEMA,
+  APIProgramsResponse,
+} from '../schemas/v1/programs';
 import { API_STATES_SCHEMA } from '../schemas/v1/states-endpoint';
 import { API_UTILITIES_SCHEMA } from '../schemas/v1/utilities-endpoint';
 
@@ -56,6 +63,7 @@ export default async function (
         typeof ERROR_SCHEMA,
         typeof API_INCENTIVE_SCHEMA,
         typeof API_CALCULATOR_RESPONSE_SCHEMA,
+        typeof API_PROGRAMS_RESPONSE_SCHEMA,
       ];
     }>
   >();
@@ -179,6 +187,45 @@ export default async function (
     { schema: API_STATES_SCHEMA },
     async (request, reply) => {
       reply.status(200).type('application/json').send(statesWithStatus);
+    },
+  );
+
+  server.get(
+    '/api/v1/incentives/programs',
+    { schema: API_PROGRAMS_REQUEST_SCHEMA },
+    async (request, reply) => {
+      const location = await resolveLocation(fastify.sqlite, request.query);
+      const language = request.query.language ?? 'en';
+
+      if (!location) {
+        throw fastify.httpErrors.createError(
+          404,
+          request.query.zip
+            ? t('errors', 'zip_code_doesnt_exist', language)
+            : t('errors', 'cannot_locate_address', language),
+          {
+            field: 'location',
+          },
+        );
+      }
+      try {
+        const programs = parseProgramJSON(location.state);
+        const payload: APIProgramsResponse = getProgramsForLocation(
+          location,
+          request.query,
+          AUTHORITIES_BY_STATE[location.state],
+          programs,
+        );
+        reply.status(200).type('application/json').send(payload);
+      } catch (error) {
+        if (error instanceof InvalidInputError) {
+          throw fastify.httpErrors.createError(400, error.message, {
+            field: error.field,
+          });
+        } else {
+          throw error;
+        }
+      }
     },
   );
 }

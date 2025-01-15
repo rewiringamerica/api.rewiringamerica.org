@@ -1,5 +1,6 @@
 import { FromSchema } from 'json-schema-to-ts';
 import { AuthorityType } from '../authorities';
+import { ALL_ITEMS } from './items';
 import { LOCALIZABLE_STRING_SCHEMA } from './localizable-string';
 
 export const PROGRAM_SCHEMA = {
@@ -15,6 +16,13 @@ export const PROGRAM_SCHEMA = {
     authority_type: { type: 'string', enum: Object.values(AuthorityType) },
     authority: { type: 'string', nullable: true },
     description: { type: 'string' },
+    items: {
+      type: 'array',
+      items: {
+        type: 'string',
+        enum: ALL_ITEMS,
+      },
+    },
   },
   required: ['name', 'url', 'authority_type', 'authority'],
   additionalProperties: false,
