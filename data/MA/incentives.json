@@ -4200,7 +4200,7 @@
   {
     "id": "MA-181",
     "payment_methods": [
-      "rebate"
+      "account_credit"
     ],
     "items": [
       "electric_stove"
@@ -4216,7 +4216,8 @@
     ],
     "short_description": {
       "en": "$100 rebate for an induction range when replacing electric."
-    }
+    },
+    "end_date": "2025-12-31"
   },
   {
     "id": "MA-182",
@@ -4259,6 +4260,4532 @@
     ],
     "short_description": {
       "en": "Up to $700 rebate for a level 2 electric charger, enrolled in the NextZero Scheduled Charging Program."
+    }
+  },
+  {
+    "id": "MA-184",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma-wmgld-energy-efficiency-programs",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit for residential customers."
+    }
+  },
+  {
+    "id": "MA-185",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "other_insulation",
+      "wall_insulation"
+    ],
+    "program": "ma-wmgld-energy-efficiency-programs",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate for insulation and air sealing, up to $1,500, after an energy audit."
+    }
+  },
+  {
+    "id": "MA-186",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ma-wmgld-energy-efficiency-programs",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton",
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton rebate up to $2,000 for a mini split or ducted heat pump. Consultation required."
+    }
+  },
+  {
+    "id": "MA-187",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "floor_insulation",
+      "wall_insulation"
+    ],
+    "program": "ma-wmgld-energy-efficiency-programs",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 5500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate up to $3,000 for a heat pump with insulation, insulation cap increased to $2,500."
+    }
+  },
+  {
+    "id": "MA-188",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "floor_insulation",
+      "wall_insulation"
+    ],
+    "program": "ma-wmgld-energy-efficiency-programs",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "ton",
+      "maximum": 7500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1000/ton rebate up to $5,000 for a heat pump with insulation, insulation cap increased to $2,500 when replacing fossil fuel systems."
+    }
+  },
+  {
+    "id": "MA-189",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ma-wmgld-energy-efficiency-programs",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an ENERGY STAR rated heat pump water heater."
+    }
+  },
+  {
+    "id": "MA-190",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-wmgld-energy-efficiency-programs",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an induction range, when replacing a gas stove."
+    }
+  },
+  {
+    "id": "MA-191",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-wmgld-energy-efficiency-programs",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an induction range when replacing an electric range."
+    }
+  },
+  {
+    "id": "MA-192",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ma-wmgld-energy-efficiency-programs",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 125
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% rebate up to $125 for a smart thermostat."
+    }
+  },
+  {
+    "id": "MA-193",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma-wmgld-energy-efficiency-programs",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an electric clothes dryer."
+    }
+  },
+  {
+    "id": "MA-194",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-wmgld-energy-efficiency-programs",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% up to $100 each for electric outdoor equipment, including snow blowers, lawn mowers, hedge trimmers, and leaf blowers."
+    }
+  },
+  {
+    "id": "MA-195",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ma-wmgld-energy-efficiency-programs",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 650,
+      "maximum": 650
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $650 rebate for a level 2 electric vehicle charger. "
+    }
+  },
+  {
+    "id": "MA-196",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "battery_storage_installation"
+    ],
+    "program": "ma-wmgld-energy-efficiency-programs",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 100,
+      "unit": "kilowatt_hour"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100/kWh rebate for installation of a residential battery system, with enrollment in the Connected Homes program."
+    }
+  },
+  {
+    "id": "MA-197",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "ma-wmgld-energy-efficiency-programs",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.8,
+      "unit": "watt"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$0.80/watt, up to 50% of installed costs for a residential solar system."
+    }
+  },
+  {
+    "id": "MA-198",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma-templeton-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit."
+    }
+  },
+  {
+    "id": "MA-199",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-templeton-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an induction range when replacing gas or propane."
+    }
+  },
+  {
+    "id": "MA-200",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-templeton-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an induction range when replacing electric."
+    }
+  },
+  {
+    "id": "MA-201",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma-templeton-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an all-in-one washer and heat pump dryer."
+    }
+  },
+  {
+    "id": "MA-202",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ma-templeton-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 125
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate up to $125 for an ENERGY STAR smart thermostat."
+    }
+  },
+  {
+    "id": "MA-203",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma-templeton-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump clothes dryer."
+    }
+  },
+  {
+    "id": "MA-204",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ma-templeton-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump water heater."
+    }
+  },
+  {
+    "id": "MA-205",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ma-templeton-nextzero",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton",
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton rebate for an air source heat pump, limit 3 tons."
+    }
+  },
+  {
+    "id": "MA-206",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ma-templeton-nextzero",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 2250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for a ground source heat pump, limit 3 tons."
+    }
+  },
+  {
+    "id": "MA-207",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "wall_insulation"
+    ],
+    "program": "ma-templeton-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% rebate up to $500 rebate for weatherization including insulation, air sealing, and blower door test, after a home energy audit."
+    }
+  },
+  {
+    "id": "MA-208",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ma-templeton-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "minimum": 200,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $700 rebate for a level 2 electric charger, enrolled in the NextZero Scheduled Charging Program."
+    }
+  },
+  {
+    "id": "MA-209",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "battery_storage_installation"
+    ],
+    "program": "ma-templeton-nextzero",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 100,
+      "unit": "kilowatt_hour"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100/kWh rebate for installation of a residential battery system, with enrollment in the Connected Homes program."
+    }
+  },
+  {
+    "id": "MA-210",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-templeton-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for a rechargeable battery operated lawn mower."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-211",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-templeton-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for a rechargeable battery operated snow blower."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-212",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-templeton-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate (each) for a rechargeable battery operated hedge trimmer, rototiller, pole saw, leaf blower, or string trimmer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-213",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit."
+    }
+  },
+  {
+    "id": "MA-214",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an induction range when replacing gas or propane."
+    }
+  },
+  {
+    "id": "MA-215",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an induction range when replacing electric."
+    }
+  },
+  {
+    "id": "MA-216",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an all-in-one washer and heat pump dryer."
+    }
+  },
+  {
+    "id": "MA-217",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 125
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate up to $125 for an ENERGY STAR smart thermostat."
+    }
+  },
+  {
+    "id": "MA-218",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump clothes dryer."
+    }
+  },
+  {
+    "id": "MA-219",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump water heater."
+    }
+  },
+  {
+    "id": "MA-220",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton",
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton rebate for an air source heat pump, limit 3 tons."
+    }
+  },
+  {
+    "id": "MA-221",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 2250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for a ground source heat pump, limit 3 tons."
+    }
+  },
+  {
+    "id": "MA-222",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "minimum": 200,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $700 rebate for a level 2 electric charger, enrolled in the NextZero Scheduled Charging Program."
+    }
+  },
+  {
+    "id": "MA-223",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "battery_storage_installation"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 100,
+      "unit": "kilowatt_hour"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100/kWh rebate for installation of a residential battery system, with enrollment in the Connected Homes program."
+    }
+  },
+  {
+    "id": "MA-224",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for a rechargeable battery operated lawn mower or snow blower (select models)."
+    }
+  },
+  {
+    "id": "MA-225",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 (each) rebate for a rechargeable battery operated hedge trimmer, pressure washer, rototiller, chain or pole saw, or snow thrower."
+    }
+  },
+  {
+    "id": "MA-226",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit."
+    }
+  },
+  {
+    "id": "MA-227",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "efficiency_rebates",
+      "floor_insulation",
+      "other_insulation",
+      "other_weatherization",
+      "wall_insulation"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to 50% of job cost or $750, for weatherization measures recommended by an energy audit."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-228",
+    "payment_methods": [
+      "account_credit",
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 2250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for an air source heat pump. Eversource customers are not eligible."
+    }
+  },
+  {
+    "id": "MA-229",
+    "payment_methods": [
+      "account_credit",
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 2250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for an ENERGY STAR rated ground source heat pump. Eversource customers are not eligible."
+    }
+  },
+  {
+    "id": "MA-230",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump water heater."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-231",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-232",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 125,
+      "maximum": 125
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$125 rebate for a smart thermostat."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-233",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ma-reading-mlp-energy-efficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 200,
+      "unit": "ton",
+      "maximum": 6000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of $200/ton for the replacement of air source heat pumps, including central, multi-zone mini-split and ducted heat pumps."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-234",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ma-reading-mlp-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 6000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of $1,000 for installing a new air source heat pump, including central, multi-zone mini-split and ducted mini-split heat pumps."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-235",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump",
+      "geothermal_heating_installation"
+    ],
+    "program": "ma-reading-mlp-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 6000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of $1,000 for installing a new geothermal heat pump."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-236",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_weatherization"
+    ],
+    "program": "ma-reading-mlp-energy-efficiency",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate, up to $2,500, for an optional weatherization add-on after installing a heat pump system."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-237",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ma-reading-mlp-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate for a heat pump water heater."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-238",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-reading-mlp-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for an electric resistance stove."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-239",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-reading-mlp-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 125
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$125 rebate for an electric induction stove."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-240",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ma-reading-mlp-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for a wireless, smart thermostat."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-241",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-reading-mlp-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an electric snowblower."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-242",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ma-reading-mlp-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate for an electric vehicle charger."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-243",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "ma-reading-mlp-energy-efficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 600,
+      "unit": "kilowatt",
+      "maximum": 12000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of $600/kW for installing a grid-connected solar system at home."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-244",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for a 4 burner induction range."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-245",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for a level 2 electric vehicle charger when enrolled in the Connected Homes program."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-246",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ebike"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate for an electric bicycle, maximum 2."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-247",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate for an electric riding mower, $100 for an electric push mower, and $100 for an electric snow blower."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-248",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "minimum": 25,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for an electric chain or pole saw, $40 for a leaf blower, and $40 for an electric snow thrower."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-249",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free energy audit for SELCO customers."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-250",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "air_sealing",
+      "other"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate for blower door and air sealing, up to $500."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-251",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "duct_sealing"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate for duct sealing, up to $500."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-252",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "other_insulation"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate for insulation, up to $500."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-253",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500/ton rebate for a partial home air source or mini split heat pump unit."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-254",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2000,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$2,000/ton rebate for a whole home air source or mini split heat pump unit."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-255",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump",
+      "geothermal_heating_installation"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for a partial home ground source heat pump unit."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-256",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump",
+      "geothermal_heating_installation"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3000,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$3,000/ton rebate for a whole home ground source heat pump unit."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-260",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "efficiency_rebates",
+      "floor_insulation",
+      "other_weatherization",
+      "wall_insulation",
+      "energy_audit"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate of weatherization costs up to $500 including insulation and air sealing for residential customers, after a free energy audit."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-261",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump water heater."
+    }
+  },
+  {
+    "id": "MA-262",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump clothes dryer."
+    }
+  },
+  {
+    "id": "MA-263",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma-ashburnham-mlp-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit."
+    }
+  },
+  {
+    "id": "MA-264",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "efficiency_rebates",
+      "floor_insulation",
+      "other_weatherization",
+      "wall_insulation",
+      "energy_audit"
+    ],
+    "program": "ma-ashburnham-mlp-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate of insulation costs up to $500 for residential customers, after an energy audit."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-265",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ma-ashburnham-mlp-nextzero",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton",
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton rebate for a qualifying air source heat pump, limit 3 tons."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-266",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ma-ashburnham-mlp-nextzero",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 2250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for a qualifying ground source heat pump."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-267",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ma-ashburnham-mlp-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump water heater."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-268",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma-ashburnham-mlp-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an all-in-one washer and heat pump dryer."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-269",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma-ashburnham-mlp-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-270",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "ma-ashburnham-mlp-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an ENERGY STAR rated electric clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-271",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ma-ashburnham-mlp-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 125
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% rebate up to $125 for an ENERGY STAR rated smart thermostat."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-272",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-ashburnham-mlp-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an induction range replacing a gas or propane range."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-273",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-ashburnham-mlp-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an induction range when replacing electric."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-274",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-ashburnham-mlp-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate up to $40 for an electric rototiller, $40 for a hedge trimmer or chain saw, $25 for a string trimmer, and $25 for a leaf blower."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-275",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-ashburnham-mlp-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate up $100 for a battery operated electric lawn mower, and $100 for a battery operated snow blower (select models only)."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-276",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma-belmont-residential-programs",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 rebate for a heat pump dryer or heat pump washer/dyer combo."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-277",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-belmont-residential-programs",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an induction stove when replacing an electric stove."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-278",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-belmont-residential-programs",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an induction stove when replacing a gas stove."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-279",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-belmont-residential-programs",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an induction stove in new construction."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-280",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-belmont-residential-programs",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75,
+      "maximum": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $75 rebate for a portable induction cooktop."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-281",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ma-belmont-residential-programs",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for a Wi-Fi enabled smart thermostat."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-282",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ma-belmont-residential-programs",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 250,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate for a qualified hybrid heat pump water heater. Rebate amount based on Tier 1, 2, 3, or 4 per NEEA guidelines."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-283",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma-belmont-residential-programs",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy assessment for residential customers."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-284",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ma-belmont-residential-programs",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 700,
+      "unit": "ton",
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$700/ton rebate up to $5,000 for a cold climate air source heat pump. $1,000 bonus for low-income customers or those removing a fossil fuel system."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-285",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing"
+    ],
+    "program": "ma-belmont-residential-programs",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "75% rebate up to $500 for air sealing costs."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-286",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "other_insulation",
+      "wall_insulation"
+    ],
+    "program": "ma-belmont-residential-programs",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "75% rebate up to $1,000 for insulation costs."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-287",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "battery_storage_installation"
+    ],
+    "program": "ma-belmont-residential-programs",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a residential battery storage system."
+    },
+    "start_date": "2025-01-01"
+  },
+  {
+    "id": "MA-288",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-belmont-residential-programs",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$400 rebate for an electric riding mower (zero turn), $200 for a riding mower, $200 for a snowblower, and $100 for an electric push mower."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-289",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-belmont-residential-programs",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "minimum": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for a battery electric rototiller, pressure washer, hedge trimmer, or chain or pole saw. $30 for leaf blower and $25 for string trimmers."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-290",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ma-belmont-residential-programs",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "minimum": 100,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $350 for a level 2 electric vehicle charger, when enrolled in the Connected Homes program. Select models only."
+    },
+    "start_date": "2025-01-01"
+  },
+  {
+    "id": "MA-291",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma-boylston-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit."
+    }
+  },
+  {
+    "id": "MA-292",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ma-boylston-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump water heater."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-293",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma-boylston-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an all-in-one washer and heat pump dryer."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-294",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma-boylston-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-295",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "ma-boylston-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an ENERGY STAR rated electric clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-296",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ma-boylston-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 125
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% rebate up to $125 for an ENERGY STAR rated smart thermostat."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-297",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-boylston-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an induction range replacing a gas or propane range."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-298",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-boylston-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an induction range when replacing electric."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-299",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-boylston-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate up to $40 for an electric rototiller, $40 for a hedge trimmer or chain saw, $25 for a string trimmer, and $25 for a leaf blower."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-300",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-boylston-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate up $100 for a battery operated electric lawn mower, and $100 for a battery operated snow blower (select models only)."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-301",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ma-boylston-nextzero",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton",
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton rebate for a qualifying air source heat pump, limit 3 tons."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-302",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ma-boylston-nextzero",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 2250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for a qualifying ground source heat pump."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-303",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "efficiency_rebates",
+      "floor_insulation",
+      "other_weatherization",
+      "wall_insulation",
+      "energy_audit"
+    ],
+    "program": "ma-boylston-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate of insulation costs up to $500 for residential customers, after an energy audit."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-304",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma-chicopee-home-efficiency",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit."
+    }
+  },
+  {
+    "id": "MA-305",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "efficiency_rebates",
+      "floor_insulation",
+      "other_weatherization",
+      "wall_insulation",
+      "energy_audit"
+    ],
+    "program": "ma-chicopee-home-efficiency",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate of insulation costs up to $500 for residential customers, after an energy audit."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-306",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ma-chicopee-home-efficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton",
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton rebate for a qualifying air source heat pump, limit 3 tons."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-307",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ma-chicopee-home-efficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 2250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for a qualifying ground source heat pump."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-308",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ma-chicopee-home-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump water heater."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-309",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma-chicopee-home-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an all-in-one washer and heat pump dryer."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-310",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma-chicopee-home-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-311",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "ma-chicopee-home-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an ENERGY STAR rated electric clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-312",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ma-chicopee-home-efficiency",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 125
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% rebate up to $125 for an ENERGY STAR rated smart thermostat."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-313",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-chicopee-home-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an induction range replacing a gas or propane range."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-314",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-chicopee-home-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an induction range when replacing electric."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-315",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-chicopee-home-efficiency",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate up to $40 for an electric rototiller, $40 for a hedge trimmer or chain saw, $25 for a string trimmer, and $25 for a leaf blower."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-316",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-chicopee-home-efficiency",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate up $100 for a battery operated electric lawn mower, and $100 for a battery operated snow blower (select models only)."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-317",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "No-cost virtual or in-person Home Energy Assessment."
+    }
+  },
+  {
+    "id": "MA-318",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3000,
+      "unit": "ton",
+      "maximum": 10000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$3,000/ton rebate for a whole home heat pump, up to $10,000."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-319",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1250,
+      "unit": "ton",
+      "maximum": 10000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,250/ton rebate for a partial home air source heat pump, up to $10,000."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-320",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1250,
+      "unit": "ton",
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,250/ton rebate for an outbuilding air source heat pump, up to $2,500."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-321",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 10000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$10,000/home rebate for a whole-home air to water heat pump."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-322",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump",
+      "geothermal_heating_installation"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2000,
+      "unit": "ton",
+      "maximum": 15000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$2,000/ton rebate for a partial home ground source heat pump, up to $15,000 per home per year."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-323",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump",
+      "geothermal_heating_installation"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 15000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$15,000 rebate for a whole home ground source heat pump."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-324",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$750 rebate for a heat pump water heater replacing an oil, natural gas, or propane water heater."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-325",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 185
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$185 rebate for a heat pump water heater replacing an electric resistance water heater."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-326",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "new_electric_vehicle",
+      "used_electric_vehicle"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPDriveEVRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for a new or used battery electric vehicle."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31",
+    "low_income": "ma-concordmlp-80ami-threshold"
+  },
+  {
+    "id": "MA-327",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "used_plugin_hybrid_vehicle",
+      "new_plugin_hybrid_vehicle"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPDriveEVRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 550
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$550 rebate for a new or used plug-in hybrid electric vehicle (PHEV)."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31",
+    "low_income": "ma-concordmlp-80ami-threshold"
+  },
+  {
+    "id": "MA-328",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_electric_vehicle",
+      "new_electric_vehicle"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPDriveEVRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 850
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$850 rebate for a new or used battery electric vehicle (BEV)."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31",
+    "low_income": "ma-concordmlp-120ami-threshold"
+  },
+  {
+    "id": "MA-329",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "used_plugin_hybrid_vehicle",
+      "new_plugin_hybrid_vehicle"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPDriveEVRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 450
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$450 rebate for a new or used plug-in hybrid electric vehicle (PHEV)."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31",
+    "low_income": "ma-concordmlp-120ami-threshold"
+  },
+  {
+    "id": "MA-330",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "new_electric_vehicle",
+      "used_electric_vehicle"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPDriveEVRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 650
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$650 rebate for a new or used battery electric vehicle (BEV)."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-331",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "used_plugin_hybrid_vehicle",
+      "new_plugin_hybrid_vehicle"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPDriveEVRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$350 rebate for a new or used plug-in hybrid electric vehicle (PHEV)."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-332",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPDriveEVRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 rebate for electric vehicle owners to install some or all components of a Level 2 EV charging system."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-333",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 625,
+      "unit": "kilowatt",
+      "maximum": 3125
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$625/kW(DC) rebate for installed solar PV generation capacity, capped at $3,125 per service address."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-334",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma_marbleheadMunicipalLightPlant_mMLDNEXTZEROResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit."
+    }
+  },
+  {
+    "id": "MA-335",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ma_marbleheadMunicipalLightPlant_mMLDNEXTZEROResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump water heater."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-336",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma_marbleheadMunicipalLightPlant_mMLDNEXTZEROResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an all-in-one washer and heat pump dryer."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-338",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "ma_marbleheadMunicipalLightPlant_mMLDNEXTZEROResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an ENERGY STAR rated electric clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-339",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ma_marbleheadMunicipalLightPlant_mMLDNEXTZEROResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 125
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% rebate up to $125 for an ENERGY STAR rated smart thermostat."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-340",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma_marbleheadMunicipalLightPlant_mMLDNEXTZEROResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an induction range replacing a gas or propane range."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-341",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma_marbleheadMunicipalLightPlant_mMLDNEXTZEROResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an induction range when replacing electric."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-342",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma_marbleheadMunicipalLightPlant_mMLDNEXTZEROResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate up to $40 for an electric rototiller, $40 for a hedge trimmer or chain saw, $25 for a string trimmer, and $25 for a leaf blower."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-343",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma_marbleheadMunicipalLightPlant_mMLDNEXTZEROResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate up $100 for a battery operated electric lawn mower, and $100 for a battery operated snow blower (select models only)."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-344",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ma_marbleheadMunicipalLightPlant_mMLDNEXTZEROResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton",
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton rebate for a qualifying air source heat pump, limit 3 tons."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-345",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ma_marbleheadMunicipalLightPlant_mMLDNEXTZEROResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 2250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for a qualifying ground source heat pump."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-346",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "efficiency_rebates",
+      "floor_insulation",
+      "other_weatherization",
+      "wall_insulation",
+      "energy_audit"
+    ],
+    "program": "ma_marbleheadMunicipalLightPlant_mMLDNEXTZEROResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate of insulation costs up to $500 for residential customers, after an energy audit."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-347",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma_marbleheadMunicipalLightPlant_mMLDNEXTZEROResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-348",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ma_marbleheadMunicipalLightPlant_mMLDNEXTZEROResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "minimum": 200,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $700 rebate for a level 2 electric charger, enrolled in the NextZero Scheduled Charging Program."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-349",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "battery_storage_installation"
+    ],
+    "program": "ma_marbleheadMunicipalLightPlant_mMLDNEXTZEROResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 100,
+      "unit": "kilowatt_hour"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100/kWh rebate for installation of a residential battery system, with enrollment in the Connected Homes program."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-350",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma-hull-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-351",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ma-hull-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump water heater."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-352",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma-hull-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an all-in-one washer and heat pump dryer."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-353",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma-hull-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-354",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "ma-hull-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an ENERGY STAR rated electric clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-355",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ma-hull-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 125
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% rebate up to $125 for an ENERGY STAR rated smart thermostat."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-356",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-hull-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an induction range replacing a gas or propane range."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-357",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-hull-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an induction range when replacing electric."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-358",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ma-hull-nextzero",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton",
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton rebate for a qualifying air source heat pump, limit 3 tons."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-359",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ma-hull-nextzero",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 2250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for a qualifying ground source heat pump."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-360",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "efficiency_rebates",
+      "floor_insulation",
+      "other_weatherization",
+      "wall_insulation",
+      "energy_audit"
+    ],
+    "program": "ma-hull-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate of insulation costs up to $500 for residential customers, after an energy audit."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-361",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ma-hull-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "minimum": 200,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $700 rebate for a level 2 electric charger, enrolled in the NextZero Scheduled Charging Program."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-362",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "ma-mansfield-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an ENERGY STAR rated electric clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-363",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ma-mansfield-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an ENERGY STAR rated smart Wi-Fi enabled thermostat."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-364",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ma-mansfield-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an ENERGY STAR rated heat pump water heater less than or equal to 55 gallons."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-365",
+    "payment_methods": [
+      "account_credit",
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "ma-mansfield-rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton",
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton rebate for a ductless mini-split heat pump, max 2 tons."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-366",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ma-mansfield-rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton",
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton for a ducted air source heat pump, max 2 tons."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-367",
+    "payment_methods": [
+      "account_credit",
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ma-mansfield-rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton",
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton for a ground source heat pump, max 5 tons."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-368",
+    "payment_methods": [
+      "account_credit",
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "other_insulation",
+      "other_weatherization",
+      "wall_insulation"
+    ],
+    "program": "ma-mansfield-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of weatherization measure costs, up to $1,000 after a home energy audit."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-369",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ma-mansfield-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for a qualifying level 2 electric vehicle charger, with enrollment in the Connected Homes program."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-370",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma-danvers-energy-savings",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "No-cost home energy assessment for Danvers Electric Division customers."
+    }
+  },
+  {
+    "id": "MA-371",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ma-danvers-energy-savings",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "ton",
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1000/ton rebate for a ducted air source heat pump, up to $4000."
+    }
+  },
+  {
+    "id": "MA-372",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "ma-danvers-energy-savings",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "ton",
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1000/ton rebate for a ductless mini-split heat pump, up to $4000."
+    }
+  },
+  {
+    "id": "MA-373",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "ma-danvers-energy-savings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 115
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$115 rebate for central AC."
+    }
+  },
+  {
+    "id": "MA-374",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ma-danvers-energy-savings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$25 - $50 rebate for a smart thermostat, depending on the type."
+    }
+  },
+  {
+    "id": "MA-375",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ma-danvers-energy-savings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 rebate for a hybrid water heater heat pump."
+    }
+  },
+  {
+    "id": "MA-376",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-danvers-energy-savings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for cordless electric lawn equipment including string trimmers and edgers, hedge trimmers, leaf blowers, and rototillers."
+    }
+  },
+  {
+    "id": "MA-377",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-danvers-energy-savings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for cordless electric lawn equipment including a pressure washer and chain & pole saw."
+    }
+  },
+  {
+    "id": "MA-378",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-danvers-energy-savings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$150 rebate for an electric cordless push lawn mower."
+    }
+  },
+  {
+    "id": "MA-379",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-danvers-energy-savings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate for electric cordless lawn equipment including a riding lawn mower and snowblower."
+    }
+  },
+  {
+    "id": "MA-380",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ma-danvers-energy-savings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 rebate for a Level 2 electric vehicle charger."
     }
   }
 ]

@@ -1164,6 +1164,37 @@
     }
   },
   "MA": {
+    "ma-concordmlp-120ami-threshold": {
+      "type": "hhsize",
+      "incentives": [
+        "MA-328",
+        "MA-329"
+      ],
+      "source_url": "https://concordma.gov/2916/Residential-Income-Based-Rebates",
+      "description": "Income-based rebates available to Concord MLP customers whose income is at or below 120% of the Boston Metropolitan Area median income.",
+      "thresholds": {
+        "1": 125100,
+        "2": 142950,
+        "3": 160800,
+        "4": 178700,
+        "5": 192950,
+        "6": 207250,
+        "7": 221550,
+        "8": 235850
+      }
+    },
+    "ma-concordmlp-80ami-threshold": {
+      "type": "ami-percentage",
+      "incentives": [
+        "MA-326",
+        "MA-327"
+      ],
+      "source_url": "https://concordma.gov/2907/DriveEV-Rebate-Program",
+      "description": "Concord MLP income-based rebates available to hose whose income is at or below 80% of the Boston Metropolitan Area median income.",
+      "thresholds": {
+        "percentage": 80
+      }
+    },
     "ma-massSave-income-eligible": {
       "type": "hhsize",
       "incentives": [
@@ -3095,6 +3126,31 @@
       "description": "WI HEAR 150% AMI",
       "thresholds": {
         "percentage": 150
+      }
+    },
+    "wi-weatherization-low-income": {
+      "type": "hhsize",
+      "incentives": [
+        "WI-138",
+        "WI-139",
+        "WI-140",
+        "WI-141",
+        "WI-142",
+        "WI-143",
+        "WI-144",
+        "WI-145"
+      ],
+      "source_url": "https://energyandhousing.wi.gov/Pages/AgencyResources/energy-assistance.aspx",
+      "description": "WI 2024-2025 heating season weatherization thresholds, 60% of state median income.",
+      "thresholds": {
+        "1": 36733,
+        "2": 48035,
+        "3": 59338,
+        "4": 70641,
+        "5": 81943,
+        "6": 93246,
+        "7": 95365,
+        "8": 97484
       }
     }
   }
