@@ -62,7 +62,8 @@
         "CO-87",
         "CO-88",
         "CO-552",
-        "CO-557"
+        "CO-557",
+        "CO-584"
       ]
     },
     "co-group-walking-mountains": {
@@ -182,7 +183,6 @@
       ],
       "description": "Member utilities of Mass Save. Some companies appear twice as they offer both electricity and gas.",
       "incentives": [
-        "MA-1",
         "MA-2",
         "MA-3",
         "MA-4",
@@ -373,6 +373,15 @@
     }
   },
   "OR": {
+    "or-central-region": {
+      "counties": [
+        "or-crook-county",
+        "or-deschutes-county",
+        "or-jefferson-county"
+      ],
+      "description": "Central Region",
+      "incentives": []
+    },
     "or-energy-trust-regional-offer": {
       "counties": [
         "or-gilliam-county",
@@ -388,6 +397,64 @@
         "OR-87",
         "OR-88"
       ]
+    },
+    "or-greater-eastern-oregon-region": {
+      "counties": [
+        "or-gilliam-county",
+        "or-grant-county",
+        "or-harney-county",
+        "or-malheur-county",
+        "or-morrow-county",
+        "or-umatilla-county",
+        "or-wheeler-county"
+      ],
+      "description": "Greater Eastern Oregon Region",
+      "incentives": []
+    },
+    "or-metro-region": {
+      "counties": [
+        "or-clackamas-county",
+        "or-multnomah-county",
+        "or-washington-county"
+      ],
+      "description": "Metro Region",
+      "incentives": []
+    },
+    "or-mid-valley-region": {
+      "counties": [
+        "or-marion-county",
+        "or-polk-county",
+        "or-yamhill-county"
+      ],
+      "description": "Mid-Valley Region",
+      "incentives": []
+    },
+    "or-north-central-region": {
+      "counties": [
+        "or-hood-river-county",
+        "or-sherman-county",
+        "or-wasco-county"
+      ],
+      "description": "North Central Region",
+      "incentives": []
+    },
+    "or-north-coast-region": {
+      "counties": [
+        "or-clatsop-county",
+        "or-columbia-county",
+        "or-tillamook-county"
+      ],
+      "description": "North Coast Region",
+      "incentives": []
+    },
+    "or-northeast-oregon-region": {
+      "counties": [
+        "or-baker-county",
+        "or-union-county",
+        "or-wallowa-county"
+      ],
+      "description": "Northeast Oregon Region",
+      "incentives": []
     },
     "or-pge-pacific-power": {
       "gas_utilities": [
@@ -424,8 +491,45 @@
         "OR-32",
         "OR-33",
         "OR-89",
-        "OR-90"
+        "OR-90",
+        "OR-353",
+        "OR-357"
       ]
+    },
+    "or-south-central-region": {
+      "counties": [
+        "or-klamath-county",
+        "or-lake-county"
+      ],
+      "description": "South Central Region",
+      "incentives": []
+    },
+    "or-south-coast-region": {
+      "counties": [
+        "or-coos-county",
+        "or-curry-county",
+        "or-douglas-county"
+      ],
+      "description": "South Coast Region",
+      "incentives": []
+    },
+    "or-south-valley-mid-coast-region": {
+      "counties": [
+        "or-benton-county",
+        "or-lane-county",
+        "or-lincoln-county",
+        "or-linn-county"
+      ],
+      "description": "South Valley/Mid-Coast Region",
+      "incentives": []
+    },
+    "or-southern-oregon-region": {
+      "counties": [
+        "or-jackson-county",
+        "or-josephine-county"
+      ],
+      "description": "Southern Oregon Region",
+      "incentives": []
     }
   },
   "PA": {
@@ -495,6 +599,18 @@
         "WI-143"
       ]
     },
+    "wi-cap-counties": {
+      "counties": [
+        "wi-marquette-county",
+        "wi-portage-county",
+        "wi-waupaca-county",
+        "wi-waushara-county"
+      ],
+      "description": "Counties served by CAP Services.",
+      "incentives": [
+        "WI-146"
+      ]
+    },
     "wi-casa-esperanza-counties": {
       "counties": [
         "wi-jefferson-county",
@@ -514,6 +630,18 @@
       "description": "Community Action of Rock and Walworth Counties",
       "incentives": [
         "WI-145"
+      ]
+    },
+    "wi-coulee-cap-counties": {
+      "counties": [
+        "wi-crawford-county",
+        "wi-la-crosse-county",
+        "wi-monroe-county",
+        "wi-vernon-county"
+      ],
+      "description": "Counties served by Couleecap",
+      "incentives": [
+        "WI-152"
       ]
     },
     "wi-group-focus-on-energy": {
@@ -625,6 +753,32 @@
         "WI-140"
       ]
     },
+    "wi-north-central-cap-counties": {
+      "counties": [
+        "wi-langlade-county",
+        "wi-lincoln-county",
+        "wi-marathon-county",
+        "wi-price-county",
+        "wi-rusk-county",
+        "wi-sawyer-county",
+        "wi-taylor-county",
+        "wi-wood-county"
+      ],
+      "description": "Counties served by North Central CAP",
+      "incentives": [
+        "WI-147"
+      ]
+    },
+    "wi-outagamie-counties": {
+      "counties": [
+        "wi-calumet-county",
+        "wi-outagamie-county"
+      ],
+      "description": "Counties served by Outagamie CHA",
+      "incentives": [
+        "WI-148"
+      ]
+    },
     "wi-partners-4cd-weatherization": {
       "counties": [
         "wi-door-county",
@@ -657,6 +811,48 @@
       "description": "Racine-Kenosha Community Action Agency counties served",
       "incentives": [
         "WI-141"
+      ]
+    },
+    "wi-sw-cap-counties": {
+      "counties": [
+        "wi-grant-county",
+        "wi-iowa-county",
+        "wi-lafayette-county",
+        "wi-richland-county"
+      ],
+      "description": "Counties served by SW WI CAP",
+      "incentives": [
+        "WI-149"
+      ]
+    },
+    "wi-west-central-counties": {
+      "counties": [
+        "wi-barron-county",
+        "wi-burnett-county",
+        "wi-chippewa-county",
+        "wi-dunn-county",
+        "wi-pepin-county",
+        "wi-pierce-county",
+        "wi-polk-county",
+        "wi-saint-croix-county",
+        "wi-washburn-county"
+      ],
+      "description": "Counties served by West Central WI CAP",
+      "incentives": [
+        "WI-150"
+      ]
+    },
+    "wi-western-dairyland-counties": {
+      "counties": [
+        "wi-buffalo-county",
+        "wi-clark-county",
+        "wi-eau-claire",
+        "wi-jackson-county",
+        "wi-trempealeau-county"
+      ],
+      "description": "Counties served by Western Dairyland",
+      "incentives": [
+        "WI-151"
       ]
     }
   }

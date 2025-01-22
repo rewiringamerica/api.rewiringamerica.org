@@ -1191,7 +1191,7 @@
       "es": "Hasta $2000 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
     },
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2025-12-31"
   },
   {
     "id": "CO-82",
@@ -1212,11 +1212,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $3000 per customer off ground source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $3000 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
+      "en": "Up to $3,000 per customer off ground source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $3,000 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
     },
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2025-12-31"
   },
   {
     "id": "CO-83",
@@ -1241,7 +1241,7 @@
       "es": "Mini split sin ductos $500 dólares/tonelada. Mínimos de eficiencia aplican."
     },
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2025-12-31"
   },
   {
     "id": "CO-84",
@@ -1293,7 +1293,7 @@
       "es": "Un descuento de $35 dólares en termostatos inteligentes. Un reembolso máximo: $70 dólares por hogar."
     },
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2025-12-31"
   },
   {
     "id": "CO-87",
@@ -1318,7 +1318,7 @@
       "es": "Un reembolso de $1.16 dólares por pie cuadrado de aislamiento. Un reembolso de $0.77 de dólar por pie cuadrado para el desván (de techo plano) y para los muros inclinados del desván ya aislados."
     },
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2025-12-31"
   },
   {
     "id": "CO-88",
@@ -1344,7 +1344,7 @@
       "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de la pérdida de aire."
     },
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2025-12-31"
   },
   {
     "id": "CO-89",
@@ -6559,11 +6559,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $400 for ENERGY STAR ground source heat pump (no desuperheater).",
-      "es": "Hasta $400 para bomba de calor geotérmica ENERGY STAR (sin regulador de vapor sobrecalentado)."
+      "en": "Up to $400 for ENERGY STAR ground source heat pump when replacing electric.",
+      "es": "Hasta $400 para bomba de calor geotérmica ENERGY STAR."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "CO-326",
@@ -6583,11 +6583,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $250 for non-cold climate ducted air source heat pump with HSPF2 at least 7.8.",
+      "en": "Up to $250 for non-cold climate ducted air source heat pump with HSPF2 at least 7.8, when replacing electric.",
       "es": "Hasta $250 para bombas de calor de fuente de aire (ASHP) con ductos con HSPF2 de al menos 8.5."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "CO-327",
@@ -11601,7 +11601,7 @@
       "es": "$3.75 por pie cuadrado para ventanas y puertas de reemplazo. Las ventanas y puertas deben cumplir con los criterios de rendimiento de la zona climática norte de ENERGY STAR."
     },
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2025-12-31"
   },
   {
     "id": "CO-557",
@@ -11627,7 +11627,7 @@
       "es": "Hasta $350 por una estufa o encimera de inducción al reemplazar una de gas. Hasta $50 al reemplazar una eléctrica."
     },
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2025-12-31"
   },
   {
     "id": "CO-558",
@@ -12214,5 +12214,619 @@
     },
     "end_date": "1991-02-14",
     "low_income": "co-aspen-CORE-150ami-threshold"
+  },
+  {
+    "id": "CO-584",
+    "eligible_geo_group": "co-group-platte-river-power-authority",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "co_platteRiverPowerAuthority_efficiencyWorks",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "minimum": 400,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $600 off a heat pump water heater UEF 3.3. ENERGY STAR certified with CTA-2045 certified communication control.",
+      "es": "Hasta $600 de descuento en un calentador de agua con bomba de calor UEF 3.3. Certificado por ENERGY STAR con control de comunicación certificado CTA-2045."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-585",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
+    "program": "co_cityOfBoulder_residentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.7,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "70% rebate up to $750 for attic insulation & air sealing.",
+      "es": "Hasta $750 para aislamiento térmico y sellado hermético del desván."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-586",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "co_cityOfBoulder_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $900 for ENERGY STAR ground source heat pump when replacing gas.",
+      "es": "Hasta $900 para bomba de calor geotérmica ENERGY STAR."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-587",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "co_cityOfBoulder_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $900 for cold climate-rated air source heat pump, including mini-split heat pumps, when replacing gas.",
+      "es": "Hasta $900 para bomba de calor de fuente de aire con ductos (ASHP) con calificación de \"clima frío\"."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-588",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "co_cityOfBoulder_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750 for non-cold climate ducted air source heat pump when replacing gas."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-589",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "co_cityOfBoulder_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750 for ENERGY STAR electric heat pump water heater when replacing gas.",
+      "es": "Hasta $750 para calentador eléctrico de agua con bomba de calor ENERGY STAR."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-590",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "co_cityOfBoulder_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 450
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$450 rebate for removing a natural gas stove/cooktop and replacing it with an induction cooktop or stove.",
+      "es": "Un reembolso de $200 dólares por retirar una estufa o parrilla de gas natural y sustituirla por una estufa o parrilla eléctrica."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-591",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "co_cityOfBoulder_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for an electric panel upgrade in conjunction with heat pump, induction, solar, or EV charger upgrades."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-592",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "co_cityOfBoulder_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400 rebate for a cold climate-rated ducted air source heat pump, when replacing electric.",
+      "es": "Hasta $400 para bomba de calor de fuente de aire con ductos (ASHP) con calificación de \"clima frío\"."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-593",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "co_cityOfBoulder_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400 for ENERGY STAR ground source heat pump when replacing electric.",
+      "es": "Hasta $900 para bomba de calor geotérmica ENERGY STAR."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-594",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_to_water_heat_pump"
+    ],
+    "program": "co_cityOfBoulder_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$900 rebate for an air to water heat pump, when replacing gas heating."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-595",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_to_water_heat_pump"
+    ],
+    "program": "co_cityOfBoulder_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for an air to water heat pump, when replacing electric heating."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-596",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "co_cityOfBoulder_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $250 for ENERGY STAR electric heat pump water heater when replacing electric.",
+      "es": "Hasta $250 para calentador eléctrico de agua con bomba de calor ENERGY STAR."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-597",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "co_cityOfBoulder_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for an induction cooktop or stove when replacing electric."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-598",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "co_cityOfBoulder_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 450
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$450 rebate for an ENERGY STAR rated heat pump dryer when replacing gas."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-599",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "co_cityOfBoulder_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 rebate for an ENERGY STAR rated heat pump dryer when replacing electric."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-600",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "co_boulderCounty_energySmart",
+    "amount": {
+      "type": "percent",
+      "number": 0.7,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 70% of project costs up to $300 for a cold climate ducted/ductless air source heat pump when replacing electric.",
+      "es": "Un reembolso del 70% de los costos del proyecto de hasta $300 dólares para una bomba de calor con ductos de fuente de aire para \"clima frío\"."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-601",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "co_boulderCounty_energySmart",
+    "amount": {
+      "type": "percent",
+      "number": 0.7,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 70% of project costs up to $400 for a cold climate ducted/ductless air source heat pump when replacing gas.",
+      "es": "Un reembolso del 70% de los costos del proyecto de hasta $400 dólares para una bomba de calor con ductos de fuente de aire para \"clima frío\"."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-602",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "co_boulderCounty_energySmart",
+    "amount": {
+      "type": "percent",
+      "number": 0.7,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 70% of project costs up to $200 for a non-cold climate ducted/ductless air source heat pump when replacing gas.",
+      "es": "Un reembolso del 70% de los costos del proyecto de hasta $200 dólares para una bomba de calor con/sin ductos de fuente de aire."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-603",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "co_boulderCounty_energySmart",
+    "amount": {
+      "type": "percent",
+      "number": 0.7,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 70% of project costs up to $100 for a non-cold climate ducted/ductless air source heat pump when replacing electric.",
+      "es": "Un reembolso del 70% de los costos del proyecto de hasta $100 dólares para una bomba de calor con/sin ductos de fuente de aire."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-604",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "co_boulderCounty_energySmart",
+    "amount": {
+      "type": "percent",
+      "number": 0.7,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 70% of project costs up to $400 for a ground source heat pump when replacing gas.",
+      "es": "Un reembolso del 70% de los costos del proyecto para una bomba de calor geotérmica, hasta $400 dólares."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-605",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "co_boulderCounty_energySmart",
+    "amount": {
+      "type": "percent",
+      "number": 0.7,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 70% of project costs up to $300 for a ground source heat pump when replacing electric.",
+      "es": "Un reembolso del 70% de los costos del proyecto para una bomba de calor geotérmica, hasta $300 dólares."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-606",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_to_water_heat_pump"
+    ],
+    "program": "co_boulderCounty_energySmart",
+    "amount": {
+      "type": "percent",
+      "number": 0.7,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 70% of project costs up to $400 for an air to water heat pump when replacing gas."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-607",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_to_water_heat_pump"
+    ],
+    "program": "co_boulderCounty_energySmart",
+    "amount": {
+      "type": "percent",
+      "number": 0.7,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 70% of project costs up to $300 for an air to water heat pump when replacing gas."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-608",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "co_boulderCounty_energySmart",
+    "amount": {
+      "type": "percent",
+      "number": 0.7,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 70% of project costs up to $200 for ENERGY STAR electric heat pump water heater when replacing gas.",
+      "es": "Un reembolso del 70% de los costos del proyecto para un calentador de agua eléctrico con bomba de calor ENERGY STAR, hasta 100 dólares."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-609",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "co_boulderCounty_energySmart",
+    "amount": {
+      "type": "percent",
+      "number": 0.7,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 70% of project costs up to $100 for ENERGY STAR heat pump water heater when replacing electric.",
+      "es": "Un reembolso del 70% de los costos del proyecto para un calentador de agua eléctrico con bomba de calor ENERGY STAR, hasta 100 dólares."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   }
 ]
