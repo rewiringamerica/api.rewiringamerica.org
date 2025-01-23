@@ -110,7 +110,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $750 back after purchase and installation of qualifying ducted heat pumps and mini-splits.",
+      "en": "Up to $750 rebate for installation of qualifying ducted heat pumps and mini-splits.",
       "es": "Reembolsos hasta $750 después de la compra e instalación de bombas de calor con ductos calificados, según el tamaño."
     }
   },
@@ -133,7 +133,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $300 back after purchase and installation of qualifying heat pump water heaters, depending on the size of the heater.",
+      "en": "Up to $300 rebate for installation of qualifying heat pump water heaters, depending on the size of the heater.",
       "es": "Reembolsos hasta $300 después de la compra e instalación de calentadores de agua con bomba de calor calificados, según el tamaño del calentador."
     }
   },
@@ -157,7 +157,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "100% of weatherization costs, including air/duct sealing and insulation, up to $2,000.",
+      "en": "100% of weatherization costs, including air/duct sealing and insulation, up to $2,000, after a home audit.",
       "es": "El total de los costos de la impermeabilización, hasta $2000, incluyendo el sellado de conductos de aire y el aislamiento."
     }
   },
@@ -181,7 +181,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,500 back after purchase or lease of a new EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served.",
+      "en": "Up to $1,500 rebate for purchase or lease of a new EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served.",
       "es": "Reembolsos hasta $1,500 por la compra o arrendamiento de un vehículo eléctrico nuevo de un concesionario con licencia de RI o calificado de otro estado."
     }
   },
@@ -205,7 +205,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,000 back after purchase or lease of a used EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served.",
+      "en": "Up to $1,000 rebate for purchase or lease of a used EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served.",
       "es": "Reembolsos hasta $1,000 por la compra o arrendamiento de un vehículo eléctrico usado de un concesionario con licencia de RI o calificado de otro estado."
     }
   },
@@ -254,8 +254,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Additional $1,500 towards a used EV from a licensed Rhode Island or qualified out-of-state dealership for LIHEAP-qualifiers. First-come, first-served.",
-      "es": "Un reembolso adicional de $1,500 por un vehículo eléctrico usado para los calificadores de LIHEAP. Por orden de llegada."
+      "en": "Additional $1,500 towards a used EV from a licensed Rhode Island or qualified out-of-state dealership for LIHEAP-qualifiers. ",
+      "es": "Un reembolso adicional de $1,500 por un vehículo eléctrico usado para los calificadores de LIHEAP. "
     },
     "low_income": "ri-default"
   },
@@ -278,11 +278,10 @@
       "renter"
     ],
     "short_description": {
-      "en": "30% up to $350 back on the final purchase of an e-bike or e-cargo bike.",
-      "es": "Devolución del 30% hasta $350 dólares en la compra final de una bicicleta e-bike o una e-cargo bike."
+      "en": "30% rebate up to $350 on the purchase of an e-bike or e-cargo bike from local RI bike shops.",
+      "es": "Devolución del 30% hasta $350 dólares en la compra de una bicicleta e-bike o una e-cargo bike."
     },
-    "start_date": "2022-10-24",
-    "low_income": "ri-default"
+    "start_date": "2022-10-24"
   },
   {
     "id": "RI-14",
@@ -313,7 +312,8 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_clothes_dryer"
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
     ],
     "program": "ri_rhodeIslandEnergy_rhodeIslandENERGYSTAR®CertifiedElectricClothesDryerRebate",
     "amount": {
@@ -321,12 +321,15 @@
       "number": 50
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$50 back on ENERGY STAR® certified electric clothes dryer purchased in 2023. Rebate requests must be completed within 90 days of purchase.",
-      "es": "$50 de reembolso en secadoras de ropa eléctricas certificadas por ENERGY STAR y compradas en 2023. Solicita dentro de los 90 días posteriores a la compra."
-    }
+      "en": "$50 rebate on ENERGY STAR® certified electric clothes dryer purchased in 2025. Rebate requests must be completed within 90 days of purchase.",
+      "es": "$50 de reembolso en secadoras de ropa eléctricas certificadas por ENERGY STAR y compradas en 2025. Solicita dentro de los 90 días posteriores a la compra."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "RI-20",
@@ -553,18 +556,18 @@
     "program": "ri_rhodeIslandEnergy_electricHeatingAndCoolingRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 350,
+      "number": 400,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$350+ back on qualifying ducted central heat pump, depending on size. Additional funding available for replacing baseboard resistance heating.",
-      "es": "$350+ de reembolso para la instalación de una bomba de calor central por conductos y más para reemplazar la calefacción eléctrica a base de resistencias."
+      "en": "$400/ton rebate on qualifying cold climate ducted central heat pump.",
+      "es": "$400/ton de reembolso para la instalación de una bomba de calor central por conductos y más para reemplazar la calefacción eléctrica a base de resistencias."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "RI-39",
@@ -577,18 +580,18 @@
     "program": "ri_rhodeIslandEnergy_electricHeatingAndCoolingRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
+      "number": 200,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$150+ back on qualifying mini-split non-ducted heat pump, depending on size. Additional funding available for replacing baseboard resistance heating.",
-      "es": "$150+ de reembolso para una bomba de calor mini-split sin conductos. Reembolso adicional para reemplazar la calefacción eléctrica a base de resistencias."
+      "en": "$200/ton rebate on qualifying ductless mini-split heat pump, depending on size.",
+      "es": "$200+ de reembolso para una bomba de calor mini-split sin conductos. Reembolso adicional para reemplazar la calefacción eléctrica a base de resistencias."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "RI-40",
@@ -608,11 +611,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "$75 back on ENERGY STAR certified, wireless connection enabled Smart Thermostat.",
+      "en": "$75 rebate on ENERGY STAR certified, wireless connection enabled Smart Thermostat.",
       "es": "$75 de reembolso en un termostato inteligente certificado por ENERGY STAR con conexión inalámbrica."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "RI-41",
@@ -677,8 +680,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "75% up to $750 back on the final purchase of an e-bike or e-cargo bike for income qualified residents.",
-      "es": "Devolución del 75% hasta $750 dólares en la compra final de una bicicleta e-bike o una e-cargo bike para residentes que cumplan con el nivel de ingresos."
+      "en": "75% rebate up to $750 on the purchase of an e-bike or e-cargo bike for income-qualified residents.",
+      "es": "Devolución del 75% hasta $750 dólares en la compra de una bicicleta e-bike o una e-cargo bike para residentes que cumplan con el nivel de ingresos."
     },
     "start_date": "2022-10-24",
     "low_income": "ri-default"
@@ -723,7 +726,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate of 75% of cost for a Level 2 EV charger, up to $500, or up to $1,000 where an electrical upgrade is needed."
+      "en": "Rebate of 75% of cost for a Level 2 EV charger, up to $500, or up to $1,000 where an electrical upgrade is needed, for income-qualified residents."
     },
     "start_date": "2024-08-01",
     "low_income": "ri-default"
@@ -867,5 +870,29 @@
       "en": "Up to $420 rebate for ENERGY STAR certified heat pump clothes dryer, electric stove, induction cooktop, range, or oven for moderate-income residents."
     },
     "low_income": "ri-hear-program-moderate"
+  },
+  {
+    "id": "RI-55",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ri_rhodeIslandEnergy_electricHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1250,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,250/ton rebate on qualifying cold climate ducted/ductless heat pumps when replacing electric baseboard heating.",
+      "es": "$1,250/ton de reembolso para la instalación de una bomba de calor central por conductos y más para reemplazar la calefacción eléctrica a base de resistencias."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   }
 ]

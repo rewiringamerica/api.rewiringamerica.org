@@ -26,6 +26,29 @@
   "incentives": [
     {
       "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "other",
+      "authority": "co-platte-river-power-authority",
+      "program": "Efficiency Works",
+      "program_url": "https://efficiencyworks.org/homes/rebates/#secrebates",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 600,
+        "maximum": 600
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "Up to $600 off a heat pump water heater UEF 3.3. ENERGY STAR certified with CTA-2045 certified communication control."
+    },
+    {
+      "payment_methods": [
         "tax_credit"
       ],
       "authority_type": "state",

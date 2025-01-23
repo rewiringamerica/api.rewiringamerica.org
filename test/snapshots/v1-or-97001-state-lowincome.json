@@ -8,6 +8,9 @@
     },
     "or-oregon-housing-and-community-services": {
       "name": "Oregon Housing and Community Services"
+    },
+    "or-oregon-department-of-energy": {
+      "name": "Oregon Department of Energy"
     }
   },
   "coverage": {
@@ -21,6 +24,27 @@
   },
   "data_partners": {},
   "incentives": [
+    {
+      "payment_methods": [
+        "assistance_program"
+      ],
+      "authority_type": "state",
+      "authority": "or-oregon-department-of-energy",
+      "program": "Community Heat Pump Deployment Program",
+      "program_url": "https://www.oregon.gov/energy/Incentives/Pages/CHPDP.aspx",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 7
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $7,000for the purchase and installation of a heat pump."
+    },
     {
       "payment_methods": [
         "pos_rebate"
@@ -543,6 +567,27 @@
       "payment_methods": [
         "rebate"
       ],
+      "authority_type": "other",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 700
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "Up to $700 rebate for a new heat pump water heater."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
       "authority_type": "state",
       "authority": "or-oregon-housing-and-community-services",
       "program": "State Home Oil Weatherization (SHOW) Program",
@@ -560,6 +605,27 @@
         "homeowner"
       ],
       "short_description": "Up to $600 for duct sealing and insulation measures."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "other",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "items": [
+        "other"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 250
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "Up to $250 to install an energy-efficient fireplace."
     }
   ]
 }

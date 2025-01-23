@@ -2259,5 +2259,51 @@
     },
     "start_date": "2025-01-01",
     "low_income": "vt-burlington-electric-department"
+  },
+  {
+    "id": "VT-112",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "vt_efficiencyVermont_efficiencyVermont-HomeElectricSystemUpgrades",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 10000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "100% of costs for a 200 amp electric panel upgrade for low-income customers."
+    },
+    "start_date": "2024-11-01",
+    "low_income": "vt-default"
+  },
+  {
+    "id": "VT-113",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "vt_efficiencyVermont_efficiencyVermont-HomeElectricSystemUpgrades",
+    "amount": {
+      "type": "percent",
+      "number": 0.9,
+      "maximum": 10000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "90% of costs for a 200 amp electric panel upgrade for moderate-income customers."
+    },
+    "start_date": "2024-11-01",
+    "low_income": "vt-default-moderate"
   }
 ]

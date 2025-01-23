@@ -64,6 +64,52 @@
         "rebate"
       ],
       "authority_type": "state",
+      "authority": "ri-oer",
+      "program": "Erika Niedowski Memorial Electric Bicycle Rebate Program",
+      "program_url": "https://drive.ri.gov/erika-niedowski-memorial-electric-bicycle-rebate-program",
+      "items": [
+        "ebike"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.3,
+        "maximum": 350
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2022-10-24",
+      "short_description": "30% rebate up to $350 on the purchase of an e-bike or e-cargo bike from local RI bike shops."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ri-rhode-island-energy",
+      "program": "Rhode Island Energy Electric Heating and Cooling Rebates",
+      "program_url": "https://www.rienergy.com/site/ways-to-save/save-money-with-rebates-and-incentives/electric-heating-and-cooling",
+      "items": [
+        "ducted_heat_pump"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 1250,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "$1,250/ton rebate on qualifying cold climate ducted/ductless heat pumps when replacing electric baseboard heating."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
       "authority": "ri-commerce-corp",
       "program": "Rhode Island Commerce Corp. Small-Scale Solar Program",
       "program_url": "https://energy.ri.gov/sites/g/files/xkgbur741/files/2023-03/REF-Small-Scale-Flyer-1.18.22.pdf",
@@ -80,6 +126,52 @@
         "homeowner"
       ],
       "short_description": "10-25% back on installation costs up to $5,000. Includes electricity-generating solar panels and solar domestic hot water technologies."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ri-rhode-island-energy",
+      "program": "Rhode Island Energy Electric Heating and Cooling Rebates",
+      "program_url": "https://www.rienergy.com/site/ways-to-save/save-money-with-rebates-and-incentives/electric-heating-and-cooling",
+      "items": [
+        "ducted_heat_pump"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 400,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "$400/ton rebate on qualifying cold climate ducted central heat pump."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ri-rhode-island-energy",
+      "program": "Rhode Island Energy Electric Heating and Cooling Rebates",
+      "program_url": "https://www.rienergy.com/site/ways-to-save/save-money-with-rebates-and-incentives/electric-heating-and-cooling",
+      "items": [
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 200,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "$200/ton rebate on qualifying ductless mini-split heat pump, depending on size."
     },
     {
       "payment_methods": [
@@ -123,7 +215,7 @@
         "homeowner",
         "renter"
       ],
-      "short_description": "Up to $1,500 back after purchase or lease of a new EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served."
+      "short_description": "Up to $1,500 rebate for purchase or lease of a new EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served."
     },
     {
       "payment_methods": [
@@ -167,7 +259,7 @@
         "homeowner",
         "renter"
       ],
-      "short_description": "Up to $1,000 back after purchase or lease of a used EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served."
+      "short_description": "Up to $1,000 rebate for purchase or lease of a used EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served."
     },
     {
       "payment_methods": [
@@ -198,19 +290,46 @@
       ],
       "authority_type": "utility",
       "authority": "ri-rhode-island-energy",
+      "program": "Rhode Island Energy Electric Heating and Cooling Rebates",
+      "program_url": "https://www.rienergy.com/site/ways-to-save/save-money-with-rebates-and-incentives/electric-heating-and-cooling",
+      "items": [
+        "smart_thermostat"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 75
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "$75 rebate on ENERGY STAR certified, wireless connection enabled Smart Thermostat."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ri-rhode-island-energy",
       "program": "Rhode Island Energy Appliance and Electronics Incentives",
       "program_url": "https://www.rienergy.com/site/ways-to-save/save-money-with-rebates-and-incentives/appliance-and-electronics-incentives",
       "items": [
-        "heat_pump_clothes_dryer"
+        "heat_pump_clothes_dryer",
+        "non_heat_pump_clothes_dryer"
       ],
       "amount": {
         "type": "dollar_amount",
         "number": 50
       },
       "owner_status": [
-        "homeowner"
+        "homeowner",
+        "renter"
       ],
-      "short_description": "$50 back on ENERGY STAR® certified electric clothes dryer purchased in 2023. Rebate requests must be completed within 90 days of purchase."
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "$50 rebate on ENERGY STAR® certified electric clothes dryer purchased in 2025. Rebate requests must be completed within 90 days of purchase."
     }
   ]
 }
