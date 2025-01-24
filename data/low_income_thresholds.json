@@ -92,6 +92,24 @@
         "10": 121680
       }
     },
+    "co-boulder-county-income-qualified": {
+      "type": "county-hhsize",
+      "incentives": [],
+      "source_url": "https://energysmartyes.com/rebates-financing/income-qualified-rebates/",
+      "description": "Boulder County Income Qualified Rebates 100% AMI",
+      "thresholds": {
+        "08013": {
+          "1": 102200,
+          "2": 116800,
+          "3": 131400,
+          "4": 146000,
+          "5": 157700,
+          "6": 169400,
+          "7": 181100,
+          "8": 192800
+        }
+      }
+    },
     "co-city-and-county-of-denver": {
       "type": "hhsize",
       "incentives": [
@@ -159,17 +177,27 @@
         "CO-103"
       ],
       "source_url": "https://socgov02.my.site.com/ceoweatherization/resource/Income_Guidelines",
+      "description": "Updated for 2025: 60% SMI/200% FPL",
       "thresholds": {
-        "1": 36983,
-        "2": 48362,
-        "3": 59742,
-        "4": 71122,
-        "5": 82501,
-        "6": 93881,
-        "7": 96014,
-        "8": 101120,
-        "9": 111400,
-        "10": 121680
+        "1": 40592,
+        "2": 53082,
+        "3": 65572,
+        "4": 78062,
+        "5": 90551,
+        "6": 103041,
+        "7": 105383,
+        "8": 105440,
+        "9": 116200,
+        "10": 126960
+      }
+    },
+    "co-energy-outreach-colorado-80-ami": {
+      "type": "county-hhsize",
+      "incentives": [],
+      "source_url": "https://docs.google.com/spreadsheets/d/1I9wrt5zJ6khmLR3ZeFCKlz5EmNKUusaFYAK4oeKO4wY/edit?gid=0#gid=0",
+      "description": "Energy Outreach of Colorado 80% AMI by each county",
+      "thresholds": {
+        "08001": {}
       }
     },
     "co-glenwood-springs-electric": {
