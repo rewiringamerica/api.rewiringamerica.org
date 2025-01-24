@@ -1449,7 +1449,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$275/kW when installing a battery storage system enrolled in Connected Solutions and contributing to summer events."
+      "en": "$275/kW rebate when installing a battery storage system enrolled in Connected Solutions and contributing to summer events."
     }
   },
   {
@@ -11968,5 +11968,171 @@
     "short_description": {
       "en": "$25 - $100 rebates available for electric yard equipment."
     }
+  },
+  {
+    "id": "MA-522",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "other"
+    ],
+    "program": "ma-ashburnham-mlp-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for an all-in-one electric washer and dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-523",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "other"
+    ],
+    "program": "ma-boylston-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for an all-in-one electric washer and dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-524",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "other"
+    ],
+    "program": "ma-chicopee-home-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for an all-in-one electric washer and dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-525",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma-groton-rebate-program",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy assessment."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-526",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ma-hingham-mlp-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "minimum": 200,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $600 rebate for a qualifying level 2 electric charger, enrolled in the NextZero Scheduled Charging Program."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-527",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "other"
+    ],
+    "program": "ma-holden-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for an all-in-one electric washer and dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-528",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "battery_storage_installation"
+    ],
+    "program": "ma-holyoke-mlp",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate and $6/kw monthly performance incentive for enrolling a Tesla Powerwall battery in the demand response program. "
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   }
 ]
