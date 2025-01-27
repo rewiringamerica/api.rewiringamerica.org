@@ -26,43 +26,49 @@ function pathToFileName(path: string) {
 }
 
 async function saveIncentiveDataToDisk() {
-  try {
-    // GENERAL_IMPORTS
-    for (const path of GENERAL_IMPORTS) {
-      const writeDirAndFilename = `data/${pathToFileName(path)}`;
-      const data = await fetchData(path);
-      writeFileSync(writeDirAndFilename, JSON.stringify(data, null, 2) + '\n');
-      console.log(`Exported ${writeDirAndFilename}....`);
+  // GENERAL_IMPORTS
+  for (const path of GENERAL_IMPORTS) {
+    const writeDirAndFilename = `data/${pathToFileName(path)}`;
+    const data = await fetchData(path);
+    if (data.error) {
+      throw new Error(`Could not fetch data from ${path}`);
     }
-
-    // STATE_IMPORTS
-    for (const path of STATE_IMPORTS) {
-      const data = await fetchData(path);
-      writeDataToStatesDirectory(data, pathToFileName(path));
-    }
-
-    // zip-to-utility.csv
-    const writePath = 'scripts/data/zip-to-utility.csv';
-    const data = await fetchZipToUtility();
-    writeFileSync(writePath, data);
-    console.log(`Exported ${writePath}...`);
-  } catch (e) {
-    console.error(e);
-    console.log(STATE_IMPORTS, 'STATE_IMPORTS');
+    writeFileSync(writeDirAndFilename, JSON.stringify(data, null, 2) + '\n');
+    console.log(`Exported ${writeDirAndFilename}....`);
   }
+
+  // STATE_IMPORTS
+  for (const path of STATE_IMPORTS) {
+    const data = await fetchData(path);
+    if (data.error) {
+      throw new Error(`Could not fetch data from ${path}`);
+    }
+    writeDataToStatesDirectory(data, pathToFileName(path));
+  }
+
+  // zip-to-utility.csv
+  const writePath = 'scripts/data/zip-to-utility.csv';
+  const data = await fetchZipToUtility();
+  writeFileSync(writePath, data);
+  console.log(`Exported ${writePath}...`);
 }
 
 async function fetchData(path: string) {
-  const data_url = `${INCENTIVE_ADMIN_HOST}${path}`;
-  console.log(`fetching data from ${data_url}`);
-  return fetch(data_url).then(res => res.json());
+  const dataUrl = `${INCENTIVE_ADMIN_HOST}${path}`;
+  console.log(`fetching data from ${dataUrl}`);
+  return fetch(dataUrl).then(res => res.json());
 }
 
 async function fetchZipToUtility(): Promise<string> {
   const dataUrl = `${INCENTIVE_ADMIN_HOST}/zip-to-utility`;
   console.log(`fetching data from ${dataUrl}`);
   // The endpoint outputs CSV directly
-  return fetch(dataUrl).then(res => res.text());
+  const resp = await fetch(dataUrl); //fetch(dataUrl).then(res => res.text());
+  const text = await resp.text();
+  if (!resp.ok) {
+    throw new Error(`Could not fetch data from ${dataUrl}`);
+  }
+  return text;
 }
 
 // Write data to states directory, expects data is organized by state.
