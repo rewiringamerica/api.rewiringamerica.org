@@ -152,28 +152,6 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
-      "authority": "ri-commerce-corp",
-      "program": "Rhode Island Commerce Corp. Small-Scale Solar Program",
-      "program_url": "https://energy.ri.gov/sites/g/files/xkgbur741/files/2023-03/REF-Small-Scale-Flyer-1.18.22.pdf",
-      "items": [
-        "rooftop_solar_installation"
-      ],
-      "amount": {
-        "type": "dollars_per_unit",
-        "number": 650,
-        "maximum": 5000,
-        "unit": "kilowatt"
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "10-25% back on installation costs up to $5,000. Includes electricity-generating solar panels and solar domestic hot water technologies."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
       "authority_type": "utility",
       "authority": "ri-rhode-island-energy",
       "program": "Rhode Island Energy Electric Heating and Cooling Rebates",
@@ -215,6 +193,28 @@
       "start_date": "2025-01-01",
       "end_date": "2025-12-31",
       "short_description": "$200/ton rebate on qualifying ductless mini-split heat pump, depending on size."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "ri-commerce-corp",
+      "program": "Rhode Island Commerce Corp. Small-Scale Solar Program",
+      "program_url": "https://energy.ri.gov/sites/g/files/xkgbur741/files/2023-03/REF-Small-Scale-Flyer-1.18.22.pdf",
+      "items": [
+        "rooftop_solar_installation"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 0.65,
+        "maximum": 5000,
+        "unit": "watt"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "$0.65/watt installation costs up to $5,000 for solar. Includes electricity-generating solar panels and solar domestic hot water technologies."
     },
     {
       "payment_methods": [

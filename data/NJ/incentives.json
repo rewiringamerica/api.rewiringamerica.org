@@ -1,0 +1,209 @@
+[
+  {
+    "id": "NJ-1",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free whole home energy assessment."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-2",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "minimum": 100,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $300 rebate for an ENERGY STAR rated electric clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-3",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750 rebate for an ENERGY STAR certified heat pump water heater."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-4",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "minimum": 75,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $100 upfront rebate for Wi-Fi enabled smart thermostats purchased through the ACE marketplace."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-5",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel",
+      "electric_vehicle_charger"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% rebate up to $1,000 for electrical upgrades to support a level 2 electric vehicle charger."
+    },
+    "start_date": "2021-02-17",
+    "end_date": "2026-12-31"
+  },
+  {
+    "id": "NJ-6",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "new_electric_vehicle"
+    ],
+    "program": "nj-charge-up",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$2,000 upfront rebate for purchase or lease of an electric vehicle for residents of NJ through a NJ dealer."
+    }
+  },
+  {
+    "id": "NJ-7",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "new_electric_vehicle"
+    ],
+    "program": "nj-charge-up",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$4,000 upfront rebate for purchase or lease of an electric vehicle for residents of NJ through a NJ dealer, for income-qualified residents."
+    },
+    "low_income": "nj-charge-up-plus"
+  },
+  {
+    "id": "NJ-8",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "nj-charge-up",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for a qualifying level 2 EV charger."
+    }
+  },
+  {
+    "id": "NJ-9",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel",
+      "electric_vehicle_charger"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "100% rebate, up to $1,500 for cost of electrical upgrades to support a level 2 EV charger."
+    }
+  }
+]

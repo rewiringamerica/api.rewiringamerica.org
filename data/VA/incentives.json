@@ -2,7 +2,7 @@
   {
     "id": "VA-1",
     "payment_methods": [
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "heat_pump_clothes_dryer"
@@ -16,7 +16,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Receive up to $50 rebate for an Energy Start certified electric ventless or vented clothes dryer from an approved retailer.",
+      "en": "$50 upfront rebate for an Energy Start certified electric ventless or vented clothes dryer from an approved retailer.",
       "es": "Reciba un reembolso de hasta $50 dólares por una secadora eléctrica de ropa con o sin ventilación con certificación Energy Start de un proveedor autorizado."
     },
     "start_date": "2022",
@@ -48,7 +48,7 @@
   {
     "id": "VA-3",
     "payment_methods": [
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "electric_vehicle_charger"
@@ -62,7 +62,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Receive up to $100 rebate for a level 2 ENERGY STAR certified electric vehicle charger from an approved retailer.",
+      "en": "$100 upfront rebate for a level 2 ENERGY STAR certified electric vehicle charger from an approved retailer.",
       "es": "Reciba un reembolso de hasta $100 dólares por un cargador para vehículos eléctricos con certificación ENERGY STAR de Nivel 2 de un distribuidor autorizado."
     },
     "start_date": "2022",
@@ -102,20 +102,19 @@
     "program": "va_takeChargeVirginiaHomePerformanceProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 261
+      "number": 267
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$267 rebate for replacing an ASHP, GSHP/AC, or electric resistance heat/AC for electrically heated homes.",
-      "es": "Un reembolso de $267 dólares para reemplazar una ASHP, GSHP/AC, o calefacción/AC de resistencia eléctrica para hogares con calefacción eléctrica."
+      "en": "$267 rebate for an air source or ground source heat pump replacing electric resistance heat/AC for electrically heated homes."
     }
   },
   {
     "id": "VA-6",
     "payment_methods": [
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "ductless_heat_pump"
@@ -129,7 +128,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Receive up to $300 rebate for a ductless mini-split heat pump displacement or replacement from an approved retailer.",
+      "en": "$300 upfront rebate for a ductless mini-split heat pump displacement or replacement from an approved retailer.",
       "es": "Reciba un reembolso de hasta $300 por el cambio o sustitución de una bomba de calor mini-split sin conductos de un distribuidor autorizado."
     },
     "start_date": "2022",
@@ -152,14 +151,14 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Receive up to $350 rebate for air sealing in electrically heated homes, with or without AC/electric heat by a qualified contractor.",
-      "es": "Reciba un reembolso de hasta $350 dólares por sellar herméticamente las casas que tengan calefacción eléctrica, con o sin aire acondicionado o calefacción eléctrica, por parte de un contratista capacitado."
+      "en": "Up to $350 rebate for air sealing in electrically heated homes by a qualified contractor.",
+      "es": "Reciba un reembolso de hasta $350 dólares por sellar herméticamente las casas que tengan calefacción eléctrica, por parte de un contratista capacitado."
     }
   },
   {
     "id": "VA-8",
     "payment_methods": [
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "heat_pump_water_heater"
@@ -173,7 +172,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Receive up to $400 rebate for an ENERGY STAR certified heat pump water heater (HPWH) from an approved retailer.",
+      "en": "Up to $400 upfront rebate for an ENERGY STAR certified heat pump water heater (HPWH) from an approved retailer.",
       "es": "Reciba un reembolso de hasta $400 dólares por un calentador de agua con bomba de calor (HPWH) con certificación ENERGY STAR de un distribuidor autorizado."
     },
     "start_date": "2022",
@@ -198,7 +197,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$550 rebate per 1,000 SF of attic insulation for AC/electric resistance heat installed by a qualified contractor for an electrically heated home.",
+      "en": "$550 rebate per 1,000 SF of attic insulation for homes with AC/electric resistance heat installed by a qualified contractor.",
       "es": "Un reembolso de $550 dólares por cada 1,000 pies cuadrados de aislamiento en el ático para aire acondicionado o AC de resistencia eléctrica instalado por un contratista capacitado para una vivienda con calefacción eléctrica."
     }
   },
@@ -208,7 +207,15 @@
       "assistance_program"
     ],
     "items": [
-      "other_insulation"
+      "other_insulation",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "efficiency_rebates",
+      "floor_insulation",
+      "other_weatherization",
+      "wall_insulation"
     ],
     "program": "va_takeChargeVirginiaHomePerformanceProgram",
     "amount": {
@@ -220,7 +227,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1500 in value of no cost direct install insulation by qualified contractors for electrically heated homes.",
+      "en": "Up to $1,500 in value of no cost direct install insulation by qualified contractors for electrically heated homes.",
       "es": "Hasta $1,500 en el valor de aislamiento de instalación directa sin costo por contratistas capacitados para viviendas con calefacción eléctrica."
     }
   },
@@ -230,7 +237,13 @@
       "assistance_program"
     ],
     "items": [
-      "other_insulation"
+      "other_insulation",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "wall_insulation",
+      "other_weatherization",
+      "floor_insulation"
     ],
     "program": "va_takeChargeVirginiaHomePerformanceProgram",
     "amount": {
@@ -266,12 +279,13 @@
       "en": "Dominion Energy customers can receive a $100 rebate on a new electric clothes dryer.",
       "es": "Los clientes de Dominion Energy pueden recibir un reembolso de $100 dólares en una nueva secadora eléctrica de ropa ."
     },
-    "start_date": "2019"
+    "start_date": "2019",
+    "end_date": "2025-01-27"
   },
   {
     "id": "VA-16",
     "payment_methods": [
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "heat_pump_water_heater"
@@ -286,7 +300,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Receive up to a $400 rebate for installing a heat pump water heater above 40 gallons in capacity.",
+      "en": "Up to $400 upfront rebate for installing a heat pump water heater above 40 gallons in capacity.",
       "es": "Reciba un reembolso de hasta $400 dólares por la instalación de un calentador de agua con bomba de calor de más de 40 galones de capacidad."
     },
     "start_date": "2022"
@@ -308,8 +322,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Participate in Dominion Energy's EV charging control events using your level 2 charger and receive a $125 rebate.",
-      "es": "Participe en los eventos de control de recarga de VEs de Dominion Energy utilizando su cargador de nivel 2 y reciba un reembolso de $125 dólares."
+      "en": "$125 rebate for a level 2 EV charger, when enrolled in the EV Charger Rewards program."
     }
   },
   {
@@ -318,7 +331,8 @@
       "assistance_program"
     ],
     "items": [
-      "other_weatherization"
+      "other_weatherization",
+      "efficiency_rebates"
     ],
     "program": "va_incomeAndAgeQualifyingEnergyEfficiencyProgram",
     "amount": {
