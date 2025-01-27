@@ -131,7 +131,7 @@
       ],
       "authority_type": "state",
       "authority": "vt-state-of-vermont",
-      "program": "State of Vermont Incentives for New Electric Vehicles",
+      "program": "Drive Electric Vermont",
       "program_url": "https://www.driveelectricvt.com/Media/Default/docs/purchase-incentives/vermont-new-pev-incentive-form.pdf?refresh",
       "items": [
         "new_electric_vehicle",
@@ -152,10 +152,10 @@
       "payment_methods": [
         "pos_rebate"
       ],
-      "authority_type": "state",
-      "authority": "vt-efficiency-vermont",
-      "program": "Efficiency Vermont Ducted Heat Pump Rebate",
-      "program_url": "https://www.efficiencyvermont.com/rebates/list/centrally-ducted-heat-pumps",
+      "authority_type": "utility",
+      "authority": "vt-burlington-electric-department",
+      "program": "Burlington Electric Department - Rebate for Ducted Heat Pump",
+      "program_url": "https://www.burlingtonelectric.com/heatpumps",
       "items": [
         "ducted_heat_pump"
       ],
@@ -168,7 +168,31 @@
         "homeowner"
       ],
       "start_date": "2021-11-01",
+      "end_date": "2025-12-31",
       "short_description": "Work with a contractor to install your ducted heat pump and get a $1,000-$2,000 instant discount."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "state",
+      "authority": "vt-state-of-vermont",
+      "program": "Drive Electric Vermont",
+      "program_url": "https://www.driveelectricvt.com/Media/Default/docs/purchase-incentives/vermont-new-pev-incentive-form.pdf?refresh",
+      "items": [
+        "ebike"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 800,
+        "maximum": 800
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2024-10-30",
+      "short_description": "$400-$800 upfront rebate on an electric bike, for income-qualified residents. Cargo ebikes and adaptive ebikes have higher rebates."
     },
     {
       "payment_methods": [
@@ -212,7 +236,7 @@
         "homeowner"
       ],
       "start_date": "2022-10-15",
-      "short_description": "Get a $400 instant discount at participating retailers for a new, high-efficiency stove."
+      "short_description": "$400 instant rebate at participating retailers for a new, high-efficiency wood stove."
     },
     {
       "payment_methods": [
@@ -258,7 +282,7 @@
         "homeowner"
       ],
       "start_date": "2020-06-15",
-      "short_description": "Apply for a rebate and get $25-40 cash back on qualifying ENERGY STAR® models."
+      "short_description": "Apply for a rebate and get $25-40 cash back on qualifying ENERGY STAR® dehumidifier models."
     },
     {
       "payment_methods": [
@@ -301,6 +325,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "start_date": "2024-04-01",
       "short_description": "100% off a heat pump water heater, up to $5,000, for low-income customers."
     },
     {
@@ -351,12 +376,64 @@
       "payment_methods": [
         "rebate"
       ],
+      "authority_type": "utility",
+      "authority": "vt-burlington-electric-department",
+      "program": "Burlington Electric Department - Rebate for Ductless Heat Pump",
+      "program_url": "https://www.burlingtonelectric.com/rebate-form?item_purchased=Mini-Split%20Heat%20Pump",
+      "items": [
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.75,
+        "maximum": 2500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2022-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "Rebate of up to $2,500 on qualifying ductless heat pumps, or $500 for a second heat pump, up to 75% of cost. Available through your contractor."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "vt-burlington-electric-department",
+      "program": "Burlington Electric Department - Residential EV Charger Rebate",
+      "program_url": "https://www.burlingtonelectric.com/evchargers#",
+      "items": [
+        "electric_vehicle_charger"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.75,
+        "maximum": 900
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "end_date": "2025-12-31",
+      "short_description": "Up to $900 back on qualifying level 2 charger purchased within 60 days of vehicle purchase or lease. May be eligible for discounted EV charging rate."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
       "authority_type": "state",
       "authority": "vt-efficiency-vermont",
       "program": "Home performance with ENERGY STAR",
       "program_url": "https://www.efficiencyvermont.com/rebates/list/home-performance-with-energy-star",
       "items": [
-        "other_insulation"
+        "other_insulation",
+        "air_sealing",
+        "attic_or_roof_insulation",
+        "basement_insulation",
+        "crawlspace_insulation",
+        "floor_insulation",
+        "other_weatherization",
+        "wall_insulation"
       ],
       "amount": {
         "type": "percent",
@@ -378,7 +455,14 @@
       "program": "Home performance with ENERGY STAR",
       "program_url": "https://www.efficiencyvermont.com/rebates/list/home-performance-with-energy-star",
       "items": [
-        "other_insulation"
+        "other_insulation",
+        "air_sealing",
+        "attic_or_roof_insulation",
+        "basement_insulation",
+        "crawlspace_insulation",
+        "floor_insulation",
+        "other_weatherization",
+        "wall_insulation"
       ],
       "amount": {
         "type": "percent",
@@ -389,7 +473,7 @@
         "homeowner"
       ],
       "start_date": "2023-08-01",
-      "short_description": "Work with an Efficiency Excellence Network contractor to improve your home's insulation and air sealing and get 75% off project costs up to $9,500."
+      "short_description": "75% rebate up to $9,500 for insulation and air sealing, for moderate-income residents."
     },
     {
       "payment_methods": [
@@ -549,7 +633,8 @@
         "homeowner",
         "renter"
       ],
-      "short_description": "Incentive up to $2,300 for a new electric vehicle, or up to $2,000 for a plug-in hybrid."
+      "end_date": "2025-12-31",
+      "short_description": "$2,300 rebate for a new electric vehicle, or $2,000 for a plug-in hybrid."
     },
     {
       "payment_methods": [
@@ -572,27 +657,6 @@
         "renter"
       ],
       "short_description": "Incentive up to $1,300 for a used electric vehicle or plug-in hybrid."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "vt-efficiency-vermont",
-      "program": "Efficiency Vermont Ductless Heat Pump Rebate Income Bonus",
-      "program_url": "https://www.efficiencyvermont.com/rebates/list/heat-pump-heating-cooling-system",
-      "items": [
-        "ductless_heat_pump"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 1000,
-        "maximum": 1000
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Income-eligible Vermonters qualify for a $200-$1,000 bonus rebate on a ductless heat pump, depending on their utility."
     },
     {
       "payment_methods": [
@@ -729,7 +793,7 @@
         "homeowner"
       ],
       "start_date": "2019-07-15",
-      "short_description": "Receive up to $400 cash back on qualifying ENERGY STAR® heat pump clothes dryers."
+      "short_description": "Up to $400 rebate on qualifying ENERGY STAR® heat pump clothes dryers."
     },
     {
       "payment_methods": [
@@ -774,7 +838,7 @@
         "homeowner"
       ],
       "start_date": "2023-10-01",
-      "short_description": "Apply for a rebate and get up to $400 cash back on qualifying ENERGY STAR® heat pump models."
+      "short_description": "Up to $400 rebate on qualifying ENERGY STAR® heat pump clothes dryers."
     },
     {
       "payment_methods": [
@@ -824,21 +888,24 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
-      "authority": "vt-efficiency-vermont",
-      "program": "Efficiency Vermont Ducted Heat Pump Rebate Income Bonus",
-      "program_url": "https://www.efficiencyvermont.com/rebates/list/centrally-ducted-heat-pumps",
+      "authority_type": "utility",
+      "authority": "vt-burlington-electric-department",
+      "program": "Burlington Electric Department - Rebate for Induction Cooktop",
+      "program_url": "https://www.burlingtonelectric.com/rebate-form?item_purchased=Induction%20Cooktop",
       "items": [
-        "ducted_heat_pump"
+        "electric_stove"
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 200
+        "number": 200,
+        "maximum": 200
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Vermonters with low or moderate household income may qualify for a $200 bonus rebate on a ducted heat pump, depending on their utility."
+      "start_date": "2022-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "Up to $200 back on the purchase of a new electric induction cooktop when replacing a non-electric cooktop."
     },
     {
       "payment_methods": [
@@ -861,7 +928,7 @@
         "homeowner"
       ],
       "start_date": "2019-09-23",
-      "short_description": "Get cash back on materials for three eligible DIY projects, including weather-stripping, insulation, and air sealing."
+      "short_description": "$100 rebate on materials for three eligible DIY projects, including weather-stripping, insulation, and air sealing."
     },
     {
       "payment_methods": [
@@ -883,7 +950,7 @@
         "homeowner"
       ],
       "start_date": "2019-01-01",
-      "short_description": "Get up to $100 cash back on qualifying ENERGY STAR® smart thermostats if wholesale discount has not already been received on the purchase."
+      "short_description": "Up to $100 rebate on qualifying ENERGY STAR® smart thermostats."
     },
     {
       "payment_methods": [
@@ -924,10 +991,11 @@
         "maximum": 100
       },
       "owner_status": [
-        "homeowner"
+        "homeowner",
+        "renter"
       ],
       "start_date": "2021-04-01",
-      "short_description": "Get $100 back for ENERGY STAR® “Most Efficient” certified models."
+      "short_description": "Get $100 back for ENERGY STAR® “Most Efficient” certified window air conditioners."
     },
     {
       "payment_methods": [

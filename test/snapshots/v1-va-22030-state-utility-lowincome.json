@@ -20,7 +20,28 @@
   "incentives": [
     {
       "payment_methods": [
-        "rebate"
+        "assistance_program"
+      ],
+      "authority_type": "utility",
+      "authority": "va-dominion-energy",
+      "program": "Income and Age Qualifying Energy Efficiency Program",
+      "program_url": "https://www.dominionenergy.com/virginia/save-energy/income-and-age-qualifying-home-improvements",
+      "items": [
+        "other_weatherization",
+        "efficiency_rebates"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 1
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Receive no cost energy efficient weatherization upgrades for qualified income and age levels by qualified service providers."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate"
       ],
       "authority_type": "utility",
       "authority": "va-dominion-energy",
@@ -38,7 +59,7 @@
         "homeowner"
       ],
       "start_date": "2022",
-      "short_description": "Receive up to a $400 rebate for installing a heat pump water heater above 40 gallons in capacity."
+      "short_description": "Up to $400 upfront rebate for installing a heat pump water heater above 40 gallons in capacity."
     },
     {
       "payment_methods": [
@@ -58,7 +79,7 @@
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Participate in Dominion Energy's EV charging control events using your level 2 charger and receive a $125 rebate."
+      "short_description": "$125 rebate for a level 2 EV charger, when enrolled in the EV Charger Rewards program."
     },
     {
       "payment_methods": [
@@ -79,6 +100,7 @@
         "homeowner"
       ],
       "start_date": "2019",
+      "end_date": "2025-01-27",
       "short_description": "Dominion Energy customers can receive a $100 rebate on a new electric clothes dryer."
     }
   ]
