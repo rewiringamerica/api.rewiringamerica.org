@@ -137,7 +137,7 @@ export function calculateStateIncentivesAndSavings(
 
     if (item.end_date) {
       const lastValidDay = lastDayOf(item.end_date);
-      if (getCurrentDateTime().isAfter(lastValidDay)) {
+      if (getCurrentDate().isAfter(lastValidDay)) {
         eligible = false;
       }
     }
@@ -372,7 +372,7 @@ function skipBasedOnRequestParams(
   return false;
 }
 
-function getCurrentDateTime() {
+function getCurrentDate() {
   // Use static date for snapshot tests
   if (process.env.STATIC_DATE) {
     return LocalDate.parse(process.env.STATIC_DATE);
