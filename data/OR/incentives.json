@@ -7178,13 +7178,13 @@
     "program": "or_oregonDepartmentOfEnergy_communityHeatPumpDeploymentProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 7
+      "number": 7000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $7,000for the purchase and installation of a heat pump."
+      "en": "Up to $7,000 for the purchase and installation of a heat pump."
     }
   },
   {
@@ -7273,13 +7273,14 @@
     "program": "or_oregonDepartmentOfEnergy_oregonRentalHomeHeatPumpProgramForTribesAndTribalMembers",
     "amount": {
       "type": "dollar_amount",
-      "number": 7
+      "number": 5000,
+      "maximum": 7000
     },
     "owner_status": [
       "renter"
     ],
     "short_description": {
-      "en": "Up to $7,000 for heat pump installations and up to $4,000 for related upgrades in rental units occupied by Tribal members from participating tribes"
+      "en": "Up to $5,000 or 60% of the total cost in rental homes or up to $7,000 or 80% of the total cost and for some owner-occupied manufactured homes or RVs"
     }
   }
 ]

@@ -1222,15 +1222,16 @@
         "CT-39"
       ],
       "source_url": "https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines",
+      "description": "",
       "thresholds": {
-        "1": 45180,
-        "2": 61320,
-        "3": 77460,
-        "4": 93600,
-        "5": 109740,
-        "6": 125880,
-        "7": 142020,
-        "8": 158160
+        "1": 46950,
+        "2": 63450,
+        "3": 79950,
+        "4": 96450,
+        "5": 112950,
+        "6": 129450,
+        "7": 145950,
+        "8": 162450
       }
     },
     "ct-default": {
@@ -1240,7 +1241,7 @@
         "CT-4"
       ],
       "source_url": "https://energizect.com/energy-evaluations/income-eligible-options",
-      "description": "",
+      "description": "2024-2025 heating season",
       "thresholds": {
         "1": 45505,
         "2": 59507,
@@ -1278,15 +1279,16 @@
         "DC-21"
       ],
       "source_url": "https://doee.dc.gov/service/wap",
+      "description": "FY25 (through 9/20/25)",
       "thresholds": {
-        "1": 49814,
-        "2": 65141,
-        "3": 80469,
-        "4": 95797,
-        "5": 111124,
-        "6": 126452,
-        "7": 129325,
-        "8": 132199
+        "1": 57571,
+        "2": 75286,
+        "3": 93001,
+        "4": 110715,
+        "5": 128429,
+        "6": 146144,
+        "7": 149465,
+        "8": 152787
       }
     },
     "dc-dc-sustainable-energy-utility": {
@@ -1299,15 +1301,16 @@
         "DC-28"
       ],
       "source_url": "https://www.dcseu.com/affordable-home-electrification",
+      "description": "",
       "thresholds": {
-        "1": 85200,
-        "2": 97350,
-        "3": 109500,
-        "4": 121700,
-        "5": 133850,
-        "6": 146000,
-        "7": 158200,
-        "8": 170350
+        "1": 86632,
+        "2": 99008,
+        "3": 111384,
+        "4": 123760,
+        "5": 136136,
+        "6": 148512,
+        "7": 160888,
+        "8": 173264
       }
     }
   },
@@ -1371,16 +1374,17 @@
       "incentives": [
         "IL-7"
       ],
-      "source_url": "https://www.huduser.gov/portal/datasets/il/il2023/2023summary.odn?inputname=STTLT*1799999999%2BIllinois&selection_type=county&stname=Illinois&statefp=17.0&year=2023",
+      "source_url": "https://www.huduser.gov/portal/datasets/il/il2024/2024summary.odn?inputname=STTLT*1799999999%2BIllinois&selection_type=county&stname=Illinois&statefp=17.0&year=2024",
+      "description": "2024 limits",
       "thresholds": {
-        "1": 56400,
-        "2": 64450,
-        "3": 72500,
-        "4": 80600,
-        "5": 87050,
-        "6": 93500,
-        "7": 99900,
-        "8": 106350
+        "1": 57650,
+        "2": 65850,
+        "3": 74100,
+        "4": 82300,
+        "5": 88900,
+        "6": 95500,
+        "7": 102100,
+        "8": 108650
       }
     },
     "il-comEd-single-family-home-energy-savings": {
@@ -1388,36 +1392,30 @@
       "incentives": [
         "IL-6"
       ],
-      "source_url": "https://www.comed.com/ways-to-save/for-your-home/home-energy-savings/single-family",
+      "source_url": "https://www.comed.com/ways-to-save/for-your-home/home-energy-savings/single-family/faqs",
+      "description": "2024 thresholds",
       "thresholds": {
-        "1": 61800,
-        "2": 70600,
-        "3": 79450,
-        "4": 88250,
-        "5": 95350,
-        "6": 102400,
-        "7": 109450,
-        "8": 116500
+        "1": 62800,
+        "2": 71800,
+        "3": 80750,
+        "4": 89700,
+        "5": 96900,
+        "6": 104100,
+        "7": 111250,
+        "8": 118450
       }
     },
     "il-evanston-green-homes-pilot-program": {
-      "type": "hhsize",
+      "type": "ami-percentage",
       "incentives": [
         "IL-40",
-        "IL-41",
         "IL-42",
         "IL-43"
       ],
       "source_url": "https://www.illinoissfa.com/programs/for-homeowners-and-building-owners/",
+      "description": "",
       "thresholds": {
-        "1": 61800,
-        "2": 70600,
-        "3": 79450,
-        "4": 88250,
-        "5": 95350,
-        "6": 102400,
-        "7": 109450,
-        "8": 116500
+        "percentage": 80
       }
     },
     "il-home-weatherization": {
@@ -1426,32 +1424,27 @@
         "IL-16"
       ],
       "source_url": "https://dceo.illinois.gov/communityservices/homeweatherization.html",
+      "description": "2025",
       "thresholds": {
-        "1": 29160,
-        "2": 39440,
-        "3": 49720,
-        "4": 60000,
-        "5": 70280,
-        "6": 80560,
-        "7": 90840,
-        "8": 93297
+        "1": 30120,
+        "2": 40880,
+        "3": 51640,
+        "4": 62400,
+        "5": 73160,
+        "6": 83920,
+        "7": 94680,
+        "8": 105440
       }
     },
     "il-solar-for-all": {
-      "type": "hhsize",
+      "type": "ami-percentage",
       "incentives": [
         "IL-33"
       ],
       "source_url": "https://www.illinoissfa.com/programs/for-homeowners-and-building-owners/",
+      "description": "",
       "thresholds": {
-        "1": 58350,
-        "2": 66700,
-        "3": 75050,
-        "4": 83350,
-        "5": 90050,
-        "6": 96700,
-        "7": 103400,
-        "8": 110050
+        "percentage": 80
       }
     }
   },
@@ -1550,7 +1543,7 @@
         "MA-138"
       ],
       "source_url": "https://www.masssave.com/en/residential/programs-and-services/income-based-offers",
-      "description": "MassSave Income Eligible Program - Up to 60% SMI",
+      "description": "MassSave Income Eligible Program - Up to 60% SMI, 2024-2025 heating season",
       "thresholds": {
         "1": 49196,
         "2": 64333,
@@ -1583,7 +1576,7 @@
         "MA-414"
       ],
       "source_url": "https://www.masssave.com/en/residential/programs-and-services/income-based-offers",
-      "description": "MassSave Income-Based Enhanced Incentive 60-80% AMI or SMI. Also known as Enhanced Incentives",
+      "description": "MassSave Income-Based Enhanced Incentive 60-80% AMI or SMI. Also known as Enhanced Incentives. 2024-2025 heating season.",
       "thresholds": {
         "percentage": 80
       }
@@ -1602,6 +1595,7 @@
         "ME-18"
       ],
       "source_url": "https://www.mainehousing.org/charts/HEAP-Income-Elibility",
+      "description": "2024-2025 heating season",
       "thresholds": {
         "1": 35336,
         "2": 46209,
@@ -1651,7 +1645,7 @@
       "type": "hhsize",
       "incentives": [],
       "source_url": "https://www.a2gov.org/departments/sustainability/Sustainability-Me/Families-Individuals/Pages/Home-Energy-Rebates.aspx",
-      "description": "Ann Arbor 120% AMI",
+      "description": "Ann Arbor 120% AMI (dupe)",
       "thresholds": {
         "1": 104200,
         "2": 119200,
@@ -1706,7 +1700,8 @@
     "mi-hear-her-low": {
       "type": "ami-percentage",
       "incentives": [
-        "MI-102"
+        "MI-102",
+        "MI-113"
       ],
       "source_url": "https://www.michigan.gov/egle/about/organization/materials-management/energy/rfps-loans/home-energy-rebate-programs/communities",
       "description": "MI HEAR and HER program low income threshold - below 80% AMI",
@@ -1737,16 +1732,28 @@
       "incentives": [
         "MI-73"
       ],
-      "source_url": "https://www.dteenergy.com/us/en/residential/service-request/pev/electric-vehicle-rebate.html#accordion-2c85f65c90-item-614638b806",
+      "source_url": "https://www.lbwl.com/sites/default/files/documents/Income%20Chart_BWL_2025.png",
+      "description": "2025 income guidelines",
       "thresholds": {
-        "1": 52500,
-        "2": 60000,
-        "3": 67500,
-        "4": 74950,
-        "5": 80950,
-        "6": 86950,
-        "7": 92950,
-        "8": 98950
+        "1": 51700,
+        "2": 59100,
+        "3": 66500,
+        "4": 73850,
+        "5": 79800,
+        "6": 85700,
+        "7": 91600,
+        "8": 97500
+      }
+    }
+  },
+  "MN": {
+    "mn-state-default-150": {
+      "type": "ami-percentage",
+      "incentives": [],
+      "source_url": "",
+      "description": "150% AMI for MN",
+      "thresholds": {
+        "percentage": 150
       }
     }
   },
@@ -1808,7 +1815,7 @@
         "NM-36"
       ],
       "source_url": "https://ev.pnm.com/wp-content/uploads/2024-Residential-Poverty-Guidelines.pdf",
-      "description": "PNM Income Qualified - 200% of federal poverty level",
+      "description": "PNM Income Qualified - 200% of federal poverty level 2024",
       "thresholds": {
         "1": 30120,
         "2": 40880,
@@ -1825,26 +1832,30 @@
     "nv-csa-reno": {
       "type": "hhsize",
       "incentives": [
-        "NV-74"
+        "NV-74",
+        "NV-75",
+        "NV-76",
+        "NV-77",
+        "NV-79"
       ],
-      "source_url": "https://www.csareno.org/Energy-Efficiency-Weatherization",
+      "source_url": "https://csareno.org/program/home-weatherization-assistance/#who",
+      "description": "200% FPL for WAP programs",
       "thresholds": {
-        "1": 27180,
-        "2": 36620,
-        "3": 46060,
-        "4": 55500,
-        "5": 64940,
-        "6": 74380,
-        "7": 83820,
-        "8": 93260
+        "1": 30120,
+        "2": 40880,
+        "3": 51640,
+        "4": 62400,
+        "5": 73160,
+        "6": 83920,
+        "7": 94680,
+        "8": 105440
       }
     },
     "nv-help-of-southern-nevada": {
       "type": "hhsize",
-      "incentives": [
-        "NV-77"
-      ],
+      "incentives": [],
       "source_url": "https://static1.squarespace.com/static/5e91c64d83735c5db90418a6/t/65dd07f61363a972f9bc5e65/1708984310854/WEBSITES+INCOME+SHEET+-+2024+WX.pdf",
+      "description": "",
       "thresholds": {
         "1": 30120,
         "2": 40880,
@@ -1858,11 +1869,9 @@
     },
     "nv-nevada-rural-housing": {
       "type": "hhsize",
-      "incentives": [
-        "NV-76",
-        "NV-79"
-      ],
+      "incentives": [],
       "source_url": "https://nvrural.org/programs/weatherization/",
+      "description": "",
       "thresholds": {
         "1": 27180,
         "2": 36620,
@@ -1912,10 +1921,9 @@
     },
     "nv-rural-nevada-development-corporation": {
       "type": "hhsize",
-      "incentives": [
-        "NV-75"
-      ],
+      "incentives": [],
       "source_url": "https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines",
+      "description": "",
       "thresholds": {
         "1": 22590,
         "2": 30660,
@@ -1956,22 +1964,14 @@
       }
     },
     "ny-empower-low": {
-      "type": "hhsize",
+      "type": "ami-percentage",
       "incentives": [
         "NY-27"
       ],
       "source_url": "https://www.nyserda.ny.gov/All-Programs/EmPower-New-York-Program/Eligibility-Guidelines",
+      "description": "80% AMI",
       "thresholds": {
-        "1": 36420,
-        "2": 47640,
-        "3": 58848,
-        "4": 70056,
-        "5": 81264,
-        "6": 92472,
-        "7": 94572,
-        "8": 96672,
-        "9": 98772,
-        "10": 100884
+        "percentage": 80
       }
     },
     "ny-empower-moderate": {
@@ -2733,7 +2733,7 @@
         "NY-35"
       ],
       "source_url": "https://otda.ny.gov/programs/heap/#income",
-      "description": "NY Low Income (less than 60%) for WAP and HEAP programs",
+      "description": "NY Low Income (less than 60%) for WAP and HEAP programs. 2024-2025 heating season",
       "thresholds": {
         "1": 39864,
         "2": 52140,
@@ -2784,14 +2784,14 @@
       "source_url": "https://www.energytrust.org/incentives/savings-within-reach/#tab-two",
       "description": "",
       "thresholds": {
-        "1": 62530,
-        "2": 81770,
-        "3": 101010,
-        "4": 120252,
-        "5": 139492,
-        "6": 158732,
-        "7": 162341,
-        "8": 165948
+        "1": 66954,
+        "2": 87424,
+        "3": 107994,
+        "4": 128564,
+        "5": 149134,
+        "6": 169704,
+        "7": 173562,
+        "8": 177418
       }
     },
     "or-eweb-income-based": {
@@ -2822,7 +2822,7 @@
         "OR-230"
       ],
       "source_url": "https://www.oregon.gov/ohcs/energy-weatherization/pages/utility-bill-payment-assistance.aspx",
-      "description": "Low Income Home Energy Assistance Program (LIHEAP) OHCS Home Weatherization Funding",
+      "description": "Low Income Home Energy Assistance Program (LIHEAP) OHCS Home Weatherization Funding, through 9/30/2025",
       "thresholds": {
         "1": 36811,
         "2": 48138,
@@ -2841,7 +2841,7 @@
         "OR-37"
       ],
       "source_url": "https://www.pacificpower.net/my-account/payments/bill-payment-assistance/oregon-low-income-discount-program.html",
-      "description": "60% AMI",
+      "description": "60% AMI, effective 10/1/2024",
       "thresholds": {
         "1": 36811,
         "2": 48138,
@@ -2864,6 +2864,7 @@
         "OR-41"
       ],
       "source_url": "https://assets.ctfassets.net/416ywc1laqmd/6hOnNAVyp1DGhfvpNwhq61/ea0accbed7090c9bb6b7e529f7365b41/Income-Eligible-PGE-ResidentialEV-11.2022.pdf",
+      "description": "",
       "thresholds": {
         "1": 62532,
         "2": 81772,
@@ -2916,6 +2917,7 @@
         "PA-1"
       ],
       "source_url": "https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines",
+      "description": "200% FPL",
       "thresholds": {
         "1": 30120,
         "2": 40880,
@@ -2933,6 +2935,7 @@
         "PA-2"
       ],
       "source_url": "https://duquesnelight.com/account-billing/payment-assistance/home-weatherization",
+      "description": "2024 federal guidelines",
       "thresholds": {
         "1": 22596,
         "2": 30660,
@@ -2951,15 +2954,16 @@
         "PA-25"
       ],
       "source_url": "https://rebates.energysavepa.com/enhanced-rebates",
+      "description": "2025 150% of FPL",
       "thresholds": {
-        "1": 22590,
-        "2": 30660,
-        "3": 38730,
-        "4": 46800,
-        "5": 54870,
-        "6": 62940,
-        "7": 71010,
-        "8": 79080
+        "1": 23475,
+        "2": 31725,
+        "3": 39975,
+        "4": 48225,
+        "5": 56475,
+        "6": 64725,
+        "7": 72975,
+        "8": 81225
       }
     },
     "pa-first-energy-warm": {
@@ -2968,6 +2972,7 @@
         "PA-26"
       ],
       "source_url": "https://www.firstenergycorp.com/save_energy/save_energy_pennsylvania/met_ed/for_your_home/warm-info.html",
+      "description": "Says 2023 on their website, 200% of FPL",
       "thresholds": {
         "1": 30120,
         "2": 40880,
@@ -2985,16 +2990,17 @@
         "PA-47",
         "PA-48"
       ],
-      "source_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
+      "source_url": "https://www.pa.gov/agencies/dep/programs-and-services/grants-loans-rebates/alternative-fuel-vehicle-rebates-for-consumers.html",
+      "description": "",
       "thresholds": {
-        "1": 58320,
-        "2": 78880,
-        "3": 99440,
-        "4": 120000,
-        "5": 140560,
-        "6": 161120,
-        "7": 181680,
-        "8": 202240
+        "1": 45180,
+        "2": 61320,
+        "3": 77460,
+        "4": 93600,
+        "5": 109740,
+        "6": 125880,
+        "7": 142020,
+        "8": 158160
       }
     },
     "pa-pennsylvania-department-of-environmental-protection-bonus": {
@@ -3003,16 +3009,17 @@
         "PA-49",
         "PA-50"
       ],
-      "source_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
+      "source_url": "https://www.pa.gov/agencies/dep/programs-and-services/grants-loans-rebates/alternative-fuel-vehicle-rebates-for-consumers.html",
+      "description": "Maximum household income eligible for an extra $1,000 rebate.",
       "thresholds": {
-        "1": 29160,
-        "2": 39440,
-        "3": 49720,
-        "4": 60000,
-        "5": 70280,
-        "6": 80560,
-        "7": 90840,
-        "8": 101120
+        "1": 22590,
+        "2": 30000,
+        "3": 38730,
+        "4": 46800,
+        "5": 54870,
+        "6": 62940,
+        "7": 71010,
+        "8": 79080
       }
     }
   },
@@ -3022,33 +3029,34 @@
       "incentives": [
         "RI-11",
         "RI-12",
+        "RI-14",
         "RI-34",
         "RI-35",
         "RI-43",
         "RI-47"
       ],
-      "source_url": "https://dhs.ri.gov/programs-and-services/energy-and-water-assistance-programs/ffy-2023-low-income-guidelines",
+      "source_url": "https://dhs.ri.gov/programs-and-services/energy-assistance-programs-heating/ffy-2025-low-income-guidelines",
+      "description": "2025 guidelines",
       "thresholds": {
-        "1": 34039,
-        "2": 44512,
-        "3": 54986,
-        "4": 65460,
-        "5": 75933,
-        "6": 86407,
-        "7": 88371,
-        "8": 90335,
-        "9": 92299,
-        "10": 94262,
-        "11": 96226,
-        "12": 98190
+        "1": 39101,
+        "2": 51133,
+        "3": 63164,
+        "4": 75196,
+        "5": 87227,
+        "6": 99258,
+        "7": 101514,
+        "8": 103770,
+        "9": 106026,
+        "10": 108282,
+        "11": 110538,
+        "12": 112794
       }
     },
     "ri-dhs": {
       "type": "hhsize",
-      "incentives": [
-        "RI-14"
-      ],
+      "incentives": [],
       "source_url": "https://dhs.ri.gov/programs-and-services/energy-and-water-assistance-programs/ffy-2023-low-income-guidelines",
+      "description": "",
       "thresholds": {
         "1": 34039,
         "2": 44512,
@@ -3093,7 +3101,8 @@
       "incentives": [
         "RI-27"
       ],
-      "source_url": "https://www.rienergy.com/RI-Home/Energy-Saving-Programs/Income-Eligible-Services#qualify",
+      "source_url": "https://www.rienergy.com/site/ways-to-save/assistance-programs/income-eligibility-energy-savings-program",
+      "description": "",
       "thresholds": {
         "1": 32265,
         "2": 42193,
@@ -3478,6 +3487,7 @@
         "WI-155"
       ],
       "source_url": "https://focusonenergy.com/income-qualified",
+      "description": "80% AMI",
       "thresholds": {
         "percentage": 80
       }

@@ -5,7 +5,15 @@
       "rebate"
     ],
     "items": [
-      "other_insulation"
+      "other_insulation",
+      "floor_insulation",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "other_weatherization",
+      "efficiency_rebates",
+      "wall_insulation"
     ],
     "program": "me_efficiencyMaine_efficiencyMaineInsulationRebates",
     "amount": {
@@ -17,7 +25,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate of 80% of project cost for air sealing and/or insulation, up to $8,000. Available for low-income residents."
+      "en": "80% of project cost rebate for air sealing and/or insulation, up to $8,000. Available for low-income residents."
     },
     "low_income": "me-low-income"
   },
@@ -27,7 +35,15 @@
       "rebate"
     ],
     "items": [
-      "other_insulation"
+      "other_insulation",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "efficiency_rebates",
+      "floor_insulation",
+      "other_weatherization",
+      "wall_insulation"
     ],
     "program": "me_efficiencyMaine_efficiencyMaineInsulationRebates",
     "amount": {
@@ -39,7 +55,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate of 60% of project cost for air sealing and/or insulation, up to $6,000. Available for moderate income residents."
+      "en": "60% of project cost rebate for air sealing and/or insulation, up to $6,000. Available for moderate income residents."
     },
     "low_income": "me-moderate-income"
   },
@@ -49,7 +65,14 @@
       "rebate"
     ],
     "items": [
-      "other_insulation"
+      "other_insulation",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "efficiency_rebates",
+      "floor_insulation",
+      "other_weatherization",
+      "wall_insulation"
     ],
     "program": "me_efficiencyMaine_efficiencyMaineInsulationRebates",
     "amount": {
@@ -61,7 +84,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate of 40% of project cost for air sealing and/or insulation, up to $4,000."
+      "en": "40% rebate of project cost for air sealing and/or insulation, up to $4,000."
     }
   },
   {
@@ -83,7 +106,8 @@
     ],
     "short_description": {
       "en": "$2,000 rebate for new battery electric vehicles."
-    }
+    },
+    "end_date": "2024-11-16"
   },
   {
     "id": "ME-5",
@@ -104,7 +128,8 @@
     ],
     "short_description": {
       "en": "$1,000 rebate for new plug-in hybrid electric vehicles."
-    }
+    },
+    "end_date": "2024-11-16"
   },
   {
     "id": "ME-6",
@@ -126,6 +151,7 @@
     "short_description": {
       "en": "$3,500 rebate for new battery electric vehicle. Available for moderate income residents."
     },
+    "end_date": "2024-11-16",
     "low_income": "me-moderate-income"
   },
   {
@@ -170,6 +196,7 @@
     "short_description": {
       "en": "$2,000 rebate for new plug-in hybrid electric vehicle. Available for moderate income residents."
     },
+    "end_date": "2024-11-16",
     "low_income": "me-moderate-income"
   },
   {
@@ -404,14 +431,14 @@
     "program": "me_efficiencyMaine_efficiencyMaineWaterHeatingIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000
+      "number": 950
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$1,000 discount on heat pump water heaters when bought through Granite Group, Lowe's, or Home Depot."
+      "en": "$950 upfront discount on heat pump water heaters when bought through Granite Group, Lowe's, or Home Depot."
     }
   },
   {
@@ -425,14 +452,14 @@
     "program": "me_efficiencyMaine_efficiencyMaineWaterHeatingIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 850
+      "number": 950
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$850 mail-in rebate for heat pump water heater."
+      "en": "$950 mail-in rebate for heat pump water heater."
     }
   }
 ]

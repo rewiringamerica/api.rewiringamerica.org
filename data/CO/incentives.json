@@ -6253,15 +6253,15 @@
     ],
     "program": "co_xcelEnergy_heatPumpRebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 1700
+      "type": "dollars_per_unit",
+      "number": 300,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1700 for qualifying High Efficiency Air Source Heat Pumps.",
-      "es": "$1,700 dólares para bombas de calor de fuente de aire de alta eficiencia certificadas."
+      "en": "$300/cooling ton rebate for ducted, partially ducted, or non-ducted heat pumps."
     }
   },
   {
@@ -6299,15 +6299,14 @@
     "program": "co_xcelEnergy_heatPumpRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 600,
+      "number": 1100,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$600 per heating ton for qualifying Ground Source Heat Pumps.",
-      "es": "$600 dólares por tonelada de calefacción para bombas de calor geotérmicas certificadas."
+      "en": "$1,100 per heating ton rebate for Ground Source Heat Pumps with quality installation."
     }
   },
   {
@@ -6317,19 +6316,21 @@
       "rebate"
     ],
     "items": [
-      "ductless_heat_pump"
+      "ductless_heat_pump",
+      "ducted_heat_pump",
+      "other_heat_pump"
     ],
     "program": "co_xcelEnergy_heatPumpRebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 1700
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1700 for qualifying Mini Split Heat Pumps.",
-      "es": "$1,700 dólares para bombas de calor mini split que cumplan los requisitos."
+      "en": "$750/heating ton at 5 degrees Fahrenheit for a cold-climate heat pump."
     }
   },
   {
@@ -13487,6 +13488,195 @@
     ],
     "short_description": {
       "en": "$150 rebate for an electric panel upgrade. Must be in conjunction with other electrification upgrades."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-638",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_water_heater"
+    ],
+    "program": "co_yampaValleyElectricAssociation_yVEAEnergyHeroRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate for an electric resistive water heater, up to $200."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-639",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "co_yampaValleyElectricAssociation_yVEAEnergyHeroRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate for a heat pump water heater, up to $200."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-640",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "co_yampaValleyElectricAssociation_yVEAEnergyHeroRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 rebate for a Level 2 EV Charger."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-641",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "co_yampaValleyElectricAssociation_yVEAEnergyHeroRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for a smart thermostat."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-642",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "co_yampaValleyElectricAssociation_yVEAEnergyHeroRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 rebate for a home energy assessment."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-643",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "co_yampaValleyElectricAssociation_yVEAEnergyHeroRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "25% rebates, up to $150, available for qualifying electric or battery powered lawn maintenance equipment."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-644",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "co_yampaValleyElectricAssociation_yVEAEnergyHeroRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate for an induction cooktop/range, up to $350."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-645",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "co_yampaValleyElectricAssociation_yVEAEnergyHeroRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate for a heat pump dryer, up to $200."
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
