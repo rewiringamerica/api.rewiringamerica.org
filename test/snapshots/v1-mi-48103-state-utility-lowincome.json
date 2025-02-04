@@ -24,22 +24,21 @@
       ],
       "authority_type": "utility",
       "authority": "mi-dte",
-      "program": "DTE Electric Vehicle Rebate",
-      "program_url": "https://www.dteenergy.com/us/en/residential/service-request/pev/electric-vehicle-rebate.html",
+      "program": "DTE Air Conditioner Rebates",
+      "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/air-conditioners.html",
       "items": [
-        "new_electric_vehicle",
-        "used_electric_vehicle"
+        "ducted_heat_pump",
+        "ductless_heat_pump"
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 1500
+        "number": 1200,
+        "maximum": 1200
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
-      "start_date": "2022-12-01",
-      "short_description": "$1,500 rebate on a purchased or leased new or used electric vehicle."
+      "short_description": "Up to $1,200 rebate for cold-climate rated air source heat pumps. Rebate value depends on appliance efficiency."
     },
     {
       "payment_methods": [
@@ -59,29 +58,7 @@
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "$1000 for ductless heat pumps. Must be both 17+ SEER2 and HSPF2 7.5+, and must replace a heat pump or electric heat system."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "mi-dte",
-      "program": "DTE Air Conditioner Rebates",
-      "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/air-conditioners.html",
-      "items": [
-        "ducted_heat_pump",
-        "ductless_heat_pump"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 850,
-        "maximum": 850
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Up to $850 rebate for air source heat pumps. Rebate value depends on appliance efficiency."
+      "short_description": "$1,000 for ductless heat pumps. Must be both 17+ SEER2 and HSPF2 7.5+, and must replace a heat pump or electric heat system."
     },
     {
       "payment_methods": [
@@ -109,20 +86,65 @@
       ],
       "authority_type": "utility",
       "authority": "mi-dte",
-      "program": "DTE Home EV Charger Rebate",
-      "program_url": "https://www.dteenergy.com/us/en/residential/service-request/pev/home-ev-charger-rebate.html",
+      "program": "DTE Air Conditioner Rebates",
+      "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/air-conditioners.html",
       "items": [
-        "electric_vehicle_charger"
+        "ducted_heat_pump",
+        "ductless_heat_pump"
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 500
+        "number": 550,
+        "maximum": 550
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
-      "short_description": "$500 rebate when you buy or lease an EV, enroll in an eligible Time of Day rate and install a Level 2 charger."
+      "short_description": "Up to $550 rebate for air source heat pumps. Rebate value depends on appliance efficiency."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "mi-dte",
+      "program": "DTE Insulation & Windows Rebates",
+      "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html",
+      "items": [
+        "attic_or_roof_insulation"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 400
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2024-08-01",
+      "end_date": "2025-03-15",
+      "short_description": "$400 for roof & attic insulation. Must insulate a minimum of 500 square feet of attic area."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "mi-dte",
+      "program": "DTE Insulation & Windows Rebates",
+      "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html",
+      "items": [
+        "wall_insulation"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 400
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2024-08-01",
+      "end_date": "2025-03-15",
+      "short_description": "$400 for above-grade wall insulation. Must insulate a minimum of 250 square feet of attic area."
     },
     {
       "payment_methods": [
@@ -185,6 +207,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "end_date": "2025-03-15",
       "short_description": "$50 for rim/band joist insulation. Must insulate a minimum of 50 square feet and all accessible rim joist areas."
     },
     {
@@ -205,6 +228,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "end_date": "2025-03-15",
       "short_description": "$50 for basement wall insulation. Must insulate a minimum of 200 square feet of wall area."
     },
     {
@@ -225,6 +249,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "end_date": "2025-03-15",
       "short_description": "$50 for crawl space wall insulation. Must insulate a minimum of 100 square feet of wall area."
     },
     {
@@ -245,6 +270,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "end_date": "2025-03-15",
       "short_description": "$50 for floor insulation. Must insulate a minimum of 100 square feet of wall area."
     },
     {
@@ -265,6 +291,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "end_date": "2025-03-15",
       "short_description": "$25 for kneewall insulation. Must insulate a minimum of 100 square feet of attic area."
     }
   ]

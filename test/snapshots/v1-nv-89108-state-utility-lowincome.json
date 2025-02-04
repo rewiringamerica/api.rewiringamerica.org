@@ -61,76 +61,12 @@
       ],
       "amount": {
         "type": "percent",
-        "number": 1,
-        "maximum": 4
+        "number": 1
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Receive a free Smart Thermostat valued at $300 with free professional installation."
-    },
-    {
-      "payment_methods": [
-        "pos_rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "nv-nv-energy",
-      "program": "NV Energy Residential Air Conditioning",
-      "program_url": "https://www.nvenergy.com/save-with-powershift/home-energy-saver/residential-ac-and-mid-stream/residential-air-conditioning",
-      "items": [
-        "ducted_heat_pump",
-        "ductless_heat_pump"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 2040,
-        "maximum": 2040
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Up to $2,040 instant rebate from qualifying distributors when you replace your old air condition system with an air source heat pump."
-    },
-    {
-      "payment_methods": [
-        "pos_rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "nv-nv-energy",
-      "program": "NV Energy Residential Air Conditioning",
-      "program_url": "https://www.nvenergy.com/save-with-powershift/home-energy-saver/residential-ac-and-mid-stream/residential-air-conditioning",
-      "items": [
-        "other"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 1360,
-        "maximum": 1360
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Receive up to $1,360 instant rebate from qualifying distributors when you replace your old air condition system with higher efficiency equipment."
-    },
-    {
-      "payment_methods": [
-        "pos_rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "nv-nv-energy",
-      "program": "NV Energy Residential Air Conditioning",
-      "program_url": "https://www.nvenergy.com/save-with-powershift/home-energy-saver/residential-ac-and-mid-stream/residential-air-conditioning",
-      "items": [
-        "ductless_heat_pump"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 1360
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Up to $1,360 discount from qualifying distributors when your replace your old air conditioning system with a ductless heat pump."
+      "short_description": "Receive a free smart thermostat valued at $300 with free professional installation."
     },
     {
       "payment_methods": [
@@ -150,7 +86,7 @@
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "$400 rebate for ENERGY STAR certified heat pump water heaters. Redeemable at Lowe's. Limit 1 per customer."
+      "short_description": "$400 upfront rebate for ENERGY STAR certified heat pump water heaters. Redeemable at Lowe's. Limit 1 per customer."
     },
     {
       "payment_methods": [
@@ -171,7 +107,7 @@
         "homeowner",
         "renter"
       ],
-      "short_description": "$200 rebate for ENERGY STAR certified heat pump dryers. Redeemable at Home Depot. Limit 1 per customer."
+      "short_description": "$200 upfront rebate for ENERGY STAR certified heat pump dryers. Redeemable at Home Depot and participating retailers. Limit 1 per customer."
     },
     {
       "payment_methods": [
@@ -182,7 +118,7 @@
       "program": "NV Energy Residential Appliances and Products",
       "program_url": "https://www.nvenergy.com/save-with-powershift/home-energy-saver/retail-appliances-and-products",
       "items": [
-        "heat_pump_clothes_dryer"
+        "non_heat_pump_clothes_dryer"
       ],
       "amount": {
         "type": "dollar_amount",
@@ -192,31 +128,7 @@
         "homeowner",
         "renter"
       ],
-      "short_description": "$50 rebate for ENERGY STAR certified electric dryers. Redeemable at Home Depot. Limit 1 per customer."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "nv-nv-energy",
-      "program": "NV Energy Home Improvements",
-      "program_url": "https://www.nvenergy.com/save-with-powershift/home-energy-saver/home-improvements",
-      "items": [
-        "other_weatherization",
-        "duct_sealing",
-        "other_insulation"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 400,
-        "maximum": 400
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "short_description": "NV Energy provides a rebate of up to $400 for weather stripping, duct sealing, and insulation."
+      "short_description": "$50 upfront rebate for ENERGY STAR certified electric dryers. Redeemable at Home Depot and participating retailers. Limit 1 per customer."
     }
   ]
 }

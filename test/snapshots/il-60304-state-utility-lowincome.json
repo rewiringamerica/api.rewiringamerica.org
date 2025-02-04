@@ -23,6 +23,29 @@
   "incentives": [
     {
       "payment_methods": [
+        "assistance_program"
+      ],
+      "authority_type": "state",
+      "authority": "il-illinois-solar-for-all",
+      "program": "ILSFA Residential Solar Program",
+      "program_url": "https://www.illinoissfa.com/programs/for-homeowners-and-building-owners/",
+      "items": [
+        "rooftop_solar_installation"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 1
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "Qualified residents can work with ILSFA approved vendors to have solar panels installed on their property with no upfront costs. "
+    },
+    {
+      "payment_methods": [
         "rebate"
       ],
       "authority_type": "state",
@@ -42,6 +65,8 @@
         "homeowner",
         "renter"
       ],
+      "start_date": "2025-01-21",
+      "end_date": "2025-04-30",
       "short_description": "Up to $4,000 rebates for Illinois residents buying new or used all-electric vehicles. Vehicle must be purchased from a licensed dealer."
     }
   ]

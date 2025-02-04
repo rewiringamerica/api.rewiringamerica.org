@@ -59,7 +59,7 @@
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Up to $1,000 rebate for installation of a home EV charger."
+      "short_description": "Up to $1,000 rebate for installation of a home EV charger on a secondary rate meter."
     },
     {
       "payment_methods": [
@@ -101,7 +101,7 @@
         "homeowner",
         "renter"
       ],
-      "short_description": "$500 rebate. Must include no less than three elements. Cooktop or range must be at least 24 inches in both length and width. Limit 1."
+      "short_description": "$500 rebate for an induction cooktop. Must include no less than three elements. Must be at least 24 inches in both length and width. Limit 1."
     },
     {
       "payment_methods": [
@@ -123,6 +123,27 @@
         "homeowner"
       ],
       "short_description": "Up to $500 rebate for a ductless heat pump system. Minimum 25 SEER2."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "mi-lansing-board-of-water-and-light",
+      "program": "Lansing BWL Heating and Cooling Rebates",
+      "program_url": "https://www.lbwl.com/hvac",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "$500 rebate on an ENERGY STAR certified heat pump water heater."
     },
     {
       "payment_methods": [

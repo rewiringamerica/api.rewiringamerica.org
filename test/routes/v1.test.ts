@@ -92,14 +92,22 @@ async function validateProgramsResponse(
   const programsResponse = JSON.parse(res.payload);
   const validator = ajv.getSchema('APIProgramsResponse')!;
   await validator(programsResponse);
-  const expectedResponse = JSON.parse(
-    fs.readFileSync(`./test/snapshots/${snapshotFile}`, 'utf-8'),
-  );
-  t.strictSame(
-    programsResponse,
-    expectedResponse,
-    `response does not match ${snapshotFile}`,
-  );
+
+  if (process.env.UPDATE_SNAPSHOTS) {
+    fs.writeFileSync(
+      `./test/snapshots/${snapshotFile}`,
+      JSON.stringify(programsResponse, null, 2) + '\n',
+    );
+  } else {
+    const expectedResponse = JSON.parse(
+      fs.readFileSync(`./test/snapshots/${snapshotFile}`, 'utf-8'),
+    );
+    t.strictSame(
+      programsResponse,
+      expectedResponse,
+      `response does not match ${snapshotFile}`,
+    );
+  }
 }
 
 test('response is valid and correct', async t => {

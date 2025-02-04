@@ -44,13 +44,60 @@
       ],
       "amount": {
         "type": "dollars_per_unit",
-        "number": 600,
+        "number": 1100,
         "unit": "ton"
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "$600 per heating ton for qualifying Ground Source Heat Pumps."
+      "short_description": "$1,100 per heating ton rebate for Ground Source Heat Pumps with quality installation."
+    },
+    {
+      "payment_methods": [
+        "account_credit",
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-xcel-energy",
+      "program": "Xcel Energy Heat Pump Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
+      "items": [
+        "ductless_heat_pump",
+        "ducted_heat_pump",
+        "other_heat_pump"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 750,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "$750/heating ton at 5 degrees Fahrenheit for a cold-climate heat pump."
+    },
+    {
+      "payment_methods": [
+        "account_credit",
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-xcel-energy",
+      "program": "Xcel Energy Heat Pump Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 300,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "$300/cooling ton rebate for ducted, partially ducted, or non-ducted heat pumps."
     },
     {
       "payment_methods": [
@@ -94,49 +141,6 @@
         "homeowner"
       ],
       "short_description": "$2200 for qualifying Cold Climate Mini Split Heat Pumps."
-    },
-    {
-      "payment_methods": [
-        "account_credit",
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "co-xcel-energy",
-      "program": "Xcel Energy Heat Pump Rebates",
-      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
-      "items": [
-        "ducted_heat_pump",
-        "ductless_heat_pump"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 1700
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "$1700 for qualifying High Efficiency Air Source Heat Pumps."
-    },
-    {
-      "payment_methods": [
-        "account_credit",
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "co-xcel-energy",
-      "program": "Xcel Energy Heat Pump Rebates",
-      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
-      "items": [
-        "ductless_heat_pump"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 1700
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "$1700 for qualifying Mini Split Heat Pumps."
     },
     {
       "payment_methods": [
