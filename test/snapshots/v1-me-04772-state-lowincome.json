@@ -31,13 +31,13 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 1000
+        "number": 950
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "short_description": "$1,000 discount on heat pump water heaters when bought through Granite Group, Lowe's, or Home Depot."
+      "short_description": "$950 upfront discount on heat pump water heaters when bought through Granite Group, Lowe's, or Home Depot."
     },
     {
       "payment_methods": [
@@ -90,7 +90,15 @@
       "program": "Efficiency Maine Insulation Rebates",
       "program_url": "https://www.efficiencymaine.com",
       "items": [
-        "other_insulation"
+        "other_insulation",
+        "floor_insulation",
+        "air_sealing",
+        "attic_or_roof_insulation",
+        "basement_insulation",
+        "crawlspace_insulation",
+        "other_weatherization",
+        "efficiency_rebates",
+        "wall_insulation"
       ],
       "amount": {
         "type": "percent",
@@ -100,7 +108,7 @@
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Rebate of 80% of project cost for air sealing and/or insulation, up to $8,000. Available for low-income residents."
+      "short_description": "80% of project cost rebate for air sealing and/or insulation, up to $8,000. Available for low-income residents."
     },
     {
       "payment_methods": [
@@ -155,7 +163,14 @@
       "program": "Efficiency Maine Insulation Rebates",
       "program_url": "https://www.efficiencymaine.com",
       "items": [
-        "other_insulation"
+        "other_insulation",
+        "attic_or_roof_insulation",
+        "basement_insulation",
+        "crawlspace_insulation",
+        "efficiency_rebates",
+        "floor_insulation",
+        "other_weatherization",
+        "wall_insulation"
       ],
       "amount": {
         "type": "percent",
@@ -165,7 +180,7 @@
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Rebate of 40% of project cost for air sealing and/or insulation, up to $4,000."
+      "short_description": "40% rebate of project cost for air sealing and/or insulation, up to $4,000."
     },
     {
       "payment_methods": [
@@ -280,48 +295,6 @@
       ],
       "authority_type": "state",
       "authority": "me-efficiency-maine",
-      "program": "Efficiency Maine Electric Vehicle Rebates",
-      "program_url": "https://www.efficiencymaine.com",
-      "items": [
-        "new_electric_vehicle"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 2000
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "short_description": "$2,000 rebate for new battery electric vehicles."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "me-efficiency-maine",
-      "program": "Efficiency Maine Electric Vehicle Rebates",
-      "program_url": "https://www.efficiencymaine.com",
-      "items": [
-        "new_plugin_hybrid_vehicle"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 1000
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "short_description": "$1,000 rebate for new plug-in hybrid electric vehicles."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "me-efficiency-maine",
       "program": "Efficiency Maine Water Heating Incentives",
       "program_url": "https://www.efficiencymaine.com",
       "items": [
@@ -329,13 +302,13 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 850
+        "number": 950
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "short_description": "$850 mail-in rebate for heat pump water heater."
+      "short_description": "$950 mail-in rebate for heat pump water heater."
     },
     {
       "payment_methods": [

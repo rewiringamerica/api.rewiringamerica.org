@@ -6,7 +6,7 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_clothes_dryer"
+      "non_heat_pump_clothes_dryer"
     ],
     "program": "il_commonwealthEdison_comEdApplianceRebates",
     "amount": {
@@ -62,7 +62,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$100 rebate for new Induction Cooktops purchased in Illinois.",
+      "en": "$100 rebate for new induction cooktops purchased in Illinois.",
       "es": "Un reembolso de $100 para nuevas parrillas de inducción compradas en Illinois."
     }
   },
@@ -85,7 +85,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$75 off new ENERGY STAR® certified Smart Thermostats purchased in Illinois.",
+      "en": "$75 off new ENERGY STAR® certified smart thermostats purchased in Illinois.",
       "es": "Un descuento de $75 en nuevos termostatos inteligentes con certificación ENERGY STAR® comprados en Illinois."
     }
   },
@@ -100,15 +100,15 @@
     "program": "il_commonwealthEdison_comEdApplianceRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 2
+      "number": 5
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $2 off on Weatherization Products such as caulking, weatherstripping, insulation, and door sweeps/seals.",
-      "es": "Hasta $2 de descuento en productos de climatización como selladores, juntas de goma, aislantes y barredores/selladores de puertas."
+      "en": "Up to $5 off on Weatherization Products such as caulking, weatherstripping, insulation, and door sweeps/seals.",
+      "es": "Hasta $5 de descuento en productos de climatización como selladores, juntas de goma, aislantes y barredores/selladores de puertas."
     }
   },
   {
@@ -150,7 +150,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $3,750 towards purchase and installation of a lvl 2 smart charger. Requires enrolling in supply rate options program.",
+      "en": "Up to $3,750 towards purchase and installation of a level 2 smart EV charger. Requires enrolling in supply rate options program.",
       "es": "Hasta $3,750 para la compra e instalación de un cargador inteligente lvl 2. Se requiere la inscripción en el programa de opciones para tarifas de suministro."
     },
     "start_date": "2024-02-01",
@@ -220,7 +220,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,800 rebate for All-Electric Cold Climate Air Source Heat Pump. Minimum efficiency of 15.2 SEER2 & 7.6 HSPF2.",
+      "en": "Up to $1,800 rebate for all-electric cold climate air source heat pump. Minimum efficiency of 15.2 SEER2 & 7.6 HSPF2.",
       "es": "Un reembolso de hasta $1,800 para una bomba de calor de fuente de aire de clima frío totalmente eléctrica. Eficiencia mínima de 15.2 SEER2 y 7.6 HSPF2."
     }
   },
@@ -244,7 +244,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $750 rebate for Dual Fuel Cold Climate Air Source Heat Pump. Minimum efficiency of 15.2 SEER2 & 7.6 HSPF2.",
+      "en": "Up to $750 rebate for dual fuel cold climate air source heat pump. Minimum efficiency of 15.2 SEER2 & 7.6 HSPF2.",
       "es": "Un reembolso de hasta $750 para una bomba de calor de fuente de aire de doble combustible y clima frío. Eficiencia mínima de 15.2 SEER2 y 7.6 HSPF2."
     }
   },
@@ -267,7 +267,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $800 rebate for Mini Split Cold Climate Air Source Heat Pump. Minimum efficiency of at least 15.2 SEER2 & 7.6 HSPF2.",
+      "en": "Up to $800 rebate for mini split cold climate air source heat pump. Minimum efficiency of at least 15.2 SEER2 & 7.6 HSPF2.",
       "es": "Un reembolso de hasta $800 para una bomba de calor mini split de clima frío con fuente de aire. Eficiencia mínima de al menos 15.2 SEER2 y 7.6 HSPF2"
     }
   },
@@ -311,7 +311,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $200 rebate for installing a level 2 EV charger. Minimum 240 volts and 50 amps.",
+      "en": "Up to $200 rebate for electric vehicle circuit installation to support a level 2 charger. Minimum 240 volts and 50 amps.",
       "es": "Un reembolso de hasta $200 por la instalación de un cargador de VEs de Nivel 2. Mínimo 240 watts y 50 amperios."
     }
   },
@@ -322,7 +322,14 @@
     ],
     "items": [
       "other_insulation",
-      "other_weatherization"
+      "other_weatherization",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "air_sealing",
+      "efficiency_rebates",
+      "floor_insulation",
+      "wall_insulation"
     ],
     "program": "il_stateOfIllinois_illinoisHomeWeatherization",
     "amount": {
@@ -363,7 +370,9 @@
     "short_description": {
       "en": "Up to $4,000 rebates for Illinois residents buying new or used all-electric vehicles. Vehicle must be purchased from a licensed dealer.",
       "es": "Un reembolso de hasta $4,000 para residentes de Illinois que compren vehículos enteramente eléctricos nuevos o usados. El vehículo debe comprarse a un concesionario autorizado."
-    }
+    },
+    "start_date": "2025-01-21",
+    "end_date": "2025-04-30"
   },
   {
     "id": "IL-18",
@@ -410,7 +419,7 @@
       "es": "Un incentivo de $500 para viviendas de nueva construcción que cumplan el reglamento de conservación de energía de Illinois (requiere una prueba de soplado de compuerta)."
     },
     "start_date": "2024-01-01",
-    "end_date": "2024-12-26"
+    "end_date": "2025-12-26"
   },
   {
     "id": "IL-20",
@@ -431,11 +440,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$250/ton rebate for qualifying Air Source Heat Pumps. Minimum efficiency of at least 14.3 SEER2 & 7.5 HSPF2.",
+      "en": "$250/ton rebate for qualifying air source heat pumps. Minimum efficiency of at least 14.3 SEER2 & 7.5 HSPF2.",
       "es": "Un reembolso de $250 /tonelada para bombas de calor de fuente de aire certificadas. Eficiencia mínima de al menos 14.3 SEER2 y 7.5 HSPF2."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-26"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-23"
   },
   {
     "id": "IL-21",
@@ -455,11 +464,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$250/ton rebate for qualifying Mini Split Heat Pumps. Minimum efficiency of at least 14.3 SEER2 & 7.5 HSPF2.",
+      "en": "$250/ton rebate for qualifying mini split heat pumps. Minimum efficiency of at least 14.3 SEER2 & 7.5 HSPF2.",
       "es": "Un reembolso de $250 /tonelada para bombas de calor mini split certificadas. Eficiencia mínima de al menos 14.3 SEER2 y 7.5 HSPF2."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-26"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-23"
   },
   {
     "id": "IL-22",
@@ -468,7 +477,13 @@
     ],
     "items": [
       "other_insulation",
-      "air_sealing"
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "other_weatherization",
+      "wall_insulation"
     ],
     "program": "il_jo-CarrollEnergyCooperative_jCECo-OpEnergyEfficiencyIncentives",
     "amount": {
@@ -484,8 +499,8 @@
       "en": "Up to $500 back on home insulation and air sealing, as well as up to $300 for an energy audit.",
       "es": "Hasta $500 de devolución para aislamiento y sellado del aire de su hogar, así como hasta $300 para una auditoría de consumo de energía."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-26"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-23"
   },
   {
     "id": "IL-23",
@@ -530,11 +545,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $500 for Compressed Air Audit performed by Professional Engineer, Certified Energy Manager, or a cooperative pre-approved partner.",
+      "en": "Up to $500 for compressed air audit performed by professional engineer, Certified Energy Manager, or a cooperative pre-approved partner.",
       "es": "Hasta $500 para una auditoría de aire comprimido realizada por un ingeniero profesional, un administrador de energía certificado o un colaborador pre-aprobado por la cooperativa."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-26"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-23"
   },
   {
     "id": "IL-25",
@@ -556,11 +571,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $300 rebate for High Efficiency Electric Water Heater depending on size. Minimum capacity 75 gal.",
+      "en": "Up to $300 rebate for a high efficiency electric water heater depending on size. Minimum capacity 75 gal.",
       "es": "Un reembolso de hasta $300 por calentador de agua eléctrico de alta eficiencia según el tamaño. Capacidad mínima 75 galones."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-26"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-23"
   },
   {
     "id": "IL-26",
@@ -580,11 +595,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "$25 bill credit for ENERGY STAR clothes dryer.",
+      "en": "$25 bill credit for an ENERGY STAR electric clothes dryer.",
       "es": "Crédito de $25 en la cuenta de luz por una secadora de ropa ENERGY STAR."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-26"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-23"
   },
   {
     "id": "IL-27",
@@ -608,8 +623,8 @@
       "en": "Up to $300 for an energy audit by a Jo-Carroll Energy representative once subsequent insulation or air-sealing project is completed.",
       "es": "Hasta $300 para una auditoría de consumo de energía realizada por un representante de Jo-Carroll Energy una vez que haya concluido el proyecto posterior de aislamiento o sellado hermético."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-26"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-23"
   },
   {
     "id": "IL-28",
@@ -633,8 +648,8 @@
       "en": "Up to $375 point-of-sale rebate for eligible air source heat pumps, depending on efficiency. Minimum 15.2 SEER2 and 8.1 HSPF2.",
       "es": "Un reembolso de hasta $375 en el punto de venta para bombas de calor con fuente de aire que cumplan los requisitos, en función de su eficiencia. Mínimo 15.2 SEER2 y 8.1 HSPF2."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "IL-29",
@@ -657,8 +672,8 @@
       "en": "Up to $300 point-of-sale rebate for eligible ductless mini-split heat pumps. Minimum 17 SEER2 and 10 HSPF2.",
       "es": "Un reembolso de hasta $300 en el punto de venta para bombas de calor sin ductos mini-split elegibles. Mínimo 17 SEER2 y 10 HSPF2."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "IL-30",
@@ -679,11 +694,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $100 rebate for ENERGY STAR® Smart Thermostats, up to 70% of equipment cost.",
+      "en": "Up to $100 rebate for ENERGY STAR® smart thermostats, up to 70% of equipment cost.",
       "es": "Un reembolso de hasta $100 para termostatos inteligentes ENERGY STAR®, hasta el 70% del costo del equipo."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "IL-31",
@@ -703,11 +718,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1200 rebate for eligible geothermal heat pumps, depending on efficiency. Minimum 17 EERFL and 4.1 COPFL.",
+      "en": "Up to $1,200 rebate for eligible geothermal heat pumps, depending on efficiency. Minimum 17 EERFL and 4.1 COPFL.",
       "es": "Un reembolso de hasta $1,200 para bombas de calor geotérmicas que cumplan los requisitos, en función de su eficiencia. Mínimo 17 EERFL y 4.1 COPFL."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "IL-32",
@@ -727,11 +742,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $225 per unit. Eligible HPWH will have a maximum capacity of 120 gal and at least 2.2 UEF.",
+      "en": "Up to $225 per unit for a heat pump water heater. Must have a maximum capacity of 120 gal and at least 2.2 UEF.",
       "es": "Hasta $225 por unidad. Los HPWH elegibles deberán tener una capacidad máxima de 120 galones y al menos 2.2 UEF."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "IL-33",
@@ -747,14 +762,15 @@
       "number": 1
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Qualified homeowners can work with ILSFA approved vendors to have solar panels installed on their property with no upfront costs.",
+      "en": "Qualified residents can work with ILSFA approved vendors to have solar panels installed on their property with no upfront costs. ",
       "es": "Los propietarios de viviendas que cumplan los requisitos pueden trabajar con proveedores autorizados por ILSFA para que les instalen paneles solares en su propiedad sin costos iniciales."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31",
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31",
     "low_income": "il-solar-for-all"
   },
   {
@@ -796,8 +812,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$800 rebate for the purchase of a HPWH.",
-      "es": "Un reembolso de $800 por la compra de un HPWH."
+      "en": "$800 rebate for the purchase of a heat pump water heater."
     }
   },
   {
@@ -817,7 +832,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,150 instant discount when HPWH is installed by a trusted Program Ally contractor.",
+      "en": "Up to $1,150 instant discount when a heat pump water heater is installed by a trusted Program Ally contractor.",
       "es": "Hasta $1,150 de descuento instantáneo cuando la HPWH haya sido instalada por un contratista de confianza de Program Ally."
     }
   },
@@ -827,7 +842,7 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_clothes_dryer"
+      "non_heat_pump_clothes_dryer"
     ],
     "program": "il_amerenIllinois_amerenEnergy-EfficientProductDiscountsAndRebates",
     "amount": {
@@ -880,7 +895,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $630 discount for air source heat pump. Must be 16 SEER2 and 8.55 HSPF2 or greater as confirmed by AHRI. Must utilize Program Ally Contractor.",
+      "en": "Up to $630 discount for a qualifying ductless air source heat pump. Must utilize Program Ally Contractor.",
       "es": "Hasta $630 de descuento por bomba de calor de fuente de aire. Debe ser de 16 SEER2 y 8.55 HSPF2 o superior según lo confirme AHRI. Debe utilizar un contratista de Program Ally."
     }
   },
@@ -925,8 +940,7 @@
     "short_description": {
       "en": "New electrical systems. In most cases, the program will cover the full cost of home improvements.",
       "es": "Nuevos sistemas eléctricos. En la mayoría de los casos, el programa cubrirá el costo total de las mejoras en el hogar."
-    },
-    "low_income": "il-evanston-green-homes-pilot-program"
+    }
   },
   {
     "id": "IL-42",
@@ -971,5 +985,50 @@
       "es": "Paneles solares de techo. En la mayoría de los casos, el programa cubrirá el costo total de las mejoras en el hogar."
     },
     "low_income": "il-evanston-green-homes-pilot-program"
+  },
+  {
+    "id": "IL-44",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "il_commonwealthEdison_comEdApplianceRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 rebate for new ENERGY STAR® rated all in one electric clothes dryers with capacity of at least 4.4 cu. ft.",
+      "es": "Un reembolso de $250 para secadoras de ropa eléctricas nuevas con certificación ENERGY STAR® y una capacidad de al menos 4.4 ft³."
+    }
+  },
+  {
+    "id": "IL-45",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "il_commonwealthEdison_comEdApplianceRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$350 rebate for new ENERGY STAR® all in one heat pump clothes dryers with capacity of at least 4.4 cu. ft.",
+      "es": "Un reembolso de $350 para las secadoras de ropa con bomba de calor nuevas ENERGY STAR® con una capacidad mínima de 4.4 ft³."
+    }
   }
 ]

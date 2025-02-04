@@ -633,7 +633,9 @@
     "program": "pa_pPLElectricUtilitiesCorp_products&Rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 100
+      "number": 100,
+      "minimum": 50,
+      "maximum": 100
     },
     "owner_status": [
       "homeowner"
@@ -660,7 +662,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate for heat pump water heater with UEF of 3.3.",
+      "en": "$400 rebate for heat pump water heater with UEF of 3.3 or greater.",
       "es": "Reembolso de $400 por un calentador de agua con bomba de calor y un índice de eficiencia energética (o UEF) de 3.3."
     }
   },
@@ -728,8 +730,8 @@
       "en": "$15 rebate for ENERGY STAR® certified electric clothes dryers.",
       "es": "Reembolso de $15 para secadoras de ropa eléctricas con certificación ENERGY STAR®."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "PA-40",
@@ -751,8 +753,8 @@
       "en": "$75 rebate for heat pump clothes dryers.",
       "es": "Reembolso de $75 para secadoras de ropa con bomba de calor."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "PA-41",
@@ -774,8 +776,8 @@
       "en": "$350 rebate for ENERGY STAR® certified heat pump hot water heaters.",
       "es": "Reembolso de $350 para calentadores de agua con bomba de calor de certificación ENERGY STAR®."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "PA-42",
@@ -797,8 +799,8 @@
       "en": "$50 rebate for ENERGY STAR® certified smart thermostats.",
       "es": "Reembolso de $50 para termostatos inteligentes con certificación ENERGY STAR®."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "PA-43",
@@ -813,6 +815,7 @@
     "amount": {
       "type": "dollar_amount",
       "number": 300,
+      "minimum": 200,
       "maximum": 300
     },
     "owner_status": [
@@ -822,8 +825,8 @@
       "en": "Up to $300 rebate for air source heat pumps. Rebate value depends on the equipment efficiency.",
       "es": "Reembolso de hasta $300 para bombas de calor de fuente de aire. El monto del reembolso depende de la eficiencia del equipo."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "PA-44",
@@ -837,6 +840,7 @@
     "amount": {
       "type": "dollar_amount",
       "number": 300,
+      "minimum": 150,
       "maximum": 300
     },
     "owner_status": [
@@ -846,8 +850,8 @@
       "en": "Up to $300 rebate for ductless mini-split heat pumps. Rebate value depends on the equipment efficiency.",
       "es": "Reembolso de hasta $300 para bombas de calor mini-splits sin ductos. El monto del reembolso depende de la eficiencia del equipo."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "PA-45",
@@ -871,8 +875,8 @@
       "en": "$50 rebate per new electric vehicle you own or lease. Must be either full electric or plug-in hybrid.",
       "es": "Un reembolso de $50 por vehículo eléctrico nuevo de su propiedad o arrendado. Debe ser totalmente eléctrico o híbrido enchufable."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "PA-46",
@@ -896,8 +900,8 @@
       "en": "$50 rebate per used electric vehicle you own or lease. Must be either full electric or plug-in hybrid.",
       "es": "Un reembolso de $50 por vehículo eléctrico usado de su propiedad o arrendado. Debe ser totalmente eléctrico o híbrido enchufable."
     },
-    "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "PA-47",
@@ -911,20 +915,20 @@
     "program": "pa_pennsylvaniaDepartmentOfEnvironmentalProtection_alternativeFuelVehicleRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 2000,
+      "number": 3000,
       "minimum": 1500,
-      "maximum": 2000
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Income-qualified rebate for purchase or lease of new electric vehicles. $2,000 for battery EVs; $1,500 for plug-in hybrid EVs.",
-      "es": "Un reembolso basado en ingresos para compra o alquiler de vehículos eléctricos nuevos. $2,000 para VEs de batería; $1,500 para VEs híbridos enchufables."
+      "en": "Income-qualified rebate for purchase or lease of new electric vehicles. $3,000 for battery EVs; $1,500 for plug-in hybrid EVs.",
+      "es": "Un reembolso basado en ingresos para compra o alquiler de vehículos eléctricos nuevos. $3,000 para VEs de batería; $1,500 para VEs híbridos enchufables."
     },
-    "start_date": "2023-07-01",
-    "end_date": "2024-06-30",
+    "start_date": "2024-09-01",
+    "end_date": "2025-06-30",
     "low_income": "pa-pennsylvania-department-of-environmental-protection"
   },
   {
@@ -939,20 +943,20 @@
     "program": "pa_pennsylvaniaDepartmentOfEnvironmentalProtection_alternativeFuelVehicleRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 2000,
+      "number": 3000,
       "minimum": 1500,
-      "maximum": 2000
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Income-qualified rebate for purchase of eligible used electric vehicles. $2,000 rebate for battery EVs; $1,500 rebate for plug-in hybrid EVs.",
-      "es": "Un reembolso basado en ingresos para la compra de vehículos eléctricos usados que cumplan los requisitos. Un reembolso de $2,000 para VEs de batería; $1,500 para VEs híbridos enchufables."
+      "en": "Income-qualified rebate for purchase of eligible used electric vehicles. $3,000 rebate for battery EVs; $1,500 rebate for plug-in hybrid EVs.",
+      "es": "Un reembolso basado en ingresos para la compra de vehículos eléctricos usados que cumplan los requisitos. Un reembolso de $3,000 para VEs de batería; $1,500 para VEs híbridos enchufables."
     },
-    "start_date": "2023-07-01",
-    "end_date": "2024-06-30",
+    "start_date": "2024-09-01",
+    "end_date": "2025-06-30",
     "low_income": "pa-pennsylvania-department-of-environmental-protection"
   },
   {
@@ -967,20 +971,20 @@
     "program": "pa_pennsylvaniaDepartmentOfEnvironmentalProtection_alternativeFuelVehicleRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 3000,
+      "number": 4000,
       "minimum": 2500,
-      "maximum": 3000
+      "maximum": 4000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Income-qualified rebate for purchase or lease of new electric vehicles. $3,000 for battery EVs; $2,500 for plug-in hybrid EVs.",
+      "en": "Income-qualified rebate for purchase or lease of new electric vehicles. $4,000 for battery EVs; $2,500 for plug-in hybrid EVs.",
       "es": "Un reembolso basado en ingresos para compra o alquiler de vehículos eléctricos nuevos. $3,000 para VEs de batería; $2,500 para VEs híbridos enchufables."
     },
-    "start_date": "2023-07-01",
-    "end_date": "2024-06-30",
+    "start_date": "2024-09-01",
+    "end_date": "2025-06-30",
     "low_income": "pa-pennsylvania-department-of-environmental-protection-bonus"
   },
   {
@@ -995,20 +999,20 @@
     "program": "pa_pennsylvaniaDepartmentOfEnvironmentalProtection_alternativeFuelVehicleRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 3000,
+      "number": 4000,
       "minimum": 2500,
-      "maximum": 3000
+      "maximum": 4000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Income-qualified rebate for purchase of eligible used electric vehicles. $3,000 rebate for battery EVs; $2,500 rebate for plug-in hybrid EVs.",
-      "es": "Un reembolso basado en ingresos para la compra de vehículos eléctricos usados que cumplan los requisitos. Un reembolso de $3,000 para VEs de batería; $2,500 para VEs híbridos enchufables."
+      "en": "Income-qualified rebate for purchase of eligible used electric vehicles. $4,000 rebate for battery EVs; $2,500 rebate for plug-in hybrid EVs.",
+      "es": "Un reembolso basado en ingresos para la compra de vehículos eléctricos usados que cumplan los requisitos. Un reembolso de $4,000 para VEs de batería; $2,500 para VEs híbridos enchufables."
     },
-    "start_date": "2023-07-01",
-    "end_date": "2024-06-30",
+    "start_date": "2024-09-01",
+    "end_date": "2025-06-30",
     "low_income": "pa-pennsylvania-department-of-environmental-protection-bonus"
   },
   {
@@ -1074,6 +1078,112 @@
     "short_description": {
       "en": "$50 rebate for purchasing a plug-in EV.",
       "es": "Un reembolso de $50 por la compra de un VE enchufable."
+    }
+  },
+  {
+    "id": "PA-54",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "pa_pPLElectricUtilitiesCorp_products&Rebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Free virtual home energy assessment for a home with electric heating and/or central A/C."
+    }
+  },
+  {
+    "id": "PA-55",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "pa_pECO_heating&CoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "minimum": 150,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $200 rebate for an ENERGY STAR central air conditioning unit."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "PA-56",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "pa_uGIUtilities_applianceRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 rebate for an ENERGY STAR central air conditioner."
+    }
+  },
+  {
+    "id": "PA-57",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump",
+      "other_heat_pump"
+    ],
+    "program": "pa_uGIUtilities_applianceRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for an air source heat pump."
+    }
+  },
+  {
+    "id": "PA-58",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "pa_uGIUtilities_applianceRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for an ENERGY STAR electric heat pump water heater."
     }
   }
 ]

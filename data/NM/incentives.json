@@ -358,7 +358,7 @@
       "en": "$200 rebate on eligible advanced window coolers."
     },
     "start_date": "2024-01-01",
-    "end_date": "2024-12-31"
+    "end_date": "2025-12-31"
   },
   {
     "id": "NM-17",
@@ -906,5 +906,262 @@
       "en": "10% of cost of installing home solar, up to $6,000 refundable tax credit."
     },
     "start_date": "2020-01-01"
+  },
+  {
+    "id": "NM-40",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "nm-pnm-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 165,
+      "maximum": 165
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$165 rebate for heat pump clothes dryers."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "NM-41",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "nm-pnm-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 110
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$110 rebate for electric clothes dryers."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "NM-42",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nm-pnm-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate for induction cooktops and ranges."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "NM-43",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nm-pnm-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate on smart thermostats."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "NM-44",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nm-pnm-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 rebate for an ENERGY STAR certified heat pump water heater."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "NM-45",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "nm-pnm-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 550,
+      "maximum": 550
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$550 rebate for a qualifying mini-split air source heat pump."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "NM-46",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "nm-pnm-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 550,
+      "maximum": 550
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$550 rebate for a qualifying ducted air source heat pump system."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "NM-47",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
+    "program": "nm-pnm-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.1,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to 10% for attic/roof insulation improvements, up to $200, after a home energy checkup."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "NM-48",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nm_centralValleyElectricCooperative_heatingAndCoolingRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,500/ton rebate for ground source heat pump systems."
+    }
+  },
+  {
+    "id": "NM-49",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "nm_centralValleyElectricCooperative_heatingAndCoolingRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 175,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$175/ton rebate for air source heat pump systems."
+    }
+  },
+  {
+    "id": "NM-50",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "nm_centralValleyElectricCooperative_heatingAndCoolingRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit for residential customers."
+    }
   }
 ]

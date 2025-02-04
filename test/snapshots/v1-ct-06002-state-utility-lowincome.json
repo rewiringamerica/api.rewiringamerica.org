@@ -112,6 +112,28 @@
     },
     {
       "payment_methods": [
+        "pos_rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ct-eversource",
+      "program": "Energize CT Residential Heat Pump Water Heater Incentive",
+      "program_url": "https://energizect.com/rebates-incentives/residential-water-heater/heat-pump",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 650
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023",
+      "end_date": "2025-12-31",
+      "short_description": "$650 upfront rebate for eligible Energy Star certified heat pump water heaters."
+    },
+    {
+      "payment_methods": [
         "pos_rebate",
         "rebate"
       ],
@@ -132,6 +154,30 @@
         "renter"
       ],
       "short_description": "Up to $85 upfront rebate on a smart thermostat."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ct-eversource",
+      "program": "Energize CT Residential Ground Source Heat Pump Incentive",
+      "program_url": "https://energizect.com/rebates-incentives/heating-cooling/heat-pumps/ground-source-residential",
+      "items": [
+        "geothermal_heating_installation"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 1500,
+        "maximum": 15000,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023",
+      "end_date": "2025-12-31",
+      "short_description": "$1,500 per ton after-purchase rebate for qualifying ground source heat pumps, up to $15,000."
     },
     {
       "payment_methods": [
