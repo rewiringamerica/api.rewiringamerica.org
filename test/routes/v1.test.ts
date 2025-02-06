@@ -966,6 +966,33 @@ const UTILITIES = [
       gas_utility_affects_incentives: true,
     },
   ],
+  [
+    '01450',
+    {
+      location: { state: 'MA', city: 'Groton', county_fips: '25017' },
+      utilities: {
+        'ma-fitchburg-gas-and-electric-light': {
+          name: 'Unitil',
+        },
+        // Not mapped to 01450, but to some of its non-ZCTA child zips
+        'ma-groton-electric-light-dept': {
+          name: 'Groton Electric Light Dept',
+        },
+        'ma-national-grid': {
+          name: 'National Grid',
+        },
+        'ma-town-of-littleton': {
+          name: 'Littleton Municipal Light Plant',
+        },
+      },
+      gas_utilities: {
+        'ma-national-grid-gas': {
+          name: 'National Grid',
+        },
+      },
+      gas_utility_affects_incentives: true,
+    },
+  ],
 ] as const;
 
 test('/utilities', async t => {

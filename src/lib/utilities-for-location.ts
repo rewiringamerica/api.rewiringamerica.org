@@ -96,10 +96,17 @@ async function getUtilitiesForLocation(
     return {};
   }
 
-  // Put the predominant utility first
+  // Search the mappings of zips that have this location's ZCTA as the parent.
+  // Put the predominant utility first.
   const rows = await db.all<ZipToUtility[]>(
-    'SELECT * FROM zip_to_utility WHERE zip = ? ORDER BY predominant DESC',
-    location.zcta,
+    `
+    WITH child_zips AS (
+      SELECT zip FROM zips WHERE parent_zcta = @zcta
+    )
+    SELECT * FROM zip_to_utility WHERE zip = @zcta OR zip IN child_zips
+    ORDER BY predominant DESC
+    `,
+    { '@zcta': location.zcta },
   );
 
   // If we didn't find any utilities in the dataset, fall back to returning all
