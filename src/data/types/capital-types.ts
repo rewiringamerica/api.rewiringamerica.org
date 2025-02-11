@@ -1,39 +1,9 @@
+import {
+  AuthorityType,
+  LoanProgramStatus,
+  ProjectType,
+} from '@rewiringamerica/capital-common';
 import { FromSchema } from 'json-schema-to-ts';
-
-export enum AuthorityType {
-  CITY = 'city',
-  COUNTY = 'county',
-  UTILITY = 'utility',
-  FEDERAL = 'federal',
-  STATE = 'state',
-  BANK = 'bank',
-  CREDIT_UNION = 'credit_union',
-  OTHER = 'other',
-}
-
-export enum LoanProgramStatus {
-  DRAFT = 'DRAFT',
-  IN_REVIEW = 'IN_REVIEW',
-  APPROVED = 'APPROVED',
-  PUBLISHED = 'PUBLISHED',
-  ARCHIVED = 'ARCHIVED',
-}
-
-export enum ProjectType {
-  WEATHERIZATION = 'WEATHERIZATION',
-  HEATING_COOLING = 'HEATING_COOLING',
-  WATER_HEATER = 'WATER_HEATER',
-  ELECTRICAL_PANEL_WIRING = 'ELECTRICAL_PANEL_WIRING',
-  EV_AND_CHARGER = 'EV_AND_CHARGER',
-  EV_CHARGER = 'EV_CHARGER',
-  SOLAR = 'SOLAR',
-  ENERGY_AUDIT = 'ENERGY_AUDIT',
-  BATTERY_INSTALLATION = 'BATTERY_INSTALLATION',
-  WATER_IRRIGATION = 'WATER_IRRIGATION',
-  ENERGY_STAR_APPLIANCES = 'ENERGY_STAR_APPLIANCES',
-  GEOTHERMAL = 'GEOTHERMAL',
-  WIND = 'WIND',
-}
 
 /**
  * Schema for Image.

@@ -1,5 +1,8 @@
+import {
+  LoanProgramStatus,
+  ProjectType,
+} from '@rewiringamerica/capital-common';
 import { FromSchema } from 'json-schema-to-ts';
-import { LoanProgramStatus, ProjectType } from '../../data/types/capital-types';
 import { STATES_AND_TERRITORIES } from '../../data/types/states';
 
 const STATES = [...STATES_AND_TERRITORIES, 'NT'];
