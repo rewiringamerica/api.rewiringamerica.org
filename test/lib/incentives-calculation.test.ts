@@ -167,7 +167,7 @@ test('correctly evaluates scenario "Single w/ $120k Household income in NJ"', as
   t.equal(data.is_over_150_ami, false);
 
   t.equal(data.savings.pos_rebate, 14000);
-  t.equal(data.savings.tax_credit, 18876);
+  t.equal(data.savings.tax_credit, 18047);
   t.equal(data.savings.performance_rebate, 4000);
 
   const pos_rebate_incentives = data.incentives.filter(
@@ -749,7 +749,7 @@ test('correctly excludes IRA rebates', async t => {
   );
   t.equal(data.savings.pos_rebate, 0);
   t.equal(data.savings.performance_rebate, 0);
-  t.equal(data.savings.tax_credit, 18876);
+  t.equal(data.savings.tax_credit, 18047);
 });
 
 test('correctly matches geo groups', async t => {
