@@ -47,7 +47,9 @@
     "dotenv-cli": "^7.4.4",
     "eslint": "^8.52.0",
     "fastify-tsconfig": "^2.0.0",
+    "husky": "^9.1.7",
     "json-schema-to-ts": "^2.0.0",
+    "lint-staged": "^15.4.3",
     "make-fetch-happen": "^14.0.3",
     "minimist": "^1.2.8",
     "prettier": "^3.0.3",
@@ -61,15 +63,19 @@
   "scripts": {
     "start": "fastify start -l info -a 0.0.0.0 build/app.js --options",
     "dev": "fastify start -r ts-node/register -w --ignore-watch test -l info -P src/app.ts --options",
-    "build": "./scripts/build.sh",
+    "build": "rm ./incentives-api.db && sqlite3 incentives-api.db < scripts/import-csvs.sql",
     "lint": "tsc --noEmit && prettier --check . --ignore-path=.prettierignore && eslint .",
     "test": "STATIC_DATE=2025-01-25 dotenv -- tap -- --ts \"test/**/*.test.ts\"",
     "testfilter": "dotenv -- tap -- --ts",
     "update-snapshots": "UPDATE_SNAPSHOTS=1 STATIC_DATE=2025-01-25 dotenv -- tap -- --ts \"test/routes/*.test.ts\"",
-    "check-data-freshness": "tap --timeout=0 scripts/check-data-freshness.ts"
+    "check-data-freshness": "tap --timeout=0 scripts/check-data-freshness.ts",
+    "prepare": "husky"
   },
   "tap": {
     "disable-coverage": true,
     "allow-empty-coverage": true
+  },
+  "lint-staged": {
+    "{scripts,src,test}/**/*.{js,ts,tsx,json,md,css,html}": "prettier --write"
   }
 }
