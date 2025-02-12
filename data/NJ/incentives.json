@@ -205,5 +205,631 @@
     "short_description": {
       "en": "100% rebate, up to $1,500 for cost of electrical upgrades to support a level 2 EV charger."
     }
+  },
+  {
+    "id": "NJ-10",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $100 rebate for an induction stove, when switching from electric."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-11",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750 rebate for a ducted air source heat pump."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-12",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 rebate for a ducted cold climate air source heat pump."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-13",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 10000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% up to $10,000 rebate for a ducted cold climate air source heat pump, when switching from gas or delivered fuels."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-14",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 10000,
+      "maximum": 10000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$10,000 rebate for a ground source heat pump system."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-15",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2000,
+      "unit": "btuh10k"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 rebate per 10k BTUh up to 40% of project cost, for a ground source heat pump when switching from an air source heat pump."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-16",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3500,
+      "unit": "btuh10k"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3,500 rebate per 10k BTUh, up to 40% of project cost, for a ground source heat pump when switching from electric resistance."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-17",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_to_water_heat_pump"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1600,
+      "unit": "btuh10k"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,600 rebate per 10k BTUh for an air to water heat pump."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-18",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750 rebate for a ductless mini split air source heat pump."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-19",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other",
+      "other_heat_pump"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate for integrated controls for heat pumps."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-20",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $400 rebate for an induction stove, when switching from gas."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-21",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $400 rebate for an electric clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-22",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 10000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of project cost, up to $10,000 rebate for a ducted cold climate air source heat pump. $2,000 adder for re-ducting. $2,000 for decommissioning."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-23",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "minimum": 750,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,000/unit rebate for additional units when replacing gas for whole-home projects. Must be part of an integrated controls system."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-24",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of project cost, up to $5,000 rebate for a cold-climate air source heat pump when part of a dual-fuel system."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-25",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "percent",
+      "number": 0.3,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "30% of project cost, up to $2,000 rebate for an air source heat pump when part of a dual-fuel system."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-26",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 5000,
+      "unit": "btuh10k",
+      "minimum": 4000,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$4,000 rebate/10k BTUh up to 50% of project cost for a ground source heat pump for gas users. For delivered fuels customers, $5,000 rebate/10k BTUh."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-27",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,000 rebate for an ENERGY STAR certified heat pump water heater, when fuel switching."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-28",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% up to $5,000 rebate for a ducted cold climate air source heat pump, when installed as part of a dual fuel system."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-29",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of project cost, up to $2,000 rebate for an air source heat pump when part of a dual-fuel system."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-30",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_to_water_heat_pump"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate per unit for an air to water heat pump when switching from gas or delivered fuels."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-31",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 rebate for a ductless mini split air source heat pump when switching from gas or delivered fuels."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-32",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_wiring"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 per circuit for each measure (heat pump, water heater, stove, or EV charger) requiring a 240V circuit."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-33",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for battery electric lawn mowers, $50 rebate for other battery electric outdoor equipment."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-34",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3500,
+      "unit": "ton",
+      "maximum": 3500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3,500/ton rebate for a ducted air source heat pump when switching from gas or delivered fuels."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-35",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 5400,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$5,400/ton rebate for a ground source heat pump when switching from gas or delivered fuels."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-36",
+    "payment_methods": [
+      "performance_rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4750,
+      "minimum": 2000,
+      "maximum": 7500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $7,500 rebate for whole home weatherization, based on modeled improvements in efficiency. Average rebate of $4,750."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
   }
 ]
