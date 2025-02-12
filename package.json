@@ -63,7 +63,7 @@
   "scripts": {
     "start": "fastify start -l info -a 0.0.0.0 build/app.js --options",
     "dev": "fastify start -r ts-node/register -w --ignore-watch test -l info -P src/app.ts --options",
-    "build": "rm ./incentives-api.db && sqlite3 incentives-api.db < scripts/import-csvs.sql",
+    "build": "rm -f ./incentives-api.db && sqlite3 incentives-api.db < scripts/import-csvs.sql",
     "lint": "tsc --noEmit && prettier --check . --ignore-path=.prettierignore && eslint .",
     "test": "STATIC_DATE=2025-01-25 dotenv -- tap -- --ts \"test/**/*.test.ts\"",
     "testfilter": "dotenv -- tap -- --ts",
