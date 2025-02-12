@@ -9,11 +9,11 @@
     "co-colorado-energy-office": {
       "name": "Colorado Energy Office"
     },
-    "co-state-of-colorado": {
-      "name": "State of Colorado"
-    },
     "co-walking-mountains": {
       "name": "Walking Mountains"
+    },
+    "co-state-of-colorado": {
+      "name": "State of Colorado"
     },
     "co-energy-outreach-colorado": {
       "name": "Energy Outreach Colorado"
@@ -184,6 +184,100 @@
       "start_date": "2024-01-01",
       "end_date": "2027-01-01",
       "short_description": "30% discount off the purchase price of qualifying electric lawn equipment from participating retailers."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate",
+        "tax_credit"
+      ],
+      "authority_type": "state",
+      "authority": "co-colorado-energy-office",
+      "program": "Colorado Heat Pump Tax Credits",
+      "program_url": "https://energyoffice.colorado.gov/hptc",
+      "items": [
+        "geothermal_heating_installation"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1500,
+        "maximum": 1500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2024-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "At least $999.90 upfront discount for ENERGY STAR & AHRI certified ground source heat pump system. Available through registered contractors."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate",
+        "tax_credit"
+      ],
+      "authority_type": "state",
+      "authority": "co-colorado-energy-office",
+      "program": "Colorado Heat Pump Tax Credits",
+      "program_url": "https://energyoffice.colorado.gov/hptc",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 500,
+        "maximum": 500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2024-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "At least $166.65 upfront discount for ENERGY STAR & AHRI certified heat pump water heater. Available through registered contractors."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate",
+        "tax_credit"
+      ],
+      "authority_type": "state",
+      "authority": "co-colorado-energy-office",
+      "program": "Colorado Heat Pump Tax Credits",
+      "program_url": "https://energyoffice.colorado.gov/hptc",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 499.95
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2024-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "At least $499.95 discount for ENERGY STAR & AHRI certified air source heat pump. Available through registered contractors."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-xcel-energy",
+      "program": "Home Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/home-rebates",
+      "items": [
+        "energy_audit"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.6,
+        "maximum": 200
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "60% rebate for a Home Energy Audit, up to $200. Can include an infrared, blower door, and standard audit."
     },
     {
       "payment_methods": [
@@ -423,6 +517,72 @@
       "payment_methods": [
         "rebate"
       ],
+      "authority_type": "utility",
+      "authority": "co-xcel-energy",
+      "program": "Home Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/home-rebates",
+      "items": [
+        "wall_insulation"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.3,
+        "maximum": 350
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "30% rebate for wall insulation, up to $350."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-xcel-energy",
+      "program": "Home Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/home-rebates",
+      "items": [
+        "attic_or_roof_insulation"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.3,
+        "maximum": 400
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "30% rebate for attic insulation, up to $400."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-xcel-energy",
+      "program": "Home Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/home-rebates",
+      "items": [
+        "air_sealing"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.3,
+        "maximum": 200
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "30% rebate for air sealing, up to $200."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
       "authority_type": "other",
       "authority": "co-walking-mountains",
       "program": "Walking Mountains Rebates & Incentives",
@@ -435,12 +595,14 @@
       "amount": {
         "type": "percent",
         "number": 0.25,
-        "maximum": 3000
+        "maximum": 1000
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Rebates of up to 25% of project costs for weatherization projects such as air/duct sealing, insulation, and more, capped annually at $3,000."
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "Rebates of up to 25% of project costs for weatherization projects such as air/duct sealing, insulation, and more, capped annually at $1,000."
     },
     {
       "payment_methods": [
@@ -462,7 +624,9 @@
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Rebates of up to 25% of project costs for qualifying cold climate air source heat pumps, capped annually at $3,000."
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "Rebates of up to 25% of project costs for qualifying cold climate air source heat pumps, capped annually at $1,000."
     },
     {
       "payment_methods": [
@@ -478,12 +642,14 @@
       "amount": {
         "type": "percent",
         "number": 0.25,
-        "maximum": 3000
+        "maximum": 1000
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Rebates of up to 25% of project costs for qualifying cold climate air to water heat pumps, capped annually at $3,000."
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "Rebates of up to 25% of project costs for qualifying cold climate air to water heat pumps, capped annually at $1,000."
     },
     {
       "payment_methods": [
@@ -494,17 +660,18 @@
       "program": "Walking Mountains Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
       "items": [
-        "ducted_heat_pump"
+        "ducted_heat_pump",
+        "geothermal_heating_installation"
       ],
       "amount": {
         "type": "percent",
         "number": 0.25,
-        "maximum": 3000
+        "maximum": 1000
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Rebates of up to 25% of project costs for qualifying cold climate ground source heat pumps, capped annually at $3,000."
+      "short_description": "Rebates of up to 25% of project costs for qualifying cold climate ground source heat pumps, capped annually at $1,000."
     },
     {
       "payment_methods": [
@@ -520,12 +687,14 @@
       "amount": {
         "type": "percent",
         "number": 0.25,
-        "maximum": 3000
+        "maximum": 1000
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Rebates of up to 25% of project costs for qualifying ductless heat pumps, capped annually at $3,000."
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "Rebates of up to 25% of project costs for qualifying ductless heat pumps, capped annually at $1,000."
     },
     {
       "payment_methods": [
@@ -541,12 +710,14 @@
       "amount": {
         "type": "percent",
         "number": 0.25,
-        "maximum": 3000
+        "maximum": 1000
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Rebates of up to 25% of project costs for heat pump water heaters, capped annually at $3,000."
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "Rebates of up to 25% of project costs for heat pump water heaters, capped annually at $1,000."
     },
     {
       "payment_methods": [
@@ -562,12 +733,14 @@
       "amount": {
         "type": "percent",
         "number": 0.25,
-        "maximum": 3000
+        "maximum": 1000
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Rebates of up to 25% of project costs for heat pump clothes dryer, capped annually at $3,000."
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "Rebates of up to 25% of project costs for heat pump clothes dryer, capped annually at $1,000."
     },
     {
       "payment_methods": [
@@ -578,17 +751,20 @@
       "program": "Walking Mountains Rebates & Incentives",
       "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
       "items": [
-        "electric_panel"
+        "electric_panel",
+        "electric_wiring"
       ],
       "amount": {
         "type": "percent",
         "number": 0.25,
-        "maximum": 3000
+        "maximum": 1000
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Rebates of up to 25% of project costs for wiring projects related to electrification, capped annually at $3,000."
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "Rebates of up to 25% of project costs for wiring projects related to electrification, capped annually at $1,000."
     },
     {
       "payment_methods": [
@@ -625,12 +801,14 @@
       "amount": {
         "type": "percent",
         "number": 0.25,
-        "maximum": 3000
+        "maximum": 1000
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Rebates of up to 25% of project costs for WiFi-enabled smart thermostats or programmable thermostats, capped annually at $3,000."
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "Rebates of up to 25% of project costs for WiFi-enabled smart thermostats or programmable thermostats, capped annually at $1,000."
     },
     {
       "payment_methods": [
@@ -646,12 +824,14 @@
       "amount": {
         "type": "percent",
         "number": 0.25,
-        "maximum": 3000
+        "maximum": 1000
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Rebates of up to 25% of project costs for induction cooktops and stoves, capped annually at $3,000."
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "Rebates of up to 25% of project costs for induction cooktops and stoves, capped annually at $1,000."
     },
     {
       "payment_methods": [
@@ -666,14 +846,40 @@
       ],
       "amount": {
         "type": "dollars_per_unit",
-        "number": 100,
-        "maximum": 3400,
+        "number": 250,
         "unit": "kilowatt"
       },
       "owner_status": [
         "homeowner"
       ],
       "short_description": "Rebates for solar photovoltaic installation: $250/kW from 0-6 kW, and $100/kW from 6-25 kW."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "other",
+      "authority": "co-walking-mountains",
+      "program": "Walking Mountains Rebates & Incentives",
+      "program_url": "https://www.walkingmountains.org/sustainability-hub/energy-efficiency-programs/rebates-incentives/",
+      "items": [
+        "electric_stove",
+        "other_insulation",
+        "air_sealing",
+        "duct_sealing",
+        "smart_thermostat",
+        "other_heat_pump",
+        "other"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 7500,
+        "maximum": 7500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $7,500 in free home improvements and energy assessment. Includes insulation, air sealing, duct sealing, thermostats, HVAC, appliances, and more."
     },
     {
       "payment_methods": [
@@ -697,52 +903,70 @@
     },
     {
       "payment_methods": [
-        "tax_credit"
+        "rebate"
       ],
-      "authority_type": "state",
-      "authority": "co-state-of-colorado",
-      "program": "Colorado Heat Pump Incentives",
-      "program_url": "https://energysmartcolorado.org/tax-credits-incentives/",
+      "authority_type": "utility",
+      "authority": "co-xcel-energy",
+      "program": "EV Rebate",
+      "program_url": "https://ev.xcelenergy.com/ev-rebate-co",
       "items": [
-        "ducted_heat_pump",
-        "ductless_heat_pump"
+        "electric_wiring"
       ],
       "amount": {
-        "type": "percent",
-        "number": 0.129
+        "type": "dollar_amount",
+        "number": 500,
+        "maximum": 2300
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $500 rebate for installing a 240-volt circuit to support a Level 2 electric vehicle charger."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-xcel-energy",
+      "program": "Home Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/home-rebates",
+      "items": [
+        "smart_thermostat"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 50
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "start_date": "2023-01-01",
-      "short_description": "12.9% discount on the equipment price of heat pumps, through Colorado State tax credit and sales tax exemption."
+      "short_description": "$50 rebate for an ENERGY STAR smart thermostat."
     },
     {
       "payment_methods": [
-        "tax_credit"
+        "rebate"
       ],
-      "authority_type": "state",
-      "authority": "co-state-of-colorado",
-      "program": "Colorado Heat Pump Incentives",
-      "program_url": "https://energysmartcolorado.org/tax-credits-incentives/",
+      "authority_type": "utility",
+      "authority": "co-xcel-energy",
+      "program": "Xcel Energy Heat Pump Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
       "items": [
-        "heat_pump_water_heater"
+        "ducted_heat_pump"
       ],
       "amount": {
-        "type": "percent",
-        "number": 0.129
+        "type": "dollar_amount",
+        "number": 1
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
-      "start_date": "2023-01-01",
-      "short_description": "12.9% discount on the equipment price of heat pump water heaters, through Colorado State tax credit and sales tax exemption."
+      "short_description": "Air Source Heat pump (ASHP) Rebate $1,100 for Electric Only customers"
     },
     {
       "payment_methods": [
-        "tax_credit"
+        "tax_credit",
+        "pos_rebate"
       ],
       "authority_type": "state",
       "authority": "co-colorado-energy-office",
@@ -753,18 +977,19 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 5000
+        "number": 3500
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
       "start_date": "2023-07-01",
-      "short_description": "State tax credit of $5,000 for the purchase or lease of a new EV (max MSRP: $80,000)."
+      "short_description": "State tax credit of $3,500 for the purchase or lease of a new EV (max MSRP: $80,000). Some dealers offer this as an upfront discount."
     },
     {
       "payment_methods": [
-        "tax_credit"
+        "tax_credit",
+        "pos_rebate"
       ],
       "authority_type": "state",
       "authority": "co-colorado-energy-office",
@@ -783,7 +1008,7 @@
       ],
       "start_date": "2024-01-01",
       "end_date": "2029-01-01",
-      "short_description": "Additional state tax credit of $2,500 for Coloradans purchasing or leasing an EV with a max MSRP of $35,000."
+      "short_description": "Bonus state tax credit of $2,500 for Coloradans purchasing or leasing an EV with a MSRP up to $35,000. Some dealers offer this as an upfront discount."
     }
   ]
 }
