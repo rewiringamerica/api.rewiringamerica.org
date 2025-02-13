@@ -1,17 +1,16 @@
 {
   "prerequisites": {
-    "CA-1": {
+    "CA-3": {
       "allOf": [
-        "CA-3"
+        "CA-2"
       ],
-      "description": "Energy Smart Homes Program whole building electrification rebate recipients can receive a bonus rebate for installing a heat pump dryer or electric infrastructure upgrades."
+      "description": "Bonus for if the dryer installed for CA-2 is a heat pump dryer"
     },
-    "CA-2": {
+    "CA-4": {
       "allOf": [
-        "CA-3",
-        "CA-4"
+        "CA-2"
       ],
-      "description": "Energy Smart Homes Program whole building electrification rebate recipients can receive a bonus rebate for installing a heat pump dryer or electric infrastructure upgrades."
+      "description": "Bonus for electric infrastructure to support the CA-2 projects"
     }
   }
 }

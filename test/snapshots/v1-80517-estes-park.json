@@ -3,14 +3,14 @@
   "is_under_150_ami": true,
   "is_over_150_ami": false,
   "authorities": {
-    "co-state-of-colorado": {
-      "name": "State of Colorado"
+    "co-colorado-energy-office": {
+      "name": "Colorado Energy Office"
     },
     "co-platte-river-power-authority": {
       "name": "Platte River Power Authority"
     },
-    "co-colorado-energy-office": {
-      "name": "Colorado Energy Office"
+    "co-state-of-colorado": {
+      "name": "State of Colorado"
     }
   },
   "coverage": {
@@ -24,6 +24,30 @@
   },
   "data_partners": {},
   "incentives": [
+    {
+      "payment_methods": [
+        "pos_rebate",
+        "tax_credit"
+      ],
+      "authority_type": "state",
+      "authority": "co-colorado-energy-office",
+      "program": "Colorado Heat Pump Tax Credits",
+      "program_url": "https://energyoffice.colorado.gov/hptc",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 500,
+        "maximum": 500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2024-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "At least $166.65 upfront discount for ENERGY STAR & AHRI certified heat pump water heater. Available through registered contractors."
+    },
     {
       "payment_methods": [
         "rebate"
@@ -46,28 +70,6 @@
       "start_date": "2025-01-01",
       "end_date": "2025-12-31",
       "short_description": "Up to $600 off a heat pump water heater UEF 3.3. ENERGY STAR certified with CTA-2045 certified communication control."
-    },
-    {
-      "payment_methods": [
-        "tax_credit"
-      ],
-      "authority_type": "state",
-      "authority": "co-state-of-colorado",
-      "program": "Colorado Heat Pump Incentives",
-      "program_url": "https://energysmartcolorado.org/tax-credits-incentives/",
-      "items": [
-        "heat_pump_water_heater"
-      ],
-      "amount": {
-        "type": "percent",
-        "number": 0.129
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2023-01-01",
-      "short_description": "12.9% discount on the equipment price of heat pump water heaters, through Colorado State tax credit and sales tax exemption."
     }
   ]
 }
