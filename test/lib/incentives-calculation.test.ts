@@ -517,8 +517,6 @@ test('correctly sorts incentives', async t => {
 test('correct filtering of county incentives', async t => {
   const incentive: StateIncentive = {
     id: 'CO',
-    start_date: '2023',
-    end_date: '2024',
     payment_methods: [PaymentMethod.AccountCredit],
     items: ['ducted_heat_pump'],
     program: 'ri_hvacAndWaterHeaterIncentives',
@@ -590,8 +588,6 @@ test('correct filtering of county incentives', async t => {
 test('correct filtering of city incentives', async t => {
   const incentive: StateIncentive = {
     id: 'CO',
-    start_date: '2023',
-    end_date: '2024',
     payment_methods: [PaymentMethod.AccountCredit],
     items: ['ducted_heat_pump'],
     program: 'ri_hvacAndWaterHeaterIncentives',
