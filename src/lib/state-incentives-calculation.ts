@@ -17,6 +17,7 @@ import {
 import { AmountType } from '../data/types/amount';
 import { APICoverage } from '../data/types/coverage';
 import { OwnerStatus } from '../data/types/owner-status';
+import { Program } from '../data/types/program';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
 import { AMIAndEVCreditEligibility } from './ami-evcredit-calculation';
 import { lastDayOf } from './dates';
@@ -88,25 +89,32 @@ export function calculateStateIncentivesAndSavings(
   const eligibleIncentives = new Map<string, StateIncentive>();
   const ineligibleIncentives = new Map<string, StateIncentive>();
 
-  for (const item of incentives) {
+  // Separate the state's incentive set into eligible and ineligible ones, based
+  // on criteria that reflect real-life eligibility rules.
+  //
+  // That is, don't yet filter on criteria like authority type, which are purely
+  // of interest to the API, not to real-life rules. (Nobody is categorically
+  // ineligible for all but state-government incentives, for example.)
+  for (const incentive of incentives) {
+    const program = allPrograms[incentive.program];
+    let eligible = true;
+
     if (
-      skipBasedOnRequestParams(
-        item,
+      ineligibleByLocationOrUtility(
+        incentive,
+        program,
+        stateAuthorities,
         request,
         location,
-        stateAuthorities,
-        allPrograms,
       )
     ) {
-      continue;
+      eligible = false;
     }
-
-    let eligible = true;
 
     if (
       location.state === 'MA' &&
       !isEligibleUnderMassSaveRule(
-        allPrograms[item.program],
+        allPrograms[incentive.program],
         request.utility,
         request.gas_utility,
       )
@@ -114,16 +122,16 @@ export function calculateStateIncentivesAndSavings(
       eligible = false;
     }
 
-    if (!item.owner_status.includes(request.owner_status as OwnerStatus)) {
+    if (!incentive.owner_status.includes(request.owner_status as OwnerStatus)) {
       eligible = false;
     }
 
-    if (item.low_income) {
+    if (incentive.low_income) {
       const thresholds =
-        LOW_INCOME_THRESHOLDS_BY_STATE[stateId]?.[item.low_income];
+        LOW_INCOME_THRESHOLDS_BY_STATE[stateId]?.[incentive.low_income];
       if (!thresholds) {
         console.log(
-          `No income thresholds defined for ${item.low_income} in ${stateId}`,
+          `No income thresholds defined for ${incentive.low_income} in ${stateId}`,
         );
         // The incentive is income-qualified but we don't know the thresholds;
         // be conservative and exclude it.
@@ -135,17 +143,17 @@ export function calculateStateIncentivesAndSavings(
       }
     }
 
-    if (item.end_date) {
-      const lastValidDay = lastDayOf(item.end_date);
+    if (incentive.end_date) {
+      const lastValidDay = lastDayOf(incentive.end_date);
       if (getCurrentDate().isAfter(lastValidDay)) {
         eligible = false;
       }
     }
 
     if (eligible) {
-      eligibleIncentives.set(item.id, item);
+      eligibleIncentives.set(incentive.id, incentive);
     } else {
-      ineligibleIncentives.set(item.id, item);
+      ineligibleIncentives.set(incentive.id, incentive);
     }
   }
 
@@ -191,12 +199,26 @@ export function calculateStateIncentivesAndSavings(
     groupedIncentives = getCombinedMaximums(incentiveRelationships);
   }
 
-  const eligibleTransformed = transformItems(eligibleIncentives, true);
-  const ineligibleTransformed = transformItems(ineligibleIncentives, false);
-  const stateIncentives = [...eligibleTransformed, ...ineligibleTransformed];
+  const stateIncentives = [];
+
+  for (const incentive of eligibleIncentives.values()) {
+    const program = allPrograms[incentive.program];
+    const requestItems = request.items;
+    const exclude =
+      (!!request.authority_types &&
+        !request.authority_types.includes(program.authority_type)) ||
+      // Don't include an incentive at all if the query is filtering by item and
+      // this incentive's items don't overlap
+      (!!requestItems &&
+        incentive.items.every(item => !requestItems.includes(item)));
+
+    if (!exclude) {
+      stateIncentives.push({ ...incentive, eligible: true });
+    }
+  }
 
   const savings: APISavings = zeroSavings();
-  eligibleTransformed.forEach(item => {
+  stateIncentives.forEach(item => {
     let amount = item.amount.representative
       ? item.amount.representative
       : item.amount.type === AmountType.DollarAmount
@@ -233,47 +255,13 @@ export function calculateStateIncentivesAndSavings(
   };
 }
 
-function transformItems(
-  incentives: Map<string, StateIncentive>,
-  eligible: boolean,
-) {
-  const transformed = [];
-  for (const item of incentives.values()) {
-    const transformedItem = {
-      ...item,
-      eligible,
-    };
-    transformed.push(transformedItem);
-  }
-  return transformed;
-}
-
-function skipBasedOnRequestParams(
+function ineligibleByLocationOrUtility(
   incentive: StateIncentive,
+  program: Program,
+  stateAuthorities: AuthoritiesByType,
   request: CalculateParams,
   location: ResolvedLocation,
-  stateAuthorities: AuthoritiesByType,
-  allPrograms: Programs,
-) {
-  const program = allPrograms[incentive.program];
-
-  if (
-    request.authority_types &&
-    !request.authority_types.includes(program.authority_type)
-  ) {
-    // Skip all utilities that are not of the requested authority type(s).
-    return true;
-  }
-
-  if (request.items) {
-    const requestItems = request.items;
-    if (incentive.items.every(item => !requestItems.includes(item))) {
-      // Don't include an incentive at all if the query is filtering by item and
-      // this incentive's items don't overlap
-      return true;
-    }
-  }
-
+): boolean {
   if (
     program.authority_type === AuthorityType.Utility &&
     program.authority !== request.utility
