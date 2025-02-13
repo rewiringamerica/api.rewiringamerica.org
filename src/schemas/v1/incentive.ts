@@ -65,6 +65,15 @@ on this program.`,
 from a third party rather than the offering authority. Localized according to \
 the \`language\` request parameter.`,
     },
+    paused: {
+      type: 'boolean',
+      description: `Describes whether the incentive is currently on offer. \
+      This field is independent of the \`start_date\` and \`end_date\` fields, \
+      which relate to the time period when the incentive is available. For \
+      example, this field may be \`true\` if the funding source for an \
+      incentive has run out, even if the incentive is still in the middle of \
+      its availability period.`,
+    },
     items: {
       type: 'array',
       description: `What products or services the incentive can be used on. \
