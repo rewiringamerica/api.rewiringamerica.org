@@ -4,19 +4,7 @@ import {
   ProjectType,
 } from '@rewiringamerica/capital-common';
 import { FromSchema } from 'json-schema-to-ts';
-
-/**
- * Schema for Image.
- */
-export const IMAGE_SCHEMA = {
-  $id: 'Image.schema.json',
-  type: 'object',
-  properties: {
-    src: { type: 'string' },
-  },
-  required: ['src'],
-  additionalProperties: false,
-} as const;
+import { API_IMAGE_SCHEMA } from '../../schemas/v1/image';
 
 /**
  * Schema for EligibleProjectType.
@@ -44,7 +32,7 @@ export const FINANCIAL_AUTHORITY_SCHEMA = {
     description: { type: ['string', 'null'] },
     state: { type: 'string' },
     city: { type: ['string', 'null'] },
-    Image: { $ref: 'Image.schema.json' },
+    Image: { $ref: 'APIImage.schema.json' },
     created_at: { type: ['string', 'null'], format: 'date-time' },
     updated_at: { type: ['string', 'null'], format: 'date-time' },
   },
@@ -114,8 +102,16 @@ export const LOAN_PROGRAMS_SCHEMA = {
 } as const;
 
 /**
+ * Derived FinancialAuthority type.
+ */
+export type FinancialAuthority = FromSchema<
+  typeof FINANCIAL_AUTHORITY_SCHEMA,
+  { references: [typeof API_IMAGE_SCHEMA] }
+>;
+
+/**
  * Derived LoanProgram type.
- * The "references" array resolves the $ref for ELIGIBLE_PROJECT_TYPE_SCHEMA, FINANCIAL_AUTHORITY_SCHEMA, and IMAGE_SCHEMA.
+ * The "references" array resolves the $ref for ELIGIBLE_PROJECT_TYPE_SCHEMA and FINANCIAL_AUTHORITY_SCHEMA
  */
 export type LoanProgram = FromSchema<
   typeof LOAN_PROGRAM_SCHEMA,
@@ -123,7 +119,6 @@ export type LoanProgram = FromSchema<
     references: [
       typeof ELIGIBLE_PROJECT_TYPE_SCHEMA,
       typeof FINANCIAL_AUTHORITY_SCHEMA,
-      typeof IMAGE_SCHEMA,
     ];
   }
 >;

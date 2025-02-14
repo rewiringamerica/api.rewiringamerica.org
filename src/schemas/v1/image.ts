@@ -1,6 +1,7 @@
 import { FromSchema } from 'json-schema-to-ts';
 
 export const API_IMAGE_SCHEMA = {
+  $id: 'APIImage.schema.json',
   type: 'object',
   properties: {
     src: {
