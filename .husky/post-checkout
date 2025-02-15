@@ -1,0 +1,12 @@
+set -e
+
+CHANGED=$(git diff "$1" "$2" --stat -- ./yarn.lock | wc -l)
+if (( CHANGED > 0 )); then
+    echo "📦 yarn.lock changed. Run yarn install to bring your dependencies up to date."
+fi
+
+CHANGED=$(git diff "$1" "$2" --stat -- ./scripts/import-csvs.sql ./scripts/data/*.csv ./scripts/income_limits/data/processed | wc -l)
+if (( CHANGED > 0 )); then
+    echo "Building SQLite database..."
+    yarn build
+fi

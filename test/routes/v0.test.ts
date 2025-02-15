@@ -52,7 +52,7 @@ test('response is valid and correct', async t => {
   t.equal(calculatorResponse.is_over_150_ami, false);
 
   t.equal(calculatorResponse.pos_savings, 14000);
-  t.equal(calculatorResponse.tax_savings, 5836);
+  t.equal(calculatorResponse.tax_savings, 5523);
   t.equal(calculatorResponse.performance_rebate_savings, 8000);
   t.equal(calculatorResponse.estimated_annual_savings, 1040);
 

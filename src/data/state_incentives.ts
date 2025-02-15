@@ -25,6 +25,7 @@ export type StateIncentive = {
   bonus_available?: boolean;
   low_income?: string;
   more_info_url?: LocalizableString;
+  paused?: boolean;
 };
 
 const incentivePropertySchema = {
@@ -61,6 +62,10 @@ const incentivePropertySchema = {
   low_income: { type: 'string', nullable: true },
   more_info_url: {
     $ref: 'LocalizableString',
+  },
+  paused: {
+    type: 'boolean',
+    nullable: true,
   },
 } as const;
 

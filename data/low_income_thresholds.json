@@ -159,23 +159,15 @@
       }
     },
     "co-colorado-energy-office": {
-      "type": "hhsize",
+      "type": "ami-percentage",
       "incentives": [
         "CO-318",
         "CO-319"
       ],
-      "source_url": "https://docs.google.com/spreadsheets/d/1I9wrt5zJ6khmLR3ZeFCKlz5EmNKUusaFYAK4oeKO4wY/edit#gid=0",
+      "source_url": "https://docs.google.com/spreadsheets/d/1I9wrt5zJ6khmLR3ZeFCKlz5EmNKUusaFYAK4oeKO4wY/edit?gid=0#gid=0",
+      "description": "",
       "thresholds": {
-        "1": 48720,
-        "2": 55680,
-        "3": 62640,
-        "4": 69600,
-        "5": 75200,
-        "6": 80800,
-        "7": 86320,
-        "8": 91920,
-        "9": 97520,
-        "10": 103120
+        "percentage": 80
       }
     },
     "co-energy-outreach-colorado": {
@@ -547,18 +539,20 @@
         "CO-513",
         "CO-514",
         "CO-515",
-        "CO-516"
+        "CO-516",
+        "CO-658"
       ],
       "source_url": "https://www.walkingmountains.org/sustainability-hub/low-to-moderate-income-rebate-information/",
+      "description": "",
       "thresholds": {
-        "1": 124350,
-        "2": 142050,
-        "3": 159750,
-        "4": 177450,
-        "5": 191700,
-        "6": 205950,
-        "7": 220050,
-        "8": 234300
+        "1": 136650,
+        "2": 156150,
+        "3": 175650,
+        "4": 195150,
+        "5": 210750,
+        "6": 226500,
+        "7": 241950,
+        "8": 257700
       }
     },
     "co-xcel-energy-ev": {
@@ -1757,7 +1751,43 @@
       }
     }
   },
+  "NC": {
+    "nc-hear-low": {
+      "type": "ami-percentage",
+      "incentives": [],
+      "source_url": "https://energysavernc.org/wp-content/uploads/2025/01/AMI-Limits-by-HH-Size-and-Income-Summary-NC-v.4-1.14.2025.pdf",
+      "description": "NC HEAR Program Low Income",
+      "thresholds": {
+        "percentage": 80
+      }
+    },
+    "nc-hear-medium": {
+      "type": "ami-percentage",
+      "incentives": [],
+      "source_url": "https://energysavernc.org/wp-content/uploads/2025/01/AMI-Limits-by-HH-Size-and-Income-Summary-NC-v.4-1.14.2025.pdf",
+      "description": "NC HEAR program medium",
+      "thresholds": {
+        "percentage": 150
+      }
+    }
+  },
   "NJ": {
+    "nj-400-fpl": {
+      "type": "hhsize",
+      "incentives": [],
+      "source_url": "https://homeenergysavings.atlanticcityelectric.com/residential/energy-assessments/home-weatherization-program/eligibility",
+      "description": "400% of FPL for weatherization programs, updated using 2025 from HHS, not ACE.",
+      "thresholds": {
+        "1": 62600,
+        "2": 84600,
+        "3": 106600,
+        "4": 128600,
+        "5": 150600,
+        "6": 172600,
+        "7": 194600,
+        "8": 216600
+      }
+    },
     "nj-charge-up-plus": {
       "type": "filing-status",
       "incentives": [
@@ -1786,6 +1816,54 @@
           0,
           150000
         ]
+      }
+    },
+    "nj-comfort-partners-low": {
+      "type": "hhsize",
+      "incentives": [],
+      "source_url": "https://www.nj.gov/bpu/assistance/programs/?os=vb&ref=app",
+      "description": "NJ Comfort Partners Program - Low Income",
+      "thresholds": {
+        "1": 39125,
+        "2": 52875,
+        "3": 66625,
+        "4": 80375,
+        "5": 94125,
+        "6": 107875,
+        "7": 121625,
+        "8": 135375
+      }
+    },
+    "nj-liheap-low": {
+      "type": "hhsize",
+      "incentives": [],
+      "source_url": "https://www.nj.gov/bpu/assistance/programs/?os=vb&ref=app",
+      "description": "NJ LIHEAP Threshold - Low Income",
+      "thresholds": {
+        "1": 47896,
+        "2": 62633,
+        "3": 77370,
+        "4": 92108,
+        "5": 106845,
+        "6": 121582,
+        "7": 124345,
+        "8": 127109
+      }
+    },
+    "nj-page-moderate": {
+      "type": "hhsize",
+      "incentives": [],
+      "source_url": "https://www.nj.gov/bpu/assistance/programs/?os=vb&ref=app",
+      "description": "NJ PAGE Program - Moderate Income",
+      "thresholds": {
+        "1": 79827,
+        "2": 104390,
+        "3": 128952,
+        "4": 153514,
+        "5": 178076,
+        "6": 202638,
+        "7": 207244,
+        "8": 211849
       }
     }
   },
