@@ -1,82 +1,110 @@
 import { GEO_GROUPS_BY_STATE } from '../data/geo_groups';
-import { Program } from '../data/types/program';
+import { Programs } from '../data/programs';
+import { StateIncentive } from '../data/state_incentives';
+import { Item } from '../data/types/items';
 
-export const EXCEPTION_ELECTRIC_UTILITIES: string[] = [
+// Authorities that let you claim their incentives along with Mass Save's.
+// These may be of any authority_type.
+export const EXCEPTION_MLPS: string[] = [
   'ma-braintree-electric-light-department',
   'ma-town-of-littleton',
   'ma-town-of-mansfield',
-  // West Boylston is also an exception, but not in authorities.json yet
+  'ma-west-boylston-mlp',
 ];
+
+export const MASS_SAVE_AUTHORITY = 'ma-massSave';
+export const MASS_SAVE_UTILITIES =
+  GEO_GROUPS_BY_STATE['MA']['ma-mass-save'].utilities!;
+export const MASS_SAVE_GAS_UTILITIES =
+  GEO_GROUPS_BY_STATE['MA']['ma-mass-save'].gas_utilities!;
 
 /**
  * Mass Save is a consortium of electric and gas utilities; their member
- * utilities serve the vast majority of people in MA. For a user in MA to be
- * eligible for an incentive, ANY of the following must be true:
+ * utilities serve the vast majority of people in MA. They offer some incentives
+ * as a consortium.
  *
- * 1. It's not a utility incentive at all
+ * In towns that have municipally-owned utilities (MLPs), some people are
+ * customers of both a Mass Save utility and the MLP (one for electric and the
+ * other for gas). In such cases, most of the MLPs don't want to offer an
+ * incentive to someone who could get an incentive for the same thing from Mass
+ * Save instead.
  *
- * 2. It belongs to Mass Save, and the user is a customer of a Mass Save member
- *    utility (for EITHER electricity or gas)
+ * This function implements that rule: an MLP incentive gets moved from the
+ * eligible set to the ineligible set if all of its `items` are covered by the
+ * totality of Mass Save incentives in the eligible set.
  *
- * 3. It belongs to a non-Mass Save utility, and the user is NOT a customer of
- *    any Mass Save member utility
+ * There are some MLPs that don't impose this rule; you can claim both their
+ * incentive and Mass Save's incentive for the same thing, if you're a customer
+ * of both. Those are the `EXCEPTION_UTILITIES` above.
  *
- * 4. It belongs to a non-Mass Save utility that is one of the few exceptions to
- *    point 3.
- *
- * The gist is that any customer of a Mass Save utility can access Mass Save
- * incentives. Small non-Mass Save utilities only want to let their customers
- * access their incentives if they don't also have access to Mass Save.
- *
- * This check is partially redundant with the standard geo group check, which is
- * upstream of this one. The case where the request does not have a Mass Save
- * utility, and the incentive is a Mass Save one, will not reach here; the geo
- * group check will filter it out. However, this function still returns the
- * correct result for that case.
+ * In theory, we don't need bespoke logic for this rule at all; we could set up
+ * exclusion ("supersedes" in HERO) relationships that would be equivalent. We
+ * may do so eventually, but this is easier for now.
  */
-export function isEligibleUnderMassSaveRule(
-  program: Program,
-  requestUtility: string | undefined,
-  requestGasUtility: string | undefined,
-): boolean {
-  // This assumes that we don't have incentive records that are associated
-  // directly with any of the Mass Save member utilities.
-  const isMassSaveIncentive =
-    program.authority_type === 'other' && program.authority === 'ma-massSave';
+export function applyMassSaveRule(
+  eligibleIncentives: Map<string, StateIncentive>,
+  ineligibleIncentives: Map<string, StateIncentive>,
+  allPrograms: Programs,
+) {
+  // "MLP" is "municipal light plant": Massachusetts' term for municipal
+  // electric utilities
+  const isFromNonExceptionalMLP = (incentive: StateIncentive) => {
+    const program = allPrograms[incentive.program];
+    return (
+      !!program.authority &&
+      // It's not one of the authorities that lets you double-dip...
+      !EXCEPTION_MLPS.includes(program.authority) &&
+      // ...and either it's from an electric utility that's not in Mass Save...
+      ((program.authority_type === 'utility' &&
+        !MASS_SAVE_UTILITIES.includes(program.authority)) ||
+        // ...or it's from a gas utility that's not in Mass Save (we don't
+        // expect to have any programs like this, because there are no non-Mass
+        // Save utilities that are gas only, but just in case)...
+        (program.authority_type === 'gas_utility' &&
+          !MASS_SAVE_GAS_UTILITIES.includes(program.authority)) ||
+        // ...or it's from an "other" authority that isn't Mass Save itself.
+        // (There are a couple of MLPs represented like this because they're
+        // both electric and gas, and you can get their incentives if you're a
+        // customer of either side.)
+        (program.authority_type === 'other' &&
+          program.authority !== MASS_SAVE_AUTHORITY))
+    );
+  };
 
-  // Point 1
-  if (
-    !isMassSaveIncentive &&
-    program.authority_type !== 'utility' &&
-    program.authority_type !== 'gas_utility'
-  ) {
-    return true;
+  const isMassSaveIncentive = (incentive: StateIncentive) => {
+    const program = allPrograms[incentive.program];
+    return (
+      program.authority_type === 'other' &&
+      program.authority === MASS_SAVE_AUTHORITY
+    );
+  };
+
+  // Collect all the items that Mass Save covers
+  const massSaveItems = new Set<Item>();
+  for (const incentive of eligibleIncentives.values()) {
+    if (isMassSaveIncentive(incentive)) {
+      incentive.items.forEach(item => massSaveItems.add(item));
+    }
   }
 
-  const group = GEO_GROUPS_BY_STATE['MA']['ma-mass-save'];
-  const isDefinitelyMassSaveCustomer =
-    (requestUtility !== undefined &&
-      group.utilities!.includes(requestUtility)) ||
-    (requestGasUtility !== undefined &&
-      group.gas_utilities!.includes(requestGasUtility));
+  // This rule can only cause incentives to move from eligible to ineligible.
+  // Keep the set of IDs to move over, then actually move them later, so we're
+  // not modifying a Map while iterating over it.
+  const incentivesToRemove = new Set<string>();
 
-  // Be conservative and assume that the user may be a Mass Save customer if
-  // either their electric utility or gas utility is unknown.
-  const mayBeMassSaveCustomer =
-    isDefinitelyMassSaveCustomer ||
-    requestUtility === undefined ||
-    requestGasUtility === undefined;
+  for (const [id, incentive] of eligibleIncentives.entries()) {
+    if (
+      isFromNonExceptionalMLP(incentive) &&
+      incentive.items.every(item => massSaveItems.has(item))
+    ) {
+      incentivesToRemove.add(id);
+    }
+  }
 
-  const isCustomerOfException =
-    requestUtility !== undefined &&
-    EXCEPTION_ELECTRIC_UTILITIES.includes(requestUtility);
-
-  return (
-    // Point 2
-    (isMassSaveIncentive && isDefinitelyMassSaveCustomer) ||
-    // Point 3
-    (!isMassSaveIncentive && !mayBeMassSaveCustomer) ||
-    // Point 4
-    (!isMassSaveIncentive && isCustomerOfException)
-  );
+  // Move ineligible incentives over.
+  for (const id of incentivesToRemove) {
+    const incentive = eligibleIncentives.get(id)!;
+    eligibleIncentives.delete(id);
+    ineligibleIncentives.set(id, incentive);
+  }
 }

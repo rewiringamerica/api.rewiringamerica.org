@@ -34,7 +34,7 @@ import {
 import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
 import { ResolvedLocation } from './location';
 import { isLowIncome } from './low-income';
-import { isEligibleUnderMassSaveRule } from './mass-save';
+import { applyMassSaveRule } from './mass-save';
 import { isStateIncluded } from './states';
 import { estimateStateTaxAmount } from './tax-brackets';
 
@@ -111,17 +111,6 @@ export function calculateStateIncentivesAndSavings(
       eligible = false;
     }
 
-    if (
-      location.state === 'MA' &&
-      !isEligibleUnderMassSaveRule(
-        allPrograms[incentive.program],
-        request.utility,
-        request.gas_utility,
-      )
-    ) {
-      eligible = false;
-    }
-
     if (!incentive.owner_status.includes(request.owner_status as OwnerStatus)) {
       eligible = false;
     }
@@ -155,6 +144,12 @@ export function calculateStateIncentivesAndSavings(
     } else {
       ineligibleIncentives.set(incentive.id, incentive);
     }
+  }
+
+  // The Mass Save rule is essentially a bespoke set of exclusion relationships.
+  // Apply those here, just before general relationship solving.
+  if (location.state === 'MA') {
+    applyMassSaveRule(eligibleIncentives, ineligibleIncentives, allPrograms);
   }
 
   // We'll create a map from incentive ID to an object storing the remaining
