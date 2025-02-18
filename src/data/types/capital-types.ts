@@ -32,7 +32,7 @@ export const FINANCIAL_AUTHORITY_SCHEMA = {
     description: { type: ['string', 'null'] },
     state: { type: 'string' },
     city: { type: ['string', 'null'] },
-    Image: { $ref: 'APIImage.schema.json' },
+    Image: API_IMAGE_SCHEMA,
     created_at: { type: ['string', 'null'], format: 'date-time' },
     updated_at: { type: ['string', 'null'], format: 'date-time' },
   },
@@ -48,7 +48,7 @@ export const LOAN_PROGRAM_SCHEMA = {
   type: 'object',
   properties: {
     id: { type: 'number' },
-    loan_program_key: { type: ['string', 'null'] }, // TODO: remove the null option when this field is required
+    loan_program_key: { type: 'string' },
     name: { type: 'string' },
     description: { type: 'string' },
     description_langs: {
@@ -100,14 +100,6 @@ export const LOAN_PROGRAMS_SCHEMA = {
   },
   additionalProperties: false,
 } as const;
-
-/**
- * Derived FinancialAuthority type.
- */
-export type FinancialAuthority = FromSchema<
-  typeof FINANCIAL_AUTHORITY_SCHEMA,
-  { references: [typeof API_IMAGE_SCHEMA] }
->;
 
 /**
  * Derived LoanProgram type.

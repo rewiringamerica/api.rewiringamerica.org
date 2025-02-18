@@ -1,8 +1,9 @@
-import {
-  LoanProgramStatus,
-  ProjectType,
-} from '@rewiringamerica/capital-common';
+import { LoanProgramStatus } from '@rewiringamerica/capital-common';
 import { FromSchema } from 'json-schema-to-ts';
+import {
+  ELIGIBLE_PROJECT_TYPE_SCHEMA,
+  FINANCIAL_AUTHORITY_SCHEMA,
+} from '../../data/types/capital-types';
 import { STATES_AND_TERRITORIES } from '../../data/types/states';
 
 const STATES = [...STATES_AND_TERRITORIES, 'NT'];
@@ -20,31 +21,37 @@ export const API_LOAN_PROGRAMS_RESPONSE_SCHEMA = {
       additionalProperties: {
         type: 'object',
         properties: {
+          loan_program_key: {
+            type: 'string',
+            description: 'Unique key for the loan program within a State',
+          },
           name: {
             type: 'string',
             description: 'Name of the loan program',
           },
+          description: { type: 'string' },
+          description_langs: {
+            type: ['object', 'null'],
+            patternProperties: {
+              '^[a-z]{2}$': { type: 'string' },
+            },
+            additionalProperties: false,
+          },
           website_url: {
             type: 'string',
             description: 'URL for loan program details',
+            format: 'uri',
           },
           status: {
             type: 'string',
             description: 'Current status of the loan program',
             enum: Object.values(LoanProgramStatus),
           },
-          financial_authority: {
-            type: 'string',
-            description:
-              'Identifier for the financial authority offering this loan program',
-          },
+          financial_authority: FINANCIAL_AUTHORITY_SCHEMA,
           eligible_project_types: {
             type: 'array',
             description: 'List of eligible project types',
-            items: {
-              type: 'string',
-              enum: Object.values(ProjectType),
-            },
+            items: ELIGIBLE_PROJECT_TYPE_SCHEMA,
           },
           state: {
             type: 'string',
@@ -55,13 +62,22 @@ export const API_LOAN_PROGRAMS_RESPONSE_SCHEMA = {
             type: 'boolean',
             description: 'Indicates if the loan program is national',
           },
+          metadata: { type: 'object' },
+          created_at: { type: 'string', format: 'date-time' },
+          updated_at: { type: 'string', format: 'date-time' },
         },
         required: [
+          'loan_program_key',
           'name',
+          'description',
           'website_url',
+          'status',
           'financial_authority',
           'eligible_project_types',
           'is_national',
+          'metadata',
+          'created_at',
+          'updated_at',
         ],
         // Conditional validations:
         // - If is_national is true, state must equal "NT"
