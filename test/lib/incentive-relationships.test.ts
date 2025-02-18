@@ -107,16 +107,11 @@ test('test incentive relationship logic', async t => {
     AMIS,
   );
   t.ok(data);
-  t.equal(data.stateIncentives.length, 6);
   // Check that the user is only eligible for A, B, and F.
-  for (const incentive of data.stateIncentives) {
-    if (['A', 'B', 'F'].includes(incentive.id)) {
-      t.equal(incentive.eligible, true);
-    }
-    if (['C', 'D', 'E'].includes(incentive.id)) {
-      t.equal(incentive.eligible, false);
-    }
-  }
+  t.strictSame(
+    data.stateIncentives.map(i => i.id),
+    ['A', 'B', 'F'],
+  );
 });
 
 // This user is a renter. Based on this, they are eligible for incentives
@@ -146,17 +141,12 @@ test('test more complex incentive relationship logic', async t => {
     AMIS,
   );
   t.ok(data);
-  t.equal(data.stateIncentives.length, 6);
-  t.equal(data.savings.account_credit, 100);
   // Check that the user is only eligible for E.
-  for (const incentive of data.stateIncentives) {
-    if (['E'].includes(incentive.id)) {
-      t.equal(incentive.eligible, true);
-    }
-    if (['A', 'B', 'C', 'D', 'F'].includes(incentive.id)) {
-      t.equal(incentive.eligible, false);
-    }
-  }
+  t.strictSame(
+    data.stateIncentives.map(i => i.id),
+    ['E'],
+  );
+  t.equal(data.savings.account_credit, 100);
 });
 
 // This user is a renter. Based on this, they are eligible for incentives
@@ -188,17 +178,12 @@ test('test incentive relationship and combined max value logic', async t => {
     AMIS,
   );
   t.ok(data);
-  t.equal(data.stateIncentives.length, 6);
+  t.strictSame(
+    data.stateIncentives.map(i => i.id),
+    ['E', 'F', 'B'],
+  );
   // There is a combined max value of $200 for A, B, C, D, E, and F.
   t.equal(data.savings.account_credit, 200);
-  for (const incentive of data.stateIncentives) {
-    if (['B', 'E', 'F'].includes(incentive.id)) {
-      t.equal(incentive.eligible, true);
-    }
-    if (['A', 'C', 'D'].includes(incentive.id)) {
-      t.equal(incentive.eligible, false);
-    }
-  }
 });
 
 // Same as above except for income.
@@ -233,17 +218,12 @@ test('test incentive relationship and permanent ineligibility criteria', async t
   );
 
   t.ok(data);
-  t.equal(data.stateIncentives.length, 6);
+  t.strictSame(
+    data.stateIncentives.map(i => i.id),
+    ['E', 'F'],
+  );
   // There is a combined max value of $200 for A, B, C, D, E, and F.
   t.equal(data.savings.account_credit, 200);
-  for (const incentive of data.stateIncentives) {
-    if (['E', 'F'].includes(incentive.id)) {
-      t.equal(incentive.eligible, true);
-    }
-    if (['A', 'B', 'C', 'D'].includes(incentive.id)) {
-      t.equal(incentive.eligible, false);
-    }
-  }
 });
 
 // This user is a renter. Based on this, they are eligible for incentives
