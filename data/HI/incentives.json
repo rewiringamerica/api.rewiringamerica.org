@@ -1,0 +1,171 @@
+[
+  {
+    "id": "HI-1",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "hi_kauaiIslandUtilityCooperative_kauaiIslandAppliancePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an ENERGY STAR heat pump water heater."
+    }
+  },
+  {
+    "id": "HI-2",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "hi_kauaiIslandUtilityCooperative_kauaiIslandAppliancePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an electric clothes dryer."
+    }
+  },
+  {
+    "id": "HI-3",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "hi_kauaiIslandUtilityCooperative_kauaiIslandCoolingAndVentilationRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "minimum": 250,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $350 rebate for a mini split air source heat pump with a SEER of 18 or higher."
+    }
+  },
+  {
+    "id": "HI-4",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "hi_kauaiIslandUtilityCooperative_kauaiIslandAppliancePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate for a level 2 electric vehicle charger."
+    }
+  },
+  {
+    "id": "HI-5",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "hi_hawaiianElectric_hawai'IEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,250 instant rebate for a central air conditioner retrofit."
+    }
+  },
+  {
+    "id": "HI-6",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "hi_hawaiianElectric_hawai'IEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 450,
+      "minimum": 300,
+      "maximum": 450
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $450 for a mini-split air source heat pump, depending on capacity and efficiency rating."
+    }
+  },
+  {
+    "id": "HI-7",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "whole_house_fan"
+    ],
+    "program": "hi_hawaiianElectric_hawai'IEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for a whole house fan."
+    }
+  },
+  {
+    "id": "HI-8",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "efficiency_rebates",
+      "other_weatherization"
+    ],
+    "program": "hi_hawaiiOfficeOfCommunityServices_hawai'IWeatherizationAssistanceProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free weatherization services for income-qualified residents."
+    },
+    "low_income": "hi-200-fpl"
+  }
+]

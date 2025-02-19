@@ -63,7 +63,8 @@
         "CO-577",
         "CO-579",
         "CO-581",
-        "CO-583"
+        "CO-583",
+        "CO-714"
       ],
       "source_url": "https://www.aspencore.org/residential-rebates",
       "description": "150% AMI threshold to qualify as a \"Community Priority Participant\" for the Aspen Community Office for Resource Efficiency's Residential Rebates Program.",
@@ -76,7 +77,8 @@
       "incentives": [
         "CO-24",
         "CO-25",
-        "CO-26"
+        "CO-26",
+        "CO-715"
       ],
       "source_url": "https://www.blackhillsenergy.com/sites/blackhillsenergy.com/files/2023%20COE%20Income%20Qualified%20EV%20Residential%20Rebate%20Form.pdf",
       "thresholds": {
@@ -503,6 +505,17 @@
         "6": 172650,
         "7": 184650,
         "8": 196500
+      }
+    },
+    "co-holy-cross-150ami-threshold": {
+      "type": "ami-percentage",
+      "incentives": [
+        "CO-695"
+      ],
+      "source_url": "",
+      "description": "Income-qualified rebates available for households falling under 150% AMI.",
+      "thresholds": {
+        "percentage": 150
       }
     },
     "co-sangre-de-cristo": {
@@ -1362,6 +1375,26 @@
       }
     }
   },
+  "HI": {
+    "hi-200-fpl": {
+      "type": "hhsize",
+      "incentives": [
+        "HI-8"
+      ],
+      "source_url": "https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines",
+      "description": "Hawaii 200% FPL for WAP eligibility",
+      "thresholds": {
+        "1": 31300,
+        "2": 42300,
+        "3": 53300,
+        "4": 64300,
+        "5": 75300,
+        "6": 86300,
+        "7": 97300,
+        "8": 108330
+      }
+    }
+  },
   "IL": {
     "il-comEd-ev-charger": {
       "type": "hhsize",
@@ -1748,6 +1781,28 @@
       "description": "150% AMI for MN",
       "thresholds": {
         "percentage": 150
+      }
+    }
+  },
+  "MO": {
+    "mo-200-fpl": {
+      "type": "hhsize",
+      "incentives": [
+        "MO-1",
+        "MO-9",
+        "MO-14"
+      ],
+      "source_url": "https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines",
+      "description": "MO 200% of FPL for eligibility in WAP and Community Savers (Amaren) 2025",
+      "thresholds": {
+        "1": 31300,
+        "2": 42300,
+        "3": 53300,
+        "4": 64300,
+        "5": 75300,
+        "6": 86300,
+        "7": 97300,
+        "8": 108300
       }
     }
   },
@@ -3205,6 +3260,26 @@
       "description": "80% AMI threshold to qualify for assistance programs through Austin Energy.",
       "thresholds": {
         "percentage": 80
+      }
+    }
+  },
+  "UT": {
+    "ut-200-fpl": {
+      "type": "hhsize",
+      "incentives": [
+        "UT-11"
+      ],
+      "source_url": "https://aspe.hhs.gov/sites/default/files/documents/7240229f28375f54435c5b83a3764cd1/detailed-guidelines-2024.pdf",
+      "description": "Utah 200% of FPL for WAP",
+      "thresholds": {
+        "1": 30120,
+        "2": 40880,
+        "3": 51640,
+        "4": 62400,
+        "5": 73160,
+        "6": 83920,
+        "7": 94680,
+        "8": 105440
       }
     }
   },

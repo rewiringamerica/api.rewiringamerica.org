@@ -16,7 +16,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Air source heat pump (ASHP) $1,100 for Electric Only customers"
+      "en": " $1,100 rebate for air source heat pump (ASHP) for electric only customers."
     }
   },
   {
@@ -36,7 +36,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate of $1500 for Cold Climate Air Source Heat Pump (electric only customers)"
+      "en": "$1,500 rebate for cold climate air source heat pump (electric only customers)."
     }
   },
   {
@@ -56,7 +56,215 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate of $2,000 for Cold Climate Air Source Heat Pump (electric/natural gas only customers)"
+      "en": " $2,000 rebate for cold climate air source heat pump (electric/natural gas only customers)."
+    }
+  },
+  {
+    "id": "MN-4",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_xcelEnergy_xcelEnergyRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,600 rebate for air source heat pump (electric/natural gas or natural gas only customers)."
+    }
+  },
+  {
+    "id": "MN-5",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_rochesterPublicUtilities_conserveAndSave™Rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate for a ducted air source heat pump that meets cold climate specifications."
+    }
+  },
+  {
+    "id": "MN-6",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_xcelEnergy_xcelEnergyRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump water heater."
+    }
+  },
+  {
+    "id": "MN-7",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_xcelEnergy_xcelEnergyRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,600 rebate for an air source heat pump."
+    }
+  },
+  {
+    "id": "MN-8",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_xcelEnergy_xcelEnergyRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 rebate for cold climate air source heat pump."
+    }
+  },
+  {
+    "id": "MN-9",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_rochesterPublicUtilities_conserveAndSave™Rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "minimum": 900,
+      "maximum": 2200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,200 rebate for a ductless air source heat pump if existing heating system is electric. Maximum rebate not to exceed 50% of equipment cost."
+    }
+  },
+  {
+    "id": "MN-10",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "mn_xcelEnergy_xcelEnergyRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,500 rebate for electric panel upgrades."
+    }
+  },
+  {
+    "id": "MN-11",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_rochesterPublicUtilities_conserveAndSave™Rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "minimum": 125,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate for an air source heat pump if existing system is an air source heat pump. Maximum rebate not to exceed 50% of equipment cost."
+    }
+  },
+  {
+    "id": "MN-12",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_rochesterPublicUtilities_conserveAndSave™Rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "minimum": 100,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $200 rebate for an air source heat pump if the existing heating system/fuel is natural gas. Maximum rebate not to exceed 50% of equipment cost."
+    }
+  },
+  {
+    "id": "MN-13",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_rochesterPublicUtilities_conserveAndSave™Rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "minimum": 200,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $700 rebate for an air source heat pump if existing system is a through-the-wall heat pump. Maximum rebate not to exceed 50% of equipment cost. "
     }
   }
 ]

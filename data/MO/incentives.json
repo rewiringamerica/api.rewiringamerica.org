@@ -1,0 +1,326 @@
+[
+  {
+    "id": "MO-1",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "efficiency_rebates",
+      "air_sealing",
+      "basement_insulation",
+      "central_air_conditioner",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "other_insulation",
+      "other_weatherization"
+    ],
+    "program": "mo_amerenMissouri_amerenMissouriEfficiencyPrograms",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "No cost insulation, air sealing, and heating/cooling installation for income-qualified residents. Tenants must work with their landlord."
+    },
+    "low_income": "mo-200-fpl"
+  },
+  {
+    "id": "MO-2",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "electric_stove",
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer",
+      "non_heat_pump_water_heater",
+      "heat_pump_water_heater",
+      "other_heat_pump",
+      "central_air_conditioner",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mo_missouriDepartmentOfRevenue_showMeGreenSalesTaxHoliday",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 63.37
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Sales tax holiday from April 19th-April 25th each year for new ENERGY STAR certified appliances, value of up to $1,500 per appliance."
+    },
+    "start_date": "2025-04-19",
+    "end_date": "2025-04-25"
+  },
+  {
+    "id": "MO-3",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater",
+      "heat_pump_water_heater"
+    ],
+    "program": "mo_blackRiverElectricCooperative_bRECRebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "minimum": 50,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $100 rebate for an ENERGY STAR certified electric water heater, depending on efficiency rating and whether a gas appliance is replaced."
+    }
+  },
+  {
+    "id": "MO-4",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_blackRiverElectricCooperative_bRECRebatePrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750/ton rebate for a ground source heat pump."
+    }
+  },
+  {
+    "id": "MO-5",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mo_intercountyElectricCooperativeAssociation_intercountyRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate not to exceed 50% of total cost for a heat pump water heater. Limit 2 per address."
+    },
+    "start_date": "2025-07-01"
+  },
+  {
+    "id": "MO-6",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mo_intercountyElectricCooperativeAssociation_intercountyRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate not to exceed 50% of total cost for a heat pump water heater. Limit 2 per address."
+    },
+    "end_date": "2025-06-30"
+  },
+  {
+    "id": "MO-7",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mo_intercountyElectricCooperativeAssociation_intercountyRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 150,
+      "unit": "ton",
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150/ton rebate for ENERGY STAR rated air source heat pumps."
+    }
+  },
+  {
+    "id": "MO-8",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_intercountyElectricCooperativeAssociation_intercountyRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 7500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for ground source heat pumps."
+    }
+  },
+  {
+    "id": "MO-9",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "efficiency_rebates",
+      "other_weatherization"
+    ],
+    "program": "mo_evergyFormerlyKcpandl_evergyIncomeEligibleWeatherization",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free in home weatherization upgrades for income-qualified residents."
+    },
+    "low_income": "mo-200-fpl"
+  },
+  {
+    "id": "MO-10",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "mo_evergyFormerlyKcpandl_evergyResidentialDiscounts",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for installation of a level 2 electric vehicle charger."
+    }
+  },
+  {
+    "id": "MO-11",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "mo_evergyFormerlyKcpandl_evergyResidentialDiscounts",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $150 upfront rebate for a smart thermostat."
+    }
+  },
+  {
+    "id": "MO-12",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
+    "program": "mo_intercountyElectricCooperativeAssociation_intercountyRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.2,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "20% of project cost for attic insulation, up to $250 rebate. Must be an R-36 rating or higher."
+    }
+  },
+  {
+    "id": "MO-13",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "mo_intercountyElectricCooperativeAssociation_intercountyRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of cost up to $50 rebate for a smart thermostat."
+    }
+  },
+  {
+    "id": "MO-14",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "efficiency_rebates",
+      "other_weatherization"
+    ],
+    "program": "mo_missouriDepartmentOfNaturalResources_missouriWeatherizationAssistanceProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home efficiency audit and weatherization services for income-qualified residents."
+    },
+    "low_income": "mo-200-fpl"
+  }
+]

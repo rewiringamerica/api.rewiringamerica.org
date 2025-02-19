@@ -83,5 +83,379 @@
     "short_description": {
       "en": "$75 rebate for an ENERGY STAR certified smart thermostat in electrically heated/cooled homes."
     }
+  },
+  {
+    "id": "UT-5",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_sealing"
+    ],
+    "program": "ut_rockyMountainPower_wattSmartHomes",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "minimum": 100,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400 rebate for qualifying duct sealing and duct insulation."
+    }
+  },
+  {
+    "id": "UT-6",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ut_rockyMountainPower_wattSmartHomes",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$150 rebate for heat pump clothes dryers."
+    }
+  },
+  {
+    "id": "UT-7",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ut_rockyMountainPower_wattSmartHomes",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350 rebate for a qualifying heat pump water heater."
+    }
+  },
+  {
+    "id": "UT-8",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing"
+    ],
+    "program": "ut_rockyMountainPower_wattSmartHomes",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.1,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$0.10/sq ft for air sealing in electrically heated homes (80%). Pre and post home air leakage must be measured to qualify for rebate."
+    }
+  },
+  {
+    "id": "UT-9",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "wall_insulation",
+      "floor_insulation"
+    ],
+    "program": "ut_rockyMountainPower_wattSmartHomes",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.65,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $0.65 /sq. ft rebate for insulation, depending on home heating/cooling type and location of insulation (attic, wall, or floor)."
+    }
+  },
+  {
+    "id": "UT-10",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "ut_rockyMountainPower_wattSmartHomes",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $3.00/sq ft rebate for new windows, depending on U-factor."
+    }
+  },
+  {
+    "id": "UT-11",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "efficiency_rebates",
+      "energy_audit",
+      "floor_insulation",
+      "other_insulation",
+      "other_weatherization",
+      "wall_insulation"
+    ],
+    "program": "ut_utahWorkforceServiceHousingAndCommunityDevelopment_utahWeatherizationAssistancePrograms",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free weatherization services for low-income individuals."
+    },
+    "low_income": "ut-200-fpl"
+  },
+  {
+    "id": "UT-12",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ut_dixiepower_dixiePowerRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 200,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200/ton rebate for an air source heat pump. 2 ton minimum."
+    }
+  },
+  {
+    "id": "UT-13",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ut_dixiepower_dixiePowerRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 200,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200/ton rebate for a ground source heat pump. "
+    }
+  },
+  {
+    "id": "UT-14",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "ut_dixiepower_dixiePowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1475
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,475 rebate for 400 Amp services."
+    }
+  },
+  {
+    "id": "UT-15",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ut_dixiepower_dixiePowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 rebate for a smart thermostat, maximum 2 per household."
+    }
+  },
+  {
+    "id": "UT-16",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ut_garkaneEnergyCooperative_garkaneRebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "minimum": 50,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400/ton rebate for a qualifying air source heat pump."
+    }
+  },
+  {
+    "id": "UT-17",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ut_garkaneEnergyCooperative_garkaneRebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "minimum": 50,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400/ton rebate for a qualifying ground source heat pump."
+    }
+  },
+  {
+    "id": "UT-18",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ut_garkaneEnergyCooperative_garkaneRebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350 rebate for a qualified energy efficient water heater."
+    }
+  },
+  {
+    "id": "UT-19",
+    "eligible_geo_group": "ut-uamps-home-energy",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater",
+      "non_heat_pump_water_heater"
+    ],
+    "program": "ut_utahAssociatedMunicipalPowerSystemsUamps_uAMPSHomeEnergySavingsProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for qualifying models of electric water heaters."
+    }
+  },
+  {
+    "id": "UT-20",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "ut_priceCityUtilities_priceCityUAMPSRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1300,
+      "minimum": 400,
+      "maximum": 1300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,300 rebate for a ductless air source heat pump."
+    }
+  },
+  {
+    "id": "UT-21",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ut_priceCityUtilities_priceCityUAMPSRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "minimum": 200,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400 rebate for a ducted air source heat pump."
+    }
   }
 ]

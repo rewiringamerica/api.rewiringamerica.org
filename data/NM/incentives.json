@@ -1197,7 +1197,8 @@
     "program": "nm_centralNewMexicoElectricCooperative_cNMECMemberRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 90
+      "number": 90,
+      "maximum": 90
     },
     "owner_status": [
       "homeowner"
@@ -1395,7 +1396,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 rebate for switching to induction cooktop from gas.  $100 rebate to switch from electric stove. Cooktop must be at least 30\" wide."
+      "en": "$350 rebate for switching to induction cooktop/range from gas or propane or install in new construction.  Cooktop must be at least 30\" wide."
     }
   },
   {
@@ -1626,7 +1627,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 rebate for induction cooktop when replacing gas or propane. $100 rebate for switching from electric. Cooktop minimum width of 30 inches."
+      "en": "$350 rebate for induction cooktop when replacing gas or propane. Cooktop minimum width of 30 inches."
     }
   },
   {
@@ -1711,7 +1712,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 rebate for a new induction cooktop (minimum 30\" width) when replacing gas. $100 rebate if replacing electric stove. "
+      "en": "$350 rebate for a new induction cooktop (minimum 30\" width) when replacing gas or propane. "
     }
   },
   {
@@ -1900,7 +1901,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 rebate for induction cooktop when replacing propane or gas. $100 rebate for switching from electric. Cooktop minimum width of 30 inches.  "
+      "en": "$350 rebate for induction cooktop/range when replacing propane or gas. Cooktop must be at least 30\" wide."
     }
   },
   {
@@ -2129,7 +2130,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 rebate for ENERGY STAR heat pump water heater. Maximum limit for all rebates over 12 months."
+      "en": "$350 rebate for ENERGY STAR heat pump water heater. There is a maximum limit for all rebates over 12 months."
     }
   },
   {
@@ -2150,7 +2151,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$50 rebate to switch to electric resistance water heater from a propane/gas water heater. Extra $50/unit for demand-response or member managed heater."
+      "en": "$50 rebate for electric water heater if replacing propane/gas, $50/unit for managed/demand-response or $30/unit new construction. 30 gallon or larger."
     }
   },
   {
@@ -2211,7 +2212,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Free electric vehicle charger"
+      "en": "Free level 2 electric vehicle charger."
     }
   },
   {
@@ -2220,7 +2221,7 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_water_heater"
+      "electric_vehicle_charger"
     ],
     "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
     "amount": {
@@ -2232,7 +2233,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of cost of Level 2 charger up to $125 labor and $125 product. Up to $500 labor and $500 product for  managed charger. Total rebate limit/year."
+      "en": "50% of cost of Level 2 charger up to $125 labor and $125 product. Up to $500 labor and $500 product for a managed charger. Total rebate limit/year."
     }
   },
   {
@@ -2275,7 +2276,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 rebate for induction cooktop (minimum width 30\") if switch from gas or $100 rebate if switch from electric stove.  $350 new construction rebate. "
+      "en": "$350 rebate for induction cooktop (minimum width 30\") if switch from gas or propane or put in new construction."
     }
   },
   {
@@ -2338,7 +2339,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$50 rebate for electric resistance water heater (30 gal minimum). $50 if replacing propane or gas. $50 for demand-response/managed water heater."
+      "en": "$50 rebate for electric water heater if replacing propane/gas, $50/unit for managed/demand-response or $30/unit new construction. 30 gallon or larger."
     }
   },
   {
@@ -2360,6 +2361,991 @@
     ],
     "short_description": {
       "en": "$350 rebate for ENERGY STAR air source heat pump water heater (30 gal. minimum)"
+    }
+  },
+  {
+    "id": "NM-108",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_thermal_storage_and_slab"
+    ],
+    "program": "nm_sierraElectricCooperative_sierraElectricCoopEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 16,
+      "unit": "kilowatt"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$16/kW for electric thermal storage units and $12/kW for thermal slabs controlled by timers or master control systems. Min. load for ETS is 1kW.\n"
+    }
+  },
+  {
+    "id": "NM-109",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "nm_sierraElectricCooperative_sierraElectricCoopEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of Level 2 cost up to $125 for EV charger and $125 for labor. If managed system, the rebate is 50% of cost up to $500 for charger/$500 for labor.\n"
+    }
+  },
+  {
+    "id": "NM-110",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_to_water_heat_pump"
+    ],
+    "program": "nm_sierraElectricCooperative_sierraElectricCoopEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton for air-to-water heat pump e.g., for radiant floors) up to 50% of equipment cost. AHRI certificate required. "
+    }
+  },
+  {
+    "id": "NM-111",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nm_sierraElectricCooperative_sierraElectricCoopEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,500 for qualified air source heat pumps greater than 1.5 tons. $500 for smaller systems. Max rebate: 50% equipment cost. $500 for propane back-up.\n"
+    }
+  },
+  {
+    "id": "NM-112",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nm_sierraElectricCooperative_sierraElectricCoopEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton for new ground source heat pumps. $250 for replacements. AHRI certificate required. \n"
+    }
+  },
+  {
+    "id": "NM-113",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ebike"
+    ],
+    "program": "nm_sierraElectricCooperative_sierraElectricCoopEnergyEfficiencyRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% of cost rebate up to $150 for e-bike plus 50% of cost of extra battery up to $25 at time of bike purchase. $300 max outdoor equipment rebate/yr."
+    }
+  },
+  {
+    "id": "NM-114",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm_sierraElectricCooperative_sierraElectricCoopEnergyEfficiencyRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% of cost up to $1000 for riding mower.  50% cost up to $25 for extra battery bought at time of mower purchase."
+    }
+  },
+  {
+    "id": "NM-115",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm_sierraElectricCooperative_sierraElectricCoopEnergyEfficiencyRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% cost up to $150 for electric snowblower, walk-behind mower; $50 for trimmer, blower, power washer; $100 for chainsaw. 50% ($25 max) extra battery"
+    }
+  },
+  {
+    "id": "NM-116",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "whole_house_fan"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for whole house fan. Limit 2 per member account. New or replacement."
+    }
+  },
+  {
+    "id": "NM-117",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 30,
+      "maximum": 90
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$90 rebate for ENERGY STAR heat pump (ventless) clothes dryer and $30 rebate for ENERGY STAR electric dryer. "
+    }
+  },
+  {
+    "id": "NM-118",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350 rebate to switch from gas/propane to induction cooktop/range at least 30\" wide."
+    }
+  },
+  {
+    "id": "NM-119",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "evaporative_cooler"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 rebate for evaporative cooler with minimum airflow of 2,500 CFM. Limit 2 per member account. New or replacement. "
+    }
+  },
+  {
+    "id": "NM-120",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350 rebate for qualified ENERGY STAR air source heat pump water heater (30 gallon or larger)"
+    }
+  },
+  {
+    "id": "NM-121",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for electric water heater if replacing propane/gas, $50/unit for managed/demand-response or $30/unit new construction. 30 gallon or larger."
+    }
+  },
+  {
+    "id": "NM-122",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_thermal_storage_and_slab"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 16,
+      "unit": "kilowatt"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$16/kW rebate for electric thermal storage and slab and $12/kW for thermal slabs. Must be controller by timers or control system. Min. load is 1 kW."
+    }
+  },
+  {
+    "id": "NM-123",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton for a new ground source heat pump system and $250/ton for replacement units. "
+    }
+  },
+  {
+    "id": "NM-124",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_to_water_heat_pump"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton rebate for air-to-water radiant systems up to 50% of equipment cost. "
+    }
+  },
+  {
+    "id": "NM-125",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,500 for qualified air source heat pumps greater than 1.5 tons, $500 for smaller systems up to 50% of equipment cost. Bonus for propane backup."
+    }
+  },
+  {
+    "id": "NM-126",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate to switch from electric stove to induction cooktop/range that is at least 30\" wide."
+    }
+  },
+  {
+    "id": "NM-127",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nm_sierraElectricCooperative_sierraElectricCoopEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": " $100 rebate for induction cooktop/range (at least 30\" wide) if you switch from an electric stove."
+    }
+  },
+  {
+    "id": "NM-128",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nm_centralNewMexicoElectricCooperative_cNMECMemberRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for switching to induction cooktop/range from electric. Cooktop must be at least 30\" wide."
+    }
+  },
+  {
+    "id": "NM-129",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nm_columbusElectricCooperative_cECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for induction cooktop when replacing electric stove. Cooktop must be at least 30\" wide."
+    }
+  },
+  {
+    "id": "NM-130",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for a new induction cooktop (minimum 30\" width) when replacing an electric stove."
+    }
+  },
+  {
+    "id": "NM-131",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for induction cooktop/range when replacing electric stove. Cooktop must be at least 30\" wide."
+    }
+  },
+  {
+    "id": "NM-132",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$25 rebate per ENERGY STAR, wifi capable smart thermostat. $50/thermostat if enrolled in managed program."
+    }
+  },
+  {
+    "id": "NM-133",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,500 for qualified air source heat pump minisplits greater than 1.5 tons, $500 for smaller systems up to 50% of equipment cost. "
+    }
+  },
+  {
+    "id": "NM-134",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater"
+    ],
+    "program": "nm_centralNewMexicoElectricCooperative_cNMECMemberRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for electric water heater if replacing propane/gas, $50/unit for managed/demand-response or $30/unit new construction. 30 gallon or larger."
+    }
+  },
+  {
+    "id": "NM-135",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of Level 2 charger cost up to $125 labor and $125 charger. If charger is in managed program, charger rebate is 50% up to $500 labor/$500 charger."
+    }
+  },
+  {
+    "id": "NM-136",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% of cost up to $1,000 for an electric riding mower. "
+    }
+  },
+  {
+    "id": "NM-137",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ebike"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% of cost up to $150 for an e-bike. Up to $25 for extra battery at time of bike purchase. $300 outdoor equipment rebate limit per year."
+    }
+  },
+  {
+    "id": "NM-138",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% cost up to $150 for electric snowblower, walk-behind mower; $50 for trimmer, blower, power washer; $100 for chainsaw. $25 max for extra battery. "
+    }
+  },
+  {
+    "id": "NM-139",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $250 rebate for professional home energy audit"
+    }
+  },
+  {
+    "id": "NM-140",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_thermal_storage_and_slab"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 50,
+      "unit": "kilowatt"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50/kW for ETS heater controlled by timers or master control system. Separate rebates for timers."
+    }
+  },
+  {
+    "id": "NM-141",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$75 rebate per ENERGY STAR smart thermostat controlling electric load.  $25 per programmable thermostat or time."
+    }
+  },
+  {
+    "id": "NM-142",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350 rebate to switch to an induction cooktop/range (minimum 30\" width) from gas or $100 rebate replacing electric. $350/unit new construction."
+    }
+  },
+  {
+    "id": "NM-143",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ebike"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.25
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% of cost of ebike up to $150. "
+    }
+  },
+  {
+    "id": "NM-144",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% rebate of cost up to $250 of electric two-stage snowblower and up to $150 for single stage snowblower."
+    }
+  },
+  {
+    "id": "NM-145",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% rebate off cost of electric riding mower up to $1000."
+    }
+  },
+  {
+    "id": "NM-146",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% rebate off cost of walk behind electric mower up to $150."
+    }
+  },
+  {
+    "id": "NM-147",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% rebate off cost of electric chainsaw + battery up to $100."
+    }
+  },
+  {
+    "id": "NM-148",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 90
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$90 rebate per ENERGY STAR heat pump dryer."
+    }
+  },
+  {
+    "id": "NM-149",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$700 rebate for a ENERGY STAR heat pump water heater, minimum 30 gallons capacity."
+    }
+  },
+  {
+    "id": "NM-150",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 for electric-resistance water heater if switching from propane/gas or if managed through wi-fi enabled smart thermostat or timer on Time of Use."
+    }
+  },
+  {
+    "id": "NM-151",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "other_weatherization"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton rebate for ducted/ductless air source heat pump (minimum HSPF2 8.5). $250 extra for weatherization. $500 propane bonus."
+    }
+  },
+  {
+    "id": "NM-152",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "other_weatherization"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton rebate for air-to-water heat pump (minimum HSPF2 8.5). $250 extra for weatherization. "
+    }
+  },
+  {
+    "id": "NM-153",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_weatherization",
+      "geothermal_heating_installation"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton rebate for new ground source heat pump (minimum 3/4 ton). $250/ton for replacement.  Extra $250 for weatherization. "
+    }
+  },
+  {
+    "id": "NM-154",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 to install electric vehicle charger. Rebate is 100% of charger cost up to $500 and 50% of plug installation cost up to $500. "
     }
   }
 ]

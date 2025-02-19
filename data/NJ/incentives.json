@@ -42,7 +42,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $300 rebate for an ENERGY STAR rated electric clothes dryer."
+      "en": "Up to $400 rebate for an ENERGY STAR rated electric clothes dryer."
     },
     "start_date": "2025-01-01",
     "end_date": "2027-06-30"
@@ -479,7 +479,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $400 rebate for an electric clothes dryer."
+      "en": "Up to $500 rebate for an electric clothes dryer."
     },
     "start_date": "2025-01-01",
     "end_date": "2027-06-30"
@@ -762,53 +762,6 @@
     "end_date": "2027-06-30"
   },
   {
-    "id": "NJ-34",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
-    "amount": {
-      "type": "dollars_per_unit",
-      "number": 3500,
-      "unit": "ton",
-      "maximum": 3500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$3,500/ton rebate for a ducted air source heat pump when switching from gas or delivered fuels."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2027-06-30"
-  },
-  {
-    "id": "NJ-35",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "geothermal_heating_installation"
-    ],
-    "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
-    "amount": {
-      "type": "dollars_per_unit",
-      "number": 5400,
-      "unit": "ton"
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$5,400/ton rebate for a ground source heat pump when switching from gas or delivered fuels."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2027-06-30"
-  },
-  {
     "id": "NJ-36",
     "payment_methods": [
       "performance_rebate"
@@ -828,6 +781,555 @@
     ],
     "short_description": {
       "en": "Up to $7,500 rebate for whole home weatherization, based on modeled improvements in efficiency. Average rebate of $4,750."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-37",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-38",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-39",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an induction stove, when switching from electric."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-40",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate for a heat pump water heater."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-41",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $150 rebate for a smart thermostat."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-42",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate for an air source heat pump."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-43",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,000 rebate for a cold-climate air source heat pump."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-44",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 10000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $10,000 rebate for a cold-climate heat pump when switching from electric resistance heating."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-45",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 10000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $10,000 rebate for a ground source heat pump."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-46",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "percent",
+      "number": 0.2
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "20% of project cost for a ground source heat pump or $2,000 per 10k BTUh, whichever is lower."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-47",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3500,
+      "unit": "btuh10k"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $3,500/10k BTUh rebate or 40% of project cost, for a ground source heat pump when switching from electric resistance heating."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-48",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_to_water_heat_pump"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1600,
+      "unit": "btuh10k"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,600/10k BTUh rebate for an air to water heat pump."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-49",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate for a heat pump water heater."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-50",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for a push or ride electric lawn mower, $50 rebate for an electric snow blower, leaf blower, string trimmer, or chain saw."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-51",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$400 rebate for a heat pump clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-52",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$400 rebate for an induction stove, when switching from gas."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-53",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "nj_publicServiceElectricAndGas_pSEGEnergyEfficiencyPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an ENERGY STAR certified electric clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-54",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nj_publicServiceElectricAndGas_pSEGEnergyEfficiencyPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an induction stove, when switching from electric."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-55",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nj_publicServiceElectricAndGas_pSEGEnergyEfficiencyPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate for an ENERGY STAR certified heat pump water heater."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-56",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nj_publicServiceElectricAndGas_pSEGEnergyEfficiencyPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$150 rebate for a smart thermostat."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-57",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nj_publicServiceElectricAndGas_pSEGEnergyEfficiencyPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for a push or ride electric lawn mower, $50 rebate for an electric snow blower, leaf blower, string trimmer, or chain saw."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-58",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nj_orangeAndRocklandUtilities_rECORebatesAndIncentivesForNewJerseyCustomers",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for a push or ride electric lawn mower, $50 rebate for an electric snow blower, leaf blower, string trimmer, or chain saw."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-59",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "nj_publicServiceElectricAndGas_pSEGEnergyEfficiencyPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$400 rebate for an ENERGY STAR certified heat pump clothes dryer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-60",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nj_publicServiceElectricAndGas_pSEGEnergyEfficiencyPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$400 rebate for an induction stove, when switching from gas."
     },
     "start_date": "2025-01-01",
     "end_date": "2027-06-30"
