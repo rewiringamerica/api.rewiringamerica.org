@@ -43,7 +43,9 @@
         "CO-580",
         "CO-581",
         "CO-582",
-        "CO-583"
+        "CO-583",
+        "CO-713",
+        "CO-714"
       ]
     },
     "co-group-platte-river-power-authority": {
@@ -217,12 +219,7 @@
         "MA-42",
         "MA-43",
         "MA-44",
-        "MA-45",
-        "MA-46",
-        "MA-47",
         "MA-48",
-        "MA-49",
-        "MA-50",
         "MA-51",
         "MA-52",
         "MA-53",
@@ -230,6 +227,21 @@
         "MA-55",
         "MA-56",
         "MA-57"
+      ]
+    },
+    "ma-mass-save-electric": {
+      "utilities": [
+        "ma-eversource",
+        "ma-fitchburg-gas-and-electric-light",
+        "ma-national-grid"
+      ],
+      "description": "Mass Save Electric (not gas) utilities",
+      "incentives": [
+        "MA-45",
+        "MA-46",
+        "MA-47",
+        "MA-49",
+        "MA-50"
       ]
     },
     "ma-middleborough-ged": {
@@ -563,6 +575,28 @@
         "PA-24",
         "PA-25",
         "PA-26"
+      ]
+    }
+  },
+  "UT": {
+    "ut-uamps-home-energy": {
+      "utilities": [
+        "ut-brigham-city-corporation",
+        "ut-city-of-springville",
+        "ut-enterprise-ut-city-of",
+        "ut-hurricane-city-power",
+        "ut-hyrum-city-corporation",
+        "ut-kaysville-city-corporation",
+        "ut-lehi-city-corporation",
+        "ut-payson-city-corporation",
+        "ut-south-utah-valley-electric-service-district"
+      ],
+      "cities": [
+        "ut-price-city-utilities"
+      ],
+      "description": "UAMPS utilities participating in the Home Energy Savings Program.",
+      "incentives": [
+        "UT-19"
       ]
     }
   },
