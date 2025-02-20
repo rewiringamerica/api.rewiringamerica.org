@@ -82,7 +82,7 @@ export function estimateStateTaxAmount(
     // gets the personal exemption automatically.)
     case 'MA': {
       const exemption = MA_EXEMPTIONS[filingStatus];
-      const taxableIncome = householdIncome - exemption;
+      const taxableIncome = _.max([0, householdIncome - exemption])!;
 
       // NB: the surtax is not a higher bracket of a graduated rate; it's
       // additional to the flat base rate.

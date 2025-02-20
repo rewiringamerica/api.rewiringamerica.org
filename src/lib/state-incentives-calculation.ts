@@ -1,6 +1,6 @@
 import { LocalDate, ZoneId } from '@js-joda/core';
 import '@js-joda/timezone';
-import { min } from 'lodash';
+import _, { min } from 'lodash';
 import { AuthoritiesByType, AuthorityType } from '../data/authorities';
 import { DATA_PARTNERS_BY_STATE } from '../data/data_partners';
 import { GEO_GROUPS_BY_STATE } from '../data/geo_groups';
@@ -16,6 +16,7 @@ import {
 } from '../data/state_incentives';
 import { AmountType } from '../data/types/amount';
 import { APICoverage } from '../data/types/coverage';
+import { PaymentMethod } from '../data/types/incentive-types';
 import { OwnerStatus } from '../data/types/owner-status';
 import { Program } from '../data/types/program';
 import { APISavings, zeroSavings } from '../schemas/v1/savings';
@@ -89,6 +90,13 @@ export function calculateStateIncentivesAndSavings(
   const eligibleIncentives = new Map<string, StateIncentive>();
   const ineligibleIncentives = new Map<string, StateIncentive>();
 
+  // Get state tax owed to determine max potential tax savings
+  const stateTaxOwed = estimateStateTaxAmount(
+    request.household_income,
+    request.tax_filing,
+    stateId,
+  );
+
   // Separate the state's incentive set into eligible and ineligible ones, based
   // on criteria that reflect real-life eligibility rules.
   //
@@ -112,6 +120,15 @@ export function calculateStateIncentivesAndSavings(
     }
 
     if (!incentive.owner_status.includes(request.owner_status as OwnerStatus)) {
+      eligible = false;
+    }
+
+    // Filter out incentives that are only payable as a tax credit, if we were
+    // able to compute the user's state tax liability and it's zero
+    if (
+      _.isEqual(incentive.payment_methods, [PaymentMethod.TaxCredit]) &&
+      stateTaxOwed?.taxOwed === 0
+    ) {
       eligible = false;
     }
 
@@ -228,13 +245,6 @@ export function calculateStateIncentivesAndSavings(
 
     savings[item.payment_methods[0]] += amount;
   });
-
-  // Get state tax owed to determine max potential tax savings
-  const stateTaxOwed = estimateStateTaxAmount(
-    request.household_income,
-    request.tax_filing,
-    stateId,
-  );
 
   // You can't save more than tax owed. Choose the lesser of state tax owed vs tax credit savings
   savings.tax_credit = stateTaxOwed
