@@ -10,13 +10,48 @@ import {
  * test `estimateStateTaxAmount`, which calculates tax owed to states
  */
 test('correctly determines Colorado state tax liability', async t => {
-  const data = estimateStateTaxAmount(100000, 'CO');
+  const data = estimateStateTaxAmount(100000, FilingStatus.Single, 'CO');
   t.equal(data?.taxOwed, 4400);
   t.equal(data?.effectiveRate, 4.4);
 });
 
+test('correctly calculates Massachusetts tax', async t => {
+  t.equal(
+    estimateStateTaxAmount(104400, FilingStatus.Single, 'MA')?.taxOwed,
+    5000,
+  );
+  t.equal(
+    estimateStateTaxAmount(108800, FilingStatus.Joint, 'MA')?.taxOwed,
+    5000, // Higher personal exemption
+  );
+  t.equal(
+    estimateStateTaxAmount(1187550, FilingStatus.Single, 'MA')?.taxOwed,
+    63158, // Surtax
+  );
+});
+
+test('correctly calculates New Mexico tax', async t => {
+  t.equal(
+    estimateStateTaxAmount(16000, FilingStatus.Single, 'NM')?.taxOwed,
+    505,
+  );
+  t.equal(
+    estimateStateTaxAmount(210000, FilingStatus.Single, 'NM')?.taxOwed,
+    10011,
+  );
+  t.equal(
+    estimateStateTaxAmount(157500, FilingStatus.MarriedFilingSeparately, 'NM')
+      ?.taxOwed,
+    7514,
+  );
+  t.equal(
+    estimateStateTaxAmount(315000, FilingStatus.Joint, 'NM')?.taxOwed,
+    15027,
+  );
+});
+
 test('defaults to a null state tax obligation for unsupported states', async t => {
-  const data = estimateStateTaxAmount(100000, 'DC');
+  const data = estimateStateTaxAmount(100000, FilingStatus.Single, 'DC');
   t.equal(data, null);
 });
 
