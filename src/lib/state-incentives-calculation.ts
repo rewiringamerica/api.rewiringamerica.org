@@ -232,6 +232,7 @@ export function calculateStateIncentivesAndSavings(
   // Get state tax owed to determine max potential tax savings
   const stateTaxOwed = estimateStateTaxAmount(
     request.household_income,
+    request.tax_filing,
     stateId,
   );
 
