@@ -45,10 +45,6 @@ const LOCATION_AND_AMIS = {
     { zcta: '02130', city: 'Jamaica Plain', state: 'MA', county_fips: '25025' },
     { computedAMI80: 91175, computedAMI150: 171360, evCreditEligible: false },
   ],
-  '80212': [
-    { zcta: '80212', city: 'Denver', state: 'CO', county_fips: '08031' },
-    { computedAMI80: 102650, computedAMI150: 195600, evCreditEligible: false },
-  ],
 } as const;
 
 const IRA_HVAC_ITEMS =

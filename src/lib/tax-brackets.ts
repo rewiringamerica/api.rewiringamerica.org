@@ -122,6 +122,20 @@ export function estimateStateTaxAmount(
     }
   }
 
+  // The above calculations should always produce nonnegative results, but this
+  // is a failsafe in case they don't.
+  if (taxOwed < 0) {
+    console.error(
+      'computed negative tax',
+      taxOwed,
+      'for',
+      householdIncome,
+      filingStatus,
+      stateCode,
+    );
+    taxOwed = 0;
+  }
+
   return { taxOwed, effectiveRate };
 }
 
