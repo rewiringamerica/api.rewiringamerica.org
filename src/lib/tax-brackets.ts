@@ -25,44 +25,34 @@ const MA_SURTAX_THRESHOLD = 1_083_150;
 // https://www.tax.newmexico.gov/individuals/wp-content/uploads/sites/5/2021/12/PIT-rates_2005_2021.pdf
 const NM_BRACKETS: {
   [S in FilingStatus]: { maxIncome: number; rate: number }[];
-} = {
-  [FilingStatus.Single]: [
-    { maxIncome: 5500, rate: 0.017 },
-    { maxIncome: 11000, rate: 0.032 },
-    { maxIncome: 16000, rate: 0.047 },
-    { maxIncome: 210000, rate: 0.049 },
-    { maxIncome: Infinity, rate: 0.059 },
-  ],
-  [FilingStatus.MarriedFilingSeparately]: [
-    { maxIncome: 4000, rate: 0.017 },
-    { maxIncome: 8000, rate: 0.032 },
-    { maxIncome: 12000, rate: 0.047 },
-    { maxIncome: 157500, rate: 0.049 },
-    { maxIncome: Infinity, rate: 0.059 },
-  ],
-  // Below three all the same
-  [FilingStatus.Joint]: [
+} = (() => {
+  const joint = [
     { maxIncome: 8000, rate: 0.017 },
     { maxIncome: 16000, rate: 0.032 },
     { maxIncome: 24000, rate: 0.047 },
     { maxIncome: 315000, rate: 0.049 },
     { maxIncome: Infinity, rate: 0.059 },
-  ],
-  [FilingStatus.HoH]: [
-    { maxIncome: 8000, rate: 0.017 },
-    { maxIncome: 16000, rate: 0.032 },
-    { maxIncome: 24000, rate: 0.047 },
-    { maxIncome: 315000, rate: 0.049 },
-    { maxIncome: Infinity, rate: 0.059 },
-  ],
-  [FilingStatus.QualifyingWidower]: [
-    { maxIncome: 8000, rate: 0.017 },
-    { maxIncome: 16000, rate: 0.032 },
-    { maxIncome: 24000, rate: 0.047 },
-    { maxIncome: 315000, rate: 0.049 },
-    { maxIncome: Infinity, rate: 0.059 },
-  ],
-};
+  ];
+  return {
+    [FilingStatus.Single]: [
+      { maxIncome: 5500, rate: 0.017 },
+      { maxIncome: 11000, rate: 0.032 },
+      { maxIncome: 16000, rate: 0.047 },
+      { maxIncome: 210000, rate: 0.049 },
+      { maxIncome: Infinity, rate: 0.059 },
+    ],
+    [FilingStatus.MarriedFilingSeparately]: [
+      { maxIncome: 4000, rate: 0.017 },
+      { maxIncome: 8000, rate: 0.032 },
+      { maxIncome: 12000, rate: 0.047 },
+      { maxIncome: 157500, rate: 0.049 },
+      { maxIncome: Infinity, rate: 0.059 },
+    ],
+    [FilingStatus.Joint]: joint,
+    [FilingStatus.HoH]: joint,
+    [FilingStatus.QualifyingWidower]: joint,
+  };
+})();
 
 /**
  * Formula to calculate tax owed to states
