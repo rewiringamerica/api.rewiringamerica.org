@@ -4,11 +4,62 @@ import { TERRITORIES } from '../data/types/states';
 import { TaxEstimate } from '../data/types/tax';
 import { roundCents } from './rounding';
 
+// This basically works like deductions in federal taxes. Everyone is allowed to
+// claim a "personal exemption", which deducts this amount from taxable income.
+// https://www.mass.gov/info-details/massachusetts-personal-income-tax-exemptions
+const MA_EXEMPTIONS: { [S in FilingStatus]: number } = {
+  [FilingStatus.Single]: 4400,
+  [FilingStatus.MarriedFilingSeparately]: 4400,
+  [FilingStatus.HoH]: 6800,
+  [FilingStatus.Joint]: 8800,
+  [FilingStatus.QualifyingWidower]: 8800,
+};
+
+// Income over this amount is subject to the 4% surtax (a.k.a. "millionaire's
+// tax"). The threshold goes up every year, which is why it's not an even $1M.
+// This is for the 2025 tax year.
+// https://www.mass.gov/info-details/4-surtax-on-taxable-income-over-1000000
+const MA_SURTAX_THRESHOLD = 1_083_150;
+
+// Source: last page of
+// https://www.tax.newmexico.gov/individuals/wp-content/uploads/sites/5/2021/12/PIT-rates_2005_2021.pdf
+const NM_BRACKETS: {
+  [S in FilingStatus]: { maxIncome: number; rate: number }[];
+} = (() => {
+  const joint = [
+    { maxIncome: 8000, rate: 0.017 },
+    { maxIncome: 16000, rate: 0.032 },
+    { maxIncome: 24000, rate: 0.047 },
+    { maxIncome: 315000, rate: 0.049 },
+    { maxIncome: Infinity, rate: 0.059 },
+  ];
+  return {
+    [FilingStatus.Single]: [
+      { maxIncome: 5500, rate: 0.017 },
+      { maxIncome: 11000, rate: 0.032 },
+      { maxIncome: 16000, rate: 0.047 },
+      { maxIncome: 210000, rate: 0.049 },
+      { maxIncome: Infinity, rate: 0.059 },
+    ],
+    [FilingStatus.MarriedFilingSeparately]: [
+      { maxIncome: 4000, rate: 0.017 },
+      { maxIncome: 8000, rate: 0.032 },
+      { maxIncome: 12000, rate: 0.047 },
+      { maxIncome: 157500, rate: 0.049 },
+      { maxIncome: Infinity, rate: 0.059 },
+    ],
+    [FilingStatus.Joint]: joint,
+    [FilingStatus.HoH]: joint,
+    [FilingStatus.QualifyingWidower]: joint,
+  };
+})();
+
 /**
  * Formula to calculate tax owed to states
  */
 export function estimateStateTaxAmount(
   householdIncome: number,
+  filingStatus: FilingStatus,
   stateCode: string,
 ): TaxEstimate | null {
   let taxOwed = null;
@@ -24,6 +75,48 @@ export function estimateStateTaxAmount(
       taxOwed = Math.ceil(householdIncome * (effectiveRate / 100));
       break;
     }
+
+    // MA has a flat rate of 5% on all income, plus 4% on all income over $1MM.
+    // This is after applying a "personal exemption"; i.e. basically a standard
+    // deduction. (You can get more exemptions for various things, but everyone
+    // gets the personal exemption automatically.)
+    case 'MA': {
+      const exemption = MA_EXEMPTIONS[filingStatus];
+      const taxableIncome = householdIncome - exemption;
+
+      // NB: the surtax is not a higher bracket of a graduated rate; it's
+      // additional to the flat base rate.
+      const baseTax = taxableIncome * 0.05;
+      const surtax =
+        taxableIncome > MA_SURTAX_THRESHOLD
+          ? (taxableIncome - MA_SURTAX_THRESHOLD) * 0.04
+          : 0;
+
+      taxOwed = Math.ceil(baseTax + surtax);
+      effectiveRate = (taxOwed / householdIncome) * 100;
+      break;
+    }
+
+    // NM has graduated brackets and no standard deduction.
+    case 'NM': {
+      const brackets = NM_BRACKETS[filingStatus];
+      let prevBracketMax = 0;
+      taxOwed = 0;
+
+      for (const { maxIncome, rate } of brackets) {
+        taxOwed +=
+          (_.min([householdIncome, maxIncome])! - prevBracketMax) * rate;
+        if (householdIncome < maxIncome) {
+          break;
+        }
+        prevBracketMax = maxIncome;
+      }
+
+      taxOwed = Math.ceil(taxOwed);
+      effectiveRate = (taxOwed / householdIncome) * 100;
+      break;
+    }
+
     default: {
       return null;
     }
