@@ -730,12 +730,6 @@ const BAD_QUERIES = [
     zip: '80212',
     owner_status: 'homeowner',
     household_income: 80000,
-    household_size: 4,
-  },
-  {
-    zip: '80212',
-    owner_status: 'homeowner',
-    household_income: 80000,
     tax_filing: '',
     household_size: 4,
   },

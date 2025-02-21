@@ -90,12 +90,16 @@ export function calculateStateIncentivesAndSavings(
   const eligibleIncentives = new Map<string, StateIncentive>();
   const ineligibleIncentives = new Map<string, StateIncentive>();
 
-  // Get state tax owed to determine max potential tax savings
-  const stateTaxOwed = estimateStateTaxAmount(
-    request.household_income,
-    request.tax_filing,
-    stateId,
-  );
+  // Get state tax owed to determine max potential tax savings and filter out
+  // tax credits if no tax liability. Don't compute tax if we don't have
+  // filing status.
+  const stateTaxOwed = request.tax_filing
+    ? estimateStateTaxAmount(
+        request.household_income,
+        request.tax_filing,
+        stateId,
+      )
+    : null;
 
   // Separate the state's incentive set into eligible and ineligible ones, based
   // on criteria that reflect real-life eligibility rules.

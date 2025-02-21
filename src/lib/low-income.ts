@@ -32,6 +32,11 @@ export function isLowIncome(
     // conservative and return false (i.e. "not low income").
     return typeof threshold === 'number' && household_income <= threshold;
   } else if (thresholds.type === 'filing-status') {
+    if (!tax_filing) {
+      // If the thresholds are filing-status-dependent but the request didn't
+      // include filing status, be conservative and say we don't meet them.
+      return false;
+    }
     const [min, max] = thresholds.thresholds[tax_filing];
     return household_income >= min && household_income <= max;
   } else if (thresholds.type === 'ami-percentage') {

@@ -526,6 +526,31 @@ test('filters tax credits if zero tax owed', async t => {
   t.equal(stateCredits.length, 1);
 });
 
+test('skips tax filing dependent items without filing status', async t => {
+  const baseQuery = {
+    owner_status: OwnerStatus.Homeowner,
+    household_income: 70000,
+    household_size: 1,
+    include_beta_states: true,
+  };
+
+  // Income + single status is low enough for NJ-7, a new-EV incentive. But its
+  // thresholds are filing-status-dependent.
+  const withFiling = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
+    ...baseQuery,
+    tax_filing: FilingStatus.Single,
+  });
+
+  t.ok(withFiling.incentives.map(i => i.id).includes('NJ-7'));
+
+  const withoutFiling = calculateIncentives(
+    ...LOCATION_AND_AMIS['07083'],
+    baseQuery,
+  );
+
+  t.notOk(withoutFiling.incentives.map(i => i.id).includes('NJ-7'));
+});
+
 test('correctly sorts incentives', async t => {
   const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
     owner_status: OwnerStatus.Homeowner,
