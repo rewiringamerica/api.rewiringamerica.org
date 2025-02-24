@@ -1333,5 +1333,84 @@
     },
     "start_date": "2025-01-01",
     "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-61",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nj_newJerseyNaturalGas_nJNGSAVEGREEN",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an ENERGY STAR certified smart thermostat."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
+  },
+  {
+    "id": "NJ-62",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "efficiency_rebates",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "energy_audit",
+      "floor_insulation",
+      "other_insulation",
+      "other_weatherization"
+    ],
+    "program": "nj_newJerseyNaturalGas_nJNGSAVEGREEN",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 14000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $14,000 in free weatherization measures for income-qualified customers of NJNG."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30",
+    "low_income": "nj-400-fpl"
+  },
+  {
+    "id": "NJ-63",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "nj_newJerseyNaturalGas_nJNGSAVEGREEN",
+    "amount": {
+      "type": "percent",
+      "number": 0.85
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Reduced cost home energy assessment ($49) to identify ways to save energy in your home."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
   }
 ]

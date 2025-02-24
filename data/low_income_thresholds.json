@@ -7,15 +7,16 @@
         "AZ-21"
       ],
       "source_url": "https://www.tep.com/weatherization-assistance",
+      "description": "",
       "thresholds": {
-        "1": 29160,
-        "2": 39440,
-        "3": 49720,
-        "4": 60000,
-        "5": 70280,
-        "6": 80560,
-        "7": 90840,
-        "8": 101120
+        "1": 31300,
+        "2": 42300,
+        "3": 53300,
+        "4": 64300,
+        "5": 75300,
+        "6": 86300,
+        "7": 97300,
+        "8": 108300
       }
     },
     "az-hear-program-low": {
@@ -1809,7 +1810,17 @@
   "NC": {
     "nc-hear-low": {
       "type": "ami-percentage",
-      "incentives": [],
+      "incentives": [
+        "NC-1",
+        "NC-2",
+        "NC-3",
+        "NC-4",
+        "NC-5",
+        "NC-6",
+        "NC-7",
+        "NC-8",
+        "NC-9"
+      ],
       "source_url": "https://energysavernc.org/wp-content/uploads/2025/01/AMI-Limits-by-HH-Size-and-Income-Summary-NC-v.4-1.14.2025.pdf",
       "description": "NC HEAR Program Low Income",
       "thresholds": {
@@ -1818,7 +1829,17 @@
     },
     "nc-hear-medium": {
       "type": "ami-percentage",
-      "incentives": [],
+      "incentives": [
+        "NC-10",
+        "NC-11",
+        "NC-12",
+        "NC-13",
+        "NC-14",
+        "NC-15",
+        "NC-16",
+        "NC-17",
+        "NC-18"
+      ],
       "source_url": "https://energysavernc.org/wp-content/uploads/2025/01/AMI-Limits-by-HH-Size-and-Income-Summary-NC-v.4-1.14.2025.pdf",
       "description": "NC HEAR program medium",
       "thresholds": {
@@ -1829,9 +1850,11 @@
   "NJ": {
     "nj-400-fpl": {
       "type": "hhsize",
-      "incentives": [],
+      "incentives": [
+        "NJ-62"
+      ],
       "source_url": "https://homeenergysavings.atlanticcityelectric.com/residential/energy-assessments/home-weatherization-program/eligibility",
-      "description": "400% of FPL for weatherization programs, updated using 2025 from HHS, not ACE.",
+      "description": "400% of FPL for weatherization programs, updated using 2025 from HHS.",
       "thresholds": {
         "1": 62600,
         "2": 84600,
@@ -1923,6 +1946,40 @@
     }
   },
   "NM": {
+    "EMNRD Low-Income ": {
+      "type": "hhsize",
+      "incentives": [],
+      "source_url": "https://www.emnrd.nm.gov/ecmd/wp-content/uploads/sites/3/SBTC2021-ECP-10.2023.pdf",
+      "description": "Households with income less than 200% of Federal poverty level each year. ",
+      "thresholds": {
+        "1": 31300,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0
+      }
+    },
+    "nm-Sustainable Building Tax Credit Low-Income": {
+      "type": "hhsize",
+      "incentives": [
+        "NM-174"
+      ],
+      "source_url": "https://www.emnrd.nm.gov/ecmd/wp-content/uploads/sites/3/Sustainable-Building-Tax-Credit-products-application-instructions-version-2.pdf",
+      "description": "Households with income less than 200% of Federal poverty level each year. ",
+      "thresholds": {
+        "1": 31300,
+        "2": 42300,
+        "3": 53300,
+        "4": 64300,
+        "5": 75300,
+        "6": 86300,
+        "7": 97300,
+        "8": 108300
+      }
+    },
     "nm-hear-low-income": {
       "type": "ami-percentage",
       "incentives": [
