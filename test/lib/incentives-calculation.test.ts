@@ -3,7 +3,7 @@ import { open } from 'sqlite';
 import sqlite3 from 'sqlite3';
 import { afterEach, beforeEach, test } from 'tap';
 import { AuthoritiesByType, AuthorityType } from '../../src/data/authorities';
-import { Programs } from '../../src/data/programs';
+import { ira_programs, Programs } from '../../src/data/programs';
 import { StateIncentive } from '../../src/data/state_incentives';
 import { FilingStatus } from '../../src/data/tax_brackets';
 import { AmountType } from '../../src/data/types/amount';
@@ -486,6 +486,44 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
   t.equal(taxCredits['used_electric_vehicle'].eligible, false);
   t.equal(taxCredits['used_electric_vehicle'].amount.number, 4000);
   t.equal(taxCredits['used_electric_vehicle'].start_date, '2023');
+});
+
+test('filters tax credits if zero tax owed', async t => {
+  const baseQuery = {
+    owner_status: OwnerStatus.Homeowner,
+    tax_filing: FilingStatus.Single,
+    household_size: 1,
+    include_beta_states: true,
+  };
+  const zeroTax = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
+    ...baseQuery,
+    household_income: 0,
+  });
+  t.equal(
+    zeroTax.incentives.filter(
+      i =>
+        _.isEqual(i.payment_methods, [PaymentMethod.TaxCredit]) && i.eligible,
+    ).length,
+    0,
+  );
+
+  // This will result in zero federal tax (due to the standard deduction), but
+  // $5 state tax (MA has a flat 5% rate on income over $4,400 for single
+  // filers), so one MA tax credit will be eligible.
+  const someTax = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
+    ...baseQuery,
+    household_income: 4500,
+  });
+
+  const [federalCredits, stateCredits] = _.partition(
+    someTax.incentives.filter(
+      i =>
+        _.isEqual(i.payment_methods, [PaymentMethod.TaxCredit]) && i.eligible,
+    ),
+    i => i.program in ira_programs,
+  );
+  t.equal(federalCredits.length, 0);
+  t.equal(stateCredits.length, 1);
 });
 
 test('correctly sorts incentives', async t => {
