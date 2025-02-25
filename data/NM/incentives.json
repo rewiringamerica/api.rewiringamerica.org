@@ -95,7 +95,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $175/ton rebate for qualified ducted or ductless air-source heat pumps."
+      "en": "Up to $175/ton rebate for qualified ducted or ductless air-source heat pumps less than 5.4 tons."
     }
   },
   {
@@ -137,7 +137,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$300/unit rebate on heat pump water heaters."
+      "en": "$300/unit rebate on ENERGY STAR certified heat pump water heaters less than 55 gallons."
     }
   },
   {
@@ -179,7 +179,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$50 rebate on an induction cooktop."
+      "en": "$50 rebate on an Energy Star induction cooktop."
     }
   },
   {
@@ -244,7 +244,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1.05/sqft rebate for ceiling insulation. Amount determined by R-Value and heat type."
+      "en": "Up to $1.05/sqft rebate for ceiling insulation. Amount determined by new and existing R-Value, heat type."
     }
   },
   {
@@ -265,7 +265,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $0.30/sqft rebate for floor insulation. Amount determined by home type and heat type."
+      "en": "Up to $0.30/sqft rebate for qualified floor insulation. Amount determined by home type and heat type."
     }
   },
   {
@@ -276,7 +276,7 @@
     "items": [
       "electric_vehicle_charger"
     ],
-    "program": "nm-pnm-evcharger-rebates",
+    "program": "nm_pnm_pNMTransportationElectrificationProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 2000,
@@ -299,7 +299,7 @@
     "items": [
       "electric_vehicle_charger"
     ],
-    "program": "nm-pnm-evcharger-rebates",
+    "program": "nm_pnm_pNMTransportationElectrificationProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 4250,
@@ -379,7 +379,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate on a heat pump water heater."
+      "en": "$500 rebate on an ENERGY STAR heat pump water heater, less than 55 gallons."
     }
   },
   {
@@ -581,7 +581,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,000 tax credit for an Energy Star certified air source heat pump."
+      "en": "$1,000 tax credit for an Energy Star certified air source heat pump including installation."
     },
     "start_date": "2021-01-01",
     "end_date": "2027-12-31"
@@ -605,7 +605,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,000 refundable tax credit for an Energy Star certified air source heat pump, for income-qualified residents."
+      "en": "$2,000 refundable tax credit for an Energy Star certified air source heat pump installation, for income-qualified residents."
     },
     "start_date": "2021-01-01",
     "end_date": "2027-12-31",
@@ -629,7 +629,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,000 refundable tax credit for an Energy Star rated ground source heat pump, for income-qualified residents."
+      "en": "$2,000 refundable tax credit for an Energy Star rated ground source heat pump installation, for income-qualified residents."
     },
     "start_date": "2021-01-01",
     "end_date": "2027-12-31",
@@ -730,7 +730,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "100% of cost up to $2,000 tax credit for insulation improvements, per product installed. For income-qualified residents."
+      "en": "100% of cost up to $2,000 refundable tax credit for insulation improvements, per product installed. For income-qualified residents."
     },
     "start_date": "2021-01-01",
     "end_date": "2027-12-31",
@@ -782,7 +782,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$700 tax credit for an Energy Star rated heat pump water heater, for income-qualified residents."
+      "en": "$700 refundable tax credit for an Energy Star rated heat pump water heater installs, for income-qualified residents."
     },
     "start_date": "2021-01-01",
     "end_date": "2027-12-31",
@@ -806,7 +806,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 tax credit for an Energy Star rated heat pump water heater."
+      "en": "$350 tax credit for an Energy Star rated heat pump water heater including installation costs."
     },
     "start_date": "2021-01-01",
     "end_date": "2027-12-31"
@@ -829,7 +829,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,000 tax credit for an electric vehicle charger product and installation costs, for income-qualified residents."
+      "en": "$1,000 refundable tax credit for an electric vehicle charger product and installation costs, for income-qualified residents."
     },
     "start_date": "2021-01-01",
     "end_date": "2027-12-31",
@@ -3570,11 +3570,15 @@
     "items": [
       "ductless_heat_pump",
       "ducted_heat_pump",
-      "other_insulation",
-      "other_weatherization",
       "smart_thermostat",
       "window_replacement",
-      "non_heat_pump_water_heater"
+      "non_heat_pump_water_heater",
+      "wall_insulation",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "other_weatherization"
     ],
     "program": "nm_rooseveltCountyElectricCooperative_rCECEnergyEfficiencyMatchingFundsProgram",
     "amount": {
@@ -3727,23 +3731,191 @@
   {
     "id": "NM-174",
     "payment_methods": [
-      "tax_credit"
+      "rebate",
+      "pos_rebate"
     ],
     "items": [
-      "electric_vehicle_charger"
+      "new_electric_vehicle",
+      "used_electric_vehicle",
+      "used_plugin_hybrid_vehicle",
+      "new_plugin_hybrid_vehicle"
     ],
-    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "program": "nm_pnm_pNMTransportationElectrificationProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000,
-      "maximum": 1000
+      "number": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $4,000 rebate for purchasing or leasing an electric vehicle for income qualified customers from participating dealers."
+    },
+    "low_income": "nm-pnm-income-qualified"
+  },
+  {
+    "id": "NM-175",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ebike"
+    ],
+    "program": "nm_pnm_pNMTransportationElectrificationProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate on ebike for income qualified customers from participating dealers."
+    },
+    "end_date": "2025-01-13"
+  },
+  {
+    "id": "NM-176",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,000 refundable tax credit for an electric vehicle charger product and installation costs for low-income households."
+      "en": "Up to $300 rebate/unit for new qualifying ENERGY STAR  pool pump."
+    }
+  },
+  {
+    "id": "NM-177",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 150,
+      "unit": "ton"
     },
-    "low_income": "nm-Sustainable Building Tax Credit Low-Income"
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $150/unit rebate on qualified central air-conditioners less than 5.4 tons."
+    }
+  },
+  {
+    "id": "NM-178",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nm_mora-SanMiguelElectricCooperative_energyStarRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350/unit rebate for gas-to-induction cooktop/range or new construction. 30 inch minimum width. ENERGY STAR required."
+    }
+  },
+  {
+    "id": "NM-179",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nm_mora-SanMiguelElectricCooperative_energyStarRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100/unit rebate for electric-to-induction cooktop/range. 30 inch minimum width. ENERGY STAR required."
+    }
+  },
+  {
+    "id": "NM-181",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater"
+    ],
+    "program": "nm_mora-SanMiguelElectricCooperative_energyStarRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 70
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$70/unit rebate for ENERGY STAR electric water heater. $50/unit for new construction."
+    }
+  },
+  {
+    "id": "NM-182",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "nm_mora-SanMiguelElectricCooperative_energyStarRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 60
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$60 rebate for ENERGY STAR electric clothes dryer."
+    }
+  },
+  {
+    "id": "NM-183",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "non_heat_pump_water_heater"
+    ],
+    "program": "nm_columbusElectricCooperative_cECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 60
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Purchase a 40 gallon or 50 gallon electric water heater for $50 or $60 respectively."
+    }
   }
 ]
