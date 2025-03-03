@@ -1656,15 +1656,15 @@
     "program": "ma-taunton-go-green",
     "amount": {
       "type": "percent",
-      "number": 0.75,
-      "maximum": 10000
+      "number": 0.5,
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "75% of weatherization plus 100% of air sealing, up to $10,000 rebate for residential customers."
+      "en": "50% of weatherization and air sealing, up to $3,000 rebate for residential customers."
     }
   },
   {
@@ -1712,13 +1712,13 @@
       "type": "dollars_per_unit",
       "number": 1250,
       "unit": "ton",
-      "maximum": 10000
+      "maximum": 5000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,250/ton rebate up to $10,000 for an air source heat pump for residential customers."
+      "en": "$1,250/ton rebate up to $5,000 for a cold climate air source heat pump for residential customers."
     }
   },
   {
@@ -1733,15 +1733,15 @@
     "program": "ma-taunton-go-green",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 1250,
+      "number": 2250,
       "unit": "ton",
-      "maximum": 16000
+      "maximum": 9000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,250/ton rebate up to $16,000 for an air source heat pump for income-qualified residential customers."
+      "en": "$2,250/ton rebate up to $9,000 for a cold climate air source heat pump for income-qualified residential customers."
     },
     "low_income": "ma-massSave-incomeEligible-enhanced"
   },
@@ -1756,14 +1756,14 @@
     "program": "ma-taunton-go-green",
     "amount": {
       "type": "dollar_amount",
-      "number": 10000,
-      "maximum": 10000
+      "number": 5000,
+      "maximum": 5000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $10,000 rebate for a ground source heat pump for residential customers."
+      "en": "Up to $5,000 rebate for a ground source heat pump for residential customers."
     }
   },
   {
@@ -2386,8 +2386,9 @@
     ],
     "program": "ma-norwood-energy-savings",
     "amount": {
-      "type": "dollar_amount",
-      "number": 10000,
+      "type": "dollars_per_unit",
+      "number": 3000,
+      "unit": "ton",
       "maximum": 10000
     },
     "owner_status": [
@@ -2395,8 +2396,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $10,000 rebate for whole-home air source heat pump for customers not using natural gas heating."
-    }
+      "en": "$3,000/ton, up to $10,000 rebate for whole-home air source heat pump for customers not using natural gas heating."
+    },
+    "start_date": "2025-02-01"
   },
   {
     "id": "MA-105",
@@ -2408,17 +2410,19 @@
     ],
     "program": "ma-norwood-energy-savings",
     "amount": {
-      "type": "dollar_amount",
-      "number": 15000,
-      "maximum": 15000
+      "type": "dollars_per_unit",
+      "number": 3000,
+      "unit": "ton",
+      "maximum": 16000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $15,000 rebate for whole-home air source heat pump for income-qualified customers not using natural gas heating."
+      "en": "$3,000/ton, up to $16,000 rebate for whole-home air source heat pump for income-qualified customers not using natural gas heating."
     },
+    "start_date": "2025-02-01",
     "low_income": "ma-massSave-income-eligible"
   },
   {
@@ -2434,15 +2438,16 @@
       "type": "dollars_per_unit",
       "number": 1250,
       "unit": "ton",
-      "maximum": 6000
+      "maximum": 10000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$1,250/ton rebate, up to $6,000 for a partial home heat pump for customers not using gas heating."
-    }
+      "en": "$1,250/ton rebate, up to $10,000 for a partial home heat pump for customers not using gas heating."
+    },
+    "start_date": "2025-02-01"
   },
   {
     "id": "MA-107",
@@ -2457,15 +2462,16 @@
       "type": "dollars_per_unit",
       "number": 1250,
       "unit": "ton",
-      "maximum": 6000
+      "maximum": 16000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$1,500/ton rebate, up to $7,500 for a partial home heat pump, for income-qualified customers not using gas heating."
+      "en": "$1,250/ton rebate, up to $16,000 for a partial home heat pump, for income-qualified customers not using gas heating."
     },
+    "start_date": "2025-02-01",
     "low_income": "ma-massSave-income-eligible"
   },
   {
@@ -2924,14 +2930,14 @@
       "type": "dollars_per_unit",
       "number": 500,
       "unit": "ton",
-      "maximum": 2500
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $500/ton rebate, capped at $2,500 for ducted air source heat pump systems."
+      "en": "Up to $500/ton rebate, capped at $2,000 for ducted air source heat pump systems."
     }
   },
   {
@@ -12090,5 +12096,96 @@
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-529",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "ma-braintree-mlp-energysaving",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.6,
+      "unit": "watt",
+      "maximum": 6000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$0.60/watt rebate, up to 10kW DC for installed rooftop solar."
+    }
+  },
+  {
+    "id": "MA-530",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ma-braintree-mlp-energysaving",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 rebate for a level 2 electric vehicle charger when enrolled in managed charging program."
+    }
+  },
+  {
+    "id": "MA-531",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ma-norwood-energy-savings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 rebate for a level 2 ENERGY STAR certified electric vehicle charger. Requires enrollment in managed charging program."
+    }
+  },
+  {
+    "id": "MA-532",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_electric_vehicle",
+      "used_plugin_hybrid_vehicle",
+      "new_plugin_hybrid_vehicle",
+      "new_electric_vehicle"
+    ],
+    "program": "ma-norwood-energy-savings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate for a new or used purchase or lease of an electric vehicle or plug-in hybrid  electric vehicle. "
+    }
   }
 ]
