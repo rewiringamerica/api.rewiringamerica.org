@@ -342,12 +342,12 @@
       "unit": "ton"
     },
     "owner_status": [
-      "homeowner",
-      "renter"
+      "homeowner"
     ],
     "short_description": {
       "en": "$200 per ton rebate for a mini-split air source heat pump"
-    }
+    },
+    "end_date": "2025-12-31"
   },
   {
     "id": "MN-18",
@@ -363,12 +363,12 @@
       "number": 25
     },
     "owner_status": [
-      "homeowner",
-      "renter"
+      "homeowner"
     ],
     "short_description": {
       "en": "$25 rebate for an induction range"
-    }
+    },
+    "end_date": "2025-12-31"
   },
   {
     "id": "MN-19",
@@ -384,12 +384,12 @@
       "number": 50
     },
     "owner_status": [
-      "homeowner",
-      "renter"
+      "homeowner"
     ],
     "short_description": {
       "en": "$50 rebate for an all-in-one washer/dryer combo with ventless heat pump drying"
-    }
+    },
+    "end_date": "2025-12-31"
   },
   {
     "id": "MN-20",
@@ -434,7 +434,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,000 rebate for an air source heat pump quality installation. Must use a registered contractor."
+      "en": "Up to $1,000 rebate for quality installation of an air source heat pump. Must use a registered contractor."
     }
   },
   {
@@ -526,5 +526,659 @@
     },
     "start_date": "2024-12-15",
     "end_date": "2025-12-15"
+  },
+  {
+    "id": "MN-26",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_dakotaElectricAssociation_energyWise",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 for an ENERGY STAR heat pump water heater"
+    }
+  },
+  {
+    "id": "MN-27",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_cityOfMinneapolis_minneapolisBonusRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$4,000 bonus rebate for a ductless air source heat pump for Green Zone residents. Must meet equipment specifications."
+    },
+    "start_date": "2024-12-15",
+    "end_date": "2025-12-15"
+  },
+  {
+    "id": "MN-28",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_cityOfMinneapolis_minneapolisBonusRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 bonus rebate for a ductless air source heat pump for non-Green Zone residents. Must meet equipment specifications."
+    },
+    "start_date": "2024-12-15",
+    "end_date": "2025-12-15"
+  },
+  {
+    "id": "MN-29",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_cityOfMinneapolis_minneapolisBonusRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$4,000 bonus rebate for a ducted air source heat pump for Green Zone residents. Must meet equipment specifications."
+    },
+    "start_date": "2024-12-15",
+    "end_date": "2025-12-15"
+  },
+  {
+    "id": "MN-30",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_cityOfMinneapolis_minneapolisBonusRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 bonus rebate for a ducted air source heat pump for non-Green Zone residents. Must meet equipment specifications."
+    },
+    "start_date": "2024-12-15",
+    "end_date": "2025-12-15"
+  },
+  {
+    "id": "MN-31",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_cityOfMinneapolis_minneapolisBonusRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate for a heat pump water heater for Green Zone residents. Must be ENERGY STAR certified."
+    },
+    "start_date": "2024-12-15",
+    "end_date": "2025-12-15"
+  },
+  {
+    "id": "MN-32",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_cityOfMinneapolis_minneapolisBonusRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 rebate for a heat pump water heater for non-Green Zone residents. Must be ENERGY STAR certified."
+    },
+    "start_date": "2024-12-15",
+    "end_date": "2025-12-15"
+  },
+  {
+    "id": "MN-33",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_minnesotaValleyElectricCoop_energyWise",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for air source heat pump"
+    }
+  },
+  {
+    "id": "MN-35",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_minnesotaValleyElectricCoop_energyWise",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for air source heat pump"
+    }
+  },
+  {
+    "id": "MN-36",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_minnesotaValleyElectricCoop_energyWise",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$600 rebate for heat pump water heater"
+    }
+  },
+  {
+    "id": "MN-37",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation"
+    ],
+    "program": "mn_cityOfEdina_communityClimateActionFund",
+    "amount": {
+      "type": "percent",
+      "number": 0.5
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% Utility rebate match for air sealing and attic insulation"
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-38",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "wall_insulation"
+    ],
+    "program": "mn_cityOfEdina_communityClimateActionFund",
+    "amount": {
+      "type": "percent",
+      "number": 0.5
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% Utility rebate match for wall insulation"
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-39",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mn_cityOfEdina_communityClimateActionFund",
+    "amount": {
+      "type": "percent",
+      "number": 0.5
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% Utility rebate match, +$250 if you add air sealing and insulation"
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-40",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_cityOfEdina_communityClimateActionFund",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "100% Utility rebate match for heat pump water heater (HPWH)"
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-41",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "mn_dakotaElectricAssociation_energyWise",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$25 rebate for an ENERGY STAR certified dryer"
+    }
+  },
+  {
+    "id": "MN-42",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_wright-HennepinCoopElectricAssn_residentialProgramsAndRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 675
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $675 rebate for air source heat pump"
+    }
+  },
+  {
+    "id": "MN-43",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ebike"
+    ],
+    "program": "mn_cityOfEdina_communityClimateActionFund",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate or more for E-Bikes"
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-44",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "mn_cityOfEdina_communityClimateActionFund",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 Rebate for installing an induction stove"
+    },
+    "start_date": "2025-02-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-45",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "mn_cityOfEdina_communityClimateActionFund",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for installing a ventless heat pump dryer"
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-46",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_connexusEnergy_rebatesAndPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a mini-split air source heat pump (ASHP)"
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-47",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_connexusEnergy_rebatesAndPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 630,
+      "minimum": 630,
+      "maximum": 850
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$630-$850 rebate for an air source heat pump (ASHP)"
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-48",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_connexusEnergy_rebatesAndPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1000 rebate for a cold climate air source heat pump (ASHP)"
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-49",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_peoplesCooperativeService_rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for a heat pump water heater. Must be an integrated, all-in-one unit with a UEF ≥ 2.20."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-50",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "mn_peoplesCooperativeService_rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$25 rebate for an ENERGY STAR certified electric dryer"
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-51",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_wright-HennepinCoopElectricAssn_residentialProgramsAndRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 rebate for air source heat pump"
+    }
+  },
+  {
+    "id": "MN-52",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "mn_cityOfHopkins_hopkinsClimateSustainabilityFund",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate for air source heat pump"
+    }
+  },
+  {
+    "id": "MN-53",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_insulation"
+    ],
+    "program": "mn_cityOfHopkins_hopkinsClimateSustainabilityFund",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,250 rebate for insulation "
+    }
+  },
+  {
+    "id": "MN-54",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "mn_cityOfHopkins_hopkinsClimateSustainabilityFund",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for induction"
+    }
+  },
+  {
+    "id": "MN-55",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "mn_cityOfHopkins_hopkinsClimateSustainabilityFund",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 rebate for heat pump or traditional electric dryer"
+    }
+  },
+  {
+    "id": "MN-56",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "mn_cityOfHopkins_hopkinsClimateSustainabilityFund",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$750 rebate for electrical panel"
+    }
   }
 ]

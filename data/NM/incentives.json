@@ -538,7 +538,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $3.00/sqft rebate for ENERGY STAR windows, dependent on home cooling type."
+      "en": "Up to $3.00/window sqft rebate for ENERGY STAR windows, dependent on home cooling type."
     }
   },
   {
@@ -1814,7 +1814,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$75 rebate for ENERGY STAR electric clothes dryer. Extra $30 rebate may be available for qualified dryer. Total rebate limit per 12 month period."
+      "en": "$75 rebate for ENERGY STAR electric clothes dryer. Extra $30 Tri-State rebate may be available for qualified dryer. "
     }
   },
   {
@@ -1827,14 +1827,15 @@
     ],
     "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
     "amount": {
-      "type": "dollar_amount",
-      "number": 100
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 100
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "25% of cost up to $100 for Learning thermostat.  Maximum limit for all rebates per year per member account."
+      "en": "25% rebate of cost up to $100 for Learning thermostat.  Maximum limit for all rebates per year per member account."
     }
   },
   {
@@ -1916,7 +1917,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "30% rebate of material costs to upgrade or add insulation. Maximum yearly rebate limits. "
+      "en": "30% rebate of material costs of upgraded or added insulation qualified for your climate zone. Maximum yearly rebate limits. "
     }
   },
   {
@@ -1956,7 +1957,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,000/unit rebate for closed loop geothermal heat pump. Additional rebates may be available. Maximum yearly rebate limits. "
+      "en": "$2,000/unit rebate for closed loop geothermal heat pump.  Maximum yearly rebate limits. "
     }
   },
   {
@@ -1977,7 +1978,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500/ton for new ground source heat pump; $250/ton for replacement, up to 50% of equipment cost. AHRI certificate required. Max yearly rebate limit."
+      "en": "$500/ton for new ground source heat pump; $250/ton for replacement, up to 50% of equipment cost. AHRI certificate required. Tri-state rebate."
     }
   },
   {
@@ -1999,7 +2000,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,000/unit for ducted air source heat pump; $500/indoor mini-split unit. At least 16 SEER. Max yearly rebate limit."
+      "en": "$1,000/unit for qualified ducted air source heat pump; $500/indoor mini-split unit. At least 16 SEER. Max yearly rebate limit."
     }
   },
   {
@@ -2021,7 +2022,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "50% equipment cost up to $1,500 for air source heat pump greater than 1.5 tons. Up to $500 for smaller systems. 7.8 HSPF2 minimum. "
+      "en": "50% cost up to $1,500 of air source heat pump > than 1.5 tons. Up to $500 for smaller systems. $500 extra for ducted propane backup. Tri-State rebate."
     }
   },
   {
@@ -2104,7 +2105,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 rebate for ENERGY STAR heat pump water heater. There is a maximum limit for all rebates over 12 months."
+      "en": "$350 Tri-State rebate for ENERGY STAR heat pump water heater. There is a maximum limit for all rebates over 12 months."
     }
   },
   {
@@ -2125,7 +2126,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$50 rebate for electric water heater if replacing propane/gas, $50/unit for managed/demand-response or $30/unit new construction. 30 gallon or larger."
+      "en": "$50 Tri-state rebate for electric water heater if replacing propane/gas, 50/unit for managed, $30/unit new construction. 30 gallon minimum."
     }
   },
   {
@@ -2186,7 +2187,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Free level 2 electric vehicle charger."
+      "en": "Free Level 2 electric vehicle charger."
     }
   },
   {
@@ -2216,8 +2217,7 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_clothes_dryer",
-      "non_heat_pump_clothes_dryer"
+      "heat_pump_clothes_dryer"
     ],
     "program": "nm_sierraElectricCooperative_sierraElectricCoopEnergyEfficiencyRebates",
     "amount": {
@@ -2229,7 +2229,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$90 rebate for ENERGY STAR heat pump (ventless) clothes dryer. $30 for ENERGY STAR electric resistance dryer. "
+      "en": "$90 rebate for ENERGY STAR heat pump (ventless) clothes dryer. "
     }
   },
   {
@@ -2605,7 +2605,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 rebate per qualified ENERGY STAR air source heat pump water heater (30 gallon or larger)"
+      "en": "$350 rebate per qualified ENERGY STAR air source heat pump water heater (30 gallon or larger)."
     }
   },
   {
@@ -2646,7 +2646,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$16/kW rebate for electric thermal storage and slab and $12/kW for thermal slabs. Must be controller by timers or control system. Min. load is 1 kW."
+      "en": "$16/kW rebate for controlled off-peak electric thermal storage and slab and $12/kW for controlled off-peak thermal slab.  Minimum load is 1 kW."
     }
   },
   {
@@ -2667,7 +2667,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500/ton for a new ground source heat pump system and $250/ton for replacement units. "
+      "en": "$500/ton for a new ground source heat pump system and $250/ton for replacement units. $100/unit for desuperheater (hot water)."
     }
   },
   {
@@ -2708,7 +2708,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,500 for qualified air source heat pumps greater than 1.5 tons, $500 for smaller systems. Up to 50% of equipment cost. Bonus for propane backup."
+      "en": "$1,500 for qualified air source heat pumps > 1.5 tons, $500 for smaller systems. Up to 50% of equipment cost. $500 bonus for ducted propane backup."
     }
   },
   {
@@ -2816,33 +2816,12 @@
     }
   },
   {
-    "id": "NM-131",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_stove"
-    ],
-    "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 100,
-      "maximum": 100
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$100 rebate for induction cooktop/range when replacing electric stove. Cooktop must be at least 30\" wide."
-    }
-  },
-  {
     "id": "NM-132",
     "payment_methods": [
       "rebate"
     ],
     "items": [
-      "electric_stove"
+      "smart_thermostat"
     ],
     "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
     "amount": {
@@ -2854,7 +2833,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$25 rebate per ENERGY STAR smart thermostat. "
+      "en": "$25 rebate per ENERGY STAR smart thermostat. Limit 2 for standard installation, limit 5 for line-voltage applications."
     }
   },
   {
@@ -3875,7 +3854,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$70/unit rebate for ENERGY STAR electric water heater. $50/unit for new construction."
+      "en": "Up to $70/unit rebate for ENERGY STAR electric water heater. $50/unit for new construction."
     }
   },
   {
@@ -3917,5 +3896,255 @@
     "short_description": {
       "en": "Purchase a 40 gallon or 50 gallon electric water heater for $50 or $60 respectively."
     }
+  },
+  {
+    "id": "NM-184",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_insulation"
+    ],
+    "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.3
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "10% rebate of material costs for insulated concrete forms used in home construction. Maximum yearly rebate limits. "
+    }
+  },
+  {
+    "id": "NM-185",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "nm_sierraElectricCooperative_sierraElectricCoopEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 30,
+      "maximum": 30
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$30 rebate for ENERGY STAR electric resistance dryer. "
+    }
+  },
+  {
+    "id": "NM-186",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "electric_vehicle_charger",
+      "used_electric_vehicle",
+      "new_electric_vehicle"
+    ],
+    "program": "nm_leaCountyElectricCooperative_lCECEnergyConservationPrograms",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free test drive of Chevy Bolt EV and free Level 2 EV charging at LCEC main office in Lovington, NM."
+    }
+  },
+  {
+    "id": "NM-188",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater"
+    ],
+    "program": "nm_leaCountyElectricCooperative_lCECEnergyConservationPrograms",
+    "amount": {
+      "type": "percent",
+      "number": 0.5
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to 50% upfront discount on Marathon electric water heater. Purchase price is LCEC's cost +10% markup - $5/gallon rebate."
+    }
+  },
+  {
+    "id": "NM-189",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "nm_leaCountyElectricCooperative_lCECEnergyConservationPrograms",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Free home energy audit including visual inspection of thermal qualities of home."
+    }
+  },
+  {
+    "id": "NM-190",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater"
+    ],
+    "program": "nm_centralValleyElectricCooperative_cVECHeatingAndCoolingRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.6
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "60% upfront discount on Marathon electric water heater. 30, 40 or 50 gallon sizes."
+    }
+  },
+  {
+    "id": "NM-191",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nm_losAlamosCounty_dPUConserveAndReduce",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Induction Cooktop Loaner Program - try out an induction cooktop, utensils, pan and instructions for free. Borrow from local libraries."
+    }
+  },
+  {
+    "id": "NM-192",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "nm_losAlamosCounty_dPUConserveAndReduce",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Reduce Energy Costs: Guidance for DIY energy audit and borrow Kill-A-Watt meter or a thermal imaging camera from public library."
+    }
+  },
+  {
+    "id": "NM-193",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "nm_tri-CountyElectricCooperative_energyUseInquiry",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Free home energy audit. Repeat audits are $500."
+    }
+  },
+  {
+    "id": "NM-194",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "nm_navopacheElectricCooperative_electricWaterHeaterTimerRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 credit on electric bill for qualified electric heat heater timer when you participate in the Residential Time of Use Plan."
+    }
+  },
+  {
+    "id": "NM-195",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "electric_stove",
+      "electric_panel",
+      "electric_wiring",
+      "energy_audit",
+      "evaporative_cooler",
+      "floor_insulation",
+      "window_replacement",
+      "wall_insulation",
+      "smart_thermostat",
+      "non_heat_pump_water_heater",
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_water_heater",
+      "heat_pump_clothes_dryer",
+      "ductless_heat_pump",
+      "ducted_heat_pump",
+      "duct_sealing",
+      "door_replacement",
+      "crawlspace_insulation",
+      "central_air_conditioner",
+      "basement_insulation",
+      "attic_or_roof_insulation",
+      "air_sealing"
+    ],
+    "program": "nm_housingNewMexicoMfa_nMEnergy$MartWeatherizationProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Provides energy-saving retrofits and home modifications at no charge to eligible low-income homeowners and renters."
+    },
+    "low_income": "nm-pnm-income-qualified"
   }
 ]
