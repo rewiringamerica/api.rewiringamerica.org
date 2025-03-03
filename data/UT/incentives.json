@@ -457,5 +457,425 @@
     "short_description": {
       "en": "Up to $400 rebate for a ducted air source heat pump."
     }
+  },
+  {
+    "id": "UT-22",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ut_cityOfLogan_loganResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 550
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$550 rebate for a heat pump water heater."
+    }
+  },
+  {
+    "id": "UT-23",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "ut_cityOfLogan_loganResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1300,
+      "minimum": 600,
+      "maximum": 1300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,300 rebate for a ductless mini split heat pump."
+    }
+  },
+  {
+    "id": "UT-24",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ut_cityOfLogan_loganResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1400,
+      "minimum": 1300,
+      "maximum": 1400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,400 rebate for an air source heat pump, depending on fuel switching."
+    }
+  },
+  {
+    "id": "UT-25",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ut_cityOfLogan_loganResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 rebate for a heat pump dryer."
+    }
+  },
+  {
+    "id": "UT-26",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ut_cityOfLogan_loganResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an induction stove or cooktop."
+    }
+  },
+  {
+    "id": "UT-27",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ut_empireElectricAssociation_eEAResidentialEnergyEfficiencyProductsProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000/ton rebate for new ground source heat pump systems, not to exceed 50% of equipment cost."
+    }
+  },
+  {
+    "id": "UT-28",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "ut_empireElectricAssociation_eEAResidentialEnergyEfficiencyProductsProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "minimum": 500,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,500 rebate for a ducted or ductless air source heat pump system, not to exceed 50% of equipment cost. "
+    }
+  },
+  {
+    "id": "UT-29",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_to_water_heat_pump"
+    ],
+    "program": "ut_empireElectricAssociation_eEAResidentialEnergyEfficiencyProductsProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton",
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton rebate for an air to water heat pump, not to exceed 50% of cost."
+    }
+  },
+  {
+    "id": "UT-30",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ut_empireElectricAssociation_eEAResidentialEnergyEfficiencyProductsProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 120
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$120 rebate for an ENERGY STAR heat pump clothes dryer. "
+    }
+  },
+  {
+    "id": "UT-31",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ut_empireElectricAssociation_eEAResidentialEnergyEfficiencyProductsProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "minimum": 100,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $350 for an induction stove or cooktop when replacing gas."
+    }
+  },
+  {
+    "id": "UT-32",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ut_empireElectricAssociation_eEAResidentialEnergyEfficiencyProductsProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350 rebate for an ENERGY STAR heat pump water heater, minimum 30 gallons."
+    }
+  },
+  {
+    "id": "UT-33",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "ut_heberLightAndPowerCompany_heberLightAndPowerEnergySavings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1600,
+      "minimum": 250,
+      "maximum": 1600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,600 rebate for an air source heat pump, depending on previous fuel type and efficiency ratings."
+    }
+  },
+  {
+    "id": "UT-34",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ut_heberLightAndPowerCompany_heberLightAndPowerEnergySavings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,500 rebate for a ground source heat pump."
+    }
+  },
+  {
+    "id": "UT-35",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ut_heberLightAndPowerCompany_heberLightAndPowerEnergySavings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for a heat pump water heater."
+    }
+  },
+  {
+    "id": "UT-36",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ut_mtWheelerPower_mtWheelerPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$75 rebate for an electric stove."
+    }
+  },
+  {
+    "id": "UT-37",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ut_mtWheelerPower_mtWheelerPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for a heat pump water heater."
+    }
+  },
+  {
+    "id": "UT-38",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ut_mtWheelerPower_mtWheelerPowerRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 300,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $300/ton rebate for an air source heat pump, depending on efficiency rating."
+    }
+  },
+  {
+    "id": "UT-39",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "ut_mtWheelerPower_mtWheelerPowerRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% rebate of cost for solar installation, or $2,500, whichever is less. Must be enrolled in net metering."
+    }
+  },
+  {
+    "id": "UT-40",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ut_raftRuralElectricCooperative_raftRuralCoopEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 450,
+      "minimum": 270,
+      "maximum": 450
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $450 rebate for a heat pump water heater."
+    }
+  },
+  {
+    "id": "UT-41",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ut_raftRuralElectricCooperative_raftRuralCoopEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an ENERGY STAR heat pump clothes dryer."
+    }
   }
 ]
