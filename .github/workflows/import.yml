@@ -5,10 +5,6 @@ on:
   schedule:
     # Run every Monday at noon UTC (early morning in US timezones)
     - cron: '0 12 * * MON'
-  # TODO: remove branch trigger after testing
-  push:
-    branches:
-      - 'benj/import-loan-data'
 
 jobs:
   incentive-admin-data-update:
