@@ -15,7 +15,12 @@ async function saveLoanProgramDataToDisk() {
   for (const path of GENERAL_IMPORTS) {
     const writeDirAndFilename = `data/${pathToFileName(path)}`;
     const data = await fetchCapitalData(path);
-    writeFileSync(writeDirAndFilename, JSON.stringify(data, null, 2) + '\n');
+    try {
+      writeFileSync(writeDirAndFilename, JSON.stringify(data, null, 2) + '\n');
+    } catch (error) {
+      console.error(`Failed to write data to ${writeDirAndFilename}:`, error);
+      throw error;
+    }
     console.log(`Exported ${writeDirAndFilename}...`);
   }
 }
