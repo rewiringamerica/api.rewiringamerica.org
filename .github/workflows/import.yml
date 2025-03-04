@@ -5,6 +5,10 @@ on:
   schedule:
     # Run every Monday at noon UTC (early morning in US timezones)
     - cron: '0 12 * * MON'
+  # TODO: remove branch trigger after testing
+  push:
+    branches:
+      - 'benj/hero-import-loans'
 
 jobs:
   incentive-admin-data-update:
@@ -13,6 +17,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - id: 'secrets'
+        uses: 'google-github-actions/get-secretmanager-secrets@v1'
+        with:
+          secrets: |-
+            CAPITAL_ADMIN_API_KEY:projects/1055073134635/secrets/CAPITAL_ADMIN_API_KEY
       - name: Use Node.js 18.x
         uses: actions/setup-node@v4
         with:
@@ -24,8 +33,10 @@ jobs:
       - name: Run transformation script
         env:
           INCENTIVE_ADMIN_HOST: 'https://incentive-admin.rewiringamerica.org/api/export'
+          CAPITAL_ADMIN_API_KEY: ${{ steps.secrets.outputs.CAPITAL_ADMIN_API_KEY }}
         run: |
           npx ts-node scripts/incentive-admin-import.ts
+          npx ts-node scripts/incentive-admin-capital-import.ts
       - name: Check for changes
         id: git_diff
         run: |
