@@ -23,6 +23,10 @@ async function saveLoanProgramDataToDisk() {
 async function fetchCapitalData(path: string) {
   const data_url = `${INCENTIVE_ADMIN_HOST}${path}`;
   const authHeader = process.env.CAPITAL_API_KEY;
+  if (!authHeader) {
+    throw new Error('No CAPITAL_API_KEY environment variable set');
+  }
+  console.log(`partial API key: ${authHeader.slice(0, 10)}`);
   console.log(`fetching data from ${data_url}`);
 
   try {
