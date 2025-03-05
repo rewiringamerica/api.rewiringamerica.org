@@ -41,6 +41,28 @@ export const FINANCIAL_AUTHORITY_SCHEMA = {
 } as const;
 
 /**
+ * Schema for LoanProgramTerms.
+ */
+export const LOAN_PROGRAM_TERMS_SCHEMA = {
+  $id: 'LoanProgramTerms.schema.json',
+  type: 'object',
+  properties: {
+    id: { type: 'number' },
+    min_credit_score: { type: ['number', 'null'] },
+    max_debt_to_income: { type: ['number', 'null'] },
+    min_loan_amount: { type: ['number', 'null'] },
+    max_loan_amount: { type: ['number', 'null'] },
+    min_interest_rate: { type: ['number', 'null'] },
+    max_interest_rate: { type: ['number', 'null'] },
+    max_repayment_months: { type: ['number', 'null'] },
+    created_at: { type: ['string', 'null'], format: 'date-time' },
+    updated_at: { type: ['string', 'null'], format: 'date-time' },
+    required: ['id', 'created_at', 'updated_at'],
+    additionalProperties: false,
+  },
+} as const;
+
+/**
  * Schema for a single LoanProgram.
  */
 export const LOAN_PROGRAM_SCHEMA = {
@@ -62,13 +84,14 @@ export const LOAN_PROGRAM_SCHEMA = {
     website_url: { type: 'string', format: 'uri' },
     financial_authority_id: { type: 'number' },
     financial_authority: { $ref: 'FinancialAuthority.schema.json' },
+    loan_program_terms_id: { type: 'number' },
+    loan_program_terms: { $ref: 'LoanProgramTerms.schema.json' },
     eligible_project_types: {
       type: 'array',
       items: { $ref: 'EligibleProjectType.schema.json' },
     },
     state: { type: 'string' },
     is_national: { type: 'boolean' },
-    metadata: { type: 'object' },
     created_at: { type: 'string', format: 'date-time' },
     updated_at: { type: 'string', format: 'date-time' },
   },
@@ -81,7 +104,7 @@ export const LOAN_PROGRAM_SCHEMA = {
     'eligible_project_types',
     'state',
     'is_national',
-    'metadata',
+    'loan_program_terms',
     'created_at',
     'updated_at',
   ],
