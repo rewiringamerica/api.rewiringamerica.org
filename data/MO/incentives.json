@@ -322,5 +322,1243 @@
       "en": "Free home efficiency audit and weatherization services for income-qualified residents."
     },
     "low_income": "mo-200-fpl"
+  },
+  {
+    "id": "MO-15",
+    "payment_methods": [
+      "account_credit",
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "mo_cityOfKirkwood_kirkwoodElectricRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for an electric vehicle charger."
+    }
+  },
+  {
+    "id": "MO-16",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_consolidatedElectricCooperative_consolidatedElectricRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for a ground source heat pump installation."
+    }
+  },
+  {
+    "id": "MO-17",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_consolidatedElectricCooperative_consolidatedElectricRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for a ground source heat pump installation."
+    }
+  },
+  {
+    "id": "MO-18",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mo_atchison-HoltElectricCooperative_aHECRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 150,
+      "unit": "ton",
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150/ton rebate for a qualifying ducted or ductless air source heat pump."
+    }
+  },
+  {
+    "id": "MO-19",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_atchison-HoltElectricCooperative_aHECRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 7500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for a qualifying ground source heat pump."
+    }
+  },
+  {
+    "id": "MO-20",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mo_atchison-HoltElectricCooperative_aHECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% rebate up to $500 for an ENERGY STAR rated heat pump water heater."
+    }
+  },
+  {
+    "id": "MO-21",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mo_bartonCountyElectricCooperative_bartonCountyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 150,
+      "unit": "ton",
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150/ton for a ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat."
+    }
+  },
+  {
+    "id": "MO-22",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_bartonCountyElectricCooperative_bartonCountyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 7500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton for a qualifying ground source heat pump."
+    }
+  },
+  {
+    "id": "MO-23",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "mo_booneElectricCooperative_booneElectricTakeControlAndSaveRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 150,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate per system and $150/ton for qualifying air source heat pumps."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MO-24",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_booneElectricCooperative_booneElectricTakeControlAndSaveRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 7500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for a ground source heat pump system."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MO-25",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_callawayElectricCooperative_callawayElectricRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 850,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $850/ton for an ENERGY STAR rated ground source heat pump."
+    }
+  },
+  {
+    "id": "MO-26",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "mo_callawayElectricCooperative_callawayElectricRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 150,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $150/ton for an ENERGY STAR rated air source heat pump."
+    }
+  },
+  {
+    "id": "MO-27",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater"
+    ],
+    "program": "mo_callawayElectricCooperative_callawayElectricRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $250 rebate for an electric water heater. Heat pump water heaters are not eligible."
+    }
+  },
+  {
+    "id": "MO-28",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "mo_callawayElectricCooperative_callawayElectricRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $250 rebate for an electric vehicle charger, up to 50% of total cost."
+    }
+  },
+  {
+    "id": "MO-29",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mo_centralMissouriElectricCooperative_cMECRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% rebate up to $500 for an ENERGY STAR certified heat pump water heater."
+    }
+  },
+  {
+    "id": "MO-30",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mo_centralMissouriElectricCooperative_cMECRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 150,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150/ton rebate for ducted or ductless air source heat pumps."
+    }
+  },
+  {
+    "id": "MO-31",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_centralMissouriElectricCooperative_cMECRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 3750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for an ENERGY STAR certified ground source heat pump."
+    }
+  },
+  {
+    "id": "MO-32",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mo_citizensElectricCorporation_cECMOPowerMovesRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an air source heat pump when used with another fuel source."
+    },
+    "end_date": "2025-05-31"
+  },
+  {
+    "id": "MO-33",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mo_citizensElectricCorporation_cECMOPowerMovesRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1800,
+      "minimum": 250,
+      "maximum": 1800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,800 rebate for an air source heat pump depending on efficiency level, cold climate rating, and system replaced."
+    },
+    "end_date": "2025-05-31"
+  },
+  {
+    "id": "MO-34",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mo_citizensElectricCorporation_cECMOPowerMovesRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 rebate for a heat pump water heater."
+    },
+    "end_date": "2025-05-31"
+  },
+  {
+    "id": "MO-35",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_citizensElectricCorporation_cECMOPowerMovesRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 rebate for a ground source heat pump."
+    },
+    "end_date": "2025-05-31"
+  },
+  {
+    "id": "MO-36",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mo_cityOfIndependence_independenceResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 701,
+      "minimum": 309,
+      "maximum": 701
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $701 rebate for an ENERGY STAR certified air source heat pump, depending on efficiency rating."
+    }
+  },
+  {
+    "id": "MO-37",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mo_cityOfIndependence_independenceResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for an ENERGY STAR certified heat pump water heater."
+    }
+  },
+  {
+    "id": "MO-38",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mo_cityUtilitiesOfSpringfield_springfieldResidentialRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an ENERGY STAR certified air source heat pump that meets minimum efficiency standards."
+    }
+  },
+  {
+    "id": "MO-39",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_cityUtilitiesOfSpringfield_springfieldResidentialRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1025
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1025 rebate for an ENERGY STAR certified ground source heat pump that meets minimum efficiency standards."
+    }
+  },
+  {
+    "id": "MO-40",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "mo_cityUtilitiesOfSpringfield_springfieldResidentialRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% up to $500 rebate for an electric vehicle charger."
+    }
+  },
+  {
+    "id": "MO-41",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "mo_co-MoElectricCooperative_co-MoElectricTakeControlAndSave",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for a level 2 electric vehicle charger. Cannot exceed 50% of purchase cost."
+    }
+  },
+  {
+    "id": "MO-42",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mo_co-MoElectricCooperative_co-MoElectricTakeControlAndSave",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump water heater. Cannot exceed 50% of purchase cost."
+    }
+  },
+  {
+    "id": "MO-43",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mo_co-MoElectricCooperative_co-MoElectricTakeControlAndSave",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 300,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $300/ton rebate for an air source heat pump depending on system configuration and efficiency rating. Cannot exceed 50% of purchase cost."
+    }
+  },
+  {
+    "id": "MO-44",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_co-MoElectricCooperative_co-MoElectricTakeControlAndSave",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 850,
+      "unit": "ton",
+      "maximum": 8500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $850/ton rebate for an ground source heat pump depending on system configuration and efficiency rating. Cannot exceed 50% of purchase cost."
+    }
+  },
+  {
+    "id": "MO-45",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater",
+      "non_heat_pump_water_heater"
+    ],
+    "program": "mo_crawfordElectricCooperative_crawfordElectricResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for a high-efficiency electric water heater."
+    }
+  },
+  {
+    "id": "MO-46",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_crawfordElectricCooperative_crawfordElectricResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for a ground source heat pump."
+    }
+  },
+  {
+    "id": "MO-47",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mo_crawfordElectricCooperative_crawfordElectricResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 350,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350/ton rebate for a ducted or ductless air source heat pump."
+    }
+  },
+  {
+    "id": "MO-48",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "mo_cuivreRiverElectricCooperative_cuivreRiverEnergyEfficiencyAndSavings",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of cost up to $250 for a level 2 electric vehicle charger."
+    }
+  },
+  {
+    "id": "MO-49",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mo_cuivreRiverElectricCooperative_cuivreRiverEnergyEfficiencyAndSavings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost."
+    }
+  },
+  {
+    "id": "MO-50",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_cuivreRiverElectricCooperative_cuivreRiverEnergyEfficiencyAndSavings",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for a qualifying ground source heat pump."
+    }
+  },
+  {
+    "id": "MO-51",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mo_cuivreRiverElectricCooperative_cuivreRiverEnergyEfficiencyAndSavings",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 150,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150/ton rebate for a qualifying ducted or ductless air source heat pump."
+    }
+  },
+  {
+    "id": "MO-52",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mo_libertyUtilities_libertyMOElectricEnergyEfficiencyProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 550
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $550 rebate for an air source heat pump, depending on efficiency rating."
+    }
+  },
+  {
+    "id": "MO-53",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mo_libertyUtilities_libertyMOElectricEnergyEfficiencyProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $350 rebate for a ductless air source mini split heat pump, depending on efficiency rating."
+    }
+  },
+  {
+    "id": "MO-54",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_libertyUtilities_libertyMOElectricEnergyEfficiencyProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 550
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $550 rebate for a ground source heat pump."
+    }
+  },
+  {
+    "id": "MO-55",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mo_gascosageElectricCooperative_gascosageElectricRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump water heater."
+    }
+  },
+  {
+    "id": "MO-56",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "mo_gascosageElectricCooperative_gascosageElectricRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for a level 2 electric vehicle charger."
+    }
+  },
+  {
+    "id": "MO-57",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_grundyElectricCooperative_grundyElectricRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton for an ENERGY STAR certified ground source heat pump."
+    }
+  },
+  {
+    "id": "MO-58",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "mo_grundyElectricCooperative_grundyElectricRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 150,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150/ton for an ENERGY STAR certified ducted or ductless air source heat pump."
+    }
+  },
+  {
+    "id": "MO-59",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_howardElectricCooperative_howardElectricRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 7500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for a qualifying ground source heat pump installation."
+    }
+  },
+  {
+    "id": "MO-60",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mo_howardElectricCooperative_howardElectricRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 350,
+      "unit": "ton",
+      "minimum": 1050
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350/ton rebate for a qualifying mini split heat pump. Minimum 3 ton."
+    }
+  },
+  {
+    "id": "MO-61",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mo_howardElectricCooperative_howardElectricRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 200,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200/ton rebate for a qualifying air source heat pump installation."
+    }
+  },
+  {
+    "id": "MO-62",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mo_howardElectricCooperative_howardElectricRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 650,
+      "minimum": 500,
+      "maximum": 650
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $650 rebate for a heat pump water heater, depending on previous fuel source."
+    }
+  },
+  {
+    "id": "MO-63",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "mo_howardElectricCooperative_howardElectricRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of total cost, up to $250 for a level 2 electric vehicle charger."
+    }
+  },
+  {
+    "id": "MO-64",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "mo_howell-OregonElectricCooperative_howell-OregonRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for a level 2 electric vehicle charger."
+    }
+  },
+  {
+    "id": "MO-65",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mo_howell-OregonElectricCooperative_howell-OregonRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 150,
+      "unit": "ton",
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150/ton rebate for a qualifying mini split heat pump."
+    }
+  },
+  {
+    "id": "MO-66",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mo_howell-OregonElectricCooperative_howell-OregonRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 150,
+      "unit": "ton",
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150/ton rebate for a qualifying air source heat pump."
+    }
+  },
+  {
+    "id": "MO-67",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_howell-OregonElectricCooperative_howell-OregonRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 350,
+      "unit": "ton",
+      "maximum": 3500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350/ton rebate for a qualifying ground source heat pump."
+    }
+  },
+  {
+    "id": "MO-68",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mo_howell-OregonElectricCooperative_howell-OregonRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of cost, up to $500 rebate for a heat pump water heater."
+    }
+  },
+  {
+    "id": "MO-69",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mo_lacledeElectricCooperative_lacledeTakeControlAndSave",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 7500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750/ton rebate for a ground source heat pump."
+    }
+  },
+  {
+    "id": "MO-70",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mo_lacledeElectricCooperative_lacledeTakeControlAndSave",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 300,
+      "unit": "ton",
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300/ton rebate for a qualifying ducted or ductless air source heat pump."
+    }
+  },
+  {
+    "id": "MO-71",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mo_lacledeElectricCooperative_lacledeTakeControlAndSave",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a qualifying heat pump water heater."
+    }
+  },
+  {
+    "id": "MO-72",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "mo_lacledeElectricCooperative_lacledeTakeControlAndSave",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for a qualifying level 2 electric vehicle charger. Must be enrolled in managed charging program."
+    }
   }
 ]

@@ -4120,7 +4120,6 @@
       "wall_insulation",
       "smart_thermostat",
       "non_heat_pump_water_heater",
-      "non_heat_pump_clothes_dryer",
       "heat_pump_water_heater",
       "heat_pump_clothes_dryer",
       "ductless_heat_pump",
@@ -4131,7 +4130,10 @@
       "central_air_conditioner",
       "basement_insulation",
       "attic_or_roof_insulation",
-      "air_sealing"
+      "air_sealing",
+      "rooftop_solar_installation",
+      "other",
+      "duct_replacement"
     ],
     "program": "nm_housingNewMexicoMfa_nMEnergy$MartWeatherizationProgram",
     "amount": {
@@ -4146,5 +4148,96 @@
       "en": "Provides energy-saving retrofits and home modifications at no charge to eligible low-income homeowners and renters."
     },
     "low_income": "nm-pnm-income-qualified"
+  },
+  {
+    "id": "NM-196",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "door_replacement",
+      "duct_sealing",
+      "duct_replacement",
+      "evaporative_cooler",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "central_air_conditioner",
+      "crawlspace_insulation",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "electric_panel",
+      "electric_stove",
+      "electric_wiring",
+      "energy_audit",
+      "floor_insulation",
+      "heat_pump_water_heater",
+      "smart_thermostat",
+      "wall_insulation",
+      "window_replacement"
+    ],
+    "program": "nm_housingNewMexicoMfa_veteransHousingRehabilitationAndModificationProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Provides energy-saving retrofits and home modifications at no charge to eligible low-income homeowners and renters."
+    },
+    "low_income": "nm-hear-low-income"
+  },
+  {
+    "id": "NM-197",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "window_replacement",
+      "rooftop_solar_installation",
+      "other",
+      "smart_thermostat",
+      "door_replacement",
+      "energy_audit",
+      "electric_wiring"
+    ],
+    "program": "nm_santaFeCounty_homeRehabilitationAndEnergyEfficiencyHREEProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "One-time grant up to $50,000 for envelope, efficiency  and safety improvements to qualified homeowners in unincorporated parts of Santa Fe County. "
+    },
+    "low_income": "nm-santafe-100AMI-HUD"
+  },
+  {
+    "id": "NM-198",
+    "eligible_geo_group": "Forth Carshare Cities",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "new_electric_vehicle",
+      "used_electric_vehicle"
+    ],
+    "program": "nm_forth_goForthElectricCarShare",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Affordable electric carshare. First test drive is free. Subsequent rentals are $4-$5/hr or a $35-50/day. Specific locations. "
+    }
   }
 ]
