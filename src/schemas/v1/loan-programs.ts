@@ -3,113 +3,127 @@ import { FromSchema } from 'json-schema-to-ts';
 import {
   ELIGIBLE_PROJECT_TYPE_SCHEMA,
   FINANCIAL_AUTHORITY_SCHEMA,
+  LOAN_PROGRAM_TERMS_SCHEMA,
 } from '../../data/types/capital-types';
 import { STATES_AND_TERRITORIES } from '../../data/types/states';
-
-const STATES = [...STATES_AND_TERRITORIES, 'NT'];
 
 /**
  * API response schema for loan programs.
  */
 export const API_LOAN_PROGRAMS_RESPONSE_SCHEMA = {
   $id: 'APILoanProgramsResponse',
-  type: 'object',
-  properties: {
-    loan_programs: {
-      type: 'object',
-      description: 'A map of IDs to loan program data.',
-      additionalProperties: {
-        type: 'object',
-        properties: {
-          loan_program_key: {
-            type: 'string',
-            description: 'Unique key for the loan program within a State',
-          },
-          name: {
-            type: 'string',
-            description: 'Name of the loan program',
-          },
-          description: { type: 'string' },
-          description_langs: {
-            type: ['object', 'null'],
-            patternProperties: {
-              '^[a-z]{2}$': { type: 'string' },
-            },
-            additionalProperties: false,
-          },
-          website_url: {
-            type: 'string',
-            description: 'URL for loan program details',
-            format: 'uri',
-          },
-          status: {
-            type: 'string',
-            description: 'Current status of the loan program',
-            enum: Object.values(LoanProgramStatus),
-          },
-          financial_authority: FINANCIAL_AUTHORITY_SCHEMA,
-          eligible_project_types: {
-            type: 'array',
-            description: 'List of eligible project types',
-            items: ELIGIBLE_PROJECT_TYPE_SCHEMA,
-          },
-          state: {
-            type: 'string',
-            description: 'State where the loan program is offered',
-            enum: Object.values(STATES),
-          },
-          is_national: {
-            type: 'boolean',
-            description: 'Indicates if the loan program is national',
-          },
-          metadata: { type: 'object' },
-          created_at: { type: 'string', format: 'date-time' },
-          updated_at: { type: 'string', format: 'date-time' },
+  type: 'array',
+  items: {
+    type: 'object',
+    properties: {
+      id: {
+        type: 'number',
+        description: 'Unique identifier for the loan program',
+      },
+      loan_program_key: {
+        type: 'string',
+        description: 'Unique key for the loan program within a State',
+      },
+      name: {
+        type: 'string',
+        description: 'Name of the loan program',
+      },
+      description: {
+        type: 'string',
+        description: 'Detailed description of the loan program',
+      },
+      description_langs: {
+        type: ['object', 'null'],
+        description: 'Localized descriptions',
+        patternProperties: {
+          '^[a-z]{2}$': { type: 'string' },
         },
-        required: [
-          'loan_program_key',
-          'name',
-          'description',
-          'website_url',
-          'status',
-          'financial_authority',
-          'eligible_project_types',
-          'is_national',
-          'metadata',
-          'created_at',
-          'updated_at',
-        ],
-        // Conditional validations:
-        // - If is_national is true, state must equal "NT"
-        // - If is_national is false, state must not equal "NT"
-        allOf: [
-          {
-            if: {
-              properties: { is_national: { const: true } },
-            },
-            then: {
-              properties: { state: { const: 'NT' } },
-            },
-          },
-          {
-            if: {
-              properties: { is_national: { const: false } },
-            },
-            then: {
-              properties: { state: { not: { const: 'NT' } } },
-            },
-          },
-        ],
+        additionalProperties: false,
+      },
+      website_url: {
+        type: 'string',
+        description: 'URL for loan program details',
+        format: 'uri',
+      },
+      status: {
+        type: 'string',
+        description: 'Current status of the loan program',
+        enum: Object.values(LoanProgramStatus),
+      },
+      financial_authority_id: {
+        type: 'number',
+        description: 'Identifier for the financial authority',
+      },
+      financial_authority: FINANCIAL_AUTHORITY_SCHEMA,
+      eligible_project_types: {
+        type: 'array',
+        description: 'List of eligible project types',
+        items: ELIGIBLE_PROJECT_TYPE_SCHEMA,
+      },
+      state: {
+        type: ['string', 'null'],
+        description: 'State where the loan program is offered',
+        enum: [...Object.values(STATES_AND_TERRITORIES), null],
+      },
+      is_national: {
+        type: 'boolean',
+        description: 'Indicates if the loan program is national',
+      },
+      loan_program_terms: LOAN_PROGRAM_TERMS_SCHEMA,
+      created_at: {
+        type: 'string',
+        format: 'date-time',
+        description: 'Timestamp of loan program creation',
+      },
+      updated_at: {
+        type: 'string',
+        format: 'date-time',
+        description: 'Timestamp of last loan program update',
       },
     },
+    required: [
+      'id',
+      'loan_program_key',
+      'name',
+      'description',
+      'website_url',
+      'status',
+      'financial_authority_id',
+      'financial_authority',
+      'eligible_project_types',
+      'is_national',
+      'created_at',
+      'updated_at',
+    ],
+    // additionalProperties: false,
+    // Conditional validations:
+    // - If is_national is true, state must be null
+    // - If is_national is false, state must not be null
+    allOf: [
+      {
+        if: {
+          properties: { is_national: { const: true } },
+        },
+        then: {
+          properties: { state: { const: null } },
+        },
+      },
+      {
+        if: {
+          properties: { is_national: { const: false } },
+        },
+        then: {
+          properties: { state: { not: { const: null } } },
+        },
+      },
+    ],
   },
-  required: ['loan_programs'],
 } as const;
 
 /**
  * API request schema for loan programs.
  */
-const API_LOAN_PROGRAMS_REQUEST = {
+export const API_LOAN_PROGRAMS_REQUEST_SCHEMA = {
   type: 'object',
   properties: {
     zip: {
@@ -138,11 +152,11 @@ const API_LOAN_PROGRAMS_REQUEST = {
 /**
  * API loan programs endpoint schema.
  */
-export const API_LOAN_PROGRAMS_REQUEST_SCHEMA = {
+export const API_LOAN_PROGRAMS_ENDPOINT_SCHEMA = {
   summary: 'Get all loan programs by location',
   description: 'Returns all loan programs for a specified location.',
   operationId: 'getLoanProgramsForLocation',
-  querystring: API_LOAN_PROGRAMS_REQUEST,
+  querystring: API_LOAN_PROGRAMS_REQUEST_SCHEMA,
   response: {
     200: API_LOAN_PROGRAMS_RESPONSE_SCHEMA,
     400: { $ref: 'Error' },
@@ -150,7 +164,7 @@ export const API_LOAN_PROGRAMS_REQUEST_SCHEMA = {
 } as const;
 
 export type APILoanProgramsRequest = FromSchema<
-  typeof API_LOAN_PROGRAMS_REQUEST
+  typeof API_LOAN_PROGRAMS_REQUEST_SCHEMA
 >;
 export type APILoanProgramsResponse = FromSchema<
   typeof API_LOAN_PROGRAMS_RESPONSE_SCHEMA

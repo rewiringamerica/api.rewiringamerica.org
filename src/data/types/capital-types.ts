@@ -13,7 +13,10 @@ export const ELIGIBLE_PROJECT_TYPE_SCHEMA = {
   $id: 'EligibleProjectType.schema.json',
   type: 'object',
   properties: {
-    type: { type: 'string', enum: Object.values(ProjectType) },
+    type: {
+      type: 'string',
+      enum: Object.values(ProjectType),
+    },
   },
   required: ['type'],
   additionalProperties: false,
@@ -32,11 +35,20 @@ export const FINANCIAL_AUTHORITY_SCHEMA = {
     description: { type: ['string', 'null'] },
     state: { type: 'string' },
     city: { type: ['string', 'null'] },
+    image_id: { type: 'number' },
     Image: API_IMAGE_SCHEMA,
     created_at: { type: ['string', 'null'], format: 'date-time' },
     updated_at: { type: ['string', 'null'], format: 'date-time' },
   },
-  required: ['id', 'authority_type', 'name', 'state', 'city', 'Image'],
+  required: [
+    'id',
+    'authority_type',
+    'name',
+    'state',
+    'city',
+    'Image',
+    'image_id',
+  ],
   additionalProperties: false,
 } as const;
 
@@ -57,9 +69,9 @@ export const LOAN_PROGRAM_TERMS_SCHEMA = {
     max_repayment_months: { type: ['number', 'null'] },
     created_at: { type: ['string', 'null'], format: 'date-time' },
     updated_at: { type: ['string', 'null'], format: 'date-time' },
-    required: ['id', 'created_at', 'updated_at'],
-    additionalProperties: false,
   },
+  required: ['id', 'created_at', 'updated_at'],
+  additionalProperties: false,
 } as const;
 
 /**
