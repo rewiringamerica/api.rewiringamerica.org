@@ -1,4 +1,5 @@
 import Ajv from 'ajv';
+import addFormats from 'ajv-formats';
 import fs from 'fs';
 import qs from 'qs';
 import { beforeEach, test, Test } from 'tap';
@@ -11,6 +12,7 @@ import {
 } from '../../src/data/types/states';
 import { API_CALCULATOR_RESPONSE_SCHEMA } from '../../src/schemas/v1/calculator-endpoint';
 import { API_INCENTIVE_SCHEMA } from '../../src/schemas/v1/incentive';
+import { API_LOAN_PROGRAMS_RESPONSE_SCHEMA } from '../../src/schemas/v1/loan-programs';
 import { API_PROGRAMS_RESPONSE_SCHEMA } from '../../src/schemas/v1/programs';
 import { API_STATES_RESPONSE_SCHEMA } from '../../src/schemas/v1/states-endpoint';
 import { API_UTILITIES_RESPONSE_SCHEMA } from '../../src/schemas/v1/utilities-endpoint';
@@ -104,6 +106,47 @@ async function validateProgramsResponse(
     );
     t.strictSame(
       programsResponse,
+      expectedResponse,
+      `response does not match ${snapshotFile}`,
+    );
+  }
+}
+
+async function validateLoanProgramsResponse(
+  t: Test,
+  query: Record<string, unknown>,
+  snapshotFile: string,
+) {
+  const app = await build(t);
+  const ajv = new Ajv({
+    schemas: [API_LOAN_PROGRAMS_RESPONSE_SCHEMA],
+    coerceTypes: true,
+    useDefaults: true,
+    removeAdditional: true,
+    allErrors: false,
+  });
+  addFormats(ajv);
+  const searchParams = qs.stringify(query, { encodeValuesOnly: true });
+  const res = await app.inject({
+    url: `/api/v1/loan-programs?${searchParams}`,
+  });
+  t.equal(res.statusCode, 200, 'status code is 200');
+
+  const loanProgramsResponse = JSON.parse(res.payload);
+  const validator = ajv.getSchema('APILoanProgramsResponse')!;
+  await validator(loanProgramsResponse);
+
+  if (process.env.UPDATE_SNAPSHOTS) {
+    fs.writeFileSync(
+      `./test/snapshots/${snapshotFile}`,
+      JSON.stringify(loanProgramsResponse, null, 2) + '\n',
+    );
+  } else {
+    const expectedResponse = JSON.parse(
+      fs.readFileSync(`./test/snapshots/${snapshotFile}`, 'utf-8'),
+    );
+    t.strictSame(
+      loanProgramsResponse,
       expectedResponse,
       `response does not match ${snapshotFile}`,
     );
@@ -1072,4 +1115,15 @@ test('all programs for location', async t => {
     },
     snapshotFile,
   );
+});
+
+test('loan programs endpoint returns correct response for valid location', async t => {
+  const query = {
+    zip: '12345',
+    language: 'en',
+  };
+
+  const snapshotFile = 'v1-loan-programs-12345.json';
+
+  await validateLoanProgramsResponse(t, query, snapshotFile);
 });
