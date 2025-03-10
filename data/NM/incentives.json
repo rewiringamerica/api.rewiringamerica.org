@@ -3781,7 +3781,7 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_water_heater"
+      "central_air_conditioner"
     ],
     "program": "nm-el-paso-energy-efficiency",
     "amount": {
@@ -4238,6 +4238,125 @@
     ],
     "short_description": {
       "en": "Affordable electric carshare. First test drive is free. Subsequent rentals are $4-$5/hr or a $35-50/day. Specific locations. "
+    }
+  },
+  {
+    "id": "NM-199",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "evaporative_cooler",
+      "smart_thermostat",
+      "attic_or_roof_insulation",
+      "air_sealing",
+      "duct_sealing"
+    ],
+    "program": "nm_elPasoElectric_elPasoElectricResidentialLowIncome",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Provides no-cost energy efficiency services to low-income qualified customers all residential home types. Multifamily and rental may qualify."
+    },
+    "low_income": "nm-elpasoelectric-income-qualified"
+  },
+  {
+    "id": "NM-200",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ebike"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate up to $900 for qualifying e-bike for qualified residential accounts. "
+    }
+  },
+  {
+    "id": "NM-201",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ebike"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "percent",
+      "number": 0.7,
+      "maximum": 1300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "70% rebate up to $1,300 for qualifying e-bike for income qualified cuistomers."
+    },
+    "low_income": "nm-elpasoelectric-income-qualified"
+  },
+  {
+    "id": "NM-202",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "new_electric_vehicle",
+      "used_electric_vehicle"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "percent",
+      "number": 0.7,
+      "maximum": 1300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$4,000 rebate off qualifying electric vehicle  (with an MSRP below $55,000), offered only to low-income customers."
+    },
+    "start_date": "2024-03-29",
+    "low_income": "nm-elpasoelectric-income-qualified"
+  },
+  {
+    "id": "NM-203",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger",
+      "electric_wiring"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1300,
+      "maximum": 1300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,300 rebate for installation costs of a new 240V outlet dedicated to EV home charging. Must join EV Smart Rewards NM Program."
     }
   }
 ]
