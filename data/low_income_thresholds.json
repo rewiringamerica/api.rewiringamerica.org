@@ -1775,6 +1775,22 @@
     }
   },
   "MN": {
+    "80% of the Dakota County AMI": {
+      "type": "hhsize",
+      "incentives": [],
+      "source_url": "https://www.northfieldmn.gov/1531/Energy-Efficiency-Rebate",
+      "description": "80% of the Dakota County AMI",
+      "thresholds": {
+        "1": 62600,
+        "2": 71550,
+        "3": 80500,
+        "4": 89400,
+        "5": 96600,
+        "6": 103750,
+        "7": 110900,
+        "8": 118050
+      }
+    },
     "mn-state-default-150": {
       "type": "ami-percentage",
       "incentives": [],
@@ -3348,6 +3364,24 @@
         "6": 83920,
         "7": 94680,
         "8": 105440
+      }
+    },
+    "ut-logan-low-income": {
+      "type": "hhsize",
+      "incentives": [
+        "UT-54"
+      ],
+      "source_url": "https://form.jotform.com/250215857470154",
+      "description": "Logan Low Income Threshold",
+      "thresholds": {
+        "1": 28952,
+        "2": 39127,
+        "3": 49302,
+        "4": 59477,
+        "5": 69652,
+        "6": 79827,
+        "7": 90002,
+        "8": 100177
       }
     }
   },
