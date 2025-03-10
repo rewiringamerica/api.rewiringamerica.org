@@ -877,5 +877,286 @@
     "short_description": {
       "en": "$50 rebate for an ENERGY STAR heat pump clothes dryer."
     }
+  },
+  {
+    "id": "UT-42",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ut_empireElectricAssociation_eEAResidentialEnergyEfficiencyProductsProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $50 rebate for a smart thermostat when on a time of use rate."
+    }
+  },
+  {
+    "id": "UT-43",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ut_empireElectricAssociation_eEAResidentialEnergyEfficiencyProductsProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "25% of purchase price, up to $250 rebate for electric snow blowers or walk-behind mowers."
+    }
+  },
+  {
+    "id": "UT-44",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ut_empireElectricAssociation_eEAResidentialEnergyEfficiencyProductsProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "25% of purchase price, up to $1,000 rebate for an electric riding lawn mower."
+    }
+  },
+  {
+    "id": "UT-45",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ebike"
+    ],
+    "program": "ut_empireElectricAssociation_eEAResidentialEnergyEfficiencyProductsProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "25% of purchase price, up to $150 rebate for an electric bicycle."
+    }
+  },
+  {
+    "id": "UT-46",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger",
+      "electric_wiring"
+    ],
+    "program": "ut_empireElectricAssociation_eEAResidentialEnergyEfficiencyProductsProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 1250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% of purchase price, up to $1,250 for electric vehicle chargers and accompanying electrical service."
+    }
+  },
+  {
+    "id": "UT-47",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ut_wellsRuralElectric_wellsRuralElectricRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1100,
+      "minimum": 700,
+      "maximum": 1100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,100 rebate for a heat pump water heater, depending on capacity."
+    }
+  },
+  {
+    "id": "UT-48",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "ut_wellsRuralElectric_wellsRuralElectricRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 rebate for a ductless mini split air source heat pump."
+    }
+  },
+  {
+    "id": "UT-49",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ut_wellsRuralElectric_wellsRuralElectricRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200,
+      "minimum": 1000,
+      "maximum": 1200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,200 rebate for a ducted air source heat pump. Pre-approval strongly encouraged."
+    }
+  },
+  {
+    "id": "UT-50",
+    "eligible_geo_group": "ut-umpa",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ut_utahMunicipalPowerAgency_renewChoiceRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for switching to a heat pump water heater from gas."
+    }
+  },
+  {
+    "id": "UT-51",
+    "eligible_geo_group": "ut-umpa",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ut_utahMunicipalPowerAgency_renewChoiceRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for a qualifying air source heat pump."
+    }
+  },
+  {
+    "id": "UT-52",
+    "eligible_geo_group": "ut-umpa",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "ut_utahMunicipalPowerAgency_renewChoiceRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a ductless mini split air source heat pump."
+    }
+  },
+  {
+    "id": "UT-53",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ut_cityOfLogan_loganResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 (each) rebate for battery operated lawn mowers and snow blowers."
+    }
+  },
+  {
+    "id": "UT-54",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ut_cityOfLogan_loganResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 (each) rebate for battery operated lawn mowers and snow blowers, for income-qualified residents."
+    },
+    "low_income": "ut-logan-low-income"
   }
 ]
