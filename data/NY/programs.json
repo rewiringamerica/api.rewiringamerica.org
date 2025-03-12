@@ -10,6 +10,37 @@
     "authority_type": "state",
     "description": ""
   },
+  "ny_centralHudsonGasAndElectric_centralHudsonRebates": {
+    "name": {
+      "en": "Central Hudson Rebates"
+    },
+    "url": {
+      "en": "https://www.cenhud.com/en/my-energy/save-energy-money/residential-incentives/"
+    },
+    "authority": "ny-central-hudson-gas-and-electric",
+    "authority_type": "utility",
+    "items": [
+      "other_heat_pump",
+      "heat_pump_water_heater"
+    ]
+  },
+  "ny_conEdison_consolidatedEdisonRebates": {
+    "name": {
+      "en": "Consolidated Edison Rebates"
+    },
+    "url": {
+      "en": "https://www.coned.com/en/save-money/rebates-incentives-tax-credits/rebates-incentives-tax-credits-for-residential-customers"
+    },
+    "authority": "ny-con-edison",
+    "authority_type": "utility",
+    "items": [
+      "other_weatherization",
+      "other_heat_pump",
+      "heat_pump_water_heater",
+      "new_electric_vehicle",
+      "battery_storage_installation"
+    ]
+  },
   "ny_empower+": {
     "name": {
       "en": "EmPower+"
@@ -19,6 +50,37 @@
     },
     "authority": "ny-nyserda",
     "authority_type": "state"
+  },
+  "ny_nationalGrid_totalHomeComfortProgram": {
+    "name": {
+      "en": "Total Home Comfort Program"
+    },
+    "url": {
+      "en": "https://www.nationalgridus.com/NY-Home/Energy-Saving-Programs/total-home-comfort"
+    },
+    "authority": "ny-national-grid",
+    "authority_type": "utility",
+    "items": [
+      "heat_pump_water_heater",
+      "energy_audit"
+    ]
+  },
+  "ny_psegLongIsland_residentialEnergyEfficiencyProgram": {
+    "name": {
+      "en": "Residential Energy Efficiency Program"
+    },
+    "url": {
+      "en": "https://homeenergy.pseg.com/"
+    },
+    "authority": "ny-pseg-long-island",
+    "authority_type": "utility",
+    "items": [
+      "other_weatherization",
+      "other_heat_pump",
+      "heat_pump_water_heater",
+      "heat_pump_clothes_dryer",
+      "energy_audit"
+    ]
   },
   "ny_stateOfNy_nYWeatherizationAssistanceProgramWAP": {
     "name": {
@@ -30,5 +92,18 @@
     "authority": "ny-state-of-ny",
     "authority_type": "state",
     "description": ""
+  },
+  "ny_stateOfNy_newYorkStateGeothermalEnergyCredit": {
+    "name": {
+      "en": "New York State Geothermal Energy Credit"
+    },
+    "url": {
+      "en": "https://www.tax.ny.gov/pit/credits/geothermal-energy-system-credit.htm"
+    },
+    "authority": "ny-state-of-ny",
+    "authority_type": "state",
+    "items": [
+      "other_heat_pump"
+    ]
   }
 }
