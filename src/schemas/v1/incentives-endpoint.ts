@@ -15,6 +15,15 @@ export const API_INCENTIVES_REQUEST_SCHEMA = {
         'Find incentives available in this state. If not provided, returns incentives from all states.',
       enum: STATES_AND_TERRITORIES,
     },
+    language: {
+      type: 'string',
+      description: 'Optional choice of language for user-visible strings.',
+      enum: [
+        'en',
+        'es',
+      ],
+      default: 'en',
+    },
   },
   additionalProperties: false,
 } as const;
@@ -114,7 +123,7 @@ export const API_INCENTIVES_SCHEMA = {
   querystring: API_INCENTIVES_REQUEST_SCHEMA,
   response: {
     200: {
-      $ref: 'APIIncentivesResponse',
+      ...API_INCENTIVES_RESPONSE_SCHEMA,
     },
     400: {
       $ref: 'Error',
