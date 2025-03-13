@@ -94,7 +94,9 @@ spouse's income.`,
     tax_filing: {
       type: 'string',
       description:
-        'The status under which the consumer files their federal taxes.',
+        'The status under which the consumer files their taxes. If this \
+parameter is absent, incentives whose eligibility depends on tax filing status \
+will not be included in the results.',
       enum: Object.values(FilingStatus),
     },
     household_size: {
@@ -132,7 +134,6 @@ taxes, and their spouse if they file taxes jointly.`,
   required: [
     'owner_status',
     'household_income',
-    'tax_filing',
     'household_size',
   ],
 } as const;

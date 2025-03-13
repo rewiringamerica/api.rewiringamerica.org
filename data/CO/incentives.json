@@ -6207,15 +6207,17 @@
     "program": "co_xcelEnergy_heatPumpRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 300,
+      "number": 900,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$300/cooling ton rebate for ducted, partially ducted, or non-ducted heat pumps."
-    }
+      "en": "$900/cooling ton rebate for ducted, partially ducted, or non-ducted heat pumps."
+    },
+    "start_date": "2025-01-20",
+    "end_date": "2025-12-31"
   },
   {
     "id": "CO-312",
@@ -6253,15 +6255,17 @@
     "program": "co_xcelEnergy_heatPumpRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 1100,
+      "number": 3300,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,100 per heating ton rebate for Ground Source Heat Pumps with quality installation."
-    }
+      "en": "$3,300 per heating ton rebate for ground source heat pumps with quality installation."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "CO-314",
@@ -6271,21 +6275,21 @@
     ],
     "items": [
       "ductless_heat_pump",
-      "ducted_heat_pump",
-      "other_heat_pump"
+      "ducted_heat_pump"
     ],
     "program": "co_xcelEnergy_heatPumpRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 750,
+      "number": 2250,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$750/heating ton at 5 degrees Fahrenheit for a cold-climate heat pump."
-    }
+      "en": "$2,250/heating ton at 5 degrees Fahrenheit for a cold-climate heat pump."
+    },
+    "end_date": "2025-12-31"
   },
   {
     "id": "CO-315",
@@ -6307,7 +6311,8 @@
     "short_description": {
       "en": "$2200 for qualifying Cold Climate Mini Split Heat Pumps.",
       "es": "$2,200 dólares para bombas de calor mini split de clima frío que cumplan los requisitos."
-    }
+    },
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-316",
@@ -8538,7 +8543,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$100 rebate for Electric Mowers & Snowblowers.",
+      "en": "$100 rebate for electric mowers & snowblowers.",
       "es": "O reembolso de hasta $100, para podadoras de césped y sopladoras de nieve eéctricas."
     }
   },
@@ -8584,7 +8589,8 @@
     "short_description": {
       "en": "25% of cost, up to $100 rebate for Electric chainsaws.",
       "es": "Reembolso de 25% del costo, hasta $100 dólares para motosierras eléctricas."
-    }
+    },
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-414",
@@ -8607,7 +8613,8 @@
     "short_description": {
       "en": "25% of cost, up to $150 rebate for Electric Bicycles.",
       "es": "Reembolso del 25% del costo de bicicletas eléctricas, hasta $150 dólares."
-    }
+    },
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-415",
@@ -8629,7 +8636,8 @@
     "short_description": {
       "en": "Up to $5,000 rebate per forklift for Electric Forklifts.",
       "es": "Un reembolso de hasta $5,000 dólares para montacargas eléctricos."
-    }
+    },
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-416",
@@ -8651,7 +8659,8 @@
     "short_description": {
       "en": "Up to $1,500 rebate for Electric Pallet Jacks.",
       "es": "Reembolso de hasta $1,500 dólares para elevadores de plataforma eléctricos."
-    }
+    },
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-417",
@@ -8674,7 +8683,8 @@
     "short_description": {
       "en": "50% of cost, up to $25 rebate for power equipment batteries.",
       "es": "Reembolso del 50% de los costos de baterías para equipos eléctricos, hasta $25 dólares."
-    }
+    },
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-418",
@@ -8716,7 +8726,8 @@
     "short_description": {
       "en": "$30 rebate for Electric Clothes Dryers.",
       "es": "Reembolso de $30 dólares para secadoras de ropa eléctricas."
-    }
+    },
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-420",
@@ -8823,7 +8834,8 @@
     "short_description": {
       "en": "$1,800 rebate up to 50% of equipment costs for tier 1 air-source heat pumps (HSPF 9, SEER 15) larger than 2 tons.",
       "es": "Un reembolso de $1,800 dólares en equipos para bombas de calor de aire de nivel 1 (HSPF 9, SEER 15) de más de 2 toneladas, hasta el 50% de los costos."
-    }
+    },
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-425",
@@ -8846,7 +8858,8 @@
     "short_description": {
       "en": "$1,000 per ton rebate for tier 2 air-source heat pumps (HSPF 10, SEER 16) up to 6 tons, not to exceed 50% of equipment costs.",
       "es": "Reembolso de $1,000 dólares por tonelada para bombas de calor de aire de nivel 2 (HSPF 10, SEER 16) de hasta 6 toneladas, sin superar el 50% de los costos del equipo."
-    }
+    },
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-426",
@@ -8868,7 +8881,8 @@
     "short_description": {
       "en": "$500 per ton rebate for new Ground-Source Heat Pumps. $250/ton for replacement systems.",
       "es": "Reembolso de $500 dólares por tonelada para bombas de calor geotérmicas nuevas. $250 dólares/tonelada para sistemas de sustitución."
-    }
+    },
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-427",
@@ -8908,7 +8922,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$50/thermostat or the cost of the thermostat, whichever is less for a Wi-Fi enabled, smart thermostat."
+      "en": "$50 rebate or the cost of the thermostat, whichever is less for a Wi-Fi enabled, smart thermostat."
     }
   },
   {
@@ -8930,7 +8944,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $90 for ENERGY STAR clothes dryers.",
+      "en": "Up to $90 for ENERGY STAR heat pump clothes dryers.",
       "es": "Hasta $90 dólares para secadoras de ropa de clasificación ENERGY STAR."
     }
   },
@@ -11527,14 +11541,16 @@
     "program": "co_xcelEnergy_heatPumpWaterHeaterRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 800
+      "number": 2250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$800 off qualifying new heat pump water heaters for Xcel customers. Must be installed by registered contractor and may not exceed 80 gallons."
-    }
+      "en": "$2,250 off qualifying new heat pump water heaters for Xcel customers. Must be installed by registered contractor and may not exceed 80 gallons."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "CO-545",
@@ -11875,7 +11891,7 @@
     "items": [
       "new_electric_vehicle"
     ],
-    "program": "co_xcelEnergy_eVRebate",
+    "program": "co_xcelEnergy_xcelEnergyEVRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 5500
@@ -11898,7 +11914,7 @@
     "items": [
       "used_electric_vehicle"
     ],
-    "program": "co_xcelEnergy_eVRebate",
+    "program": "co_xcelEnergy_xcelEnergyEVRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 3000
@@ -12123,7 +12139,13 @@
       "rebate"
     ],
     "items": [
-      "other_weatherization"
+      "other_weatherization",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "wall_insulation"
     ],
     "program": "co_AspenCORE_residential_rebates",
     "amount": {
@@ -12145,7 +12167,13 @@
       "rebate"
     ],
     "items": [
-      "other_weatherization"
+      "other_weatherization",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "wall_insulation"
     ],
     "program": "co_AspenCORE_residential_rebates",
     "amount": {
@@ -13725,7 +13753,7 @@
     "items": [
       "smart_thermostat"
     ],
-    "program": "co_xcelEnergy_homeRebates",
+    "program": "co_xcelEnergy_xcelEnergyHomeRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 50
@@ -13746,19 +13774,21 @@
     "items": [
       "wall_insulation"
     ],
-    "program": "co_xcelEnergy_homeRebates",
+    "program": "co_xcelEnergy_xcelEnergyHomeRebates",
     "amount": {
       "type": "percent",
       "number": 0.3,
-      "maximum": 350
+      "maximum": 525
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "30% rebate for wall insulation, up to $350."
-    }
+      "en": "30% rebate for wall insulation, up to $350. 1.5x bonus (up to $525) for gas heating customers."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "CO-648",
@@ -13768,19 +13798,21 @@
     "items": [
       "attic_or_roof_insulation"
     ],
-    "program": "co_xcelEnergy_homeRebates",
+    "program": "co_xcelEnergy_xcelEnergyHomeRebates",
     "amount": {
       "type": "percent",
       "number": 0.3,
-      "maximum": 400
+      "maximum": 600
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "30% rebate for attic insulation, up to $400."
-    }
+      "en": "30% rebate for attic insulation, up to $400. 1.5x bonus (up to $600) for homes heated with gas."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   },
   {
     "id": "CO-649",
@@ -13790,7 +13822,7 @@
     "items": [
       "air_sealing"
     ],
-    "program": "co_xcelEnergy_homeRebates",
+    "program": "co_xcelEnergy_xcelEnergyHomeRebates",
     "amount": {
       "type": "percent",
       "number": 0.3,
@@ -13802,7 +13834,8 @@
     ],
     "short_description": {
       "en": "30% rebate for air sealing, up to $200."
-    }
+    },
+    "end_date": "2024-12-31"
   },
   {
     "id": "CO-650",
@@ -13812,7 +13845,7 @@
     "items": [
       "energy_audit"
     ],
-    "program": "co_xcelEnergy_homeRebates",
+    "program": "co_xcelEnergy_xcelEnergyHomeRebates",
     "amount": {
       "type": "percent",
       "number": 0.6,
@@ -13823,7 +13856,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "60% rebate for a Home Energy Audit, up to $200. Can include an infrared, blower door, and standard audit."
+      "en": "60% rebate for a home energy audit, up to $200. Can include an infrared, blower door, and standard audit."
     }
   },
   {
@@ -13834,7 +13867,7 @@
     "items": [
       "electric_wiring"
     ],
-    "program": "co_xcelEnergy_eVRebate",
+    "program": "co_xcelEnergy_xcelEnergyEVRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 500,
@@ -15441,5 +15474,53 @@
     },
     "start_date": "2025-03-15",
     "end_date": "2026-02-28"
+  },
+  {
+    "id": "CO-722",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "other_weatherization"
+    ],
+    "program": "co_xcelEnergy_xcelEnergyHomeRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.3,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "30% rebate, up to $400 for air sealing and weatherstripping that reduces energy use by 20%. 1.5x bonus for gas heating customers (up to $600)"
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "CO-723",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "evaporative_cooler"
+    ],
+    "program": "co_xcelEnergy_xcelEnergyHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200,
+      "minimum": 300,
+      "maximum": 1200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,200 rebate for an energy-efficient evaporative cooler."
+    }
   }
 ]

@@ -41,13 +41,15 @@
       ],
       "amount": {
         "type": "dollars_per_unit",
-        "number": 1100,
+        "number": 3300,
         "unit": "ton"
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "$1,100 per heating ton rebate for Ground Source Heat Pumps with quality installation."
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "$3,300 per heating ton rebate for ground source heat pumps with quality installation."
     },
     {
       "payment_methods": [
@@ -60,18 +62,18 @@
       "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
       "items": [
         "ductless_heat_pump",
-        "ducted_heat_pump",
-        "other_heat_pump"
+        "ducted_heat_pump"
       ],
       "amount": {
         "type": "dollars_per_unit",
-        "number": 750,
+        "number": 2250,
         "unit": "ton"
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "$750/heating ton at 5 degrees Fahrenheit for a cold-climate heat pump."
+      "end_date": "2025-12-31",
+      "short_description": "$2,250/heating ton at 5 degrees Fahrenheit for a cold-climate heat pump."
     },
     {
       "payment_methods": [
@@ -88,34 +90,15 @@
       ],
       "amount": {
         "type": "dollars_per_unit",
-        "number": 300,
+        "number": 900,
         "unit": "ton"
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "$300/cooling ton rebate for ducted, partially ducted, or non-ducted heat pumps."
-    },
-    {
-      "payment_methods": [
-        "account_credit",
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "co-xcel-energy",
-      "program": "Xcel Energy Heat Pump Rebates",
-      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
-      "items": [
-        "ductless_heat_pump"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 2200
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "$2200 for qualifying Cold Climate Mini Split Heat Pumps."
+      "start_date": "2025-01-20",
+      "end_date": "2025-12-31",
+      "short_description": "$900/cooling ton rebate for ducted, partially ducted, or non-ducted heat pumps."
     },
     {
       "payment_methods": [
@@ -238,7 +221,7 @@
       ],
       "authority_type": "utility",
       "authority": "co-xcel-energy",
-      "program": "Home Rebates",
+      "program": "Xcel Energy Home Rebates",
       "program_url": "https://co.my.xcelenergy.com/s/residential/home-rebates",
       "items": [
         "energy_audit"
@@ -252,7 +235,7 @@
         "homeowner",
         "renter"
       ],
-      "short_description": "60% rebate for a Home Energy Audit, up to $200. Can include an infrared, blower door, and standard audit."
+      "short_description": "60% rebate for a home energy audit, up to $200. Can include an infrared, blower door, and standard audit."
     },
     {
       "payment_methods": [
@@ -494,7 +477,7 @@
       ],
       "authority_type": "utility",
       "authority": "co-xcel-energy",
-      "program": "Home Rebates",
+      "program": "Xcel Energy Home Rebates",
       "program_url": "https://co.my.xcelenergy.com/s/residential/home-rebates",
       "items": [
         "wall_insulation"
@@ -502,13 +485,15 @@
       "amount": {
         "type": "percent",
         "number": 0.3,
-        "maximum": 350
+        "maximum": 525
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "short_description": "30% rebate for wall insulation, up to $350."
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "30% rebate for wall insulation, up to $350. 1.5x bonus (up to $525) for gas heating customers."
     },
     {
       "payment_methods": [
@@ -516,7 +501,7 @@
       ],
       "authority_type": "utility",
       "authority": "co-xcel-energy",
-      "program": "Home Rebates",
+      "program": "Xcel Energy Home Rebates",
       "program_url": "https://co.my.xcelenergy.com/s/residential/home-rebates",
       "items": [
         "attic_or_roof_insulation"
@@ -524,13 +509,15 @@
       "amount": {
         "type": "percent",
         "number": 0.3,
-        "maximum": 400
+        "maximum": 600
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "short_description": "30% rebate for attic insulation, up to $400."
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "30% rebate for attic insulation, up to $400. 1.5x bonus (up to $600) for homes heated with gas."
     },
     {
       "payment_methods": [
@@ -538,21 +525,24 @@
       ],
       "authority_type": "utility",
       "authority": "co-xcel-energy",
-      "program": "Home Rebates",
+      "program": "Xcel Energy Home Rebates",
       "program_url": "https://co.my.xcelenergy.com/s/residential/home-rebates",
       "items": [
-        "air_sealing"
+        "air_sealing",
+        "other_weatherization"
       ],
       "amount": {
         "type": "percent",
         "number": 0.3,
-        "maximum": 200
+        "maximum": 600
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "short_description": "30% rebate for air sealing, up to $200."
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "30% rebate, up to $400 for air sealing and weatherstripping that reduces energy use by 20%. 1.5x bonus for gas heating customers (up to $600)"
     },
     {
       "payment_methods": [
@@ -869,12 +859,14 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 800
+        "number": 2250
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "$800 off qualifying new heat pump water heaters for Xcel customers. Must be installed by registered contractor and may not exceed 80 gallons."
+      "start_date": "2025-01-01",
+      "end_date": "2025-12-31",
+      "short_description": "$2,250 off qualifying new heat pump water heaters for Xcel customers. Must be installed by registered contractor and may not exceed 80 gallons."
     },
     {
       "payment_methods": [
@@ -882,7 +874,29 @@
       ],
       "authority_type": "utility",
       "authority": "co-xcel-energy",
-      "program": "EV Rebate",
+      "program": "Xcel Energy Home Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/home-rebates",
+      "items": [
+        "evaporative_cooler"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1200,
+        "maximum": 1200
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "Up to $1,200 rebate for an energy-efficient evaporative cooler."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "co-xcel-energy",
+      "program": "Xcel Energy EV Rebate",
       "program_url": "https://ev.xcelenergy.com/ev-rebate-co",
       "items": [
         "electric_wiring"
@@ -903,7 +917,7 @@
       ],
       "authority_type": "utility",
       "authority": "co-xcel-energy",
-      "program": "Home Rebates",
+      "program": "Xcel Energy Home Rebates",
       "program_url": "https://co.my.xcelenergy.com/s/residential/home-rebates",
       "items": [
         "smart_thermostat"

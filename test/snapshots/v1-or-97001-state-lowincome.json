@@ -75,7 +75,8 @@
       "program": "Energy Trust of Oregon",
       "program_url": "https://www.energytrust.org/residential/incentives",
       "items": [
-        "other"
+        "other",
+        "other_heat_pump"
       ],
       "amount": {
         "type": "dollar_amount",
@@ -112,7 +113,7 @@
       ],
       "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
-      "program": "Savings Within Reach",
+      "program": "Energy Trust of Oregon Savings Within Reach",
       "program_url": "https://www.energytrust.org/residential/incentives",
       "items": [
         "wall_insulation"
@@ -154,7 +155,7 @@
       ],
       "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
-      "program": "Savings Within Reach",
+      "program": "Energy Trust of Oregon Savings Within Reach",
       "program_url": "https://www.energytrust.org/residential/incentives",
       "items": [
         "attic_or_roof_insulation"
@@ -175,7 +176,7 @@
       ],
       "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
-      "program": "Savings Within Reach",
+      "program": "Energy Trust of Oregon Savings Within Reach",
       "program_url": "https://www.energytrust.org/residential/incentives",
       "items": [
         "attic_or_roof_insulation"
@@ -217,7 +218,7 @@
       ],
       "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
-      "program": "Savings Within Reach",
+      "program": "Energy Trust of Oregon Savings Within Reach",
       "program_url": "https://www.energytrust.org/residential/incentives",
       "items": [
         "floor_insulation"
@@ -238,7 +239,7 @@
       ],
       "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
-      "program": "Savings Within Reach",
+      "program": "Energy Trust of Oregon Savings Within Reach",
       "program_url": "https://www.energytrust.org/residential/incentives",
       "items": [
         "floor_insulation"
@@ -259,7 +260,7 @@
       ],
       "authority_type": "state",
       "authority": "or-oregon-housing-and-community-services",
-      "program": "State Home Oil Weatherization (SHOW) Program",
+      "program": "OHCS State Home Oil Weatherization (SHOW) Program",
       "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
       "items": [
         "attic_or_roof_insulation",
@@ -283,9 +284,52 @@
       "payment_methods": [
         "rebate"
       ],
+      "authority_type": "other",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "items": [
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 3500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023-10-01",
+      "short_description": "$3,500 rebate for a ductless heat pump replacing electric forced air as the primary heat source. Primary unit must be in the main living space."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "other",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "items": [
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 3500,
+        "maximum": 3500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023-10-01",
+      "short_description": "$3,500 rebate for a ductless heat pump replacing electric resistance heat in manufactured homes. Primary unit must be in the main living space."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
       "authority_type": "state",
       "authority": "or-oregon-housing-and-community-services",
-      "program": "State Home Oil Weatherization (SHOW) Program",
+      "program": "OHCS State Home Oil Weatherization (SHOW) Program",
       "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
       "items": [
         "efficiency_rebates",
@@ -328,7 +372,7 @@
       ],
       "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
-      "program": "Savings Within Reach",
+      "program": "Energy Trust of Oregon Savings Within Reach",
       "program_url": "https://www.energytrust.org/residential/incentives",
       "items": [
         "ducted_heat_pump",
@@ -350,7 +394,7 @@
       ],
       "authority_type": "state",
       "authority": "or-oregon-housing-and-community-services",
-      "program": "State Home Oil Weatherization (SHOW) Program",
+      "program": "OHCS State Home Oil Weatherization (SHOW) Program",
       "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
       "items": [
         "attic_or_roof_insulation",
@@ -374,9 +418,31 @@
       "payment_methods": [
         "rebate"
       ],
+      "authority_type": "other",
+      "authority": "or-energy-trust-of-oregon",
+      "program": "Energy Trust of Oregon",
+      "program_url": "https://www.energytrust.org/residential/incentives",
+      "items": [
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2900,
+        "maximum": 2900
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023-10-01",
+      "short_description": "$2,900 rebate for a ductless heat pump replacing electric zonal heating as the primary heat source. Primary unit must be in the main living space."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
       "authority_type": "state",
       "authority": "or-oregon-housing-and-community-services",
-      "program": "State Home Oil Weatherization (SHOW) Program",
+      "program": "OHCS State Home Oil Weatherization (SHOW) Program",
       "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
       "items": [
         "efficiency_rebates",
@@ -398,7 +464,7 @@
       ],
       "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
-      "program": "Savings Within Reach",
+      "program": "Energy Trust of Oregon Savings Within Reach",
       "program_url": "https://www.energytrust.org/residential/incentives",
       "items": [
         "ducted_heat_pump"
@@ -419,7 +485,7 @@
       ],
       "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
-      "program": "Savings Within Reach",
+      "program": "Energy Trust of Oregon Savings Within Reach",
       "program_url": "https://www.energytrust.org/residential/incentives",
       "items": [
         "ductless_heat_pump"
@@ -440,7 +506,7 @@
       ],
       "authority_type": "state",
       "authority": "or-oregon-housing-and-community-services",
-      "program": "State Home Oil Weatherization (SHOW) Program",
+      "program": "OHCS State Home Oil Weatherization (SHOW) Program",
       "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
       "items": [
         "door_replacement",
@@ -483,7 +549,7 @@
       ],
       "authority_type": "other",
       "authority": "or-energy-trust-of-oregon",
-      "program": "Extended Capacity Heat Pump",
+      "program": "Energy Trust of Oregon Extended Capacity Heat Pump",
       "program_url": "https://www.energytrust.org/residential/incentives",
       "items": [
         "ducted_heat_pump"
@@ -504,7 +570,7 @@
       ],
       "authority_type": "state",
       "authority": "or-oregon-housing-and-community-services",
-      "program": "State Home Oil Weatherization (SHOW) Program",
+      "program": "OHCS State Home Oil Weatherization (SHOW) Program",
       "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
       "items": [
         "air_sealing",
@@ -526,7 +592,7 @@
       ],
       "authority_type": "state",
       "authority": "or-oregon-housing-and-community-services",
-      "program": "State Home Oil Weatherization (SHOW) Program",
+      "program": "OHCS State Home Oil Weatherization (SHOW) Program",
       "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
       "items": [
         "door_replacement",
@@ -590,7 +656,7 @@
       ],
       "authority_type": "state",
       "authority": "or-oregon-housing-and-community-services",
-      "program": "State Home Oil Weatherization (SHOW) Program",
+      "program": "OHCS State Home Oil Weatherization (SHOW) Program",
       "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
       "items": [
         "air_sealing",
@@ -605,27 +671,6 @@
         "homeowner"
       ],
       "short_description": "Up to $600 for duct sealing and insulation measures."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "other",
-      "authority": "or-energy-trust-of-oregon",
-      "program": "Energy Trust of Oregon",
-      "program_url": "https://www.energytrust.org/residential/incentives",
-      "items": [
-        "other"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 250
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "short_description": "Up to $250 to install an energy-efficient fireplace."
     }
   ]
 }

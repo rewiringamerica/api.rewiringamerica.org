@@ -11,6 +11,7 @@ import { WEBSITE_CALCULATOR_RESPONSE_SCHEMA } from './schemas/v0/calculator-resp
 import { WEBSITE_INCENTIVE_SCHEMA } from './schemas/v0/incentive';
 import { API_CALCULATOR_RESPONSE_SCHEMA } from './schemas/v1/calculator-endpoint';
 import { API_INCENTIVE_SCHEMA } from './schemas/v1/incentive';
+import { API_LOAN_PROGRAMS_RESPONSE_SCHEMA } from './schemas/v1/loan-programs';
 import { API_PROGRAMS_RESPONSE_SCHEMA } from './schemas/v1/programs';
 
 // These are the options described here:
@@ -33,6 +34,7 @@ export default async function (
   fastify.addSchema(API_INCENTIVE_SCHEMA);
   fastify.addSchema(API_CALCULATOR_RESPONSE_SCHEMA);
   fastify.addSchema(API_PROGRAMS_RESPONSE_SCHEMA);
+  fastify.addSchema(API_LOAN_PROGRAMS_RESPONSE_SCHEMA);
 
   // Replace Fastify's default request-start logging, to include more structured
   // info about the request, including the API consumer's identity

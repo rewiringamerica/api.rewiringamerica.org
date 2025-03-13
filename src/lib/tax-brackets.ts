@@ -82,7 +82,7 @@ export function estimateStateTaxAmount(
     // gets the personal exemption automatically.)
     case 'MA': {
       const exemption = MA_EXEMPTIONS[filingStatus];
-      const taxableIncome = householdIncome - exemption;
+      const taxableIncome = _.max([0, householdIncome - exemption])!;
 
       // NB: the surtax is not a higher bracket of a graduated rate; it's
       // additional to the flat base rate.
@@ -120,6 +120,20 @@ export function estimateStateTaxAmount(
     default: {
       return null;
     }
+  }
+
+  // The above calculations should always produce nonnegative results, but this
+  // is a failsafe in case they don't.
+  if (taxOwed < 0) {
+    console.error(
+      'computed negative tax',
+      taxOwed,
+      'for',
+      householdIncome,
+      filingStatus,
+      stateCode,
+    );
+    taxOwed = 0;
   }
 
   return { taxOwed, effectiveRate };

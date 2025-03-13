@@ -7,15 +7,16 @@
         "AZ-21"
       ],
       "source_url": "https://www.tep.com/weatherization-assistance",
+      "description": "",
       "thresholds": {
-        "1": 29160,
-        "2": 39440,
-        "3": 49720,
-        "4": 60000,
-        "5": 70280,
-        "6": 80560,
-        "7": 90840,
-        "8": 101120
+        "1": 31300,
+        "2": 42300,
+        "3": 53300,
+        "4": 64300,
+        "5": 75300,
+        "6": 86300,
+        "7": 97300,
+        "8": 108300
       }
     },
     "az-hear-program-low": {
@@ -1774,6 +1775,22 @@
     }
   },
   "MN": {
+    "80% of the Dakota County AMI": {
+      "type": "hhsize",
+      "incentives": [],
+      "source_url": "https://www.northfieldmn.gov/1531/Energy-Efficiency-Rebate",
+      "description": "80% of the Dakota County AMI",
+      "thresholds": {
+        "1": 62600,
+        "2": 71550,
+        "3": 80500,
+        "4": 89400,
+        "5": 96600,
+        "6": 103750,
+        "7": 110900,
+        "8": 118050
+      }
+    },
     "mn-state-default-150": {
       "type": "ami-percentage",
       "incentives": [],
@@ -1809,7 +1826,17 @@
   "NC": {
     "nc-hear-low": {
       "type": "ami-percentage",
-      "incentives": [],
+      "incentives": [
+        "NC-1",
+        "NC-2",
+        "NC-3",
+        "NC-4",
+        "NC-5",
+        "NC-6",
+        "NC-7",
+        "NC-8",
+        "NC-9"
+      ],
       "source_url": "https://energysavernc.org/wp-content/uploads/2025/01/AMI-Limits-by-HH-Size-and-Income-Summary-NC-v.4-1.14.2025.pdf",
       "description": "NC HEAR Program Low Income",
       "thresholds": {
@@ -1818,7 +1845,17 @@
     },
     "nc-hear-medium": {
       "type": "ami-percentage",
-      "incentives": [],
+      "incentives": [
+        "NC-10",
+        "NC-11",
+        "NC-12",
+        "NC-13",
+        "NC-14",
+        "NC-15",
+        "NC-16",
+        "NC-17",
+        "NC-18"
+      ],
       "source_url": "https://energysavernc.org/wp-content/uploads/2025/01/AMI-Limits-by-HH-Size-and-Income-Summary-NC-v.4-1.14.2025.pdf",
       "description": "NC HEAR program medium",
       "thresholds": {
@@ -1829,9 +1866,15 @@
   "NJ": {
     "nj-400-fpl": {
       "type": "hhsize",
-      "incentives": [],
+      "incentives": [
+        "NJ-62",
+        "NJ-67",
+        "NJ-71",
+        "NJ-73",
+        "NJ-74"
+      ],
       "source_url": "https://homeenergysavings.atlanticcityelectric.com/residential/energy-assessments/home-weatherization-program/eligibility",
-      "description": "400% of FPL for weatherization programs, updated using 2025 from HHS, not ACE.",
+      "description": "400% of FPL for weatherization programs, updated using 2025 from HHS.",
       "thresholds": {
         "1": 62600,
         "2": 84600,
@@ -1907,7 +1950,11 @@
     },
     "nj-page-moderate": {
       "type": "hhsize",
-      "incentives": [],
+      "incentives": [
+        "NJ-75",
+        "NJ-76",
+        "NJ-78"
+      ],
       "source_url": "https://www.nj.gov/bpu/assistance/programs/?os=vb&ref=app",
       "description": "NJ PAGE Program - Moderate Income",
       "thresholds": {
@@ -1923,12 +1970,49 @@
     }
   },
   "NM": {
+    "nm-Sustainable Building Tax Credit Low-Income": {
+      "type": "hhsize",
+      "incentives": [],
+      "source_url": "https://www.emnrd.nm.gov/ecmd/wp-content/uploads/sites/3/Sustainable-Building-Tax-Credit-products-application-instructions-version-2.pdf",
+      "description": "Households with income less than 200% of Federal poverty level each year. ",
+      "thresholds": {
+        "1": 31300,
+        "2": 42300,
+        "3": 53300,
+        "4": 64300,
+        "5": 75300,
+        "6": 86300,
+        "7": 97300,
+        "8": 108300
+      }
+    },
+    "nm-elpasoelectric-income-qualified": {
+      "type": "hhsize",
+      "incentives": [
+        "NM-199",
+        "NM-201",
+        "NM-202"
+      ],
+      "source_url": "https://www.epesaver.com/service/residential-low-income/",
+      "description": "200% of 2025 DHHS Federal Poverty Guidelines",
+      "thresholds": {
+        "1": 31300,
+        "2": 42300,
+        "3": 53300,
+        "4": 64300,
+        "5": 75300,
+        "6": 86300,
+        "7": 97300,
+        "8": 108300
+      }
+    },
     "nm-hear-low-income": {
       "type": "ami-percentage",
       "incentives": [
         "NM-1",
         "NM-2",
-        "NM-3"
+        "NM-3",
+        "NM-196"
       ],
       "source_url": "https://clean.energy.nm.gov/landing/appliances/",
       "description": "New Mexico's HEAR program 80% AMI",
@@ -1945,7 +2029,9 @@
         "NM-30",
         "NM-32",
         "NM-34",
-        "NM-36"
+        "NM-36",
+        "NM-174",
+        "NM-195"
       ],
       "source_url": "https://ev.pnm.com/wp-content/uploads/2024-Residential-Poverty-Guidelines.pdf",
       "description": "PNM Income Qualified - 200% of federal poverty level 2024",
@@ -1958,6 +2044,24 @@
         "6": 83920,
         "7": 94680,
         "8": 105440
+      }
+    },
+    "nm-santafe-100AMI-HUD": {
+      "type": "hhsize",
+      "incentives": [
+        "NM-197"
+      ],
+      "source_url": "https://www.santafecountynm.gov/uploads/documents/_2_-_HREE_Income_Limits_2024.pdf",
+      "description": "Santa Fe HUD 100% Area Median Income ",
+      "thresholds": {
+        "1": 64100,
+        "2": 73200,
+        "3": 82400,
+        "4": 91500,
+        "5": 98900,
+        "6": 106200,
+        "7": 113500,
+        "8": 120800
       }
     }
   },
@@ -3280,6 +3384,24 @@
         "6": 83920,
         "7": 94680,
         "8": 105440
+      }
+    },
+    "ut-logan-low-income": {
+      "type": "hhsize",
+      "incentives": [
+        "UT-54"
+      ],
+      "source_url": "https://form.jotform.com/250215857470154",
+      "description": "Logan Low Income Threshold",
+      "thresholds": {
+        "1": 28952,
+        "2": 39127,
+        "3": 49302,
+        "4": 59477,
+        "5": 69652,
+        "6": 79827,
+        "7": 90002,
+        "8": 100177
       }
     }
   },

@@ -56,6 +56,7 @@ export type CalculateParams = Omit<APICalculatorRequest, 'location'>;
 
 function calculateFederalIncentivesAndSavings(
   amiAndEvCreditEligibility: AMIAndEVCreditEligibility,
+  location: ResolvedLocation,
   solarSystemCost: number,
   excludeIRARebates: boolean,
   { tax_filing, owner_status, household_income, items }: CalculateParams,
@@ -63,6 +64,11 @@ function calculateFederalIncentivesAndSavings(
   federalIncentives: CalculatedIncentive[];
   savings: APISavings;
 } {
+  // Get tax owed to determine max potential tax savings
+  const tax = tax_filing
+    ? estimateFederalTaxAmount(location.state, tax_filing, household_income)
+    : null;
+
   const eligibleIncentives: CalculatedIncentive[] = [];
   const ineligibleIncentives: CalculatedIncentive[] = [];
 
@@ -126,6 +132,14 @@ function calculateFederalIncentivesAndSavings(
       if (incentive.filing_status !== tax_filing) {
         eligible = false;
       }
+    }
+
+    // Filter out tax credits for people who don't owe any tax
+    if (
+      _.isEqual(incentive.payment_methods, [PaymentMethod.TaxCredit]) &&
+      tax?.taxOwed === 0
+    ) {
+      eligible = false;
     }
 
     //
@@ -199,6 +213,14 @@ function calculateFederalIncentivesAndSavings(
     }
   }
 
+  // You can't save more than tax owed. Choose the lesser of tax owed vs tax
+  // savings. If we couldn't compute tax because no filing status was passed,
+  // leave the number as-is. (It will never actually be seen; the number is only
+  // returned in API v0, which requires filing status.)
+  if (tax && savings.tax_credit > tax.taxOwed) {
+    savings.tax_credit = tax.taxOwed;
+  }
+
   // The max POS savings is $14,000 if you're under 150% ami, otherwise 0
   savings.pos_rebate =
     household_income < amiAndEvCreditEligibility.computedAMI150 &&
@@ -232,7 +254,7 @@ export default function calculateIncentives(
     throw new UnexpectedInputError('Unknown owner_status');
   }
 
-  if (!TAX_FILINGS.has(tax_filing)) {
+  if (tax_filing && !TAX_FILINGS.has(tax_filing)) {
     throw new UnexpectedInputError('Unknown tax_filing.');
   }
 
@@ -325,6 +347,7 @@ export default function calculateIncentives(
   if (!authority_types || authority_types.includes(AuthorityType.Federal)) {
     const federal = calculateFederalIncentivesAndSavings(
       amiAndEvCreditEligibility,
+      location,
       SOLAR_PRICES[state_id]?.system_cost,
       excludeIRARebates,
       request,
@@ -357,18 +380,6 @@ export default function calculateIncentives(
     incentives.push(...state.stateIncentives);
     savings = addSavings(savings, state.savings);
     coverage = state.coverage;
-  }
-
-  // Get tax owed to determine max potential tax savings
-  const tax = estimateFederalTaxAmount(
-    location.state,
-    tax_filing as FilingStatus,
-    household_income,
-  );
-
-  // You can't save more than tax owed. Choose the lesser of tax owed vs tax savings
-  if (savings.tax_credit > tax.taxOwed) {
-    savings.tax_credit = tax.taxOwed;
   }
 
   // Sort incentives https://app.asana.com/0/0/1204275945510481/f

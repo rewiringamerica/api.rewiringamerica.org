@@ -19,7 +19,7 @@ jobs:
 
       - name: Auth to GCP
         id: auth
-        uses: google-github-actions/auth@v1
+        uses: google-github-actions/auth@v2
         with:
           # A push to "main" should be deployed to the dev project. If it's
           # not a push to main, it must be a release; deploy to prod.

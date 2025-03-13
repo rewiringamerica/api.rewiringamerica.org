@@ -16,6 +16,8 @@ test('correctly determines Colorado state tax liability', async t => {
 });
 
 test('correctly calculates Massachusetts tax', async t => {
+  // No tax if less than standard exemption
+  t.equal(estimateStateTaxAmount(4399, FilingStatus.Single, 'MA')?.taxOwed, 0);
   t.equal(
     estimateStateTaxAmount(104400, FilingStatus.Single, 'MA')?.taxOwed,
     5000,
