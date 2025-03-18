@@ -153,6 +153,54 @@ async function validateLoanProgramsResponse(
   }
 }
 
+test('all documented ways of specifying array-type params work', async t => {
+  const app = await build(t);
+  const baseParams = qs.stringify(
+    {
+      zip: '80212',
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 80000,
+      tax_filing: 'single',
+    },
+    { encodeValuesOnly: true },
+  );
+
+  const baseUrl = `/api/v1/calculator?${baseParams}`;
+
+  // Comma-separated
+  const commaSeparated = await app.inject({
+    url: baseUrl + '&authority_types=federal,state',
+  });
+  t.equal(commaSeparated.statusCode, 200);
+
+  // Zuplo's percent-encoded comma separation. Technically they shouldn't be
+  // doing it this way, but they are. We've raised this issue to them but not
+  // heard anything back, and it's possible they don't want to change the
+  // behavior since clients may be relying on it.
+  const zuploCommaSeparated = await app.inject({
+    url: baseUrl + '&authority_types=federal%2Cstate',
+  });
+  t.equal(zuploCommaSeparated.statusCode, 200);
+
+  // Same param multiple times
+  const sameParam = await app.inject({
+    url: baseUrl + '&authority_types=federal&authority_types=state',
+  });
+  t.equal(sameParam.statusCode, 200);
+
+  // Empty square brackets
+  const emptyBrackets = await app.inject({
+    url: baseUrl + '&authority_types[]=federal&authority_types[]=state',
+  });
+  t.equal(emptyBrackets.statusCode, 200);
+
+  // All should have resulted in the same contents
+  t.strictSame(commaSeparated.payload, zuploCommaSeparated.payload);
+  t.strictSame(zuploCommaSeparated.payload, sameParam.payload);
+  t.strictSame(sameParam.payload, emptyBrackets.payload);
+});
+
 test('response is valid and correct', async t => {
   await validateResponse(
     t,
