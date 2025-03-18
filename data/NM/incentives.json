@@ -8,7 +8,7 @@
     "items": [
       "heat_pump_clothes_dryer"
     ],
-    "program": "nm-ecam-hear",
+    "program": "nm_energyConservationAndManagement_eCAMApplianceIncentivesAndRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 840,
@@ -32,7 +32,7 @@
     "items": [
       "electric_stove"
     ],
-    "program": "nm-ecam-hear",
+    "program": "nm_energyConservationAndManagement_eCAMApplianceIncentivesAndRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 840,
@@ -60,7 +60,7 @@
       "other_insulation",
       "wall_insulation"
     ],
-    "program": "nm-ecam-hear-insulation",
+    "program": "nm_energyConservationAndManagement_eCAMInsulationIncentivesAndRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 1600,
@@ -70,7 +70,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,600 off qualifying insulation products for income-qualified residents."
+      "en": "Up to $1,600 coupon off qualifying insulation products for income-qualified residents via Home Electrification and Appliance Rebates (HEAR) program."
     },
     "start_date": "2024-12-01",
     "low_income": "nm-hear-low-income"
@@ -158,7 +158,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$50 rebate on an Energy Star smart thermostat for homes with refrigerated air conditioning."
+      "en": "$50 rebate on an qualified Energy Star smart thermostat for homes with refrigerated air conditioning."
     }
   },
   {
@@ -379,7 +379,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate on an ENERGY STAR heat pump water heater, less than 55 gallons."
+      "en": "$500 rebate on an ENERGY STAR heat pump water heater, less than 55 gallons. "
     }
   },
   {
@@ -414,14 +414,14 @@
     "program": "nm-xcel-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 75,
-      "maximum": 75
+      "number": 100
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Receive a one-time $75 enrollment bill credit for signing up for thermostat rewards."
+      "en": "Receive a one-time $100 enrollment bill credit for signing up for thermostat rewards program and $25/year for participating in it."
     }
   },
   {
@@ -435,7 +435,7 @@
       "new_electric_vehicle",
       "used_plugin_hybrid_vehicle"
     ],
-    "program": "nm-ecam-clean-car-incentives",
+    "program": "nm_energyConservationAndManagement_newMexicoCleanCarIncentivesAndRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 3000,
@@ -460,7 +460,7 @@
     "items": [
       "electric_vehicle_charger"
     ],
-    "program": "nm-ecam-clean-car-incentives",
+    "program": "nm_energyConservationAndManagement_newMexicoCleanCarIncentivesAndRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 400,
@@ -3689,22 +3689,19 @@
       "pos_rebate"
     ],
     "items": [
-      "central_air_conditioner",
-      "ducted_heat_pump",
-      "ductless_heat_pump",
-      "heat_pump_water_heater",
       "smart_thermostat"
     ],
     "program": "nm_pnm_pNMResidentialMidstreamProgram",
     "amount": {
-      "type": "percent",
-      "number": 0.01
+      "type": "dollar_amount",
+      "number": 50
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Wholesale-level pricing for refrigerated air, heat pumps, heat pump water heaters and smart thermostats."
+      "en": "$50 rebate for smart thermostat through the PNM Midstream Program. Incentive availability subject to change due to program funding. "
     }
   },
   {
@@ -4318,7 +4315,9 @@
     ],
     "items": [
       "new_electric_vehicle",
-      "used_electric_vehicle"
+      "used_electric_vehicle",
+      "new_plugin_hybrid_vehicle",
+      "used_plugin_hybrid_vehicle"
     ],
     "program": "nm-el-paso-energy-efficiency",
     "amount": {
@@ -4331,7 +4330,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$4,000 rebate off qualifying electric vehicle  (with an MSRP below $55,000), offered only to low-income customers."
+      "en": "$4,000 rebate off qualifying electric vehicle (with an MSRP below $55,000), offered only to low-income customers."
     },
     "start_date": "2024-03-29",
     "low_income": "nm-elpasoelectric-income-qualified"
@@ -4342,21 +4341,302 @@
       "rebate"
     ],
     "items": [
-      "electric_vehicle_charger",
-      "electric_wiring"
+      "electric_wiring",
+      "electric_panel"
     ],
     "program": "nm-el-paso-energy-efficiency",
     "amount": {
       "type": "dollar_amount",
       "number": 1300,
-      "maximum": 1300
+      "maximum": 3800
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,300 rebate for installation costs of a new 240V outlet dedicated to EV home charging. Must join EV Smart Rewards NM Program."
+      "en": "Up to $1,300 for installation of 240V dedicated EV charging outlet. Up to $2,500 extra if panel upgrade is required. Must join EV Smart Rewards NM."
+    }
+  },
+  {
+    "id": "NM-204",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_wiring",
+      "electric_panel"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1800,
+      "maximum": 4300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,800 for installation of dedicated 240V EV charger outlet. Up to $2,500 extra available if a panel upgrade is required."
+    },
+    "low_income": "nm-elpasoelectric-income-qualified"
+  },
+  {
+    "id": "NM-205",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate for qualifying smart Level 2 charging station for eligible customers. Enroll in EV Smart Rewards NM or Whole House EV Program. "
+    }
+  },
+  {
+    "id": "NM-206",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $600 rebate for qualifying smart Level 2 charging station for income qualifying customers. "
+    },
+    "low_income": "nm-elpasoelectric-income-qualified"
+  },
+  {
+    "id": "NM-207",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 75
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $75 rebate on qualified smart thermostat plus $25/year in Energy Wise Savings program.  Get $50 + $25/yr to enroll existing thermostat.  "
+    }
+  },
+  {
+    "id": "NM-211",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nm_pnm_pNMResidentialMidstreamProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 860,
+      "maximum": 860
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $860 off the cost of a qualified heat pump depending on efficiency rating, subject to PNM Midstream program funding availability."
+    }
+  },
+  {
+    "id": "NM-212",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nm_pnm_pNMResidentialMidstreamProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 860,
+      "maximum": 860
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $650 off the cost of a qualified heat pump water heater depending on efficiency rating and size. Subject to program funding availability.  "
+    }
+  },
+  {
+    "id": "NM-213",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "nm_pnm_pNMResidentialMidstreamProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 310,
+      "maximum": 310
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $310 off a qualified central refrigerated air conditioner depending on efficiency rating. Subject to Midstream Program funding availability.  "
+    }
+  },
+  {
+    "id": "NM-215",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "window_replacement",
+      "smart_thermostat",
+      "door_replacement",
+      "energy_audit",
+      "air_sealing",
+      "basement_insulation",
+      "attic_or_roof_insulation",
+      "crawlspace_insulation",
+      "duct_replacement",
+      "duct_sealing",
+      "floor_insulation",
+      "heat_pump_clothes_dryer",
+      "heat_pump_water_heater",
+      "other_weatherization",
+      "wall_insulation"
+    ],
+    "program": "nm_santaFeCounty_santaFeCommunityEnergyEfficiencyDevelopmentCEED",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 16000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $16,000 worth of energy retrofits for income qualifying homeowners in unincorporated parts of Santa Fe County."
+    },
+    "start_date": "2025-04-15",
+    "end_date": "2027-12-31",
+    "low_income": "nm-santafe-80AMISF"
+  },
+  {
+    "id": "NM-216",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "central_air_conditioner"
+    ],
+    "program": "nm-xcel-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400 rebate on qualified air source heat pump and central air conditioner using participating contractor."
+    }
+  },
+  {
+    "id": "NM-217",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "nm-xcel-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 325,
+      "maximum": 325
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $325 rebate on qualified air source heat pump in new construction using participating contractor."
+    }
+  },
+  {
+    "id": "NM-218",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "nm-xcel-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 190,
+      "maximum": 190
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $190 rebate on qualified ductless heat pump, depending on efficiency and using participating contractor."
+    }
+  },
+  {
+    "id": "NM-219",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "evaporative_cooler"
+    ],
+    "program": "nm-xcel-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$700 or $200 rebate on eligible evaporative cooling unit from Xcel list, depending on media saturation rating. "
     }
   }
 ]

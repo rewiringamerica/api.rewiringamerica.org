@@ -944,7 +944,9 @@ const UTILITIES = [
       location: { state: 'RI', city: 'Chepachet', county_fips: '44007' },
       utilities: {
         'ri-rhode-island-energy': { name: 'Rhode Island Energy' },
-        'ri-pascoag-utility-district': { name: 'Pascoag Utility District' },
+        'ri-pascoag-utility-district': {
+          name: 'Clear River Electric and Water District',
+        },
       },
     },
   ],
