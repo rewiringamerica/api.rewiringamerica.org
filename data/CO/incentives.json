@@ -716,7 +716,8 @@
       "en": "Rebate up to 80% of the total cost of a ground source heat pump and installation, up to $3,500. Efficiency minimums apply.",
       "es": "Un reembolso de hasta el 80% del costo total de una bomba de calor geotérmica y su instalación, hasta $3,500 dólares. Mínimos de eficiencia aplican."
     },
-    "start_date": "2023-01-01"
+    "start_date": "2023-01-01",
+    "end_date": "2025-03-15"
   },
   {
     "id": "CO-34",
@@ -15424,8 +15425,8 @@
       "en": "Rebate up to 40% of the total cost of a cold climate air source heat pump and installation, up to $1,200. Efficiency minimums apply.",
       "es": "Un reembolso de hasta el 40% del costo total de una bomba de calor con fuente de aire para climas fríos y de la instalación, hasta $1,200. Mínimos de eficiencia aplican."
     },
-    "start_date": "2025-03-15",
-    "end_date": "2026-02-28"
+    "start_date": "2025-01-01",
+    "end_date": "2025-03-14"
   },
   {
     "id": "CO-720",
@@ -15449,7 +15450,7 @@
       "es": "Un reembolso de hasta el 40% del costo total de una bomba de calor mini-split para climas fríos y de la instalación, hasta $1,200. Mínimos de eficiencia aplican."
     },
     "start_date": "2025-03-15",
-    "end_date": "2026-02-28"
+    "end_date": "2025-03-15"
   },
   {
     "id": "CO-721",
@@ -15473,7 +15474,7 @@
       "es": "Un reembolso de hasta el 60% del costo total de un calentador de agua con bomba de calor inteligente/conectado y de la instalación, hasta $500. Mínimos de eficiencia aplican."
     },
     "start_date": "2025-03-15",
-    "end_date": "2026-02-28"
+    "end_date": "2025-03-15"
   },
   {
     "id": "CO-722",
@@ -15521,6 +15522,26 @@
     ],
     "short_description": {
       "en": "Up to $1,200 rebate for an energy-efficient evaporative cooler."
+    }
+  },
+  {
+    "id": "CO-724",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_wiring"
+    ],
+    "program": "co_mountainParksElectric_rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $300 rebate for heat tape timers when installed permanently by an electrician."
     }
   }
 ]
