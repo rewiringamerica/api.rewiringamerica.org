@@ -235,8 +235,8 @@ export function calculateStateIncentivesAndSavings(
     let amount = item.amount.representative
       ? item.amount.representative
       : item.amount.type === AmountType.DollarAmount
-      ? item.amount.number
-      : 0;
+        ? item.amount.number
+        : 0;
     // Check any incentive groupings for this item to make sure it has remaining eligible value.
     if (groupedIncentives.has(item.id)) {
       const combinedValue = groupedIncentives.get(item.id)!;

@@ -81,10 +81,10 @@ export function isLowIncome(
       percentage === 80
         ? amiAndEvCreditEligibility.computedAMI80
         : percentage === 150
-        ? amiAndEvCreditEligibility.computedAMI150
-        : // If the percentage is an unknown value, use a negative threshold so
-          // all incomes are greater than it.
-          -1;
+          ? amiAndEvCreditEligibility.computedAMI150
+          : // If the percentage is an unknown value, use a negative threshold
+            // so all incomes are greater than it.
+            -1;
 
     return household_income <= threshold;
   } else if (thresholds.type === 'fpl-percentage') {
@@ -97,8 +97,8 @@ export function isLowIncome(
       location.state === 'AK'
         ? FEDERAL_POVERTY_LEVELS.AK
         : location.state === 'HI'
-        ? FEDERAL_POVERTY_LEVELS.HI
-        : FEDERAL_POVERTY_LEVELS.other;
+          ? FEDERAL_POVERTY_LEVELS.HI
+          : FEDERAL_POVERTY_LEVELS.other;
 
     const level =
       household_size <= 8
