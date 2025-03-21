@@ -1,3 +1,4 @@
+import { GeocodeAccuracyType } from 'geocodio-library-node';
 import { Database } from 'sqlite';
 import { geocoder } from './geocoder';
 
@@ -15,7 +16,7 @@ export type ResolvedLocation = {
  * types are imprecise enough, in practice, that we can't trust the geocoded
  * census tract.
  */
-const GEOCODIO_LOW_PRECISION = new Set([
+const GEOCODIO_LOW_PRECISION = new Set<GeocodeAccuracyType>([
   'street_center',
   'place',
   'county',
@@ -47,13 +48,13 @@ export async function resolveLocation(
   } else {
     const { address } = zipOrAddress;
     const response = await geocoder.geocode(address, ['census2020']);
-    const result = response?.results?.at(0);
+    const result = response.results.at(0);
 
     if (!result || result.address_components.country !== 'US') {
       return null;
     }
 
-    const censusInfo = result.fields.census['2020'];
+    const censusInfo = result.fields?.census?.['2020'];
 
     return {
       state: result.address_components.state,
