@@ -14,10 +14,52 @@ import { API_INCENTIVE_SCHEMA } from './schemas/v1/incentive';
 import { API_LOAN_PROGRAMS_RESPONSE_SCHEMA } from './schemas/v1/loan-programs';
 import { API_PROGRAMS_RESPONSE_SCHEMA } from './schemas/v1/programs';
 
+/**
+ * Custom querystring decoding logic that parses comma-separated param values
+ * into arrays.
+ *
+ * qs has an option to parse comma-separated param values as arrays, but there
+ * are two problems with that, so we can't use it.
+ *
+ * - Zuplo percent-encodes commas (so if a client passes "a=b,c", Zuplo will
+ *   send us "a=b%2Cc"), which suppresses qs's comma-separating behavior.
+ *
+ * - Not all fields should get this treatment. In particular, "address" may
+ *   contain commas, but should never be parsed as an array.
+ */
+function querystringParser(str: string): { [key: string]: unknown } {
+  // The query parameters whose values are arrays. (Unfortunately, we can't
+  // discriminate by endpoint in this function, so the parsing logic will be
+  // applied to params with these names on all endpoints.)
+  const ARRAY_VALUED_KEYS = ['authority_types', 'items'];
+
+  // The "decoder" function passed to qs.parse is invoked sequentially with keys
+  // and values as they're encountered in the query string. Track the last key
+  // we saw so we know when to parse an array.
+  let lastKey: string | null = null;
+
+  return qs.parse(str, {
+    decoder: (str, defaultDecoder, charset, type) => {
+      if (type === 'key') {
+        lastKey = str;
+      }
+
+      if (type === 'value' && lastKey && ARRAY_VALUED_KEYS.includes(lastKey)) {
+        // (?:) is a non-capturing group so we don't get the separators in the
+        // array returned from split()
+        return str
+          .split(/(?:%2C|,)/i)
+          .map(part => defaultDecoder(part, undefined, charset));
+      }
+      return defaultDecoder(str, undefined, charset);
+    },
+  });
+}
+
 // These are the options described here:
 // https://fastify.dev/docs/latest/Reference/Server
 export const options = {
-  querystringParser: (str: string) => qs.parse(str, { comma: true }),
+  querystringParser,
   disableRequestLogging: true,
 };
 
