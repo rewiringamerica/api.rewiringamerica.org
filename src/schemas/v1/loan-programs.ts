@@ -129,14 +129,14 @@ export const API_LOAN_PROGRAMS_REQUEST_SCHEMA = {
     zip: {
       type: 'string',
       description:
-        'Find loan programs available in this ZIP code. Exactly one of this and "address" is required.',
+        'Find loan programs available in this ZIP code. Exactly one of this or "address" is required.',
       maxLength: 5,
       minLength: 5,
     },
     address: {
       type: 'string',
       description:
-        'Find loan programs available at this address. Exactly one of this and "zip" is required.',
+        'Find loan programs available at this address. Exactly one of this or "zip" is required.',
     },
     language: {
       type: 'string',
@@ -153,8 +153,9 @@ export const API_LOAN_PROGRAMS_REQUEST_SCHEMA = {
  * API loan programs endpoint schema.
  */
 export const API_LOAN_PROGRAMS_ENDPOINT_SCHEMA = {
-  summary: 'Get all loan programs by location',
-  description: 'Returns all loan programs for a specified location.',
+  summary: 'BETA - Get all loan programs by location',
+  description:
+    "This endpoint is still in BETA and may have additional changes. It returns the relevant loan programs for a location. The location can be specified by either a ZIP code or a full address (one of these parameters is required, providing both we result in an error). The filtering is currently just based on a user's State.",
   operationId: 'getLoanProgramsForLocation',
   querystring: API_LOAN_PROGRAMS_REQUEST_SCHEMA,
   response: {
