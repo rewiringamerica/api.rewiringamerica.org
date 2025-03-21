@@ -21,8 +21,8 @@ export function isLowIncome(
     const bySize: HHSizeThresholds =
       thresholds.type === 'hhsize'
         ? thresholds.thresholds
-        : thresholds.thresholds[location.county_fips] ??
-          thresholds.thresholds['other'];
+        : (thresholds.thresholds[location.county_fips] ??
+          thresholds.thresholds['other']);
     const threshold = bySize?.[household_size];
 
     // The only way the threshold should be missing is if they are defined by
@@ -45,10 +45,10 @@ export function isLowIncome(
       percentage === 80
         ? amiAndEvCreditEligibility.computedAMI80
         : percentage === 150
-        ? amiAndEvCreditEligibility.computedAMI150
-        : // If the percentage is an unknown value, use a negative threshold so
-          // all incomes are greater than it.
-          -1;
+          ? amiAndEvCreditEligibility.computedAMI150
+          : // If the percentage is an unknown value, use a negative threshold
+            // so all incomes are greater than it.
+            -1;
 
     return household_income <= threshold;
   } else {
