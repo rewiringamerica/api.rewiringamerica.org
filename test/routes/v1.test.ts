@@ -128,7 +128,7 @@ async function validateLoanProgramsResponse(
   addFormats(ajv);
   const searchParams = qs.stringify(query, { encodeValuesOnly: true });
   const res = await app.inject({
-    url: `/api/v1/loan-programs?${searchParams}`,
+    url: `/api/v1/finance/loan-programs?${searchParams}`,
   });
   t.equal(res.statusCode, 200, 'status code is 200');
 
