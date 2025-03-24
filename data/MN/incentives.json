@@ -7,7 +7,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_xcelEnergy_xcelEnergyRebate",
+    "program": "mn_xcelEnergy_xcelEnergyHomeRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 1100
@@ -27,7 +27,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_xcelEnergy_xcelEnergyRebate",
+    "program": "mn_xcelEnergy_xcelEnergyHomeRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 1500
@@ -47,7 +47,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_xcelEnergy_xcelEnergyRebate",
+    "program": "mn_xcelEnergy_xcelEnergyHomeRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 2000
@@ -67,7 +67,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_xcelEnergy_xcelEnergyRebate",
+    "program": "mn_xcelEnergy_xcelEnergyHomeRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 1600
@@ -107,16 +107,18 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_xcelEnergy_xcelEnergyRebate",
+    "program": "mn_xcelEnergy_xcelEnergyHomeRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 500,
+      "minimum": 400,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for a heat pump water heater."
+      "en": "Up to $500 rebate for smart electric heat pump water heater. $400 for standard electric heat pump water heater."
     }
   },
   {
@@ -127,7 +129,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_xcelEnergy_xcelEnergyRebate",
+    "program": "mn_xcelEnergy_xcelEnergyHomeRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 1600
@@ -147,7 +149,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_xcelEnergy_xcelEnergyRebate",
+    "program": "mn_xcelEnergy_xcelEnergyHomeRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 2000
@@ -189,7 +191,7 @@
     "items": [
       "electric_panel"
     ],
-    "program": "mn_xcelEnergy_xcelEnergyRebate",
+    "program": "mn_xcelEnergy_xcelEnergyHomeRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 1500
@@ -198,7 +200,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,500 rebate for electric panel upgrades."
+      "en": "Up to $1,500 rebate for electric panel upgrade. Must upgrade your panel to a higher amperage."
     }
   },
   {
@@ -1009,7 +1011,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$1000 rebate for a cold climate air source heat pump (ASHP)"
+      "en": "$1000 rebate for a ducted cold climate air source heat pump (ASHP)"
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
@@ -1272,10 +1274,11 @@
       "attic_or_roof_insulation",
       "wall_insulation"
     ],
-    "program": "mn_cityOfStLouisPark_climateChampionsForHomes",
+    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomes",
     "amount": {
       "type": "percent",
-      "number": 0.5
+      "number": 0.5,
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner"
@@ -1295,7 +1298,7 @@
       "attic_or_roof_insulation",
       "wall_insulation"
     ],
-    "program": "mn_cityOfStLouisPark_climateChampionsForHomes",
+    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomes",
     "amount": {
       "type": "percent",
       "number": 1
@@ -1318,7 +1321,7 @@
       "ducted_heat_pump",
       "ductless_heat_pump"
     ],
-    "program": "mn_cityOfStLouisPark_climateChampionsForHomes",
+    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomes",
     "amount": {
       "type": "percent",
       "number": 0.5
@@ -1341,7 +1344,7 @@
       "ducted_heat_pump",
       "ductless_heat_pump"
     ],
-    "program": "mn_cityOfStLouisPark_climateChampionsForHomes",
+    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomes",
     "amount": {
       "type": "percent",
       "number": 1
@@ -1363,7 +1366,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_cityOfStLouisPark_climateChampionsForHomes",
+    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomes",
     "amount": {
       "type": "percent",
       "number": 1
@@ -1385,7 +1388,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_cityOfStLouisPark_climateChampionsForHomes",
+    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomes",
     "amount": {
       "type": "percent",
       "number": 1
@@ -1432,7 +1435,7 @@
       "attic_or_roof_insulation",
       "wall_insulation"
     ],
-    "program": "mn_cityOfStLouisPark_climateChampionsForHomes",
+    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomes",
     "amount": {
       "type": "percent",
       "number": 0.5,
@@ -1470,5 +1473,115 @@
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-70",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_kenyonMunicipalUtilities_residentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 50,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 per ton rebate for a ductless air source heat pump with a SEER rating of 13.5 - 14.99"
+    }
+  },
+  {
+    "id": "MN-71",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mn_glencoeLightAndPowerCommission_rebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for an air source heat pump (ducted or ductless) SEER2 ≥ 14.3"
+    }
+  },
+  {
+    "id": "MN-72",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "wall_insulation",
+      "other_insulation"
+    ],
+    "program": "mn_centerpointEnergy_centerPointEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000,
+      "minimum": 750,
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $3,000 for insulation and air sealing. $1,300 for attic insulation and air sealing, $1,500 for wall insulation, $200 for rim joist insulation."
+    },
+    "end_date": "2027-01-01"
+  },
+  {
+    "id": "MN-73",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_centerpointEnergy_centerPointEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,100 rebate for a ducted air source heat pump installed in a home with a 92% or higher efficient gas furnace "
+    },
+    "end_date": "2027-01-01"
+  },
+  {
+    "id": "MN-74",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_xcelEnergy_xcelEnergyHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$900 rebate for a ducted cold climate air source heat pump qualifying for a CenterPoint Energy rebate. Not to exceed $2,000 total from both utilities."
+    }
   }
 ]

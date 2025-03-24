@@ -201,6 +201,22 @@
       "evaporative_cooler"
     ]
   },
+  "tx_entergyTexas_entergySolutions": {
+    "name": {
+      "en": "Entergy Solutions "
+    },
+    "url": {
+      "en": "https://www.entergy-texas.com/your_home/save_money/ee/hvac/"
+    },
+    "authority": "tx-entergy-texas",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "central_air_conditioner"
+    ]
+  },
   "tx_entergyTexas_hVACDistributorProgram": {
     "name": {
       "en": "HVAC Distributor Program"
@@ -243,20 +259,6 @@
     "items": [
       "ducted_heat_pump",
       "ductless_heat_pump"
-    ]
-  },
-  "tx_guadalupeValleyElectricCooperative_gVECRebates": {
-    "name": {
-      "en": "GVEC Rebates"
-    },
-    "url": {
-      "en": "https://www.gvec.org/electric/rebates/"
-    },
-    "authority": "tx-guadalupe-valley-electric-cooperative",
-    "authority_type": "utility",
-    "items": [
-      "other_heat_pump",
-      "new_electric_vehicle"
     ]
   },
   "tx_guadalupeValleyElectricCooperative_gVECResidentialRebates": {
@@ -546,7 +548,10 @@
       "duct_sealing",
       "air_sealing",
       "attic_or_roof_insulation",
-      "efficiency_rebates"
+      "efficiency_rebates",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "heat_pump_water_heater"
     ]
   }
 }

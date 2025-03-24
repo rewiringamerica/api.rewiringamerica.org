@@ -249,7 +249,8 @@
     "program": "mo_evergyFormerlyKcpandl_evergyResidentialDiscounts",
     "amount": {
       "type": "dollar_amount",
-      "number": 150
+      "number": 150,
+      "maximum": 150
     },
     "owner_status": [
       "homeowner"
@@ -276,7 +277,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "20% of project cost for attic insulation, up to $250 rebate. Must be an R-36 rating or higher."
+      "en": "20% of project cost for attic insulation on existing building, up to $250 rebate."
     }
   },
   {
@@ -297,7 +298,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of cost up to $50 rebate for a smart thermostat."
+      "en": "50% of cost up to $50 rebate for an ENERGY STAR smart thermostat."
     }
   },
   {
@@ -307,7 +308,8 @@
     ],
     "items": [
       "efficiency_rebates",
-      "other_weatherization"
+      "other_weatherization",
+      "energy_audit"
     ],
     "program": "mo_missouriDepartmentOfNaturalResources_missouriWeatherizationAssistanceProgram",
     "amount": {
@@ -376,14 +378,14 @@
     "program": "mo_consolidatedElectricCooperative_consolidatedElectricRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 750,
+      "number": 400,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$750/ton rebate for a ground source heat pump installation."
+      "en": "$400/ton rebate for replacement of an existing ground source heat pump."
     }
   },
   {
@@ -516,7 +518,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 rebate per system and $150/ton for qualifying air source heat pumps."
+      "en": "$300 rebate per system and $150/ton for qualifying air source heat pumps (maximum 2)."
     },
     "end_date": "2025-12-31"
   },
