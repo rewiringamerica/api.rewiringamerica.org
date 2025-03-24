@@ -16,6 +16,7 @@ export type ResolvedLocation = {
  * types are imprecise enough, in practice, that we can't trust the geocoded
  * census tract.
  */
+// @ts-expect-error county is not included in the typedef
 const GEOCODIO_LOW_PRECISION = new Set<GeocodeAccuracyType>([
   'street_center',
   'place',
@@ -54,13 +55,18 @@ export async function resolveLocation(
       return null;
     }
 
-    const censusInfo = result.fields?.census?.['2020'];
+    // @ts-expect-error census2020 is not included in the typedef
+    const censusInfo = result.fields.census['2020'];
 
     return {
+      // @ts-expect-error state is optional in the typedef
       state: result.address_components.state,
+      // @ts-expect-error zip is optional in the typedef
       zcta:
+        // @ts-expect-error zip is optional in the typedef
         (await zipLookup(db, result.address_components.zip))?.zcta ??
         result.address_components.zip,
+      // @ts-expect-error city is optional in the typedef
       city: result.address_components.city,
       county_fips: censusInfo.county_fips,
       tract_geoid: GEOCODIO_LOW_PRECISION.has(result.accuracy_type)
