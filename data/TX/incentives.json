@@ -664,5 +664,557 @@
       "en": "30% of project, up to $300 rebate for a heat pump water heater."
     },
     "start_date": "2024-10-01"
+  },
+  {
+    "id": "TX-32",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "tx_cityOfNewBraunfels_nBURebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,150 rebate for a ducted air source heat pump, depending on SEER2 rating."
+    }
+  },
+  {
+    "id": "TX-33",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "tx_cityOfNewBraunfels_nBURebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 rebate for a ductless mini split heat pump."
+    }
+  },
+  {
+    "id": "TX-34",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "tx_cityOfNewBraunfels_nBURebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.5,
+      "unit": "watt",
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $0.50/watt rebate up to $3,000 depending on azimuth and tilt for residential rooftop solar installations."
+    }
+  },
+  {
+    "id": "TX-35",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "tx_cityOfSanMarcos_sanMarcosEnergyRebatePrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250/ton rebate for an air source heat pump."
+    }
+  },
+  {
+    "id": "TX-36",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "tx_cityOfSanMarcos_sanMarcosEnergyRebatePrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1,
+      "unit": "watt",
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1.00/watt up to $2,500 rebate for residential solar installation."
+    }
+  },
+  {
+    "id": "TX-37",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "tx_fayetteElectricCooperative_fECHVACRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 rebate for an air source heat pump."
+    }
+  },
+  {
+    "id": "TX-38",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "tx_hilcoElectricCooperative_hILCORebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 rebate for an air source heat pump."
+    }
+  },
+  {
+    "id": "TX-39",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "tx_hilcoElectricCooperative_hILCORebatePrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 100,
+      "unit": "kilowatt",
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100/kw rebate for residential solar installation, up to $300 total."
+    }
+  },
+  {
+    "id": "TX-40",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "tx_kerrvillePublicUtilityBoard_kPUBEnergySavingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $900 rebate for a qualifying ducted or ductless air source heat pump."
+    }
+  },
+  {
+    "id": "TX-41",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "tx_kerrvillePublicUtilityBoard_kPUBEnergySavingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $300 rebate per unit (max 2) for a qualifying heat pump water heater."
+    }
+  },
+  {
+    "id": "TX-42",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "tx_unitedElectricCooperativeService_unitedElectricEnergyInnovationRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 rebate for a qualifying air source heat pump."
+    }
+  },
+  {
+    "id": "TX-43",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "tx_unitedElectricCooperativeService_unitedElectricEnergyInnovationRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 rebate for a qualifying ground source heat pump."
+    }
+  },
+  {
+    "id": "TX-44",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "tx_unitedElectricCooperativeService_unitedElectricEnergyInnovationRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 rebate for a qualifying heat pump water heater with at least 40 gallon capacity."
+    }
+  },
+  {
+    "id": "TX-45",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "tx_unitedElectricCooperativeService_unitedElectricEnergyInnovationRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 50% of the purchase and installation cost of a Level 2 (240V) charging station, up to $250. Must enroll in \"Beat the Peak\" program."
+    }
+  },
+  {
+    "id": "TX-46",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "tx_heartOfTexasElectricCooperative_hOTECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $200 rebate for a qualifying air source heat pump."
+    }
+  },
+  {
+    "id": "TX-47",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater",
+      "non_heat_pump_water_heater"
+    ],
+    "program": "tx_heartOfTexasElectricCooperative_hOTECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$75 rebate for a qualifying electric water heater."
+    }
+  },
+  {
+    "id": "TX-48",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "tx_heartOfTexasElectricCooperative_hOTECRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.1,
+      "unit": "watt",
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$0.10/watt up to $500 rebate for residential solar installation."
+    }
+  },
+  {
+    "id": "TX-49",
+    "payment_methods": [
+      "account_credit",
+      "rebate"
+    ],
+    "items": [
+      "battery_storage_installation"
+    ],
+    "program": "tx_guadalupeValleyElectricCooperative_gVECResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 200,
+      "unit": "kilowatt"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200/installed kw of rated capacity for a home battery storage system, enrolled in GVEC Peak Time Payback program."
+    }
+  },
+  {
+    "id": "TX-50",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "tx_guadalupeValleyElectricCooperative_gVECResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 50% of the purchase and installation cost of an approved Level 2 (240V) charging station, up to $600."
+    }
+  },
+  {
+    "id": "TX-51",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "tx_guadalupeValleyElectricCooperative_gVECResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$600 rebate for qualifying ducted air source heat pumps."
+    }
+  },
+  {
+    "id": "TX-52",
+    "payment_methods": [
+      "performance_rebate"
+    ],
+    "items": [
+      "efficiency_rebates",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "tx_xcelEnergy_xcelEnergyTXEnergyEfficiencyServiceProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to 100% for weatherization and efficiency services provided by approved contractors. Coverage based on modeled performance savings."
+    }
+  },
+  {
+    "id": "TX-53",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "tx_wiseElectricCooperative_wiseElectricRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "minimum": 400,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $600 rebate for an air source heat pump, depending on efficiency rating."
+    }
+  },
+  {
+    "id": "TX-54",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "tx_oncorElectricDelivery_oncorResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 upfront rebate for a heat pump water heater when reserved through Oncor Marketplace."
+    }
+  },
+  {
+    "id": "TX-55",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "tx_oncorElectricDelivery_oncorResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 upfront rebate for an ENERGY STAR electric dryer when reserved through Oncor Marketplace."
+    }
+  },
+  {
+    "id": "TX-56",
+    "payment_methods": [
+      "assistance_program",
+      "pos_rebate"
+    ],
+    "items": [
+      "efficiency_rebates",
+      "ductless_heat_pump",
+      "ducted_heat_pump",
+      "attic_or_roof_insulation",
+      "air_sealing"
+    ],
+    "program": "tx_oncorElectricDelivery_oncorResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 3500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to 100% of project costs for efficiency projects and heating/cooling upgrades. Renters are eligible with landlord permission."
+    }
+  },
+  {
+    "id": "TX-57",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "central_air_conditioner",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "tx_entergyTexas_entergySolutions",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,700 upfront discount through qualified HVAC distributors for high efficiency air conditioners or air source heat pumps."
+    }
   }
 ]

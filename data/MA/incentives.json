@@ -57,7 +57,10 @@
       "air_sealing",
       "attic_or_roof_insulation",
       "basement_insulation",
-      "crawlspace_insulation"
+      "crawlspace_insulation",
+      "floor_insulation",
+      "duct_sealing",
+      "efficiency_rebates"
     ],
     "program": "ma_masssave_massSaveWeatherizationIncentives",
     "amount": {
@@ -69,7 +72,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to 100% coverage for approved insulation improvements and air sealing after receiving a home energy assessment."
+      "en": "Up to 100% coverage for approved insulation improvements and air sealing after receiving a home energy assessment, for moderate income customers."
     },
     "low_income": "ma-massSave-incomeEligible-enhanced"
   },
@@ -86,7 +89,8 @@
       "basement_insulation",
       "crawlspace_insulation",
       "window_replacement",
-      "other_weatherization"
+      "other_weatherization",
+      "efficiency_rebates"
     ],
     "program": "ma_masssave_massSaveWeatherizationIncentives",
     "amount": {
@@ -98,7 +102,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to 100% coverage for approved insulation improvements, air sealing, windows, and appliance replacements after receiving a home energy assessment."
+      "en": "Up to 100% coverage for approved weatherization services after receiving a home energy assessment, for income-qualified customers."
     },
     "low_income": "ma-massSave-income-eligible"
   },
@@ -115,13 +119,13 @@
     "program": "ma_masssave_massSaveWeatherizationIncentives",
     "amount": {
       "type": "percent",
-      "number": 0.75
+      "number": 1
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to 75% off approved insulation and air sealing improvements after receiving a home energy assessment."
+      "en": "Up to 100% off approved insulation and air sealing improvements after receiving a home energy assessment."
     }
   },
   {
@@ -371,7 +375,11 @@
     ],
     "items": [
       "air_sealing",
-      "other_insulation"
+      "other_insulation",
+      "floor_insulation",
+      "basement_insulation",
+      "attic_or_roof_insulation",
+      "crawlspace_insulation"
     ],
     "program": "ma_masssave_massSaveWeatherizationIncentives",
     "amount": {
@@ -384,28 +392,6 @@
     ],
     "short_description": {
       "en": "Up to 100% coverage for insulation and air sealing upgrades, plus a $500 bonus, when partial-home heat pumps are installed within 6 months."
-    }
-  },
-  {
-    "id": "MA-18",
-    "eligible_geo_group": "ma-mass-save",
-    "payment_methods": [
-      "assistance_program"
-    ],
-    "items": [
-      "air_sealing"
-    ],
-    "program": "ma_masssave_massSaveWeatherizationIncentives",
-    "amount": {
-      "type": "percent",
-      "number": 1
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to 100% coverage for air sealing upgrades made after receiving a Home Energy Assessment."
     }
   },
   {
@@ -440,7 +426,8 @@
     ],
     "items": [
       "other",
-      "electric_wiring"
+      "electric_wiring",
+      "other_insulation"
     ],
     "program": "ma_masssave_massSaveWeatherizationIncentives",
     "amount": {
@@ -552,7 +539,8 @@
       "rebate"
     ],
     "items": [
-      "ductless_heat_pump"
+      "ductless_heat_pump",
+      "ducted_heat_pump"
     ],
     "program": "ma_massSave_massSaveHeatingAndCoolingIncentives",
     "amount": {
@@ -565,32 +553,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $16,000 rebate per home for installing a partial-home air source heat pump."
+      "en": "Up to $16,000 rebate per home for installing a partial-home or whole home air source heat pump, for moderate income residents."
     },
-    "end_date": "2025-02-28",
-    "low_income": "ma-massSave-incomeEligible-enhanced"
-  },
-  {
-    "id": "MA-26",
-    "eligible_geo_group": "ma-mass-save",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "ma_massSave_massSaveHeatingAndCoolingIncentives",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 16000
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $16,000 rebate per home for installing a whole-home air source heat pump."
-    },
+    "end_date": "2025-12-31",
     "low_income": "ma-massSave-incomeEligible-enhanced"
   },
   {
@@ -612,9 +577,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $25,000 rebate per home for installing a whole-home ground source heat pump."
+      "en": "Up to $25,000 rebate per home for installing a whole-home ground source heat pump, for moderate income households."
     },
-    "end_date": "2025-02-28",
+    "end_date": "2025-08-31",
     "low_income": "ma-massSave-incomeEligible-enhanced"
   },
   {
@@ -636,9 +601,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $25,000 rebate per home for installing a partial-home ground source heat pump."
+      "en": "Up to $25,000 rebate per home for installing a partial-home ground source heat pump, for moderate income households."
     },
-    "end_date": "2025-02-28",
+    "end_date": "2025-08-31",
     "low_income": "ma-massSave-incomeEligible-enhanced"
   },
   {
@@ -688,7 +653,7 @@
     "short_description": {
       "en": "$1,250/ton rebate, up to $10,000 for a partial-home air source heat pump."
     },
-    "end_date": "2025-02-28"
+    "end_date": "2025-12-31"
   },
   {
     "id": "MA-31",
@@ -713,7 +678,7 @@
     "short_description": {
       "en": "$3,000/ton rebate, up to $10,000 for a whole-home air source heat pump."
     },
-    "end_date": "2025-02-28"
+    "end_date": "2025-12-31"
   },
   {
     "id": "MA-32",
@@ -739,29 +704,6 @@
       "en": "Up to $2,000/ton rebate for a partial-home ground source heat pump."
     },
     "end_date": "2025-02-28"
-  },
-  {
-    "id": "MA-33",
-    "eligible_geo_group": "ma-mass-save",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "geothermal_heating_installation"
-    ],
-    "program": "ma_massSave_massSaveHeatingAndCoolingIncentives",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 15000,
-      "maximum": 15000
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $15,000 rebate per home for a whole-home ground source heat pump."
-    }
   },
   {
     "id": "MA-34",
@@ -807,7 +749,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "100% off a replacement window air conditioner if current appliances are inefficient."
+      "en": "100% off a replacement window air conditioner if current appliances are inefficient. For income-eligible residents."
     },
     "low_income": "ma-massSave-income-eligible"
   },
@@ -966,7 +908,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $750 rebate for a heat pump water heater (120 volt/15 amp circuit)."
+      "en": "Up to $750 rebate for a 120 volt/15amp circuit heat pump water heater."
     }
   },
   {
@@ -988,7 +930,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,500 rebate for a heat pump water heater split-system."
+      "en": "Up to $1,500 rebate for a split-system heat pump water heater."
     }
   },
   {
@@ -1010,8 +952,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for replacing a natural gas or propane stove with an induction stove."
-    }
+      "en": "Up to $500 rebate for replacing a natural gas or propane stove with an induction stove."
+    },
+    "end_date": "2025-12-31"
   },
   {
     "id": "MA-45",
@@ -1057,56 +1000,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "$30 rebate (each) for a battery-powered electric leaf blower or string trimmer."
+      "en": "$30 rebate (each) for a battery-powered electric leaf blower, string trimmer, or chainsaw."
     }
-  },
-  {
-    "id": "MA-47",
-    "eligible_geo_group": "ma-mass-save-electric",
-    "payment_methods": [
-      "rebate",
-      "pos_rebate"
-    ],
-    "items": [
-      "electric_outdoor_equipment"
-    ],
-    "program": "ma-MassSave-appliances",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 30,
-      "maximum": 30
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $30 rebate for a battery-powered chainsaw."
-    }
-  },
-  {
-    "id": "MA-48",
-    "eligible_geo_group": "ma-mass-save",
-    "payment_methods": [
-      "assistance_program"
-    ],
-    "items": [
-      "non_heat_pump_clothes_dryer",
-      "heat_pump_clothes_dryer"
-    ],
-    "program": "ma-MassSave-appliances",
-    "amount": {
-      "type": "percent",
-      "number": 1
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "100% coverage for an ENERGY STAR certified clothes dryer."
-    },
-    "low_income": "ma-massSave-income-eligible"
   },
   {
     "id": "MA-49",
@@ -1115,7 +1010,6 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_clothes_dryer",
       "non_heat_pump_clothes_dryer"
     ],
     "program": "ma-MassSave-appliances",
@@ -1151,7 +1045,8 @@
     ],
     "short_description": {
       "en": "$200 rebate for purchasing an ENERGY STAR heat pump clothes dryer."
-    }
+    },
+    "end_date": "2025-12-31"
   },
   {
     "id": "MA-51",
@@ -1172,7 +1067,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "100% coverage for an ENERGY STAR certified clothes washer."
+      "en": "100% coverage for an ENERGY STAR certified clothes washer, for income-eligible residents."
     },
     "low_income": "ma-massSave-income-eligible"
   },
