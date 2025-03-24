@@ -17,8 +17,8 @@ export function adjustAMI(baseAMI: number, householdSize: number): number {
     householdSize < 4
       ? baseAMI * (1 - 0.1 * (4 - householdSize))
       : householdSize > 4
-      ? baseAMI * (1 + 0.08 * (householdSize - 4))
-      : baseAMI,
+        ? baseAMI * (1 + 0.08 * (householdSize - 4))
+        : baseAMI,
   );
 }
 
