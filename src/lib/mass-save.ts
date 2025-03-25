@@ -9,6 +9,7 @@ export const EXCEPTION_MLPS: string[] = [
   'ma-braintree-electric-light-department',
   'ma-town-of-littleton',
   'ma-town-of-mansfield',
+  'ma-town-of-wellesley',
   'ma-west-boylston-mlp',
 ];
 
