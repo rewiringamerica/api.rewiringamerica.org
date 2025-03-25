@@ -28,6 +28,7 @@
     "short_description": {
       "en": "No cost insulation, air sealing, and heating/cooling installation for income-qualified residents. Tenants must work with their landlord."
     },
+    "paused": true,
     "low_income": "mo-200-fpl"
   },
   {
@@ -146,7 +147,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 rebate not to exceed 50% of total cost for a heat pump water heater. Limit 2 per address."
+      "en": "Up to $500 rebate not to exceed 50% of total cost for a heat pump water heater. "
     },
     "end_date": "2025-06-30"
   },
@@ -845,7 +846,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR certified air source heat pump that meets minimum efficiency standards."
+      "en": "$500 rebate for an ENERGY STAR certified air source heat pump "
     }
   },
   {
@@ -865,7 +866,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1025 rebate for an ENERGY STAR certified ground source heat pump that meets minimum efficiency standards."
+      "en": "$1025 rebate for an ENERGY STAR certified ground source heat pump. "
     }
   },
   {
@@ -879,7 +880,8 @@
     "program": "mo_cityUtilitiesOfSpringfield_springfieldResidentialRebatesAndIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 500,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
@@ -940,14 +942,14 @@
     "program": "mo_co-MoElectricCooperative_co-MoElectricTakeControlAndSave",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 300,
+      "number": 150,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $300/ton rebate for an air source heat pump depending on system configuration and efficiency rating. Cannot exceed 50% of purchase cost."
+      "en": "Up to $150/ton rebate for an air source heat pump depending on system configuration and efficiency rating. Cannot exceed 50% of purchase cost."
     }
   },
   {
@@ -1027,7 +1029,8 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 350,
-      "unit": "ton"
+      "unit": "ton",
+      "maximum": 3500
     },
     "owner_status": [
       "homeowner"
@@ -1068,13 +1071,14 @@
     "program": "mo_cuivreRiverElectricCooperative_cuivreRiverEnergyEfficiencyAndSavings",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 500,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost."
+      "en": "$500 rebate for an ENERGY STAR certified heat pump water heater. Cannot exceed 50% of total cost."
     }
   },
   {
@@ -1131,7 +1135,8 @@
     "program": "mo_libertyUtilities_libertyMOElectricEnergyEfficiencyProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 550
+      "number": 550,
+      "maximum": 550
     },
     "owner_status": [
       "homeowner"
@@ -1197,7 +1202,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for a heat pump water heater."
+      "en": "$500 rebate for an ENERGY STAR heat pump water heater."
     }
   },
   {
@@ -1211,7 +1216,8 @@
     "program": "mo_gascosageElectricCooperative_gascosageElectricRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 250
+      "number": 250,
+      "maximum": 250
     },
     "owner_status": [
       "homeowner"
@@ -1388,7 +1394,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$250 rebate for a level 2 electric vehicle charger."
+      "en": "$250 rebate for a level 2 electric vehicle charger. Cannot exceed 50% of the total cost of the unit."
     }
   },
   {
@@ -1540,7 +1546,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for a qualifying heat pump water heater."
+      "en": "$500 rebate for a qualifying heat pump water heater. Cannot exceed 50% of the total cost of the unit"
     }
   },
   {
@@ -1582,7 +1588,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$750/ton rebate for a ground source heat pump."
+      "en": "$750/ton rebate for a ground source heat pump. Cannot exceed 50% of the total cost of the unit."
     }
   },
   {
@@ -1596,15 +1602,15 @@
     "program": "mo_maconElectricCooperative_maconTakeControlAndSave",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
+      "number": 300,
       "unit": "ton",
-      "maximum": 1500
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton rebate for a qualifying mini split heat pump."
+      "en": "$300/ton rebate for a qualifying mini split heat pump."
     }
   },
   {
@@ -1618,15 +1624,15 @@
     "program": "mo_maconElectricCooperative_maconTakeControlAndSave",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
+      "number": 300,
       "unit": "ton",
-      "maximum": 1500
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton rebate for a qualifying air source heat pump."
+      "en": "$300/ton rebate for a qualifying air source heat pump."
     }
   },
   {
@@ -1703,7 +1709,7 @@
       "type": "dollars_per_unit",
       "number": 300,
       "unit": "ton",
-      "maximum": 3500
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
@@ -1858,7 +1864,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR rated heat pump water heater."
+      "en": "$500 rebate for an ENERGY STAR rated heat pump water heater up to 50% of the total cost of the unit. "
     }
   },
   {
@@ -1881,7 +1887,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton for a ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat."
+      "en": "$150/ton for a ducted or ductless air source heat pump up to 50% of the total unit cost."
     }
   },
   {
@@ -1903,7 +1909,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$750/ton rebate for a qualifying ground source heat pump installation."
+      "en": "$750/ton rebate for a qualifying ground source heat pump installation up to 50% of the total unit cost. "
     }
   },
   {
@@ -2053,7 +2059,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR rated heat pump water heater."
+      "en": "$500 rebate for an ENERGY STAR rated heat pump water heater up to 50% of the total cost of the unit."
     }
   },
   {
@@ -2206,7 +2212,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$750/ton rebate for a ground source heat pump."
+      "en": "$750/ton rebate for a ground source heat pump up to 50% of the total cost of the unit."
     }
   },
   {
@@ -2309,7 +2315,8 @@
     "program": "mo_semoElectricCooperative_sEMOElectricTakeControlAndSaveRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 500,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
@@ -2444,7 +2451,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR rated heat pump water heater."
+      "en": "$500 rebate for an ENERGY STAR rated heat pump water heater up to 50% of the cost of the unit. "
     }
   },
   {
@@ -2724,7 +2731,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$300/ton for a ducted or ductless air source heat pump, when replacing electric resistance heating."
+      "en": "$300/ton for a ducted or ductless air source heat pump."
     }
   },
   {
@@ -2873,7 +2880,8 @@
     ],
     "short_description": {
       "en": "$500 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost."
-    }
+    },
+    "end_date": "2025-07-01"
   },
   {
     "id": "MO-134",
