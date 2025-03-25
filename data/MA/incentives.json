@@ -851,7 +851,7 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "other_heat_pump"
     ],
     "program": "ma_massSave_massSaveHeatingAndCoolingIncentives",
     "amount": {
@@ -5352,7 +5352,7 @@
       "en": "$200 rebate for a heat pump water heater."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31"
+    "end_date": "2025-03-21"
   },
   {
     "id": "MA-238",
@@ -12082,5 +12082,73 @@
     "short_description": {
       "en": "$1,500 rebate for a new or used purchase or lease of an electric vehicle or plug-in hybrid  electric vehicle. "
     }
+  },
+  {
+    "id": "MA-533",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "ma-wellesley-mlp-electrification-energy-rebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1200,
+      "unit": "kilowatt",
+      "maximum": 12000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,200 per kW-direct current of solar generation capacity for residential properties. Not to exceed 50% of project cost."
+    }
+  },
+  {
+    "id": "MA-534",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ma-wellesley-mlp-electrification-energy-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 10000,
+      "minimum": 8000,
+      "maximum": 10000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $10,000 rebate for an air source heat pump if home is heated by oil, propane, or electric resistance. Gas customers must use Mass Save rebates."
+    },
+    "end_date": "2025-06-30"
+  },
+  {
+    "id": "MA-535",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ma-wellesley-mlp-electrification-energy-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 8000,
+      "minimum": 6500,
+      "maximum": 8000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $8,000 rebate for an air source heat pump if home is heated by oil, propane, or electric resistance. Gas customers must use Mass Save rebates."
+    },
+    "start_date": "2025-07-01"
   }
 ]

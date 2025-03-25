@@ -399,7 +399,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Receive an $50 instant rebate on eligible Thermostat Rewards devices at the Xcel Energy Store."
+      "en": "Receive an $50 instant rebate on eligible Thermostat Rewards device at the Xcel Energy Store."
     }
   },
   {
@@ -408,8 +408,7 @@
       "account_credit"
     ],
     "items": [
-      "other",
-      "smart_thermostat"
+      "other"
     ],
     "program": "nm-xcel-rebates",
     "amount": {
@@ -421,7 +420,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Receive a one-time $100 enrollment bill credit for signing up for thermostat rewards program and $25/year for participating in it."
+      "en": "Receive a one-time $100 enrollment bill credit for signing up for Thermostat Rewards program with an existing eligible thermostat with central AC."
     }
   },
   {
@@ -3750,7 +3749,8 @@
     "short_description": {
       "en": "$1,000 rebate on ebike for income qualified customers from participating dealers."
     },
-    "end_date": "2025-01-13"
+    "end_date": "2025-01-13",
+    "paused": true
   },
   {
     "id": "NM-176",
@@ -4559,8 +4559,7 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump",
-      "central_air_conditioner"
+      "ducted_heat_pump"
     ],
     "program": "nm-xcel-rebates",
     "amount": {
@@ -4572,7 +4571,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $400 rebate on qualified air source heat pump and central air conditioner using participating contractor."
+      "en": "Up to $400 rebate on qualified air source heat pump using participating contractor."
     }
   },
   {
@@ -4637,6 +4636,27 @@
     ],
     "short_description": {
       "en": "$700 or $200 rebate on eligible evaporative cooling unit from Xcel list, depending on media saturation rating. "
+    }
+  },
+  {
+    "id": "NM-220",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "nm-xcel-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $200 rebate on qualified central air conditioner using participating contractor."
     }
   }
 ]
