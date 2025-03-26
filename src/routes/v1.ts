@@ -239,7 +239,7 @@ export default async function (
 
   // Return a list of available Loan Programs.
   server.get(
-    '/api/v1/loan-programs',
+    '/api/v1/finance/loan-programs',
     { schema: API_LOAN_PROGRAMS_ENDPOINT_SCHEMA },
     async (request, reply) => {
       const location = await resolveLocation(fastify.sqlite, request.query);
