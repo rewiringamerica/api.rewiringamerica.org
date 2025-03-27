@@ -2515,7 +2515,8 @@
     ],
     "short_description": {
       "en": "$500 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost."
-    }
+    },
+    "end_date": "2025-07-01"
   },
   {
     "id": "MO-117",
@@ -2927,5 +2928,26 @@
     "short_description": {
       "en": "$150/ton for a ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat."
     }
+  },
+  {
+    "id": "MO-136",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mo_tri-CountyElectricCooperativeAssociation_tri-CountyElectricTakeControlAndSaveRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost."
+    },
+    "start_date": "2025-07-01"
   }
 ]
