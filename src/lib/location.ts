@@ -55,17 +55,12 @@ export async function resolveLocation(
       return null;
     }
 
-    // @ts-expect-error census2020 is not included in the typedef
+    // @ts-expect-error census.2020 is not included in the typedef
     const censusInfo = result.fields.census['2020'];
 
     return {
-      // @ts-expect-error state is optional in the typedef
-      state: result.address_components.state,
-      // @ts-expect-error zip is optional in the typedef
-      zcta:
-        // @ts-expect-error zip is optional in the typedef
-        (await zipLookup(db, result.address_components.zip))?.zcta ??
-        result.address_components.zip,
+      state: result.address_components.state!,
+      zcta: result.address_components.zip!,
       // @ts-expect-error city is optional in the typedef
       city: result.address_components.city,
       county_fips: censusInfo.county_fips,
