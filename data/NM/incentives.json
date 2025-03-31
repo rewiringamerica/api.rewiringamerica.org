@@ -92,7 +92,8 @@
       "maximum": 945
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $175/ton rebate for qualified ducted or ductless air-source heat pumps less than 5.4 tons."
@@ -113,7 +114,8 @@
       "maximum": 700
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$700/unit rebate for qualified ground source heat pumps."
@@ -134,7 +136,8 @@
       "maximum": 300
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$300/unit rebate on ENERGY STAR certified heat pump water heaters less than 55 gallons."
@@ -155,7 +158,8 @@
       "maximum": 50
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$50 rebate on an qualified Energy Star smart thermostat for homes with refrigerated air conditioning."
@@ -176,7 +180,8 @@
       "maximum": 50
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$50 rebate on an Energy Star induction cooktop."
@@ -198,7 +203,8 @@
       "unit": "cfm50"
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $0.239/CFM50 rebate on air sealing. Rebate amount dependent upon home heating and AC type\n(gas, electric resistance, heat pump)."
@@ -219,7 +225,8 @@
       "unit": "kilowatt"
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $200/kW + $0.19/kWh rebate on duct sealing based on kW and kWh savings."
@@ -241,7 +248,8 @@
       "maximum": 1
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $1.05/sqft rebate for ceiling insulation. Amount determined by new and existing R-Value, heat type."
@@ -262,7 +270,8 @@
       "unit": "square_foot"
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $0.30/sqft rebate for qualified floor insulation. Amount determined by home type and heat type."
@@ -376,7 +385,8 @@
       "maximum": 500
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$500 rebate on an ENERGY STAR heat pump water heater, less than 55 gallons. "
@@ -396,7 +406,8 @@
       "number": 50
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Receive an $50 instant rebate on eligible Thermostat Rewards device at the Xcel Energy Store."
@@ -408,7 +419,8 @@
       "account_credit"
     ],
     "items": [
-      "other"
+      "other",
+      "smart_thermostat"
     ],
     "program": "nm-xcel-rebates",
     "amount": {
@@ -480,7 +492,7 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "cool_roof"
     ],
     "program": "nm-el-paso-energy-efficiency",
     "amount": {
@@ -489,7 +501,8 @@
       "unit": "square_foot"
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $0.20/sqft rebate for cool roof products, dependent on home cooling type."
@@ -511,7 +524,8 @@
       "maximum": 1
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$1.00/Sqft rebate for solar screens on West and South facing single-pane windows. Must be rated to block minimum 80% of solar heat."
@@ -534,7 +548,8 @@
       "maximum": 3
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $3.00/window sqft rebate for ENERGY STAR windows, dependent on home cooling type."
@@ -555,7 +570,8 @@
       "maximum": 600
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$600 rebate for an eligible permanently installed evaporative cooling unit."
@@ -3577,7 +3593,8 @@
       "rebate"
     ],
     "items": [
-      "electric_wiring"
+      "electric_wiring",
+      "electric_vehicle_charger"
     ],
     "program": "nm-xcel-rebates",
     "amount": {
@@ -3589,7 +3606,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for wiring a 240 volt circuit for a Level 2 electric vehicle charger. Income-qualified customers are eligible for up to $2,300."
+      "en": "Up to $500 rebate for either a Level 2 electric vehicle charger or for the cost of wiring a 240 volt circuit for the charger."
     }
   },
   {
@@ -3598,7 +3615,7 @@
       "account_credit"
     ],
     "items": [
-      "other"
+      "electric_vehicle_charger"
     ],
     "program": "nm-xcel-rebates",
     "amount": {
@@ -3610,7 +3627,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 annual bill credit for signing up for off-peak electric vehicle charging schedule."
+      "en": "$35 annual bill credit for signing up for an off-peak electric vehicle charging schedule with eligible charger."
     }
   },
   {
@@ -3766,7 +3783,8 @@
       "number": 300
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $300 rebate/unit for new qualifying ENERGY STAR  pool pump."
@@ -3787,7 +3805,8 @@
       "unit": "ton"
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $150/unit rebate on qualified central air-conditioners less than 5.4 tons."
@@ -4129,8 +4148,8 @@
       "attic_or_roof_insulation",
       "air_sealing",
       "rooftop_solar_installation",
-      "other",
-      "duct_replacement"
+      "duct_replacement",
+      "efficiency_rebates"
     ],
     "program": "nm_housingNewMexicoMfa_nMEnergy$MartWeatherizationProgram",
     "amount": {
@@ -4193,13 +4212,8 @@
       "assistance_program"
     ],
     "items": [
-      "window_replacement",
-      "rooftop_solar_installation",
-      "other",
-      "smart_thermostat",
-      "door_replacement",
-      "energy_audit",
-      "electric_wiring"
+      "efficiency_rebates",
+      "rooftop_solar_installation"
     ],
     "program": "nm_santaFeCounty_homeRehabilitationAndEnergyEfficiencyHREEProgram",
     "amount": {
@@ -4247,7 +4261,8 @@
       "smart_thermostat",
       "attic_or_roof_insulation",
       "air_sealing",
-      "duct_sealing"
+      "duct_sealing",
+      "energy_audit"
     ],
     "program": "nm_elPasoElectric_elPasoElectricResidentialLowIncome",
     "amount": {
@@ -4259,7 +4274,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Provides no-cost energy efficiency services to low-income qualified customers all residential home types. Multifamily and rental may qualify."
+      "en": "Provides no-cost energy efficiency services to income-qualified customers in all residential home types. Multifamily and rental may qualify."
     },
     "low_income": "nm-elpasoelectric-income-qualified"
   },
@@ -4442,7 +4457,8 @@
       "maximum": 75
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $75 rebate on qualified smart thermostat plus $25/year in Energy Wise Savings program.  Get $50 + $25/yr to enroll existing thermostat.  "
@@ -4521,21 +4537,7 @@
       "assistance_program"
     ],
     "items": [
-      "window_replacement",
-      "smart_thermostat",
-      "door_replacement",
-      "energy_audit",
-      "air_sealing",
-      "basement_insulation",
-      "attic_or_roof_insulation",
-      "crawlspace_insulation",
-      "duct_replacement",
-      "duct_sealing",
-      "floor_insulation",
-      "heat_pump_clothes_dryer",
-      "heat_pump_water_heater",
-      "other_weatherization",
-      "wall_insulation"
+      "efficiency_rebates"
     ],
     "program": "nm_santaFeCounty_santaFeCommunityEnergyEfficiencyDevelopmentCEED",
     "amount": {
@@ -4568,7 +4570,8 @@
       "maximum": 400
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $400 rebate on qualified air source heat pump using participating contractor."
@@ -4610,7 +4613,8 @@
       "maximum": 190
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $190 rebate on qualified ductless heat pump, depending on efficiency and using participating contractor."
@@ -4653,10 +4657,102 @@
       "maximum": 200
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $200 rebate on qualified central air conditioner using participating contractor."
     }
+  },
+  {
+    "id": "NM-221",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "duct_sealing"
+    ],
+    "program": "nm-xcel-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free energy audit and energy-saving measures such as sealing leaks with approved contractors.  Additional efficiency services at reduced prices."
+    }
+  },
+  {
+    "id": "NM-222",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_wiring",
+      "electric_vehicle_charger"
+    ],
+    "program": "nm-xcel-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate for either a Level 2 electric vehicle charger or for the cost of wiring a 240 volt circuit for the charger."
+    }
+  },
+  {
+    "id": "NM-223",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_wiring",
+      "electric_vehicle_charger"
+    ],
+    "program": "nm-xcel-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2,300 rebate for installation of a qualified Level 2 electric vehicle charger for income-qualified residents."
+    }
+  },
+  {
+    "id": "NM-224",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "electric_wiring",
+      "electric_vehicle_charger"
+    ],
+    "program": "nm-xcel-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rent a Level 2 EV charger for $12/month if you have Wi-Fi and charge off-peak through \"Optimize Your Charge\" program."
+    },
+    "paused": true
   }
 ]

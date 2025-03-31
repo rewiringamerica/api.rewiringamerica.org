@@ -941,7 +941,8 @@
       "pos_rebate"
     ],
     "items": [
-      "other"
+      "electric_wiring",
+      "electric_panel"
     ],
     "program": "co_cityAndCountyOfDenver_denverClimateActionRebateProgram-HomeEnergyRebates",
     "amount": {
@@ -7466,7 +7467,7 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "ductless_heat_pump"
     ],
     "program": "co_boulderCounty_energySmartManufacturedHomesRebates",
     "amount": {
@@ -7478,7 +7479,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Receive 25% of project cost up to $50 for Portable Heat Pump.",
+      "en": "Receive 25% of project cost up to $50 for portable heat pump.",
       "es": "Reciba un 25% del costo del proyecto hasta $50 dólares por una bomba de calor portátil."
     },
     "start_date": "2023-01-01",
@@ -7827,7 +7828,7 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "air_sealing"
     ],
     "program": "co_glenwoodSpringsElectric_sustainabilityProgramElectricRebates",
     "amount": {
@@ -12050,7 +12051,7 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "other_heat_pump"
     ],
     "program": "co_AspenCORE_residential_rebates",
     "amount": {
@@ -12072,7 +12073,7 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "other_heat_pump"
     ],
     "program": "co_AspenCORE_residential_rebates",
     "amount": {
@@ -12117,7 +12118,8 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "ducted_heat_pump",
+      "ductless_heat_pump"
     ],
     "program": "co_AspenCORE_residential_rebates",
     "amount": {
@@ -14013,7 +14015,7 @@
       "duct_sealing",
       "smart_thermostat",
       "other_heat_pump",
-      "other"
+      "efficiency_rebates"
     ],
     "program": "co_walkingMountains_rebates&Incentives",
     "amount": {
@@ -15337,7 +15339,8 @@
       "pos_rebate"
     ],
     "items": [
-      "other"
+      "electric_wiring",
+      "electric_panel"
     ],
     "program": "co_cityAndCountyOfDenver_denverClimateActionRebateProgram-HomeEnergyRebates",
     "amount": {
@@ -15544,6 +15547,30 @@
     ],
     "short_description": {
       "en": "Up to $300 rebate for heat tape timers when installed permanently by an electrician."
+    }
+  },
+  {
+    "id": "CO-725",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "wall_insulation"
+    ],
+    "program": "co_coloradoNaturalGas_coloradoNaturalGasRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for qualifying insulation of attics, basements/crawlspaces, floors, or walls."
     }
   }
 ]
