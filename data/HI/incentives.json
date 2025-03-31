@@ -114,15 +114,15 @@
     "program": "hi_hawaiianElectric_hawai'IEnergyRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 450,
-      "minimum": 300,
-      "maximum": 450
+      "number": 550,
+      "minimum": 400,
+      "maximum": 550
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $450 for a mini-split air source heat pump, depending on capacity and efficiency rating."
+      "en": "Up to $550 for a mini-split air source heat pump, depending on capacity and efficiency rating."
     }
   },
   {
@@ -167,5 +167,48 @@
       "en": "Free weatherization services for income-qualified residents."
     },
     "low_income": "hi-200-fpl"
+  },
+  {
+    "id": "HI-9",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "hi_hawaiianElectric_hawai'IEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "minimum": 500,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $700 rebate for a heat pump water heater. "
+    }
+  },
+  {
+    "id": "HI-10",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "solar_water_heater"
+    ],
+    "program": "hi_hawaiianElectric_hawai'IEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 rebate for a solar hot water heater. "
+    }
   }
 ]

@@ -142,17 +142,6 @@
     "authority_type": "utility",
     "description": ""
   },
-  "ma-holyoke-mlp": {
-    "name": {
-      "en": "HG & E Rebates and Incentives "
-    },
-    "url": {
-      "en": "https://www.hged.com/residential/ee-home/default.aspx"
-    },
-    "authority": "ma-holyoke-gas-and-elec-dep",
-    "authority_type": "gas_utility",
-    "description": ""
-  },
   "ma-hudson-rebates": {
     "name": {
       "en": "Hudson Light & Power Rebates"
@@ -472,6 +461,28 @@
     "authority_type": "utility",
     "description": "Residential rebates for Concord Municipal Light Plant customers."
   },
+  "ma_holyokeGasAndElectricDepartmentElectric_hGAndERebatesAndIncentives": {
+    "name": {
+      "en": "HG & E Rebates and Incentives "
+    },
+    "url": {
+      "en": "https://www.hged.com/residential/ee-home/default.aspx"
+    },
+    "authority": "ma-city-of-holyoke",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "battery_storage_installation",
+      "non_heat_pump_clothes_dryer",
+      "solar_water_heater",
+      "heat_pump_water_heater",
+      "smart_thermostat",
+      "energy_audit",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "electric_vehicle_charger"
+    ]
+  },
   "ma_marbleheadMunicipalLightPlant_mMLDNEXTZEROResidentialRebates": {
     "name": {
       "en": "MMLD NEXT ZERO Residential Rebates"
@@ -483,6 +494,32 @@
     "authority_type": "utility",
     "description": ""
   },
+  "ma_massSave_massSaveEnhancedResidentialOffers": {
+    "name": {
+      "en": "Mass Save Enhanced Residential Offers",
+      "es": "Mass Save Ofertas residenciales mejoradas"
+    },
+    "url": {
+      "en": "https://www.masssave.com/residential/programs-and-services/income-based-offers/save-with-enhanced-incentives",
+      "es": "https://www.masssave.com/es/residential/programs-and-services/income-based-offers/save-with-enhanced-incentives"
+    },
+    "authority": "ma-massSave",
+    "authority_type": "other",
+    "description": "Includes energy audit, insulation, air sealing, free heat pumps, efficient appliances, and windows for moderate income residents.",
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "electric_stove",
+      "energy_audit",
+      "floor_insulation",
+      "window_replacement",
+      "smart_thermostat"
+    ]
+  },
   "ma_massSave_massSaveHeatingAndCoolingIncentives": {
     "name": {
       "en": "Mass Save Heating & Cooling Incentives"
@@ -493,6 +530,32 @@
     "authority": "ma-massSave",
     "authority_type": "other",
     "description": "Includes heat pumps, integrated controls, and smart thermostats."
+  },
+  "ma_massSave_massSaveIncomeEligibleProgram": {
+    "name": {
+      "en": "Mass Save Income Eligible Program",
+      "es": "Mass Save Programa de elegibilidad según los ingresos"
+    },
+    "url": {
+      "en": "https://www.masssave.com/en/residential/programs-and-services/income-based-offers/income-eligible-programs",
+      "es": "https://www.masssave.com/es/residential/programs-and-services/income-based-offers/income-eligible-programs"
+    },
+    "authority": "ma-massSave",
+    "authority_type": "other",
+    "description": "Includes energy audit, insulation, air sealing, free heat pumps, efficient appliances, and windows for low income residents.",
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "electric_stove",
+      "energy_audit",
+      "floor_insulation",
+      "window_replacement",
+      "smart_thermostat"
+    ]
   },
   "ma_massSave_massSaveResidentialTurnkeyProgram": {
     "name": {
@@ -514,7 +577,11 @@
     },
     "authority": "ma-massachusetts-department-of-energy-resources-doer",
     "authority_type": "state",
-    "description": "Income tax credits for residential energy installs."
+    "description": "Income tax credits for residential energy installs.",
+    "items": [
+      "solar_water_heater",
+      "rooftop_solar_installation"
+    ]
   },
   "ma_massachusettsDepartmentOfEnergyResourcesDoer_mOR-EV": {
     "name": {
@@ -527,23 +594,6 @@
     "authority_type": "state",
     "description": "Massachusetts Offers Rebates for Electric Vehicles"
   },
-  "ma_massachusettsDepartmentOfEnergyResourcesDoer_massachusettsSalesTaxExemptions": {
-    "name": {
-      "en": "Massachusetts Sales Tax Exemptions"
-    },
-    "url": {
-      "en": "https://www.mass.gov/guides/sales-and-use-tax#-home-&-household-items-"
-    },
-    "authority": "ma-massachusetts-department-of-energy-resources-doer",
-    "authority_type": "state",
-    "description": "Solar equipment and heat pumps are exempt from sales tax.",
-    "items": [
-      "rooftop_solar_installation",
-      "ducted_heat_pump",
-      "ductless_heat_pump",
-      "geothermal_heating_installation"
-    ]
-  },
   "ma_masssave_massSaveWeatherizationIncentives": {
     "name": {
       "en": "Mass Save Weatherization Incentives"
@@ -554,6 +604,29 @@
     "authority": "ma-massSave",
     "authority_type": "other",
     "description": "Includes energy audit, insulation, air sealing, and windows."
+  },
+  "ma_merrimackValleyRenewFund_merrimackValleyRENEWProgram": {
+    "name": {
+      "en": "Merrimack Valley RENEW Program"
+    },
+    "url": {
+      "en": "https://www.masssave.com/en/get-started/homeowners"
+    },
+    "authority": "ma-merrimack-valley-renew-fund-area",
+    "authority_type": "other",
+    "description": "Additional benefits for residents in Andover, North Andover, and Lawrence.",
+    "items": [
+      "air_sealing",
+      "crawlspace_insulation",
+      "basement_insulation",
+      "attic_or_roof_insulation",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "electric_panel",
+      "electric_wiring",
+      "rooftop_solar_installation",
+      "wall_insulation"
+    ]
   },
   "ma_middleboroughGasAndElectric_mGEDHomeEnergyRebates": {
     "name": {
