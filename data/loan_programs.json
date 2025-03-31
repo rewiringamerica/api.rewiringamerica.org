@@ -1,5 +1,124 @@
 [
   {
+    "id": 44,
+    "loan_program_key": "CO-5",
+    "name": "Epic Homes Loan",
+    "description": "This loan program helps Fort Collins Utilities customers finance energy efficiency and home improvements such as heat pumps, weatherization, and solar purchases.",
+    "description_langs": {
+      "es": "Este programa de préstamos ayuda a los clientes de Fort Collins Utilities a financiar la eficiencia energética y mejoras en el hogar, como bombas de calor, climatización y compras de energía solar."
+    },
+    "status": "PUBLISHED",
+    "state": "CO",
+    "is_national": false,
+    "website_url": "https://www.fcgov.com/utilities/epicloan",
+    "financial_authority_id": 32,
+    "financial_authority": {
+      "id": 32,
+      "authority_type": "utility",
+      "description": "Fort Collins Utilities offers loans for energy customers to finance energy efficiency improvements and solar/battery purchases.",
+      "name": "Fort Collins Utilities",
+      "state": "CO",
+      "city": "Fort Collins",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-02-28T21:37:06.053Z",
+      "updated_at": "2025-02-28T21:37:06.053Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "BATTERY_INSTALLATION"
+      },
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "SOLAR"
+      },
+      {
+        "type": "WATER_HEATER"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 43,
+      "min_credit_score": 640,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 50000,
+      "min_interest_rate": 5.25,
+      "max_interest_rate": 5.95,
+      "max_repayment_months": null,
+      "created_at": "2025-02-28T21:46:23.896Z",
+      "updated_at": "2025-03-13T17:55:16.750Z"
+    },
+    "created_at": "2025-02-28T21:46:23.913Z",
+    "updated_at": "2025-03-13T17:55:16.769Z"
+  },
+  {
+    "id": 56,
+    "loan_program_key": "RI-1",
+    "name": "Rhode Island HEAT Loans",
+    "description": "This loan program helps BankFive customers finance home energy updates including weatherization, water heating, and HVAC. ",
+    "description_langs": {
+      "es": "Este programa de préstamos ayuda a los clientes de BankFive a financiar actualizaciones de energía del hogar, incluida la climatización, el calentamiento de agua y el HVAC."
+    },
+    "status": "PUBLISHED",
+    "state": "RI",
+    "is_national": false,
+    "website_url": "https://www.bankfive.com/landing-pages/ri-energy-efficiency-loans",
+    "financial_authority_id": 44,
+    "financial_authority": {
+      "id": 44,
+      "authority_type": "bank",
+      "description": "BankFive is a community bank that offers loans for customers to install qualified high-efficiency heating and cooling upgrades in their homes.",
+      "name": "BankFive",
+      "state": "RI",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-03-14T17:06:49.878Z",
+      "updated_at": "2025-03-14T17:06:49.878Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "BATTERY_INSTALLATION"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 55,
+      "min_credit_score": 680,
+      "max_debt_to_income": 45,
+      "min_loan_amount": null,
+      "max_loan_amount": 25000,
+      "min_interest_rate": 0,
+      "max_interest_rate": null,
+      "max_repayment_months": null,
+      "created_at": "2025-03-14T17:10:30.613Z",
+      "updated_at": "2025-03-14T17:10:30.613Z"
+    },
+    "created_at": "2025-03-14T17:10:30.629Z",
+    "updated_at": "2025-03-14T17:10:30.629Z"
+  },
+  {
     "id": 43,
     "loan_program_key": "MA-2",
     "name": "Energy Saver Home Loan Program",
@@ -71,6 +190,110 @@
     },
     "created_at": "2025-02-13T22:15:02.915Z",
     "updated_at": "2025-02-20T16:17:21.719Z"
+  },
+  {
+    "id": 58,
+    "loan_program_key": "MA-3",
+    "name": "DoubleGreen Loan",
+    "description": "This loan programs offers interest-free loans for measures that make homes more energy-efficient, including insulation and HVAC equipment.",
+    "description_langs": {
+      "es": "Este programa de préstamos ofrece préstamos sin intereses para medidas que hagan que los hogares sean más eficientes energéticamente, incluido el aislamiento y los equipos HVAC."
+    },
+    "status": "PUBLISHED",
+    "state": "MA",
+    "is_national": false,
+    "website_url": "https://capitalgoodfund.org/loans/weatherization/",
+    "financial_authority_id": 46,
+    "financial_authority": {
+      "id": 46,
+      "authority_type": "other",
+      "description": "Capital Good Fund is a nonprofit that offers loans for energy efficient home improvements.",
+      "name": "Capital Good Fund",
+      "state": "MA",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-03-28T09:01:49.224Z",
+      "updated_at": "2025-03-28T09:01:49.224Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "HEATING_COOLING"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 57,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": 499,
+      "max_loan_amount": 25000,
+      "min_interest_rate": null,
+      "max_interest_rate": null,
+      "max_repayment_months": null,
+      "created_at": "2025-03-28T09:03:16.231Z",
+      "updated_at": "2025-03-28T09:03:16.231Z"
+    },
+    "created_at": "2025-03-28T09:03:16.251Z",
+    "updated_at": "2025-03-28T09:03:16.251Z"
+  },
+  {
+    "id": 57,
+    "loan_program_key": "RI-2",
+    "name": "DoubleGreen Loan",
+    "description": "This loan programs offers interest-free loans for measures that make homes more energy-efficient, including insulation and HVAC equipment.",
+    "description_langs": {
+      "es": "Este programa de préstamos ofrece préstamos sin intereses para medidas que hagan que los hogares sean más eficientes energéticamente, incluido el aislamiento y los equipos HVAC."
+    },
+    "status": "PUBLISHED",
+    "state": "RI",
+    "is_national": false,
+    "website_url": "https://capitalgoodfund.org/loans/weatherization/",
+    "financial_authority_id": 45,
+    "financial_authority": {
+      "id": 45,
+      "authority_type": "other",
+      "description": "Capital Good Fund is a nonprofit that offers loan financing for energy efficient home upgrades.",
+      "name": "Capital Good Fund",
+      "state": "RI",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-03-28T08:55:10.820Z",
+      "updated_at": "2025-03-28T08:55:10.820Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "HEATING_COOLING"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 56,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": 500,
+      "max_loan_amount": 25000,
+      "min_interest_rate": null,
+      "max_interest_rate": 0,
+      "max_repayment_months": null,
+      "created_at": "2025-03-28T08:58:55.067Z",
+      "updated_at": "2025-03-28T09:04:22.709Z"
+    },
+    "created_at": "2025-03-28T08:58:55.085Z",
+    "updated_at": "2025-03-28T09:04:22.780Z"
   },
   {
     "id": 42,
@@ -445,6 +668,73 @@
     "updated_at": "2025-02-21T23:08:49.204Z"
   },
   {
+    "id": 45,
+    "loan_program_key": "CO-6",
+    "name": "On-Bill Repayment",
+    "description": "This loan program helps Tri-State Cooperative members finance energy efficiency improvements such as weatherization, water heaters, and HVAC installations. ",
+    "description_langs": {
+      "es": "Este programa de préstamos ayuda a los miembros de la Cooperativa Tri-State a financiar mejoras de eficiencia energética, como climatización, calentadores de agua e instalaciones de HVAC."
+    },
+    "status": "PUBLISHED",
+    "state": "CO",
+    "is_national": false,
+    "website_url": "https://tristate.coop/on-bill-repayment",
+    "financial_authority_id": 33,
+    "financial_authority": {
+      "id": 33,
+      "authority_type": "utility",
+      "description": "A non-profit, wholesale power supplier cooperative that offers an on-bill repayment financing program for energy efficient upgrades. Available to members of the Gunnison County, Mountain View, San Luis Valley, and Sangre de Cristo cooperatives.",
+      "name": "Tri-State Generation and Transmission Cooperative",
+      "state": "CO",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-03-01T19:12:26.884Z",
+      "updated_at": "2025-03-01T20:08:31.452Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "BATTERY_INSTALLATION"
+      },
+      {
+        "type": "ELECTRICAL_PANEL_WIRING"
+      },
+      {
+        "type": "EV_CHARGER"
+      },
+      {
+        "type": "GEOTHERMAL"
+      },
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "WEATHERIZATION"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 44,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": null,
+      "min_interest_rate": 4,
+      "max_interest_rate": 4.99,
+      "max_repayment_months": null,
+      "created_at": "2025-03-01T19:53:05.216Z",
+      "updated_at": "2025-03-13T17:57:38.286Z"
+    },
+    "created_at": "2025-03-01T19:53:05.238Z",
+    "updated_at": "2025-03-13T17:57:38.300Z"
+  },
+  {
     "id": 25,
     "loan_program_key": "CO-1",
     "name": "RENU Loan",
@@ -677,6 +967,63 @@
     "updated_at": "2025-02-21T22:50:13.051Z"
   },
   {
+    "id": 46,
+    "loan_program_key": "GA-2",
+    "name": "Solar Energy Loan Fund",
+    "description": "SELF's loan program offers financing for home renovations that promote energy efficiency, among other home improvements.",
+    "description_langs": {
+      "es": "El programa de préstamos de SELF ofrece financiamiento para renovaciones de viviendas que promuevan la eficiencia energética, entre otras mejoras del hogar."
+    },
+    "status": "PUBLISHED",
+    "state": "GA",
+    "is_national": false,
+    "website_url": "https://solarenergyloanfund.org/georgia-landing-page/",
+    "financial_authority_id": 35,
+    "financial_authority": {
+      "id": 35,
+      "authority_type": "other",
+      "description": "SELF is an independent, non-profit, community-based lending organization focused on financing home renovations that promote energy efficiency, storm protection, water conservation, and disability products.",
+      "name": "Solar Energy Loan Fund",
+      "state": "GA",
+      "city": "",
+      "image_id": null,
+      "Image": null,
+      "created_at": "2025-03-04T19:55:45.265Z",
+      "updated_at": "2025-03-04T19:55:45.265Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "SOLAR"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "WATER_IRRIGATION"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 45,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 15000,
+      "min_interest_rate": 5,
+      "max_interest_rate": 11,
+      "max_repayment_months": null,
+      "created_at": "2025-03-04T19:57:59.907Z",
+      "updated_at": "2025-03-13T18:54:33.600Z"
+    },
+    "created_at": "2025-03-04T19:57:59.918Z",
+    "updated_at": "2025-03-13T18:54:33.613Z"
+  },
+  {
     "id": 26,
     "loan_program_key": "NH-1",
     "name": "New Hampshire Residential Clean Energy Loan Program",
@@ -785,6 +1132,67 @@
     },
     "created_at": "2024-10-31T21:00:57.545Z",
     "updated_at": "2025-02-21T22:53:49.237Z"
+  },
+  {
+    "id": 47,
+    "loan_program_key": "GA-3",
+    "name": "PowerUp Lending Program",
+    "description": "PowerUp is a loan program for energy efficiency improvements such as heat pumps, weatherization, heat pump water heaters, and solar PV systems.",
+    "description_langs": {
+      "es": "PowerUp es un programa de préstamos para mejoras de eficiencia energética, como bombas de calor, climatización, calentadores de agua con bombas de calor y sistemas solares fotovoltaicos."
+    },
+    "status": "PUBLISHED",
+    "state": "GA",
+    "is_national": false,
+    "website_url": "https://www.cgemc.com/powerup",
+    "financial_authority_id": 36,
+    "financial_authority": {
+      "id": 36,
+      "authority_type": "utility",
+      "description": "Central Georgia EMC is a Touchstone Energy Cooperative utility that offers loans for energy efficient home improvements.",
+      "name": "Central Georgia EMC",
+      "state": "GA",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-03-04T21:51:42.047Z",
+      "updated_at": "2025-03-04T21:51:42.047Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "GEOTHERMAL"
+      },
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "SOLAR"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "WEATHERIZATION"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 46,
+      "min_credit_score": 650,
+      "max_debt_to_income": null,
+      "min_loan_amount": 500,
+      "max_loan_amount": 25000,
+      "min_interest_rate": 9.9,
+      "max_interest_rate": null,
+      "max_repayment_months": null,
+      "created_at": "2025-03-04T21:59:12.216Z",
+      "updated_at": "2025-03-13T20:02:17.467Z"
+    },
+    "created_at": "2025-03-04T21:59:12.228Z",
+    "updated_at": "2025-03-13T20:02:17.482Z"
   },
   {
     "id": 33,
@@ -1098,6 +1506,119 @@
     "updated_at": "2025-02-21T23:13:23.036Z"
   },
   {
+    "id": 50,
+    "loan_program_key": "GA-5",
+    "name": "Altamaha EMC PowerUp Lending Program",
+    "description": "Altamaha EMC's PowerUp Lending Program is a loan program which offers financing for energy efficient home improvements including HVAC and weatherization upgrades.",
+    "description_langs": {
+      "es": "El Programa de Préstamos PowerUp de Altamaha EMC es un programa de préstamos que ofrece financiamiento para mejoras de eficiencia energética en el hogar, incluidas actualizaciones de HVAC y climatización."
+    },
+    "status": "PUBLISHED",
+    "state": "GA",
+    "is_national": false,
+    "website_url": "https://www.altamahaemc.com/services/powerup-lending-program.html",
+    "financial_authority_id": 38,
+    "financial_authority": {
+      "id": 38,
+      "authority_type": "utility",
+      "description": "Altamaha EMC is a utility cooperative which offers loans for members to make energy efficient home improvements.",
+      "name": "Altamaha EMC",
+      "state": "GA",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-03-13T21:30:12.393Z",
+      "updated_at": "2025-03-13T21:30:12.393Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "WEATHERIZATION"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 49,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": 500,
+      "max_loan_amount": 25000,
+      "min_interest_rate": 9.9,
+      "max_interest_rate": null,
+      "max_repayment_months": null,
+      "created_at": "2025-03-13T21:35:40.675Z",
+      "updated_at": "2025-03-13T21:35:40.675Z"
+    },
+    "created_at": "2025-03-13T21:35:40.691Z",
+    "updated_at": "2025-03-13T21:35:40.691Z"
+  },
+  {
+    "id": 51,
+    "loan_program_key": "GA-6",
+    "name": "Energy Efficient Loan Program",
+    "description": "The Energy Efficient Loan Program enables Southern Rivers Energy members to finance energy-efficient home improvements including HVAC, water heater, and weatherization installations.",
+    "description_langs": {
+      "es": "El Programa de Préstamos para Eficiencia Energética permite a los miembros de Southern Rivers Energy financiar mejoras energéticamente eficientes en el hogar, incluidas instalaciones de HVAC, calentadores de agua y climatización."
+    },
+    "status": "PUBLISHED",
+    "state": "GA",
+    "is_national": false,
+    "website_url": "https://www.southernriversenergy.com/energy-efficient-loan-program",
+    "financial_authority_id": 39,
+    "financial_authority": {
+      "id": 39,
+      "authority_type": "utility",
+      "description": "Southern Rivers Energy is a touchstone energy cooperative and utility that offers loans for energy-efficient home improvements.",
+      "name": "Southern Rivers Energy",
+      "state": "GA",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-03-13T22:17:00.698Z",
+      "updated_at": "2025-03-13T22:17:00.698Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "ENERGY_STAR_APPLIANCES"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 50,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": null,
+      "min_interest_rate": 9.9,
+      "max_interest_rate": null,
+      "max_repayment_months": null,
+      "created_at": "2025-03-13T22:36:51.891Z",
+      "updated_at": "2025-03-13T22:36:51.891Z"
+    },
+    "created_at": "2025-03-13T22:36:51.908Z",
+    "updated_at": "2025-03-13T22:36:51.908Z"
+  },
+  {
     "id": 28,
     "loan_program_key": "CA-2",
     "name": "Zero Percent Loan Program",
@@ -1206,5 +1727,219 @@
     },
     "created_at": "2024-10-31T21:00:59.929Z",
     "updated_at": "2025-02-20T15:53:11.860Z"
+  },
+  {
+    "id": 53,
+    "loan_program_key": "GA-8",
+    "name": "Mitchell EMC PowerUp Lending Program",
+    "description": "This loan program helps Mitchell EMC members finance energy-efficient home upgrades or repairs, including HVAC systems, roofing, generators, solar panels, and windows.",
+    "description_langs": {
+      "es": "Este programa de préstamos ayuda a los miembros de Mitchell EMC a financiar mejoras o reparaciones de viviendas energéticamente eficientes, incluidos sistemas HVAC, techos, generadores, paneles solares y ventanas."
+    },
+    "status": "PUBLISHED",
+    "state": "GA",
+    "is_national": false,
+    "website_url": "https://mitchellemc.com/powerup-lending-program",
+    "financial_authority_id": 41,
+    "financial_authority": {
+      "id": 41,
+      "authority_type": "utility",
+      "description": "Mitchell EMC is a utility corporation which partners with Go Energy Credit Union to provide loans to finance energy-efficient home upgrades.",
+      "name": "Mitchell EMC",
+      "state": "GA",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-03-13T22:58:23.387Z",
+      "updated_at": "2025-03-13T22:58:23.387Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "WEATHERIZATION"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 52,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": 500,
+      "max_loan_amount": 25000,
+      "min_interest_rate": 9.9,
+      "max_interest_rate": 9.9,
+      "max_repayment_months": null,
+      "created_at": "2025-03-13T23:00:55.542Z",
+      "updated_at": "2025-03-13T23:00:55.542Z"
+    },
+    "created_at": "2025-03-13T23:00:55.554Z",
+    "updated_at": "2025-03-13T23:00:55.554Z"
+  },
+  {
+    "id": 17,
+    "loan_program_key": "GA-1",
+    "name": "Heat Pump Financing",
+    "description": "Blue Ridge Mountain EMC provides financing for heat pumps to help members improve energy efficiency in their homes. The loan program offers affordable monthly payments and is available to qualifying members.",
+    "description_langs": {
+      "es": "Blue Ridge Mountain EMC ofrece financiamiento para bombas de calor para ayudar a los miembros a mejorar la eficiencia energética en sus hogares. El programa ofrece pagos mensuales asequibles y está disponible para miembros que califiquen."
+    },
+    "status": "PUBLISHED",
+    "state": "GA",
+    "is_national": false,
+    "website_url": "https://www.brmemc.com/heat-pump-financing/",
+    "financial_authority_id": 14,
+    "financial_authority": {
+      "id": 14,
+      "authority_type": "utility",
+      "description": "Blue Ridge Mountain EMC offers financing for heat pumps to help members improve energy efficiency in their homes.",
+      "name": "Blue Ridge Mountain Electric Membership Corporation",
+      "state": "GA",
+      "city": null,
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2024-10-31T21:00:52.786Z",
+      "updated_at": "2024-10-31T21:00:52.786Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 36,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 15000,
+      "min_interest_rate": null,
+      "max_interest_rate": 8,
+      "max_repayment_months": 120,
+      "created_at": "2025-02-18T22:33:28.507Z",
+      "updated_at": "2025-03-13T18:50:39.376Z"
+    },
+    "created_at": "2024-10-31T21:00:53.041Z",
+    "updated_at": "2025-03-13T18:50:39.393Z"
+  },
+  {
+    "id": 54,
+    "loan_program_key": "PA-1",
+    "name": "KEEP Home Energy Loan",
+    "description": "This loan offers Pennsylvanians financing for improvements that make their homes more energy efficient, such as HVAC, weatherization, and water heater installations.",
+    "description_langs": {
+      "es": ""
+    },
+    "status": "PUBLISHED",
+    "state": "PA",
+    "is_national": false,
+    "website_url": "https://www.neifund.org/keepenergyloan/",
+    "financial_authority_id": 42,
+    "financial_authority": {
+      "id": 42,
+      "authority_type": "other",
+      "description": "The National Energy Improvement Fund is a for-profit benefit corporation that offers loans for energy efficient home improvements.",
+      "name": "National Energy Improvement Fund",
+      "state": "PA",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-03-14T00:18:40.806Z",
+      "updated_at": "2025-03-14T00:18:40.806Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "EV_CHARGER"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 53,
+      "min_credit_score": 640,
+      "max_debt_to_income": null,
+      "min_loan_amount": 2500,
+      "max_loan_amount": 25000,
+      "min_interest_rate": 8.99,
+      "max_interest_rate": null,
+      "max_repayment_months": null,
+      "created_at": "2025-03-14T00:27:11.658Z",
+      "updated_at": "2025-03-14T00:27:11.658Z"
+    },
+    "created_at": "2025-03-14T00:27:11.682Z",
+    "updated_at": "2025-03-14T00:27:11.682Z"
+  },
+  {
+    "id": 55,
+    "loan_program_key": "PA-2",
+    "name": "Homeowners Energy Efficiency Loan Program",
+    "description": "This loan program offers loans up to $10,000 for energy efficiency repairs including HVAC replacements. Persons below 80% AMI are eligible.",
+    "description_langs": {
+      "es": "Este programa de préstamos ofrece préstamos de hasta $10,000 para reparaciones de eficiencia energética, incluyendo reemplazo de sistemas de climatización (HVAC). Las personas con un ingreso medio anual (AMI) inferior al 80% son elegibles."
+    },
+    "status": "PUBLISHED",
+    "state": "PA",
+    "is_national": false,
+    "website_url": "https://www.phfa.org/programs/repairs.aspx",
+    "financial_authority_id": 43,
+    "financial_authority": {
+      "id": 43,
+      "authority_type": "state",
+      "description": "The PHFA is a state-affiliated agency that offers loans for energy efficient home upgrades.",
+      "name": "PA Housing Finance Agency",
+      "state": "PA",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-03-14T00:36:19.069Z",
+      "updated_at": "2025-03-14T00:36:19.069Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "HEATING_COOLING"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 54,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": 1000,
+      "max_loan_amount": 10000,
+      "min_interest_rate": 1,
+      "max_interest_rate": 1,
+      "max_repayment_months": null,
+      "created_at": "2025-03-14T00:45:06.523Z",
+      "updated_at": "2025-03-14T00:45:06.523Z"
+    },
+    "created_at": "2025-03-14T00:45:06.538Z",
+    "updated_at": "2025-03-14T00:45:06.538Z"
   }
 ]
