@@ -1126,7 +1126,7 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "electric_stove"
     ],
     "program": "mn_cityOfHopkins_hopkinsClimateSustainabilityFund",
     "amount": {
@@ -1138,7 +1138,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$1,000 rebate for induction"
+      "en": "$1,000 rebate for an induction stove."
     }
   },
   {
@@ -1665,6 +1665,94 @@
     ],
     "short_description": {
       "en": "$50 rebate for a heat pump water heater. "
+    }
+  },
+  {
+    "id": "MN-79",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_janesvilleMunicipalUtility_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "minimum": 60,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate for a ducted air source heat pump. Must be ≥16 SEER, ≥11 EER & 8.6 HSPF. Rebate amount depends upon SEER rating and tonnage."
+    }
+  },
+  {
+    "id": "MN-80",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_janesvilleMunicipalUtility_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "minimum": 60,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate for a ducted air source heat pump. Must be ≥15.2 SEER2, ≥10.6 EER2 & 7.1 HSPF2. Rebate amount depends upon SEER2 rating and tonnage."
+    }
+  },
+  {
+    "id": "MN-81",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_janesvilleMunicipalUtility_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "minimum": 60,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate for a ductless air source heat pump. Must be ≥15.2 SEER, ≥11.7 EER & 8.1 HSPF. Rebate amount depends upon SEER rating and tonnage."
+    }
+  },
+  {
+    "id": "MN-82",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_janesvilleMunicipalUtility_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "minimum": 60,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate for a ductless air source heat pump. Must be ≥15.2 SEER2, ≥11.7 EER2 & 7.8 HSPF2. Amount depends upon SEER2 rating and tonnage."
     }
   }
 ]

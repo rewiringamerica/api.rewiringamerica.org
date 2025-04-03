@@ -483,7 +483,7 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "solar_screen_films"
     ],
     "program": "az_saltRiverProject_shadeScreenAndWindowFilmRebate",
     "amount": {
@@ -1281,7 +1281,7 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "solar_screen_films"
     ],
     "program": "az_electricalDistrictNo3PinalCounty_residentialRebates",
     "amount": {
@@ -1999,6 +1999,29 @@
     "short_description": {
       "en": "Up to $600 rebate for attic insulation installed by SRP insulation program contactor.",
       "es": "Un reembolso de hasta $600 dólares para aislamiento del ático instalado por un contratista del programa de aislamiento SRP."
+    }
+  },
+  {
+    "id": "AZ-100",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "az_mohaveElectricCooperative_mohaveHeatPumpRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "minimum": 200,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate up to $2000 available based on heat pump SEER value.",
+      "es": "Un reembolso de hasta $2,000 dólares según el valor SEER de la bomba de calor."
     }
   }
 ]
