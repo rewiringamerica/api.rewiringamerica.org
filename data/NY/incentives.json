@@ -218,5 +218,726 @@
       "en": "Free energy audit and weatherization services potentially including insulation, air sealing, heating system repairs, and window/door replacement."
     },
     "low_income": "ny-wap-heap"
+  },
+  {
+    "id": "NY-36",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ny_stateOfNy_newYorkStateGeothermalEnergyCredit",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% tax credit, up to $5,000 for installation of a geothermal heat pump system. Non-refundable but may carry forward."
+    }
+  },
+  {
+    "id": "NY-37",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ny_centralHudsonGasAndElectric_centralHudsonRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "btuh10k"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,000/ 10,000 Btuh rebate for an air source heat pump, depending on fuel switching."
+    }
+  },
+  {
+    "id": "NY-38",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ny_centralHudsonGasAndElectric_centralHudsonRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2000,
+      "unit": "btuh10k"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,000/ 10,000 Btuh rebate for a ground source heat pump, depending on fuel switching."
+    }
+  },
+  {
+    "id": "NY-39",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ny_centralHudsonGasAndElectric_centralHudsonRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for a heat pump water heater."
+    }
+  },
+  {
+    "id": "NY-40",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ny_rochesterGasAndElectric_rGandECleanHeatProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1200,
+      "unit": "btuh10k",
+      "minimum": 800,
+      "maximum": 1200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,200/ 10,000 Btuh rebate for a cold climate air source heat pump, depending on fuel switching."
+    }
+  },
+  {
+    "id": "NY-41",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_to_water_heat_pump"
+    ],
+    "program": "ny_rochesterGasAndElectric_rGandECleanHeatProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 800,
+      "unit": "btuh10k"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800/ 10,000 Btuh rebate for an air to water heat pump."
+    }
+  },
+  {
+    "id": "NY-42",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ny_rochesterGasAndElectric_rGandECleanHeatProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1500,
+      "unit": "btuh10k"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,500/ 10,000 Btuh rebate for a ground source heat pump."
+    }
+  },
+  {
+    "id": "NY-43",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "basement_insulation",
+      "attic_or_roof_insulation",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ny_rochesterGasAndElectric_rGandECleanHeatProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 bonus rebate when participating in both the insulation and heat pump programs."
+    },
+    "end_date": "2025-09-01"
+  },
+  {
+    "id": "NY-44",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ny_nyseg_nYSEGCleanHeatProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1500,
+      "unit": "btuh10k",
+      "minimum": 1000,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,500/ 10,000 Btuh rebate for a cold climate air source heat pump, depending on fuel switching."
+    }
+  },
+  {
+    "id": "NY-45",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_to_water_heat_pump"
+    ],
+    "program": "ny_nyseg_nYSEGCleanHeatProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "btuh10k"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000/ 10,000 Btuh rebate for an air to water heat pump."
+    }
+  },
+  {
+    "id": "NY-46",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ny_nyseg_nYSEGCleanHeatProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2000,
+      "unit": "btuh10k",
+      "minimum": 1500,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,000/ 10,000 Btuh rebate for a ground source heat pump."
+    }
+  },
+  {
+    "id": "NY-47",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "basement_insulation",
+      "attic_or_roof_insulation",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ny_nyseg_nYSEGCleanHeatProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 bonus rebate when participating in both the insulation and heat pump programs."
+    },
+    "end_date": "2025-09-01"
+  },
+  {
+    "id": "NY-48",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ny_nyseg_nYSEGCleanHeatProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$900 upfront rebate when purchasing a heat pump water heater through a registered retailer."
+    }
+  },
+  {
+    "id": "NY-49",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ny_nyseg_nYSEGCleanHeatProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for a heat pump water heater through a participating contractor."
+    }
+  },
+  {
+    "id": "NY-50",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ny_rochesterGasAndElectric_rGandECleanHeatProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$900 upfront rebate when purchasing a heat pump water heater through a registered retailer."
+    }
+  },
+  {
+    "id": "NY-51",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ny_rochesterGasAndElectric_rGandECleanHeatProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for a heat pump water heater through a participating contractor."
+    }
+  },
+  {
+    "id": "NY-52",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "ny_nationalGrid_nationalGridEnergySavingPrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1600,
+      "unit": "btuh10k",
+      "minimum": 1200,
+      "maximum": 1600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,600/ 10,000 Btuh rebate for an air source heat pump, depending on load and decommissioning."
+    },
+    "start_date": "2025-03-01"
+  },
+  {
+    "id": "NY-53",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_to_water_heat_pump"
+    ],
+    "program": "ny_nationalGrid_nationalGridEnergySavingPrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1600,
+      "unit": "btuh10k"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,600/ 10,000 Btuh rebate for an air to water heat pump, depending on load and decommissioning."
+    },
+    "start_date": "2025-03-01"
+  },
+  {
+    "id": "NY-54",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ny_nationalGrid_nationalGridEnergySavingPrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2500,
+      "unit": "btuh10k"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,500/ 10,000 Btuh rebate for a ground source heat pump."
+    },
+    "start_date": "2025-03-01"
+  },
+  {
+    "id": "NY-55",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ny_nationalGrid_nationalGridEnergySavingPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for a heat pump water heater."
+    }
+  },
+  {
+    "id": "NY-56",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ny_conEdison_consolidatedEdisonAirSourceHeatPumpRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 8000,
+      "minimum": 2500,
+      "maximum": 8000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $8,000 rebate for installing an air source heat pump, depending on decommissioning."
+    }
+  },
+  {
+    "id": "NY-57",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ny_conEdison_consolidatedEdisonAirSourceHeatPumpRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $4,000 rebate for disabling old fossil fuel system if you already have a partial home heat pump. "
+    }
+  },
+  {
+    "id": "NY-58",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ny_conEdison_consolidatedEdisonGeothermalHeatPumpRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 30000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% rebate, up to $30,000 for a geothermal heating system. Apply by 5/31 and install by 11/30/2025."
+    },
+    "end_date": "2025-11-30"
+  },
+  {
+    "id": "NY-59",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ny_conEdison_consolidatedEdisonGeothermalHeatPumpRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% rebate, up to $25,000 for a geothermal heating system. All applications after 6/1/2025."
+    },
+    "start_date": "2025-06-01"
+  },
+  {
+    "id": "NY-60",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ny_conEdison_consolidatedEdisonRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 upfront rebate for a heat pump rebate, through participating retailers or contractors."
+    }
+  },
+  {
+    "id": "NY-61",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "ny_conEdison_consolidatedEdisonRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.7,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "70% rebate, up to $2,000 for weatherization including insulation and air sealing."
+    }
+  },
+  {
+    "id": "NY-62",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ny_psegLongIsland_pSEGLongIslandHomeComfortPlusProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3000,
+      "unit": "ton",
+      "maximum": 11000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $3,000/ton rebate for whole home air source heat pumps, for income-qualified customers."
+    },
+    "low_income": "ny-wap-heap"
+  },
+  {
+    "id": "NY-63",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ny_psegLongIsland_pSEGLongIslandHomeComfortProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "ton",
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,000/ton for a whole home air source heat pump."
+    }
+  },
+  {
+    "id": "NY-64",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "ny_salamancaBoardOfPublicUtilities_salamancaBPUEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for an ENERGY STAR rated electric clothes dryer."
+    }
+  },
+  {
+    "id": "NY-65",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "ny_salamancaBoardOfPublicUtilities_salamancaBPUEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,200 rebate per system for a cold climate (ducted or ductless) heat pump. Pre-approval required."
+    }
+  },
+  {
+    "id": "NY-66",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ny_salamancaBoardOfPublicUtilities_salamancaBPUEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2100,
+      "minimum": 200,
+      "maximum": 2100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 rebate per system for a ground source heat pump. $100 bonus for a desuperheater. Pre-approval required."
+    }
+  },
+  {
+    "id": "NY-67",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ny_salamancaBoardOfPublicUtilities_salamancaBPUEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750 rebate for an ENERGY STAR rated heat pump water heater."
+    }
+  },
+  {
+    "id": "NY-68",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ny_salamancaBoardOfPublicUtilities_salamancaBPUEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "minimum": 25,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an electric battery powered snow blower or riding lawn mower. $25 rebate for an electric push mower."
+    }
   }
 ]

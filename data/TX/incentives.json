@@ -134,7 +134,7 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "solar_screen_films"
     ],
     "program": "tx_AustinEnergy_RebatesAndIncentives",
     "amount": {
@@ -160,7 +160,7 @@
       "attic_or_roof_insulation",
       "duct_sealing",
       "smart_thermostat",
-      "other"
+      "efficiency_rebates"
     ],
     "program": "tx_AustinEnergy_RebatesAndIncentives",
     "amount": {
@@ -1216,5 +1216,251 @@
     "short_description": {
       "en": "Up to $2,700 upfront discount through qualified HVAC distributors for high efficiency air conditioners or air source heat pumps."
     }
+  },
+  {
+    "id": "TX-58",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "wall_insulation"
+    ],
+    "program": "tx_elPasoElectric_elPasoElectricTXResidentialProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.36,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $0.36/sq ft rebate for ceiling and wall insulation, depending on current insulation and income qualification. Reserve rebate prior to project."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "TX-59",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "cool_roof"
+    ],
+    "program": "tx_elPasoElectric_elPasoElectricTXResidentialProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.06,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $0.06/sq ft rebate for cool roofs, depending on roof slope and income qualification. Reserve rebate prior to project."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "TX-60",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "tx_elPasoElectric_elPasoElectricTXIncomeQualifiedProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for an ENERGY STAR heat pump water heater, 55 gallons or less, for income-qualified customers. Reserve rebate in advance."
+    },
+    "end_date": "2025-12-31",
+    "low_income": "tx-200-fpl"
+  },
+  {
+    "id": "TX-61",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "tx_elPasoElectric_elPasoElectricTXResidentialProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for an ENERGY STAR heat pump water heater, 55 gallons or less. Reserve rebate in advance."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "TX-62",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "evaporative_cooler"
+    ],
+    "program": "tx_elPasoElectric_elPasoElectricTXIncomeQualifiedProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$700 rebate for a qualifying evaporative cooler, for income-qualified customers. Reserve rebate in advance."
+    },
+    "end_date": "2025-12-31",
+    "low_income": "tx-200-fpl"
+  },
+  {
+    "id": "TX-63",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "evaporative_cooler"
+    ],
+    "program": "tx_elPasoElectric_elPasoElectricTXResidentialProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$600 rebate for a qualifying evaporative cooler. Reserve rebate in advance."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "TX-64",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "tx_elPasoElectric_elPasoElectricTXResidentialProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 449
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$449 rebate for a qualifying heat pump, mini split, or air conditioner. Reserve rebate in advance."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "TX-65",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
+    "program": "tx_cpsEnergy_cPSEnergyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.35,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $0.35/sq ft rebate for attic insulation."
+    }
+  },
+  {
+    "id": "TX-66",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "cool_roof"
+    ],
+    "program": "tx_cpsEnergy_cPSEnergyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.2,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $0.20/sq ft rebate for cool roofs, depending on roof slope and reflectance rating."
+    }
+  },
+  {
+    "id": "TX-67",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "tx_cpsEnergy_cPSEnergyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 310,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$90-$310/cooling ton rebate for central air conditioners, heat pumps, and mini splits, depending on efficiency and early/burnout replacement."
+    },
+    "start_date": "2025-02-01",
+    "end_date": "2026-01-31"
+  },
+  {
+    "id": "TX-68",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "tx_cpsEnergy_cPSEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 60,
+      "minimum": 15,
+      "maximum": 60
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $60 account credit for electric lawn equipment including mowers, string trimmers, edgers, and blowers."
+    },
+    "start_date": "2025-03-01",
+    "end_date": "2025-08-31"
   }
 ]
