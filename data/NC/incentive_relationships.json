@@ -1,84 +1,10 @@
 {
-  "prerequisites": {
-    "NC-1": {
-      "allOf": [
-        "NC-2"
-      ]
-    },
-    "NC-3": {
-      "allOf": [
-        "NC-2"
-      ]
-    },
-    "NC-4": {
-      "allOf": [
-        "NC-2"
-      ]
-    },
-    "NC-5": {
-      "allOf": [
-        "NC-2"
-      ]
-    },
-    "NC-6": {
-      "allOf": [
-        "NC-2"
-      ]
-    },
-    "NC-7": {
-      "allOf": [
-        "NC-2"
-      ]
-    },
-    "NC-8": {
-      "allOf": [
-        "NC-2"
-      ]
-    },
-    "NC-9": {
-      "allOf": [
-        "NC-2"
-      ]
-    },
-    "NC-11": {
-      "allOf": [
+  "exclusions": {
+    "NC-2": {
+      "ids": [
         "NC-10"
-      ]
-    },
-    "NC-12": {
-      "allOf": [
-        "NC-10"
-      ]
-    },
-    "NC-13": {
-      "allOf": [
-        "NC-10"
-      ]
-    },
-    "NC-14": {
-      "allOf": [
-        "NC-10"
-      ]
-    },
-    "NC-15": {
-      "allOf": [
-        "NC-10"
-      ]
-    },
-    "NC-16": {
-      "allOf": [
-        "NC-10"
-      ]
-    },
-    "NC-17": {
-      "allOf": [
-        "NC-10"
-      ]
-    },
-    "NC-18": {
-      "allOf": [
-        "NC-10"
-      ]
+      ],
+      "description": "If both moderate and low are displayed, just display low income one."
     }
   }
 }

@@ -440,10 +440,8 @@
       "tax_credit"
     ],
     "items": [
-      "used_electric_vehicle",
       "new_plugin_hybrid_vehicle",
-      "new_electric_vehicle",
-      "used_plugin_hybrid_vehicle"
+      "new_electric_vehicle"
     ],
     "program": "nm_energyConservationAndManagement_newMexicoCleanCarIncentivesAndRebates",
     "amount": {
@@ -519,8 +517,7 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 1,
-      "unit": "square_foot",
-      "maximum": 1
+      "unit": "square_foot"
     },
     "owner_status": [
       "homeowner",
@@ -1207,7 +1204,7 @@
     "amount": {
       "type": "percent",
       "number": 0.25,
-      "maximum": 150
+      "maximum": 175
     },
     "owner_status": [
       "homeowner"
@@ -1329,8 +1326,7 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
+      "ducted_heat_pump"
     ],
     "program": "nm_centralNewMexicoElectricCooperative_cNMECMemberRebates",
     "amount": {
@@ -1342,7 +1338,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "50% rebate on qualified air-source heat pump larger than 1.5 tons, up to $1,500.  Up to $500 for smaller systems. $500 bonus for propane back-up."
+      "en": "50% rebate on qualified ducted air-source heat pump larger than 1.5 tons, up to $1,500.  Up to $500 for smaller system. $500 propane back-up bonus."
     }
   },
   {
@@ -1540,7 +1536,7 @@
       "rebate"
     ],
     "items": [
-      "electric_outdoor_equipment"
+      "ebike"
     ],
     "program": "nm_columbusElectricCooperative_cECRebates",
     "amount": {
@@ -1730,8 +1726,7 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_clothes_dryer",
-      "non_heat_pump_clothes_dryer"
+      "evaporative_cooler"
     ],
     "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
     "amount": {
@@ -1764,7 +1759,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$25 rebate/ENERGY STAR smart thermostat, $50/thermostat in managed program.  Limit 2 for standard low-voltage. Limit 5 for line voltage thermostats."
+      "en": "$25 rebate/Energy Star smart thermostat, $50/thermostat in managed program.  Limit 2 for standard low-voltage. Limit 5 for line voltage thermostats."
     }
   },
   {
@@ -1773,8 +1768,7 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
+      "ducted_heat_pump"
     ],
     "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
     "amount": {
@@ -1786,7 +1780,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "50% equipment cost up to $1,500 for qualified air source heat pumps greater than 1.5 tons. Up to $500 for smaller systems. "
+      "en": "50% equipment cost up to $1,500 for qualified ducted air source heat pump > than 1.5 tons. Up to $500 for smaller systems. $500 propane backup bonus."
     }
   },
   {
@@ -1828,7 +1822,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$75 rebate for ENERGY STAR electric clothes dryer. Extra $30 Tri-State rebate may be available for qualified dryer. "
+      "en": "$75 rebate for Energy Star electric clothes dryer. Extra $30 Tri-State rebate may be available for qualified dryer. "
     }
   },
   {
@@ -1864,33 +1858,13 @@
     "amount": {
       "type": "dollar_amount",
       "number": 25,
-      "maximum": 250
+      "maximum": 50
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$25 rebate/ENERGY STAR smart thermostat. $50 rebate/thermostat if in a managed program. Limit 2 for low-voltage, limit 5 for line voltage application."
-    }
-  },
-  {
-    "id": "NM-85",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_stove"
-    ],
-    "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 350
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$350 rebate for induction cooktop/range when replacing propane or gas. Cooktop must be at least 30\" wide."
+      "en": "$25 rebate/Energy Star smart thermostat. $50 rebate/thermostat if in a managed program. Limit 2 for low-voltage, limit 5 for line voltage application."
     }
   },
   {
@@ -2119,7 +2093,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 Tri-State rebate for ENERGY STAR heat pump water heater. There is a maximum limit for all rebates over 12 months."
+      "en": "$350 Tri-State rebate for Energy Star heat pump water heater. There is a maximum limit for all rebates over 12 months."
     }
   },
   {
@@ -2161,7 +2135,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for ENERGY STAR heat pump water heater (HP setting only). Maximum annual limit for all rebates."
+      "en": "$500 rebate for Energy Star heat pump water heater (HP setting only). Maximum annual limit for all rebates."
     }
   },
   {
@@ -2716,7 +2690,7 @@
     "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 2000
     },
     "owner_status": [
       "homeowner"
@@ -3444,7 +3418,7 @@
     "amount": {
       "type": "percent",
       "number": 0.25,
-      "maximum": 325
+      "maximum": 175
     },
     "owner_status": [
       "homeowner"
@@ -3526,7 +3500,7 @@
     "program": "nm_jemezMountainsElectricCooperative_jMECEnergyEfficiencyRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 1500
+      "number": 2000
     },
     "owner_status": [
       "homeowner"
@@ -3765,7 +3739,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $300 rebate/unit for new qualifying ENERGY STAR  pool pump."
+      "en": "Up to $300 rebate/unit for new qualifying Energy Star pool pump."
     }
   },
   {
@@ -3798,7 +3772,7 @@
     "items": [
       "electric_stove"
     ],
-    "program": "nm_mora-SanMiguelElectricCooperative_energyStarRebateProgram",
+    "program": "nm_mora-SanMiguelElectricCooperative_mSMECEnergyStarRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 350
@@ -3807,7 +3781,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350/unit rebate for gas-to-induction cooktop/range or new construction. 30 inch minimum width. ENERGY STAR required."
+      "en": "$350/unit rebate for switching from gas to induction cooktop/range or new construction. 30 inch minimum width. Energy Star required."
     }
   },
   {
@@ -3818,7 +3792,7 @@
     "items": [
       "electric_stove"
     ],
-    "program": "nm_mora-SanMiguelElectricCooperative_energyStarRebateProgram",
+    "program": "nm_mora-SanMiguelElectricCooperative_mSMECEnergyStarRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 100
@@ -3827,7 +3801,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$100/unit rebate for electric-to-induction cooktop/range. 30 inch minimum width. ENERGY STAR required."
+      "en": "$100/unit rebate for electric-to-induction cooktop/range switch. 30 inch minimum width. Energy Star required."
     }
   },
   {
@@ -3838,7 +3812,7 @@
     "items": [
       "non_heat_pump_water_heater"
     ],
-    "program": "nm_mora-SanMiguelElectricCooperative_energyStarRebateProgram",
+    "program": "nm_mora-SanMiguelElectricCooperative_mSMECEnergyStarRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 50,
@@ -3848,7 +3822,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $70/unit rebate for ENERGY STAR electric water heater. $50/unit for new construction."
+      "en": "Up to $70/unit rebate for Energy Star electric water heater. $50/unit for new construction."
     }
   },
   {
@@ -3859,7 +3833,7 @@
     "items": [
       "non_heat_pump_clothes_dryer"
     ],
-    "program": "nm_mora-SanMiguelElectricCooperative_energyStarRebateProgram",
+    "program": "nm_mora-SanMiguelElectricCooperative_mSMECEnergyStarRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 60
@@ -3868,7 +3842,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$60 rebate for ENERGY STAR electric clothes dryer."
+      "en": "$60 rebate for Energy Star electric clothes dryer"
     }
   },
   {
@@ -3902,7 +3876,7 @@
     "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
     "amount": {
       "type": "percent",
-      "number": 0.3
+      "number": 0.1
     },
     "owner_status": [
       "homeowner"
@@ -4226,7 +4200,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Affordable electric carshare. First test drive is free. Subsequent rentals are $4-$5/hr or a $35-50/day. Specific locations. "
+      "en": "Affordable electric carshare. First test drive is free. Subsequent rentals are $4-$5/hr or a $35-50/day. Specific locations. Las Cruces summer 2025."
     }
   },
   {
@@ -4314,9 +4288,8 @@
     ],
     "program": "nm-el-paso-energy-efficiency",
     "amount": {
-      "type": "percent",
-      "number": 0.7,
-      "maximum": 1300
+      "type": "dollar_amount",
+      "number": 4000
     },
     "owner_status": [
       "homeowner",
@@ -4783,25 +4756,20 @@
       "assistance_program"
     ],
     "items": [
-      "other_weatherization",
       "smart_thermostat",
       "energy_audit",
       "duct_sealing",
       "attic_or_roof_insulation",
-      "basement_insulation",
-      "crawlspace_insulation",
       "electric_wiring",
       "electric_panel",
       "air_sealing",
-      "door_replacement",
       "ducted_heat_pump",
       "ductless_heat_pump",
       "efficiency_rebates",
       "evaporative_cooler",
-      "floor_insulation",
-      "other_insulation",
       "wall_insulation",
-      "window_replacement"
+      "window_replacement",
+      "door_replacement"
     ],
     "program": "nm_prosperityWorks_prosperityWorksCommunityEnergyEfficientUpgrade",
     "amount": {
@@ -4809,11 +4777,13 @@
       "number": 1
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "No-cost energy audit and efficiency upgrades to qualifying income-limited households. Upgrades depend on grant funding availability. "
-    }
+      "en": "No-cost energy audit and efficiency upgrades to income-qualified households. Upgrades depend on grant funds availability. Community solar enrollment."
+    },
+    "low_income": "nm-Sustainable Building Tax Credit Low-Income"
   },
   {
     "id": "NM-228",
@@ -4885,7 +4855,7 @@
     "low_income": "nm-Sustainable Building Tax Credit Low-Income"
   },
   {
-    "id": "",
+    "id": "NM-233",
     "payment_methods": [
       "rebate"
     ],
@@ -4896,8 +4866,7 @@
     "program": "nm_newMexicoGasCompany_nMGasEnergyEfficiencyProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 200,
-      "maximum": 1000
+      "number": 1000
     },
     "owner_status": [
       "homeowner"
@@ -4906,5 +4875,328 @@
       "en": "Up to $1,000 rebate for installation of qualified insulation in attic, roof or crawl space by a participating contractor.  "
     },
     "end_date": "2026-03-31"
+  },
+  {
+    "id": "NM-234",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_sealing"
+    ],
+    "program": "nm_newMexicoGasCompany_nMGasEnergyEfficiencyProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $200 rebate for duct sealing  by a participating contractor.  "
+    },
+    "end_date": "2026-03-31"
+  },
+  {
+    "id": "NM-235",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing"
+    ],
+    "program": "nm_newMexicoGasCompany_nMGasEnergyEfficiencyProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $200 rebate for sealing air leaks by a participating contractor.  "
+    },
+    "end_date": "2026-03-31"
+  },
+  {
+    "id": "NM-236",
+    "payment_methods": [
+      "rebate",
+      "pos_rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nm_newMexicoGasCompany_nMGasEnergyEfficiencyProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 instant rebate for ENERGY STAR smart thermostat at Lowes or The Home Depots or via contractor. $50 rebate after purchase at other retailers. "
+    },
+    "end_date": "2026-03-31"
+  },
+  {
+    "id": "NM-237",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nm_jemezMountainsElectricCooperative_jMECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$25 rebate for qualified Energy Star smart thermostat."
+    }
+  },
+  {
+    "id": "NM-238",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "nm_jemezMountainsElectricCooperative_jMECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 90
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$90/unit rebate for heat pump clothes dryer. "
+    }
+  },
+  {
+    "id": "NM-239",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "nm_jemezMountainsElectricCooperative_jMECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 30
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$30/unit rebate for electric clothes dryer. "
+    }
+  },
+  {
+    "id": "NM-240",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 90
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$90/unit rebate for an Energy Star heat pump clothes dryer. $30 rebate for Energy Star electric clothes dryer. "
+    }
+  },
+  {
+    "id": "NM-241",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of the product and installation cost of a Level 2 electric vehicle charger up to $250."
+    }
+  },
+  {
+    "id": "NM-242",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% equipment cost up to $1,500 for qualified ductless Energy Star air source heat pumps greater than 1.5 tons. Up to $500 for smaller systems. "
+    }
+  },
+  {
+    "id": "NM-243",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ebike"
+    ],
+    "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 175
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "25% of the cost up of an e-bike to $150. 50% of cost up to $25 for additional battery with original purchase."
+    }
+  },
+  {
+    "id": "NM-244",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "25% of the cost of an electric ride-on lawn mower up $1,000. 50% of cost up to $25 for additional battery with original purchase. "
+    }
+  },
+  {
+    "id": "NM-245",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "25% of cost up to $250 for electric walk behind 2-stage mower. Up to $150 for 1-stage mower. Extra battery at time of purchase 50% rebate up to $25."
+    }
+  },
+  {
+    "id": "NM-246",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "25% of cost up to $100 for chain saw; $50 for trimmer, pruner, power washer, or leaf blower. Extra battery at time of purchase - 50% rebate up to $25."
+    }
+  },
+  {
+    "id": "NM-247",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "nm_centralNewMexicoElectricCooperative_cNMECMemberRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% rebate on qualified ducted air-source heat pump larger than 1.5 tons, up to $1,500.  Up to $500 for smaller system. "
+    }
+  },
+  {
+    "id": "NM-248",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "used_electric_vehicle",
+      "used_plugin_hybrid_vehicle"
+    ],
+    "program": "nm_energyConservationAndManagement_newMexicoCleanCarIncentivesAndRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000,
+      "minimum": 800,
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2,500 refundable tax credit for used electric vehicle.  Credit amount steps down through 2029."
+    },
+    "start_date": "2024-05-15",
+    "end_date": "2029-12-31"
   }
 ]
