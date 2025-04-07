@@ -821,7 +821,7 @@ test('correctly matches geo groups', async t => {
   } as const;
 
   const massSaveFilter = (i: CalculatedIncentive) =>
-    i.program.startsWith('ma-massSave');
+    i.program.toLocaleLowerCase().startsWith('ma-masssave');
 
   const withElectric = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
     ...baseArgs,
