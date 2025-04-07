@@ -95,14 +95,14 @@ test('correctly evaluates state incentives for launched states', async t => {
 });
 
 test('correctly excludes state incentives for beta states', async t => {
-  // MA is not launched so will not get state incentives.
-  const data = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
+  // NJ is not launched so will not get state incentives.
+  const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
     owner_status: OwnerStatus.Homeowner,
-    household_income: 120000,
+    household_income: 20000,
     tax_filing: FilingStatus.Single,
     household_size: 1,
-    authority_types: [AuthorityType.Other],
-    utility: 'ma-eversource',
+    authority_types: [AuthorityType.Utility],
+    utility: 'nj-public-service-electric-and-gas',
     include_beta_states: false,
   });
   t.ok(data);
@@ -110,14 +110,14 @@ test('correctly excludes state incentives for beta states', async t => {
 });
 
 test('correctly evaluates state incentives for beta states', async t => {
-  // MA is in beta so we should get incentives for it when beta is requested.
-  const data = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
+  // NJ is in beta so we should get incentives for it when beta is requested.
+  const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
     owner_status: OwnerStatus.Homeowner,
-    household_income: 120000,
+    household_income: 20000,
     tax_filing: FilingStatus.Single,
     household_size: 1,
-    authority_types: [AuthorityType.Other],
-    utility: 'ma-eversource',
+    authority_types: [AuthorityType.Utility],
+    utility: 'nj-public-service-electric-and-gas',
     include_beta_states: true,
   });
   t.ok(data);
