@@ -71,6 +71,7 @@ export const IRA_ITEMS_SCHEMA = {
   heat_pump_water_heater: { type: 'string' },
   new_electric_vehicle: { type: 'string' },
   rooftop_solar_installation: { type: 'string' },
+  solar_water_heater: { type: 'string' },
   used_electric_vehicle: { type: 'string' },
   weatherization: { type: 'string' },
 } as const;
