@@ -11476,8 +11476,7 @@
     "program": "ma_massSave_massSaveIncomeEligibleProgram",
     "amount": {
       "type": "percent",
-      "number": 1,
-      "maximum": 16000
+      "number": 1
     },
     "owner_status": [
       "homeowner",
@@ -12474,18 +12473,22 @@
     ],
     "items": [
       "air_sealing",
-      "other_insulation"
+      "other_insulation",
+      "crawlspace_insulation",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "floor_insulation"
     ],
     "program": "ma_massSave_massSaveRenterIncentives",
     "amount": {
       "type": "percent",
-      "number": 0.75
+      "number": 1
     },
     "owner_status": [
       "renter"
     ],
     "short_description": {
-      "en": "75-100% off approved insulation and air sealing improvements after receiving a home energy assessment."
+      "en": "100% off approved insulation and air sealing improvements after receiving a home energy assessment."
     }
   },
   {
