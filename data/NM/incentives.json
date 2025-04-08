@@ -319,7 +319,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to a $750 rebate on the purchase of a qualified EV charger plus up to $3,500 in installation assistance."
+      "en": "Up to a $750 rebate on the purchase of a qualified EV charger plus up to $3,500 in installation assistance, for income-qualified households."
     },
     "start_date": "2024-06-01",
     "low_income": "nm-pnm-income-qualified"
@@ -332,7 +332,7 @@
     "items": [
       "energy_audit"
     ],
-    "program": "nm-pnm-rebates",
+    "program": "nm_pnm_pNMHomeEnergyCheckupProgram",
     "amount": {
       "type": "percent",
       "number": 1
@@ -342,7 +342,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Free in-home energy check up or virtual video call appointment. Required for some equipment rebates."
+      "en": "Free in-home Energy Check Up or virtual video call appointment. Required first step for Check Up program equipment rebates. Not a full energy audit."
     }
   },
   {
@@ -389,7 +389,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate on an ENERGY STAR heat pump water heater."
+      "en": "$500 rebate on a qualifying Energy Star heat pump water heater. "
     }
   },
   {
@@ -894,7 +894,6 @@
   {
     "id": "NM-40",
     "payment_methods": [
-      "pos_rebate",
       "rebate"
     ],
     "items": [
@@ -911,7 +910,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$165 rebate for qualifying ENERGY STAR heat pump clothes dryers."
+      "en": "$165 rebate for a qualifying Energy Star heat pump clothes dryer. On-line or mail-in rebate."
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
@@ -919,7 +918,6 @@
   {
     "id": "NM-41",
     "payment_methods": [
-      "pos_rebate",
       "rebate"
     ],
     "items": [
@@ -935,7 +933,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$110 rebate for qualifying ENERGY STAR electric clothes dryers."
+      "en": "$110 rebate for qualifying Energy Star electric clothes dryers. Online/mail in rebates. Can be stacked with Home Energy Checkup rebates."
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
@@ -960,7 +958,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$200 rebate for eligible ENERGY STAR induction cooktops and ranges."
+      "en": "$200 rebate for eligible Energy Star induction cooktops and ranges."
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
@@ -968,7 +966,6 @@
   {
     "id": "NM-43",
     "payment_methods": [
-      "pos_rebate",
       "rebate"
     ],
     "items": [
@@ -985,7 +982,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate on select ENERGY STAR smart thermostats."
+      "en": "$50 rebate on select Energy Star smart thermostats."
     },
     "start_date": "2024-01-01",
     "end_date": "2025-12-31"
@@ -998,18 +995,17 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "nm-pnm-rebates",
+    "program": "nm_pnm_pNMHomeEnergyCheckupProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 300,
-      "maximum": 300
+      "number": 300
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$300 rebate for an ENERGY STAR certified heat pump water heater that is 50 gallons or larger."
+      "en": "$300 rebate for an Energy Star certified heat pump water heater that is 50 gallons or larger. Home Checkup in prior 10 years."
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
@@ -1022,18 +1018,17 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "nm-pnm-rebates",
+    "program": "nm_pnm_pNMHomeEnergyCheckupProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 550,
-      "maximum": 550
+      "number": 550
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$550 rebate for a qualifying mini-split air source heat pump. Home checkup required first. "
+      "en": "$550 rebate for a qualifying mini-split air source heat pump replacing refrigerated system by participating installer. Home Checkup in prior 10 yrs. "
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
@@ -1046,18 +1041,17 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "nm-pnm-rebates",
+    "program": "nm_pnm_pNMHomeEnergyCheckupProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 550,
-      "maximum": 550
+      "number": 550
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$550 rebate for a qualifying ducted air source heat pump system. Home Checkup required first."
+      "en": "$550 rebate for qualifying ducted air source heat pump replacing refrigerated air, installed by participating installer. Home Checkup in prior 10 yrs."
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
@@ -1070,7 +1064,7 @@
     "items": [
       "attic_or_roof_insulation"
     ],
-    "program": "nm-pnm-rebates",
+    "program": "nm_pnm_pNMHomeEnergyCheckupProgram",
     "amount": {
       "type": "percent",
       "number": 0.1,
@@ -1080,7 +1074,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to 10% for attic/roof insulation improvements, up to $200, after a home energy checkup."
+      "en": "5%-10% for qualified attic/roof insulation improvements, by participating contractor, up to $200 depending on cooling type. Prior Home Energy Checkup."
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
@@ -2217,7 +2211,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$90 rebate for ENERGY STAR heat pump (ventless) clothes dryer. "
+      "en": "$90 rebate for Energy Star heat pump (ventless) clothes dryer. "
     }
   },
   {
@@ -2268,7 +2262,7 @@
       "rebate"
     ],
     "items": [
-      "whole_house_fan"
+      "evaporative_cooler"
     ],
     "program": "nm_sierraElectricCooperative_sierraElectricCoopEnergyEfficiencyRebates",
     "amount": {
@@ -2322,7 +2316,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 rebate for ENERGY STAR air source heat pump water heater (30 gal. minimum)"
+      "en": "$350 rebate for Energy Star air source heat pump water heater (30 gal. minimum)"
     }
   },
   {
@@ -2356,8 +2350,8 @@
     ],
     "program": "nm_sierraElectricCooperative_sierraElectricCoopEnergyEfficiencyRebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 500,
+      "type": "percent",
+      "number": 0.5,
       "maximum": 1000
     },
     "owner_status": [
@@ -2532,7 +2526,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$30 rebate for ENERGY STAR electric resistance clothes dryer. "
+      "en": "$30 rebate for Energy Star electric resistance clothes dryer. "
     }
   },
   {
@@ -2593,7 +2587,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 rebate per qualified ENERGY STAR air source heat pump water heater (30 gallon or larger)."
+      "en": "$350 rebate per qualified Energy Star air source heat pump water heater (30 gallon or larger)."
     }
   },
   {
@@ -2821,7 +2815,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$25 rebate per ENERGY STAR smart thermostat. Limit 2 for standard installation, limit 5 for line-voltage applications."
+      "en": "$25 rebate per Energy Star smart thermostat. Limit 2 for standard installation, limit 5 for line-voltage applications."
     }
   },
   {
@@ -3302,7 +3296,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$90 rebate for ENERGY STAR heat pump (ventless) clothes dryer."
+      "en": "$90 rebate for Energy Star heat pump (ventless) clothes dryer."
     }
   },
   {
@@ -3624,7 +3618,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$80 rebate per ENERGY STAR certified windows. "
+      "en": "$80 rebate per Energy Star certified windows. "
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
@@ -3646,7 +3640,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 for qualified ENERGY STAR variable speed pool pump."
+      "en": "$300 for qualified Energy Star variable speed pool pump."
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
@@ -3903,7 +3897,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$30 rebate for ENERGY STAR electric resistance dryer. "
+      "en": "$30 rebate for Energy Star electric resistance dryer. "
     }
   },
   {
@@ -4449,8 +4443,7 @@
     "program": "nm_pnm_pNMResidentialMidstreamProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 860,
-      "maximum": 860
+      "number": 650
     },
     "owner_status": [
       "homeowner",
@@ -4793,7 +4786,7 @@
     "items": [
       "smart_thermostat"
     ],
-    "program": "nm_ziaNaturalGasCompany_ziaEnergyEfficiencyProgram",
+    "program": "nm_ziaNaturalGasCompany_ziaNaturalGasCompanyEnergyEfficiencyProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 25,
@@ -4815,7 +4808,7 @@
     "items": [
       "attic_or_roof_insulation"
     ],
-    "program": "nm_ziaNaturalGasCompany_ziaEnergyEfficiencyProgram",
+    "program": "nm_ziaNaturalGasCompany_ziaNaturalGasCompanyEnergyEfficiencyProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 300,
@@ -4840,7 +4833,7 @@
       "air_sealing",
       "other_weatherization"
     ],
-    "program": "nm_ziaNaturalGasCompany_ziaEnergyEfficiencyProgram",
+    "program": "nm_ziaNaturalGasCompany_ziaNaturalGasCompanyEnergyEfficiencyProgram",
     "amount": {
       "type": "percent",
       "number": 1
@@ -4850,7 +4843,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "No-cost weatherization to eligible low-income households including duct sealing, air sealing, caulking, water heater jacket, thermostat."
+      "en": "No-cost weatherization including duct sealing, air sealing, caulking, water heater jacket, thermostat for income-eligible households."
     },
     "low_income": "nm-Sustainable Building Tax Credit Low-Income"
   },
@@ -5185,7 +5178,7 @@
     "program": "nm_energyConservationAndManagement_newMexicoCleanCarIncentivesAndRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 3000,
+      "number": 2500,
       "minimum": 800,
       "maximum": 3000
     },
@@ -5198,5 +5191,231 @@
     },
     "start_date": "2024-05-15",
     "end_date": "2029-12-31"
+  },
+  {
+    "id": "NM-249",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "nm_northernRioArribaElectricCooperative_nORAEnergyEfficiency",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Free energy use analysis. "
+    }
+  },
+  {
+    "id": "NM-250",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nm_pnm_pNMHomeEnergyCheckupProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate on select Energy Star smart thermostats installed after a PNM Home Energy Checkup."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "NM-251",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "nm_pnm_pNMHomeEnergyCheckupProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 rebate for early retirement of central air conditioner with eligible replacement by participating contractor.  Home Checkup in prior 10 years."
+    }
+  },
+  {
+    "id": "NM-252",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "nm_pnm_pNMHomeEnergyCheckupProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for early replacement of 2014 or older clothes dryer with a new qualified Energy Star model.  Previous Home Energy Checkup required."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "NM-253",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "nm_pnm_pNMHomeEnergyCheckupProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an A/C Tune-up by participating contractor. Prior Home Energy Checkup required."
+    }
+  },
+  {
+    "id": "NM-254",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "nm-pnm-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 165,
+      "maximum": 165
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$165 rebate for a qualifying Energy Star heat pump clothes dryer. Instant coupon to use in-store or online at retailer. "
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "NM-255",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "nm-pnm-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 110
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$110 rebate for qualifying Energy Star electric clothes dryers. Instant coupon for online or in-store purchase at retailer."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "NM-256",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "evaporative_cooler"
+    ],
+    "program": "nm-pnm-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "minimum": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$400 rebate on eligible large advanced evaporative cooler. Instant coupon for on-line or in-store participating retailer."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "NM-257",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nm-pnm-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 instant coupon for on-line or in-store purchase of select Energy Star smart thermostats at participating retailers."
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "NM-258",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nm-pnm-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $700 instant coupon for on-line or in-store purchase of eligible heat pump hot waters at participating retailers.  "
+    },
+    "start_date": "2024-01-01",
+    "end_date": "2025-12-31"
   }
 ]
