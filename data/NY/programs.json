@@ -24,15 +24,50 @@
       "heat_pump_water_heater"
     ]
   },
+  "ny_conEdison_consolidatedEdisonAirSourceHeatPumpRebates": {
+    "name": {
+      "en": "Consolidated Edison Air Source Heat Pump Rebates",
+      "es": "Consolidated Edison Incentivos por bombas de calor aerotérmicas"
+    },
+    "url": {
+      "en": "https://www.coned.com/en/save-money/rebates-incentives-tax-credits/rebates-incentives-tax-credits-for-residential-customers/electric-heating-and-cooling-technology-for-renters-homeowners/save-on-a-central-air-source-heat-pump",
+      "es": "https://www.coned.com/es/save-money/rebates-incentives-tax-credits/rebates-incentives-tax-credits-for-residential-customers/electric-heating-and-cooling-technology-for-renters-homeowners/save-on-a-central-air-source-heat-pump"
+    },
+    "authority": "ny-con-edison",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ]
+  },
+  "ny_conEdison_consolidatedEdisonGeothermalHeatPumpRebates": {
+    "name": {
+      "en": "Consolidated Edison Geothermal Heat Pump Rebates",
+      "es": "Consolidated Edison Incentivos por bombas de calor geotérmicas"
+    },
+    "url": {
+      "en": "https://www.coned.com/en/save-money/rebates-incentives-tax-credits/rebates-incentives-tax-credits-for-residential-customers/electric-heating-and-cooling-technology-for-renters-homeowners/save-thousands-on-a-geothermal-system",
+      "es": "https://www.coned.com/es/save-money/rebates-incentives-tax-credits/rebates-incentives-tax-credits-for-residential-customers/electric-heating-and-cooling-technology-for-renters-homeowners/save-thousands-on-a-geothermal-system"
+    },
+    "authority": "ny-con-edison",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "geothermal_heating_installation"
+    ]
+  },
   "ny_conEdison_consolidatedEdisonRebates": {
     "name": {
       "en": "Consolidated Edison Rebates"
     },
     "url": {
-      "en": "https://www.coned.com/en/save-money/rebates-incentives-tax-credits/rebates-incentives-tax-credits-for-residential-customers"
+      "en": "https://www.coned.com/en/save-money/rebates-incentives-tax-credits/rebates-incentives-tax-credits-for-residential-customers",
+      "es": "https://www.coned.com/es/save-money/rebates-incentives-tax-credits/rebates-incentives-tax-credits-for-residential-customers"
     },
     "authority": "ny-con-edison",
     "authority_type": "utility",
+    "description": "",
     "items": [
       "other_weatherization",
       "other_heat_pump",
@@ -51,6 +86,24 @@
     "authority": "ny-nyserda",
     "authority_type": "state"
   },
+  "ny_nationalGrid_nationalGridEnergySavingPrograms": {
+    "name": {
+      "en": "National Grid Energy Saving Programs"
+    },
+    "url": {
+      "en": "https://www.nationalgridus.com/Upstate-NY-Home/Energy-Saving-Programs/?regionkey=nyupstate&customertype=home"
+    },
+    "authority": "ny-national-grid",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "air_to_water_heat_pump",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "geothermal_heating_installation",
+      "heat_pump_water_heater"
+    ]
+  },
   "ny_nationalGrid_totalHomeComfortProgram": {
     "name": {
       "en": "Total Home Comfort Program"
@@ -65,21 +118,105 @@
       "energy_audit"
     ]
   },
-  "ny_psegLongIsland_residentialEnergyEfficiencyProgram": {
+  "ny_nyseg_nYSEGCleanHeatProgram": {
     "name": {
-      "en": "Residential Energy Efficiency Program"
+      "en": "NYSEG Clean Heat Program"
     },
     "url": {
-      "en": "https://homeenergy.pseg.com/"
+      "en": "https://www.nyseg.com/smartenergy/rebatesandprograms/nys-clean-heat-rebate-program"
+    },
+    "authority": "ny-nyseg",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "air_to_water_heat_pump",
+      "geothermal_heating_installation",
+      "window_replacement",
+      "wall_insulation",
+      "air_sealing",
+      "attic_or_roof_insulation"
+    ]
+  },
+  "ny_psegLongIsland_pSEGLongIslandHomeComfortPlusProgram": {
+    "name": {
+      "en": "PSEG Long Island Home Comfort Plus Program"
+    },
+    "url": {
+      "en": "https://www.psegliny.com/saveenergyandmoney/homeefficiency/homecomfort/plus"
     },
     "authority": "ny-pseg-long-island",
     "authority_type": "utility",
+    "description": "Income eligible program",
     "items": [
       "other_weatherization",
-      "other_heat_pump",
       "heat_pump_water_heater",
       "heat_pump_clothes_dryer",
-      "energy_audit"
+      "energy_audit",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ]
+  },
+  "ny_psegLongIsland_pSEGLongIslandHomeComfortProgram": {
+    "name": {
+      "en": "PSEG Long Island Home Comfort Program"
+    },
+    "url": {
+      "en": "https://www.psegliny.com/saveenergyandmoney/homeefficiency"
+    },
+    "authority": "ny-pseg-long-island",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "other_weatherization",
+      "heat_pump_water_heater",
+      "heat_pump_clothes_dryer",
+      "energy_audit",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ]
+  },
+  "ny_rochesterGasAndElectric_rGandECleanHeatProgram": {
+    "name": {
+      "en": "RG&E Clean Heat Program"
+    },
+    "url": {
+      "en": "https://www.rge.com/en/smartenergy/rebatesandprograms/nys-clean-heat-rebate-program"
+    },
+    "authority": "ny-rochester-gas-and-electric",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "air_to_water_heat_pump",
+      "geothermal_heating_installation",
+      "window_replacement",
+      "wall_insulation",
+      "air_sealing",
+      "attic_or_roof_insulation"
+    ]
+  },
+  "ny_salamancaBoardOfPublicUtilities_salamancaBPUEnergyRebates": {
+    "name": {
+      "en": "Salamanca BPU Energy Rebates"
+    },
+    "url": {
+      "en": "https://www.salamancabpu.com/energy-rebates.html"
+    },
+    "authority": "ny-salamanca-board-of-public-utilities",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "smart_thermostat",
+      "window_replacement",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "geothermal_heating_installation",
+      "heat_pump_water_heater",
+      "electric_outdoor_equipment"
     ]
   },
   "ny_stateOfNy_nYWeatherizationAssistanceProgramWAP": {

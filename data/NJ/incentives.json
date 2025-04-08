@@ -428,8 +428,7 @@
       "rebate"
     ],
     "items": [
-      "other",
-      "other_heat_pump"
+      "integrated_heat_pump_controls"
     ],
     "program": "nj_atlanticCityElectric_aCEResidentialEfficiency",
     "amount": {
@@ -1625,13 +1624,13 @@
     "program": "nj_elizabethtownGas_elizabethtownGasConserveProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 150
+      "number": 100
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$150 rebate for an ENERGY STAR certified smart thermostat."
+      "en": "$100 upfront rebate for an ENERGY STAR certified smart thermostat when purchased through Elizabethtown Gas marketplace."
     },
     "start_date": "2025-01-01",
     "end_date": "2027-06-30"
@@ -1657,14 +1656,14 @@
     "amount": {
       "type": "percent",
       "number": 1,
-      "maximum": 17500
+      "maximum": 16500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $15,000 in free weatherization measures for income-qualified customers of ETG. Additional $2,500 for health and safety expenses."
+      "en": "Up to $14,000 in free weatherization measures for income-qualified customers of ETG. Additional $2,500 for health and safety expenses."
     },
     "start_date": "2025-01-01",
     "end_date": "2027-06-30",
@@ -1813,8 +1812,7 @@
       "rebate"
     ],
     "items": [
-      "other",
-      "other_heat_pump"
+      "integrated_heat_pump_controls"
     ],
     "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
     "amount": {
@@ -2001,5 +1999,27 @@
     "start_date": "2025-01-01",
     "end_date": "2027-06-30",
     "paused": true
+  },
+  {
+    "id": "NJ-85",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger",
+      "electric_service_upgrades"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 5500,
+      "maximum": 5500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $5,500 for cost of utility service upgrades to support a level 2 EV charger, if needed."
+    }
   }
 ]

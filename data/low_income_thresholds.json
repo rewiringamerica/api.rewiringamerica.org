@@ -1543,14 +1543,6 @@
     "ma-massSave-income-eligible": {
       "type": "hhsize",
       "incentives": [
-        "MA-2",
-        "MA-5",
-        "MA-19",
-        "MA-22",
-        "MA-23",
-        "MA-24",
-        "MA-35",
-        "MA-37",
         "MA-51",
         "MA-53",
         "MA-54",
@@ -1567,7 +1559,16 @@
         "MA-131",
         "MA-134",
         "MA-136",
-        "MA-138"
+        "MA-138",
+        "MA-539",
+        "MA-541",
+        "MA-542",
+        "MA-544",
+        "MA-545",
+        "MA-546",
+        "MA-551",
+        "MA-552",
+        "MA-574"
       ],
       "source_url": "https://www.masssave.com/en/residential/programs-and-services/income-based-offers",
       "description": "MassSave Income Eligible Program - Up to 60% SMI, 2024-2025 heating season",
@@ -1585,12 +1586,6 @@
     "ma-massSave-incomeEligible-enhanced": {
       "type": "ami-percentage",
       "incentives": [
-        "MA-4",
-        "MA-20",
-        "MA-25",
-        "MA-27",
-        "MA-28",
-        "MA-29",
         "MA-59",
         "MA-70",
         "MA-74",
@@ -1599,7 +1594,19 @@
         "MA-114",
         "MA-115",
         "MA-408",
-        "MA-414"
+        "MA-414",
+        "MA-540",
+        "MA-543",
+        "MA-547",
+        "MA-548",
+        "MA-549",
+        "MA-550",
+        "MA-572",
+        "MA-587",
+        "MA-588",
+        "MA-589",
+        "MA-590",
+        "MA-591"
       ],
       "source_url": "https://www.masssave.com/en/residential/programs-and-services/income-based-offers",
       "description": "MassSave Income-Based Enhanced Incentive 60-80% AMI or SMI. Also known as Enhanced Incentives. 2024-2025 heating season.",
@@ -1970,7 +1977,10 @@
   "NM": {
     "nm-Sustainable Building Tax Credit Low-Income": {
       "type": "hhsize",
-      "incentives": [],
+      "incentives": [
+        "NM-227",
+        "NM-230"
+      ],
       "source_url": "https://www.emnrd.nm.gov/ecmd/wp-content/uploads/sites/3/Sustainable-Building-Tax-Credit-products-application-instructions-version-2.pdf",
       "description": "Households with income less than 200% of Federal poverty level each year. ",
       "thresholds": {
@@ -2031,7 +2041,8 @@
         "NM-34",
         "NM-36",
         "NM-174",
-        "NM-195"
+        "NM-195",
+        "NM-223"
       ],
       "source_url": "https://ev.pnm.com/wp-content/uploads/2024-Residential-Poverty-Guidelines.pdf",
       "description": "PNM Income Qualified - 200% of federal poverty level 2024",
@@ -2985,7 +2996,8 @@
     "ny-wap-heap": {
       "type": "hhsize",
       "incentives": [
-        "NY-35"
+        "NY-35",
+        "NY-62"
       ],
       "source_url": "https://otda.ny.gov/programs/heap/#income",
       "description": "NY Low Income (less than 60%) for WAP and HEAP programs. 2024-2025 heating season",
@@ -3373,6 +3385,25 @@
     }
   },
   "TX": {
+    "tx-200-fpl": {
+      "type": "hhsize",
+      "incentives": [
+        "TX-60",
+        "TX-62"
+      ],
+      "source_url": "https://www.epesavings.com/documents/2025/docs/Single-Family_Income_Eligibility_form_2025.pdf",
+      "description": "Texas 200% FPL used for WAP and other programs",
+      "thresholds": {
+        "1": 31300,
+        "2": 42300,
+        "3": 53300,
+        "4": 64300,
+        "5": 75300,
+        "6": 86300,
+        "7": 97300,
+        "8": 108300
+      }
+    },
     "tx-austinenergy-80ami-threshold": {
       "type": "ami-percentage",
       "incentives": [

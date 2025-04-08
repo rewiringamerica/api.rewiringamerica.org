@@ -95,14 +95,14 @@ test('correctly evaluates state incentives for launched states', async t => {
 });
 
 test('correctly excludes state incentives for beta states', async t => {
-  // MA is not launched so will not get state incentives.
-  const data = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
+  // NJ is not launched so will not get state incentives.
+  const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
     owner_status: OwnerStatus.Homeowner,
-    household_income: 120000,
+    household_income: 20000,
     tax_filing: FilingStatus.Single,
     household_size: 1,
-    authority_types: [AuthorityType.Other],
-    utility: 'ma-eversource',
+    authority_types: [AuthorityType.Utility],
+    utility: 'nj-public-service-electric-and-gas',
     include_beta_states: false,
   });
   t.ok(data);
@@ -110,14 +110,14 @@ test('correctly excludes state incentives for beta states', async t => {
 });
 
 test('correctly evaluates state incentives for beta states', async t => {
-  // MA is in beta so we should get incentives for it when beta is requested.
-  const data = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
+  // NJ is in beta so we should get incentives for it when beta is requested.
+  const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
     owner_status: OwnerStatus.Homeowner,
-    household_income: 120000,
+    household_income: 20000,
     tax_filing: FilingStatus.Single,
     household_size: 1,
-    authority_types: [AuthorityType.Other],
-    utility: 'ma-eversource',
+    authority_types: [AuthorityType.Utility],
+    utility: 'nj-public-service-electric-and-gas',
     include_beta_states: true,
   });
   t.ok(data);
@@ -509,7 +509,7 @@ test('filters tax credits if zero tax owed', async t => {
 
   // This will result in zero federal tax (due to the standard deduction), but
   // $5 state tax (MA has a flat 5% rate on income over $4,400 for single
-  // filers), so one MA tax credit will be eligible.
+  // filers), so two MA tax credits will be eligible.
   const someTax = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
     ...baseQuery,
     household_income: 4500,
@@ -523,7 +523,7 @@ test('filters tax credits if zero tax owed', async t => {
     i => i.program in ira_programs,
   );
   t.equal(federalCredits.length, 0);
-  t.equal(stateCredits.length, 1);
+  t.equal(stateCredits.length, 2);
 });
 
 test('skips tax filing dependent items without filing status', async t => {
@@ -821,7 +821,7 @@ test('correctly matches geo groups', async t => {
   } as const;
 
   const massSaveFilter = (i: CalculatedIncentive) =>
-    i.program.startsWith('ma-massSave');
+    i.program.toLocaleLowerCase().startsWith('ma-masssave');
 
   const withElectric = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
     ...baseArgs,

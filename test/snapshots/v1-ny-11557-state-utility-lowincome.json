@@ -5,6 +5,12 @@
   "authorities": {
     "ny-nyserda": {
       "name": "New York State Energy Research and Development Authority"
+    },
+    "ny-state-of-ny": {
+      "name": "State of NY"
+    },
+    "ny-pseg-long-island": {
+      "name": "PSEG Long Island"
     }
   },
   "coverage": {
@@ -173,6 +179,50 @@
       ],
       "start_date": "2024-11-26",
       "short_description": "50% of cost of electrical wiring, up to $2,500 for income-eligible residents. Must use a participating contractor."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ny-pseg-long-island",
+      "program": "PSEG Long Island Home Comfort Program",
+      "program_url": "https://www.psegliny.com/saveenergyandmoney/homeefficiency",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 1000,
+        "maximum": 5000,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $1,000/ton for a whole home air source heat pump."
+    },
+    {
+      "payment_methods": [
+        "tax_credit"
+      ],
+      "authority_type": "state",
+      "authority": "ny-state-of-ny",
+      "program": "New York State Geothermal Energy Credit",
+      "program_url": "https://www.tax.ny.gov/pit/credits/geothermal-energy-system-credit.htm",
+      "items": [
+        "geothermal_heating_installation"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.25,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "25% tax credit, up to $5,000 for installation of a geothermal heat pump system. Non-refundable but may carry forward."
     }
   ]
 }

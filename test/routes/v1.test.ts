@@ -981,6 +981,8 @@ const UTILITIES = [
     '02807',
     {
       location: { state: 'RI', city: 'Block Island', county_fips: '44009' },
+      gas_utilities: {},
+      gas_utility_affects_incentives: false,
       utilities: {
         'ri-block-island-power-company': { name: 'Block Island Power Company' },
       },
@@ -990,6 +992,10 @@ const UTILITIES = [
     '02814',
     {
       location: { state: 'RI', city: 'Chepachet', county_fips: '44007' },
+      gas_utilities: {
+        'ri-rhode-island-energy-gas': { name: 'Rhode Island Energy' },
+      },
+      gas_utility_affects_incentives: false,
       utilities: {
         'ri-rhode-island-energy': { name: 'Rhode Island Energy' },
         'ri-pascoag-utility-district': {
@@ -1002,6 +1008,10 @@ const UTILITIES = [
     '02905',
     {
       location: { state: 'RI', city: 'Providence', county_fips: '44007' },
+      gas_utilities: {
+        'ri-rhode-island-energy-gas': { name: 'Rhode Island Energy' },
+      },
+      gas_utility_affects_incentives: false,
       utilities: { 'ri-rhode-island-energy': { name: 'Rhode Island Energy' } },
     },
   ],

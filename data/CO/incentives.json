@@ -941,7 +941,8 @@
       "pos_rebate"
     ],
     "items": [
-      "other"
+      "electric_wiring",
+      "electric_panel"
     ],
     "program": "co_cityAndCountyOfDenver_denverClimateActionRebateProgram-HomeEnergyRebates",
     "amount": {
@@ -6198,6 +6199,7 @@
   },
   {
     "id": "CO-311",
+    "eligible_geo_group": "co-xcel-rebates",
     "payment_methods": [
       "account_credit",
       "rebate"
@@ -6223,6 +6225,7 @@
   },
   {
     "id": "CO-312",
+    "eligible_geo_group": "co-xcel-rebates",
     "payment_methods": [
       "account_credit",
       "rebate"
@@ -6247,6 +6250,7 @@
   },
   {
     "id": "CO-313",
+    "eligible_geo_group": "co-xcel-rebates",
     "payment_methods": [
       "account_credit",
       "rebate"
@@ -6271,6 +6275,7 @@
   },
   {
     "id": "CO-314",
+    "eligible_geo_group": "co-xcel-rebates",
     "payment_methods": [
       "account_credit",
       "rebate"
@@ -6295,6 +6300,7 @@
   },
   {
     "id": "CO-315",
+    "eligible_geo_group": "co-xcel-rebates",
     "payment_methods": [
       "account_credit",
       "rebate"
@@ -7466,7 +7472,7 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "ductless_heat_pump"
     ],
     "program": "co_boulderCounty_energySmartManufacturedHomesRebates",
     "amount": {
@@ -7478,7 +7484,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Receive 25% of project cost up to $50 for Portable Heat Pump.",
+      "en": "Receive 25% of project cost up to $50 for portable heat pump.",
       "es": "Reciba un 25% del costo del proyecto hasta $50 dólares por una bomba de calor portátil."
     },
     "start_date": "2023-01-01",
@@ -7752,10 +7758,10 @@
       "rebate"
     ],
     "items": [
-      "other",
       "electric_panel",
       "electric_stove",
-      "heat_pump_clothes_dryer"
+      "heat_pump_clothes_dryer",
+      "electric_service_upgrades"
     ],
     "program": "co_glenwoodSpringsElectric_sustainabilityProgramElectricRebates",
     "amount": {
@@ -7779,7 +7785,7 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "efficiency_rebates"
     ],
     "program": "co_glenwoodSpringsElectric_sustainabilityProgramElectricRebates",
     "amount": {
@@ -7803,7 +7809,7 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "efficiency_rebates"
     ],
     "program": "co_glenwoodSpringsElectric_sustainabilityProgramElectricRebates",
     "amount": {
@@ -7827,7 +7833,7 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "air_sealing"
     ],
     "program": "co_glenwoodSpringsElectric_sustainabilityProgramElectricRebates",
     "amount": {
@@ -11534,6 +11540,7 @@
   },
   {
     "id": "CO-544",
+    "eligible_geo_group": "co-xcel-rebates",
     "payment_methods": [
       "rebate"
     ],
@@ -11590,9 +11597,7 @@
     "program": "co_coloradoEnergyOffice_coloradoHeatPumpTaxCredits",
     "amount": {
       "type": "dollar_amount",
-      "number": 1500,
-      "minimum": 999,
-      "maximum": 1500
+      "number": 999.9
     },
     "owner_status": [
       "homeowner"
@@ -11886,6 +11891,7 @@
   },
   {
     "id": "CO-567",
+    "eligible_geo_group": "co-xcel-rebates",
     "payment_methods": [
       "pos_rebate"
     ],
@@ -11909,6 +11915,7 @@
   },
   {
     "id": "CO-568",
+    "eligible_geo_group": "co-xcel-rebates",
     "payment_methods": [
       "pos_rebate"
     ],
@@ -12050,7 +12057,7 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "other_heat_pump"
     ],
     "program": "co_AspenCORE_residential_rebates",
     "amount": {
@@ -12072,7 +12079,7 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "other_heat_pump"
     ],
     "program": "co_AspenCORE_residential_rebates",
     "amount": {
@@ -12095,7 +12102,7 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "other_heat_pump"
     ],
     "program": "co_AspenCORE_residential_rebates",
     "amount": {
@@ -12117,7 +12124,8 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "ducted_heat_pump",
+      "ductless_heat_pump"
     ],
     "program": "co_AspenCORE_residential_rebates",
     "amount": {
@@ -13748,6 +13756,7 @@
   },
   {
     "id": "CO-646",
+    "eligible_geo_group": "co-xcel-rebates",
     "payment_methods": [
       "rebate"
     ],
@@ -13769,6 +13778,7 @@
   },
   {
     "id": "CO-647",
+    "eligible_geo_group": "co-xcel-rebates",
     "payment_methods": [
       "rebate"
     ],
@@ -13793,6 +13803,7 @@
   },
   {
     "id": "CO-648",
+    "eligible_geo_group": "co-xcel-rebates",
     "payment_methods": [
       "rebate"
     ],
@@ -13817,6 +13828,7 @@
   },
   {
     "id": "CO-649",
+    "eligible_geo_group": "co-xcel-rebates",
     "payment_methods": [
       "rebate"
     ],
@@ -13840,6 +13852,7 @@
   },
   {
     "id": "CO-650",
+    "eligible_geo_group": "co-xcel-rebates",
     "payment_methods": [
       "rebate"
     ],
@@ -13862,6 +13875,7 @@
   },
   {
     "id": "CO-651",
+    "eligible_geo_group": "co-xcel-rebates",
     "payment_methods": [
       "rebate"
     ],
@@ -14013,7 +14027,7 @@
       "duct_sealing",
       "smart_thermostat",
       "other_heat_pump",
-      "other"
+      "efficiency_rebates"
     ],
     "program": "co_walkingMountains_rebates&Incentives",
     "amount": {
@@ -15337,7 +15351,8 @@
       "pos_rebate"
     ],
     "items": [
-      "other"
+      "electric_wiring",
+      "electric_panel"
     ],
     "program": "co_cityAndCountyOfDenver_denverClimateActionRebateProgram-HomeEnergyRebates",
     "amount": {
@@ -15480,6 +15495,7 @@
   },
   {
     "id": "CO-722",
+    "eligible_geo_group": "co-xcel-rebates",
     "payment_methods": [
       "rebate"
     ],
@@ -15505,6 +15521,7 @@
   },
   {
     "id": "CO-723",
+    "eligible_geo_group": "co-xcel-rebates",
     "payment_methods": [
       "rebate"
     ],
@@ -15544,6 +15561,30 @@
     ],
     "short_description": {
       "en": "Up to $300 rebate for heat tape timers when installed permanently by an electrician."
+    }
+  },
+  {
+    "id": "CO-725",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "wall_insulation"
+    ],
+    "program": "co_coloradoNaturalGas_coloradoNaturalGasRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for qualifying insulation of attics, basements/crawlspaces, floors, or walls."
     }
   }
 ]

@@ -190,11 +190,8 @@
       "rebate"
     ],
     "items": [
-      "other_insulation",
       "air_sealing",
-      "other",
-      "other_heat_pump",
-      "other_weatherization"
+      "efficiency_rebates"
     ],
     "program": "nc_northCarolinaDepartmentOfEnvironmentalQuality_energySaverNorthCarolina",
     "amount": {
@@ -402,11 +399,8 @@
       "rebate"
     ],
     "items": [
-      "other_insulation",
       "air_sealing",
-      "other",
-      "other_heat_pump",
-      "other_weatherization"
+      "efficiency_rebates"
     ],
     "program": "nc_northCarolinaDepartmentOfEnvironmentalQuality_energySaverNorthCarolina",
     "amount": {
@@ -442,6 +436,233 @@
     ],
     "short_description": {
       "en": "$50 rebate for a smart thermostat, and $50 a year for enrolling in Connect to Save."
+    }
+  },
+  {
+    "id": "NC-20",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nc_carteret-CravenElectricCooperative_cCECEnergyConservationAndEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 rebate for a qualified heat pump water heater."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "NC-21",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "air_to_water_heat_pump",
+      "other_heat_pump",
+      "geothermal_heating_installation"
+    ],
+    "program": "nc_cityOfConcord_concordResidentialRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$400 rebate for installing a new qualifying heat pump, or replacing an existing HVAC system with a qualifying heat pump."
+    }
+  },
+  {
+    "id": "NC-22",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_to_water_heat_pump",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "other_heat_pump"
+    ],
+    "program": "nc_cityOfHighPoint_applianceRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "minimum": 300,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $400 rebate for a heat pump for existing homes or new construction."
+    }
+  },
+  {
+    "id": "NC-23",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nc_cityOfHighPoint_applianceRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a geothermal heat pump."
+    }
+  },
+  {
+    "id": "NC-24",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater",
+      "non_heat_pump_water_heater"
+    ],
+    "program": "nc_cityOfHighPoint_applianceRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $150 rebate for an electric water heater."
+    }
+  },
+  {
+    "id": "NC-25",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater",
+      "heat_pump_water_heater"
+    ],
+    "program": "nc_cityOfNewBern_newBernEnergyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$150 rebate for an electric water heater."
+    }
+  },
+  {
+    "id": "NC-26",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "nc_cityOfNewBern_newBernEnergyRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 100,
+      "unit": "ton",
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100/ton, up to $400 rebate for a central heat pump with heat strips."
+    }
+  },
+  {
+    "id": "NC-27",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "nc_cityOfStatesville_statesvilleElectricUtilityRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "minimum": 300,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $400 rebate for an electric heat pump in an existing home or new construction."
+    }
+  },
+  {
+    "id": "NC-28",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nc_cityOfStatesville_statesvilleElectricUtilityRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a geothermal heat pump."
+    }
+  },
+  {
+    "id": "NC-29",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater",
+      "heat_pump_water_heater"
+    ],
+    "program": "nc_cityOfStatesville_statesvilleElectricUtilityRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$150 rebate for an electric water heater."
     }
   }
 ]
