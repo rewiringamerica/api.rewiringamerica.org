@@ -92,6 +92,16 @@ function calculateFederalIncentivesAndSavings(
       continue;
     }
 
+    // MA residents are already eligible for free energy audits, so do not include
+    // that federal incentive
+    if (
+      location.state === 'MA' &&
+      incentive.items.length === 1 &&
+      incentive.items[0] === 'energy_audit'
+    ) {
+      continue;
+    }
+
     //
     // 1) Verify that the selected homeowner status qualifies
     //
