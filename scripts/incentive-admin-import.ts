@@ -21,6 +21,11 @@ const GENERAL_IMPORTS = [
   '/low-income-thresholds',
 ];
 
+const CSV_IMPORTS = [
+  '/geographies',
+  '/zip-to-utility',
+];
+
 function pathToFileName(path: string) {
   return path.replaceAll('/', '').replaceAll('-', '_') + '.json';
 }
@@ -46,11 +51,12 @@ async function saveIncentiveDataToDisk() {
     writeDataToStatesDirectory(data, pathToFileName(path));
   }
 
-  // zip-to-utility.csv
-  const writePath = 'scripts/data/zip-to-utility.csv';
-  const data = await fetchZipToUtility();
-  writeFileSync(writePath, data);
-  console.log(`Exported ${writePath}...`);
+  for (const path of CSV_IMPORTS) {
+    const data = await fetchCsv(path);
+    const writePath = `scripts/data/${path.replaceAll('/', '')}.csv`;
+    writeFileSync(writePath, data);
+    console.log(`Exported ${writePath}...`);
+  }
 }
 
 async function fetchData(path: string) {
@@ -59,11 +65,11 @@ async function fetchData(path: string) {
   return fetch(dataUrl).then(res => res.json());
 }
 
-async function fetchZipToUtility(): Promise<string> {
-  const dataUrl = `${INCENTIVE_ADMIN_HOST}/zip-to-utility`;
+async function fetchCsv(path: string): Promise<string> {
+  const dataUrl = `${INCENTIVE_ADMIN_HOST}${path}`;
   console.log(`fetching data from ${dataUrl}`);
   // The endpoint outputs CSV directly
-  const resp = await fetch(dataUrl); //fetch(dataUrl).then(res => res.text());
+  const resp = await fetch(dataUrl);
   const text = await resp.text();
   if (!resp.ok) {
     throw new Error(`Could not fetch data from ${dataUrl}`);

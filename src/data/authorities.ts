@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { FromSchema } from 'json-schema-to-ts';
+import { FromSchema, JSONSchema } from 'json-schema-to-ts';
 import { API_IMAGE_SCHEMA } from '../schemas/v1/image';
 import { STATES_AND_TERRITORIES } from './types/states';
 
@@ -34,10 +34,11 @@ const AUTHORITY_SCHEMA = {
     logo: API_IMAGE_SCHEMA,
     city: { type: 'string' },
     county_fips: { type: 'string' },
+    geography_id: { type: 'integer' },
   },
   required: ['name'],
   additionalProperties: false,
-} as const;
+} as const satisfies JSONSchema;
 
 /**
  * The same as AUTHORITY_SCHEMA, but with only the name and logo fields; this is
