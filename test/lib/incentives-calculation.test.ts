@@ -850,3 +850,22 @@ test('correctly matches geo groups', async t => {
   });
   t.equal(withNoMassSave.incentives.filter(massSaveFilter).length, 0);
 });
+
+test('exclude federal energy audit incentive for MA', async t => {
+  const args = {
+    owner_status: OwnerStatus.Homeowner,
+    household_income: 40000,
+    tax_filing: FilingStatus.Single,
+    household_size: 1,
+  };
+  const filter = (i: CalculatedIncentive) =>
+    i.payment_methods[0] === 'tax_credit' &&
+    i.items.length === 1 &&
+    i.items[0] === 'energy_audit';
+
+  const maResults = calculateIncentives(...LOCATION_AND_AMIS['02130'], args);
+  t.equal(maResults.incentives.filter(filter).length, 0);
+
+  const riResults = calculateIncentives(...LOCATION_AND_AMIS['02861'], args);
+  t.ok(riResults.incentives.filter(filter).length > 0);
+});
