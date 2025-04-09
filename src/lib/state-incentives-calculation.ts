@@ -288,44 +288,15 @@ function ineligibleByLocationOrUtility(
     return true;
   }
 
-  // TODO further gas utility handling. This isn't exactly the same as electric
-  // utility handling; depending on the state, the gas utility may *prevent*
-  // some electric utility incentives from being eligible.
+  const authority =
+    stateAuthorities[program.authority_type][program.authority!];
 
-  // County and City incentives are approximate and prone to
-  // false positives, since zip codes to not map 1:1 to counties
-  // and cities.
-  // https://app.asana.com/0/1204738794846444/1206454407609847
-  // tracks long-term work in this space.
-  if (program.authority_type === AuthorityType.County) {
-    // Skip if we didn't get location data.
-    if (location.county_fips === undefined) {
-      return true;
-    }
-
-    // We have tests to ensure county authorities are registered.
-    const authorityDetails = stateAuthorities.county![program.authority!];
-    if (authorityDetails.county_fips !== location.county_fips) {
-      return true;
-    }
-  }
-
-  if (program.authority_type === AuthorityType.City) {
-    // We have to match on both city and county since more than one
-    // municipalities can have the same name within the same state.
-
-    // Skip if we didn't get location data.
-    if (location.city === undefined || location.county_fips === undefined) {
-      return true;
-    }
-
-    // We have tests to ensure city authorities are registered.
-    const authorityDetails = stateAuthorities.city![program.authority!];
-
-    if (
-      authorityDetails.city !== location.city ||
-      authorityDetails.county_fips !== location.county_fips
-    ) {
+  if (authority.geography_id) {
+    // One of the resolved location's geographies must match the authority's
+    // geography. This is permissive: the user's location is not guaranteed to
+    // be within any one of the resolved geographies. For example, they may have
+    // entered a ZIP code which only partially overlaps with a county.
+    if (!location.geographies.map(g => g.id).includes(authority.geography_id)) {
       return true;
     }
   }
@@ -335,7 +306,7 @@ function ineligibleByLocationOrUtility(
     const group =
       GEO_GROUPS_BY_STATE[location.state]![incentive.eligible_geo_group];
 
-    // The request params must match ANY of the keys the geo group defines
+    // The request params must match ANY of the geo group's member authorities
     const matchesUtility =
       group.utilities &&
       request.utility &&
@@ -344,25 +315,21 @@ function ineligibleByLocationOrUtility(
       group.gas_utilities &&
       request.gas_utility &&
       group.gas_utilities.includes(request.gas_utility);
-    const matchesCity =
-      group.cities &&
-      location.city &&
-      group.cities
-        .map(id => stateAuthorities.city[id].city)
-        .includes(location.city);
-    const matchesCounty =
-      group.counties &&
-      location.county_fips &&
-      group.counties
-        .map(id => stateAuthorities.county[id].county_fips)
-        .includes(location.county_fips);
 
-    if (
-      !matchesUtility &&
-      !matchesGasUtility &&
-      !matchesCity &&
-      !matchesCounty
-    ) {
+    const groupGeographyIds = [
+      ...(group.cities?.map(id => stateAuthorities.city[id]) || []),
+      ...(group.counties?.map(id => stateAuthorities.county[id]) || []),
+    ]
+      .map(authority => authority.geography_id)
+      .filter(id => id !== undefined);
+
+    // This is permissive: the user's location is not guaranteed to be within
+    // any particular one of the resolved location's geographies.
+    const matchesGeography = location.geographies.some(g =>
+      groupGeographyIds.includes(g.id),
+    );
+
+    if (!matchesUtility && !matchesGasUtility && !matchesGeography) {
       return true;
     }
   }

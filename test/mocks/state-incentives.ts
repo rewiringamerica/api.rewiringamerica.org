@@ -1,4 +1,5 @@
 import fs from 'fs';
+import { AuthoritiesByType } from '../../src/data/authorities';
 import { Programs } from '../../src/data/programs';
 import { StateIncentive } from '../../src/data/state_incentives';
 
@@ -11,4 +12,8 @@ export const TEST_INCENTIVES: StateIncentive[] = JSON.parse(
 
 export const TEST_PROGRAMS: Programs = JSON.parse(
   fs.readFileSync('./test/fixtures/test-programs.json', 'utf-8'),
+);
+
+export const TEST_AUTHORITIES: AuthoritiesByType = JSON.parse(
+  fs.readFileSync('./test/fixtures/test-authorities.json', 'utf-8'),
 );

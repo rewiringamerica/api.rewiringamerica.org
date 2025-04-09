@@ -10,39 +10,79 @@ import { AmountType } from '../../src/data/types/amount';
 import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { OwnerStatus } from '../../src/data/types/owner-status';
 import { BETA_STATES, LAUNCHED_STATES } from '../../src/data/types/states';
+import { AMIAndEVCreditEligibility } from '../../src/lib/ami-evcredit-calculation';
 import calculateIncentives, {
   CalculatedIncentive,
 } from '../../src/lib/incentives-calculation';
+import { GeographyType, ResolvedLocation } from '../../src/lib/location';
 import { calculateStateIncentivesAndSavings } from '../../src/lib/state-incentives-calculation';
 
-const LOCATION_AND_AMIS = {
+const stateGeo = (id: number, state: string) => ({
+  id,
+  type: GeographyType.State,
+  state,
+  name: '',
+  county_fips: null,
+  intersection_proportion: 1.0,
+});
+const countyGeo = (id: number, state: string, county_fips: string) => ({
+  id,
+  type: GeographyType.County,
+  state,
+  name: '',
+  county_fips,
+  intersection_proportion: 1.0,
+});
+
+const LOCATION_AND_AMIS: {
+  [fips: string]: [ResolvedLocation, AMIAndEVCreditEligibility];
+} = {
   '07083': [
-    { zcta: '07083', city: 'Union', state: 'NJ', county_fips: '34039' },
+    {
+      zcta: '07083',
+      state: 'NJ',
+      geographies: [stateGeo(30, 'NJ'), countyGeo(1843, 'NJ', '34039')],
+    },
     { computedAMI80: 97800, computedAMI150: 195450, evCreditEligible: false },
   ],
   '94117': [
     {
       zcta: '94117',
-      city: 'San Francisco',
       state: 'CA',
-      county_fips: '06075',
+      geographies: [stateGeo(5, 'CA'), countyGeo(281, 'CA', '06075')],
     },
     { computedAMI80: 156650, computedAMI150: 293700, evCreditEligible: false },
   ],
   '39503': [
-    { zcta: '39503', city: 'Gulfport', state: 'MS', county_fips: '28047' },
+    {
+      zcta: '39503',
+      state: 'MS',
+      geographies: [stateGeo(24, 'MS'), countyGeo(1474, 'MS', '28047')],
+    },
     { computedAMI80: 80256, computedAMI150: 150480, evCreditEligible: false },
   ],
   '02861': [
-    { zcta: '02861', city: 'Pawtucket', state: 'RI', county_fips: '44007' },
+    {
+      zcta: '02861',
+      state: 'RI',
+      geographies: [stateGeo(39, 'RI'), countyGeo(2364, 'RI', '44007')],
+    },
     { computedAMI80: 62930, computedAMI150: 118020, evCreditEligible: false },
   ],
   '06002': [
-    { zcta: '06002', city: 'Bloomfield', state: 'CT', county_fips: '09003' },
+    {
+      zcta: '06002',
+      state: 'CT',
+      geographies: [stateGeo(7, 'CT'), countyGeo(3283, 'CT', '09003')],
+    },
     { computedAMI80: 68215, computedAMI150: 127890, evCreditEligible: false },
   ],
   '02130': [
-    { zcta: '02130', city: 'Jamaica Plain', state: 'MA', county_fips: '25025' },
+    {
+      zcta: '02130',
+      state: 'MA',
+      geographies: [stateGeo(21, 'MA'), countyGeo(1279, 'MA', '25025')],
+    },
     { computedAMI80: 91175, computedAMI150: 171360, evCreditEligible: false },
   ],
 } as const;
@@ -577,7 +617,7 @@ test('correctly sorts incentives', async t => {
   });
 });
 
-test('correct filtering of county incentives', async t => {
+test('correct filtering of incentives with geography', async t => {
   const incentive: StateIncentive = {
     id: 'CO',
     payment_methods: [PaymentMethod.AccountCredit],
@@ -610,7 +650,7 @@ test('correct filtering of county incentives', async t => {
     county: {
       'mock-county-authority': {
         name: 'The Mock Authority Company',
-        county_fips: '99999',
+        geography_id: 111,
       },
     },
   };
@@ -624,7 +664,20 @@ test('correct filtering of county incentives', async t => {
     include_beta_states: true,
   };
   const shouldFind = calculateStateIncentivesAndSavings(
-    { state: 'CO', county_fips: '99999', city: 'Asdf', zcta: '00000' },
+    {
+      state: 'CO',
+      zcta: '00000',
+      geographies: [
+        {
+          id: 111,
+          name: '',
+          type: GeographyType.County,
+          state: 'CO',
+          county_fips: '99999',
+          intersection_proportion: 1.0,
+        },
+      ],
+    },
     request,
     [incentive],
     {},
@@ -636,7 +689,20 @@ test('correct filtering of county incentives', async t => {
   t.equal(shouldFind.stateIncentives.length, 1);
 
   const shouldNotFind = calculateStateIncentivesAndSavings(
-    { state: 'CO', county_fips: '11111', city: 'Asdf', zcta: '00000' },
+    {
+      state: 'CO',
+      zcta: '00000',
+      geographies: [
+        {
+          id: 222,
+          name: '',
+          type: GeographyType.County,
+          state: 'CO',
+          county_fips: '88888',
+          intersection_proportion: 1.0,
+        },
+      ],
+    },
     request,
     [incentive],
     {},
@@ -646,78 +712,6 @@ test('correct filtering of county incentives', async t => {
   );
   t.ok(shouldNotFind);
   t.equal(shouldNotFind.stateIncentives.length, 0);
-});
-
-test('correct filtering of city incentives', async t => {
-  const incentive: StateIncentive = {
-    id: 'CO',
-    payment_methods: [PaymentMethod.AccountCredit],
-    items: ['ducted_heat_pump'],
-    program: 'ri_hvacAndWaterHeaterIncentives',
-    amount: {
-      type: AmountType.DollarAmount,
-      number: 100,
-    },
-    owner_status: [
-      OwnerStatus.Homeowner,
-    ],
-    short_description: {
-      en: 'This is a model incentive only to be used for testing.',
-    },
-  };
-
-  const programs: Programs = {
-    ri_hvacAndWaterHeaterIncentives: {
-      name: { en: '' },
-      url: { en: '' },
-      authority: 'mock-city-authority',
-      authority_type: AuthorityType.City,
-    },
-  };
-
-  const authorities: AuthoritiesByType = {
-    state: {},
-    utility: {},
-    city: {
-      'mock-city-authority': {
-        name: 'The Mock Authority Company',
-        city: 'New York',
-        county_fips: '99999',
-      },
-    },
-  };
-
-  const request = {
-    owner_status: OwnerStatus.Homeowner,
-    household_income: 120000,
-    tax_filing: FilingStatus.Single,
-    household_size: 1,
-    authority_types: [AuthorityType.City],
-    include_beta_states: true,
-  };
-  const shouldFind = calculateStateIncentivesAndSavings(
-    { state: 'CO', city: 'New York', county_fips: '99999', zcta: '00000' },
-    request,
-    [incentive],
-    {},
-    authorities,
-    programs,
-    { computedAMI80: 80000, computedAMI150: 150000, evCreditEligible: false },
-  );
-  t.ok(shouldFind);
-  t.equal(shouldFind.stateIncentives.length, 1);
-
-  const shouldNotFindWithPartialMatch = calculateStateIncentivesAndSavings(
-    { state: 'CO', city: 'New York', county_fips: '11111', zcta: '00000' },
-    request,
-    [incentive],
-    {},
-    authorities,
-    programs,
-    { computedAMI80: 80000, computedAMI150: 150000, evCreditEligible: false },
-  );
-  t.ok(shouldNotFindWithPartialMatch);
-  t.equal(shouldNotFindWithPartialMatch.stateIncentives.length, 0);
 });
 
 test('correctly evaluates savings when state tax liability is lower than max savings', async t => {
@@ -748,13 +742,12 @@ test('correctly evaluates savings when state tax liability is lower than max sav
   };
 
   const authorities: AuthoritiesByType = {
-    state: {},
+    city: {},
     utility: {},
-    city: {
+    state: {
       'mock-state-authority': {
         name: 'Colorado Mock Department of Energy',
-        city: 'Colorado Springs',
-        county_fips: '11111',
+        geography_id: 1,
       },
     },
   };
@@ -771,9 +764,17 @@ test('correctly evaluates savings when state tax liability is lower than max sav
   const result = calculateStateIncentivesAndSavings(
     {
       state: 'CO',
-      city: 'Colorado Springs',
-      county_fips: '11111',
       zcta: '80903',
+      geographies: [
+        {
+          id: 1,
+          name: '',
+          type: GeographyType.State,
+          state: 'CO',
+          county_fips: null,
+          intersection_proportion: 1.0,
+        },
+      ],
     },
     request,
     [incentive],
