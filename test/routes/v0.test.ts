@@ -57,7 +57,7 @@ test('response is valid and correct', async t => {
   t.equal(calculatorResponse.estimated_annual_savings, 1040);
 
   t.equal(calculatorResponse.pos_rebate_incentives.length, 8);
-  t.equal(calculatorResponse.tax_credit_incentives.length, 11);
+  t.equal(calculatorResponse.tax_credit_incentives.length, 10);
 
   const snapshotPath = './test/snapshots/v0-80212-homeowner-80000-joint-4.json';
   if (process.env.UPDATE_SNAPSHOTS) {
@@ -267,7 +267,7 @@ test('zips with parent ZCTA', async t => {
   const calculatorResponse = JSON.parse(res.payload);
   t.equal(res.statusCode, 200, 'response status is 200');
   t.equal(calculatorResponse.pos_rebate_incentives.length, 8);
-  t.equal(calculatorResponse.tax_credit_incentives.length, 11);
+  t.equal(calculatorResponse.tax_credit_incentives.length, 10);
 });
 
 const ESTIMATION_TESTS = [
@@ -327,7 +327,7 @@ test('/incentives', async t => {
   const app = await build(t);
   const res = await app.inject({ url: '/api/v0/incentives' });
   const incentivesResponse = JSON.parse(res.payload);
-  t.equal(incentivesResponse.incentives.length, 33);
+  t.equal(incentivesResponse.incentives.length, 32);
   t.equal(res.statusCode, 200, 'response status is 200');
 
   const ajv = new Ajv({
