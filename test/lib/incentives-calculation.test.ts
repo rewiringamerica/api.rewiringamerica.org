@@ -181,7 +181,7 @@ test('correctly evaluates scenario "Single w/ $120k Household income in NJ"', as
   );
 
   t.equal(pos_rebate_incentives.length, 7);
-  t.equal(tax_credit_incentives.length, 11);
+  t.equal(tax_credit_incentives.length, 12);
   t.equal(performance_rebate_incentives.length, 1);
 
   // count the incentives by key used to de-dupe in UI:
@@ -291,7 +291,7 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
   );
 
   t.equal(pos_rebate_incentives.length, 7);
-  t.equal(tax_credit_incentives.length, 11);
+  t.equal(tax_credit_incentives.length, 12);
   t.equal(performance_rebate_incentives.length, 1);
 
   // count the incentives by key used to de-dupe in UI:
@@ -401,7 +401,7 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
   );
 
   t.equal(pos_rebate_incentives.length, 7);
-  t.equal(tax_credit_incentives.length, 11);
+  t.equal(tax_credit_incentives.length, 12);
   t.equal(performance_rebate_incentives.length, 1);
 
   // count the incentives by key used to de-dupe in UI:
@@ -801,10 +801,10 @@ test('correctly excludes IRA rebates', async t => {
     true,
   );
 
-  t.equal(data.incentives.length, 11);
+  t.equal(data.incentives.length, 12);
   t.equal(
     data.incentives.filter(i => i.payment_methods[0] === 'tax_credit').length,
-    11,
+    12,
   );
   t.equal(data.savings.pos_rebate, 0);
   t.equal(data.savings.performance_rebate, 0);
