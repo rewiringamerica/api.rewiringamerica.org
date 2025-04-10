@@ -1422,6 +1422,61 @@
     "updated_at": "2025-04-02T18:18:11.624Z"
   },
   {
+    "id": 16,
+    "loan_program_key": "MN-1",
+    "name": "Efficiency Loan",
+    "description": "The Efficiency Loan Program provides financing for energy-efficient home improvements such as heating, cooling, water heaters, and more.",
+    "description_langs": {
+      "es": "El Programa de Préstamos de Eficiencia ofrece financiamiento para mejoras energéticas en el hogar, como calefacción, refrigeración, calentadores de agua y más."
+    },
+    "status": "PUBLISHED",
+    "state": "MN",
+    "is_national": false,
+    "website_url": "https://www.stearnselectric.org/save-money-and-energy/tools-and-resources/efficiency-loan/",
+    "financial_authority_id": 13,
+    "financial_authority": {
+      "id": 13,
+      "authority_type": "utility",
+      "description": "Stearns Electric Association offers an Efficiency Loan Program to help members finance energy-efficient home improvements.",
+      "name": "Stearns Electric Association",
+      "state": "MN",
+      "city": "Melrose",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2024-10-31T21:00:52.251Z",
+      "updated_at": "2024-10-31T21:00:52.251Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WATER_HEATER"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 6,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 5000,
+      "min_interest_rate": 5,
+      "max_interest_rate": 5,
+      "max_repayment_months": 60,
+      "created_at": "2025-02-18T22:33:28.507Z",
+      "updated_at": "2025-04-10T19:30:56.037Z"
+    },
+    "created_at": "2024-10-31T21:00:52.499Z",
+    "updated_at": "2025-04-10T19:30:56.102Z"
+  },
+  {
     "id": 33,
     "loan_program_key": "CO-4",
     "name": "Green Home Improvement Loan",
@@ -1895,6 +1950,61 @@
     "updated_at": "2025-03-13T21:35:40.691Z"
   },
   {
+    "id": 64,
+    "loan_program_key": "MD-2",
+    "name": "Clean Energy Advantage Loan Pilot Program",
+    "description": "The CEA Loan Pilot Program offers Maryland residents financing for residential energy improvements including HVAC, water heating, and weatherization upgrades. Homeowners within Maryland service territories for BGE, SMECO, Potomac Edison, Delmarva Power, Pepco, and Washington Gas are eligible for the program.",
+    "description_langs": {
+      "es": "El Programa Piloto de Préstamos CEA ofrece a los residentes de Maryland financiamiento para mejoras energéticas residenciales, incluidas mejoras de HVAC, calentamiento de agua y climatización. Los propietarios de viviendas dentro de los territorios de servicio de Maryland para BGE, SMECO, Potomac Edison, Delmarva Power, Pepco y Washington Gas son elegibles para el programa."
+    },
+    "status": "PUBLISHED",
+    "state": "MD",
+    "is_national": false,
+    "website_url": "https://cealoan.org/for-customers/",
+    "financial_authority_id": 53,
+    "financial_authority": {
+      "id": 53,
+      "authority_type": "credit_union",
+      "description": "The Clean Energy Credit Union is the participating lender for the Clean Energy Advantage Loan Pilot Program. The program is open to residents within the following Maryland utility service territories: BGE, SMECO, Potomac Edison, Delmarva Power, Pepco, and Washington Gas.",
+      "name": "Clean Energy Credit Union",
+      "state": "MD",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-04-10T18:10:10.510Z",
+      "updated_at": "2025-04-10T18:10:10.510Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "WEATHERIZATION"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 63,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": 3000,
+      "max_loan_amount": 35000,
+      "min_interest_rate": 5.75,
+      "max_interest_rate": null,
+      "max_repayment_months": null,
+      "created_at": "2025-04-10T18:14:48.275Z",
+      "updated_at": "2025-04-10T18:14:48.275Z"
+    },
+    "created_at": "2025-04-10T18:14:48.292Z",
+    "updated_at": "2025-04-10T18:14:48.292Z"
+  },
+  {
     "id": 51,
     "loan_program_key": "GA-6",
     "name": "Energy Efficient Loan Program",
@@ -1951,6 +2061,64 @@
     },
     "created_at": "2025-03-13T22:36:51.908Z",
     "updated_at": "2025-03-13T22:36:51.908Z"
+  },
+  {
+    "id": 65,
+    "loan_program_key": "MN-2",
+    "name": "MHFA Home Energy Loan",
+    "description": "This loan program offers loans for Minnesota homeowners to make energy efficient home improvements including HVAC, water heater, and weatherization upgrades.",
+    "description_langs": {
+      "es": "Este programa de préstamos ofrece préstamos a propietarios de viviendas de Minnesota para realizar mejoras energéticamente eficientes en el hogar, incluidas mejoras en HVAC, calentador de agua y climatización."
+    },
+    "status": "PUBLISHED",
+    "state": "MN",
+    "is_national": false,
+    "website_url": "https://www.mncee.org/mhfa-home-energy-loan",
+    "financial_authority_id": 54,
+    "financial_authority": {
+      "id": 54,
+      "authority_type": "state",
+      "description": "The Minnesota Housing Finance Agency (MHFA) offers home energy loans for Minnesota homeowners to make energy efficient improvements to their homes.",
+      "name": "Minnesota Housing Finance Agency",
+      "state": "MN",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-04-10T20:24:55.447Z",
+      "updated_at": "2025-04-10T20:24:55.447Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "SOLAR"
+      },
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "WEATHERIZATION"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 64,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 60000,
+      "min_interest_rate": 7.125,
+      "max_interest_rate": null,
+      "max_repayment_months": null,
+      "created_at": "2025-04-10T20:28:24.649Z",
+      "updated_at": "2025-04-10T20:28:24.649Z"
+    },
+    "created_at": "2025-04-10T20:28:24.670Z",
+    "updated_at": "2025-04-10T20:28:24.670Z"
   },
   {
     "id": 28,
@@ -2118,6 +2286,64 @@
     "updated_at": "2025-03-13T23:00:55.554Z"
   },
   {
+    "id": 11,
+    "loan_program_key": "WA-1",
+    "name": "Energy Smart Loans",
+    "description": "Energy Smart Loans are designed to help homeowners finance energy-efficient home improvements such as solar, heating, cooling, and weatherization projects.",
+    "description_langs": {
+      "es": "Los préstamos Energy Smart están diseñados para ayudar a los propietarios a financiar mejoras energéticas en el hogar, como proyectos de energía solar, calefacción, refrigeración y climatización."
+    },
+    "status": "PUBLISHED",
+    "state": "WA",
+    "is_national": false,
+    "website_url": "https://www.psccu.org/energysmart.aspx",
+    "financial_authority_id": 8,
+    "financial_authority": {
+      "id": 8,
+      "authority_type": "credit_union",
+      "description": "Puget Sound Cooperative Credit Union offers the Energy Smart Loans program to help homeowners finance energy-efficient home improvements.",
+      "name": "Puget Sound Cooperative Credit Union",
+      "state": "WA",
+      "city": null,
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2024-10-31T21:00:49.573Z",
+      "updated_at": "2024-10-31T21:00:49.573Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "SOLAR"
+      },
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "BATTERY_INSTALLATION"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 12,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 85000,
+      "min_interest_rate": 7,
+      "max_interest_rate": 12.5,
+      "max_repayment_months": 240,
+      "created_at": "2025-02-18T22:33:28.507Z",
+      "updated_at": "2025-04-10T22:40:52.620Z"
+    },
+    "created_at": "2024-10-31T21:00:49.822Z",
+    "updated_at": "2025-04-10T22:40:52.640Z"
+  },
+  {
     "id": 17,
     "loan_program_key": "GA-1",
     "name": "Heat Pump Financing",
@@ -2225,6 +2451,64 @@
     "updated_at": "2025-03-14T00:27:11.682Z"
   },
   {
+    "id": 66,
+    "loan_program_key": "WA-2",
+    "name": "Energy-Efficiency Financing",
+    "description": "This loan program offers financings and on-bill repayment for energy efficient improvements including HVAC, weatherization, and appliance upgrades.",
+    "description_langs": {
+      "es": "Este programa de préstamos ofrece financiamiento y pago en factura para mejoras de eficiencia energética que incluyen HVAC, climatización y actualizaciones de electrodomésticos."
+    },
+    "status": "PUBLISHED",
+    "state": "WA",
+    "is_national": false,
+    "website_url": "https://www.myavista.com/energy-savings/energy-smart-loans/wa-energy-efficiency-financing",
+    "financial_authority_id": 55,
+    "financial_authority": {
+      "id": 55,
+      "authority_type": "utility",
+      "description": "Avista is an energy provider which offers loans for residential energy efficiency improvements.",
+      "name": "Avista Corporation",
+      "state": "WA",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-04-10T22:43:50.226Z",
+      "updated_at": "2025-04-10T22:50:52.346Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "ENERGY_STAR_APPLIANCES"
+      },
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "WATER_HEATER"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 65,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": 1000,
+      "max_loan_amount": 30000,
+      "min_interest_rate": null,
+      "max_interest_rate": 7.5,
+      "max_repayment_months": null,
+      "created_at": "2025-04-10T22:49:09.739Z",
+      "updated_at": "2025-04-10T22:49:09.739Z"
+    },
+    "created_at": "2025-04-10T22:49:09.756Z",
+    "updated_at": "2025-04-10T22:50:52.374Z"
+  },
+  {
     "id": 55,
     "loan_program_key": "PA-2",
     "name": "Homeowners Energy Efficiency Loan Program",
@@ -2275,5 +2559,60 @@
     },
     "created_at": "2025-03-14T00:45:06.538Z",
     "updated_at": "2025-03-14T00:45:06.538Z"
+  },
+  {
+    "id": 67,
+    "loan_program_key": "WA-3",
+    "name": "Energy Efficiency Loans",
+    "description": "This loan program offers Lewis County residents financing for energy efficient home improvements, such as HVAC or weatherization upgrades.",
+    "description_langs": {
+      "es": "Este programa de préstamos ofrece a los residentes del condado de Lewis financiamiento para mejoras energéticamente eficientes en el hogar, como mejoras de HVAC o climatización."
+    },
+    "status": "PUBLISHED",
+    "state": "WA",
+    "is_national": false,
+    "website_url": "https://www.lcpud.org/energy-efficiency/energy-efficiency-loans/",
+    "financial_authority_id": 56,
+    "financial_authority": {
+      "id": 56,
+      "authority_type": "county",
+      "description": "Lewis County offers energy efficiency loans for its residents.",
+      "name": "Lewis County Public Utility District",
+      "state": "WA",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-04-10T23:03:48.626Z",
+      "updated_at": "2025-04-10T23:03:48.626Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "WATER_HEATER"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 66,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 7500,
+      "min_interest_rate": 5,
+      "max_interest_rate": 5,
+      "max_repayment_months": null,
+      "created_at": "2025-04-10T23:07:04.749Z",
+      "updated_at": "2025-04-10T23:07:04.749Z"
+    },
+    "created_at": "2025-04-10T23:07:04.765Z",
+    "updated_at": "2025-04-10T23:07:04.765Z"
   }
 ]

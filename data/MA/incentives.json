@@ -12848,5 +12848,28 @@
       "en": "$1,250/ton rebate, up to $10,000 for a partial-home air source heat pump."
     },
     "end_date": "2025-12-31"
+  },
+  {
+    "id": "MA-599",
+    "eligible_geo_group": "ma-mass-save",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_to_water_heat_pump"
+    ],
+    "program": "ma_massSave_massSaveEnhancedResidentialOffers",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 16000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $16,000 rebate per home for a whole-home air to water heat pump, for moderate income residents."
+    },
+    "end_date": "2025-12-31",
+    "low_income": "ma-massSave-incomeEligible-enhanced"
   }
 ]

@@ -664,5 +664,631 @@
     "short_description": {
       "en": "$150 rebate for an electric water heater."
     }
+  },
+  {
+    "id": "NC-30",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "air_sealing"
+    ],
+    "program": "nc_dukeEnergyCarolinas_dukeEnergyCarolinasSmartSaverInsulationAndSealingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$700 rebate for attic insulation and air sealing."
+    }
+  },
+  {
+    "id": "NC-31",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_sealing"
+    ],
+    "program": "nc_dukeEnergyCarolinas_dukeEnergyCarolinasSmartSaverInsulationAndSealingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$350 rebate for duct sealing."
+    }
+  },
+  {
+    "id": "NC-32",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "nc_dukeEnergyCarolinas_dukeEnergyCarolinasSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "minimum": 200,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $400 rebate for replacing a central air conditioner upon failure of previous unit, depending on efficiency rating."
+    }
+  },
+  {
+    "id": "NC-33",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "nc_dukeEnergyCarolinas_dukeEnergyCarolinasSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "minimum": 350,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $700 rebate for replacing an air-source heat pump upon failure of previous unit, depending on efficiency rating."
+    }
+  },
+  {
+    "id": "NC-34",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nc_dukeEnergyCarolinas_dukeEnergyCarolinasSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$700 rebate for replacement of mini-split heat pump ducted or multi-head unit upon failure, for whole-home conditioning."
+    }
+  },
+  {
+    "id": "NC-35",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "nc_dukeEnergyCarolinas_dukeEnergyCarolinasSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 300,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $500 for the early replacement of existing equipment with a central air conditioner, amount dependent on efficiency rating."
+    }
+  },
+  {
+    "id": "NC-36",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "nc_dukeEnergyCarolinas_dukeEnergyCarolinasSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900,
+      "minimum": 700,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $900 for the early replacement of existing equipment with an air-source heat pump, amount dependent on efficiency rating."
+    }
+  },
+  {
+    "id": "NC-37",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nc_dukeEnergyCarolinas_dukeEnergyCarolinasSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$900 rebate for the early replacement of existing unit with a mini-split heat pump ducted or multi-head for whole-home conditioning."
+    }
+  },
+  {
+    "id": "NC-38",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump",
+      "other"
+    ],
+    "program": "nc_dukeEnergyCarolinas_dukeEnergyCarolinasSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500,
+      "minimum": 2000,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2,500 for an air-source heat pump conversion to dual fuel 80% AFUE."
+    }
+  },
+  {
+    "id": "NC-39",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "nc_dukeEnergyCarolinas_dukeEnergyCarolinasSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,500 for an electric furnace/radiant heating conversion to air-source heat pump."
+    }
+  },
+  {
+    "id": "NC-40",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "nc_dukeEnergyCarolinas_dukeEnergyCarolinasSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2400,
+      "minimum": 2100,
+      "maximum": 2400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2,400 for an air-source heat pump conversion to cold climate heat pump (COP 2 or above)."
+    }
+  },
+  {
+    "id": "NC-41",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nc_dukeEnergyCarolinas_dukeEnergyCarolinasSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500,
+      "minimum": 2300,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2,500 for an air-source heat pump conversion to geothermal heat pump."
+    }
+  },
+  {
+    "id": "NC-42",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nc_dukeEnergyCarolinas_dukeEnergyCarolinasSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 125
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$125 rebate for a smart thermostat. Must be purchased along with eligible HVAC equipment."
+    }
+  },
+  {
+    "id": "NC-43",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nc_dukeEnergyCarolinas_dukeEnergyCarolinasSmartSaverHeatPumpWaterHeaterRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump water heater."
+    }
+  },
+  {
+    "id": "NC-44",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "air_sealing"
+    ],
+    "program": "nc_dukeEnergyProgress_dukeEnergyProgressSmartSaverInsulationAndSealingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$700 rebate for attic insulation and air sealing."
+    }
+  },
+  {
+    "id": "NC-45",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_sealing"
+    ],
+    "program": "nc_dukeEnergyProgress_dukeEnergyProgressSmartSaverInsulationAndSealingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$350 rebate for duct sealing."
+    }
+  },
+  {
+    "id": "NC-46",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "nc_dukeEnergyProgress_dukeEnergyProgressSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "minimum": 200,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $400 rebate for replacing a central air conditioner upon failure of previous unit, depending on efficiency rating."
+    }
+  },
+  {
+    "id": "NC-47",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "nc_dukeEnergyProgress_dukeEnergyProgressSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "minimum": 350,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $700 rebate for replacing an air-source heat pump upon failure of previous unit, depending on efficiency rating."
+    }
+  },
+  {
+    "id": "NC-48",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nc_dukeEnergyProgress_dukeEnergyProgressSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$700 rebate for replacement of mini-split heat pump ducted or multi-head unit upon failure, for whole-home conditioning."
+    }
+  },
+  {
+    "id": "NC-49",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "nc_dukeEnergyProgress_dukeEnergyProgressSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 300,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $500 for the early replacement of existing equipment with a central air conditioner, amount dependent on efficiency rating."
+    }
+  },
+  {
+    "id": "NC-50",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "nc_dukeEnergyProgress_dukeEnergyProgressSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900,
+      "minimum": 700,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $900 for the early replacement of existing equipment with an air-source heat pump, amount dependent on efficiency rating."
+    }
+  },
+  {
+    "id": "NC-51",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nc_dukeEnergyProgress_dukeEnergyProgressSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$900 rebate for the early replacement of existing unit with a mini-split heat pump ducted or multi-head for whole-home conditioning."
+    }
+  },
+  {
+    "id": "NC-52",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump",
+      "other"
+    ],
+    "program": "nc_dukeEnergyProgress_dukeEnergyProgressSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500,
+      "minimum": 2000,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2,500 for an air-source heat pump conversion to dual fuel 80% AFUE."
+    }
+  },
+  {
+    "id": "NC-53",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "nc_dukeEnergyProgress_dukeEnergyProgressSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,500 for an electric furnace/radiant heating conversion to air-source heat pump."
+    }
+  },
+  {
+    "id": "NC-54",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "nc_dukeEnergyProgress_dukeEnergyProgressSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2400,
+      "minimum": 2100,
+      "maximum": 2400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2,400 for an air-source heat pump conversion to cold climate heat pump (COP 2 or above)."
+    }
+  },
+  {
+    "id": "NC-55",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nc_dukeEnergyProgress_dukeEnergyProgressSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500,
+      "minimum": 2300,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2,500 for an air-source heat pump conversion to geothermal heat pump."
+    }
+  },
+  {
+    "id": "NC-56",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nc_dukeEnergyProgress_dukeEnergyProgressSmartSaverHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 125
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$125 rebate for a smart thermostat. Must be purchased along with eligible HVAC equipment."
+    }
+  },
+  {
+    "id": "NC-57",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nc_dukeEnergyProgress_dukeEnergyProgressSmartSaverHeatPumpWaterHeaterRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump water heater."
+    }
   }
 ]
