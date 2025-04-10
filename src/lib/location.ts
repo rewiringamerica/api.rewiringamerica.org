@@ -1,4 +1,4 @@
-import { GeocodeAccuracyType } from 'geocodio-library-node';
+import { Census, GeocodeAccuracyType } from 'geocodio-library-node';
 import { Database } from 'sqlite';
 import { geocoder } from './geocoder';
 
@@ -56,13 +56,14 @@ export async function resolveLocation(
     }
 
     // @ts-expect-error census.2020 is not included in the typedef
-    const censusInfo = result.fields.census['2020'];
+    const censusInfo = result.fields.census['2020'] as Census;
 
     return {
       state: result.address_components.state!,
-      zcta: result.address_components.zip!,
-      // @ts-expect-error city is optional in the typedef
-      city: result.address_components.city,
+      zcta:
+        (await zipLookup(db, result.address_components.zip!))?.zcta ??
+        result.address_components.zip!,
+      city: result.address_components.city!,
       county_fips: censusInfo.county_fips,
       tract_geoid: GEOCODIO_LOW_PRECISION.has(result.accuracy_type)
         ? undefined
