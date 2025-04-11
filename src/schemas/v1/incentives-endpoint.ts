@@ -104,9 +104,8 @@ export const API_INCENTIVES_RESPONSE_SCHEMA = {
     },
     metadata: {
       type: 'object',
-      required: ['last_updated', 'total_incentives', 'total_states'],
+      required: ['total_incentives', 'total_states'],
       properties: {
-        last_updated: { type: 'string' },
         total_incentives: { type: 'number' },
         total_states: { type: 'number' },
       },
