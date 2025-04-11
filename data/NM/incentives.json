@@ -3529,11 +3529,7 @@
       "rebate"
     ],
     "items": [
-      "ductless_heat_pump",
-      "ducted_heat_pump",
-      "smart_thermostat",
       "window_replacement",
-      "non_heat_pump_water_heater",
       "wall_insulation",
       "attic_or_roof_insulation",
       "basement_insulation",
@@ -3695,7 +3691,7 @@
   {
     "id": "NM-175",
     "payment_methods": [
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "ebike"
@@ -3710,7 +3706,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$1,000 rebate on ebike for income qualified customers from participating dealers."
+      "en": "$1,000 rebate on electric bike for income qualified customers from participating dealers."
     },
     "end_date": "2025-01-13",
     "paused": true
@@ -3907,8 +3903,7 @@
     ],
     "items": [
       "electric_vehicle_charger",
-      "used_electric_vehicle",
-      "new_electric_vehicle"
+      "used_electric_vehicle"
     ],
     "program": "nm_leaCountyElectricCooperative_lCECEnergyConservationPrograms",
     "amount": {
@@ -4276,9 +4271,7 @@
     ],
     "items": [
       "new_electric_vehicle",
-      "used_electric_vehicle",
-      "new_plugin_hybrid_vehicle",
-      "used_plugin_hybrid_vehicle"
+      "new_plugin_hybrid_vehicle"
     ],
     "program": "nm-el-paso-energy-efficiency",
     "amount": {
@@ -5180,7 +5173,7 @@
       "type": "dollar_amount",
       "number": 2500,
       "minimum": 800,
-      "maximum": 3000
+      "maximum": 2500
     },
     "owner_status": [
       "homeowner",
@@ -5417,5 +5410,96 @@
     },
     "start_date": "2024-01-01",
     "end_date": "2025-12-31"
+  },
+  {
+    "id": "NM-259",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_electric_vehicle",
+      "used_plugin_hybrid_vehicle"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$4,000 rebate off pre-owned qualifying electric vehicle, offered only to low-income customers."
+    },
+    "start_date": "2024-03-29",
+    "low_income": "nm-elpasoelectric-income-qualified"
+  },
+  {
+    "id": "NM-260",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "ebike"
+    ],
+    "program": "nm_pnm_pNMTransportationElectrificationProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 point-of-sale rebate on electric bike from participating dealers."
+    },
+    "end_date": "2025-01-13",
+    "paused": true
+  },
+  {
+    "id": "NM-261",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nm_rooseveltCountyElectricCooperative_rCECEnergyEfficiencyMatchingFundsProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,500 in matching funds for energy-efficient upgrades including heat pumps (16 SEER+), smart water heaters, insulation, thermostats and more."
+    }
+  },
+  {
+    "id": "NM-262",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump",
+      "non_heat_pump_water_heater"
+    ],
+    "program": "nm_rooseveltCountyElectricCooperative_rCECEnergyEfficiencyMatchingFundsProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,500 in matching funds for energy-efficient upgrades including heat pumps (16 SEER+), smart water heaters, insulation, thermostats and more."
+    }
   }
 ]
