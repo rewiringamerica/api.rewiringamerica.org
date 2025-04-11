@@ -95,9 +95,12 @@ export const API_INCENTIVES_RESPONSE_SCHEMA = {
               enum: Object.values(OwnerStatus),
             },
           },
-          eligible_geo_group: { type: 'string' },
+          income_qualified: {
+            type: 'boolean',
+            description:
+              'Indicates whether this incentive has income eligibility requirements',
+          },
           program: { type: 'string' },
-          low_income: { type: 'string' },
         },
         additionalProperties: false,
       },

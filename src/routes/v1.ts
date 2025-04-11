@@ -4,6 +4,10 @@ import { Database } from 'sqlite';
 import { AUTHORITIES_BY_STATE } from '../data/authorities';
 import { LOCALES } from '../data/locale';
 import { parseProgramJSON, PROGRAMS } from '../data/programs';
+import {
+  STATE_INCENTIVES_BY_STATE,
+  StateIncentive,
+} from '../data/state_incentives';
 import { computeAMIAndEVCreditEligibility } from '../lib/ami-evcredit-calculation';
 import { InvalidInputError } from '../lib/error';
 import { t, tr } from '../lib/i18n';
@@ -25,6 +29,11 @@ import {
 } from '../schemas/v1/calculator-endpoint';
 import { API_INCENTIVE_SCHEMA, APIIncentive } from '../schemas/v1/incentive';
 import {
+  API_INCENTIVES_RESPONSE_SCHEMA,
+  API_INCENTIVES_SCHEMA,
+  APIIncentivesResponse,
+} from '../schemas/v1/incentives-endpoint';
+import {
   API_PROGRAMS_REQUEST_SCHEMA,
   API_PROGRAMS_RESPONSE_SCHEMA,
   APIProgramsResponse,
@@ -42,6 +51,10 @@ function transformIncentives(
     // Transfer authority fields from program
     authority: PROGRAMS[incentive.program].authority ?? undefined,
     authority_type: PROGRAMS[incentive.program].authority_type,
+
+    // Add income_qualified flag based on presence of low_income field
+    income_qualified: !!(incentive as StateIncentive & { eligible: boolean })
+      .low_income,
 
     // Localize localizable fields
     program: tr(PROGRAMS[incentive.program].name, language),
@@ -64,6 +77,7 @@ export default async function (
         typeof API_INCENTIVE_SCHEMA,
         typeof API_CALCULATOR_RESPONSE_SCHEMA,
         typeof API_PROGRAMS_RESPONSE_SCHEMA,
+        typeof API_INCENTIVES_RESPONSE_SCHEMA,
       ];
     }>
   >();
@@ -217,6 +231,57 @@ export default async function (
           programs,
         );
         reply.status(200).type('application/json').send(payload);
+      } catch (error) {
+        if (error instanceof InvalidInputError) {
+          throw fastify.httpErrors.createError(400, error.message, {
+            field: error.field,
+          });
+        } else {
+          throw error;
+        }
+      }
+    },
+  );
+
+  //
+  // Returns a list of incentives.
+  //
+  server.get(
+    '/api/v1/incentives',
+    { schema: API_INCENTIVES_SCHEMA },
+    async (request, reply) => {
+      const language = request.query.language ?? 'en';
+      const { state } = request.query;
+
+      try {
+        const incentives: CalculatedIncentive[] = [];
+        const states = state ? [state] : Object.keys(statesWithStatus);
+
+        for (const stateId of states) {
+          if (!STATE_INCENTIVES_BY_STATE[stateId]) {
+            continue;
+          }
+
+          const stateIncentives = STATE_INCENTIVES_BY_STATE[stateId];
+          incentives.push(
+            ...stateIncentives.map(incentive => ({
+              ...incentive,
+              eligible: true,
+            })),
+          );
+        }
+
+        const transformedIncentives = transformIncentives(incentives, language);
+        const response: APIIncentivesResponse = {
+          incentives:
+            transformedIncentives as unknown as APIIncentivesResponse['incentives'],
+          metadata: {
+            total_incentives: transformedIncentives.length,
+            total_states: states.length,
+          },
+        };
+
+        reply.status(200).type('application/json').send(response);
       } catch (error) {
         if (error instanceof InvalidInputError) {
           throw fastify.httpErrors.createError(400, error.message, {
