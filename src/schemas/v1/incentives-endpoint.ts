@@ -31,7 +31,6 @@ export const API_INCENTIVES_REQUEST_SCHEMA = {
 export const API_INCENTIVES_RESPONSE_SCHEMA = {
   $id: 'APIIncentivesResponse',
   type: 'object',
-  required: ['incentives', 'metadata'],
   properties: {
     incentives: {
       type: 'array',
@@ -115,6 +114,7 @@ export const API_INCENTIVES_RESPONSE_SCHEMA = {
       additionalProperties: false,
     },
   },
+  required: ['incentives', 'metadata'],
   additionalProperties: false,
 } as const;
 
@@ -125,7 +125,7 @@ export const API_INCENTIVES_SCHEMA = {
   querystring: API_INCENTIVES_REQUEST_SCHEMA,
   response: {
     200: {
-      ...API_INCENTIVES_RESPONSE_SCHEMA,
+      $ref: 'APIIncentivesResponse',
     },
     400: {
       $ref: 'Error',
