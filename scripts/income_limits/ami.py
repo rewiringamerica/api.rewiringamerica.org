@@ -56,12 +56,15 @@ geoid_to_postal = {v: k for k, v in util.STATE_POSTAL_TO_GEOID.items()}
 ami_by_countysub['state'] = ami_by_countysub.county_geoid.str.slice(
     0, 2).map(geoid_to_postal)
 
+# add a column for 60 percent AMI
+ami_by_countysub['ami_60'] = ami_by_countysub['ami_50'] * 1.2
+
 # write this now since it takes a while to pull
 
 geo_cols = ["countysub_geoid",  "county_geoid", "state",  "county_name",
             "counties_msa", "town_name", "metro_status", "metro_name", "area_name"]
 ami_cols = ['median_family_income', 'ami_30',
-            'ami_50', 'ami_80', 'ami_100', 'ami_150']
+            'ami_50', 'ami_60', 'ami_80', 'ami_100', 'ami_150']
 
 fpath_out = util.DATA_FPATH / 'processed' / 'ami_by_countysub.csv'
 print(f"Writing to {fpath_out}")
@@ -110,7 +113,7 @@ tract_countysub_crosswalk['tract_geoid'] = tract_countysub_crosswalk.apply(
 
 # First, impute 80%, 50% and 30% AMI for any county/countysubs to pull from API (see error log)
 missing_ami_80_mask = ami_by_countysub.ami_80.isna()
-for ami_threshold in [30, 50, 80]:
+for ami_threshold in [30, 50, 60, 80]:
     ami_by_countysub.loc[missing_ami_80_mask,
                          f"ami_{ami_threshold}"] = ami_by_countysub.loc[missing_ami_80_mask, "ami_100"] * ami_threshold/100
 
@@ -180,9 +183,9 @@ assert len(set(zcta_countysub_crosswalk.zcta).difference(
 assert len(set(tract_countysub_crosswalk.tract_geoid).difference(
     ami_by_tract.tract_geoid)) == 0
 
-# check that all 80% and 100% AMI's are non-missing in the final tables
-assert sum(ami_by_zcta.ami_80.isna() | ami_by_zcta.ami_100.isna()) == 0
-assert sum(ami_by_tract.ami_80.isna() | ami_by_tract.ami_100.isna()) == 0
+# check that all 80%, 60%, and 100% AMI's are non-missing in the final tables
+assert sum(ami_by_zcta.ami_80.isna() | ami_by_zcta.ami_60.isna() | ami_by_zcta.ami_100.isna()) == 0
+assert sum(ami_by_tract.ami_80.isna() | ami_by_tract.ami_60.isna() | ami_by_tract.ami_100.isna()) == 0
 
 # -- 4. Create territory lookup  -- #
 # For AS,GU,MP there is only one county over the whole territory,
