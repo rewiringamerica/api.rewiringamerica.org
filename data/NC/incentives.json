@@ -1290,5 +1290,734 @@
     "short_description": {
       "en": "$500 rebate for a heat pump water heater."
     }
+  },
+  {
+    "id": "NC-58",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "nc_energyunitedElectricMemberCorp_energyUnitedRebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "minimum": 150,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $300 rebate for a heat pump, amount dependent on efficiency rating.",
+      "es": "Reembolso de hasta $300 por una bomba de calor, el monto depende de la clasificación de eficiencia."
+    }
+  },
+  {
+    "id": "NC-59",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "nc_lumbeeRiverElectricMemberCorp_lumbeeRiverRebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 15
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$15 rebate for a high efficiency central AC unit."
+    }
+  },
+  {
+    "id": "NC-60",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "nc_lumbeeRiverElectricMemberCorp_lumbeeRiverRebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 60
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$60 rebate for a high efficiency heat pump."
+    }
+  },
+  {
+    "id": "NC-61",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nc_lumbeeRiverElectricMemberCorp_lumbeeRiverRebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 rebate for a geothermal heat pump."
+    }
+  },
+  {
+    "id": "NC-62",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing"
+    ],
+    "program": "nc_lumbeeRiverElectricMemberCorp_lumbeeRiverRebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$25 rebate available for air sealing."
+    }
+  },
+  {
+    "id": "NC-63",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "duct_sealing"
+    ],
+    "program": "nc_lumbeeRiverElectricMemberCorp_lumbeeRiverRebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for duct sealing or replacement."
+    }
+  },
+  {
+    "id": "NC-64",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "floor_insulation",
+      "crawlspace_insulation"
+    ],
+    "program": "nc_lumbeeRiverElectricMemberCorp_lumbeeRiverRebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for insulation, including attic/ceiling and floor/crawl space insulation."
+    }
+  },
+  {
+    "id": "NC-65",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nc_piedmontElectricMemberCorp_pEMCRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for a smart thermostat upon entering in PEMC's Smart Thermostat Savings Program."
+    }
+  },
+  {
+    "id": "NC-66",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nc_piedmontElectricMemberCorp_pEMCRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $600 for installing an electric heat pump."
+    }
+  },
+  {
+    "id": "NC-67",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "used_electric_vehicle",
+      "new_electric_vehicle"
+    ],
+    "program": "nc_piedmontElectricMemberCorp_pEMCRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for purchasing or leasing a plug-in electric vehicle."
+    }
+  },
+  {
+    "id": "NC-68",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nc_piedmontElectricMemberCorp_pEMCRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an ENERGY STAR rated heat pump water heater."
+    }
+  },
+  {
+    "id": "NC-69",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "duct_sealing"
+    ],
+    "program": "nc_piedmontElectricMemberCorp_pEMCRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for attic air insulation or duct sealing."
+    }
+  },
+  {
+    "id": "NC-70",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "nc_randolphElectricMemberCorp_randolphEMCEnergySolutions",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy analysis for Randolph EMC members."
+    }
+  },
+  {
+    "id": "NC-71",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "air_sealing",
+      "duct_sealing",
+      "other_insulation",
+      "other_weatherization",
+      "smart_thermostat"
+    ],
+    "program": "nc_southRiverElectricMemberCorp_southRiverRebatesAndEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 rebate available for low-income weatherization, including air/duct sealing, insulation, HVAC tune-up/replacement, and programmable thermostat."
+    }
+  },
+  {
+    "id": "NC-72",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "solar_water_heater"
+    ],
+    "program": "nc_southRiverElectricMemberCorp_southRiverRebatesAndEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate for a solar water heating system."
+    }
+  },
+  {
+    "id": "NC-73",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nc_southRiverElectricMemberCorp_southRiverRebatesAndEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$150 rebate for a heat pump water heater."
+    }
+  },
+  {
+    "id": "NC-74",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "nc_southRiverElectricMemberCorp_southRiverRebatesAndEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "minimum": 150,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $200 rebate for an air source or dual fuel heat pump."
+    }
+  },
+  {
+    "id": "NC-75",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nc_southRiverElectricMemberCorp_southRiverRebatesAndEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 rebate for a geothermal heat pump."
+    }
+  },
+  {
+    "id": "NC-76",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "nc_southRiverElectricMemberCorp_southRiverRebatesAndEfficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for a central AC unit in a single family or manufactured home."
+    }
+  },
+  {
+    "id": "NC-77",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "nc_southRiverElectricMemberCorp_southRiverRebatesAndEfficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot",
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$2/square foot rebate, up to $200 for energy efficient exterior windows. "
+    }
+  },
+  {
+    "id": "NC-78",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nc_tidelandElectricMemberCorp_tidelandEMCRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150,
+      "minimum": 75,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $150 for air source heat pump installations."
+    }
+  },
+  {
+    "id": "NC-79",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation",
+      "other_heat_pump"
+    ],
+    "program": "nc_tidelandElectricMemberCorp_tidelandEMCRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 for geothermal heat pump installations, qualifying dual fuel heat pump installations, and hyper-heating, whole house heat pump systems."
+    }
+  },
+  {
+    "id": "NC-80",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nc_tidelandElectricMemberCorp_tidelandEMCRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 rebate for a heat pump water heater installation."
+    }
+  },
+  {
+    "id": "NC-81",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner",
+      "other_heat_pump",
+      "geothermal_heating_installation"
+    ],
+    "program": "nc_jones-OnslowElectricMembershipCorp_jOEMCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 rebate for ENERGY STAR rated central AC units, air-to-air heat pumps, or geothermal heat pumps."
+    }
+  },
+  {
+    "id": "NC-82",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nc_jones-OnslowElectricMembershipCorp_jOEMCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 rebate for a heat pump water heater."
+    }
+  },
+  {
+    "id": "NC-83",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater",
+      "non_heat_pump_clothes_dryer",
+      "other",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "nc_jones-OnslowElectricMembershipCorp_jOEMCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$25 rebate for ENERGY STAR certified appliances including washers/dryers, refrigerators, and water heaters."
+    }
+  },
+  {
+    "id": "NC-84",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "nc_jones-OnslowElectricMembershipCorp_jOEMCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for installing a Level 2 electric vehicle charger."
+    }
+  },
+  {
+    "id": "NC-85",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer",
+      "other"
+    ],
+    "program": "nc_fourCountyElectricMemberCorp_fourCountyEMCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 bill credit for purchasing ENERGY STAR appliances, including clothes washers and dryers, dishwashers, freezers, and refrigerators."
+    }
+  },
+  {
+    "id": "NC-86",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "other_heat_pump",
+      "geothermal_heating_installation",
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "nc_fourCountyElectricMemberCorp_fourCountyEMCResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 100,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100/ton rebate for installing a heat pump."
+    }
+  },
+  {
+    "id": "NC-87",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nc_fourCountyElectricMemberCorp_fourCountyEMCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 rebate for an ENERGY STAR heat pump water heater."
+    }
+  },
+  {
+    "id": "NC-88",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "nc_fourCountyElectricMemberCorp_fourCountyEMCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate to purchase and install an at-home EV charging station."
+    }
+  },
+  {
+    "id": "NC-89",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nc_fourCountyElectricMemberCorp_fourCountyEMCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$25 bill credit for electric or batter-powered lawn equipment."
+    }
+  },
+  {
+    "id": "NC-90",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nc_fourCountyElectricMemberCorp_fourCountyEMCResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for a smart thermostat after enrolling in the Connect to Save program."
+    }
   }
 ]

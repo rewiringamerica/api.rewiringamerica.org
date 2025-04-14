@@ -2054,7 +2054,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_cityOfChaskaElectricDepartment_energyRebates",
+    "program": "mn_cityOfChaskaElectricDepartment_cityOfChaskaEnergyRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 300
@@ -2063,8 +2063,9 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 rebate for a ducted air source heat pump."
-    }
+      "en": "$300 rebate for a ducted air source heat pump. Can be single package or split system."
+    },
+    "end_date": "2025-11-30"
   },
   {
     "id": "MN-98",
@@ -2074,7 +2075,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_cityOfChaskaElectricDepartment_energyRebates",
+    "program": "mn_cityOfChaskaElectricDepartment_cityOfChaskaEnergyRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 300
@@ -2144,6 +2145,381 @@
     ],
     "short_description": {
       "en": "$35 rebate for an electric clothes dryer"
+    }
+  },
+  {
+    "id": "MN-102",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_hibbingPublicUtilities_residentialRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for a ducted air source heat pump"
+    }
+  },
+  {
+    "id": "MN-103",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_hibbingPublicUtilities_residentialRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for a ductless air source heat pump"
+    }
+  },
+  {
+    "id": "MN-104",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mn_hibbingPublicUtilities_residentialRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for a cold climate heat pump."
+    }
+  },
+  {
+    "id": "MN-105",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_hibbingPublicUtilities_residentialRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for a heat pump water heater."
+    }
+  },
+  {
+    "id": "MN-106",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "mn_hibbingPublicUtilities_residentialRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 35
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$35 rebate for a clothes dryer"
+    }
+  },
+  {
+    "id": "MN-107",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_cityOfChaskaElectricDepartment_cityOfChaskaEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for a ductless air source heat pump."
+    },
+    "end_date": "2025-11-30"
+  },
+  {
+    "id": "MN-108",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_cityOfChaskaElectricDepartment_cityOfChaskaEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "minimum": 150,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $300 rebate for a heat pump water heater. Rebate amount dependent upon water heater size."
+    },
+    "end_date": "2025-11-30"
+  },
+  {
+    "id": "MN-109",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_austinUtilities_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2200,
+      "minimum": 900,
+      "maximum": 2200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,200 rebate for a ductless air source heat pump if existing heating system is electric. Maximum rebate not to exceed 50% of equipment cost."
+    }
+  },
+  {
+    "id": "MN-110",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_austinUtilities_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate for a ducted air source heat pump that meets cold climate specifications."
+    }
+  },
+  {
+    "id": "MN-111",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_allete_residentialRebatesAndServices",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for a ducted air source heat pump"
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-112",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_elkRiverMunicipalUtilities_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for a ducted air source heat pump."
+    }
+  },
+  {
+    "id": "MN-113",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_elkRiverMunicipalUtilities_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for a ductless air source heat pump."
+    }
+  },
+  {
+    "id": "MN-114",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mn_elkRiverMunicipalUtilities_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for a cold climate air source heat pump."
+    }
+  },
+  {
+    "id": "MN-115",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_elkRiverMunicipalUtilities_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 450,
+      "minimum": 400,
+      "maximum": 450
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $450 rebate for a heat pump water heater. Rebate amount dependent upon unit size. "
+    }
+  },
+  {
+    "id": "MN-116",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "mn_elkRiverMunicipalUtilities_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$40 rebate for a clothes dryer."
+    }
+  },
+  {
+    "id": "MN-117",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_cityOfNorthSaintPaulElectricUtilities_electricUtilityRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a ducted air source heat pump. May be a single package or split system."
+    }
+  },
+  {
+    "id": "MN-118",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_cityOfNorthSaintPaulElectricUtilities_electricUtilityRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a ductless air source heat pump. May be a single package or split system."
+    }
+  },
+  {
+    "id": "MN-119",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "mn_cityOfNorthSaintPaulElectricUtilities_electricUtilityRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$25 rebate for an electric clothes dryer"
     }
   }
 ]
