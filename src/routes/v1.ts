@@ -250,7 +250,7 @@ export default async function (
     '/api/v1/incentives',
     { schema: API_INCENTIVES_SCHEMA },
     async (request, reply) => {
-      const language = request.query.language ?? 'en';
+      // const language = request.query.language ?? 'en';
       const { state } = request.query;
 
       try {
@@ -271,17 +271,15 @@ export default async function (
           );
         }
 
-        const transformedIncentives = transformIncentives(incentives, language);
-        const response: APIIncentivesResponse = {
-          incentives:
-            transformedIncentives as unknown as APIIncentivesResponse['incentives'],
+        const payload: APIIncentivesResponse = {
+          incentives,
           metadata: {
-            total_incentives: transformedIncentives.length,
+            total_incentives: incentives.length,
             total_states: states.length,
           },
         };
 
-        reply.status(200).type('application/json').send(response);
+        reply.status(200).type('application/json').send(payload);
       } catch (error) {
         if (error instanceof InvalidInputError) {
           throw fastify.httpErrors.createError(400, error.message, {
