@@ -16,7 +16,7 @@ the most recently available data year unless otherwise specified.
 # currently ~10 counties/county subs throw errors, see hud_ami_api_error.log.
 print(f"Pulling AMI data...")
 mfi_ami80_by_countysub = pd.concat([
-    util.pull_state_amis_by_countysub(state_postal_code=state, verbose=True)
+    util.pull_state_amis_by_countysub(state_postal_code=state, year=2024, verbose=True)
     for state in util.STATE_POSTAL_TO_GEOID.keys()]
 )
 
