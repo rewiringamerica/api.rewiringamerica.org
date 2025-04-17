@@ -176,16 +176,15 @@ ami_by_tract = util.aggregate_over_origin(
     groupby_cols=['tract_geoid', 'state'],
     agg_cols=ami_cols)
 
-
 # check that all zctas and tracts appear in the final tables
 assert len(set(zcta_countysub_crosswalk.zcta).difference(
     ami_by_zcta.zcta)) == 0
 assert len(set(tract_countysub_crosswalk.tract_geoid).difference(
     ami_by_tract.tract_geoid)) == 0
 
-# check that all 80%, 60%, and 100% AMI's are non-missing in the final tables
-assert sum(ami_by_zcta.ami_80.isna() | ami_by_zcta.ami_60.isna() | ami_by_zcta.ami_100.isna()) == 0
-assert sum(ami_by_tract.ami_80.isna() | ami_by_tract.ami_60.isna() | ami_by_tract.ami_100.isna()) == 0
+# check that all 60, 80%, and 100% AMI's are non-missing in the final tables
+assert sum(ami_by_zcta.ami_60.isna() | ami_by_zcta.ami_80.isna() | ami_by_zcta.ami_100.isna()) == 0
+assert sum(ami_by_tract.ami_60.isna() | ami_by_tract.ami_80.isna() | ami_by_tract.ami_100.isna()) == 0
 
 # -- 4. Create territory lookup  -- #
 # For AS,GU,MP there is only one county over the whole territory,
