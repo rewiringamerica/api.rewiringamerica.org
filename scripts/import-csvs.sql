@@ -30,6 +30,7 @@ CREATE TABLE ami_by_zcta(
     median_family_income TEXT,
     ami_30 INT,
     ami_50 INT,
+    ami_60 INT,
     ami_80 INT,
     ami_100 INT,
     ami_150 INT
@@ -41,6 +42,7 @@ CREATE TABLE ami_by_tract(
     median_family_income TEXT,
     ami_30 INT,
     ami_50 INT,
+    ami_60 INT,
     ami_80 INT,
     ami_100 INT,
     ami_150 INT
@@ -52,6 +54,7 @@ CREATE TABLE ami_by_territory_zip(
     median_family_income INT,
     ami_30 INT,
     ami_50 INT,
+    ami_60 INT,
     ami_80 INT,
     ami_100 INT,
     ami_150 INT,
