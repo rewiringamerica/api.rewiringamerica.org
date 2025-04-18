@@ -2063,7 +2063,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 rebate for a ducted air source heat pump. Can be single package or split system."
+      "en": "$300 rebate for a ducted air source heat pump (single package or split system). Must be ENERGY STAR qualified and installed via Q.I. procedures."
     },
     "end_date": "2025-11-30"
   },
@@ -2084,7 +2084,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 rebate for a ductless air source heat pump."
+      "en": "$300 rebate for a ductless air source heat pump. Must be ENERGY STAR qualified and installed via Q.I. procedures."
     }
   },
   {
@@ -2104,7 +2104,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate for a ductless air source heat pump. Rebate is per qualified unit. "
+      "en": "$400 rebate for a ductless air source heat pump. Rebate is per qualified unit. Must be completed with a professional installation."
     }
   },
   {
@@ -2250,27 +2250,6 @@
     }
   },
   {
-    "id": "MN-107",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_cityOfChaskaElectricDepartment_cityOfChaskaEnergyRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 300
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$300 rebate for a ductless air source heat pump."
-    },
-    "end_date": "2025-11-30"
-  },
-  {
     "id": "MN-108",
     "payment_methods": [
       "rebate"
@@ -2341,7 +2320,7 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump"
+      "ductless_heat_pump"
     ],
     "program": "mn_allete_residentialRebatesAndServices",
     "amount": {
@@ -2352,7 +2331,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate for a ducted air source heat pump"
+      "en": "$400 rebate for a ductless air source heat pump. Must meet 2023 ENERGY STAR specifications and be installed by a participating contractor."
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
@@ -2521,5 +2500,427 @@
     "short_description": {
       "en": "$25 rebate for an electric clothes dryer"
     }
+  },
+  {
+    "id": "MN-120",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_fairfaxMunicipal_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750 rebate for a ducted air source heat pump. Rebate is per condensing unit. "
+    }
+  },
+  {
+    "id": "MN-121",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_fairfaxMunicipal_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750 rebate for a ductless air source heat pump. Rebate is per condensing unit. "
+    }
+  },
+  {
+    "id": "MN-122",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_fairfaxMunicipal_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for a heat pump water heater. "
+    }
+  },
+  {
+    "id": "MN-123",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "mn_fairfaxMunicipal_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for a washer dryer combo with an electric clothes dryer."
+    }
+  },
+  {
+    "id": "MN-124",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_freeborn-MowerCoopSvcs_heatingAndCoolingRebate",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 300,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 per ton rebate for a ducted air source heat pump."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-125",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_freeborn-MowerCoopSvcs_heatingAndCoolingRebate",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 300,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 per ton rebate for a ductless air source heat pump."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-126",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "mn_freeborn-MowerCoopSvcs_heatingAndCoolingRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$25 rebate for an induction range/cooktop."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-127",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "mn_fairfaxMunicipal_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$25 rebate for an electric clothes dryer. "
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-128",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "mn_freeborn-MowerCoopSvcs_heatingAndCoolingRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$25 rebate for an electric clothes dryer."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-129",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "mn_freeborn-MowerCoopSvcs_heatingAndCoolingRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an all-in-one washer and dryer combo."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-130",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_freeborn-MowerCoopSvcs_heatingAndCoolingRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for a heat pump water heater. "
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-131",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_otterTailPower_rebatesAndSavings",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 600,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$600 per ton rebate for a cold climate ductless air source heat pump. "
+    }
+  },
+  {
+    "id": "MN-132",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_otterTailPower_rebatesAndSavings",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 200,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 per ton rebate when ductless cold climate air source heat pump is installed by contractor participating in Quality installation program."
+    }
+  },
+  {
+    "id": "MN-133",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_otterTailPower_rebatesAndSavings",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 40,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$40 per ton additional rebate for a cold climate air source heat pump subject to Dual Fuel, Deferred Load, or Residential Demand Control Rate."
+    }
+  },
+  {
+    "id": "MN-134",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_allete_residentialRebatesAndServices",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for a ducted air source heat pump. Must meet 2023 ENERGY STAR specifications and be installed by a participating contractor."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-135",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_brainerdPublicUtilities_residentialAndCommercialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for a ducted air source heat pump. Rebate is per qualified unit. Must be completed with a professional installation."
+    }
+  },
+  {
+    "id": "MN-136",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_allete_residentialRebatesAndServices",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for a ducted cold climate air source heat pump. Must meet 25C tax credit requirements and be installed by a participating contractor."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-137",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_allete_residentialRebatesAndServices",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for a ductless cold climate air source heat pump. Must meet 25C tax credit requirements and be installed by a participating contractor."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-138",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "mn_allete_residentialRebatesAndServices",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for a heat pump clothes dryer. Must be ENERGY STAR certified and replace existing, traditional electric dryer or part of new construction."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-139",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_allete_residentialRebatesAndServices",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for a heat pump water heater. Must be ENERGY STAR certified and replace an existing electric water heater or part of new construction."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
   }
 ]
