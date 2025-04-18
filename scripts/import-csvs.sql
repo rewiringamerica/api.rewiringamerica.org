@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS zips;
 DROP TABLE IF EXISTS zip_to_utility;
+DROP TABLE IF EXISTS zcta_to_geography;
 DROP TABLE IF EXISTS ami_by_zcta;
 DROP TABLE IF EXISTS ami_by_tract;
 DROP TABLE IF EXISTS ami_by_territory_zip;
@@ -22,6 +23,22 @@ CREATE TABLE zip_to_utility(
     utility_id TEXT,
     predominant INTEGER,
     UNIQUE (zip, utility_id)
+) STRICT;
+
+CREATE TABLE geographies(
+    id INTEGER PRIMARY KEY,
+    type TEXT NOT NULL,
+    name TEXT NOT NULL,
+    state TEXT,
+    county_fips TEXT,
+    geometry TEXT
+) STRICT;
+
+CREATE TABLE zcta_to_geography(
+    zcta TEXT NOT NULL,
+    geography_id INTEGER NOT NULL REFERENCES geographies(id),
+    intersection_proportion REAL NOT NULL,
+    UNIQUE (zcta, geography_id)
 ) STRICT;
 
 CREATE TABLE ami_by_zcta(
@@ -76,6 +93,8 @@ CREATE TABLE "30c_eligibility_by_tract"(
 
 .import --csv --skip 1 ./scripts/data/zips.csv zips
 .import --csv --skip 1 ./scripts/data/zip-to-utility.csv zip_to_utility
+.import --csv --skip 1 ./scripts/data/geographies.csv geographies
+.import --csv --skip 1 ./scripts/data/zcta-to-geography.csv zcta_to_geography
 .import --csv --skip 1 ./scripts/income_limits/data/processed/ami_by_zcta.csv ami_by_zcta
 .import --csv --skip 1 ./scripts/income_limits/data/processed/ami_by_tract.csv ami_by_tract
 .import --csv --skip 1 ./scripts/income_limits/data/processed/ami_by_territory_zip.csv ami_by_territory_zip
