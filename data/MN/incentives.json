@@ -2748,7 +2748,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$600 per ton rebate for a cold climate ductless air source heat pump. "
+      "en": "$600 per ton rebate for a ductless cold climate air source heat pump. "
     }
   },
   {
@@ -2769,7 +2769,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$200 per ton rebate when ductless cold climate air source heat pump is installed by contractor participating in Quality installation program."
+      "en": "$200 per ton additional rebate when ductless cold climate air source heat pump installed by contractor participating in Quality Installation program."
     }
   },
   {
@@ -2790,7 +2790,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$40 per ton additional rebate for a cold climate air source heat pump subject to Dual Fuel, Deferred Load, or Residential Demand Control Rate."
+      "en": "$40 per ton additional rebate for a ductless cold climate air source heat pump subject to Dual Fuel, Deferred Load, or Residential Demand Control Rate"
     }
   },
   {
@@ -2922,5 +2922,152 @@
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-140",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_otterTailPower_rebatesAndSavings",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 800,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 per ton rebate for a ducted cold climate air source heat pump. "
+    }
+  },
+  {
+    "id": "MN-141",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_otterTailPower_rebatesAndSavings",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 200,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 per ton additional rebate when ducted air source heat pump installed by contractor participating in Quality Installation program."
+    }
+  },
+  {
+    "id": "MN-142",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_otterTailPower_rebatesAndSavings",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 40,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$40 per ton additional rebate for a ducted cold climate air source heat pump subject to Dual Fuel, Deferred Load, or Residential Demand Control Rate."
+    }
+  },
+  {
+    "id": "MN-143",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_otterTailPower_rebatesAndSavings",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 300,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 per ton rebate for a ducted air source heat pump. Must meet efficiency specifications."
+    }
+  },
+  {
+    "id": "MN-144",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_otterTailPower_rebatesAndSavings",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 300,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 per ton rebate for a ductless air source heat pump. Must meet efficiency specifications."
+    }
+  },
+  {
+    "id": "MN-145",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_otterTailPower_rebatesAndSavings",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 200,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 per ton additional rebate when ducted air source heat pump installed by contractor participating in Quality Installation program."
+    }
+  },
+  {
+    "id": "MN-146",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_otterTailPower_rebatesAndSavings",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 200,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 per ton additional rebate when ductless air source heat pump installed by contractor participating in Quality Installation program."
+    }
   }
 ]
