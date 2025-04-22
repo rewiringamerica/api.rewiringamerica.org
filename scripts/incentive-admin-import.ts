@@ -53,7 +53,7 @@ async function saveIncentiveDataToDisk() {
 
   for (const path of CSV_IMPORTS) {
     const data = await fetchCsv(path);
-    const writePath = `scripts/data/${path.replaceAll('/', '')}.csv`;
+    const writePath = `scripts/data${path}.csv`;
     writeFileSync(writePath, data);
     console.log(`Exported ${writePath}...`);
   }
