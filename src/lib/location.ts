@@ -110,7 +110,12 @@ export async function resolveLocation(
     const response = await geocoder.geocode(address, ['census2024']);
     const result = response?.results?.at(0);
 
-    if (!result || result.address_components.country !== 'US') {
+    // Accuracy type "state" is too imprecise
+    if (
+      !result ||
+      result.address_components.country !== 'US' ||
+      result.accuracy_type === 'state'
+    ) {
       return null;
     }
 
