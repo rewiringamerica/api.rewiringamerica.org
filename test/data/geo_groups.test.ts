@@ -1,6 +1,7 @@
 import { test } from 'tap';
 import {
   AUTHORITIES_BY_STATE,
+  AuthoritiesByType,
   AuthorityType,
 } from '../../src/data/authorities';
 import { GEO_GROUPS_BY_STATE } from '../../src/data/geo_groups';
@@ -78,15 +79,28 @@ test('geo groups are equivalent in JSON config and incentives', async t => {
   }
 });
 
-test('AuthorityType.Other incentives have eligible_geo_group', async t => {
-  for (const [, stateIncentives] of Object.entries(STATE_INCENTIVES_BY_STATE)) {
+test('incentives either have an authority with geography, or eligible_geo_group', async t => {
+  for (const [state, stateIncentives] of Object.entries(
+    STATE_INCENTIVES_BY_STATE,
+  )) {
     for (const incentive of stateIncentives) {
       const program = PROGRAMS[incentive.program];
-      if (program.authority_type === AuthorityType.Other) {
+      if (
+        program.authority_type === AuthorityType.Utility ||
+        program.authority_type === AuthorityType.GasUtility
+      ) {
+        // Utilities don't have geographies
+        continue;
+      }
+
+      const stateAuthorities: AuthoritiesByType = AUTHORITIES_BY_STATE[state];
+      const authority =
+        stateAuthorities[program.authority_type][program.authority!];
+      if (!authority.geography_id) {
         t.hasProp(
           incentive,
           'eligible_geo_group',
-          `authority_type 'other' must include a geo group (id ${incentive.id})`,
+          `incentive must have authority with geography, or geo group (id ${incentive.id})`,
         );
       }
     }

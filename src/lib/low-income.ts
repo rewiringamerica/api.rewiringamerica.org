@@ -1,10 +1,45 @@
+import _ from 'lodash';
 import {
   HHSizeThresholds,
   LowIncomeThresholdsAuthority,
 } from '../data/low_income_thresholds';
 import { AMIAndEVCreditEligibility } from './ami-evcredit-calculation';
 import { CalculateParams } from './incentives-calculation';
-import { ResolvedLocation } from './location';
+import { GeographyType, ResolvedLocation } from './location';
+
+/**
+ * For when thresholds are county-specific, return a set of thresholds with the
+ * lowest value for each hhsize over all possible counties.
+ */
+function getCountyThresholds(
+  location: ResolvedLocation,
+  thresholds: { [fips: string]: HHSizeThresholds },
+): HHSizeThresholds {
+  const result: HHSizeThresholds = {};
+  const counties = location.geographies.filter(
+    geo => geo.type === GeographyType.County,
+  );
+
+  for (const county of counties) {
+    const countyThresholds =
+      thresholds[county.county_fips!] || thresholds['other'] || null;
+    if (!countyThresholds) {
+      // If the user might be in a county for which we don't have thresholds, be
+      // conservative and return no thresholds. Downstream, this will cause the
+      // user to be considered NOT to meet the definition of low-income.
+      return {};
+    }
+    for (const [hhsize, amount] of Object.entries(countyThresholds)) {
+      if (hhsize in result) {
+        result[hhsize] = _.min([amount, result[hhsize]])!;
+      } else {
+        result[hhsize] = amount;
+      }
+    }
+  }
+
+  return result;
+}
 
 /**
  * Chooses the right income threshold and determines whether the given income
@@ -21,8 +56,7 @@ export function isLowIncome(
     const bySize: HHSizeThresholds =
       thresholds.type === 'hhsize'
         ? thresholds.thresholds
-        : thresholds.thresholds[location.county_fips] ??
-          thresholds.thresholds['other'];
+        : getCountyThresholds(location, thresholds.thresholds);
     const threshold = bySize?.[household_size];
 
     // The only way the threshold should be missing is if they are defined by

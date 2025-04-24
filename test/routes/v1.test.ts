@@ -980,7 +980,7 @@ const UTILITIES = [
   [
     '02807',
     {
-      location: { state: 'RI', city: 'Block Island', county_fips: '44009' },
+      location: { state: 'RI' },
       gas_utilities: {},
       gas_utility_affects_incentives: false,
       utilities: {
@@ -991,7 +991,7 @@ const UTILITIES = [
   [
     '02814',
     {
-      location: { state: 'RI', city: 'Chepachet', county_fips: '44007' },
+      location: { state: 'RI' },
       gas_utilities: {
         'ri-rhode-island-energy-gas': { name: 'Rhode Island Energy' },
       },
@@ -1007,7 +1007,7 @@ const UTILITIES = [
   [
     '02905',
     {
-      location: { state: 'RI', city: 'Providence', county_fips: '44007' },
+      location: { state: 'RI' },
       gas_utilities: {
         'ri-rhode-island-energy-gas': { name: 'Rhode Island Energy' },
       },
@@ -1018,7 +1018,7 @@ const UTILITIES = [
   [
     '06360',
     {
-      location: { state: 'CT', city: 'Norwich', county_fips: '09011' },
+      location: { state: 'CT' },
       utilities: {
         'ct-bozrah-light-and-power-company': {
           name: 'Bozrah Light & Power Company',
@@ -1035,7 +1035,7 @@ const UTILITIES = [
   [
     '84106',
     {
-      location: { state: 'UT', city: 'Salt Lake City', county_fips: '49035' },
+      location: { state: 'UT' },
       utilities: {
         'ut-rocky-mountain-power': {
           name: 'Rocky Mountain Power',
@@ -1046,7 +1046,7 @@ const UTILITIES = [
   [
     '02116',
     {
-      location: { state: 'MA', city: 'Boston', county_fips: '25025' },
+      location: { state: 'MA' },
       utilities: {
         'ma-eversource': {
           name: 'Eversource',
@@ -1066,7 +1066,7 @@ const UTILITIES = [
   [
     '01450',
     {
-      location: { state: 'MA', city: 'Groton', county_fips: '25017' },
+      location: { state: 'MA' },
       utilities: {
         'ma-fitchburg-gas-and-electric-light': {
           name: 'Unitil',

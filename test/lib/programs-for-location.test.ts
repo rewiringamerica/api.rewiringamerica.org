@@ -1,6 +1,7 @@
 import { test } from 'tap';
 import { AuthoritiesByType, AuthorityType } from '../../src/data/authorities';
 import { Programs } from '../../src/data/programs';
+import { GeographyType, ResolvedLocation } from '../../src/lib/location';
 import getProgramsForLocation from '../../src/lib/programs-for-location';
 import { APIProgramsResponse } from '../../src/schemas/v1/programs';
 
@@ -44,19 +45,19 @@ const mockAuthorities: AuthoritiesByType = {
   state: {
     'mock-state-authority': {
       name: 'Test',
+      geography_id: 1,
     },
   },
   city: {
     'mock-city-authority': {
       name: 'Test',
-      city: 'City',
-      county_fips: '00000',
+      geography_id: 2,
     },
   },
   county: {
     'mock-county-authority': {
       name: 'Test',
-      county_fips: '00000',
+      geography_id: 3,
     },
   },
   utility: {
@@ -71,11 +72,35 @@ const mockAuthorities: AuthoritiesByType = {
   },
 };
 
-const location = {
-  zcta: '12604',
-  city: 'City',
+const location: ResolvedLocation = {
   state: 'NY',
-  county_fips: '00000',
+  zcta: '12604',
+  geographies: [
+    {
+      id: 1,
+      type: GeographyType.State,
+      name: 'Test',
+      state: 'NY',
+      county_fips: null,
+      intersection_proportion: 1.0,
+    },
+    {
+      id: 2,
+      type: GeographyType.Custom,
+      name: 'City',
+      state: 'NY',
+      county_fips: null,
+      intersection_proportion: 1.0,
+    },
+    {
+      id: 3,
+      type: GeographyType.County,
+      name: 'County',
+      state: 'NY',
+      county_fips: '00000',
+      intersection_proportion: 1.0,
+    },
+  ],
 };
 
 test('get all programs for location', async t => {

@@ -5,7 +5,7 @@ import {
   adjustAMI,
   computeAMIAndEVCreditEligibility,
 } from '../../src/lib/ami-evcredit-calculation';
-import { ResolvedLocation } from '../../src/lib/location';
+import { GeographyType, ResolvedLocation } from '../../src/lib/location';
 
 const DB_PROMISE = open({
   filename: './incentives-api.db',
@@ -22,29 +22,25 @@ test('AMI adjustment', async t => {
 const AS_LOCATION: ResolvedLocation = {
   zcta: '96799',
   state: 'AS',
-  city: 'Pago Pago',
-  county_fips: '60010',
+  geographies: [],
   tract_geoid: '60010950600',
 };
 const GU_LOCATION: ResolvedLocation = {
   zcta: '96913',
   state: 'GU',
-  city: 'Barrigada',
-  county_fips: '66010',
+  geographies: [],
   tract_geoid: '66010951100',
 };
 const MP_LOCATION: ResolvedLocation = {
   zcta: '96950',
   state: 'MP',
-  city: 'Saipan',
-  county_fips: '69110',
+  geographies: [],
   tract_geoid: '69110001700',
 };
 const VI_LOCATION: ResolvedLocation = {
   zcta: '00840',
   state: 'VI',
-  city: 'Frederiksted',
-  county_fips: '78010',
+  geographies: [],
   tract_geoid: '78010971000',
 };
 
@@ -74,26 +70,74 @@ test('territories other than PR', async t => {
 
 const NY_TRACT = '36099950200';
 const NY_LOCATION: ResolvedLocation = {
-  city: 'Seneca Falls',
-  county_fips: '36099',
   state: 'NY',
   zcta: '13148',
+  geographies: [
+    {
+      id: 32,
+      type: GeographyType.State,
+      name: 'New York',
+      state: 'NY',
+      county_fips: null,
+      intersection_proportion: 1.0,
+    },
+    {
+      id: 1927,
+      type: GeographyType.County,
+      name: 'Seneca County',
+      state: 'NY',
+      county_fips: '36099',
+      intersection_proportion: 1.0,
+    },
+  ],
 };
 
 const DC_TRACT = '11001010700';
 const DC_LOCATION: ResolvedLocation = {
-  city: 'Washington',
-  county_fips: '11001',
   state: 'DC',
   zcta: '20036',
+  geographies: [
+    {
+      id: 56,
+      type: GeographyType.State,
+      name: 'Washington DC',
+      state: 'DC',
+      county_fips: null,
+      intersection_proportion: 1.0,
+    },
+    {
+      id: 369,
+      type: GeographyType.County,
+      name: 'District of Columbia',
+      state: 'DC',
+      county_fips: '11001',
+      intersection_proportion: 1.0,
+    },
+  ],
 };
 
 const PR_TRACT = '72127002100';
 const PR_LOCATION: ResolvedLocation = {
-  city: 'San Juan',
-  county_fips: '72127',
   state: 'PR',
   zcta: '00907',
+  geographies: [
+    {
+      id: 54,
+      type: GeographyType.State,
+      name: 'Puerto Rico',
+      state: 'PR',
+      county_fips: null,
+      intersection_proportion: 1.0,
+    },
+    {
+      id: 3266,
+      type: GeographyType.County,
+      name: 'San Juan Municipio',
+      state: 'PR',
+      county_fips: '72127',
+      intersection_proportion: 1.0,
+    },
+  ],
 };
 
 test('states+DC+PR without tract', async t => {
@@ -165,8 +209,25 @@ test('EV charger eligibility', async t => {
   const brooklyn = {
     zcta: '11211',
     state: 'NY',
-    city: 'Brooklyn',
-    county_fips: '36047',
+    geographies: [
+      {
+        id: 32,
+        type: GeographyType.State,
+        name: 'New York',
+        state: 'NY',
+        county_fips: null,
+        intersection_proportion: 1.0,
+      },
+      {
+        id: 1901,
+        type: GeographyType.County,
+        name: 'Kings County',
+        state: 'NY',
+        county_fips: '36047',
+        intersection_proportion: 1.0,
+      },
+    ],
+    customGeographiesComprehensive: false,
   };
   t.notOk(
     (await computeAMIAndEVCreditEligibility(db, brooklyn, 4))!.evCreditEligible,

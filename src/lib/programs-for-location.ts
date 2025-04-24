@@ -90,36 +90,41 @@ export default function getProgramsForLocation(
     Object.entries(programs)
       // Filter programs based on authority_types request param, location, and utility
       .filter(([, program]) => {
-        const authority_id = program.authority!;
-        if (includeCity && program.authority_type === AuthorityType.City) {
-          const authority = authorities.city![authority_id];
-          return (
-            authority.city === location.city &&
-            authority.county_fips === location.county_fips
-          );
-        }
-        if (includeCounty && program.authority_type === AuthorityType.County) {
-          const authority = authorities.county![authority_id];
-          return authority.county_fips === location.county_fips;
+        if (
+          (!includeState && program.authority_type === AuthorityType.State) ||
+          (!includeCity && program.authority_type === AuthorityType.City) ||
+          (!includeCounty && program.authority_type === AuthorityType.County) ||
+          (!includeUtility &&
+            program.authority_type === AuthorityType.Utility) ||
+          (!includeGasUtility &&
+            program.authority_type === AuthorityType.GasUtility)
+        ) {
+          return false;
         }
 
-        if (
-          utility &&
-          includeUtility &&
-          program.authority_type === AuthorityType.Utility
-        ) {
+        if (utility && program.authority_type === AuthorityType.Utility) {
           return program.authority === utility;
         }
 
         if (
           gas_utility &&
-          includeGasUtility &&
           program.authority_type === AuthorityType.GasUtility
         ) {
           return program.authority === gas_utility;
         }
 
-        return includeState && program.authority_type === AuthorityType.State;
+        const authority =
+          authorities[program.authority_type][program.authority!];
+
+        // This excludes programs from authorities that don't have a geography.
+        if (
+          authority.geography_id &&
+          location.geographies.some(geo => geo.id === authority.geography_id)
+        ) {
+          return true;
+        }
+
+        return false;
       })
       // Transform programs to match schema
       .map(([key, program]) => {
