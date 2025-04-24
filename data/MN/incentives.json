@@ -173,14 +173,14 @@
     "amount": {
       "type": "dollar_amount",
       "number": 2200,
-      "minimum": 900,
+      "minimum": 100,
       "maximum": 2200
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $2,200 rebate for a ductless air source heat pump if existing heating system is electric. Maximum rebate not to exceed 50% of equipment cost."
+      "en": "Up to $2,200 rebate for a ductless air source heat pump. Range is between $100 and $2,200 depending on heat pump size, efficiency, and current system."
     }
   },
   {
@@ -3068,6 +3068,177 @@
     ],
     "short_description": {
       "en": "$200 per ton additional rebate when ductless air source heat pump installed by contractor participating in Quality Installation program."
+    }
+  },
+  {
+    "id": "MN-147",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_otterTailPower_rebatesAndSavings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 rebate for a heat pump water heater. Must be ENERGY STAR-rated. "
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-148",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "mn_otterTailPower_rebatesAndSavings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an induction cooktop or range with induction cooktop. Must be ENERGY STAR-rated."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-149",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "mn_otterTailPower_rebatesAndSavings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an electric clothes dryer. Must be ENERGY STAR-rated."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-150",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "mn_otterTailPower_rebatesAndSavings",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for a heat pump clothes dryer. Must be ENERGY STAR-rated."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "MN-151",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_austinUtilities_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2200,
+      "minimum": 100,
+      "maximum": 2200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,200 rebate for a ductless air source heat pump. Range is between $100 and $2,200 depending on heat pump size, efficiency, and current system."
+    }
+  },
+  {
+    "id": "MN-152",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_austinUtilities_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate for a ducted air source heat pump that meets cold climate specifications."
+    }
+  },
+  {
+    "id": "MN-153",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_austinUtilities_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for a 20-55 gallon heat pump water heater. Rebate not to exceed 50% of cost."
+    }
+  },
+  {
+    "id": "MN-154",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_austinUtilities_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 90
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$90 rebate for a >55 gallon heat pump water heater. Rebate not to exceed 50% of cost."
     }
   }
 ]

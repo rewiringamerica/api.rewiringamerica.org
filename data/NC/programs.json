@@ -29,25 +29,6 @@
       "ductless_heat_pump"
     ]
   },
-  "nc_cityOfHighPoint_highPointApplianceRebates": {
-    "name": {
-      "en": "High Point Appliance Rebates"
-    },
-    "url": {
-      "en": "https://www.highpointnc.gov/531/Appliance-Rebates"
-    },
-    "authority": "nc-city-of-high-point",
-    "authority_type": "city",
-    "description": "City of High Point Electric offers appliance rebates for equipment like heat pumps and water heaters.",
-    "items": [
-      "other_heat_pump",
-      "geothermal_heating_installation",
-      "heat_pump_water_heater",
-      "non_heat_pump_water_heater",
-      "ducted_heat_pump",
-      "ductless_heat_pump"
-    ]
-  },
   "nc_cityOfNewBern_newBernEnergyRebateProgram": {
     "name": {
       "en": "New Bern Energy Rebate Program"
@@ -385,11 +366,14 @@
     },
     "authority": "nc-town-of-high-point",
     "authority_type": "utility",
-    "description": "",
+    "description": "City of High Point Electric offers appliance rebates for equipment like heat pumps and water heaters.",
     "items": [
       "ducted_heat_pump",
       "ductless_heat_pump",
-      "heat_pump_water_heater"
+      "heat_pump_water_heater",
+      "geothermal_heating_installation",
+      "non_heat_pump_water_heater",
+      "other_heat_pump"
     ]
   }
 }
