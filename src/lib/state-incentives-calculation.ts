@@ -334,6 +334,17 @@ function ineligibleByLocationOrUtility(
     }
   }
 
+  if (
+    program.authority_type !== AuthorityType.Utility &&
+    program.authority_type !== AuthorityType.GasUtility &&
+    !authority.geography_id &&
+    !incentive.eligible_geo_group
+  ) {
+    // Unit tests make sure this doesn't happen
+    console.error(`Non-utility incentive with no geography: ${incentive.id}`);
+    return true;
+  }
+
   return false;
 }
 
