@@ -123,7 +123,7 @@ taxes, and their spouse if they file taxes jointly.`,
       type: 'boolean',
       description:
         'Option to include states which are in development and not fully launched.',
-      default: 'false',
+      default: false,
     },
   },
   additionalProperties: false,
