@@ -933,7 +933,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $2,500 for an air-source heat pump conversion to geothermal heat pump."
+      "en": "Up to $2,500 for an air-source heat pump conversion to a geothermal heat pump."
     }
   },
   {
@@ -1019,7 +1019,8 @@
     ],
     "short_description": {
       "en": "$350 rebate for duct sealing."
-    }
+    },
+    "start_date": "2025-01-01"
   },
   {
     "id": "NC-46",
@@ -1323,10 +1324,11 @@
     "items": [
       "central_air_conditioner"
     ],
-    "program": "nc_lumbeeRiverElectricMemberCorp_lumbeeRiverRebatePrograms",
+    "program": "nc_lumbeeRiverElectricMemberCorp_lumbeeRiverHeatingAndCoolingRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 15
+      "number": 15,
+      "maximum": 15
     },
     "owner_status": [
       "homeowner",
@@ -1344,7 +1346,7 @@
     "items": [
       "other_heat_pump"
     ],
-    "program": "nc_lumbeeRiverElectricMemberCorp_lumbeeRiverRebatePrograms",
+    "program": "nc_lumbeeRiverElectricMemberCorp_lumbeeRiverHeatingAndCoolingRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 60
@@ -1365,7 +1367,7 @@
     "items": [
       "geothermal_heating_installation"
     ],
-    "program": "nc_lumbeeRiverElectricMemberCorp_lumbeeRiverRebatePrograms",
+    "program": "nc_lumbeeRiverElectricMemberCorp_lumbeeRiverHeatingAndCoolingRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 250
@@ -1386,7 +1388,7 @@
     "items": [
       "air_sealing"
     ],
-    "program": "nc_lumbeeRiverElectricMemberCorp_lumbeeRiverRebatePrograms",
+    "program": "nc_lumbeeRiverElectricMemberCorp_lumbeeRiverWeatherizationRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 25
@@ -1407,7 +1409,7 @@
     "items": [
       "duct_sealing"
     ],
-    "program": "nc_lumbeeRiverElectricMemberCorp_lumbeeRiverRebatePrograms",
+    "program": "nc_lumbeeRiverElectricMemberCorp_lumbeeRiverWeatherizationRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 50
@@ -1430,7 +1432,7 @@
       "floor_insulation",
       "crawlspace_insulation"
     ],
-    "program": "nc_lumbeeRiverElectricMemberCorp_lumbeeRiverRebatePrograms",
+    "program": "nc_lumbeeRiverElectricMemberCorp_lumbeeRiverWeatherizationRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 100
@@ -1543,7 +1545,8 @@
     "program": "nc_piedmontElectricMemberCorp_pEMCRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 100
+      "number": 100,
+      "maximum": 200
     },
     "owner_status": [
       "homeowner",
@@ -1571,7 +1574,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Free home energy analysis for Randolph EMC members."
+      "en": "Free home energy audit for Randolph EMC members."
     }
   },
   {
@@ -1610,14 +1613,14 @@
     "program": "nc_southRiverElectricMemberCorp_southRiverRebatesAndEfficiency",
     "amount": {
       "type": "dollar_amount",
-      "number": 200
+      "number": 150
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$200 rebate for a solar water heating system."
+      "en": "$150 rebate for a solar water heating system."
     }
   },
   {
@@ -1653,7 +1656,7 @@
     "amount": {
       "type": "dollar_amount",
       "number": 200,
-      "minimum": 150,
+      "minimum": 100,
       "maximum": 200
     },
     "owner_status": [
@@ -1703,7 +1706,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$75 rebate for a central AC unit in a single family or manufactured home."
+      "en": "$75 rebate for a central AC unit in a manufactured home."
     }
   },
   {
@@ -1726,7 +1729,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$2/square foot rebate, up to $200 for energy efficient exterior windows. "
+      "en": "$2 per square foot, up to $200 for energy efficient exterior windows. "
     }
   },
   {
@@ -2018,6 +2021,164 @@
     ],
     "short_description": {
       "en": "$50 rebate for a smart thermostat after enrolling in the Connect to Save program."
+    }
+  },
+  {
+    "id": "NC-91",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "other_heat_pump"
+    ],
+    "program": "nc_fayettevillePwc_fayettevillePWCResidentialRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "minimum": 250,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400 rebate on new HVAC equipment. "
+    }
+  },
+  {
+    "id": "NC-92",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "duct_replacement",
+      "duct_sealing"
+    ],
+    "program": "nc_fayettevillePwc_fayettevillePWCResidentialRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $200 bill credit for the replacement of HVAC ductwork that is greater than 15 years old."
+    }
+  },
+  {
+    "id": "NC-93",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "crawlspace_insulation",
+      "attic_or_roof_insulation"
+    ],
+    "program": "nc_fayettevillePwc_fayettevillePWCResidentialRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Earn a bill credit of up to $250 by increasing the R-value of the insulation in both your attic and crawlspace."
+    }
+  },
+  {
+    "id": "NC-94",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nc_dominionEnergy_waterEnergySavingProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "minimum": 250,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400 upfront rebate for installing an ENERGY STAR® certified heat pump water heater when replacing an electric water heater."
+    },
+    "start_date": "2022"
+  },
+  {
+    "id": "NC-95",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "other_weatherization",
+      "efficiency_rebates"
+    ],
+    "program": "nc_dominionEnergy_incomeAndAgeQualifyingEnergyEfficiencyProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive no cost energy efficient weatherization upgrades for qualified income and age levels by qualified service providers.",
+      "es": "Reciba sin costo alguno actualizaciones de sus instalaciones de climatización si cumple los requisitos de nivel de ingresos o de edad realizados por proveedores de servicios competentes."
+    },
+    "low_income": "nc-hear-low"
+  },
+  {
+    "id": "NC-96",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nc_brunswickElectricMemberCorp_bEMCRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "minimum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Earn a $50 rebate and $4 per month for enrolling your Smart Thermostat in Connect to Save. "
+    }
+  },
+  {
+    "id": "NC-97",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_vehicle_charger",
+      "electric_wiring"
+    ],
+    "program": "nc_brunswickElectricMemberCorp_bEMCRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 bill credit  for costs associated with the installation of in-home wiring for Level 2 EV charging."
     }
   }
 ]
