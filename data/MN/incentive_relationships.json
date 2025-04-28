@@ -1,11 +1,17 @@
 {
-  "prerequisites": {
-    "MN-74": {
-      "allOf": [
-        "MN-73"
-      ],
-      "description": "Xcel add on to CenterPoint heat pump rebate"
+  "exclusions": {
+    "MN-3": {
+      "ids": [
+        "MN-74"
+      ]
     },
+    "MN-4": {
+      "ids": [
+        "MN-160"
+      ]
+    }
+  },
+  "prerequisites": {
     "MN-132": {
       "allOf": [
         "MN-131"
