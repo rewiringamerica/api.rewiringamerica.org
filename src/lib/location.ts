@@ -1,5 +1,6 @@
 import * as turf from '@turf/turf';
 import { Database } from 'sqlite';
+import { InvalidInputError } from './error';
 import { geocoder } from './geocoder';
 
 export enum GeographyType {
@@ -107,80 +108,87 @@ export async function resolveLocation(
     };
   } else {
     const { address } = zipOrAddress;
-    const response = await geocoder.geocode(address, ['census2024']);
-    const result = response?.results?.at(0);
+    try {
+      const response = await geocoder.geocode(address, ['census2024']);
+      const result = response?.results?.at(0);
 
-    // Accuracy type "state" is too imprecise
-    if (
-      !result ||
-      result.address_components.country !== 'US' ||
-      result.accuracy_type === 'state'
-    ) {
-      return null;
-    }
+      // Accuracy type "state" is too imprecise
+      if (
+        !result ||
+        result.address_components.country !== 'US' ||
+        result.accuracy_type === 'state'
+      ) {
+        return null;
+      }
 
-    const censusInfo = result.fields.census['2024'];
+      const censusInfo = result.fields.census['2024'];
 
-    const geographies: Geography[] = [];
+      const geographies: Geography[] = [];
 
-    const state = await db.get<DbGeography>(
-      `SELECT * FROM geographies
-      WHERE type = 'state' AND state = ?`,
-      result.address_components.state,
-    );
-    if (state) {
-      geographies.push({ ...state, intersection_proportion: 1.0 });
-    }
-
-    const county = await db.get<DbGeography>(
-      `SELECT * FROM geographies
-      WHERE type = 'county' AND county_fips = ?`,
-      censusInfo.county_fips,
-    );
-    if (county) {
-      geographies.push({ ...county, intersection_proportion: 1.0 });
-    }
-
-    const point = turf.point([result.location.lng, result.location.lat]);
-
-    // There is a relatively small number of 'custom' geographies, so running
-    // the "contains" computation over all of them is quick. If necessary, we
-    // can speed this up by using a spatial index and/or caching the parsed
-    // GeoJSON in memory.
-    (
-      await db.all<DbGeography[]>(
-        `SELECT * FROM geographies WHERE type = 'custom'`,
-      )
-    )
-      .filter(geo => {
-        const geometry = JSON.parse(geo.geometry!);
-        let contains = false;
-
-        // Check whether the point is inside any sub-geometry of the overall
-        // geometry object (which is usually a FeatureCollection).
-        turf.geomEach(geometry, subgeometry => {
-          if (turf.booleanPointInPolygon(point, subgeometry)) {
-            contains = true;
-            // Returning false from the geomEach callback terminates the
-            // geomEach loop early.
-            return false;
-          }
-        });
-        return contains;
-      })
-      .forEach(geo =>
-        geographies.push({ ...geo, intersection_proportion: 1.0 }),
+      const state = await db.get<DbGeography>(
+        `SELECT * FROM geographies
+        WHERE type = 'state' AND state = ?`,
+        result.address_components.state,
       );
+      if (state) {
+        geographies.push({ ...state, intersection_proportion: 1.0 });
+      }
 
-    return {
-      state: result.address_components.state,
-      zcta:
-        (await getZctaFromZip(db, result.address_components.zip)) ??
-        result.address_components.zip,
-      geographies,
-      tract_geoid: GEOCODIO_LOW_PRECISION.has(result.accuracy_type)
-        ? undefined
-        : censusInfo.county_fips + censusInfo.tract_code,
-    };
+      const county = await db.get<DbGeography>(
+        `SELECT * FROM geographies
+        WHERE type = 'county' AND county_fips = ?`,
+        censusInfo.county_fips,
+      );
+      if (county) {
+        geographies.push({ ...county, intersection_proportion: 1.0 });
+      }
+
+      const point = turf.point([result.location.lng, result.location.lat]);
+
+      // There is a relatively small number of 'custom' geographies, so running
+      // the "contains" computation over all of them is quick. If necessary, we
+      // can speed this up by using a spatial index and/or caching the parsed
+      // GeoJSON in memory.
+      (
+        await db.all<DbGeography[]>(
+          `SELECT * FROM geographies WHERE type = 'custom'`,
+        )
+      )
+        .filter(geo => {
+          const geometry = JSON.parse(geo.geometry!);
+          let contains = false;
+
+          // Check whether the point is inside any sub-geometry of the overall
+          // geometry object (which is usually a FeatureCollection).
+          turf.geomEach(geometry, subgeometry => {
+            if (turf.booleanPointInPolygon(point, subgeometry)) {
+              contains = true;
+              // Returning false from the geomEach callback terminates the
+              // geomEach loop early.
+              return false;
+            }
+          });
+          return contains;
+        })
+        .forEach(geo =>
+          geographies.push({ ...geo, intersection_proportion: 1.0 }),
+        );
+
+      return {
+        state: result.address_components.state,
+        zcta:
+          (await getZctaFromZip(db, result.address_components.zip)) ??
+          result.address_components.zip,
+        geographies,
+        tract_geoid: GEOCODIO_LOW_PRECISION.has(result.accuracy_type)
+          ? undefined
+          : censusInfo.county_fips + censusInfo.tract_code,
+      };
+    } catch (error) {
+      throw new InvalidInputError(
+        `Unable to geocode address: ${address}`,
+        'address',
+      );
+    }
   }
 }
