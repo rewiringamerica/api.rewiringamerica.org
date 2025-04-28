@@ -33,7 +33,8 @@ export const API_LOAN_PROGRAMS_RESPONSE_SCHEMA = {
         description: 'Detailed description of the loan program',
       },
       description_langs: {
-        type: ['object', 'null'],
+        type: 'object',
+        nullable: true,
         description: 'Localized descriptions',
         patternProperties: {
           '^[a-z]{2}$': { type: 'string' },
@@ -61,7 +62,8 @@ export const API_LOAN_PROGRAMS_RESPONSE_SCHEMA = {
         items: ELIGIBLE_PROJECT_TYPE_SCHEMA,
       },
       state: {
-        type: ['string', 'null'],
+        type: 'string',
+        nullable: true,
         description: 'State where the loan program is offered',
         enum: [...Object.values(STATES_AND_TERRITORIES), null],
       },
@@ -96,27 +98,6 @@ export const API_LOAN_PROGRAMS_RESPONSE_SCHEMA = {
       'updated_at',
     ],
     // additionalProperties: false,
-    // Conditional validations:
-    // - If is_national is true, state must be null
-    // - If is_national is false, state must not be null
-    allOf: [
-      {
-        if: {
-          properties: { is_national: { const: true } },
-        },
-        then: {
-          properties: { state: { const: null } },
-        },
-      },
-      {
-        if: {
-          properties: { is_national: { const: false } },
-        },
-        then: {
-          properties: { state: { not: { const: null } } },
-        },
-      },
-    ],
   },
 } as const;
 
