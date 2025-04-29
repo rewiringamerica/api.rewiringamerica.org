@@ -31,6 +31,10 @@ import { TAX_BRACKETS, SCHEMA as TB_SCHEMA } from '../../src/data/tax_brackets';
 
 import Ajv from 'ajv/dist/2020';
 import {
+  FEDERAL_POVERTY_LEVELS,
+  FEDERAL_POVERTY_LEVELS_SCHEMA,
+} from '../../src/data/federal_poverty_levels';
+import {
   GEO_GROUPS_BY_STATE,
   GEO_GROUPS_SCHEMA,
 } from '../../src/data/geo_groups';
@@ -62,6 +66,11 @@ const TESTS = [
     'State low income',
   ],
   [GEO_GROUPS_SCHEMA, GEO_GROUPS_BY_STATE, 'geo_groups'],
+  [
+    FEDERAL_POVERTY_LEVELS_SCHEMA,
+    FEDERAL_POVERTY_LEVELS,
+    'federal_poverty_levels',
+  ],
 ];
 
 test('static JSON files match schema', async tap => {
