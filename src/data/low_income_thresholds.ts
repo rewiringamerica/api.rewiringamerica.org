@@ -140,6 +140,23 @@ export const AUTHORITY_INFO_SCHEMA = {
       },
       required: ['type', 'thresholds'],
     },
+    {
+      properties: {
+        type: {
+          type: 'string',
+          const: 'fpl-percentage',
+        },
+        thresholds: {
+          type: 'object',
+          properties: {
+            percentage: { type: 'number' },
+          },
+          required: ['percentage'],
+          additionalProperties: false,
+        },
+      },
+      required: ['type', 'thresholds'],
+    },
   ],
 } as const;
 

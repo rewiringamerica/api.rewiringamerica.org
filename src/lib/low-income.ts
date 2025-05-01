@@ -1,8 +1,10 @@
 import _ from 'lodash';
+import { FEDERAL_POVERTY_LEVELS } from '../data/federal_poverty_levels';
 import {
   HHSizeThresholds,
   LowIncomeThresholdsAuthority,
 } from '../data/low_income_thresholds';
+import { TERRITORIES } from '../data/types/states';
 import { AMIAndEVCreditEligibility } from './ami-evcredit-calculation';
 import { CalculateParams } from './incentives-calculation';
 import { GeographyType, ResolvedLocation } from './location';
@@ -85,6 +87,27 @@ export function isLowIncome(
           -1;
 
     return household_income <= threshold;
+  } else if (thresholds.type === 'fpl-percentage') {
+    if ((TERRITORIES as readonly string[]).includes(location.state)) {
+      // FPL isn't defined in the territories
+      return false;
+    }
+
+    const table =
+      location.state === 'AK'
+        ? FEDERAL_POVERTY_LEVELS.AK
+        : location.state === 'HI'
+        ? FEDERAL_POVERTY_LEVELS.HI
+        : FEDERAL_POVERTY_LEVELS.other;
+
+    const level =
+      household_size <= 8
+        ? table.levels_by_hhsize[household_size]
+        : table.levels_by_hhsize[8] +
+          (household_size - 8) * table.per_additional;
+
+    const multiplier = thresholds.thresholds.percentage * 0.01;
+    return household_income <= multiplier * level;
   } else {
     const t: never = thresholds;
     console.error('Unknown income threshold type', t);
