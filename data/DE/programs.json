@@ -1,14 +1,19 @@
 {
-  "de_cityOfMilfordElectricDepartment_efficiencySmartHomeEnergyRebates-CityOfMilfordElectricDepartment": {
+  "de_cityOfMilford_efficiencySmartHomeEnergyRebates-CityOfMilfordElectricDepartment": {
     "name": {
       "en": "Efficiency Smart Home Energy Rebates - City of Milford Electric Department"
     },
     "url": {
       "en": "https://www.efficiencysmart.org/home-energy-rebates"
     },
-    "authority": "de-city-of-milford-electric-department",
+    "authority": "de-city-of-milford",
     "authority_type": "utility",
-    "description": "Home Energy Rebates available for purchasing energy-efficient products."
+    "description": "Home Energy Rebates available for purchasing energy-efficient products.",
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ]
   },
   "de_cityOfNewark_efficiencySmartHomeEnergyRebates-CityOfNewarkElectricDepartment": {
     "name": {
@@ -32,31 +37,84 @@
     "authority_type": "utility",
     "description": "Home Energy Rebates available for purchasing energy-efficient products."
   },
-  "de_delmarvaPower_electricVehicleProgram": {
+  "de_delawareDepartmentOfNaturalResourcesAndEnvironmentalControlDnrec_delawareCleanVehicleRebateProgram": {
     "name": {
-      "en": "Electric Vehicle Program"
+      "en": "Delaware Clean Vehicle Rebate Program"
     },
     "url": {
-      "en": "https://www.delmarva.com/SmartEnergy/InnovationTechnology/Pages/ElectricVehicles/DE/ElectricVehicleProgram.aspx"
+      "en": "https://dnrec.delaware.gov/climate-coastal-energy/clean-transportation/vehicle-rebates/"
     },
-    "authority": "de-delmarva-power",
-    "authority_type": "utility",
+    "authority": "de-delaware-department-of-natural-resources-and-environmental-control-dnrec",
+    "authority_type": "state",
+    "description": "",
     "items": [
-      "new_electric_vehicle"
+      "new_electric_vehicle",
+      "new_plugin_hybrid_vehicle",
+      "used_electric_vehicle",
+      "used_plugin_hybrid_vehicle"
     ]
   },
-  "de_delmarvaPower_renewableEnergyAssistance": {
+  "de_delawareDepartmentOfNaturalResourcesAndEnvironmentalControlDnrec_delawareGreenEnergyProgram": {
     "name": {
-      "en": "Renewable Energy Assistance"
+      "en": "Delaware Green Energy Program"
     },
     "url": {
       "en": "https://dnrec.delaware.gov/climate-coastal-energy/renewable/assistance/"
     },
-    "authority": "de-delmarva-power",
-    "authority_type": "utility",
+    "authority": "de-delaware-department-of-natural-resources-and-environmental-control-dnrec",
+    "authority_type": "state",
+    "description": "Provides grants for geothermal heat pumps, solar water heating, and residential solar.",
     "items": [
-      "heat_pump_water_heater",
+      "geothermal_heating_installation",
+      "rooftop_solar_installation",
+      "solar_water_heater"
+    ]
+  },
+  "de_delawareDepartmentOfNaturalResourcesAndEnvironmentalControlDnrec_delawareLow-ToModerate-IncomeSolarPilotProgram": {
+    "name": {
+      "en": "Delaware Low- to Moderate-Income Solar Pilot Program"
+    },
+    "url": {
+      "en": "https://dnrec.delaware.gov/climate-coastal-energy/renewable/lmi-solar-pilot-program/"
+    },
+    "authority": "de-delaware-department-of-natural-resources-and-environmental-control-dnrec",
+    "authority_type": "state",
+    "description": "",
+    "items": [
       "rooftop_solar_installation"
+    ]
+  },
+  "de_delawareDepartmentOfNaturalResourcesAndEnvironmentalControlDnrec_delawareWeatherizationAssistanceProgram": {
+    "name": {
+      "en": "Delaware Weatherization Assistance Program"
+    },
+    "url": {
+      "en": "https://dnrec.delaware.gov/climate-coastal-energy/sustainable-communities/weatherization/"
+    },
+    "authority": "de-delaware-department-of-natural-resources-and-environmental-control-dnrec",
+    "authority_type": "state",
+    "description": "",
+    "items": [
+      "efficiency_rebates",
+      "air_sealing",
+      "crawlspace_insulation",
+      "attic_or_roof_insulation"
+    ]
+  },
+  "de_delawareElectricCooperative_dECRenewableEnergyAndEfficiencyGrants": {
+    "name": {
+      "en": "DEC Renewable Energy & Efficiency Grants"
+    },
+    "url": {
+      "en": "https://www.delaware.coop/renewable-energy-efficiency-grants"
+    },
+    "authority": "de-delaware-electric-cooperative",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "solar_water_heater",
+      "heat_pump_water_heater",
+      "geothermal_heating_installation"
     ]
   },
   "de_lewesBpw_efficiencySmartHomeEnergyRebates-LewesBPW": {

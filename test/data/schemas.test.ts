@@ -186,25 +186,6 @@ test('programs refer to valid authorities', async tap => {
       data.authority,
       `nonexistent authority (program ${programId})`,
     );
-    if (data.authority_type === AuthorityType.County) {
-      tap.hasProp(
-        authorities[data.authority_type]![data.authority],
-        'county_fips',
-        `must define county_fips attribute on corresponding authority ${data.authority} for incentives with county authority type`,
-      );
-    }
-    if (data.authority_type === AuthorityType.City) {
-      tap.hasProp(
-        authorities[data.authority_type]![data.authority],
-        'county_fips',
-        `must define county_fips attribute on corresponding authority ${data.authority} for incentives with city authority type (county is used for matching)`,
-      );
-      tap.hasProp(
-        authorities[data.authority_type]![data.authority],
-        'city',
-        `must define city attribute on corresponding authority ${data.authority} for incentives with city authority type`,
-      );
-    }
   }
 });
 

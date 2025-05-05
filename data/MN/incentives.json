@@ -98,7 +98,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,600 rebate for an air source heat pump."
+      "en": "$1,600 rebate for a ductless air source heat pump."
     }
   },
   {
@@ -165,72 +165,6 @@
     }
   },
   {
-    "id": "MN-11",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_rochesterPublicUtilities_conserveAndSave™Rebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "minimum": 125,
-      "maximum": 500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $500 rebate for an air source heat pump if existing system is an air source heat pump. Maximum rebate not to exceed 50% of equipment cost."
-    }
-  },
-  {
-    "id": "MN-12",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_rochesterPublicUtilities_conserveAndSave™Rebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 200,
-      "minimum": 100,
-      "maximum": 200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $200 rebate for an air source heat pump if the existing heating system/fuel is natural gas. Maximum rebate not to exceed 50% of equipment cost."
-    }
-  },
-  {
-    "id": "MN-13",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_rochesterPublicUtilities_conserveAndSave™Rebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 700,
-      "minimum": 200,
-      "maximum": 700
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $700 rebate for an air source heat pump if existing system is a through-the-wall heat pump. Maximum rebate not to exceed 50% of equipment cost. "
-    }
-  },
-  {
     "id": "MN-14",
     "payment_methods": [
       "rebate"
@@ -287,7 +221,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$25 rebate for a single-family home heat pump clothes dryer."
+      "en": "$25 rebate for a heat pump clothes dryer in a single-family home."
     }
   },
   {
@@ -1078,7 +1012,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$1,250 rebate for insulation "
+      "en": "$1,250 rebate for insulation & air sealing"
     }
   },
   {
@@ -1543,7 +1477,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$900 rebate for a ducted cold climate air source heat pump qualifying for a CenterPoint Energy rebate. Not to exceed $2,000 total from both utilities."
+      "en": "$900 rebate for a ducted cold climate air source heat pump. May pair with CenterPoint Energy rebate for a maximum total of $2,000 from both utilities."
     }
   },
   {
@@ -2232,48 +2166,6 @@
       "en": "Up to $300 rebate for a heat pump water heater. Rebate amount dependent upon water heater size."
     },
     "end_date": "2025-11-30"
-  },
-  {
-    "id": "MN-109",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_austinUtilities_residentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2200,
-      "minimum": 900,
-      "maximum": 2200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $2,200 rebate for a ductless air source heat pump if existing heating system is electric. Maximum rebate not to exceed 50% of equipment cost."
-    }
-  },
-  {
-    "id": "MN-110",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_austinUtilities_residentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$1,500 rebate for a ducted air source heat pump that meets cold climate specifications."
-    }
   },
   {
     "id": "MN-111",
@@ -3179,7 +3071,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate for a 20-55 gallon heat pump water heater. Rebate not to exceed 50% of cost."
+      "en": "$400 rebate for a 20-55 gallon heat pump water heater. Not to exceed 50% of cost. Electric instantaneous or tankless water heaters do not qualify."
     }
   },
   {
@@ -3199,7 +3091,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$90 rebate for a >55 gallon heat pump water heater. Rebate not to exceed 50% of cost."
+      "en": "$90 rebate for a heat pump water heater larger than 55 gallons. Rebate not to exceed 50% of cost."
     }
   },
   {
@@ -3340,7 +3232,380 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for a ducted air source heat pump."
+      "en": "$500 rebate for a ducted air source heat pump. May pair with CenterPoint Energy rebate for a maximum total of $1,600 from both utilities."
+    }
+  },
+  {
+    "id": "MN-161",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "mn_rochesterPublicUtilities_conserveAndSave™Rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 90,
+      "minimum": 25,
+      "maximum": 90
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $90 rebate for a washer/dryer combo with heat pump drying. Must be ENERGY STAR certified. Rebate amount dependent upon washer efficiency.  "
+    }
+  },
+  {
+    "id": "MN-162",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "mn_austinUtilities_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$25 rebate for a heat pump clothes dryer in a single-family home."
+    }
+  },
+  {
+    "id": "MN-163",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "mn_owatonnaPublicUtilities_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 90,
+      "minimum": 25,
+      "maximum": 90
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $115 rebate for a washer/dryer combo with heat pump drying. Must be ENERGY STAR certified. Rebate amount dependent upon washer efficiency.  "
+    }
+  },
+  {
+    "id": "MN-164",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_owatonnaPublicUtilities_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2200,
+      "minimum": 100,
+      "maximum": 2200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,200 rebate for a ductless air source heat pump. Range is between $100 and $2,200 depending on heat pump size, efficiency, and current system."
+    }
+  },
+  {
+    "id": "MN-165",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_owatonnaPublicUtilities_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate for a ducted air source heat pump that meets cold climate specifications."
+    }
+  },
+  {
+    "id": "MN-166",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_owatonnaPublicUtilities_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for a 20-55 gallon heat pump water heater. Not to exceed 50% of cost. Electric instantaneous or tankless water heaters do not qualify."
+    }
+  },
+  {
+    "id": "MN-167",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_owatonnaPublicUtilities_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 90
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$90 rebate for a heat pump water heater larger than 55 gallons. Rebate not to exceed 50% of cost."
+    }
+  },
+  {
+    "id": "MN-168",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "mn_owatonnaPublicUtilities_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$25 rebate for a heat pump clothes dryer in a single-family home."
+    }
+  },
+  {
+    "id": "MN-169",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_cityOfBaudetteMunicipalUtilities_rebatesAndEnergyIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 rebate for ducted air source heat pump. Qualifying equipment will receive a rebate of $150 per ton installed."
+    }
+  },
+  {
+    "id": "MN-170",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_cityOfBaudetteMunicipalUtilities_rebatesAndEnergyIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 per ton rebate for ductless air source heat pump."
+    }
+  },
+  {
+    "id": "MN-171",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_roseauElectricCoop_powerSaversEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 per ton rebate for ducted air source heat pump."
+    }
+  },
+  {
+    "id": "MN-172",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_roseauElectricCoop_powerSaversEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 per ton rebate for ductless air source heat pump. "
+    }
+  },
+  {
+    "id": "MN-173",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_roseauElectricCoop_powerSaversEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 per ton rebate for ducted mini-split air source heat pump."
+    }
+  },
+  {
+    "id": "MN-174",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_roseauElectricCoop_powerSaversEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 per ton rebate for ductless mini-split air source heat pump"
+    }
+  },
+  {
+    "id": "MN-175",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_cityOfBaudetteMunicipalUtilities_rebatesAndEnergyIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 per ton rebate for ducted mini-split air source heat pump. "
+    }
+  },
+  {
+    "id": "MN-176",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_cityOfBaudetteMunicipalUtilities_rebatesAndEnergyIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 per ton rebate for ductless mini-split air source heat pump."
+    }
+  },
+  {
+    "id": "MN-177",
+    "eligible_geo_group": "mn-missouri-river-energy-services",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_missouriRiverEnergyServices_brightEnergySolutionsResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1150,
+      "minimum": 150,
+      "maximum": 1150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1150 rebate for air source heat pump "
+    },
+    "start_date": "2025-01-01"
+  },
+  {
+    "id": "MN-178",
+    "eligible_geo_group": "mn-missouri-river-energy-services",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_missouriRiverEnergyServices_brightEnergySolutionsResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $400 rebate on ductless air source heat pump "
     }
   }
 ]

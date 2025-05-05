@@ -1322,6 +1322,45 @@
       }
     }
   },
+  "DE": {
+    "de-low-income": {
+      "type": "hhsize",
+      "incentives": [
+        "DE-25",
+        "DE-26"
+      ],
+      "source_url": "https://dnrec.delaware.gov/climate-coastal-energy/sustainable-communities/weatherization/",
+      "description": "Delaware Low income threshold. For WAP and others.",
+      "thresholds": {
+        "1": 30120,
+        "2": 40880,
+        "3": 51640,
+        "4": 62400,
+        "5": 73160,
+        "6": 83920,
+        "7": 94680,
+        "8": 105440
+      }
+    },
+    "de-moderate-income": {
+      "type": "hhsize",
+      "incentives": [
+        "DE-27"
+      ],
+      "source_url": "https://documents.dnrec.delaware.gov/energy/renewable/lmi-solar-fact-sheet.pdf",
+      "description": "Delaware moderate income threshold",
+      "thresholds": {
+        "1": 59050,
+        "2": 67450,
+        "3": 75590,
+        "4": 84300,
+        "5": 91050,
+        "6": 97800,
+        "7": 0,
+        "8": 0
+      }
+    }
+  },
   "GA": {
     "ga-georgia-power-lowincome": {
       "type": "hhsize",

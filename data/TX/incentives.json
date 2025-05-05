@@ -53,6 +53,7 @@
     "amount": {
       "type": "dollar_amount",
       "number": 600,
+      "minimum": 400,
       "maximum": 600
     },
     "owner_status": [
@@ -75,6 +76,7 @@
     "amount": {
       "type": "dollar_amount",
       "number": 750,
+      "minimum": 450,
       "maximum": 750
     },
     "owner_status": [
@@ -322,7 +324,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $600 rebate for E-Ride purchases, including E-bikes, scooters, mopeds, and motorcycles."
+      "en": "Up to $600 rebate for E-Ride purchases, including e-bikes, scooters, mopeds, and motorcycles."
     }
   },
   {
@@ -345,7 +347,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,300 rebate for E-ride purchases made by Customer Assistance Program Customers, including e-bikes, scooters, mopeds, and motorcycles."
+      "en": "Up to $1,300 rebate for E-Ride purchases made by Customer Assistance Program customers, including e-bikes, scooters, mopeds, and motorcycles."
     }
   },
   {
@@ -380,7 +382,9 @@
     "program": "tx_mid-SouthElectricCooperativeAssociation_midSouthRewards",
     "amount": {
       "type": "dollar_amount",
-      "number": 400
+      "number": 400,
+      "minimum": 200,
+      "maximum": 400
     },
     "owner_status": [
       "homeowner"
@@ -427,7 +431,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate for a qualifying air source heat pump."
+      "en": "$400 rebate for a qualifying air source heat pump replacement. "
     }
   },
   {
@@ -447,7 +451,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$250 rebate for a heat pump water heater."
+      "en": "$250 rebate for an ENERGY STAR heat pump water heater."
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
@@ -486,13 +490,15 @@
     "program": "tx_southwestRuralElectricAssociation_sWREProductsAndRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 200
+      "number": 200,
+      "minimum": 25,
+      "maximum": 200
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$200 rebate for an electric water heater."
+      "en": "Up to $200 rebate for an electric water heater."
     }
   },
   {
@@ -513,7 +519,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$200 rebate for an air source heat pump or mini split."
+      "en": "Up to $200 rebate for an air source heat pump or mini split."
     }
   },
   {
@@ -528,13 +534,15 @@
     "program": "tx_bartlettElectricCooperative_bECB-GreenRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 200
+      "number": 200,
+      "minimum": 100,
+      "maximum": 200
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $200 rebate for a qualifying air source heat pump."
+      "en": "Up to $200 rebate for a qualifying air source heat pump replacing an existing system. "
     }
   },
   {
@@ -569,7 +577,9 @@
     "program": "tx_brownsvillePublicUtilitiesBoard_brownsvillePublicUtilitiesGoGreenRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 450
+      "number": 450,
+      "minimum": 350,
+      "maximum": 450
     },
     "owner_status": [
       "homeowner"
@@ -676,7 +686,9 @@
     "program": "tx_cityOfNewBraunfels_nBURebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 1150
+      "number": 1150,
+      "minimum": 550,
+      "maximum": 1150
     },
     "owner_status": [
       "homeowner"
@@ -739,13 +751,15 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 250,
-      "unit": "ton"
+      "unit": "ton",
+      "minimum": 175,
+      "maximum": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$250/ton rebate for an air source heat pump."
+      "en": "Up to $250/ton rebate for an air source heat pump. Not to exceed 50% of the installation cost. "
     }
   },
   {
@@ -767,7 +781,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1.00/watt up to $2,500 rebate for residential solar installation."
+      "en": "$1.00/watt up to $2,500 rebate for residential solar installation. May not exceed 50% of installation costs."
     }
   },
   {
@@ -1462,5 +1476,49 @@
     },
     "start_date": "2025-03-01",
     "end_date": "2025-08-31"
+  },
+  {
+    "id": "TX-69",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "solar_water_heater"
+    ],
+    "program": "tx_cityOfDenton_cityOfDentonRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.3,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "30% of project, up to $300 rebate for a solar hot water heater."
+    },
+    "start_date": "2024-10-01"
+  },
+  {
+    "id": "TX-70",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "tx_cityOfDenton_cityOfDentonRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "up to $100 Smart Thermostat rebate. "
+    },
+    "start_date": "2024-10-01"
   }
 ]

@@ -251,8 +251,7 @@
       "en": "$750 rebate for a ducted air source heat pump."
     },
     "start_date": "2025-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
+    "end_date": "2027-06-30"
   },
   {
     "id": "NJ-12",
@@ -419,8 +418,7 @@
       "en": "$750 rebate for a ductless mini split air source heat pump."
     },
     "start_date": "2025-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
+    "end_date": "2027-06-30"
   },
   {
     "id": "NJ-19",
@@ -834,31 +832,6 @@
     "paused": true
   },
   {
-    "id": "NJ-38",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_clothes_dryer",
-      "non_heat_pump_clothes_dryer"
-    ],
-    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$500 rebate for a heat pump clothes dryer."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
-  },
-  {
     "id": "NJ-39",
     "payment_methods": [
       "rebate"
@@ -915,17 +888,16 @@
     "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
     "amount": {
       "type": "dollar_amount",
-      "number": 150
+      "number": 100
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $150 rebate for a smart thermostat."
+      "en": "Up to $100 rebate for a smart thermostat, limit 2."
     },
     "start_date": "2025-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
+    "end_date": "2027-06-30"
   },
   {
     "id": "NJ-42",
@@ -948,8 +920,7 @@
       "en": "Up to $750 rebate for an air source heat pump."
     },
     "start_date": "2025-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
+    "end_date": "2027-06-30"
   },
   {
     "id": "NJ-43",
@@ -963,111 +934,16 @@
     "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
     "amount": {
       "type": "dollar_amount",
-      "number": 2000
+      "number": 1000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $2,000 rebate for a cold-climate air source heat pump."
+      "en": "Up to $1,000 rebate for a cold-climate air source heat pump."
     },
     "start_date": "2025-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
-  },
-  {
-    "id": "NJ-44",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
-    ],
-    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 10000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $10,000 rebate for a cold-climate heat pump when switching from electric resistance heating."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
-  },
-  {
-    "id": "NJ-45",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "geothermal_heating_installation"
-    ],
-    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 10000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $10,000 rebate for a ground source heat pump."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
-  },
-  {
-    "id": "NJ-46",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "geothermal_heating_installation"
-    ],
-    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
-    "amount": {
-      "type": "percent",
-      "number": 0.2
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "20% of project cost for a ground source heat pump or $2,000 per 10k BTUh, whichever is lower."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
-  },
-  {
-    "id": "NJ-47",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "geothermal_heating_installation"
-    ],
-    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
-    "amount": {
-      "type": "dollars_per_unit",
-      "number": 3500,
-      "unit": "btuh10k"
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $3,500/10k BTUh rebate or 40% of project cost, for a ground source heat pump when switching from electric resistance heating."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
+    "end_date": "2027-06-30"
   },
   {
     "id": "NJ-48",
@@ -1199,18 +1075,17 @@
     "program": "nj_publicServiceElectricAndGas_pSEGEnergyEfficiencyPrograms",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 300
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR certified electric clothes dryer."
+      "en": "$300 rebate for an ENERGY STAR certified most efficient electric clothes dryer."
     },
     "start_date": "2025-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
+    "end_date": "2027-06-30"
   },
   {
     "id": "NJ-54",
@@ -1276,7 +1151,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$150 rebate for a smart thermostat."
+      "en": "$100 rebate for a smart thermostat."
     },
     "start_date": "2025-01-01",
     "end_date": "2027-06-30"
@@ -1468,18 +1343,17 @@
     "amount": {
       "type": "dollar_amount",
       "number": 2000,
-      "maximum": 7500
+      "maximum": 6000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $7,500 rebate per home for weatherization services, based on modeled energy reduction. $2,000 +$200 /each percentage point of savings above 5%."
+      "en": "Up to $6,000 rebate per home for weatherization services, based on modeled energy reduction. $2,000 +$200 /each percentage point of savings above 5%."
     },
-    "start_date": "2027-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
   },
   {
     "id": "NJ-65",
@@ -1487,24 +1361,23 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump"
+      "ducted_heat_pump",
+      "ductless_heat_pump"
     ],
     "program": "nj_newJerseyNaturalGas_nJNGSAVEGREEN",
     "amount": {
       "type": "dollar_amount",
-      "number": 2000,
-      "maximum": 2000
+      "number": 1000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$2,000 for an air source heat pump."
+      "en": "$1,000 rebate for a cold climate air source heat pump."
     },
-    "start_date": "2027-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
+    "start_date": "2025-01-01",
+    "end_date": "2027-06-30"
   },
   {
     "id": "NJ-66",
@@ -1518,18 +1391,18 @@
     "program": "nj_newJerseyNaturalGas_nJNGSAVEGREEN",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000,
+      "number": 750,
       "minimum": 500,
-      "maximum": 1000
+      "maximum": 750
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,000 for an air source heat pump, depending on efficiency level."
+      "en": "Up to $750 for an air source heat pump, depending on efficiency level."
     },
-    "start_date": "2027-01-01",
+    "start_date": "2025-01-01",
     "end_date": "2027-06-30"
   },
   {
@@ -1553,14 +1426,14 @@
     "amount": {
       "type": "percent",
       "number": 1,
-      "maximum": 17500
+      "maximum": 16500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $15,000 in free weatherization measures for income-qualified customers of SJG. Additional $2,500 for health and safety expenses."
+      "en": "Up to $14,000 in free weatherization measures for income-qualified customers of SJG. Additional $2,500 for health and safety expenses."
     },
     "start_date": "2025-01-01",
     "end_date": "2027-06-30",
@@ -1851,154 +1724,7 @@
     },
     "start_date": "2025-01-01",
     "end_date": "2027-06-30",
-    "paused": true,
     "low_income": "nj-page-moderate"
-  },
-  {
-    "id": "NJ-79",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
-    "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 10000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "50% of project cost up to $10,000 rebate for a cold climate heat pump when removing gas service."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
-  },
-  {
-    "id": "NJ-80",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
-    "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 5000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "50% of project cost up to $5,000 rebate for a cold climate heat pump when switching from a dual fuel system."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
-  },
-  {
-    "id": "NJ-81",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2000,
-      "minimum": 750,
-      "maximum": 2000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $2,000 rebate per additional unit for a cold climate heat pump, or $750/unit for a standard air source heat pump when switching from gas."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
-  },
-  {
-    "id": "NJ-82",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
-    "amount": {
-      "type": "percent",
-      "number": 0.3,
-      "maximum": 2000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "30% of project cost up to $3,000 rebate for an air source heat pump that is partially displacing gas heating."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
-  },
-  {
-    "id": "NJ-83",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "geothermal_heating_installation"
-    ],
-    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
-    "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 12000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "50% of project cost up to $4,000/10k BTUh rebate for a ground source heat pump when replacing gas."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
-  },
-  {
-    "id": "NJ-84",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump",
-      "other_heat_pump"
-    ],
-    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 5000,
-      "maximum": 5000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$5,000 rebate for a packaged terminal heat pump when replacing gas."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2027-06-30",
-    "paused": true
   },
   {
     "id": "NJ-85",
@@ -2006,7 +1732,6 @@
       "rebate"
     ],
     "items": [
-      "electric_vehicle_charger",
       "electric_service_upgrades"
     ],
     "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
@@ -2020,6 +1745,26 @@
     ],
     "short_description": {
       "en": "Up to $5,500 for cost of utility service upgrades to support a level 2 EV charger, if needed."
+    }
+  },
+  {
+    "id": "NJ-86",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nj_jerseyCentralPowerAndLight_jCPLResidentialPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate for an ENERGY STAR certified ground source heat pump."
     }
   }
 ]

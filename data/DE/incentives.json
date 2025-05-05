@@ -53,7 +53,7 @@
     "items": [
       "non_heat_pump_clothes_dryer"
     ],
-    "program": "de_cityOfMilfordElectricDepartment_efficiencySmartHomeEnergyRebates-CityOfMilfordElectricDepartment",
+    "program": "de_cityOfMilford_efficiencySmartHomeEnergyRebates-CityOfMilfordElectricDepartment",
     "amount": {
       "type": "dollar_amount",
       "number": 50
@@ -218,13 +218,14 @@
     "program": "de_lewesBpw_efficiencySmartHomeEnergyRebates-LewesBPW",
     "amount": {
       "type": "dollar_amount",
-      "number": 100
+      "number": 750,
+      "maximum": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$100 rebate for an ENERGY STAR certified air source heat pump."
+      "en": "Up to $750 rebate for an ENERGY STAR certified air source heat pump, depending on efficiency."
     },
     "start_date": "2022-11-01",
     "end_date": "2025-10-31"
@@ -238,16 +239,17 @@
       "ducted_heat_pump",
       "ductless_heat_pump"
     ],
-    "program": "de_cityOfMilfordElectricDepartment_efficiencySmartHomeEnergyRebates-CityOfMilfordElectricDepartment",
+    "program": "de_cityOfMilford_efficiencySmartHomeEnergyRebates-CityOfMilfordElectricDepartment",
     "amount": {
       "type": "dollar_amount",
-      "number": 100
+      "number": 750,
+      "maximum": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$100 rebate for an ENERGY STAR certified air source heat pump."
+      "en": "Up to $750 rebate for an ENERGY STAR certified air source heat pump, depending on efficiency."
     },
     "start_date": "2024-03-01",
     "end_date": "2027-02-28"
@@ -366,5 +368,255 @@
     },
     "start_date": "2022-11-01",
     "end_date": "2025-10-31"
+  },
+  {
+    "id": "DE-17",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "new_electric_vehicle",
+      "new_plugin_hybrid_vehicle"
+    ],
+    "program": "de_delawareDepartmentOfNaturalResourcesAndEnvironmentalControlDnrec_delawareCleanVehicleRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500,
+      "minimum": 1000,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2,500 rebate for a new battery electric or plug-in hybrid vehicle, depending on base MSRP."
+    },
+    "start_date": "2025-05-01"
+  },
+  {
+    "id": "DE-18",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_plugin_hybrid_vehicle",
+      "used_electric_vehicle"
+    ],
+    "program": "de_delawareDepartmentOfNaturalResourcesAndEnvironmentalControlDnrec_delawareCleanVehicleRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500,
+      "minimum": 1000,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2,500 rebate for a used battery electric or plug-in hybrid vehicle, depending on fair market value."
+    },
+    "start_date": "2025-05-01"
+  },
+  {
+    "id": "DE-19",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "de_delawareElectricCooperative_dECRenewableEnergyAndEfficiencyGrants",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for a ENERGY STAR qualified heat pump water heater."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "DE-20",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "solar_water_heater"
+    ],
+    "program": "de_delawareElectricCooperative_dECRenewableEnergyAndEfficiencyGrants",
+    "amount": {
+      "type": "percent",
+      "number": 0.2,
+      "minimum": 2000,
+      "maximum": 3500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "20% of system cost up to $3,500 rebate for class B solar hot water systems, $2,000 for class A systems."
+    }
+  },
+  {
+    "id": "DE-21",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "de_delawareElectricCooperative_dECRenewableEnergyAndEfficiencyGrants",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 800,
+      "unit": "ton",
+      "maximum": 3500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 per ton for first two tons, $700 per ton after, up to $3,500 rebate for geothermal heat pump systems, depending on efficiency."
+    }
+  },
+  {
+    "id": "DE-22",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "de_delawareDepartmentOfNaturalResourcesAndEnvironmentalControlDnrec_delawareGreenEnergyProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 800,
+      "unit": "ton",
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 per ton, up to $5,000 rebate for a geothermal heat pump."
+    }
+  },
+  {
+    "id": "DE-23",
+    "payment_methods": [
+      "performance_rebate"
+    ],
+    "items": [
+      "solar_water_heater"
+    ],
+    "program": "de_delawareDepartmentOfNaturalResourcesAndEnvironmentalControlDnrec_delawareGreenEnergyProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1,
+      "unit": "kilowatt_hour",
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1.00/kWh saved rebate for a solar hot water heater."
+    }
+  },
+  {
+    "id": "DE-24",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "de_delawareDepartmentOfNaturalResourcesAndEnvironmentalControlDnrec_delawareGreenEnergyProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.7,
+      "unit": "watt",
+      "maximum": 6000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$0.70 rebate per watt for residential solar installation, up to $6,000."
+    }
+  },
+  {
+    "id": "DE-25",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "efficiency_rebates",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing"
+    ],
+    "program": "de_delawareDepartmentOfNaturalResourcesAndEnvironmentalControlDnrec_delawareWeatherizationAssistanceProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home weatherization program for income-qualified residents."
+    },
+    "low_income": "de-low-income"
+  },
+  {
+    "id": "DE-26",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "de_delawareDepartmentOfNaturalResourcesAndEnvironmentalControlDnrec_delawareLow-ToModerate-IncomeSolarPilotProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Cost-free solar system up to 4.0kW and free weatherization services for low-income homeowners."
+    },
+    "low_income": "de-low-income"
+  },
+  {
+    "id": "DE-27",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "de_delawareDepartmentOfNaturalResourcesAndEnvironmentalControlDnrec_delawareLow-ToModerate-IncomeSolarPilotProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.7
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "70% of project cost for a residential solar system, up to 6.0 kW for moderate-income homeowners."
+    },
+    "low_income": "de-moderate-income"
   }
 ]
