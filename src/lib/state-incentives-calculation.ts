@@ -4,7 +4,7 @@ import _, { min } from 'lodash';
 import { AuthoritiesByType, AuthorityType } from '../data/authorities';
 import { DATA_PARTNERS_BY_STATE } from '../data/data_partners';
 import { GEO_GROUPS_BY_STATE } from '../data/geo_groups';
-import { LOW_INCOME_THRESHOLDS_BY_STATE } from '../data/low_income_thresholds';
+import { LOW_INCOME_THRESHOLDS } from '../data/low_income_thresholds';
 import { Programs } from '../data/programs';
 import {
   INCENTIVE_RELATIONSHIPS_BY_STATE,
@@ -137,12 +137,9 @@ export function calculateStateIncentivesAndSavings(
     }
 
     if (incentive.low_income) {
-      const thresholds =
-        LOW_INCOME_THRESHOLDS_BY_STATE[stateId]?.[incentive.low_income];
+      const thresholds = LOW_INCOME_THRESHOLDS[incentive.low_income];
       if (!thresholds) {
-        console.log(
-          `No income thresholds defined for ${incentive.low_income} in ${stateId}`,
-        );
+        console.log(`No income thresholds defined for ${incentive.low_income}`);
         // The incentive is income-qualified but we don't know the thresholds;
         // be conservative and exclude it.
         eligible = false;
