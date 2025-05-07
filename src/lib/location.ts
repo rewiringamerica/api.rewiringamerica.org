@@ -112,6 +112,7 @@ export async function resolveLocation(
     try {
       response = await geocoder.geocode(address, ['census2024']);
     } catch (error) {
+      console.error('Error geocoding user-inputted address: ', error);
       return null;
     }
 
