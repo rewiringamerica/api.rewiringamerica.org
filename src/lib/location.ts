@@ -107,7 +107,15 @@ export async function resolveLocation(
     };
   } else {
     const { address } = zipOrAddress;
-    const response = await geocoder.geocode(address, ['census2024']);
+    let response;
+
+    try {
+      response = await geocoder.geocode(address, ['census2024']);
+    } catch (error) {
+      console.error('Error geocoding user-inputted address: ', error);
+      return null;
+    }
+
     const result = response?.results?.at(0);
 
     // Accuracy type "state" is too imprecise
@@ -125,7 +133,7 @@ export async function resolveLocation(
 
     const state = await db.get<DbGeography>(
       `SELECT * FROM geographies
-      WHERE type = 'state' AND state = ?`,
+        WHERE type = 'state' AND state = ?`,
       result.address_components.state,
     );
     if (state) {
@@ -134,7 +142,7 @@ export async function resolveLocation(
 
     const county = await db.get<DbGeography>(
       `SELECT * FROM geographies
-      WHERE type = 'county' AND county_fips = ?`,
+        WHERE type = 'county' AND county_fips = ?`,
       censusInfo.county_fips,
     );
     if (county) {
