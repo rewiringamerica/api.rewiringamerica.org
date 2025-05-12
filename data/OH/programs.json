@@ -1,4 +1,26 @@
 {
+  "oh_aepOhio_highEfficiencyForLow-IncomeProgramHELP": {
+    "name": {
+      "en": "High Efficiency for Low-Income Program (HELP)"
+    },
+    "url": {
+      "en": "https://www.aepohio.com/savings/home/energy/high-efficiency-low-income/"
+    },
+    "authority": "oh-aep-ohio",
+    "authority_type": "utility",
+    "description": "Energy efficient products and services for residential customers in need.",
+    "items": [
+      "duct_sealing",
+      "air_sealing",
+      "wall_insulation",
+      "attic_or_roof_insulation",
+      "efficiency_rebates",
+      "energy_audit",
+      "heat_pump_water_heater",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ]
+  },
   "oh_brewsterMunicipalElectric_efficiencySmartHomeEnergyRebates-BrewsterMunicipalElectric": {
     "name": {
       "en": "Efficiency Smart Home Energy Rebates - Brewster Municipal Electric"
@@ -10,18 +32,50 @@
     "authority_type": "utility",
     "description": "Home Energy Rebates available for purchasing energy-efficient products."
   },
-  "oh_butlerRuralElectricCooperative_butlerRuralElectricRebates": {
+  "oh_butlerRuralElectricCooperative_butlerRuralElectricHeatPumpRebates": {
     "name": {
-      "en": "Butler Rural Electric Rebates"
+      "en": "Butler Rural Electric Heat Pump Rebates"
     },
     "url": {
-      "en": "https://www.butlerrural.coop/rebates"
+      "en": "https://butlerrural.coop/heat-pump-rebates"
     },
     "authority": "oh-butler-rural-electric-cooperative",
     "authority_type": "utility",
+    "description": "",
     "items": [
-      "other_heat_pump",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ]
+  },
+  "oh_butlerRuralElectricCooperative_butlerRuralElectricWaterHeaterRebates": {
+    "name": {
+      "en": "Butler Rural Electric Water Heater Rebates"
+    },
+    "url": {
+      "en": "https://butlerrural.coop/water-heater-rebates"
+    },
+    "authority": "oh-butler-rural-electric-cooperative",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
       "heat_pump_water_heater"
+    ]
+  },
+  "oh_carrollElectricCooperative_carrollElectricRebatesAndIncentives": {
+    "name": {
+      "en": "Carroll Electric Rebates & Incentives"
+    },
+    "url": {
+      "en": "https://cecpower.coop/rebates-incentive-programs"
+    },
+    "authority": "oh-carroll-electric-cooperative",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "non_heat_pump_water_heater",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "geothermal_heating_installation"
     ]
   },
   "oh_cityOfBowlingGreen_efficiencySmartHomeEnergyRebates-BowlingGreenMunicipalUtilities": {
@@ -83,33 +137,42 @@
       "new_electric_vehicle"
     ]
   },
-  "oh_dukeEnergyOhio_smart$AverRebateProgram": {
+  "oh_firelandsElectricCooperative_firelandsMemberPrograms": {
     "name": {
-      "en": "Smart $aver Rebate Program"
+      "en": "Firelands Member Programs"
     },
     "url": {
-      "en": "https://www.duke-energy.com/home/products/smart-saver"
-    },
-    "authority": "oh-duke-energy-ohio",
-    "authority_type": "utility",
-    "items": [
-      "other_weatherization",
-      "other_heat_pump",
-      "heat_pump_water_heater"
-    ]
-  },
-  "oh_firelandsElectricCooperative_firelandsApplianceRebates": {
-    "name": {
-      "en": "Firelands Appliance Rebates"
-    },
-    "url": {
-      "en": "https://firelandsec.com/appliance-rebates"
+      "en": "https://firelandsec.com/member-programs"
     },
     "authority": "oh-firelands-electric-cooperative",
     "authority_type": "utility",
+    "description": "",
     "items": [
-      "electric_stove",
-      "heat_pump_clothes_dryer"
+      "heat_pump_clothes_dryer",
+      "electric_vehicle_charger",
+      "geothermal_heating_installation",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "heat_pump_water_heater",
+      "non_heat_pump_water_heater",
+      "smart_thermostat",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "wall_insulation"
+    ]
+  },
+  "oh_frontierPowerCompany_frontierPowerRebates": {
+    "name": {
+      "en": "Frontier Power Rebates"
+    },
+    "url": {
+      "en": "https://frontier-power.com/rebate-programs-0"
+    },
+    "authority": "oh-frontier-power-company",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "heat_pump_water_heater"
     ]
   },
   "oh_georgetownPublicUtilities_efficiencySmartHomeEnergyRebates-GeorgetownPublicUtilities": {
@@ -122,6 +185,46 @@
     "authority": "oh-georgetown",
     "authority_type": "utility",
     "description": "Home Energy Rebates available for purchasing energy-efficient products."
+  },
+  "oh_guernsey-MuskingumElectricCooperative_gMECRebates": {
+    "name": {
+      "en": "GMEC Rebates"
+    },
+    "url": {
+      "en": "https://www.gmenergy.com/water-heaters"
+    },
+    "authority": "oh-guernsey-muskingum-electric-cooperative",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "geothermal_heating_installation",
+      "heat_pump_water_heater",
+      "energy_audit",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "central_air_conditioner"
+    ]
+  },
+  "oh_hancock-WoodElectricCooperative_hancock-WoodRebates": {
+    "name": {
+      "en": "Hancock-Wood Rebates"
+    },
+    "url": {
+      "en": "https://www.hwe.coop/rebates"
+    },
+    "authority": "oh-hancock-wood-electric-cooperative",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "electric_vehicle_charger",
+      "geothermal_heating_installation",
+      "heat_pump_water_heater",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "duct_sealing"
+    ]
   },
   "oh_jacksonCenterMunipalElectricSystem_efficiencySmartHomeEnergyRebates-JacksonCenterMunicipalElectricSystem": {
     "name": {
@@ -145,6 +248,63 @@
     "authority_type": "utility",
     "description": "Home Energy Rebates available for purchasing energy-efficient products."
   },
+  "oh_lickingRuralElectric_theEnergyCooperativeRebatePrograms": {
+    "name": {
+      "en": "The Energy Cooperative Rebate Programs"
+    },
+    "url": {
+      "en": "https://myenergycoop.com/rebate-programs"
+    },
+    "authority": "oh-licking-rural-electric",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "electric_vehicle_charger",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "geothermal_heating_installation"
+    ]
+  },
+  "oh_lorain-MedinaRec_lMRERebatePrograms": {
+    "name": {
+      "en": "LMRE Rebate Programs"
+    },
+    "url": {
+      "en": "https://lmre.org/rebates-programs"
+    },
+    "authority": "oh-lorain-medina-rec",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "smart_thermostat",
+      "heat_pump_water_heater",
+      "geothermal_heating_installation",
+      "central_air_conditioner",
+      "attic_or_roof_insulation",
+      "air_sealing"
+    ]
+  },
+  "oh_midwestElectric_midwestElectricRebatesAndIncentives": {
+    "name": {
+      "en": "Midwest Electric Rebates and Incentives"
+    },
+    "url": {
+      "en": "https://midwestrec.com/rebates"
+    },
+    "authority": "oh-midwest-electric",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "attic_or_roof_insulation",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "electric_vehicle_charger",
+      "heat_pump_water_heater",
+      "smart_thermostat"
+    ]
+  },
   "oh_napoleonLightAndPower_efficiencySmartHomeEnergyRebates-NapoleonLightAndPower": {
     "name": {
       "en": "Efficiency Smart Home Energy Rebates - Napoleon Light and Power"
@@ -155,6 +315,44 @@
     "authority": "oh-napoleon-light-power",
     "authority_type": "utility",
     "description": "Home Energy Rebates available for purchasing energy-efficient products."
+  },
+  "oh_northCentralElectricCooperative_nCERebatePrograms": {
+    "name": {
+      "en": "NCE Rebate Programs"
+    },
+    "url": {
+      "en": "https://www.ncelec.org/rebates-programs"
+    },
+    "authority": "oh-north-central-electric-cooperative",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "smart_thermostat",
+      "heat_pump_water_heater",
+      "geothermal_heating_installation",
+      "central_air_conditioner",
+      "attic_or_roof_insulation",
+      "air_sealing"
+    ]
+  },
+  "oh_northWesternElectricCooperative_nWECRebates": {
+    "name": {
+      "en": "NWEC Rebates"
+    },
+    "url": {
+      "en": "https://nwec.com/rebates"
+    },
+    "authority": "oh-north-western-electric-cooperative",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "geothermal_heating_installation",
+      "heat_pump_water_heater"
+    ]
   },
   "oh_oakHarborPublicPower_efficiencySmartHomeEnergyRebates-OakHarborPublicPower": {
     "name": {
@@ -177,6 +375,81 @@
     "authority": "oh-oberlin-municipal-light-power",
     "authority_type": "utility",
     "description": "Home Energy Rebates available for purchasing energy-efficient products."
+  },
+  "oh_paulding-PutmanElectricCooperative_pPECRebates": {
+    "name": {
+      "en": "PPEC Rebates"
+    },
+    "url": {
+      "en": "https://www.ppec.coop/rebate-programs"
+    },
+    "authority": "oh-paulding-putman-electric-cooperative",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "electric_vehicle_charger",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "geothermal_heating_installation"
+    ]
+  },
+  "oh_pioneerRuralElectricCooperative_pioneerRebatesAndIncentives": {
+    "name": {
+      "en": "Pioneer Rebates and Incentives"
+    },
+    "url": {
+      "en": "https://pioneerec.com/member-programs/rebates-incentives/"
+    },
+    "authority": "oh-pioneer-rural-electric-cooperative",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "geothermal_heating_installation",
+      "heat_pump_water_heater",
+      "non_heat_pump_water_heater",
+      "electric_vehicle_charger"
+    ]
+  },
+  "oh_triCountyRuralElectricCooperative_tRECRebates": {
+    "name": {
+      "en": "TREC Rebates"
+    },
+    "url": {
+      "en": "https://www.tricountyelectriccoop.coop/rebates"
+    },
+    "authority": "oh-tri-county-rural-electric-cooperative",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "geothermal_heating_installation",
+      "non_heat_pump_water_heater"
+    ]
+  },
+  "oh_unionRuralElectricCooperative_uRERebates": {
+    "name": {
+      "en": "URE Rebates"
+    },
+    "url": {
+      "en": "https://ure.com/ways-to-save/rebate-programs-services/"
+    },
+    "authority": "oh-union-rural-electric-cooperative",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "electric_vehicle_charger",
+      "smart_thermostat"
+    ]
   },
   "oh_villageOfEdgertonElectricDepartment_efficiencySmartHomeEnergyRebates-VillageOfEdgertonElectricDepartment": {
     "name": {
@@ -232,5 +505,23 @@
     "authority": "oh-city-of-wapakoneta",
     "authority_type": "utility",
     "description": "Home Energy Rebates available for purchasing energy-efficient products."
+  },
+  "oh_washingtonElectricCooperative_washingtonElectricRebates": {
+    "name": {
+      "en": "Washington Electric Rebates"
+    },
+    "url": {
+      "en": "https://www.weci.org/rebates-and-incentives"
+    },
+    "authority": "oh-washington-electric-cooperative",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "heat_pump_water_heater",
+      "central_air_conditioner",
+      "geothermal_heating_installation",
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
+    ]
   }
 }

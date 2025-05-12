@@ -98,5 +98,69 @@
     },
     "start_date": "2024-01-01",
     "end_date": "2025-12-31"
+  },
+  {
+    "id": "CA-5",
+    "eligible_geo_group": "ca-energy-smart-homes-territories",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ca_bayAreaRegionalEnergyNetworkBayren_greenLabelingProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "minimum": 200,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Save $200 – $250 on Home Energy Score Rebate"
+    }
+  },
+  {
+    "id": "CA-6",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel",
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_single-FamilyNon-ConnectedHeatPumpWaterHeaterElectricalUpgradeIncentive",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Must accompany the qualifying retrofit installation of a non-connected HPWH. Panel Upgrade up to 200 amps OR Smart Load Center"
+    }
+  },
+  {
+    "id": "CA-7",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_single-FamilyUnitarySplitSystemAndMini/Multi-SplitHeatPumpElectricalUpgrades",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Save $2,000 per unit - Rebate on Single-Family Unitary Split System and Mini/Multi-Split Heat Pump Electrical Upgrades"
+    }
   }
 ]

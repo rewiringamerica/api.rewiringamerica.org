@@ -291,7 +291,7 @@
     "items": [
       "electric_vehicle_charger"
     ],
-    "program": "tx_AustinEnergy_RebatesAndIncentives",
+    "program": "tx_austinEnergy_austinEnergyHomeEVChargerRebate",
     "amount": {
       "type": "percent",
       "number": 0.5,
@@ -313,7 +313,7 @@
       "ebike",
       "other"
     ],
-    "program": "tx_AustinEnergy_RebatesAndIncentives",
+    "program": "tx_austinEnergy_austinEnergyE-RideRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 600,
@@ -336,7 +336,7 @@
       "ebike",
       "other"
     ],
-    "program": "tx_AustinEnergy_RebatesAndIncentives",
+    "program": "tx_austinEnergy_austinEnergyE-RideRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 1300,
@@ -348,7 +348,8 @@
     ],
     "short_description": {
       "en": "Up to $1,300 rebate for E-Ride purchases made by Customer Assistance Program customers, including e-bikes, scooters, mopeds, and motorcycles."
-    }
+    },
+    "low_income": "tx-200-fpl"
   },
   {
     "id": "TX-17",
@@ -396,7 +397,7 @@
   {
     "id": "TX-19",
     "payment_methods": [
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "non_heat_pump_water_heater"
@@ -896,7 +897,7 @@
       "ducted_heat_pump",
       "ductless_heat_pump"
     ],
-    "program": "tx_unitedElectricCooperativeService_unitedElectricEnergyInnovationRebates",
+    "program": "tx_unitedElectricCooperativeService_unitedEnergyInnovationRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 200
@@ -916,7 +917,7 @@
     "items": [
       "geothermal_heating_installation"
     ],
-    "program": "tx_unitedElectricCooperativeService_unitedElectricEnergyInnovationRebates",
+    "program": "tx_unitedElectricCooperativeService_unitedEnergyInnovationRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 200
@@ -936,7 +937,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "tx_unitedElectricCooperativeService_unitedElectricEnergyInnovationRebates",
+    "program": "tx_unitedElectricCooperativeService_unitedEnergyInnovationRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 150
@@ -945,7 +946,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$150 rebate for a qualifying heat pump water heater with at least 40 gallon capacity."
+      "en": "$150 rebate for a qualifying heat pump water heater."
     }
   },
   {
@@ -956,7 +957,7 @@
     "items": [
       "electric_vehicle_charger"
     ],
-    "program": "tx_unitedElectricCooperativeService_unitedElectricEnergyInnovationRebates",
+    "program": "tx_unitedElectricCooperativeService_unitedEnergyInnovationRebates",
     "amount": {
       "type": "percent",
       "number": 0.5,
@@ -981,7 +982,9 @@
     "program": "tx_heartOfTexasElectricCooperative_hOTECRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 200
+      "number": 200,
+      "minimum": 100,
+      "maximum": 200
     },
     "owner_status": [
       "homeowner"
@@ -1045,14 +1048,14 @@
     "program": "tx_guadalupeValleyElectricCooperative_gVECResidentialRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 200,
+      "number": 220,
       "unit": "kilowatt"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$200/installed kw of rated capacity for a home battery storage system, enrolled in GVEC Peak Time Payback program."
+      "en": "$220/installed kw of rated capacity for a home battery storage system, enrolled in GVEC Peak Time Payback program."
     }
   },
   {
@@ -1087,13 +1090,13 @@
     "program": "tx_guadalupeValleyElectricCooperative_gVECResidentialRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 600
+      "number": 650
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$600 rebate for qualifying ducted air source heat pumps."
+      "en": "$650 rebate for qualifying ducted air source heat pumps."
     }
   },
   {
@@ -1131,7 +1134,7 @@
     "amount": {
       "type": "dollar_amount",
       "number": 600,
-      "minimum": 400,
+      "minimum": 200,
       "maximum": 600
     },
     "owner_status": [
@@ -1206,7 +1209,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to 100% of project costs for efficiency projects and heating/cooling upgrades. Renters are eligible with landlord permission."
+      "en": "Up to 100% of project costs for efficiency projects and heating/cooling upgrades. "
     }
   },
   {
@@ -1293,7 +1296,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate for an ENERGY STAR heat pump water heater, 55 gallons or less, for income-qualified customers. Reserve rebate in advance."
+      "en": "$400 rebate for a qualifying ENERGY STAR heat pump water heater for income-qualified customers. Reserve rebate in advance."
     },
     "end_date": "2025-12-31",
     "low_income": "tx-200-fpl"
@@ -1315,7 +1318,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 rebate for an ENERGY STAR heat pump water heater, 55 gallons or less. Reserve rebate in advance."
+      "en": "$300 rebate for a qulifying ENERGY STAR heat pump water heater. Reserve rebate in advance."
     },
     "end_date": "2025-12-31"
   },
@@ -1336,7 +1339,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$700 rebate for a qualifying evaporative cooler, for income-qualified customers. Reserve rebate in advance."
+      "en": "$700 rebate for a qualifying evaporative cooler for income-qualified customers. Reserve rebate in advance."
     },
     "end_date": "2025-12-31",
     "low_income": "tx-200-fpl"
@@ -1368,7 +1371,6 @@
       "rebate"
     ],
     "items": [
-      "central_air_conditioner",
       "ducted_heat_pump",
       "ductless_heat_pump"
     ],
@@ -1393,7 +1395,7 @@
     "items": [
       "attic_or_roof_insulation"
     ],
-    "program": "tx_cpsEnergy_cPSEnergyRebates",
+    "program": "tx_cityOfSanAntonio_cPSEnergyRebates",
     "amount": {
       "type": "dollars_per_unit",
       "number": 0.35,
@@ -1414,7 +1416,7 @@
     "items": [
       "cool_roof"
     ],
-    "program": "tx_cpsEnergy_cPSEnergyRebates",
+    "program": "tx_cityOfSanAntonio_cPSEnergyRebates",
     "amount": {
       "type": "dollars_per_unit",
       "number": 0.2,
@@ -1437,7 +1439,7 @@
       "ducted_heat_pump",
       "ductless_heat_pump"
     ],
-    "program": "tx_cpsEnergy_cPSEnergyRebates",
+    "program": "tx_cityOfSanAntonio_cPSEnergyRebates",
     "amount": {
       "type": "dollars_per_unit",
       "number": 310,
@@ -1460,7 +1462,7 @@
     "items": [
       "electric_outdoor_equipment"
     ],
-    "program": "tx_cpsEnergy_cPSEnergyRebates",
+    "program": "tx_cityOfSanAntonio_cPSEnergyRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 60,
@@ -1495,7 +1497,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "30% of project, up to $300 rebate for a solar hot water heater."
+      "en": "30% up to $300 rebate for a solar hot water heater."
     },
     "start_date": "2024-10-01"
   },
@@ -1517,8 +1519,249 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "up to $100 Smart Thermostat rebate. "
+      "en": "Up to $100 rebate for a smart thermostat. "
     },
     "start_date": "2024-10-01"
+  },
+  {
+    "id": "TX-71",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement",
+      "window_replacement"
+    ],
+    "program": "tx_cityOfSanMarcos_sanMarcosEnergyRebatePrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1.5,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1.50 per square foot for ENERGY STAR rated windows and doors."
+    }
+  },
+  {
+    "id": "TX-72",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "solar_screen_films"
+    ],
+    "program": "tx_cityOfSanMarcos_sanMarcosEnergyRebatePrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.3,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$0.30 per square foot for solar screen and window film installation."
+    }
+  },
+  {
+    "id": "TX-73",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit",
+      "efficiency_rebates",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing"
+    ],
+    "program": "tx_texasDepartmentOfHousingAndCommunityAffairs_texasWeatherizationAssistanceProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free energy audit and installation of weatherization measures to increase energy efficiency of a home."
+    },
+    "low_income": "tx-200-fpl"
+  },
+  {
+    "id": "TX-74",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
+    "program": "tx_hilcoElectricCooperative_hILCORebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for increasing attic insulation by 6 inches or more in homes heated/cooled by electricity."
+    }
+  },
+  {
+    "id": "TX-75",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
+    "program": "tx_kerrvillePublicUtilityBoard_kPUBEnergySavingRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.2,
+      "unit": "square_foot",
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$0.20 per sq ft rebate, up to $300 for attic insulation."
+    }
+  },
+  {
+    "id": "TX-76",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "tx_kerrvillePublicUtilityBoard_kPUBEnergySavingRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot",
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2.00 per sq ft rebate, up to $500 for qualifying windows."
+    }
+  },
+  {
+    "id": "TX-77",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
+    "program": "tx_heartOfTexasElectricCooperative_hOTECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 275
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$275 rebate for a upgrading attic insulation from R0-R8 to R38+ in air-conditioned homes."
+    }
+  },
+  {
+    "id": "TX-78",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "tx_oncorElectricDelivery_oncorResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3500,
+      "maximum": 3500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $3,500 upfront discount for a new high efficiency A/C unit, based on equipment placement and geographic location."
+    }
+  },
+  {
+    "id": "TX-79",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "tx_entergyTexas_entergySolutions",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Free energy efficiency upgrades including air sealing, duct sealing, and insulation, based on funding availability."
+    }
+  },
+  {
+    "id": "TX-80",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "tx_entergyTexas_entergyTexasHomeEnergyEfficiencyProgramForLow-IncomeCustomers",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Free energy efficiency measures including duct sealing, weather stripping, and attic insulation, for income-qualified customers."
+    },
+    "low_income": "tx-200-fpl"
+  },
+  {
+    "id": "TX-81",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement",
+      "solar_screen_films"
+    ],
+    "program": "tx_elPasoElectric_elPasoElectricTXResidentialProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1.35,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1.35/sq ft rebate for ENERGY STAR windows or solar screens. Reserve rebate in advance."
+    },
+    "end_date": "2025-12-31"
   }
 ]

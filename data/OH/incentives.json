@@ -734,5 +734,1454 @@
     },
     "start_date": "2023-01-01",
     "end_date": "2025-12-31"
+  },
+  {
+    "id": "OH-33",
+    "payment_methods": [
+      "account_credit",
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "oh_butlerRuralElectricCooperative_butlerRuralElectricHeatPumpRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "minimum": 300,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $600 rebate for an air source heat pump. Must use a qualified contractor."
+    }
+  },
+  {
+    "id": "OH-34",
+    "payment_methods": [
+      "account_credit",
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "oh_butlerRuralElectricCooperative_butlerRuralElectricHeatPumpRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200,
+      "minimum": 600,
+      "maximum": 1200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1200 rebate for a ground source heat pump. Must use a qualified contractor."
+    }
+  },
+  {
+    "id": "OH-35",
+    "payment_methods": [
+      "pos_rebate",
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_water_heater"
+    ],
+    "program": "oh_butlerRuralElectricCooperative_butlerRuralElectricWaterHeaterRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 650,
+      "minimum": 350,
+      "maximum": 650
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $650 rebate for a water heater purchased through Butler Rural Electric Coop, depending on size of tank."
+    }
+  },
+  {
+    "id": "OH-36",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "oh_firelandsElectricCooperative_firelandsMemberPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an ENERGY STAR certified electric clothes dryer."
+    }
+  },
+  {
+    "id": "OH-37",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "oh_firelandsElectricCooperative_firelandsMemberPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for level 2 electric vehicle charger."
+    },
+    "end_date": "2025-06-15"
+  },
+  {
+    "id": "OH-38",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater",
+      "non_heat_pump_water_heater"
+    ],
+    "program": "oh_firelandsElectricCooperative_firelandsMemberPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "minimum": 150,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $300 bill credit for an electric hot water heater."
+    },
+    "end_date": "2025-06-15"
+  },
+  {
+    "id": "OH-39",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "oh_firelandsElectricCooperative_firelandsMemberPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "minimum": 700,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate for a ground source heat pump, depending on energy standard rating."
+    },
+    "end_date": "2025-06-15"
+  },
+  {
+    "id": "OH-40",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "oh_firelandsElectricCooperative_firelandsMemberPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 300,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate for an air source heat pump, depending on energy standard rating."
+    },
+    "end_date": "2025-06-15"
+  },
+  {
+    "id": "OH-41",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "wall_insulation"
+    ],
+    "program": "oh_firelandsElectricCooperative_firelandsMemberPrograms",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate or 50% of project cost for insulation upgrades."
+    },
+    "end_date": "2025-06-15"
+  },
+  {
+    "id": "OH-42",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing"
+    ],
+    "program": "oh_firelandsElectricCooperative_firelandsMemberPrograms",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400 rebate or 50% of project cost for air sealing."
+    },
+    "end_date": "2025-06-15"
+  },
+  {
+    "id": "OH-43",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_water_heater",
+      "heat_pump_water_heater"
+    ],
+    "program": "oh_consolidatedElectricCooperative_consolidatedCooperativeResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "minimum": 125,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $200 account credit for a heat pump water heater or electric water heater."
+    }
+  },
+  {
+    "id": "OH-44",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "oh_consolidatedElectricCooperative_consolidatedCooperativeResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$600 account credit for a ducted or ductless air source heat pump."
+    }
+  },
+  {
+    "id": "OH-45",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "oh_consolidatedElectricCooperative_consolidatedCooperativeResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 account credit for a ground source heat pump."
+    }
+  },
+  {
+    "id": "OH-46",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "oh_consolidatedElectricCooperative_consolidatedCooperativeResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 account credit for installation of a level 2 electric vehicle charger."
+    }
+  },
+  {
+    "id": "OH-47",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "oh_aepOhio_highEfficiencyForLow-IncomeProgramHELP",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy assessment and low- or no-cost upgrades recommended by the assessment including HVAC, weatherization, and a water heater."
+    },
+    "low_income": "oh-300-fpl"
+  },
+  {
+    "id": "OH-48",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater",
+      "non_heat_pump_water_heater"
+    ],
+    "program": "oh_carrollElectricCooperative_carrollElectricRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $200 rebate for an electric hot water heater."
+    },
+    "end_date": "2025-06-30"
+  },
+  {
+    "id": "OH-49",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "oh_carrollElectricCooperative_carrollElectricRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400 rebate for an air source heat pump."
+    },
+    "end_date": "2025-06-30"
+  },
+  {
+    "id": "OH-50",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "oh_carrollElectricCooperative_carrollElectricRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 rebate for a ground source heat pump."
+    },
+    "end_date": "2025-06-30"
+  },
+  {
+    "id": "OH-51",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "oh_carrollElectricCooperative_carrollElectricRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for installation of a level 2 electric vehicle charger."
+    },
+    "end_date": "2025-06-30"
+  },
+  {
+    "id": "OH-52",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "oh_frontierPowerCompany_frontierPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for a heat pump water heater."
+    }
+  },
+  {
+    "id": "OH-53",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "oh_guernsey-MuskingumElectricCooperative_gMECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for a ground source heat pump."
+    }
+  },
+  {
+    "id": "OH-54",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "oh_guernsey-MuskingumElectricCooperative_gMECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for an air source heat pump."
+    }
+  },
+  {
+    "id": "OH-55",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater"
+    ],
+    "program": "oh_guernsey-MuskingumElectricCooperative_gMECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $250 rebate and wholesale pricing for an electric water heater when purchased through GMEC."
+    }
+  },
+  {
+    "id": "OH-56",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "oh_hancock-WoodElectricCooperative_hancock-WoodRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "minimum": 300,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $600 rebate for a ductless mini-split heat pump."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "OH-57",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "oh_hancock-WoodElectricCooperative_hancock-WoodRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for a level 2 electric vehicle charger."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "OH-58",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "oh_hancock-WoodElectricCooperative_hancock-WoodRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $900 rebate for a ground source heat pump."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "OH-59",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "oh_hancock-WoodElectricCooperative_hancock-WoodRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400 rebate for a heat pump water heater."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "OH-60",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "oh_hancock-WoodElectricCooperative_hancock-WoodRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$700 rebate for an air source heat pump."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "OH-61",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "oh_lickingRuralElectric_theEnergyCooperativeRebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "minimum": 400,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $600 rebate for an air source heat pump."
+    }
+  },
+  {
+    "id": "OH-62",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "oh_lickingRuralElectric_theEnergyCooperativeRebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 rebate for a ground source heat pump."
+    }
+  },
+  {
+    "id": "OH-63",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "oh_lickingRuralElectric_theEnergyCooperativeRebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for a level 2 electric vehicle charger."
+    }
+  },
+  {
+    "id": "OH-64",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater",
+      "heat_pump_water_heater"
+    ],
+    "program": "oh_lorain-MedinaRec_lMRERebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 75,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate for an electric water heater, depending on type."
+    }
+  },
+  {
+    "id": "OH-65",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "oh_lorain-MedinaRec_lMRERebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 rebate for a geothermal heat pump system."
+    }
+  },
+  {
+    "id": "OH-66",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "oh_lorain-MedinaRec_lMRERebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$600 rebate for an air source heat pump system."
+    }
+  },
+  {
+    "id": "OH-67",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "oh_midwestElectric_midwestElectricRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 bill credit for a geothermal heat pump system."
+    }
+  },
+  {
+    "id": "OH-68",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "oh_midwestElectric_midwestElectricRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600,
+      "minimum": 300,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $600 bill credit for an air source heat pump."
+    }
+  },
+  {
+    "id": "OH-69",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_water_heater",
+      "heat_pump_water_heater"
+    ],
+    "program": "oh_midwestElectric_midwestElectricRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 200,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 bill credit for an electric water heater, depending on type."
+    }
+  },
+  {
+    "id": "OH-70",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "oh_midwestElectric_midwestElectricRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 bill credit for a level 2 electric vehicle charger."
+    }
+  },
+  {
+    "id": "OH-71",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_water_heater",
+      "heat_pump_water_heater"
+    ],
+    "program": "oh_northCentralElectricCooperative_nCERebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 200,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 bill credit for an electric water heater, depending on type."
+    }
+  },
+  {
+    "id": "OH-72",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "oh_northCentralElectricCooperative_nCERebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 rebate for a ground source heat pump."
+    }
+  },
+  {
+    "id": "OH-73",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "oh_northCentralElectricCooperative_nCERebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $600 rebate for an air source heat pump system."
+    }
+  },
+  {
+    "id": "OH-74",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "oh_northCentralElectricCooperative_nCERebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for installation of a level 2 electric vehicle charger."
+    }
+  },
+  {
+    "id": "OH-75",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation"
+    ],
+    "program": "oh_northCentralElectricCooperative_nCERebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate for insulation improvements."
+    }
+  },
+  {
+    "id": "OH-76",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing"
+    ],
+    "program": "oh_northCentralElectricCooperative_nCERebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400 rebate for air sealing improvements."
+    }
+  },
+  {
+    "id": "OH-77",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "oh_northWesternElectricCooperative_nWECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 rebate for a ground source heat pump."
+    }
+  },
+  {
+    "id": "OH-78",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "oh_northWesternElectricCooperative_nWECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $600 rebate for an air source heat pump system."
+    }
+  },
+  {
+    "id": "OH-79",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater",
+      "non_heat_pump_water_heater"
+    ],
+    "program": "oh_paulding-PutmanElectricCooperative_pPECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $350 bill credit for an electric hot water heater."
+    },
+    "end_date": "2025-06-15"
+  },
+  {
+    "id": "OH-80",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "oh_paulding-PutmanElectricCooperative_pPECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 account credit for an air source heat pump."
+    }
+  },
+  {
+    "id": "OH-81",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "oh_paulding-PutmanElectricCooperative_pPECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 450
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$450 account credit for a ground source heat pump."
+    }
+  },
+  {
+    "id": "OH-82",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "air_sealing"
+    ],
+    "program": "oh_paulding-PutmanElectricCooperative_pPECRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of project cost up to $600 account credit for insulation and air sealing."
+    }
+  },
+  {
+    "id": "OH-83",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "oh_paulding-PutmanElectricCooperative_pPECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 bill credit for a level 2 electric vehicle charger."
+    }
+  },
+  {
+    "id": "OH-84",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "oh_pioneerRuralElectricCooperative_pioneerRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1400,
+      "minimum": 800,
+      "maximum": 1400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,400 bill credit for installation of a geothermal heat pump system."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "OH-85",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "oh_pioneerRuralElectricCooperative_pioneerRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 200,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 bill credit for installation of an air source heat pump."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "OH-86",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater",
+      "non_heat_pump_water_heater"
+    ],
+    "program": "oh_pioneerRuralElectricCooperative_pioneerRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "minimum": 75,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400 bill credit for installation of a heat pump water heater or electric water heater."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "OH-87",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "oh_pioneerRuralElectricCooperative_pioneerRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 bill credit for a level 2 electric vehicle charger."
+    },
+    "end_date": "2025-12-31"
+  },
+  {
+    "id": "OH-88",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "oh_triCountyRuralElectricCooperative_tRECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for an air source heat pump."
+    }
+  },
+  {
+    "id": "OH-89",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater"
+    ],
+    "program": "oh_triCountyRuralElectricCooperative_tRECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350 rebate for an electric water heater."
+    }
+  },
+  {
+    "id": "OH-90",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "oh_triCountyRuralElectricCooperative_tRECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 for a ground source heat pump."
+    }
+  },
+  {
+    "id": "OH-91",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "oh_unionRuralElectricCooperative_uRERebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate for a qualified geothermal system."
+    },
+    "end_date": "2025-06-30"
+  },
+  {
+    "id": "OH-92",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "oh_unionRuralElectricCooperative_uRERebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $600 rebate for a qualified air source heat pump."
+    },
+    "end_date": "2025-06-30"
+  },
+  {
+    "id": "OH-93",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater",
+      "non_heat_pump_water_heater"
+    ],
+    "program": "oh_unionRuralElectricCooperative_uRERebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for an electric water heater."
+    },
+    "end_date": "2025-06-30"
+  },
+  {
+    "id": "OH-94",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "oh_unionRuralElectricCooperative_uRERebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $250 rebate for a level 2 electric vehicle charger."
+    },
+    "end_date": "2025-06-30"
+  },
+  {
+    "id": "OH-95",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater",
+      "heat_pump_water_heater"
+    ],
+    "program": "oh_washingtonElectricCooperative_washingtonElectricRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 rebate for an electric water heater."
+    }
+  },
+  {
+    "id": "OH-96",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "oh_washingtonElectricCooperative_washingtonElectricRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$600 rebate for a geothermal heat pump system."
+    }
+  },
+  {
+    "id": "OH-97",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater",
+      "heat_pump_water_heater"
+    ],
+    "program": "oh_butlerRuralElectricCooperative_butlerRuralElectricWaterHeaterRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 650
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $650 rebate for an electric water heater."
+    }
+  },
+  {
+    "id": "OH-98",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "oh_butlerRuralElectricCooperative_butlerRuralElectricHeatPumpRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $600 rebate for an air source heat pump."
+    }
+  },
+  {
+    "id": "OH-99",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "oh_butlerRuralElectricCooperative_butlerRuralElectricHeatPumpRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,200 rebate for a ground source heat pump."
+    }
   }
 ]
