@@ -15,11 +15,19 @@
       "en": "Austin Energy Rebates and Incentives"
     },
     "url": {
-      "en": "https://savings.austinenergy.com/"
+      "en": "https://savings.austinenergy.com/residential/offerings"
     },
     "authority": "tx-austin-energy",
     "authority_type": "utility",
-    "description": "Residential rebates for heating, air conditioning, ventilation, lighting, pools, water heaters, and more offered through Austin Energy."
+    "description": "Residential rebates for heating, air conditioning, ventilation, lighting, pools, water heaters, and more offered through Austin Energy.",
+    "items": [
+      "central_air_conditioner",
+      "heat_pump_water_heater",
+      "smart_thermostat",
+      "solar_screen_films",
+      "rooftop_solar_installation",
+      "other_weatherization"
+    ]
   },
   "tx_aepTexasNorth_sMARTSourceSolarPVProgram": {
     "name": {
@@ -32,6 +40,34 @@
     "authority_type": "utility",
     "items": [
       "rooftop_solar_installation"
+    ]
+  },
+  "tx_austinEnergy_austinEnergyE-RideRebate": {
+    "name": {
+      "en": "Austin Energy E-Ride Rebate"
+    },
+    "url": {
+      "en": "https://austinenergy.com/green-power/plug-in-austin/more-ways-to-go-electric/e-ride-rebate"
+    },
+    "authority": "tx-austin-energy",
+    "authority_type": "utility",
+    "description": "Rebates Available for Eligible E-Bikes, Scooters, Mopeds, and Motorcycles",
+    "items": [
+      "ebike"
+    ]
+  },
+  "tx_austinEnergy_austinEnergyHomeEVChargerRebate": {
+    "name": {
+      "en": "Austin Energy Home EV Charger Rebate"
+    },
+    "url": {
+      "en": "https://austinenergy.com/green-power/plug-in-austin/home-charging"
+    },
+    "authority": "tx-austin-energy",
+    "authority_type": "utility",
+    "description": "Rebate for Level 2 fast charging.",
+    "items": [
+      "electric_vehicle_charger"
     ]
   },
   "tx_bartlettElectricCooperative_bECB-GreenRebates": {
@@ -68,15 +104,16 @@
       "window_replacement"
     ]
   },
-  "tx_centerpointEnergyHoustonElectricLlc_weatherizationAssistanceProgram": {
+  "tx_centerpointEnergyHoustonElectricLlc_centerPointWeatherizationAssistanceProgram": {
     "name": {
-      "en": "Weatherization Assistance Program"
+      "en": "CenterPoint Weatherization Assistance Program"
     },
     "url": {
       "en": "https://www.centerpointenergy.com/en-us/SaveEnergyandMoney/Pages/agencies-in-action-program.aspx?sa=ho&au=res"
     },
     "authority": "tx-center-point-energy-houston-electric-llc",
     "authority_type": "utility",
+    "description": "",
     "items": [
       "other_weatherization",
       "energy_audit"
@@ -141,6 +178,24 @@
       "smart_thermostat"
     ]
   },
+  "tx_cityOfSanAntonio_cPSEnergyRebates": {
+    "name": {
+      "en": "CPS Energy Rebates"
+    },
+    "url": {
+      "en": "https://resi-savenow.cpsenergy.com/cps-energy/en/savings/hvac-rebates/"
+    },
+    "authority": "tx-city-of-san-antonio",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump",
+      "energy_audit",
+      "efficiency_rebates",
+      "electric_outdoor_equipment"
+    ]
+  },
   "tx_cityOfSanMarcos_sanMarcosEnergyRebatePrograms": {
     "name": {
       "en": "San Marcos Energy Rebate Programs"
@@ -162,24 +217,6 @@
       "crawlspace_insulation",
       "floor_insulation",
       "wall_insulation"
-    ]
-  },
-  "tx_cpsEnergy_cPSEnergyRebates": {
-    "name": {
-      "en": "CPS Energy Rebates"
-    },
-    "url": {
-      "en": "https://resi-savenow.cpsenergy.com/cps-energy/en/savings/hvac-rebates/"
-    },
-    "authority": "tx-cps-energy",
-    "authority_type": "utility",
-    "description": "",
-    "items": [
-      "ductless_heat_pump",
-      "ducted_heat_pump",
-      "energy_audit",
-      "efficiency_rebates",
-      "electric_outdoor_equipment"
     ]
   },
   "tx_elPasoElectric_elPasoElectricTXIncomeQualifiedProgram": {
@@ -241,6 +278,20 @@
       "ducted_heat_pump",
       "ductless_heat_pump",
       "central_air_conditioner"
+    ]
+  },
+  "tx_entergyTexas_entergyTexasHomeEnergyEfficiencyProgramForLow-IncomeCustomers": {
+    "name": {
+      "en": "Entergy Texas Home Energy Efficiency Program for Low-Income Customers"
+    },
+    "url": {
+      "en": "https://www.entergy-texas.com/your_home/save_money/ee/home_hard_to_reach/"
+    },
+    "authority": "tx-entergy-texas",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "efficiency_rebates"
     ]
   },
   "tx_entergyTexas_hVACDistributorProgram": {
@@ -427,15 +478,16 @@
       "non_heat_pump_water_heater"
     ]
   },
-  "tx_oncorElectricDelivery_low-IncomeWeatherizationProgram": {
+  "tx_oncorElectricDelivery_oncorLow-IncomeWeatherizationProgram": {
     "name": {
-      "en": "Low-Income Weatherization Program"
+      "en": "Oncor Low-Income Weatherization Program"
     },
     "url": {
       "en": "https://www.oncor.com/takealoadofftexas/pages/weatherization"
     },
     "authority": "tx-oncor-electric-delivery",
     "authority_type": "utility",
+    "description": "",
     "items": [
       "other_weatherization"
     ]
@@ -494,15 +546,38 @@
       "new_electric_vehicle"
     ]
   },
-  "tx_unitedElectricCooperativeService_energyInnovationRebateProgram": {
+  "tx_texasDepartmentOfHousingAndCommunityAffairs_texasWeatherizationAssistanceProgram": {
     "name": {
-      "en": "Energy Innovation Rebate Program"
+      "en": "Texas Weatherization Assistance Program"
+    },
+    "url": {
+      "en": "https://www.tdhca.texas.gov/ca/wap"
+    },
+    "authority": "tx-texas-department-of-housing-and-community-affairs",
+    "authority_type": "state",
+    "description": "",
+    "items": [
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "efficiency_rebates",
+      "energy_audit",
+      "floor_insulation",
+      "wall_insulation"
+    ]
+  },
+  "tx_unitedElectricCooperativeService_unitedEnergyInnovationRebateProgram": {
+    "name": {
+      "en": "United Energy Innovation Rebate Program"
     },
     "url": {
       "en": "https://ucs.net/rebate-programs"
     },
     "authority": "tx-united-electric-cooperative-service",
     "authority_type": "utility",
+    "description": "",
     "items": [
       "other_weatherization",
       "other_heat_pump",
@@ -511,9 +586,9 @@
       "energy_audit"
     ]
   },
-  "tx_unitedElectricCooperativeService_unitedElectricEnergyInnovationRebates": {
+  "tx_unitedElectricCooperativeService_unitedEnergyInnovationRebates": {
     "name": {
-      "en": "United Electric Energy Innovation rebates"
+      "en": "United Energy Innovation rebates"
     },
     "url": {
       "en": "https://ucs.net/sites/default/files/2025%20REBATE%20BROCHURE_2_Draft5.pdf"

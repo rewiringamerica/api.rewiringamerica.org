@@ -48,6 +48,20 @@
       "energy_audit"
     ]
   },
+  "ca_bayAreaRegionalEnergyNetworkBayren_greenLabelingProgram": {
+    "name": {
+      "en": "Green Labeling Program"
+    },
+    "url": {
+      "en": "http://www.bayren.org/HES"
+    },
+    "authority": "ca-bay-area-regional-energy-network-bay-ren",
+    "authority_type": "other",
+    "description": "",
+    "items": [
+      "energy_audit"
+    ]
+  },
   "ca_bayAreaRegionalEnergyNetworkBayren_rebates:SingleFamilyHomeowners": {
     "name": {
       "en": "Rebates: Single Family Homeowners"
@@ -66,28 +80,30 @@
       "energy_audit"
     ]
   },
-  "ca_bearValleyElectricService_energySavingsAssistanceProgramESAP": {
+  "ca_bearValleyElectricService_bearValleyEnergySavingsAssistanceProgramESAP": {
     "name": {
-      "en": "Energy Savings Assistance Program (ESAP)"
+      "en": "Bear Valley Energy Savings Assistance Program (ESAP)"
     },
     "url": {
       "en": "https://www.bvesinc.com/customer-service/assistance-programs/energy-savings-assistance-program"
     },
     "authority": "ca-bear-valley-electric-service",
     "authority_type": "utility",
+    "description": "",
     "items": [
       "other_weatherization"
     ]
   },
-  "ca_burbankWaterAndPower_residentialRebates": {
+  "ca_burbankWaterAndPower_burbankResidentialRebates": {
     "name": {
-      "en": "Residential Rebates"
+      "en": "Burbank Residential Rebates"
     },
     "url": {
       "en": "https://www.burbankwaterandpower.com/conservation/residential-programs-rebates/residential-rebates"
     },
     "authority": "ca-burbank-water-and-power",
     "authority_type": "utility",
+    "description": "",
     "items": [
       "other_weatherization",
       "other_heat_pump",
@@ -120,29 +136,60 @@
       "heat_pump_water_heater"
     ]
   },
-  "ca_cityOfLompoc_rebateAndConservationProgram": {
+  "ca_centralCoastCommunityEnergy_single-FamilyNon-ConnectedHeatPumpWaterHeaterElectricalUpgradeIncentive": {
     "name": {
-      "en": "Rebate and Conservation Program"
+      "en": "Single-Family Non-Connected Heat Pump Water Heater Electrical Upgrade Incentive"
+    },
+    "url": {
+      "en": "https://switchison.cleanenergyconnection.org/"
+    },
+    "authority": "ca-central-coast-community-energy",
+    "authority_type": "utility",
+    "description": "Must accompany the qualifying retrofit installation of a non-connected HPWH. Panel Upgrade up to 200 amps OR Smart Load Center",
+    "items": [
+      "heat_pump_water_heater",
+      "electric_panel"
+    ]
+  },
+  "ca_centralCoastCommunityEnergy_single-FamilyUnitarySplitSystemAndMini/Multi-SplitHeatPumpElectricalUpgrades": {
+    "name": {
+      "en": "Single-Family Unitary Split System and Mini/Multi-Split Heat Pump Electrical Upgrades"
+    },
+    "url": {
+      "en": "https://switchison.cleanenergyconnection.org/"
+    },
+    "authority": "ca-central-coast-community-energy",
+    "authority_type": "utility",
+    "description": "Save $2,000 per unit - Rebate on Single-Family Unitary Split System and Mini/Multi-Split Heat Pump Electrical Upgrades",
+    "items": [
+      "other_heat_pump"
+    ]
+  },
+  "ca_cityOfLompoc_lompocRebateAndConservationProgram": {
+    "name": {
+      "en": "Lompoc Rebate and Conservation Program"
     },
     "url": {
       "en": "https://www.cityoflompoc.com/government/departments/utilities/conservation"
     },
     "authority": "ca-city-of-lompoc",
     "authority_type": "utility",
+    "description": "",
     "items": [
       "other_heat_pump",
       "rooftop_solar_installation"
     ]
   },
-  "ca_cityOfPaloAltoUtilities_switchToAnElectricWaterHeater": {
+  "ca_cityOfPaloAltoUtilities_paloAltoSwitchToAnElectricWaterHeater": {
     "name": {
-      "en": "Switch to an Electric Water Heater"
+      "en": "Palo Alto Switch to an Electric Water Heater"
     },
     "url": {
       "en": "https://www.cityofpaloalto.org/Departments/Utilities/Sustainability/Ways-to-Save"
     },
     "authority": "ca-city-of-palo-alto-utilities",
     "authority_type": "utility",
+    "description": "",
     "items": [
       "heat_pump_water_heater",
       "new_electric_vehicle"
