@@ -59,8 +59,8 @@ function translateIncentives(incentives: IRAIncentive[]): WebsiteIncentive[] {
         incentive.items[0] === 'rooftop_solar_installation'
           ? 'solar_tax_credit'
           : incentive.items[0] === 'electric_vehicle_charger'
-          ? 'ev_charger_credit'
-          : incentive.type,
+            ? 'ev_charger_credit'
+            : incentive.type,
 
       // Transform amounts from v1 to v0 format
       amount: incentive.amount.number,
