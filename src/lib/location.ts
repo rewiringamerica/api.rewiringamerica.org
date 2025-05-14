@@ -1,4 +1,5 @@
 import * as turf from '@turf/turf';
+import { Census, FieldOption } from 'geocodio-library-node';
 import { Database } from 'sqlite';
 import { geocoder } from './geocoder';
 
@@ -110,7 +111,7 @@ export async function resolveLocation(
     let response;
 
     try {
-      response = await geocoder.geocode(address, ['census2024']);
+      response = await geocoder.geocode(address, ['census2024' as FieldOption]);
     } catch (error) {
       console.error('Error geocoding user-inputted address: ', error);
       return null;
@@ -127,7 +128,11 @@ export async function resolveLocation(
       return null;
     }
 
-    const censusInfo = result.fields.census['2024'];
+    // The `census` field is mistyped in the geocodio library
+    const censusYears = result.fields!.census as unknown as {
+      [year: string]: Census;
+    };
+    const censusInfo = censusYears['2024'];
 
     const geographies: Geography[] = [];
 
@@ -181,10 +186,10 @@ export async function resolveLocation(
       );
 
     return {
-      state: result.address_components.state,
+      state: result.address_components.state!,
       zcta:
-        (await getZctaFromZip(db, result.address_components.zip)) ??
-        result.address_components.zip,
+        (await getZctaFromZip(db, result.address_components.zip!)) ??
+        result.address_components.zip!,
       geographies,
       tract_geoid: GEOCODIO_LOW_PRECISION.has(result.accuracy_type)
         ? undefined
