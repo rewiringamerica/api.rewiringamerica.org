@@ -70,19 +70,36 @@ def get_geographies_dataframe(state_file, county_file):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("zcta_file")
-    parser.add_argument("state_file")
-    parser.add_argument("county_file")
+    parser.add_argument("--zcta-file")
+    parser.add_argument("--state-file")
+    parser.add_argument("--county-file")
     args = parser.parse_args()
 
-    geographies = get_geographies_dataframe(args.state_file, args.county_file)
+    state_file = (
+        args.state_file
+        or "https://www2.census.gov/geo/tiger/TIGER2024/STATE/tl_2024_us_state.zip"
+    )
+    county_file = (
+        args.county_file
+        or "https://www2.census.gov/geo/tiger/TIGER2024/COUNTY/tl_2024_us_county.zip"
+    )
+    zcta_file = (
+        args.zcta_file
+        or "https://www2.census.gov/geo/tiger/TIGER2024/ZCTA520/tl_2024_us_zcta520.zip"
+    )
+
+    print(state_file, county_file, zcta_file)
+    open(OUTPUT_CSV_PATH, "w").write("yay we did it")
+    return
+
+    geographies = get_geographies_dataframe(state_file, county_file)
     geographies.to_crs(PROJECTED_CRS, inplace=True)
     geographies["geog_geometry"] = geographies["geometry"]
 
     # To compute intersection area of two geometries, we need to reproject those
     # geometries into a CRS that uses physical units of measure (meters), rather than
     # geographic coordinates.
-    zctas = gpd.read_file(args.zcta_file).to_crs(PROJECTED_CRS)
+    zctas = gpd.read_file(zcta_file).to_crs(PROJECTED_CRS)
 
     # The "intersects" predicate will be true for geometries that just touch each other,
     # without actually overlapping. Later we'll filter out rows where the area of the

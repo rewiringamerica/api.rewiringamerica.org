@@ -20,7 +20,7 @@ This script regenerates the mapping from ZCTAs (roughly, ZIP codes) to geography
    2. `. venv/bin/activate`
    3. `python3 -m pip install -r requirements.txt`
 
-3. Run the script, passing the path to the ZCTA file, states file, and counties file from step 1, in that order. (You can run `./zcta-to-geography.py --help` to see the arguments.)
+3. Run the script, passing the path to the ZCTA file, states file, and counties file from step 1, using the flags `--zcta-file`, `--state-file`, and `--county-file` respectively. (You can run `./zcta-to-geography.py --help` to see the arguments.)
 
    The script reads from `data/geographies.json` and writes to `scripts/data/zcta-to-geography.csv`
 
