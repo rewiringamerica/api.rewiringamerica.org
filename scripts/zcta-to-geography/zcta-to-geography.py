@@ -4,14 +4,37 @@ import argparse
 import geopandas as gpd
 import json
 from os import path
+import os
+import requests
 import shapely
 
 
 GEOGRAPHIES_CSV_PATH = path.join(path.dirname(__file__), "../data/geographies.csv")
 OUTPUT_CSV_PATH = path.join(path.dirname(__file__), "../data/zcta-to-geography.csv")
+SHAPEFILES_DIR_PATH = path.join(path.dirname(__file__), "shapefiles")
 
 GEOJSON_CRS = "EPSG:4326"
 PROJECTED_CRS = "EPSG:3857"
+
+
+def download_file_if_needed(url, cache_name):
+    if not path.isdir(SHAPEFILES_DIR_PATH):
+        os.mkdir(SHAPEFILES_DIR_PATH)
+
+    filepath = path.join(SHAPEFILES_DIR_PATH, cache_name)
+
+    if path.exists(filepath):
+        print(f"Using cached {url}")
+        return filepath
+
+    print(f"Downloading {url}")
+    with requests.get(url, stream=True) as response:
+        response.raise_for_status()
+        with open(filepath, "wb") as outfile:
+            for chunk in response.iter_content(chunk_size=10000):
+                outfile.write(chunk)
+
+    return filepath
 
 
 def geojson_to_geometry(geojson):
@@ -70,19 +93,34 @@ def get_geographies_dataframe(state_file, county_file):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("zcta_file")
-    parser.add_argument("state_file")
-    parser.add_argument("county_file")
+    parser.add_argument("--zcta-file")
+    parser.add_argument("--state-file")
+    parser.add_argument("--county-file")
     args = parser.parse_args()
 
-    geographies = get_geographies_dataframe(args.state_file, args.county_file)
+    # If you update these URLs to use files of a newer vintage, make sure to also update
+    # the Geocodio calls in the JS code to request Census fields of the same vintage.
+    state_file = args.state_file or download_file_if_needed(
+        "https://www2.census.gov/geo/tiger/TIGER2024/STATE/tl_2024_us_state.zip",
+        "state.zip",
+    )
+    county_file = args.county_file or download_file_if_needed(
+        "https://www2.census.gov/geo/tiger/TIGER2024/COUNTY/tl_2024_us_county.zip",
+        "county.zip",
+    )
+    zcta_file = args.zcta_file or download_file_if_needed(
+        "https://www2.census.gov/geo/tiger/TIGER2024/ZCTA520/tl_2024_us_zcta520.zip",
+        "zcta.zip",
+    )
+
+    geographies = get_geographies_dataframe(state_file, county_file)
     geographies.to_crs(PROJECTED_CRS, inplace=True)
     geographies["geog_geometry"] = geographies["geometry"]
 
     # To compute intersection area of two geometries, we need to reproject those
     # geometries into a CRS that uses physical units of measure (meters), rather than
     # geographic coordinates.
-    zctas = gpd.read_file(args.zcta_file).to_crs(PROJECTED_CRS)
+    zctas = gpd.read_file(zcta_file).to_crs(PROJECTED_CRS)
 
     # The "intersects" predicate will be true for geometries that just touch each other,
     # without actually overlapping. Later we'll filter out rows where the area of the
