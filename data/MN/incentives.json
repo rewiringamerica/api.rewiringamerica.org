@@ -1,45 +1,5 @@
 [
   {
-    "id": "MN-3",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_xcelEnergyGas_xcelEnergyHomeRebatesGas",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": " $2,000 rebate for cold climate air source heat pump."
-    }
-  },
-  {
-    "id": "MN-4",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_xcelEnergyGas_xcelEnergyHomeRebatesGas",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1600
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$1,600 rebate for a ducted air source heat pump."
-    }
-  },
-  {
     "id": "MN-5",
     "payment_methods": [
       "rebate"
@@ -78,47 +38,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 rebate for smart electric heat pump water heater. $400 for standard electric heat pump water heater."
-    }
-  },
-  {
-    "id": "MN-7",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_xcelEnergy_xcelEnergyHomeRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1600
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$1,600 rebate for a ductless air source heat pump."
-    }
-  },
-  {
-    "id": "MN-8",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_xcelEnergy_xcelEnergyHomeRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$2,000 rebate for a ductless cold climate air source heat pump."
+      "en": "$500 rebate for smart electric heat pump water heater. $400 for standard electric heat pump water heater."
     }
   },
   {
@@ -307,7 +227,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,000 rebate for an HSPF2 rated ductless air source heat pump."
+      "en": "Up to $1,000 rebate for a ductless air source heat pump. Amount varies by unit size and efficiency. Rebates under $400 credited to customer account."
     }
   },
   {
@@ -340,21 +260,22 @@
     ],
     "items": [
       "attic_or_roof_insulation",
-      "air_sealing"
+      "air_sealing",
+      "wall_insulation"
     ],
     "program": "mn_cityOfMinneapolis_minneapolisGreenCostShareBonusRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 3000
+      "number": 6000,
+      "minimum": 3000,
+      "maximum": 6000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$3000 Bonus rebate for attic insulation and air sealing (Green Zone Residents)"
-    },
-    "start_date": "2024-12-15",
-    "end_date": "2025-12-15"
+      "en": "$3,000 rebate for attic insulation and air sealing. $3,000 rebate for wall insulation for Green Zone residents only. Must receive utility rebate. "
+    }
   },
   {
     "id": "MN-23",
@@ -363,62 +284,21 @@
     ],
     "items": [
       "attic_or_roof_insulation",
-      "air_sealing"
-    ],
-    "program": "mn_cityOfMinneapolis_minneapolisGreenCostShareBonusRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1300
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$1300 Bonus rebate for attic insulation and air sealing (Non-Green Zone Residents)"
-    },
-    "start_date": "2024-12-15",
-    "end_date": "2025-12-15"
-  },
-  {
-    "id": "MN-24",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
+      "air_sealing",
       "wall_insulation"
     ],
     "program": "mn_cityOfMinneapolis_minneapolisGreenCostShareBonusRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 3000
+      "number": 2800,
+      "minimum": 1300,
+      "maximum": 2800
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$3000 Bonus rebate for wall insulation (Green Zone Residents)"
-    },
-    "start_date": "2024-12-15",
-    "end_date": "2025-12-15"
-  },
-  {
-    "id": "MN-25",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "wall_insulation"
-    ],
-    "program": "mn_cityOfMinneapolis_minneapolisGreenCostShareBonusRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$1500 Bonus rebate for attic insulation and air sealing (Non-Green Zone Residents)"
+      "en": "$1,300 rebate for attic insulation and air sealing. $1,500 rebate for wall insulation. For all Minneapolis residents. Must receive utility rebate. "
     },
     "start_date": "2024-12-15",
     "end_date": "2025-12-15"
@@ -440,7 +320,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 for an ENERGY STAR certified heat pump water heater."
+      "en": "$500 rebate for a heat pump water heater. Must be ENERGY STAR certified."
     }
   },
   {
@@ -583,7 +463,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_minnesotaValleyElectricCoop_energyWise",
+    "program": "mn_minnesotaValleyElectricCoop_minnesotaValleyElectricCooperativeEnergyWiseRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 500
@@ -603,7 +483,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_minnesotaValleyElectricCoop_energyWise",
+    "program": "mn_minnesotaValleyElectricCoop_minnesotaValleyElectricCooperativeEnergyWiseRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 300
@@ -623,7 +503,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_minnesotaValleyElectricCoop_energyWise",
+    "program": "mn_minnesotaValleyElectricCoop_minnesotaValleyElectricCooperativeEnergyWiseRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 600
@@ -735,7 +615,8 @@
       "rebate"
     ],
     "items": [
-      "non_heat_pump_clothes_dryer"
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
     ],
     "program": "mn_dakotaElectricAssociation_dakotaElectricAssociationEnergyWiseRebates",
     "amount": {
@@ -746,7 +627,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$25 rebate for an ENERGY STAR certified dryer."
+      "en": "$25 rebate for an electric dryer. Must be ENERGY STAR certified."
     }
   },
   {
@@ -757,7 +638,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_wright-HennepinCoopElectricAssn_residentialProgramsAndRebates",
+    "program": "mn_wright-HennepinCoopElectricAssn_wright-HennepinCoopElectricAssociationRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 675
@@ -960,7 +841,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_wright-HennepinCoopElectricAssn_residentialProgramsAndRebates",
+    "program": "mn_wright-HennepinCoopElectricAssn_wright-HennepinCoopElectricAssociationRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 200
@@ -980,7 +861,7 @@
     "items": [
       "other_heat_pump"
     ],
-    "program": "mn_cityOfHopkins_hopkinsClimateSustainabilityFund",
+    "program": "mn_cityOfHopkins_hopkinsClimateSolutionsFundRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 1500
@@ -1001,7 +882,7 @@
     "items": [
       "other_insulation"
     ],
-    "program": "mn_cityOfHopkins_hopkinsClimateSustainabilityFund",
+    "program": "mn_cityOfHopkins_hopkinsClimateSolutionsFundRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 1250
@@ -1022,7 +903,7 @@
     "items": [
       "electric_stove"
     ],
-    "program": "mn_cityOfHopkins_hopkinsClimateSustainabilityFund",
+    "program": "mn_cityOfHopkins_hopkinsClimateSolutionsFundRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 1000
@@ -1043,7 +924,7 @@
     "items": [
       "heat_pump_clothes_dryer"
     ],
-    "program": "mn_cityOfHopkins_hopkinsClimateSustainabilityFund",
+    "program": "mn_cityOfHopkins_hopkinsClimateSolutionsFundRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 250
@@ -1064,7 +945,7 @@
     "items": [
       "electric_panel"
     ],
-    "program": "mn_cityOfHopkins_hopkinsClimateSustainabilityFund",
+    "program": "mn_cityOfHopkins_hopkinsClimateSolutionsFundRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 750
@@ -1160,99 +1041,6 @@
     "end_date": "2025-12-31"
   },
   {
-    "id": "MN-61",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "attic_or_roof_insulation",
-      "wall_insulation"
-    ],
-    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomes",
-    "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 1500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "50% utility rebate match for attic or wall insulation"
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31"
-  },
-  {
-    "id": "MN-62",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "attic_or_roof_insulation",
-      "wall_insulation"
-    ],
-    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomes",
-    "amount": {
-      "type": "percent",
-      "number": 1
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "100% income-qualified utility rebate match for attic or wall insulation"
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31"
-  },
-  {
-    "id": "MN-63",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
-    ],
-    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomes",
-    "amount": {
-      "type": "percent",
-      "number": 0.5
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "50% utility rebate match for air source heat pump "
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31"
-  },
-  {
-    "id": "MN-64",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
-    ],
-    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomes",
-    "amount": {
-      "type": "percent",
-      "number": 1
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "100% income-qualified utility rebate match for an air source heat pump"
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31"
-  },
-  {
     "id": "MN-65",
     "payment_methods": [
       "rebate"
@@ -1260,19 +1048,19 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomes",
+    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomesCostShare",
     "amount": {
-      "type": "percent",
-      "number": 1
+      "type": "dollar_amount",
+      "number": 750,
+      "minimum": 600,
+      "maximum": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "100% utility rebate match for heat pump water heater"
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31"
+      "en": "150% utility rebate match for a heat pump water heater for St. Louis Park residents who meet environmental justice rate eligibility."
+    }
   },
   {
     "id": "MN-66",
@@ -1282,19 +1070,19 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomes",
+    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomesCostShare",
     "amount": {
-      "type": "percent",
-      "number": 1
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 400,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "150% income-qualified utility rebate match for heat pump water heater"
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31"
+      "en": "100% utility rebate match for a heat pump water heater. All St. Louis Park residents are eligible."
+    }
   },
   {
     "id": "MN-67",
@@ -1316,30 +1104,6 @@
     ],
     "short_description": {
       "en": "50% utility rebate match for an air source heat pump for income-qualified"
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31"
-  },
-  {
-    "id": "MN-68",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "attic_or_roof_insulation",
-      "wall_insulation"
-    ],
-    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomes",
-    "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 2500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "50% utility rebate match for insulation for income-qualified"
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31"
@@ -1376,7 +1140,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_kenyonMunicipalUtilities_residentialRebates",
+    "program": "mn_kenyonMunicipalUtilities_kenyonMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollars_per_unit",
       "number": 150,
@@ -1399,7 +1163,7 @@
       "ducted_heat_pump",
       "ductless_heat_pump"
     ],
-    "program": "mn_glencoeLightAndPowerCommission_rebatesAndIncentives",
+    "program": "mn_glencoeLightAndPowerCommission_glencoeLightAndPowerRebatesAndIncentives",
     "amount": {
       "type": "dollar_amount",
       "number": 300
@@ -1408,7 +1172,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 rebate for a ducted or ductless air source heat pump."
+      "en": "$300 rebate for a ducted or ductless air source heat pump. Must meet energy specifications."
     }
   },
   {
@@ -1460,26 +1224,6 @@
     "end_date": "2027-01-01"
   },
   {
-    "id": "MN-74",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_xcelEnergy_xcelEnergyHomeRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 900
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$900 rebate for a ducted cold climate air source heat pump. May pair with CenterPoint Energy rebate for a maximum total of $2,000 from both utilities."
-    }
-  },
-  {
     "id": "MN-75",
     "payment_methods": [
       "rebate"
@@ -1488,7 +1232,7 @@
       "ducted_heat_pump",
       "ductless_heat_pump"
     ],
-    "program": "mn_graniteFallsMunicipalUtilities_residentialRebates",
+    "program": "mn_graniteFallsMunicipalUtilities_graniteFallsMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 750
@@ -1508,7 +1252,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_graniteFallsMunicipalUtilities_residentialRebates",
+    "program": "mn_graniteFallsMunicipalUtilities_graniteFallsMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 400,
@@ -1527,9 +1271,10 @@
       "rebate"
     ],
     "items": [
-      "non_heat_pump_clothes_dryer"
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
     ],
-    "program": "mn_graniteFallsMunicipalUtilities_residentialRebates",
+    "program": "mn_graniteFallsMunicipalUtilities_graniteFallsMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 30
@@ -1549,7 +1294,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_janesvilleMunicipalUtility_residentialRebates",
+    "program": "mn_janesvilleMunicipalUtility_janesvilleMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 50
@@ -1569,7 +1314,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_janesvilleMunicipalUtility_residentialRebates",
+    "program": "mn_janesvilleMunicipalUtility_janesvilleMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 750,
@@ -1591,7 +1336,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_janesvilleMunicipalUtility_residentialRebates",
+    "program": "mn_janesvilleMunicipalUtility_janesvilleMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 750,
@@ -1613,7 +1358,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_janesvilleMunicipalUtility_residentialRebates",
+    "program": "mn_janesvilleMunicipalUtility_janesvilleMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 750,
@@ -1635,7 +1380,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_janesvilleMunicipalUtility_residentialRebates",
+    "program": "mn_janesvilleMunicipalUtility_janesvilleMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 750,
@@ -1777,7 +1522,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_kassonPublicUtilities_rebates",
+    "program": "mn_kassonPublicUtilities_kassonPublicUtilitiesRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 750,
@@ -1799,7 +1544,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_kassonPublicUtilities_rebates",
+    "program": "mn_kassonPublicUtilities_kassonPublicUtilitiesRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 750,
@@ -1821,7 +1566,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_kassonPublicUtilities_rebates",
+    "program": "mn_kassonPublicUtilities_kassonPublicUtilitiesRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 750,
@@ -1843,7 +1588,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_kassonPublicUtilities_rebates",
+    "program": "mn_kassonPublicUtilities_kassonPublicUtilitiesRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 750,
@@ -1865,7 +1610,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_kassonPublicUtilities_rebates",
+    "program": "mn_kassonPublicUtilities_kassonPublicUtilitiesRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 50
@@ -1886,7 +1631,7 @@
       "non_heat_pump_clothes_dryer",
       "heat_pump_clothes_dryer"
     ],
-    "program": "mn_kassonPublicUtilities_rebates",
+    "program": "mn_kassonPublicUtilities_kassonPublicUtilitiesRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 30
@@ -1990,7 +1735,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_brainerdPublicUtilities_residentialAndCommercialRebates",
+    "program": "mn_brainerdPublicUtilities_brainerdPublicUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 400
@@ -2010,7 +1755,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_brainerdPublicUtilities_residentialAndCommercialRebates",
+    "program": "mn_brainerdPublicUtilities_brainerdPublicUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 250
@@ -2030,7 +1775,7 @@
     "items": [
       "non_heat_pump_clothes_dryer"
     ],
-    "program": "mn_brainerdPublicUtilities_residentialAndCommercialRebates",
+    "program": "mn_brainerdPublicUtilities_brainerdPublicUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 35
@@ -2050,7 +1795,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_hibbingPublicUtilities_residentialRebateProgram",
+    "program": "mn_hibbingPublicUtilities_hibbingPublicUtilitiesRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 400
@@ -2070,7 +1815,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_hibbingPublicUtilities_residentialRebateProgram",
+    "program": "mn_hibbingPublicUtilities_hibbingPublicUtilitiesRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 400
@@ -2091,7 +1836,7 @@
       "ducted_heat_pump",
       "ductless_heat_pump"
     ],
-    "program": "mn_hibbingPublicUtilities_residentialRebateProgram",
+    "program": "mn_hibbingPublicUtilities_hibbingPublicUtilitiesRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 1000
@@ -2111,7 +1856,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_hibbingPublicUtilities_residentialRebateProgram",
+    "program": "mn_hibbingPublicUtilities_hibbingPublicUtilitiesRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 250
@@ -2132,7 +1877,7 @@
       "non_heat_pump_clothes_dryer",
       "heat_pump_clothes_dryer"
     ],
-    "program": "mn_hibbingPublicUtilities_residentialRebateProgram",
+    "program": "mn_hibbingPublicUtilities_hibbingPublicUtilitiesRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 35
@@ -2175,7 +1920,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_allete_residentialRebatesAndServices",
+    "program": "mn_minnesotaPower_minnesotaPowerResidentialRebatesAndServices",
     "amount": {
       "type": "dollar_amount",
       "number": 400
@@ -2197,7 +1942,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_elkRiverMunicipalUtilities_residentialRebates",
+    "program": "mn_elkRiverMunicipalUtilities_elkRiverMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 400
@@ -2217,7 +1962,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_elkRiverMunicipalUtilities_residentialRebates",
+    "program": "mn_elkRiverMunicipalUtilities_elkRiverMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 400
@@ -2238,7 +1983,7 @@
       "ducted_heat_pump",
       "ductless_heat_pump"
     ],
-    "program": "mn_elkRiverMunicipalUtilities_residentialRebates",
+    "program": "mn_elkRiverMunicipalUtilities_elkRiverMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 1000
@@ -2258,7 +2003,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_elkRiverMunicipalUtilities_residentialRebates",
+    "program": "mn_elkRiverMunicipalUtilities_elkRiverMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 450,
@@ -2281,7 +2026,7 @@
       "heat_pump_clothes_dryer",
       "non_heat_pump_clothes_dryer"
     ],
-    "program": "mn_elkRiverMunicipalUtilities_residentialRebates",
+    "program": "mn_elkRiverMunicipalUtilities_elkRiverMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 40
@@ -2301,7 +2046,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_cityOfNorthSaintPaulElectricUtilities_electricUtilityRebates",
+    "program": "mn_cityOfNorthSaintPaulElectricUtilities_northSaintPaulElectricUtilitiesEnergySavingRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 500
@@ -2321,7 +2066,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_cityOfNorthSaintPaulElectricUtilities_electricUtilityRebates",
+    "program": "mn_cityOfNorthSaintPaulElectricUtilities_northSaintPaulElectricUtilitiesEnergySavingRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 500
@@ -2342,7 +2087,7 @@
       "heat_pump_clothes_dryer",
       "non_heat_pump_clothes_dryer"
     ],
-    "program": "mn_cityOfNorthSaintPaulElectricUtilities_electricUtilityRebates",
+    "program": "mn_cityOfNorthSaintPaulElectricUtilities_northSaintPaulElectricUtilitiesEnergySavingRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 25
@@ -2362,7 +2107,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_fairfaxMunicipal_residentialRebates",
+    "program": "mn_fairfaxMunicipal_fairfaxMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 750
@@ -2382,7 +2127,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_fairfaxMunicipal_residentialRebates",
+    "program": "mn_fairfaxMunicipal_fairfaxMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 750
@@ -2402,7 +2147,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_fairfaxMunicipal_residentialRebates",
+    "program": "mn_fairfaxMunicipal_fairfaxMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 400
@@ -2422,7 +2167,7 @@
     "items": [
       "non_heat_pump_clothes_dryer"
     ],
-    "program": "mn_fairfaxMunicipal_residentialRebates",
+    "program": "mn_fairfaxMunicipal_fairfaxMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 50
@@ -2442,7 +2187,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_freeborn-MowerCoopSvcs_heatingAndCoolingRebate",
+    "program": "mn_freeborn-MowerCoopSvcs_freebornMowerElectricCooperativeHeatingAndCoolingRebate",
     "amount": {
       "type": "dollars_per_unit",
       "number": 300,
@@ -2464,7 +2209,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_freeborn-MowerCoopSvcs_heatingAndCoolingRebate",
+    "program": "mn_freeborn-MowerCoopSvcs_freebornMowerElectricCooperativeHeatingAndCoolingRebate",
     "amount": {
       "type": "dollars_per_unit",
       "number": 300,
@@ -2486,7 +2231,7 @@
     "items": [
       "electric_stove"
     ],
-    "program": "mn_freeborn-MowerCoopSvcs_heatingAndCoolingRebate",
+    "program": "mn_freeborn-MowerCoopSvcs_freebornMowerElectricCooperativeHeatingAndCoolingRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 25
@@ -2507,7 +2252,7 @@
     "items": [
       "non_heat_pump_clothes_dryer"
     ],
-    "program": "mn_fairfaxMunicipal_residentialRebates",
+    "program": "mn_fairfaxMunicipal_fairfaxMunicipalUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 25
@@ -2528,7 +2273,7 @@
     "items": [
       "non_heat_pump_clothes_dryer"
     ],
-    "program": "mn_freeborn-MowerCoopSvcs_heatingAndCoolingRebate",
+    "program": "mn_freeborn-MowerCoopSvcs_freebornMowerElectricCooperativeHeatingAndCoolingRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 25
@@ -2549,7 +2294,7 @@
     "items": [
       "non_heat_pump_clothes_dryer"
     ],
-    "program": "mn_freeborn-MowerCoopSvcs_heatingAndCoolingRebate",
+    "program": "mn_freeborn-MowerCoopSvcs_freebornMowerElectricCooperativeHeatingAndCoolingRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 50
@@ -2570,7 +2315,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_freeborn-MowerCoopSvcs_heatingAndCoolingRebate",
+    "program": "mn_freeborn-MowerCoopSvcs_freebornMowerElectricCooperativeHeatingAndCoolingRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 300
@@ -2591,7 +2336,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_otterTailPower_rebatesAndSavings",
+    "program": "mn_otterTailPower_otterTailPowerCompanyRebatesAndSavings",
     "amount": {
       "type": "dollars_per_unit",
       "number": 600,
@@ -2612,7 +2357,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_otterTailPower_rebatesAndSavings",
+    "program": "mn_otterTailPower_otterTailPowerCompanyRebatesAndSavings",
     "amount": {
       "type": "dollars_per_unit",
       "number": 200,
@@ -2633,7 +2378,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_otterTailPower_rebatesAndSavings",
+    "program": "mn_otterTailPower_otterTailPowerCompanyRebatesAndSavings",
     "amount": {
       "type": "dollars_per_unit",
       "number": 40,
@@ -2654,7 +2399,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_allete_residentialRebatesAndServices",
+    "program": "mn_minnesotaPower_minnesotaPowerResidentialRebatesAndServices",
     "amount": {
       "type": "dollar_amount",
       "number": 400
@@ -2676,7 +2421,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_brainerdPublicUtilities_residentialAndCommercialRebates",
+    "program": "mn_brainerdPublicUtilities_brainerdPublicUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 400
@@ -2696,10 +2441,10 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_allete_residentialRebatesAndServices",
+    "program": "mn_minnesotaPower_minnesotaPowerResidentialRebatesAndServices",
     "amount": {
       "type": "dollar_amount",
-      "number": 1
+      "number": 1000
     },
     "owner_status": [
       "homeowner"
@@ -2718,10 +2463,10 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_allete_residentialRebatesAndServices",
+    "program": "mn_minnesotaPower_minnesotaPowerResidentialRebatesAndServices",
     "amount": {
       "type": "dollar_amount",
-      "number": 1
+      "number": 1200
     },
     "owner_status": [
       "homeowner"
@@ -2740,7 +2485,7 @@
     "items": [
       "heat_pump_clothes_dryer"
     ],
-    "program": "mn_allete_residentialRebatesAndServices",
+    "program": "mn_minnesotaPower_minnesotaPowerResidentialRebatesAndServices",
     "amount": {
       "type": "dollar_amount",
       "number": 300
@@ -2762,7 +2507,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_allete_residentialRebatesAndServices",
+    "program": "mn_minnesotaPower_minnesotaPowerResidentialRebatesAndServices",
     "amount": {
       "type": "dollar_amount",
       "number": 300
@@ -2784,7 +2529,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_otterTailPower_rebatesAndSavings",
+    "program": "mn_otterTailPower_otterTailPowerCompanyRebatesAndSavings",
     "amount": {
       "type": "dollars_per_unit",
       "number": 800,
@@ -2805,7 +2550,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_otterTailPower_rebatesAndSavings",
+    "program": "mn_otterTailPower_otterTailPowerCompanyRebatesAndSavings",
     "amount": {
       "type": "dollars_per_unit",
       "number": 200,
@@ -2826,7 +2571,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_otterTailPower_rebatesAndSavings",
+    "program": "mn_otterTailPower_otterTailPowerCompanyRebatesAndSavings",
     "amount": {
       "type": "dollars_per_unit",
       "number": 40,
@@ -2847,7 +2592,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_otterTailPower_rebatesAndSavings",
+    "program": "mn_otterTailPower_otterTailPowerCompanyRebatesAndSavings",
     "amount": {
       "type": "dollars_per_unit",
       "number": 300,
@@ -2868,7 +2613,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_otterTailPower_rebatesAndSavings",
+    "program": "mn_otterTailPower_otterTailPowerCompanyRebatesAndSavings",
     "amount": {
       "type": "dollars_per_unit",
       "number": 300,
@@ -2889,7 +2634,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_otterTailPower_rebatesAndSavings",
+    "program": "mn_otterTailPower_otterTailPowerCompanyRebatesAndSavings",
     "amount": {
       "type": "dollars_per_unit",
       "number": 200,
@@ -2910,7 +2655,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_otterTailPower_rebatesAndSavings",
+    "program": "mn_otterTailPower_otterTailPowerCompanyRebatesAndSavings",
     "amount": {
       "type": "dollars_per_unit",
       "number": 200,
@@ -2931,7 +2676,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_otterTailPower_rebatesAndSavings",
+    "program": "mn_otterTailPower_otterTailPowerCompanyRebatesAndSavings",
     "amount": {
       "type": "dollar_amount",
       "number": 200
@@ -2953,7 +2698,7 @@
     "items": [
       "electric_stove"
     ],
-    "program": "mn_otterTailPower_rebatesAndSavings",
+    "program": "mn_otterTailPower_otterTailPowerCompanyRebatesAndSavings",
     "amount": {
       "type": "dollar_amount",
       "number": 50
@@ -2976,7 +2721,7 @@
     "items": [
       "non_heat_pump_clothes_dryer"
     ],
-    "program": "mn_otterTailPower_rebatesAndSavings",
+    "program": "mn_otterTailPower_otterTailPowerCompanyRebatesAndSavings",
     "amount": {
       "type": "dollar_amount",
       "number": 50
@@ -2998,7 +2743,7 @@
     "items": [
       "heat_pump_clothes_dryer"
     ],
-    "program": "mn_otterTailPower_rebatesAndSavings",
+    "program": "mn_otterTailPower_otterTailPowerCompanyRebatesAndSavings",
     "amount": {
       "type": "dollar_amount",
       "number": 50
@@ -3020,7 +2765,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_austinUtilities_austinUtilitiesConserveAndSave™Rebates",
+    "program": "mn_austinUtilities_austinUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 2200,
@@ -3042,7 +2787,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_austinUtilities_austinUtilitiesConserveAndSave™Rebates",
+    "program": "mn_austinUtilities_austinUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 1500
@@ -3062,7 +2807,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_austinUtilities_austinUtilitiesConserveAndSave™Rebates",
+    "program": "mn_austinUtilities_austinUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 400
@@ -3082,7 +2827,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_austinUtilities_austinUtilitiesConserveAndSave™Rebates",
+    "program": "mn_austinUtilities_austinUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 90
@@ -3216,26 +2961,6 @@
     }
   },
   {
-    "id": "MN-160",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_xcelEnergy_xcelEnergyHomeRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$500 rebate for a ducted air source heat pump. May pair with CenterPoint Energy rebate for a maximum total of $1,600 from both utilities."
-    }
-  },
-  {
     "id": "MN-161",
     "payment_methods": [
       "rebate"
@@ -3265,7 +2990,7 @@
     "items": [
       "heat_pump_clothes_dryer"
     ],
-    "program": "mn_austinUtilities_austinUtilitiesConserveAndSave™Rebates",
+    "program": "mn_austinUtilities_austinUtilitiesResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 25
@@ -3409,7 +3134,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_cityOfBaudetteMunicipalUtilities_rebatesAndEnergyIncentives",
+    "program": "mn_cityOfBaudetteMunicipalUtilities_baudetteMunicipalUtilitiesPowerSaversProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 150
@@ -3429,7 +3154,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_cityOfBaudetteMunicipalUtilities_rebatesAndEnergyIncentives",
+    "program": "mn_cityOfBaudetteMunicipalUtilities_baudetteMunicipalUtilitiesPowerSaversProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 150
@@ -3449,7 +3174,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_roseauElectricCoop_roseauElectricCooperativeRebates",
+    "program": "mn_roseauElectricCoop_roseauElectricCooperativePowerSaversEfficiencyRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 150
@@ -3469,7 +3194,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_roseauElectricCoop_roseauElectricCooperativeRebates",
+    "program": "mn_roseauElectricCoop_roseauElectricCooperativePowerSaversEfficiencyRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 150
@@ -3489,7 +3214,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_roseauElectricCoop_roseauElectricCooperativeRebates",
+    "program": "mn_roseauElectricCoop_roseauElectricCooperativePowerSaversEfficiencyRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 150
@@ -3509,7 +3234,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_roseauElectricCoop_roseauElectricCooperativeRebates",
+    "program": "mn_roseauElectricCoop_roseauElectricCooperativePowerSaversEfficiencyRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 150
@@ -3529,7 +3254,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_cityOfBaudetteMunicipalUtilities_rebatesAndEnergyIncentives",
+    "program": "mn_cityOfBaudetteMunicipalUtilities_baudetteMunicipalUtilitiesPowerSaversProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 150
@@ -3549,7 +3274,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_cityOfBaudetteMunicipalUtilities_rebatesAndEnergyIncentives",
+    "program": "mn_cityOfBaudetteMunicipalUtilities_baudetteMunicipalUtilitiesPowerSaversProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 150
@@ -3570,7 +3295,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_missouriRiverEnergyServices_brightEnergySolutionsResidentialRebates",
+    "program": "mn_missouriRiverEnergyServices_missouriRiverEnergyServicesBrightEnergySolutionsResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 1150,
@@ -3582,7 +3307,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,150 rebate for air source heat pump "
+      "en": "Up to $1,150 rebate for air source heat pump."
     },
     "start_date": "2025-01-01"
   },
@@ -3595,7 +3320,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_missouriRiverEnergyServices_brightEnergySolutionsResidentialRebates",
+    "program": "mn_missouriRiverEnergyServices_missouriRiverEnergyServicesBrightEnergySolutionsResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 400
@@ -3605,7 +3330,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $400 rebate on ductless air source heat pump "
+      "en": "Up to $400 rebate on ductless air source heat pump. "
     }
   },
   {
@@ -3640,7 +3365,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "mn_allete_residentialRebatesAndServices",
+    "program": "mn_minnesotaPower_minnesotaPowerResidentialRebatesAndServices",
     "amount": {
       "type": "dollar_amount",
       "number": 1
@@ -3663,7 +3388,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "mn_missouriRiverEnergyServices_brightEnergySolutionsResidentialRebates",
+    "program": "mn_missouriRiverEnergyServices_missouriRiverEnergyServicesBrightEnergySolutionsResidentialRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 200
@@ -3674,6 +3399,433 @@
     ],
     "short_description": {
       "en": "$200 rebate for a heat pump water heater with an ENERGY STAR certification."
+    }
+  },
+  {
+    "id": "MN-182",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_bloomingPrairiePublicUtilities_southernMinnesotaMunicipalPowerAgencyResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "minimum": 90,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$400 rebate for a 20-55 gallon heat pump water heater. $90 rebate for heat pump water heater larger than 55 gallons. "
+    }
+  },
+  {
+    "id": "MN-183",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "mn_southCentralElectricAssn_southCentralElectricAssociationRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$25 rebate for a heat pump clothes dryer in a single-family home."
+    }
+  },
+  {
+    "id": "MN-184",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_glencoeLightAndPowerCommission_glencoeLightAndPowerRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "minimum": 150,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $300 rebate for a heat pump water heater. Rebate range is $150 to $300 depending upon unit size. Must meet efficiency specifications."
+    }
+  },
+  {
+    "id": "MN-185",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_goodhueCountyCoopElectricAssn_goodhueCountyCooperativeElectricMemberRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a heat pump water heater. Must be 50 gallons or larger"
+    }
+  },
+  {
+    "id": "MN-186",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_goodhueCountyCoopElectricAssn_goodhueCountyCooperativeElectricMemberRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "minimum": 400,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $700 rebate for a ducted air source heat pump. Rebate amount dependent upon equipment efficiency."
+    }
+  },
+  {
+    "id": "MN-187",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "air_sealing",
+      "wall_insulation"
+    ],
+    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomesCostShare",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3040,
+      "minimum": 240,
+      "maximum": 3040
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "100% utility rebate match for air sealing and attic and wall insulation for St. Louis Park residents who meet environmental justice rate eligibility."
+    }
+  },
+  {
+    "id": "MN-188",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mn_cityOfMinneapolis_minneapolisGreenCostShareBonusRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 bonus rebate for an air source heat pump. Green Zone residents qualify for a $4,000 rebate. Must meet utility rebate efficiency requirements. "
+    }
+  },
+  {
+    "id": "MN-189",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomesCostShare",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% utility rebate match for a cold climate air source heat pump. All St. Louis Park residents are eligible."
+    }
+  },
+  {
+    "id": "MN-190",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomesCostShare",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "100% utility rebate match for a cold climate air source heat pump. St. Louis Park residents must qualify for environmental justice rate."
+    }
+  },
+  {
+    "id": "MN-191",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_bagleyPublicUtilitiesCommission_bagleyPublicUtilitiesPowerSaversEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": " $600 per ton rebate for air source heat pump.(Equal to or greater than 16.2 SEER2) "
+    }
+  },
+  {
+    "id": "MN-192",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_bagleyPublicUtilitiesCommission_bagleyPublicUtilitiesPowerSaversEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 per ton rebate for ducted air source source heat pump.  (Less than 16.2 SEER2) "
+    }
+  },
+  {
+    "id": "MN-193",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_xcelEnergy_xcelEnergyHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "minimum": 1600,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 rebate for a cold climate ductless air source heat pump. $1,600 for a standard efficiency ductless air source heat pump.  "
+    }
+  },
+  {
+    "id": "MN-194",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_xcelEnergy_xcelEnergyHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900,
+      "minimum": 500,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$900 rebate for a ducted cold climate air source heat pump. $500 for standard efficiency heat pump. Pair with CenterPoint rebate for a max of $2,000. "
+    }
+  },
+  {
+    "id": "MN-195",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_xcelEnergyGas_xcelEnergyHomeRebatesGas",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "minimum": 1600,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 rebate for a cold climate ducted air source heat pump. $1,600 for a standard efficiency ducted air source heat pump."
+    }
+  },
+  {
+    "id": "MN-196",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_bagleyPublicUtilitiesCommission_bagleyPublicUtilitiesPowerSaversEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 per ton rebate for ductless air source heat pump. Less than 16.2 SEER2"
+    }
+  },
+  {
+    "id": "MN-197",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_bagleyPublicUtilitiesCommission_bagleyPublicUtilitiesPowerSaversEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$600 per ton rebate for ductless air source heat pump. (Equal to or greater than 16.2 SEER2)"
+    }
+  },
+  {
+    "id": "MN-198",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "air_sealing",
+      "wall_insulation"
+    ],
+    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomesCostShare",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1520,
+      "maximum": 1520
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% utility rebate match for air sealing and attic and wall insulation. All St. Louis Park residents are eligible. "
+    }
+  },
+  {
+    "id": "MN-199",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mn_h-DElectricCoop,Inc_h-DElectricCoop,IncRebates,Loans,AndOtherIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$600 rebate for an air source heat pump. Must be at least 2 tons and meet efficiency specifications."
+    }
+  },
+  {
+    "id": "MN-200",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mn_hawleyPublicUtilities_hawleyPublicUtilitiesPowerSaversEfficiencyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 600,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $600 per ton rebate for a ducted or ductless air source heat pump. $300 per ton rebate for lower efficiency unit. "
+    }
+  },
+  {
+    "id": "MN-201",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "mn_hawleyPublicUtilities_hawleyPublicUtilitiesPowerSaversEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$25 rebate for an electric dryer. Must be ENERGY STAR certified."
     }
   }
 ]

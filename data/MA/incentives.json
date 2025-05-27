@@ -12871,5 +12871,76 @@
     },
     "end_date": "2025-12-31",
     "low_income": "ma-massSave-incomeEligible-enhanced"
+  },
+  {
+    "id": "MA-600",
+    "payment_methods": [
+      "account_credit",
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "other_insulation"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% of cost of weatherization, up to $1,000"
+    }
+  },
+  {
+    "id": "MA-601",
+    "payment_methods": [
+      "account_credit",
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "other_insulation"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "75% of cost of weatherization, up to $1,500"
+    },
+    "low_income": "ma-concordmlp-120ami-threshold"
+  },
+  {
+    "id": "MA-602",
+    "payment_methods": [
+      "account_credit",
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "other_insulation"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "100% of cost of weatherization, up to $2,000"
+    },
+    "low_income": "ma-concordmlp-80ami-threshold"
   }
 ]

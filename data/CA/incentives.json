@@ -162,5 +162,88 @@
     "short_description": {
       "en": "Save $2,000 per unit - Rebate on Single-Family Unitary Split System and Mini/Multi-Split Heat Pump Electrical Upgrades"
     }
+  },
+  {
+    "id": "CA-8",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_single-FamilyConnectedHeatPumpWaterHeaterIncentive",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4250,
+      "minimum": 2000,
+      "maximum": 6500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2000-6500 for 3CE customers who qualify and are looking to install a Heat Pump Water Heater"
+    }
+  },
+  {
+    "id": "CA-9",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_californiaPublicUtilitiesCommission_goldenStateRebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Save $500 Per Water Heater – Instant Rebate on Heat Pump Water. Must be replacing an electric water heater"
+    }
+  },
+  {
+    "id": "CA-10",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_californiaPublicUtilitiesCommission_goldenStateRebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Save up to $900 Per Unit – Rebate On Heat Pump Water Heater replacing Gas Water Heater"
+    }
+  },
+  {
+    "id": "CA-11",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ca_pacificGasAndElectric_pGandERebatesAndIncentives",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free-Induction-Loaner-Program: Must be a PG&E customer"
+    }
   }
 ]
