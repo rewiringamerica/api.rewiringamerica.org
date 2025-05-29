@@ -22,6 +22,7 @@ export type StateIncentive = {
   owner_status: OwnerStatus[];
   eligible_geo_group?: string;
   program: string;
+  url: LocalizableString;
   bonus_available?: boolean;
   low_income?: string;
   more_info_url?: LocalizableString;
@@ -58,6 +59,9 @@ const incentivePropertySchema = {
   },
   eligible_geo_group: { type: 'string', nullable: true },
   program: { type: 'string', enum: Object.keys(PROGRAMS) },
+  url: {
+    $ref: 'LocalizableString',
+  },
   bonus_available: { type: 'boolean', nullable: true },
   low_income: { type: 'string', nullable: true },
   more_info_url: {
@@ -81,6 +85,7 @@ const requiredProperties = [
   'amount',
   'owner_status',
   'short_description',
+  'url',
 ] as const;
 
 export const STATE_SCHEMA: JSONSchemaType<StateIncentive[]> = {

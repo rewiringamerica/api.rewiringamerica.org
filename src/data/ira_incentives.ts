@@ -36,6 +36,7 @@ export interface IRAIncentive {
   payment_methods: PaymentMethod[];
   short_description: LocalizableString;
   more_info_url: LocalizableString;
+  url: LocalizableString;
 }
 
 // Work around https://github.com/ajv-validator/ajv/issues/1664
@@ -104,6 +105,9 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
       more_info_url: {
         $ref: 'LocalizableString',
       },
+      url: {
+        $ref: 'LocalizableString',
+      },
     },
     required: [
       'id',
@@ -119,6 +123,7 @@ export const SCHEMA: JSONSchemaType<IRAIncentive[]> = {
       'type',
       'payment_methods',
       'short_description',
+      'url',
     ],
     additionalProperties: false,
   },

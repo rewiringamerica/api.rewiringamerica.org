@@ -633,6 +633,9 @@ test('correct filtering of incentives with geography', async t => {
     short_description: {
       en: 'This is a model incentive only to be used for testing.',
     },
+    url: {
+      en: 'https://example.com/',
+    },
   };
 
   const programs: Programs = {
@@ -729,6 +732,9 @@ test('correctly evaluates savings when state tax liability is lower than max sav
     ],
     short_description: {
       en: 'This is a model incentive only to be used for testing.',
+    },
+    url: {
+      en: 'https://example.com/',
     },
   };
 

@@ -68,6 +68,7 @@ function inc(
       },
       payment_methods: [PaymentMethod.Rebate],
       owner_status: [OwnerStatus.Homeowner],
+      url: { en: '' },
     },
   ];
 }

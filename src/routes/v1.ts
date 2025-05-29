@@ -52,7 +52,7 @@ function transformIncentives(
 
     // Localize localizable fields
     program: tr(PROGRAMS[incentive.program].name, language),
-    program_url: tr(PROGRAMS[incentive.program].url, language),
+    program_url: tr(incentive.url, language),
     more_info_url: incentive.more_info_url
       ? tr(incentive.more_info_url, language)
       : undefined,
