@@ -1367,6 +1367,64 @@
     "updated_at": "2025-04-02T17:58:30.320Z"
   },
   {
+    "id": 71,
+    "loan_program_key": "CT-2",
+    "name": "HES Micro Loan",
+    "description": "The HES Micro Loan program provides low-interest loans to help Connecticut homeowners finance energy efficiency improvements such as insulation, high-efficiency heating and cooling systems, water heaters, and windows.",
+    "description_langs": {
+      "es": "El programa de micropréstamos HES ofrece préstamos a bajo interés para ayudar a los propietarios de viviendas de Connecticut a financiar mejoras de eficiencia energética, como aislamiento, sistemas de calefacción y refrigeración de alta eficiencia, calentadores de agua y ventanas."
+    },
+    "status": "PUBLISHED",
+    "state": "CT",
+    "is_national": false,
+    "website_url": "https://www.capitalforchange.org/hes-micro-loan",
+    "financial_authority_id": 59,
+    "financial_authority": {
+      "id": 59,
+      "authority_type": "other",
+      "description": "Capital for Change is a Community Development Financial Institution which provides financing loans and programs for energy efficient home upgrades.",
+      "name": "Capital for Change",
+      "state": "CT",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-06-03T18:51:50.849Z",
+      "updated_at": "2025-06-03T18:51:50.849Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "ENERGY_STAR_APPLIANCES"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 70,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": 500,
+      "max_loan_amount": 3000,
+      "min_interest_rate": 0,
+      "max_interest_rate": 0,
+      "max_repayment_months": 36,
+      "created_at": "2025-06-03T18:56:08.226Z",
+      "updated_at": "2025-06-03T18:57:17.472Z"
+    },
+    "created_at": "2025-06-03T18:56:08.241Z",
+    "updated_at": "2025-06-03T18:57:17.482Z"
+  },
+  {
     "id": 62,
     "loan_program_key": "NJ-3",
     "name": "Save Green's Whole-Home Efficiency On-Bill Repayment Program",
@@ -1768,6 +1826,67 @@
     },
     "created_at": "2025-04-02T19:56:55.800Z",
     "updated_at": "2025-04-02T19:56:55.800Z"
+  },
+  {
+    "id": 9,
+    "loan_program_key": "NC-1",
+    "name": "Randolph EMC Energy Efficiency Loan Program",
+    "description": "This loan program provides financing for energy efficiency improvements such as HVAC systems, insulation, and other energy-saving upgrades for Randolph EMC members.",
+    "description_langs": {
+      "es": "Este programa de préstamos ofrece financiamiento para mejoras de eficiencia energética, como sistemas HVAC, aislamiento y otras mejoras de ahorro de energía para los miembros de Randolph EMC."
+    },
+    "status": "PUBLISHED",
+    "state": "NC",
+    "is_national": false,
+    "website_url": "https://www.randolphemc.com/financing-electel",
+    "financial_authority_id": 6,
+    "financial_authority": {
+      "id": 6,
+      "authority_type": "credit_union",
+      "description": "ElecTel Cooperative Federal Credit Union offers financing options for Randolph EMC members to help with energy efficiency improvements.",
+      "name": "ElecTel Cooperative Federal Credit Union",
+      "state": "NC",
+      "city": null,
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2024-10-31T20:59:38.016Z",
+      "updated_at": "2024-10-31T21:00:48.445Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "SOLAR"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "ENERGY_STAR_APPLIANCES"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 10,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 35000,
+      "min_interest_rate": 4.9,
+      "max_interest_rate": 4.9,
+      "max_repayment_months": null,
+      "created_at": "2025-02-18T22:33:28.507Z",
+      "updated_at": "2025-06-03T19:47:17.714Z"
+    },
+    "created_at": "2024-10-31T21:00:48.691Z",
+    "updated_at": "2025-06-03T19:47:17.737Z"
   },
   {
     "id": 13,
