@@ -10,7 +10,7 @@ import { API_IMAGE_SCHEMA } from '../../schemas/v1/image';
  * Schema for EligibleProjectType.
  */
 export const ELIGIBLE_PROJECT_TYPE_SCHEMA = {
-  $id: 'EligibleProjectType.schema.json',
+  $id: 'EligibleProjectType',
   type: 'object',
   properties: {
     type: {
@@ -26,7 +26,7 @@ export const ELIGIBLE_PROJECT_TYPE_SCHEMA = {
  * Schema for FinancialAuthority.
  */
 export const FINANCIAL_AUTHORITY_SCHEMA = {
-  $id: 'FinancialAuthority.schema.json',
+  $id: 'FinancialAuthority',
   type: 'object',
   properties: {
     id: { type: 'number' },
@@ -56,7 +56,7 @@ export const FINANCIAL_AUTHORITY_SCHEMA = {
  * Schema for LoanProgramTerms.
  */
 export const LOAN_PROGRAM_TERMS_SCHEMA = {
-  $id: 'LoanProgramTerms.schema.json',
+  $id: 'LoanProgramTerms',
   type: 'object',
   properties: {
     id: { type: 'number' },
@@ -78,7 +78,7 @@ export const LOAN_PROGRAM_TERMS_SCHEMA = {
  * Schema for a single LoanProgram.
  */
 export const LOAN_PROGRAM_SCHEMA = {
-  $id: 'LoanProgram.schema.json',
+  $id: 'LoanProgram',
   type: 'object',
   properties: {
     id: { type: 'number' },
@@ -96,12 +96,12 @@ export const LOAN_PROGRAM_SCHEMA = {
     status: { type: 'string', enum: Object.values(LoanProgramStatus) },
     website_url: { type: 'string', format: 'uri' },
     financial_authority_id: { type: 'number' },
-    financial_authority: { $ref: 'FinancialAuthority.schema.json' },
+    financial_authority: { $ref: 'FinancialAuthority' },
     loan_program_terms_id: { type: 'number' },
-    loan_program_terms: { $ref: 'LoanProgramTerms.schema.json' },
+    loan_program_terms: { $ref: 'LoanProgramTerms' },
     eligible_project_types: {
       type: 'array',
-      items: { $ref: 'EligibleProjectType.schema.json' },
+      items: { $ref: 'EligibleProjectType' },
     },
     state: { type: 'string' },
     is_national: { type: 'boolean' },
@@ -132,7 +132,7 @@ export const LOAN_PROGRAMS_SCHEMA = {
   title: 'LoanPrograms',
   type: 'object',
   patternProperties: {
-    '^.*$': { $ref: 'LoanProgram.schema.json' },
+    '^.*$': { $ref: 'LoanProgram' },
   },
   additionalProperties: false,
 } as const;
