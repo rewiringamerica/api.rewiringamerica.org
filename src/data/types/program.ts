@@ -4,7 +4,7 @@ import { ALL_ITEMS } from './items';
 import { LOCALIZABLE_STRING_SCHEMA } from './localizable-string';
 
 export const PROGRAM_SCHEMA = {
-  $id: 'Program.schema.json',
+  $id: 'Program',
   type: 'object',
   properties: {
     name: {
@@ -33,7 +33,7 @@ export const PROGRAMS_SCHEMA = {
   title: 'Programs',
   type: 'object',
   patternProperties: {
-    '^.*$': { $ref: 'Program.schema.json' },
+    '^.*$': { $ref: 'Program' },
   },
   additionalProperties: false,
 } as const;
