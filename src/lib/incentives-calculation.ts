@@ -6,12 +6,10 @@ import {
   NO_GAS_UTILITY,
 } from '../data/authorities';
 import { DataPartnersType } from '../data/data_partners';
-import { IRAIncentive, IRA_INCENTIVES } from '../data/ira_incentives';
+import { IRA_INCENTIVES } from '../data/ira_incentives';
 import { PROGRAMS } from '../data/programs';
-import { SOLAR_PRICES } from '../data/solar_prices';
 import { StateIncentive } from '../data/state_incentives';
 import { FilingStatus } from '../data/tax_brackets';
-import { APICoverage } from '../data/types/coverage';
 import { PaymentMethod } from '../data/types/incentive-types';
 import { OwnerStatus } from '../data/types/owner-status';
 import {
@@ -21,21 +19,19 @@ import {
 import { AMIAndEVCreditEligibility } from './ami-evcredit-calculation';
 import { InvalidInputError, UnexpectedInputError } from './error';
 import { ResolvedLocation } from './location';
-import { roundCents } from './rounding';
 import {
   calculateStateIncentives,
   getAllStateIncentives,
   getStateDataPartners,
   getStateIncentiveRelationships,
 } from './state-incentives-calculation';
-import { estimateFederalTaxAmount } from './tax-brackets';
 
 const OWNER_STATUSES = new Set(Object.values(OwnerStatus));
 const TAX_FILINGS = new Set(Object.values(FilingStatus));
 
 IRA_INCENTIVES.forEach(incentive => Object.freeze(incentive));
 
-export type CalculatedIncentive = (IRAIncentive | StateIncentive) & {
+export type CalculatedIncentive = StateIncentive & {
   eligible: boolean;
 };
 
@@ -50,155 +46,10 @@ type CalculatedIncentives = Omit<APICalculatorResponse, 'incentives'> & {
 
 export type CalculateParams = Omit<APICalculatorRequest, 'location'>;
 
-function calculateFederalIncentivesAndSavings(
-  amiAndEvCreditEligibility: AMIAndEVCreditEligibility,
-  location: ResolvedLocation,
-  solarSystemCost: number,
-  excludeIRARebates: boolean,
-  { tax_filing, owner_status, household_income, items }: CalculateParams,
-): CalculatedIncentive[] {
-  // Get tax owed to determine max potential tax savings
-  const tax = tax_filing
-    ? estimateFederalTaxAmount(location.state, tax_filing, household_income)
-    : null;
-
-  const eligibleIncentives: CalculatedIncentive[] = [];
-  const ineligibleIncentives: CalculatedIncentive[] = [];
-
-  // Loop through each of the incentives, running several tests to see if visitor is eligible
-  for (const incentive of IRA_INCENTIVES) {
-    let eligible = true;
-
-    if (items) {
-      if (incentive.items.every(item => !items.includes(item))) {
-        // Don't include an incentive at all if the query is filtering by item
-        // and this incentive's items don't overlap
-        continue;
-      }
-    }
-
-    if (
-      excludeIRARebates &&
-      (incentive.payment_methods[0] === PaymentMethod.PosRebate ||
-        incentive.payment_methods[0] === PaymentMethod.PerformanceRebate)
-    ) {
-      continue;
-    }
-
-    // MA residents are already eligible for free energy audits, so do not include
-    // that federal incentive
-    if (
-      location.state === 'MA' &&
-      incentive.items.length === 1 &&
-      incentive.items[0] === 'energy_audit'
-    ) {
-      continue;
-    }
-
-    //
-    // 1) Verify that the selected homeowner status qualifies
-    //
-    if (!incentive.owner_status.includes(owner_status as OwnerStatus)) {
-      eligible = false;
-    }
-
-    //
-    // 2) Verify that the given income falls within defined AMI limits, if defined
-    //
-    if (incentive.ami_qualification) {
-      if (
-        (incentive.ami_qualification === 'less_than_80_ami' &&
-          household_income >= amiAndEvCreditEligibility.computedAMI80) ||
-        (incentive.ami_qualification === 'more_than_80_ami' &&
-          household_income < amiAndEvCreditEligibility.computedAMI80) ||
-        (incentive.ami_qualification === 'less_than_150_ami' &&
-          (household_income < amiAndEvCreditEligibility.computedAMI80 ||
-            household_income >= amiAndEvCreditEligibility.computedAMI150))
-      ) {
-        eligible = false;
-      }
-    }
-
-    //
-    // 3) Verify that overall income limits not exceeded
-    //
-    if (incentive.agi_max_limit) {
-      if (Number(household_income) >= Number(incentive.agi_max_limit)) {
-        eligible = false;
-      }
-    }
-
-    //
-    // 4) Verify tax filing status is eligible for benefit
-    //
-    if (incentive.filing_status) {
-      if (incentive.filing_status !== tax_filing) {
-        eligible = false;
-      }
-    }
-
-    // Filter out tax credits for people who don't owe any tax
-    if (
-      _.isEqual(incentive.payment_methods, [PaymentMethod.TaxCredit]) &&
-      tax?.taxOwed === 0
-    ) {
-      eligible = false;
-    }
-
-    //
-    // 5) Add the Rooftop Solar Credit amount
-    //
-    const amount = { ...incentive.amount };
-    if (
-      incentive.items.includes('rooftop_solar_installation') &&
-      !isNaN(solarSystemCost)
-    ) {
-      amount.representative = roundCents(solarSystemCost * amount.number!);
-    }
-
-    // EV charger credit has some special eligibility rules
-    if (incentive.items.includes('electric_vehicle_charger')) {
-      eligible = amiAndEvCreditEligibility.evCreditEligible;
-    }
-
-    const newItem = {
-      ...incentive,
-      amount,
-      eligible,
-    };
-    if (eligible) {
-      eligibleIncentives.push(newItem);
-    } else {
-      ineligibleIncentives.push(newItem);
-    }
-  }
-
-  // Remove items in ineligible section that display in eligible section
-  const dedupedIneligibleIncentives = _.uniqBy(
-    ineligibleIncentives.filter(incentive => {
-      // Note: using _ here because it finds by matching properties, not by equality
-      const key = {
-        items: incentive.items,
-        type: incentive.payment_methods[0],
-      };
-      return _.find(eligibleIncentives, key) === undefined;
-    }),
-    incentive => incentive.items[0] + incentive.payment_methods[0],
-  );
-
-  const calculatedIncentives = [
-    ...eligibleIncentives,
-    ...dedupedIneligibleIncentives,
-  ];
-
-  return calculatedIncentives;
-}
-
 export default function calculateIncentives(
   location: ResolvedLocation,
   amiAndEvCreditEligibility: AMIAndEVCreditEligibility,
   request: CalculateParams,
-  excludeIRARebates: boolean = false,
 ): CalculatedIncentives {
   const {
     owner_status,
@@ -297,47 +148,18 @@ export default function calculateIncentives(
     household_income < amiAndEvCreditEligibility.computedAMI150;
   const isOver150Ami = !isUnder150Ami;
 
-  const incentives: CalculatedIncentive[] = [];
-  let coverage: APICoverage = {
-    state: null,
-    utility: null,
-  };
-
-  if (!authority_types || authority_types.includes(AuthorityType.Federal)) {
-    const federal = calculateFederalIncentivesAndSavings(
-      amiAndEvCreditEligibility,
-      location,
-      SOLAR_PRICES[state_id]?.system_cost,
-      excludeIRARebates,
-      request,
-    );
-    incentives.push(...federal);
-  }
-
-  if (
-    !authority_types ||
-    authority_types.includes(AuthorityType.State) ||
-    authority_types.includes(AuthorityType.Utility) ||
-    authority_types.includes(AuthorityType.County) ||
-    authority_types.includes(AuthorityType.City) ||
-    authority_types.includes(AuthorityType.GasUtility) ||
-    authority_types.includes(AuthorityType.Other)
-  ) {
-    const allStateIncentives = getAllStateIncentives(state_id, request);
-    const stateIncentiveRelationships =
-      getStateIncentiveRelationships(state_id);
-    const state = calculateStateIncentives(
-      location,
-      request,
-      allStateIncentives,
-      stateIncentiveRelationships,
-      stateAuthorities,
-      PROGRAMS,
-      amiAndEvCreditEligibility,
-    );
-    incentives.push(...state.stateIncentives);
-    coverage = state.coverage;
-  }
+  const allStateIncentives = getAllStateIncentives(state_id, request);
+  const stateIncentiveRelationships = getStateIncentiveRelationships(state_id);
+  const state = calculateStateIncentives(
+    location,
+    request,
+    [...IRA_INCENTIVES, ...allStateIncentives],
+    stateIncentiveRelationships,
+    stateAuthorities,
+    PROGRAMS,
+    amiAndEvCreditEligibility,
+  );
+  const incentives = state.stateIncentives;
 
   // Sort incentives https://app.asana.com/0/0/1204275945510481/f
   // Sort by payment method first, treating "performance_rebate" the same as
@@ -378,7 +200,7 @@ export default function calculateIncentives(
     is_under_150_ami: isUnder150Ami,
     is_over_150_ami: isOver150Ami,
     authorities,
-    coverage,
+    coverage: state.coverage,
     data_partners,
     location,
     incentives: sortedIncentives,

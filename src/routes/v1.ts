@@ -111,7 +111,6 @@ export default async function (
           location,
           amiAndEvCreditEligibility,
           { ...request.query },
-          true,
         );
         const eligibleIncentives = result.incentives.filter(i => i.eligible);
         const translated = {

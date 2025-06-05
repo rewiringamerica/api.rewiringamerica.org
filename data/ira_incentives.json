@@ -1,13 +1,10 @@
 [
   {
     "id": "IRA-1",
-    "type": "tax_credit",
     "payment_methods": [
       "tax_credit"
     ],
     "program": "residentialCleanEnergyCredit",
-    "authority_type": "federal",
-    "v0_item": "battery_storage_installation",
     "items": [
       "battery_storage_installation"
     ],
@@ -19,7 +16,6 @@
     "owner_status": [
       "homeowner"
     ],
-    "ami_qualification": null,
     "start_date": "2023",
     "end_date": "2025-12-31",
     "short_description": {
@@ -37,13 +33,10 @@
   },
   {
     "id": "IRA-8",
-    "type": "tax_credit",
     "payment_methods": [
       "tax_credit"
     ],
     "program": "residentialCleanEnergyCredit",
-    "authority_type": "federal",
-    "v0_item": "geothermal_heating_installation",
     "items": [
       "geothermal_heating_installation"
     ],
@@ -55,7 +48,6 @@
     "owner_status": [
       "homeowner"
     ],
-    "ami_qualification": null,
     "start_date": "2022",
     "end_date": "2025-12-31",
     "short_description": {
@@ -73,13 +65,10 @@
   },
   {
     "id": "IRA-4",
-    "type": "tax_credit",
     "payment_methods": [
       "tax_credit"
     ],
     "program": "energyEfficientHomeImprovementCredit",
-    "authority_type": "federal",
-    "v0_item": "electric_panel",
     "items": [
       "electric_panel"
     ],
@@ -91,7 +80,6 @@
       "homeowner",
       "renter"
     ],
-    "ami_qualification": null,
     "start_date": "2023",
     "end_date": "2025-12-31",
     "short_description": {
@@ -108,226 +96,11 @@
     }
   },
   {
-    "id": "IRA-3",
-    "type": "pos_rebate",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "program": "homeElectrificationAndApplianceRebates",
-    "authority_type": "federal",
-    "v0_item": "electric_panel",
-    "items": [
-      "electric_panel"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 4000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "ami_qualification": "less_than_150_ami",
-    "start_date": "2025",
-    "end_date": "2032",
-    "short_description": {
-      "en": "Rebate up to $4,000 for electrical panel costs. Low-income households receive 100%. Moderate-income households receive 50%.",
-      "es": "Reembolsos hasta $4,000 por los costos del tablero eléctrico. Los hogares de bajos ingresos: reembolso del 100%. Los de ingresos medios reciben el 50%."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/home-electrification-appliance-rebates"
-    },
-    "url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://www.rewiringamerica.org/app/ira-calculator/information/cuadro-electrico"
-    }
-  },
-  {
-    "id": "IRA-3",
-    "type": "pos_rebate",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "program": "homeElectrificationAndApplianceRebates",
-    "authority_type": "federal",
-    "v0_item": "electric_panel",
-    "items": [
-      "electric_panel"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 4000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "ami_qualification": "less_than_80_ami",
-    "start_date": "2025",
-    "end_date": "2032",
-    "short_description": {
-      "en": "Rebate up to $4,000 for electrical panel costs. Low-income households receive 100%. Moderate-income households receive 50%.",
-      "es": "Reembolsos hasta $4,000 por los costos del tablero eléctrico. Los hogares de bajos ingresos: reembolso del 100%. Los de ingresos medios reciben el 50%."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/home-electrification-appliance-rebates"
-    },
-    "url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://www.rewiringamerica.org/app/ira-calculator/information/cuadro-electrico"
-    }
-  },
-  {
-    "id": "IRA-7",
-    "type": "pos_rebate",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "program": "homeElectrificationAndApplianceRebates",
-    "authority_type": "federal",
-    "v0_item": "electric_stove",
-    "items": [
-      "electric_stove"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 840
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "ami_qualification": "less_than_150_ami",
-    "start_date": "2025",
-    "end_date": "2032",
-    "short_description": {
-      "en": "Electrification rebates for electric and induction stoves. Low-income: 100% coverage up to $840. Moderate-income: 50% up to $840.",
-      "es": "Reembolsos hasta $840 por las estufas eléctricas y de inducción. Los hogares de bajos ingresos reciben un reembolso del 100% (ingresos medios: 50%)."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/home-electrification-appliance-rebates"
-    },
-    "url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://www.rewiringamerica.org/app/ira-calculator/information/cuadro-electrico"
-    }
-  },
-  {
-    "id": "IRA-7",
-    "type": "pos_rebate",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "program": "homeElectrificationAndApplianceRebates",
-    "authority_type": "federal",
-    "v0_item": "electric_stove",
-    "items": [
-      "electric_stove"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 840
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "ami_qualification": "less_than_80_ami",
-    "start_date": "2025",
-    "end_date": "2032",
-    "short_description": {
-      "en": "Electrification rebates for electric and induction stoves. Low-income: 100% coverage up to $840. Moderate-income: 50% up to $840.",
-      "es": "Reembolsos hasta $840 por las estufas eléctricas y de inducción. Los hogares de bajos ingresos reciben un reembolso del 100% (ingresos medios: 50%)."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/home-electrification-appliance-rebates"
-    },
-    "url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://www.rewiringamerica.org/app/ira-calculator/information/cuadro-electrico"
-    }
-  },
-  {
-    "id": "IRA-6",
-    "type": "pos_rebate",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "program": "homeElectrificationAndApplianceRebates",
-    "authority_type": "federal",
-    "v0_item": "electric_wiring",
-    "items": [
-      "electric_wiring"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "ami_qualification": "less_than_80_ami",
-    "start_date": "2025",
-    "end_date": "2032",
-    "short_description": {
-      "en": "Electrification rebates for electric wiring. Low-income: 100% coverage up to $2,500. Moderate-income: 50% up to $2,500.",
-      "es": "Reembolsos hasta $2,500 por el cableado. Los hogares de bajos ingresos reciben un reembolso del 100% y los de ingresos medios reciben el 50%."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/home-electrification-appliance-rebates"
-    },
-    "url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://www.rewiringamerica.org/app/ira-calculator/information/cuadro-electrico"
-    }
-  },
-  {
-    "id": "IRA-6",
-    "type": "pos_rebate",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "program": "homeElectrificationAndApplianceRebates",
-    "authority_type": "federal",
-    "v0_item": "electric_wiring",
-    "items": [
-      "electric_wiring"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "ami_qualification": "less_than_150_ami",
-    "start_date": "2025",
-    "end_date": "2032",
-    "short_description": {
-      "en": "Electrification rebates for electric wiring. Low-income: 100% coverage up to $2,500. Moderate-income: 50% up to $2,500.",
-      "es": "Reembolsos hasta $2,500 por el cableado. Los hogares de bajos ingresos reciben un reembolso del 100% y los de ingresos medios reciben el 50%."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/home-electrification-appliance-rebates"
-    },
-    "url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://www.rewiringamerica.org/app/ira-calculator/information/cuadro-electrico"
-    }
-  },
-  {
     "id": "IRA-5",
-    "type": "tax_credit",
     "payment_methods": [
       "tax_credit"
     ],
     "program": "alternativeFuelVehicleRefuelingPropertyCredit",
-    "authority_type": "federal",
-    "v0_item": "electric_vehicle_charger",
     "items": [
       "electric_vehicle_charger"
     ],
@@ -339,7 +112,6 @@
       "homeowner",
       "renter"
     ],
-    "ami_qualification": null,
     "start_date": "2023",
     "end_date": "2026-06-30",
     "short_description": {
@@ -357,13 +129,10 @@
   },
   {
     "id": "IRA-14",
-    "type": "tax_credit",
     "payment_methods": [
       "tax_credit"
     ],
     "program": "cleanVehicleCredit",
-    "authority_type": "federal",
-    "v0_item": "new_electric_vehicle",
     "items": [
       "new_electric_vehicle"
     ],
@@ -375,123 +144,8 @@
       "homeowner",
       "renter"
     ],
-    "ami_qualification": null,
-    "agi_max_limit": 150000,
-    "filing_status": "single",
-    "start_date": "2023",
-    "end_date": "2025-09-30",
-    "short_description": {
-      "en": "Tax credit provided as an upfront rebate for new EVs with a maximum MSRP of $55,000 and vans, pickup trucks, and SUVs with a maximum MSRP of $80,000.",
-      "es": "Crédito fiscal proporcionado como un reembolso inicial para los nuevos vehículos eléctricos con un MSRP máximo de $55,000 y furgonetas, camionetas y SUVs con un MSRP máximo de $80,000."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/30d-new-ev-tax-incentive",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/30d-new-ev-tax-incentive"
-    },
-    "url": {
-      "en": "https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after",
-      "es": "https://www.irs.gov/es/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after"
-    }
-  },
-  {
-    "id": "IRA-14",
-    "type": "tax_credit",
-    "payment_methods": [
-      "tax_credit"
-    ],
-    "program": "cleanVehicleCredit",
-    "authority_type": "federal",
-    "v0_item": "new_electric_vehicle",
-    "items": [
-      "new_electric_vehicle"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 7500
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "ami_qualification": null,
-    "agi_max_limit": 150000,
-    "filing_status": "married_filing_separately",
-    "start_date": "2023",
-    "end_date": "2025-09-30",
-    "short_description": {
-      "en": "Tax credit provided as an upfront rebate for new EVs with a maximum MSRP of $55,000 and vans, pickup trucks, and SUVs with a maximum MSRP of $80,000.",
-      "es": "Crédito fiscal proporcionado como un reembolso inicial para los nuevos vehículos eléctricos con un MSRP máximo de $55,000 y furgonetas, camionetas y SUVs con un MSRP máximo de $80,000."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/30d-new-ev-tax-incentive",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/30d-new-ev-tax-incentive"
-    },
-    "url": {
-      "en": "https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after",
-      "es": "https://www.irs.gov/es/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after"
-    }
-  },
-  {
-    "id": "IRA-14",
-    "type": "tax_credit",
-    "payment_methods": [
-      "tax_credit"
-    ],
-    "program": "cleanVehicleCredit",
-    "authority_type": "federal",
-    "v0_item": "new_electric_vehicle",
-    "items": [
-      "new_electric_vehicle"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 7500
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "ami_qualification": null,
-    "agi_max_limit": 225000,
-    "filing_status": "hoh",
-    "start_date": "2023",
-    "end_date": "2025-09-30",
-    "short_description": {
-      "en": "Tax credit provided as an upfront rebate for new EVs with a maximum MSRP of $55,000 and vans, pickup trucks, and SUVs with a maximum MSRP of $80,000.",
-      "es": "Crédito fiscal proporcionado como un reembolso inicial para los nuevos vehículos eléctricos con un MSRP máximo de $55,000 y furgonetas, camionetas y SUVs con un MSRP máximo de $80,000."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/30d-new-ev-tax-incentive",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/30d-new-ev-tax-incentive"
-    },
-    "url": {
-      "en": "https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after",
-      "es": "https://www.irs.gov/es/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after"
-    }
-  },
-  {
-    "id": "IRA-14",
-    "type": "tax_credit",
-    "payment_methods": [
-      "tax_credit"
-    ],
-    "program": "cleanVehicleCredit",
-    "authority_type": "federal",
-    "v0_item": "new_electric_vehicle",
-    "items": [
-      "new_electric_vehicle"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 7500
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "ami_qualification": null,
-    "agi_max_limit": 300000,
-    "filing_status": "joint",
+
+    "low_income": "ira-30d-credit",
     "start_date": "2023",
     "end_date": "2025-09-30",
     "short_description": {
@@ -509,13 +163,10 @@
   },
   {
     "id": "IRA-16",
-    "type": "tax_credit",
     "payment_methods": [
       "tax_credit"
     ],
     "program": "creditForPreviouslyOwnedCleanVehicles",
-    "authority_type": "federal",
-    "v0_item": "used_electric_vehicle",
     "items": [
       "used_electric_vehicle"
     ],
@@ -527,123 +178,7 @@
       "homeowner",
       "renter"
     ],
-    "ami_qualification": null,
-    "agi_max_limit": 75000,
-    "filing_status": "single",
-    "start_date": "2023",
-    "end_date": "2025-09-30",
-    "short_description": {
-      "en": "30% tax credit (up to $4,000) for a used EV of up to 14,000 lbs, with an MSRP of up to $25,000.",
-      "es": "Crédito fiscal del 30% (hasta $4,000) por los vehículos eléctricos usados con el precio sugerido hasta $25,000 y el peso hasta 14,000 libras."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/25e-used-ev-tax-incentive",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/25e-used-ev-tax-incentive"
-    },
-    "url": {
-      "en": "https://www.irs.gov/credits-deductions/used-clean-vehicle-credit",
-      "es": "https://www.irs.gov/es/credits-deductions/used-clean-vehicle-credit"
-    }
-  },
-  {
-    "id": "IRA-16",
-    "type": "tax_credit",
-    "payment_methods": [
-      "tax_credit"
-    ],
-    "program": "creditForPreviouslyOwnedCleanVehicles",
-    "authority_type": "federal",
-    "v0_item": "used_electric_vehicle",
-    "items": [
-      "used_electric_vehicle"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 4000
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "ami_qualification": null,
-    "agi_max_limit": 75000,
-    "filing_status": "married_filing_separately",
-    "start_date": "2023",
-    "end_date": "2025-09-30",
-    "short_description": {
-      "en": "30% tax credit (up to $4,000) for a used EV of up to 14,000 lbs, with an MSRP of up to $25,000.",
-      "es": "Crédito fiscal del 30% (hasta $4,000) por los vehículos eléctricos usados con el precio sugerido hasta $25,000 y el peso hasta 14,000 libras."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/25e-used-ev-tax-incentive",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/25e-used-ev-tax-incentive"
-    },
-    "url": {
-      "en": "https://www.irs.gov/credits-deductions/used-clean-vehicle-credit",
-      "es": "https://www.irs.gov/es/credits-deductions/used-clean-vehicle-credit"
-    }
-  },
-  {
-    "id": "IRA-16",
-    "type": "tax_credit",
-    "payment_methods": [
-      "tax_credit"
-    ],
-    "program": "creditForPreviouslyOwnedCleanVehicles",
-    "authority_type": "federal",
-    "v0_item": "used_electric_vehicle",
-    "items": [
-      "used_electric_vehicle"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 4000
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "ami_qualification": null,
-    "agi_max_limit": 150000,
-    "filing_status": "joint",
-    "start_date": "2023",
-    "end_date": "2025-09-30",
-    "short_description": {
-      "en": "30% tax credit (up to $4,000) for a used EV of up to 14,000 lbs, with an MSRP of up to $25,000.",
-      "es": "Crédito fiscal del 30% (hasta $4,000) por los vehículos eléctricos usados con el precio sugerido hasta $25,000 y el peso hasta 14,000 libras."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/25e-used-ev-tax-incentive",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/25e-used-ev-tax-incentive"
-    },
-    "url": {
-      "en": "https://www.irs.gov/credits-deductions/used-clean-vehicle-credit",
-      "es": "https://www.irs.gov/es/credits-deductions/used-clean-vehicle-credit"
-    }
-  },
-  {
-    "id": "IRA-16",
-    "type": "tax_credit",
-    "payment_methods": [
-      "tax_credit"
-    ],
-    "program": "creditForPreviouslyOwnedCleanVehicles",
-    "authority_type": "federal",
-    "v0_item": "used_electric_vehicle",
-    "items": [
-      "used_electric_vehicle"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 4000
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "ami_qualification": null,
-    "agi_max_limit": 112500,
-    "filing_status": "hoh",
+    "low_income": "ira-25e-credit",
     "start_date": "2023",
     "end_date": "2025-09-30",
     "short_description": {
@@ -661,13 +196,10 @@
   },
   {
     "id": "IRA-10",
-    "type": "tax_credit",
     "payment_methods": [
       "tax_credit"
     ],
     "program": "energyEfficientHomeImprovementCredit",
-    "authority_type": "federal",
-    "v0_item": "heat_pump_air_conditioner_heater",
     "items": [
       "air_to_water_heat_pump",
       "ducted_heat_pump",
@@ -681,7 +213,6 @@
       "homeowner",
       "renter"
     ],
-    "ami_qualification": null,
     "start_date": "2023",
     "end_date": "2025-12-31",
     "short_description": {
@@ -698,14 +229,11 @@
     }
   },
   {
-    "id": "IRA-10",
-    "type": "tax_credit",
+    "id": "IRA-11",
     "payment_methods": [
       "tax_credit"
     ],
     "program": "energyEfficientHomeImprovementCredit",
-    "authority_type": "federal",
-    "v0_item": "heat_pump_water_heater",
     "items": [
       "heat_pump_water_heater"
     ],
@@ -717,7 +245,6 @@
       "homeowner",
       "renter"
     ],
-    "ami_qualification": null,
     "start_date": "2023",
     "end_date": "2025-12-31",
     "short_description": {
@@ -734,232 +261,11 @@
     }
   },
   {
-    "id": "IRA-12",
-    "type": "pos_rebate",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "program": "homeElectrificationAndApplianceRebates",
-    "authority_type": "federal",
-    "v0_item": "heat_pump_water_heater",
-    "items": [
-      "heat_pump_water_heater"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1750
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "ami_qualification": "less_than_150_ami",
-    "start_date": "2025",
-    "end_date": "2032",
-    "short_description": {
-      "en": "Rebate up to $1,750 for heat pump water heaters: 100% for low-income households, 50% for moderate-income households.",
-      "es": "Reembolsos por los calentadores de agua con bomba de calor hasta $1,750. Los hogares de bajos ingresos reciben un reembolso del 100% (ingresos medios: 50%)."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/home-electrification-appliance-rebates"
-    },
-    "url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://www.rewiringamerica.org/app/ira-calculator/information/cuadro-electrico"
-    }
-  },
-  {
-    "id": "IRA-9",
-    "type": "pos_rebate",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "program": "homeElectrificationAndApplianceRebates",
-    "authority_type": "federal",
-    "v0_item": "heat_pump_air_conditioner_heater",
-    "items": [
-      "air_to_water_heat_pump",
-      "ducted_heat_pump",
-      "ductless_heat_pump"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 8000
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "ami_qualification": "less_than_150_ami",
-    "start_date": "2025",
-    "end_date": "2032",
-    "short_description": {
-      "en": "Low-income households get a 100% rebate on heat pumps up to $8,000; moderate-income households get 50% up to $8,000.",
-      "es": "Reembolsos hasta $8,000 por las bombas de calor. Los hogares de bajos ingresos reciben un reembolso del 100% y los de ingresos medios reciben el 50%."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/home-electrification-appliance-rebates"
-    },
-    "url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://www.rewiringamerica.org/app/ira-calculator/information/cuadro-electrico"
-    }
-  },
-  {
-    "id": "IRA-11",
-    "type": "pos_rebate",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "program": "homeElectrificationAndApplianceRebates",
-    "authority_type": "federal",
-    "v0_item": "heat_pump_clothes_dryer",
-    "items": [
-      "heat_pump_clothes_dryer"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 840
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "ami_qualification": "less_than_150_ami",
-    "start_date": "2025",
-    "end_date": "2032",
-    "short_description": {
-      "en": "Rebate up to $840 for heat pump dryers. Low-income households: 100% rebate, Moderate-income: 50% rebate.",
-      "es": "Reembolsos hasta $840 por las secadoras con bomba de calor. Los hogares de bajos ingresos reciben un reembolso del 100% y los de ingresos medios reciben el 50%."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/home-electrification-appliance-rebates"
-    },
-    "url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://www.rewiringamerica.org/app/ira-calculator/information/cuadro-electrico"
-    }
-  },
-  {
-    "id": "IRA-12",
-    "type": "pos_rebate",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "program": "homeElectrificationAndApplianceRebates",
-    "authority_type": "federal",
-    "v0_item": "heat_pump_water_heater",
-    "items": [
-      "heat_pump_water_heater"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1750
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "ami_qualification": "less_than_80_ami",
-    "start_date": "2025",
-    "end_date": "2032",
-    "short_description": {
-      "en": "Rebate up to $1,750 for heat pump water heaters: 100% for low-income households, 50% for moderate-income households.",
-      "es": "Reembolsos por los calentadores de agua con bomba de calor hasta $1,750. Los hogares de bajos ingresos reciben un reembolso del 100% (ingresos medios: 50%)."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/home-electrification-appliance-rebates"
-    },
-    "url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://www.rewiringamerica.org/app/ira-calculator/information/cuadro-electrico"
-    }
-  },
-  {
-    "id": "IRA-9",
-    "type": "pos_rebate",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "program": "homeElectrificationAndApplianceRebates",
-    "authority_type": "federal",
-    "v0_item": "heat_pump_air_conditioner_heater",
-    "items": [
-      "air_to_water_heat_pump",
-      "ducted_heat_pump",
-      "ductless_heat_pump"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 8000
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "ami_qualification": "less_than_80_ami",
-    "start_date": "2025",
-    "end_date": "2032",
-    "short_description": {
-      "en": "Low-income households get a 100% rebate on heat pumps up to $8,000; moderate-income households get 50% up to $8,000.",
-      "es": "Reembolsos hasta $8,000 por las bombas de calor. Los hogares de bajos ingresos reciben un reembolso del 100% y los de ingresos medios reciben el 50%."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/home-electrification-appliance-rebates"
-    },
-    "url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://www.rewiringamerica.org/app/ira-calculator/information/cuadro-electrico"
-    }
-  },
-  {
-    "id": "IRA-11",
-    "type": "pos_rebate",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "program": "homeElectrificationAndApplianceRebates",
-    "authority_type": "federal",
-    "v0_item": "heat_pump_clothes_dryer",
-    "items": [
-      "heat_pump_clothes_dryer"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 840
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "ami_qualification": "less_than_80_ami",
-    "start_date": "2025",
-    "end_date": "2032",
-    "short_description": {
-      "en": "Rebate up to $840 for heat pump dryers. Low-income households: 100% rebate, Moderate-income: 50% rebate.",
-      "es": "Reembolsos hasta $840 por las secadoras con bomba de calor. Los hogares de bajos ingresos reciben un reembolso del 100% y los de ingresos medios reciben el 50%."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/home-electrification-appliance-rebates"
-    },
-    "url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://www.rewiringamerica.org/app/ira-calculator/information/cuadro-electrico"
-    }
-  },
-  {
     "id": "IRA-15",
-    "type": "tax_credit",
     "payment_methods": [
       "tax_credit"
     ],
     "program": "residentialCleanEnergyCredit",
-    "authority_type": "federal",
-    "v0_item": "rooftop_solar_installation",
     "items": [
       "rooftop_solar_installation"
     ],
@@ -970,7 +276,6 @@
     "owner_status": [
       "homeowner"
     ],
-    "ami_qualification": null,
     "start_date": "2022",
     "end_date": "2025-12-31",
     "short_description": {
@@ -987,51 +292,11 @@
     }
   },
   {
-    "id": "IRA-17",
-    "type": "pos_rebate",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "program": "homeElectrificationAndApplianceRebates",
-    "authority_type": "federal",
-    "v0_item": "weatherization",
-    "items": [
-      "air_sealing",
-      "other_insulation",
-      "other_weatherization"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1600
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "ami_qualification": "less_than_80_ami",
-    "start_date": "2025",
-    "end_date": "2032",
-    "short_description": {
-      "en": "Weatherization rebates cover insulation, air sealing, ventilation. Low-income: 100% up to $1,600. Moderate-income: 50% up to $1,600.",
-      "es": "Reembolsos por los proyectos de impermeabilización hasta $16,000. Los hogares de bajos ingresos reciben un reembolso del 100% (los de ingresos medios: 50%)."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-efficiency-rebates",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/home-efficiency-rebates"
-    },
-    "url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://www.rewiringamerica.org/app/ira-calculator/information/cuadro-electrico"
-    }
-  },
-  {
     "id": "IRA-18",
-    "type": "tax_credit",
     "payment_methods": [
       "tax_credit"
     ],
     "program": "energyEfficientHomeImprovementCredit",
-    "authority_type": "federal",
-    "v0_item": "weatherization",
     "items": [
       "air_sealing",
       "door_replacement",
@@ -1046,7 +311,6 @@
       "homeowner",
       "renter"
     ],
-    "ami_qualification": null,
     "start_date": "2023",
     "end_date": "2025-12-31",
     "short_description": {
@@ -1064,13 +328,10 @@
   },
   {
     "id": "IRA-19",
-    "type": "tax_credit",
     "payment_methods": [
       "tax_credit"
     ],
     "program": "energyEfficientHomeImprovementCredit",
-    "authority_type": "federal",
-    "v0_item": null,
     "items": [
       "energy_audit"
     ],
@@ -1082,7 +343,6 @@
       "homeowner",
       "renter"
     ],
-    "ami_qualification": null,
     "start_date": "2023",
     "end_date": "2025-12-31",
     "short_description": {
@@ -1099,121 +359,11 @@
     }
   },
   {
-    "id": "IRA-17",
-    "type": "pos_rebate",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "program": "homeElectrificationAndApplianceRebates",
-    "authority_type": "federal",
-    "v0_item": "weatherization",
-    "items": [
-      "air_sealing",
-      "other_insulation",
-      "other_weatherization"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1600
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "ami_qualification": "less_than_150_ami",
-    "start_date": "2025",
-    "end_date": "2032",
-    "short_description": {
-      "en": "Weatherization rebates cover insulation, air sealing, ventilation. Low-income: 100% up to $1,600. Moderate-income: 50% up to $1,600.",
-      "es": "Reembolsos por los proyectos de impermeabilización hasta $16,000. Los hogares de bajos ingresos reciben un reembolso del 100% (los de ingresos medios: 50%)."
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-efficiency-rebates",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/home-efficiency-rebates"
-    },
-    "url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-electrification-appliance-rebates",
-      "es": "https://www.rewiringamerica.org/app/ira-calculator/information/cuadro-electrico"
-    }
-  },
-  {
-    "id": "IRA-2",
-    "type": "performance_rebate",
-    "payment_methods": [
-      "performance_rebate"
-    ],
-    "program": "homeEfficiencyRebates",
-    "authority_type": "federal",
-    "v0_item": "efficiency_rebates",
-    "items": [
-      "efficiency_rebates"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 8000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "ami_qualification": "less_than_80_ami",
-    "start_date": "2025",
-    "end_date": "2032",
-    "short_description": {
-      "en": "Rebate up to $8,000 for low and moderate income households and up to $4,000 for all other households for energy efficiency retrofits.",
-      "es": "Reembolsos hasta $8,000 para los hogares de bajos ingresos o de ingresos medios y hasta $4,000 para los otros por renovaciones de eficiencia energética"
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-efficiency-rebates",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/home-efficiency-rebates"
-    },
-    "url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-efficiency-rebates",
-      "es": "https://www.rewiringamerica.org/app/ira-calculator/information/climatizacion"
-    }
-  },
-  {
-    "id": "IRA-2",
-    "type": "performance_rebate",
-    "payment_methods": [
-      "performance_rebate"
-    ],
-    "program": "homeEfficiencyRebates",
-    "authority_type": "federal",
-    "v0_item": "efficiency_rebates",
-    "items": [
-      "efficiency_rebates"
-    ],
-    "amount": {
-      "type": "dollar_amount",
-      "number": 4000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "ami_qualification": "more_than_80_ami",
-    "start_date": "2025",
-    "end_date": "2032",
-    "short_description": {
-      "en": "Rebate up to $8,000 for low and moderate income households and up to $4,000 for all other households for energy efficiency retrofits.",
-      "es": "Reembolsos hasta $8,000 para los hogares de bajos ingresos o de ingresos medios y hasta $4,000 para los otros por renovaciones de eficiencia energética"
-    },
-    "more_info_url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-efficiency-rebates",
-      "es": "https://homes.rewiringamerica.org/es/federal-incentives/home-efficiency-rebates"
-    },
-    "url": {
-      "en": "https://homes.rewiringamerica.org/federal-incentives/home-efficiency-rebates",
-      "es": "https://www.rewiringamerica.org/app/ira-calculator/information/climatizacion"
-    }
-  },
-  {
     "id": "IRA-20",
-    "type": "tax_credit",
     "payment_methods": [
       "tax_credit"
     ],
     "program": "residentialCleanEnergyCredit",
-    "authority_type": "federal",
-    "v0_item": null,
     "items": [
       "solar_water_heater"
     ],
@@ -1224,7 +374,6 @@
     "owner_status": [
       "homeowner"
     ],
-    "ami_qualification": null,
     "start_date": "2022",
     "end_date": "2025-12-31",
     "short_description": {

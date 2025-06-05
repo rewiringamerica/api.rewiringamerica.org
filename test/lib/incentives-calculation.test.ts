@@ -91,8 +91,6 @@ const IRA_HVAC_ITEMS =
   'air_to_water_heat_pump,ducted_heat_pump,ductless_heat_pump';
 const IRA_25C_WEATHERIZATION_ITEMS =
   'air_sealing,door_replacement,window_replacement,other_insulation';
-const IRA_HEAR_WEATHERIZATION_ITEMS =
-  'air_sealing,other_insulation,other_weatherization';
 
 beforeEach(async t => {
   t.context.db = await open({
@@ -216,9 +214,9 @@ test('correctly evaluates scenario "Single w/ $120k Household income in NJ"', as
     i => i.payment_methods[0] === PaymentMethod.PerformanceRebate,
   );
 
-  t.equal(pos_rebate_incentives.length, 7);
-  t.equal(tax_credit_incentives.length, 12);
-  t.equal(performance_rebate_incentives.length, 1);
+  t.equal(pos_rebate_incentives.length, 0);
+  t.equal(tax_credit_incentives.length, 10);
+  t.equal(performance_rebate_incentives.length, 0);
 
   // count the incentives by key used to de-dupe in UI:
   const rebateCounts = _.countBy(
@@ -238,33 +236,6 @@ test('correctly evaluates scenario "Single w/ $120k Household income in NJ"', as
     true,
   );
 
-  const posRebates = _.keyBy(pos_rebate_incentives, i => i.items.join(','));
-  t.equal(posRebates['electric_panel'].eligible, true);
-  t.equal(posRebates['electric_panel'].amount.number, 4000);
-  t.equal(posRebates['electric_panel'].start_date, '2025');
-  t.equal(posRebates['electric_stove'].eligible, true);
-  t.equal(posRebates['electric_stove'].amount.number, 840);
-  t.equal(posRebates['electric_stove'].start_date, '2025');
-  t.equal(posRebates['electric_wiring'].eligible, true);
-  t.equal(posRebates['electric_wiring'].amount.number, 2500);
-  t.equal(posRebates['electric_wiring'].start_date, '2025');
-  t.equal(posRebates['heat_pump_water_heater'].eligible, true);
-  t.equal(posRebates['heat_pump_water_heater'].amount.number, 1750);
-  t.equal(posRebates['heat_pump_water_heater'].start_date, '2025');
-  t.equal(posRebates[IRA_HVAC_ITEMS].eligible, true);
-  t.equal(posRebates[IRA_HVAC_ITEMS].amount.number, 8000);
-  t.equal(posRebates[IRA_HVAC_ITEMS].start_date, '2025');
-  t.equal(posRebates['heat_pump_clothes_dryer'].eligible, true);
-  t.equal(posRebates['heat_pump_clothes_dryer'].amount.number, 840);
-  t.equal(posRebates['heat_pump_clothes_dryer'].start_date, '2025');
-  t.equal(posRebates[IRA_HEAR_WEATHERIZATION_ITEMS].eligible, true);
-  t.equal(posRebates[IRA_HEAR_WEATHERIZATION_ITEMS].amount.number, 1600);
-  t.equal(posRebates[IRA_HEAR_WEATHERIZATION_ITEMS].start_date, '2025');
-
-  t.equal(performance_rebate_incentives[0].eligible, true);
-  t.equal(performance_rebate_incentives[0].amount.number, 4000);
-  t.equal(performance_rebate_incentives[0].start_date, '2025');
-
   const taxCredits = _.keyBy(tax_credit_incentives, i => i.items.join(','));
   t.equal(taxCredits['battery_storage_installation'].eligible, true);
   t.equal(taxCredits['battery_storage_installation'].amount.number, 0.3); // will be displayed as 30%
@@ -275,9 +246,7 @@ test('correctly evaluates scenario "Single w/ $120k Household income in NJ"', as
   t.equal(taxCredits['electric_panel'].eligible, true);
   t.equal(taxCredits['electric_panel'].amount.number, 600);
   t.equal(taxCredits['electric_panel'].start_date, '2023');
-  t.equal(taxCredits['electric_vehicle_charger'].eligible, false);
-  t.equal(taxCredits['electric_vehicle_charger'].amount.number, 1000);
-  t.equal(taxCredits['electric_vehicle_charger'].start_date, '2023');
+  t.notOk('electric_vehicle_charger' in taxCredits);
   t.equal(taxCredits['new_electric_vehicle'].eligible, true);
   t.equal(taxCredits['new_electric_vehicle'].amount.number, 7500);
   t.equal(taxCredits['new_electric_vehicle'].start_date, '2023');
@@ -289,15 +258,12 @@ test('correctly evaluates scenario "Single w/ $120k Household income in NJ"', as
   t.equal(taxCredits['heat_pump_water_heater'].start_date, '2023');
   t.equal(taxCredits['rooftop_solar_installation'].eligible, true);
   t.equal(taxCredits['rooftop_solar_installation'].amount.number, 0.3);
-  t.equal(taxCredits['rooftop_solar_installation'].amount.representative, 4356);
   t.equal(taxCredits['rooftop_solar_installation'].start_date, '2022');
   t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].eligible, true);
   t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].amount.number, 1200);
   t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].start_date, '2023');
   // everything except used EV should be eligible for tax credit (agi limit is 75k)
-  t.equal(taxCredits['used_electric_vehicle'].eligible, false);
-  t.equal(taxCredits['used_electric_vehicle'].amount.number, 4000);
-  t.equal(taxCredits['used_electric_vehicle'].start_date, '2023');
+  t.notOk('used_electric_vehicle' in taxCredits);
 });
 
 test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k Household income in San Francisco"', async t => {
@@ -322,9 +288,9 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
     i => i.payment_methods[0] === PaymentMethod.PerformanceRebate,
   );
 
-  t.equal(pos_rebate_incentives.length, 7);
-  t.equal(tax_credit_incentives.length, 12);
-  t.equal(performance_rebate_incentives.length, 1);
+  t.equal(pos_rebate_incentives.length, 0);
+  t.equal(tax_credit_incentives.length, 10);
+  t.equal(performance_rebate_incentives.length, 0);
 
   // count the incentives by key used to de-dupe in UI:
   const rebateCounts = _.countBy(
@@ -344,33 +310,6 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
     true,
   );
 
-  const posRebates = _.keyBy(pos_rebate_incentives, i => i.items.join(','));
-  t.equal(posRebates['electric_panel'].eligible, true);
-  t.equal(posRebates['electric_panel'].amount.number, 4000);
-  t.equal(posRebates['electric_panel'].start_date, '2025');
-  t.equal(posRebates['electric_stove'].eligible, true);
-  t.equal(posRebates['electric_stove'].amount.number, 840);
-  t.equal(posRebates['electric_stove'].start_date, '2025');
-  t.equal(posRebates['electric_wiring'].eligible, true);
-  t.equal(posRebates['electric_wiring'].amount.number, 2500);
-  t.equal(posRebates['electric_wiring'].start_date, '2025');
-  t.equal(posRebates['heat_pump_water_heater'].eligible, true);
-  t.equal(posRebates['heat_pump_water_heater'].amount.number, 1750);
-  t.equal(posRebates['heat_pump_water_heater'].start_date, '2025');
-  t.equal(posRebates[IRA_HVAC_ITEMS].eligible, true);
-  t.equal(posRebates[IRA_HVAC_ITEMS].amount.number, 8000);
-  t.equal(posRebates[IRA_HVAC_ITEMS].start_date, '2025');
-  t.equal(posRebates['heat_pump_clothes_dryer'].eligible, true);
-  t.equal(posRebates['heat_pump_clothes_dryer'].amount.number, 840);
-  t.equal(posRebates['heat_pump_clothes_dryer'].start_date, '2025');
-  t.equal(posRebates[IRA_HEAR_WEATHERIZATION_ITEMS].eligible, true);
-  t.equal(posRebates[IRA_HEAR_WEATHERIZATION_ITEMS].amount.number, 1600);
-  t.equal(posRebates[IRA_HEAR_WEATHERIZATION_ITEMS].start_date, '2025');
-
-  t.equal(performance_rebate_incentives[0].eligible, true);
-  t.equal(performance_rebate_incentives[0].amount.number, 4000);
-  t.equal(performance_rebate_incentives[0].start_date, '2025');
-
   const taxCredits = _.keyBy(tax_credit_incentives, i => i.items.join(','));
   t.equal(taxCredits['battery_storage_installation'].eligible, true);
   t.equal(taxCredits['battery_storage_installation'].amount.number, 0.3); // will be displayed as 30%
@@ -381,9 +320,7 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
   t.equal(taxCredits['electric_panel'].eligible, true);
   t.equal(taxCredits['electric_panel'].amount.number, 600);
   t.equal(taxCredits['electric_panel'].start_date, '2023');
-  t.equal(taxCredits['electric_vehicle_charger'].eligible, false);
-  t.equal(taxCredits['electric_vehicle_charger'].amount.number, 1000);
-  t.equal(taxCredits['electric_vehicle_charger'].start_date, '2023');
+  t.notOk('electric_vehicle_charger' in taxCredits);
   t.equal(taxCredits['new_electric_vehicle'].eligible, true);
   t.equal(taxCredits['new_electric_vehicle'].amount.number, 7500);
   t.equal(taxCredits['new_electric_vehicle'].start_date, '2023');
@@ -395,15 +332,12 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
   t.equal(taxCredits['heat_pump_water_heater'].start_date, '2023');
   t.equal(taxCredits['rooftop_solar_installation'].eligible, true);
   t.equal(taxCredits['rooftop_solar_installation'].amount.number, 0.3);
-  t.equal(taxCredits['rooftop_solar_installation'].amount.representative, 4572);
   t.equal(taxCredits['rooftop_solar_installation'].start_date, '2022');
   t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].eligible, true);
   t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].amount.number, 1200);
   t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].start_date, '2023');
   // everything except used EV should be eligible for tax credit (agi limit is 75k)
-  t.equal(taxCredits['used_electric_vehicle'].eligible, false);
-  t.equal(taxCredits['used_electric_vehicle'].amount.number, 4000);
-  t.equal(taxCredits['used_electric_vehicle'].start_date, '2023');
+  t.notOk('used_electric_vehicle' in taxCredits);
 });
 
 test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in Missisippi"', async t => {
@@ -428,9 +362,9 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
     i => i.payment_methods[0] === PaymentMethod.PerformanceRebate,
   );
 
-  t.equal(pos_rebate_incentives.length, 7);
-  t.equal(tax_credit_incentives.length, 12);
-  t.equal(performance_rebate_incentives.length, 1);
+  t.equal(pos_rebate_incentives.length, 0);
+  t.equal(tax_credit_incentives.length, 9);
+  t.equal(performance_rebate_incentives.length, 0);
 
   // count the incentives by key used to de-dupe in UI:
   const rebateCounts = _.countBy(
@@ -450,34 +384,6 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
     true,
   );
 
-  const posRebates = _.keyBy(pos_rebate_incentives, i => i.items.join(','));
-  t.equal(posRebates['electric_panel'].eligible, false);
-  t.equal(posRebates['electric_panel'].amount.number, 4000);
-  t.equal(posRebates['electric_panel'].start_date, '2025');
-  t.equal(posRebates['electric_stove'].eligible, false);
-  t.equal(posRebates['electric_stove'].amount.number, 840);
-  t.equal(posRebates['electric_stove'].start_date, '2025');
-  t.equal(posRebates['electric_wiring'].eligible, false);
-  t.equal(posRebates['electric_wiring'].amount.number, 2500);
-  t.equal(posRebates['electric_wiring'].start_date, '2025');
-  t.equal(posRebates['heat_pump_water_heater'].eligible, false);
-  t.equal(posRebates['heat_pump_water_heater'].amount.number, 1750);
-  t.equal(posRebates['heat_pump_water_heater'].start_date, '2025');
-  t.equal(posRebates[IRA_HVAC_ITEMS].eligible, false);
-  t.equal(posRebates[IRA_HVAC_ITEMS].amount.number, 8000);
-  t.equal(posRebates[IRA_HVAC_ITEMS].start_date, '2025');
-  t.equal(posRebates['heat_pump_clothes_dryer'].eligible, false);
-  t.equal(posRebates['heat_pump_clothes_dryer'].amount.number, 840);
-  t.equal(posRebates['heat_pump_clothes_dryer'].start_date, '2025');
-  t.equal(posRebates[IRA_HEAR_WEATHERIZATION_ITEMS].eligible, false);
-  t.equal(posRebates[IRA_HEAR_WEATHERIZATION_ITEMS].amount.number, 1600);
-  t.equal(posRebates[IRA_HEAR_WEATHERIZATION_ITEMS].start_date, '2025');
-
-  // only items.efficiency_rebates are eligible here:
-  t.equal(performance_rebate_incentives[0].eligible, true);
-  t.equal(performance_rebate_incentives[0].amount.number, 4000);
-  t.equal(performance_rebate_incentives[0].start_date, '2025');
-
   const taxCredits = _.keyBy(tax_credit_incentives, i => i.items.join(','));
   t.equal(taxCredits['battery_storage_installation'].eligible, true);
   t.equal(taxCredits['battery_storage_installation'].amount.number, 0.3); // will be displayed as 30%
@@ -488,9 +394,7 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
   t.equal(taxCredits['electric_panel'].eligible, true);
   t.equal(taxCredits['electric_panel'].amount.number, 600);
   t.equal(taxCredits['electric_panel'].start_date, '2023');
-  t.equal(taxCredits['electric_vehicle_charger'].eligible, false);
-  t.equal(taxCredits['electric_vehicle_charger'].amount.number, 1000);
-  t.equal(taxCredits['electric_vehicle_charger'].start_date, '2023');
+  t.notOk('electric_vehicle_charger' in taxCredits);
   t.equal(taxCredits[IRA_HVAC_ITEMS].eligible, true);
   t.equal(taxCredits[IRA_HVAC_ITEMS].amount.number, 2000);
   t.equal(taxCredits[IRA_HVAC_ITEMS].start_date, '2023');
@@ -499,21 +403,13 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
   t.equal(taxCredits['heat_pump_water_heater'].start_date, '2023');
   t.equal(taxCredits['rooftop_solar_installation'].eligible, true);
   t.equal(taxCredits['rooftop_solar_installation'].amount.number, 0.3);
-  t.equal(
-    taxCredits['rooftop_solar_installation'].amount.representative,
-    4428.9,
-  );
   t.equal(taxCredits['rooftop_solar_installation'].start_date, '2022');
   t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].eligible, true);
   t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].amount.number, 1200);
   t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].start_date, '2023');
   // new and used EVs should not be eligible:
-  t.equal(taxCredits['new_electric_vehicle'].eligible, false);
-  t.equal(taxCredits['new_electric_vehicle'].amount.number, 7500);
-  t.equal(taxCredits['new_electric_vehicle'].start_date, '2023');
-  t.equal(taxCredits['used_electric_vehicle'].eligible, false);
-  t.equal(taxCredits['used_electric_vehicle'].amount.number, 4000);
-  t.equal(taxCredits['used_electric_vehicle'].start_date, '2023');
+  t.notOk('new_electric_vehicle' in taxCredits);
+  t.notOk('used_electric_vehicle' in taxCredits);
 });
 
 test('filters tax credits if zero tax owed', async t => {
@@ -703,25 +599,6 @@ test('correct filtering of incentives with geography', async t => {
   );
   t.ok(shouldNotFind);
   t.equal(shouldNotFind.stateIncentives.length, 0);
-});
-
-test('correctly excludes IRA rebates', async t => {
-  const data = calculateIncentives(
-    ...LOCATION_AND_AMIS['07083'],
-    {
-      owner_status: OwnerStatus.Homeowner,
-      household_income: 120000,
-      tax_filing: FilingStatus.Single,
-      household_size: 1,
-    },
-    true,
-  );
-
-  t.equal(data.incentives.length, 14);
-  t.equal(
-    data.incentives.filter(i => i.payment_methods[0] === 'tax_credit').length,
-    12,
-  );
 });
 
 test('correctly matches geo groups', async t => {

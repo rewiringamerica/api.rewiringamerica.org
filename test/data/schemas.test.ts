@@ -4,10 +4,7 @@ import {
   SCHEMA as AUTHORITIES_SCHEMA,
   AuthorityType,
 } from '../../src/data/authorities';
-import {
-  IRA_INCENTIVES,
-  SCHEMA as I_SCHEMA,
-} from '../../src/data/ira_incentives';
+import { IRA_INCENTIVES } from '../../src/data/ira_incentives';
 import {
   IRA_STATE_SAVINGS,
   SCHEMA as ISS_SCHEMA,
@@ -53,7 +50,7 @@ const ENGLISH_DESC_CHAR_LIMIT = 150;
 const SPANISH_DESC_CHAR_LIMIT = 400;
 
 const TESTS = [
-  [I_SCHEMA, IRA_INCENTIVES, 'ira_incentives'],
+  [STATE_SCHEMA, IRA_INCENTIVES, 'ira_incentives'],
   [ISS_SCHEMA, IRA_STATE_SAVINGS, 'ira_state_savings'],
   [L_SCHEMA, LOCALES.en, 'en locale'],
   [L_SCHEMA, LOCALES.es, 'es locale'],
@@ -71,7 +68,7 @@ const TESTS = [
     FEDERAL_POVERTY_LEVELS,
     'federal_poverty_levels',
   ],
-];
+] as const;
 
 test('static JSON files match schema', async tap => {
   tap.plan(TESTS.length);

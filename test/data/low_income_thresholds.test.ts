@@ -1,9 +1,13 @@
 import { test } from 'tap';
+import { IRA_INCENTIVES } from '../../src/data/ira_incentives';
 import { LOW_INCOME_THRESHOLDS } from '../../src/data/low_income_thresholds';
 import { STATE_INCENTIVES_BY_STATE } from '../../src/data/state_incentives';
 
 test('incentives refer to defined thresholds', async t => {
-  for (const stateIncentives of Object.values(STATE_INCENTIVES_BY_STATE)) {
+  for (const stateIncentives of [
+    [...IRA_INCENTIVES],
+    ...Object.values(STATE_INCENTIVES_BY_STATE),
+  ]) {
     for (const incentive of stateIncentives) {
       if (incentive.low_income) {
         t.hasProp(LOW_INCOME_THRESHOLDS, incentive.low_income);
