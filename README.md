@@ -42,18 +42,6 @@ You can run the API server as a Docker container, without setting up a developme
 
   There is also a Fastify plugin to handle CORS, but it's enabled only when `NODE_ENV !== 'production'`, because RA's public API instance also uses Zuplo to handle CORS.
 
-## API versions
-
-There are two versions of the API: v0 and v1. All API endpoint URLs are prefixed with a version.
-
-- v0 is used by the legacy [IRA calculator](https://www.rewiringamerica.org/app/ira-calculator) and legacy [embed calculator](https://embed.rewiringamerica.org). It only has support for the federal incentives from the Inflation Reduction Act, will not get significant updates, and will be deprecated and removed at some point.
-
-- v1 is used by the newer [calculator](https://homes.rewiringamerica.org/calculator). This is where all new development happens. It has support for incentives from state governments and utilities. We are actively working on expanding the state/utility coverage, and evolving the API to capture the wider variety of incentive structures.
-
-In summary: v0 is stable, but has limited incentive coverage and no future. v1 has better coverage and is under active development, but may still change in disruptive ways.
-
-If you're looking to develop your own client of our API, expect breaking changes to v1 in the near term. If you're in contact with us, we'll notify you before deploying breaking changes, but we will be moving quickly.
-
 ## Roadmap
 
 **Caveat**: the roadmap for this project is planned and tracked internally at Rewiring America. What's reflected here may not be fully up to date.

@@ -7,8 +7,6 @@ import {
 import path from 'path';
 import qs from 'qs';
 import { ERROR_SCHEMA } from './schemas/error';
-import { WEBSITE_CALCULATOR_RESPONSE_SCHEMA } from './schemas/v0/calculator-response';
-import { WEBSITE_INCENTIVE_SCHEMA } from './schemas/v0/incentive';
 import { API_CALCULATOR_RESPONSE_SCHEMA } from './schemas/v1/calculator-endpoint';
 import { API_INCENTIVE_SCHEMA } from './schemas/v1/incentive';
 import { API_LOAN_PROGRAMS_RESPONSE_SCHEMA } from './schemas/v1/loan-programs';
@@ -71,8 +69,6 @@ export default async function (
 
   // Add any schemas that are referred to by $id
   fastify.addSchema(ERROR_SCHEMA);
-  fastify.addSchema(WEBSITE_INCENTIVE_SCHEMA);
-  fastify.addSchema(WEBSITE_CALCULATOR_RESPONSE_SCHEMA);
   fastify.addSchema(API_INCENTIVE_SCHEMA);
   fastify.addSchema(API_CALCULATOR_RESPONSE_SCHEMA);
   fastify.addSchema(API_PROGRAMS_RESPONSE_SCHEMA);
