@@ -135,14 +135,14 @@ test('correctly evaluates state incentives for launched states', async t => {
 });
 
 test('correctly excludes state incentives for beta states', async t => {
-  // NJ is not launched so will not get state incentives.
-  const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
+  // CA is not launched so will not get state incentives.
+  const data = calculateIncentives(...LOCATION_AND_AMIS['94117'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 20000,
     tax_filing: FilingStatus.Single,
     household_size: 1,
     authority_types: [AuthorityType.Utility],
-    utility: 'nj-public-service-electric-and-gas',
+    utility: 'ca-pacific-gas-and-electric',
     include_beta_states: false,
   });
   t.ok(data);
@@ -150,14 +150,14 @@ test('correctly excludes state incentives for beta states', async t => {
 });
 
 test('correctly evaluates state incentives for beta states', async t => {
-  // NJ is in beta so we should get incentives for it when beta is requested.
-  const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
+  // CA is in beta so we should get incentives for it when beta is requested.
+  const data = calculateIncentives(...LOCATION_AND_AMIS['94117'], {
     owner_status: OwnerStatus.Homeowner,
     household_income: 20000,
     tax_filing: FilingStatus.Single,
     household_size: 1,
     authority_types: [AuthorityType.Utility],
-    utility: 'nj-public-service-electric-and-gas',
+    utility: 'ca-pacific-gas-and-electric',
     include_beta_states: true,
   });
   t.ok(data);
@@ -808,7 +808,7 @@ test('correctly excludes IRA rebates', async t => {
     true,
   );
 
-  t.equal(data.incentives.length, 12);
+  t.equal(data.incentives.length, 14);
   t.equal(
     data.incentives.filter(i => i.payment_methods[0] === 'tax_credit').length,
     12,
