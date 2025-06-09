@@ -1889,6 +1889,61 @@
     "updated_at": "2025-06-03T19:47:17.737Z"
   },
   {
+    "id": 73,
+    "loan_program_key": "NC-3",
+    "name": "CHEC Residential Energy Efficiency Loans",
+    "description": "This loan program offers up to $6,000 to help finance energy efficient home improvements including water heaters, HVAC equipment, and weatherization.",
+    "description_langs": {
+      "es": "Este programa de préstamos ofrece hasta $6,000 para ayudar a financiar mejoras energéticamente eficientes en el hogar, incluidos calentadores de agua, equipos HVAC y climatización."
+    },
+    "status": "PUBLISHED",
+    "state": "NC",
+    "is_national": false,
+    "website_url": "https://www.chec.coop/eeloans",
+    "financial_authority_id": 61,
+    "financial_authority": {
+      "id": 61,
+      "authority_type": "utility",
+      "description": "CHEC is a utility in North Carolina which offers financing to residential members purchasing high-efficiency appliances and weatherization projects.",
+      "name": "Cape Hatteras Electric Cooperative",
+      "state": "NC",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-06-03T19:57:09.034Z",
+      "updated_at": "2025-06-03T19:57:09.034Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "WEATHERIZATION"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 72,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 6000,
+      "min_interest_rate": 5,
+      "max_interest_rate": null,
+      "max_repayment_months": null,
+      "created_at": "2025-06-03T20:03:42.536Z",
+      "updated_at": "2025-06-03T20:03:42.536Z"
+    },
+    "created_at": "2025-06-03T20:03:42.548Z",
+    "updated_at": "2025-06-03T20:03:42.548Z"
+  },
+  {
     "id": 13,
     "loan_program_key": "CA-1",
     "name": "Energy Efficiency Home Loans",
@@ -2122,6 +2177,220 @@
     },
     "created_at": "2025-04-10T18:14:48.292Z",
     "updated_at": "2025-04-10T18:14:48.292Z"
+  },
+  {
+    "id": 74,
+    "loan_program_key": "NH-2",
+    "name": "NH Electric Co-Op On Bill Financing",
+    "description": "This loan program offers NH Electric Co-Op members financing for home energy improvements projects.",
+    "description_langs": {
+      "es": "Este programa de préstamos ofrece a los miembros de NH Electric Co-Op financiamiento para proyectos de mejoras energéticas en el hogar."
+    },
+    "status": "PUBLISHED",
+    "state": "NH",
+    "is_national": false,
+    "website_url": "https://www.nhec.com/residential-energy-savings/energy-efficiency-loans/",
+    "financial_authority_id": 62,
+    "financial_authority": {
+      "id": 62,
+      "authority_type": "utility",
+      "description": "The New Hampshire Electric Co-Op is an electric utility which offers Home Energy Performance Loans for members to finance qualified energy efficiency measures.",
+      "name": "New Hampshire Electric Co-Op",
+      "state": "NH",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-06-03T20:06:44.147Z",
+      "updated_at": "2025-06-03T20:06:44.147Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "WATER_HEATER"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 73,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": 250,
+      "max_loan_amount": 4000,
+      "min_interest_rate": 0,
+      "max_interest_rate": 0,
+      "max_repayment_months": 48,
+      "created_at": "2025-06-03T20:10:21.664Z",
+      "updated_at": "2025-06-03T20:10:21.664Z"
+    },
+    "created_at": "2025-06-03T20:10:21.681Z",
+    "updated_at": "2025-06-03T20:10:21.681Z"
+  },
+  {
+    "id": 75,
+    "loan_program_key": "NH-3",
+    "name": "NH Electric Co-Op Third Party Financing",
+    "description": "NHEC provides interest subsidies through participating banks and credit unions to finance Home Energy Performance project loans.",
+    "description_langs": {
+      "es": "NHEC ofrece subsidios de intereses a través de bancos y cooperativas de crédito participantes para financiar préstamos para proyectos de rendimiento energético del hogar."
+    },
+    "status": "PUBLISHED",
+    "state": "NH",
+    "is_national": false,
+    "website_url": "https://www.nhec.com/residential-energy-savings/energy-efficiency-loans/",
+    "financial_authority_id": 62,
+    "financial_authority": {
+      "id": 62,
+      "authority_type": "utility",
+      "description": "The New Hampshire Electric Co-Op is an electric utility which offers Home Energy Performance Loans for members to finance qualified energy efficiency measures.",
+      "name": "New Hampshire Electric Co-Op",
+      "state": "NH",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-06-03T20:06:44.147Z",
+      "updated_at": "2025-06-03T20:06:44.147Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "WATER_HEATER"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 74,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 15000,
+      "min_interest_rate": 2,
+      "max_interest_rate": null,
+      "max_repayment_months": 84,
+      "created_at": "2025-06-03T20:12:40.878Z",
+      "updated_at": "2025-06-03T20:12:40.878Z"
+    },
+    "created_at": "2025-06-03T20:12:40.895Z",
+    "updated_at": "2025-06-03T20:12:40.895Z"
+  },
+  {
+    "id": 76,
+    "loan_program_key": "NH-4",
+    "name": "NHSaves Energy Efficiency Loan",
+    "description": "The NH Save Heat Loan is a 0% interest loan program offered by Eastern Bank in partnership with NHSaves, designed to help New Hampshire residents finance energy efficiency improvements in their homes. ",
+    "description_langs": {
+      "es": "El Préstamo NH Save Heat es un programa de préstamo con 0 % de interés ofrecido por Eastern Bank en asociación con NHSaves, diseñado para ayudar a los residentes de New Hampshire a financiar mejoras de eficiencia energética en sus hogares."
+    },
+    "status": "PUBLISHED",
+    "state": "NH",
+    "is_national": false,
+    "website_url": "https://www.easternbank.com/personal-banking/home-loan-personal-borrowing/nh-save-heat-loan",
+    "financial_authority_id": 63,
+    "financial_authority": {
+      "id": 63,
+      "authority_type": "bank",
+      "description": "Eastern Bank offers energy efficiency loans for customers looking to make energy efficient upgrades at home.",
+      "name": "Eastern Bank",
+      "state": "NH",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-06-03T20:17:24.557Z",
+      "updated_at": "2025-06-03T20:17:24.557Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "HEATING_COOLING"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 75,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": 1000,
+      "max_loan_amount": 15000,
+      "min_interest_rate": 0,
+      "max_interest_rate": 0,
+      "max_repayment_months": 84,
+      "created_at": "2025-06-03T20:20:30.599Z",
+      "updated_at": "2025-06-03T20:20:30.599Z"
+    },
+    "created_at": "2025-06-03T20:20:30.614Z",
+    "updated_at": "2025-06-03T20:20:30.614Z"
+  },
+  {
+    "id": 77,
+    "loan_program_key": "NH-5",
+    "name": "New Hampshire Clean Energy Fund",
+    "description": "The New Hampshire Clean Energy Fund offers low-interest loans to help residents finance clean energy improvements such as heat pump and battery storage installations.",
+    "description_langs": {
+      "es": "El Fondo de Energía Limpia de New Hampshire ofrece préstamos a bajo interés para ayudar a los residentes a financiar mejoras de energía limpia, como instalaciones de bombas de calor y almacenamiento de baterías."
+    },
+    "status": "PUBLISHED",
+    "state": "NH",
+    "is_national": false,
+    "website_url": "https://www.eversource.com/content/residential/save-money-energy/clean-energy-options/new-hampshire-clean-energy-fund",
+    "financial_authority_id": 64,
+    "financial_authority": {
+      "id": 64,
+      "authority_type": "utility",
+      "description": "Eversource is a utility that offers New Hampshire customers 0% APR loans for qualifying energy efficiency projects.",
+      "name": "Eversource",
+      "state": "NH",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-06-03T20:18:21.283Z",
+      "updated_at": "2025-06-03T20:18:21.283Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "BATTERY_INSTALLATION"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 76,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 10000,
+      "min_interest_rate": 0,
+      "max_interest_rate": 0,
+      "max_repayment_months": null,
+      "created_at": "2025-06-03T20:23:29.103Z",
+      "updated_at": "2025-06-03T20:23:29.103Z"
+    },
+    "created_at": "2025-06-03T20:23:29.116Z",
+    "updated_at": "2025-06-03T20:23:29.116Z"
   },
   {
     "id": 51,

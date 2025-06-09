@@ -1391,6 +1391,60 @@
       "percentage": 80
     }
   },
+  "ira-25e-credit": {
+    "type": "filing-status",
+    "source_url": "https://www.irs.gov/credits-deductions/used-clean-vehicle-credit",
+    "description": "For federal used clean vehicle credit",
+    "thresholds": {
+      "hoh": [
+        0,
+        112500
+      ],
+      "joint": [
+        0,
+        150000
+      ],
+      "single": [
+        0,
+        75000
+      ],
+      "married_filing_separately": [
+        0,
+        75000
+      ],
+      "qualifying_widower_with_dependent_child": [
+        0,
+        150000
+      ]
+    }
+  },
+  "ira-30d-credit": {
+    "type": "filing-status",
+    "source_url": "https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after",
+    "description": "For federal new clean vehicle credit",
+    "thresholds": {
+      "hoh": [
+        0,
+        225000
+      ],
+      "joint": [
+        0,
+        300000
+      ],
+      "single": [
+        0,
+        150000
+      ],
+      "married_filing_separately": [
+        0,
+        150000
+      ],
+      "qualifying_widower_with_dependent_child": [
+        0,
+        300000
+      ]
+    }
+  },
   "ma-concordmlp-120ami-threshold": {
     "type": "hhsize",
     "source_url": "https://concordma.gov/2916/Residential-Income-Based-Rebates",
