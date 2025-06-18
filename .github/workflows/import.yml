@@ -34,6 +34,7 @@ jobs:
         run: |
           npx ts-node scripts/incentive-admin-import.ts
           npx ts-node scripts/incentive-admin-capital-import.ts
+          yarn update-snapshots
       - name: Check for changes
         id: git_diff
         run: |
