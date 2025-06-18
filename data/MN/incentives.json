@@ -463,61 +463,6 @@
     }
   },
   {
-    "id": "MN-37",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "air_sealing",
-      "attic_or_roof_insulation",
-      "wall_insulation"
-    ],
-    "program": "mn_cityOfEdina_edinaCommunityClimateActionFund",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1620,
-      "maximum": 1620
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "50% utility rebate match for air sealing, attic and wall insulation. All residents are eligible. "
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
-    "url": {
-      "en": "https://www.edinamn.gov/1929/Community-Climate-Action-Fund"
-    }
-  },
-  {
-    "id": "MN-39",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
-    ],
-    "program": "mn_cityOfEdina_edinaCommunityClimateActionFund",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1000,
-      "maximum": 1000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "50% utility rebate match for a cold climate air source heat pump. +$250 if you add air sealing and insulation. All residents are eligible."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
-    "url": {
-      "en": "https://www.edinamn.gov/1929/Community-Climate-Action-Fund"
-    }
-  },
-  {
     "id": "MN-40",
     "payment_methods": [
       "rebate"
@@ -528,16 +473,16 @@
     "program": "mn_cityOfEdina_edinaCommunityClimateActionFund",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
+      "number": 750,
       "minimum": 400,
-      "maximum": 500
+      "maximum": 750
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "100% utility rebate match for heat pump water heater. $500 for smart electric model. $400 for standard electric model."
+      "en": "100% utility rebate match for heat pump water heater or 150% match for those who qualify for bonuses. Edina residents only."
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31",
@@ -603,15 +548,16 @@
     "program": "mn_cityOfEdina_edinaCommunityClimateActionFund",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "minimum": 500
+      "number": 1200,
+      "minimum": 500,
+      "maximum": 1200
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate or more for E-Bikes"
+      "en": "$500 rebate for e-bikes and safety equipment, or $1,000 for those who qualify. $200 bonus for cargo/adaptive e-bikes. Edina residents only."
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31",
@@ -630,14 +576,16 @@
     "program": "mn_cityOfEdina_edinaCommunityClimateActionFund",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 750,
+      "minimum": 500,
+      "maximum": 750
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$750 rebate for an induction stove."
+      "en": "$500 rebate for an induction stove or $750 for those who qualify for bonuses. Edina residents only."
     },
     "start_date": "2025-02-01",
     "end_date": "2025-12-31",
@@ -656,14 +604,15 @@
     "program": "mn_cityOfEdina_edinaCommunityClimateActionFund",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 750,
+      "maximum": 750
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$750 rebate for a heat pump clothes dryer."
+      "en": "$500 rebate for a heat pump clothes dryer or $750 for those who qualify for bonuses. Edina residents only."
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31",
@@ -1048,39 +997,14 @@
     "amount": {
       "type": "dollar_amount",
       "number": 750,
-      "minimum": 600,
+      "minimum": 500,
       "maximum": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "150% utility rebate match for a heat pump water heater. St. Louis Park residents must meet environmental justice rate requirements."
-    },
-    "url": {
-      "en": "https://www.stlouisparkmn.gov/government/departments-divisions/sustainability/cost-share-programs/climate-champions/residential-homes"
-    }
-  },
-  {
-    "id": "MN-66",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_water_heater"
-    ],
-    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomesCostShare",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "minimum": 400,
-      "maximum": 500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "100% utility rebate match for a heat pump water heater. All St. Louis Park residents are eligible."
+      "en": "100% utility rebate match for heat pump water heater or 150% match for those qualifying for EJ rate. St. Louis Park residents only."
     },
     "url": {
       "en": "https://www.stlouisparkmn.gov/government/departments-divisions/sustainability/cost-share-programs/climate-champions/residential-homes"
@@ -3660,7 +3584,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "100% utility rebate match for air sealing, attic and wall insulation. St. Louis Park residents must meet environmental justice rate requirements."
+      "en": "50% utility rebate match for air sealing, attic and wall insulation or 100% match for those qualifying for EJ rate. St. Louis Park residents only."
     },
     "url": {
       "en": "https://www.stlouisparkmn.gov/government/departments-divisions/sustainability/cost-share-programs/climate-champions/residential-homes"
@@ -3691,30 +3615,6 @@
     }
   },
   {
-    "id": "MN-189",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
-    ],
-    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomesCostShare",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "50% utility rebate match for a cold climate air source heat pump. All St. Louis Park residents are eligible."
-    },
-    "url": {
-      "en": "https://www.stlouisparkmn.gov/government/departments-divisions/sustainability/cost-share-programs/climate-champions/residential-homes"
-    }
-  },
-  {
     "id": "MN-190",
     "payment_methods": [
       "rebate"
@@ -3726,13 +3626,15 @@
     "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomesCostShare",
     "amount": {
       "type": "dollar_amount",
-      "number": 2000
+      "number": 2000,
+      "minimum": 1000,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "100% utility rebate match for a cold climate air source heat pump. St. Louis Park residents must meet environmental justice rate requirements."
+      "en": "50% utility rebate match for a cold climate air source heat pump or 100% bonus match for those qualifying for EJ rate. St. Louis Park residents only."
     },
     "url": {
       "en": "https://www.stlouisparkmn.gov/government/departments-divisions/sustainability/cost-share-programs/climate-champions/residential-homes"
@@ -3903,32 +3805,6 @@
     },
     "url": {
       "en": "https://www.valueofelectricity.com/save-with-your-utility/bagley-public-utilities"
-    }
-  },
-  {
-    "id": "MN-198",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "attic_or_roof_insulation",
-      "air_sealing",
-      "wall_insulation"
-    ],
-    "program": "mn_cityOfStLouisPark_stLouisParkClimateChampionsForHomesCostShare",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1620,
-      "maximum": 1620
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "50% utility rebate match for air sealing and attic and wall insulation. All St. Louis Park residents are eligible. "
-    },
-    "url": {
-      "en": "https://www.stlouisparkmn.gov/government/departments-divisions/sustainability/cost-share-programs/climate-champions/residential-homes"
     }
   },
   {
@@ -6790,14 +6666,14 @@
     "amount": {
       "type": "dollar_amount",
       "number": 3240,
-      "minimum": 1300,
+      "minimum": 1620,
       "maximum": 3240
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "100% utility rebate match for air sealing, attic and wall insulation. Residents must qualify for Environmental Justice Bonus."
+      "en": "50% utility rebate match for air sealing, attic and wall insulation, or 100% match for those who qualify for bonuses. Edina residents only."
     },
     "start_date": "2025-01-01",
     "end_date": "2025-12-31",
@@ -6824,7 +6700,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "100% utility rebate match for a cold climate air source heat pump +$250 with air sealing and insulation. Must qualify for Environmental Justice Bonus."
+      "en": "50% utility rebate match for a cold climate air source heat pump, or 100% bonus match. +$250 with air sealing/insulation. Edina residents only."
     },
     "url": {
       "en": "https://www.edinamn.gov/1929/Community-Climate-Action-Fund"
@@ -6855,263 +6731,6 @@
     },
     "url": {
       "en": "https://www.pkmcoop.com/rebates/"
-    }
-  },
-  {
-    "id": "MN-318",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_prestonPublicUtilities_prestonPublicUtilitiesResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1500,
-      "minimum": 700,
-      "maximum": 1500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $1,500 rebate for air source heat pump. $700 for standard efficiency and $1500 for high efficiency"
-    },
-    "url": {
-      "en": "https://smmpa.com/members/preston"
-    }
-  },
-  {
-    "id": "MN-319",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_prestonPublicUtilities_prestonPublicUtilitiesResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1000,
-      "minimum": 500,
-      "maximum": 1000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $1000 for ductless air source heat pump. $500 for lower efficiency and $1000 for high efficiency."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/preston"
-    }
-  },
-  {
-    "id": "MN-320",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_prestonPublicUtilities_prestonPublicUtilitiesResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1800
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $1800 rebate for cold climate air source heat pump."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/preston"
-    }
-  },
-  {
-    "id": "MN-321",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_prestonPublicUtilities_prestonPublicUtilitiesResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1800
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $1800 rebate for cold climate air source heat pump."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/preston"
-    }
-  },
-  {
-    "id": "MN-322",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
-    ],
-    "program": "mn_prestonPublicUtilities_prestonPublicUtilitiesResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 700,
-      "minimum": 200,
-      "maximum": 700
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $700 rebate for air source heat pump (existing natural gas)"
-    },
-    "url": {
-      "en": "https://smmpa.com/members/preston"
-    }
-  },
-  {
-    "id": "MN-323",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_princetonPublicUtilities_princetonPublicUtilitiesResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1800,
-      "minimum": 125,
-      "maximum": 1800
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $1,800 rebate for ducted air source heat pump. $125 for lower efficiency and $1,800 for high efficiency"
-    },
-    "url": {
-      "en": "https://smmpa.com/members/princeton"
-    }
-  },
-  {
-    "id": "MN-324",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_princetonPublicUtilities_princetonPublicUtilitiesResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1800,
-      "minimum": 125,
-      "maximum": 1800
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $1800 rebate for ductless air source heat pump. $125 for lower efficiency and $1,800 high efficiency"
-    },
-    "url": {
-      "en": "https://smmpa.com/members/princeton"
-    }
-  },
-  {
-    "id": "MN-325",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_princetonPublicUtilities_princetonPublicUtilitiesResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2200,
-      "minimum": 250,
-      "maximum": 2200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $2,200 rebate for ducted air source heat pump (cold climate). $250 lower efficiency and $2200 for high efficiency"
-    },
-    "url": {
-      "en": "https://smmpa.com/members/princeton"
-    }
-  },
-  {
-    "id": "MN-326",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_princetonPublicUtilities_princetonPublicUtilitiesResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2200,
-      "minimum": 250,
-      "maximum": 2200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $2,200 rebate for ductless air source heat pump (cold climate). "
-    },
-    "url": {
-      "en": "https://smmpa.com/members/princeton"
-    }
-  },
-  {
-    "id": "MN-327",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_princetonPublicUtilities_princetonPublicUtilitiesResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 200,
-      "minimum": 100,
-      "maximum": 200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $200 rebate for ducted air source heat pump (existing natural gas)"
-    },
-    "url": {
-      "en": "https://smmpa.com/members/princeton"
     }
   },
   {
@@ -7256,135 +6875,6 @@
     },
     "url": {
       "en": "https://redwoodelectric.com/rebate-programs"
-    }
-  },
-  {
-    "id": "MN-334",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_redwoodFallsPublicUtilities_cityOfRedwoodFallsPublicUtilitiesResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1800,
-      "minimum": 125,
-      "maximum": 1800
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $1800 rebate for ducted air source heat pump."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/redwood-falls"
-    }
-  },
-  {
-    "id": "MN-335",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_redwoodFallsPublicUtilities_cityOfRedwoodFallsPublicUtilitiesResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1800,
-      "minimum": 125,
-      "maximum": 1800
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $1800 rebate for ductless air source heat pump. "
-    },
-    "url": {
-      "en": "https://smmpa.com/members/redwood-falls"
-    }
-  },
-  {
-    "id": "MN-336",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_redwoodFallsPublicUtilities_cityOfRedwoodFallsPublicUtilitiesResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2200,
-      "minimum": 250,
-      "maximum": 2200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $2,200 rebate for Cold Climate Air Source Heat Pump. $250 for lower efficiency and $2200 for higher efficiency."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/redwood-falls"
-    }
-  },
-  {
-    "id": "MN-337",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_redwoodFallsPublicUtilities_cityOfRedwoodFallsPublicUtilitiesResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2200,
-      "minimum": 250,
-      "maximum": 2200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $2,200 rebate for Cold Climate Air Source Heat Pump. $250 for lower efficiency and $2200 for higher efficiency."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/redwood-falls"
-    }
-  },
-  {
-    "id": "MN-338",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_redwoodFallsPublicUtilities_cityOfRedwoodFallsPublicUtilitiesResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 200,
-      "minimum": 100,
-      "maximum": 200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $200 rebate for ducted air source heat pump (existing natural gas)."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/redwood-falls"
     }
   },
   {
@@ -7551,431 +7041,28 @@
     }
   },
   {
-    "id": "MN-346",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_stPeterMunicipalUtilities_cityOfStPeterResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1800,
-      "minimum": 125,
-      "maximum": 1800
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $1800 rebate for air source heat pump."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/saint-peter"
-    }
-  },
-  {
-    "id": "MN-347",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
+    "id": "MN-363",
     "payment_methods": [
       "rebate"
     ],
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "mn_stPeterMunicipalUtilities_cityOfStPeterResidentialRebates",
+    "program": "mn_xcelEnergyGas_xcelEnergyHomeRebatesGas",
     "amount": {
       "type": "dollar_amount",
-      "number": 1800,
-      "minimum": 125,
-      "maximum": 1800
+      "number": 2000,
+      "minimum": 1600,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1800 rebate for air source heat pump."
+      "en": "$2,000 rebate for a cold climate ductless air source heat pump. $1,600 for a standard efficiency ductless air source heat pump."
     },
     "url": {
-      "en": "https://smmpa.com/members/saint-peter"
-    }
-  },
-  {
-    "id": "MN-348",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_stPeterMunicipalUtilities_cityOfStPeterResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2200,
-      "minimum": 250,
-      "maximum": 2200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $2200 rebate for air source heat pump (cold climate)"
-    },
-    "url": {
-      "en": "https://smmpa.com/members/saint-peter"
-    }
-  },
-  {
-    "id": "MN-349",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_stPeterMunicipalUtilities_cityOfStPeterResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2200,
-      "minimum": 250,
-      "maximum": 2200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $2200 rebate for air source heat pump (cold climate)"
-    },
-    "url": {
-      "en": "https://smmpa.com/members/saint-peter"
-    }
-  },
-  {
-    "id": "MN-350",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_stPeterMunicipalUtilities_cityOfStPeterResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 200,
-      "minimum": 100,
-      "maximum": 200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$200 rebate for air source heat pump (existing natural gas)"
-    },
-    "url": {
-      "en": "https://smmpa.com/members/saint-peter"
-    }
-  },
-  {
-    "id": "MN-351",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_springValleyPublicUtilitiesComm_springValleyUtilitiesRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1800,
-      "minimum": 125,
-      "maximum": 1800
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $1800 rebate for air source heat pump. "
-    },
-    "url": {
-      "en": "https://smmpa.com/members/spring-valley"
-    }
-  },
-  {
-    "id": "MN-352",
-    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_springValleyPublicUtilitiesComm_springValleyUtilitiesRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1800,
-      "minimum": 125,
-      "maximum": 1800
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $1800 rebate for air source heat pump. "
-    },
-    "url": {
-      "en": "https://smmpa.com/members/spring-valley"
-    }
-  },
-  {
-    "id": "MN-353",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_springValleyPublicUtilitiesComm_springValleyUtilitiesRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2200,
-      "minimum": 250,
-      "maximum": 2200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $2,200 rebate for ducted air source heat pump (cold climate). $250 for lower efficiency and $2200 for higher efficiency."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/spring-valley"
-    }
-  },
-  {
-    "id": "MN-354",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_springValleyPublicUtilitiesComm_springValleyUtilitiesRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2200,
-      "minimum": 250,
-      "maximum": 2200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $2,200 rebate for ductless air source heat pump (cold climate). $250 for lower efficiency and $2200 for higher efficiency."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/spring-valley"
-    }
-  },
-  {
-    "id": "MN-355",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_springValleyPublicUtilitiesComm_springValleyUtilitiesRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 200,
-      "minimum": 100,
-      "maximum": 200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $200 rebate for Air Source Heat Pump (existing natural gas)"
-    },
-    "url": {
-      "en": "https://smmpa.com/members/spring-valley"
-    }
-  },
-  {
-    "id": "MN-356",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_wasecaUtility_cityOfWasecaRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 60
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$60 rebate for ducted air source heat pump. Tune up"
-    },
-    "url": {
-      "en": "https://smmpa.com/members/waseca"
-    }
-  },
-  {
-    "id": "MN-357",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_wasecaUtility_cityOfWasecaRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 60
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$60 rebate for ductless air source heat pump. Tune up"
-    },
-    "url": {
-      "en": "https://smmpa.com/members/waseca"
-    }
-  },
-  {
-    "id": "MN-358",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_wellsPublicUtilities_wellsPublicUtilitiesRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1800,
-      "minimum": 125,
-      "maximum": 1800
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $1,800 rebate for ducted air source heat pump."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/wells"
-    }
-  },
-  {
-    "id": "MN-359",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_wellsPublicUtilities_wellsPublicUtilitiesRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1800,
-      "minimum": 125,
-      "maximum": 1800
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $1,800 rebate for ductless air source heat pump."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/wells"
-    }
-  },
-  {
-    "id": "MN-360",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_wellsPublicUtilities_wellsPublicUtilitiesRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2200,
-      "minimum": 250,
-      "maximum": 2200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $2200 rebate for Cold Climate Air Source Heat Pump. $250 for lower efficiency and $2200 for higher efficiency."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/wells"
-    }
-  },
-  {
-    "id": "MN-361",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_wellsPublicUtilities_wellsPublicUtilitiesRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2200,
-      "minimum": 250,
-      "maximum": 2200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $2200 rebate for Cold Climate Air Source Heat Pump. $250 for lower efficiency and $2200 for higher efficiency."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/wells"
-    }
-  },
-  {
-    "id": "MN-362",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_wellsPublicUtilities_wellsPublicUtilitiesRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 200,
-      "minimum": 100,
-      "maximum": 200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $200 rebate for Air Source Heat Pump (existing natural gas)."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/wells"
+      "en": "https://mn.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps"
     }
   }
 ]

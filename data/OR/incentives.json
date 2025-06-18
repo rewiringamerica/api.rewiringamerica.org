@@ -1529,7 +1529,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,000 for ducted or ductless qualifying heat pump systems."
+      "en": "Up to $1,000 for ducted qualifying heat pump systems."
     },
     "url": {
       "en": "https://www.salemelectric.com/energy-efficiency/incentives/"
@@ -2048,7 +2048,7 @@
   {
     "id": "OR-83",
     "payment_methods": [
-      "pos_rebate"
+      "rebate"
     ],
     "items": [
       "electric_vehicle_charger"
@@ -8403,6 +8403,341 @@
     },
     "url": {
       "en": "https://www.cec.coop/energy-programs/residential-efficiency/"
+    }
+  },
+  {
+    "id": "OR-367",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_consumersPower_consumerPowerEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,200 rebate for new Northwest Energy Efficiency Manufactured (NEEM) Homes ENERGY STAR® qualified manufactured home."
+    },
+    "url": {
+      "en": "https://www.directefficiency.com/cpi-rebates/"
+    }
+  },
+  {
+    "id": "OR-368",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "central_air_conditioner"
+    ],
+    "program": "or_consumersPower_consumerPowerEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for centrally ducted A/C unit with a SEER rating of 16 or higher"
+    },
+    "url": {
+      "en": "https://www.directefficiency.com/cpi-rebates/"
+    }
+  },
+  {
+    "id": "OR-369",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_coos-CurryElectricCooperative_cCECResidentialConservationRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,500 for replacement of Pre-1976 home with Northwest Energy Efficiency Manufactured (NEEM) Homes ENERGY STAR® qualified manufactured home."
+    },
+    "url": {
+      "en": "https://www.ccec.coop/efficiency-rebate-program"
+    }
+  },
+  {
+    "id": "OR-370",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "or_douglasElectricCooperative_douglasElectricCoopRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate per appliance for ENERGY STAR® clothes dryers and washers."
+    },
+    "url": {
+      "en": "https://www.dec.coop/energy-efficiency/rebate-programs/"
+    }
+  },
+  {
+    "id": "OR-371",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_douglasElectricCooperative_douglasElectricCoopRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$600 rebate for qualifying heat pump water heater"
+    },
+    "url": {
+      "en": "https://www.dec.coop/energy-efficiency/rebate-programs/"
+    }
+  },
+  {
+    "id": "OR-372",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_douglasElectricCooperative_douglasElectricCoopRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1200,
+      "minimum": 1100,
+      "maximum": 1200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,200 rebate for centrally-ducted air source heat pump"
+    },
+    "url": {
+      "en": "https://www.dec.coop/energy-efficiency/rebate-programs/"
+    }
+  },
+  {
+    "id": "OR-373",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_douglasElectricCooperative_douglasElectricCoopRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 rebate for ductless heat pump"
+    },
+    "url": {
+      "en": "https://www.dec.coop/energy-efficiency/rebate-programs/"
+    }
+  },
+  {
+    "id": "OR-374",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_douglasElectricCooperative_douglasElectricCoopRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for a new Northwest Energy Efficiency Manufactured (NEEM) Homes ENERGY STAR® qualified home."
+    },
+    "url": {
+      "en": "https://www.dec.coop/energy-efficiency/rebate-programs/"
+    }
+  },
+  {
+    "id": "OR-375",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "floor_insulation",
+      "wall_insulation"
+    ],
+    "program": "or_douglasElectricCooperative_douglasElectricCoopRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2 per square foot rebate for home insulation replacement in existing homes."
+    },
+    "url": {
+      "en": "https://www.dec.coop/energy-efficiency/rebate-programs/"
+    }
+  },
+  {
+    "id": "OR-376",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement"
+    ],
+    "program": "or_douglasElectricCooperative_douglasElectricCoopRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$40 rebate for ENERGY STAR® exterior door replacement"
+    },
+    "url": {
+      "en": "https://www.dec.coop/energy-efficiency/rebate-programs/"
+    }
+  },
+  {
+    "id": "OR-377",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "or_douglasElectricCooperative_douglasElectricCoopRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 6,
+      "unit": "square_foot",
+      "minimum": 5,
+      "maximum": 6
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $6/sq ft rebate for energy efficient windows or glass patio doors."
+    },
+    "url": {
+      "en": "https://www.dec.coop/energy-efficiency/rebate-programs/"
+    }
+  },
+  {
+    "id": "OR-378",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_douglasElectricCooperative_douglasElectricCoopRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for smart thermostat in homes with electric heat or heat pumps."
+    },
+    "url": {
+      "en": "https://www.dec.coop/energy-efficiency/rebate-programs/"
+    }
+  },
+  {
+    "id": "OR-379",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "or_douglasElectricCooperative_douglasElectricCoopRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate on Level 2 EV Charger"
+    },
+    "url": {
+      "en": "https://www.dec.coop/energy-efficiency/rebate-programs/"
+    }
+  },
+  {
+    "id": "OR-380",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "other_heat_pump"
+    ],
+    "program": "or_oregonDepartmentOfEnergy_heatPumpPurchaseProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2,000 rebate for air-source or ground-source heat pump"
+    },
+    "start_date": "2025-06-17",
+    "url": {
+      "en": "https://www.oregon.gov/energy/Incentives/Pages/HP3.aspx"
     }
   }
 ]
