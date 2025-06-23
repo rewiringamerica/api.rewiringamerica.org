@@ -20,6 +20,8 @@
       "en": "$1,000 rebate for a ductless heat pump replacing zonal electric resistance as the primary heat source. Primary unit must be in the main living space."
     },
     "start_date": "2023-10-01",
+    "end_date": "2025-06-20",
+    "paused": true,
     "url": {
       "en": "https://www.energytrust.org/residential/incentives"
     }
@@ -134,8 +136,7 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
+      "ducted_heat_pump"
     ],
     "program": "or_energyTrustOfOregon_energyTrustOfOregon",
     "amount": {
@@ -191,13 +192,13 @@
     "program": "or_energyTrustOfOregon_energyTrustOfOregon",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000
+      "number": 800
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,000 rebate for a ductless heat pump. Must replace electric resistance as the primary heat source and primary unit must be in the main living space."
+      "en": "$800 rebate for a ductless heat pump. Must replace electric resistance as the primary heat source and primary unit must be in the main living space."
     },
     "start_date": "2023-10-01",
     "url": {
@@ -215,13 +216,13 @@
     "program": "or_portlandGeneralElectric_pGESolarForYourHome",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000
+      "number": 850
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Earn a $1,000 rebate for installing solar panels on your home. Systems must be installed by an approved Energy Trust solar trade ally contractor."
+      "en": "Earn a $850 rebate for installing solar panels on your home. Systems must be installed by an approved Energy Trust solar trade ally contractor."
     },
     "url": {
       "en": "https://www.energytrust.org/incentives/solar-for-your-home"
@@ -238,13 +239,13 @@
     "program": "or_pacificPowerPacificorp_pacificPowerSolarForYourHome",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000
+      "number": 950
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Earn a $1,000 rebate for installing solar panels on your home. Systems must be installed by an approved Energy Trust solar trade ally contractor."
+      "en": "Earn a $950 rebate for installing solar panels on your home. Systems must be installed by an approved Energy Trust solar trade ally contractor."
     },
     "url": {
       "en": "https://www.energytrust.org/incentives/solar-for-your-home"
@@ -261,15 +262,15 @@
     "program": "or_portlandGeneralElectric_pGESolarForYourHome",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 500,
+      "number": 400,
       "unit": "kilowatt",
-      "maximum": 6000
+      "maximum": 4800
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Earn $500/kWh up to $6,000 for your battery storage system. Systems must be installed by an approved Energy Trust solar trade ally contractor."
+      "en": "Earn $400/kWh up to $4,800 for your battery storage system. Systems must be installed by an approved Energy Trust solar trade ally contractor."
     },
     "url": {
       "en": "https://www.energytrust.org/incentives/solar-for-your-home"
@@ -286,15 +287,15 @@
     "program": "or_pacificPowerPacificorp_pacificPowerSolarForYourHome",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 500,
+      "number": 400,
       "unit": "kilowatt",
-      "maximum": 6000
+      "maximum": 4800
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Earn $500/kWh up to $6,000 for your battery storage system. Systems must be installed by an approved Energy Trust solar trade ally contractor."
+      "en": "Earn $400/kWh up to $4,800 for your battery storage system. Systems must be installed by an approved Energy Trust solar trade ally contractor."
     },
     "url": {
       "en": "https://www.energytrust.org/incentives/solar-for-your-home"
@@ -311,15 +312,15 @@
     "program": "or_portlandGeneralElectric_pGESolarWithinReach",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 1.2,
+      "number": 1,
       "unit": "watt",
-      "maximum": 7200
+      "maximum": 6000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Income-qualified households can earn $1.20/watt up to $7,200 for adding solar panels to your home. An approved solar trade ally must install system."
+      "en": "Income-qualified households can earn $1/watt up to $6,000 for adding solar panels to your home. An approved solar trade ally must install system."
     },
     "low_income": "or-energy-trust-of-oregon",
     "url": {
@@ -337,15 +338,15 @@
     "program": "or_pacificPowerPacificorp_pacificPowerSolarWithinReach",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 1,
+      "number": 0.75,
       "unit": "watt",
-      "maximum": 6000
+      "maximum": 4500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Income-qualified households can earn $1.00/watt up to $6,000 for adding solar panels to your home. An approved solar trade ally must install system."
+      "en": "Income-qualified households can earn $0.75/watt up to $4,500 for adding solar panels to your home. An approved solar trade ally must install system."
     },
     "low_income": "or-energy-trust-of-oregon",
     "url": {
@@ -363,15 +364,15 @@
     "program": "or_portlandGeneralElectric_pGESolarWithinReach",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 1000,
+      "number": 900,
       "unit": "kilowatt",
-      "maximum": 13000
+      "maximum": 10800
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Income-qualified households can earn $1,000/kWh up to $13,000 for home solar battery storage. An approved solar trade ally must install the system."
+      "en": "Income-qualified households can earn $900/kWh up to $10,800 for home solar battery storage. An approved solar trade ally must install the system."
     },
     "low_income": "or-energy-trust-of-oregon",
     "url": {
@@ -389,15 +390,15 @@
     "program": "or_pacificPowerPacificorp_pacificPowerSolarWithinReach",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 750,
+      "number": 700,
       "unit": "kilowatt",
-      "maximum": 10000
+      "maximum": 8400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Income-qualified households can earn $750/kWh up to $10,000 for home solar battery storage. An approved solar trade ally must install the system."
+      "en": "Income-qualified households can earn $700/kWh up to $8,400 for home solar battery storage. An approved solar trade ally must install the system."
     },
     "low_income": "or-energy-trust-of-oregon",
     "url": {
@@ -755,6 +756,8 @@
       "en": "$500 discount on a ductless heat pump with additional heating source. The heat pump must replace zonal electric as the primary heat source."
     },
     "start_date": "2023-10-01",
+    "end_date": "2025-06-20",
+    "paused": true,
     "url": {
       "en": "https://www.energytrust.org/residential/incentives"
     }
@@ -1064,7 +1067,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$4,000 incentive for replacing an electric forced-air furnace with a qualifying central ducted system."
+      "en": "$4,000 incentive for an extended capacity heat pump replacing electric forced-air furnace."
     },
     "url": {
       "en": "https://www.energytrust.org/residential/incentives/furnace-and-heat-pump/all"
@@ -1137,6 +1140,8 @@
     "short_description": {
       "en": "Earn a $1,200 rebate for installing solar panels on your home. Systems must be installed by an approved Energy Trust solar trade ally contractor."
     },
+    "start_date": "2025-06-20",
+    "paused": true,
     "url": {
       "en": "https://www.energytrust.org/incentives/solar-for-your-home"
     }
@@ -2140,6 +2145,8 @@
       "en": "$3,500 rebate for a ductless heat pump replacing electric forced air as the primary heat source. Primary unit must be in the main living space."
     },
     "start_date": "2023-10-01",
+    "end_date": "2025-06-20",
+    "paused": true,
     "url": {
       "en": "https://www.energytrust.org/residential/incentives"
     }
@@ -2156,14 +2163,14 @@
     "program": "or_energyTrustOfOregon_energyTrustOfOregon",
     "amount": {
       "type": "dollar_amount",
-      "number": 2900,
-      "maximum": 2900
+      "number": 1800,
+      "maximum": 1800
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,900 rebate for a ductless heat pump replacing electric zonal heating as the primary heat source. Primary unit must be in the main living space."
+      "en": "$1,800 rebate for a ductless heat pump replacing electric zonal heating as the primary heat source. Primary unit must be in the main living space."
     },
     "start_date": "2023-10-01",
     "url": {
@@ -2243,6 +2250,8 @@
       "en": "$1,000 rebate for a ductless heat pump. Must replace electric resistance as the primary heat source and installed in the main living space."
     },
     "start_date": "2023-10-01",
+    "end_date": "2025-06-20",
+    "paused": true,
     "url": {
       "en": "https://www.energytrust.org/residential/incentives"
     }
@@ -8738,6 +8747,54 @@
     "start_date": "2025-06-17",
     "url": {
       "en": "https://www.oregon.gov/energy/Incentives/Pages/HP3.aspx"
+    }
+  },
+  {
+    "id": "OR-381",
+    "eligible_geo_group": "or-energy-trust-regional-offer",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_pacificPowerPacificorp_energyTrustOfOregonExtendedCapacityHeatPumpRegionalPromotion",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,000 off an extended capacity heat pump for manufactured home."
+    },
+    "url": {
+      "en": "https://www.energytrust.org/residential/incentives/furnace-and-heat-pump/all"
+    }
+  },
+  {
+    "id": "OR-382",
+    "eligible_geo_group": "or-energy-trust-regional-offer",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_pacificPowerPacificorp_energyTrustOfOregonExtendedCapacityHeatPumpRegionalPromotion",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $4,000 off an extended capacity heat pump for manufactured home replacing electric forced-air furnace."
+    },
+    "url": {
+      "en": "https://www.energytrust.org/residential/incentives/furnace-and-heat-pump/all"
     }
   }
 ]
