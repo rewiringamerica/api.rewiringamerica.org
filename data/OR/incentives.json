@@ -28,6 +28,7 @@
   },
   {
     "id": "OR-2",
+    "eligible_geo_group": "or-energy-trust-regional-offer",
     "payment_methods": [
       "rebate"
     ],
@@ -1064,7 +1065,8 @@
       "number": 4000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$4,000 incentive for an extended capacity heat pump replacing electric forced-air furnace."
@@ -1088,7 +1090,8 @@
       "number": 4000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$4,000 incentive for installing a ducted heat pump on your home."
@@ -2126,14 +2129,14 @@
   },
   {
     "id": "OR-86",
-    "eligible_geo_group": "or-eto-electric",
+    "eligible_geo_group": "or-energy-trust-regional-offer",
     "payment_methods": [
       "rebate"
     ],
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "or_energyTrustOfOregon_energyTrustOfOregon",
+    "program": "or_pacificPowerPacificorp_energyTrustOfOregonHeatPumpRegionalPromotion",
     "amount": {
       "type": "dollar_amount",
       "number": 3500
@@ -2167,7 +2170,8 @@
       "maximum": 1800
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$1,800 rebate for a ductless heat pump replacing electric zonal heating as the primary heat source. Primary unit must be in the main living space."
@@ -2824,6 +2828,8 @@
     "short_description": {
       "en": "$150 upfront rebate for a heat pump water heater, total install cost $550. "
     },
+    "end_date": "2025-06-23",
+    "paused": true,
     "url": {
       "en": "https://www.cec.coop/energy-programs/residential-efficiency/"
     }
@@ -3437,13 +3443,13 @@
     "program": "or_blachly-LaneElectricCooperative_blachly-LaneElectricCooperativeResidentialEnergyEfficiencyRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 800
+      "number": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $800 rebate on a new Northwest Energy Efficiency Manufactured (NEEM) Homes ENERGY STAR® qualified home."
+      "en": "Up to $500 rebate on a new Northwest Energy Efficiency Manufactured (NEEM) Homes ENERGY STAR® qualified home."
     },
     "url": {
       "en": "https://www.blachlylane.coop/conservation/energy-efficiency-rebates/residential-rebates/"
@@ -4935,6 +4941,8 @@
     "short_description": {
       "en": "$6 to $8 per sq foot rebate for qualifying window or patio door replacement in existing single-family, multi-family and manufactured homes."
     },
+    "start_date": "2025-06-23",
+    "paused": true,
     "url": {
       "en": "https://www.blachlylane.coop/conservation/energy-efficiency-rebates/residential-rebates/"
     }
@@ -5317,20 +5325,18 @@
       "rebate"
     ],
     "items": [
-      "geothermal_heating_installation",
-      "ducted_heat_pump",
-      "ductless_heat_pump"
+      "geothermal_heating_installation"
     ],
     "program": "or_clearwaterPowerCompany_clearwaterPowerCompanyEnergyEfficiencyRebates",
     "amount": {
-      "type": "percent",
-      "number": 1
+      "type": "dollar_amount",
+      "number": 3500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebates for installing ducted, ductless, or ground source heat pump systems."
+      "en": "Up to $3,500 rebate for geothermal heat pump."
     },
     "url": {
       "en": "https://www.clearwaterpower.com/energy-efficiency/rebates/"
@@ -5538,21 +5544,20 @@
       "rebate"
     ],
     "items": [
-      "wall_insulation",
-      "floor_insulation",
       "attic_or_roof_insulation"
     ],
     "program": "or_clearwaterPowerCompany_clearwaterPowerCompanyEnergyEfficiencyRebates",
     "amount": {
-      "type": "percent",
-      "number": 1
+      "type": "dollars_per_unit",
+      "number": 2.3,
+      "unit": "square_foot"
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Rebate for insulation replacement in existing homes."
+      "en": "Up to $2.30 per square foot off attic insulation."
     },
     "url": {
       "en": "https://www.clearwaterpower.com/energy-efficiency/rebates/"
@@ -8164,6 +8169,7 @@
   },
   {
     "id": "OR-350",
+    "eligible_geo_group": "or-north-coast-region",
     "payment_methods": [
       "assistance_program"
     ],
@@ -8180,10 +8186,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $7,000 for the purchase and installation of a heat pump."
+      "en": "Up to $7,000 for the purchase and installation of a heat pump. "
     },
     "url": {
-      "en": "https://www.oregon.gov/energy/Incentives/Pages/CHPDP.aspx"
+      "en": "https://www.earthadvantage.org/climate-justice/community-heat-pump-deployment-program.html"
     }
   },
   {
@@ -8795,6 +8801,301 @@
     },
     "url": {
       "en": "https://www.energytrust.org/residential/incentives/furnace-and-heat-pump/all"
+    }
+  },
+  {
+    "id": "OR-383",
+    "payment_methods": [
+      "performance_rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "or_centralElectricCooperative_centralElectricCooperativeResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Performance based rebate for new construction homes. Newly built home must be 10% more efficient that standard building code."
+    },
+    "url": {
+      "en": "https://www.cec.coop/energy-programs/residential-efficiency/new-home-performance-path/"
+    }
+  },
+  {
+    "id": "OR-384",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_clearwaterPowerCompany_clearwaterPowerCompanyEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 rebate for air-source heat pump."
+    },
+    "url": {
+      "en": "https://www.clearwaterpower.com/energy-efficiency/rebates/"
+    }
+  },
+  {
+    "id": "OR-385",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_clearwaterPowerCompany_clearwaterPowerCompanyEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate for ductless heat pump."
+    },
+    "url": {
+      "en": "https://www.clearwaterpower.com/energy-efficiency/rebates/"
+    }
+  },
+  {
+    "id": "OR-386",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "floor_insulation"
+    ],
+    "program": "or_clearwaterPowerCompany_clearwaterPowerCompanyEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1.05,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1.05 per square foot off floor insulation."
+    },
+    "url": {
+      "en": "https://www.clearwaterpower.com/energy-efficiency/rebates/"
+    }
+  },
+  {
+    "id": "OR-387",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "wall_insulation"
+    ],
+    "program": "or_clearwaterPowerCompany_clearwaterPowerCompanyEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$2 per square foot off exterior wall insulation."
+    },
+    "url": {
+      "en": "https://www.clearwaterpower.com/energy-efficiency/rebates/"
+    }
+  },
+  {
+    "id": "OR-390",
+    "eligible_geo_group": "or-south-coast-region",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "or_oregonDepartmentOfEnergy_communityHeatPumpDeploymentProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 7000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $7,000 for the purchase and installation of a heat pump. "
+    },
+    "url": {
+      "en": "https://www.nwumpqua.org/our-programs/homeowner-programs/home-repair-assistance/"
+    }
+  },
+  {
+    "id": "OR-392",
+    "eligible_geo_group": "or-metro-region",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "or_oregonDepartmentOfEnergy_communityHeatPumpDeploymentProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 7000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $7,000 for the purchase and installation of a heat pump. "
+    },
+    "url": {
+      "en": "https://www.earthadvantage.org/climate-justice/community-heat-pump-deployment-program.html"
+    }
+  },
+  {
+    "id": "OR-397",
+    "eligible_geo_group": "or-northeast-oregon-region",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "or_oregonDepartmentOfEnergy_communityHeatPumpDeploymentProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 7000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $7,000 for the purchase and installation of a heat pump. Contact your regional administrator for details."
+    },
+    "url": {
+      "en": "https://www.communityenergyprogram.org/contact-us"
+    }
+  },
+  {
+    "id": "OR-398",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "or_oregonDepartmentOfEnergy_communityHeatPumpDeploymentProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 7000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $7,000 for the purchase and installation of a heat pump for Burns Paiute tribal members. "
+    },
+    "url": {
+      "en": "https://www.geodc.net/burns-paiute-tribe-community-heat-pump-deployment-program/"
+    }
+  },
+  {
+    "id": "OR-399",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_columbiaRuralElectricWa_columbiaREAResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 off a ductless heat pump. "
+    },
+    "url": {
+      "en": "https://www.columbiarea.coop/wp-content/uploads/Residential-Heating-and-Cooling-HVAC-04212025.pdf"
+    }
+  },
+  {
+    "id": "OR-400",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "wall_insulation",
+      "window_replacement",
+      "floor_insulation",
+      "other_weatherization",
+      "duct_sealing"
+    ],
+    "program": "or_laneElectricCooperative_laneElectricCooperativeEnergyEfficiencyRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "25% off weatherization costs up to $1,000. "
+    },
+    "url": {
+      "en": "https://laneelectric.com/programs-services/weatherization-programs/"
+    }
+  },
+  {
+    "id": "OR-401",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_laneElectricCooperative_laneElectricCooperativeEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 6000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $6,000 for installation of a ductless heat pump. "
+    },
+    "low_income": "OR-LEC-60AMI",
+    "url": {
+      "en": "https://laneelectric.com/wp-content/uploads/0-LI-DHP-Packet-15.pdf"
     }
   }
 ]
