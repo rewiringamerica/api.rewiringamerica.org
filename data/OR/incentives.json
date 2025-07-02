@@ -263,15 +263,15 @@
     "program": "or_portlandGeneralElectric_pGESolarForYourHome",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 400,
+      "number": 350,
       "unit": "kilowatt",
-      "maximum": 4800
+      "maximum": 4200
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Earn $400/kWh up to $4,800 for your battery storage system. Systems must be installed by an approved Energy Trust solar trade ally contractor."
+      "en": "Earn $350/kWh up to $4,200 for your battery storage system. Systems must be installed by an approved Energy Trust solar trade ally contractor."
     },
     "url": {
       "en": "https://www.energytrust.org/incentives/solar-for-your-home"
@@ -365,15 +365,15 @@
     "program": "or_portlandGeneralElectric_pGESolarWithinReach",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 900,
+      "number": 850,
       "unit": "kilowatt",
-      "maximum": 10800
+      "maximum": 10200
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Income-qualified households can earn $900/kWh up to $10,800 for home solar battery storage. An approved solar trade ally must install the system."
+      "en": "Income-qualified households can earn $850/kWh up to $10,200 for home solar battery storage. An approved solar trade ally must install the system."
     },
     "low_income": "or-energy-trust-of-oregon",
     "url": {
@@ -391,15 +391,15 @@
     "program": "or_pacificPowerPacificorp_pacificPowerSolarWithinReach",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 700,
+      "number": 650,
       "unit": "kilowatt",
-      "maximum": 8400
+      "maximum": 7800
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Income-qualified households can earn $700/kWh up to $8,400 for home solar battery storage. An approved solar trade ally must install the system."
+      "en": "Income-qualified households can earn $650/kWh up to $7,800 for home solar battery storage. An approved solar trade ally must install the system."
     },
     "low_income": "or-energy-trust-of-oregon",
     "url": {
@@ -2558,6 +2558,8 @@
     "short_description": {
       "en": "Up to $900 rebate for heat pump water heaters."
     },
+    "end_date": "2025-06-30",
+    "paused": true,
     "url": {
       "en": "https://www.midstateelectric.coop/residential"
     }
@@ -2607,6 +2609,8 @@
     "short_description": {
       "en": "$3,000 rebate for a ground source heat pump."
     },
+    "end_date": "2025-06-30",
+    "paused": true,
     "url": {
       "en": "https://www.midstateelectric.coop/residential"
     }
@@ -2631,6 +2635,8 @@
     "short_description": {
       "en": "$800 rebate for a ductless air source heat pump."
     },
+    "end_date": "2025-06-30",
+    "paused": true,
     "url": {
       "en": "https://www.midstateelectric.coop/residential"
     }
@@ -7233,13 +7239,13 @@
     "program": "or_midstateElectricCooperative_midstateResidentialConservationIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 200
+      "number": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $200 rebate for Performance Tested Comfort Systems (PTCS) duct sealing."
+      "en": "Up to $250 rebate for Performance Tested Comfort Systems (PTCS) duct sealing."
     },
     "url": {
       "en": "https://www.midstateelectric.coop/residential"
@@ -7361,6 +7367,8 @@
     "short_description": {
       "en": "Free home energy audit."
     },
+    "end_date": "2025-06-30",
+    "paused": true,
     "url": {
       "en": "https://www.midstateelectric.coop/residential"
     }
@@ -7545,13 +7553,13 @@
     "program": "or_oregonTrailElectricCooperative_oregonTrailElectricCooperativeRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 100
+      "number": 525
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $100 rebate for a heat pump water heater in an existing home."
+      "en": "Up to $525 rebate for a heat pump water heater in an existing home."
     },
     "url": {
       "en": "https://otec.coop/rebates"
@@ -7669,13 +7677,13 @@
     "program": "or_oregonTrailElectricCooperative_oregonTrailElectricCooperativeRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 600
+      "number": 700
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $600 rebate for new Northwest Energy Efficiency Manufactured (NEEM) Homes ENERGY STAR® qualified manufactured home."
+      "en": "Up to $700 rebate for new Northwest Energy Efficiency Manufactured (NEEM) Homes ENERGY STAR® qualified manufactured home."
     },
     "url": {
       "en": "https://otec.coop/rebates"
@@ -9096,6 +9104,359 @@
     "low_income": "OR-LEC-60AMI",
     "url": {
       "en": "https://laneelectric.com/wp-content/uploads/0-LI-DHP-Packet-15.pdf"
+    }
+  },
+  {
+    "id": "OR-402",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "or_laneElectricCooperative_laneElectricCooperativeEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 for a Level 2 Charger. "
+    },
+    "url": {
+      "en": "https://laneelectric.chooseev.com/promos/"
+    }
+  },
+  {
+    "id": "OR-403",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_weatherization"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oregonTrailElectricCooperativeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 10
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$10 off Energy Star dishwasher."
+    },
+    "url": {
+      "en": "https://www.otec.coop/sites/default/files/dishwasher-packet-fillable-6_22.pdf"
+    }
+  },
+  {
+    "id": "OR-404",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_weatherization"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oregonTrailElectricCooperativeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 10
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$10 off Energy Star refrigerator."
+    },
+    "url": {
+      "en": "https://www.otec.coop/sites/default/files/dishwasher-packet-fillable-6_22.pdf"
+    }
+  },
+  {
+    "id": "OR-405",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_weatherization"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oregonTrailElectricCooperativeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 10
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$10 off Energy Star electric freezer."
+    },
+    "url": {
+      "en": "https://www.otec.coop/sites/default/files/dishwasher-packet-fillable-6_22.pdf"
+    }
+  },
+  {
+    "id": "OR-406",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_weatherization"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oregonTrailElectricCooperativeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 off electric storage water heater."
+    },
+    "url": {
+      "en": "https://www.otec.coop/sites/default/files/electric-storage-water-heater-packet-fillable-6_22.pdf"
+    }
+  },
+  {
+    "id": "OR-407",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates"
+    ],
+    "program": "or_oregonTrailElectricCooperative_oregonTrailElectricCooperativeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Replace your pre-1976 electric manufactured home with a new ENERGY STAR® NEEM Home and get up to a $1,250 rebate. "
+    },
+    "url": {
+      "en": "https://otec.coop/rebates"
+    }
+  },
+  {
+    "id": "OR-408",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_salemElectric_salemElectricHeatPumpProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate for ductless heat pump. "
+    },
+    "url": {
+      "en": "https://www.salemelectric.com/energy-efficiency/incentives/"
+    }
+  },
+  {
+    "id": "OR-409",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "or_salemElectric_salemElectricSolarIncentives",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 300,
+      "unit": "kilowatt",
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 incentive per kW up to $1,500. Cannot exceed 50% of project costs. "
+    },
+    "url": {
+      "en": "https://www.salemelectric.com/energy-efficiency/solar-information/"
+    }
+  },
+  {
+    "id": "OR-410",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "or_salemElectric_salemElectricElectricVehicleIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Register your EV with and receive a $50 bill credit"
+    },
+    "url": {
+      "en": "https://www.salemelectric.com/energy-efficiency/electric-vehicles/"
+    }
+  },
+  {
+    "id": "OR-411",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "or_umatillaElectricCooperativeAssociation_umatillaElectricCo-OpResidentialRebatesForEnergyEfficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 300,
+      "unit": "kilowatt",
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 kW Net Metering rebate up to $1,500."
+    },
+    "url": {
+      "en": "https://www.umatillaelectric.com/energy-efficiency/rooftop-solar-program/"
+    }
+  },
+  {
+    "id": "OR-412",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_weatherization"
+    ],
+    "program": "or_umatillaElectricCooperative_nEEMHomeRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up $1,000 rebate for Northwest Energy Efficient Manufactured Housing Program (NEEM)."
+    },
+    "url": {
+      "en": "https://www.umatillaelectric.com/energy-efficiency/residential-rebates-programs/neem-home-rebate-program/"
+    }
+  },
+  {
+    "id": "OR-413",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_weatherization"
+    ],
+    "program": "or_wascoElectricCooperative_wascoElectricCo-OpResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,400 for purchase of Northwest Energy Efficiency Manufactured (NEEM) manufactured home."
+    },
+    "url": {
+      "en": "https://www.wascoelectric.com/rebates-energy-efficiency/residential-rebates/new-manufactured-home/"
+    }
+  },
+  {
+    "id": "OR-414",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_weatherization"
+    ],
+    "program": "or_wascoElectricCooperative_wascoElectricCo-OpResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 35
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$35 rebate for ENERGY STAR® Clothes Washer."
+    },
+    "url": {
+      "en": "https://www.wascoelectric.com/rebates-energy-efficiency/residential-rebates/washer-dryer/"
+    }
+  },
+  {
+    "id": "OR-415",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_weatherization"
+    ],
+    "program": "or_westOregonElectricCooperative_westOregonElectricCo-OpResidentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 35
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$30 rebate for ENERGY STAR® Clothes Washer"
+    },
+    "url": {
+      "en": "https://www.westoregon.org/members/rebates/clothes-washer-dryer/"
+    }
+  },
+  {
+    "id": "OR-416",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_weatherization"
+    ],
+    "program": "or_westOregonElectricCooperative_westOregonElectricCo-OpResidentialEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,400 for purchase of a Northwest Energy Efficiency Manufactured (NEEM) manufactured home. "
+    },
+    "url": {
+      "en": "https://www.westoregon.org/members/rebates/new-manufactured-home-2/"
     }
   }
 ]
