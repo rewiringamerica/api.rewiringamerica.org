@@ -433,7 +433,7 @@
       "es": "Un reembolso de hasta $1,200 dólares en proyectos certificados para casas unifamiliares construidas en el sitio o manufacturadas existentes cuando se sustituya un calefactor eléctrico de aire forzado."
     },
     "url": {
-      "en": "https://www.wrec.coop/save-energy-save-money/rebates/"
+      "en": "https://www.wrec.coop/save-energy-save-money/rebates/air-source-heat-pump/"
     }
   },
   {
@@ -447,18 +447,18 @@
     "program": "nv_nVEnergy_nVEnergyResidentialAirConditioning",
     "amount": {
       "type": "dollar_amount",
-      "number": 1360,
-      "minimum": 340,
-      "maximum": 1360
+      "number": 2500,
+      "minimum": 100,
+      "maximum": 2500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Receive up to $1,360 instant rebate from qualifying distributors when you replace your old air condition system with higher efficiency equipment.",
-      "es": "Reciba hasta $1,360 dólares de reembolso instantáneo de distribuidores habilitados cuando reemplace su viejo sistema de aire acondicionado por un equipo de eficiencia superior."
+      "en": "Receive up to $2,500 instant rebate from qualifying distributors when you replace your old air conditioning system with higher efficiency equipment.",
+      "es": "Reciba hasta $2,500 dólares de reembolso instantáneo de distribuidores habilitados cuando reemplace su viejo sistema de aire acondicionado por un equipo de eficiencia superior."
     },
-    "end_date": "2024-08-31",
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.nvenergy.com/save-with-powershift/home-energy-saver/residential-ac-and-mid-stream/residential-air-conditioning"
     }
@@ -1069,18 +1069,20 @@
     "program": "nv_cityOfBoulderCity_utilityRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 1600
+      "number": 3600,
+      "minimum": 400,
+      "maximum": 3600
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,600 rebate for air conditioner replacement, depending on efficiency level.",
-      "es": "Reembolsos por sustitución de aire acondicionado central por un monto de $400 dólares para 16 SEER, $900 para 18 SEER y $1,600 para 20 SEER y de mayor capacidad."
+      "en": "Up to $3,600 rebate for air conditioner replacement, depending on efficiency level and membership status in Boulder City Energy Assistance Program.",
+      "es": "Reembolso de hasta $3,600 por el reemplazo del aire acondicionado, según el nivel de eficiencia y el estado de membresía en el Programa de Asistencia Energética de Boulder City."
     },
     "url": {
-      "en": "https://bcnv.org/284/Utility-Rebate-Program"
+      "en": "https://www.bcnv.org/285/Air-Conditioners"
     }
   },
   {
@@ -1127,11 +1129,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $200 rebate for a solar water heating system to supplement electric domestic water heating. Minimum 40 gallons.",
-      "es": "Reembolso de hasta $200 dólares está disponible para un sistema solar de calentamiento de agua que complemente el calentamiento eléctrico del agua doméstica. Mínimo 40 galones."
+      "en": "$200 rebate for a solar water heating system to supplement electric domestic water heating. Minimum 40 gallons.",
+      "es": "$200 dólares está disponible para un sistema solar de calentamiento de agua que complemente el calentamiento eléctrico del agua doméstica. Mínimo 40 galones."
     },
     "url": {
-      "en": "https://bcnv.org/284/Utility-Rebate-Program"
+      "en": "https://www.bcnv.org/288/Solar-Water-Heaters"
     }
   },
   {
@@ -1795,6 +1797,7 @@
       "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for income-qualified residents. Application required.",
       "es": "El programa de ayuda para la climatización Weatherization Assistance Program aplica medidas de conservación de la energía en el hogar sin costo alguno para los residentes que reúnan los requisitos de nivel de ingresos. Se requiere presentar una solicitud."
     },
+    "paused": true,
     "low_income": "nv-csa-reno",
     "url": {
       "en": "https://nvrural.org/programs/weatherization/"
@@ -1879,9 +1882,88 @@
       "en": "The Weatherization Assistance Program implements home energy conservation measures at no cost for income-qualified residents. Application required.",
       "es": "El programa de ayuda para la climatización Weatherization Assistance Program aplica medidas de conservación de la energía en el hogar sin costo alguno para los residentes que reúnan los requisitos de nivel de ingresos. Se requiere presentar una solicitud."
     },
+    "paused": true,
     "low_income": "nv-csa-reno",
     "url": {
       "en": "https://nvrural.org/programs/weatherization/"
+    }
+  },
+  {
+    "id": "NV-80",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "nv_wellsRuralElectric_saveEnergy,SaveMoney",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "minimum": 1800,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,000 for a new manufactured home built to NEEM 1.1 or 2.0 Program standards.",
+      "es": "Hasta $2,000 para una nueva casa prefabricada construida según los estándares del programa NEEM 1.1 o 2.0."
+    },
+    "url": {
+      "en": "https://www.wrec.coop/save-energy-save-money/rebates/new-manufactured-home/"
+    }
+  },
+  {
+    "id": "NV-81",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "nv_nevadaCleanEnergyFund_energyAuditIncentiveProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "A free energy audit, as long as the resident takes steps to implement an eligible home upgrade that was recommended in the audit.",
+      "es": "Una auditoría energética gratuita, siempre que el residente tome medidas para implementar una mejora elegible en el hogar que se recomendó en la auditoría."
+    },
+    "url": {
+      "en": "https://nevadacef.org/audit/"
+    }
+  },
+  {
+    "id": "NV-82",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "nv_nevadaCleanEnergyFund_nevadaSolarForAll",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2250,
+      "unit": "kilowatt",
+      "minimum": 2130,
+      "maximum": 2250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,250 per kW rebate for individually owned rooftop solar systems.",
+      "es": "Reembolso de hasta $2250 por kW para sistemas solares de azotea de propiedad individual."
+    },
+    "url": {
+      "en": "https://nevadacef.org/solar-for-all/"
     }
   }
 ]
