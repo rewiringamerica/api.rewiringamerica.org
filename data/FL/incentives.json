@@ -17,11 +17,89 @@
       "renter"
     ],
     "short_description": {
-      "en": "Free home energy assessment. This is a prerequisite for further Duke Energy Florida rebates."
+      "en": "Free home energy assessment. This is a prerequisite for further Duke Energy Florida rebates.",
+      "es": "Evaluación gratuita del consumo de energía del hogar. Este es un requisito para obtener más reembolsos de Duke Energy Florida."
     },
     "url": {
       "en": "https://www.duke-energy.com/home/products/home-energy-improvement",
       "es": "https://www.duke-energy.com/es/home/products/home-energy-improvement"
+    }
+  },
+  {
+    "id": "FL-2",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "attic_or_roof_insulation"
+    ],
+    "program": "fl_dukeEnergyFlorida_dukeEnergyFloridaHomeEnergyImprovementProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 800,
+      "unit": "square_foot",
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate on attic insulation measures for qualifying homes. ",
+      "es": "Reembolso de hasta $800 en medidas de aislamiento del ático para viviendas que califiquen. "
+    },
+    "url": {
+      "en": "https://www.duke-energy.com/home/products/home-energy-improvement/attic-insulation-upgrade#tab-65ee45cf-136e-43d4-acfa-c82490cd6e08"
+    }
+  },
+  {
+    "id": "FL-3",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "duct_replacement"
+    ],
+    "program": "fl_dukeEnergyFlorida_dukeEnergyFloridaHomeEnergyImprovementProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400 toward the cost of duct repairs.",
+      "es": "Hasta $400 para el costo de reparación de conductos."
+    },
+    "url": {
+      "en": "https://www.duke-energy.com/home/products/home-energy-improvement/duct-test-and-repair#tab-b2c13b04-0141-48a7-b58e-6fa25833b8fd"
+    }
+  },
+  {
+    "id": "FL-4",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "fl_dukeEnergyFlorida_dukeEnergyFloridaHomeEnergyImprovementProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 4,
+      "unit": "square_foot",
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 on east-, west-, and south-facing energy efficient windows on qualifying homes.",
+      "es": "Hasta $800 en ventanas energéticamente eficientes orientadas al este, oeste y sur en viviendas calificadas."
+    },
+    "url": {
+      "en": "https://www.duke-energy.com/home/products/home-energy-improvement/energy-efficient-windows"
     }
   }
 ]
