@@ -15,7 +15,7 @@ import calculateIncentives, {
   CalculatedIncentive,
 } from '../../src/lib/incentives-calculation';
 import { GeographyType, ResolvedLocation } from '../../src/lib/location';
-import { calculateStateIncentivesAndSavings } from '../../src/lib/state-incentives-calculation';
+import { calculateStateIncentives } from '../../src/lib/state-incentives-calculation';
 
 const stateGeo = (id: number, state: string) => ({
   id,
@@ -206,10 +206,6 @@ test('correctly evaluates scenario "Single w/ $120k Household income in NJ"', as
   t.equal(data.is_under_150_ami, true);
   t.equal(data.is_over_150_ami, false);
 
-  t.equal(data.savings.pos_rebate, 14000);
-  t.equal(data.savings.tax_credit, 18047);
-  t.equal(data.savings.performance_rebate, 4000);
-
   const pos_rebate_incentives = data.incentives.filter(
     i => i.payment_methods[0] === PaymentMethod.PosRebate,
   );
@@ -316,10 +312,6 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
   t.equal(data.is_under_150_ami, true);
   t.equal(data.is_over_150_ami, false);
 
-  t.equal(data.savings.pos_rebate, 14000);
-  t.equal(data.savings.tax_credit, 30022);
-  t.equal(data.savings.performance_rebate, 4000);
-
   const pos_rebate_incentives = data.incentives.filter(
     i => i.payment_methods[0] === PaymentMethod.PosRebate,
   );
@@ -425,10 +417,6 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
   t.equal(data.is_under_80_ami, false);
   t.equal(data.is_under_150_ami, false);
   t.equal(data.is_over_150_ami, true);
-
-  t.equal(data.savings.pos_rebate, 0);
-  t.equal(data.savings.tax_credit, 22378.9);
-  t.equal(data.savings.performance_rebate, 4000);
 
   const pos_rebate_incentives = data.incentives.filter(
     i => i.payment_methods[0] === PaymentMethod.PosRebate,
@@ -666,7 +654,7 @@ test('correct filtering of incentives with geography', async t => {
     authority_types: [AuthorityType.County],
     include_beta_states: true,
   };
-  const shouldFind = calculateStateIncentivesAndSavings(
+  const shouldFind = calculateStateIncentives(
     {
       state: 'CO',
       zcta: '00000',
@@ -691,7 +679,7 @@ test('correct filtering of incentives with geography', async t => {
   t.ok(shouldFind);
   t.equal(shouldFind.stateIncentives.length, 1);
 
-  const shouldNotFind = calculateStateIncentivesAndSavings(
+  const shouldNotFind = calculateStateIncentives(
     {
       state: 'CO',
       zcta: '00000',
@@ -717,85 +705,6 @@ test('correct filtering of incentives with geography', async t => {
   t.equal(shouldNotFind.stateIncentives.length, 0);
 });
 
-test('correctly evaluates savings when state tax liability is lower than max savings', async t => {
-  const incentive: StateIncentive = {
-    id: 'CO',
-    payment_methods: [PaymentMethod.TaxCredit],
-    items: ['ducted_heat_pump'],
-    program: 'co_hvacAndWaterHeaterIncentives',
-    amount: {
-      type: AmountType.DollarAmount,
-      number: 5000,
-    },
-    owner_status: [
-      OwnerStatus.Homeowner,
-    ],
-    short_description: {
-      en: 'This is a model incentive only to be used for testing.',
-    },
-    url: {
-      en: 'https://example.com/',
-    },
-  };
-
-  const programs: Programs = {
-    co_hvacAndWaterHeaterIncentives: {
-      name: { en: '' },
-      url: { en: '' },
-      authority: 'mock-state-authority',
-      authority_type: AuthorityType.State,
-    },
-  };
-
-  const authorities: AuthoritiesByType = {
-    city: {},
-    utility: {},
-    state: {
-      'mock-state-authority': {
-        name: 'Colorado Mock Department of Energy',
-        geography_id: 1,
-      },
-    },
-  };
-
-  const request = {
-    owner_status: OwnerStatus.Homeowner,
-    household_income: 100000,
-    tax_filing: FilingStatus.MarriedFilingSeparately,
-    household_size: 8,
-    authority_types: [AuthorityType.State],
-    include_beta_states: true,
-  };
-
-  const result = calculateStateIncentivesAndSavings(
-    {
-      state: 'CO',
-      zcta: '80903',
-      geographies: [
-        {
-          id: 1,
-          name: '',
-          type: GeographyType.State,
-          state: 'CO',
-          county_fips: null,
-          intersection_proportion: 1.0,
-        },
-      ],
-    },
-    request,
-    [incentive],
-    {},
-    authorities,
-    programs,
-    { computedAMI80: 80000, computedAMI150: 150000, evCreditEligible: false },
-  );
-
-  t.ok(result);
-  t.equal(result.stateIncentives.length, 1);
-  t.equal(result.stateIncentives[0].amount.number, 5000);
-  t.equal(result.savings.tax_credit, 4400);
-});
-
 test('correctly excludes IRA rebates', async t => {
   const data = calculateIncentives(
     ...LOCATION_AND_AMIS['07083'],
@@ -813,9 +722,6 @@ test('correctly excludes IRA rebates', async t => {
     data.incentives.filter(i => i.payment_methods[0] === 'tax_credit').length,
     12,
   );
-  t.equal(data.savings.pos_rebate, 0);
-  t.equal(data.savings.performance_rebate, 0);
-  t.equal(data.savings.tax_credit, 18047);
 });
 
 test('correctly matches geo groups', async t => {
