@@ -5,7 +5,7 @@ import { STATE_INCENTIVES_BY_STATE } from '../../src/data/state_incentives';
 
 test('incentives refer to defined thresholds', async t => {
   for (const stateIncentives of [
-    [...IRA_INCENTIVES],
+    IRA_INCENTIVES,
     ...Object.values(STATE_INCENTIVES_BY_STATE),
   ]) {
     for (const incentive of stateIncentives) {
