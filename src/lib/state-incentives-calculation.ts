@@ -28,7 +28,7 @@ import {
   makeIneligible,
   meetsPrerequisites,
 } from './incentive-relationship-calculation';
-import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
+import { CalculateParams } from './incentives-calculation';
 import { ResolvedLocation } from './location';
 import { isLowIncome } from './low-income';
 import { applyMassSaveRule } from './mass-save';
@@ -73,7 +73,7 @@ export function calculateStateIncentives(
   allPrograms: Programs,
   amiAndEvCreditEligibility: AMIAndEVCreditEligibility,
 ): {
-  stateIncentives: CalculatedIncentive[];
+  stateIncentives: StateIncentive[];
   coverage: APICoverage;
 } {
   if (incentives.length === 0) {
@@ -87,8 +87,8 @@ export function calculateStateIncentives(
   const eligibleIncentives = new Map<string, StateIncentive>();
   const ineligibleIncentives = new Map<string, StateIncentive>();
 
-  // Get state tax owed to filter out tax credits if no tax liability. Don't
-  // compute tax if we don't have filing status.
+  // Get state and federal taxes owed to filter out tax credits if no tax
+  // liability. Don't compute tax if we don't have filing status.
   const stateTaxOwed = request.tax_filing
     ? estimateStateTaxAmount(
         request.household_income,
@@ -96,7 +96,6 @@ export function calculateStateIncentives(
         stateId,
       )
     : null;
-  // Get tax owed to determine max potential tax savings
   const federalTaxOwed = request.tax_filing
     ? estimateFederalTaxAmount(
         location.state,
@@ -242,7 +241,7 @@ export function calculateStateIncentives(
         incentive.items.every(item => !requestItems.includes(item)));
 
     if (!exclude) {
-      stateIncentives.push({ ...incentive, eligible: true });
+      stateIncentives.push(incentive);
     }
   }
 

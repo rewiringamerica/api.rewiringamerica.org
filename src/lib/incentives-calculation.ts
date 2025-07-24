@@ -31,17 +31,13 @@ const TAX_FILINGS = new Set(Object.values(FilingStatus));
 
 IRA_INCENTIVES.forEach(incentive => Object.freeze(incentive));
 
-export type CalculatedIncentive = StateIncentive & {
-  eligible: boolean;
-};
-
 /**
  * calculateIncentives() returns something that is almost the API response
  * object, but with incentives in a format closer to the static JSON format.
  * Replace the type of the "incentives" property.
  */
 type CalculatedIncentives = Omit<APICalculatorResponse, 'incentives'> & {
-  incentives: CalculatedIncentive[];
+  incentives: StateIncentive[];
 };
 
 export type CalculateParams = Omit<APICalculatorRequest, 'location'>;
@@ -166,7 +162,7 @@ export default function calculateIncentives(
   // "pos_rebate" for backward compatibility.
   // Within each of those categories, put "percent" items first, then
   // "dollar_amount", then sort by amount with highest first.
-  const adjustedType = (i: CalculatedIncentive) =>
+  const adjustedType = (i: StateIncentive) =>
     i.payment_methods[0] === PaymentMethod.PerformanceRebate
       ? PaymentMethod.PosRebate
       : i.payment_methods[0];

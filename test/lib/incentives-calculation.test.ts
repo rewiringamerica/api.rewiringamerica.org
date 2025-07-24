@@ -11,9 +11,7 @@ import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { OwnerStatus } from '../../src/data/types/owner-status';
 import { BETA_STATES, LAUNCHED_STATES } from '../../src/data/types/states';
 import { AMIAndEVCreditEligibility } from '../../src/lib/ami-evcredit-calculation';
-import calculateIncentives, {
-  CalculatedIncentive,
-} from '../../src/lib/incentives-calculation';
+import calculateIncentives from '../../src/lib/incentives-calculation';
 import { GeographyType, ResolvedLocation } from '../../src/lib/location';
 import { calculateStateIncentives } from '../../src/lib/state-incentives-calculation';
 
@@ -237,29 +235,21 @@ test('correctly evaluates scenario "Single w/ $120k Household income in NJ"', as
   );
 
   const taxCredits = _.keyBy(tax_credit_incentives, i => i.items.join(','));
-  t.equal(taxCredits['battery_storage_installation'].eligible, true);
   t.equal(taxCredits['battery_storage_installation'].amount.number, 0.3); // will be displayed as 30%
   t.equal(taxCredits['battery_storage_installation'].start_date, '2023');
-  t.equal(taxCredits['geothermal_heating_installation'].eligible, true);
   t.equal(taxCredits['geothermal_heating_installation'].amount.number, 0.3); // will be displayed as 30%
   t.equal(taxCredits['geothermal_heating_installation'].start_date, '2022');
-  t.equal(taxCredits['electric_panel'].eligible, true);
   t.equal(taxCredits['electric_panel'].amount.number, 600);
   t.equal(taxCredits['electric_panel'].start_date, '2023');
   t.notOk('electric_vehicle_charger' in taxCredits);
-  t.equal(taxCredits['new_electric_vehicle'].eligible, true);
   t.equal(taxCredits['new_electric_vehicle'].amount.number, 7500);
   t.equal(taxCredits['new_electric_vehicle'].start_date, '2023');
-  t.equal(taxCredits[IRA_HVAC_ITEMS].eligible, true);
   t.equal(taxCredits[IRA_HVAC_ITEMS].amount.number, 2000);
   t.equal(taxCredits[IRA_HVAC_ITEMS].start_date, '2023');
-  t.equal(taxCredits['heat_pump_water_heater'].eligible, true);
   t.equal(taxCredits['heat_pump_water_heater'].amount.number, 2000);
   t.equal(taxCredits['heat_pump_water_heater'].start_date, '2023');
-  t.equal(taxCredits['rooftop_solar_installation'].eligible, true);
   t.equal(taxCredits['rooftop_solar_installation'].amount.number, 0.3);
   t.equal(taxCredits['rooftop_solar_installation'].start_date, '2022');
-  t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].eligible, true);
   t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].amount.number, 1200);
   t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].start_date, '2023');
   // everything except used EV should be eligible for tax credit (agi limit is 75k)
@@ -311,29 +301,21 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
   );
 
   const taxCredits = _.keyBy(tax_credit_incentives, i => i.items.join(','));
-  t.equal(taxCredits['battery_storage_installation'].eligible, true);
   t.equal(taxCredits['battery_storage_installation'].amount.number, 0.3); // will be displayed as 30%
   t.equal(taxCredits['battery_storage_installation'].start_date, '2023');
-  t.equal(taxCredits['geothermal_heating_installation'].eligible, true);
   t.equal(taxCredits['geothermal_heating_installation'].amount.number, 0.3); // will be displayed as 30%
   t.equal(taxCredits['geothermal_heating_installation'].start_date, '2022');
-  t.equal(taxCredits['electric_panel'].eligible, true);
   t.equal(taxCredits['electric_panel'].amount.number, 600);
   t.equal(taxCredits['electric_panel'].start_date, '2023');
   t.notOk('electric_vehicle_charger' in taxCredits);
-  t.equal(taxCredits['new_electric_vehicle'].eligible, true);
   t.equal(taxCredits['new_electric_vehicle'].amount.number, 7500);
   t.equal(taxCredits['new_electric_vehicle'].start_date, '2023');
-  t.equal(taxCredits[IRA_HVAC_ITEMS].eligible, true);
   t.equal(taxCredits[IRA_HVAC_ITEMS].amount.number, 2000);
   t.equal(taxCredits[IRA_HVAC_ITEMS].start_date, '2023');
-  t.equal(taxCredits['heat_pump_water_heater'].eligible, true);
   t.equal(taxCredits['heat_pump_water_heater'].amount.number, 2000);
   t.equal(taxCredits['heat_pump_water_heater'].start_date, '2023');
-  t.equal(taxCredits['rooftop_solar_installation'].eligible, true);
   t.equal(taxCredits['rooftop_solar_installation'].amount.number, 0.3);
   t.equal(taxCredits['rooftop_solar_installation'].start_date, '2022');
-  t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].eligible, true);
   t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].amount.number, 1200);
   t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].start_date, '2023');
   // everything except used EV should be eligible for tax credit (agi limit is 75k)
@@ -385,26 +367,19 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
   );
 
   const taxCredits = _.keyBy(tax_credit_incentives, i => i.items.join(','));
-  t.equal(taxCredits['battery_storage_installation'].eligible, true);
   t.equal(taxCredits['battery_storage_installation'].amount.number, 0.3); // will be displayed as 30%
   t.equal(taxCredits['battery_storage_installation'].start_date, '2023');
-  t.equal(taxCredits['geothermal_heating_installation'].eligible, true);
   t.equal(taxCredits['geothermal_heating_installation'].amount.number, 0.3); // will be displayed as 30%
   t.equal(taxCredits['geothermal_heating_installation'].start_date, '2022');
-  t.equal(taxCredits['electric_panel'].eligible, true);
   t.equal(taxCredits['electric_panel'].amount.number, 600);
   t.equal(taxCredits['electric_panel'].start_date, '2023');
   t.notOk('electric_vehicle_charger' in taxCredits);
-  t.equal(taxCredits[IRA_HVAC_ITEMS].eligible, true);
   t.equal(taxCredits[IRA_HVAC_ITEMS].amount.number, 2000);
   t.equal(taxCredits[IRA_HVAC_ITEMS].start_date, '2023');
-  t.equal(taxCredits['heat_pump_water_heater'].eligible, true);
   t.equal(taxCredits['heat_pump_water_heater'].amount.number, 2000);
   t.equal(taxCredits['heat_pump_water_heater'].start_date, '2023');
-  t.equal(taxCredits['rooftop_solar_installation'].eligible, true);
   t.equal(taxCredits['rooftop_solar_installation'].amount.number, 0.3);
   t.equal(taxCredits['rooftop_solar_installation'].start_date, '2022');
-  t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].eligible, true);
   t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].amount.number, 1200);
   t.equal(taxCredits[IRA_25C_WEATHERIZATION_ITEMS].start_date, '2023');
   // new and used EVs should not be eligible:
@@ -424,9 +399,8 @@ test('filters tax credits if zero tax owed', async t => {
     household_income: 0,
   });
   t.equal(
-    zeroTax.incentives.filter(
-      i =>
-        _.isEqual(i.payment_methods, [PaymentMethod.TaxCredit]) && i.eligible,
+    zeroTax.incentives.filter(i =>
+      _.isEqual(i.payment_methods, [PaymentMethod.TaxCredit]),
     ).length,
     0,
   );
@@ -440,9 +414,8 @@ test('filters tax credits if zero tax owed', async t => {
   });
 
   const [federalCredits, stateCredits] = _.partition(
-    someTax.incentives.filter(
-      i =>
-        _.isEqual(i.payment_methods, [PaymentMethod.TaxCredit]) && i.eligible,
+    someTax.incentives.filter(i =>
+      _.isEqual(i.payment_methods, [PaymentMethod.TaxCredit]),
     ),
     i => i.program in ira_programs,
   );
@@ -610,7 +583,7 @@ test('correctly matches geo groups', async t => {
     household_size: 1,
   } as const;
 
-  const massSaveFilter = (i: CalculatedIncentive) =>
+  const massSaveFilter = (i: StateIncentive) =>
     i.program.toLocaleLowerCase().startsWith('ma-masssave');
 
   const withElectric = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
@@ -648,7 +621,7 @@ test('exclude federal energy audit incentive for MA', async t => {
     tax_filing: FilingStatus.Single,
     household_size: 1,
   };
-  const filter = (i: CalculatedIncentive) =>
+  const filter = (i: StateIncentive) =>
     i.payment_methods[0] === 'tax_credit' &&
     i.items.length === 1 &&
     i.items[0] === 'energy_audit';

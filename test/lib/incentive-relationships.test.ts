@@ -54,9 +54,6 @@ test('basic test for supplying test incentive data to calculation logic', async 
   t.ok(data);
   // This user is eligible for all of the incentives.
   t.equal(data.stateIncentives.length, 6);
-  for (const incentive of data.stateIncentives) {
-    t.equal(incentive.eligible, true);
-  }
 });
 
 test('test calculation with no incentives', async t => {
@@ -251,14 +248,8 @@ test('test nested incentive relationship logic', async t => {
     AMIS,
   );
   t.ok(data);
-  for (const incentive of data.stateIncentives) {
-    if (['A', 'C', 'E', 'F'].includes(incentive.id)) {
-      t.equal(incentive.eligible, true);
-    }
-    if (['B', 'D'].includes(incentive.id)) {
-      t.equal(incentive.eligible, false);
-    }
-  }
+  const eligibleIds = data.stateIncentives.map(i => i.id).sort();
+  t.strictSame(eligibleIds, ['A', 'C', 'E', 'F']);
 });
 
 // This user is eligible for incentives B, E, and F. These incentives are each
@@ -284,11 +275,8 @@ test('test combined maximum savings logic', async t => {
   );
   t.ok(data);
   // Check that the user is eligible for B, E, and F.
-  for (const incentive of data.stateIncentives) {
-    if (['B', 'E', 'F'].includes(incentive.id)) {
-      t.equal(incentive.eligible, true);
-    }
-  }
+  const eligibleIds = data.stateIncentives.map(i => i.id).sort();
+  t.strictSame(eligibleIds, ['B', 'E', 'F']);
 });
 
 test('test incentive relationships contain no circular dependencies', async tap => {
