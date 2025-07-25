@@ -18,20 +18,18 @@ import {
   APICalculatorRequest,
   APICalculatorResponse,
 } from '../schemas/v1/calculator-endpoint';
-import { APISavings, addSavings, zeroSavings } from '../schemas/v1/savings';
 import { AMIAndEVCreditEligibility } from './ami-evcredit-calculation';
 import { InvalidInputError, UnexpectedInputError } from './error';
 import { ResolvedLocation } from './location';
 import { roundCents } from './rounding';
 import {
-  calculateStateIncentivesAndSavings,
+  calculateStateIncentives,
   getAllStateIncentives,
   getStateDataPartners,
   getStateIncentiveRelationships,
 } from './state-incentives-calculation';
 import { estimateFederalTaxAmount } from './tax-brackets';
 
-const MAX_POS_SAVINGS = 14000;
 const OWNER_STATUSES = new Set(Object.values(OwnerStatus));
 const TAX_FILINGS = new Set(Object.values(FilingStatus));
 
@@ -48,8 +46,6 @@ export type CalculatedIncentive = (IRAIncentive | StateIncentive) & {
  */
 type CalculatedIncentives = Omit<APICalculatorResponse, 'incentives'> & {
   incentives: CalculatedIncentive[];
-  /** Only used in v0 for now */
-  savings: APISavings;
 };
 
 export type CalculateParams = Omit<APICalculatorRequest, 'location'>;
@@ -60,10 +56,7 @@ function calculateFederalIncentivesAndSavings(
   solarSystemCost: number,
   excludeIRARebates: boolean,
   { tax_filing, owner_status, household_income, items }: CalculateParams,
-): {
-  federalIncentives: CalculatedIncentive[];
-  savings: APISavings;
-} {
+): CalculatedIncentive[] {
   // Get tax owed to determine max potential tax savings
   const tax = tax_filing
     ? estimateFederalTaxAmount(location.state, tax_filing, household_income)
@@ -198,50 +191,7 @@ function calculateFederalIncentivesAndSavings(
     ...dedupedIneligibleIncentives,
   ];
 
-  //
-  // Loop through every eligible incentive and add any with an "immediate" dollar value
-  //
-  const savings: APISavings = zeroSavings();
-
-  for (const item of eligibleIncentives) {
-    if (item.payment_methods[0] === 'pos_rebate') {
-      savings.pos_rebate += item.amount.number!;
-    } else if (item.payment_methods[0] === 'performance_rebate') {
-      savings.performance_rebate += item.amount.number!;
-    } else if (item.payment_methods[0] === 'tax_credit') {
-      // if this is a dollar amount, just add it up:
-      if (item.amount.type === 'dollar_amount') {
-        savings.tax_credit += item.amount.number!;
-      } else if (item.amount.representative) {
-        // otherwise, it's a percentage. If there's a representative amount, use that:
-        savings.tax_credit += item.amount.representative;
-      }
-    } else {
-      throw new UnexpectedInputError(
-        `Unknown item payment_method: ${item.payment_methods[0]}`,
-      );
-    }
-  }
-
-  // You can't save more than tax owed. Choose the lesser of tax owed vs tax
-  // savings. If we couldn't compute tax because no filing status was passed,
-  // leave the number as-is. (It will never actually be seen; the number is only
-  // returned in API v0, which requires filing status.)
-  if (tax && savings.tax_credit > tax.taxOwed) {
-    savings.tax_credit = tax.taxOwed;
-  }
-
-  // The max POS savings is $14,000 if you're under 150% ami, otherwise 0
-  savings.pos_rebate =
-    household_income < amiAndEvCreditEligibility.computedAMI150 &&
-    owner_status !== 'renter'
-      ? Math.min(MAX_POS_SAVINGS, savings.pos_rebate)
-      : 0;
-
-  return {
-    federalIncentives: calculatedIncentives,
-    savings,
-  };
+  return calculatedIncentives;
 }
 
 export default function calculateIncentives(
@@ -348,7 +298,6 @@ export default function calculateIncentives(
   const isOver150Ami = !isUnder150Ami;
 
   const incentives: CalculatedIncentive[] = [];
-  let savings: APISavings = zeroSavings();
   let coverage: APICoverage = {
     state: null,
     utility: null,
@@ -362,8 +311,7 @@ export default function calculateIncentives(
       excludeIRARebates,
       request,
     );
-    incentives.push(...federal.federalIncentives);
-    savings = addSavings(savings, federal.savings);
+    incentives.push(...federal);
   }
 
   if (
@@ -378,7 +326,7 @@ export default function calculateIncentives(
     const allStateIncentives = getAllStateIncentives(state_id, request);
     const stateIncentiveRelationships =
       getStateIncentiveRelationships(state_id);
-    const state = calculateStateIncentivesAndSavings(
+    const state = calculateStateIncentives(
       location,
       request,
       allStateIncentives,
@@ -388,7 +336,6 @@ export default function calculateIncentives(
       amiAndEvCreditEligibility,
     );
     incentives.push(...state.stateIncentives);
-    savings = addSavings(savings, state.savings);
     coverage = state.coverage;
   }
 
@@ -434,7 +381,6 @@ export default function calculateIncentives(
     coverage,
     data_partners,
     location,
-    savings,
     incentives: sortedIncentives,
   };
 }

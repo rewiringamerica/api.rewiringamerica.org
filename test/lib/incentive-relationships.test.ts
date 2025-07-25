@@ -4,7 +4,7 @@ import { FilingStatus } from '../../src/data/tax_brackets';
 import { OwnerStatus } from '../../src/data/types/owner-status';
 import { buildRelationshipGraph } from '../../src/lib/incentive-relationship-calculation';
 import { ResolvedLocation } from '../../src/lib/location';
-import { calculateStateIncentivesAndSavings } from '../../src/lib/state-incentives-calculation';
+import { calculateStateIncentives } from '../../src/lib/state-incentives-calculation';
 import { incentiveRelationshipsContainCycle } from '../data/cycles';
 import {
   TEST_INCENTIVE_RELATIONSHIPS,
@@ -34,7 +34,7 @@ const AMIS = {
 // This is a basic test to set up supplying test data to the calculator logic.
 // This checks incentive eligibility with no relationship logic included.
 test('basic test for supplying test incentive data to calculation logic', async t => {
-  const data = calculateStateIncentivesAndSavings(
+  const data = calculateStateIncentives(
     LOCATION,
     {
       owner_status: OwnerStatus.Homeowner,
@@ -54,14 +54,13 @@ test('basic test for supplying test incentive data to calculation logic', async 
   t.ok(data);
   // This user is eligible for all of the incentives.
   t.equal(data.stateIncentives.length, 6);
-  t.equal(data.savings.account_credit, 600);
   for (const incentive of data.stateIncentives) {
     t.equal(incentive.eligible, true);
   }
 });
 
 test('test calculation with no incentives', async t => {
-  const data = calculateStateIncentivesAndSavings(
+  const data = calculateStateIncentives(
     LOCATION,
     {
       owner_status: OwnerStatus.Homeowner,
@@ -92,7 +91,7 @@ test('test calculation with no incentives', async t => {
 // 3) C and F and mutually exclusive and C supersedes F, but since the user is
 //    not eligible for C, they can still be eligible for F.
 test('test incentive relationship logic', async t => {
-  const data = calculateStateIncentivesAndSavings(
+  const data = calculateStateIncentives(
     LOCATION,
     {
       owner_status: OwnerStatus.Renter,
@@ -126,7 +125,7 @@ test('test incentive relationship logic', async t => {
 // 4) A supersedes E, so they are still eligible for E.
 // 5) E supersedes F, so they are not eligible for F.
 test('test more complex incentive relationship logic', async t => {
-  const data = calculateStateIncentivesAndSavings(
+  const data = calculateStateIncentives(
     LOCATION,
     {
       owner_status: OwnerStatus.Renter,
@@ -149,7 +148,6 @@ test('test more complex incentive relationship logic', async t => {
     data.stateIncentives.map(i => i.id),
     ['E'],
   );
-  t.equal(data.savings.account_credit, 100);
 });
 
 // This user is a renter. Based on this, they are eligible for incentives
@@ -163,7 +161,7 @@ test('test more complex incentive relationship logic', async t => {
 //    not eligible for A, they can still be eligible for B.
 // 4) F is not affected by the relationships, so they are eligible for F.
 test('test incentive relationship and combined max value logic', async t => {
-  const data = calculateStateIncentivesAndSavings(
+  const data = calculateStateIncentives(
     LOCATION,
     {
       owner_status: OwnerStatus.Renter,
@@ -185,8 +183,6 @@ test('test incentive relationship and combined max value logic', async t => {
     data.stateIncentives.map(i => i.id),
     ['E', 'F', 'B'],
   );
-  // There is a combined max value of $200 for A, B, C, D, E, and F.
-  t.equal(data.savings.account_credit, 200);
 });
 
 // Same as above except for income.
@@ -202,7 +198,7 @@ test('test incentive relationship and combined max value logic', async t => {
 //    because their income was too high.
 // 4) F is not affected by the relationships, so they are eligible for F.
 test('test incentive relationship and permanent ineligibility criteria', async t => {
-  const data = calculateStateIncentivesAndSavings(
+  const data = calculateStateIncentives(
     LOCATION,
     {
       owner_status: OwnerStatus.Renter,
@@ -225,8 +221,6 @@ test('test incentive relationship and permanent ineligibility criteria', async t
     data.stateIncentives.map(i => i.id),
     ['E', 'F'],
   );
-  // There is a combined max value of $200 for A, B, C, D, E, and F.
-  t.equal(data.savings.account_credit, 200);
 });
 
 // This user is a renter. Based on this, they are eligible for incentives
@@ -239,7 +233,7 @@ test('test incentive relationship and permanent ineligibility criteria', async t
 // 3) E requires either A and C or B and D. Since the user is eligible for both
 //    A and C, they will remain eligible for E.
 test('test nested incentive relationship logic', async t => {
-  const data = calculateStateIncentivesAndSavings(
+  const data = calculateStateIncentives(
     LOCATION,
     {
       owner_status: OwnerStatus.Renter,
@@ -271,7 +265,7 @@ test('test nested incentive relationship logic', async t => {
 // worth $100 and belong to a group with a maximum value of $200, so the final
 // savings value is $200.
 test('test combined maximum savings logic', async t => {
-  const data = calculateStateIncentivesAndSavings(
+  const data = calculateStateIncentives(
     LOCATION,
     {
       owner_status: OwnerStatus.Renter,
@@ -295,9 +289,6 @@ test('test combined maximum savings logic', async t => {
       t.equal(incentive.eligible, true);
     }
   }
-
-  // There is a combined max value of $200 for A, B, C, D, E, and F.
-  t.equal(data.savings.account_credit, 200);
 });
 
 test('test incentive relationships contain no circular dependencies', async tap => {

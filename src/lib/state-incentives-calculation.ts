@@ -1,6 +1,6 @@
 import { LocalDate, ZoneId } from '@js-joda/core';
 import '@js-joda/timezone';
-import _, { min } from 'lodash';
+import _ from 'lodash';
 import { AuthoritiesByType, AuthorityType } from '../data/authorities';
 import { DATA_PARTNERS_BY_STATE } from '../data/data_partners';
 import { GEO_GROUPS_BY_STATE } from '../data/geo_groups';
@@ -14,20 +14,16 @@ import {
   STATE_INCENTIVES_BY_STATE,
   StateIncentive,
 } from '../data/state_incentives';
-import { AmountType } from '../data/types/amount';
 import { APICoverage } from '../data/types/coverage';
 import { PaymentMethod } from '../data/types/incentive-types';
 import { OwnerStatus } from '../data/types/owner-status';
 import { Program } from '../data/types/program';
-import { APISavings, zeroSavings } from '../schemas/v1/savings';
 import { AMIAndEVCreditEligibility } from './ami-evcredit-calculation';
 import { lastDayOf } from './dates';
 import {
-  CombinedValue,
   RelationshipMaps,
   buildExclusionMaps,
   buildPrerequisiteMaps,
-  getCombinedMaximums,
   isExcluded,
   makeIneligible,
   meetsPrerequisites,
@@ -65,7 +61,7 @@ export function getStateDataPartners(
   return DATA_PARTNERS_BY_STATE[stateId] || {};
 }
 
-export function calculateStateIncentivesAndSavings(
+export function calculateStateIncentives(
   location: ResolvedLocation,
   request: CalculateParams,
   incentives: StateIncentive[],
@@ -75,13 +71,11 @@ export function calculateStateIncentivesAndSavings(
   amiAndEvCreditEligibility: AMIAndEVCreditEligibility,
 ): {
   stateIncentives: CalculatedIncentive[];
-  savings: APISavings;
   coverage: APICoverage;
 } {
   if (incentives.length === 0) {
     return {
       stateIncentives: [],
-      savings: zeroSavings(),
       coverage: { state: null, utility: null },
     };
   }
@@ -90,9 +84,8 @@ export function calculateStateIncentivesAndSavings(
   const eligibleIncentives = new Map<string, StateIncentive>();
   const ineligibleIncentives = new Map<string, StateIncentive>();
 
-  // Get state tax owed to determine max potential tax savings and filter out
-  // tax credits if no tax liability. Don't compute tax if we don't have
-  // filing status.
+  // Get state tax owed to filter out tax credits if no tax liability. Don't
+  // compute tax if we don't have filing status.
   const stateTaxOwed = request.tax_filing
     ? estimateStateTaxAmount(
         request.household_income,
@@ -170,10 +163,6 @@ export function calculateStateIncentivesAndSavings(
     applyMassSaveRule(eligibleIncentives, ineligibleIncentives, allPrograms);
   }
 
-  // We'll create a map from incentive ID to an object storing the remaining
-  // value for its incentive grouping (if it has one).
-  let groupedIncentives = new Map<string, CombinedValue>();
-
   if (incentiveRelationships !== undefined) {
     const prerequisiteMaps = buildPrerequisiteMaps(incentiveRelationships);
     const exclusionMaps = buildExclusionMaps(incentiveRelationships);
@@ -207,9 +196,6 @@ export function calculateStateIncentivesAndSavings(
         makeIneligible(incentiveId, maps);
       }
     }
-
-    // Now that we know final eligibility, enforce combined maximum values.
-    groupedIncentives = getCombinedMaximums(incentiveRelationships);
   }
 
   const stateIncentives = [];
@@ -230,31 +216,8 @@ export function calculateStateIncentivesAndSavings(
     }
   }
 
-  const savings: APISavings = zeroSavings();
-  stateIncentives.forEach(item => {
-    let amount = item.amount.representative
-      ? item.amount.representative
-      : item.amount.type === AmountType.DollarAmount
-        ? item.amount.number
-        : 0;
-    // Check any incentive groupings for this item to make sure it has remaining eligible value.
-    if (groupedIncentives.has(item.id)) {
-      const combinedValue = groupedIncentives.get(item.id)!;
-      amount = min([amount, combinedValue.remainingValue])!;
-      combinedValue.remainingValue -= amount;
-    }
-
-    savings[item.payment_methods[0]] += amount;
-  });
-
-  // You can't save more than tax owed. Choose the lesser of state tax owed vs tax credit savings
-  savings.tax_credit = stateTaxOwed
-    ? Math.min(stateTaxOwed.taxOwed, savings.tax_credit)
-    : savings.tax_credit;
-
   return {
     stateIncentives,
-    savings,
     coverage: {
       state: stateId,
       utility: request.utility ?? null,
