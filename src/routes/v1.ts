@@ -5,12 +5,11 @@ import { AUTHORITIES_BY_STATE } from '../data/authorities';
 import { parseLoanProgramJSON } from '../data/loan_programs';
 import { LOCALES } from '../data/locale';
 import { parseProgramJSON, PROGRAMS } from '../data/programs';
+import { StateIncentive } from '../data/state_incentives';
 import { computeAMIAndEVCreditEligibility } from '../lib/ami-evcredit-calculation';
 import { InvalidInputError } from '../lib/error';
 import { t, tr } from '../lib/i18n';
-import calculateIncentives, {
-  CalculatedIncentive,
-} from '../lib/incentives-calculation';
+import calculateIncentives from '../lib/incentives-calculation';
 import getLoanProgramsForLocation from '../lib/loan-programs-for-location';
 import { resolveLocation } from '../lib/location';
 import getProgramsForLocation from '../lib/programs-for-location';
@@ -40,7 +39,7 @@ import { API_STATES_SCHEMA } from '../schemas/v1/states-endpoint';
 import { API_UTILITIES_SCHEMA } from '../schemas/v1/utilities-endpoint';
 
 function transformIncentives(
-  incentives: CalculatedIncentive[],
+  incentives: StateIncentive[],
   language: keyof typeof LOCALES,
 ): APIIncentive[] {
   return incentives.map(incentive => ({
@@ -111,12 +110,10 @@ export default async function (
           location,
           amiAndEvCreditEligibility,
           { ...request.query },
-          true,
         );
-        const eligibleIncentives = result.incentives.filter(i => i.eligible);
         const translated = {
           ...result,
-          incentives: transformIncentives(eligibleIncentives, language),
+          incentives: transformIncentives(result.incentives, language),
         };
 
         reply.status(200).type('application/json').send(translated);

@@ -28,12 +28,15 @@ import {
   makeIneligible,
   meetsPrerequisites,
 } from './incentive-relationship-calculation';
-import { CalculateParams, CalculatedIncentive } from './incentives-calculation';
+import { CalculateParams } from './incentives-calculation';
 import { ResolvedLocation } from './location';
 import { isLowIncome } from './low-income';
 import { applyMassSaveRule } from './mass-save';
 import { isStateIncluded } from './states';
-import { estimateStateTaxAmount } from './tax-brackets';
+import {
+  estimateFederalTaxAmount,
+  estimateStateTaxAmount,
+} from './tax-brackets';
 
 export function getAllStateIncentives(
   stateId: string,
@@ -70,7 +73,7 @@ export function calculateStateIncentives(
   allPrograms: Programs,
   amiAndEvCreditEligibility: AMIAndEVCreditEligibility,
 ): {
-  stateIncentives: CalculatedIncentive[];
+  stateIncentives: StateIncentive[];
   coverage: APICoverage;
 } {
   if (incentives.length === 0) {
@@ -84,13 +87,20 @@ export function calculateStateIncentives(
   const eligibleIncentives = new Map<string, StateIncentive>();
   const ineligibleIncentives = new Map<string, StateIncentive>();
 
-  // Get state tax owed to filter out tax credits if no tax liability. Don't
-  // compute tax if we don't have filing status.
+  // Get state and federal taxes owed to filter out tax credits if no tax
+  // liability. Don't compute tax if we don't have filing status.
   const stateTaxOwed = request.tax_filing
     ? estimateStateTaxAmount(
         request.household_income,
         request.tax_filing,
         stateId,
+      )
+    : null;
+  const federalTaxOwed = request.tax_filing
+    ? estimateFederalTaxAmount(
+        location.state,
+        request.tax_filing,
+        request.household_income,
       )
     : null;
 
@@ -116,17 +126,36 @@ export function calculateStateIncentives(
       eligible = false;
     }
 
+    // MA residents are already eligible for free energy audits, so do not
+    // include that federal incentive
+    if (
+      location.state === 'MA' &&
+      program.authority_type === AuthorityType.Federal &&
+      incentive.items.length === 1 &&
+      incentive.items[0] === 'energy_audit'
+    ) {
+      eligible = false;
+    }
+
+    if (incentive.program === 'alternativeFuelVehicleRefuelingPropertyCredit') {
+      // Federal EV charger credit has some special eligibility rules
+      eligible = amiAndEvCreditEligibility.evCreditEligible;
+    }
+
     if (!incentive.owner_status.includes(request.owner_status as OwnerStatus)) {
       eligible = false;
     }
 
     // Filter out incentives that are only payable as a tax credit, if we were
-    // able to compute the user's state tax liability and it's zero
-    if (
-      _.isEqual(incentive.payment_methods, [PaymentMethod.TaxCredit]) &&
-      stateTaxOwed?.taxOwed === 0
-    ) {
-      eligible = false;
+    // able to compute the user's tax liability and it's zero
+    if (_.isEqual(incentive.payment_methods, [PaymentMethod.TaxCredit])) {
+      const taxOwed =
+        program.authority_type === AuthorityType.Federal
+          ? federalTaxOwed?.taxOwed
+          : stateTaxOwed?.taxOwed;
+      if (taxOwed === 0) {
+        eligible = false;
+      }
     }
 
     if (incentive.low_income) {
@@ -212,7 +241,7 @@ export function calculateStateIncentives(
         incentive.items.every(item => !requestItems.includes(item)));
 
     if (!exclude) {
-      stateIncentives.push({ ...incentive, eligible: true });
+      stateIncentives.push(incentive);
     }
   }
 
@@ -248,10 +277,13 @@ function ineligibleByLocationOrUtility(
     return true;
   }
 
+  // Federal incentives have no authority, and need no geography check
   const authority =
-    stateAuthorities[program.authority_type][program.authority!];
+    program.authority_type !== AuthorityType.Federal && program.authority
+      ? stateAuthorities[program.authority_type][program.authority]
+      : null;
 
-  if (authority.geography_id) {
+  if (authority?.geography_id) {
     // One of the resolved location's geographies must match the authority's
     // geography. This is permissive: the user's location is not guaranteed to
     // be within any one of the resolved geographies. For example, they may have
@@ -297,7 +329,8 @@ function ineligibleByLocationOrUtility(
   if (
     program.authority_type !== AuthorityType.Utility &&
     program.authority_type !== AuthorityType.GasUtility &&
-    !authority.geography_id &&
+    program.authority_type !== AuthorityType.Federal &&
+    !authority?.geography_id &&
     !incentive.eligible_geo_group
   ) {
     // Unit tests make sure this doesn't happen
