@@ -5,16 +5,11 @@ import {
   AuthorityType,
 } from '../../src/data/authorities';
 import { IRA_INCENTIVES } from '../../src/data/ira_incentives';
-import {
-  IRA_STATE_SAVINGS,
-  SCHEMA as ISS_SCHEMA,
-} from '../../src/data/ira_state_savings';
 import { LOCALES, SCHEMA as L_SCHEMA } from '../../src/data/locale';
 import {
   LOW_INCOME_THRESHOLDS,
   SCHEMA as LOW_INCOME_THRESHOLDS_SCHEMA,
 } from '../../src/data/low_income_thresholds';
-import { SOLAR_PRICES, SCHEMA as SP_SCHEMA } from '../../src/data/solar_prices';
 import {
   INCENTIVE_RELATIONSHIPS_BY_STATE,
   INCENTIVE_RELATIONSHIPS_SCHEMA,
@@ -51,10 +46,8 @@ const SPANISH_DESC_CHAR_LIMIT = 400;
 
 const TESTS = [
   [STATE_SCHEMA, IRA_INCENTIVES, 'ira_incentives'],
-  [ISS_SCHEMA, IRA_STATE_SAVINGS, 'ira_state_savings'],
   [L_SCHEMA, LOCALES.en, 'en locale'],
   [L_SCHEMA, LOCALES.es, 'es locale'],
-  [SP_SCHEMA, SOLAR_PRICES, 'solar_prices'],
   [TB_SCHEMA, TAX_BRACKETS, 'tax_brackets'],
   [AUTHORITIES_SCHEMA, AUTHORITIES_BY_STATE, 'authorities'],
   [
