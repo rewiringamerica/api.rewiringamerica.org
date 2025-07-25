@@ -278,10 +278,10 @@ function ineligibleByLocationOrUtility(
   }
 
   // Federal incentives have no authority, and need no geography check
-
-  const authority = program.authority
-    ? stateAuthorities[program.authority_type][program.authority]
-    : null;
+  const authority =
+    program.authority_type !== AuthorityType.Federal && program.authority
+      ? stateAuthorities[program.authority_type][program.authority]
+      : null;
 
   if (authority?.geography_id) {
     // One of the resolved location's geographies must match the authority's
