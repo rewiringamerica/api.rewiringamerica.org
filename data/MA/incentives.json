@@ -6563,8 +6563,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$750/ton rebate for a qualifying ground source heat pump.",
-      "es": "Reembolso de $750 por tonelada para bombas de calor geotérmicas que califiquen."
+      "en": "$750/ton rebate for a qualifying ground source heat pump, limit 3 tons.",
+      "es": "Reembolso de $750 por tonelada para bombas de calor de fuente terrestre calificada, límite de 3 toneladas."
     },
     "end_date": "2025-12-31",
     "url": {
@@ -7546,8 +7546,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$750/ton rebate for a qualifying ground source heat pump.",
-      "es": "Reembolso de $750 por tonelada para bombas de calor geotérmicas que califiquen."
+      "en": "$750/ton rebate for a qualifying ground source heat pump, limit 3 tons.",
+      "es": "Reembolso de $750/tonelada para una bomba de calor de fuente terrestre calificada, límite de 3 toneladas."
     },
     "end_date": "2025-12-31",
     "url": {
@@ -7560,16 +7560,14 @@
       "account_credit"
     ],
     "items": [
-      "air_sealing",
       "attic_or_roof_insulation",
       "basement_insulation",
       "crawlspace_insulation",
-      "duct_sealing",
       "efficiency_rebates",
       "floor_insulation",
-      "other_weatherization",
       "wall_insulation",
-      "energy_audit"
+      "energy_audit",
+      "other_insulation"
     ],
     "program": "ma-boylston-nextzero",
     "amount": {
@@ -15238,6 +15236,68 @@
     "url": {
       "en": "https://www.masssave.com/en/residential/programs-and-services/income-based-offers/income-eligible-programs",
       "es": "https://www.masssave.com/en/residential/programs-and-services/income-based-offers/income-eligible-programs"
+    }
+  },
+  {
+    "id": "MA-604",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "efficiency_rebates",
+      "energy_audit",
+      "air_sealing",
+      "other_weatherization"
+    ],
+    "program": "ma-boylston-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate of blower door test and air sealing costs up to $500 for residential customers, after an energy audit.",
+      "es": "Reembolso del 50 % en los costos de prueba de puerta soplante y sellado de aire de hasta $500 para clientes residenciales, después de una auditoría energética."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31",
+    "url": {
+      "en": "https://nextzero.org/boylston/"
+    }
+  },
+  {
+    "id": "MA-605",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "efficiency_rebates",
+      "energy_audit",
+      "other_weatherization",
+      "duct_sealing"
+    ],
+    "program": "ma-boylston-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate of duct sealing costs up to $500 for residential customers, after an energy audit.",
+      "es": "Reembolso del 50% en los costos de sellado de conductos de hasta $500 para clientes residenciales, después de una auditoría energética."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31",
+    "url": {
+      "en": "https://nextzero.org/boylston/"
     }
   }
 ]
