@@ -120,7 +120,7 @@
     ],
     "short_description": {
       "en": "$500 rebate for a qualifying heat pump replacement.",
-      "es": "Reembolso de $500 por el reemplazo de una bomba de calor que califique."
+      "es": "Reembolso de $500 por el reemplazo de una bomba de calor que cumpla con los requisitos."
     },
     "url": {
       "en": "https://www.duke-energy.com/-/media/pdfs/for-your-home/hei-rebates-forms/hei-def-hvac-rebates-handout.pdf?rev=5e9e8bd0e74d4499b34ce0666fafbae3"
@@ -132,7 +132,9 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_water_heater"
+      "heat_pump_water_heater",
+      "electric_wiring",
+      "energy_audit"
     ],
     "program": "fl_dukeEnergyFlorida_dukeEnergyFloridaHomeEnergyImprovementProgram",
     "amount": {
@@ -145,8 +147,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $800 rebate on a new heat pump water heater. ",
-      "es": "Reembolso de hasta $800 en un nuevo calentador de agua con bomba de calor. "
+      "en": "Up to $800 rebate on a new heat pump water heater.",
+      "es": "Reembolso de hasta $800 en un nuevo calentador de agua con bomba de calor."
     },
     "url": {
       "en": "https://www.duke-energy.com/home/products/home-energy-improvement/heat-pump-water-heater"
@@ -173,7 +175,7 @@
     ],
     "short_description": {
       "en": "$40-$550 rebate on qualifying heat pump systems. ",
-      "es": "Reembolso de $40 a $550 en sistemas de bomba de calor calificados. "
+      "es": "Reembolso de $40 a $550 para sistemas de bomba de calor que cumplan con los requisitos. "
     },
     "url": {
       "en": "https://www.tampaelectric.com/residential/saveenergy/heatingcooling/"
@@ -203,6 +205,58 @@
     },
     "url": {
       "en": "https://www.tampaelectric.com/residential/saveenergy/heatingcooling/"
+    }
+  },
+  {
+    "id": "FL-9",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "fl_jea_jEAHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350 rebate on an ENERGY STAR certified heat pump water heater. ",
+      "es": "Reembolso de $350 en un calentador de agua con bomba de calor con certificación ENERGY STAR. "
+    },
+    "end_date": "2025-09-30",
+    "url": {
+      "en": "https://www.jea.com/heatpumpwaterheaters"
+    }
+  },
+  {
+    "id": "FL-10",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "fl_jea_jEAHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 rebate on qualifying ENERGY STAR-certified HVAC systems. ",
+      "es": "Reembolso de $200 en sistemas HVAC con certificación ENERGY STAR calificados. "
+    },
+    "url": {
+      "en": "https://www.jea.com/residential_customers/residential_rebates/heating_and_cooling_rebates/"
     }
   }
 ]
