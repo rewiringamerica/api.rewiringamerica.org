@@ -23,7 +23,7 @@ const GENERAL_IMPORTS = [
 
 const CSV_IMPORTS = [
   '/geographies',
-  '/zip-to-utility',
+  '/zip-to-geography-approx',
 ];
 
 function pathToFileName(path: string) {

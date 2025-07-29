@@ -96,7 +96,7 @@ test('incentives either have an authority with geography, or eligible_geo_group'
       const stateAuthorities: AuthoritiesByType = AUTHORITIES_BY_STATE[state];
       const authority =
         stateAuthorities[program.authority_type][program.authority!];
-      if (!authority.geography_id) {
+      if (!authority.geography_ids) {
         t.hasProp(
           incentive,
           'eligible_geo_group',

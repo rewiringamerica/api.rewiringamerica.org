@@ -1,12 +1,16 @@
 import * as turf from '@turf/turf';
 import { Census, FieldOption } from 'geocodio-library-node';
 import { Database } from 'sqlite';
+import { NO_GAS_UTILITY } from '../data/authorities';
+import { InvalidInputError } from './error';
 import { geocoder } from './geocoder';
 
 export enum GeographyType {
   State = 'state',
   County = 'county',
   Custom = 'custom',
+  ElectricTerritory = 'electric_territory',
+  GasTerritory = 'gas_territory',
 }
 
 type DbGeography = {
@@ -73,12 +77,42 @@ async function getZctaFromZip(
   return row?.zcta;
 }
 
+async function resolveUtility(
+  db: Database,
+  state: string,
+  type: GeographyType.ElectricTerritory | GeographyType.GasTerritory,
+  key: string,
+): Promise<Geography> {
+  const dbResult = await db.get<Geography>(
+    `SELECT *, 1.0 as intersection_proportion
+    FROM geographies
+    WHERE key = ? and type = ? and state = ?`,
+    key,
+    type,
+    state,
+  );
+
+  if (!dbResult) {
+    throw new InvalidInputError(
+      `Invalid utility "${key}".`,
+      type === GeographyType.ElectricTerritory ? 'utility' : 'gas_utility',
+    );
+  }
+
+  return dbResult;
+}
+
 export async function resolveLocation(
   db: Database,
-  zipOrAddress: { zip: string } | { address: string },
+  request: ({ zip: string } | { address: string }) & {
+    utility?: string;
+    gas_utility?: string;
+  },
 ): Promise<ResolvedLocation | null> {
-  if ('zip' in zipOrAddress) {
-    const zcta = await getZctaFromZip(db, zipOrAddress.zip);
+  const resolved: ResolvedLocation = { state: '', zcta: '', geographies: [] };
+
+  if ('zip' in request) {
+    const zcta = await getZctaFromZip(db, request.zip);
     if (!zcta) {
       return null;
     }
@@ -101,13 +135,11 @@ export async function resolveLocation(
       return null;
     }
 
-    return {
-      state: stateGeo.state!,
-      zcta,
-      geographies,
-    };
+    resolved.state = stateGeo.state!;
+    resolved.zcta = zcta;
+    resolved.geographies.push(...geographies);
   } else {
-    const { address } = zipOrAddress;
+    const { address } = request;
     let response;
 
     try {
@@ -185,15 +217,38 @@ export async function resolveLocation(
         geographies.push({ ...geo, intersection_proportion: 1.0 }),
       );
 
-    return {
-      state: result.address_components.state!,
-      zcta:
-        (await getZctaFromZip(db, result.address_components.zip!)) ??
-        result.address_components.zip!,
-      geographies,
-      tract_geoid: GEOCODIO_LOW_PRECISION.has(result.accuracy_type)
-        ? undefined
-        : censusInfo.county_fips + censusInfo.tract_code,
-    };
+    resolved.state = result.address_components.state!;
+    resolved.zcta =
+      (await getZctaFromZip(db, result.address_components.zip!)) ??
+      result.address_components.zip!;
+    resolved.geographies.push(...geographies);
+    resolved.tract_geoid = GEOCODIO_LOW_PRECISION.has(result.accuracy_type)
+      ? undefined
+      : censusInfo.county_fips + censusInfo.tract_code;
   }
+
+  // Look up the geography records for the passed utilities
+  if (request.utility) {
+    resolved.geographies.unshift(
+      await resolveUtility(
+        db,
+        resolved.state,
+        GeographyType.ElectricTerritory,
+
+        request.utility,
+      ),
+    );
+  }
+  if (request.gas_utility && request.gas_utility !== NO_GAS_UTILITY) {
+    resolved.geographies.unshift(
+      await resolveUtility(
+        db,
+        resolved.state,
+        GeographyType.GasTerritory,
+        request.gas_utility,
+      ),
+    );
+  }
+
+  return resolved;
 }

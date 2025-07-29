@@ -108,7 +108,6 @@ export function calculateStateIncentives(
         incentive,
         program,
         stateAuthorities,
-        request,
         location,
       )
     ) {
@@ -241,37 +240,21 @@ function ineligibleByLocationOrUtility(
   incentive: StateIncentive,
   program: Program,
   stateAuthorities: AuthoritiesByType,
-  request: CalculateParams,
   location: ResolvedLocation,
 ): boolean {
-  if (
-    program.authority_type === AuthorityType.Utility &&
-    program.authority !== request.utility
-  ) {
-    // Don't include utility incentives at all if they weren't requested, or
-    // if they're for the wrong utility.
-    return true;
-  }
-
-  if (
-    program.authority_type === AuthorityType.GasUtility &&
-    program.authority !== request.gas_utility
-  ) {
-    return true;
-  }
-
   // Federal incentives have no authority, and need no geography check
   const authority =
     program.authority_type !== AuthorityType.Federal && program.authority
       ? stateAuthorities[program.authority_type][program.authority]
       : null;
 
-  if (authority?.geography_id) {
+  if (authority?.geography_ids) {
     // One of the resolved location's geographies must match the authority's
     // geography. This is permissive: the user's location is not guaranteed to
     // be within any one of the resolved geographies. For example, they may have
     // entered a ZIP code which only partially overlaps with a county.
-    if (!location.geographies.map(g => g.id).includes(authority.geography_id)) {
+    const locationGeoIds = location.geographies.map(g => g.id);
+    if (!_.some(authority.geography_ids, id => locationGeoIds.includes(id))) {
       return true;
     }
   }
@@ -281,30 +264,30 @@ function ineligibleByLocationOrUtility(
     const group =
       GEO_GROUPS_BY_STATE[location.state]![incentive.eligible_geo_group];
 
-    // The request params must match ANY of the geo group's member authorities
-    const matchesUtility =
-      group.utilities &&
-      request.utility &&
-      group.utilities.includes(request.utility);
-    const matchesGasUtility =
-      group.gas_utilities &&
-      request.gas_utility &&
-      group.gas_utilities.includes(request.gas_utility);
-
-    const groupGeographyIds = [
-      ...(group.cities?.map(id => stateAuthorities.city[id]) || []),
-      ...(group.counties?.map(id => stateAuthorities.county[id]) || []),
-    ]
-      .map(authority => authority.geography_id)
-      .filter(id => id !== undefined);
+    const groupGeographyIds = new Set(
+      _.flattenDeep([
+        (group.utilities || []).map(
+          id => stateAuthorities.utility[id].geography_ids || [],
+        ),
+        (group.gas_utilities || []).map(
+          id => stateAuthorities.gas_utility[id].geography_ids || [],
+        ),
+        (group.cities || []).map(
+          id => stateAuthorities.city[id].geography_ids || [],
+        ),
+        (group.counties || []).map(
+          id => stateAuthorities.county[id].geography_ids || [],
+        ),
+      ]),
+    );
 
     // This is permissive: the user's location is not guaranteed to be within
     // any particular one of the resolved location's geographies.
     const matchesGeography = location.geographies.some(g =>
-      groupGeographyIds.includes(g.id),
+      groupGeographyIds.has(g.id),
     );
 
-    if (!matchesUtility && !matchesGasUtility && !matchesGeography) {
+    if (!matchesGeography) {
       return true;
     }
   }
@@ -313,7 +296,7 @@ function ineligibleByLocationOrUtility(
     program.authority_type !== AuthorityType.Utility &&
     program.authority_type !== AuthorityType.GasUtility &&
     program.authority_type !== AuthorityType.Federal &&
-    !authority?.geography_id &&
+    !authority?.geography_ids &&
     !incentive.eligible_geo_group
   ) {
     // Unit tests make sure this doesn't happen

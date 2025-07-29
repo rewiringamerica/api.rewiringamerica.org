@@ -118,8 +118,10 @@ export default function getProgramsForLocation(
 
         // This excludes programs from authorities that don't have a geography.
         if (
-          authority.geography_id &&
-          location.geographies.some(geo => geo.id === authority.geography_id)
+          authority.geography_ids &&
+          location.geographies.some(geo =>
+            authority.geography_ids!.includes(geo.id),
+          )
         ) {
           return true;
         }

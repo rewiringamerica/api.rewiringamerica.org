@@ -34,7 +34,7 @@ const AUTHORITY_SCHEMA = {
     logo: API_IMAGE_SCHEMA,
     city: { type: 'string' },
     county_fips: { type: 'string' },
-    geography_id: { type: 'integer' },
+    geography_ids: { type: 'array', items: { type: 'integer' } },
   },
   required: ['name'],
   additionalProperties: false,

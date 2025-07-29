@@ -45,19 +45,19 @@ const mockAuthorities: AuthoritiesByType = {
   state: {
     'mock-state-authority': {
       name: 'Test',
-      geography_id: 1,
+      geography_ids: [1],
     },
   },
   city: {
     'mock-city-authority': {
       name: 'Test',
-      geography_id: 2,
+      geography_ids: [2],
     },
   },
   county: {
     'mock-county-authority': {
       name: 'Test',
-      geography_id: 3,
+      geography_ids: [3],
     },
   },
   utility: {

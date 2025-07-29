@@ -21,6 +21,7 @@ test('all geographies intersect with at least one ZCTA', async t => {
     FROM geographies g
     LEFT OUTER JOIN zcta_to_geography zg ON g.id = zg.geography_id
     WHERE zg.geography_id IS NULL
+    AND g.type NOT IN ('electric_territory', 'gas_territory')
     ORDER BY g.id`,
   );
 

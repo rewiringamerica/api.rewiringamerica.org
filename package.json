@@ -70,7 +70,7 @@
     "build": "rm -f ./incentives-api.db && sqlite3 incentives-api.db < scripts/import-csvs.sql",
     "lint": "tsc --noEmit && prettier --check . --ignore-path=.prettierignore && eslint .",
     "test": "STATIC_DATE=2025-01-25 dotenv -- tap -- --ts \"test/**/*.test.ts\"",
-    "testfilter": "dotenv -- tap -- --ts",
+    "testfilter": "STATIC_DATE=2025-01-25 dotenv -- tap -- --ts",
     "update-snapshots": "UPDATE_SNAPSHOTS=1 STATIC_DATE=2025-01-25 dotenv -- tap -- --ts \"test/routes/*.test.ts\"",
     "check-data-freshness": "tap --timeout=0 scripts/check-data-freshness.ts",
     "prepare": "husky"
