@@ -10,6 +10,7 @@ import { IRA_INCENTIVES } from '../data/ira_incentives';
 import { PROGRAMS } from '../data/programs';
 import { StateIncentive } from '../data/state_incentives';
 import { FilingStatus } from '../data/tax_brackets';
+import { APICoverage } from '../data/types/coverage';
 import { PaymentMethod } from '../data/types/incentive-types';
 import { OwnerStatus } from '../data/types/owner-status';
 import {
@@ -146,7 +147,7 @@ export default function calculateIncentives(
 
   const allStateIncentives = getAllStateIncentives(state_id, request);
   const stateIncentiveRelationships = getStateIncentiveRelationships(state_id);
-  const state = calculateStateIncentives(
+  const incentives = calculateStateIncentives(
     location,
     request,
     [...IRA_INCENTIVES, ...allStateIncentives],
@@ -155,7 +156,11 @@ export default function calculateIncentives(
     PROGRAMS,
     amiAndEvCreditEligibility,
   );
-  const incentives = state.stateIncentives;
+
+  const coverage: APICoverage =
+    allStateIncentives.length > 0
+      ? { state: state_id, utility: request.utility || null }
+      : { state: null, utility: null };
 
   // Sort incentives https://app.asana.com/0/0/1204275945510481/f
   // Sort by payment method first, treating "performance_rebate" the same as
@@ -196,7 +201,7 @@ export default function calculateIncentives(
     is_under_150_ami: isUnder150Ami,
     is_over_150_ami: isOver150Ami,
     authorities,
-    coverage: state.coverage,
+    coverage,
     data_partners,
     location,
     incentives: sortedIncentives,

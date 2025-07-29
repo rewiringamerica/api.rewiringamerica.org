@@ -53,7 +53,7 @@ test('basic test for supplying test incentive data to calculation logic', async 
   );
   t.ok(data);
   // This user is eligible for all of the incentives.
-  t.equal(data.stateIncentives.length, 6);
+  t.equal(data.length, 6);
 });
 
 test('test calculation with no incentives', async t => {
@@ -75,7 +75,7 @@ test('test calculation with no incentives', async t => {
     AMIS,
   );
   t.ok(data);
-  t.equal(data.stateIncentives.length, 0);
+  t.equal(data.length, 0);
 });
 
 // This user is a renter. Based on this, they are eligible for incentives
@@ -108,7 +108,7 @@ test('test incentive relationship logic', async t => {
   t.ok(data);
   // Check that the user is only eligible for A, B, and F.
   t.strictSame(
-    data.stateIncentives.map(i => i.id),
+    data.map(i => i.id),
     ['A', 'B', 'F'],
   );
 });
@@ -142,7 +142,7 @@ test('test more complex incentive relationship logic', async t => {
   t.ok(data);
   // Check that the user is only eligible for E.
   t.strictSame(
-    data.stateIncentives.map(i => i.id),
+    data.map(i => i.id),
     ['E'],
   );
 });
@@ -177,7 +177,7 @@ test('test incentive relationship and combined max value logic', async t => {
   );
   t.ok(data);
   t.strictSame(
-    data.stateIncentives.map(i => i.id),
+    data.map(i => i.id),
     ['E', 'F', 'B'],
   );
 });
@@ -215,7 +215,7 @@ test('test incentive relationship and permanent ineligibility criteria', async t
 
   t.ok(data);
   t.strictSame(
-    data.stateIncentives.map(i => i.id),
+    data.map(i => i.id),
     ['E', 'F'],
   );
 });
@@ -248,7 +248,7 @@ test('test nested incentive relationship logic', async t => {
     AMIS,
   );
   t.ok(data);
-  const eligibleIds = data.stateIncentives.map(i => i.id).sort();
+  const eligibleIds = data.map(i => i.id).sort();
   t.strictSame(eligibleIds, ['A', 'C', 'E', 'F']);
 });
 
@@ -275,7 +275,7 @@ test('test combined maximum savings logic', async t => {
   );
   t.ok(data);
   // Check that the user is eligible for B, E, and F.
-  const eligibleIds = data.stateIncentives.map(i => i.id).sort();
+  const eligibleIds = data.map(i => i.id).sort();
   t.strictSame(eligibleIds, ['B', 'E', 'F']);
 });
 

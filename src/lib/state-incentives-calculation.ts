@@ -14,7 +14,6 @@ import {
   STATE_INCENTIVES_BY_STATE,
   StateIncentive,
 } from '../data/state_incentives';
-import { APICoverage } from '../data/types/coverage';
 import { PaymentMethod } from '../data/types/incentive-types';
 import { OwnerStatus } from '../data/types/owner-status';
 import { Program } from '../data/types/program';
@@ -72,17 +71,7 @@ export function calculateStateIncentives(
   stateAuthorities: AuthoritiesByType,
   allPrograms: Programs,
   amiAndEvCreditEligibility: AMIAndEVCreditEligibility,
-): {
-  stateIncentives: StateIncentive[];
-  coverage: APICoverage;
-} {
-  if (incentives.length === 0) {
-    return {
-      stateIncentives: [],
-      coverage: { state: null, utility: null },
-    };
-  }
-
+): StateIncentive[] {
   const stateId = location.state;
   const eligibleIncentives = new Map<string, StateIncentive>();
   const ineligibleIncentives = new Map<string, StateIncentive>();
@@ -245,13 +234,7 @@ export function calculateStateIncentives(
     }
   }
 
-  return {
-    stateIncentives,
-    coverage: {
-      state: stateId,
-      utility: request.utility ?? null,
-    },
-  };
+  return stateIncentives;
 }
 
 function ineligibleByLocationOrUtility(

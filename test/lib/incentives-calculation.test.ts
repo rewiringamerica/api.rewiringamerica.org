@@ -546,7 +546,7 @@ test('correct filtering of incentives with geography', async t => {
     { computedAMI80: 80000, computedAMI150: 150000, evCreditEligible: false },
   );
   t.ok(shouldFind);
-  t.equal(shouldFind.stateIncentives.length, 1);
+  t.equal(shouldFind.length, 1);
 
   const shouldNotFind = calculateStateIncentives(
     {
@@ -571,7 +571,7 @@ test('correct filtering of incentives with geography', async t => {
     { computedAMI80: 80000, computedAMI150: 150000, evCreditEligible: false },
   );
   t.ok(shouldNotFind);
-  t.equal(shouldNotFind.stateIncentives.length, 0);
+  t.equal(shouldNotFind.length, 0);
 });
 
 test('correctly matches geo groups', async t => {

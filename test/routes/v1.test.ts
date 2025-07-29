@@ -738,6 +738,21 @@ test('WI low income threshold', async t => {
   );
 });
 
+test('null coverage for state with no incentive data', async t => {
+  await validateResponse(
+    t,
+    {
+      zip: '57104',
+      owner_status: 'homeowner',
+      household_size: 1,
+      household_income: 20000,
+      tax_filing: 'joint',
+      utility: 'sd-black-hills-power',
+    },
+    './test/snapshots/v1-sd-no-coverage.json',
+  );
+});
+
 const BAD_QUERIES = [
   // bad location:
   {
