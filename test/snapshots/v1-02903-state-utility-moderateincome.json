@@ -38,6 +38,31 @@
       ],
       "authority_type": "state",
       "authority": "ri-oer",
+      "program": "RI Office of Energy Resources Clean Heat RI",
+      "program_url": "https://cleanheatri.com/resources/incentives/",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump",
+        "geothermal_heating_installation"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.6,
+        "maximum": 11500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2025-07-21",
+      "short_description": "60% rebate for a heat pump system, up to $11,500, for income-qualified customers currently using natural gas, propane, or oil. "
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "ri-oer",
       "program": "PowerUpRI",
       "program_url": "https://drive.ri.gov/powerupri",
       "items": [
@@ -167,6 +192,29 @@
         "homeowner"
       ],
       "short_description": "$0.65/watt installation costs up to $5,000 for solar. Includes electricity-generating solar panels and solar domestic hot water technologies."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "ri-oer",
+      "program": "RI Office of Energy Resources Clean Heat RI",
+      "program_url": "https://cleanheatri.com/resources/incentives/",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2500,
+        "maximum": 2500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2025-07-21",
+      "short_description": "$2,500 rebate for an ENERGY STAR rated heat pump water heater, for income-qualified customers."
     },
     {
       "payment_methods": [

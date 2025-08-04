@@ -253,10 +253,218 @@
     ],
     "short_description": {
       "en": "$200 rebate on qualifying ENERGY STAR-certified HVAC systems. ",
-      "es": "Reembolso de $200 en sistemas HVAC con certificación ENERGY STAR calificados. "
+      "es": "Reembolso de $200 en sistemas HVAC con certificación ENERGY STAR. "
     },
     "url": {
       "en": "https://www.jea.com/residential_customers/residential_rebates/heating_and_cooling_rebates/"
+    }
+  },
+  {
+    "id": "FL-11",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "new_electric_vehicle"
+    ],
+    "program": "fl_orlandoUtilitiesCommission_orlandoUtilitiesCommissionEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate when you buy or lease an electric vehicle (EV). ",
+      "es": "$200 de reembolso al comprar o alquilar un vehículo eléctrico (EV). "
+    },
+    "url": {
+      "en": "https://www.ouc.com/solutions-programs/savings/rebates/electric-vehicle-purchase-lease/"
+    }
+  },
+  {
+    "id": "FL-12",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "fl_orlandoUtilitiesCommission_orlandoUtilitiesCommissionEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate on an ENERGY STAR heat pump water heater. ",
+      "es": "Reembolso de $500 en un calentador de agua con bomba de calor ENERGY STAR. "
+    },
+    "url": {
+      "en": "https://www.ouc.com/solutions-programs/savings/rebates/heat-pump-water-heater/"
+    }
+  },
+  {
+    "id": "FL-13",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "fl_orlandoUtilitiesCommission_orlandoUtilitiesCommissionEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1150,
+      "minimum": 55,
+      "maximum": 1150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,150 rebate on a new heat pump HVAC system. ",
+      "es": "Reembolso de hasta $1,150 en un nuevo sistema HVAC con bomba de calor. "
+    },
+    "url": {
+      "en": "https://www.ouc.com/solutions-programs/savings/rebates/heat-pump-ac/"
+    }
+  },
+  {
+    "id": "FL-14",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "other_heat_pump"
+    ],
+    "program": "fl_clayElectricCooperative_clayElectricEnergyRebatesAndLoans",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate on a high efficiency electric heat pump. ",
+      "es": "Reembolso de $250 en una bomba de calor eléctrica de alta eficiencia."
+    },
+    "url": {
+      "en": "https://www.clayelectric.com/energy-rebates-loans"
+    }
+  },
+  {
+    "id": "FL-15",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "other_heat_pump"
+    ],
+    "program": "fl_clayElectricCooperative_clayElectricEnergyRebatesAndLoans",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 175,
+      "maximum": 175
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$175 rebate on an electric hybrid heat pump water heater.",
+      "es": "Reembolso de $175 en un calentador de agua con bomba de calor híbrida eléctrica."
+    },
+    "url": {
+      "en": "https://www.clayelectric.com/energy-rebates-loans"
+    }
+  },
+  {
+    "id": "FL-16",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "fl_cityOfLakeland_lakelandEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 450,
+      "maximum": 450
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$450 rebate on an ENERGY STAR certified heat pump water heater. ",
+      "es": "Reembolso de $450 en un calentador de agua con bomba de calor con certificación ENERGY STAR. "
+    },
+    "url": {
+      "en": "https://lakelandelectric.com/programs-and-services/energy"
+    }
+  },
+  {
+    "id": "FL-17",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "fl_cityOfLakeland_lakelandEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for a new energy-efficient heat pump. ",
+      "es": "Reembolso de $300 para una nueva bomba de calor de bajo consumo energético. "
+    },
+    "url": {
+      "en": "https://lakelandelectric.com/programs-and-services/energy"
+    }
+  },
+  {
+    "id": "FL-18",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "fl_cityOfLakeland_lakelandEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 rebate for a new energy-efficient heat pump mini split. Limit two (2) per household.  ",
+      "es": "Reembolso de $150 para un nuevo minisplit con bomba de calor de bajo consumo. Límite de dos (2) por hogar.  "
+    },
+    "url": {
+      "en": "https://lakelandelectric.com/programs-and-services/energy"
     }
   }
 ]

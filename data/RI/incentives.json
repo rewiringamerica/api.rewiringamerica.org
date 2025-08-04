@@ -1017,5 +1017,63 @@
     "url": {
       "en": "https://www.rienergy.com/site/ways-to-save/save-money-with-rebates-and-incentives/electric-heating-and-cooling"
     }
+  },
+  {
+    "id": "RI-56",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "geothermal_heating_installation"
+    ],
+    "program": "ri_oER_cleanHeatRhodeIslandResidentialIncentive",
+    "amount": {
+      "type": "percent",
+      "number": 0.6,
+      "maximum": 11500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "60% rebate for a heat pump system, up to $11,500, for income-qualified customers currently using natural gas, propane, or oil. ",
+      "es": "Reembolso del 60 % para un sistema de bomba de calor, hasta $11 500, para clientes que califican según sus ingresos y que actualmente utilizan gas natural, propano o petróleo. "
+    },
+    "start_date": "2025-07-21",
+    "low_income": "ri-hear-program-moderate",
+    "url": {
+      "en": "https://cleanheatri.com/resources/incentives/"
+    }
+  },
+  {
+    "id": "RI-57",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ri_oER_cleanHeatRhodeIslandResidentialIncentive",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$2,500 rebate for an ENERGY STAR rated heat pump water heater, for income-qualified customers.",
+      "es": "Reembolso de $2,500 para un calentador de agua con bomba de calor con clasificación ENERGY STAR, para clientes que califican según sus ingresos."
+    },
+    "start_date": "2025-07-21",
+    "low_income": "ri-hear-program-moderate",
+    "url": {
+      "en": "https://cleanheatri.com/resources/incentives/"
+    }
   }
 ]
