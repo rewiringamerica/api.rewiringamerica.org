@@ -304,7 +304,7 @@
     ],
     "short_description": {
       "en": "$500 rebate on an ENERGY STAR heat pump water heater. ",
-      "es": "Reembolso de $500 en un calentador de agua con bomba de calor ENERGY STAR. "
+      "es": "Reembolso de $500 para un calentador de agua con bomba de calor ENERGY STAR. "
     },
     "url": {
       "en": "https://www.ouc.com/solutions-programs/savings/rebates/heat-pump-water-heater/"
@@ -330,7 +330,7 @@
     ],
     "short_description": {
       "en": "Up to $1,150 rebate on a new heat pump HVAC system. ",
-      "es": "Reembolso de hasta $1,150 en un nuevo sistema HVAC con bomba de calor. "
+      "es": "Reembolso de hasta $1,150 para un nuevo sistema HVAC con bomba de calor. "
     },
     "url": {
       "en": "https://www.ouc.com/solutions-programs/savings/rebates/heat-pump-ac/"
@@ -357,7 +357,7 @@
     ],
     "short_description": {
       "en": "$250 rebate on a high efficiency electric heat pump. ",
-      "es": "Reembolso de $250 en una bomba de calor eléctrica de alta eficiencia."
+      "es": "Reembolso de $250 para una bomba de calor eléctrica de alta eficiencia."
     },
     "url": {
       "en": "https://www.clayelectric.com/energy-rebates-loans"
@@ -384,7 +384,7 @@
     ],
     "short_description": {
       "en": "$175 rebate on an electric hybrid heat pump water heater.",
-      "es": "Reembolso de $175 en un calentador de agua con bomba de calor híbrida eléctrica."
+      "es": "Reembolso de $175 para un calentador de agua con bomba de calor híbrida eléctrica."
     },
     "url": {
       "en": "https://www.clayelectric.com/energy-rebates-loans"
@@ -409,7 +409,7 @@
     ],
     "short_description": {
       "en": "$450 rebate on an ENERGY STAR certified heat pump water heater. ",
-      "es": "Reembolso de $450 en un calentador de agua con bomba de calor con certificación ENERGY STAR. "
+      "es": "Reembolso de $450 para un calentador de agua con bomba de calor con certificación ENERGY STAR. "
     },
     "url": {
       "en": "https://lakelandelectric.com/programs-and-services/energy"
@@ -461,10 +461,294 @@
     ],
     "short_description": {
       "en": "$150 rebate for a new energy-efficient heat pump mini split. Limit two (2) per household.  ",
-      "es": "Reembolso de $150 para un nuevo minisplit con bomba de calor de bajo consumo. Límite de dos (2) por hogar.  "
+      "es": "Reembolso de $150 para un minisplit nuevo con bomba de calor de bajo consumo. Límite de dos (2) por hogar.  "
     },
     "url": {
       "en": "https://lakelandelectric.com/programs-and-services/energy"
+    }
+  },
+  {
+    "id": "FL-19",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "fl_cityOfTallahassee_tallahasseeACAndHeatPumpRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "minimum": 100,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $350 rebate on qualifying heat pumps. ",
+      "es": "Reembolso de hasta $350 en bombas de calor que cumplan los requisitos."
+    },
+    "url": {
+      "en": "https://www.talgov.com/you/you-products-home-hvac-rebates"
+    }
+  },
+  {
+    "id": "FL-20",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "fl_cityOfTallahassee_tallahasseeACAndHeatPumpRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate on an ENERGY STAR heat pump water heater. ",
+      "es": "Reembolso de $300 en un calentador de agua con bomba de calor ENERGY STAR. "
+    },
+    "url": {
+      "en": "https://www.talgov.com/you/you-products-home-hvac-rebates"
+    }
+  },
+  {
+    "id": "FL-21",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "fl_kissimmeeUtilityAuthority_kUARebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 325
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% of costs up to $325 on an ENERGY STAR electric hybrid heat pump water heater. ",
+      "es": "25% en costos hasta $325 en un calentador de agua con bomba de calor eléctrica híbrida ENERGY STAR. "
+    },
+    "url": {
+      "en": "https://kua.com/energy-conservation/rebates/"
+    }
+  },
+  {
+    "id": "FL-22",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "fl_kissimmeeUtilityAuthority_kUARebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% of costs up to $100 on a Smart Thermostat.",
+      "es": "50% del costo hasta $100 en un termostato inteligente."
+    },
+    "url": {
+      "en": "https://kua.com/energy-conservation/rebates/"
+    }
+  },
+  {
+    "id": "FL-23",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "duct_sealing",
+      "duct_replacement"
+    ],
+    "program": "fl_kissimmeeUtilityAuthority_kUARebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of costs up to $200 on duct sealing and repairs.",
+      "es": "50% de costos hasta $200 en sellado y reparaciones de ductos."
+    },
+    "url": {
+      "en": "https://kua.com/energy-conservation/rebates/"
+    }
+  },
+  {
+    "id": "FL-24",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "duct_sealing",
+      "duct_replacement"
+    ],
+    "program": "fl_kissimmeeUtilityAuthority_kUARebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.09,
+      "unit": "square_foot",
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$0.09 per square foot up to $300 max on insulation upgrades.",
+      "es": "$0.09 por pie cuadrado hasta un máximo de $300 en actualizaciones de aislamiento."
+    },
+    "url": {
+      "en": "https://kua.com/energy-conservation/rebates/"
+    }
+  },
+  {
+    "id": "FL-25",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "fl_kissimmeeUtilityAuthority_kUARebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 on a qualifying heat pump replacing a central A/C. ",
+      "es": "$250 en una bomba de calor que cumpla los requisitos y sustituya un aire acondicionado central. "
+    },
+    "url": {
+      "en": "https://kua.com/energy-conservation/rebates/"
+    }
+  },
+  {
+    "id": "FL-26",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "fl_kissimmeeUtilityAuthority_kUARebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 on a Level 2 home EV charger.",
+      "es": "$100 en un cargador EV doméstico de nivel 2."
+    },
+    "url": {
+      "en": "https://kua.com/energy-conservation/rebates/"
+    }
+  },
+  {
+    "id": "FL-27",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "fl_choctawhatcheElectricCooperative_choctawhatcheRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 350,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350/ton rebate on qualifying mini-split heat pumps. ",
+      "es": "Descuento de $350 por tonelada en bombas de calor minisplit que cumplan con los requisitos. "
+    },
+    "url": {
+      "en": "https://www.chelco.com/heat-pump-rebate-program"
+    }
+  },
+  {
+    "id": "FL-28",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "solar_water_heater"
+    ],
+    "program": "fl_cityOfOcala_ocalaEnergyStarApplianceRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 450,
+      "maximum": 450
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$450 rebate on solar hot water heaters.",
+      "es": "Reembolso de $450 en calentadores de agua solares."
+    },
+    "url": {
+      "en": "https://www.ocalafl.gov/government/electric-utility/rebates"
+    }
+  },
+  {
+    "id": "FL-29",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "fl_cityOfOcala_ocalaEnergyStarApplianceRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate on a Smart Thermostat.",
+      "es": "Reembolso de $100 en un termostato inteligente."
+    },
+    "url": {
+      "en": "https://www.ocalafl.gov/government/electric-utility/rebates"
     }
   }
 ]

@@ -296,6 +296,122 @@
     "updated_at": "2025-03-28T09:04:22.780Z"
   },
   {
+    "id": 68,
+    "loan_program_key": "GA-9",
+    "name": "Energy Saver Loans",
+    "description": "Self-Help's Energy Saver Loans help homeowners finance energy-efficient upgrades such as insulation, HVAC systems, and solar panels. The program offers affordable financing to improve home comfort and reduce energy bills.",
+    "description_langs": {
+      "es": "Los Préstamos para Ahorradores de Energía de Self-Help ayudan a los propietarios a financiar mejoras energéticamente eficientes como aislamiento, sistemas HVAC y paneles solares. El programa ofrece financiamiento asequible para mejorar la comodidad del hogar y reducir las facturas de energía."
+    },
+    "status": "PUBLISHED",
+    "state": "GA",
+    "is_national": false,
+    "website_url": "https://www.self-help.org/personal/loans/green-loans/energy-saver-loans",
+    "financial_authority_id": 58,
+    "financial_authority": {
+      "id": 58,
+      "authority_type": "credit_union",
+      "description": "Self-Help Credit Union was chartered in 1983 to build a network of branches that partner with working families and communities often underserved by the financial marketplace. With over $1.86 billion in assets and serving more than 89,000 members in 37 branches – eight in Florida, one in Georgia, 23 in North Carolina, four in South Carolina, and one in Virginia - Self-Help Credit Union is one of the fastest-growing community development financial institutions in the country. It is part of the Self-Help family of nonprofit organizations whose collective mission is to create and protect ownership and economic opportunity for all. For over 40 years, the national Center for Community Self-Help and its affiliates have provided more than $11 billion in financing to help more than 168,000 borrowers buy homes, start and grow businesses and strengthen community resources. For more information, please visit www.self-help.org. ",
+      "name": "Self-Help Credit Union",
+      "state": "GA",
+      "city": "Atlanta",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-05-20T19:41:42.517Z",
+      "updated_at": "2025-05-20T19:41:42.517Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "ENERGY_STAR_APPLIANCES"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "ELECTRICAL_PANEL_WIRING"
+      },
+      {
+        "type": "HEATING_COOLING"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 67,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": 2500,
+      "max_loan_amount": 50000,
+      "min_interest_rate": null,
+      "max_interest_rate": null,
+      "max_repayment_months": 180,
+      "created_at": "2025-05-20T19:48:48.278Z",
+      "updated_at": "2025-08-06T21:47:50.069Z"
+    },
+    "created_at": "2025-05-20T19:48:48.294Z",
+    "updated_at": "2025-08-06T21:47:50.084Z"
+  },
+  {
+    "id": 21,
+    "loan_program_key": "AR-4",
+    "name": "Motor Systems, Irrigation or Water Systems, Compressed-air Systems, Energy-storage Devices, and EV Chargers Loan",
+    "description": "Financing of these loans will require the assistance of the NAEC Engineering department regarding recommendations and inspections.",
+    "description_langs": {
+      "es": "LEl financiamiento de estos préstamos requerirá la asistencia del departamento de Ingeniería de NAEC en materia de recomendaciones e inspecciones."
+    },
+    "status": "PUBLISHED",
+    "state": "AR",
+    "is_national": false,
+    "website_url": "https://www.naeci.com/eecl",
+    "financial_authority_id": 15,
+    "financial_authority": {
+      "id": 15,
+      "authority_type": "utility",
+      "description": "North Arkansas Electric Cooperative, Inc. (NAEC) offers Rural Energy Savings Program (RESP) loans to help members finance energy efficiency improvements.",
+      "name": "North Arkansas Electric Cooperative, Inc.",
+      "state": "AR",
+      "city": null,
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2024-10-31T21:00:53.317Z",
+      "updated_at": "2024-10-31T21:00:53.317Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "BATTERY_INSTALLATION"
+      },
+      {
+        "type": "WATER_IRRIGATION"
+      },
+      {
+        "type": "EV_CHARGER"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 19,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": null,
+      "min_interest_rate": null,
+      "max_interest_rate": 1,
+      "max_repayment_months": null,
+      "created_at": "2025-02-18T22:33:28.507Z",
+      "updated_at": "2025-08-07T19:14:16.030Z"
+    },
+    "created_at": "2024-10-31T21:00:54.336Z",
+    "updated_at": "2025-08-07T19:14:16.043Z"
+  },
+  {
     "id": 42,
     "loan_program_key": "CA-3",
     "name": "EcoHome Payment Plan",
@@ -793,6 +909,110 @@
     "updated_at": "2025-03-13T17:57:38.300Z"
   },
   {
+    "id": 2,
+    "loan_program_key": "MI-1",
+    "name": "Detroit 0% Interest Home Repair Loan Program",
+    "description": "The Detroit Home Repair Loan Program provides low-interest loans to help Detroit homeowners make critical home repairs, including HVAC replacement, roof replacements, window replacements, and other essential improvements.",
+    "description_langs": {
+      "es": "El Programa de Préstamos para Reparaciones del Hogar de Detroit ofrece préstamos a bajo interés para ayudar a los propietarios de viviendas en Detroit a realizar reparaciones críticas en sus hogares, incluyendo la sustitución de sistemas HVAC, reemplazo de techos, ventanas y otras mejoras esenciales."
+    },
+    "status": "PUBLISHED",
+    "state": "MI",
+    "is_national": false,
+    "website_url": "https://www.detroithomeloans.org/",
+    "financial_authority_id": 2,
+    "financial_authority": {
+      "id": 2,
+      "authority_type": "bank",
+      "description": "LISC is a national nonprofit organization that provides financial support to community development initiatives.",
+      "name": "Flagstar Bank - Local Initiatives Support Corporation (LISC)",
+      "state": "MI",
+      "city": "Detroit",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2024-10-31T20:59:35.250Z",
+      "updated_at": "2024-10-31T21:00:46.124Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "ELECTRICAL_PANEL_WIRING"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 5,
+      "min_credit_score": 560,
+      "max_debt_to_income": 45,
+      "min_loan_amount": 5000,
+      "max_loan_amount": 25000,
+      "min_interest_rate": null,
+      "max_interest_rate": 0,
+      "max_repayment_months": 120,
+      "created_at": "2025-02-18T22:33:28.507Z",
+      "updated_at": "2025-08-07T16:00:31.683Z"
+    },
+    "created_at": "2024-10-31T20:59:35.500Z",
+    "updated_at": "2025-08-07T16:00:31.705Z"
+  },
+  {
+    "id": 19,
+    "loan_program_key": "AR-2",
+    "name": "Building Envelope Improvements and Air Sealing Loan",
+    "description": "RESP can finance various building envelope improvements including, but not limited to, the following applications: ENERGY STAR® windows and doors; insulation for ceiling, floor or wall; duct work; and certain roofing applications.",
+    "description_langs": {
+      "es": "RESP puede financiar diversas mejoras en la envolvente de los edificios, incluidas, entre otras, las siguientes aplicaciones: ventanas y puertas ENERGY STAR®; aislamiento para techo, suelo o pared; trabajo de conductos; y ciertas aplicaciones para techos."
+    },
+    "status": "PUBLISHED",
+    "state": "AR",
+    "is_national": false,
+    "website_url": "https://www.naeci.com/eecl",
+    "financial_authority_id": 15,
+    "financial_authority": {
+      "id": 15,
+      "authority_type": "utility",
+      "description": "North Arkansas Electric Cooperative, Inc. (NAEC) offers Rural Energy Savings Program (RESP) loans to help members finance energy efficiency improvements.",
+      "name": "North Arkansas Electric Cooperative, Inc.",
+      "state": "AR",
+      "city": null,
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2024-10-31T21:00:53.317Z",
+      "updated_at": "2024-10-31T21:00:53.317Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "WEATHERIZATION"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 37,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": 5000,
+      "max_loan_amount": 4999,
+      "min_interest_rate": null,
+      "max_interest_rate": 1,
+      "max_repayment_months": 120,
+      "created_at": "2025-02-18T22:33:28.507Z",
+      "updated_at": "2025-08-07T19:13:55.724Z"
+    },
+    "created_at": "2024-10-31T21:00:53.827Z",
+    "updated_at": "2025-08-07T19:13:55.737Z"
+  },
+  {
     "id": 25,
     "loan_program_key": "CO-1",
     "name": "RENU Loan",
@@ -1141,6 +1361,64 @@
     "updated_at": "2025-04-02T17:34:40.506Z"
   },
   {
+    "id": 22,
+    "loan_program_key": "DE-1",
+    "name": "Home Energy Efficiency Loan Program",
+    "description": "The Home Energy Efficiency Loan Program provides low-interest loans to Delaware homeowners for energy efficiency improvements such as insulation, HVAC systems, water heaters, and more.",
+    "description_langs": {
+      "es": "El Programa de Préstamos para la Eficiencia Energética del Hogar ofrece préstamos a bajo interés a los propietarios de viviendas en Delaware para mejoras de eficiencia energética como aislamiento, sistemas HVAC, calentadores de agua y más."
+    },
+    "status": "PUBLISHED",
+    "state": "DE",
+    "is_national": false,
+    "website_url": "https://energizedelawareloans.org/home-energy-efficiency-loan-program/",
+    "financial_authority_id": 16,
+    "financial_authority": {
+      "id": 16,
+      "authority_type": "other",
+      "description": "Energize Delaware offers a Home Energy Efficiency Loan Program to help homeowners finance energy efficiency improvements.",
+      "name": "Energize Delaware",
+      "state": "DE",
+      "city": null,
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2024-10-31T21:00:54.612Z",
+      "updated_at": "2024-10-31T21:00:54.612Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "ENERGY_AUDIT"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 20,
+      "min_credit_score": 650,
+      "max_debt_to_income": 40,
+      "min_loan_amount": 1000,
+      "max_loan_amount": 50000,
+      "min_interest_rate": 5.99,
+      "max_interest_rate": 5.99,
+      "max_repayment_months": 120,
+      "created_at": "2025-02-18T22:33:28.507Z",
+      "updated_at": "2025-08-07T19:14:26.318Z"
+    },
+    "created_at": "2024-10-31T21:00:54.853Z",
+    "updated_at": "2025-08-07T19:14:26.329Z"
+  },
+  {
     "id": 26,
     "loan_program_key": "NH-1",
     "name": "New Hampshire Residential Clean Energy Loan Program",
@@ -1365,6 +1643,110 @@
     },
     "created_at": "2025-04-02T17:58:30.320Z",
     "updated_at": "2025-04-02T17:58:30.320Z"
+  },
+  {
+    "id": 70,
+    "loan_program_key": "GA-11",
+    "name": "Electric Vehicle Loans",
+    "description": "Self-Help Credit Union offers Electric Vehicle Loans to help individuals purchase new or used electric vehicles. The program supports clean transportation by providing affordable financing options with flexible terms and competitive interest rates. Loans are available for both new and used EVs, and refinancing options are also offered. All SHCU members can get a 0.25% discount on an EV or PHEV (plug-in hybrid electric vehicle).  For a limited time only, qualifying members with modest incomes (below 80% area median income) can access a deeper rate discount on EVs and PHEVs.",
+    "description_langs": {
+      "es": "Self-Help Credit Union ofrece Préstamos para Vehículos Eléctricos para ayudar a las personas a comprar vehículos eléctricos nuevos o usados. El programa apoya el transporte limpio al proporcionar opciones de financiamiento asequibles con términos flexibles y tasas de interés competitivas. Los préstamos están disponibles tanto para vehículos eléctricos nuevos como usados, y también se ofrecen opciones de refinanciamiento."
+    },
+    "status": "PUBLISHED",
+    "state": "GA",
+    "is_national": false,
+    "website_url": "https://www.self-help.org/personal/loans/green-loans/electric-vehicle-loans",
+    "financial_authority_id": 58,
+    "financial_authority": {
+      "id": 58,
+      "authority_type": "credit_union",
+      "description": "Self-Help Credit Union was chartered in 1983 to build a network of branches that partner with working families and communities often underserved by the financial marketplace. With over $1.86 billion in assets and serving more than 89,000 members in 37 branches – eight in Florida, one in Georgia, 23 in North Carolina, four in South Carolina, and one in Virginia - Self-Help Credit Union is one of the fastest-growing community development financial institutions in the country. It is part of the Self-Help family of nonprofit organizations whose collective mission is to create and protect ownership and economic opportunity for all. For over 40 years, the national Center for Community Self-Help and its affiliates have provided more than $11 billion in financing to help more than 168,000 borrowers buy homes, start and grow businesses and strengthen community resources. For more information, please visit www.self-help.org. ",
+      "name": "Self-Help Credit Union",
+      "state": "GA",
+      "city": "Atlanta",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-05-20T19:41:42.517Z",
+      "updated_at": "2025-05-20T19:41:42.517Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "EV_AND_CHARGER"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 69,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 75000,
+      "min_interest_rate": null,
+      "max_interest_rate": null,
+      "max_repayment_months": 84,
+      "created_at": "2025-05-20T20:08:41.861Z",
+      "updated_at": "2025-08-06T21:49:35.617Z"
+    },
+    "created_at": "2025-05-20T20:08:41.886Z",
+    "updated_at": "2025-08-06T21:49:35.631Z"
+  },
+  {
+    "id": 30,
+    "loan_program_key": "TN-2",
+    "name": "Energy Efficiency Loan Program",
+    "description": "Appalachian Electric Cooperative offers an Energy Efficiency Loan Program to help members finance energy-efficient home improvements, such as HVAC systems, insulation, and water heaters.",
+    "description_langs": {
+      "es": "Appalachian Electric Cooperative ofrece un Programa de Préstamos para Eficiencia Energética para ayudar a los miembros a financiar mejoras energéticas en el hogar, como sistemas HVAC, aislamiento y calentadores de agua."
+    },
+    "status": "PUBLISHED",
+    "state": "TN",
+    "is_national": false,
+    "website_url": "https://www.aecoop.org/services-products/programs/energy-efficiency-loan/",
+    "financial_authority_id": 24,
+    "financial_authority": {
+      "id": 24,
+      "authority_type": "utility",
+      "description": "Appalachian Electric offers financing for energy-efficient home improvements through their Energy Efficiency Loan Program.",
+      "name": "Appalachian Electric Cooperative",
+      "state": "TN",
+      "city": null,
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2024-10-31T21:00:58.879Z",
+      "updated_at": "2024-10-31T21:00:58.879Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "WEATHERIZATION"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 40,
+      "min_credit_score": 625,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": null,
+      "min_interest_rate": null,
+      "max_interest_rate": 8,
+      "max_repayment_months": 120,
+      "created_at": "2025-02-18T22:33:28.507Z",
+      "updated_at": "2025-08-07T19:14:44.735Z"
+    },
+    "created_at": "2024-10-31T21:00:59.155Z",
+    "updated_at": "2025-08-07T19:14:44.747Z"
   },
   {
     "id": 71,
@@ -1721,6 +2103,122 @@
     "updated_at": "2025-02-21T22:56:05.607Z"
   },
   {
+    "id": 1,
+    "loan_program_key": "TX-1",
+    "name": "Austin Energy Loans",
+    "description": "This loan program helps Austin Energy customers finance energy efficiency improvements such as HVAC upgrades, solar installations, and weatherization.",
+    "description_langs": {
+      "es": "Este programa de préstamos ayuda a los clientes de Austin Energy a financiar mejoras de eficiencia energética, como actualizaciones de HVAC, instalaciones solares y climatización."
+    },
+    "status": "PUBLISHED",
+    "state": "TX",
+    "is_national": false,
+    "website_url": "https://www.velocitycu.com/loans/austin-energy/",
+    "financial_authority_id": 1,
+    "financial_authority": {
+      "id": 1,
+      "authority_type": "credit_union",
+      "description": "Velocity Credit Union offers loans for Austin Energy customers to finance energy efficiency improvements.",
+      "name": "Velocity Credit Union",
+      "state": "TX",
+      "city": "Austin",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2024-10-31T20:59:34.459Z",
+      "updated_at": "2024-10-31T21:00:45.400Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "HEATING_COOLING"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 3,
+      "min_credit_score": 600,
+      "max_debt_to_income": null,
+      "min_loan_amount": 1500,
+      "max_loan_amount": 20000,
+      "min_interest_rate": 1.99,
+      "max_interest_rate": 3.99,
+      "max_repayment_months": 120,
+      "created_at": "2025-02-18T22:33:28.507Z",
+      "updated_at": "2025-08-07T15:58:50.720Z"
+    },
+    "created_at": "2024-10-31T20:59:34.852Z",
+    "updated_at": "2025-08-07T15:58:50.734Z"
+  },
+  {
+    "id": 48,
+    "loan_program_key": "CO-7",
+    "name": "LPEA On-Bill Financing Program",
+    "description": "In partnership with First Southwest Bank, the La Plata Electric Association offers this loan program to finance energy efficiency, electrification, solar PV, or energy storage projects. Loan payments will appear on the LPEA monthly bill.",
+    "description_langs": {
+      "es": "En asociación con First Southwest Bank, la Asociación Eléctrica de La Plata ofrece este programa de préstamos para financiar proyectos de eficiencia energética, electrificación, energía solar fotovoltaica o almacenamiento de energía."
+    },
+    "status": "PUBLISHED",
+    "state": "CO",
+    "is_national": false,
+    "website_url": "https://lpea.coop/obf",
+    "financial_authority_id": 34,
+    "financial_authority": {
+      "id": 34,
+      "authority_type": "utility",
+      "description": "La Plata Electric Association is a cooperative utility that offers on-bill financing loans for energy efficiency improvements.",
+      "name": "La Plata Electric Association",
+      "state": "CO",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-03-01T20:13:28.251Z",
+      "updated_at": "2025-03-01T20:13:28.251Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "BATTERY_INSTALLATION"
+      },
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "ENERGY_STAR_APPLIANCES"
+      },
+      {
+        "type": "SOLAR"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 47,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 60000,
+      "min_interest_rate": null,
+      "max_interest_rate": null,
+      "max_repayment_months": 180,
+      "created_at": "2025-03-13T18:12:28.850Z",
+      "updated_at": "2025-08-07T19:08:14.127Z"
+    },
+    "created_at": "2025-03-13T18:12:28.865Z",
+    "updated_at": "2025-08-07T19:08:14.145Z"
+  },
+  {
     "id": 7,
     "loan_program_key": "OR-1",
     "name": "Weatherization Loan Program",
@@ -2009,6 +2507,61 @@
     },
     "created_at": "2024-10-31T21:00:50.897Z",
     "updated_at": "2025-02-20T14:59:46.967Z"
+  },
+  {
+    "id": 49,
+    "loan_program_key": "GA-4",
+    "name": "North Georgia EMC's TVA EnergyRight Program",
+    "description": "The EnergyRight Program is a loan program offered through the North Georgia EMC to finance energy efficient home improvements including heat pumps, attic insulation, and duct work.",
+    "description_langs": {
+      "es": "El Programa EnergyRight es un programa de préstamos ofrecido a través de North Georgia EMC para financiar mejoras energéticamente eficientes en el hogar, incluidas bombas de calor, aislamiento del ático y conductos."
+    },
+    "status": "PUBLISHED",
+    "state": "GA",
+    "is_national": false,
+    "website_url": "https://www.ngemc.com/account/incentivesandfinancing",
+    "financial_authority_id": 37,
+    "financial_authority": {
+      "id": 37,
+      "authority_type": "utility",
+      "description": "North Georgia EMC is a cooperative utility which offers loans to finance certain energy efficient home improvements.",
+      "name": "North Georgia EMC",
+      "state": "GA",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-03-13T20:16:19.574Z",
+      "updated_at": "2025-03-13T20:16:19.574Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "WATER_HEATER"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 48,
+      "min_credit_score": 625,
+      "max_debt_to_income": null,
+      "min_loan_amount": 2500,
+      "max_loan_amount": 20000,
+      "min_interest_rate": null,
+      "max_interest_rate": null,
+      "max_repayment_months": null,
+      "created_at": "2025-03-13T21:27:56.096Z",
+      "updated_at": "2025-08-07T16:44:14.663Z"
+    },
+    "created_at": "2025-03-13T21:27:56.114Z",
+    "updated_at": "2025-08-07T16:44:14.677Z"
   },
   {
     "id": 40,
@@ -2393,6 +2946,104 @@
     "updated_at": "2025-06-03T20:23:29.116Z"
   },
   {
+    "id": 18,
+    "loan_program_key": "AR-1",
+    "name": "HVAC Loan",
+    "description": "RESP can finance the installation of air-source and geothermal heating and cooling.",
+    "description_langs": {
+      "es": "RESP puede financiar la instalación de calefacción y refrigeración geotérmica y de aire."
+    },
+    "status": "PUBLISHED",
+    "state": "AR",
+    "is_national": false,
+    "website_url": "https://www.naeci.com/eecl",
+    "financial_authority_id": 15,
+    "financial_authority": {
+      "id": 15,
+      "authority_type": "utility",
+      "description": "North Arkansas Electric Cooperative, Inc. (NAEC) offers Rural Energy Savings Program (RESP) loans to help members finance energy efficiency improvements.",
+      "name": "North Arkansas Electric Cooperative, Inc.",
+      "state": "AR",
+      "city": null,
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2024-10-31T21:00:53.317Z",
+      "updated_at": "2024-10-31T21:00:53.317Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 17,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": null,
+      "min_interest_rate": null,
+      "max_interest_rate": 1,
+      "max_repayment_months": 120,
+      "created_at": "2025-02-18T22:33:28.507Z",
+      "updated_at": "2025-08-07T19:13:42.939Z"
+    },
+    "created_at": "2024-10-31T21:00:53.579Z",
+    "updated_at": "2025-08-07T19:13:42.956Z"
+  },
+  {
+    "id": 20,
+    "loan_program_key": "AR-3",
+    "name": "On- or Off-grid Renewable Energy Systems Loan",
+    "description": "Loans are available for on- or off-grid renewable energy systems installed by Today’s Power Inc., subject to inspection and interconnection requirements, with additional processing time for solar installations.",
+    "description_langs": {
+      "es": "Los préstamos están disponibles para sistemas de energía renovable conectados o fuera de la red instalados por Today's Power Inc., sujetos a requisitos de inspección e interconexión, con tiempo de procesamiento adicional para instalaciones solares."
+    },
+    "status": "PUBLISHED",
+    "state": "AR",
+    "is_national": false,
+    "website_url": "https://www.naeci.com/eecl",
+    "financial_authority_id": 15,
+    "financial_authority": {
+      "id": 15,
+      "authority_type": "utility",
+      "description": "North Arkansas Electric Cooperative, Inc. (NAEC) offers Rural Energy Savings Program (RESP) loans to help members finance energy efficiency improvements.",
+      "name": "North Arkansas Electric Cooperative, Inc.",
+      "state": "AR",
+      "city": null,
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2024-10-31T21:00:53.317Z",
+      "updated_at": "2024-10-31T21:00:53.317Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "SOLAR"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 18,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 25000,
+      "min_interest_rate": null,
+      "max_interest_rate": 1,
+      "max_repayment_months": 120,
+      "created_at": "2025-02-18T22:33:28.507Z",
+      "updated_at": "2025-08-07T19:14:04.834Z"
+    },
+    "created_at": "2024-10-31T21:00:54.077Z",
+    "updated_at": "2025-08-07T19:14:04.852Z"
+  },
+  {
     "id": 51,
     "loan_program_key": "GA-6",
     "name": "Energy Efficient Loan Program",
@@ -2644,6 +3295,55 @@
     "updated_at": "2025-07-07T04:09:16.212Z"
   },
   {
+    "id": 29,
+    "loan_program_key": "TN-1",
+    "name": "Heat Pump Financing Program",
+    "description": "The Heat Pump Financing Program provides loans for the installation of energy-efficient heat pumps, helping customers reduce energy costs and improve home comfort.",
+    "description_langs": {
+      "es": "El Programa de Financiamiento de Bombas de Calor ofrece préstamos para la instalación de bombas de calor energéticamente eficientes, ayudando a los clientes a reducir los costos de energía y mejorar la comodidad del hogar."
+    },
+    "status": "PUBLISHED",
+    "state": "TN",
+    "is_national": false,
+    "website_url": "https://vec.org/energy-efficiency/heat-pump-financing/",
+    "financial_authority_id": 23,
+    "financial_authority": {
+      "id": 23,
+      "authority_type": "utility",
+      "description": "Volunteer Energy Cooperative offers financing for energy-efficient heat pumps to help customers reduce energy consumption and improve home comfort.",
+      "name": "Volunteer Energy Cooperative",
+      "state": "TN",
+      "city": null,
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2024-10-31T21:00:58.379Z",
+      "updated_at": "2024-10-31T21:00:58.379Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 26,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 20000,
+      "min_interest_rate": null,
+      "max_interest_rate": 8,
+      "max_repayment_months": 120,
+      "created_at": "2025-02-18T22:33:28.507Z",
+      "updated_at": "2025-08-07T19:14:35.329Z"
+    },
+    "created_at": "2024-10-31T21:00:58.633Z",
+    "updated_at": "2025-08-07T19:14:35.343Z"
+  },
+  {
     "id": 28,
     "loan_program_key": "CA-2",
     "name": "Zero Percent Loan Program",
@@ -2752,6 +3452,104 @@
     },
     "created_at": "2024-10-31T21:00:59.929Z",
     "updated_at": "2025-02-20T15:53:11.860Z"
+  },
+  {
+    "id": 81,
+    "loan_program_key": "TN-3",
+    "name": "Heat Pump Program",
+    "description": "Caney Fork Electric Cooperative offers an on-bill Heat Pump Program that provides financing for the installation of energy-efficient heat pumps. The program allows qualified members to finance the cost of a new heat pump system through their electric bill, with no down payment required and competitive interest rates. Payments are added to the member's monthly bill.",
+    "description_langs": {
+      "es": "Caney Fork Electric Cooperative ofrece un Programa de Bombas de Calor que proporciona financiamiento para la instalación de bombas de calor energéticamente eficientes. El programa permite a los miembros calificados financiar el costo de un nuevo sistema de bomba de calor a través de su factura eléctrica, sin pago inicial y con tasas de interés competitivas."
+    },
+    "status": "PUBLISHED",
+    "state": "TN",
+    "is_national": false,
+    "website_url": "https://caneyforkec.com/heat-pump-program/",
+    "financial_authority_id": 69,
+    "financial_authority": {
+      "id": 69,
+      "authority_type": "utility",
+      "description": "",
+      "name": "Caney Fork Electric Cooperative",
+      "state": "TN",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-07-17T16:00:34.904Z",
+      "updated_at": "2025-07-17T16:00:34.904Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 80,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 20000,
+      "min_interest_rate": 8,
+      "max_interest_rate": 8,
+      "max_repayment_months": 120,
+      "created_at": "2025-07-17T16:02:03.883Z",
+      "updated_at": "2025-08-07T19:13:19.794Z"
+    },
+    "created_at": "2025-07-17T16:02:03.899Z",
+    "updated_at": "2025-08-07T19:13:19.811Z"
+  },
+  {
+    "id": 35,
+    "loan_program_key": "SC-2",
+    "name": "Renewable Energy Resource Loan",
+    "description": "The Renewable Energy Resource Loan offers financing for solar voltaic (PV), wind, micro-hydro, and biomass generation.",
+    "description_langs": {
+      "es": "El Préstamo de Recursos de Energía Renovable ofrece financiamiento para la generación de energía solar fotovoltaica (PV), eólica, microhidroeléctrica y de biomasa."
+    },
+    "status": "PUBLISHED",
+    "state": "SC",
+    "is_national": false,
+    "website_url": "https://www.santeecooper.com/programs-incentives/empowerhome/loans/",
+    "financial_authority_id": 26,
+    "financial_authority": {
+      "id": 26,
+      "authority_type": "utility",
+      "description": "Santee Cooper offers loans to help customers finance energy efficiency improvements, including HVAC systems, water heaters, solar, and more.",
+      "name": "Santee Cooper",
+      "state": "SC",
+      "city": null,
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2024-10-31T21:01:00.582Z",
+      "updated_at": "2024-10-31T21:01:00.582Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "SOLAR"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 31,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 40000,
+      "min_interest_rate": null,
+      "max_interest_rate": 5.5,
+      "max_repayment_months": 120,
+      "created_at": "2025-02-18T22:33:28.507Z",
+      "updated_at": "2025-08-07T16:41:06.480Z"
+    },
+    "created_at": "2024-10-31T21:01:01.098Z",
+    "updated_at": "2025-08-07T16:41:06.499Z"
   },
   {
     "id": 37,
@@ -2970,6 +3768,55 @@
     "updated_at": "2025-07-07T03:57:09.336Z"
   },
   {
+    "id": 41,
+    "loan_program_key": "KY-1",
+    "name": "Heat Pump Loan",
+    "description": "The Heat Pump Loan Program offers loans to WRECC members for the installation of energy-efficient heat pumps. Loan payments are added to the WRECC bill each month.",
+    "description_langs": {
+      "es": "El Programa de Préstamos para Bombas de Calor ofrece préstamos a los miembros de WRECC para la instalación de bombas de calor energéticamente eficientes."
+    },
+    "status": "PUBLISHED",
+    "state": "KY",
+    "is_national": false,
+    "website_url": "https://www.wrecc.com/heat-pump-loan-program/",
+    "financial_authority_id": 29,
+    "financial_authority": {
+      "id": 29,
+      "authority_type": "utility",
+      "description": "Warren Rural Electric Cooperative Corporation (WRECC) offers financing for the installation of energy-efficient heat pumps.",
+      "name": "Warren Rural Electric Cooperative Corporation (WRECC)",
+      "state": "KY",
+      "city": null,
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2024-10-31T21:01:03.144Z",
+      "updated_at": "2024-10-31T21:01:03.144Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 34,
+      "min_credit_score": 625,
+      "max_debt_to_income": null,
+      "min_loan_amount": 2500,
+      "max_loan_amount": 20000,
+      "min_interest_rate": null,
+      "max_interest_rate": 8,
+      "max_repayment_months": 120,
+      "created_at": "2025-02-18T22:33:28.507Z",
+      "updated_at": "2025-08-07T19:04:20.686Z"
+    },
+    "created_at": "2024-10-31T21:01:03.390Z",
+    "updated_at": "2025-08-07T19:04:20.698Z"
+  },
+  {
     "id": 38,
     "loan_program_key": "VT-3",
     "name": "20-Year Energy Improvement Loan",
@@ -3023,6 +3870,67 @@
     },
     "created_at": "2024-10-31T21:01:02.124Z",
     "updated_at": "2025-07-07T03:58:12.413Z"
+  },
+  {
+    "id": 52,
+    "loan_program_key": "GA-7",
+    "name": "Habersham EMC Energy Efficiency Loan Program",
+    "description": "This loan program allows HEMC customers to finance energy efficient home improvements including heat pump, water heater, and weatherization installations.",
+    "description_langs": {
+      "es": "Este programa de préstamos permite a los clientes de HEMC financiar mejoras energéticamente eficientes en el hogar, incluidas instalaciones de bombas de calor, calentadores de agua y climatización."
+    },
+    "status": "PUBLISHED",
+    "state": "GA",
+    "is_national": false,
+    "website_url": "https://www.habershamemc.com/services/energy-management/loans/",
+    "financial_authority_id": 40,
+    "financial_authority": {
+      "id": 40,
+      "authority_type": "utility",
+      "description": "Habersham EMC is a Touchstone Energy Cooperative and utility that offers loans for customers to make energy efficient upgrades.",
+      "name": "Habersham EMC",
+      "state": "GA",
+      "city": "",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-03-13T22:52:32.269Z",
+      "updated_at": "2025-03-13T22:52:32.269Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "EV_CHARGER"
+      },
+      {
+        "type": "SOLAR"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 51,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": null,
+      "min_interest_rate": null,
+      "max_interest_rate": null,
+      "max_repayment_months": null,
+      "created_at": "2025-03-13T22:55:39.930Z",
+      "updated_at": "2025-08-07T19:10:30.343Z"
+    },
+    "created_at": "2025-03-13T22:55:39.947Z",
+    "updated_at": "2025-08-07T19:10:30.358Z"
   },
   {
     "id": 17,
@@ -3190,6 +4098,55 @@
     "updated_at": "2025-04-10T22:50:52.374Z"
   },
   {
+    "id": 69,
+    "loan_program_key": "GA-10",
+    "name": "Self-Help Credit Union Solar Loans",
+    "description": "Self-Help Credit Union offers solar loans to help homeowners finance the installation of solar energy systems. These loans are designed to make clean energy more accessible and affordable, with flexible terms and competitive interest rates. The program supports residential solar projects and aims to promote environmental sustainability.",
+    "description_langs": {
+      "es": "Self-Help Credit Union ofrece préstamos solares para ayudar a los propietarios a financiar la instalación de sistemas de energía solar. Estos préstamos están diseñados para hacer que la energía limpia sea más accesible y asequible, con términos flexibles y tasas de interés competitivas. El programa apoya proyectos solares residenciales y tiene como objetivo promover la sostenibilidad ambiental."
+    },
+    "status": "PUBLISHED",
+    "state": "GA",
+    "is_national": false,
+    "website_url": "https://www.self-help.org/personal/loans/green-loans/solar-loans",
+    "financial_authority_id": 58,
+    "financial_authority": {
+      "id": 58,
+      "authority_type": "credit_union",
+      "description": "Self-Help Credit Union was chartered in 1983 to build a network of branches that partner with working families and communities often underserved by the financial marketplace. With over $1.86 billion in assets and serving more than 89,000 members in 37 branches – eight in Florida, one in Georgia, 23 in North Carolina, four in South Carolina, and one in Virginia - Self-Help Credit Union is one of the fastest-growing community development financial institutions in the country. It is part of the Self-Help family of nonprofit organizations whose collective mission is to create and protect ownership and economic opportunity for all. For over 40 years, the national Center for Community Self-Help and its affiliates have provided more than $11 billion in financing to help more than 168,000 borrowers buy homes, start and grow businesses and strengthen community resources. For more information, please visit www.self-help.org. ",
+      "name": "Self-Help Credit Union",
+      "state": "GA",
+      "city": "Atlanta",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-05-20T19:41:42.517Z",
+      "updated_at": "2025-05-20T19:41:42.517Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "SOLAR"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 68,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 100000,
+      "min_interest_rate": null,
+      "max_interest_rate": null,
+      "max_repayment_months": 240,
+      "created_at": "2025-05-20T19:59:33.471Z",
+      "updated_at": "2025-08-06T21:48:54.337Z"
+    },
+    "created_at": "2025-05-20T19:59:33.486Z",
+    "updated_at": "2025-08-06T21:48:54.349Z"
+  },
+  {
     "id": 55,
     "loan_program_key": "PA-2",
     "name": "Homeowners Energy Efficiency Loan Program",
@@ -3353,5 +4310,57 @@
     },
     "created_at": "2024-10-31T21:01:01.583Z",
     "updated_at": "2025-07-07T03:59:48.015Z"
+  },
+  {
+    "id": 34,
+    "loan_program_key": "SC-1",
+    "name": "Energy Efficiency Loan",
+    "description": "The Energy Efficiency Loan offers financing to help customers finance energy efficiency improvements, including HVAC systems, water heaters, and more.",
+    "description_langs": {
+      "es": "El Préstamo de Eficiencia Energética ofrece financiamiento para ayudar a los clientes a financiar mejoras de eficiencia energética, incluidos sistemas HVAC, calentadores de agua y más."
+    },
+    "status": "PUBLISHED",
+    "state": "SC",
+    "is_national": false,
+    "website_url": "https://www.santeecooper.com/programs-incentives/empowerhome/loans/",
+    "financial_authority_id": 26,
+    "financial_authority": {
+      "id": 26,
+      "authority_type": "utility",
+      "description": "Santee Cooper offers loans to help customers finance energy efficiency improvements, including HVAC systems, water heaters, solar, and more.",
+      "name": "Santee Cooper",
+      "state": "SC",
+      "city": null,
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2024-10-31T21:01:00.582Z",
+      "updated_at": "2024-10-31T21:01:00.582Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WATER_HEATER"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 29,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": 1000,
+      "max_loan_amount": 20000,
+      "min_interest_rate": null,
+      "max_interest_rate": 5.5,
+      "max_repayment_months": 60,
+      "created_at": "2025-02-18T22:33:28.507Z",
+      "updated_at": "2025-08-07T16:41:21.445Z"
+    },
+    "created_at": "2024-10-31T21:01:00.822Z",
+    "updated_at": "2025-08-07T16:41:21.489Z"
   }
 ]
