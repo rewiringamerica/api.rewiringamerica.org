@@ -1886,14 +1886,16 @@
     "program": "co_gunnisonCountyElectricAssociation_rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 30
+      "number": 30,
+      "minimum": 30,
+      "maximum": 130
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$30 rebate for new ENERGY STAR® rated electric clothes dryer.",
-      "es": "Un reembolso de $30 dólares por una nueva secadora de ropa eléctrica con clasificación ENERGY STAR."
+      "en": "$30 for new ENERGY STAR® rated electric dryer; up to $130 if switching from a gas dryer. Must be part of the PowerWise Pledge program to qualify. ",
+      "es": "$30 por una secadora eléctrica nueva con certificación ENERGY STAR®; hasta $130 si cambia de secadora a gas. Debe participar en el programa PowerWise Pledge para calificar. "
     },
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
@@ -1910,14 +1912,16 @@
     "program": "co_gunnisonCountyElectricAssociation_rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 90
+      "number": 90,
+      "minimum": 90,
+      "maximum": 190
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$90 rebate for new ENERGY STAR® electric hybrid heat pump clothes dryer.",
-      "es": "Un reembolso de $90 dólares por una nueva secadora de ropa eléctrica híbrida con bomba de calor ENERGY STAR."
+      "en": "$90 for new ENERGY STAR® electric hybrid heat pump clothes dryer. $190 when switching from a gas dryer.",
+      "es": "$90 por una nueva secadora de ropa eléctrica híbrida con bomba de calor ENERGY STAR®. $190 al cambiar de una secadora a gas."
     },
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
@@ -1958,14 +1962,16 @@
     "program": "co_gunnisonCountyElectricAssociation_rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 350
+      "number": 350,
+      "minimum": 350,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 rebate per unit for gas-to-induction replacement or new construction.",
-      "es": "Un reembolso de $350 dólares por unidad para el reemplazo de equipos de gas a equipos de inducción o nueva construcción."
+      "en": "$350 rebate per unit for gas-to-induction replacement or new construction.  For PowerWise Pledge contributors, the rebate is $500.",
+      "es": "Reembolso de $350 por unidad para la sustitución de gas por inducción o nueva construcción. Para quienes contribuyen al Compromiso PowerWise, el reembolso es de $500."
     },
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
@@ -2019,6 +2025,7 @@
       "en": "25% off purchase price up to $500 for qualified used PHEVs.",
       "es": "Un descuento del 25% en el precio de compra de hasta $500 dólares para un vehículo eléctrico híbrido enchufable usado certificado."
     },
+    "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
     }
@@ -2068,8 +2075,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of the total cost of installation and equipment, up to $1250 for residential EV chargers.",
-      "es": "El 50% del costo total de instalación y equipamiento, hasta $1,250 dólares para cargadores residenciales de VEs."
+      "en": "50% off cost of installation and equipment, up to $1,000, for residential EV chargers. PowerWise Pledge contributors can get up to $1,250 in rebates.",
+      "es": "50% de descuento en el costo de instalación y equipo, hasta $1,000, para cargadores residenciales de vehículos eléctricos. Quienes contribuyan al Compromiso PowerWise pueden obtener hasta $1,250 en reembolsos."
     },
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
@@ -2121,6 +2128,7 @@
       "en": "$70 rebate for Electric Resistance Water Heaters replacing natural gas or propane water heaters or if a member signs up for Time-of-Use rate.",
       "es": "Un reembolso de $70 dólares para calentadores de agua por resistencia eléctrica que sustituyan a los de gas natural o propano o si un miembro se suscribe a la tarifa de tiempo de uso."
     },
+    "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
     }
@@ -2143,8 +2151,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of purchase price, up to $950 for electric heat pump water heaters.",
-      "es": "Reembolso del 50 % del precio de compra, hasta $950, por calentadores de agua con bomba de calor eléctricos."
+      "en": "50% of purchase price, up to $950 for electric heat pump water heaters. $950 for PowerWise Pledge contributors, $350 for non-contributors.",
+      "es": "50% del precio de compra, hasta $950 para calentadores de agua con bomba de calor eléctricos. $950 para contribuyentes del Compromiso PowerWise, $350 para no contribuyentes."
     },
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
@@ -2196,6 +2204,7 @@
       "en": "$16/kW rebate for electric thermal storage (ETS) units controlled by timers or a master control system for non-PowerWise Pledge contributors.",
       "es": "Reembolso de $16 por kW para unidades de almacenamiento térmico eléctrico (ETS) controladas por temporizadores o un sistema de control maestro, para quienes no contribuyan al programa PowerWise Pledge."
     },
+    "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
     }
@@ -2222,6 +2231,7 @@
       "en": "$1175 rebate for standard Air Source Heat Pumps that are at most 2 tons (not to exceed 50% of equipment cost).",
       "es": "Un reembolso de $1,175 dólares para bombas de calor de fuente de aire estándar de 2 toneladas como máximo (sin superar el 50% del costo del equipo)."
     },
+    "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
     }
@@ -2248,6 +2258,7 @@
       "en": "$2300 rebate for standard Air Source Heat Pumps over 2 tons (not to exceed 50% of equipment cost).",
       "es": "Un reembolso de $2,300 dólares para bombas de calor de fuente de aire estándar de más de 2 toneladas (sin superar el 50% del costo del equipo)."
     },
+    "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
     }
@@ -2274,6 +2285,7 @@
       "en": "$1500 rebate for Cold Climate Tier 2 Air Source Heat Pumps that are at most 2 tons (not to exceed 50% of equipment cost).",
       "es": "Un reembolso de $1,500 dólares para bombas de calor de fuente de aire de nivel 2 para climas fríos que tengan como máximo 2 toneladas (sin superar el 50% del costo del equipo)."
     },
+    "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
     }
@@ -2300,6 +2312,7 @@
       "en": "$5400 rebate for Cold Climate Air Source Heat Pumps over 2 tons (not to exceed 50% of equipment cost).",
       "es": "Un reembolso de $5,400 dólares para bombas de calor de fuente de aire de clima frío de más de 2 toneladas (sin superar el 50% del costo del equipo)."
     },
+    "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
     }
@@ -2326,6 +2339,7 @@
       "en": "$450 rebate per ton for air-to-water units with EER at least 19 and COP at least 4.",
       "es": "Un reembolso de $450 dólares por tonelada para unidades aire-agua con EER de al menos 19 y COP de al menos 4."
     },
+    "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
     }
@@ -2495,7 +2509,6 @@
     "amount": {
       "type": "percent",
       "number": 0.25,
-      "minimum": 150,
       "maximum": 250
     },
     "owner_status": [
@@ -2503,8 +2516,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "25% of cost up to $250 rebate for electric snowblowers.",
-      "es": "Reembolso del 25 % del costo, hasta $250, por sopladoras de nieve eléctricas."
+      "en": "25% of cost up to $150 for a standard electric snowblower, up to $250 rebate for 2 stage electric snowblowers.",
+      "es": "25% del costo hasta $150 para una quitanieves eléctrica estándar, hasta $250 de reembolso para quitanieves eléctricas de 2 etapas."
     },
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
@@ -2532,6 +2545,7 @@
       "en": "25% of cost up to $50 rebate for electric Leaf Blower.",
       "es": "Un reembolso del 25% del costo de un soplador de hojas eléctrico, hasta $50 dólares."
     },
+    "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
     }
@@ -2558,6 +2572,7 @@
       "en": "25% of cost up to $100 rebate for electric Chainsaw.",
       "es": "Un reembolso del 25% del costo de una motosierra eléctrica, hasta $100 dólares."
     },
+    "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
     }
@@ -2584,6 +2599,7 @@
       "en": "25% of cost up to $50 rebate for electric Trimmer.",
       "es": "Un reembolso del 25% del costo de una recortadora eléctrica, hasta $50 dólares."
     },
+    "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
     }
@@ -2636,6 +2652,7 @@
       "en": "25% of cost up to $50 rebate for electric Pruner.",
       "es": "Un reembolso del 25% del costo de una podadora eléctrica, hasta 50 dólares."
     },
+    "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
     }
@@ -2662,6 +2679,7 @@
       "en": "25% of cost up to $50 rebate for electric Power Washer.",
       "es": "Un reembolso del 25% del costo de una hidrolimpiadora eléctrica, hasta $50 dólares."
     },
+    "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
     }
@@ -2686,6 +2704,7 @@
       "en": "$1000 rebate per unit for a non-dispatchable Battery Storage unit on a Time of Use rate.",
       "es": "Un reembolso de $1,000 dólares por cada unidad de almacenamiento en batería no despachable con tarifa por tiempo de uso."
     },
+    "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
     }
@@ -2725,14 +2744,16 @@
     "program": "co_gunnisonCountyElectricAssociation_rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 25
+      "number": 25,
+      "minimum": 25,
+      "maximum": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$25 rebate per thermostat.",
-      "es": "Un reembolso de $25 dólares por termostato."
+      "en": "$25 rebate per thermostat. $50 per thermostat if enrolled in GCEA's time-of-use rate.  ",
+      "es": "$25 de reembolso por termostato. $50 por termostato si está inscrito en la tarifa por tiempo de uso de GCEA.  "
     },
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
