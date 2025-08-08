@@ -85,6 +85,37 @@ const LOCATION_AND_AMIS: {
   ],
 } as const;
 
+const locationWithUtilities = (
+  baseLocation: ResolvedLocation,
+  electricId: number,
+  gasId?: number,
+): ResolvedLocation => ({
+  ...baseLocation,
+  geographies: [
+    {
+      id: electricId,
+      type: GeographyType.ElectricTerritory,
+      name: '',
+      state: '',
+      county_fips: null,
+      intersection_proportion: 1,
+    },
+    ...[
+      gasId
+        ? {
+            id: gasId,
+            type: GeographyType.GasTerritory,
+            name: '',
+            state: '',
+            county_fips: null,
+            intersection_proportion: 1,
+          }
+        : null,
+    ].filter(g => g !== null),
+    ...baseLocation.geographies,
+  ],
+});
+
 const IRA_HVAC_ITEMS =
   'air_to_water_heat_pump,ducted_heat_pump,ductless_heat_pump';
 const IRA_25C_WEATHERIZATION_ITEMS =
@@ -147,15 +178,21 @@ test('correctly excludes state incentives for beta states', async t => {
 
 test('correctly evaluates state incentives for beta states', async t => {
   // CA is in beta so we should get incentives for it when beta is requested.
-  const data = calculateIncentives(...LOCATION_AND_AMIS['94117'], {
-    owner_status: OwnerStatus.Homeowner,
-    household_income: 20000,
-    tax_filing: FilingStatus.Single,
-    household_size: 1,
-    authority_types: [AuthorityType.Utility],
-    utility: 'ca-pacific-gas-and-electric',
-    include_beta_states: true,
-  });
+  const [baseLocation, amis] = LOCATION_AND_AMIS['94117'];
+  const data = calculateIncentives(
+    // PG&E electric
+    locationWithUtilities(baseLocation, 3536),
+    amis,
+    {
+      owner_status: OwnerStatus.Homeowner,
+      household_income: 20000,
+      tax_filing: FilingStatus.Single,
+      household_size: 1,
+      authority_types: [AuthorityType.Utility],
+      include_beta_states: true,
+      utility: 'ca-pacific-gas-and-electric',
+    },
+  );
   t.ok(data);
   t.not(data.incentives.length, 0);
 });
@@ -510,7 +547,7 @@ test('correct filtering of incentives with geography', async t => {
     county: {
       'mock-county-authority': {
         name: 'The Mock Authority Company',
-        geography_id: 111,
+        geography_ids: [111],
       },
     },
   };
@@ -583,34 +620,41 @@ test('correctly matches geo groups', async t => {
     household_size: 1,
   } as const;
 
+  const [baseLocation, amis] = LOCATION_AND_AMIS['02130'];
+
   const massSaveFilter = (i: StateIncentive) =>
     i.program.toLocaleLowerCase().startsWith('ma-masssave');
 
-  const withElectric = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
-    ...baseArgs,
-    utility: 'ma-eversource',
-  });
+  // Eversource elec only
+  const withElectric = calculateIncentives(
+    locationWithUtilities(baseLocation, 4104),
+    amis,
+    baseArgs,
+  );
   t.ok(withElectric.incentives.filter(massSaveFilter).length > 0);
 
-  const withGas = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
-    ...baseArgs,
-    utility: 'ma-town-of-wellesley',
-    gas_utility: 'ma-national-grid-gas',
-  });
+  // Wellesley MLP and National Grid gas
+  const withGas = calculateIncentives(
+    locationWithUtilities(baseLocation, 4156, 5526),
+    amis,
+    baseArgs,
+  );
   t.ok(withGas.incentives.filter(massSaveFilter).length > 0);
 
-  const withBoth = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
-    ...baseArgs,
-    utility: 'ma-national-grid',
-    gas_utility: 'ma-national-grid-gas',
-  });
+  // National Grid elec and National Grid gas
+  const withBoth = calculateIncentives(
+    locationWithUtilities(baseLocation, 4106, 5526),
+    amis,
+    baseArgs,
+  );
   t.ok(withBoth.incentives.filter(massSaveFilter).length > 0);
 
-  const withNoMassSave = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
-    ...baseArgs,
-    utility: 'ma-city-of-westfield',
-    gas_utility: 'ma-westfield-gas-and-elec-lt-dep',
-  });
+  // Westfield elec and Westfield gas
+  const withNoMassSave = calculateIncentives(
+    locationWithUtilities(baseLocation, 4157, 5520),
+    amis,
+    baseArgs,
+  );
   t.equal(withNoMassSave.incentives.filter(massSaveFilter).length, 0);
 });
 

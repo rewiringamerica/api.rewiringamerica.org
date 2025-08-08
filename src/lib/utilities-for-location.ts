@@ -1,20 +1,10 @@
+import _ from 'lodash';
 import { Database } from 'sqlite';
-import {
-  APIAuthority,
-  AUTHORITIES_BY_STATE,
-  AuthorityType,
-} from '../data/authorities';
+import { APIAuthority, AuthorityType } from '../data/authorities';
 import { GEO_GROUPS_BY_STATE } from '../data/geo_groups';
 import { PROGRAMS } from '../data/programs';
 import { STATE_INCENTIVES_BY_STATE } from '../data/state_incentives';
-import { ResolvedLocation } from './location';
-
-/** Models the zip_to_utility table in sqlite. */
-type ZipToUtility = {
-  zip: string;
-  utility_id: string;
-  predominant: number;
-};
+import { GeographyType, ResolvedLocation } from './location';
 
 type AuthorityMap = {
   [id: string]: APIAuthority;
@@ -33,11 +23,7 @@ export async function getElectricUtilitiesForLocation(
   db: Database,
   location: ResolvedLocation,
 ): Promise<AuthorityMap> {
-  return getUtilitiesForLocation(
-    db,
-    location,
-    AUTHORITIES_BY_STATE[location.state]?.utility,
-  );
+  return getUtilitiesForLocation(db, location, GeographyType.ElectricTerritory);
 }
 
 /**
@@ -48,12 +34,19 @@ export async function getGasUtilitiesForLocation(
   db: Database,
   location: ResolvedLocation,
 ): Promise<AuthorityMap | undefined> {
-  const stateMap = AUTHORITIES_BY_STATE[location.state]?.gas_utility;
-  if (stateMap && Object.keys(stateMap).length > 0) {
-    return getUtilitiesForLocation(db, location, stateMap);
-  } else {
+  // Every state has at least one gas utility in real life, so if we know of no
+  // gas territories in the state, take that to mean we don't have the data.
+  const totalInState = (await db.get<{ ct: number }>(
+    `SELECT count(1) AS ct FROM geographies
+    WHERE state = ? AND type = 'gas_territory'`,
+    location.state,
+  ))!.ct;
+
+  if (totalInState === 0) {
     return undefined;
   }
+
+  return getUtilitiesForLocation(db, location, GeographyType.GasTerritory);
 }
 
 /**
@@ -90,36 +83,24 @@ export function canGasUtilityAffectEligibility(
 async function getUtilitiesForLocation(
   db: Database,
   location: ResolvedLocation,
-  stateUtilities: AuthorityMap | undefined,
+  type: GeographyType,
 ): Promise<AuthorityMap> {
-  if (!stateUtilities) {
-    return {};
-  }
-
   // Search the mappings of zips that have this location's ZCTA as the parent.
   // Put the predominant utility first.
-  const rows = await db.all<ZipToUtility[]>(
+  const rows = await db.all<{ key: string; name: string }[]>(
     `
     WITH child_zips AS (
       SELECT zip FROM zips WHERE parent_zcta = @zcta
     )
-    SELECT * FROM zip_to_utility WHERE zip = @zcta OR zip IN child_zips
+    SELECT g.key, g.name FROM zip_to_geography_approx zg
+    JOIN geographies g ON (g.id = zg.geography_id)
+    WHERE (zip = @zcta OR zip IN child_zips)
+    AND g.type = @type
+    AND g.state = @state
     ORDER BY predominant DESC
     `,
-    { '@zcta': location.zcta },
+    { '@zcta': location.zcta, '@type': type, '@state': location.state },
   );
 
-  // If we didn't find any utilities in the dataset, fall back to returning all
-  // the utilities in the state.
-  if (rows.length === 0) {
-    return stateUtilities;
-  }
-
-  // For now, only return utilities that are also reflected in authorities.json,
-  // as those are the ones we've done data collection for.
-  return Object.fromEntries(
-    rows
-      .filter(row => row.utility_id in stateUtilities)
-      .map(row => [row.utility_id, stateUtilities[row.utility_id]]),
-  );
+  return Object.fromEntries(rows.map(row => [row.key, _.pick(row, 'name')]));
 }

@@ -108,36 +108,6 @@ export default function calculateIncentives(
   }
 
   const stateAuthorities = AUTHORITIES_BY_STATE[state_id];
-  if (request.utility) {
-    if (!stateAuthorities) {
-      throw new InvalidInputError(
-        `We do not yet have information about the utilities in ${state_id}.`,
-        'utility',
-      );
-    }
-
-    if (!stateAuthorities.utility[request.utility]) {
-      throw new InvalidInputError(
-        `Invalid utility: "${request.utility}".`,
-        'utility',
-      );
-    }
-  }
-
-  if (request.gas_utility && request.gas_utility !== NO_GAS_UTILITY) {
-    if (!stateAuthorities.gas_utility) {
-      throw new InvalidInputError(
-        `We do not yet have information about gas utilities in ${state_id}.`,
-        'gas_utility',
-      );
-    }
-    if (!stateAuthorities.gas_utility[request.gas_utility]) {
-      throw new InvalidInputError(
-        `Invalid gas utility: "${request.gas_utility}.`,
-        'gas_utility',
-      );
-    }
-  }
 
   const isUnder80Ami =
     household_income < amiAndEvCreditEligibility.computedAMI80;

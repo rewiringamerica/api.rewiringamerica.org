@@ -79,33 +79,34 @@ export default async function (
     '/api/v1/calculator',
     { schema: API_CALCULATOR_SCHEMA },
     async (request, reply) => {
-      const language = request.query.language ?? 'en';
-      const location = await resolveLocation(fastify.sqlite, request.query);
-
-      if (!location) {
-        throw fastify.httpErrors.createError(
-          404,
-          request.query.zip
-            ? t('errors', 'zip_code_doesnt_exist', language)
-            : t('errors', 'cannot_locate_address', language),
-          { field: 'location' },
-        );
-      }
-
-      const amiAndEvCreditEligibility = await computeAMIAndEVCreditEligibility(
-        fastify.sqlite,
-        location,
-        request.query.household_size,
-      );
-      if (!amiAndEvCreditEligibility) {
-        throw fastify.httpErrors.createError(
-          404,
-          t('errors', 'no_data_for_location', language),
-          { field: 'location' },
-        );
-      }
-
       try {
+        const language = request.query.language ?? 'en';
+        const location = await resolveLocation(fastify.sqlite, request.query);
+
+        if (!location) {
+          throw fastify.httpErrors.createError(
+            404,
+            request.query.zip
+              ? t('errors', 'zip_code_doesnt_exist', language)
+              : t('errors', 'cannot_locate_address', language),
+            { field: 'location' },
+          );
+        }
+
+        const amiAndEvCreditEligibility =
+          await computeAMIAndEVCreditEligibility(
+            fastify.sqlite,
+            location,
+            request.query.household_size,
+          );
+        if (!amiAndEvCreditEligibility) {
+          throw fastify.httpErrors.createError(
+            404,
+            t('errors', 'no_data_for_location', language),
+            { field: 'location' },
+          );
+        }
+
         const result = calculateIncentives(
           location,
           amiAndEvCreditEligibility,
@@ -136,30 +137,30 @@ export default async function (
     '/api/v1/utilities',
     { schema: API_UTILITIES_SCHEMA },
     async (request, reply) => {
-      const language = request.query.language ?? 'en';
-      const location = await resolveLocation(fastify.sqlite, request.query);
-
-      if (!location) {
-        throw fastify.httpErrors.createError(
-          404,
-          request.query.zip
-            ? t('errors', 'zip_code_doesnt_exist', language)
-            : t('errors', 'cannot_locate_address', language),
-          {
-            field: 'location',
-          },
-        );
-      }
-
-      const gas_utilities = await getGasUtilitiesForLocation(
-        fastify.sqlite,
-        location,
-      );
-      const gas_utility_affects_incentives = gas_utilities
-        ? canGasUtilityAffectEligibility(location)
-        : undefined;
-
       try {
+        const language = request.query.language ?? 'en';
+        const location = await resolveLocation(fastify.sqlite, request.query);
+
+        if (!location) {
+          throw fastify.httpErrors.createError(
+            404,
+            request.query.zip
+              ? t('errors', 'zip_code_doesnt_exist', language)
+              : t('errors', 'cannot_locate_address', language),
+            {
+              field: 'location',
+            },
+          );
+        }
+
+        const gas_utilities = await getGasUtilitiesForLocation(
+          fastify.sqlite,
+          location,
+        );
+        const gas_utility_affects_incentives = gas_utilities
+          ? canGasUtilityAffectEligibility(location)
+          : undefined;
+
         reply
           .status(200)
           .type('application/json')
@@ -199,21 +200,21 @@ export default async function (
     '/api/v1/incentives/programs',
     { schema: API_PROGRAMS_REQUEST_SCHEMA },
     async (request, reply) => {
-      const location = await resolveLocation(fastify.sqlite, request.query);
-      const language = request.query.language ?? 'en';
-
-      if (!location) {
-        throw fastify.httpErrors.createError(
-          404,
-          request.query.zip
-            ? t('errors', 'zip_code_doesnt_exist', language)
-            : t('errors', 'cannot_locate_address', language),
-          {
-            field: 'location',
-          },
-        );
-      }
       try {
+        const location = await resolveLocation(fastify.sqlite, request.query);
+        const language = request.query.language ?? 'en';
+
+        if (!location) {
+          throw fastify.httpErrors.createError(
+            404,
+            request.query.zip
+              ? t('errors', 'zip_code_doesnt_exist', language)
+              : t('errors', 'cannot_locate_address', language),
+            {
+              field: 'location',
+            },
+          );
+        }
         const programs = parseProgramJSON(location.state);
         const payload: APIProgramsResponse = getProgramsForLocation(
           location,
