@@ -2694,17 +2694,19 @@
     ],
     "program": "co_gunnisonCountyElectricAssociation_rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 1000
+      "type": "dollars_per_unit",
+      "number": 200,
+      "unit": "kilowatt_hour",
+      "minimum": 100,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1000 rebate per unit for a non-dispatchable Battery Storage unit on a Time of Use rate.",
-      "es": "Un reembolso de $1,000 dólares por cada unidad de almacenamiento en batería no despachable con tarifa por tiempo de uso."
+      "en": "20 cents/watt-hour up to $500 for portable electric generator",
+      "es": "20 centavos/vatio-hora hasta $500 por generador eléctrico portátil"
     },
-    "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
     }
@@ -2726,8 +2728,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$2000 rebate per unit for a dispatchable  Battery Storage unit on a Time of Use rate.",
-      "es": "Reembolso de $2,000 por unidad para un sistema de almacenamiento de batería despachable con tarifa según horario de uso."
+      "en": "$2000 rebate per unit for a dispatch-able  Battery Storage unit.  Available to PowerWise Pledge contributors.",
+      "es": "Descuento de $2000 por unidad para una unidad de almacenamiento de baterías despachable. Disponible para quienes contribuyen al Compromiso PowerWise."
     },
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
