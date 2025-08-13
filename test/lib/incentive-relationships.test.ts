@@ -3,7 +3,7 @@ import { AuthorityType } from '../../src/data/authorities';
 import { FilingStatus } from '../../src/data/tax_brackets';
 import { OwnerStatus } from '../../src/data/types/owner-status';
 import { buildRelationshipGraph } from '../../src/lib/incentive-relationship-calculation';
-import { ResolvedLocation } from '../../src/lib/location';
+import { GeographyType, ResolvedLocation } from '../../src/lib/location';
 import { calculateStateIncentives } from '../../src/lib/state-incentives-calculation';
 import { incentiveRelationshipsContainCycle } from '../data/cycles';
 import {
@@ -22,7 +22,16 @@ import {
 const LOCATION: ResolvedLocation = {
   state: 'RI',
   zcta: '02903',
-  geographies: [],
+  geographies: [
+    {
+      id: 4761,
+      type: GeographyType.ElectricTerritory,
+      name: 'Clear River Electric and Water District',
+      state: 'RI',
+      county_fips: null,
+      intersection_proportion: 1.0,
+    },
+  ],
 };
 
 const AMIS = {

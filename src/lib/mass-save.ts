@@ -1,4 +1,3 @@
-import { GEO_GROUPS_BY_STATE } from '../data/geo_groups';
 import { Programs } from '../data/programs';
 import { StateIncentive } from '../data/state_incentives';
 import { Item } from '../data/types/items';
@@ -14,10 +13,18 @@ export const EXCEPTION_MLPS: string[] = [
 ];
 
 export const MASS_SAVE_AUTHORITY = 'ma-massSave';
-export const MASS_SAVE_UTILITIES =
-  GEO_GROUPS_BY_STATE['MA']['ma-mass-save'].utilities!;
-export const MASS_SAVE_GAS_UTILITIES =
-  GEO_GROUPS_BY_STATE['MA']['ma-mass-save'].gas_utilities!;
+export const MASS_SAVE_UTILITY_AUTHORITIES = [
+  'ma-eversource',
+  'ma-fitchburg-gas-and-electric-light', // Unitil
+  'ma-national-grid',
+];
+export const MASS_SAVE_GAS_UTILITY_AUTHORITIES = [
+  'ma-berkshire-gas-co',
+  'ma-fitchburg-gas-and-elec-lt-co', // Unitil
+  'ma-liberty-utilities-ma',
+  'ma-national-grid-gas',
+  'ma-nstar-gas-company', // Eversource
+];
 
 /**
  * Mass Save is a consortium of electric and gas utilities; their member
@@ -57,12 +64,12 @@ export function applyMassSaveRule(
       !EXCEPTION_MLPS.includes(program.authority) &&
       // ...and either it's from an electric utility that's not in Mass Save...
       ((program.authority_type === 'utility' &&
-        !MASS_SAVE_UTILITIES.includes(program.authority)) ||
+        !MASS_SAVE_UTILITY_AUTHORITIES.includes(program.authority)) ||
         // ...or it's from a gas utility that's not in Mass Save (we don't
         // expect to have any programs like this, because there are no non-Mass
         // Save utilities that are gas only, but just in case)...
         (program.authority_type === 'gas_utility' &&
-          !MASS_SAVE_GAS_UTILITIES.includes(program.authority)) ||
+          !MASS_SAVE_GAS_UTILITY_AUTHORITIES.includes(program.authority)) ||
         // ...or it's from an "other" authority that isn't Mass Save itself.
         // (There are a couple of MLPs represented like this because they're
         // both electric and gas, and you can get their incentives if you're a
