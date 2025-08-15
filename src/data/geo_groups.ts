@@ -6,20 +6,10 @@ const GEO_GROUP_SCHEMA = {
   type: 'object',
   properties: {
     description: { type: 'string' },
-    utilities: { type: 'array', items: { type: 'string' }, minItems: 1 },
-    gas_utilities: { type: 'array', items: { type: 'string' }, minItems: 1 },
-    cities: { type: 'array', items: { type: 'string' }, minItems: 1 },
-    counties: { type: 'array', items: { type: 'string' }, minItems: 1 },
-    incentives: { type: 'array', items: { type: 'string' } },
+    geographies: { type: 'array', items: { type: 'number' }, minItems: 1 },
   },
   additionalProperties: false,
-  anyOf: [
-    { required: ['utilities'] },
-    { required: ['gas_utilities'] },
-    { required: ['cities'] },
-    { required: ['counties'] },
-  ],
-  required: ['incentives'],
+  required: ['geographies'],
 } as const;
 
 export type GeoGroup = FromSchema<typeof GEO_GROUP_SCHEMA>;

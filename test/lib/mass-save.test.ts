@@ -1,8 +1,10 @@
+import _ from 'lodash';
 import { test } from 'tap';
 import {
   AUTHORITIES_BY_STATE,
   AuthorityType,
 } from '../../src/data/authorities';
+import { GEO_GROUPS_BY_STATE } from '../../src/data/geo_groups';
 import { Programs } from '../../src/data/programs';
 import { StateIncentive } from '../../src/data/state_incentives';
 import { AmountType } from '../../src/data/types/amount';
@@ -13,8 +15,8 @@ import {
   applyMassSaveRule,
   EXCEPTION_MLPS,
   MASS_SAVE_AUTHORITY,
-  MASS_SAVE_GAS_UTILITIES,
-  MASS_SAVE_UTILITIES,
+  MASS_SAVE_GAS_UTILITY_AUTHORITIES,
+  MASS_SAVE_UTILITY_AUTHORITIES,
 } from '../../src/lib/mass-save';
 
 const ALL_PROGRAMS = {
@@ -26,7 +28,7 @@ const ALL_PROGRAMS = {
   },
   massSaveUtility: {
     authority_type: AuthorityType.Utility,
-    authority: MASS_SAVE_UTILITIES[0],
+    authority: MASS_SAVE_UTILITY_AUTHORITIES[0],
     name: { en: '' },
     url: { en: '' },
   },
@@ -156,18 +158,52 @@ test('all cases', async t => {
 });
 
 test('all hardcoded authorities are real', async t => {
-  for (const auth of EXCEPTION_MLPS) {
+  for (const authKey of [...EXCEPTION_MLPS, ...MASS_SAVE_UTILITY_AUTHORITIES]) {
     t.ok(
-      auth in AUTHORITIES_BY_STATE['MA'].utility,
-      `${auth} not in MA utilities`,
+      authKey in AUTHORITIES_BY_STATE['MA'].utility,
+      `${authKey} not in MA utilities`,
     );
   }
 
-  t.ok(MASS_SAVE_UTILITIES.length > 0);
-  t.ok(MASS_SAVE_GAS_UTILITIES.length > 0);
+  for (const authKey of MASS_SAVE_GAS_UTILITY_AUTHORITIES) {
+    t.ok(
+      authKey in AUTHORITIES_BY_STATE['MA'].gas_utility!,
+      `${authKey} not in MA gas utilities`,
+    );
+  }
 
   t.ok(
     MASS_SAVE_AUTHORITY in (AUTHORITIES_BY_STATE['MA'].other || {}),
     'ma-massSave not in MA "other"',
+  );
+});
+
+test('geographies for hardcoded MS authorities match geo groups', async t => {
+  const geoIds = new Set();
+
+  for (const authKey of MASS_SAVE_UTILITY_AUTHORITIES) {
+    const auth = AUTHORITIES_BY_STATE['MA'].utility[authKey];
+    auth.geography_ids?.forEach(id => geoIds.add(id));
+  }
+
+  const electricGroupIds =
+    GEO_GROUPS_BY_STATE['MA']['ma-mass-save-electric'].geographies;
+
+  t.strictSame(
+    _.sortBy(Array.from(geoIds.values())),
+    _.sortBy(electricGroupIds),
+  );
+
+  for (const authKey of MASS_SAVE_GAS_UTILITY_AUTHORITIES) {
+    const auth = AUTHORITIES_BY_STATE['MA'].gas_utility![authKey];
+    auth.geography_ids?.forEach(id => geoIds.add(id));
+  }
+
+  const combinedGroupIds =
+    GEO_GROUPS_BY_STATE['MA']['ma-mass-save'].geographies;
+
+  t.strictSame(
+    _.sortBy(Array.from(geoIds.values())),
+    _.sortBy(combinedGroupIds),
   );
 });

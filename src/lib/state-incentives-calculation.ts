@@ -242,11 +242,31 @@ function ineligibleByLocationOrUtility(
   stateAuthorities: AuthoritiesByType,
   location: ResolvedLocation,
 ): boolean {
-  // Federal incentives have no authority, and need no geography check
-  const authority =
-    program.authority_type !== AuthorityType.Federal && program.authority
-      ? stateAuthorities[program.authority_type][program.authority]
-      : null;
+  // An incentive's geo group overrides the authority's geographies.
+  if (incentive.eligible_geo_group) {
+    // A test ensures that geo groups are registered.
+    const groupGeographyIds =
+      GEO_GROUPS_BY_STATE[location.state]![incentive.eligible_geo_group]
+        .geographies;
+
+    // This is permissive: the user's location is not guaranteed to be within
+    // any particular one of the resolved location's geographies.
+    const matchesGeography = location.geographies.some(g =>
+      groupGeographyIds.includes(g.id),
+    );
+
+    return !matchesGeography;
+  }
+
+  // Federal incentives have no authority, and if they have no geo group they're
+  // presumed eligible nationwide.
+  if (program.authority_type === AuthorityType.Federal) {
+    return false;
+  }
+
+  const authority = program.authority
+    ? stateAuthorities[program.authority_type][program.authority]
+    : null;
 
   if (authority?.geography_ids) {
     // One of the resolved location's geographies must match the authority's
@@ -254,57 +274,18 @@ function ineligibleByLocationOrUtility(
     // be within any one of the resolved geographies. For example, they may have
     // entered a ZIP code which only partially overlaps with a county.
     const locationGeoIds = location.geographies.map(g => g.id);
-    if (!_.some(authority.geography_ids, id => locationGeoIds.includes(id))) {
-      return true;
-    }
-  }
-
-  if (incentive.eligible_geo_group) {
-    // A test ensures that geo groups are registered.
-    const group =
-      GEO_GROUPS_BY_STATE[location.state]![incentive.eligible_geo_group];
-
-    const groupGeographyIds = new Set(
-      _.flattenDeep([
-        (group.utilities || []).map(
-          id => stateAuthorities.utility[id].geography_ids || [],
-        ),
-        (group.gas_utilities || []).map(
-          id => stateAuthorities.gas_utility[id].geography_ids || [],
-        ),
-        (group.cities || []).map(
-          id => stateAuthorities.city[id].geography_ids || [],
-        ),
-        (group.counties || []).map(
-          id => stateAuthorities.county[id].geography_ids || [],
-        ),
-      ]),
+    const geographiesInCommon = _.some(authority.geography_ids, id =>
+      locationGeoIds.includes(id),
     );
-
-    // This is permissive: the user's location is not guaranteed to be within
-    // any particular one of the resolved location's geographies.
-    const matchesGeography = location.geographies.some(g =>
-      groupGeographyIds.has(g.id),
-    );
-
-    if (!matchesGeography) {
-      return true;
-    }
+    return !geographiesInCommon;
   }
 
-  if (
-    program.authority_type !== AuthorityType.Utility &&
-    program.authority_type !== AuthorityType.GasUtility &&
-    program.authority_type !== AuthorityType.Federal &&
-    !authority?.geography_ids &&
-    !incentive.eligible_geo_group
-  ) {
-    // Unit tests make sure this doesn't happen
-    console.error(`Non-utility incentive with no geography: ${incentive.id}`);
-    return true;
-  }
-
-  return false;
+  // Unit tests make sure this doesn't happen
+  console.error(
+    'Incentive with no geo group and ' +
+      `no geographies inherited from authority: ${incentive.id}`,
+  );
+  return true;
 }
 
 function getCurrentDate() {
