@@ -8929,7 +8929,7 @@
     ],
     "short_description": {
       "en": "Up to $1,700 rebate for a ducted air source heat pump. Rebate amount dependent upon unit efficiency. Contractor QI Registration Required.",
-      "es": "Reembolso de hasta $1,700 para una bomba de calor de aire por conducto. El monto del reembolso depende de la eficiencia de la unidad. Se requiere el registro de contratista QI."
+      "es": "Reembolso de hasta $1,700 para una bomba de calor de aire con ductos. El monto del reembolso depende de la eficiencia de la unidad. Se requiere que el contratista tenga registro QI."
     },
     "url": {
       "en": "https://www.agralite.coop/rebates"
@@ -8954,7 +8954,7 @@
     ],
     "short_description": {
       "en": "Up to $300 rebate for a ductless air source heat pump. Rebate amount dependent upon unit efficiency.",
-      "es": "Hasta $300 de reembolso por una bomba de calor de aire sin ductos. El monto del reembolso depende de la eficiencia de la unidad."
+      "es": "Reembolso de hasta $300 por una bomba de calor de aire sin ductos. El monto del reembolso depende de la eficiencia de la unidad."
     },
     "url": {
       "en": "https://www.ci.aitkin.mn.us/index.asp?SEC=C05CFC13-B275-4EA4-8AFF-8E3254AEF30C&DE=71782DFA-142E-475F-8CAC-C62987544B16"
@@ -8980,7 +8980,7 @@
     ],
     "short_description": {
       "en": "Up to $780 rebate for a ducted air source heat pump. Rebate amount dependent upon unit efficiency.",
-      "es": "Reembolso de hasta $780 por una bomba de calor de aire por conducto. El monto del reembolso depende de la eficiencia de la unidad."
+      "es": "Reembolso de hasta $780 por una bomba de calor de aire con ductos. El monto del reembolso depende de la eficiencia de la unidad."
     },
     "url": {
       "en": "https://www.ci.aitkin.mn.us/index.asp?SEC=C05CFC13-B275-4EA4-8AFF-8E3254AEF30C&DE=71782DFA-142E-475F-8CAC-C62987544B16"
@@ -9057,7 +9057,7 @@
     ],
     "short_description": {
       "en": "Up to $750 per ton rebate for an air source heat pump. Rebate amount dependent upon unit efficiency.",
-      "es": "Descuento de hasta $750 por tonelada para una bomba de calor aerotérmica. El monto del descuento depende de la eficiencia de la unidad."
+      "es": "Reembolso de hasta $750 por tonelada para una bomba de calor aerotérmica. El monto del descuento depende de la eficiencia de la unidad."
     },
     "end_date": "2025-12-31",
     "url": {
@@ -9106,7 +9106,7 @@
     ],
     "short_description": {
       "en": "$1,000 rebate for a ducted air source heat pump. Quality Installation (QI) is required.",
-      "es": "Reembolso de $1,000 para una bomba de calor de aire por conducto. Se requiere una Instalación de Calidad (IC)."
+      "es": "Reembolso de $1,000 para una bomba de calor de aire ductos. Se requiere una Instalación de Calidad (Quality Installation, QI))."
     },
     "url": {
       "en": "https://www.benco.org/heating-and-cooling"
@@ -9131,7 +9131,7 @@
     ],
     "short_description": {
       "en": "Up to $500 rebate for a ductless air source heat pump. Rebate amount dependent upon unit size and efficiency.",
-      "es": "Reembolso de hasta $500 por una bomba de calor de aire sin ductos. El monto del reembolso depende del tamaño y la eficiencia de la unidad."
+      "es": "Reembolso de hasta $500 para una bomba de calor de aire sin ductos. El monto del reembolso depende del tamaño y la eficiencia de la unidad."
     },
     "url": {
       "en": "https://www.browncountyrea.coop/rebates"
@@ -9156,7 +9156,7 @@
     ],
     "short_description": {
       "en": "Up to $1,000 rebate for a ducted air source heat pump. Rebate amount dependent upon unity efficiency. Electric backup allowed without load control.",
-      "es": "Reembolso de hasta $1,000 para una bomba de calor de aire por conducto. El monto del reembolso depende de la eficiencia de la unidad. Se permite el respaldo eléctrico sin control de carga."
+      "es": "Reembolso de hasta $1,000 para una bomba de calor de aire con conductos. El monto del reembolso depende de la eficiencia de la unidad. Se permite el respaldo eléctrico sin control de carga."
     },
     "url": {
       "en": "https://www.browncountyrea.coop/rebates"
@@ -9181,10 +9181,85 @@
     ],
     "short_description": {
       "en": "Up to $2,000 rebate for a ducted air source heat pump. Amount depends on unit efficiency. Must have whole house non-electric backup with load control.",
-      "es": "Reembolso de hasta $2,000 para una bomba de calor de aire por conducto. El monto depende de la eficiencia de la unidad. Se requiere un sistema de respaldo sin electricidad para toda la casa con control de carga."
+      "es": "Reembolso de hasta $2,000 para una bomba de calor de aire con ductos. El monto depende de la eficiencia de la unidad. Se requiere un sistema de respaldo sin electricidad para toda la casa con control de carga."
     },
     "url": {
       "en": "https://www.browncountyrea.coop/rebates"
+    }
+  },
+  {
+    "id": "MN-438",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mn_browntonMunicipalLightAndPower_browntonMunicipalLightAndPowerWeSaveRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an air source heat pump. Must be installed following quality installation (Q.I.) procedures and ENERGY STAR certified.",
+      "es": "Reembolso de $500 para una bomba de calor aerotérmica. Debe instalarse siguiendo los procedimientos de instalación de calidad (QI) y contar con la certificación ENERGY STAR."
+    },
+    "end_date": "2025-11-30",
+    "url": {
+      "en": "https://www.mmpa.org/communities/brownton/"
+    }
+  },
+  {
+    "id": "MN-439",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mn_buffaloMunicipalUtilities_buffaloMunicipalUtilitiesEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an air source heat pump. Must be installed following Quality Installation (Q.I.) procedures and be ENERGY STAR certified.",
+      "es": "Reembolso de $500 para una bomba de calor aerotérmica. Debe instalarse siguiendo los procedimientos de Instalación de Calidad (IC) y contar con la certificación ENERGY STAR."
+    },
+    "url": {
+      "en": "https://ci.buffalo.mn.us/605/Energy-Rebates"
+    }
+  },
+  {
+    "id": "MN-440",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_goodhueCountyCoopElectricAssn_goodhueCountyCooperativeElectricMemberRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for a ductless air source heat pump. Must be installed by a qualified contractor. ",
+      "es": "Reembolso de $250 para una bomba de calor de aire sin ductos. La instalación debe ser realizada por un contratista calificado. "
+    },
+    "url": {
+      "en": "https://gccea.com/member-rebates"
     }
   }
 ]
