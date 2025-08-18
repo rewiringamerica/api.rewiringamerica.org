@@ -2,7 +2,7 @@
 
 This repo contains structured data about home electrification incentives in the US, and an API server that calculates which incentives a user is eligible for.
 
-See public API docs at https://api.rewiringamerica.org/docs.
+See public API docs at https://docs.rewiringamerica.org/.
 
 An instance of this API is live at https://api.rewiringamerica.org. An API key is required to use it; [sign up for a key here](https://www.rewiringamerica.org/api).
 
@@ -32,7 +32,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for a guide to the codebase.
 
 You can run the API server as a Docker container, without setting up a development environment.
 
-:rotating_light: **We strongly recommend that you use Rewiring America's public API instance, rather than deploying your own instance**. We'll be updating incentive data frequently, and it's important to keep up with those changes. If our public API doesn't meet your needs, please [contact us](#contact) to discuss.
+:rotating_light: **We strongly recommend that you use Rewiring America's public API instance, rather than deploying your own instance**. We update incentive data at least once a week, and it's important to keep up with those changes. If our public API doesn't meet your needs, please [contact us](#contact) to discuss.
 
 - Run `docker build .` to build the image.
 - The container listens for HTTP requests on port 8080.
@@ -41,16 +41,6 @@ You can run the API server as a Docker container, without setting up a developme
 - The server does not deal with access control (e.g. API keys) or rate limiting. Rewiring America's public API instance uses [Zuplo](https://zuplo.com) to handle those concerns.
 
   There is also a Fastify plugin to handle CORS, but it's enabled only when `NODE_ENV !== 'production'`, because RA's public API instance also uses Zuplo to handle CORS.
-
-## Roadmap
-
-**Caveat**: the roadmap for this project is planned and tracked internally at Rewiring America. What's reflected here may not be fully up to date.
-
-As of November 2023, our highest priority efforts are:
-
-- Improving our processes for collecting new incentive data and keeping existing incentive data up to date.
-- Using those processes to expand coverage of state, local, and utility incentives nationwide.
-- Adapting our representation of incentives to be able to capture all the various details and nuances of incentives, in a structured way. This includes income limits, time limits, stacking and mutual exclusion, and so on.
 
 ## Data
 
@@ -80,11 +70,13 @@ Aligning to our mission, the scope of the incentive data we have collected so fa
 - Smart Thermostat
 - E-Bike
 
-### Structure of the Incentives data
+### Management
 
-Refer to the [Incentive data model definition](https://docs.google.com/spreadsheets/d/1JTeTk9lhBxgCvpNDsU80upaxgp1XPROUpFwfK4UHVbI/edit?pli=1#gid=894925043) to understand our approach to standardize the incentive data structure across all 50 states.
+Incentive data is managed in Rewiring America's [Home Electrification Resource Organizer](https://incentive-admin.rewiringamerica.org) (HERO), and periodically exported to this repo as JSON. This export happens at least once per week.
 
-This data model is undergoing continuous refinement as we gather more comprehensive information about nationwide incentive programs. Our goal is to iteratively enhance the model by incorporating additional data points that complement the current broad survey of incentive data, typically derived from the market needs.
+Refer to the [Incentive data model definition](https://docs.google.com/spreadsheets/d/1JTeTk9lhBxgCvpNDsU80upaxgp1XPROUpFwfK4UHVbI/edit?pli=1#gid=894925043), and to the [public API docs](https://docs.rewiringamerica.org/api/incentives), to understand the meaning of the data fields.
+
+We expect the data model to evolve incrementally as we gather more comprehensive information about incentive programs nationwide, and as our requirements for detail and structure in the data change.
 
 ## Contributing
 
@@ -92,7 +84,7 @@ This data model is undergoing continuous refinement as we gather more comprehens
 
 That said, there are two situations we consider to be serious bugs, of which we gladly welcome reports:
 
-- **False positive eligibility results**. That is: the API returning an incentive with `eligible: true`, given a specific set of inputs that would make someone _ineligible_ for that incentive. If you see this, please file an issue.
+- **False positive eligibility results**. That is: the API returning an incentive, given a specific set of inputs that would make someone _ineligible_ for that incentive. If you see this, please file an issue.
 - **Incorrect incentive information**. For example, if the calculator is showing the wrong amount for an incentive, or a description is inaccurate, or a link is broken, please file an issue.
 
 In general, we know that our incentive coverage is _incomplete_, and we're working to change that. However, we expect the coverage we have to be _accurate_, and if it's not, we want to fix that as soon as possible.
@@ -107,4 +99,4 @@ See the [Contributing](#contributing) section for specific situations where we'd
 
 For other matters, you can email us at `api@rewiringamerica.org`.
 
-For FAQs, refer to the [IRA Calculator FAQ page](https://www.rewiringamerica.org/app/ira-calculator/faqs).
+For FAQs, refer to the [Incentive Calculator FAQ page](https://homes.rewiringamerica.org/calculator/faqs).
