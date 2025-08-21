@@ -63,11 +63,13 @@ const mockAuthorities: AuthoritiesByType = {
   utility: {
     'mock-utility-authority': {
       name: 'Test',
+      geography_ids: [4],
     },
   },
   gas_utility: {
     'mock-gas-utility-authority': {
       name: 'Test',
+      geography_ids: [5],
     },
   },
 };
@@ -98,6 +100,23 @@ const location: ResolvedLocation = {
       name: 'County',
       state: 'NY',
       county_fips: '00000',
+      intersection_proportion: 1.0,
+    },
+    {
+      id: 4,
+      type: GeographyType.ElectricTerritory,
+      name: 'Electricco',
+      state: 'NY',
+      county_fips: null,
+      intersection_proportion: 1.0,
+    },
+
+    {
+      id: 5,
+      type: GeographyType.GasTerritory,
+      name: 'Gasco',
+      state: 'NY',
+      county_fips: null,
       intersection_proportion: 1.0,
     },
   ],
