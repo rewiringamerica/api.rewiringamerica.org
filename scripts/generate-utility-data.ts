@@ -15,10 +15,7 @@ import fetch from 'make-fetch-happen';
 import minimist from 'minimist';
 import path from 'path';
 import xlsx from 'xlsx';
-import {
-  createAuthorityName,
-  sortMapByKey,
-} from './lib/authority-and-program-updater';
+import { createAuthorityName } from './lib/authority-and-program-updater';
 import { EXCLUSIONS, OVERRIDES } from './lib/utility-data-overrides';
 
 /**
@@ -136,17 +133,17 @@ enum Col {
     return;
   }
 
-  const zipToUtilityOut = stringify({
+  const keyCodeOut = stringify({
     header: true,
-    columns: ['zip', 'utility_id', 'predominant'],
+    columns: ['key', 'external_id'],
   });
-  zipToUtilityOut.pipe(
-    fs.createWriteStream(path.join(__dirname, 'data/zip-to-utility.csv')),
-  );
+  keyCodeOut.pipe(fs.createWriteStream(path.join(__dirname, '../eia-ids.csv')));
 
   // For deduplication by utility ID and zip.
-  const seen = new Set<string>();
-  const utilitiesByState = new Map<string, Map<string, { name: string }>>();
+  //const seen = new Set<string>();
+  //const utilitiesByState = new Map<string, Map<string, { name: string }>>();
+
+  const keyToCode = new Map<string, Set<string>>();
 
   // Print the last refresh date
   console.log(sheet[0][0].v);
@@ -171,56 +168,34 @@ enum Col {
       continue;
     }
 
+    if (typeof row.Zip === 'string' && parseInt(row.Zip) < 127) {
+      continue;
+    }
+
     const sheetName =
       OVERRIDES.get(parseInt(row.UtilityCode)) ??
       OVERRIDES.get(row.UtilityName) ??
       row.UtilityName;
-    const { id, name } = convertName(sheetName, row.State);
+    const { id } = convertName(sheetName, row.State);
 
-    if (seen.has(row.Zip + id)) {
-      continue;
+    const existingCodes = keyToCode.get(id);
+    if (existingCodes) {
+      existingCodes.add(row.UtilityCode);
+    } else {
+      keyToCode.set(id, new Set([row.UtilityCode]));
     }
-    seen.add(row.Zip + id);
-
-    if (!utilitiesByState.has(row.State)) {
-      utilitiesByState.set(row.State, new Map());
-    }
-    utilitiesByState.get(row.State)!.set(id, { name });
-
-    zipToUtilityOut.write({
-      zip: row.Zip,
-      utility_id: id,
-      predominant: row.Predominant === 'Yes' ? 1 : 0,
-    });
   }
 
-  // Update each state's authorities.json with the utilities from the dataset.
-  utilitiesByState.forEach((utilityMap, state) => {
-    // If there's no subdir for the state in /data, create it.
-    const stateDir = path.join(__dirname, `../data/${state}`);
-    if (!fs.existsSync(stateDir)) {
-      fs.mkdirSync(stateDir);
+  const allKeys = Array.from(keyToCode.keys());
+  allKeys.sort(
+    (a, b) =>
+      keyToCode.get(b)!.size - keyToCode.get(a)!.size || a.localeCompare(b),
+  );
+
+  for (const key of allKeys) {
+    const codes = keyToCode.get(key)!;
+    for (const code of codes) {
+      keyCodeOut.write({ key, external_id: code });
     }
-
-    const filepath = path.join(stateDir, 'authorities.json');
-    const authoritiesJson = fs.existsSync(filepath)
-      ? JSON.parse(fs.readFileSync(filepath, 'utf-8'))
-      : { utility: {} };
-    const existingUtilities = authoritiesJson.utility;
-    const newUtilities: typeof existingUtilities = {};
-    utilityMap.forEach((utility, id) => {
-      // Existing utilities in authorities.json may have other info like a
-      // logo; preserve that and update only the name
-      if (id in existingUtilities) {
-        newUtilities[id] = { ...existingUtilities[id], ...utility };
-      } else {
-        newUtilities[id] = utility;
-      }
-    });
-
-    // This removes any utilities that aren't in the dataset
-    authoritiesJson.utility = sortMapByKey(newUtilities);
-
-    fs.writeFileSync(filepath, JSON.stringify(authoritiesJson, null, 2) + '\n');
-  });
+  }
 })();

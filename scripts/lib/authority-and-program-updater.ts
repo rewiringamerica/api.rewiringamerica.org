@@ -151,12 +151,7 @@ export function updateGeoGroups(
   for (const id of otherAuthorities) {
     const groupId = authorityNameToGroupName(id);
     if (!(groupId in stateGroups)) {
-      stateGroups[groupId] = {
-        utilities: [],
-        cities: [],
-        counties: [],
-        incentives: [],
-      };
+      stateGroups[groupId] = { geographies: [] };
     }
   }
 
