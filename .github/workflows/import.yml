@@ -18,7 +18,7 @@ jobs:
           app-id: ${{ secrets.IMPORTER_APP_ID }}
           private-key: ${{ secrets.IMPORTER_PRIVATE_KEY }}
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Use Node.js 18.x
         uses: actions/setup-node@v4
         with:
