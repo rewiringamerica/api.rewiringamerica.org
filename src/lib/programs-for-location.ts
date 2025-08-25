@@ -75,7 +75,7 @@ export default function getProgramsForLocation(
   programs: Programs,
 ): APIProgramsResponse {
   validateRequestParams(location.state, request, authorities);
-  const { utility, gas_utility, authority_types, language } = request;
+  const { utility, authority_types, language } = request;
 
   // Default all to true if authority_types is undefined
   const includeCity = authority_types?.includes(AuthorityType.City) ?? true;
@@ -100,17 +100,6 @@ export default function getProgramsForLocation(
             program.authority_type === AuthorityType.GasUtility)
         ) {
           return false;
-        }
-
-        if (utility && program.authority_type === AuthorityType.Utility) {
-          return program.authority === utility;
-        }
-
-        if (
-          gas_utility &&
-          program.authority_type === AuthorityType.GasUtility
-        ) {
-          return program.authority === gas_utility;
         }
 
         const authority =

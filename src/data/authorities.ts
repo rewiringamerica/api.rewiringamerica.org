@@ -32,11 +32,9 @@ const AUTHORITY_SCHEMA = {
   properties: {
     name: { type: 'string' },
     logo: API_IMAGE_SCHEMA,
-    city: { type: 'string' },
-    county_fips: { type: 'string' },
-    geography_ids: { type: 'array', items: { type: 'integer' } },
+    geography_ids: { type: 'array', items: { type: 'integer' }, minItems: 1 },
   },
-  required: ['name'],
+  required: ['name', 'geography_ids'],
   additionalProperties: false,
 } as const satisfies JSONSchema;
 
