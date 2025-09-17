@@ -242,7 +242,27 @@ function ineligibleByLocationOrUtility(
   stateAuthorities: AuthoritiesByType,
   location: ResolvedLocation,
 ): boolean {
-  // An incentive's geo group overrides the authority's geographies.
+  // Check that the location matches the authority's rule, and the incentive's
+  // rule if any. Both must pass for the incentive to be eligible.
+
+  // Federal incentives might have no authority, and in that case there is no
+  // authority-defined geography check -- the incentive is presumed to be
+  // available nationwide.
+  if (program.authority) {
+    // One of the resolved location's geographies must match the authority's
+    // geography. This is permissive: the user's location is not guaranteed to
+    // be within any one of the resolved geographies. For example, they may have
+    // entered a ZIP code which only partially overlaps with a county.
+    const authorityGeoIds =
+      stateAuthorities[program.authority_type][program.authority].geography_ids;
+    const matchesGeography = location.geographies.some(g =>
+      authorityGeoIds.includes(g.id),
+    );
+    if (!matchesGeography) {
+      return true;
+    }
+  }
+
   if (incentive.eligible_geo_group) {
     // A test ensures that geo groups are registered.
     const groupGeographyIds =
@@ -255,37 +275,12 @@ function ineligibleByLocationOrUtility(
       groupGeographyIds.includes(g.id),
     );
 
-    return !matchesGeography;
+    if (!matchesGeography) {
+      return true;
+    }
   }
 
-  // Federal incentives have no authority, and if they have no geo group they're
-  // presumed eligible nationwide.
-  if (program.authority_type === AuthorityType.Federal) {
-    return false;
-  }
-
-  const authority = program.authority
-    ? stateAuthorities[program.authority_type][program.authority]
-    : null;
-
-  if (authority?.geography_ids) {
-    // One of the resolved location's geographies must match the authority's
-    // geography. This is permissive: the user's location is not guaranteed to
-    // be within any one of the resolved geographies. For example, they may have
-    // entered a ZIP code which only partially overlaps with a county.
-    const locationGeoIds = location.geographies.map(g => g.id);
-    const geographiesInCommon = _.some(authority.geography_ids, id =>
-      locationGeoIds.includes(id),
-    );
-    return !geographiesInCommon;
-  }
-
-  // Unit tests make sure this doesn't happen
-  console.error(
-    'Incentive with no geo group and ' +
-      `no geographies inherited from authority: ${incentive.id}`,
-  );
-  return true;
+  return false;
 }
 
 function getCurrentDate() {
