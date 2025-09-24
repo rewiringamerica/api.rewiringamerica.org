@@ -1,5 +1,4 @@
-import { open } from 'sqlite';
-import { Database } from 'sqlite3';
+import Database from 'better-sqlite3';
 import { test } from 'tap';
 import {
   adjustAMI,
@@ -7,10 +6,7 @@ import {
 } from '../../src/lib/ami-evcredit-calculation';
 import { GeographyType, ResolvedLocation } from '../../src/lib/location';
 
-const DB_PROMISE = open({
-  filename: './incentives-api.db',
-  driver: Database,
-});
+const db = new Database('./incentives-api.db');
 
 test('AMI adjustment', async t => {
   t.equal(adjustAMI(60400, 1), 42300);
@@ -45,7 +41,6 @@ const VI_LOCATION: ResolvedLocation = {
 };
 
 test('territories other than PR', async t => {
-  const db = await DB_PROMISE;
   t.strictSame(await computeAMIAndEVCreditEligibility(db, AS_LOCATION, 4), {
     computedAMI80: 44100,
     computedAMI150: 97800,
@@ -141,8 +136,6 @@ const PR_LOCATION: ResolvedLocation = {
 };
 
 test('states+DC+PR without tract', async t => {
-  const db = await DB_PROMISE;
-
   t.strictSame(await computeAMIAndEVCreditEligibility(db, NY_LOCATION, 4), {
     computedAMI80: 69350,
     computedAMI150: 130050,
@@ -161,8 +154,6 @@ test('states+DC+PR without tract', async t => {
 });
 
 test('states+DC+PR with tract', async t => {
-  const db = await DB_PROMISE;
-
   t.strictSame(
     await computeAMIAndEVCreditEligibility(
       db,
@@ -202,8 +193,6 @@ test('states+DC+PR with tract', async t => {
 });
 
 test('EV charger eligibility', async t => {
-  const db = await DB_PROMISE;
-
   // The ZCTA 11211 contains both eligible and non-eligible tracts, so it
   // should be returned as not eligible.
   const brooklyn = {
