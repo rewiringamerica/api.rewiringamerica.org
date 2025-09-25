@@ -1,6 +1,6 @@
 import { JsonSchemaToTsProvider } from '@fastify/type-provider-json-schema-to-ts';
+import { Database } from 'better-sqlite3';
 import { FastifyInstance } from 'fastify';
-import { Database } from 'sqlite';
 import { AUTHORITIES_BY_STATE } from '../data/authorities';
 import { parseLoanProgramJSON } from '../data/loan_programs';
 import { LOCALES } from '../data/locale';

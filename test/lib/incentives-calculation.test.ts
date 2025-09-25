@@ -1,6 +1,5 @@
+import Database from 'better-sqlite3';
 import _ from 'lodash';
-import { open } from 'sqlite';
-import sqlite3 from 'sqlite3';
 import { afterEach, beforeEach, test } from 'tap';
 import { AuthoritiesByType, AuthorityType } from '../../src/data/authorities';
 import { ira_programs, Programs } from '../../src/data/programs';
@@ -122,14 +121,11 @@ const IRA_25C_WEATHERIZATION_ITEMS =
   'air_sealing,door_replacement,window_replacement,other_insulation';
 
 beforeEach(async t => {
-  t.context.db = await open({
-    filename: './incentives-api.db',
-    driver: sqlite3.Database,
-  });
+  t.context.db = new Database('./incentives-api.db');
 });
 
 afterEach(async t => {
-  await t.context.db.close();
+  t.context.db.close();
 });
 
 test('correctly evaluates scenario "Single w/ $120k Household income"', async t => {

@@ -1,5 +1,5 @@
+import { Database } from 'better-sqlite3';
 import _ from 'lodash';
-import { Database } from 'sqlite';
 import { APIAuthority, AuthorityType } from '../data/authorities';
 import { GEO_GROUPS_BY_STATE } from '../data/geo_groups';
 import { PROGRAMS } from '../data/programs';
@@ -36,11 +36,12 @@ export async function getGasUtilitiesForLocation(
 ): Promise<AuthorityMap | undefined> {
   // Every state has at least one gas utility in real life, so if we know of no
   // gas territories in the state, take that to mean we don't have the data.
-  const totalInState = (await db.get<{ ct: number }>(
-    `SELECT count(1) AS ct FROM geographies
+  const totalInState = db
+    .prepare<string, { ct: number }>(
+      `SELECT count(1) AS ct FROM geographies
     WHERE state = ? AND type = 'gas_territory'`,
-    location.state,
-  ))!.ct;
+    )
+    .get(location.state)!.ct;
 
   if (totalInState === 0) {
     return undefined;
@@ -87,8 +88,12 @@ async function getUtilitiesForLocation(
 ): Promise<AuthorityMap> {
   // Search the mappings of zips that have this location's ZCTA as the parent.
   // Put the predominant utility first.
-  const rows = await db.all<{ key: string; name: string }[]>(
-    `
+  const rows = db
+    .prepare<
+      { zcta: string; type: string; state: string },
+      { key: string; name: string }
+    >(
+      `
     WITH child_zips AS (
       SELECT zip FROM zips WHERE parent_zcta = @zcta
     )
@@ -99,8 +104,8 @@ async function getUtilitiesForLocation(
     AND g.state = @state
     ORDER BY predominant DESC
     `,
-    { '@zcta': location.zcta, '@type': type, '@state': location.state },
-  );
+    )
+    .all({ zcta: location.zcta, type: type, state: location.state });
 
   return Object.fromEntries(rows.map(row => [row.key, _.pick(row, 'name')]));
 }

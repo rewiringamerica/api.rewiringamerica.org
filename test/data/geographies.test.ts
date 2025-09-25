@@ -1,6 +1,5 @@
+import sqlite3 from 'better-sqlite3';
 import path from 'path';
-import { open } from 'sqlite';
-import sqlite3 from 'sqlite3';
 import { test } from 'tap';
 import util from 'util';
 
@@ -11,19 +10,18 @@ const EXCEPTIONS = [
 ];
 
 test('all geographies intersect with at least one ZCTA', async t => {
-  const database = await open({
-    filename: path.join(__dirname, '../../incentives-api.db'),
-    driver: sqlite3.Database,
-  });
+  const database = sqlite3(path.join(__dirname, '../../incentives-api.db'));
 
-  const geosWithoutZcta = await database.all<{ id: number; name: string }[]>(
-    `SELECT id, name
+  const geosWithoutZcta = database
+    .prepare<[], { id: number; name: string }>(
+      `SELECT id, name
     FROM geographies g
     LEFT OUTER JOIN zcta_to_geography zg ON g.id = zg.geography_id
     WHERE zg.geography_id IS NULL
     AND g.type NOT IN ('electric_territory', 'gas_territory')
     ORDER BY g.id`,
-  );
+    )
+    .all();
 
   t.strictSame(
     geosWithoutZcta,

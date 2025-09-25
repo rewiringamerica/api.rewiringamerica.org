@@ -1,6 +1,6 @@
 import * as turf from '@turf/turf';
+import { Database } from 'better-sqlite3';
 import { Census, FieldOption } from 'geocodio-library-node';
-import { Database } from 'sqlite';
 import { NO_GAS_UTILITY } from '../data/authorities';
 import { InvalidInputError } from './error';
 import { geocoder } from './geocoder';
@@ -64,16 +64,17 @@ async function getZctaFromZip(
   db: Database,
   zip: string,
 ): Promise<string | undefined> {
-  const row = await db.get<{ zcta: string } | undefined>(
-    `SELECT
+  const row = db
+    .prepare<string, { zcta: string } | undefined>(
+      `SELECT
       CASE WHEN zcta = 'TRUE' THEN zip
       ELSE NULLIF(parent_zcta, '')
       END
       AS zcta
     FROM zips
     WHERE zip = ?`,
-    zip,
-  );
+    )
+    .get(zip);
   return row?.zcta;
 }
 
@@ -83,14 +84,13 @@ async function resolveUtility(
   type: GeographyType.ElectricTerritory | GeographyType.GasTerritory,
   key: string,
 ): Promise<Geography> {
-  const dbResult = await db.get<Geography>(
-    `SELECT *, 1.0 as intersection_proportion
+  const dbResult = db
+    .prepare<[string, string, string], Geography>(
+      `SELECT *, 1.0 as intersection_proportion
     FROM geographies
     WHERE key = ? and type = ? and state = ?`,
-    key,
-    type,
-    state,
-  );
+    )
+    .get(key, type, state);
 
   if (!dbResult) {
     throw new InvalidInputError(
@@ -117,14 +117,15 @@ export async function resolveLocation(
       return null;
     }
 
-    const geographies = await db.all<Geography[]>(
-      `SELECT g.*, zg.intersection_proportion
+    const geographies = db
+      .prepare<string, Geography>(
+        `SELECT g.*, zg.intersection_proportion
       FROM geographies g
       JOIN zcta_to_geography zg ON g.id = zg.geography_id
       WHERE zcta = ?
       ORDER BY intersection_proportion DESC`,
-      zcta,
-    );
+      )
+      .all(zcta);
 
     // For ZCTAs that intersect multiple states, for now just pick the state
     // with the largest overlap, rather than show incentives for multiple
@@ -168,20 +169,22 @@ export async function resolveLocation(
 
     const geographies: Geography[] = [];
 
-    const state = await db.get<DbGeography>(
-      `SELECT * FROM geographies
+    const state = db
+      .prepare<string, DbGeography>(
+        `SELECT * FROM geographies
         WHERE type = 'state' AND state = ?`,
-      result.address_components.state,
-    );
+      )
+      .get(result.address_components.state!);
     if (state) {
       geographies.push({ ...state, intersection_proportion: 1.0 });
     }
 
-    const county = await db.get<DbGeography>(
-      `SELECT * FROM geographies
+    const county = db
+      .prepare<string, DbGeography>(
+        `SELECT * FROM geographies
         WHERE type = 'county' AND county_fips = ?`,
-      censusInfo.county_fips,
-    );
+      )
+      .get(censusInfo.county_fips);
     if (county) {
       geographies.push({ ...county, intersection_proportion: 1.0 });
     }
@@ -192,11 +195,10 @@ export async function resolveLocation(
     // the "contains" computation over all of them is quick. If necessary, we
     // can speed this up by using a spatial index and/or caching the parsed
     // GeoJSON in memory.
-    (
-      await db.all<DbGeography[]>(
-        `SELECT * FROM geographies WHERE type = 'custom'`,
-      )
+    db.prepare<[], DbGeography>(
+      `SELECT * FROM geographies WHERE type = 'custom'`,
     )
+      .all()
       .filter(geo => {
         const geometry = JSON.parse(geo.geometry!);
         let contains = false;
