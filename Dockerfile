@@ -1,4 +1,4 @@
-ARG VERSION="18.18.0"
+ARG VERSION="22.18.0"
 
 # Separate build stage to compile TypeScript and build database
 FROM node:$VERSION-alpine as builder
