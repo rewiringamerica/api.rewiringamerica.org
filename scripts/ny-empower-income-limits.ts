@@ -3,24 +3,22 @@
  * generate the corresponding income thresholds in low_income_thresholds.json.
  */
 
+import sqlite3, { Database } from 'better-sqlite3';
 import fs from 'fs';
 import path from 'path';
-import { Database, open } from 'sqlite';
-import sqlite3 from 'sqlite3';
 
 const LOW_INCOME_THRESHOLDS_NAME = 'ny-empower-low';
 const MODERATE_INCOME_THRESHOLDS_NAME = 'ny-empower-moderate';
 const SOURCE_URL =
   'https://www.nyserda.ny.gov/All-Programs/EmPower-New-York-Program/Eligibility-Guidelines';
 
-async function getCountyFips(
-  db: Database,
-  countyName: string,
-): Promise<string> {
-  return (await db.get(
-    "SELECT county_fips FROM zips WHERE county_name = ? AND state_id = 'NY'",
-    countyName,
-  ))!.county_fips;
+function getCountyFips(db: Database, countyName: string): string {
+  return db
+    .prepare<
+      string,
+      { county_fips: string }
+    >("SELECT county_fips FROM zips WHERE county_name = ? AND state_id = 'NY'")
+    .get(countyName)!.county_fips;
 }
 
 /**
@@ -36,24 +34,20 @@ function convertToObject(thresholds: number[]): Record<string, number> {
 }
 
 async function main() {
-  const db = await open({
-    filename: path.join(__dirname, '../incentives-api.db'),
-    driver: sqlite3.Database,
-  });
+  const db = sqlite3(path.join(__dirname, '../incentives-api.db'));
 
   const thresholdsPath = path.join(
     __dirname,
     '../data/low_income_thresholds.json',
   );
   const thresholdsJson = JSON.parse(fs.readFileSync(thresholdsPath, 'utf-8'));
-  const nyJson = thresholdsJson.NY;
 
   // Low income thresholds under "NY" key
-  nyJson[LOW_INCOME_THRESHOLDS_NAME] = {
+  thresholdsJson[LOW_INCOME_THRESHOLDS_NAME] = {
     type: 'hhsize',
     source_url: SOURCE_URL,
     // Copy in existing incentives array, if any
-    incentives: nyJson[LOW_INCOME_THRESHOLDS_NAME]?.incentives ?? [],
+    incentives: thresholdsJson[LOW_INCOME_THRESHOLDS_NAME]?.incentives ?? [],
     thresholds: convertToObject(data.get('NY')!),
   };
 
@@ -64,16 +58,17 @@ async function main() {
       continue;
     }
 
-    const fips = await getCountyFips(db, countyName);
+    const fips = getCountyFips(db, countyName);
     console.log(fips, countyName);
     moderateThresholds[fips] = convertToObject(raw);
   }
 
-  nyJson[MODERATE_INCOME_THRESHOLDS_NAME] = {
+  thresholdsJson[MODERATE_INCOME_THRESHOLDS_NAME] = {
     type: 'county-hhsize',
     source_url: SOURCE_URL,
     // Copy in existing incentives array, if any
-    incentives: nyJson[MODERATE_INCOME_THRESHOLDS_NAME]?.incentives ?? [],
+    incentives:
+      thresholdsJson[MODERATE_INCOME_THRESHOLDS_NAME]?.incentives ?? [],
     thresholds: moderateThresholds,
   };
 

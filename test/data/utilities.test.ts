@@ -1,6 +1,5 @@
+import sqlite3 from 'better-sqlite3';
 import path from 'path';
-import { open } from 'sqlite';
-import sqlite3 from 'sqlite3';
 import { skip } from 'tap';
 import { AUTHORITIES_BY_STATE } from '../../src/data/authorities';
 
@@ -10,19 +9,19 @@ import { AUTHORITIES_BY_STATE } from '../../src/data/authorities';
 // incentives in the data, even though the utilities can't be returned from
 // `/v1/utilities` without service territories.
 skip('all authorities.json utilities are in DB', async t => {
-  const database = await open({
-    filename: path.join(__dirname, '../../incentives-api.db'),
-    driver: sqlite3.Database,
-  });
+  const database = sqlite3(path.join(__dirname, '../../incentives-api.db'));
 
   const allUtilityIds = Object.values(AUTHORITIES_BY_STATE)
     .map(state => state.utility)
     .map(Object.keys)
     .flat();
 
-  const query = await database.all<{ utility_id: string; ct: number }[]>(
-    'SELECT utility_id, COUNT(1) AS ct FROM zip_to_utility GROUP BY utility_id',
-  );
+  const query = database
+    .prepare<
+      [],
+      { utility_id: string; ct: number }
+    >('SELECT utility_id, COUNT(1) AS ct FROM zip_to_utility GROUP BY utility_id')
+    .all();
   const utilityCounts = Object.fromEntries(
     query!.map(({ utility_id, ct }) => [utility_id, ct]),
   );

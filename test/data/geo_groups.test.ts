@@ -1,6 +1,5 @@
+import Database from 'better-sqlite3';
 import path from 'path';
-import { open } from 'sqlite';
-import sqlite3 from 'sqlite3';
 import { test } from 'tap';
 import {
   AUTHORITIES_BY_STATE,
@@ -11,14 +10,14 @@ import { PROGRAMS } from '../../src/data/programs';
 import { STATE_INCENTIVES_BY_STATE } from '../../src/data/state_incentives';
 
 test('geo groups refer to valid geographies', async t => {
-  const db = await open({
-    filename: path.join(__dirname, '../../incentives-api.db'),
-    driver: sqlite3.Database,
-  });
+  const db = new Database(path.join(__dirname, '../../incentives-api.db'));
 
-  const allGeos = await db.all<{ id: number; state: string }[]>(
-    'SELECT id, state FROM geographies',
-  );
+  const allGeos = db
+    .prepare<
+      [],
+      { id: number; state: string }
+    >('SELECT id, state FROM geographies')
+    .all();
   const statesById = new Map(allGeos.map(({ id, state }) => [id, state]));
 
   Object.entries(GEO_GROUPS_BY_STATE).forEach(([state, groups]) => {

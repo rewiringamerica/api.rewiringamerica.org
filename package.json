@@ -23,19 +23,19 @@
     "ajv-formats": "^3.0.1",
     "axios": "^1.12.2",
     "axios-retry": "^4.0.0",
+    "better-sqlite3": "^11.7.2",
     "cheerio": "^1.0.0-rc.12",
     "fastify": "^4.17.0",
     "fastify-cli": "^6.1.1",
     "fastify-plugin": "^4.5.1",
-    "fastify-sqlite": "^1.1.0",
     "geocodio-library-node": "^1.9.1",
     "lodash": "^4.17.21",
-    "qs": "^6.11.2",
-    "sqlite": "^5.1.1"
+    "qs": "^6.11.2"
   },
   "devDependencies": {
     "@fastify/type-provider-json-schema-to-ts": "^2.2.2",
     "@js-joda/locale_en-us": "^4.15.1",
+    "@types/better-sqlite3": "^7.6.13",
     "@types/glob": "^8.1.0",
     "@types/lodash": "^4.17.20",
     "@types/make-fetch-happen": "^10.0.4",
@@ -59,7 +59,6 @@
     "prettier": "^3.5.3",
     "prettier-plugin-multiline-arrays": "^3.0.6",
     "prettier-plugin-organize-imports": "^4.1.0",
-    "sqlite3": "^5.1.7",
     "tap": "^19.0.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2"

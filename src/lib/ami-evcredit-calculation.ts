@@ -1,4 +1,4 @@
-import { Database } from 'sqlite';
+import { Database } from 'better-sqlite3';
 import { ResolvedLocation } from './location';
 import { roundFiftyDollars } from './rounding';
 
@@ -45,36 +45,45 @@ export async function computeAMIAndEVCreditEligibility(
     // Guam, and the Northern Mariana Islands have a single AMI each.
     ami =
       resolvedLocation.state === 'VI'
-        ? await db.get<AMIRow>(
-            'SELECT * FROM ami_by_territory_zip WHERE zip = ?',
-            resolvedLocation.zcta,
-          )
-        : await db.get<AMIRow>(
-            'SELECT * FROM ami_by_territory_zip WHERE state = ?',
-            resolvedLocation.state,
-          );
+        ? db
+            .prepare<
+              string,
+              AMIRow
+            >('SELECT * FROM ami_by_territory_zip WHERE zip = ?')
+            .get(resolvedLocation.zcta)
+        : db
+            .prepare<
+              string,
+              AMIRow
+            >('SELECT * FROM ami_by_territory_zip WHERE state = ?')
+            .get(resolvedLocation.state);
 
     // The entirety of these territories is non-urban and thus 30C-eligible.
     evCreditEligible = true;
   } else {
     ami = resolvedLocation.tract_geoid
-      ? await db.get<AMIRow>(
-          'SELECT * FROM ami_by_tract WHERE tract_geoid = ?',
-          resolvedLocation.tract_geoid,
-        )
-      : await db.get<AMIRow>(
-          'SELECT * FROM ami_by_zcta WHERE zcta = ?',
-          resolvedLocation.zcta,
-        );
+      ? db
+          .prepare<
+            string,
+            AMIRow
+          >('SELECT * FROM ami_by_tract WHERE tract_geoid = ?')
+          .get(resolvedLocation.tract_geoid)
+      : db
+          .prepare<string, AMIRow>('SELECT * FROM ami_by_zcta WHERE zcta = ?')
+          .get(resolvedLocation.zcta);
     const ev = resolvedLocation.tract_geoid
-      ? await db.get<{ is_eligible: string }>(
-          'SELECT is_eligible FROM "30c_eligibility_by_tract" WHERE tract_geoid = ?',
-          resolvedLocation.tract_geoid,
-        )
-      : await db.get<{ is_eligible: string }>(
-          'SELECT is_eligible FROM "30c_eligibility_by_zcta" WHERE zcta = ?',
-          resolvedLocation.zcta,
-        );
+      ? db
+          .prepare<
+            string,
+            { is_eligible: string }
+          >('SELECT is_eligible FROM "30c_eligibility_by_tract" WHERE tract_geoid = ?')
+          .get(resolvedLocation.tract_geoid)
+      : db
+          .prepare<
+            string,
+            { is_eligible: string }
+          >('SELECT is_eligible FROM "30c_eligibility_by_zcta" WHERE zcta = ?')
+          .get(resolvedLocation.zcta);
     if (!ev) {
       return null;
     }
