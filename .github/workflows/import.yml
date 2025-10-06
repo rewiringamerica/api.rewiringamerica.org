@@ -53,7 +53,7 @@ jobs:
           fi
       - name: Set up Python if needed
         if: steps.git_diff.outputs.geographychanges == 'true'
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.13'
           cache: 'pip'
