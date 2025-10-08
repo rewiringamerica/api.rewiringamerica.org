@@ -811,7 +811,8 @@
       "rebate"
     ],
     "items": [
-      "other_heat_pump"
+      "ducted_heat_pump",
+      "ductless_heat_pump"
     ],
     "program": "mn_cityOfHopkins_hopkinsClimateSolutionsFundRebates",
     "amount": {
@@ -823,8 +824,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "$1,500 rebate for a cold climate air source heat pump for all households. $2,500 rebate for households up to 80% AMI. Must be ENERGY STAR certified.",
-      "es": "Reembolso de $1,500 para una bomba de calor de aire para climas fríos para todos los hogares. Reembolso de $2,500 para hogares con un consumo interno de aire (AMI) de hasta el 80%. Debe contar con la certificación ENERGY STAR."
+      "en": "$1,500 rebate for a cold climate air source heat pump for all households. $2,500 rebate for income-qualified. Must be ENERGY STAR certified.",
+      "es": "Reembolso de $1,500 para una bomba de calor de aire para climas fríos para todos los hogares. Reembolso de $2,500 para hogares con ingresos que califican. Debe contar con certificación ENERGY STAR."
     },
     "url": {
       "en": "https://www.hopkinsmn.com/1152/HCSF-EligibilityRebate-Amounts"
@@ -836,7 +837,9 @@
       "rebate"
     ],
     "items": [
-      "other_insulation"
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "wall_insulation"
     ],
     "program": "mn_cityOfHopkins_hopkinsClimateSolutionsFundRebates",
     "amount": {
@@ -886,7 +889,8 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_clothes_dryer"
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
     ],
     "program": "mn_cityOfHopkins_hopkinsClimateSolutionsFundRebates",
     "amount": {
@@ -9351,6 +9355,130 @@
     },
     "url": {
       "en": "https://www.federatedrea.coop/rebates"
+    }
+  },
+  {
+    "id": "MN-479",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_cityOfHopkins_hopkinsClimateSolutionsFundRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750 rebate for a heat pump water heater for all households. $1,500 rebate for income-qualified households.",
+      "es": "Reembolso de $750 para un calentador de agua con bomba de calor para todos los hogares. Reembolso de $1,500 para hogares que califican según sus ingresos."
+    },
+    "end_date": "2025-12-31",
+    "url": {
+      "en": "https://www.hopkinsmn.com/1152/HCSF-EligibilityRebate-Amounts"
+    }
+  },
+  {
+    "id": "MN-480",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ebike"
+    ],
+    "program": "mn_cityOfHopkins_hopkinsClimateSolutionsFundRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an electric bicycle for all households. $1,000 rebate for income-qualified households. See city website for application details.",
+      "es": "Reembolso de $500 para una bicicleta eléctrica para todos los hogares. Reembolso de $1,000 para hogares con ingresos que cumplen los requisitos. Consulte el sitio web de la ciudad para obtener más información sobre la solicitud."
+    },
+    "url": {
+      "en": "https://www.hopkinsmn.com/1152/HCSF-EligibilityRebate-Amounts"
+    }
+  },
+  {
+    "id": "MN-481",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "mn_cityOfHopkins_hopkinsClimateSolutionsFundRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "10% off of a solar energy system up to a maximum of $4,000 for all households. 10% off up to a maximum of $5,000 for income-qualified households. ",
+      "es": "10% de descuento en un sistema de energía solar hasta un máximo de $4,000 para todos los hogares. 10% de descuento hasta un máximo de $5,000 para hogares que califican según sus ingresos. "
+    },
+    "url": {
+      "en": "https://www.hopkinsmn.com/1152/HCSF-EligibilityRebate-Amounts"
+    }
+  },
+  {
+    "id": "MN-482",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "battery_storage_installation"
+    ],
+    "program": "mn_cityOfHopkins_hopkinsClimateSolutionsFundRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "15% off of a battery storage system up to a maximum of $2,000 for all households. 15% off up to a maximum of $4,000 for income-qualified households.",
+      "es": "15% de descuento en un sistema de almacenamiento de baterías hasta un máximo de $2,000 para todos los hogares. 15% de descuento hasta un máximo de $4,000 para hogares que califican según sus ingresos."
+    },
+    "url": {
+      "en": "https://www.hopkinsmn.com/1152/HCSF-EligibilityRebate-Amounts"
+    }
+  },
+  {
+    "id": "MN-483",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "mn_cityOfHopkins_hopkinsClimateSolutionsFundRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for electric vehicle charging equipment.",
+      "es": "Reembolso de $500 para equipos de carga de vehículos eléctricos."
+    },
+    "url": {
+      "en": "https://www.hopkinsmn.com/1152/HCSF-EligibilityRebate-Amounts"
     }
   }
 ]
