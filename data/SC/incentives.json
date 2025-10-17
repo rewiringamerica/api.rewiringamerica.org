@@ -23,5 +23,58 @@
     "url": {
       "en": "https://www.duke-energy.com/home/products/smart-saver/heat-pump-water-heater"
     }
+  },
+  {
+    "id": "SC-2",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "sc_berkeleyElectricCooperative_berkeleyH20Advantage",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "minimum": 200,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $300 rebate on a new electric water heater in new or existing homes. ",
+      "es": "Reembolso de hasta $300 en un nuevo calentador de agua eléctrico en viviendas nuevas o existentes. "
+    },
+    "url": {
+      "en": "https://www.berkeleyelectric.coop/electric-water-heater-programs"
+    }
+  },
+  {
+    "id": "SC-3",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "sc_palmettoElectricCooperative_pEBuriedTreasure",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 200,
+      "unit": "ton",
+      "minimum": 200,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 per ton rebate (up to $1,000 per household) on ground-source heat pump system. ",
+      "es": "Reembolso de $200 por tonelada (hasta $1,000 por hogar) en sistemas de bomba de calor de fuente terrestre. "
+    },
+    "url": {
+      "en": "https://palmetto.coop/buried-treasure#:~:text=To%20help%20you%20finance%20this,members%20who%20install%20qualified%20systems."
+    }
   }
 ]
