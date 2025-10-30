@@ -239,8 +239,7 @@
       "account_credit"
     ],
     "items": [
-      "ductless_heat_pump",
-      "ducted_heat_pump"
+      "ductless_heat_pump"
     ],
     "program": "fl_jea_jEAHeatingAndCoolingRebates",
     "amount": {
@@ -252,8 +251,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$200 rebate on qualifying ENERGY STAR-certified HVAC systems. ",
-      "es": "Reembolso de $200 en sistemas HVAC con certificación ENERGY STAR. "
+      "en": "$200 rebate on qualifying ENERGY STAR-certified ductless heat pump. ",
+      "es": "Reembolso de $200 en bombas de calor sin sistema de ductos con certificación ENERGY STAR que cumplan los requisitos. "
     },
     "url": {
       "en": "https://www.jea.com/residential_customers/residential_rebates/heating_and_cooling_rebates/"
@@ -822,6 +821,31 @@
     },
     "url": {
       "en": "https://www.fpl.com/electric-vehicles/for-drivers/evolution-home.html"
+    }
+  },
+  {
+    "id": "FL-33",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "fl_jea_jEAHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 rebate on qualifying ENERGY STAR-certified ducted heat pump. ",
+      "es": "Reembolso de $200 en bombas de calor con sistema de ductos con certificación ENERGY STAR que cumplan los requisitos. "
+    },
+    "url": {
+      "en": "https://www.jea.com/residential_customers/residential_rebates/heating_and_cooling_rebates/"
     }
   }
 ]

@@ -7,7 +7,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "la_entergyLouisiana_entergySolutions",
+    "program": "la_entergyLouisiana_entergyLouisianaEnergySmart",
     "amount": {
       "type": "dollar_amount",
       "number": 400
@@ -31,7 +31,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "la_entergyLouisiana_entergySolutions",
+    "program": "la_entergyLouisiana_entergyLouisianaEnergySmart",
     "amount": {
       "type": "dollar_amount",
       "number": 250
@@ -40,8 +40,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $250 rebate on qualifying air-source heat pumps. ",
-      "es": "Reembolso de hasta $250 en bombas de calor de fuente de aire calificadas. "
+      "en": "Up to $250 rebate on ENERGY STAR-certified air-source heat pumps. ",
+      "es": "Reembolso de hasta $250 en bombas de calor de fuente de aire con certificación ENERGY STAR. "
     },
     "url": {
       "en": "https://www.entergylouisiana.com/energyefficiency/residential/ac"
@@ -55,7 +55,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "la_entergyLouisiana_entergySolutions",
+    "program": "la_entergyLouisiana_entergyLouisianaEnergySmart",
     "amount": {
       "type": "dollar_amount",
       "number": 500
@@ -64,8 +64,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 rebate on qualifying mini-split heat pumps. ",
-      "es": "Reembolso de hasta $500 en bombas de calor mini-split calificadas. "
+      "en": "Up to $500 rebate on ENERGY STAR-certified mini-split heat pumps. ",
+      "es": "Reembolso de hasta $500 por bombas de calor mini-split con certificación ENERGY STAR. "
     },
     "url": {
       "en": "https://www.entergylouisiana.com/energyefficiency/residential/ac"
@@ -114,7 +114,7 @@
     ],
     "short_description": {
       "en": "Up to $3,500 rebate when upgrading an air conditioning system to a new, qualifying heat pump system.",
-      "es": "Reembolso de hasta $3,500 al actualizar un sistema de aire acondicionado a un nuevo sistema de bomba de calor calificado."
+      "es": "Reembolso de hasta $3,500 al actualizar un sistema de aire acondicionado a un nuevo sistema de bomba de calor que cumpla los requisitos."
     },
     "url": {
       "en": "https://www.cleco.com/residential-commercial/energy-efficiency-renewables/power-wise/residential-rebates"
@@ -142,6 +142,255 @@
     },
     "url": {
       "en": "https://www.cleco.com/residential-commercial/energy-efficiency-renewables/power-wise/residential-rebates"
+    }
+  },
+  {
+    "id": "LA-7",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "la_southwesternElectricPower_southwesternElectricEfficientProductsRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $100 rebate on ENERGY STAR-certified clothes dryers. ",
+      "es": "Reembolso de hasta $100 en secadoras de ropa con certificación ENERGY STAR. "
+    },
+    "url": {
+      "en": "https://swepcosolutions.com/rebates/energy-star-clothes-dryers/"
+    }
+  },
+  {
+    "id": "LA-8",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "la_southwesternElectricPower_southwesternElectricEfficientProductsRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $3,500 per unit rebate on qualifying heat pumps. ",
+      "es": "Reembolso de hasta $3,500 por unidad en bombas de calor que cumplan los requisitos. "
+    },
+    "url": {
+      "en": "https://www.swepco.com/savings/home/money/rebates/"
+    }
+  },
+  {
+    "id": "LA-9",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "la_southwesternElectricPower_southwesternElectricEfficientProductsRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,150 rebate on ENERGY STAR-certified heat pump water heaters. ",
+      "es": "Reembolso de hasta $1,150 en calentadores de agua con bomba de calor con certificación ENERGY STAR. "
+    },
+    "url": {
+      "en": "https://swepcosolutions.com/rebates/energy-star-heat-pump-water-heaters-1150/"
+    }
+  },
+  {
+    "id": "LA-10",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "la_southwesternElectricPower_southwesternElectricEfficientProductsRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $250 per charger for ENERGY STAR-certified Level 2 EV chargers. ",
+      "es": "Hasta $250 por cargador para cargadores EV de Nivel 2 con certificación ENERGY STAR. "
+    },
+    "url": {
+      "en": "https://swepcosolutions.com/rebates/energy-star-level-2-ev-charging-station/"
+    }
+  },
+  {
+    "id": "LA-11",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "la_entergyNewOrleans_entergyNewOrleansEnergySmart",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $250 rebate on ENERGY STAR-certified air-source heat pumps. ",
+      "es": "Reembolso de hasta $250 en bombas de calor de fuente de aire con certificación ENERGY STAR. "
+    },
+    "url": {
+      "en": "https://energysmartnola.info/a-c-solutions/"
+    }
+  },
+  {
+    "id": "LA-12",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "la_entergyNewOrleans_entergyNewOrleansEnergySmart",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 rebate on ENERGY STAR-certified mini-split heat pumps replacing electric strip heat. ",
+      "es": "Reembolso de hasta $500 en bombas de calor mini-split con certificación ENERGY STAR que reemplacen la calefacción eléctrica de banda. "
+    },
+    "url": {
+      "en": "https://energysmartnola.info/a-c-solutions/"
+    }
+  },
+  {
+    "id": "LA-13",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "la_entergyNewOrleans_entergyNewOrleansEnergySmart",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate on ENERGY STAR-certified heat pump water heater. Limit 4 per customer per year. ",
+      "es": "Reembolso de $1,000 en calentador de agua con bomba de calor con certificación ENERGY STAR. Límite de 4 por cliente al año. "
+    },
+    "url": {
+      "en": "https://energysmartnola.info/a-c-solutions/"
+    }
+  },
+  {
+    "id": "LA-14",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "la_entergyNewOrleans_entergyNewOrleansEnergySmart",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 rebate on ENERGY STAR-certified heat pump clothes dryer. Limit 2 per customer per year. ",
+      "es": "Reembolso de $300 en secadoras de ropa con bomba de calor con certificación ENERGY STAR. Límite de 2 por cliente al año. "
+    },
+    "url": {
+      "en": "https://energysmartnola.info/residential-appliances/#chooseappliance"
+    }
+  },
+  {
+    "id": "LA-15",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "la_entergyNewOrleans_entergyNewOrleansEnergySmart",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$25 rebate on ENERGY STAR-certified electric clothes dryer. Limit 2 per customer per year. ",
+      "es": "Reembolso de $25 en secadoras de ropa eléctricas con certificación ENERGY STAR. Límite de 2 por cliente al año. "
+    },
+    "url": {
+      "en": "https://energysmartnola.info/residential-appliances/#chooseappliance"
+    }
+  },
+  {
+    "id": "LA-16",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "la_entergyNewOrleans_entergyNewOrleansEnergySmart",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50-100 discounts on ENERGY STAR-certified Level 2 electric vehicle (EV) chargers through Energy Smart Online Marketplace.",
+      "es": "Descuentos de $50 a $100 en cargadores de vehículos eléctricos (EV) de Nivel 2 con certificación ENERGY STAR a través de Energy Smart Online Marketplace."
+    },
+    "url": {
+      "en": "https://shop.energysmartnola.com/?_gl=1*1jis3zg*_gcl_au*MTAwNzA0MTU0LjE3NjEyNjIxNDE."
     }
   }
 ]
