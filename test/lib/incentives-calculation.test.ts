@@ -50,6 +50,14 @@ const LOCATION_AND_AMIS: {
     },
     { computedAMI80: 156650, computedAMI150: 293700, evCreditEligible: false },
   ],
+  '94086': [
+    {
+      zcta: '94086',
+      state: 'CA',
+      geographies: [stateGeo(5, 'CA'), countyGeo(286, 'CA', '06085')],
+    },
+    { computedAMI80: 102250, computedAMI150: 193500, evCreditEligible: false },
+  ],
   '39503': [
     {
       zcta: '39503',
@@ -671,4 +679,26 @@ test('exclude federal energy audit incentive for MA', async t => {
 
   const riResults = calculateIncentives(...LOCATION_AND_AMIS['02861'], args);
   t.ok(riResults.incentives.filter(filter).length > 0);
+});
+
+test('includes RA heat pump program for Santa Clara county', async t => {
+  const args = {
+    owner_status: OwnerStatus.Homeowner,
+    household_income: 40000,
+    tax_filing: FilingStatus.Single,
+    household_size: 1,
+    authority_types: [AuthorityType.Other],
+  };
+
+  const santaClaraResults = calculateIncentives(
+    ...LOCATION_AND_AMIS['94086'],
+    args,
+  );
+  t.equal(santaClaraResults.incentives.length, 1);
+
+  const sanFranciscoResults = calculateIncentives(
+    ...LOCATION_AND_AMIS['94117'],
+    args,
+  );
+  t.equal(sanFranciscoResults.incentives.length, 0);
 });

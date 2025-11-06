@@ -37,12 +37,23 @@ import {
   estimateStateTaxAmount,
 } from './tax-brackets';
 
+const RA_BAY_AREA_HEAT_PUMP_PROGRAMS = STATE_INCENTIVES_BY_STATE['CA'].filter(
+  incentive => incentive.id === 'CA-12',
+);
+
 export function getAllStateIncentives(
   stateId: string,
   request: CalculateParams,
 ) {
   // Only process incentives for launched states, or beta states if beta was requested.
   if (!isStateIncluded(stateId, request.include_beta_states ?? false)) {
+    // TODO(hannah): This hack surfaces our Bay Area heat pump program while CA
+    // is still in beta. It should be deleted once CA is launched or once the
+    // program ends in spring 2026.
+    if (stateId === 'CA') {
+      return RA_BAY_AREA_HEAT_PUMP_PROGRAMS;
+    }
+
     return [];
   }
   return STATE_INCENTIVES_BY_STATE[stateId];
