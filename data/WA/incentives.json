@@ -22,6 +22,7 @@
       "en": "Up to $850 rebate on a qualifying electric heat pump water heater.",
       "es": "Reembolso de hasta $850 para calentadores de agua con bomba de calor eléctrica que cumplan los requisitos."
     },
+    "start_date": "2025-01-01",
     "url": {
       "en": "https://www.pse.com/rebates/water-heating/heat-pump-water-heater-rebate"
     }
@@ -71,9 +72,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,400 rebate when you replace your electric resistance heating system with a qualifying air-source heat pump.",
-      "es": "Reembolso de $2,400 cuando reemplaza su sistema de calefacción por resistencia eléctrica con una bomba de calor de fuente de aire calificada."
+      "en": "$2,400 rebate when you replace your electric resistance heating system with a qualifying air-source heat pump. For income-qualified customers.",
+      "es": "Reembolso de $2,400 al reemplazar su sistema de calefacción eléctrica por una bomba de calor aire-agua que cumpla con los requisitos. Para clientes con ingresos que cumplan con los requisitos."
     },
+    "low_income": "wa-puget-sound-mmi-by-county",
     "url": {
       "en": "https://www.pse.com/en/rebates/heating/electric-resistance-to-air-source-heat-pump-conversion-rebate"
     }
@@ -174,8 +176,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$175 rebate on a BPA Tier 3 heat pump dryer. ",
-      "es": "Reembolso de $175 para una secadora con bomba de calor con BPA de Nivel 3."
+      "en": "$175 rebate on a BPA Tier 3 efficiency heat pump dryer. ",
+      "es": "Reembolso de $175 en una secadora con bomba de calor de eficiencia BPA Tier 3. "
     },
     "url": {
       "en": "https://www.seattle.gov/city-light/residential-services/home-energy-solutions#washeranddryerrebates"
@@ -253,8 +255,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $2,500 rebate on a qualifying ducted heat pump system.",
-      "es": "Reembolso de hasta $2,500 para un sistema de bomba de calor con ductos calificado."
+      "en": "Up to $2,500 rebate on a qualifying ducted heat pump system when replacing electric resistance heating.",
+      "es": "Reembolso de hasta $2,500 en un sistema de bomba de calor canalizada que cumpla con los requisitos al reemplazar la calefacción por resistencia eléctrica."
     },
     "url": {
       "en": "https://www.snopud.com/save-energy/residential/rebates/heating/"
@@ -424,14 +426,14 @@
     "program": "wa_clarkPublicUtilities_clarkPublicUtilitiesHeatPumpProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 800
+      "number": 900
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$800 rebate for the installation of qualifying ductless heat pump.",
-      "es": "Reembolso de $800 para la instalación de una bomba de calor sin ductos que cumpla con los requisitos."
+      "en": "$900 rebate for the installation of qualifying ductless heat pump when replacing electric resistance heating.",
+      "es": "Reembolso de $900 por la instalación de una bomba de calor sin conductos que cumpla con los requisitos al reemplazar la calefacción por resistencia eléctrica."
     },
     "url": {
       "en": "https://www.clarkpublicutilities.com/residential-customers/reduce-energy-waste-and-lower-your-bill/all-rebates-incentives-and-low-interest-loans/ductless-heat-pump-program/"
@@ -530,8 +532,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $2,000 rebate on a ductless heat pump system replacing an existing forced air electric furnace",
-      "es": "Reembolso de hasta $2,000 para un sistema de bomba de calor sin ductos que reemplaza un horno eléctrico de aire forzado existente"
+      "en": "Up to $2,000 rebate on a ductless heat pump system replacing an existing forced air electric furnace.",
+      "es": "Reembolso de hasta $2,000 en un sistema de bomba de calor sin conductos que reemplace un horno eléctrico de aire forzado existente."
     },
     "url": {
       "en": "https://www.mytpu.org/ways-to-save/residential-incentives/heat-pump/#pattern_1"
@@ -1160,8 +1162,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,800 rebate on a qualifying ductless heat pump system.",
-      "es": "Reembolso de hasta $1,800 para un sistema de bomba de calor sin ductos calificado."
+      "en": "Up to $2,000 rebate on a qualifying ductless heat pump system, depending on fuel switching.",
+      "es": "Reembolso de hasta $2,000 en un sistema de bomba de calor sin conductos que cumpla con los requisitos, dependiendo del cambio de combustible."
     },
     "url": {
       "en": "https://wattsmartsavings.net/washington-residential/find-savings-heating-and-cooling/ductless-heat-pumps/"
@@ -1313,6 +1315,33 @@
     },
     "url": {
       "en": "https://wattsmartsavings.net/washington-residential/find-savings-heating-and-cooling/heat-pumps-wa/"
+    }
+  },
+  {
+    "id": "WA-53",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "wa_pugetSoundEnergy_efficiencyBoost",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$4,000 rebate when you replace your gas heating system with a qualifying air-source heat pump, for income-qualified customers.",
+      "es": "Reembolso de $4,000 al reemplazar su sistema de calefacción a gas con una bomba de calor aire-agua que cumpla con los requisitos, para clientes que califiquen por ingresos."
+    },
+    "low_income": "wa-puget-sound-mmi-by-county",
+    "url": {
+      "en": "https://www.pse.com/en/rebates/heating/iq-heatpump"
     }
   }
 ]

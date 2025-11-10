@@ -6,5 +6,19 @@
       ],
       "description": "If both moderate and low are displayed, just display low income one."
     }
+  },
+  "prerequisites": {
+    "NC-1": {
+      "allOf": [
+        "NC-2"
+      ],
+      "description": "Free home energy assessment required"
+    },
+    "NC-3": {
+      "allOf": [
+        "NC-2"
+      ],
+      "description": "Free home assessment required "
+    }
   }
 }
