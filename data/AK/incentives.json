@@ -1,0 +1,86 @@
+[
+  {
+    "id": "AK-1",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ak_chugachElectricAssociation_chugachEnergySolutionsProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate on qualifying Level 2 electric vehicle (EV) chargers. Limit two per household. ",
+      "es": "Reembolso de $200 en cargadores para vehículos eléctricos (EV) de Nivel 2 que cumplan con los requisitos. Límite de dos por hogar. "
+    },
+    "url": {
+      "en": "https://www.chugachelectric.com/energy-solutions/electric-vehicles"
+    }
+  },
+  {
+    "id": "AK-2",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump",
+      "geothermal_heating_installation",
+      "other_heat_pump"
+    ],
+    "program": "ak_chugachElectricAssociation_chugachHeatPumpPilotProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.15,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Earn maximum incentive of 15%, up to $900 on a qualifying heat pump system.",
+      "es": "Obtenga un incentivo máximo del 15%, hasta $900, en un sistema de bomba de calor que cumpla con los requisitos."
+    },
+    "url": {
+      "en": "https://www.chugachelectric.com/system/files/Heat%20Pump%20Pilot%20Program_requirements_2025.pdf"
+    }
+  },
+  {
+    "id": "AK-3",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump",
+      "geothermal_heating_installation",
+      "other_heat_pump"
+    ],
+    "program": "ak_homerElectricAssociation_homerElectricHeatPumpRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Earn up to $1,000 for the purchase and installation of a qualified heat pump.",
+      "es": "Gane hasta $1,000 por la compra e instalación de una bomba de calor que cumpla los requisitos."
+    },
+    "url": {
+      "en": "https://www.homerelectric.com/energy-efficiency/heat-pump-program/"
+    }
+  }
+]

@@ -1141,22 +1141,20 @@
       "account_credit"
     ],
     "items": [
-      "non_heat_pump_water_heater",
       "heat_pump_water_heater"
     ],
     "program": "oh_consolidatedElectricCooperative_consolidatedCooperativeResidentialRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 200,
-      "minimum": 125,
-      "maximum": 200
+      "number": 400,
+      "maximum": 400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $200 account credit for a heat pump water heater or electric water heater.",
-      "es": "Crédito en la cuenta de hasta $200 por un calentador de agua con bomba de calor o un calentador de agua eléctrico."
+      "en": "Up to $400 account credit for a heat pump water heater.",
+      "es": "Hasta $400 de crédito en cuenta para un calentador de agua con bomba de calor."
     },
     "url": {
       "en": "https://www.consolidated.coop/electric/residential/rebates/"
@@ -2572,11 +2570,36 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,200 rebate for a ground source heat pump.",
-      "es": "Reembolso de hasta $1,200 por una bomba de calor geotérmica."
+      "en": "Up to $1,200 rebate for a ground source heat pump.  Member also qualify for reduced electricity cost. ",
+      "es": "Reembolso de hasta $1,200 para una bomba de calor geotérmica. Los miembros también pueden optar a un descuento en la factura de la luz. "
     },
     "url": {
-      "en": "https://butlerrural.coop/heat-pump-rebates"
+      "en": "https://butlerrural.coop/geothermal-rebates"
+    }
+  },
+  {
+    "id": "OH-100",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "oh_consolidatedElectricCooperative_consolidatedCooperativeResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $250 account credit for an electric water heater.",
+      "es": "Hasta $250 de crédito en cuenta para un calentador de agua eléctrico."
+    },
+    "url": {
+      "en": "https://www.consolidated.coop/electric/residential/rebates/"
     }
   }
 ]

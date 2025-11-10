@@ -315,7 +315,8 @@
       "account_credit"
     ],
     "items": [
-      "other_heat_pump"
+      "ducted_heat_pump",
+      "ductless_heat_pump"
     ],
     "program": "fl_orlandoUtilitiesCommission_orlandoUtilitiesCommissionEfficiencyRebates",
     "amount": {
@@ -433,8 +434,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 rebate for a new energy-efficient heat pump. ",
-      "es": "Reembolso de $300 para una nueva bomba de calor de bajo consumo energético. "
+      "en": "Up to $300 rebate for a new energy-efficient heat pump. ",
+      "es": "Reembolso de hasta $300 por una nueva bomba de calor de alta eficiencia energética. "
     },
     "url": {
       "en": "https://lakelandelectric.com/programs-and-services/energy"
@@ -753,7 +754,7 @@
   {
     "id": "FL-30",
     "payment_methods": [
-      "account_credit"
+      "pos_rebate"
     ],
     "items": [
       "central_air_conditioner"
@@ -846,6 +847,58 @@
     },
     "url": {
       "en": "https://www.jea.com/residential_customers/residential_rebates/heating_and_cooling_rebates/"
+    }
+  },
+  {
+    "id": "FL-34",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "fl_dukeEnergyFlorida_dukeEnergyFloridaHomeEnergyImprovementProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "minimum": 600,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1000 rebate for a qualifying heat pump when replacing existing strip heat, depending on efficiency.",
+      "es": "Reembolso de hasta $1000 por una bomba de calor que cumpla con los requisitos al reemplazar el sistema de calefacción por resistencia existente, según su eficiencia."
+    },
+    "url": {
+      "en": "https://www.duke-energy.com/-/media/pdfs/for-your-home/hei-rebates-forms/hei-def-hvac-rebates-handout.pdf?rev=5e9e8bd0e74d4499b34ce0666fafbae3"
+    }
+  },
+  {
+    "id": "FL-35",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "fl_cityOfTallahassee_tallahasseeACAndHeatPumpRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750 rebate on qualifying ground source heat pumps.",
+      "es": "Reembolso de $750 en bombas de calor geotérmicas que cumplan los requisitos."
+    },
+    "url": {
+      "en": "https://www.talgov.com/you/you-products-home-hvac-rebates"
     }
   }
 ]
