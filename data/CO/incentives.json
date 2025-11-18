@@ -6918,6 +6918,7 @@
       "en": "Up to $2,500 for a Ground Source Heat Pump, depending on size and retrofit vs replacement.",
       "es": "Hasta $2,500 por una bomba de calor geotérmica, según el tamaño y si se trata de una modernización o un reemplazo."
     },
+    "paused": true,
     "url": {
       "en": "https://www.unitedpower.com/rebates"
     }
@@ -6944,6 +6945,7 @@
       "en": "Up to $2,000 for a cold-climate, high efficiency mini-split heat pump.",
       "es": "Hasta $2,000 por una bomba de calor mini-split de alta eficiencia para clima frío."
     },
+    "paused": true,
     "url": {
       "en": "https://www.unitedpower.com/rebates"
     }
@@ -6970,6 +6972,7 @@
       "en": "Up to $2,500 for a cold-climate, high efficiency ducted air source heat pump.",
       "es": "Hasta $2,500 por una bomba de calor de fuente de aire con sistema de ductos, de alta eficiencia y apta para clima frío."
     },
+    "paused": true,
     "url": {
       "en": "https://www.unitedpower.com/rebates"
     }
@@ -15969,6 +15972,7 @@
       "en": "Up to $100 for an electric water heater.",
       "es": "Hasta $100 por un calentador de agua eléctrico."
     },
+    "paused": true,
     "url": {
       "en": "https://www.unitedpower.com/rebates"
     }
@@ -15995,6 +15999,7 @@
       "en": "Up to $300 for a heat pump water heater.",
       "es": "Hasta $300 por un calentador de agua con bomba de calor."
     },
+    "paused": true,
     "url": {
       "en": "https://www.unitedpower.com/rebates"
     }
@@ -16022,6 +16027,7 @@
       "en": "Up to $500 for wiring and panel upgrades that support heat pump or water heater installations.",
       "es": "Hasta $500 por trabajos de cableado y mejoras en el panel eléctrico que respalden la instalación de una bomba de calor o un calentador de agua."
     },
+    "paused": true,
     "url": {
       "en": "https://www.unitedpower.com/rebates"
     }
@@ -16049,6 +16055,7 @@
       "en": "Up to $150 for an electric walk-behind lawn mower.",
       "es": "Hasta $150 por una cortadora de césped eléctrica de empuje."
     },
+    "paused": true,
     "url": {
       "en": "https://www.unitedpower.com/rebates"
     }
@@ -16076,6 +16083,7 @@
       "en": "Up to $150 for an electric snow blower.",
       "es": "Hasta $150 por una sopladora de nieve eléctrica."
     },
+    "paused": true,
     "url": {
       "en": "https://www.unitedpower.com/rebates"
     }
@@ -16814,7 +16822,7 @@
       "rebate"
     ],
     "items": [
-      "electric_outdoor_equipment"
+      "electric_stove"
     ],
     "program": "co_laPlataElectricAssociation_electrifyAndSave",
     "amount": {
@@ -18230,6 +18238,436 @@
     "end_date": "2025-12-31",
     "url": {
       "en": "https://energysmartyes.com/rebates/superior/"
+    }
+  },
+  {
+    "id": "CO-746",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel",
+      "electric_wiring"
+    ],
+    "program": "co_unitedPower_tri-StateG&T",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "minimum": 250,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1500 for wiring and panel upgrades for an EV Charger.  Higher rebate with United EV enrollment.",
+      "es": "Hasta $1500 para mejoras en el cableado y el panel de un cargador para vehículos eléctricos. Mayor reembolso con la inscripción en United EV."
+    },
+    "paused": true,
+    "url": {
+      "en": "https://www.unitedpower.com/ev_rebates"
+    }
+  },
+  {
+    "id": "CO-747",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "co_coloradoEnergyOffice_cOHEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 1750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 100% of ENERGY STAR heat pump water heater costs for households below 80% AMI, up to $1,750.",
+      "es": "Reembolso del 100% del costo de los calentadores de agua con bomba de calor ENERGY STAR para hogares con ingresos inferiores al 80% del AMI, hasta $1,750."
+    },
+    "start_date": "2025-11-17",
+    "low_income": "co-hear-program-low",
+    "url": {
+      "en": "https://energyoffice.colorado.gov/home-energy-rebates"
+    }
+  },
+  {
+    "id": "CO-748",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "co_coloradoEnergyOffice_cOHEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 1750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of ENERGY STAR heat pump water heater costs for households between 80% and 150% AMI, up to $1,750.",
+      "es": "Reembolso del 50% del costo de los calentadores de agua con bomba de calor ENERGY STAR para hogares con ingresos entre el 80% y el 150% del AMI, hasta $1,750."
+    },
+    "start_date": "2025-11-17",
+    "low_income": "co-hear-program-moderate",
+    "url": {
+      "en": "https://energyoffice.colorado.gov/home-energy-rebates"
+    }
+  },
+  {
+    "id": "CO-749",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "co_coloradoEnergyOffice_cOHEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 8000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 100% of ENERGY STAR air source heat pump costs for households below 80% AMI, up to $8,000.",
+      "es": "Reembolso del 100% del costo de las bombas de calor aire-agua ENERGY STAR para hogares con ingresos inferiores al 80% del AMI, hasta $8,000."
+    },
+    "start_date": "2025-11-17",
+    "low_income": "co-hear-program-low",
+    "url": {
+      "en": "https://energyoffice.colorado.gov/home-energy-rebates"
+    }
+  },
+  {
+    "id": "CO-750",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "co_coloradoEnergyOffice_cOHEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 8000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of ENERGY STAR air source heat pump costs for households between 80% and 150% AMI, up to $8,000.",
+      "es": "Reembolso del 50% del costo de las bombas de calor aire-agua ENERGY STAR para hogares con ingresos entre el 80% y el 150% del AMI, hasta $8,000."
+    },
+    "low_income": "co-hear-program-moderate",
+    "url": {
+      "en": "https://energyoffice.colorado.gov/home-energy-rebates"
+    }
+  },
+  {
+    "id": "CO-751",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "co_coloradoEnergyOffice_cOHEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 840
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 100% of ENERGY STAR heat pump clothes dryer costs for households under 80% AMI, up to $840.",
+      "es": "Reembolso del 100% del costo de las secadoras de ropa con bomba de calor ENERGY STAR para hogares con ingresos inferiores al 80% del AMI, hasta $840."
+    },
+    "start_date": "2025-11-17",
+    "low_income": "co-hear-program-low",
+    "url": {
+      "en": "https://energyoffice.colorado.gov/home-energy-rebates"
+    }
+  },
+  {
+    "id": "CO-752",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "co_coloradoEnergyOffice_cOHEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 840
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of ENERGY STAR heat pump clothes dryer costs for households between 80% and 150% AMI, up to $840.",
+      "es": "Reembolso del 50% del costo de las secadoras de ropa con bomba de calor ENERGY STAR para hogares con ingresos entre el 80% y el 150% del AMI, hasta $840."
+    },
+    "low_income": "co-hear-program-moderate",
+    "url": {
+      "en": "https://energyoffice.colorado.gov/home-energy-rebates"
+    }
+  },
+  {
+    "id": "CO-753",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "co_coloradoEnergyOffice_cOHEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 840
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 100% of ENERGY STAR electric stove, cooktop, range, or oven costs for households under 80% AMI, up to $840.",
+      "es": "Reembolso del 100% del costo de estufas, placas de cocina, hornos o cocinas eléctricas ENERGY STAR para hogares con ingresos inferiores al 80% del AMI, hasta $840."
+    },
+    "low_income": "co-hear-program-low",
+    "url": {
+      "en": "https://energyoffice.colorado.gov/home-energy-rebates"
+    }
+  },
+  {
+    "id": "CO-754",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "co_coloradoEnergyOffice_cOHEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 840
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of ENERGY STAR electric stove, cooktop, range, or oven costs for households between 80% and 150% AMI, up to $840.",
+      "es": "Reembolso del 50% del costo de estufas, placas de cocina, hornos o cocinas eléctricas ENERGY STAR para hogares con ingresos entre el 80% y el 150% del AMI, hasta $840."
+    },
+    "start_date": "2025-11-17",
+    "low_income": "co-hear-program-moderate",
+    "url": {
+      "en": "https://energyoffice.colorado.gov/home-energy-rebates"
+    }
+  },
+  {
+    "id": "CO-755",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_wiring"
+    ],
+    "program": "co_coloradoEnergyOffice_cOHEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 100% of electrical wiring costs for households below 80% AMI, up to $2,500.",
+      "es": "Reembolso del 100% de los costos de cableado eléctrico para hogares con ingresos inferiores al 80% del AMI, hasta $2,500."
+    },
+    "start_date": "2025-11-17",
+    "low_income": "co-hear-program-low",
+    "url": {
+      "en": "https://energyoffice.colorado.gov/home-energy-rebates"
+    }
+  },
+  {
+    "id": "CO-756",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_wiring"
+    ],
+    "program": "co_coloradoEnergyOffice_cOHEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of electrical wiring costs for households between 80% and 150% AMI, up to $2,500.",
+      "es": "Reembolso del 50% de los costos de cableado eléctrico para hogares con ingresos entre el 80% y el 150% del AMI, hasta $2,500."
+    },
+    "start_date": "2025-11-17",
+    "low_income": "co-hear-program-moderate",
+    "url": {
+      "en": "https://energyoffice.colorado.gov/home-energy-rebates"
+    }
+  },
+  {
+    "id": "CO-757",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "co_coloradoEnergyOffice_cOHEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 100% of electrical load service center (electrical panel) costs for households under 80% AMI, up to $4,000.",
+      "es": "Reembolso del 100% de los costos del centro de servicio de carga eléctrica (panel eléctrico) para hogares con ingresos inferiores al 80% del AMI, hasta $4,000."
+    },
+    "start_date": "2025-11-17",
+    "low_income": "co-hear-program-low",
+    "url": {
+      "en": "https://energyoffice.colorado.gov/home-energy-rebates"
+    }
+  },
+  {
+    "id": "CO-758",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "co_coloradoEnergyOffice_cOHEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of electrical load service center (electrical panel) costs for households between 80% and 150% AMI, up to $4,000.",
+      "es": "Reembolso del 50% de los costos del centro de servicio de carga eléctrica (panel eléctrico) para hogares entre el 80% y el 150% del AMI, hasta $4,000."
+    },
+    "start_date": "2025-11-17",
+    "low_income": "co-hear-program-moderate",
+    "url": {
+      "en": "https://energyoffice.colorado.gov/home-energy-rebates"
+    }
+  },
+  {
+    "id": "CO-759",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_insulation",
+      "other_weatherization",
+      "wall_insulation",
+      "floor_insulation",
+      "basement_insulation",
+      "attic_or_roof_insulation",
+      "air_sealing"
+    ],
+    "program": "co_coloradoEnergyOffice_cOHEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 1600
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 100% of insulation, air sealing, and ventilation costs for households under 80% AMI, up to $1,600.",
+      "es": "Reembolso del 100% de los costos de aislamiento, sellado de aire y ventilación para hogares con ingresos inferiores al 80% del AMI, hasta $1,600."
+    },
+    "start_date": "2025-11-17",
+    "low_income": "co-hear-program-low",
+    "url": {
+      "en": "https://energyoffice.colorado.gov/home-energy-rebates"
+    }
+  },
+  {
+    "id": "CO-760",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_insulation",
+      "floor_insulation",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "air_sealing",
+      "wall_insulation"
+    ],
+    "program": "co_coloradoEnergyOffice_cOHEARProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 1600
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of insulation, air sealing, and ventilation costs for households between 80% and 150% AMI, up to $1,600.",
+      "es": "Reembolso del 50% de los costos de aislamiento, sellado de aire y ventilación para hogares con ingresos entre el 80% y el 150% del AMI, hasta $1,600."
+    },
+    "low_income": "co-hear-program-moderate",
+    "url": {
+      "en": "https://energyoffice.colorado.gov/home-energy-rebates"
     }
   }
 ]
