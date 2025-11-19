@@ -1523,16 +1523,16 @@
     ],
     "program": "or_salemElectric_salemElectricApplianceIncentives",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
+      "type": "dollar_amount",
+      "number": 600,
       "maximum": 600
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $600 for heat pump water heaters, up to 50% of water heater cost.",
-      "es": "Hasta $600 por calentadores de agua con bomba de calor, que no deberá exceder el 50 % del costo del calentador de agua."
+      "en": "Up to $600 for heat pump water heater.",
+      "es": "Hasta $600 para calentador de agua con bomba de calor."
     },
     "url": {
       "en": "https://www.salemelectric.com/energy-efficiency/incentives/"
@@ -2601,19 +2601,16 @@
     "program": "or_midstateElectricCooperative_midstateElectricCooperativeResidentialConservationIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 900,
-      "minimum": 800,
-      "maximum": 900
+      "number": 1800,
+      "maximum": 1800
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $900 rebate for heat pump water heaters.",
-      "es": "Reembolso de hasta $900 por calentadores de agua con bomba de calor."
+      "en": "Up to $1,800 rebate for heat pump water heater.",
+      "es": "Reembolso de hasta $1,800 para calentadores de agua con bomba de calor."
     },
-    "end_date": "2025-06-30",
-    "paused": true,
     "url": {
       "en": "https://www.midstateelectric.coop/residential"
     }
@@ -2629,16 +2626,15 @@
     "program": "or_midstateElectricCooperative_midstateElectricCooperativeResidentialConservationIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 1200,
-      "minimum": 1000,
-      "maximum": 1200
+      "number": 1560,
+      "maximum": 1560
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,200 rebate for an air source heat pump.",
-      "es": "Reembolso de hasta $1,200 por una bomba de calor de fuente de aire."
+      "en": "Up to $1,560 rebate for an air source heat pump.",
+      "es": "Reembolso de hasta $1,560 para una bomba de calor aire-agua."
     },
     "url": {
       "en": "https://www.midstateelectric.coop/residential"
@@ -2664,33 +2660,6 @@
     "short_description": {
       "en": "$3,000 rebate for a ground source heat pump.",
       "es": "Reembolso de $3,000 por una bomba de calor geotérmica."
-    },
-    "end_date": "2025-06-30",
-    "paused": true,
-    "url": {
-      "en": "https://www.midstateelectric.coop/residential"
-    }
-  },
-  {
-    "id": "OR-105",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "or_midstateElectricCooperative_midstateElectricCooperativeResidentialConservationIncentives",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 800,
-      "maximum": 800
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$800 rebate for a ductless air source heat pump.",
-      "es": "Reembolso de $800 por una bomba de calor de fuente de aire sin ductos."
     },
     "end_date": "2025-06-30",
     "paused": true,
@@ -2884,18 +2853,16 @@
     "program": "or_centralElectricCooperative_centralElectricCooperativeResidentialRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 150,
-      "maximum": 150
+      "number": 165,
+      "maximum": 165
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$150 upfront rebate for a heat pump water heater, total install cost $550. ",
-      "es": "Reembolso inicial de $150 por un calentador de agua con bomba de calor, con un costo total de instalación de $550. "
+      "en": "$165 upfront rebate for a heat pump water heater, total install cost $575. ",
+      "es": "Reembolso inicial de $165 para un calentador de agua con bomba de calor, costo total de instalación $575. "
     },
-    "end_date": "2025-06-23",
-    "paused": true,
     "url": {
       "en": "https://www.cec.coop/energy-programs/residential-efficiency/"
     }
@@ -3858,7 +3825,7 @@
       "en": "Free home weatherization, heat pump, washer, dryer, and heat pump water heater for income qualified CEC members.",
       "es": "Climatización del hogar gratuita, bomba de calor, lavadora, secadora y calentador de agua con bomba de calor para miembros del CEC que cumplen con los requisitos de ingresos."
     },
-    "low_income": "or-show-low-income",
+    "low_income": "OR-60AMI-CEC-LI",
     "url": {
       "en": "https://www.cec.coop/energy-programs/residential-efficiency/"
     }
@@ -5133,7 +5100,7 @@
   {
     "id": "OR-220",
     "payment_methods": [
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "heat_pump_water_heater"
@@ -5141,15 +5108,15 @@
     "program": "or_hoodRiverElectricCooperative_hoodRiverCoopResidentialRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 750,
-      "maximum": 750
+      "number": 1800,
+      "maximum": 1800
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $750 rebate for a heat pump water heater in an existing home.",
-      "es": "Reembolso de hasta $750 por un calentador de agua con bomba de calor en una casa existente."
+      "en": "Up to $1,800 rebate for a heat pump water heater.",
+      "es": "Reembolso de hasta $1,800 para un calentador de agua con bomba de calor."
     },
     "url": {
       "en": "https://hoodriver.coop/electric-service/rebates/"
@@ -5244,7 +5211,7 @@
     "program": "or_umatillaElectricCooperativeAssociation_umatillaElectricCo-OpResidentialRebatesForEnergyEfficiency",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 4,
+      "number": 5,
       "unit": "square_foot"
     },
     "owner_status": [
@@ -5252,8 +5219,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $4 per square foot rebate for energy-efficiency windows.",
-      "es": "Reembolso de hasta $4 por pie cuadrado por ventanas con eficiencia energética."
+      "en": "Up to $5 per square foot rebate for energy-efficiency windows.",
+      "es": "Reembolso de hasta 5 dólares por pie cuadrado para ventanas de alta eficiencia energética."
     },
     "url": {
       "en": "https://www.umatillaelectric.com/energy-efficiency/residential-rebates/"
@@ -5294,14 +5261,14 @@
     "program": "or_laneElectricCooperative_laneElectricCooperativeEnergyEfficiencyRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 800
+      "number": 900
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $800 rebate for a heat pump water heater in an existing home.",
-      "es": "Reembolso de hasta $800 por un calentador de agua con bomba de calor en una casa existente."
+      "en": "Up to $900 rebate for a heat pump water heater in an existing home.",
+      "es": "Reembolso de hasta $900 para un calentador de agua con bomba de calor en una vivienda existente."
     },
     "url": {
       "en": "https://laneelectric.com/programs-services/energy-efficiency/"
@@ -7178,15 +7145,15 @@
     "program": "or_midstateElectricCooperative_midstateResidentialConservationIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 30
+      "number": 44
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $30 rebate for new ENERGY STAR® electric clothes washer.",
-      "es": "Reembolso de hasta $30 por una lavadora eléctrica nueva con certificación ENERGY STAR®."
+      "en": "Up to $44 rebate for new ENERGY STAR® electric clothes washer.",
+      "es": "Reembolso de hasta $44 para lavadoras eléctricas nuevas con certificación ENERGY STAR®."
     },
     "url": {
       "en": "https://www.midstateelectric.coop/residential"
@@ -7219,33 +7186,6 @@
     }
   },
   {
-    "id": "OR-305",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump",
-      "geothermal_heating_installation"
-    ],
-    "program": "or_midstateElectricCooperative_midstateResidentialConservationIncentives",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1200,
-      "minimum": 200,
-      "maximum": 3000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $1,200 rebate for an air source heat pump, $3,000 rebate for a ground source heat pump",
-      "es": "Reembolso de hasta $1,200 por una bomba de calor de fuente de aire. Reembolso de $3,000 por una bomba de calor de fuente de tierra."
-    },
-    "url": {
-      "en": "https://www.midstateelectric.coop/residential"
-    }
-  },
-  {
     "id": "OR-306",
     "payment_methods": [
       "rebate"
@@ -7256,39 +7196,15 @@
     "program": "or_midstateElectricCooperative_midstateResidentialConservationIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 800
+      "number": 920,
+      "maximum": 920
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $800 rebate for a ductless heat pump in an electrically heated home.",
-      "es": "Reembolso de hasta $800 por una bomba de calor sin ductos en hogares con calefacción eléctrica."
-    },
-    "url": {
-      "en": "https://www.midstateelectric.coop/residential"
-    }
-  },
-  {
-    "id": "OR-307",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_water_heater"
-    ],
-    "program": "or_midstateElectricCooperative_midstateResidentialConservationIncentives",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 900,
-      "maximum": 900
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $900 rebate for a heat pump water heater in an existing home.",
-      "es": "Reembolso de hasta $900 por un calentador de agua con bomba de calor en una casa existente."
+      "en": "Up to $920 rebate for a ductless heat pump in an electrically heated home.",
+      "es": "Reembolso de hasta $920 para una bomba de calor sin conductos en una vivienda con calefacción eléctrica."
     },
     "url": {
       "en": "https://www.midstateelectric.coop/residential"
@@ -7411,8 +7327,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,200 rebate for new Northwest Energy Efficiency Manufactured (NEEM) Homes ENERGY STAR® qualified manufactured home.",
-      "es": "Reembolso de hasta $1200 para casas prefabricadas nuevas con certificación ENERGY STAR® de Northwest Energy Efficiency Manufactured Homes (NEEM)."
+      "en": "Up to $1,400 rebate for new Northwest Energy Efficiency Manufactured (NEEM) Homes ENERGY STAR® qualified manufactured home.",
+      "es": "Reembolso de hasta $1,400 para casas prefabricadas nuevas de Northwest Energy Efficiency Manufactured (NEEM) con certificación ENERGY STAR®."
     },
     "url": {
       "en": "https://www.midstateelectric.coop/residential"
@@ -8382,15 +8298,15 @@
     "program": "or_umatillaElectricCooperativeAssociation_umatillaElectricCo-OpResidentialRebatesForEnergyEfficiency",
     "amount": {
       "type": "dollar_amount",
-      "number": 200
+      "number": 100
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$200 rebate on the purchase of a Level 2 charging station for your home or business",
-      "es": "Reembolso de $200 por la compra de una estación de carga de nivel 2 para su hogar o negocio."
+      "en": "$100 rebate on the purchase of a Level 2 charging station for your home or business",
+      "es": "Reembolso de $100 en la compra de una estación de carga de Nivel 2 para su hogar o negocio."
     },
     "url": {
       "en": "https://www.umatillaelectric.com/energy-efficiency/residential-rebates/"
@@ -9349,32 +9265,6 @@
     }
   },
   {
-    "id": "OR-409",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "rooftop_solar_installation"
-    ],
-    "program": "or_salemElectric_salemElectricSolarIncentives",
-    "amount": {
-      "type": "dollars_per_unit",
-      "number": 300,
-      "unit": "kilowatt",
-      "maximum": 1500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$300 incentive per kW up to $1,500. Cannot exceed 50% of project costs. ",
-      "es": "Incentivo de $300 por kW hasta $1,500. No podrá exceder el 50 % del costo del proyecto. "
-    },
-    "url": {
-      "en": "https://www.salemelectric.com/energy-efficiency/solar-information/"
-    }
-  },
-  {
     "id": "OR-410",
     "payment_methods": [
       "account_credit"
@@ -9405,7 +9295,7 @@
       "rebate"
     ],
     "items": [
-      "other"
+      "rooftop_solar_installation"
     ],
     "program": "or_umatillaElectricCooperativeAssociation_umatillaElectricCo-OpResidentialRebatesForEnergyEfficiency",
     "amount": {
@@ -11880,6 +11770,345 @@
     },
     "url": {
       "en": "https://ashlandoregon.gov/584/Residential-Incentives"
+    }
+  },
+  {
+    "id": "OR-505",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement",
+      "door_replacement"
+    ],
+    "program": "or_cityOfBandon_residentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 6,
+      "unit": "square_foot",
+      "maximum": 6
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$6 per square foot for replacement windows and patio doors.",
+      "es": "6 dólares por pie cuadrado para ventanas y puertas de patio de reemplazo."
+    },
+    "url": {
+      "en": "https://www.directefficiency.com/bandon-rebates/#bandon-residential"
+    }
+  },
+  {
+    "id": "OR-506",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "door_replacement"
+    ],
+    "program": "or_cityOfBandon_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 32,
+      "maximum": 32
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$32 for replacement exterior doors.",
+      "es": "$32 por puertas exteriores de repuesto."
+    },
+    "url": {
+      "en": "https://www.directefficiency.com/bandon-rebates/#bandon-residential"
+    }
+  },
+  {
+    "id": "OR-507",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "wall_insulation",
+      "floor_insulation"
+    ],
+    "program": "or_cityOfBandon_residentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1.6,
+      "unit": "square_foot",
+      "maximum": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1.60 per square foot for insulation.",
+      "es": "Hasta 1,60 dólares por pie cuadrado para aislamiento."
+    },
+    "url": {
+      "en": "https://www.directefficiency.com/bandon-rebates/#bandon-residential"
+    }
+  },
+  {
+    "id": "OR-508",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "or_cityOfBandon_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 for first time air source heat pump purchase.",
+      "es": "Hasta $1,000 para la primera compra de una bomba de calor aire-agua."
+    },
+    "url": {
+      "en": "https://www.directefficiency.com/bandon-rebates/#bandon-residential"
+    }
+  },
+  {
+    "id": "OR-509",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "or_cityOfBandon_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 for ENERGY STAR® electric clothes dryer.",
+      "es": "Secadora de ropa eléctrica ENERGY STAR® por $40."
+    },
+    "url": {
+      "en": "https://www.directefficiency.com/bandon-rebates/#bandon-residential"
+    }
+  },
+  {
+    "id": "OR-510",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_weatherization"
+    ],
+    "program": "or_cityOfBandon_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 30,
+      "maximum": 30
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$30 for ENERGY STAR® electric clothes washer.",
+      "es": "$30 por una lavadora eléctrica ENERGY STAR®."
+    },
+    "url": {
+      "en": "https://www.directefficiency.com/bandon-rebates/#bandon-residential"
+    }
+  },
+  {
+    "id": "OR-511",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "or_cityOfBandon_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 for heat pump water heater.",
+      "es": "Hasta $1,000 para calentadores de agua con bomba de calor."
+    },
+    "url": {
+      "en": "https://www.directefficiency.com/bandon-rebates/#bandon-residential"
+    }
+  },
+  {
+    "id": "OR-512",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_weatherization"
+    ],
+    "program": "or_cityOfBandon_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1120,
+      "maximum": 1120
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,120 for NEEM ENERGY STAR® manufactured home.",
+      "es": "Hasta $1,120 para casas prefabricadas NEEM ENERGY STAR®."
+    },
+    "url": {
+      "en": "https://www.directefficiency.com/bandon-rebates/#bandon-residential"
+    }
+  },
+  {
+    "id": "OR-513",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "or_cityOfBandon_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $800 for ductless heat pump in electrically heated homes.",
+      "es": "Hasta $800 para bombas de calor sin conductos en viviendas con calefacción eléctrica."
+    },
+    "url": {
+      "en": "https://www.directefficiency.com/bandon-rebates/#bandon-residential"
+    }
+  },
+  {
+    "id": "OR-514",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_cityOfBandon_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 110,
+      "maximum": 110
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$110 for smart thermostat.",
+      "es": "110 dólares por un termostato inteligente."
+    },
+    "url": {
+      "en": "https://www.directefficiency.com/bandon-rebates/#bandon-residential"
+    }
+  },
+  {
+    "id": "OR-515",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "or_midstateElectricCooperative_midstateResidentialConservationIncentives",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free Google Nest Smart Thermostat. ",
+      "es": "Termostato inteligente Google Nest gratis. "
+    },
+    "url": {
+      "en": "https://www.midstateelectric.coop/energy-efficiency/incentives/residential/"
+    }
+  },
+  {
+    "id": "OR-516",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "or_umatillaElectricCooperativeAssociation_umatillaElectricCo-OpResidentialRebatesForEnergyEfficiency",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free home energy audit.",
+      "es": "Auditoría energética gratuita a domicilio."
+    },
+    "url": {
+      "en": "https://www.umatillaelectric.com/energy-efficiency/residential-rebates-programs/"
+    }
+  },
+  {
+    "id": "OR-517",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "or_centralElectricCooperative_centralElectricCooperativeResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for registering EV.",
+      "es": "Reembolso de 50 dólares por registrar un vehículo eléctrico."
+    },
+    "url": {
+      "en": "https://www.cec.coop/energy-programs/residential-efficiency/"
     }
   }
 ]
