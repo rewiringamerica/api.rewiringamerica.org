@@ -529,7 +529,7 @@
       "authority_type": "state",
       "authority": "or-oregon-housing-and-community-services",
       "program": "OHCS State Home Oil Weatherization (SHOW) Program",
-      "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
+      "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/pages/show.aspx",
       "items": [
         "efficiency_rebates",
         "smart_thermostat"
@@ -620,7 +620,7 @@
       "authority_type": "state",
       "authority": "or-oregon-housing-and-community-services",
       "program": "OHCS State Home Oil Weatherization (SHOW) Program",
-      "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
+      "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/pages/show.aspx",
       "items": [
         "efficiency_rebates",
         "smart_thermostat"
@@ -664,6 +664,7 @@
       "authority": "or-oregon-department-of-energy",
       "program": "Heat Pump Purchase Program",
       "program_url": "https://www.oregon.gov/energy/Incentives/Pages/HP3.aspx",
+      "paused": true,
       "items": [
         "ducted_heat_pump",
         "other_heat_pump"
@@ -673,11 +674,33 @@
         "number": 2000
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
       "start_date": "2025-06-17",
-      "short_description": "Up to $2,000 rebate for air-source or ground-source heat pump"
+      "end_date": "2025-11-10",
+      "short_description": "Up to $2,000 rebate for air-source or ground-source heat pump for owner-occupied homes."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-oregon-department-of-energy",
+      "program": "Heat Pump Purchase Program",
+      "program_url": "https://www.oregon.gov/energy/Incentives/Pages/HP3.aspx",
+      "items": [
+        "ducted_heat_pump",
+        "other_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2025-06-17",
+      "short_description": "Up to $2,000 rebate for air-source or ground-source heat pump for new construction."
     },
     {
       "payment_methods": [
