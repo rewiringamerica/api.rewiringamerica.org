@@ -305,6 +305,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "end_date": "2026-01-01",
       "short_description": "$250 discount on qualifying heat pump controls."
     },
     {
@@ -367,6 +368,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "end_date": "2026-01-01",
       "short_description": "Eligible customers can replace their existing windows with new ones rated U-Value 0.22 or less and earn $1.50 per sq ft."
     },
     {
@@ -430,6 +432,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "end_date": "2026-01-01",
       "short_description": "Eligible customers can replace their existing windows with new ones with a U-Value rating between 0.27 and 0.23 and earn $1 per sq ft."
     },
     {
@@ -481,7 +484,7 @@
       "authority_type": "state",
       "authority": "or-oregon-housing-and-community-services",
       "program": "OHCS State Home Oil Weatherization (SHOW) Program",
-      "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
+      "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/pages/show.aspx",
       "items": [
         "attic_or_roof_insulation",
         "basement_insulation",
@@ -492,35 +495,58 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 4500,
-        "maximum": 4500
+        "number": 17600
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Up to $4,500 for dwelling insulation measures ($1,500 per region of the home) for income-qualified residents."
+      "short_description": "Up to $17,600 for dwelling insulation measures for income-qualified residents."
     },
     {
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "other",
-      "authority": "or-energy-trust-of-oregon",
-      "program": "Energy Trust of Oregon",
-      "program_url": "https://www.energytrust.org/residential/incentives",
+      "authority_type": "state",
+      "authority": "or-oregon-housing-and-community-services",
+      "program": "OHCS State Home Oil Weatherization (SHOW) Program",
+      "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/pages/show.aspx",
       "items": [
-        "ductless_heat_pump"
+        "attic_or_roof_insulation",
+        "basement_insulation",
+        "crawlspace_insulation",
+        "floor_insulation",
+        "other_insulation",
+        "wall_insulation"
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 3500,
-        "maximum": 3500
+        "number": 6600
       },
       "owner_status": [
         "homeowner"
       ],
-      "start_date": "2023-10-01",
-      "short_description": "$3,500 rebate for a ductless heat pump replacing electric resistance heat in manufactured homes. Primary unit must be in the main living space."
+      "short_description": "Up to $6,600 for dwelling insulation measures for income-qualified households."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-oregon-housing-and-community-services",
+      "program": "OHCS State Home Oil Weatherization (SHOW) Program",
+      "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
+      "items": [
+        "door_replacement",
+        "window_replacement"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 5900
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $5,900 for energy-efficient windows and doors, for income-qualified residents."
     },
     {
       "payment_methods": [
@@ -536,13 +562,33 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 3200,
-        "maximum": 3200
+        "number": 5700
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Up to $3,200 for heating equipment measures such as replacement parts, efficiency measures, and smart thermostats. Income-qualified residents only."
+      "short_description": "Up to $5,700 for heating equipment measures such as replacement parts, efficiency measures, and smart thermostats. Income-qualified residents only."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-oregon-housing-and-community-services",
+      "program": "OHCS State Home Oil Weatherization (SHOW) Program",
+      "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/pages/show.aspx",
+      "items": [
+        "efficiency_rebates",
+        "smart_thermostat"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 3800
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $3,800 for heating system measures such as replacement parts, efficiency measures, and smart thermostats. Must use delivered fuel oil."
     },
     {
       "payment_methods": [
@@ -563,6 +609,7 @@
         "homeowner"
       ],
       "start_date": "2023-10-01",
+      "end_date": "2026-01-01",
       "short_description": "$3,000 rebate for an extended capacity heat pump replacing an electric furnace."
     },
     {
@@ -585,6 +632,7 @@
         "homeowner"
       ],
       "start_date": "2023-10-01",
+      "end_date": "2026-01-01",
       "short_description": "$3,000 rebate for a heat pump for income-qualified customers. Must replace an electric forced-air furnace as the primary heating source."
     },
     {
@@ -596,44 +644,17 @@
       "program": "OHCS State Home Oil Weatherization (SHOW) Program",
       "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
       "items": [
-        "attic_or_roof_insulation",
-        "basement_insulation",
-        "crawlspace_insulation",
-        "floor_insulation",
-        "other_insulation",
-        "wall_insulation"
+        "door_replacement",
+        "window_replacement"
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 3000,
-        "maximum": 3000
+        "number": 3000
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Up to $3,000 for dwelling insulation measures ($1,000 per region of the home)."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "or-oregon-housing-and-community-services",
-      "program": "OHCS State Home Oil Weatherization (SHOW) Program",
-      "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/pages/show.aspx",
-      "items": [
-        "efficiency_rebates",
-        "smart_thermostat"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 2000,
-        "maximum": 2000
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Up to $2,000 for heating equipment measures such as replacement parts, efficiency measures, and smart thermostats. Must use delivered fuel oil."
+      "short_description": "Up to $3,000 for energy-efficient windows and doors."
     },
     {
       "payment_methods": [
@@ -731,51 +752,6 @@
       "authority": "or-energy-trust-of-oregon",
       "program": "Energy Trust of Oregon",
       "program_url": "https://www.energytrust.org/residential/incentives",
-      "items": [
-        "ductless_heat_pump"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 1800,
-        "maximum": 1800
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2023-10-01",
-      "short_description": "$1,800 rebate for a ductless heat pump replacing electric zonal heating as the primary heat source. Primary unit must be in the main living space."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "or-oregon-housing-and-community-services",
-      "program": "OHCS State Home Oil Weatherization (SHOW) Program",
-      "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
-      "items": [
-        "door_replacement",
-        "window_replacement"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 1500,
-        "maximum": 1500
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Up to $1,500 for energy-efficient windows and doors, for income-qualified residents."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "other",
-      "authority": "or-energy-trust-of-oregon",
-      "program": "Energy Trust of Oregon",
-      "program_url": "https://www.energytrust.org/residential/incentives",
       "paused": true,
       "items": [
         "ductless_heat_pump"
@@ -811,50 +787,6 @@
       ],
       "start_date": "2023-10-01",
       "short_description": "$1,000 rebate for an extended capacity central ducted heat pump. Must be listed on Energy Trust’s list and be the primary heat source."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "or-oregon-housing-and-community-services",
-      "program": "OHCS State Home Oil Weatherization (SHOW) Program",
-      "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
-      "items": [
-        "air_sealing",
-        "duct_sealing"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 1000,
-        "maximum": 1000
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Up to $1,000 for duct sealing and insulation measures for income-qualified residents."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "or-oregon-housing-and-community-services",
-      "program": "OHCS State Home Oil Weatherization (SHOW) Program",
-      "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
-      "items": [
-        "door_replacement",
-        "window_replacement"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 1000,
-        "maximum": 1000
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Up to $1,000 for energy-efficient windows and doors."
     },
     {
       "payment_methods": [
@@ -935,13 +867,34 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 600,
-        "maximum": 600
+        "number": 500
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Up to $600 for duct sealing and insulation measures."
+      "short_description": "Up to $500 for air sealing measures for income-qualified residents."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "or-oregon-housing-and-community-services",
+      "program": "OHCS State Home Oil Weatherization (SHOW) Program",
+      "program_url": "https://www.oregon.gov/ohcs/energy-weatherization/Documents/factsheets/factsheet-show.pdf",
+      "paused": true,
+      "items": [
+        "air_sealing",
+        "duct_sealing"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "Up to $500 for air sealing measures."
     }
   ]
 }
