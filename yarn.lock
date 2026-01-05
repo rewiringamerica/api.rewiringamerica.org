@@ -125,10 +125,15 @@
     fastify-plugin "^4.0.0"
     mnemonist "0.39.6"
 
-"@fastify/deepmerge@^1.0.0", "@fastify/deepmerge@^1.2.0":
+"@fastify/deepmerge@^1.0.0":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@fastify/deepmerge/-/deepmerge-1.3.0.tgz#8116858108f0c7d9fd460d05a7d637a13fe3239a"
   integrity sha512-J8TOSBq3SoZbDhM9+R/u77hP93gz/rajSA+K2kGyijPpORPWUXHUpTaleoj+92As0S9uPRP7Oi8IqMf0u+ro6A==
+
+"@fastify/deepmerge@^2.0.0":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@fastify/deepmerge/-/deepmerge-2.0.2.tgz#5dcbda2acb266e309b8a1ca92fa48b2125e65fc0"
+  integrity sha512-3wuLdX5iiiYeZWP6bQrjqhrcvBIf0NHbQH1Ur1WbHvoiuTYUEItgygea3zs8aHpiitn0lOB8gX20u1qO+FDm7Q==
 
 "@fastify/error@^3.3.0", "@fastify/error@^3.4.0":
   version "3.4.1"
@@ -2840,12 +2845,7 @@ chalk@^4.0.0, chalk@^4.1.2:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chalk@^5.2.0, chalk@^5.3.0:
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/chalk/-/chalk-5.3.0.tgz#67c20a7ebef70e7f3970a01f90fa210cb6860385"
-  integrity sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==
-
-chalk@^5.4.1:
+chalk@^5.2.0, chalk@^5.3.0, chalk@^5.4.1:
   version "5.4.1"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-5.4.1.tgz#1b48bf0963ec158dce2aacf69c093ae2dd2092d8"
   integrity sha512-zgVZuo2WcZgfUEmsn6eO3kINexW8RAE4maiQ8QNs8CtpPCSyMiYsULR3HQYkm3w8FIA3SberyMJMSldGsW+U3w==
@@ -2875,22 +2875,7 @@ cheerio@^1.0.0-rc.12:
     parse5 "^7.0.0"
     parse5-htmlparser2-tree-adapter "^7.0.0"
 
-chokidar@^3.5.2:
-  version "3.5.3"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.3.tgz#1cf37c8707b932bd1af1ae22c0432e2acd1903bd"
-  integrity sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==
-  dependencies:
-    anymatch "~3.1.2"
-    braces "~3.0.2"
-    glob-parent "~5.1.2"
-    is-binary-path "~2.1.0"
-    is-glob "~4.0.1"
-    normalize-path "~3.0.0"
-    readdirp "~3.6.0"
-  optionalDependencies:
-    fsevents "~2.3.2"
-
-chokidar@^3.6.0:
+chokidar@^3.5.2, chokidar@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.6.0.tgz#197c6cc669ef2a8dc5e7b4d97ee4e092c3eb0d5b"
   integrity sha512-7VT13fmjotKpGipCW9JEQAusEPE+Ei8nl6/g4FBAmIm0GOOLMua9NDDo/DWp0ZAxCr3cPq5ZpBqmPAQgDda2Pw==
@@ -3527,10 +3512,10 @@ fast-content-type-parse@^1.1.0:
   resolved "https://registry.yarnpkg.com/fast-content-type-parse/-/fast-content-type-parse-1.1.0.tgz#4087162bf5af3294d4726ff29b334f72e3a1092c"
   integrity sha512-fBHHqSTFLVnR61C+gltJuE5GkVQMV0S2nqUO8TJ+5Z3qAKG8vAx4FKai1s5jq/inV1+sREynIWSuQ6HgoSXpDQ==
 
-fast-copy@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/fast-copy/-/fast-copy-3.0.0.tgz#875ebf33b13948ae012b6e51d33da5e6e7571ab8"
-  integrity sha512-4HzS+9pQ5Yxtv13Lhs1Z1unMXamBdn5nA4bEi1abYpDNSpSp7ODYQ1KPMF6nTatfEzgH6/zPvXKU1zvHiUjWlA==
+fast-copy@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/fast-copy/-/fast-copy-3.0.2.tgz#59c68f59ccbcac82050ba992e0d5c389097c9d35"
+  integrity sha512-dl0O9Vhju8IrcLndv2eU4ldt1ftXMqqfgN4H1cpmGV7P6jeB9FwpN9a2c8DPGE1Ys88rNUJVYDHq73CGAGOPfQ==
 
 fast-decode-uri-component@^1.0.1:
   version "1.0.1"
@@ -3615,12 +3600,12 @@ fast-uri@^3.0.1:
   resolved "https://registry.yarnpkg.com/fast-uri/-/fast-uri-3.0.6.tgz#88f130b77cfaea2378d56bf970dea21257a68748"
   integrity sha512-Atfo14OibSv5wAp4VWNsFYE1AchQRTv9cBGWET4pZWHzYshFSS9NQI6I57rdKn9croWVMbYFbLhJ+yJvmZIIHw==
 
-fastify-cli@^6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/fastify-cli/-/fastify-cli-6.1.1.tgz#08a291bb21a2b61cf6b681e5cf7d1f5c10f2ac3e"
-  integrity sha512-3TinVuHxcEOhwjRLoE9rTeH1IXa73B5fS21amNyTgF2kOnC72sHzp1p6y2RsbPES1NGf2A7+4S11jbfdTOchVQ==
+fastify-cli@^6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/fastify-cli/-/fastify-cli-6.3.0.tgz#42206223840648a9b65de1fd77b8f664c7b109e1"
+  integrity sha512-FORXCwuBiNAArMMxp5hTthQCU9Xa7oO1wnCsGSgvuWC2k5ZarEEIXNm5RekcO9koZDQ0NACU6gGRF96Tf7ZI7Q==
   dependencies:
-    "@fastify/deepmerge" "^1.2.0"
+    "@fastify/deepmerge" "^2.0.0"
     chalk "^4.1.2"
     chokidar "^3.5.2"
     close-with-grace "^1.1.0"
@@ -3631,8 +3616,7 @@ fastify-cli@^6.1.1:
     generify "^4.0.0"
     help-me "^4.0.1"
     is-docker "^2.0.0"
-    make-promises-safe "^5.1.0"
-    pino-pretty "^10.1.0"
+    pino-pretty "^11.2.0"
     pkg-up "^3.1.0"
     resolve-from "^5.0.0"
     semver "^7.3.5"
@@ -4622,13 +4606,6 @@ lru-cache@^10.0.1, lru-cache@^10.2.0, "lru-cache@^9.1.1 || ^10.0.0":
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.4.3.tgz#410fc8a17b70e598013df257c2446b7f3383f119"
   integrity sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==
 
-lru-cache@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-6.0.0.tgz#6d6fe6570ebd96aaf90fcad1dafa3b2566db3a94"
-  integrity sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==
-  dependencies:
-    yallist "^4.0.0"
-
 lru-cache@^7.7.1:
   version "7.18.3"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.18.3.tgz#f793896e0fd0e954a59dfdd82f0773808df6aa89"
@@ -4708,11 +4685,6 @@ make-fetch-happen@^14.0.3:
     proc-log "^5.0.0"
     promise-retry "^2.0.1"
     ssri "^12.0.0"
-
-make-promises-safe@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/make-promises-safe/-/make-promises-safe-5.1.0.tgz#dd9d311f555bcaa144f12e225b3d37785f0aa8f2"
-  integrity sha512-AfdZ49rtyhQR/6cqVKGoH7y4ql7XkS5HJI1lZm0/5N6CQosy1eYbBJ/qbhkKHzo17UH7M918Bysf6XB9f3kS1g==
 
 makeerror@1.0.12:
   version "1.0.12"
@@ -5373,12 +5345,11 @@ pidtree@^0.6.0:
   resolved "https://registry.yarnpkg.com/pidtree/-/pidtree-0.6.0.tgz#90ad7b6d42d5841e69e0a2419ef38f8883aa057c"
   integrity sha512-eG2dWTVw5bzqGRztnHExczNxt5VGsE6OwTeCG3fdUf9KBsZzO3R5OIIIzWR+iZA0NtZ+RDVdaoE2dK1cn6jH4g==
 
-pino-abstract-transport@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/pino-abstract-transport/-/pino-abstract-transport-1.0.0.tgz#cc0d6955fffcadb91b7b49ef220a6cc111d48bb3"
-  integrity sha512-c7vo5OpW4wIS42hUVcT5REsL8ZljsUfBjqV/e2sFxmFEFZiq1XLUp5EYLtuDH6PEHq9W1egWqRbnLUP5FuZmOA==
+pino-abstract-transport@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/pino-abstract-transport/-/pino-abstract-transport-2.0.0.tgz#de241578406ac7b8a33ce0d77ae6e8a0b3b68a60"
+  integrity sha512-F63x5tizV6WCh4R6RHyi2Ml+M70DNRXt/+HANowMflpgGFMAym/VKm6G7ZOQRjqN7XbGxK1Lg9t6ZrtzOaivMw==
   dependencies:
-    readable-stream "^4.0.0"
     split2 "^4.0.0"
 
 pino-abstract-transport@v1.1.0:
@@ -5389,24 +5360,24 @@ pino-abstract-transport@v1.1.0:
     readable-stream "^4.0.0"
     split2 "^4.0.0"
 
-pino-pretty@^10.1.0:
-  version "10.3.1"
-  resolved "https://registry.yarnpkg.com/pino-pretty/-/pino-pretty-10.3.1.tgz#e3285a5265211ac6c7cd5988f9e65bf3371a0ca9"
-  integrity sha512-az8JbIYeN/1iLj2t0jR9DV48/LQ3RC6hZPpapKPkb84Q+yTidMCpgWxIT3N0flnBDilyBQ1luWNpOeJptjdp/g==
+pino-pretty@^11.2.0:
+  version "11.3.0"
+  resolved "https://registry.yarnpkg.com/pino-pretty/-/pino-pretty-11.3.0.tgz#390b3be044cf3d2e9192c7d19d44f6b690468f2e"
+  integrity sha512-oXwn7ICywaZPHmu3epHGU2oJX4nPmKvHvB/bwrJHlGcbEWaVcotkpyVHMKLKmiVryWYByNp0jpgAcXpFJDXJzA==
   dependencies:
     colorette "^2.0.7"
     dateformat "^4.6.3"
-    fast-copy "^3.0.0"
+    fast-copy "^3.0.2"
     fast-safe-stringify "^2.1.1"
     help-me "^5.0.0"
     joycon "^3.1.1"
     minimist "^1.2.6"
     on-exit-leak-free "^2.1.0"
-    pino-abstract-transport "^1.0.0"
+    pino-abstract-transport "^2.0.0"
     pump "^3.0.0"
     readable-stream "^4.0.0"
     secure-json-parse "^2.4.0"
-    sonic-boom "^3.0.0"
+    sonic-boom "^4.0.1"
     strip-json-comments "^3.1.1"
 
 pino-std-serializers@^6.0.0:
@@ -5907,14 +5878,7 @@ semver@^6.0.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.1.tgz#556d2ef8689146e46dcea4bfdd095f3434dffcb4"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
 
-semver@^7.0.0, semver@^7.1.1, semver@^7.3.5, semver@^7.5.3, semver@^7.5.4:
-  version "7.5.4"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.4.tgz#483986ec4ed38e1c6c48c34894a9182dbff68a6e"
-  integrity sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==
-  dependencies:
-    lru-cache "^6.0.0"
-
-semver@^7.6.0:
+semver@^7.0.0, semver@^7.1.1, semver@^7.3.5, semver@^7.5.3, semver@^7.5.4, semver@^7.6.0:
   version "7.6.3"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.6.3.tgz#980f7b5550bc175fb4dc09403085627f9eb33143"
   integrity sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==
@@ -6108,17 +6072,17 @@ socks@^2.8.3:
     ip-address "^9.0.5"
     smart-buffer "^4.2.0"
 
-sonic-boom@^3.0.0:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/sonic-boom/-/sonic-boom-3.2.1.tgz#972ceab831b5840a08a002fa95a672008bda1c38"
-  integrity sha512-iITeTHxy3B9FGu8aVdiDXUVAcHMF9Ss0cCsAOo2HfCrmVGT3/DT5oYaeu0M/YKZDlKTvChEyPq0zI9Hf33EX6A==
-  dependencies:
-    atomic-sleep "^1.0.0"
-
 sonic-boom@^3.7.0:
   version "3.8.0"
   resolved "https://registry.yarnpkg.com/sonic-boom/-/sonic-boom-3.8.0.tgz#e442c5c23165df897d77c3c14ef3ca40dec66a66"
   integrity sha512-ybz6OYOUjoQQCQ/i4LU8kaToD8ACtYP+Cj5qd2AO36bwbdewxWJ3ArmJ2cr6AvxlL2o0PqnCcPGUgkILbfkaCA==
+  dependencies:
+    atomic-sleep "^1.0.0"
+
+sonic-boom@^4.0.1:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/sonic-boom/-/sonic-boom-4.2.0.tgz#e59a525f831210fa4ef1896428338641ac1c124d"
+  integrity sha512-INb7TM37/mAcsGmc9hyyI6+QR3rR1zVRu36B0NeGXKnOOLiZOfER5SA+N7X7k3yUYRzLWafduTDvJAfDswwEww==
   dependencies:
     atomic-sleep "^1.0.0"
 
