@@ -43,22 +43,22 @@ const VI_LOCATION: ResolvedLocation = {
 test('territories other than PR', async t => {
   t.strictSame(await computeAMIAndEVCreditEligibility(db, AS_LOCATION, 4), {
     computedAMI80: 44100,
-    computedAMI150: 97800,
+    computedAMI150: 104200,
     evCreditEligible: true,
   });
   t.strictSame(await computeAMIAndEVCreditEligibility(db, GU_LOCATION, 4), {
     computedAMI80: 71050,
-    computedAMI150: 133200,
+    computedAMI150: 145350,
     evCreditEligible: true,
   });
   t.strictSame(await computeAMIAndEVCreditEligibility(db, MP_LOCATION, 4), {
     computedAMI80: 43350,
-    computedAMI150: 97800,
+    computedAMI150: 104200,
     evCreditEligible: true,
   });
   t.strictSame(await computeAMIAndEVCreditEligibility(db, VI_LOCATION, 4), {
     computedAMI80: 59700,
-    computedAMI150: 111900,
+    computedAMI150: 121200,
     evCreditEligible: true,
   });
 });
@@ -138,17 +138,17 @@ const PR_LOCATION: ResolvedLocation = {
 test('states+DC+PR without tract', async t => {
   t.strictSame(await computeAMIAndEVCreditEligibility(db, NY_LOCATION, 4), {
     computedAMI80: 69350,
-    computedAMI150: 130050,
+    computedAMI150: 140850,
     evCreditEligible: true,
   });
   t.strictSame(await computeAMIAndEVCreditEligibility(db, DC_LOCATION, 4), {
     computedAMI80: 97800,
-    computedAMI150: 232050,
+    computedAMI150: 245850,
     evCreditEligible: false,
   });
   t.strictSame(await computeAMIAndEVCreditEligibility(db, PR_LOCATION, 4), {
     computedAMI80: 29500,
-    computedAMI150: 97800,
+    computedAMI150: 104200,
     evCreditEligible: false,
   });
 });
@@ -162,7 +162,7 @@ test('states+DC+PR with tract', async t => {
     ),
     {
       computedAMI80: 69350,
-      computedAMI150: 130050,
+      computedAMI150: 140850,
       evCreditEligible: true,
     },
   );
@@ -174,7 +174,7 @@ test('states+DC+PR with tract', async t => {
     ),
     {
       computedAMI80: 97800,
-      computedAMI150: 232050,
+      computedAMI150: 245850,
       evCreditEligible: true,
     },
   );
@@ -186,7 +186,7 @@ test('states+DC+PR with tract', async t => {
     ),
     {
       computedAMI80: 29500,
-      computedAMI150: 97800,
+      computedAMI150: 104200,
       evCreditEligible: true,
     },
   );
