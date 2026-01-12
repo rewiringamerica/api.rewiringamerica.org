@@ -82,7 +82,7 @@
     "items": [
       "ducted_heat_pump"
     ],
-    "program": "ms_mississippiPower_rebatesAndIncentives",
+    "program": "ms_mississippiPower_mississippiPowerRebatesAndIncentives",
     "amount": {
       "type": "dollars_per_unit",
       "number": 200,
@@ -107,7 +107,7 @@
     "items": [
       "ductless_heat_pump"
     ],
-    "program": "ms_mississippiPower_rebatesAndIncentives",
+    "program": "ms_mississippiPower_mississippiPowerRebatesAndIncentives",
     "amount": {
       "type": "dollars_per_unit",
       "number": 200,
@@ -132,7 +132,7 @@
     "items": [
       "heat_pump_clothes_dryer"
     ],
-    "program": "ms_mississippiPower_rebatesAndIncentives",
+    "program": "ms_mississippiPower_mississippiPowerRebatesAndIncentives",
     "amount": {
       "type": "dollars_per_unit",
       "number": 350,
@@ -157,7 +157,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "ms_mississippiPower_rebatesAndIncentives",
+    "program": "ms_mississippiPower_mississippiPowerRebatesAndIncentives",
     "amount": {
       "type": "dollar_amount",
       "number": 350
@@ -179,21 +179,19 @@
       "rebate"
     ],
     "items": [
-      "geothermal_heating_installation",
-      "ducted_heat_pump",
-      "ductless_heat_pump"
+      "geothermal_heating_installation"
     ],
     "program": "ms_singingRiverElectricPowerAssociation_singingRiverComfortAdvantageHome",
     "amount": {
       "type": "dollar_amount",
-      "number": 300
+      "number": 1300
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 rebate on 14 SEER or higher electric heat pump or an ARI-Rated geothermal system. ",
-      "es": "Reembolso de $300 por una bomba de calor eléctrica de 14 SEER o superior o en un sistema geotérmico con clasificación ARI. "
+      "en": "$1,300 Comfort Advantage Basic rebate on qualifying geothermal heat pump system installed in a new home..",
+      "es": "Reembolso de $1,300 de Comfort Advantage Basic en un sistema de bomba de calor geotérmica que reúna los requisitos y esté instalado en una casa nueva."
     },
     "url": {
       "en": "https://singingriver.com/my-home/comfort-advantage/"
@@ -222,6 +220,401 @@
     },
     "url": {
       "en": "https://www.tombigbeeelectric.com/programs"
+    }
+  },
+  {
+    "id": "MS-10",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ms_singingRiverElectricPowerAssociation_singingRiverComfortAdvantageHome",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 Comfort Advantage Basic rebate on qualifying, energy-efficient heat pump installed in a new home.",
+      "es": "Reembolso de $300 de Comfort Advantage Basic para una bomba de calor energéticamente eficiente que reúna los requisitos y esté instalada en una casa nueva."
+    },
+    "url": {
+      "en": "https://singingriver.com/my-home/comfort-advantage/"
+    }
+  },
+  {
+    "id": "MS-11",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ms_singingRiverElectricPowerAssociation_singingRiverComfortAdvantageHome",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 Comfort Advantage Plus rebate on qualifying, high efficiency heat pumps installed in a new home.",
+      "es": "Reembolso de $500 de Comfort Advantage Plus en bombas de calor de alta eficiencia que reúnan los requisitos y estén instaladas en una casa nueva."
+    },
+    "url": {
+      "en": "https://singingriver.com/my-home/comfort-advantage/"
+    }
+  },
+  {
+    "id": "MS-12",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ms_singingRiverElectricPowerAssociation_singingRiverComfortAdvantageHome",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate on qualifying heat pump installation when converting from a gas or electric furnace heating system.",
+      "es": "Reembolso de $400 en la instalación de bombas de calor que reúnan los requisitos al realizar la conversión desde un sistema de calefacción de horno a gas o eléctrico."
+    },
+    "url": {
+      "en": "https://singingriver.com/my-home/comfort-advantage/"
+    }
+  },
+  {
+    "id": "MS-13",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ms_singingRiverElectricPowerAssociation_singingRiverComfortAdvantageHome",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$900 rebate on qualifying geothermal water source heat system when converting from a gas or electric furnace heating system.",
+      "es": "Reembolso de $900 en un sistema de calefacción con fuente de agua geotérmica que reúna los requisitos al realizar la conversión desde un sistema de calefacción de horno a gas o eléctrico."
+    },
+    "url": {
+      "en": "https://singingriver.com/my-home/comfort-advantage/"
+    }
+  },
+  {
+    "id": "MS-14",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ms_dixieElectricPowerAssociation_dixieElectricComfortAdvantageHome",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 Comfort Advantage Basic rebate on qualifying, energy-efficient heat pump installed in a new home.",
+      "es": "Reembolso de $300 de Comfort Advantage Basic para una bomba de calor energéticamente eficiente que reúna los requisitos y esté instalada en una casa nueva."
+    },
+    "url": {
+      "en": "https://www.dixieepa.com/energy-solutions/comfort-advantage/"
+    }
+  },
+  {
+    "id": "MS-15",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ms_dixieElectricPowerAssociation_dixieElectricComfortAdvantageHome",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 Comfort Advantage Plus rebate on qualifying, high efficiency heat pumps installed in a new home.",
+      "es": "Reembolso de $500 de Comfort Advantage Plus en bombas de calor de alta eficiencia que reúnan los requisitos y estén instaladas en una casa nueva."
+    },
+    "url": {
+      "en": "https://www.dixieepa.com/energy-solutions/comfort-advantage/"
+    }
+  },
+  {
+    "id": "MS-16",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ms_dixieElectricPowerAssociation_dixieElectricComfortAdvantageHome",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate on qualifying 14.00 SEER or higher heat pump when converting from a gas or electric furnace heating system.",
+      "es": "Reembolso de $400 en bombas de calor que reúnan los requisitos con un SEER de 14.00 o superior al realizar la conversión desde un sistema de calefacción de horno a gas o eléctrico."
+    },
+    "url": {
+      "en": "https://www.dixieepa.com/energy-solutions/comfort-advantage/"
+    }
+  },
+  {
+    "id": "MS-17",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ms_dixieElectricPowerAssociation_dixieElectricComfortAdvantageHome",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 rebate on additional heat pumps if two or more are required.\n",
+      "es": "Reembolso de $150 en bombas de calor adicionales si se requieren dos o más. \n"
+    },
+    "url": {
+      "en": "https://www.dixieepa.com/energy-solutions/comfort-advantage/"
+    }
+  },
+  {
+    "id": "MS-18",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ms_dixieElectricPowerAssociation_dixieElectricComfortAdvantageHome",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 Comfort Advantage Basic rebate on qualifying geothermal heat pump installed in a new home.",
+      "es": "Reembolso de $800 de Comfort Advantage Basic en una bomba de calor geotérmica que reúna los requisitos y esté instalada en una casa nueva."
+    },
+    "url": {
+      "en": "https://www.dixieepa.com/energy-solutions/comfort-advantage/"
+    }
+  },
+  {
+    "id": "MS-19",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ms_dixieElectricPowerAssociation_dixieElectricComfortAdvantageHome",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 Comfort Advantage Plus rebate on qualifying geothermal heat pump installed in a new home.",
+      "es": "Reembolso de $1,000 de Comfort Advantage Plus en una bomba de calor geotérmica que reúna los requisitos y esté instalada en una casa nueva."
+    },
+    "url": {
+      "en": "https://www.dixieepa.com/energy-solutions/comfort-advantage/"
+    }
+  },
+  {
+    "id": "MS-20",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ms_singingRiverElectricPowerAssociation_singingRiverComfortAdvantageHome",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 rebate on additional heat pumps if two or more are required.\n",
+      "es": "Reembolso de $150 en bombas de calor adicionales si se requieren dos o más. \n"
+    },
+    "url": {
+      "en": "https://singingriver.com/my-home/comfort-advantage/"
+    }
+  },
+  {
+    "id": "MS-21",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ms_singingRiverElectricPowerAssociation_singingRiverComfortAdvantageHome",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 rebate on additional heat pumps if two or more are required.\n",
+      "es": "Reembolso de $150 en bombas de calor adicionales si se requieren dos o más. \n"
+    },
+    "url": {
+      "en": "https://singingriver.com/my-home/comfort-advantage/"
+    }
+  },
+  {
+    "id": "MS-22",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "geothermal_heating_installation"
+    ],
+    "program": "ms_dixieElectricPowerAssociation_dixieElectricComfortAdvantageHome",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate on qualifying 14.00 SEER or higher heat pump when converting from a gas or electric furnace heating system.",
+      "es": "Reembolso de $400 en bombas de calor que reúnan los requisitos con un SEER de 14.00 o superior al realizar la conversión desde un sistema de calefacción de horno a gas o eléctrico."
+    },
+    "url": {
+      "en": "https://www.dixieepa.com/energy-solutions/comfort-advantage/"
+    }
+  },
+  {
+    "id": "MS-23",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "ms_singingRiverElectricPowerAssociation_singingRiverComfortAdvantageHome",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,500 Comfort Advantage Plus rebate on qualifying high-efficiency geothermal heat pump system installed in a new home..",
+      "es": "Reembolso de $1,500 de Comfort Advantage Plus en un sistema de bomba de calor geotérmica de alta eficiencia que reúna los requisitos y esté instalado en una casa nueva."
+    },
+    "url": {
+      "en": "https://singingriver.com/my-home/comfort-advantage/"
+    }
+  },
+  {
+    "id": "MS-24",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ms_mississippiPower_mississippiPowerRebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate on qualifying smart thermostats.",
+      "es": "Reembolso de $100 en termostatos inteligentes calificados."
+    },
+    "url": {
+      "en": "https://www.mississippipower.com/residential/ways-to-save/rebates---incentives.html"
+    }
+  },
+  {
+    "id": "MS-25",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ms_entergyMississippi_residentialSolutions",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Free smart thermostat and professional installation for qualified residential customers enrolled in the Entergy Mississippi Smart Thermostat Program.",
+      "es": "Termostato inteligente gratuito e instalación profesional para clientes residenciales calificados inscritos en el Programa de Termostato Inteligente Entergy Mississippi."
+    },
+    "url": {
+      "en": "https://www.entergymississippi.com/energyefficiency/residential/smart-thermostat"
     }
   }
 ]

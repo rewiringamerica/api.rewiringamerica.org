@@ -625,14 +625,14 @@
     "amount": {
       "type": "percent",
       "number": 0.4,
-      "maximum": 3750
+      "maximum": 1
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate up to $3,750 for insulation and air sealing.",
-      "es": "Un reembolso de hasta $3,750 dólares por aislamiento y sellado hermético."
+      "en": "Rebate up to $1,250 for insulation and air sealing.",
+      "es": "Reembolso de hasta $1,250 por aislamiento y sellado de aire."
     },
     "start_date": "2024-01-01",
     "end_date": "2025-12-31",
@@ -7076,7 +7076,6 @@
       "es": "Reembolso de $900 por tonelada de refrigeración para bombas de calor con sistema de ductos, con sistema de ductos parcial o sin ductos."
     },
     "start_date": "2025-01-20",
-    "end_date": "2025-12-31",
     "url": {
       "en": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps"
     }
@@ -7131,7 +7130,7 @@
       "es": "Reembolso de $3,300 por tonelada de calefacción para bombas de calor geotérmicas con instalación de calidad."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps"
     }
@@ -7159,7 +7158,7 @@
       "en": "$2,250/heating ton at 5 degrees Fahrenheit for a cold-climate heat pump.",
       "es": "$2,250 por tonelada de calefacción a 5 grados Fahrenheit para una bomba de calor para clima frío."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps"
     }
@@ -13089,7 +13088,8 @@
     "program": "co_xcelEnergyCombined_xcelEnergyHeatPumpWaterHeaterRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 2250
+      "number": 2250,
+      "minimum": 750
     },
     "owner_status": [
       "homeowner"
@@ -13099,7 +13099,7 @@
       "es": "Descuento de $2,250 en calentadores de agua con bomba de calor que califiquen para clientes de Xcel. Debe ser instalado por un contratista registrado y no debe exceder los 80 galones."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://co.my.xcelenergy.com/s/residential/home-rebates/water-heaters"
     }
