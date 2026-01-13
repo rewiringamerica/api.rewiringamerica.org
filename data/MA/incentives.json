@@ -9219,35 +9219,7 @@
       "rebate"
     ],
     "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "ma-mansfield-rebates",
-    "amount": {
-      "type": "dollars_per_unit",
-      "number": 500,
-      "unit": "ton",
-      "maximum": 1000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$500/ton rebate for a ductless mini-split heat pump, max 2 tons.",
-      "es": "Reembolso de $500 por tonelada por bombas de calor mini-split de fuente de aire sin sistema de ductos (máximo de 2 toneladas)."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
-    "url": {
-      "en": "https://www.mansfieldelectric.com/rebates-savings"
-    }
-  },
-  {
-    "id": "MA-366",
-    "payment_methods": [
-      "rebate",
-      "account_credit"
-    ],
-    "items": [
+      "ductless_heat_pump",
       "ducted_heat_pump"
     ],
     "program": "ma-mansfield-rebates",
@@ -9261,11 +9233,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500/ton for a ducted air source heat pump, max 2 tons.",
-      "es": "Reembolso de $500 por tonelada por bombas de calor de fuente de aire con sistema de ductos (máximo de 2 toneladas)."
+      "en": "$500/ton off air source heat pumps",
+      "es": "Bombas de calor de fuente de aire de $500/tonelada"
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.mansfieldelectric.com/rebates-savings"
     }
@@ -9290,11 +9262,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500/ton for a ground source heat pump, max 5 tons.",
-      "es": "Reembolso de $500 por tonelada para una bomba de calor geotérmica, máximo 5 toneladas."
+      "en": "$500/ton off ground source heat pumps",
+      "es": "Bombas de calor de fuente terrestre de $500/tonelada"
     },
-    "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.mansfieldelectric.com/rebates-savings"
     }
@@ -9328,8 +9300,8 @@
       "en": "50% of weatherization measure costs, up to $1,000 after a home energy audit.",
       "es": "Reembolso del 50 % del costo de medidas de climatización, hasta $1,000 después de una auditoría energética del hogar."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.mansfieldelectric.com/rebates-savings"
     }
@@ -13444,11 +13416,12 @@
       "number": 1
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Up to 100% coverage for approved insulation improvements and air sealing after receiving a home energy assessment, for moderate income customers.",
-      "es": "Cobertura de hasta el 100 % para mejoras de aislamiento y sellado de aire aprobadas después de recibir una evaluación de energía del hogar, para clientes de ingresos moderados."
+      "en": "Up to 100% off approved insulation, air sealing, and barrier removal for weatherization after a home energy assessment, for moderate income customers.",
+      "es": "Hasta un 100 % de descuento en aislamiento aprobado, sellado de aire y eliminación de barreras para climatización después de una evaluación energética del hogar, para clientes de ingresos moderados."
     },
     "low_income": "ma-massSave-incomeEligible-enhanced",
     "url": {
@@ -13508,8 +13481,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "100% coverage for Knob & Tube  and Vermiculite Mitigation (if barrier to accessing insulation/air sealing incentive) for income-eligible customers.",
-      "es": "Cobertura del 100 % para mitigación de perillas y tubos y vermiculita (si existe una barrera para acceder al incentivo de aislamiento/sellado de aire) para clientes que califiquen según sus ingresos."
+      "en": "100% coverage for Knob & Tube and Vermiculite Mitigation (if barrier to accessing insulation/air sealing incentive) for income-eligible customers.",
+      "es": "Cobertura del 100 % para mitigación de tuberías, válvulas y vermiculita (si existe barrera para acceder al incentivo de aislamiento/sellado de aire) para clientes que cumplen los requisitos de ingresos."
     },
     "low_income": "ma-massSave-income-eligible",
     "url": {
@@ -15627,6 +15600,31 @@
     },
     "url": {
       "en": "https://www.lelwd.com/sustainable-home-program/"
+    }
+  },
+  {
+    "id": "MA-621",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma-mansfield-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "No-cost virtual or in-person Home Energy Assessment.",
+      "es": "Evaluación de energía del hogar virtual o en persona sin costo."
+    },
+    "url": {
+      "en": "https://ene.org/sustainability/hea/"
     }
   }
 ]

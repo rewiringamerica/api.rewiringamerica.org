@@ -1,0 +1,21 @@
+{
+  "prerequisites": {
+    "MS-17": {
+      "allOf": [
+        "MS-16",
+        "MS-22"
+      ]
+    },
+    "MS-20": {
+      "allOf": [
+        "MS-12"
+      ],
+      "description": "Requires MS-12."
+    },
+    "MS-21": {
+      "allOf": [
+        "MS-13"
+      ]
+    }
+  }
+}

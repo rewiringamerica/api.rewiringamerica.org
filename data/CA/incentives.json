@@ -139,81 +139,6 @@
     }
   },
   {
-    "id": "CA-6",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_panel",
-      "heat_pump_water_heater"
-    ],
-    "program": "ca_centralCoastCommunityEnergy_single-FamilyNon-ConnectedHeatPumpWaterHeaterElectricalUpgradeIncentive",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Must accompany the qualifying retrofit installation of a non-connected HPWH. Panel Upgrade up to 200 amps OR Smart Load Center",
-      "es": "Debe acompañar la instalación de modernización de un calentador de agua con bomba de calor (HPWH) no conectado. Incluye la actualización del panel eléctrico de hasta 200 amperios o la instalación de un centro de carga inteligente."
-    },
-    "url": {
-      "en": "https://switchison.cleanenergyconnection.org/"
-    }
-  },
-  {
-    "id": "CA-7",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "other_heat_pump"
-    ],
-    "program": "ca_centralCoastCommunityEnergy_single-FamilyUnitarySplitSystemAndMini/Multi-SplitHeatPumpElectricalUpgrades",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Save $2,000 per unit - Rebate on Single-Family Unitary Split System and Mini/Multi-Split Heat Pump Electrical Upgrades",
-      "es": "Ahorre $2,000 por unidad con el reembolso por actualizaciones eléctricas en sistemas unifamiliares divididos y mini/multi-split con bomba de calor."
-    },
-    "url": {
-      "en": "https://switchison.cleanenergyconnection.org/"
-    }
-  },
-  {
-    "id": "CA-8",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_water_heater"
-    ],
-    "program": "ca_centralCoastCommunityEnergy_single-FamilyConnectedHeatPumpWaterHeaterIncentive",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 4250,
-      "minimum": 2000,
-      "maximum": 6500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$2000-6500 for 3CE customers who qualify and are looking to install a Heat Pump Water Heater",
-      "es": "Entre $2000 y $6500 para clientes de 3CE que califiquen y deseen instalar un calentador de agua con bomba de calor."
-    },
-    "url": {
-      "en": "https://3cenergy.org/rebates/electrify-your-home/"
-    }
-  },
-  {
     "id": "CA-9",
     "payment_methods": [
       "rebate"
@@ -313,6 +238,3553 @@
     "end_date": "2025-11-21",
     "url": {
       "en": "https://homes.rewiringamerica.org/bay-area"
+    }
+  },
+  {
+    "id": "CA-13",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_plugin_hybrid_vehicle",
+      "used_electric_vehicle"
+    ],
+    "program": "ca_southernCaliforniaEdison_southernCaliforniaEdisonEVRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for the purchase or lease of an eligible pre-owned electric vehicle (EV).",
+      "es": "Reembolso de $1,000 por la compra o arrendamiento de un vehículo eléctrico (EV) usado elegible."
+    },
+    "url": {
+      "en": "https://evrebates.sce.com/site/home"
+    }
+  },
+  {
+    "id": "CA-14",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_plugin_hybrid_vehicle",
+      "used_electric_vehicle"
+    ],
+    "program": "ca_southernCaliforniaEdison_southernCaliforniaEdisonEVRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$4,000 rebate for income-qualified customers for the purchase or lease of an eligible pre-owned electric vehicle (EV).",
+      "es": "Reembolso de $4,000 para clientes que califican en términos de ingresos para la compra o arrendamiento de un vehículo eléctrico (EV) usado elegible."
+    },
+    "url": {
+      "en": "https://evrebates.sce.com/site/home"
+    }
+  },
+  {
+    "id": "CA-15",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_southernCaliforniaEdison_southernCaliforniaEdisonEnergySavingsAssistanceProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Qualified SCE customers may be eligible for a free electric heat pump water heater replacement. ",
+      "es": "Los clientes que reúnen los requisitos de SCE pueden ser elegibles para un reemplazo gratuito de calentador de agua con bomba de calor eléctrica. "
+    },
+    "low_income": "ca-southern-california-edison-li-threshold",
+    "url": {
+      "en": "https://www.sce.com/save-money/income-qualified-programs/energy-savings-assistance-program"
+    }
+  },
+  {
+    "id": "CA-16",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ca_southernCaliforniaEdison_southernCaliforniaEdisonEnergySavingsAssistanceProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Qualified SCE customers may be eligible for a smart thermostat. ",
+      "es": "Los clientes que reúnen los requisitos de SCE pueden ser elegibles para un termostato inteligente. "
+    },
+    "low_income": "ca-southern-california-edison-li-threshold",
+    "url": {
+      "en": "https://www.sce.com/save-money/income-qualified-programs/energy-savings-assistance-program"
+    }
+  },
+  {
+    "id": "CA-17",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "other_heat_pump",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ca_southernCaliforniaEdison_southernCaliforniaEdisonEnergySavingsAssistanceProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Qualified SCE customers may be eligible for a free central heat pump replacement.",
+      "es": "Los clientes que reúnen los requisitos de SCE pueden ser elegibles para un reemplazo gratuito de la bomba de calor central."
+    },
+    "low_income": "ca-southern-california-edison-li-threshold",
+    "url": {
+      "en": "https://www.sce.com/save-money/income-qualified-programs/energy-savings-assistance-program"
+    }
+  },
+  {
+    "id": "CA-18",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ca_californiaPublicUtilitiesCommission_goldenStateRebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 60
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$60 rebate on a qualifying smart thermostat.",
+      "es": "Reembolso de $60 en un termostato inteligente que reúna los requisitos."
+    },
+    "url": {
+      "en": "https://goldenstaterebates.clearesult.com/smart-thermostat-energy-star-certified"
+    }
+  },
+  {
+    "id": "CA-19",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ca_losAngelesDepartmentOfWaterAndPower_lADWPResidentialRebatesAndPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Earn up to $1,000 for the purchase and installation of a qualified Level 2 electric vehicle (EV) charger. ",
+      "es": "Gane hasta $1,000 por la compra e instalación de un cargador de vehículo eléctrico (VE) calificado de Nivel 2."
+    },
+    "url": {
+      "en": "https://www.ladwp.com/residential-services/programs-and-rebates-residential/electric-vehicles/residential-ev-charger-rebate-program"
+    }
+  },
+  {
+    "id": "CA-20",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_plugin_hybrid_vehicle",
+      "used_electric_vehicle"
+    ],
+    "program": "ca_losAngelesDepartmentOfWaterAndPower_lADWPResidentialRebatesAndPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate on a qualifying used electric vehicle (EV) purchase. ",
+      "es": "Reembolso de $1,500 para la compra de un vehículo eléctrico (VE) usado que califique."
+    },
+    "url": {
+      "en": "https://www.ladwp.com/residential-services/programs-and-rebates-residential/electric-vehicles/used-electric-vehicle-rebate-program"
+    }
+  },
+  {
+    "id": "CA-21",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_plugin_hybrid_vehicle",
+      "used_electric_vehicle"
+    ],
+    "program": "ca_losAngelesDepartmentOfWaterAndPower_lADWPResidentialRebatesAndPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $4,000 rebate on a qualifying used electric vehicle (EV) purchase for income-qualified customers. ",
+      "es": "Reembolso de hasta $4,000 para la compra de un vehículo eléctrico (VE) usado calificado para clientes que califican según sus ingresos."
+    },
+    "low_income": "ca-ladwp-ez-save-program",
+    "url": {
+      "en": "https://www.ladwp.com/residential-services/programs-and-rebates-residential/electric-vehicles/used-electric-vehicle-rebate-program"
+    }
+  },
+  {
+    "id": "CA-22",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ca_losAngelesDepartmentOfWaterAndPower_lADWPConsumerRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1250,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000-$1,250 per ton rebate on qualifying ducted heat pump systems. Amount varies by system efficiency.",
+      "es": "Reembolso de $1,000 a $1,250 por tonelada para sistemas de bomba de calor por conductos que cumplan los requisitos. El monto varía según la eficiencia del sistema."
+    },
+    "url": {
+      "en": "https://www.ladwp.com/residential-services/assistance-programs/consumer-rebate-program"
+    }
+  },
+  {
+    "id": "CA-23",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "ca_losAngelesDepartmentOfWaterAndPower_lADWPConsumerRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,500-$2,500 per ton rebate on qualifying ductless heat pump systems. Amount varies by system efficiency.",
+      "es": "Reembolso de $1,500 a $2,500 por tonelada para sistemas de bomba de calor sin ductos que cumplan los requisitos. El monto varía según la eficiencia del sistema."
+    },
+    "url": {
+      "en": "https://www.ladwp.com/residential-services/assistance-programs/consumer-rebate-program"
+    }
+  },
+  {
+    "id": "CA-24",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_losAngelesDepartmentOfWaterAndPower_lADWPConsumerRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 2500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,500 per unit rebate on qualifying heat pump water heaters. Rebate amount varies by system capacity and efficiency. ",
+      "es": "Reembolso de hasta $2,500 para unidad en calentadores de agua con bomba de calor que cumplan los requisitos. El monto del reembolso varía según la capacidad y la eficiencia del sistema."
+    },
+    "url": {
+      "en": "https://www.ladwp.com/residential-services/assistance-programs/consumer-rebate-program"
+    }
+  },
+  {
+    "id": "CA-25",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_electric_vehicle",
+      "used_plugin_hybrid_vehicle"
+    ],
+    "program": "ca_sanDiegoGasAndElectric_sDGandEElectricVehicleIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for the purchase or lease of a qualifying pre-owned electric vehicle (EV). ",
+      "es": "Reembolso de $1,000 para la compra o arrendamiento de un vehículo eléctrico (VE) usado calificado."
+    },
+    "url": {
+      "en": "https://www.sdge.com/residential/electric-vehicles/ev-incentives#SDGE"
+    }
+  },
+  {
+    "id": "CA-26",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_electric_vehicle",
+      "used_plugin_hybrid_vehicle"
+    ],
+    "program": "ca_sanDiegoGasAndElectric_sDGandEElectricVehicleIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$4,000 for the purchase or lease of a qualifying pre-owned electric vehicle (EV). Available to income-qualified customers through Rebate Plus.",
+      "es": "$4,000 para la compra o el arrendamiento de un vehículo eléctrico (VE) usado que cumpla con los requisitos. Disponible para clientes con ingresos calificados a través de Rebate Plus."
+    },
+    "url": {
+      "en": "https://www.sdge.com/residential/electric-vehicles/ev-incentives#SDGE"
+    }
+  },
+  {
+    "id": "CA-27",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350 rebate on a qualifying Level 2 electric vehicle (EV) charger. ",
+      "es": "Reembolso de $350 para un cargador de vehículo eléctrico (VE) de Nivel 2 calificado."
+    },
+    "url": {
+      "en": "https://www.mid.org/saving-energy-money/rebates/residential-rebates/"
+    }
+  },
+  {
+    "id": "CA-28",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$450 - $700  per unit rebate on qualifying central heat pump system. ",
+      "es": "Reembolso de $450 a $700 por unidad para sistemas de bomba de calor central calificados."
+    },
+    "url": {
+      "en": "https://www.mid.org/saving-energy-money/rebates/residential-rebates/"
+    }
+  },
+  {
+    "id": "CA-29",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350 per unit rebate on qualifying ductless mini split / heat pump. ",
+      "es": "Reembolso de $350 por unidad para minisplit/bomba de calor sin ductos calificados."
+    },
+    "url": {
+      "en": "https://www.mid.org/saving-energy-money/rebates/residential-rebates/"
+    }
+  },
+  {
+    "id": "CA-30",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 per unit rebate on ENERGY STAR certified smart thermostats. Limit 2 per household.",
+      "es": "Reembolso de $50 por unidad para termostatos inteligentes con certificación ENERGY STAR. Límite de 2 por hogar."
+    },
+    "url": {
+      "en": "https://www.mid.org/saving-energy-money/rebates/residential-rebates/"
+    }
+  },
+  {
+    "id": "CA-31",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 35
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$35 rebate on an ENERGY STAR certified electric clothes dryer. ",
+      "es": "Reembolso de $35 para una secadora de ropa eléctrica con certificación ENERGY STAR."
+    },
+    "url": {
+      "en": "https://www.mid.org/saving-energy-money/rebates/residential-rebates/"
+    }
+  },
+  {
+    "id": "CA-32",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate on an ENERGY STAR certified induction cooktop/range. ",
+      "es": "Reembolso de $100 para una cocina/estufa de inducción con certificación ENERGY STAR."
+    },
+    "url": {
+      "en": "https://www.mid.org/saving-energy-money/rebates/residential-rebates/"
+    }
+  },
+  {
+    "id": "CA-33",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_modestoIrrigationDistrict_mIDHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate on an ENERGY STAR certified heat pump water heater. ",
+      "es": "Reembolso de $500 para un calentador de agua con bomba de calor con certificación ENERGY STAR."
+    },
+    "url": {
+      "en": "https://www.mid.org/saving-energy-money/rebates/residential-rebates/"
+    }
+  },
+  {
+    "id": "CA-34",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "ca_imperialIrrigationDistrict_imperialIrrigationDistrictEnergyRewardsProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate on qualifying ENERGY STAR-certified clothes dryer. ",
+      "es": "Reembolso de $75 para una secadora de ropa con certificación ENERGY STAR."
+    },
+    "url": {
+      "en": "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates"
+    }
+  },
+  {
+    "id": "CA-35",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "ca_imperialIrrigationDistrict_imperialIrrigationDistrictEnergyRewardsProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200/unit rebate on qualifying ductless mini-split heat pumps system.",
+      "es": "Reembolso de $200 por unidad para sistemas calificados de bomba de calor minisplit sin ductos."
+    },
+    "url": {
+      "en": "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates"
+    }
+  },
+  {
+    "id": "CA-36",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ca_imperialIrrigationDistrict_imperialIrrigationDistrictEnergyRewardsProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate on qualifying ENERGY STAR-certified smart thermostat. Limit 2 per household.",
+      "es": "Reembolso de $50 para termostatos inteligentes con certificación ENERGY STAR. Límite de 2 por hogar."
+    },
+    "url": {
+      "en": "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates"
+    }
+  },
+  {
+    "id": "CA-37",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "ca_imperialIrrigationDistrict_imperialIrrigationDistrictEnergyRewardsProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 400,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$400/ton rebate on new electric heat pump HVAC system replacing a gas furnace HVAC system.",
+      "es": "Reembolso de $400 por tonelada para un nuevo sistema de calefacción, ventilación y aire acondicionado (HVAC) con bomba de calor eléctrica que reemplaza un sistema de HVAC con horno a gas."
+    },
+    "url": {
+      "en": "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates"
+    }
+  },
+  {
+    "id": "CA-38",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "ca_imperialIrrigationDistrict_imperialIrrigationDistrictEnergyRewardsProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 300,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$125/ton - $300/ton rebates available for split or packaged HVAC systems. Rebate amount varies by equipment efficiency. ",
+      "es": "Reembolsos de $125 a $300 por tonelada disponibles para sistemas HVAC divididos o compactos. El monto del reembolso varía según la eficiencia del equipo."
+    },
+    "url": {
+      "en": "https://www.iid.com/customer-service/save-energy-and-money/your-home/residential-rebates"
+    }
+  },
+  {
+    "id": "CA-39",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_riversidePublicUtilities_riversideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate on an ENERGY STAR-certified electric heat pump water heater. ",
+      "es": "Reembolso de $200 para un calentador de agua con bomba de calor eléctrico con certificación ENERGY STAR."
+    },
+    "url": {
+      "en": "https://www.riversideca.gov/utilities/residents/rebates/energy-rebates/energy-star"
+    }
+  },
+  {
+    "id": "CA-40",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ca_riversidePublicUtilities_riversideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate on an ENERGY STAR-certified electric heat pump clothes dryer. ",
+      "es": "Reembolso de $200 para una secadora de ropa con bomba de calor eléctrica con certificación ENERGY STAR."
+    },
+    "url": {
+      "en": "https://www.riversideca.gov/utilities/residents/rebates/energy-rebates/energy-star"
+    }
+  },
+  {
+    "id": "CA-41",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater"
+    ],
+    "program": "ca_riversidePublicUtilities_riversideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate on a high-efficiency electric water heater. ",
+      "es": "$50 de reembolso para un calentador de agua eléctrico de alta eficiencia."
+    },
+    "url": {
+      "en": "https://www.riversideca.gov/utilities/residents/rebates/energy-rebates/energy-star"
+    }
+  },
+  {
+    "id": "CA-42",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ca_riversidePublicUtilities_riversideResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$750 per ton rebate on a qualifying electric heat pump.",
+      "es": "Reembolso de $750 por tonelada para una bomba de calor eléctrica calificada."
+    },
+    "url": {
+      "en": "https://www.riversideca.gov/utilities/residents/rebates/energy-rebates/air-conditioning-incentives"
+    }
+  },
+  {
+    "id": "CA-43",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ca_riversidePublicUtilities_riversideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate on a Wi-Fi enabled programmable smart thermostat.",
+      "es": "Reembolso de $50 para un termostato inteligente programable con Wi-Fi habilitado."
+    },
+    "url": {
+      "en": "https://www.riversideca.gov/utilities/residents/rebates/energy-rebates/air-conditioning-incentives"
+    }
+  },
+  {
+    "id": "CA-44",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "used_electric_vehicle",
+      "used_plugin_hybrid_vehicle"
+    ],
+    "program": "ca_riversidePublicUtilities_riversidePublicUtilitiesElectrifyRiverside",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 rebate for a qualifying used battery electric (BEV) or plug-in hybrid electric vehicle (EV).",
+      "es": "Reembolso de hasta $1,000 para un vehículo eléctrico de batería (BEV) o un vehículo eléctrico híbrido enchufable (VE) usado que califique."
+    },
+    "url": {
+      "en": "https://www.riversideca.gov/utilities/residents/rebates/electrify-riverside"
+    }
+  },
+  {
+    "id": "CA-45",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "used_electric_vehicle",
+      "used_plugin_hybrid_vehicle"
+    ],
+    "program": "ca_riversidePublicUtilities_riversidePublicUtilitiesElectrifyRiverside",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $2,500 rebate for a qualifying used battery electric (BEV) or plug-in hybrid electric vehicle (EV) for income-qualified customers. ",
+      "es": "Reembolso de hasta $2,500 para un vehículo eléctrico de batería (BEV) o un vehículo eléctrico híbrido enchufable (VE) usado que califique. Para clientes que califiquen según sus ingresos."
+    },
+    "low_income": "ca-riverside-public-utilities-SHARE-li-threshold",
+    "url": {
+      "en": "https://www.riversideca.gov/utilities/residents/rebates/electrify-riverside"
+    }
+  },
+  {
+    "id": "CA-46",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ca_riversidePublicUtilities_riversidePublicUtilitiesElectrifyRiverside",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate on a qualifying Level 2 electric vehicle (EV) charger.",
+      "es": "Reembolso de $500 para un cargador de vehículo eléctrico (VE) de Nivel 2 calificado."
+    },
+    "url": {
+      "en": "https://www.riversideca.gov/utilities/residents/rebates/electrify-riverside"
+    }
+  },
+  {
+    "id": "CA-47",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "ca_turlockIrrigationDistrict_turlockIrrigationDistrictResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate on qualifying ENERGY STAR-certified clothes dryer. ",
+      "es": "Reembolso de $50 para una secadora de ropa con certificación ENERGY STAR."
+    },
+    "url": {
+      "en": "https://www.tid.org/customer-service/rebates-and-savings/residential-rebates/#advgb-tabs-tab0"
+    }
+  },
+  {
+    "id": "CA-48",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ca_turlockIrrigationDistrict_turlockIrrigationDistrictResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 rebate on qualifying induction cooktop",
+      "es": "Reembolso de $300 para cocinas de inducción que califiquen"
+    },
+    "url": {
+      "en": "https://www.tid.org/customer-service/rebates-and-savings/residential-rebates/#advgb-tabs-tab0"
+    }
+  },
+  {
+    "id": "CA-49",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_turlockIrrigationDistrict_turlockIrrigationDistrictResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate on qualifying ENERGY STAR-certified heat pump water heater.",
+      "es": "Reembolso de $500 para calentadores de agua con bomba de calor con certificación ENERGY STAR."
+    },
+    "url": {
+      "en": "https://www.tid.org/customer-service/rebates-and-savings/residential-rebates/#advgb-tabs-tab0"
+    }
+  },
+  {
+    "id": "CA-50",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ca_turlockIrrigationDistrict_turlockIrrigationDistrictResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate on qualifying central heat pump.",
+      "es": "Reembolso de $500 para una bomba de calor central calificada."
+    },
+    "url": {
+      "en": "https://www.tid.org/customer-service/rebates-and-savings/residential-rebates/#advgb-tabs-tab1"
+    }
+  },
+  {
+    "id": "CA-51",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ca_turlockIrrigationDistrict_turlockIrrigationDistrictResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate on a qualifying smart thermostat.",
+      "es": "Reembolso de $50 para un termostato inteligente calificado."
+    },
+    "url": {
+      "en": "https://www.tid.org/customer-service/rebates-and-savings/residential-rebates/#advgb-tabs-tab1"
+    }
+  },
+  {
+    "id": "CA-52",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "ca_turlockIrrigationDistrict_turlockIrrigationDistrictResidentialRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 350,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$350/ton rebate on qualifying heat pump.",
+      "es": "Reembolso de $350 por tonelada para bombas de calor calificadas."
+    },
+    "url": {
+      "en": "https://www.tid.org/customer-service/rebates-and-savings/residential-rebates/#advgb-tabs-tab0"
+    }
+  },
+  {
+    "id": "CA-53",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ca_turlockIrrigationDistrict_turlockIrrigationDistrictResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$800 rebate on G2E induction cooktop.",
+      "es": "Reembolso de $800 para una cocina de inducción G2E."
+    },
+    "url": {
+      "en": "https://www.tid.org/customer-service/rebates-and-savings/residential-rebates/#advgb-tabs-tab3"
+    }
+  },
+  {
+    "id": "CA-54",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_turlockIrrigationDistrict_turlockIrrigationDistrictResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$800 rebate on G2E ENERGY STAR-certified heat pump water heater.",
+      "es": "Reembolso de $800 para un calentador de agua con bomba de calor con certificación ENERGY STAR de G2E."
+    },
+    "url": {
+      "en": "https://www.tid.org/customer-service/rebates-and-savings/residential-rebates/#advgb-tabs-tab3"
+    }
+  },
+  {
+    "id": "CA-55",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ca_glendaleWaterAndPower_glendaleWaterAndPowerHomeEnergyAndWaterSavingRebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $400 rebate on an ENERGY STAR-certified heat pump clothes dryer replacing an existing natural gas dryer. ",
+      "es": "Reembolso de hasta $400 para una secadora de ropa con bomba de calor con certificación ENERGY STAR que reemplaza una secadora de ropa a gas natural existente."
+    },
+    "url": {
+      "en": "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program"
+    }
+  },
+  {
+    "id": "CA-56",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_glendaleWaterAndPower_glendaleWaterAndPowerHomeEnergyAndWaterSavingRebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $4,000 rebate on an ENERGY STAR-certified heat pump water heater replacing existing natural gas water heater.",
+      "es": "Reembolso de hasta $4,000 para un calentador de agua con bomba de calor con certificación ENERGY STAR que reemplace su calentador de agua a gas natural existente."
+    },
+    "url": {
+      "en": "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program"
+    }
+  },
+  {
+    "id": "CA-57",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "ca_glendaleWaterAndPower_glendaleWaterAndPowerHomeEnergyAndWaterSavingRebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $200 rebate on an ENERGY STAR-certified electric clothes dryer replacing an existing natural gas dryer. ",
+      "es": "Reembolso de hasta $200 para una secadora de ropa eléctrica con certificación ENERGY STAR que reemplaza una secadora de ropa a gas natural existente."
+    },
+    "url": {
+      "en": "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program"
+    }
+  },
+  {
+    "id": "CA-58",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "ca_glendaleWaterAndPower_glendaleWaterAndPowerHomeEnergyAndWaterSavingRebatesProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton",
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 per ton rebate on an ENERGY STAR-certified heat pump/mini-split heat pump replacing an existing heat pump.",
+      "es": "Reembolso de $500 por tonelada para una bomba de calor/bomba de calor mini-split con certificación ENERGY STAR que reemplaza una bomba de calor existente."
+    },
+    "url": {
+      "en": "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program"
+    }
+  },
+  {
+    "id": "CA-59",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "ca_glendaleWaterAndPower_glendaleWaterAndPowerHomeEnergyAndWaterSavingRebatesProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "ton",
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,000 per ton rebate when you replace an existing gas and electric HVAC system or gas furnace with a qualifying ENERGY STAR-certified heat pump.",
+      "es": "Reembolso de $1,000 por tonelada cuando reemplaza un sistema HVAC a gas y eléctrico, o un horno a gas, con una bomba de calor con certificación ENERGY STAR."
+    },
+    "url": {
+      "en": "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program"
+    }
+  },
+  {
+    "id": "CA-60",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ca_glendaleWaterAndPower_glendaleWaterAndPowerHomeEnergyAndWaterSavingRebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$400 rebate on an electric range replacing a natural gas range. ",
+      "es": "Reembolso de $400 para una cocina eléctrica que reemplaza a una cocina a gas natural."
+    },
+    "url": {
+      "en": "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program"
+    }
+  },
+  {
+    "id": "CA-61",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ca_glendaleWaterAndPower_glendaleWaterAndPowerHomeEnergyAndWaterSavingRebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$400 rebate on an electric range/oven combo replacing an existing natural gas range/oven combo.",
+      "es": "Reembolso de $400 para una combinación de cocina y horno eléctrico que reemplaza una combinación de cocina y horno a gas natural existente."
+    },
+    "url": {
+      "en": "https://www.glendaleca.gov/government/departments/glendale-water-and-power/residential-customers/residential-programs/smart-home-rebate-program"
+    }
+  },
+  {
+    "id": "CA-62",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ca_rosevilleElectric_rosevilleElectricVehicleRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 rebate on a qualifying Level 2 electric vehicle (EV) charger.",
+      "es": "Reembolso de $200 para un cargador de vehículo eléctrico (VE) de Nivel 2 calificado."
+    },
+    "url": {
+      "en": "https://www.roseville.ca.us/cms/One.aspx?portalId=7964922&pageId=19015746"
+    }
+  },
+  {
+    "id": "CA-63",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ca_rosevilleElectric_rosevilleElectricVehicleRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate on a eligible Level 2 electric vehicle (EV) charger for customers enrolled in the Utility Rate Assistance Program.",
+      "es": "Reembolso de $400 para un cargador de vehículo eléctrico (VE) de Nivel 2 elegible para clientes inscritos en el Programa de Asistencia de Tarifas de Servicios Públicos (Utility Rate Assistance Program)."
+    },
+    "low_income": "ca-roseville-utility-rate-assistance-threshold",
+    "url": {
+      "en": "https://www.roseville.ca.us/cms/One.aspx?portalId=7964922&pageId=19015746"
+    }
+  },
+  {
+    "id": "CA-64",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ca_rosevilleElectric_rosevilleElectricVehicleRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate on a eligible Level 2 electric vehicle (EV) charger for customers enrolled in the Medical Electric Rate Assistance Program.",
+      "es": "Reembolso de $400 para un cargador de vehículo eléctrico (VE) de Nivel 2 elegible para clientes inscritos en el Programa de Asistencia para Tarifa Eléctrica Médica (Medical Electric Rate Assistance Program)."
+    },
+    "low_income": "ca-roseville-medical-electric-assistance-rate",
+    "url": {
+      "en": "https://www.roseville.ca.us/cms/One.aspx?portalId=7964922&pageId=19015746"
+    }
+  },
+  {
+    "id": "CA-65",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ca_rosevilleElectric_rosevilleResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive a $1,500 rebate when you replace an existing gas heating system with a two-stage, all-electric heat pump.",
+      "es": "Reciba un reembolso de $1,500 cuando reemplace un sistema de calefacción a gas existente con una bomba de calor totalmente eléctrica de dos etapas."
+    },
+    "url": {
+      "en": "https://www.roseville.ca.us/cms/One.aspx?portalId=7964922&pageId=20457142"
+    }
+  },
+  {
+    "id": "CA-66",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ca_rosevilleElectric_rosevilleResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive a $2,500 rebate when you replace an existing gas heating system with a high-efficiency, variable-stage electric heat pump.",
+      "es": "Reciba un reembolso de $2,500 cuando reemplace un sistema de calefacción a gas existente con una bomba de calor eléctrica de etapa variable de alta eficiencia."
+    },
+    "url": {
+      "en": "https://www.roseville.ca.us/cms/One.aspx?portalId=7964922&pageId=20457142"
+    }
+  },
+  {
+    "id": "CA-67",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ca_rosevilleElectric_rosevilleResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive a $600 rebate when you upgrade an existing electric heating system to a two-stage electric heat pump.",
+      "es": "Reciba un reembolso de $600 cuando actualice un sistema de calefacción eléctrica existente a una bomba de calor eléctrica de dos etapas."
+    },
+    "url": {
+      "en": "https://www.roseville.ca.us/cms/One.aspx?portalId=7964922&pageId=20457142"
+    }
+  },
+  {
+    "id": "CA-68",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ca_rosevilleElectric_rosevilleResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1600
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive a $1,600 rebate when you upgrade an existing electric heating system to a high-efficiency, variable-stage electric heat pump.",
+      "es": "Reciba un reembolso de $1,600 cuando actualice un sistema de calefacción eléctrica existente a una bomba de calor eléctrica de etapa variable de alta eficiencia."
+    },
+    "url": {
+      "en": "https://www.roseville.ca.us/cms/One.aspx?portalId=7964922&pageId=20457142"
+    }
+  },
+  {
+    "id": "CA-69",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ca_rosevilleElectric_rosevilleResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive a $200 rebate when you purchase an ENERGY STAR-certified heat pump clothes dryer.",
+      "es": "Reciba un reembolso de $200 cuando compre una secadora de ropa con bomba de calor con certificación ENERGY STAR."
+    },
+    "url": {
+      "en": "https://www.roseville.ca.us/cms/One.aspx?portalId=7964922&pageId=20458486"
+    }
+  },
+  {
+    "id": "CA-70",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_rosevilleElectric_rosevilleResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive a $2,500 rebate when you replace an existing gas water heater with a new heat pump water heater.",
+      "es": "Reciba un reembolso de $2,500 cuando reemplace un calentador de agua a gas existente por un nuevo calentador de agua con bomba de calor."
+    },
+    "url": {
+      "en": "https://www.roseville.ca.us/cms/One.aspx?portalId=7964922&pageId=20458741"
+    }
+  },
+  {
+    "id": "CA-71",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_rosevilleElectric_rosevilleResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Receive a $1,000 rebate when you replace an existing electric water heater with a new heat pump water heater.",
+      "es": "Reciba un reembolso de $1,000 cuando reemplace un calentador de agua eléctrico existente por un nuevo calentador de agua con bomba de calor."
+    },
+    "url": {
+      "en": "https://www.roseville.ca.us/cms/One.aspx?portalId=7964922&pageId=20458741"
+    }
+  },
+  {
+    "id": "CA-72",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ca_rosevilleElectric_rosevilleResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate on an ENERGY STAR-certified smart thermostat. ",
+      "es": "Reembolso de $100 para un termostato inteligente con certificación ENERGY STAR."
+    },
+    "url": {
+      "en": "https://www.roseville.ca.us/cms/One.aspx?portalId=7964922&pageId=20458741"
+    }
+  },
+  {
+    "id": "CA-73",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ca_rosevilleElectric_rosevilleResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$600 rebate on a a qualifying induction cooktop.",
+      "es": "Reembolso de $600 para una cocina de inducción calificada."
+    },
+    "url": {
+      "en": "https://www.roseville.ca.us/cms/One.aspx?portalId=7964922&pageId=20459098"
+    }
+  },
+  {
+    "id": "CA-74",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ca_pasadenaWaterAndPower_pasadenaResidentialPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate on qualifying smart thermostat.",
+      "es": "Reembolso de $50 para un termostato inteligente calificado."
+    },
+    "url": {
+      "en": "https://pwp.cityofpasadena.net/savemoney/"
+    }
+  },
+  {
+    "id": "CA-75",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ca_pasadenaWaterAndPower_pasadenaResidentialPrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 170,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$170/ton rebate when you purchase and install a qualifying heat pump or mini-split heat pump.",
+      "es": "Reembolso de $170 por tonelada cuando compra e instala una bomba de calor o una bomba de calor minisplit calificada."
+    },
+    "url": {
+      "en": "https://pwp.cityofpasadena.net/savemoney/"
+    }
+  },
+  {
+    "id": "CA-76",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ca_pasadenaWaterAndPower_pasadenaResidentialPrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 190,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$190/ton rebate when you purchase qualifying heat pump or mini-split heat pump in Pasadena. ",
+      "es": "Reembolso de $190 por tonelada cuando compra una bomba de calor o una bomba de calor mini-split calificada en Pasadena."
+    },
+    "url": {
+      "en": "https://pwp.cityofpasadena.net/savemoney/"
+    }
+  },
+  {
+    "id": "CA-77",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ca_pasadenaWaterAndPower_pasadenaResidentialPrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 340,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$340/ton rebate when you purchase and install a qualifying heat pump or mini-split heat pump. Available for income-qualified customers.",
+      "es": "Reembolso de $340 por tonelada al comprar e instalar una bomba de calor o minisplit que cumpla con los requisitos. Disponible para clientes que califican según sus ingresos."
+    },
+    "low_income": "ca-liheap",
+    "url": {
+      "en": "https://pwp.cityofpasadena.net/savemoney/"
+    }
+  },
+  {
+    "id": "CA-78",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ca_pasadenaWaterAndPower_pasadenaResidentialPrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 190,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$360/ton rebate when you purchase qualifying heat pump or mini-split heat pump in Pasadena. Available to income-qualified customers.",
+      "es": "Reembolso de $360 por tonelada al comprar una bomba de calor o una minisplit en Pasadena. Disponible para clientes que califican según sus ingresos."
+    },
+    "low_income": "ca-liheap",
+    "url": {
+      "en": "https://pwp.cityofpasadena.net/savemoney/"
+    }
+  },
+  {
+    "id": "CA-79",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_plugin_hybrid_vehicle"
+    ],
+    "program": "ca_pasadenaWaterAndPower_pasadenaResidentialElectricVehicleAndChargerIncentiveProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 rebate when you purchase a used plug-in electric vehicle (EV). Limit 2 rebates per PWP residential electric account.",
+      "es": "Reembolso de $250 al comprar un vehículo eléctrico (VE)  enchufable usado. Límite de 2 reembolsos por cuenta eléctrica residencial de PWP."
+    },
+    "url": {
+      "en": "https://pwp.cityofpasadena.net/residentialevrebate/"
+    }
+  },
+  {
+    "id": "CA-80",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_electric_vehicle"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,500 for the purchase or lease of a qualifying pre-owned electric vehicle (EV) for income-qualified customers. ",
+      "es": "$1,500 para la compra o arrendamiento de un vehículo eléctrico (VE) usado calificado para clientes que califican según sus ingresos. "
+    },
+    "low_income": "ca-silicon-valley-power-rate-assistance-program",
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates"
+    }
+  },
+  {
+    "id": "CA-82",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_plugin_hybrid_vehicle"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,000 for the purchase or lease of a qualifying pre-owned plug-in hybrid vehicle (EV) for income-qualified customers.",
+      "es": "$1,000 para la compra o arrendamiento de un vehículo híbrido enchufable (EV) usado calificado para clientes que califican según sus ingresos."
+    },
+    "low_income": "ca-silicon-valley-power-rate-assistance-program",
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates"
+    }
+  },
+  {
+    "id": "CA-83",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_electric_vehicle"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$2,500 for the purchase or lease of a qualifying pre-owned electric vehicle (EV) for income-qualified customers.",
+      "es": "$2,500 para la compra o arrendamiento de un vehículo eléctrico (EV) usado calificado para clientes que califican según sus ingresos."
+    },
+    "low_income": "ca-liheap",
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates"
+    }
+  },
+  {
+    "id": "CA-84",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_plugin_hybrid_vehicle"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$2,000 for the purchase or lease of a qualifying pre-owned plug-in hybrid vehicle (EV) for income-qualified customers.",
+      "es": "$2,000 para la compra o arrendamiento de un vehículo híbrido enchufable (EV) usado calificado para clientes que califican según sus ingresos."
+    },
+    "low_income": "ca-liheap",
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates"
+    }
+  },
+  {
+    "id": "CA-85",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$750 rebate on an ENERGY STAR-certified electric range with induction cooktop replacing an existing natural gas appliance.",
+      "es": "Reembolso de $750 para una cocina eléctrica con certificación ENERGY STAR de cocción por inducción que reemplaza un electrodoméstico a gas natural existente."
+    },
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates"
+    }
+  },
+  {
+    "id": "CA-86",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 850
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$850 rebate on an ENERGY STAR-certified electric range with induction cooktop replacing an existing natural gas appliance.",
+      "es": "Reembolso de $850 para una cocina eléctrica con certificación ENERGY STAR de cocción por inducción que reemplaza un electrodoméstico a gas natural existente."
+    },
+    "low_income": "ca-liheap",
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates"
+    }
+  },
+  {
+    "id": "CA-87",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 850
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$850 rebate on an ENERGY STAR-certified electric range with induction cooktop replacing an existing natural gas appliance.",
+      "es": "Reembolso de $850 para una cocina eléctrica con certificación ENERGY STAR de cocción por inducción que reemplaza un electrodoméstico a gas natural existente."
+    },
+    "low_income": "ca-silicon-valley-power-rate-assistance-program",
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates"
+    }
+  },
+  {
+    "id": "CA-88",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 rebate on an ENERGY STAR-certified induction cooktop replacing an existing natural gas appliance.",
+      "es": "Reembolso de $250 para una cocina de inducción con certificación ENERGY STAR que reemplaza un electrodoméstico a gas natural existente."
+    },
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates"
+    }
+  },
+  {
+    "id": "CA-89",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$350 rebate on an ENERGY STAR-certified induction cooktop replacing an existing natural gas appliance.",
+      "es": "Reembolso de $350 para una cocina de inducción con certificación ENERGY STAR que reemplaza un electrodoméstico a gas natural existente."
+    },
+    "low_income": "ca-liheap",
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates"
+    }
+  },
+  {
+    "id": "CA-90",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$350 rebate on an ENERGY STAR-certified induction cooktop replacing an existing natural gas appliance.",
+      "es": "Reembolso de $350 para una cocina de inducción con certificación ENERGY STAR que reemplaza un electrodoméstico a gas natural existente."
+    },
+    "low_income": "ca-silicon-valley-power-rate-assistance-program",
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates"
+    }
+  },
+  {
+    "id": "CA-91",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 rebate for an ENERGY STAR-certified heat pump clothes dryer replacing a gas clothes dryer.",
+      "es": "Reembolso de $250 para una secadora de ropa con bomba de calor con certificación ENERGY STAR que reemplaza una secadora de ropa a gas."
+    },
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates"
+    }
+  },
+  {
+    "id": "CA-92",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Income-qualified customers can receive a rebate up to $300 for an ENERGY STAR-certified heat pump clothes dryer replacing a gas clothes dryer.",
+      "es": "Los clientes que califican según sus ingresos pueden recibir un reembolso de hasta $300 para una secadora de ropa con bomba de calor con certificación ENERGY STAR que reemplace una secadora de ropa a gas."
+    },
+    "low_income": "ca-liheap",
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates"
+    }
+  },
+  {
+    "id": "CA-93",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Income-qualified customers can receive a rebate up to $300 for an ENERGY STAR-certified heat pump clothes dryer replacing a gas clothes dryer.",
+      "es": "Los clientes que califican según sus ingresos pueden recibir un reembolso de hasta $300 para una secadora de ropa con bomba de calor con certificación ENERGY STAR que reemplace una secadora de ropa a gas."
+    },
+    "low_income": "ca-silicon-valley-power-rate-assistance-program",
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates"
+    }
+  },
+  {
+    "id": "CA-94",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$150 rebate for an ENERGY STAR-certified electric clothes dryer replacing a gas clothes dryer.",
+      "es": "Reembolso de $150 para una secadora de ropa eléctrica con certificación ENERGY STAR que reemplaza una secadora de ropa a gas."
+    },
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates"
+    }
+  },
+  {
+    "id": "CA-95",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 rebate for an ENERGY STAR-certified electric clothes dryer replacing a gas clothes dryer for income-qualified customers.",
+      "es": "Reembolso de $250 para una secadora de ropa eléctrica con certificación ENERGY STAR que reemplace una secadora de ropa a gas. Para clientes que califican según sus ingresos."
+    },
+    "low_income": "ca-liheap",
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates"
+    }
+  },
+  {
+    "id": "CA-96",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 rebate for an ENERGY STAR-certified electric clothes dryer replacing a gas clothes dryer for income-qualified customers.",
+      "es": "Reembolso de $250 para una secadora de ropa eléctrica con certificación ENERGY STAR que reemplace una secadora de ropa a gas. Para clientes que califican según sus ingresos."
+    },
+    "low_income": "ca-silicon-valley-power-rate-assistance-program",
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates"
+    }
+  },
+  {
+    "id": "CA-97",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an ENERGY STAR-certified smart thermostat.",
+      "es": "Reembolso de $50 para un termostato inteligente con certificación ENERGY STAR."
+    },
+    "low_income": "ca-silicon-valley-power-rate-assistance-program",
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates"
+    }
+  },
+  {
+    "id": "CA-98",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3000,
+      "unit": "ton",
+      "maximum": 10000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3,000 per ton rebate, up to $10,000 on qualifying heat pump replacing gas furnace (propane, or wood stove heater/furnace).",
+      "es": "Reembolso de $3,000 por tonelada, hasta $10,000, para bombas de calor calificadas que reemplacen un horno a gas (estufa/calentador de propano o leña)."
+    },
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates/residential-electrification-program-rules"
+    }
+  },
+  {
+    "id": "CA-99",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3500,
+      "unit": "ton",
+      "maximum": 11000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3,500 per ton rebate, up to $11,000 on qualifying heat pump replacing gas furnace (propane, or wood stove heater/furnace).",
+      "es": "Reembolso de $3,500 por tonelada, hasta $11,000, para bombas de calor calificadas que reemplacen un horno a gas (estufa/calentador de propano o leña)."
+    },
+    "low_income": "ca-heap",
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates/residential-electrification-program-rules"
+    }
+  },
+  {
+    "id": "CA-100",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ca_siliconValleyPower_siliconValleyPowerRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 3500,
+      "unit": "ton",
+      "maximum": 11000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3,500 per ton rebate, up to $11,000 on qualifying heat pump replacing gas furnace (propane, or wood stove heater/furnace).",
+      "es": "Reembolso de $3,500 por tonelada, hasta $11,000, para bombas de calor calificadas que reemplacen un horno a gas (estufa/calentador de propano o leña)."
+    },
+    "low_income": "ca-silicon-valley-power-rate-assistance-program",
+    "url": {
+      "en": "https://www.siliconvalleypower.com/residents/rebates/residential-electrification-program-rules"
+    }
+  },
+  {
+    "id": "CA-101",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_burbankWaterAndPower_burbankResidentialBuildingElectrificationProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate on ENERGY STAR-certified heat pump water heater.",
+      "es": "Reembolso de $1,500 para un calentador de agua con bomba de calor con certificación ENERGY STAR."
+    },
+    "url": {
+      "en": "https://www.burbankwaterandpower.com/electrify#cooling"
+    }
+  },
+  {
+    "id": "CA-102",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ca_burbankWaterAndPower_burbankResidentialBuildingElectrificationProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "ton",
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000/ton rebate up to $2,500 on a ductless mini-split or central heat pump HVAC system.",
+      "es": "Reembolso de $1,000 por tonelada hasta $2,500 para un sistema HVAC con bomba de calor central o minisplit sin ductos."
+    },
+    "url": {
+      "en": "https://www.burbankwaterandpower.com/electrify#cooling"
+    }
+  },
+  {
+    "id": "CA-103",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ca_burbankWaterAndPower_burbankResidentialBuildingElectrificationProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "ton",
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000/ton rebate up to $5,000 on a ductless mini-split or central heat pump HVAC system for customers enrolled in the Lifeline Program.",
+      "es": "Reembolso de $1,000 por tonelada hasta $5,000 para un sistema HVAC con bomba de calor central o minisplit sin ductos para clientes inscritos en el Programa Lifeline."
+    },
+    "low_income": "ca-burbank-water-and-power-lifeline-program",
+    "url": {
+      "en": "https://www.burbankwaterandpower.com/electrify#cooling"
+    }
+  },
+  {
+    "id": "CA-104",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ca_burbankWaterAndPower_burbankResidentialBuildingElectrificationProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "ton",
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000/ton rebate up to $5,000 on ductless mini-split or central heat pump HVAC systems for customers enrolled in the Utility Service Subsidy Program.",
+      "es": "Reembolso de $1,000 por tonelada hasta $5,000 para sistemas HVAC con bomba de calor central o minisplit sin ductos para clientes inscritos en el Programa de Subsidio de Servicios Públicos."
+    },
+    "low_income": "ca-burbank-water-and-power-utility-service-subsidy-program",
+    "url": {
+      "en": "https://www.burbankwaterandpower.com/electrify#cooling"
+    }
+  },
+  {
+    "id": "CA-105",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ca_burbankWaterAndPower_burbankResidentialBuildingElectrificationProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate on a qualifying heat pump clothes dryer.",
+      "es": "Reembolso de $200 para una secadora de ropa con bomba de calor calificada."
+    },
+    "url": {
+      "en": "https://burbankwaterandpower.com/images/administrative/downloads/Electrification_Rebate_Program_Form_v08-06-25.pdf"
+    }
+  },
+  {
+    "id": "CA-106",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ca_burbankWaterAndPower_burbankResidentialBuildingElectrificationProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$600 rebate on a qualifying heat pump clothes dryer for customers enrolled in the Lifeline Program.",
+      "es": "Reembolso de $600 para una secadora de ropa con bomba de calor calificada para clientes inscritos en el Programa Lifeline."
+    },
+    "low_income": "ca-burbank-water-and-power-lifeline-program",
+    "url": {
+      "en": "https://burbankwaterandpower.com/images/administrative/downloads/Electrification_Rebate_Program_Form_v08-06-25.pdf"
+    }
+  },
+  {
+    "id": "CA-107",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ca_burbankWaterAndPower_burbankResidentialBuildingElectrificationProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$600 rebate on a qualifying heat pump clothes dryer for customers enrolled in the Utility Service Subsidy Program.",
+      "es": "Reembolso de $600 para una secadora de ropa con bomba de calor calificada para clientes inscritos en el Programa de Subsidio de Servicios Públicos."
+    },
+    "low_income": "ca-burbank-water-and-power-utility-service-subsidy-program",
+    "url": {
+      "en": "https://burbankwaterandpower.com/images/administrative/downloads/Electrification_Rebate_Program_Form_v08-06-25.pdf"
+    }
+  },
+  {
+    "id": "CA-108",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ca_burbankWaterAndPower_burbankResidentialBuildingElectrificationProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate on a qualifying induction cooktop.",
+      "es": "Reembolso de $200 para una cocina de inducción calificada."
+    },
+    "url": {
+      "en": "https://burbankwaterandpower.com/images/administrative/downloads/Electrification_Rebate_Program_Form_v08-06-25.pdf"
+    }
+  },
+  {
+    "id": "CA-109",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ca_burbankWaterAndPower_burbankResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $75 rebate on a qualifying smart thermostats. Limit two per customer.",
+      "es": "Reembolso de hasta $75 para termostatos inteligentes que cumplan los requisitos. Límite de dos por cliente."
+    },
+    "url": {
+      "en": "https://burbankwaterandpower.com/images/administrative/downloads/forms/Residential%20Rebate%20Application%20v09-08-2025.pdf"
+    }
+  },
+  {
+    "id": "CA-110",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_libertyUtilities_libertyUtilitiesResidentialHeatPumpIncentiveProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 900,
+      "minimum": 400,
+      "maximum": 900
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Earn a rebate between $400-900 for a qualifying heat pump water heater. Rebate amount varied by system efficiency.",
+      "es": "Obtenga un reembolso de entre $400 y $900 para un calentador de agua con bomba de calor que cumpla con los requisitos. El monto del reembolso varía según la eficiencia del sistema."
+    },
+    "url": {
+      "en": "https://california.libertyutilities.com/verdi/residential/smart-energy-use/electric/heat-pump-incentive-program.html"
+    }
+  },
+  {
+    "id": "CA-111",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ca_libertyUtilities_libertyUtilitiesResidentialHeatPumpIncentiveProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 60
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$60 rebate on a qualifying smart thermostat with an HVAC heat pump upgrade.",
+      "es": "Reembolso de $60 para un termostato inteligente calificado con una actualización de bomba de calor."
+    },
+    "url": {
+      "en": "https://california.libertyutilities.com/verdi/residential/smart-energy-use/electric/heat-pump-incentive-program.html"
+    }
+  },
+  {
+    "id": "CA-112",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "ca_libertyUtilities_libertyUtilitiesResidentialHeatPumpIncentiveProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 150,
+      "unit": "ton",
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 per ton rebate up to $4,000 on a qualifying \"Tier 1\" ductless mini split system.",
+      "es": "Reembolso de $150 por tonelada hasta $4,000 para un sistema minisplit sin ductos \"Nivel 1\" calificado."
+    },
+    "url": {
+      "en": "https://california.libertyutilities.com/verdi/residential/smart-energy-use/electric/heat-pump-incentive-program.html"
+    }
+  },
+  {
+    "id": "CA-113",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "ca_libertyUtilities_libertyUtilitiesResidentialHeatPumpIncentiveProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 425,
+      "unit": "ton",
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$425 per ton rebate  up to $4,000 on qualifying \"Tier 1\" ductless mini split room units.",
+      "es": "Reembolso de $425 por tonelada hasta $4,000 para unidades de habitación minisplit sin ductos \"Nivel 1\" calificadas."
+    },
+    "url": {
+      "en": "https://california.libertyutilities.com/verdi/residential/smart-energy-use/electric/heat-pump-incentive-program.html"
+    }
+  },
+  {
+    "id": "CA-114",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ca_libertyUtilities_libertyUtilitiesResidentialHeatPumpIncentiveProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 300,
+      "unit": "ton",
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 per ton rebate, up to $4,000, on qualifying \"Tier 1\" central heat pump systems.",
+      "es": "Reembolso de $300 por tonelada, hasta un máximo de $4,000, para sistemas de bomba de calor central \"Nivel 1\" calificados."
+    },
+    "url": {
+      "en": "https://california.libertyutilities.com/verdi/residential/smart-energy-use/electric/heat-pump-incentive-program.html"
+    }
+  },
+  {
+    "id": "CA-115",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "ca_libertyUtilities_libertyUtilitiesResidentialHeatPumpIncentiveProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 150,
+      "unit": "ton",
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 per ton rebate up to $4,000 on a qualifying \"Tier 2\" ductless mini split system.",
+      "es": "Reembolso de $400 por tonelada hasta $4,000 para un sistema minisplit sin ductos \"Nivel 2\" calificado."
+    },
+    "url": {
+      "en": "https://california.libertyutilities.com/verdi/residential/smart-energy-use/electric/heat-pump-incentive-program.html"
+    }
+  },
+  {
+    "id": "CA-116",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "ca_libertyUtilities_libertyUtilitiesResidentialHeatPumpIncentiveProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 675,
+      "unit": "ton",
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$675 per ton rebate  up to $4,000 on qualifying \"Tier 2\" ductless mini split room units.",
+      "es": "Reembolso de $675 por tonelada hasta $4,000 para unidades de habitación minisplit sin ductos de \"Nivel 2\" calificadas."
+    },
+    "url": {
+      "en": "https://california.libertyutilities.com/verdi/residential/smart-energy-use/electric/heat-pump-incentive-program.html"
+    }
+  },
+  {
+    "id": "CA-117",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "ca_libertyUtilities_libertyUtilitiesResidentialHeatPumpIncentiveProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 800,
+      "unit": "ton",
+      "maximum": 4000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 per ton rebate, up to $4,000, on qualifying \"Tier 2\" central heat pump systems.",
+      "es": "Reembolso de $800 por tonelada, hasta un máximo de $4,000, para sistemas de bomba de calor central de \"Nivel 2\" calificados."
+    },
+    "url": {
+      "en": "https://california.libertyutilities.com/verdi/residential/smart-energy-use/electric/heat-pump-incentive-program.html"
+    }
+  },
+  {
+    "id": "CA-118",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_cityOfRedding_cityOfReddingResidentialElectrificationRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate on a qualifying ENERGY STAR-certified heat pump water heater.",
+      "es": "Reembolso de $1,000 para un calentador de agua con bomba de calor con certificación ENERGY STAR."
+    },
+    "url": {
+      "en": "https://www.cityofredding.gov/government/departments/redding_electric_utility/residential/residential_electrification_rebates.php"
+    }
+  },
+  {
+    "id": "CA-119",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "new_electric_vehicle",
+      "used_electric_vehicle"
+    ],
+    "program": "ca_cityOfRedding_cityOfReddingResidentialElectrificationRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Income-qualified customers may be eligible to receive a $3,000 voucher for a new or used electric vehicle (EV).",
+      "es": "Los clientes que califican según sus ingresos pueden ser elegibles para recibir un vale de $3,000 para un vehículo eléctrico (VE) nuevo o usado."
+    },
+    "low_income": "ca-redding-income-qualified-electric-vehicle-incentive-threshold",
+    "url": {
+      "en": "https://www.cityofredding.gov/government/departments/redding_electric_utility/residential/residential_electrification_rebates.php"
+    }
+  },
+  {
+    "id": "CA-120",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_anaheimPublicUtilities_anaheimEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$400 rebate on a qualifying ENERGY STAR-certified heat pump water heater.",
+      "es": "Reembolso de $400 para un calentador de agua con bomba de calor con certificación ENERGY STAR."
+    },
+    "url": {
+      "en": "https://www.anaheim.net/5241/Appliance-Fixtures"
+    }
+  },
+  {
+    "id": "CA-121",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ca_anaheimPublicUtilities_anaheimEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate on a qualifying ENERGY STAR-certified heat pump clothes dryer.",
+      "es": "Reembolso de $200 para una secadora de ropa con bomba de calor certificada ENERGY STAR."
+    },
+    "url": {
+      "en": "https://www.anaheim.net/5241/Appliance-Fixtures"
+    }
+  },
+  {
+    "id": "CA-122",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ca_anaheimPublicUtilities_anaheimEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Earn up to $300 for a qualifying Level 2 electric vehicle (EV) charger.",
+      "es": "Gane hasta $300 por un cargador de vehículo eléctrico (VE) de Nivel 2 calificado."
+    },
+    "url": {
+      "en": "https://www.anaheim.net/593/Private-EV-Charger-Rebate"
+    }
+  },
+  {
+    "id": "CA-123",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "ca_anaheimPublicUtilities_anaheimEnergyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 400,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 per ton rebate on qualifying ENERGY STAR-certified mini-split or central heat pump systems.",
+      "es": "Descuento de $200 por tonelada en sistemas de bomba de calor central o minisplit con certificación ENERGY STAR que califiquen."
+    },
+    "url": {
+      "en": "https://www.anaheim.net/2579/Heating-Cooling-Systems"
+    }
+  },
+  {
+    "id": "CA-124",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_electric_vehicle"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_centralCoastElectrifyYourRideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate on a qualifying used battery electric vehicle (EV).",
+      "es": "Reembolso de $1,000 en un vehículo eléctrico (EV) de batería usada que califique."
+    },
+    "url": {
+      "en": "https://3cenergy.org/rebates/electrify-your-ride-residential/"
+    }
+  },
+  {
+    "id": "CA-125",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "new_electric_vehicle"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_centralCoastElectrifyYourRideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$2,500 rebate on a qualifying new battery electric vehicle (EV) for income-qualified customers.",
+      "es": "Reembolso de $2,500 en un vehículo eléctrico (EV) de batería nuevo que califique para clientes que califiquen según sus ingresos."
+    },
+    "low_income": "ca-central-coast-li-threshold-tier-1",
+    "url": {
+      "en": "https://3cenergy.org/rebates/electrify-your-ride-residential/"
+    }
+  },
+  {
+    "id": "CA-126",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "new_electric_vehicle"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_centralCoastElectrifyYourRideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$3,500 rebate on a qualifying new battery electric vehicle (EV) for income-qualified customers.",
+      "es": "Reembolso de $3,500 en un vehículo eléctrico (EV) de batería nuevo que califique para clientes que califiquen según sus ingresos."
+    },
+    "low_income": "ca-central-coast-li-threshold",
+    "url": {
+      "en": "https://3cenergy.org/rebates/electrify-your-ride-residential/"
+    }
+  },
+  {
+    "id": "CA-127",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_single-FamilyConnectedHeatPumpWaterHeaterIncentive",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate on an ENERGY STAR-certified heat pump water heater replacing a natural gas or propane appliance.",
+      "es": "Reembolso de $1,000 en un calentador de agua con bomba de calor con certificación ENERGY STAR que reemplaza un electrodoméstico a gas natural o propano."
+    },
+    "start_date": "2025-06-01",
+    "end_date": "2026-09-30",
+    "url": {
+      "en": "https://3cenergy.org/rebates/electrify-your-home/"
+    }
+  },
+  {
+    "id": "CA-128",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_single-FamilyConnectedHeatPumpWaterHeaterIncentive",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate on an ENERGY STAR-certified heat pump water heater replacing a natural gas or propane appliance for income-qualified customers.",
+      "es": "Reembolso de $1,500 en un calentador de agua con bomba de calor con certificación ENERGY STAR que reemplace un electrodoméstico a gas natural o propano para clientes que califican en función de sus ingresos."
+    },
+    "start_date": "2025-06-01",
+    "end_date": "2026-09-30",
+    "low_income": "ca-central-coast-li-threshold",
+    "url": {
+      "en": "https://3cenergy.org/rebates/electrify-your-home/"
+    }
+  },
+  {
+    "id": "CA-129",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_single-FamilyUnitarySplitSystemAndMini/Multi-SplitHeatPumpElectricalUpgrades",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 rebate on qualifying heat pumps replacing a natural gas or propane appliance.",
+      "es": "Reembolso de $2,000 en bombas de calor calificadas que reemplacen un aparato a gas natural o propano."
+    },
+    "start_date": "2025-06-01",
+    "end_date": "2026-09-30",
+    "url": {
+      "en": "https://3cenergy.org/rebates/electrify-your-home/"
+    }
+  },
+  {
+    "id": "CA-130",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_single-FamilyUnitarySplitSystemAndMini/Multi-SplitHeatPumpElectricalUpgrades",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3,000 rebate on qualifying heat pumps replacing a natural gas or propane appliance for income-qualified customers.",
+      "es": "Reembolso de $3,000 en bombas de calor calificadas que reemplacen un aparato a gas natural o propano para clientes que califican según sus ingresos."
+    },
+    "start_date": "2025-06-01",
+    "end_date": "2026-09-30",
+    "low_income": "ca-central-coast-li-threshold",
+    "url": {
+      "en": "https://3cenergy.org/rebates/electrify-your-home/"
+    }
+  },
+  {
+    "id": "CA-131",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_plugin_hybrid_vehicle"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_centralCoastElectrifyYourRideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate on a qualifying used plug-in hybrid electric vehicle (EV) for income-qualified customers.",
+      "es": "Reembolso de $1,500 en un vehículo eléctrico híbrido enchufable (EV) usado calificado para clientes que califican según sus ingresos."
+    },
+    "low_income": "ca-central-coast-li-threshold",
+    "url": {
+      "en": "https://3cenergy.org/rebates/electrify-your-ride-residential/"
+    }
+  },
+  {
+    "id": "CA-132",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_plugin_hybrid_vehicle"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_centralCoastElectrifyYourRideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$2,500 rebate on a qualifying used plug-in hybrid electric vehicle (EV) for income-qualified customers.",
+      "es": "Reembolso de $2,500 en un vehículo eléctrico híbrido enchufable (EV) usado calificado para clientes que califican según sus ingresos."
+    },
+    "low_income": "ca-central-coast-li-threshold",
+    "url": {
+      "en": "https://3cenergy.org/rebates/electrify-your-ride-residential/"
+    }
+  },
+  {
+    "id": "CA-133",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_electric_vehicle"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_centralCoastElectrifyYourRideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$2,500 rebate on a qualifying used battery electric vehicle (EV) for income-qualified customers.",
+      "es": "Reembolso de $2,500 en un vehículo eléctrico (EV) de batería usada calificado para clientes que califican según sus ingresos."
+    },
+    "low_income": "ca-central-coast-li-threshold",
+    "url": {
+      "en": "https://3cenergy.org/rebates/electrify-your-ride-residential/"
+    }
+  },
+  {
+    "id": "CA-134",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "new_plugin_hybrid_vehicle"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_centralCoastElectrifyYourRideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate on a qualifying new plug-in hybrid electric vehicle (EV) for income-qualified customers.",
+      "es": "Reembolso de $1,500 en un vehículo eléctrico híbrido enchufable nuevo calificado para clientes que califican según sus ingresos."
+    },
+    "low_income": "ca-central-coast-li-threshold-tier-1",
+    "url": {
+      "en": "https://3cenergy.org/rebates/electrify-your-ride-residential/"
+    }
+  },
+  {
+    "id": "CA-135",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "new_electric_vehicle"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_centralCoastElectrifyYourRideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate on a qualifying new battery electric vehicle (EV).",
+      "es": "Reembolso de $1,500 en un vehículo eléctrico (EV) de batería nueva que califique."
+    },
+    "url": {
+      "en": "https://3cenergy.org/rebates/electrify-your-ride-residential/"
+    }
+  },
+  {
+    "id": "CA-136",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "new_electric_vehicle"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_centralCoastElectrifyYourRideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate on a qualifying new battery electric vehicle (EV) for income-qualified customers.",
+      "es": "Reembolso de $1,500 en un vehículo eléctrico (EV) de batería nuevo calificado para clientes que califican según sus ingresos."
+    },
+    "low_income": "ca-central-coast-li-threshold-tier-1",
+    "url": {
+      "en": "https://3cenergy.org/rebates/electrify-your-ride-residential/"
+    }
+  },
+  {
+    "id": "CA-137",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_plugin_hybrid_vehicle"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_centralCoastElectrifyYourRideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate on a qualifying used plug-in hybrid electric vehicle (EV) for income-qualified customers.",
+      "es": "Reembolso de $500 en un vehículo eléctrico híbrido enchufable (EV) usado calificado para clientes que califican según sus ingresos."
+    },
+    "low_income": "ca-central-coast-li-threshold-tier-1",
+    "url": {
+      "en": "https://3cenergy.org/rebates/electrify-your-ride-residential/"
+    }
+  },
+  {
+    "id": "CA-138",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_centralCoastElectrifyYourRideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$2,000 rebate on a qualifying electric vehicle (EV) charger and installation costs.",
+      "es": "Reembolso de $2,000 en un cargador de vehículo eléctrico (EV) calificado y en los costos de instalación."
+    },
+    "url": {
+      "en": "https://3cenergy.org/rebates/electrify-your-ride-residential/"
+    }
+  },
+  {
+    "id": "CA-139",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_centralCoastElectrifyYourRideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$2,500 rebate on a qualifying electric vehicle (EV) charger and installation costs for income-qualified customers.",
+      "es": "Reembolso de $2,500 en un cargador de vehículo eléctrico (EV) calificado y en los costos de instalación para clientes que califican según sus ingresos."
+    },
+    "low_income": "ca-central-coast-li-threshold-tier-1",
+    "url": {
+      "en": "https://3cenergy.org/rebates/electrify-your-ride-residential/"
+    }
+  },
+  {
+    "id": "CA-140",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ca_centralCoastCommunityEnergy_centralCoastElectrifyYourRideResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$3,000 rebate on a qualifying electric vehicle (EV) charger and installation costs for income-qualified customers.",
+      "es": "Reembolso de $3,000 para un cargador de vehículo eléctrico (EV) calificado y costos de instalación para clientes que califican según sus ingresos."
+    },
+    "low_income": "ca-central-coast-li-threshold",
+    "url": {
+      "en": "https://3cenergy.org/rebates/electrify-your-ride-residential/"
+    }
+  },
+  {
+    "id": "CA-141",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ca_sacramentoMunicipalUtilityDistrict_sMUDResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2500,
+      "minimum": 1500,
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Earn an up to $2,500 rebate on a qualifying heat pump system conversion from a gas system. ",
+      "es": "Obtenga un reembolso de hasta $2,500 para la conversión de un sistema de gas a un sistema de bomba de calor calificado."
+    },
+    "url": {
+      "en": "https://www.smud.org/Rebates-and-Savings-Tips/Rebates-for-My-Home/Heating-and-Cooling-Rebates#HVAC"
+    }
+  },
+  {
+    "id": "CA-142",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ca_sacramentoMunicipalUtilityDistrict_sMUDResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Convert your electric cooktop/range to an induction cooktop/range and qualify for a $100 rebate.",
+      "es": "Convierta su cocina/estufa eléctrica en una cocina/estufa de inducción y califique para un reembolso de $100."
+    },
+    "url": {
+      "en": "https://www.smud.org/Rebates-and-Savings-Tips/Rebates-for-My-Home/Home-Appliances-and-Electronics-Rebates"
+    }
+  },
+  {
+    "id": "CA-143",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ca_sacramentoMunicipalUtilityDistrict_sMUDResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Convert your gas cooktop/range with an induction cooktop/range and qualify for a $750 rebate.",
+      "es": "Convierta su cocina/estufa a gas con una cocina/estufa de inducción y califique para un reembolso de $750."
+    },
+    "url": {
+      "en": "https://www.smud.org/Rebates-and-Savings-Tips/Rebates-for-My-Home/Home-Appliances-and-Electronics-Rebates"
+    }
+  },
+  {
+    "id": "CA-144",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_sacramentoMunicipalUtilityDistrict_sMUDResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000,
+      "minimum": 500,
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $3,000 rebate for upgrading to a qualifying heat pump water heaters, depending on the size of the heater.",
+      "es": "Reembolso de hasta $3,000 para actualizar a un calentador de agua con bomba de calor calificado, dependiendo del tamaño del calentador."
+    },
+    "url": {
+      "en": "https://www.smud.org/Rebates-and-Savings-Tips/Rebates-for-My-Home/Home-Appliances-and-Electronics-Rebates"
+    }
+  },
+  {
+    "id": "CA-145",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ca_sacramentoMunicipalUtilityDistrict_sMUDResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 600
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $600 rebate on qualifying Level 2 electric vehicle (EV) charger and installation costs.",
+      "es": "Reembolso de hasta $600 para costos de instalación y cargadores de vehículos eléctricos (VE) de Nivel 2 que califiquen."
+    },
+    "url": {
+      "en": "https://www.smud.org/Going-Green/Electric-Vehicles/Charge-at-Home-application-page"
+    }
+  },
+  {
+    "id": "CA-146",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ca_sacramentoMunicipalUtilityDistrict_sMUDResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 smart thermostat rebate. ",
+      "es": "Reembolso de $50 para termostato inteligente."
+    },
+    "url": {
+      "en": "https://www.smud.org/Rebates-and-Savings-Tips/Rebates-for-My-Home"
+    }
+  },
+  {
+    "id": "CA-147",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "used_plugin_hybrid_vehicle",
+      "used_electric_vehicle"
+    ],
+    "program": "ca_pacificGasAndElectric_pGandERebatesAndIncentives",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 4000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$4,000 rebate for income-qualified customers for the purchase or lease of an eligible pre-owned electric vehicle (EV).",
+      "es": "Reembolso de $4,000 para clientes que califican en términos de ingresos para la compra o arrendamiento de un vehículo eléctrico (EV) usado elegible."
+    },
+    "url": {
+      "en": "https://evrebates.pge.com/"
+    }
+  },
+  {
+    "id": "CA-148",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ca_pacificGasAndElectric_pGandERebatesAndIncentives",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 100% of costs of a qualifying electric vehicle (EV) charger for income-qualified customers.",
+      "es": "Reembolso del 100% de los costos de un cargador de vehículo eléctrico (VE) calificado para clientes que califican según sus ingresos."
+    },
+    "url": {
+      "en": "https://www.pge.com/en/clean-energy/electric-vehicles/getting-started-with-electric-vehicles/residential-charging-solutions-rebate.html#rebate-options"
+    }
+  },
+  {
+    "id": "CA-149",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ca_pacificGasAndElectric_pGandERebatesAndIncentives",
+    "amount": {
+      "type": "percent",
+      "number": 0.5
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Rebate of 50% of costs of a qualifying electric vehicle (EV) charger.",
+      "es": "Reembolso del 50% del coste de un cargador para vehículo eléctrico (VE) calificado."
+    },
+    "url": {
+      "en": "https://www.pge.com/en/clean-energy/electric-vehicles/getting-started-with-electric-vehicles/residential-charging-solutions-rebate.html#rebate-options"
+    }
+  },
+  {
+    "id": "CA-150",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ca_sanJoseCleanEnergy_sanJoseCleanEnergyEcoHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 rebate on qualifying heat pump water heaters replacing gas. ",
+      "es": "Reembolso de $2,000 para calentadores de agua con bomba de calor calificados que reemplacen calentadores de gas."
+    },
+    "url": {
+      "en": "https://sanjosecleanenergy.org/ecohome-rebate/#amounts"
+    }
+  },
+  {
+    "id": "CA-151",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ca_sanJoseCleanEnergy_sanJoseCleanEnergyEcoHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate on qualifying heat pump HVAC system replacing gas. ",
+      "es": "Reembolso de $1,500 en sistemas de calefacción, ventilación y aire acondicionado (HVAC) con bomba de calor que reemplacen un sistema a gas."
+    },
+    "url": {
+      "en": "https://sanjosecleanenergy.org/ecohome-rebate/#amounts"
     }
   }
 ]
