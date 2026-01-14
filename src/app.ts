@@ -37,6 +37,7 @@ function querystringParser(str: string): { [key: string]: unknown } {
   let lastKey: string | null = null;
 
   return qs.parse(str, {
+    arrayLimit: Infinity,
     decoder: (str, defaultDecoder, charset, type) => {
       if (type === 'key') {
         lastKey = str;

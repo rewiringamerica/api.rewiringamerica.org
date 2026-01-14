@@ -4,6 +4,7 @@ import fs from 'fs';
 import qs from 'qs';
 import { beforeEach, test, Test } from 'tap';
 import { AuthorityType } from '../../src/data/authorities';
+import { ALL_ITEMS } from '../../src/data/types/items';
 import { StateStatus } from '../../src/data/types/state-status';
 import {
   BETA_STATES,
@@ -170,7 +171,7 @@ test('all documented ways of specifying array-type params work', async t => {
 
   // Comma-separated
   const commaSeparated = await app.inject({
-    url: baseUrl + '&authority_types=federal,state',
+    url: baseUrl + '&items=' + ALL_ITEMS.join(','),
   });
   t.equal(commaSeparated.statusCode, 200);
 
@@ -179,19 +180,19 @@ test('all documented ways of specifying array-type params work', async t => {
   // heard anything back, and it's possible they don't want to change the
   // behavior since clients may be relying on it.
   const zuploCommaSeparated = await app.inject({
-    url: baseUrl + '&authority_types=federal%2Cstate',
+    url: baseUrl + '&items=' + ALL_ITEMS.join('%2C'),
   });
   t.equal(zuploCommaSeparated.statusCode, 200);
 
   // Same param multiple times
   const sameParam = await app.inject({
-    url: baseUrl + '&authority_types=federal&authority_types=state',
+    url: baseUrl + '&' + ALL_ITEMS.map(i => `items=${i}`).join('&'),
   });
   t.equal(sameParam.statusCode, 200);
 
   // Empty square brackets
   const emptyBrackets = await app.inject({
-    url: baseUrl + '&authority_types[]=federal&authority_types[]=state',
+    url: baseUrl + '&' + ALL_ITEMS.map(i => `items[]=${i}`).join('&'),
   });
   t.equal(emptyBrackets.statusCode, 200);
 
