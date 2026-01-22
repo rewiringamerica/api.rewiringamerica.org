@@ -223,6 +223,50 @@
       ],
       "authority_type": "state",
       "authority": "ri-oer",
+      "program": "RI Office of Energy Resources DRIVE EV",
+      "program_url": "https://drive.ri.gov/ev-programs/drive-ev",
+      "items": [
+        "new_electric_vehicle"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 3000,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "Up to $3,000 rebate for purchase or lease of a new EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "ri-oer",
+      "program": "RI Office of Energy Resources DRIVE EV",
+      "program_url": "https://drive.ri.gov/ev-programs/drive-ev",
+      "items": [
+        "used_electric_vehicle"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 2500,
+        "maximum": 2500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "short_description": "Up to $2,500 rebate for purchase or lease of a used EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "ri-oer",
       "program": "RI Office of Energy Resources Clean Heat RI",
       "program_url": "https://cleanheatri.com/resources/incentives/",
       "items": [
@@ -268,28 +312,6 @@
       ],
       "authority_type": "state",
       "authority": "ri-oer",
-      "program": "RI Office of Energy Resources DRIVE EV",
-      "program_url": "https://drive.ri.gov/ev-programs/drive-ev",
-      "items": [
-        "new_electric_vehicle"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 1500,
-        "maximum": 1500
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "short_description": "Up to $1,500 rebate for purchase or lease of a new EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "ri-oer",
       "program": "Rhode Island Home Electrification and Appliance Rebate Program",
       "program_url": "https://energy.ri.gov/energy-incentives/home-energy-rebate-program",
       "items": [
@@ -310,23 +332,24 @@
       "payment_methods": [
         "rebate"
       ],
-      "authority_type": "state",
-      "authority": "ri-oer",
-      "program": "RI Office of Energy Resources DRIVE EV",
-      "program_url": "https://drive.ri.gov/ev-programs/drive-ev",
+      "authority_type": "utility",
+      "authority": "ri-rhode-island-energy",
+      "program": "Rhode Island Energy Water Heating Rebates",
+      "program_url": "https://www.rienergy.com/site/ways-to-save/save-money-with-rebates-and-incentives/gas-electric-water-heating",
       "items": [
-        "used_electric_vehicle"
+        "heat_pump_water_heater"
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 1000,
-        "maximum": 1000
+        "number": 625,
+        "maximum": 625
       },
       "owner_status": [
-        "homeowner",
-        "renter"
+        "homeowner"
       ],
-      "short_description": "Up to $1,000 rebate for purchase or lease of a used EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served."
+      "start_date": "2024-01-01",
+      "end_date": "2026-12-31",
+      "short_description": "Up to $625 back on a qualifying electric heat pump water heater when replacing an existing electric water heater or installing in a new home."
     },
     {
       "payment_methods": [

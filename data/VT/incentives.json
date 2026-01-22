@@ -175,16 +175,16 @@
     "program": "vt_efficiencyVermont_efficiencyVermontDuctedHeatPumpRebate",
     "amount": {
       "type": "dollar_amount",
-      "number": 2000,
-      "minimum": 1000,
-      "maximum": 2000
+      "number": 2200,
+      "minimum": 1200,
+      "maximum": 2200
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Work with a contractor to install your ducted heat pump and get a $1,000-$2,000 upfront rebate.",
-      "es": "Trabaje con un contratista para instalar su bomba de calor con ductos y obtenga un descuento instantáneo de entre $1,000 y $2,000."
+      "en": "Work with a contractor to install your ducted heat pump and get a $1,200-$2,200 upfront rebate.",
+      "es": "Trabaje con un contratista para instalar su bomba de calor canalizada y obtenga un reembolso inicial de entre $1200 y $2200."
     },
     "start_date": "2021-11-01",
     "url": {
@@ -202,7 +202,9 @@
     "program": "vt_efficiencyVermont_efficiencyVermontDuctedHeatPumpRebateIncomeBonus",
     "amount": {
       "type": "dollar_amount",
-      "number": 2200
+      "number": 2200,
+      "minimum": 200,
+      "maximum": 2200
     },
     "owner_status": [
       "homeowner"
@@ -248,7 +250,8 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump"
+      "ducted_heat_pump",
+      "ductless_heat_pump"
     ],
     "program": "vt_vPPSA_vPPSAHeatPumpRebateIncomeBonus",
     "amount": {
@@ -260,9 +263,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Income-eligible Vermonters can receive $2,200 rebate on a ducted heat pump.",
-      "es": "Los residentes de Vermont que cumplan con el nivel de ingresos pueden recibir un reembolso de $2,200 en una bomba de calor con ductos."
+      "en": "Income-eligible Vermonters can receive additional $1,000 rebate on a ducted or ductless heat pump.",
+      "es": "Los residentes de Vermont que cumplan con los ingresos pueden recibir un reembolso adicional de $1,000 en una bomba de calor con o sin ductos."
     },
+    "start_date": "2023-01-01",
     "low_income": "vt-default-moderate",
     "url": {
       "en": "https://www.efficiencyvermont.com/Media/Default/docs/rebates/forms/vppsa-tc-income-bonus-form.pdf"
@@ -291,7 +295,7 @@
       "es": "Hasta $5,450 en instalación de bomba de calor."
     },
     "start_date": "2023-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.burlingtonelectric.com/heatpumps"
     }
@@ -308,17 +312,18 @@
     "amount": {
       "type": "dollar_amount",
       "number": 400,
+      "minimum": 350,
       "maximum": 400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Income-eligible BED customers can receive a $500 enhanced rebate for a qualifying ducted heat pump.",
-      "es": "Los residentes de Vermont que cumplan con el nivel de ingresos y sean clientes de BED pueden optar por un reembolso adicional ampliado de $500 al instalar una bomba de calor con ductos certificada."
+      "en": "Income-eligible BED customers can receive a $400 enhanced rebate for a qualifying ducted heat pump.",
+      "es": "Los clientes de BED que cumplan con los requisitos de ingresos pueden recibir un reembolso mejorado de $400 por una bomba de calor canalizada que califique."
     },
     "start_date": "2023-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "low_income": "vt-burlington-electric-department",
     "url": {
       "en": "https://www.burlingtonelectric.com/heatpumps"
@@ -386,15 +391,15 @@
     "amount": {
       "type": "dollar_amount",
       "number": 450,
-      "minimum": 350,
-      "maximum": 450
+      "minimum": 375,
+      "maximum": 475
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Hire a contractor and get a $350-$450 instant discount on qualifying models of ductless heat pumps at a participating distributor.",
-      "es": "Contrate a un técnico y obtenga un descuento instantáneo de entre $350 y $450 en modelos aprobados de bombas de calor sin ductos de un distribuidor participante."
+      "en": "Hire a contractor and get a $375-$475 instant discount on qualifying models of ductless heat pumps at a participating distributor.",
+      "es": "Contrate a un contratista y obtenga un descuento instantáneo de $375 a $475 en modelos calificados de bombas de calor sin ductos en un distribuidor participante."
     },
     "start_date": "2021-11-01",
     "url": {
@@ -475,7 +480,7 @@
       "es": "Los clientes de BED pueden recibir un reembolso de hasta $2,500 en las bombas de calor que cumplan los requisitos, o $500 por una segunda bomba de calor. El reembolso total está limitado al 75% del costo. Disponible a través de su contratista."
     },
     "start_date": "2022-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.burlingtonelectric.com/rebate-form?item_purchased=Mini-Split%20Heat%20Pump"
     }
@@ -491,18 +496,19 @@
     "program": "vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForDuctlessHeatPump",
     "amount": {
       "type": "dollar_amount",
-      "number": 400,
-      "maximum": 400
+      "number": 500,
+      "minimum": 400,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Income-eligible customers qualify for a $400 enhanced rebate for a ductless heat pump.",
-      "es": "Los clientes de BED que cumplan los niveles de ingresos pueden optar a un reembolso mejorado de $400 por una bomba de calor sin ductos."
+      "en": "Income-eligible customers qualify for up to $500 enhanced rebate for a ductless heat pump.",
+      "es": "Los clientes que cumplen los requisitos de ingresos califican para un reembolso mejorado de hasta $500 para una bomba de calor sin ductos."
     },
     "start_date": "2022-01-01",
-    "end_date": "2024-12-31",
+    "end_date": "2026-12-31",
     "low_income": "vt-burlington-electric-department",
     "url": {
       "en": "https://www.burlingtonelectric.com/rebate-form?item_purchased=Mini-Split%20Heat%20Pump"
@@ -555,6 +561,7 @@
       "en": "25% of the upfront cost of a used high-efficiency vehicle, up to $5,000, for low and moderate income car buyers.",
       "es": "Éste ofrece a los compradores de automóviles con ingresos bajos y moderados un incentivo que cubre el 25% del costo inicial de un vehículo usado de alta eficiencia, hasta un máximo de $5,000."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "low_income": "vt-default",
     "url": {
@@ -583,7 +590,7 @@
       "en": "Up to $900 back on qualifying level 2 charger purchased within 60 days of vehicle purchase or lease. May be eligible for discounted EV charging rate.",
       "es": "Devolución de hasta $900 por la compra de un cargador de nivel 2 válido en los 60 días siguientes a la compra o arrendamiento del vehículo. "
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.burlingtonelectric.com/evchargers#"
     }
@@ -816,8 +823,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "BED customers may receive a rebate up to $2,500 on qualifying ground source heat pumps, plus an additional $500 for a second ground source heat pump.",
-      "es": "Los clientes de BED pueden recibir un reembolso de hasta $2,500 en las bombas de calor GS que cumplan los requisitos, más $500 adicionales por una segunda bomba de calor GS."
+      "en": "BED customers can receive generous rebates on ground source heat pump systems. Rebate amounts are calculated on a customer basis. ",
+      "es": "Los clientes de BED pueden recibir generosos descuentos en sistemas de bombas de calor geotérmicas. Los importes de los descuentos se calculan según el cliente. "
     },
     "url": {
       "en": "https://www.burlingtonelectric.com/gshp"
@@ -870,6 +877,7 @@
       "es": "Un 90% de descuento en un calentador de agua con bomba de calor, hasta $4,500, para clientes con ingresos moderados."
     },
     "start_date": "2020-01-01",
+    "end_date": "2025-12-31",
     "low_income": "vt-default-moderate",
     "url": {
       "en": "https://www.efficiencyvermont.com/rebates/list/heat-pump-water-heaters"
@@ -886,7 +894,7 @@
     "program": "vt_burlingtonElectricDepartment_burlingtonElectricDepartment-RebateForHeatPumpWaterHeater",
     "amount": {
       "type": "dollar_amount",
-      "number": 600,
+      "number": 800,
       "minimum": 500,
       "maximum": 800
     },
@@ -894,11 +902,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$600 available from BED through Efficiency VT, available through your contractor.",
-      "es": "Los clientes de BED pueden recibir un reembolso de hasta $600 por un calentador de agua con bomba de calor, disponible a través de su contratista."
+      "en": "$800 available from BED through Efficiency VT, available through your contractor.",
+      "es": "$800 disponibles en BED a través de Efficiency VT, disponible a través de su contratista."
     },
     "start_date": "2022-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.burlingtonelectric.com/waterheaters"
     }
@@ -922,7 +930,7 @@
     ],
     "short_description": {
       "en": "Income-eligible customers receive an enhanced bonus rebate of $200 for a heat pump water heater.",
-      "es": "Los clientes de BED que cumplen los niveles de ingresos recibirán un reembolso adicional ampliado de $200 por un calentador de agua con bomba de calor."
+      "es": "Los clientes que cumplen los requisitos de ingresos reciben un reembolso adicional mejorado de $200 para un calentador de agua con bomba de calor."
     },
     "start_date": "2022-01-01",
     "end_date": "2024-12-31",
@@ -1117,17 +1125,17 @@
     "amount": {
       "type": "percent",
       "number": 0.75,
-      "maximum": 9500
+      "maximum": 4000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "75% rebate up to $9,500 for insulation and air sealing, for moderate-income residents.",
-      "es": "Reembolso del 75 %, hasta $9,500, por trabajos de aislamiento y sellado de aire, destinado a residentes con ingresos moderados."
+      "en": "75% rebate up to $4000 for insulation and air sealing regardless of income.",
+      "es": "Reembolso del 75% hasta $4000 para aislamiento y sellado de aire independientemente del ingreso."
     },
     "start_date": "2023-08-01",
-    "low_income": "vt-default-moderate",
     "url": {
       "en": "https://www.efficiencyvermont.com/rebates/list/home-performance-with-energy-star"
     }
@@ -1218,13 +1226,20 @@
       "rebate"
     ],
     "items": [
-      "other_weatherization"
+      "other_weatherization",
+      "other_insulation",
+      "floor_insulation",
+      "wall_insulation",
+      "window_replacement",
+      "crawlspace_insulation",
+      "attic_or_roof_insulation",
+      "basement_insulation"
     ],
     "program": "vt_vermontGasSystemsInc_vGSWeatherizationProgram",
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 3500
+      "maximum": 4000
     },
     "owner_status": [
       "homeowner"
@@ -1233,7 +1248,7 @@
       "en": "VGS offers qualifying single-family homeowners an incentive to cover 50% of comprehensive weatherization project costs up to $3,500.",
       "es": "VGS ofrece a los propietarios de viviendas unifamiliares que cumplan los requisitos un incentivo para cubrir el 50% de los costos del proyecto de climatización integral hasta un máximo de $3,500."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://vgsvt.com/savings/residentialrebate/energy-audits-weatherization/"
     }
@@ -1250,16 +1265,16 @@
     "amount": {
       "type": "percent",
       "number": 0.75,
-      "maximum": 5000
+      "maximum": 7000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "VGS offers qualifying single-family homeowners an incentive to cover 75% of comprehensive weatherization project costs up to $5,000.",
-      "es": "VGS ofrece a los propietarios de viviendas unifamiliares que cumplan los requisitos un incentivo para cubrir el 75% de los costos del proyecto de climatización integral hasta un máximo de $5,000."
+      "en": "VGS offers qualifying single-family homeowners an incentive to cover 75% of comprehensive weatherization project costs up to $7,000.",
+      "es": "VGS ofrece a los propietarios de viviendas unifamiliares que califican un incentivo para cubrir el 75 % de los costos del proyecto de climatización integral hasta $7000."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "low_income": "vt-vgs-moderate",
     "url": {
       "en": "https://vgsvt.com/savings/residentialrebate/weatherization-rebates/"
@@ -1288,7 +1303,7 @@
       "es": "Hasta $100 de devolución por una podadora manual residencial o hasta $300 de reembolso por una podadora de operador a bordo, o $50 en motosierras y desbrozadoras eléctricas."
     },
     "start_date": "2022-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.burlingtonelectric.com/lawnmowers"
     }
@@ -1304,17 +1319,17 @@
     "program": "vt_burlingtonElectricDepartment_burlingtonElectricDepartment-LawnCare-ResidentialRebate",
     "amount": {
       "type": "dollar_amount",
-      "number": 40
+      "number": 50
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Receive up to $40 back for residential electric leaf blower (commercial up to $200).",
-      "es": "Reciba hasta $40 de reembolso por un soplador eléctrico de hojas residencial (o comercial, hasta $200)"
+      "en": "Receive up to $50 back for residential electric leaf blower (commercial up to $150).",
+      "es": "Reciba hasta $50 de reembolso por un soplador de hojas eléctrico residencial (comercial hasta $150)."
     },
     "start_date": "2022-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.burlingtonelectric.com/lawnmowers"
     }
@@ -1470,8 +1485,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$50 rebate for an electric lawnmower or $100 for a ride-on mower. $50 rebate on electric trimmers, electric leaf blowers, and electric chainsaws.",
-      "es": "Un reembolso de $50 para una podadora eléctrica residencial. Un reembolso de $50 en recortadoras eléctricas, sopladores de hojas eléctricos y motosierras eléctricas."
+      "en": "$50 rebate for an electric lawnmower. $50 rebate on electric trimmers, electric leaf blowers, and electric chainsaws.",
+      "es": "Reembolso de $50 en una cortadora de césped eléctrica. Reembolso de $50 en cortadoras de césped eléctricas, sopladores de hojas eléctricos y motosierras eléctricas."
     },
     "url": {
       "en": "https://vppsa.com/2023-electric-lawn-mower-rebate/"
@@ -1516,16 +1531,16 @@
       "type": "dollar_amount",
       "number": 40,
       "minimum": 25,
-      "maximum": 40
+      "maximum": 90
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Apply for a rebate and get $25-40 cash back on qualifying ENERGY STAR® dehumidifier models.",
-      "es": "Solicite un reembolso y reciba entre $25 y $40 de devolución en efectivo en los modelos ENERGY STAR® que cumplan los requisitos."
+      "en": "Apply for a rebate and get $25-90 cash back on qualifying ENERGY STAR® dehumidifier models.",
+      "es": "Solicite un reembolso y obtenga entre $25 y $90 de reembolso en efectivo en modelos de deshumidificadores ENERGY STAR® calificados."
     },
-    "start_date": "2020-06-15",
+    "start_date": "2025-06-01",
     "url": {
       "en": "https://www.efficiencyvermont.com/rebates/list/dehumidifiers"
     }
@@ -1568,18 +1583,18 @@
     "program": "vt_efficiencyVermont_efficiencyVermont-High-PerformanceCirculatorPumpRebate",
     "amount": {
       "type": "dollar_amount",
-      "number": 15,
-      "minimum": 15,
-      "maximum": 600
+      "number": 40,
+      "minimum": 40,
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Hire a contractor and get a $15-$600 instant rebate on each qualifying high-performance circulator pump at participating distributors.",
-      "es": "Contrate a un técnico especialista y reciba un reembolso instantáneo de entre $15 y $600 por cada bomba circuladora de alto desempeño autorizada con distribuidores participantes..."
+      "en": "Hire a contractor and get a $40-$1500 instant rebate on each qualifying high-performance circulator pump at participating distributors.",
+      "es": "Contrate a un contratista y obtenga un reembolso instantáneo de $40 a $1500 en cada bomba circuladora de alto rendimiento calificada en distribuidores participantes."
     },
-    "start_date": "2018-07-01",
+    "start_date": "2024-08-01",
     "url": {
       "en": "https://www.efficiencyvermont.com/rebates/list/high-performance-circulator-pumps"
     }
@@ -1739,6 +1754,7 @@
       "en": "Incentive up to $5,000 for a new electric vehicle, or up to $3,000 for a new plug-in hybrid vehicle.",
       "es": "Incentivo de hasta $5,000 para un vehículo eléctrico nuevo o de hasta $3,000 para un vehículo híbrido enchufable nuevo."
     },
+    "end_date": "2025-12-31",
     "low_income": "vt-ev-low",
     "url": {
       "en": "https://www.driveelectricvt.com/Media/Default/docs/purchase-incentives/vermont-new-pev-incentive-form.pdf?refresh"
@@ -1768,6 +1784,7 @@
       "en": "Incentive up to $2,500 for a new electric vehicle, or up to $1,500 for a new plug-in hybrid vehicle.",
       "es": "Incentivo de hasta $2,500 para un vehículo eléctrico nuevo o de hasta $1,500 para un vehículo híbrido enchufable nuevo."
     },
+    "end_date": "2025-12-31",
     "low_income": "vt-ev-moderate",
     "url": {
       "en": "https://www.driveelectricvt.com/Media/Default/docs/purchase-incentives/vermont-new-pev-incentive-form.pdf?refresh"
@@ -1786,17 +1803,17 @@
     "program": "vt_greenMountainPower_greenMountainPowerElectricVehicleRebate",
     "amount": {
       "type": "dollar_amount",
-      "number": 2200,
+      "number": 1500,
       "minimum": 1000,
-      "maximum": 2200
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Incentive up to $2,200 for a new electric vehicle, or up to $1,000 for a plug-in hybrid.",
-      "es": "Incentivo de hasta $2,200 para un vehículo eléctrico nuevo o de hasta $1,000 para un vehículo híbrido enchufable nuevo."
+      "en": "Incentive up to $1500 for a new electric vehicle, or up to $1,000 for a plug-in hybrid.",
+      "es": "Incentivo de hasta $1500 para un vehículo eléctrico nuevo, o hasta $1000 para un híbrido enchufable."
     },
     "url": {
       "en": "https://greenmountainpower.com/rebates-programs/electric-vehicles/ev-rebate/"
@@ -1904,10 +1921,10 @@
       "renter"
     ],
     "short_description": {
-      "en": "$2,300 rebate for a new electric vehicle, or $2,000 for a plug-in hybrid.",
-      "es": "$2,300 para un vehículo eléctrico nuevo o $2,000 para un vehículo híbrido enchufable nuevo."
+      "en": "$5000 rebate for a new electric vehicle, or $2,000 for a plug-in hybrid.",
+      "es": "Reembolso de $5000 para un vehículo eléctrico nuevo, o $2000 para un híbrido enchufable."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.burlingtonelectric.com/evrebates/"
     }
@@ -1962,6 +1979,7 @@
       "en": "An extra $700 for a new all-electric vehicle, or $300 for a plug-in hybrid, for income-qualified customers.",
       "es": "Un suplemento de $700 por un vehículo nuevo totalmente eléctrico, o de $300 por un híbrido enchufable, para los clientes que cumplan los requisitos de ingresos."
     },
+    "end_date": "2026-12-31",
     "low_income": "vt-burlington-electric-department-ev",
     "url": {
       "en": "https://www.burlingtonelectric.com/evrebates/"
@@ -2183,7 +2201,7 @@
       "en": "VGS offers qualifying single-family homeowners an incentive to cover 90% of comprehensive weatherization project costs up to $9,500.",
       "es": "VGS ofrece a los propietarios de viviendas unifamiliares que cumplan los requisitos un incentivo para cubrir el 90% de los costos del proyecto de climatización integral hasta un máximo de $9,500."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "low_income": "vt-vgs-low",
     "url": {
       "en": "https://vgsvt.com/savings/residentialrebate/weatherization-rebates/"
@@ -2211,6 +2229,7 @@
       "es": "Un 100% de descuento en un calentador de agua con bomba de calor, hasta $5,000, para clientes con bajos ingresos."
     },
     "start_date": "2024-04-01",
+    "end_date": "2025-12-31",
     "low_income": "vt-default",
     "url": {
       "en": "https://www.efficiencyvermont.com/rebates/list/heat-pump-water-heaters"
@@ -2293,37 +2312,9 @@
       "es": "Contrate a un técnico y obtenga un descuento instantáneo de entre $350 y $450 en modelos aprobados de bombas de calor sin ductos de un distribuidor participante."
     },
     "start_date": "2021-11-01",
-    "end_date": "2024-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.burlingtonelectric.com/rebate-form?item_purchased=Mini-Split%20Heat%20Pump"
-    }
-  },
-  {
-    "id": "VT-102",
-    "payment_methods": [
-      "pos_rebate",
-      "rebate"
-    ],
-    "items": [
-      "ebike"
-    ],
-    "program": "vt_burlingtonElectricDepartment_burlingtonElectricDepartmentEbikeRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 300,
-      "maximum": 300
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$300 rebate on an e-bike.",
-      "es": "Reembolso de $300 en bicicletas eléctricas."
-    },
-    "start_date": "2022-04-25",
-    "url": {
-      "en": "https://www.burlingtonelectric.com/ebike/"
     }
   },
   {
@@ -2394,19 +2385,20 @@
     "program": "vt_stoweElectricDepartment_stoweElectricRebates&Incentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 750,
-      "maximum": 750
+      "number": 700,
+      "minimum": 350,
+      "maximum": 700
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$750 rebate for purchase or lease of a new EV or plug-in hybrid EV.",
-      "es": "Reembolso de $750 por la compra o el alquiler de un vehículo eléctrico nuevo o de un vehículo eléctrico híbrido enchufable."
+      "en": "Up to $700 rebate for purchase or lease of a new EV or plug-in hybrid EV.  ",
+      "es": "Reembolso de hasta $700 por la compra o arrendamiento de un vehículo eléctrico nuevo o un vehículo eléctrico híbrido enchufable.  "
     },
     "url": {
-      "en": "https://www.stoweelectric.com/rebates/electric-yard-equipment"
+      "en": "https://www.stoweelectric.com/rebates/electric-vehicles"
     }
   },
   {
@@ -2422,6 +2414,7 @@
     "amount": {
       "type": "dollar_amount",
       "number": 500,
+      "minimum": 350,
       "maximum": 500
     },
     "owner_status": [
@@ -2433,7 +2426,7 @@
       "es": "Reembolso de $500 por la compra o el alquiler de un vehículo eléctrico usado o de un vehículo eléctrico híbrido enchufable."
     },
     "url": {
-      "en": "https://www.stoweelectric.com/rebates/electric-yard-equipment"
+      "en": "https://www.stoweelectric.com/rebates/electric-vehicles"
     }
   },
   {
@@ -2484,6 +2477,7 @@
       "es": "Los clientes de BED que cumplen los niveles de ingresos recibirán un reembolso adicional ampliado de $400 por un calentador de agua con bomba de calor."
     },
     "start_date": "2025-01-01",
+    "end_date": "2026-12-31",
     "low_income": "vt-burlington-electric-department",
     "url": {
       "en": "https://www.burlingtonelectric.com/waterheaters"
@@ -2541,6 +2535,7 @@
       "es": "Reembolso de $600 en bicicletas eléctricas, hasta el 25 % del precio de compra."
     },
     "start_date": "2025-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.burlingtonelectric.com/ebike/"
     }
@@ -2569,6 +2564,7 @@
       "es": "Reembolso de $850 en bicicletas eléctricas, hasta el 50 % del precio de compra, para clientes que califiquen según sus ingresos."
     },
     "start_date": "2025-01-01",
+    "end_date": "2026-12-31",
     "low_income": "vt-burlington-electric-department",
     "url": {
       "en": "https://www.burlingtonelectric.com/ebike/"
@@ -2596,6 +2592,7 @@
       "es": "100 % de los costos por la actualización de un panel eléctrico de 200 amperios para clientes con bajos ingresos."
     },
     "start_date": "2024-11-01",
+    "end_date": "2025-04-15",
     "low_income": "vt-default",
     "url": {
       "en": "https://www.efficiencyvermont.com/rebates/list/home-electric-system-upgrade"
@@ -2623,6 +2620,7 @@
       "es": "90 % de los costos por la actualización de un panel eléctrico de 200 amperios para clientes con ingresos moderados."
     },
     "start_date": "2024-11-01",
+    "end_date": "2025-04-15",
     "low_income": "vt-default-moderate",
     "url": {
       "en": "https://www.efficiencyvermont.com/rebates/list/home-electric-system-upgrade"
@@ -2652,9 +2650,135 @@
       "es": "Reembolso inicial de $400 a $800 en la compra de una bicicleta eléctrica, destinado a residentes que cumplan con los requisitos de ingresos. Las bicicletas eléctricas de carga y las bicicletas eléctricas adaptadas califican para reembolsos mayores."
     },
     "start_date": "2024-10-30",
+    "end_date": "2025-12-31",
     "low_income": "vt-ev-low",
     "url": {
-      "en": "https://www.driveelectricvt.com/Media/Default/docs/purchase-incentives/vermont-new-pev-incentive-form.pdf?refresh"
+      "en": "https://www.driveelectricvt.com/shopping/incentives/e-bikes"
+    }
+  },
+  {
+    "id": "VT-115",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "vt_burlingtonElectricDepartment_burlingtonElectricDepartment-ResidentialEVChargerRebate",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1000 for income qualified buyers of qualifying level 2 charger purchased within 60 days of vehicle purchase or lease. ",
+      "es": "Hasta $1000 para compradores que califiquen según sus ingresos de un cargador de nivel 2 calificado comprado dentro de los 60 días posteriores a la compra o el arrendamiento del vehículo. "
+    },
+    "end_date": "2026-12-31",
+    "low_income": "vt-burlington-electric-department-ev",
+    "url": {
+      "en": "https://www.burlingtonelectric.com/evchargers#"
+    }
+  },
+  {
+    "id": "VT-116",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "vt_efficiencyVermont_efficiencyVermontHeatPumpWaterHeaterRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Income-eligible customers recieve an enhanced bonus rebate of $400 for a heat pump water heater.",
+      "es": "Los clientes que cumplen los requisitos de ingresos reciben un reembolso adicional mejorado de $400 para un calentador de agua con bomba de calor."
+    },
+    "start_date": "2025-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "vt-default-moderate",
+    "url": {
+      "en": "https://www.burlingtonelectric.com/waterheaters"
+    }
+  },
+  {
+    "id": "VT-117",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_insulation",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "other_weatherization",
+      "wall_insulation"
+    ],
+    "program": "vt_efficiencyVermont_homePerformanceWithENERGYSTAR",
+    "amount": {
+      "type": "percent",
+      "number": 0.75,
+      "maximum": 9500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "75% rebate up to $9500 for insulation and air sealing.  For moderate income households.",
+      "es": "Reembolso del 75% hasta $9500 para aislamiento y sellado de aire. Para hogares con ingresos moderados."
+    },
+    "start_date": "2023-08-01",
+    "low_income": "vt-default-moderate",
+    "url": {
+      "en": "https://www.efficiencyvermont.com/rebates/list/home-performance-with-energy-star"
+    }
+  },
+  {
+    "id": "VT-118",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_insulation",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "other_weatherization",
+      "wall_insulation"
+    ],
+    "program": "vt_efficiencyVermont_homePerformanceWithENERGYSTAR",
+    "amount": {
+      "type": "percent",
+      "number": 0.95,
+      "maximum": 9500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "95% rebate up to $9500 for insulation and air sealing.  For low income households.",
+      "es": "Reembolso del 95% hasta $9500 para aislamiento y sellado de aire. Para hogares de bajos ingresos."
+    },
+    "start_date": "2023-08-01",
+    "low_income": "vt-default",
+    "url": {
+      "en": "https://www.efficiencyvermont.com/rebates/list/home-performance-with-energy-star"
     }
   }
 ]

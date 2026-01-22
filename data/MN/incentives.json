@@ -586,7 +586,7 @@
       "es": "Reembolso de $500 por bicicletas eléctricas y equipo de seguridad, o de $1,000 para quienes califiquen. Bonificación de $200 para bicicletas eléctricas de carga o adaptadas. Solo para residentes de Edina."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.edinamn.gov/1929/Community-Climate-Action-Fund"
     }
@@ -1383,7 +1383,7 @@
     "program": "mn_springfieldPublicUtilitiesComm_springfieldPublicUtilitiesRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 1
+      "number": 1000
     },
     "owner_status": [
       "homeowner"
@@ -1407,7 +1407,7 @@
     "program": "mn_springfieldPublicUtilitiesComm_springfieldPublicUtilitiesRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 1
+      "number": 1000
     },
     "owner_status": [
       "homeowner"
@@ -3049,9 +3049,9 @@
     "program": "mn_owatonnaPublicUtilities_owatonnaPublicUtilitiesConserveAndSave™Rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 90,
-      "minimum": 25,
-      "maximum": 90
+      "number": 115,
+      "minimum": 50,
+      "maximum": 115
     },
     "owner_status": [
       "homeowner"
@@ -5439,18 +5439,17 @@
     ],
     "program": "mn_mienergyCoop_miEnergyCoopEnergyEfficientRebates",
     "amount": {
-      "type": "dollars_per_unit",
-      "number": 200,
-      "unit": "ton"
+      "type": "dollar_amount",
+      "number": 400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 rebate for a heat pump water heater. Must meet energy specifications.",
-      "es": "Reembolso de $300 por un calentador de agua con bomba de calor. Debe cumplir con las especificaciones de eficiencia energética."
+      "en": "$400 rebate for a heat pump water heater. Must meet energy specifications.",
+      "es": "Reembolso de $400 para un calentador de agua con bomba de calor. Debe cumplir con las especificaciones energéticas."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.mienergy.coop/rebates"
     }
@@ -8153,7 +8152,7 @@
       "en": "Up to $750 per ton rebate for an air source heat pump. Rebate amount dependent upon unit efficiency.",
       "es": "Reembolso de hasta $750 por tonelada para una bomba de calor aerotérmica. El monto del descuento depende de la eficiencia de la unidad."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.beltramielectric.com/rebates-and-incentives"
     }
@@ -9297,7 +9296,7 @@
     "program": "mn_eastGrandForksWaterAndLightDept_eastGrandForksWaterAndLightDepartmentEnergyRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 150
+      "number": 250
     },
     "owner_status": [
       "homeowner"
@@ -9482,6 +9481,65 @@
     },
     "url": {
       "en": "https://www.hopkinsmn.com/1152/HCSF-EligibilityRebate-Amounts"
+    }
+  },
+  {
+    "id": "MN-484",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "mn_eastGrandForksWaterAndLightDept_eastGrandForksWaterAndLightDepartmentEnergyRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 200,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200/ton rebate for geothermal ground source heat pump.",
+      "es": "Descuento de $200 por tonelada para bombas de calor geotérmicas."
+    },
+    "url": {
+      "en": "https://www.eastgrandforks.us/262/Apply-for-Energy-Rebates-Load-Management"
+    }
+  },
+  {
+    "id": "MN-485",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "basement_insulation",
+      "attic_or_roof_insulation",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "heat_pump_water_heater",
+      "wall_insulation",
+      "rooftop_solar_installation",
+      "electric_vehicle_charger"
+    ],
+    "program": "mn_cityOfPlymouth_homeEnergyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate for income-qualified or climate vulnerable households. $500 for standard rate. One rebate per household.",
+      "es": "Reembolso de hasta $750 para hogares con ingresos calificados o vulnerables al cambio climático. $500 para la tarifa estándar. Un reembolso por hogar."
+    },
+    "start_date": "2026-01-01",
+    "url": {
+      "en": "https://www.plymouthmn.gov/departments/public-works/environmental-stewardship/home-energy-rebate-program-2609"
     }
   }
 ]

@@ -30,14 +30,14 @@
       "amount": {
         "type": "percent",
         "number": 0.5,
-        "maximum": 250
+        "maximum": 200
       },
       "owner_status": [
         "homeowner"
       ],
       "start_date": "2023-01-01",
-      "end_date": "2025-12-31",
-      "short_description": "Rebate for 50% of cost up to $250 for attic insulation. Addition of R-38 or greater required."
+      "end_date": "2026-12-31",
+      "short_description": "Rebate for 50% of cost up to $200 for attic insulation. Addition of R-38 or greater required."
     },
     {
       "payment_methods": [
@@ -59,7 +59,7 @@
         "homeowner"
       ],
       "start_date": "2023-01-01",
-      "end_date": "2025-12-31",
+      "end_date": "2026-12-31",
       "short_description": "Rebate for 50% of cost up to $300 for air sealing. Must be completed by a participating program contractor."
     },
     {
@@ -76,14 +76,14 @@
       "amount": {
         "type": "percent",
         "number": 0.5,
-        "maximum": 300
+        "maximum": 400
       },
       "owner_status": [
         "homeowner"
       ],
       "start_date": "2023-01-01",
-      "end_date": "2025-12-31",
-      "short_description": "Rebate for 50% of cost up to $300 for duct sealing."
+      "end_date": "2026-12-31",
+      "short_description": "Rebate for 50% of cost up to $400 for duct sealing."
     },
     {
       "payment_methods": [
@@ -122,14 +122,14 @@
       "amount": {
         "type": "percent",
         "number": 0.5,
-        "maximum": 1000
+        "maximum": 300
       },
       "owner_status": [
         "homeowner"
       ],
       "start_date": "2023-01-01",
-      "end_date": "2025-12-31",
-      "short_description": "Rebate for 50% of cost up to $1,000 for ENERGY STAR® certified ground source heat pumps."
+      "end_date": "2026-12-31",
+      "short_description": "Rebate for 50% of cost up to $300 for ENERGY STAR® certified ground source heat pumps."
     },
     {
       "payment_methods": [
@@ -186,7 +186,8 @@
       "program": "Home Energy Improvement Program",
       "program_url": "https://www.georgiapower.com/residential/save-money-and-energy/products-programs/home-energy-efficiency-programs/home-energy-improvementprogram.html",
       "items": [
-        "ductless_heat_pump"
+        "ductless_heat_pump",
+        "ducted_heat_pump"
       ],
       "amount": {
         "type": "percent",
@@ -197,8 +198,8 @@
         "homeowner"
       ],
       "start_date": "2023-01-01",
-      "end_date": "2025-12-31",
-      "short_description": "Rebate for 50% of cost up to $1,000 for ENERGY STAR® certified mini-split heat pumps."
+      "end_date": "2026-12-31",
+      "short_description": "Rebate for 50% of cost up to $1,000 for converting an electric furnace to an air-source heat pump."
     },
     {
       "payment_methods": [
@@ -220,7 +221,7 @@
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Rebate for 50% of cost up to $1,100 for achieving a whole house electric kWh reduction of 20% or more."
+      "short_description": "Rebate for 50% of cost up to $1,100 for air sealing, duct sealing, and attic insulation completed by a program contractor."
     },
     {
       "payment_methods": [
@@ -389,6 +390,28 @@
         "homeowner"
       ],
       "short_description": "Rebate for a home energy management system bundle, including smart thermostat, LED bulbs, connected plug load device, and occupancy/motion sensor."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ga-georgia-power",
+      "program": "Home Energy Improvement Program",
+      "program_url": "https://www.georgiapower.com/residential/save-money-and-energy/products-programs/home-energy-efficiency-programs/home-energy-improvementprogram.html",
+      "items": [
+        "solar_water_heater"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.5,
+        "maximum": 250
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2026-01-01",
+      "short_description": "Rebate for 50% of cost up to $250 for a solar hot water system."
     }
   ]
 }

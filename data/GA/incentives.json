@@ -11,17 +11,17 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 250
+      "maximum": 200
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of cost up to $250 for attic insulation. Addition of R-38 or greater required.",
-      "es": "Reembolso del 50% de los costos hasta $250 dólares por aislamiento térmico del desván. Se requiere un aislamiento R-38 o superior."
+      "en": "Rebate for 50% of cost up to $200 for attic insulation. Addition of R-38 or greater required.",
+      "es": "Reembolso del 50% del costo hasta $200 para aislamiento de ático. Se requiere adición de R-38 o superior."
     },
     "start_date": "2023-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.georgiapower.com/residential/save-money-and-energy/products-programs/home-energy-efficiency-programs/home-energy-improvementprogram.html"
     }
@@ -48,7 +48,7 @@
       "es": "Reembolso del 50% de los costos por sellado hermético, hasta $300 dólares. Debe realizarse por un contratista participante en el programa."
     },
     "start_date": "2023-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.georgiapower.com/residential/save-money-and-energy/products-programs/home-energy-efficiency-programs/home-energy-improvementprogram.html"
     }
@@ -65,17 +65,17 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 300
+      "maximum": 400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of cost up to $300 for duct sealing.",
-      "es": "Un reembolso del 50% de los costos hasta $300 dólares para el sellado de ductos."
+      "en": "Rebate for 50% of cost up to $400 for duct sealing.",
+      "es": "Reembolso del 50% del costo hasta $400 por sellado de conductos."
     },
     "start_date": "2023-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.georgiapower.com/residential/save-money-and-energy/products-programs/home-energy-efficiency-programs/home-energy-improvementprogram.html"
     }
@@ -119,17 +119,17 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 1000
+      "maximum": 300
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of cost up to $1,000 for ENERGY STAR® certified ground source heat pumps.",
-      "es": "Un reembolso del 50% de los costos de bombas de calor geotérmicas con certificación ENERGY STAR, hasta $1,000 dólares."
+      "en": "Rebate for 50% of cost up to $300 for ENERGY STAR® certified ground source heat pumps.",
+      "es": "Reembolso del 50% del costo hasta $300 para bombas de calor de fuente terrestre con certificación ENERGY STAR®."
     },
     "start_date": "2023-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.georgiapower.com/residential/save-money-and-energy/products-programs/home-energy-efficiency-programs/home-energy-improvementprogram.html"
     }
@@ -221,7 +221,8 @@
       "rebate"
     ],
     "items": [
-      "ductless_heat_pump"
+      "ductless_heat_pump",
+      "ducted_heat_pump"
     ],
     "program": "ga_georgiaPower_homeEnergyImprovementProgram",
     "amount": {
@@ -233,11 +234,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of cost up to $1,000 for ENERGY STAR® certified mini-split heat pumps.",
-      "es": "Un reembolso del 50% de los costos de mini-splits con certificación ENERGY STAR, hasta $1,000 dólares."
+      "en": "Rebate for 50% of cost up to $1,000 for converting an electric furnace to an air-source heat pump.",
+      "es": "Reembolso del 50% del costo hasta $1,000 por convertir un horno eléctrico a una bomba de calor de fuente de aire."
     },
     "start_date": "2023-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.georgiapower.com/residential/save-money-and-energy/products-programs/home-energy-efficiency-programs/home-energy-improvementprogram.html"
     }
@@ -261,8 +262,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of cost up to $1,100 for achieving a whole house electric kWh reduction of 20% or more.",
-      "es": "Reembolso del 50 % del costo, hasta $1,100, por lograr una reducción del 20 % o más en el consumo eléctrico en kWh en toda la casa."
+      "en": "Rebate for 50% of cost up to $1,100 for air sealing, duct sealing, and attic insulation completed by a program contractor.",
+      "es": "Reembolso del 50% del costo hasta $1,100 por sellado de aire, sellado de conductos y aislamiento de ático realizado por un contratista del programa."
     },
     "url": {
       "en": "https://www.georgiapower.com/residential/save-money-and-energy/products-programs/home-energy-efficiency-programs/home-energy-improvementprogram.html"
@@ -948,6 +949,32 @@
     "low_income": "ga-her-moderate",
     "url": {
       "en": "https://energyrebates.georgia.gov/home-electrification-and-appliance-rebates"
+    }
+  },
+  {
+    "id": "GA-35",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "solar_water_heater"
+    ],
+    "program": "ga_georgiaPower_homeEnergyImprovementProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Rebate for 50% of cost up to $250 for a solar hot water system.",
+      "es": "Reembolso del 50% del costo hasta $250 para un sistema de agua caliente solar."
+    },
+    "start_date": "2026-01-01",
+    "url": {
+      "en": "https://www.georgiapower.com/residential/save-money-and-energy/products-programs/home-energy-efficiency-programs/home-energy-improvementprogram.html"
     }
   }
 ]
