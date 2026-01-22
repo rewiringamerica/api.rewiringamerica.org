@@ -82,6 +82,21 @@
       "8": 0
     }
   },
+  "Sustainable Grand Income Limit": {
+    "type": "hhsize",
+    "source_url": "https://www.sustainablegrand.org/home-energy/income-qualified-programs",
+    "description": "Household income threshold for Sustainable Grand programs",
+    "thresholds": {
+      "1": 107850,
+      "2": 123150,
+      "3": 138600,
+      "4": 153900,
+      "5": 166200,
+      "6": 178650,
+      "7": 0,
+      "8": 0
+    }
+  },
   "az-default": {
     "type": "hhsize",
     "source_url": "https://www.tep.com/weatherization-assistance",
@@ -748,6 +763,14 @@
     "type": "ami-percentage",
     "source_url": "",
     "description": "Income-qualified rebates available for households falling under 150% AMI.",
+    "thresholds": {
+      "percentage": 150
+    }
+  },
+  "co-lpea-income-qualified": {
+    "type": "ami-percentage",
+    "source_url": "https://lpea.coop/electric-thermal-storage-ets-heating-rebates",
+    "description": "Income qualification for some LPEA rebates",
     "thresholds": {
       "percentage": 150
     }
@@ -3325,16 +3348,16 @@
   "va-default": {
     "type": "hhsize",
     "source_url": "https://www.dhcd.virginia.gov/sites/default/files/Docx/weatherization/income-limits.pdf",
-    "description": "in effect 7/1/2024",
+    "description": "in effect 7/2025, 60% AMI",
     "thresholds": {
-      "1": 41809,
-      "2": 54674,
-      "3": 67538,
-      "4": 80403,
-      "5": 93267,
-      "6": 106131,
-      "7": 108544,
-      "8": 110956,
+      "1": 43420,
+      "2": 56780,
+      "3": 70140,
+      "4": 83500,
+      "5": 96860,
+      "6": 110220,
+      "7": 112725,
+      "8": 115230,
       "9": 113368,
       "10": 115780,
       "11": 118192,

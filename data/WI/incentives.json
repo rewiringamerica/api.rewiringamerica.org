@@ -22,7 +22,7 @@
       "es": "Un reembolso de $200 por aislamiento térmico y sellado hermético del ático realizado por usted mismo, debe cumplir el nivel de aislamiento R42."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-08-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://focusonenergy.com/residential/diy"
     }
@@ -55,28 +55,28 @@
   {
     "id": "WI-20",
     "payment_methods": [
-      "pos_rebate"
+      "rebate"
     ],
     "items": [
       "rooftop_solar_installation"
     ],
     "program": "wi_focusOnEnergy_focusOnEnergySolarForHomesProgram",
     "amount": {
-      "type": "dollar_amount",
-      "number": 300,
-      "minimum": 300,
-      "maximum": 600
+      "type": "dollars_per_unit",
+      "number": 600,
+      "unit": "kilowatt",
+      "minimum": 600,
+      "maximum": 2400
     },
     "owner_status": [
-      "homeowner",
-      "renter"
+      "homeowner"
     ],
     "short_description": {
-      "en": "Up to $300 rebate for residential solar PV systems, additional $300 for rural areas.",
-      "es": "Un reembolso de hasta $300 para sistemas solares fotovoltaicos residenciales, $300 adicionales para zonas rurales."
+      "en": "$600 per kw rebate for rooftop solar installations, up to $2,400 total.",
+      "es": "Reembolso de $600 por kW para instalaciones solares en azoteas, hasta un total de $2,400."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://focusonenergy.com/residential/solar-for-homes"
     }
@@ -138,7 +138,7 @@
   {
     "id": "WI-23",
     "payment_methods": [
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "ducted_heat_pump",
@@ -147,18 +147,18 @@
     "program": "wi_focusOnEnergy_focusOnEnergyHeatingAndCoolingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 400
+      "number": 350
     },
     "owner_status": [
-      "homeowner",
-      "renter"
+      "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate for air source heat pumps replacing propane, oil, existing heat pump, etc.",
-      "es": "Un reembolso de $400 para bombas de calor de fuente de aire que sustituyan a las de propano, gasóleo, bombas de calor existentes, etc."
+      "en": "$350 upfront rebate for air source heat pumps replacing propane for income-qualified residents.",
+      "es": "Reembolso inicial de $350 para bombas de calor de fuente de aire que reemplacen el propano para residentes que califican en función de sus ingresos."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-08-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "wi-focus-on-energy",
     "url": {
       "en": "https://focusonenergy.com/residential/heating-and-cooling"
     }
@@ -203,17 +203,17 @@
     "program": "wi_focusOnEnergy_focusOnEnergyInsulationAndAirSealingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 675
+      "number": 850
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $675 rebate for ENERGY STAR® air sealing, assessment required.",
-      "es": "Un reembolso de hasta $675 para el sellado hermético con certificación ENERGY STAR®, pero se requiere una evaluación."
+      "en": "Up to $850 rebate for ENERGY STAR® air sealing, assessment required.",
+      "es": "Reembolso de hasta $850 por sellado de aire ENERGY STAR® (se requiere evaluación)."
     },
-    "start_date": "2025-01-01",
+    "start_date": "2026-01-01",
     "url": {
       "en": "https://focusonenergy.com/residential/insulation-and-air-sealing"
     }
@@ -221,7 +221,7 @@
   {
     "id": "WI-26",
     "payment_methods": [
-      "pos_rebate"
+      "rebate"
     ],
     "items": [
       "air_sealing"
@@ -229,17 +229,17 @@
     "program": "wi_focusOnEnergy_focusOnEnergyInsulationAndAirSealingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 1125
+      "number": 1475
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,125 rebate for ENERGY STAR® Qualified Air Sealing, assessment required. For income-qualified customers.",
-      "es": "Un reembolso de hasta $1,125 para el sellado hermético con certificación ENERGY STAR®, pero se requiere una evaluación. Para clientes que cumplen requisitos de nivel de ingresos."
+      "en": "Up to $1,475 rebate for ENERGY STAR® Qualified Air Sealing, assessment required. For income-qualified customers.",
+      "es": "Reembolso de hasta $1,475 por sellado de aire con certificación ENERGY STAR®. Se requiere evaluación. Para clientes con ingresos calificados."
     },
-    "start_date": "2025-01-01",
+    "start_date": "2026-01-01",
     "low_income": "wi-focus-on-energy",
     "url": {
       "en": "https://focusonenergy.com/residential/insulation-and-air-sealing"
@@ -256,15 +256,15 @@
     "program": "wi_focusOnEnergy_focusOnEnergyInsulationAndAirSealingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 525
+      "number": 650
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $525 rebate for attic insulation.",
-      "es": "Un reembolso de hasta $525 para aislamiento térmico del ático."
+      "en": "Up to $650 rebate for attic insulation.",
+      "es": "Reembolso de hasta $650 por aislamiento de ático."
     },
     "start_date": "2025-01-01",
     "url": {
@@ -274,7 +274,7 @@
   {
     "id": "WI-28",
     "payment_methods": [
-      "pos_rebate"
+      "rebate"
     ],
     "items": [
       "attic_or_roof_insulation"
@@ -282,15 +282,15 @@
     "program": "wi_focusOnEnergy_focusOnEnergyInsulationAndAirSealingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 675
+      "number": 850
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $675 rebate for attic insulation. For income-qualified customers.",
-      "es": "Un reembolso de hasta $675 para aislamiento térmico del ático. Para clientes que cumplan requisitos de nivel de ingresos."
+      "en": "Up to $850 rebate for attic insulation. For income-qualified customers.",
+      "es": "Reembolso de hasta $850 para aislamiento de ático. Para clientes con ingresos que califican."
     },
     "start_date": "2025-01-01",
     "low_income": "wi-focus-on-energy",
@@ -309,15 +309,14 @@
     "program": "wi_focusOnEnergy_focusOnEnergyInsulationAndAirSealingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 75
+      "number": 90
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $75 rebate for foundation insulation.",
-      "es": "Un reembolso de hasta $75 para aislamiento térmico de cimientos."
+      "en": "Up to $90 rebate for foundation insulation."
     },
     "start_date": "2025-01-01",
     "url": {
@@ -327,7 +326,7 @@
   {
     "id": "WI-30",
     "payment_methods": [
-      "pos_rebate"
+      "rebate"
     ],
     "items": [
       "other_insulation"
@@ -335,15 +334,15 @@
     "program": "wi_focusOnEnergy_focusOnEnergyInsulationAndAirSealingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 110
+      "number": 150
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $110 rebate for foundation insulation. For income-qualified customers.",
-      "es": "Un reembolso de hasta $110 para aislamiento térmico de cimientos. Para clientes que cumplan con  requisitos de nivel de ingresos."
+      "en": "Up to $150 rebate for foundation insulation. For income-qualified customers.",
+      "es": "Reembolso de hasta $150 para aislamiento de cimientos. Para clientes con ingresos que califican."
     },
     "start_date": "2025-01-01",
     "low_income": "wi-focus-on-energy",
@@ -362,15 +361,15 @@
     "program": "wi_focusOnEnergy_focusOnEnergyInsulationAndAirSealingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 450
+      "number": 575
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $450 rebate for wall insulation.",
-      "es": "Un reembolso de hasta $450 para aislamiento térmico de muros."
+      "en": "Up to $575 rebate for wall insulation.",
+      "es": "Reembolso de hasta $575 por aislamiento de paredes."
     },
     "start_date": "2025-01-01",
     "url": {
@@ -388,15 +387,15 @@
     "program": "wi_focusOnEnergy_focusOnEnergyInsulationAndAirSealingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 75
+      "number": 90
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $75 rebate for duct sealing & insulation.",
-      "es": "Un reembolso de hasta $75 para sellado y aislamiento térmico de ductos."
+      "en": "Up to $90 rebate for duct sealing & insulation in a semi-conditioned space.",
+      "es": "Hasta $90 de reembolso por sellado y aislamiento de conductos en un espacio semi-acondicionado."
     },
     "start_date": "2025-01-01",
     "url": {
@@ -423,9 +422,9 @@
       "en": "Free smart EV charger ($1,100 value) for members who purchase an EV and meet requirements.",
       "es": "Cargador de VE inteligente gratuito (con un valor de $1,100) para usuarios que adquieran un VE y cumplan los requisitos."
     },
-    "end_date": "2025-12-13",
+    "end_date": "2026-12-13",
     "url": {
-      "en": "https://www.barronelectric.com/2024-energy-rebates"
+      "en": "https://www.barronelectric.com/index.php/2026-energy-rebates"
     }
   },
   {
@@ -439,18 +438,18 @@
     "program": "wi_barronElectricCooperative_energySavingsRebates:EVChargers",
     "amount": {
       "type": "dollar_amount",
-      "number": 400
+      "number": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate for alternative EV chargers compatible with load management equipment.",
-      "es": "Un reembolso de $400 para cargadores alternativos de VE compatibles con equipos de manejo de carga."
+      "en": "$500 rebate for alternative EV chargers compatible with load management equipment.",
+      "es": "Reembolso de $500 para cargadores de vehículos eléctricos alternativos compatibles con equipos de gestión de carga."
     },
-    "end_date": "2025-12-13",
+    "end_date": "2026-12-13",
     "url": {
-      "en": "https://www.barronelectric.com/2024-energy-rebates"
+      "en": "https://www.barronelectric.com/index.php/2026-energy-rebates"
     }
   },
   {
@@ -474,9 +473,9 @@
       "es": "Un reembolso del 20% para bombas de calor geotérmicas, hasta $400/tonelada."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-13",
+    "end_date": "2026-12-11",
     "url": {
-      "en": "https://www.barronelectric.com/2024-energy-rebates"
+      "en": "https://www.barronelectric.com/index.php/2026-energy-rebates"
     }
   },
   {
@@ -492,19 +491,19 @@
     "amount": {
       "type": "percent",
       "number": 0.2,
-      "maximum": 300
+      "maximum": 400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "20% rebate for residential electric water heaters, up to $150 for 75-99 gallons and up to $300 for 100+ gallons. Must be load managed.",
-      "es": "Un reembolso del 20% para calentadores de agua eléctricos residenciales, de hasta $150 para 75-99 galones y de hasta $300 para 100+ galones. Hay que administrar la carga."
+      "en": "20% rebate for residential electric water heaters, up to $250 for 75-99 gallons and up to $400 for 100+ gallons. Must be load managed.",
+      "es": "Reembolso del 20% en calentadores de agua eléctricos residenciales: hasta $250 para calentadores de agua de 75 a 99 galones y hasta $400 para calentadores de agua de 100 galones o más. Deben contar con control de carga."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-13",
+    "end_date": "2026-12-11",
     "url": {
-      "en": "https://www.barronelectric.com/2024-energy-rebates"
+      "en": "https://www.barronelectric.com/index.php/2026-energy-rebates"
     }
   },
   {
@@ -520,19 +519,19 @@
     "amount": {
       "type": "percent",
       "number": 0.2,
-      "maximum": 300
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "20% rebate for heat pump water heaters with EF 2.00+, up to $300.",
-      "es": "Un reembolso del 20% para calentadores de agua eléctricos residenciales, de hasta $150 para 75-99 galones y de hasta $300 para 100+ galones. La carga debe ser administrada."
+      "en": "20% rebate for heat pump water heaters with EF 2.00+, up to $500.",
+      "es": "20% de reembolso para calentadores de agua con bomba de calor con EF 2.00+, hasta $500."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-13",
+    "end_date": "2026-12-11",
     "url": {
-      "en": "https://www.barronelectric.com/2024-energy-rebates"
+      "en": "https://www.barronelectric.com/index.php/2026-energy-rebates"
     }
   },
   {
@@ -558,9 +557,9 @@
       "es": "Un reembolso del 20% para bombas de calor de fuente de aire y mini-splits, hasta $200/tonelada. SEER2 14.3+, HSPF2 7.5+."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-13",
+    "end_date": "2026-12-11",
     "url": {
-      "en": "https://www.barronelectric.com/2024-energy-rebates"
+      "en": "https://www.barronelectric.com/index.php/2026-energy-rebates"
     }
   },
   {
@@ -638,9 +637,9 @@
       "en": "20% of cost for energy efficiency improvements, up to $500.",
       "es": "20% del costo para mejoras de eficiencia energética, hasta $500."
     },
-    "end_date": "2025-12-13",
+    "end_date": "2026-12-11",
     "url": {
-      "en": "https://www.barronelectric.com/2024-energy-rebates"
+      "en": "https://www.barronelectric.com/index.php/2026-energy-rebates"
     }
   },
   {
@@ -910,16 +909,18 @@
     "program": "wi_chippewaValleyElectricCooperative_electricVehicleChargingStationIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 400
+      "number": 1000,
+      "minimum": 500,
+      "maximum": 1000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 incentive towards the purchase of any EV charger.",
-      "es": "Incentivo de $400 para la compra de cualquier cargador de VEs."
+      "en": "Up to $1,000 incentive towards the purchase of a Smart EV charging station with integrated metering.",
+      "es": "Incentivo de hasta $1,000 para la compra de una estación de carga Smart EV con medición integrada."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.cvecoop.com/rebates.php"
     }
@@ -945,7 +946,7 @@
       "en": "Up to $700/ton rebate for geothermal heat pumps.",
       "es": "Un reembolso de hasta $700/tonelada para bombas de calor geotérmicas."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.cvecoop.com/rebates.php"
     }
@@ -970,7 +971,7 @@
       "en": "$25 rebate for ENERGY STAR® clothes dryers.",
       "es": "Un reembolso de $25 para secadoras de ropa ENERGY STAR®."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.cvecoop.com/rebates.php"
     }
@@ -986,19 +987,19 @@
     "program": "wi_chippewaValleyElectricCooperative_waterHeaterIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 461,
+      "number": 269,
       "minimum": 63,
-      "maximum": 461
+      "maximum": 269
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $461/unit rebate for high efficiency water heaters. UEF must be .88 or greater, must be controlled by load control program .",
-      "es": "Un reembolso de hasta $461/unidad para calentadores de agua de alta eficiencia. El UEF debe ser de .88 o superior, debe estar administrado por un programa de control de carga."
+      "en": "Up to $269/unit rebate for high efficiency water heaters. UEF must be .88 or greater, must be controlled by load control program .",
+      "es": "Reembolso de hasta $269 por unidad para calentadores de agua de alta eficiencia. El factor de eficiencia energética (UEF) debe ser de 0.88 o superior y debe estar controlado por un programa de control de carga."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.cvecoop.com/rebates.php"
     }
@@ -1014,17 +1015,17 @@
     "program": "wi_chippewaValleyElectricCooperative_waterHeaterIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 300
+      "number": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $300/unit rebate for integrated heat pump water heaters. UEF must be 2.00 or greater.",
-      "es": "Un reembolso de hasta $300/unidad para calentadores de agua con bomba de calor. El UEF debe ser de 2.00 o superior."
+      "en": "Up to $500/unit rebate for integrated heat pump water heaters. UEF must be 2.00 or greater.",
+      "es": "Reembolso de hasta $500 por unidad para calentadores de agua con bomba de calor integrada. El factor de eficiencia energética (UEF) debe ser de 2.00 o superior."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.cvecoop.com/rebates.php"
     }
@@ -1051,7 +1052,7 @@
       "en": "Up to $200/ton rebate for air source & mini-split heat pumps. SEER2 14.3+, HSPF2 7.5+ or SEER 15+, HSPF 8.8+.",
       "es": "Un reembolso de hasta $200/tonelada para bombas de calor de fuente de aire y mini-splits. SEER2 14.3+, HSPF2 7.5+ o SEER 15+, HSPF 8.8+."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.cvecoop.com/rebates.php"
     }
@@ -1076,7 +1077,7 @@
       "en": "$25 incentive for induction ranges.",
       "es": "Incentivo de $25 para estufas con parrillas de inducción."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.cvecoop.com/rebates.php"
     }
@@ -1101,7 +1102,7 @@
       "en": "$25 incentive for Honeywell or Emerson brand smart thermostats enrolled in Load Management Program.",
       "es": "Incentivo de $25 para termostatos inteligentes de  marcas Honeywell o Emerson inscritos en el Programa de Manejo de Cargas."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.cvecoop.com/rebates.php"
     }
@@ -1127,7 +1128,7 @@
       "en": "Up to $500 for audit-recommended energy efficiency improvements.",
       "es": "Hasta $500 para mejoras de eficiencia energética recomendadas por la auditoría."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.cvecoop.com/rebates.php"
     }
@@ -1152,7 +1153,7 @@
       "en": "$25 rebate for ENERGY STAR® clothes dryers.",
       "es": "Un reembolso de $25 para secadoras de ropa ENERGY STAR®."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.cecoop.com/rebatesincentives"
     }
@@ -1195,16 +1196,16 @@
     "program": "wi_clarkElectricCooperative_waterHeaterIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 400
+      "number": 350
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate for an integrated heat pump water heaters, UEF .88, on load control.",
-      "es": "Un reembolso de $400 para calentadores de agua con bomba de calor, UEF .88, bajo control de carga."
+      "en": "Up to $350 rebate for an integrated heat pump water heaters, UEF .88, on load control.",
+      "es": "Reembolso de hasta $350 para calentadores de agua con bomba de calor integrados, UEF .88, con control de carga."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.cecoop.com/rebatesincentives"
     }
@@ -1229,7 +1230,7 @@
       "en": "$25 rebate for induction ranges.",
       "es": "Un reembolso de $25 para estufas con parrilla de inducción."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.cecoop.com/rebatesincentives"
     }
@@ -1256,7 +1257,7 @@
       "en": "Up to $300/ton rebate for air source & mini-split heat pumps. SEER2 14.3+, HSPF2 7.5+ or SEER 15+, HSPF 8.8+.",
       "es": "Un reembolso de hasta $300/tonelada para bombas de calor de fuente de aire y mini-splits. SEER2 14.3+, HSPF2 7.5+ o SEER 15+, HSPF 8.8+."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.cecoop.com/rebatesincentives"
     }
@@ -1282,7 +1283,7 @@
       "en": "Up to $650/ton rebate for geothermal heat pumps.",
       "es": "Un reembolso de hasta $650/tonelada para bombas de calor geotérmicas."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.cecoop.com/rebatesincentives"
     }
@@ -1307,7 +1308,7 @@
       "en": "$25 incentive for Honeywell or Emerson brand smart thermostats enrolled in Load Management Program.",
       "es": "Incentivo de $25 para termostatos inteligentes de  marcas Honeywell o Emerson inscritos en el Programa de Manejo de Cargas."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.cecoop.com/rebatesincentives"
     }
@@ -1333,7 +1334,7 @@
       "en": "Up to $500 rebate for audit-recommended energy efficiency improvements.",
       "es": "Hasta $500 para mejoras de eficiencia energética recomendadas por la auditoría."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.cecoop.com/rebatesincentives"
     }
@@ -1410,7 +1411,7 @@
       "en": "$400 incentive for new EV chargers.",
       "es": "Incentivo de $400 para cargadores de VEs nuevos."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.dunnenergy.com/electric-vehicles"
     }
@@ -1433,7 +1434,7 @@
     ],
     "short_description": {
       "en": "$800 incentive for smart EV chargers with integrated metering.",
-      "es": "Incentivo de 800 para cargadores inteligentes de VEs con medidor integrado."
+      "es": "Incentivo de $800 para cargadores inteligentes de vehículos eléctricos con medición integrada."
     },
     "end_date": "2025-12-31",
     "url": {
@@ -1451,18 +1452,18 @@
     "program": "wi_dunnEnergyCooperative_homeRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 500,
+      "number": 400,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500/ton rebate for geothermal heat pumps.",
-      "es": "Un reembolso de $500/tonelada para bombas de calor geotérmicas."
+      "en": "$400/ton rebate for geothermal heat pumps.",
+      "es": "Descuento de $400 por tonelada para bombas de calor geotérmicas."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.dunnenergy.com/home-rebates"
     }
@@ -1484,11 +1485,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$50 rebate for heat pump clothes dryers.",
-      "es": "Un reembolso de $50 para secadoras de ropa con bomba de calor."
+      "en": "$50 rebate for all in one washer/heat pump clothes dryers.",
+      "es": "Reembolso de $50 para lavadoras y secadoras de ropa todo en uno con bomba de calor."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.dunnenergy.com/home-rebates"
     }
@@ -1504,19 +1505,19 @@
     "program": "wi_dunnEnergyCooperative_homeRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 300,
+      "number": 400,
       "minimum": 150,
-      "maximum": 300
+      "maximum": 400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $300 rebate for residential high efficiency water heaters. UEF of at least .88. Must be on load control.",
-      "es": "Un reembolso de hasta $300 para calentadores de agua residenciales de alta eficiencia. UEF de al menos 0.88. Debe estar bajo control de carga."
+      "en": "Up to $400 rebate for residential high efficiency water heaters. UEF of at least .88. Must be on load control.",
+      "es": "Reembolso de hasta $400 para calentadores de agua residenciales de alta eficiencia. UEF de al menos 0.88. Debe estar en control de carga."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.dunnenergy.com/home-rebates"
     }
@@ -1532,17 +1533,17 @@
     "program": "wi_dunnEnergyCooperative_homeRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 300
+      "number": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $300 rebate for heat pump water heaters. Must have UEF of at least 2.20.",
-      "es": "Un reembolso de hasta $300 para calentadores de agua con bomba de calor. Deben tener un UEF de al menos 2.20."
+      "en": "Up to $500 rebate for heat pump water heaters. Must have UEF of at least 2.20.",
+      "es": "Reembolso de hasta $500 para calentadores de agua con bomba de calor. Debe tener un factor de eficiencia energética (UEF) de al menos 2.20."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.dunnenergy.com/home-rebates"
     }
@@ -1559,18 +1560,18 @@
     "program": "wi_dunnEnergyCooperative_homeRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 300,
+      "number": 200,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$300/ton rebate for air source heat pumps/mini-splits. Must be 14.3+ SEER2 , HSPF2 7.5+ or SEER 15+, HSPF 8.8+.",
-      "es": "Un reembolso de $300/tonelada para bombas de calor de fuente de aire/mini-splits. Deben ser 14.3+SEER2 , HSPF2 7.5+ o SEER 15+, HSPF 8.8+."
+      "en": "$200/ton rebate for air source heat pumps/mini-splits. Must be 14.3+ SEER2 , HSPF2 7.5+ or SEER 15+, HSPF 8.8+.",
+      "es": "Descuento de $200 por tonelada para bombas de calor aerotérmicas/minisplits. Deben tener un SEER2 de 14.3 o más, un HSPF2 de 7.5 o más, o un SEER de 15 o más, un HSPF de 8.8 o más."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.dunnenergy.com/home-rebates"
     }
@@ -1586,18 +1587,18 @@
     "program": "wi_dunnEnergyCooperative_homeRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 500,
+      "number": 400,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500/ton rebate for geothermal heat pumps. AHRI Certificate must be provided.",
-      "es": "Un reembolso de $500/tonelada para bombas de calor geotérmicas. Debe proporcionarse el Certificado AHRI."
+      "en": "$400/ton rebate for geothermal heat pumps. AHRI Certificate must be provided.",
+      "es": "Descuento de $400 por tonelada para bombas de calor geotérmicas. Se requiere certificado AHRI."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.dunnenergy.com/home-rebates"
     }
@@ -1649,7 +1650,7 @@
       "es": "Un reembolso de $400 para cargadores de VEs de nivel 2 con medidor."
     },
     "url": {
-      "en": "https://eastcentralenergy.com/2024-residential-rebates"
+      "en": "https://eastcentralenergy.com/residential-rebates"
     }
   },
   {
@@ -1861,17 +1862,17 @@
     "program": "wi_jacksonElectricCooperative_rebatesAndIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 800
+      "number": 1000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$800 rebate for smart EV chargers with integrated metering.",
-      "es": "Un reembolso de $800 para cargadores inteligentes de VEs con medidor integrado."
+      "en": "Up to $1,000 rebate for smart EV chargers with integrated metering.",
+      "es": "Reembolso de hasta $1,000 para cargadores inteligentes de vehículos eléctricos con medición integrada."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.jackelec.com/rebates-and-incentives"
     }
@@ -1888,18 +1889,18 @@
     "program": "wi_jacksonElectricCooperative_rebatesAndIncentives",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 500,
+      "number": 600,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500/ton rebate for air source heat pumps SEER 14+, HSPF 8.2+, or EER 11+.",
-      "es": "Un reembolso de $500/tonelada para bombas de calor con fuente de aire SEER 14+, HSPF 8.2+ o EER 11+."
+      "en": "$600/ton rebate for air source heat pumps SEER 14+, HSPF 8.2+, or EER 11+.",
+      "es": "Reembolso de $600/tonelada para bombas de calor de fuente de aire SEER 14+, HSPF 8.2+ o EER 11+."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.jackelec.com/rebates-and-incentives"
     }
@@ -1915,18 +1916,18 @@
     "program": "wi_jacksonElectricCooperative_rebatesAndIncentives",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 500,
+      "number": 600,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500/ton rebate for geothermal heat pumps. New units not allowed on load management program .",
-      "es": "Un reembolso de $500/tonelada para bombas de calor geotérmicas. No se permiten unidades nuevas en el programa de manejo de cargas."
+      "en": "$600/ton rebate for geothermal heat pumps. New units not allowed on load management program .",
+      "es": "Descuento de $600 por tonelada para bombas de calor geotérmicas. No se permiten unidades nuevas en el programa de gestión de carga."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.jackelec.com/rebates-and-incentives"
     }
@@ -1968,19 +1969,19 @@
     "program": "wi_jacksonElectricCooperative_rebatesAndIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 300,
-      "minimum": 150,
-      "maximum": 300
+      "number": 500,
+      "minimum": 400,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $300 rebate for water heaters with capacity of at least 75 gallons.",
-      "es": "Un reembolso de hasta $300 para calentadores de agua con capacidad de al menos 75 galones."
+      "en": "Up to $500 rebate for water heaters with capacity of at least 75 gallons.",
+      "es": "Reembolso de hasta $500 para calentadores de agua con capacidad de al menos 75 galones."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.jackelec.com/rebates-and-incentives"
     }
@@ -1996,17 +1997,17 @@
     "program": "wi_jacksonElectricCooperative_rebatesAndIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 300
+      "number": 700
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 rebate for integrated heat pump water heaters. UEF 2.00 or greater.",
-      "es": "Un reembolso de $300 para calentadores de agua integrados con bomba de calor. UEF 2.00 o superior."
+      "en": "$700 rebate for integrated heat pump water heaters. UEF 2.00 or greater.",
+      "es": "Reembolso de $700 para calentadores de agua con bomba de calor integrada. UEF 2.00 o superior."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.jackelec.com/rebates-and-incentives"
     }
@@ -2304,17 +2305,17 @@
     "program": "wi_polk-BurnettElectricCooperative_eVChargerRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 800
+      "number": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$800 rebate for smart EV chargers with integrated metering. Must be purchased from Polk-Burnett.",
-      "es": "Un reembolso de $800 para cargadores inteligentes de VEs con medidor integrado."
+      "en": "$500 rebate for smart EV chargers with integrated metering. ",
+      "es": "Reembolso de $500 para cargadores inteligentes de vehículos eléctricos con medición integrada. "
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.polkburnett.com/rebates"
     }
@@ -2330,18 +2331,18 @@
     "program": "wi_polk-BurnettElectricCooperative_hVACRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 400,
+      "number": 450,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$400/ton rebate for geothermal heat pumps, may qualify for off-peak rates.",
-      "es": "Un reembolso de $400/tonelada para bombas de calor geotérmicas, puede tener derecho a tarifas reducidas."
+      "en": "$450/ton rebate for geothermal heat pumps, may qualify for off-peak rates.",
+      "es": "Descuento de $450 por tonelada para bombas de calor geotérmicas; puede calificar para tarifas fuera de horas pico."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.polkburnett.com/rebates"
     }
@@ -2368,7 +2369,7 @@
       "es": "Un reembolso de $25 para secadoras de ropa ENERGY STAR®."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.polkburnett.com/rebates"
     }
@@ -2384,17 +2385,17 @@
     "program": "wi_polk-BurnettElectricCooperative_waterHeaterRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 300
+      "number": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 rebate for integrated heat pump water heaters with UEF 2.20+.",
-      "es": "Un reembolso de $300 para calentadores de agua integrados con bomba de calor y FUE 2.20+."
+      "en": "$500 rebate for integrated heat pump water heaters with UEF 2.20+.",
+      "es": "Reembolso de $500 para calentadores de agua con bomba de calor integrada con UEF 2.20+."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.polkburnett.com/rebates"
     }
@@ -2411,18 +2412,18 @@
     "program": "wi_polk-BurnettElectricCooperative_hVACRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 200,
+      "number": 250,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$200/ton rebate for air source & mini-split heat pumps, SEER2 14.3+, HSPF2 7.5+.",
-      "es": "Un reembolso de $200/tonelada para bombas de calor de fuente de aire y mini-splits, SEER2 14.3+, HSPF2 7.5+."
+      "en": "$250/ton rebate for air source & mini-split heat pumps, SEER2 14.3+, HSPF2 7.5+.",
+      "es": "Reembolso de $250/tonelada para bombas de calor de fuente de aire y mini-split, SEER2 14.3+, HSPF2 7.5+."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.polkburnett.com/rebates"
     }
@@ -2448,7 +2449,7 @@
       "es": "Un reembolso de $25 para estufas de parrilla de inducción."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.polkburnett.com/rebates"
     }
@@ -2464,19 +2465,19 @@
     "program": "wi_polk-BurnettElectricCooperative_renewableSolarRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 200,
+      "number": 250,
       "unit": "kilowatt",
-      "maximum": 600
+      "maximum": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$200/kW solar PV rebate, capped at $600 per account.",
-      "es": "Reembolso de $200/kW de energía solar fotovoltaica, con un tope de $600 por cuenta."
+      "en": "$250/kW solar PV rebate, capped at $750 per account.",
+      "es": "Reembolso de $250/kW por energía solar fotovoltaica, con un límite de $750 por cuenta."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.polkburnett.com/rebates"
     }
@@ -2510,7 +2511,7 @@
       "en": "30% of cost for efficiency measures, up to $1,000.",
       "es": "30 % del costo en medidas de eficiencia, hasta $1,000."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.polkburnett.com/rebates"
     }
@@ -2526,19 +2527,19 @@
     "program": "wi_priceElectricCooperative_pECSmartSenseRebates:HVAC",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 500,
+      "number": 600,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500/ton for geothermal heat pumps.",
-      "es": "Hasta $500/tonelada para bombas de calor geotérmicas."
+      "en": "Up to $600/ton for geothermal heat pumps.",
+      "es": "Hasta $600/tonelada para bombas de calor geotérmicas."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://priceelectric.coop/smart-sense-rebates"
+      "en": "https://priceelectric.coop/rebates"
     }
   },
   {
@@ -2552,18 +2553,18 @@
     "program": "wi_priceElectricCooperative_pECSmartSenseRebates:Appliances",
     "amount": {
       "type": "dollar_amount",
-      "number": 50
+      "number": 75
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$50 rebate for ENERGY STAR® clothes dryers.",
-      "es": "Un reembolso de $50 para secadoras de ropa ENERGY STAR®."
+      "en": "$75 rebate for ENERGY STAR® clothes dryers.",
+      "es": "Reembolso de $75 para secadoras de ropa ENERGY STAR®."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://priceelectric.coop/smart-sense-rebates"
+      "en": "https://priceelectric.coop/rebates"
     }
   },
   {
@@ -2588,9 +2589,9 @@
       "en": "Up to $1,000 rebate for water heaters, depending on capacity and efficiency. Must be load controlled.",
       "es": "Un reembolso de hasta $1,000 para calentadores de agua, en función de capacidad y eficiencia. Deben ser de carga controlada."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://priceelectric.coop/smart-sense-rebates"
+      "en": "https://priceelectric.coop/rebates"
     }
   },
   {
@@ -2604,18 +2605,18 @@
     "program": "wi_priceElectricCooperative_pECSmartSenseRebates:WaterHeaters",
     "amount": {
       "type": "dollar_amount",
-      "number": 300
+      "number": 700
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 rebate for integrated heat pump water heaters. UEF must be at least 2.2.",
-      "es": "Un reembolso de $300 para calentadores de agua integrados con bomba de calor. El UEF debe ser de al menos 2,.2."
+      "en": "$700 rebate for integrated heat pump water heaters. UEF must be at least 2.2.",
+      "es": "Reembolso de $700 para calentadores de agua con bomba de calor integrada. El factor de eficiencia energética (UEF) debe ser de al menos 2,2."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://priceelectric.coop/smart-sense-rebates"
+      "en": "https://priceelectric.coop/rebates"
     }
   },
   {
@@ -2630,19 +2631,19 @@
     "program": "wi_priceElectricCooperative_pECSmartSenseRebates:HVAC",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 300,
+      "number": 400,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $300/ton for air source & mini-split heat pumps with SEER2 14.3+ or SEER 15+.",
-      "es": "Hasta $300/tonelada para bombas de calor de fuente de aire y mini-split con SEER2 14.3+ o SEER 15+."
+      "en": "Up to $400/ton for air source & mini-split heat pumps with SEER2 14.3+ or SEER 15+.",
+      "es": "Hasta $400/tonelada para bombas de calor de fuente de aire y mini-split con SEER2 14.3+ o SEER 15+."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://priceelectric.coop/smart-sense-rebates"
+      "en": "https://priceelectric.coop/rebates"
     }
   },
   {
@@ -2656,18 +2657,18 @@
     "program": "wi_priceElectricCooperative_pECSmartSenseRebates:Appliances",
     "amount": {
       "type": "dollar_amount",
-      "number": 50
+      "number": 75
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$50 rebate for induction ranges.",
-      "es": "Rebaja de $50 para estufas de parrilla de inducción."
+      "en": "$75 rebate for induction ranges.",
+      "es": "Reembolso de $75 para cocinas de inducción."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://priceelectric.coop/smart-sense-rebates"
+      "en": "https://priceelectric.coop/rebates"
     }
   },
   {
@@ -2691,9 +2692,9 @@
       "es": "Incentivo de $500 para instalaciones de sistemas de energía solar eléctrica (FV) que cumplan los requisitos."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://priceelectric.coop/smart-sense-rebates"
+      "en": "https://priceelectric.coop/rebates"
     }
   },
   {
@@ -2716,9 +2717,9 @@
       "en": "$75 incentive for WiFi enabled smart thermostats.",
       "es": "Incentivo de $75 para termostatos inteligentes con WiFi."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://priceelectric.coop/smart-sense-rebates"
+      "en": "https://priceelectric.coop/rebates"
     }
   },
   {
@@ -2741,9 +2742,9 @@
       "en": "Up to $500 for audit-recommended energy efficiency improvements.",
       "es": "Hasta $500 para mejoras de eficiencia energética recomendadas por la auditoría."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://priceelectric.coop/smart-sense-rebates"
+      "en": "https://priceelectric.coop/rebates"
     }
   },
   {
@@ -2757,16 +2758,16 @@
     "program": "wi_riverlandEnergyCooperative_eVChargingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 400
+      "number": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate for EV chargers with load control.",
-      "es": "Un reembolso de $400 para cargadores de VEs con control de carga."
+      "en": "$500 rebate for EV chargers with load control.",
+      "es": "Reembolso de $500 para cargadores de vehículos eléctricos con control de carga."
     },
-    "end_date": "2025-12-19",
+    "end_date": "2026-12-19",
     "url": {
       "en": "https://www.riverlandenergy.com/rebates"
     }
@@ -2817,7 +2818,7 @@
       "en": "$400/ton rebate for geothermal heat pumps.",
       "es": "Un reembolso de $400/tonelada para bombas de calor geotérmicas."
     },
-    "end_date": "2025-12-19",
+    "end_date": "2026-12-19",
     "url": {
       "en": "https://www.riverlandenergy.com/rebates"
     }
@@ -2842,7 +2843,7 @@
       "en": "$25 rebate for ENERGY STAR® clothes dryers.",
       "es": "Un reembolso de $25 para secadoras de ropa ENERGY STAR®."
     },
-    "end_date": "2025-12-19",
+    "end_date": "2026-12-19",
     "url": {
       "en": "https://www.riverlandenergy.com/rebates"
     }
@@ -2858,18 +2859,18 @@
     "program": "wi_riverlandEnergyCooperative_waterHeaterRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 300,
-      "minimum": 150,
-      "maximum": 300
+      "number": 400,
+      "minimum": 250,
+      "maximum": 400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $300 rebate for residential high efficiency water heaters, depending on capacity. UEF must be at least .88.",
-      "es": "Un reembolso de hasta $300 para calentadores de agua residenciales de alta eficiencia, dependiendo de la capacidad. El UEF debe ser de al menos .88."
+      "en": "Up to $400 rebate for residential high efficiency water heaters, depending on capacity. UEF must be at least .88.",
+      "es": "Reembolso de hasta $400 para calentadores de agua residenciales de alta eficiencia, según la capacidad. El factor de eficiencia energética (UEF) debe ser de al menos 0,88."
     },
-    "end_date": "2025-12-19",
+    "end_date": "2026-12-19",
     "url": {
       "en": "https://www.riverlandenergy.com/rebates"
     }
@@ -2885,16 +2886,16 @@
     "program": "wi_riverlandEnergyCooperative_waterHeaterRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 300
+      "number": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 rebate for integrated heat pump water heaters, UEF at least 2.00, controlled by Cooperative's load control program.",
-      "es": "Un reembolso de $300 para calentadores de agua integrados con bomba de calor, UEF de al menos 2.00, regulados por el programa de control de carga de la Cooperativa."
+      "en": "$500 rebate for integrated heat pump water heaters, UEF at least 2.00, controlled by Cooperative's load control program.",
+      "es": "Reembolso de $500 para calentadores de agua con bomba de calor integrada, UEF de al menos 2.00, controlados por el programa de control de carga de la Cooperativa."
     },
-    "end_date": "2025-12-19",
+    "end_date": "2026-12-19",
     "url": {
       "en": "https://www.riverlandenergy.com/rebates"
     }
@@ -2921,7 +2922,7 @@
       "en": "$200 rebate for air source & mini-split heat pumps. SEER2 14.3+, HSPF2 7.5+ or SEER 15+, HSPF 8.8+.",
       "es": "Un reembolso de $200 para bombas de calor de fuente de aire y mini-splits. SEER2 14.3+, HSPF2 7.5+ o SEER 15+, HSPF 8.8+."
     },
-    "end_date": "2025-12-19",
+    "end_date": "2026-12-19",
     "url": {
       "en": "https://www.riverlandenergy.com/rebates"
     }
@@ -2947,7 +2948,7 @@
       "en": "$25 rebate for ENERGY STAR® induction ranges.",
       "es": "Un reembolso de $25 para estufas con parrilla de inducción ENERGY STAR®."
     },
-    "end_date": "2025-12-19",
+    "end_date": "2026-12-19",
     "url": {
       "en": "https://www.riverlandenergy.com/rebates"
     }
@@ -3539,15 +3540,15 @@
     "program": "wi_focusOnEnergy_focusOnEnergyInsulationAndAirSealingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 150
+      "number": 1000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $150 rebate for verified duct sealing & insulation.",
-      "es": "Un reembolso de hasta $150 para sellado y aislamiento térmico de ductos."
+      "en": "Up to $1000 rebate for verified duct sealing & insulation in an unconditioned space.",
+      "es": "Reembolso de hasta $1000 por sellado y aislamiento de conductos verificados en un espacio sin acondicionamiento."
     },
     "start_date": "2025-01-01",
     "url": {
@@ -3593,18 +3594,18 @@
     "program": "wi_priceElectricCooperative_pECSmartSenseRebates:Appliances",
     "amount": {
       "type": "dollar_amount",
-      "number": 100
+      "number": 125
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$100 rebate for ENERGY STAR® all in one washer/dryers.",
-      "es": "Reembolso de $100 en lavadoras/secadoras todo en uno ENERGY STAR®."
+      "en": "$125 rebate for ENERGY STAR® all in one washer/dryers.",
+      "es": "Reembolso de $125 para lavadoras/secadoras todo en uno ENERGY STAR®."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://priceelectric.coop/smart-sense-rebates"
+      "en": "https://priceelectric.coop/rebates"
     }
   },
   {
@@ -3627,9 +3628,37 @@
       "en": "$50 rebate for ENERGY STAR® all-in-one washer/dryer combo.",
       "es": "Reembolso de $50 por la combinación de lavadora/secadora todo en uno ENERGY STAR®."
     },
-    "end_date": "2025-12-19",
+    "end_date": "2026-12-19",
     "url": {
       "en": "https://www.riverlandenergy.com/rebates"
+    }
+  },
+  {
+    "id": "WI-158",
+    "payment_methods": [
+      "account_credit",
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "wi_clarkElectricCooperative_clarkEVChargingStationIncentive",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $1,000 for a ZEF smart electric charging station with integrated metering. Not to exceed EV charger cost.",
+      "es": "Hasta $1,000 por una estación de carga eléctrica inteligente ZEF con medidor integrado. Sin exceder el costo del cargador de vehículos eléctricos."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.cecoop.com/sites/default/files/Clark%20Electric/Rebates/2026%20Incentive%20Form%20--%20EV%20Chargers.pdf"
     }
   }
 ]

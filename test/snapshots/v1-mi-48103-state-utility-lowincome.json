@@ -51,12 +51,13 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 1000
+        "number": 1000,
+        "maximum": 1000
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "$1,000 for ductless heat pumps. Must be both 17+ SEER2 and HSPF2 7.5+, and must replace a heat pump or electric heat system."
+      "short_description": "Up to $1,000 for ductless heat pumps. Must be both 17+ SEER2 and HSPF2 7.5+, and must replace a heat pump or electric heat system."
     },
     {
       "payment_methods": [
@@ -71,12 +72,13 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 800
+        "number": 800,
+        "maximum": 800
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "$800 rebate for 16+ EER2 ground source heat pumps."
+      "short_description": "Up to $800 rebate for 16+ EER2 ground source heat pumps."
     },
     {
       "payment_methods": [
@@ -87,7 +89,7 @@
       "program": "DTE Insulation & Windows Rebates",
       "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html",
       "items": [
-        "wall_insulation"
+        "attic_or_roof_insulation"
       ],
       "amount": {
         "type": "dollar_amount",
@@ -97,8 +99,8 @@
         "homeowner"
       ],
       "start_date": "2024-08-01",
-      "end_date": "2025-03-15",
-      "short_description": "$600 for above-grade wall insulation. Must insulate a minimum of 250 square feet of attic area."
+      "end_date": "2026-12-31",
+      "short_description": "$600 for roof & attic insulation. Must insulate a minimum of 500 square feet of attic area."
     },
     {
       "payment_methods": [
@@ -114,35 +116,13 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 550,
-        "maximum": 550
+        "number": 500,
+        "maximum": 500
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Up to $550 rebate for air source heat pumps. Rebate value depends on appliance efficiency."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "mi-dte",
-      "program": "DTE Insulation & Windows Rebates",
-      "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html",
-      "items": [
-        "attic_or_roof_insulation"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 400
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2024-08-01",
-      "end_date": "2025-03-15",
-      "short_description": "$400 for roof & attic insulation. Must insulate a minimum of 500 square feet of attic area."
+      "short_description": "Up to $500 rebate for air source heat pumps. Rebate value depends on appliance efficiency."
     },
     {
       "payment_methods": [
@@ -165,6 +145,28 @@
       ],
       "start_date": "2024-01-01",
       "short_description": "Up to $250 for a qualifying ENERGY STAR heat pump clothes dryer."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "mi-dte",
+      "program": "DTE Insulation & Windows Rebates",
+      "program_url": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html",
+      "items": [
+        "wall_insulation"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 125
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2024-08-01",
+      "end_date": "2026-12-31",
+      "short_description": "$125 for above-grade wall insulation. Must insulate a minimum of 250 square feet of attic area."
     },
     {
       "payment_methods": [

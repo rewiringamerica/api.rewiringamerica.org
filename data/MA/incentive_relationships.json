@@ -178,5 +178,31 @@
       ],
       "description": "Mass Save income eligible audit"
     }
+  },
+  "prerequisites": {
+    "MA-164": {
+      "allOf": [
+        "MA-71"
+      ],
+      "description": "HEA required before weatherization measures can be completed."
+    },
+    "MA-368": {
+      "allOf": [
+        "MA-621"
+      ],
+      "description": "Each measure must be recommended by ENE Home Energy Assessment audit & have a Savings to Investment Ratio (SIR) of greater than one (1). "
+    },
+    "MA-641": {
+      "allOf": [
+        "MA-165"
+      ],
+      "description": "Bonus only available for those pursuing full home conversion or displacement of delivered fuels (oil and propane)"
+    },
+    "MA-642": {
+      "allOf": [
+        "MA-640"
+      ],
+      "description": "Bonus only available if pursuing a full home conversion or if displacing oil or propane."
+    }
   }
 }

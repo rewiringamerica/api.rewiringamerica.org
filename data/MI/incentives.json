@@ -62,16 +62,16 @@
     "program": "mi_dte_dTEAirConditionerRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 550,
+      "number": 500,
       "minimum": 150,
-      "maximum": 550
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $550 rebate for air source heat pumps. Rebate value depends on appliance efficiency.",
-      "es": "Un reembolso de hasta $850 para bombas de calor de fuente de aire. El valor del reembolso depende de la eficiencia del aparato."
+      "en": "Up to $500 rebate for air source heat pumps. Rebate value depends on appliance efficiency.",
+      "es": "Reembolso de hasta $500 para bombas de calor de aire. El valor del reembolso depende de la eficiencia del aparato."
     },
     "url": {
       "en": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/air-conditioners.html"
@@ -88,14 +88,16 @@
     "program": "mi_dte_dTEAirConditionerRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 800
+      "number": 800,
+      "minimum": 600,
+      "maximum": 800
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$800 rebate for 16+ EER2 ground source heat pumps.",
-      "es": "Un reembolso de $800 para bombas de calor geotérmicas con un EER2 superior a 16."
+      "en": "Up to $800 rebate for 16+ EER2 ground source heat pumps.",
+      "es": "Reembolso de hasta $800 para bombas de calor de fuente terrestre con EER2 superior a 16."
     },
     "url": {
       "en": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/air-conditioners.html"
@@ -112,14 +114,16 @@
     "program": "mi_dte_dTEAirConditionerRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000
+      "number": 1000,
+      "minimum": 700,
+      "maximum": 1000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,000 for ductless heat pumps. Must be both 17+ SEER2 and HSPF2 7.5+, and must replace a heat pump or electric heat system.",
-      "es": "$1,000 para bombas de calor sin ductos. Deben ser a la vez 17+ SEER2 y HSPF2 7.5+, y deben sustituir a una bomba de calor o a un sistema de calefacción eléctrica."
+      "en": "Up to $1,000 for ductless heat pumps. Must be both 17+ SEER2 and HSPF2 7.5+, and must replace a heat pump or electric heat system.",
+      "es": "Hasta $1,000 para bombas de calor sin ductos. Deben tener un SEER2 de 17+ y un HSPF2 de 7.5+, y deben reemplazar una bomba de calor o un sistema de calefacción eléctrico."
     },
     "url": {
       "en": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/air-conditioners.html"
@@ -161,17 +165,17 @@
     "program": "mi_dte_dTEInsulationAndWindowsRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 400
+      "number": 600
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 for roof & attic insulation. Must insulate a minimum of 500 square feet of attic area.",
-      "es": "$400 por aislamiento térmico del techo y del desván. Debe aislar un mínimo de 500 pies cuadrados de superficie del desván."
+      "en": "$600 for roof & attic insulation. Must insulate a minimum of 500 square feet of attic area.",
+      "es": "$600 por aislamiento de techo y ático. Se requiere aislar un mínimo de 500 pies cuadrados de ático."
     },
     "start_date": "2024-08-01",
-    "end_date": "2025-03-15",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html"
     }
@@ -187,17 +191,17 @@
     "program": "mi_dte_dTEInsulationAndWindowsRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 600
+      "number": 125
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$600 for above-grade wall insulation. Must insulate a minimum of 250 square feet of attic area.",
-      "es": "$600 por aislamiento de paredes sobre el nivel del suelo. Debe aislarse un mínimo de 250 pies cuadrados de área de ático."
+      "en": "$125 for above-grade wall insulation. Must insulate a minimum of 250 square feet of attic area.",
+      "es": "$125 por aislamiento de pared sobre rasante. Se requiere aislar un mínimo de 250 pies cuadrados de ático."
     },
     "start_date": "2024-08-01",
-    "end_date": "2025-03-15",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.dteenergy.com/us/en/residential/save-money-energy/rebates-and-offers/Insulation.html"
     }
@@ -421,17 +425,17 @@
     "program": "mi_greatLakesEnergyCooperative_energyWise",
     "amount": {
       "type": "dollar_amount",
-      "number": 400
+      "number": 50
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate for ENERGY STAR qualified electric heat pump clothes dryer.",
-      "es": "Un reembolso de $400 para secadoras de ropa eléctricas con bomba de calor que cumplan los requisitos ENERGY STAR."
+      "en": "$50 rebate for ENERGY STAR qualified electric heat pump clothes dryer.",
+      "es": "Reembolso de $50 por secadora de ropa con bomba de calor eléctrica calificada ENERGY STAR."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.gtlakes.com/energy-wise/"
     }
@@ -447,17 +451,17 @@
     "program": "mi_greatLakesEnergyCooperative_energyWise",
     "amount": {
       "type": "dollar_amount",
-      "number": 50
+      "number": 10
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$50 rebate for induction stove replacing gas or electric resistance. 3 burner minimum. Portable units do not qualify.",
-      "es": "Un reembolso de $50 por parrilla de inducción que sustituya a una resistencia de gas o eléctrica. Mínimo 3 quemadores. Las unidades portátiles no cumplen los requisitos."
+      "en": "$10 rebate for induction stove replacing gas or electric resistance. 3 burner minimum. Portable units do not qualify.",
+      "es": "Reembolso de $10 por estufa de inducción que reemplaza una resistencia de gas o eléctrica. Mínimo 3 quemadores. Las unidades portátiles no califican."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.gtlakes.com/energy-wise/"
     }
@@ -473,17 +477,17 @@
     "program": "mi_greatLakesEnergyCooperative_energyWise",
     "amount": {
       "type": "dollar_amount",
-      "number": 75
+      "number": 50
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$75 rebate for Wi-Fi enabled smart thermostat. Thermostat must control an HVAC system with an air conditioner and/or electric heat. Limit 1.",
-      "es": "Un reembolso de $75 por termostato inteligente con Wi-Fi. El termostato debe controlar un sistema de climatización con aire acondicionado y/o calefacción eléctrica. Límite 1."
+      "en": "$50 rebate for Wi-Fi enabled smart thermostat. Thermostat must control an HVAC system with an air conditioner and/or electric heat. Limit 1.",
+      "es": "Reembolso de $50 por termostato inteligente con wifi. El termostato debe controlar un sistema de climatización (HVAC) con aire acondicionado o calefacción eléctrica. Límite de 1."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.gtlakes.com/energy-wise/"
     }
@@ -634,17 +638,17 @@
     "program": "mi_greatLakesEnergyCooperative_energyWise",
     "amount": {
       "type": "dollar_amount",
-      "number": 1500
+      "number": 450
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,500 rebate for central air source heat pump. Rebate amount depends on appliance efficiency. Requires a licensed mechanical contractor.",
-      "es": "Un reembolso de hasta $1,500 por bomba de calor de fuente de aire central. El monto del reembolso depende de la eficiencia del aparato. Requiere un contratista mecánico autorizado."
+      "en": "Up to $450 rebate for central air source heat pump. Rebate amount depends on appliance efficiency. Requires a licensed mechanical contractor.",
+      "es": "Reembolso de hasta $450 para bombas de calor de aire acondicionado central. El monto del reembolso depende de la eficiencia del aparato. Requiere un contratista mecánico certificado."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.gtlakes.com/energy-wise/"
     }
@@ -660,18 +664,18 @@
     "program": "mi_greatLakesEnergyCooperative_energyWise",
     "amount": {
       "type": "dollar_amount",
-      "number": 900,
-      "maximum": 1800
+      "number": 500,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$900 rebate per outdoor unit for mini/multi split air-source heat pumps. Limit 2 units. Additional $100 per indoor unit.",
-      "es": "Un reembolso de $900 por unidad exterior para bombas de calor de fuente de aire mini/multi-split. Límite de 2 unidades. $100 adicionales por unidad interior."
+      "en": "$500 rebate per outdoor unit for mini/multi split air-source heat pumps. Limit 4 units. ",
+      "es": "Descuento de $500 por unidad exterior para bombas de calor de aire mini/multisplit. Límite de 4 unidades. "
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.gtlakes.com/energy-wise/"
     }
@@ -687,17 +691,17 @@
     "program": "mi_greatLakesEnergyCooperative_energyWise",
     "amount": {
       "type": "dollar_amount",
-      "number": 2000
+      "number": 800
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,000 rebate for an air-to-water heat pump.",
-      "es": "Un reembolso de $2,000 por una bomba de calor de aire a agua."
+      "en": "$800 rebate for an air-to-water heat pump.",
+      "es": "Reembolso de $800 para una bomba de calor aire-agua."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.gtlakes.com/energy-wise/"
     }
@@ -739,17 +743,17 @@
     "program": "mi_greatLakesEnergyCooperative_energyWise",
     "amount": {
       "type": "dollar_amount",
-      "number": 2500
+      "number": 2250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,500 rebate for a new or replacement ground loop installed with eligible ground source heat pump.",
-      "es": "Un reembolso de $2,500 por un ciclo de tierra nuevo o de sustitución instalado con una bomba de calor geotérmica que cumpla los requisitos."
+      "en": "$2,250 rebate for a new or replacement ground loop installed with eligible ground source heat pump.",
+      "es": "Reembolso de $2,250 por un circuito de tierra nuevo o de reemplazo instalado con una bomba de calor de fuente terrestre elegible."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.gtlakes.com/energy-wise/"
     }
@@ -765,17 +769,17 @@
     "program": "mi_greatLakesEnergyCooperative_energyWise",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 100
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for a desuperheater connected to a ground source heat pump for domestic hot water generation.",
-      "es": "Un reembolso de $500 por un regulador de vapor sobrecalentado conectado a una bomba de calor geotérmica para la generación de agua caliente para uso doméstico."
+      "en": "$100 rebate for a desuperheater connected to a ground source heat pump for domestic hot water generation.",
+      "es": "Reembolso de $100 para un desobrecalentador conectado a una bomba de calor de fuente terrestre para la generación de agua caliente sanitaria."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.gtlakes.com/energy-wise/"
     }
@@ -791,17 +795,17 @@
     "program": "mi_greatLakesEnergyCooperative_energyWise",
     "amount": {
       "type": "dollar_amount",
-      "number": 1200
+      "number": 100
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,200 rebate for a heat pump water heater. Minimum 2.0 UEF.",
-      "es": "Un reembolso de $1,200 por un calentador de agua con bomba de calor. Mínimo 2.0 UEF."
+      "en": "$100 rebate for a heat pump water heater. Minimum 2.0 UEF.",
+      "es": "Reembolso de $100 para un calentador de agua con bomba de calor. Mínimo 2.0 UEF."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.gtlakes.com/energy-wise/"
     }
@@ -870,16 +874,16 @@
     "program": "mi_indianaMichiganPower_i&MMarketplace",
     "amount": {
       "type": "dollar_amount",
-      "number": 30,
-      "minimum": 30,
-      "maximum": 60
+      "number": 75,
+      "minimum": 75,
+      "maximum": 150
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$30 rebate for smart thermostats. Limit 2 of each kind per account lifetime. Household must have electric heat.",
-      "es": "Un reembolso de $30 por termostatos inteligentes. Límite de 2 de cada tipo por cuenta de por vida. La vivienda debe tener calefacción eléctrica."
+      "en": "$75 rebate for smart thermostats. Limit 2 of each kind per account lifetime. Household must have electric heat.",
+      "es": "Reembolso de $75 en termostatos inteligentes. Límite de 2 de cada tipo por cuenta. El hogar debe tener calefacción eléctrica."
     },
     "url": {
       "en": "https://electricideas.com/at-home/rebates-products/marketplace/"
@@ -1155,7 +1159,7 @@
     "program": "mi_lansingBoardOfWaterAndLight_lansingBWLElectrificationPrograms",
     "amount": {
       "type": "dollar_amount",
-      "number": 150,
+      "number": 100,
       "minimum": 25,
       "maximum": 150
     },
@@ -1164,8 +1168,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $150 rebate for electric lawn equipment. Includes rebates for mowers, trimmers, chainsaws and blowers.",
-      "es": "Un reembolso de hasta $150 para equipos eléctricos de jardinería. Un reembolso que incluye podadoras, recortadoras, motosierras y sopladores."
+      "en": "Up to $100 rebate for electric lawn equipment. Includes rebates for mowers, trimmers, chainsaws and blowers.",
+      "es": "Reembolso de hasta $100 en equipos eléctricos para césped. Incluye descuentos para cortadoras de césped, recortadoras, motosierras y sopladores."
     },
     "url": {
       "en": "https://www.lbwl.com/customers/save-money-energy/electrification-programs"
@@ -1342,15 +1346,15 @@
     "program": "mi_a2zero_home_energy_rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 2500,
-      "maximum": 2500
+      "number": 500,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,500 rebate for weatherization.",
-      "es": "Reembolso de $2,500 en climatización."
+      "en": "$500 rebate for weatherization.",
+      "es": "Reembolso de $500 por climatización."
     },
     "start_date": "2024-07-01",
     "url": {
@@ -1368,15 +1372,15 @@
     "program": "mi_a2zero_home_energy_rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 2500,
-      "maximum": 2500
+      "number": 4000,
+      "maximum": 4000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,500 rebate for an air source heat pump.",
-      "es": "Reembolso de $2,500 para una bomba de calor de fuente de aire."
+      "en": "$4,000 rebate for an air source heat pump.",
+      "es": "Reembolso de $4,000 para una bomba de calor de fuente de aire."
     },
     "start_date": "2024-07-01",
     "url": {
@@ -1481,15 +1485,15 @@
     "program": "mi_a2zero_home_energy_rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 4000,
-      "maximum": 4000
+      "number": 1000,
+      "maximum": 1000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$4,000 rebate for weatherization for income-qualified residents.",
-      "es": "Reembolso de $4,000 en climatización para residentes que califiquen según sus ingresos."
+      "en": "$1,000 rebate for weatherization for income-qualified residents.",
+      "es": "Reembolso de $1,000 para climatización para residentes que califican según sus ingresos."
     },
     "start_date": "2024-07-01",
     "low_income": "mi-a2zero",
@@ -1509,15 +1513,15 @@
     "program": "mi_a2zero_home_energy_rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 3500,
-      "maximum": 3500
+      "number": 5500,
+      "maximum": 5500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$3,500 rebate for an air source heat pump for income-qualified residents.",
-      "es": "Reembolso de $3,500 en una bomba de calor de fuente de aire para residentes que califiquen según sus ingresos."
+      "en": "$5,500 rebate for an air source heat pump for income-qualified residents.",
+      "es": "Reembolso de $5,500 para una bomba de calor de fuente de aire para residentes que califican según sus ingresos."
     },
     "start_date": "2024-07-01",
     "low_income": "mi-a2zero",
@@ -1535,18 +1539,17 @@
     ],
     "program": "mi_a2zero_home_energy_rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "minimum": 250,
-      "maximum": 500
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 250
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for cargo e-bikes and $250 for standard e-bikes.",
-      "es": "Reembolso de $500 para bicicletas eléctricas de carga y $250 para bicicletas eléctricas estándar."
+      "en": "50% rebate up to $250 for standard e-bikes.",
+      "es": "Reembolso del 50% hasta $250 para bicicletas eléctricas estándar."
     },
     "start_date": "2024-07-01",
     "url": {
@@ -1563,18 +1566,17 @@
     ],
     "program": "mi_a2zero_home_energy_rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 1200,
-      "minimum": 1000,
-      "maximum": 1200
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 1000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$1,200 rebate for cargo e-bikes and $1,000 for standard e-bikes for income-qualified residents.",
-      "es": "Reembolso de $1,200 en bicicletas eléctricas de carga y $1,000 en bicicletas eléctricas estándar para residentes que califique según sus ingresos."
+      "en": "50% rebate up to $1,000 for e-bikes for income-qualified residents.",
+      "es": "Reembolso del 50% hasta $1,000 en bicicletas eléctricas para residentes que cumplan los requisitos de ingresos."
     },
     "start_date": "2024-07-01",
     "low_income": "mi-a2zero",
@@ -1619,8 +1621,8 @@
     "program": "mi_a2zero_home_energy_rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000,
-      "maximum": 1000
+      "number": 2000,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
@@ -1659,7 +1661,7 @@
       "es": "Reembolso de $100 por una bomba de calor de fuente de aire con calificación ENERGY STAR."
     },
     "start_date": "2022-10-01",
-    "end_date": "2025-09-30",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.efficiencysmart.org/home-energy-rebates?community=hillsdale-michigan"
     }
@@ -1688,7 +1690,7 @@
       "es": "Reembolso de $350 para una bomba de calor de fuente de aire para clima frío con calificación ENERGY STAR, de menos de 2 toneladas."
     },
     "start_date": "2022-10-01",
-    "end_date": "2025-09-30",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.efficiencysmart.org/home-energy-rebates?community=hillsdale-michigan"
     }
@@ -1717,7 +1719,7 @@
       "es": "Reembolso de $750 para una bomba de calor de fuente de aire para clima frío con calificación ENERGY STAR, de 2 toneladas o más."
     },
     "start_date": "2022-10-01",
-    "end_date": "2025-09-30",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.efficiencysmart.org/home-energy-rebates?community=hillsdale-michigan"
     }
@@ -1746,7 +1748,7 @@
       "es": "Reembolso de $50 por una secadora de ropa eléctrica con certificación ENERGY STAR."
     },
     "start_date": "2022-10-01",
-    "end_date": "2025-09-30",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.efficiencysmart.org/home-energy-rebates?community=hillsdale-michigan"
     }
@@ -1774,7 +1776,7 @@
       "es": "Reembolso de $300 por un calentador de agua con bomba de calor con certificación ENERGY STAR."
     },
     "start_date": "2022-10-01",
-    "end_date": "2025-09-30",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.efficiencysmart.org/home-energy-rebates?community=hillsdale-michigan"
     }
@@ -1802,7 +1804,7 @@
       "es": "Reembolso de $100 por un termostato inteligente."
     },
     "start_date": "2022-10-01",
-    "end_date": "2025-09-30",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.efficiencysmart.org/home-energy-rebates?community=hillsdale-michigan"
     }
@@ -2149,7 +2151,7 @@
     "amount": {
       "type": "dollar_amount",
       "number": 1200,
-      "minimum": 800,
+      "minimum": 900,
       "maximum": 1200
     },
     "owner_status": [

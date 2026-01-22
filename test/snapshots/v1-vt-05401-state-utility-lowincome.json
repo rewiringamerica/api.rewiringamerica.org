@@ -75,6 +75,7 @@
         "renter"
       ],
       "start_date": "2025-01-01",
+      "end_date": "2026-12-31",
       "short_description": "$850 rebate on an e-bike, up to 50% of purchase price, for income-qualified customers."
     },
     {
@@ -98,31 +99,8 @@
         "homeowner",
         "renter"
       ],
+      "end_date": "2025-12-31",
       "short_description": "25% of the upfront cost of a used high-efficiency vehicle, up to $5,000, for low and moderate income car buyers."
-    },
-    {
-      "payment_methods": [
-        "pos_rebate",
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "vt-burlington-electric-department",
-      "program": "Burlington Electric Department E-Bike Rebate",
-      "program_url": "https://www.burlingtonelectric.com/ebike/",
-      "items": [
-        "ebike"
-      ],
-      "amount": {
-        "type": "percent",
-        "number": 0.25,
-        "maximum": 600
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2025-01-01",
-      "short_description": "$600 rebate on an e-bike, up to 25% of purchase price."
     },
     {
       "payment_methods": [
@@ -145,6 +123,7 @@
         "homeowner",
         "renter"
       ],
+      "end_date": "2025-12-31",
       "short_description": "Incentive up to $5,000 for a new electric vehicle, or up to $3,000 for a new plug-in hybrid vehicle."
     },
     {
@@ -177,7 +156,7 @@
       "authority_type": "state",
       "authority": "vt-state-of-vermont",
       "program": "Drive Electric Vermont",
-      "program_url": "https://www.driveelectricvt.com/Media/Default/docs/purchase-incentives/vermont-new-pev-incentive-form.pdf?refresh",
+      "program_url": "https://www.driveelectricvt.com/shopping/incentives/e-bikes",
       "items": [
         "ebike"
       ],
@@ -191,16 +170,17 @@
         "renter"
       ],
       "start_date": "2024-10-30",
+      "end_date": "2025-12-31",
       "short_description": "$400-$800 upfront rebate on an electric bike, for income-qualified residents. Cargo ebikes and adaptive ebikes have higher rebates."
     },
     {
       "payment_methods": [
         "pos_rebate"
       ],
-      "authority_type": "state",
-      "authority": "vt-efficiency-vermont",
-      "program": "Efficiency Vermont Ductless Heat Pump Rebate",
-      "program_url": "https://www.efficiencyvermont.com/rebates/list/heat-pump-heating-cooling-system",
+      "authority_type": "utility",
+      "authority": "vt-burlington-electric-department",
+      "program": "Burlington Electric Department - Rebate for Ductless Heat Pump",
+      "program_url": "https://www.burlingtonelectric.com/rebate-form?item_purchased=Mini-Split%20Heat%20Pump",
       "items": [
         "ductless_heat_pump"
       ],
@@ -213,6 +193,7 @@
         "homeowner"
       ],
       "start_date": "2021-11-01",
+      "end_date": "2026-12-31",
       "short_description": "Hire a contractor and get a $350-$450 instant discount on qualifying models of ductless heat pumps at a participating distributor."
     },
     {
@@ -239,30 +220,6 @@
     },
     {
       "payment_methods": [
-        "pos_rebate",
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "vt-burlington-electric-department",
-      "program": "Burlington Electric Department E-Bike Rebate",
-      "program_url": "https://www.burlingtonelectric.com/ebike/",
-      "items": [
-        "ebike"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 300,
-        "maximum": 300
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2022-04-25",
-      "short_description": "$300 rebate on an e-bike."
-    },
-    {
-      "payment_methods": [
         "pos_rebate"
       ],
       "authority_type": "state",
@@ -275,13 +232,13 @@
       "amount": {
         "type": "dollar_amount",
         "number": 40,
-        "maximum": 40
+        "maximum": 90
       },
       "owner_status": [
         "homeowner"
       ],
-      "start_date": "2020-06-15",
-      "short_description": "Apply for a rebate and get $25-40 cash back on qualifying ENERGY STAR® dehumidifier models."
+      "start_date": "2025-06-01",
+      "short_description": "Apply for a rebate and get $25-90 cash back on qualifying ENERGY STAR® dehumidifier models."
     },
     {
       "payment_methods": [
@@ -296,14 +253,14 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 15,
-        "maximum": 600
+        "number": 40,
+        "maximum": 1500
       },
       "owner_status": [
         "homeowner"
       ],
-      "start_date": "2018-07-01",
-      "short_description": "Hire a contractor and get a $15-$600 instant rebate on each qualifying high-performance circulator pump at participating distributors."
+      "start_date": "2024-08-01",
+      "short_description": "Hire a contractor and get a $40-$1500 instant rebate on each qualifying high-performance circulator pump at participating distributors."
     },
     {
       "payment_methods": [
@@ -325,6 +282,7 @@
         "homeowner"
       ],
       "start_date": "2024-04-01",
+      "end_date": "2025-12-31",
       "short_description": "100% off a heat pump water heater, up to $5,000, for low-income customers."
     },
     {
@@ -347,7 +305,38 @@
         "homeowner"
       ],
       "start_date": "2024-11-01",
+      "end_date": "2025-04-15",
       "short_description": "100% of costs for a 200 amp electric panel upgrade for low-income customers."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "vt-efficiency-vermont",
+      "program": "Home performance with ENERGY STAR",
+      "program_url": "https://www.efficiencyvermont.com/rebates/list/home-performance-with-energy-star",
+      "items": [
+        "other_insulation",
+        "air_sealing",
+        "attic_or_roof_insulation",
+        "basement_insulation",
+        "crawlspace_insulation",
+        "floor_insulation",
+        "other_weatherization",
+        "wall_insulation"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.95,
+        "maximum": 9500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2023-08-01",
+      "short_description": "95% rebate up to $9500 for insulation and air sealing.  For low income households."
     },
     {
       "payment_methods": [
@@ -369,6 +358,7 @@
         "homeowner"
       ],
       "start_date": "2024-11-01",
+      "end_date": "2025-04-15",
       "short_description": "90% of costs for a 200 amp electric panel upgrade for moderate-income customers."
     },
     {
@@ -391,7 +381,7 @@
         "homeowner"
       ],
       "start_date": "2022-01-01",
-      "end_date": "2025-12-31",
+      "end_date": "2026-12-31",
       "short_description": "Rebate of up to $2,500 on qualifying ductless heat pumps, or $500 for a second heat pump, up to 75% of cost. Available through your contractor."
     },
     {
@@ -413,7 +403,7 @@
       "owner_status": [
         "homeowner"
       ],
-      "end_date": "2025-12-31",
+      "end_date": "2026-12-31",
       "short_description": "Up to $900 back on qualifying level 2 charger purchased within 60 days of vehicle purchase or lease. May be eligible for discounted EV charging rate."
     },
     {
@@ -449,6 +439,28 @@
       "payment_methods": [
         "rebate"
       ],
+      "authority_type": "utility",
+      "authority": "vt-burlington-electric-department",
+      "program": "Burlington Electric Department - Residential EV Charger Rebate",
+      "program_url": "https://www.burlingtonelectric.com/evchargers#",
+      "items": [
+        "electric_vehicle_charger"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.75,
+        "maximum": 1000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "end_date": "2026-12-31",
+      "short_description": "Up to $1000 for income qualified buyers of qualifying level 2 charger purchased within 60 days of vehicle purchase or lease. "
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
       "authority_type": "state",
       "authority": "vt-efficiency-vermont",
       "program": "Home performance with ENERGY STAR",
@@ -469,10 +481,11 @@
         "maximum": 9500
       },
       "owner_status": [
-        "homeowner"
+        "homeowner",
+        "renter"
       ],
       "start_date": "2023-08-01",
-      "short_description": "75% rebate up to $9,500 for insulation and air sealing, for moderate-income residents."
+      "short_description": "75% rebate up to $9500 for insulation and air sealing.  For moderate income households."
     },
     {
       "payment_methods": [
@@ -494,7 +507,7 @@
         "homeowner"
       ],
       "start_date": "2022-01-01",
-      "end_date": "2025-12-31",
+      "end_date": "2026-12-31",
       "short_description": "Up to $100 rebate for residential push mower or $300 rebate for a ride-on mower, or $50 on electric chainsaws and trimmers."
     },
     {
@@ -564,7 +577,7 @@
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "BED customers may receive a rebate up to $2,500 on qualifying ground source heat pumps, plus an additional $500 for a second ground source heat pump."
+      "short_description": "BED customers can receive generous rebates on ground source heat pump systems. Rebate amounts are calculated on a customer basis. "
     },
     {
       "payment_methods": [
@@ -608,7 +621,7 @@
         "homeowner"
       ],
       "start_date": "2023-01-01",
-      "end_date": "2025-12-31",
+      "end_date": "2026-12-31",
       "short_description": "Up to $5,450 on heat pump installation."
     },
     {
@@ -632,8 +645,8 @@
         "homeowner",
         "renter"
       ],
-      "end_date": "2025-12-31",
-      "short_description": "$2,300 rebate for a new electric vehicle, or $2,000 for a plug-in hybrid."
+      "end_date": "2026-12-31",
+      "short_description": "$5000 rebate for a new electric vehicle, or $2,000 for a plug-in hybrid."
     },
     {
       "payment_methods": [
@@ -656,6 +669,29 @@
         "renter"
       ],
       "short_description": "Incentive up to $1,300 for a used electric vehicle or plug-in hybrid."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "vt-burlington-electric-department",
+      "program": "Burlington Electric Department - Rebate for Heat Pump Water Heater",
+      "program_url": "https://www.burlingtonelectric.com/waterheaters",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 800,
+        "maximum": 800
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2022-01-01",
+      "end_date": "2026-12-31",
+      "short_description": "$800 available from BED through Efficiency VT, available through your contractor."
     },
     {
       "payment_methods": [
@@ -702,30 +738,8 @@
         "homeowner",
         "renter"
       ],
+      "end_date": "2026-12-31",
       "short_description": "An extra $700 for a new all-electric vehicle, or $300 for a plug-in hybrid, for income-qualified customers."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "vt-burlington-electric-department",
-      "program": "Burlington Electric Department - Rebate for Heat Pump Water Heater",
-      "program_url": "https://www.burlingtonelectric.com/waterheaters",
-      "items": [
-        "heat_pump_water_heater"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 600,
-        "maximum": 800
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2022-01-01",
-      "end_date": "2025-12-31",
-      "short_description": "$600 available from BED through Efficiency VT, available through your contractor."
     },
     {
       "payment_methods": [
@@ -748,6 +762,29 @@
       ],
       "start_date": "2021-12-01",
       "short_description": "Install integrated controls with a new ductless heat pump in a single family home and get up to $600 back."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "vt-burlington-electric-department",
+      "program": "Burlington Electric Department - Rebate for Ductless Heat Pump",
+      "program_url": "https://www.burlingtonelectric.com/rebate-form?item_purchased=Mini-Split%20Heat%20Pump",
+      "items": [
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 500,
+        "maximum": 500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2022-01-01",
+      "end_date": "2026-12-31",
+      "short_description": "Income-eligible customers qualify for up to $500 enhanced rebate for a ductless heat pump."
     },
     {
       "payment_methods": [
@@ -814,8 +851,8 @@
         "homeowner"
       ],
       "start_date": "2023-01-01",
-      "end_date": "2025-12-31",
-      "short_description": "Income-eligible BED customers can receive a $500 enhanced rebate for a qualifying ducted heat pump."
+      "end_date": "2026-12-31",
+      "short_description": "Income-eligible BED customers can receive a $400 enhanced rebate for a qualifying ducted heat pump."
     },
     {
       "payment_methods": [
@@ -860,28 +897,6 @@
       ],
       "start_date": "2023-10-01",
       "short_description": "BED rebate offered through Efficiency Vermont. Apply for a rebate and get up to $400 cash back on qualifying ENERGY STAR® heat pump models."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "utility",
-      "authority": "vt-burlington-electric-department",
-      "program": "Burlington Electric Department - Heat Pump Rebates - Income Bonus",
-      "program_url": "https://www.burlingtonelectric.com/waterheaters",
-      "items": [
-        "heat_pump_water_heater"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 400,
-        "maximum": 400
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2025-01-01",
-      "short_description": "Income-eligible customers recieve an enhanced bonus rebate of $400 for a heat pump water heater."
     },
     {
       "payment_methods": [
@@ -1009,14 +1024,14 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 40
+        "number": 50
       },
       "owner_status": [
         "homeowner"
       ],
       "start_date": "2022-01-01",
-      "end_date": "2025-12-31",
-      "short_description": "Receive up to $40 back for residential electric leaf blower (commercial up to $200)."
+      "end_date": "2026-12-31",
+      "short_description": "Receive up to $50 back for residential electric leaf blower (commercial up to $150)."
     }
   ]
 }
