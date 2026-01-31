@@ -61,18 +61,18 @@
     "program": "ar_southwesternElectricPower_southwesternElectricEfficientProductsRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 1150
+      "number": 500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,150 rebate on ENERGY STAR-certified heat pump water heaters. ",
-      "es": "Reembolso de hasta $1,150 en calentadores de agua con bomba de calor con certificación ENERGY STAR. "
+      "en": "Up to $500 rebate on ENERGY STAR-certified heat pump water heaters. ",
+      "es": "Reembolso de hasta $500 en calentadores de agua con bomba de calor con certificación ENERGY STAR. "
     },
     "url": {
-      "en": "https://swepcosavings.com/downloads/2025/0125_SWEPCOAR_RES_5068931_Incentive%20Applications_ResReb_APP_HPWH_FILLABLE_v2.pdf"
+      "en": "https://www.swepco.com/savings/home/money/rebates/"
     }
   },
   {
@@ -98,6 +98,7 @@
       "en": "$250/ton rebate on qualifying heat pumps.",
       "es": "Reembolso de $250 por tonelada en bombas de calor que reúnan los requisitos."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://swepcosavings.com/downloads/2025/REIP_Incentive_Table-2025_v2.pdf"
     }
@@ -122,8 +123,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "$400/ton rebate on qualifying mini-split heat pumps.",
-      "es": "Reembolso de $400 por tonelada en bombas de calor mini-split que reúnan los requisitos."
+      "en": "Up to $400/ton rebate on qualifying mini-split and air-source heat pumps.",
+      "es": "Descuento de hasta $400 por tonelada en bombas de calor de fuente de aire y minisplit calificadas."
     },
     "url": {
       "en": "https://swepcosavings.com/downloads/2025/REIP_Incentive_Table-2025_v2.pdf"
@@ -161,7 +162,8 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_water_heater"
+      "ducted_heat_pump",
+      "ductless_heat_pump"
     ],
     "program": "ar_carrollElectricCooperativeCorp_carollElectricEnergyEfficiencyRebates",
     "amount": {
