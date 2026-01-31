@@ -73,6 +73,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "start_date": "2025-11-16",
       "end_date": "2026-12-31",
       "short_description": "$2,250/heating ton at 5 degrees Fahrenheit for a cold-climate heat pump."
     },
@@ -237,30 +238,6 @@
       "start_date": "2024-01-01",
       "end_date": "2025-12-31",
       "short_description": "At least $499.95 discount for customers who purchase an eligible air source heat pump from a contractor registered with the Colorado Energy Office."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "co-colorado-energy-office",
-      "program": "Colorado HEAR Program",
-      "program_url": "https://energyoffice.colorado.gov/home-energy-rebates",
-      "items": [
-        "ducted_heat_pump",
-        "ductless_heat_pump"
-      ],
-      "amount": {
-        "type": "percent",
-        "number": 1,
-        "maximum": 3000
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2025-11-17",
-      "short_description": "Rebate of 50% of ENERGY STAR heat pump costs.   For space heating and cooling in households between 80% and 150% AMI, up to $3,000."
     },
     {
       "payment_methods": [
@@ -682,6 +659,30 @@
         "renter"
       ],
       "short_description": "Rebate of 50% of insulation, air sealing, and ventilation costs for households between 80% and 150% AMI, up to $1,600."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "co-colorado-energy-office",
+      "program": "Colorado HEAR Program",
+      "program_url": "https://energyoffice.colorado.gov/home-energy-rebates",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.5,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2025-11-17",
+      "short_description": "Rebate of 50% of ENERGY STAR heat pump costs.   For space heating and cooling in households between 80% and 150% AMI, up to $3,000."
     },
     {
       "payment_methods": [

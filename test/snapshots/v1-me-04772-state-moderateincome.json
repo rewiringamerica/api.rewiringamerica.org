@@ -23,19 +23,19 @@
       "authority_type": "state",
       "authority": "me-efficiency-maine",
       "program": "Efficiency Maine Water Heating Incentives",
-      "program_url": "https://www.efficiencymaine.com",
+      "program_url": "https://www.efficiencymaine.com/at-home/heat-pump-water-heater-program/",
       "items": [
         "heat_pump_water_heater"
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 950
+        "number": 1050
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "short_description": "$950 upfront discount on heat pump water heaters when bought through Granite Group, Lowe's, or Home Depot."
+      "short_description": "$1,050 upfront discount on heat pump water heaters when bought through Granite Group, Lowe's, or Home Depot."
     },
     {
       "payment_methods": [
@@ -143,30 +143,8 @@
       ],
       "authority_type": "state",
       "authority": "me-efficiency-maine",
-      "program": "Efficiency Maine Residential Heat Pump Incentives",
-      "program_url": "https://www.efficiencymaine.com",
-      "items": [
-        "ducted_heat_pump",
-        "ductless_heat_pump"
-      ],
-      "amount": {
-        "type": "percent",
-        "number": 0.4,
-        "maximum": 4000
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "short_description": "Rebate for 40% of project cost for a heat pump, up to $4,000."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "me-efficiency-maine",
       "program": "Efficiency Maine Heating System Rebates",
-      "program_url": "https://www.efficiencymaine.com",
+      "program_url": "https://www.efficiencymaine.com/at-home/geothermal/",
       "items": [
         "geothermal_heating_installation"
       ],
@@ -187,20 +165,42 @@
       ],
       "authority_type": "state",
       "authority": "me-efficiency-maine",
-      "program": "Efficiency Maine Water Heating Incentives",
+      "program": "Efficiency Maine Residential Heat Pump Incentives",
       "program_url": "https://www.efficiencymaine.com",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 4000,
+        "maximum": 4000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "short_description": "$4,000 rebate for a qualifying heat pump."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "me-efficiency-maine",
+      "program": "Efficiency Maine Water Heating Incentives",
+      "program_url": "https://www.efficiencymaine.com/at-home/heat-pump-water-heater-program/",
       "items": [
         "heat_pump_water_heater"
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 950
+        "number": 1050
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
-      "short_description": "$950 mail-in rebate for heat pump water heater."
+      "short_description": "$1,050 mail-in rebate for heat pump water heater."
     },
     {
       "payment_methods": [

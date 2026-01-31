@@ -123,7 +123,29 @@
         "homeowner"
       ],
       "start_date": "2024-08-01",
-      "short_description": "Rebate of 75% of cost for a Level 2 EV charger, up to $500, or up to $1,000 where an electrical upgrade is needed, for income-qualified residents."
+      "short_description": "Rebate for full cost for a Level 2 EV charger, up to $800, or 75% of cost up to $1,000 if an electrical upgrade is needed."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "state",
+      "authority": "ri-oer",
+      "program": "PowerUpRI",
+      "program_url": "https://drive.ri.gov/powerupri",
+      "items": [
+        "electric_vehicle_charger"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.75,
+        "maximum": 1500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2024-08-01",
+      "short_description": "Rebate for full cost for a Level 2 EV charger, up to $800, or 75% up to $1,500 where electrical upgrade needed for income qualified residents. "
     },
     {
       "payment_methods": [
@@ -149,28 +171,6 @@
       ],
       "start_date": "2025-07-21",
       "short_description": "60% rebate for a heat pump system, up to $11,500, for income-qualified customers currently using natural gas, propane, or oil. "
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "ri-oer",
-      "program": "PowerUpRI",
-      "program_url": "https://drive.ri.gov/powerupri",
-      "items": [
-        "electric_vehicle_charger"
-      ],
-      "amount": {
-        "type": "percent",
-        "number": 0.5,
-        "maximum": 700
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2024-08-01",
-      "short_description": "Rebate of 50% of cost for a Level 2 EV charger, up to $350, or up to $700 if an electrical upgrade is needed."
     },
     {
       "payment_methods": [

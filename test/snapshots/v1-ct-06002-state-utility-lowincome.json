@@ -38,6 +38,7 @@
         "homeowner",
         "renter"
       ],
+      "end_date": "2026-12-31",
       "short_description": "The Home Energy Solutions program provides income-eligible households with no-cost energy assessments and incentives for weatherization services."
     },
     {
@@ -99,14 +100,14 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 1500
+        "number": 1000
       },
       "owner_status": [
         "homeowner",
         "renter"
       ],
       "start_date": "2025-01-01",
-      "short_description": "$1,500 rebate for a qualifying new electric vehicle."
+      "short_description": "$1,000 rebate for a qualifying new electric vehicle."
     },
     {
       "payment_methods": [
@@ -121,14 +122,14 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 650
+        "number": 900
       },
       "owner_status": [
         "homeowner"
       ],
       "start_date": "2023",
-      "end_date": "2025-12-31",
-      "short_description": "$650 upfront rebate for eligible Energy Star certified heat pump water heaters."
+      "end_date": "2026-12-31",
+      "short_description": "$900 upfront rebate for eligible Energy Star certified heat pump water heaters."
     },
     {
       "payment_methods": [
@@ -174,8 +175,82 @@
         "homeowner"
       ],
       "start_date": "2023",
-      "end_date": "2025-12-31",
+      "end_date": "2026-12-31",
       "short_description": "$1,500 per ton after-purchase rebate for qualifying ground source heat pumps, up to $15,000."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ct-eversource",
+      "program": "Energize CT Residential Ground Source Heat Pump Incentive",
+      "program_url": "https://energizect.com/rebates-incentives/heating-cooling/heat-pumps/ground-source-residential",
+      "items": [
+        "geothermal_heating_installation"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 1500,
+        "maximum": 15000,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023",
+      "end_date": "2026-12-31",
+      "short_description": "$1,500 per ton up to $15,000 for qualifying ground source heat pumps."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ct-eversource",
+      "program": "Energize CT Residential Air Source Heat Pump Incentive",
+      "program_url": "https://energizect.com/rebates-incentives/heating-cooling/heat-pumps/residential-air-source",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 1000,
+        "maximum": 10000,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023",
+      "end_date": "2026-12-31",
+      "short_description": "$1000 per ton after-purchase rebate for qualifying air source heat pumps."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "utility",
+      "authority": "ct-eversource",
+      "program": "Energize CT Residential Air Source Heat Pump Incentive",
+      "program_url": "https://energizect.com/rebates-incentives/heating-cooling/heat-pumps/residential-air-source",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 250,
+        "maximum": 2500,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2023",
+      "end_date": "2026-12-31",
+      "short_description": "$250/ton when replacing an air source heat pump or adding cooling only."
     },
     {
       "payment_methods": [
@@ -197,6 +272,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "end_date": "2026-04-01",
       "short_description": "Up to $250 rebate for 10MW installed battery capacity. Additional performance incentives paid 2x yearly."
     },
     {
@@ -217,7 +293,7 @@
       ],
       "amount": {
         "type": "dollars_per_unit",
-        "number": 1.7,
+        "number": 2,
         "maximum": 10000,
         "unit": "square_foot"
       },
@@ -225,7 +301,8 @@
         "homeowner",
         "renter"
       ],
-      "short_description": "Up to $1.70 per square foot or 75% of total cost, up to $10,000 for approved insulation projects using participating installers."
+      "end_date": "2026-12-31",
+      "short_description": "Up to $2.00 per square foot or 75% of total cost, up to $10,000 for approved insulation projects using participating installers."
     },
     {
       "payment_methods": [
@@ -247,6 +324,7 @@
         "homeowner",
         "renter"
       ],
+      "end_date": "2026-12-31",
       "short_description": "Up to $1,750 for advanced duct sealing for heating or heating & cooling systems. Limit is 2 systems."
     },
     {
@@ -292,7 +370,8 @@
         "homeowner"
       ],
       "start_date": "2024-01-20",
-      "short_description": "$500 bonus rebate when you weatherize and install a heat pump."
+      "end_date": "2026-12-31",
+      "short_description": "$500 bonus rebate when you weatherize and install a heat pump, for income-qualified residents."
     }
   ]
 }
