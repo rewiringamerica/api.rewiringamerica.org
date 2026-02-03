@@ -91,6 +91,7 @@
       "number": 200
     },
     "owner_status": [
+      "homeowner",
       "renter"
     ],
     "short_description": {
@@ -112,14 +113,16 @@
     "program": "ok_publicServiceCompanyOfOklahoma_powerForwardWithPSO",
     "amount": {
       "type": "dollar_amount",
-      "number": 1400
+      "number": 1400,
+      "minimum": 600,
+      "maximum": 1400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,400 rebate on qualifying air-source heat pumps. ",
-      "es": "Reembolso de $1,400 por bombas de calor de fuente de aire que cumplan los requisitos. "
+      "en": "Up to $1,400 rebate on qualifying air-source heat pumps, depending on efficiency level. ",
+      "es": "Reembolso de hasta $1,400 en bombas de calor de fuente de aire calificadas, según el nivel de eficiencia. "
     },
     "url": {
       "en": "https://powerforwardwithpso.com/rebate/air-source-heat-pump-15-2-17-1-seer2/?category=Heating%2C+Cooling+%26amp%3B+Ventilation&link=heating-cooling-ventilation"
@@ -159,17 +162,17 @@
     ],
     "program": "ok_publicServiceCompanyOfOklahoma_powerForwardWithPSO",
     "amount": {
-      "type": "dollars_per_unit",
-      "number": 500,
-      "unit": "ton",
-      "maximum": 1400
+      "type": "dollar_amount",
+      "number": 1400,
+      "minimum": 1400,
+      "maximum": 3400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500/ton rebate on a geothermal heat pump system.",
-      "es": "Reembolso de $500 por tonelada por un sistema de bomba de calor geotérmica."
+      "en": "$1,400 rebate plus $500/ton rebate on a geothermal heat pump system.",
+      "es": "Descuento de $1,400 más descuento de $500/tonelada en un sistema de bomba de calor geotérmica."
     },
     "url": {
       "en": "https://powerforwardwithpso.com/rebate/geothermal-ground-source-heat-pump-2/?category=Heating%2C+Cooling+%26amp%3B+Ventilation&link=heating-cooling-ventilation"
