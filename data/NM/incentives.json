@@ -1916,7 +1916,7 @@
     ],
     "short_description": {
       "en": "$90 rebate for ENERGY STAR heat pump (ventless) clothes dryer. $30 rebate for electric clothes dryer. ",
-      "es": "Reembolso de $90 para secadora de ropa con bomba de calor ENERGY STAR (sin ventilación). Reembolso de $30 para secadora de ropa eléctrica. "
+      "es": "Reembolso de $90 para secadora de ropa con bomba de calor ENERGY STAR (sin ventilación). Reembolso de $30 para secadora de ropa eléctrica."
     },
     "url": {
       "en": "https://www.columbusco-op.org/rebates"
@@ -4965,7 +4965,7 @@
     ],
     "short_description": {
       "en": "Affordable electric carshare. First test drive is free. Subsequent rentals are $4-$5/hr or a $35-50/day. Specific locations. Las Cruces coming soon.",
-      "es": "Alquiler de coches eléctricos compartidos a precios asequibles. La primera prueba de conducción es gratuita. Los alquileres posteriores cuestan entre $4 y $5 por hora o entre $35 y $50 por día. Ubicaciones específicas. Próximamente en Las Cruces."
+      "es": "Alquiler de autos eléctricos compartidos a precios asequibles. La primera prueba de conducción es gratuita. Los alquileres posteriores cuestan entre $4 y $5 por hora o entre $35 y $50 por día. Ubicaciones específicas. Próximamente en Las Cruces."
     },
     "url": {
       "en": "https://forthmobility.org/goforth"
@@ -5211,7 +5211,7 @@
     ],
     "short_description": {
       "en": "Up to $50 rebate on qualified smart thermostat plus $25/year in Energy Wise Savings program.  Get $25 + $25/yr to enroll existing thermostat.  ",
-      "es": "Hasta $50 de descuento en termostatos inteligentes calificados, más $25 al año en el programa de Ahorro Energético. Reciba $25 + $25 al año para registrar su termostato actual.  "
+      "es": "Hasta $50 de descuento en termostatos inteligentes calificados, más $25 al año en el programa de Ahorro Energético. Reciba $25 + $25 al año para registrar su termostato actual."
     },
     "url": {
       "en": "https://www.epesaver.com/residential-comprehensive/"
@@ -5398,7 +5398,7 @@
     ],
     "short_description": {
       "en": "Up to $300 rebate on qualified ductless heat pump, depending on efficiency and using participating contractor.",
-      "es": "Reembolso de hasta $300 en bombas de calor sin ductos calificadas, según la eficiencia y el uso de un contratista participante."
+      "es": "Reembolso de hasta $300 para bombas de calor sin ductos calificadas, según la eficiencia y la instalación por parte de un contratista participante."
     },
     "start_date": "2025-01-01",
     "url": {
@@ -5506,7 +5506,7 @@
     ],
     "short_description": {
       "en": "Up to $800 rebate for Level 2 electric vehicle charger or installation cost (240 volt circuit). Renters- separate meter and written landlord consent.",
-      "es": "Reembolso de hasta $800 por cargador de vehículo eléctrico de Nivel 2 o costo de instalación (circuito de 240 voltios). Inquilinos: medidor independiente y consentimiento por escrito del propietario."
+      "es": "Reembolso de hasta $800 para un cargador de vehículo eléctrico de Nivel 2 o costo de instalación (circuito de 240 voltios). Inquilinos: medidor independiente y consentimiento por escrito del propietario."
     },
     "url": {
       "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
@@ -6569,11 +6569,62 @@
     ],
     "short_description": {
       "en": "Up to $4,000 off an electric panel upgrade and $2,500 off electrical wiring work conducted by an authorized program contractor.",
-      "es": "Hasta $4,000 de descuento en una actualización de panel eléctrico y $2,500 de descuento en trabajos de cableado eléctrico realizados por un contratista autorizado del programa."
+      "es": "Hasta $4,000 de descuento para una actualización de panel eléctrico y $2,500 de descuento para trabajos de cableado eléctrico realizados por un contratista autorizado del programa."
     },
     "low_income": "nm-hear-low-income",
     "url": {
       "en": "https://clean.energy.nm.gov/landing/electric-upgrades/"
+    }
+  },
+  {
+    "id": "NM-266",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nm-pnm-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 160
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$160 off coupon for 1-2 Heat Pump Water Heater (56 gallons or more) at selected retailers (local and online)https://pnm.clearesult.com/shop-products",
+      "es": "Cupón de descuento de $160 para calentadores de agua con bomba de calor 1-2 (56 galones o más) en minoristas seleccionados (locales y en línea) https://pnm.clearesult.com/shop-products"
+    },
+    "start_date": "2026-01-01",
+    "url": {
+      "en": "https://pnm.clearesult.com/shop-products"
+    }
+  },
+  {
+    "id": "NM-267",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nm-pnm-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$700 coupon for Heat Pump Water Heater (55 gallons or less) at select retailers (online and local)",
+      "es": "Cupón de $700 para calentador de agua con bomba de calor (55 galones o menos) en minoristas selectos (en línea y locales)"
+    },
+    "start_date": "2026-01-01",
+    "url": {
+      "en": "https://pnm.clearesult.com/shop-products"
     }
   }
 ]

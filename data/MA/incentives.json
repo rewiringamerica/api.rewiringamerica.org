@@ -119,7 +119,7 @@
     ],
     "short_description": {
       "en": "$100 rebate for ENERGY STAR Certified heat pump clothes dryer.",
-      "es": "Reembolso de $100 por secadora de ropa con bomba de calor con certificación ENERGY STAR."
+      "es": "Reembolso de $100 para secadora de ropa con bomba de calor con certificación ENERGY STAR."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -391,25 +391,26 @@
       "rebate"
     ],
     "items": [
-      "ductless_heat_pump"
+      "ductless_heat_pump",
+      "ducted_heat_pump"
     ],
     "program": "ma_massSave_massSaveHeatingAndCoolingIncentives",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 1250,
+      "number": 1125,
       "unit": "ton",
-      "maximum": 10000
+      "maximum": 8500
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$1,250/ton rebate, up to $10,000 for a partial-home air source heat pump.",
-      "es": "Reembolso de $1,250 por tonelada, hasta $10,000 por una bomba de calor de fuente de aire para vivienda parcial."
+      "en": "$1,125/ton rebate, up to $8,500 for a partial-home air source heat pump. $500 sizing bonus for heat pumps sized to meet homes' total heating needs.",
+      "es": "Reembolso de $1,125/tonelada, hasta $8,500 para una bomba de calor de fuente de aire para una parte del hogar. Bono de tamaño de $500 para bombas de calor dimensionadas para satisfacer las necesidades totales de calefacción de las viviendas."
     },
-    "end_date": "2025-12-31",
     "url": {
-      "en": "https://www.masssave.com/en/residential/rebates-and-incentives/heating-and-cooling/heat-pumps"
+      "en": "https://www.masssave.com/residential/rebates-offers-services/heating-and-cooling/heat-pumps/air-source-heat-pumps"
     }
   },
   {
@@ -418,25 +419,26 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump"
+      "ducted_heat_pump",
+      "ductless_heat_pump"
     ],
     "program": "ma_massSave_massSaveHeatingAndCoolingIncentives",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 3000,
+      "number": 2650,
       "unit": "ton",
-      "maximum": 10000
+      "maximum": 8500
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$3,000/ton rebate, up to $10,000 for a whole-home air source heat pump.",
-      "es": "Reembolso de $3,000 por tonelada, hasta $10,000 por una bomba de calor de fuente de aire para toda la casa."
+      "en": "$2,650/ton rebate, up to $8,500 for a whole-home air source heat pump.",
+      "es": "Reembolso de $2,650 por tonelada, hasta $8,500 para una bomba de calor de fuente de aire para toda la casa."
     },
-    "end_date": "2025-12-31",
     "url": {
-      "en": "https://www.masssave.com/en/residential/rebates-and-incentives/heating-and-cooling/heat-pumps"
+      "en": "https://www.masssave.com/en/residential/rebates-and-incentives/heating-and-cooling/heat-pumps/air-source-heat-pumps"
     }
   },
   {
@@ -4422,7 +4424,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "50% off cost up to $2,000 for qualifying insulation and weatherization measures, after an energy audit."
+      "en": "50% off cost up to $2,000 for qualifying insulation and weatherization measures, after an energy audit.",
+      "es": "Reembolso del 50 % para aislamiento y sellado de aire, hasta $1,500, después de una auditoría energética."
     },
     "start_date": "2026-01-01",
     "url": {
@@ -4451,7 +4454,7 @@
     ],
     "short_description": {
       "en": "$500 per ton up to $2,000 rebate for a mini split or ducted heat pump. ",
-      "es": "$500 por tonelada hasta $2,000 de reembolso para un minisplit o una bomba de calor canalizada. "
+      "es": "$500 por tonelada hasta $2,000 de reembolso para un minisplit o una bomba de calor con ductos."
     },
     "start_date": "2026-01-01",
     "url": {
@@ -4485,7 +4488,7 @@
     ],
     "short_description": {
       "en": "$1,000 per ton up to $5,000 for a qualifying heat pump when paired with insulation. Insulation rebate increased to 50% off up to $2,500 in bundle.",
-      "es": "$1,000 por tonelada, hasta $5,000 por una bomba de calor que cumpla los requisitos al combinarse con aislamiento. El descuento por aislamiento aumentó al 50% hasta $2,500 en el paquete."
+      "es": "$1,000 por tonelada, hasta $5,000, para una bomba de calor que cumpla los requisitos al combinarse con aislamiento. El descuento por aislamiento aumentó al 50% hasta $2,500 en el paquete."
     },
     "start_date": "2026-01-01",
     "url": {
@@ -4524,7 +4527,7 @@
     ],
     "short_description": {
       "en": "$1,250 per ton up to $6,250 for a qualifying heat pump with proof of fossil fuel system removal. Insulation max increased to $3,750 when bundled.",
-      "es": "$1250 por tonelada, hasta $6250 por una bomba de calor que cumpla los requisitos, con comprobante de desinstalación del sistema de combustible fósil. El máximo de aislamiento aumenta a $3750 al incluir el paquete."
+      "es": "$1,250 por tonelada, hasta $6,250 para una bomba de calor que cumpla los requisitos, con comprobante de desinstalación del sistema de combustible fósil. El máximo de aislamiento aumenta a $3,750 al incluir el paquete."
     },
     "start_date": "2026-01-01",
     "url": {
@@ -4608,7 +4611,7 @@
     ],
     "short_description": {
       "en": "$100 rebate for an induction range not replacing a gas stove.",
-      "es": "Reembolso de $100 por una cocina de inducción que no reemplaza una estufa de gas."
+      "es": "Reembolso de $100 para una cocina de inducción que no reemplaza una estufa de gas."
     },
     "start_date": "2026-01-01",
     "url": {
@@ -4691,7 +4694,7 @@
     ],
     "short_description": {
       "en": "50% of cost up to $100 for a cordless electric snow blower. ",
-      "es": "50% del costo hasta $100 para una quitanieves eléctrica inalámbrica. "
+      "es": "50% del costo hasta $100 para una quitanieves eléctrica inalámbrica."
     },
     "start_date": "2026-01-01",
     "url": {
@@ -4720,7 +4723,7 @@
     ],
     "short_description": {
       "en": "Up to $650 rebate for a level 2 residential electric vehicle charger with enrollment in charger curtailment program. ",
-      "es": "Reembolso de hasta $650 para un cargador de vehículo eléctrico residencial de nivel 2 con inscripción en el programa de reducción de cargadores. "
+      "es": "Reembolso de hasta $650 para un cargador de vehículo eléctrico residencial de nivel 2 con inscripción en el programa de reducción de cargadores."
     },
     "url": {
       "en": "https://nextzero.org/wakefield/ev-charger-program/"
@@ -4773,7 +4776,7 @@
     ],
     "short_description": {
       "en": "$0.80 per watt, up to 50% of installed costs for a residential solar system.",
-      "es": "$0,80 por vatio, hasta el 50% de los costos de instalación para un sistema solar residencial."
+      "es": "$0.80 por vatio, hasta el 50% de los costos de instalación para un sistema solar residencial."
     },
     "url": {
       "en": "https://wmgld.com/residential/residential-rebates/solar-rebate/"
@@ -4852,7 +4855,7 @@
     ],
     "short_description": {
       "en": "$100 rebate for an ENERGY STAR certified induction range when replacing electric.",
-      "es": "Reembolso de $100 por una cocina de inducción con certificación ENERGY STAR al reemplazar una eléctrica."
+      "es": "Reembolso de $100 para una cocina de inducción con certificación ENERGY STAR al reemplazar una eléctrica."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -4880,7 +4883,7 @@
     ],
     "short_description": {
       "en": "$500 rebate for an ENERGY STAR certified all-in-one washer and heat pump dryer.",
-      "es": "Reembolso de $500 por una lavadora y secadora con bomba de calor todo en uno con certificación ENERGY STAR."
+      "es": "Reembolso de $500 para una lavadora y secadora todo en uno con bomba de calor y  certificación ENERGY STAR."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -4908,7 +4911,7 @@
     ],
     "short_description": {
       "en": "50% off up to $125 for an ENERGY STAR certified smart WiFi thermostat.",
-      "es": "50% de descuento hasta $125 en un termostato WiFi inteligente con certificación ENERGY STAR."
+      "es": "50% de descuento hasta $125 para un termostato WiFi inteligente con certificación ENERGY STAR."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -4936,7 +4939,7 @@
     ],
     "short_description": {
       "en": "$500 rebate for an ENERGY STAR certified heat pump clothes dryer.",
-      "es": "Reembolso de $500 por una secadora de ropa con bomba de calor con certificación ENERGY STAR."
+      "es": "Reembolso de $500 para una secadora de ropa con bomba de calor y certificación ENERGY STAR."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -4964,7 +4967,7 @@
     ],
     "short_description": {
       "en": "$500 rebate for an ENERGY STAR certified electric heat pump water heater.",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor eléctrico con certificación ENERGY STAR."
+      "es": "Reembolso de $500 para un calentador de agua eléctrico con bomba de calor y certificación ENERGY STAR."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -5025,7 +5028,7 @@
     ],
     "short_description": {
       "en": "$750 per ton rebate for a ground source heat pump, limit 3 tons.",
-      "es": "Reembolso de $750 por tonelada para una bomba de calor de fuente terrestre, límite de 3 toneladas."
+      "es": "Reembolso de $750 por tonelada para una bomba de calor geotérmica, límite de 3 toneladas."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -5054,7 +5057,7 @@
     ],
     "short_description": {
       "en": "50% of cost up to $750 rebate for air sealing and blower door test. ",
-      "es": "50% del costo hasta $750 de reembolso para sellado de aire y prueba de puerta sopladora. "
+      "es": "50% del costo hasta $750 de reembolso para sellado de aire y prueba de puerta sopladora."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -5082,7 +5085,7 @@
     ],
     "short_description": {
       "en": "Up to $700 rebate for a smart level 2 electric vehicle charger, enrolled in the NextZero Scheduled Charging Program.",
-      "es": "Reembolso de hasta $700 por un cargador de vehículo eléctrico inteligente de nivel 2, inscrito en el Programa de Carga Programada NextZero."
+      "es": "Reembolso de hasta $700 para un cargador de vehículo eléctrico inteligente de nivel 2, inscrito en el Programa de Carga Programada NextZero."
     },
     "url": {
       "en": "https://nextzero.org/templeton/ev-charger-program/"
@@ -5191,7 +5194,7 @@
     ],
     "short_description": {
       "en": "$40 rebate for a rechargeable battery operated hedge trimmer.",
-      "es": "Reembolso de $40 por un cortasetos a batería recargable."
+      "es": "Reembolso de $40 por una podadora a batería recargable."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -5217,17 +5220,17 @@
       "renter"
     ],
     "short_description": {
-      "en": "Free home energy audit.",
-      "es": "Auditoría energética del hogar gratuita."
+      "en": "No cost home energy audit.",
+      "es": "Auditoría energética del hogar sin costo."
     },
     "url": {
-      "en": "https://nextzero.org/sterling/"
+      "en": "https://nextzero.org/sterling/energy-audits/"
     }
   },
   {
     "id": "MA-214",
     "payment_methods": [
-      "rebate"
+      "account_credit"
     ],
     "items": [
       "electric_stove"
@@ -5239,20 +5242,23 @@
       "maximum": 500
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for an induction range when replacing gas or propane.",
-      "es": "Reembolso de $500 por una estufa de inducción al reemplazar una de gas o propano."
+      "en": "$500 rebate for an ENERGY STAR certified four burner induction range when replacing gas or propane.",
+      "es": "Reembolso de $500 para una cocina de inducción de cuatro quemadores con certificación ENERGY STAR al reemplazar una de gas o propano."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/sterling/"
+      "en": "https://nextzero.org/sterling/appliances/"
     }
   },
   {
     "id": "MA-215",
     "payment_methods": [
-      "rebate"
+      "account_credit"
     ],
     "items": [
       "electric_stove"
@@ -5264,20 +5270,23 @@
       "maximum": 100
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$100 rebate for an induction range when replacing electric.",
-      "es": "Reembolso de $100 para una cocina de inducción al reemplazar una eléctrica."
+      "en": "$100 rebate for an ENERGY STAR four burner induction range when replacing electric.",
+      "es": "Reembolso de $100 para una cocina de inducción de cuatro quemadores con certificación ENERGY STAR al reemplazar una eléctrica."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/sterling/"
+      "en": "https://nextzero.org/sterling/appliances/"
     }
   },
   {
     "id": "MA-216",
     "payment_methods": [
-      "rebate"
+      "account_credit"
     ],
     "items": [
       "heat_pump_clothes_dryer"
@@ -5293,17 +5302,19 @@
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for an all-in-one washer and heat pump dryer.",
-      "es": "Reembolso de $500 por una lavadora y secadora con bomba de calor todo en uno."
+      "en": "$500 rebate for an ENERGY STAR certified all-in-one washer and heat pump dryer.",
+      "es": "Reembolso de $500 para una lavadora y secadora  todo en uno con bomba de calor con certificación ENERGY STAR."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/sterling/"
+      "en": "https://nextzero.org/sterling/appliances/"
     }
   },
   {
     "id": "MA-217",
     "payment_methods": [
-      "rebate"
+      "account_credit"
     ],
     "items": [
       "smart_thermostat"
@@ -5319,17 +5330,19 @@
       "renter"
     ],
     "short_description": {
-      "en": "50% rebate up to $125 for an ENERGY STAR smart thermostat.",
-      "es": "Reembolso del 50 % hasta $125 por un termostato inteligente con certificación ENERGY STAR."
+      "en": "50% rebate up to $125 for an ENERGY STAR certified WiFi thermostat.",
+      "es": "Reembolso del 50 % hasta $125 para un termostato WiFi con certificación ENERGY STAR."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/sterling/"
+      "en": "https://nextzero.org/sterling/appliances/"
     }
   },
   {
     "id": "MA-218",
     "payment_methods": [
-      "rebate"
+      "account_credit"
     ],
     "items": [
       "heat_pump_clothes_dryer"
@@ -5345,17 +5358,19 @@
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for a heat pump clothes dryer.",
-      "es": "Reembolso de $500 por una secadora de ropa con bomba de calor."
+      "en": "$500 rebate for an ENERGY STAR certified electric heat pump clothes dryer.",
+      "es": "Reembolso de $500 para una secadora de ropa eléctrica con bomba de calor con certificación ENERGY STAR."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/sterling/"
+      "en": "https://nextzero.org/sterling/appliances/"
     }
   },
   {
     "id": "MA-219",
     "payment_methods": [
-      "rebate"
+      "account_credit"
     ],
     "items": [
       "heat_pump_water_heater"
@@ -5367,19 +5382,23 @@
       "maximum": 500
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for a heat pump water heater.",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor."
+      "en": "$500 rebate for an ENERGY STAR certified electric heat pump water heater.",
+      "es": "Reembolso de $500 para un calentador de agua eléctrico con bomba de calor con certificación ENERGY STAR."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/sterling/"
+      "en": "https://nextzero.org/sterling/appliances/"
     }
   },
   {
     "id": "MA-220",
     "payment_methods": [
+      "account_credit",
       "rebate"
     ],
     "items": [
@@ -5394,19 +5413,23 @@
       "maximum": 1500
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$500/ton rebate for an air source heat pump, limit 3 tons.",
-      "es": "Reembolso de $500 por tonelada por una bomba de calor de fuente de aire (máximo de 3 toneladas)."
+      "en": "$500 per ton rebate for an air source heat pump, limit 3 tons.",
+      "es": "Reembolso de $500 por tonelada para una bomba de calor de fuente de aire, límite de 3 toneladas."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/sterling/"
+      "en": "https://nextzero.org/sterling/heat-pumps/"
     }
   },
   {
     "id": "MA-221",
     "payment_methods": [
+      "account_credit",
       "rebate"
     ],
     "items": [
@@ -5420,20 +5443,24 @@
       "maximum": 2250
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$750/ton rebate for a ground source heat pump, limit 3 tons.",
-      "es": "Reembolso de $750 por tonelada por una bomba de calor de fuente terrestre, límite de 3 toneladas."
+      "en": "$750 per ton rebate for a ground source heat pump, limit 3 tons.",
+      "es": "Reembolso de $750 por tonelada para una bomba de calor geotérmica, límite de 3 toneladas."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/sterling/"
+      "en": "https://nextzero.org/sterling/heat-pumps/"
     }
   },
   {
     "id": "MA-222",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
       "electric_vehicle_charger"
@@ -5442,24 +5469,25 @@
     "amount": {
       "type": "dollar_amount",
       "number": 700,
-      "minimum": 200,
       "maximum": 700
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Up to $700 rebate for a level 2 electric charger, enrolled in the NextZero Scheduled Charging Program.",
-      "es": "Reembolso de hasta $700 por un cargador eléctrico de nivel 2, inscrito en el programa de carga programada NextZero."
+      "en": "Up to $700 rebate for a level 2 fully electric vehicle charger, enrolled in the NextZero Scheduled Charging Program.",
+      "es": "Reembolso de hasta $700 por un cargador de vehículo totalmente eléctrico de nivel 2, inscrito en el Programa de Carga Programada NextZero."
     },
     "url": {
-      "en": "https://nextzero.org/sterling/"
+      "en": "https://nextzero.org/sterling/ev-charger-program/"
     }
   },
   {
     "id": "MA-223",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
       "battery_storage_installation"
@@ -5468,23 +5496,26 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 100,
-      "unit": "kilowatt_hour"
+      "unit": "kilowatt_hour",
+      "minimum": 750,
+      "maximum": 2000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$100/kWh rebate for installation of a residential battery system, with enrollment in the Connected Homes program.",
       "es": "Reembolso de $100 por kWh por la instalación de un sistema de baterías residencial, con inscripción en el programa Connected Homes."
     },
     "url": {
-      "en": "https://nextzero.org/sterling/"
+      "en": "https://nextzero.org/sterling/battery-program/"
     }
   },
   {
     "id": "MA-224",
     "payment_methods": [
-      "rebate"
+      "account_credit"
     ],
     "items": [
       "electric_outdoor_equipment"
@@ -5500,17 +5531,19 @@
       "renter"
     ],
     "short_description": {
-      "en": "$100 rebate for a rechargeable battery operated lawn mower or snow blower (select models).",
-      "es": "Reembolso de $100 para una cortadora de césped o quitanieves a batería recargable (modelos seleccionados)."
+      "en": "$100 rebate for a rechargeable battery operated riding lawn mower.",
+      "es": "Reembolso de $100 por una cortadora de césped con asiento a batería recargable."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/sterling/"
+      "en": "https://nextzero.org/sterling/electric-yard-equipment/"
     }
   },
   {
     "id": "MA-225",
     "payment_methods": [
-      "rebate"
+      "account_credit"
     ],
     "items": [
       "electric_outdoor_equipment"
@@ -5526,11 +5559,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "$40 (each) rebate for a rechargeable battery operated hedge trimmer, pressure washer, rototiller, chain or pole saw, or snow thrower.",
-      "es": "Reembolso de $40 (cada uno) por un cortasetos, una hidrolavadora, una motoazada, una motosierra o una sierra de pértiga, o una máquina quitanieves que funcionen a batería recargable."
+      "en": "$40 rebate for a rechargeable battery operated hedge trimmer.",
+      "es": "Reembolso de $40 por un cortasetos a batería recargable."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/sterling/"
+      "en": "https://nextzero.org/sterling/electric-yard-equipment/"
     }
   },
   {
@@ -6196,13 +6231,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "Free energy audit for SELCO customers.",
-      "es": "Reembolso por auditoría energética gratuita para clientes de SELCO."
+      "en": "No cost home energy audit.",
+      "es": "Auditoría energética del hogar sin costo."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
     "url": {
-      "en": "https://nextzero.org/shrewsbury/"
+      "en": "https://nextzero.org/shrewsbury/energy-audits/"
     }
   },
   {
@@ -6211,7 +6244,8 @@
       "account_credit"
     ],
     "items": [
-      "air_sealing"
+      "air_sealing",
+      "other_weatherization"
     ],
     "program": "ma-selco-nextzero",
     "amount": {
@@ -6224,13 +6258,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "50% rebate for blower door and air sealing, up to $500.",
-      "es": "Reembolso del 50 % en puertas soplantes y sellado de aire, hasta $500."
+      "en": "50% off total cost up to $500 rebate for blower door test and air sealing.",
+      "es": "50% de descuento en el costo total hasta $500 de reembolso para prueba de puerta sopladora y sellado de aire."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/shrewsbury/"
+      "en": "https://nextzero.org/shrewsbury/heat-pumps/weatherization/"
     }
   },
   {
@@ -6252,13 +6286,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "50% rebate for duct sealing, up to $500.",
-      "es": "Reembolso del 50 % por sellado de ductos, hasta $500."
+      "en": "50% off total cost up to $500 rebate for duct sealing.",
+      "es": "50% de descuento en el costo total hasta $500 de reembolso por sellado de conductos."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/shrewsbury/"
+      "en": "https://nextzero.org/shrewsbury/heat-pumps/weatherization/"
     }
   },
   {
@@ -6267,7 +6301,11 @@
       "account_credit"
     ],
     "items": [
-      "other_insulation"
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "other_insulation",
+      "wall_insulation"
     ],
     "program": "ma-selco-nextzero",
     "amount": {
@@ -6280,28 +6318,29 @@
       "renter"
     ],
     "short_description": {
-      "en": "50% rebate for insulation, up to $500.",
-      "es": "Reembolso del 50 % por aislamiento, hasta $500."
+      "en": "50% off total cost up to $500 rebate for insulation.",
+      "es": "50% de descuento en el costo total hasta $500 de reembolso por aislamiento."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/shrewsbury/"
+      "en": "https://nextzero.org/shrewsbury/heat-pumps/weatherization/"
     }
   },
   {
     "id": "MA-253",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
-      "other_heat_pump",
-      "ductless_heat_pump"
+      "ductless_heat_pump",
+      "ducted_heat_pump"
     ],
     "program": "ma-selco-nextzero",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 500,
+      "number": 250,
       "unit": "ton"
     },
     "owner_status": [
@@ -6309,23 +6348,24 @@
       "renter"
     ],
     "short_description": {
-      "en": "$500/ton rebate for a partial home air source or mini split heat pump unit.",
-      "es": "Reembolso de $500 por tonelada por una unidad de bomba de calor de fuente de aire o mini-split para uso residencial parcial."
+      "en": "$250 per ton rebate for a partial home air source heat pump installation.",
+      "es": "Reembolso de $250 por tonelada para la instalación parcial de una bomba de calor de fuente de aire en una vivienda."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/shrewsbury/"
+      "en": "https://nextzero.org/shrewsbury/heat-pumps/"
     }
   },
   {
     "id": "MA-254",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
-      "other_heat_pump",
-      "ductless_heat_pump"
+      "ductless_heat_pump",
+      "ducted_heat_pump"
     ],
     "program": "ma-selco-nextzero",
     "amount": {
@@ -6338,13 +6378,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "$2,000/ton rebate for a whole home air source or mini split heat pump unit.",
-      "es": "Reembolso de $2000 por tonelada por una unidad de bomba de calor de fuente de aire o mini-split para toda la casa."
+      "en": "$2,000 per ton rebate for a whole home air source heat pump installation.",
+      "es": "Reembolso de $2,000 por tonelada para la instalación de una bomba de calor de fuente de aire en toda la casa."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/shrewsbury/"
+      "en": "https://nextzero.org/shrewsbury/heat-pumps/"
     }
   },
   {
@@ -6353,8 +6393,8 @@
       "rebate"
     ],
     "items": [
-      "other_heat_pump",
-      "geothermal_heating_installation"
+      "geothermal_heating_installation",
+      "other_heat_pump"
     ],
     "program": "ma-selco-nextzero",
     "amount": {
@@ -6367,23 +6407,24 @@
       "renter"
     ],
     "short_description": {
-      "en": "$750/ton rebate for a partial home ground source heat pump unit.",
-      "es": "Reembolso de $750 por tonelada por una unidad de bomba de calor geotérmica para uso residencial parcial."
+      "en": "$750 per ton rebate for a partial home ground source heat pump installation.",
+      "es": "Reembolso de $750 por tonelada para la instalación parcial de una bomba de calor geotérmica en una vivienda."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/shrewsbury/"
+      "en": "https://nextzero.org/shrewsbury/heat-pumps/"
     }
   },
   {
     "id": "MA-256",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
-      "other_heat_pump",
-      "geothermal_heating_installation"
+      "geothermal_heating_installation",
+      "other_heat_pump"
     ],
     "program": "ma-selco-nextzero",
     "amount": {
@@ -6396,31 +6437,53 @@
       "renter"
     ],
     "short_description": {
-      "en": "$3,000/ton rebate for a whole home ground source heat pump unit.",
-      "es": "Reembolso de $3,000 por tonelada por una unidad de bomba de calor geotérmica para toda la casa."
+      "en": "$3,000 per ton rebate for a whole home ground source heat pump installation.",
+      "es": "Reembolso de $3,000 por tonelada para la instalación de una bomba de calor geotérmica en toda la casa."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/shrewsbury/"
+      "en": "https://nextzero.org/shrewsbury/heat-pumps/"
     }
   },
   {
     "id": "MA-260",
     "payment_methods": [
+      "account_credit",
       "rebate"
     ],
     "items": [
-      "air_sealing",
-      "attic_or_roof_insulation",
-      "basement_insulation",
-      "crawlspace_insulation",
-      "duct_sealing",
-      "efficiency_rebates",
-      "floor_insulation",
-      "other_weatherization",
-      "wall_insulation",
-      "energy_audit"
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "geothermal_heating_installation"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,000 decarbonization rebate when installing heat pumps as the sole heating source, with proof of fossil fuel system disconnect or removal. ",
+      "es": "Reembolso de descarbonización de $1,000 al instalar bombas de calor como única fuente de calefacción, con prueba de desconexión o eliminación del sistema de combustible fósil. "
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/shrewsbury/heat-pumps/"
+    }
+  },
+  {
+    "id": "MA-261",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater"
     ],
     "program": "ma-selco-nextzero",
     "amount": {
@@ -6433,45 +6496,19 @@
       "renter"
     ],
     "short_description": {
-      "en": "50% rebate of weatherization costs up to $500 including insulation and air sealing for residential customers, after a free energy audit.",
-      "es": "Reembolso del 50 % en los costos de climatización hasta $500, incluido el aislamiento y el sellado de aire para clientes residenciales, después de una auditoría energética gratuita."
+      "en": "50% off up to $500 rebate for an electric ENERGY STAR certified heat pump water heater.",
+      "es": "50% de descuento, hasta $500 de reembolso para un calentador de agua con bomba de calor eléctrico con certificación ENERGY STAR."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/shrewsbury/"
-    }
-  },
-  {
-    "id": "MA-261",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_water_heater"
-    ],
-    "program": "ma-selco-nextzero",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$500 rebate for a heat pump water heater.",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor."
-    },
-    "url": {
-      "en": "https://nextzero.org/shrewsbury/"
+      "en": "https://nextzero.org/shrewsbury/appliances/"
     }
   },
   {
     "id": "MA-262",
     "payment_methods": [
-      "rebate"
+      "account_credit"
     ],
     "items": [
       "heat_pump_clothes_dryer"
@@ -6487,11 +6524,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for a heat pump clothes dryer or all-in-one washer and heat pump dryer.",
-      "es": "Reembolso de $500 por una secadora de ropa con bomba de calor o una lavadora y secadora todo en uno con bomba de calor."
+      "en": "$500 rebate for an electric ENERGY STAR certified heat pump clothes dryer.",
+      "es": "Reembolso de $500 por una secadora de ropa eléctrica con bomba de calor certificada ENERGY STAR."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/shrewsbury/"
+      "en": "https://nextzero.org/shrewsbury/appliances/"
     }
   },
   {
@@ -12092,11 +12131,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "50% rebate for a Wi-Fi enabled thermostat/HVAC control, up to $100.",
-      "es": "Reembolso del 50 % por un termostato/control de HVAC con Wi-Fi habilitado, hasta $100."
+      "en": "50% off up to $100 rebate for an ENERGY STAR certified Wi-Fi enabled thermostat.",
+      "es": "50% de descuento, hasta $100 de reembolso para un termostato habilitado con Wi-Fi con certificación ENERGY STAR."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/shrewsbury/"
+      "en": "https://nextzero.org/shrewsbury/appliances/"
     }
   },
   {
@@ -12111,7 +12152,6 @@
     "amount": {
       "type": "dollar_amount",
       "number": 250,
-      "minimum": 100,
       "maximum": 250
     },
     "owner_status": [
@@ -12119,11 +12159,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "$100 - $250 rebates available for induction ranges.",
-      "es": "Reembolso disponible de $100 a $250 para cocinas de inducción."
+      "en": "$250 rebate for an ENERGY STAR certified four burner induction range when replacing a gas or propane range.",
+      "es": "Reembolso de $250 por una cocina de inducción de cuatro quemadores con certificación ENERGY STAR al reemplazar una cocina a gas o propano."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/shrewsbury/"
+      "en": "https://nextzero.org/shrewsbury/appliances/"
     }
   },
   {
@@ -12138,22 +12180,22 @@
     "program": "ma-selco-nextzero",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000,
-      "minimum": 400,
-      "maximum": 1000
+      "number": 750,
+      "minimum": 300,
+      "maximum": 750
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$400 - $1,000 rebates available for electric vehicles.",
-      "es": "Reembolso disponible de $400 a $1,000 para vehículos eléctricos."
+      "en": "Up to $750 rebate for the purchase or lease of a new or used all electric vehicle.",
+      "es": "Reembolso de hasta $750 por la compra o arrendamiento de un vehículo totalmente eléctrico nuevo o usado."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/shrewsbury/"
+      "en": "https://selco.shrewsburyma.gov/electric/residential/rebates-and-incentives/ev-rebate/"
     }
   },
   {
@@ -12167,18 +12209,21 @@
     "program": "ma-selco-nextzero",
     "amount": {
       "type": "dollar_amount",
-      "number": 200
+      "number": 200,
+      "maximum": 200
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$200 rebate for a new E-Bike.",
-      "es": "Reembolso de $200 para una nueva bicicleta eléctrica."
+      "en": "$200 rebate for the purchase of a new electric bike or electric motorcycle.",
+      "es": "$200 de reembolso por la compra de una nueva bicicleta eléctrica o motocicleta eléctrica."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/shrewsbury/"
+      "en": "https://selco.shrewsburyma.gov/electric/residential/rebates-and-incentives/ev-rebate/"
     }
   },
   {
@@ -12200,11 +12245,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "50% rebate available for an electric vehicle charger, up to $350.",
-      "es": "Reembolso del 50 % disponible para un cargador de vehículo eléctrico, hasta $350."
+      "en": "50% off the cost up to $350 rebate for an electric vehicle charger with enrollment in the Connected Homes Program.",
+      "es": "50% de descuento en el costo hasta $350 de reembolso para un cargador de vehículo eléctrico con la inscripción en el Programa Hogares Conectados."
     },
     "url": {
-      "en": "https://nextzero.org/shrewsbury/"
+      "en": "https://nextzero.org/shrewsbury/ev-charger-rebate-program/"
     }
   },
   {
@@ -12219,7 +12264,6 @@
     "amount": {
       "type": "dollar_amount",
       "number": 100,
-      "minimum": 25,
       "maximum": 100
     },
     "owner_status": [
@@ -12227,13 +12271,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "$25 - $100 rebates available for rechargeable electric lawn equipment.",
-      "es": "Reembolsos disponibles de $25 a $100 para equipos de césped eléctricos recargables."
+      "en": "$100 for a rechargeable battery operated riding lawn mower.",
+      "es": "$100 por una cortadora de césped con asiento que funciona con batería recargable."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://nextzero.org/shrewsbury/"
+      "en": "https://nextzero.org/shrewsbury/electric-yard-equipment/"
     }
   },
   {
@@ -13429,8 +13473,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "100% of total install cost of an air source heat pump (partial or whole home) for income-qualified residents.",
-      "es": "100 % del costo total de instalación de una bomba de calor de fuente de aire (parcial o para toda la casa) para residentes que califiquen según sus ingresos."
+      "en": "Up to 100% off install cost of a partial-home or whole-home air source heat pump, for income-qualified residents.",
+      "es": "Hasta un 100 % de descuento en el costo de instalación de una bomba de calor de fuente de aire para toda la casa o parte de ella, para residentes que califican según sus ingresos."
     },
     "start_date": "2024-01-01",
     "low_income": "ma-massSave-income-eligible",
@@ -13664,10 +13708,9 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $16,000 rebate per home for installing a partial-home or whole home air source heat pump, for moderate income residents.",
-      "es": "Reembolso de hasta $16,000 por hogar para la instalación de una bomba de calor de fuente de aire para toda la vivienda o parte de ella, para residentes con ingresos moderados."
+      "en": "Up to $16,000 rebate per home for installing a partial-home or whole-home air source heat pump, for moderate income residents.",
+      "es": "Reembolso de hasta $16,000 por vivienda para la instalación de una bomba de calor de fuente de aire para toda la vivienda o parte de ella, para residentes con ingresos moderados."
     },
-    "end_date": "2025-12-31",
     "low_income": "ma-massSave-incomeEligible-enhanced",
     "url": {
       "en": "https://www.masssave.com/residential/programs-and-services/income-based-offers/save-with-enhanced-incentives",
@@ -13691,12 +13734,12 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $25,000 rebate per home for installing a whole-home ground source heat pump, for moderate income households.",
-      "es": "Reembolso de hasta $25,000 por hogar para la instalación de una bomba de calor geotérmica para toda la vivienda, para hogares con ingresos moderados."
+      "en": "Up to $25,000 rebate per home for installing a partial-home or whole-home ground source heat pump, for moderate income households.",
+      "es": "Reembolso de hasta $25,000 por vivienda para la instalación de una bomba de calor geotérmica para toda la vivienda o para partes de ella, para hogares con ingresos moderados."
     },
     "low_income": "ma-massSave-incomeEligible-enhanced",
     "url": {
-      "en": "https://www.masssave.com/residential/programs-and-services/income-based-offers/save-with-enhanced-incentives",
+      "en": "https://www.masssave.com/en/residential/rebates-offers-services/income-based-offers/save-with-enhanced-incentives/enhanced-heating-and-cooling-rebates",
       "es": "https://www.masssave.com/es/residential/programs-and-services/income-based-offers/save-with-enhanced-incentives"
     }
   },
@@ -13720,6 +13763,7 @@
       "en": "Up to $25,000 rebate per home for installing a partial-home ground source heat pump, for moderate income households.",
       "es": "Reembolso de hasta $25,000 por hogar para la instalación de una bomba de calor geotérmica en áreas parciales de la vivienda, para hogares con ingresos moderados."
     },
+    "end_date": "2025-12-31",
     "low_income": "ma-massSave-incomeEligible-enhanced",
     "url": {
       "en": "https://www.masssave.com/residential/programs-and-services/income-based-offers/save-with-enhanced-incentives",
@@ -15045,7 +15089,6 @@
       "en": "Up to $16,000 rebate per home for a whole-home air to water heat pump, for moderate income residents.",
       "es": "Reembolso de hasta $16,000 por hogar para una bomba de calor de aire a agua para toda la casa, para residentes con ingresos moderados."
     },
-    "end_date": "2025-12-31",
     "low_income": "ma-massSave-incomeEligible-enhanced",
     "url": {
       "en": "https://www.masssave.com/residential/programs-and-services/income-based-offers/save-with-enhanced-incentives",
@@ -16503,7 +16546,7 @@
     ],
     "short_description": {
       "en": "$500 per ton up to $2,500 rebate for air source heat pumps installed in new additions less than 500 square feet.",
-      "es": "$500 por tonelada hasta $2,500 de reembolso para bombas de calor de fuente de aire instaladas en nuevas ampliaciones de menos de 500 pies cuadrados."
+      "es": "Reembolso de $500 por tonelada hasta $2,500 para bombas de calor de fuente de aire instaladas en nuevas ampliaciones de menos de 500 pies cuadrados."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -16543,7 +16586,7 @@
     ],
     "short_description": {
       "en": "$1,500 per ton up to $7,500 for a qualifying heat pump with complete disconnect from gas. Insulation rebate max increased to $3,750 when bundled.",
-      "es": "$1,500 por tonelada, hasta $7,500 por una bomba de calor que cumpla los requisitos y esté completamente desconectada del gas. El reembolso máximo por aislamiento aumenta a $3,750 al combinarse."
+      "es": "$1,500 por tonelada, hasta $7,500 para una bomba de calor que cumpla los requisitos y esté completamente desconectada del gas. El reembolso máximo por aislamiento aumenta a $3,750 al combinarse."
     },
     "start_date": "2026-01-01",
     "url": {
@@ -16598,7 +16641,7 @@
     ],
     "short_description": {
       "en": "50% of cost up to $100 for a cordless electric lawn mower. ",
-      "es": "50% del costo hasta $100 para una cortadora de césped eléctrica inalámbrica. "
+      "es": "50% del costo hasta $100 para una cortadora de césped eléctrica inalámbrica."
     },
     "start_date": "2026-01-01",
     "url": {
@@ -16625,7 +16668,7 @@
     ],
     "short_description": {
       "en": "50% of cost up to $25 for a cordless electric leaf blower. ",
-      "es": "50% del costo hasta $25 por un soplador de hojas eléctrico inalámbrico. "
+      "es": "50% del costo hasta $25 para un soplador de hojas eléctrico inalámbrico."
     },
     "start_date": "2026-01-01",
     "url": {
@@ -16652,7 +16695,7 @@
     ],
     "short_description": {
       "en": "50% of cost up to $25 for a cordless electric string trimmer. ",
-      "es": "50% del costo hasta $25 por una cortadora de hilo eléctrica inalámbrica. "
+      "es": "50% del costo hasta $25 para una podadora de cesped de cordel eléctrica inalámbrica."
     },
     "start_date": "2026-01-01",
     "url": {
@@ -16679,7 +16722,7 @@
     ],
     "short_description": {
       "en": "50% of cost up to $40 for a cordless electric hedge trimmer. ",
-      "es": "50% del costo hasta $40 por un cortasetos eléctrico inalámbrico. "
+      "es": "50% del costo, hasta $40, por una podadora eléctrica inalámbrica."
     },
     "start_date": "2026-01-01",
     "url": {
@@ -16706,7 +16749,7 @@
     ],
     "short_description": {
       "en": "50% of cost up to $50 for a cordless electric chain saw. ",
-      "es": "50% del costo hasta $50 por una motosierra eléctrica inalámbrica. "
+      "es": "50% del costo, hasta $50, para una motosierra eléctrica inalámbrica."
     },
     "start_date": "2026-01-01",
     "url": {
@@ -16739,7 +16782,7 @@
     ],
     "short_description": {
       "en": "50% of cost up to $750 rebate for insulation. ",
-      "es": "50% del costo hasta $750 de reembolso por aislamiento. "
+      "es": "50% del costo, hasta $750 de reembolso, para aislamiento."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -16768,7 +16811,7 @@
     ],
     "short_description": {
       "en": "50% of cost up to $750 rebate for duct sealing. ",
-      "es": "50% del costo hasta $750 de reembolso por sellado de conductos. "
+      "es": "50% del costo, hasta $750 de reembolso, para sellado de ductos."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -16796,7 +16839,7 @@
     ],
     "short_description": {
       "en": "$50 rebate for an ENERGY STAR certified electric clothes dryer.",
-      "es": "Reembolso de $50 por una secadora de ropa eléctrica con certificación ENERGY STAR."
+      "es": "Reembolso de $50 para una secadora de ropa eléctrica con certificación ENERGY STAR."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -16824,7 +16867,7 @@
     ],
     "short_description": {
       "en": "50% off up to $125 for a mini split HVAC controls when enrolled in Connected Homes program.",
-      "es": "50% de descuento hasta $125 en controles de HVAC minisplit al inscribirse en el programa Connected Homes."
+      "es": "50% de descuento hasta $125 para controles de HVAC minisplit al inscribirse en el programa Connected Homes."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -16879,7 +16922,7 @@
     ],
     "short_description": {
       "en": "$100 rebate for a rechargeable battery operated push lawn mower.",
-      "es": "Reembolso de $100 por una cortadora de césped manual a batería recargable."
+      "es": "Reembolso de $100 para una cortadora de césped que funciona con batería recargable."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -16907,7 +16950,7 @@
     ],
     "short_description": {
       "en": "$40 rebate for a rechargeable battery operated pressure washer.",
-      "es": "Reembolso de $40 por una hidrolavadora a batería recargable."
+      "es": "Reembolso de $40 para una hidrolavadora a batería recargable."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -16935,7 +16978,7 @@
     ],
     "short_description": {
       "en": "$40 rebate for a rechargeable battery operated rototiller.",
-      "es": "Reembolso de $40 por un motocultor operado con batería recargable."
+      "es": "Reembolso de $40 para un motocultor que funciona con batería recargable."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -16963,7 +17006,7 @@
     ],
     "short_description": {
       "en": "$40 rebate for a rechargeable battery operated dethatcher or aerator.",
-      "es": "Reembolso de $40 por un aireador o escarificador que funciona con batería recargable."
+      "es": "Reembolso de $40 para un aireador o escarificador que funciona con batería recargable."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -16991,7 +17034,7 @@
     ],
     "short_description": {
       "en": "$40 rebate for a rechargeable battery operated chain or pole saw.",
-      "es": "Reembolso de $40 por una motosierra o sierra de pértiga operada con batería recargable."
+      "es": "Reembolso de $40 para una motosierra o sierra de pértiga que funciona con batería recargable."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -17019,7 +17062,7 @@
     ],
     "short_description": {
       "en": "$40 rebate for a rechargeable battery operated snow thrower or snow shovel.",
-      "es": "Reembolso de $40 por una máquina quitanieve o pala quitanieve que funcione a batería recargable."
+      "es": "Reembolso de $40 para una máquina quitanieve o pala quitanieve que funcione a batería recargable."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -17047,7 +17090,7 @@
     ],
     "short_description": {
       "en": "$25 rebate for a rechargeable battery operated leaf blower.",
-      "es": "Reembolso de $25 por un soplador de hojas a batería recargable."
+      "es": "Reembolso de $25 para un soplador de hojas a batería recargable."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
@@ -17075,12 +17118,888 @@
     ],
     "short_description": {
       "en": "$25 rebate for a rechargeable battery operated string trimmer.",
-      "es": "Reembolso de $25 por una cortadora de hilo que funciona con batería recargable."
+      "es": "Reembolso de $25 para una podadora de cordel que funciona con batería recargable."
     },
     "start_date": "2026-01-01",
     "end_date": "2026-12-31",
     "url": {
       "en": "https://nextzero.org/templeton/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-672",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer",
+      "other_heat_pump"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75,
+      "maximum": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for an ENERGY STAR certified all-in-one electric washer and dryer.",
+      "es": "Reembolso de $75 para lavadora y secadora eléctricas todo en uno con certificación ENERGY STAR."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/sterling/appliances/"
+    }
+  },
+  {
+    "id": "MA-673",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an ENERGY STAR certified electric clothes dryer.",
+      "es": "Reembolso de $50 para una secadora de ropa eléctrica con certificación ENERGY STAR."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/sterling/appliances/"
+    }
+  },
+  {
+    "id": "MA-674",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 125
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% rebate up to $125 for qualifying mini split HVAC controls.",
+      "es": "Reembolso del 50 % hasta $125 para controles de HVAC minisplit calificados."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/sterling/appliances/"
+    }
+  },
+  {
+    "id": "MA-675",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300,
+      "minimum": 200,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $300 rebate for a level 2 plug in hybrid electric vehicle charger, enrolled in the NextZero Scheduled Charging Program.",
+      "es": "Reembolso de hasta $300 por un cargador de vehículo eléctrico híbrido enchufable de nivel 2, inscrito en el Programa de carga programada NextZero."
+    },
+    "url": {
+      "en": "https://nextzero.org/sterling/ev-charger-program/"
+    }
+  },
+  {
+    "id": "MA-676",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for a rechargeable battery operated push lawn mower.",
+      "es": "Reembolso de $100 por una cortadora de césped manual a batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/sterling/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-677",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for a rechargeable battery operated snow blower.",
+      "es": "Reembolso de $100 por una quitanieves que funciona con batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/sterling/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-678",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for a rechargeable battery operated pressure washer.",
+      "es": "Reembolso de $40 por una hidrolavadora a batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/sterling/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-679",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for a rechargeable battery operated rototiller.",
+      "es": "Reembolso de $40 por un motocultor operado con batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/sterling/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-680",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for a rechargeable battery operated dethatcher or aerator.",
+      "es": "Reembolso de $40 por un aireador o escarificador que funciona con batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/sterling/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-681",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for a rechargeable battery operated chain or pole saw.",
+      "es": "Reembolso de $40 por una motosierra o sierra de pértiga operada con batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/sterling/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-682",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for a rechargeable battery operated snow thrower or snow shovel.",
+      "es": "Reembolso de $40 por una máquina quitanieve o pala quitanieve que funcione a batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/sterling/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-683",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25,
+      "maximum": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$25 rebate for a rechargeable battery operated leaf blower.",
+      "es": "Reembolso de $25 por un soplador de hojas a batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/sterling/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-684",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-sterling-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25,
+      "maximum": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$25 rebate for a rechargeable battery operated string trimmer.",
+      "es": "Reembolso de $25 por una cortadora de hilo que funciona con batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/sterling/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-685",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "ma_massSave_massSaveHeatingAndCoolingIncentives",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton",
+      "maximum": 2500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250/ton rebate, up to $2,500 for an air source heat pump. Basic rebate for customers not displacing fossil fuel or electric resistance heat.",
+      "es": "Descuento de $250 por tonelada, hasta $2500 por una bomba de calor aerotérmica. Descuento básico para clientes que no reemplazan combustibles fósiles ni calefacción por resistencia eléctrica."
+    },
+    "url": {
+      "en": "https://www.masssave.com/residential/rebates-offers-services/heating-and-cooling/heat-pumps/air-source-heat-pumps"
+    }
+  },
+  {
+    "id": "MA-686",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "integrated_heat_pump_controls"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% off up to $100 rebate for mini split HVAC controls.",
+      "es": "50% de descuento hasta $100 de reembolso para controles de HVAC minisplit."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/shrewsbury/appliances/"
+    }
+  },
+  {
+    "id": "MA-687",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an ENERGY STAR certified four burner induction range when replacing an electric range.",
+      "es": "Reembolso de $100 por una cocina de inducción de cuatro quemadores con certificación ENERGY STAR al reemplazar una cocina eléctrica."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/shrewsbury/appliances/"
+    }
+  },
+  {
+    "id": "MA-688",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an electric ENERGY STAR certified all in one washer and heat pump clothes dryer.",
+      "es": "Reembolso de $500 por una lavadora y secadora de ropa todo en uno eléctrica con certificación ENERGY STAR y bomba de calor."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/shrewsbury/appliances/"
+    }
+  },
+  {
+    "id": "MA-689",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an electric ENERGY STAR certified clothes dryer, for income qualified customers.",
+      "es": "Reembolso de $50 para una secadora de ropa eléctrica con certificación ENERGY STAR, para clientes que califican según sus ingresos."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "MA-Shrewsbury-60ami-threshold ",
+    "url": {
+      "en": "https://nextzero.org/shrewsbury/appliances/"
+    }
+  },
+  {
+    "id": "MA-690",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 for a rechargeable battery operated push lawn mower.",
+      "es": "$100 por una cortadora de césped manual que funciona con batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/shrewsbury/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-691",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 for a rechargeable battery operated snow blower.",
+      "es": "$100 por una quitanieves que funciona con batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/shrewsbury/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-692",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for a rechargeable battery operated hedge trimmer.",
+      "es": "Reembolso de $40 por un cortasetos a batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/shrewsbury/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-693",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for a rechargeable battery operated pressure washer.",
+      "es": "Reembolso de $40 por una hidrolavadora a batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/shrewsbury/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-694",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for a rechargeable battery operated rototiller.",
+      "es": "Reembolso de $40 por un motocultor operado con batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/shrewsbury/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-695",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for a rechargeable battery operated dethatcher or aerator.",
+      "es": "Reembolso de $40 por un aireador o escarificador que funciona con batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/shrewsbury/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-696",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for a rechargeable battery operated chain or pole saw.",
+      "es": "Reembolso de $40 por una motosierra o sierra de pértiga operada con batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/shrewsbury/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-697",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for a rechargeable battery operated snow thrower or snow shovel.",
+      "es": "Reembolso de $40 por una máquina quitanieve o pala quitanieve que funcione a batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/shrewsbury/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-698",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25,
+      "maximum": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$25 rebate for a rechargeable battery operated leaf blower.",
+      "es": "Reembolso de $25 por un soplador de hojas a batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/shrewsbury/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-699",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25,
+      "maximum": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$25 rebate for a rechargeable battery operated string trimmer.",
+      "es": "Reembolso de $25 por una cortadora de hilo que funciona con batería recargable."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/shrewsbury/electric-yard-equipment/"
+    }
+  },
+  {
+    "id": "MA-700",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "new_electric_vehicle",
+      "used_electric_vehicle"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "minimum": 125,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $250 rebate adder for the purchase or lease of a new or used all electric vehicle, for income qualified customers.",
+      "es": "Descuento adicional de hasta $250 por la compra o arrendamiento de un vehículo totalmente eléctrico nuevo o usado, para clientes con ingresos calificados."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "ma-shrewsbury-80ami-threshold",
+    "url": {
+      "en": "https://selco.shrewsburyma.gov/electric/residential/rebates-and-incentives/ev-rebate/"
+    }
+  },
+  {
+    "id": "MA-701",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "battery_storage_installation"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 100,
+      "unit": "kilowatt_hour",
+      "minimum": 750,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100/kWh rebate for installation of a residential battery system, with enrollment in the Connected Homes program.",
+      "es": "Reembolso de $100/kWh para la instalación de un sistema de batería residencial, con inscripción en el programa Hogares Conectados."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://nextzero.org/shrewsbury/battery-program/"
+    }
+  },
+  {
+    "id": "MA-702",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ebike"
+    ],
+    "program": "ma-selco-nextzero",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate adder for the purchase of a new electric bike or electric motorcycle, for income qualified customers.",
+      "es": "Descuento adicional de $100 en la compra de una nueva bicicleta eléctrica o motocicleta eléctrica, para clientes con ingresos calificados."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "ma-shrewsbury-80ami-threshold",
+    "url": {
+      "en": "https://selco.shrewsburyma.gov/electric/residential/rebates-and-incentives/ev-rebate/"
     }
   }
 ]
