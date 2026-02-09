@@ -29,6 +29,21 @@
       "8": 129100
     }
   },
+  "MA-Shrewsbury-60ami-threshold ": {
+    "type": "hhsize",
+    "source_url": "https://selco.shrewsburyma.gov/income-qualified-rate/",
+    "description": "Income qualified customers must provide proof of participation in SELCO Share the Warmth bill assistance, or any of the following government benefit programs within the previous 6 months: Fuel Assistance, WIC, TAFDC, EAEDC, SSP, SNAP, TANF, SSI or Medicaid.",
+    "thresholds": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0
+    }
+  },
   "OR-60AMI-CEC-LI": {
     "type": "hhsize",
     "source_url": "https://www.cec.coop/energy-programs/residential-efficiency/income-qualified-programs/",
@@ -1823,6 +1838,21 @@
     "description": "MassSave Income-Based Enhanced Incentive 60-80% AMI or SMI. Also known as Enhanced Incentives. 2024-2025 heating season.",
     "thresholds": {
       "percentage": 80
+    }
+  },
+  "ma-shrewsbury-80ami-threshold": {
+    "type": "hhsize",
+    "source_url": "https://selco.shrewsburyma.gov/electric/residential/rebates-and-incentives/ev-rebate/",
+    "description": "Household income thresholds detailed are from Mass Housing Partnerships (Worcester County Area Median Income).",
+    "thresholds": {
+      "1": 72100,
+      "2": 82400,
+      "3": 92700,
+      "4": 102950,
+      "5": 111200,
+      "6": 119450,
+      "7": 127700,
+      "8": 135900
     }
   },
   "me-low-income": {
