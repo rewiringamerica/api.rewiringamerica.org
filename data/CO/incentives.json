@@ -1236,7 +1236,7 @@
     ],
     "short_description": {
       "en": "Up to $2,000 per customer off ducted and partially-ducted air source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $2,000 por cliente en bombas de calor de aire con conductos y parcialmente con conductos. Se aplican mínimos de eficiencia."
+      "es": "Hasta $2,000 por cliente para bombas de calor de aire con ductos y parcialmente con ductos. Se aplican mínimos de eficiencia."
     },
     "start_date": "2024-01-01",
     "end_date": "2026-12-31",
@@ -1347,7 +1347,7 @@
     ],
     "short_description": {
       "en": "Up to $50 off eligible thermostats.",
-      "es": "Hasta $50 de descuento en termostatos elegibles."
+      "es": "Hasta $50 de descuento para termostatos elegibles."
     },
     "start_date": "2024-01-01",
     "end_date": "2026-12-31",
@@ -7762,10 +7762,10 @@
       "en": "Rebate for income-qualified residents or eligible nonprofits for photovoltatic or thermal solar. Capped at lowest of 50% of costs, $1/watt, or $8,000.",
       "es": "Reembolso para residentes que cumplen con requisitos de ingresos o las organizaciones sin ánimo de lucro elegibles para  energía solar fotovoltaica o térmica. El límite más bajo es del 50% de los costos, 1 $/watt, o $8,000 dólares."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "low_income": "co-city-of-boulder",
     "url": {
-      "en": "https://energysmartyes.com/rebates-financing/city-of-boulder/"
+      "en": "https://bouldercolorado.gov/services/solar-grants"
     }
   },
   {
@@ -7894,6 +7894,8 @@
       "en": "Rebate for ~15% of Boulder's sales and use tax for materials and permits on solar electric or thermal installations (roughly 0.6% overall).",
       "es": "Un reembolso de aproximadamente un 15% del impuesto sobre las ventas y uso de materiales y permisos de Boulder en instalaciones solares eléctricas o térmicas (aproximadamente un 0.6% en total)."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://bouldercolorado.gov/services/solar-tax-rebates"
     }
@@ -14424,24 +14426,24 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump",
       "ductless_heat_pump"
     ],
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 400
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate of project costs up to $400 for a cold climate ducted/ductless air source heat pump when replacing gas.",
-      "es": "Un reembolso del 70% de los costos del proyecto de hasta $400 dólares para una bomba de calor con ductos de fuente de aire para \"clima frío\"."
+      "en": "50% off, up to $2,000, for ductless heat pump installations. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para instalaciones de bombas de calor sin ductos. Los reembolsos combinados con el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
     }
@@ -14452,24 +14454,24 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
+      "ducted_heat_pump"
     ],
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 200
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate of project costs up to $200 for a non-cold climate ducted/ductless air source heat pump when replacing gas.",
-      "es": "Un reembolso del 70% de los costos del proyecto de hasta $200 dólares para una bomba de calor con/sin ductos de fuente de aire."
+      "en": "50% off, up to $2,000, for ducted heat pump installations. Your combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para instalaciones de bombas de calor con ductos. Sus reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
     }
@@ -14513,18 +14515,19 @@
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 400
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate of project costs up to $400 for a ground source heat pump when replacing gas.",
-      "es": "Un reembolso del 70% de los costos del proyecto para una bomba de calor geotérmica, hasta $400 dólares."
+      "en": "50% off, up to $2,000, for geothermal heat pump installations. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para instalaciones de bombas de calor geotérmicas. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
     }
@@ -14567,18 +14570,19 @@
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 400
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate of project costs up to $400 for an air to water heat pump when replacing gas.",
-      "es": "Reembolso del 70 % del costo del proyecto, hasta $400, por una bomba de calor aire‑agua al reemplazar un sistema a gas."
+      "en": "50% off, up to $2,000, for air to water heat pump installations. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para instalaciones de bombas de calor aire-agua. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
     }
@@ -14648,18 +14652,19 @@
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 100
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate of project costs up to $100 for ENERGY STAR heat pump water heater when replacing electric.",
-      "es": "Un reembolso del 70% de los costos del proyecto para un calentador de agua eléctrico con bomba de calor ENERGY STAR, hasta 100 dólares."
+      "en": "50% off, up to $2,000, for heat pump water heater installations. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para la instalación de calentadores de agua con bomba de calor. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
     }
@@ -14675,18 +14680,19 @@
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 200
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate up to $200 for an induction or electric cooktop when replacing gas. Portable stoves not eligible.",
-      "es": "Reembolso del 70 %, hasta $200, por una placa de cocción por inducción o eléctrica al reemplazar una a gas. No se admiten cocinas portátiles."
+      "en": "50% off, up to $2,000, for qualified electric stove installations. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para instalaciones de estufas eléctricas que cumplan con los requisitos. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
     }
@@ -14702,20 +14708,21 @@
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 100
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate up to $100 for an induction or electric cooktop when replacing electric. Portable stoves not eligible.",
-      "es": "Reembolso del 70 %, hasta $100, por una placa de cocción por inducción o eléctrica al reemplazar una eléctrica. No se admiten cocinas portátiles."
+      "en": "50% off, up to $2,000, for induction cooktop installations. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para la instalación de cocinas de inducción. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
-      "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
+      "en": "https://energysmartyes.com/rebates/income-qualified-rebates/"
     }
   },
   {
@@ -14756,18 +14763,19 @@
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 100
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate up to $100 for an ENERGY STAR certified heat pump clothes dryer, when replacing electric.",
-      "es": "Reembolso del 70 %, hasta $100, por una secadora con bomba de calor con certificación ENERGY STAR, al reemplazar una eléctrica."
+      "en": "50% off, up to $2,000, for heat pump clothes dryer installations. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para la instalación de secadoras de ropa con bomba de calor. Los reembolsos combinados en el programa EnergySmart del condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
     }
@@ -14783,18 +14791,19 @@
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 100
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate up to $100 for an electric panel upgrade. Must be done in conjunction with heat pump, induction, solar, or EV charger upgrades.",
-      "es": "Reembolso del 70 %, hasta $100, por una mejora del panel eléctrico. Debe realizarse junto con mejoras en bombas de calor, inducción, energía solar o cargadores de vehículos eléctricos."
+      "en": "50% off, up to $2,000, for a qualified electric panel upgrade. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para la actualización de panel eléctrico que cumpla con los requisitos. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
     }
@@ -14861,23 +14870,23 @@
       "rebate"
     ],
     "items": [
-      "geothermal_heating_installation"
+      "other"
     ],
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 4000
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate of project costs up to $4,000 for a ground source heat pump, for income-qualified residents.",
-      "es": "Reembolso del 70 % del costo del proyecto, hasta $4,000, por una bomba de calor geotérmica, para residentes que califiquen según sus ingresos."
+      "en": "50% off, up to $2,000, for qualified cellular shade installations. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para instalaciones de cortinas celulares que cumplan con los requisitos. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
@@ -14895,18 +14904,19 @@
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.3,
-      "maximum": 300
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "30% rebate of project costs up to $300 for attic insulation with air sealing.",
-      "es": "Un reembolso del 30% de los costos del proyecto para aislamiento térmico y sellado hermético del desván, hasta $300."
+      "en": "50% off, up to $2,000, for qualified attic insulation projects. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para proyectos de aislamiento de áticos que cumplan con los requisitos. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
     }
@@ -14917,23 +14927,23 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_water_heater"
+      "wall_insulation"
     ],
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 4000
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate of project costs up to $4,000 for ENERGY STAR electric heat pump water heater for income-qualified residents.",
-      "es": "Reembolso del 70 % del costo del proyecto, hasta $4,000, por un calentador de agua eléctrico con bomba de calor y certificación ENERGY STAR, para residentes que califiquen según sus ingresos."
+      "en": "50% off, up to $2,000, for qualified wall insulation projects. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para proyectos de aislamiento de paredes que cumplan con los requisitos. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
@@ -14945,23 +14955,25 @@
       "rebate"
     ],
     "items": [
-      "electric_stove"
+      "basement_insulation",
+      "crawlspace_insulation",
+      "air_sealing"
     ],
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 4000
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate up to $4,000 for an induction or electric cooktop for income-eligible residents. Portable stoves not eligible.",
-      "es": "Reembolso del 70 %, hasta $4,000, por una placa de cocción eléctrica o de inducción, para residentes que califiquen según sus ingresos. No son elegibles las cocinas portátiles."
+      "en": "50% off, up to $2,000, for qualified foundation insulation projects. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para proyectos de aislamiento de cimientos que cumplan con los requisitos. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
@@ -14973,23 +14985,24 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_clothes_dryer"
+      "floor_insulation",
+      "air_sealing"
     ],
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 4000
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate up to $4,000 for an ENERGY STAR certified heat pump clothes dryer, for income-qualified residents.",
-      "es": "Reembolso del 70 %, hasta $4,000, por una secadora de ropa con bomba de calor y certificación ENERGY STAR, para residentes que califiquen según sus ingresos."
+      "en": "50% off, up to $2,000, for sub-floor or framed floor insulation. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para aislamiento de contrapiso o de piso enmarcado. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
@@ -15001,23 +15014,23 @@
       "rebate"
     ],
     "items": [
-      "electric_panel"
+      "air_sealing"
     ],
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 4000
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate up to $4,000 for an electric panel upgrade, for income-qualified residents. In conjunction with other electrification upgrades.",
-      "es": "Reembolso del 70 %, hasta $4,000, por una mejora del panel eléctrico, para residentes que califiquen según sus ingresos. Aplicable junto con otras mejoras de electrificación."
+      "en": "50% off, up to $2,000, for qualified air sealing projects. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para proyectos de sellado de aire que cumplan con los requisitos. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
@@ -18978,7 +18991,7 @@
       "es": "50% del costo del proyecto, hasta $2,000 al año en reembolsos para proyectos de climatización y electrificación. Solo los residentes con ingresos calificados pueden optar a ellos."
     },
     "start_date": "2026-01-01",
-    "end_date": "2026-12-31",
+    "end_date": "2026-02-09",
     "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates/income-qualified-rebates/"
