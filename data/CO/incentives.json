@@ -1044,7 +1044,7 @@
       "es": "Un reembolso de hasta el 80% del costo de almacenamiento de la batería, hasta $500 dólares para hogares sin una bomba de calor calentador de espacio, calentador de agua con bomba de calor, O V2B cargador para VEs."
     },
     "start_date": "2023-01-01",
-    "end_date": "2026-02-28",
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Cutting-Denvers-Carbon-Pollution/High-Performance-Buildings-and-Homes/Electrify-Your-Home/Home-Solar/Rebates-for-Renewables"
     }
@@ -1088,17 +1088,19 @@
     "program": "co_cityAndCountyOfDenver_denverClimateActionRebateProgram-E-BikeAndE-CargoBikeRebateVouchers",
     "amount": {
       "type": "dollar_amount",
-      "number": 300,
-      "maximum": 300
+      "number": 450,
+      "minimum": 450,
+      "maximum": 900
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$300 point-of-sale rebate on the purchase of an e-bike.",
-      "es": "Un reembolso de $300 dólares en el punto de venta por la compra de una e-bike (bicicleta eléctrica)."
+      "en": "Returning in 2026 - $450 to $900 point-of-sale rebate on the purchase of an e-bike.",
+      "es": "Regresará en 2026: reembolso de $450 a $900 en el punto de venta para la compra de una bicicleta eléctrica."
     },
+    "paused": true,
     "url": {
       "en": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Sustainable-Transportation/Electric-Bikes-E-Bikes-Rebates"
     }
@@ -1114,17 +1116,19 @@
     "program": "co_cityAndCountyOfDenver_denverClimateActionRebateProgram-E-BikeAndE-CargoBikeRebateVouchers",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 450,
+      "maximum": 450
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$500 point-of-sale rebate on the purchase of an e-cargo bike.",
-      "es": "Un reembolso de $500 dólares en el punto de venta por la compra de una bicicleta eléctrica de carga."
+      "en": "Returning in 2026 - point-of-sale rebate on the purchase of an e-cargo bike.",
+      "es": "Regresa en 2026: reembolso en el punto de venta para la compra de una bicicleta eléctrica e-cargo."
     },
+    "end_date": "2025-12-31",
+    "paused": true,
     "url": {
       "en": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Sustainable-Transportation/Electric-Bikes-E-Bikes-Rebates"
     }
@@ -1140,17 +1144,18 @@
     "program": "co_cityAndCountyOfDenver_denverClimateActionRebateProgram-E-BikeAndE-CargoBikeRebateVouchers",
     "amount": {
       "type": "dollar_amount",
-      "number": 1200,
-      "maximum": 1200
+      "number": 450,
+      "maximum": 450
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Income-qualified residents can receive a point-of-sale rebate up to $1200 on the purchase of an e-bike.",
-      "es": "Los residentes con ingresos suficientes pueden recibir un reembolso en el punto de venta de hasta $1,200 dólares por la compra de una bicicleta eléctrica."
+      "en": "Returning in 2026 - Income-qualified residents can receive a point-of-sale rebate on the purchase of an e-bike.",
+      "es": "Regresa en 2026: los residentes que califican según sus ingresos pueden recibir un reembolso en el punto de venta al comprar una bicicleta eléctrica."
     },
+    "paused": true,
     "low_income": "co-city-and-county-of-denver",
     "url": {
       "en": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Sustainable-Transportation/Electric-Bikes-E-Bikes-Rebates"
@@ -1178,6 +1183,7 @@
       "en": "Income-qualified residents can receive a point-of-sale rebate up to $1400 on the purchase of an e-cargo bike.",
       "es": "Los residentes que reúnan los requisitos de ingresos pueden recibir un reembolso en el punto de venta de hasta $1,400 dólares por la compra de una bicicleta eléctrica."
     },
+    "end_date": "2025-12-31",
     "low_income": "co-city-and-county-of-denver",
     "url": {
       "en": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Sustainable-Transportation/Electric-Bikes-E-Bikes-Rebates"
@@ -1194,17 +1200,18 @@
     "program": "co_cityAndCountyOfDenver_denverClimateActionRebateProgram-E-BikeAndE-CargoBikeRebateVouchers",
     "amount": {
       "type": "dollar_amount",
-      "number": 1400,
-      "maximum": 1400
+      "number": 1200,
+      "maximum": 1200
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Persons with disabilities who are unable to use a standard e-bike may be eligible for a point-of-sale rebate up to $1,400 on an adaptive e-bike.",
-      "es": "Las personas con discapacidad que no puedan utilizar una bicicleta eléctrica estándar pueden optar a un reembolso en el punto de venta de hasta $1,400 dólares en una bicicleta eléctrica adaptativa."
+      "en": "Returning in 2026 - Persons with disabilities may be eligible for a point-of-sale rebate up to $900 on an adaptive e-bike.",
+      "es": "Regresa en 2026: las personas con discapacidades pueden ser elegibles para un reembolso en el punto de venta de hasta $900 para una bicicleta eléctrica adaptada."
     },
+    "paused": true,
     "url": {
       "en": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Sustainable-Transportation/Electric-Bikes-E-Bikes-Rebates"
     }
@@ -1215,26 +1222,26 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
+      "ducted_heat_pump"
     ],
     "program": "co_platteRiverPowerAuthority_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
       "number": 2000,
+      "minimum": 1500,
       "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $2000 per customer off air source heat pumps. Efficiency minimums apply.",
-      "es": "Hasta $2000 dólares de descuento por cliente en bombas de calor de fuente de aire. Mínimos de eficiencia aplican."
+      "en": "Up to $2,000 per customer off ducted and partially-ducted air source heat pumps. Efficiency minimums apply.",
+      "es": "Hasta $2,000 por cliente para bombas de calor de aire con ductos y parcialmente con ductos. Se aplican mínimos de eficiencia."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://efficiencyworks.org/homes/rebates/#secrebates"
+      "en": "https://efficiencyworks.org/for-your-home-rebates-and-incentives/"
     }
   },
   {
@@ -1259,9 +1266,9 @@
       "es": "Hasta $3,000 dólares por cliente en descuentos en bombas de calor geotérmicas. Mínimos de eficiencia aplican."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://efficiencyworks.org/homes/rebates/#secrebates"
+      "en": "https://efficiencyworks.org/for-your-home-rebates-and-incentives/"
     }
   },
   {
@@ -1276,19 +1283,21 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 500,
-      "unit": "ton"
+      "unit": "ton",
+      "minimum": 500,
+      "maximum": 1000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Ductless mini-split $500/ton. Efficiency minimums apply.",
-      "es": "Mini split sin ductos $500 dólares/tonelada. Mínimos de eficiencia aplican."
+      "en": "Ductless mini-split cold climate air source heat pump $500/ton, or $1,000/ton if removing electric baseboard heat. Efficiency minimums apply.",
+      "es": "Minisplit sin ductos para clima frío con bomba de calor de aire a presión: $500/tonelada, o $1000/tonelada si se retira la calefacción eléctrica de rodapiés. Se aplican mínimos de eficiencia."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://efficiencyworks.org/homes/rebates/#secrebates"
+      "en": "https://efficiencyworks.org/for-your-home-rebates-and-incentives/"
     }
   },
   {
@@ -1330,21 +1339,20 @@
     "program": "co_platteRiverPowerAuthority_efficiencyWorks",
     "amount": {
       "type": "dollar_amount",
-      "number": 35,
-      "minimum": 35,
-      "maximum": 70
+      "number": 50,
+      "maximum": 50
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$35 off smart thermostats. Max rebate: $70 per home.",
-      "es": "Un descuento de $35 dólares en termostatos inteligentes. Un reembolso máximo: $70 dólares por hogar."
+      "en": "Up to $50 off eligible thermostats.",
+      "es": "Hasta $50 de descuento para termostatos elegibles."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://efficiencyworks.org/homes/rebates/#secrebates"
+      "en": "https://efficiencyworks.org/for-your-home-rebates-and-incentives/"
     }
   },
   {
@@ -1353,7 +1361,11 @@
       "rebate"
     ],
     "items": [
-      "attic_or_roof_insulation"
+      "attic_or_roof_insulation",
+      "wall_insulation",
+      "floor_insulation",
+      "basement_insulation",
+      "other_insulation"
     ],
     "program": "co_platteRiverPowerAuthority_efficiencyWorks",
     "amount": {
@@ -1365,13 +1377,13 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate of $1.16 per sq ft for insulation. Attic (flat ceiling) and already insulated attic kneewalls capped at a rebate of $0.77 per sq ft.",
-      "es": "Un reembolso de $1.16 dólares por pie cuadrado de aislamiento. Un reembolso de $0.77 de dólar por pie cuadrado para el desván (de techo plano) y para los muros inclinados del desván ya aislados."
+      "en": "Up to $1.16 per sq ft for eligible insulation.",
+      "es": "Hasta $1.16 por pie cuadrado para aislamiento elegible."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://efficiencyworks.org/homes/rebates/#secrebates"
+      "en": "https://efficiencyworks.org/for-your-home-rebates-and-incentives/"
     }
   },
   {
@@ -1397,9 +1409,9 @@
       "es": "Un reembolso escalonado para el sellado hermético que oscila entre $310 y $770 dólares según la reducción de la pérdida de aire."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://efficiencyworks.org/homes/rebates/#secrebates"
+      "en": "https://efficiencyworks.org/for-your-home-rebates-and-incentives/"
     }
   },
   {
@@ -1719,20 +1731,22 @@
     ],
     "program": "co_empireElectricAssociation_energyEfficiencyProductsProgram",
     "amount": {
-      "type": "dollar_amount",
-      "number": 1800,
-      "minimum": 675,
-      "maximum": 1800
+      "type": "percent",
+      "number": 0.5,
+      "minimum": 500,
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$675 rebate per standard ASHP with HSPF at most 2 ton capacity, $1,800 per systems over 2 ton capacity. Not to exceed 50% of equipment cost.",
-      "es": "Un reembolso de $675 dólares por ASHP estándar con HSPF de un máximo de 2 toneladas de capacidad, $1,800 dólares por sistema de más de 2 toneladas de capacidad. No debe superar el 50% de costo del equipo."
+      "en": "$500 per systems equal or less than 1.5 tons, $1,500 per system over 1.5 ton capacity. Not to exceed 50% of equipment cost. ",
+      "es": "$500 por sistema de capacidad igual o inferior a 1.5 toneladas, $1,500 por sistema de capacidad superior a 1.5 toneladas. No debe exceder el 50% del costo del equipo."
     },
+    "start_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.eea.coop/residential-energy-efficiency-program"
+      "en": "https://www.eea.coop/form/2026-heat-pump-rebate"
     }
   },
   {
@@ -1758,6 +1772,7 @@
       "en": "$1,000 rebate per Cold Climate Certified ASHP w/ HSPF, at most 2 ton capacity. $2,400 per system over 2 ton capacity. Capped at 50% of equipment cost.",
       "es": "Un reembolso de $1,000 dólares por ASHP certificado para clima frío con HSPF, con una capacidad máxima de 2 toneladas. $2,400 dólares por sistema de más de 2 toneladas de capacidad. Con un tope del 50% del costo del equipo."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.eea.coop/residential-energy-efficiency-program"
     }
@@ -2121,6 +2136,7 @@
       "en": "$70 rebate for Electric Resistance Water Heaters replacing natural gas or propane water heaters or if a member signs up for Time-of-Use rate.",
       "es": "Un reembolso de $70 dólares para calentadores de agua por resistencia eléctrica que sustituyan a los de gas natural o propano o si un miembro se suscribe a la tarifa de tiempo de uso."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
@@ -2224,6 +2240,7 @@
       "en": "$1175 rebate for standard Air Source Heat Pumps that are at most 2 tons (not to exceed 50% of equipment cost).",
       "es": "Un reembolso de $1,175 dólares para bombas de calor de fuente de aire estándar de 2 toneladas como máximo (sin superar el 50% del costo del equipo)."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
@@ -2251,6 +2268,7 @@
       "en": "$2300 rebate for standard Air Source Heat Pumps over 2 tons (not to exceed 50% of equipment cost).",
       "es": "Un reembolso de $2,300 dólares para bombas de calor de fuente de aire estándar de más de 2 toneladas (sin superar el 50% del costo del equipo)."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
@@ -2278,6 +2296,7 @@
       "en": "$1500 rebate for Cold Climate Tier 2 Air Source Heat Pumps that are at most 2 tons (not to exceed 50% of equipment cost).",
       "es": "Un reembolso de $1,500 dólares para bombas de calor de fuente de aire de nivel 2 para climas fríos que tengan como máximo 2 toneladas (sin superar el 50% del costo del equipo)."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
@@ -2305,6 +2324,7 @@
       "en": "$5400 rebate for Cold Climate Air Source Heat Pumps over 2 tons (not to exceed 50% of equipment cost).",
       "es": "Un reembolso de $5,400 dólares para bombas de calor de fuente de aire de clima frío de más de 2 toneladas (sin superar el 50% del costo del equipo)."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
@@ -2332,6 +2352,7 @@
       "en": "$450 rebate per ton for air-to-water units with EER at least 19 and COP at least 4.",
       "es": "Un reembolso de $450 dólares por tonelada para unidades aire-agua con EER de al menos 19 y COP de al menos 4."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
@@ -2407,6 +2428,7 @@
       "en": "$200 rebate per unit for Evaporative Coolers.",
       "es": "Un reembolso de $200 dólares por unidad de enfriadores por evaporación."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
     }
@@ -2423,7 +2445,7 @@
     "amount": {
       "type": "percent",
       "number": 0.25,
-      "minimum": 100,
+      "minimum": 12,
       "maximum": 150
     },
     "owner_status": [
@@ -2538,6 +2560,7 @@
       "en": "25% of cost up to $50 rebate for electric Leaf Blower.",
       "es": "Un reembolso del 25% del costo de un soplador de hojas eléctrico, hasta $50 dólares."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
@@ -2565,6 +2588,7 @@
       "en": "25% of cost up to $100 rebate for electric Chainsaw.",
       "es": "Un reembolso del 25% del costo de una motosierra eléctrica, hasta $100 dólares."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
@@ -2592,6 +2616,7 @@
       "en": "25% of cost up to $50 rebate for electric Trimmer.",
       "es": "Un reembolso del 25% del costo de una recortadora eléctrica, hasta $50 dólares."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
@@ -2645,6 +2670,7 @@
       "en": "25% of cost up to $50 rebate for electric Pruner.",
       "es": "Un reembolso del 25% del costo de una podadora eléctrica, hasta 50 dólares."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
@@ -2672,6 +2698,7 @@
       "en": "25% of cost up to $50 rebate for electric Power Washer.",
       "es": "Un reembolso del 25% del costo de una hidrolimpiadora eléctrica, hasta $50 dólares."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "url": {
       "en": "https://www.gcea.coop/energy-efficiency/rebates/"
@@ -2798,6 +2825,7 @@
       "en": "Rebate for 25% of total project cost for any qualifying Ducted Heat Pump.",
       "es": "Un reembolso del 25% del costo total del proyecto para cualquier bomba de calor con ductos que cumpla los requisitos."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.holycross.com/rebates/"
     }
@@ -2822,6 +2850,7 @@
       "en": "Rebate for 25% of total project cost for any qualifying Ductless Heat Pump.",
       "es": "Un reembolso del 25% del costo total del proyecto para cualquier bomba de calor sin ductos que cumpla los requisitos."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.holycross.com/rebates/"
     }
@@ -2836,16 +2865,18 @@
     ],
     "program": "co_holyCrossEnergy_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.25
+      "type": "dollar_amount",
+      "number": 1500,
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 25% of total project cost for air sealing.",
-      "es": "Un reembolso del 25% del costo total del proyecto para el sellado hermético."
+      "en": "$1,500 for air sealing.  Rebate shall not exceed 100% of project cost.",
+      "es": "$1,500 para sellado de aire. El reembolso no superará el 100% del costo del proyecto."
     },
+    "start_date": "2026-01-01",
     "url": {
       "en": "https://www.holycross.com/rebates/"
     }
@@ -2858,22 +2889,25 @@
     "items": [
       "attic_or_roof_insulation",
       "crawlspace_insulation",
-      "wall_insulation"
+      "wall_insulation",
+      "floor_insulation"
     ],
     "program": "co_holyCrossEnergy_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.25
+      "type": "dollar_amount",
+      "number": 1500,
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 25% of total project cost for insulation in attic, crawlspace, and exterior walls.",
-      "es": "Un reembolso del 25% del costo total del proyecto para aislamiento del desván, el entrepiso y las paredes exteriores."
+      "en": "$1500 rebate for for insulation in attic, crawlspace, and exterior walls in electrically heated building.",
+      "es": "Reembolso de $1,500 para aislamiento en ático, espacio de acceso y paredes exteriores en edificios con calefacción eléctrica."
     },
+    "start_date": "2026-01-01",
     "url": {
-      "en": "https://www.holycross.com/rebates/"
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026#hpwh"
     }
   },
   {
@@ -2886,18 +2920,20 @@
     ],
     "program": "co_holyCrossEnergy_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.25
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 25% of total project cost for a heat pump clothes dryer.",
-      "es": "Un reembolso del 25% del costo total del proyecto para una secadora de ropa con bomba de calor."
+      "en": "$500 rebate for a heat pump clothes dryer.",
+      "es": "Reembolso de $500 para una secadora de ropa con bomba de calor."
     },
+    "start_date": "2026-01-01",
     "url": {
-      "en": "https://www.holycross.com/rebates/"
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026#hpwh"
     }
   },
   {
@@ -2910,18 +2946,20 @@
     ],
     "program": "co_holyCrossEnergy_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.25
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "25% of costs for projects including Heat Pump Water Heaters.",
-      "es": "Un 25% de los costos de proyectos que incluyan calentadores de agua con bomba de calor."
+      "en": "$1,000 rebate for a Heat Pump Water Heater.",
+      "es": "Reembolso de $1,000 para un calentador de agua con bomba de calor."
     },
+    "start_date": "2026-01-01",
     "url": {
-      "en": "https://www.holycross.com/rebates/"
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026#hpwh"
     }
   },
   {
@@ -2934,18 +2972,20 @@
     ],
     "program": "co_holyCrossEnergy_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.25
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "25% of costs for projects including Induction Cooktops.",
-      "es": "Un 25% de los costos de proyectos que incluyan parrillas de inducción."
+      "en": "$500 rebate for new Induction Cooktops.",
+      "es": "Reembolso de $500 para nuevas estufas de inducción."
     },
+    "start_date": "2026-01-01",
     "url": {
-      "en": "https://www.holycross.com/rebates/"
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026"
     }
   },
   {
@@ -2958,15 +2998,16 @@
     ],
     "program": "co_holyCrossEnergy_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.25
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "25% of costs for projects including Smart Thermostats.",
-      "es": "Un 25% de los costos de proyectos que incluyan termostatos inteligentes."
+      "en": "$50 per Smart or programmable thermostat.",
+      "es": "$50 por termostato inteligente o programable."
     },
     "url": {
       "en": "https://www.holycross.com/rebates/"
@@ -2995,7 +3036,7 @@
       "es": "Un reembolso de $50 dólares por cada e-bike nueva."
     },
     "url": {
-      "en": "https://www.holycross.com/rebates/"
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/e-bike-rebate-application"
     }
   },
   {
@@ -3008,18 +3049,19 @@
     ],
     "program": "co_holyCrossEnergy_residentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 1
+      "type": "dollar_amount",
+      "number": 549,
+      "maximum": 549
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Free level II ChargePoint EV charger.",
-      "es": "Cargador gratuito de VEs ChargePoint de nivel II  ."
+      "en": "Up to $549 rebate for eligible Level 2 charger.",
+      "es": "Reembolso de hasta $549 para cargador de Nivel 2 elegible."
     },
     "url": {
-      "en": "https://www.holycross.com/rebates/"
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026"
     }
   },
   {
@@ -3121,9 +3163,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 per ton rebate (maximum 50% of material cost) for a new Ground Source Heat Pump.",
-      "es": "Un reembolso de $500 por tonelada (con un máximo del 50% del costo del material) para una nueva bomba de calor geotérmica."
+      "en": "$500 per ton rebate (maximum 50% of material cost) for a new Ground Source Heat Pump.  Income-qualified program.",
+      "es": "Descuento de $500 por tonelada (máximo 50% del costo del material) para una nueva bomba de calor geotérmica. Programa sujeto a ingresos."
     },
+    "low_income": "co-lpea-income-qualified",
     "url": {
       "en": "https://lpea.coop/electrify"
     }
@@ -3197,9 +3240,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$700 rebate for a Heat Pump Water Heater.",
-      "es": "Un reembolso de $700 dólares por un calentador de agua con bomba de calor."
+      "en": "$700 rebate for a Heat Pump Water Heater.  Available to income qualified households.",
+      "es": "Reembolso de $700 para un calentador de agua con bomba de calor. Disponible para hogares con ingresos que califican."
     },
+    "low_income": "co-lpea-income-qualified",
     "url": {
       "en": "https://lpea.coop/electrify"
     }
@@ -3222,9 +3266,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$30/kW rebate for ETS heater controlled by timers or master control system. For income qualified households.",
-      "es": "Reembolso de $30/kW para calentadores ETS controlados por temporizadores o sistema de control maestro. Para hogares con ingresos que cumplen los requisitos."
+      "en": "$30/kW rebate for ETS heater or thermal slab controlled by timers or master control system. For income qualified households.",
+      "es": "Reembolso de $30/kW para calentadores ETS o placas térmicas controladas por temporizadores o sistema de control maestro. Para hogares con ingresos que cumplen los requisitos."
     },
+    "start_date": "2026-01-01",
     "low_income": "co-lpea-income-qualified",
     "url": {
       "en": "https://lpea.coop/electrify"
@@ -3248,9 +3293,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$20/kW rebate for Thermal Slab heating controlled by timers or a master control system.",
-      "es": "Reembolso de $20/kW para calefacción por losa térmica controlada por temporizadores o un sistema de control maestro."
+      "en": "$20/kW rebate for ETS heaters or Thermal Slab storage heating controlled by timers or a master control system.",
+      "es": "Reembolso de $20/kW para calentadores ETS o calefacción de almacenamiento con losa térmica controlados por temporizadores o un sistema de control maestro."
     },
+    "start_date": "2026-01-01",
     "url": {
       "en": "https://lpea.coop/electric-thermal-storage-ets-heating-rebates"
     }
@@ -3267,7 +3313,8 @@
     "amount": {
       "type": "dollar_amount",
       "number": 75,
-      "maximum": 75
+      "minimum": 30,
+      "maximum": 150
     },
     "owner_status": [
       "homeowner"
@@ -3276,6 +3323,8 @@
       "en": "$75 rebate per smart thermostat. Maximum 50% of equipment costs and up to two thermostats per member account.",
       "es": "Un reembolso de $75 dólares por termostato inteligente. Hasta un máximo del 50% de los costos del equipo y de dos termostatos por cuenta de miembro."
     },
+    "start_date": "2026-01-01",
+    "low_income": "co-lpea-income-qualified",
     "url": {
       "en": "https://lpea.coop/electrify"
     }
@@ -3301,6 +3350,7 @@
       "en": "Free Level 2 plug-in charger for home use ($700 value), plus 50% rebate for installation costs, up to $500.",
       "es": "Cargador de enchufe gratuito de nivel 2 para uso doméstico (valorado en $700 dólares), más un reembolso del 50% por los costos de instalación, hasta $500."
     },
+    "end_date": "2025-11-15",
     "url": {
       "en": "https://lpea.coop/electrify"
     }
@@ -3326,6 +3376,7 @@
       "en": "50% rebate, up to $250, for the independent purchase and installation of a Level 2 charger.",
       "es": "Un reembolso del 50%, hasta $250, por la compra independiente de un cargador de nivel 2 y su instalación."
     },
+    "start_date": "2025-11-15",
     "url": {
       "en": "https://lpea.coop/electrify"
     }
@@ -3489,6 +3540,7 @@
       "en": "Up to $500 in weatherization products such as insulation, windows/doors, and sealing. Must be approved by local weatherization agency.",
       "es": "Hasta $500 en productos de climatización como aislamiento, ventanas/puertas y sellado. Debe ser aprobado por una agencia local de climatización."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.mcrea.org/energy-efficiency-rebates"
     }
@@ -3595,6 +3647,7 @@
       "en": "Up to $2,400 for qualifying Tier 2 Cold Climate Air Source Heat Pumps, capped at 50% of equipment cost.",
       "es": "Hasta $2,400 dólares para bombas de calor de fuente de aire de clima frío de nivel 2 certificadas, con un tope del 50% del costo del equipo."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.mcrea.org/energy-efficiency-rebates"
     }
@@ -4394,6 +4447,7 @@
       "en": "Up to $2,800 rebate for qualifying Cold Climate Air Source Heat Pumps. Must be AHRI-tested and certified. Not to exceed 50% of equipment cost.",
       "es": "Un reembolso de hasta $2,800 dólares para bombas de calor de fuente de aire de clima frío que cumplan los requisitos. Deben estar probadas y certificadas por AHRI. No debe superar el 50% del costo del equipo."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://pvrea.coop/for-members/residential-services/rebates/"
     }
@@ -5754,6 +5808,7 @@
       "en": "$500/ton for outdoor mounted Heat Pumps, capped at 50% of costs. $20,000 maximum per project.",
       "es": "$500/tonelada para bombas de calor de fuente de aire de 5 toneladas o menos, $250/tonelada para aquellas de más de 5 toneladas, con un límite del 50% del costo. Máximo de $20,000 por proyecto."
     },
+    "start_date": "2026-01-01",
     "url": {
       "en": "https://www.smpa.com/energy#berebates"
     }
@@ -5778,6 +5833,7 @@
       "en": "$1000/ton rebate for Air to Water Heat Pumps, capped at 50% of costs.",
       "es": "Un reembolso de $1,000 dólares/tonelada para bombas de calor de aire a agua, con un tope del 50% de los costos."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.smpa.com/energy#berebates"
     }
@@ -5802,6 +5858,7 @@
       "en": "$1000/ton rebate for new Ground Source Heat Pumps, capped at 50% of costs.",
       "es": "Un reembolso de $1,000 dólares/tonelada para bombas de calor geotérmicas nuevas, con un tope del 50% de los costos."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.smpa.com/energy#berebates"
     }
@@ -5850,6 +5907,7 @@
       "en": "$200 rebate for Whole House Fan. Replacement or new construction. Attic ventilation not eligible.",
       "es": "Un reembolso de $200 dólares para un ventilador de casa completa. Sustitución o nueva construcción. Ventilación de desván no es elegible."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.smpa.com/energy#berebates"
     }
@@ -6180,6 +6238,7 @@
       "en": "$750 rebate for new All Electric Plug-In Vehicle (EV), capped at 50% of purchase price.",
       "es": "Un reembolso de $750 dólares para vehículos eléctricos enchufables (VEs) nuevos, con un tope del 50% del precio de compra."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.smpa.com/energy#berebates"
     }
@@ -6206,6 +6265,7 @@
       "en": "$750 rebate for used All Electric Plug-In Vehicle (EV), capped at 50% of purchase price.",
       "es": "Un reembolso de $750 dólares para vehículos eléctricos enchufables (VEs) usados, con un límite del 50% del precio de compra."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.smpa.com/energy#berebates"
     }
@@ -6232,6 +6292,7 @@
       "en": "$250 rebate for new Plug-In Hybrid Electric Vehicle (PHEV), capped at 50% of purchase price.",
       "es": "Un reembolso de $250 dólares para un vehículo eléctrico híbrido enchufable (PHEV) nuevo, con un límite del 50% del precio de compra."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.smpa.com/energy#berebates"
     }
@@ -6258,6 +6319,7 @@
       "en": "$250 rebate for used Plug-In Hybrid Electric Vehicle (PHEV), capped at 50% of purchase price.",
       "es": "Un reembolso de $250 dólares para vehículos eléctricos híbridos enchufables (PHEV) usados, con un límite del 50% del precio de compra."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.smpa.com/energy#berebates"
     }
@@ -6284,6 +6346,7 @@
       "en": "$250 rebate for new Neighborhood Electric Vehicle (NEV), capped at 50% of purchase price.",
       "es": "Un reembolso de $250 dólares para un vehículo eléctrico de cortas distancias (NEV) nuevo, con un límite del 50% del precio de compra."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.smpa.com/energy#berebates"
     }
@@ -6310,6 +6373,7 @@
       "en": "$250 rebate for used Neighborhood Electric Vehicle (NEV), capped at 50% of purchase price.",
       "es": "Un reembolso de $250 dólares para un vehículo eléctrico de distancias cortas (NEV) usado, con un límite del 50% del precio de compra."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.smpa.com/energy#berebates"
     }
@@ -6335,6 +6399,7 @@
       "en": "$250 rebate for Electric Motorcycles.",
       "es": "Un reembolso de $250 dólares para motocicletas eléctricas."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.smpa.com/energy#berebates"
     }
@@ -6537,7 +6602,7 @@
     ],
     "short_description": {
       "en": "Up to $1600 off qualifying Air Source Heat Pumps, not to exceed 50% of costs.",
-      "es": "Hasta $1600 de descuento en bombas de calor de fuente de aire calificadas, sin exceder el 50 % de los costos."
+      "es": "Hasta $1,600 de descuento para bombas de calor de fuente de aire calificadas, sin exceder el 50 % de los costos."
     },
     "url": {
       "en": "https://www.secpa.com/rebates"
@@ -6921,6 +6986,7 @@
       "en": "Up to $2,500 for a Ground Source Heat Pump, depending on size and retrofit vs replacement.",
       "es": "Hasta $2,500 por una bomba de calor geotérmica, según el tamaño y si se trata de una modernización o un reemplazo."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "url": {
       "en": "https://www.unitedpower.com/rebates"
@@ -6948,6 +7014,7 @@
       "en": "Up to $2,000 for a cold-climate, high efficiency mini-split heat pump.",
       "es": "Hasta $2,000 por una bomba de calor mini-split de alta eficiencia para clima frío."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "url": {
       "en": "https://www.unitedpower.com/rebates"
@@ -6975,6 +7042,7 @@
       "en": "Up to $2,500 for a cold-climate, high efficiency ducted air source heat pump.",
       "es": "Hasta $2,500 por una bomba de calor de fuente de aire con sistema de ductos, de alta eficiencia y apta para clima frío."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "url": {
       "en": "https://www.unitedpower.com/rebates"
@@ -7161,6 +7229,7 @@
       "en": "$2,250/heating ton at 5 degrees Fahrenheit for a cold-climate heat pump.",
       "es": "$2,250 por tonelada de calefacción a 5 grados Fahrenheit para una bomba de calor para clima frío."
     },
+    "start_date": "2025-11-16",
     "end_date": "2026-12-31",
     "url": {
       "en": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps"
@@ -7266,7 +7335,7 @@
     ],
     "short_description": {
       "en": "Income-qualified Coloradans can receive a $9,000 rebate to replace old or high-emitting vehicles with a new BEV or PHEV.",
-      "es": "Los habitantes de Colorado que califican según sus ingresos pueden recibir un reembolso de $9,000 para reemplazar vehículos viejos o de altas emisiones por un nuevo BEV o PHEV."
+      "es": "Los habitantes de Colorado que califican según sus ingresos pueden recibir un reembolso de $9,000 para reemplazar vehículos viejos o de alta emisión por un nuevo BEV o PHEV."
     },
     "low_income": "co-colorado-energy-office",
     "url": {
@@ -7292,7 +7361,7 @@
     ],
     "short_description": {
       "en": "Income-qualified Coloradans can receive a $6,000 rebate to replace old or high-emitting vehicles with a used BEV or PHEV.",
-      "es": "Los habitantes de Colorado que califican según sus ingresos pueden recibir un reembolso de $6,000 para reemplazar vehículos viejos o de altas emisiones por un BEV o PHEV usado."
+      "es": "Los habitantes de Colorado que califican según sus ingresos pueden recibir un reembolso de $6,000 para reemplazar vehículos viejos o de alta emisión por un BEV o PHEV usado."
     },
     "low_income": "co-colorado-energy-office",
     "url": {
@@ -7693,9 +7762,10 @@
       "en": "Rebate for income-qualified residents or eligible nonprofits for photovoltatic or thermal solar. Capped at lowest of 50% of costs, $1/watt, or $8,000.",
       "es": "Reembolso para residentes que cumplen con requisitos de ingresos o las organizaciones sin ánimo de lucro elegibles para  energía solar fotovoltaica o térmica. El límite más bajo es del 50% de los costos, 1 $/watt, o $8,000 dólares."
     },
+    "end_date": "2026-12-31",
     "low_income": "co-city-of-boulder",
     "url": {
-      "en": "https://energysmartyes.com/rebates-financing/city-of-boulder/"
+      "en": "https://bouldercolorado.gov/services/solar-grants"
     }
   },
   {
@@ -7824,6 +7894,8 @@
       "en": "Rebate for ~15% of Boulder's sales and use tax for materials and permits on solar electric or thermal installations (roughly 0.6% overall).",
       "es": "Un reembolso de aproximadamente un 15% del impuesto sobre las ventas y uso de materiales y permisos de Boulder en instalaciones solares eléctricas o térmicas (aproximadamente un 0.6% en total)."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://bouldercolorado.gov/services/solar-tax-rebates"
     }
@@ -8545,15 +8617,15 @@
     "program": "co_glenwoodSpringsElectric_sustainabilityProgramElectricRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 200,
-      "maximum": 200
+      "number": 400,
+      "maximum": 400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$200 rebate for Home Energy Assessment.",
-      "es": "Un reembolso de $200 dólares para una evaluación del consumo de energía doméstica."
+      "en": "Rebates up to $400 resulting in Home Energy Assessment cost of $100.",
+      "es": "Reembolsos de hasta $400 que resultan en un costo de evaluación de energía del hogar de $100."
     },
     "url": {
       "en": "https://garfieldcleanenergy.org/gwse-rebates/"
@@ -8745,6 +8817,7 @@
       "en": "$200 rebate for E-Bike, up to 2 bikes per account.",
       "es": "Un reembolso de $200 dólares para E-Bikes, hasta 2 bicicletas eléctricas por cuenta."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://garfieldcleanenergy.org/gwse-rebates/"
     }
@@ -8772,6 +8845,7 @@
       "en": "$500 rebate for E-Bike for income-qualified residents, up to 2 bikes per account.",
       "es": "Un reembolso de $500 dólares para E-Bikes para residentes que cumplan los requisitos de ingresos, hasta 2 bicicletas eléctricas por cuenta."
     },
+    "end_date": "2025-12-31",
     "low_income": "co-glenwood-springs-electric",
     "url": {
       "en": "https://garfieldcleanenergy.org/gwse-rebates/"
@@ -8798,6 +8872,7 @@
       "en": "$500 rebate for an EV Charging Station.",
       "es": "Un reembolso de $500 por una estación de recarga de VEs."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://garfieldcleanenergy.org/gwse-rebates/"
     }
@@ -9427,6 +9502,7 @@
       "en": "$16/kW incentive for Controlled Off-Peak Heating.",
       "es": "Incentivo de $16 dólares/kW para calefacción controlada fuera de horas pico."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.kcelectric.coop/rebates"
     }
@@ -9452,6 +9528,7 @@
       "en": "$12/kW incentive for Heated Floors.",
       "es": "$12/kW incentive for Heated Floors."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.kcelectric.coop/rebates"
     }
@@ -9476,7 +9553,7 @@
     ],
     "short_description": {
       "en": "$250/ton rebate for Air Source Heat Pump up to 50% costs.",
-      "es": "Reembolso de $250/tonelada para bombas de calor de fuente de aire de hasta el 50 % del costo."
+      "es": "Reembolso de $250/tonelada para bombas de calor de fuente de aire, hasta el 50 % del costo."
     },
     "url": {
       "en": "https://www.kcelectric.coop/rebates"
@@ -9502,7 +9579,7 @@
     ],
     "short_description": {
       "en": "$500/ton for Cold-Climate Air Source Heat Pump up to 50% costs.",
-      "es": "$500/tonelada para bomba de calor de fuente de aire para clima frío hasta un 50% de costos."
+      "es": "$500/tonelada para bomba de calor de fuente de aire para clima frío, hasta un 50% del costo."
     },
     "url": {
       "en": "https://www.kcelectric.coop/rebates"
@@ -9530,6 +9607,7 @@
       "en": "$2400 rebate for Tier 2 - Cold-Climate Certified Air Source Heat Pump (> 2 tons) up to 50% costs.",
       "es": "Un reembolso de $2,400 dólares para bombas de calor de fuente de aire con certificación de clima frío de nivel 2 (> 2 toneladas), hasta el 50% de los costos."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.kcelectric.coop/rebates"
     }
@@ -9836,6 +9914,7 @@
       "en": "$200 for electric resistive and heat pump water heaters.",
       "es": "Reembolso de $200 por calentadores de agua eléctricos de resistencia y con bomba de calor."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.mpei.com/rebates"
     }
@@ -9900,38 +9979,16 @@
     "program": "co_mountainParksElectric_rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 100
+      "number": 200,
+      "minimum": 100,
+      "maximum": 200
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$100 per unit rebate for an induction range.",
-      "es": "Reembolso de $100 por unidad para una cocina de inducción."
-    },
-    "url": {
-      "en": "https://www.mpei.com/rebates"
-    }
-  },
-  {
-    "id": "CO-422",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_stove"
-    ],
-    "program": "co_mountainParksElectric_rebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$200 rebate for induction cooktops.",
-      "es": "Reembolso de $200 por placas de cocción por inducción."
+      "en": "$200 per unit for induction range  + cooktop.  $100 rebate for an induction cooktop only. ",
+      "es": "$200 por unidad para cocina de inducción y placa de cocción. $100 de reembolso solo para cocina de inducción."
     },
     "url": {
       "en": "https://www.mpei.com/rebates"
@@ -10240,6 +10297,7 @@
       "en": "Up to $500 in weatherization products such as insulation, windows/doors, and sealing. Must be approved by local weatherization agency.",
       "es": "Hasta $500 dólares en productos de climatización como aislamiento térmico, ventanas/puertas y sellado hermético. Debe ser aprobado por la agencia local de climatización."
     },
+    "end_date": "2025-11-15",
     "url": {
       "en": "https://slvrec.com/rebates"
     }
@@ -10274,7 +10332,7 @@
       "rebate"
     ],
     "items": [
-      "battery_storage_installation"
+      "electric_thermal_storage_and_slab"
     ],
     "program": "co_sanLuisValleyREC_energyEfficiencyRebateProgram",
     "amount": {
@@ -10289,6 +10347,7 @@
       "en": "$16 per kilowatt (kW) for Electric Thermal Storage controlled by timer or master control system. Energy audit recommended.",
       "es": "$16 dólares por kilowatt (kW) para almacenamiento térmico eléctrico controlado por temporizador o sistema de control maestro. Se recomienda una auditoría de consumo de energía."
     },
+    "start_date": "2025-11-15",
     "url": {
       "en": "https://slvrec.com/rebates"
     }
@@ -10315,6 +10374,7 @@
       "en": "Up to $1,800 for qualifying Tier 1 (standard climate) Air Source Heat Pumps, capped at 50% of equipment cost.",
       "es": "Hasta $1,800 dólares para bombas de calor de fuente de aire de nivel 1 (clima estándar) que cumplan los requisitos, con un tope del 50% del costo del equipo."
     },
+    "end_date": "2025-11-15",
     "url": {
       "en": "https://slvrec.com/rebates"
     }
@@ -10341,6 +10401,7 @@
       "en": "Up to $2,400 for qualifying Tier 2 Cold Climate Air Source Heat Pumps, capped at 50% of equipment cost.",
       "es": "Hasta $2,400 dólares para bombas de calor de fuente de aire de clima frío de nivel 2, que cumplan los requisitos, con un tope del 50% del costo del equipo."
     },
+    "end_date": "2025-11-15",
     "url": {
       "en": "https://slvrec.com/rebates"
     }
@@ -10357,15 +10418,15 @@
     "program": "co_sanLuisValleyREC_energyEfficiencyRebateProgram",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 450,
+      "number": 500,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$450 per ton rebate for air-to-water heat pump units.",
-      "es": "Un reembolso de $450 dólares por tonelada para  unidades de bomba de calor de aire a agua."
+      "en": "$500 per ton rebate for air-to-water heat pump units.",
+      "es": "Descuento de $500 por tonelada para unidades de bomba de calor aire-agua."
     },
     "url": {
       "en": "https://slvrec.com/rebates"
@@ -10569,8 +10630,9 @@
     ],
     "short_description": {
       "en": "Additional Battery Rebate: 50% of the cost up to $25.",
-      "es": "Reembolso por batería adicional: 50% del costo, hasta $25 dólares."
+      "es": "Reembolso adicional de batería: 50% del costo hasta $25."
     },
+    "start_date": "2026-01-01",
     "url": {
       "en": "https://slvrec.com/rebates"
     }
@@ -11320,6 +11382,7 @@
       "en": "$150 rebate for qualifying Non-Cold Climate Air Source Heat Pump.",
       "es": "Reembolso de $150 dólares para una bomba de calor de fuente de aire para climas no fríos que cumpla los requisitos."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.erieco.gov/2242/Energy-Efficiency-Rebates"
     }
@@ -11344,6 +11407,7 @@
       "en": "$150 rebate for qualifying Non-Cold Climate Mini-Splits Air Source Heat Pump.",
       "es": "Reembolso de $150 dólares para una bomba de calor de fuente de aire para mini-splits de clima no frío que cumpla los requisitos."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.erieco.gov/2242/Energy-Efficiency-Rebates"
     }
@@ -11416,6 +11480,7 @@
       "en": "$50 rebate for portable or whole home Evaporative Coolers.",
       "es": "Reembolso de $50 dólares para enfriadores por evaporación portátiles o para toda la casa."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.erieco.gov/2242/Energy-Efficiency-Rebates"
     }
@@ -12622,6 +12687,7 @@
       "en": "$675 rebate for qualifying Tier 1 Air Source Heat Pump (2 tons or less), up to 50% of equipment cost.",
       "es": "Reembolso de $675 dólares para una bomba de calor de fuente de aire de nivel 1 que cumpla los requisitos (2 toneladas o menos), hasta el 50% del costo del equipo."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.wrea.org/rebates"
     }
@@ -12647,6 +12713,7 @@
       "en": "$1,800 rebate for qualifying Tier 1 Air Source Heat Pump (2 tons or more), up to 50% of equipment cost.",
       "es": "Reembolso de $1,800 dólares para una bomba de calor de fuente de aire de nivel 1 que cumpla los requisitos (2 toneladas o más), hasta el 50% del costo del equipo."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.wrea.org/rebates"
     }
@@ -12672,6 +12739,7 @@
       "en": "$1,000 rebate for qualifying Tier 2 Air Source Heat Pump (2 tons or less), up to 50% of equipment cost.",
       "es": "Reembolso de $1,000 dólares para una bomba de calor de fuente de aire de nivel 2 que cumpla los requisitos (2 toneladas o menos), hasta el 50% del costo del equipo."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.wrea.org/rebates"
     }
@@ -12697,6 +12765,7 @@
       "en": "$2,400 rebate for qualifying Tier 2 Air Source Heat Pump (2 tons or more), up to 50% of equipment cost.",
       "es": "Reembolso de $2,400 dólares para una bomba de calor de fuente de aire de nivel 2 que cumpla los requisitos (2 toneladas o más), hasta el 50% del costo del equipo."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.wrea.org/rebates"
     }
@@ -12824,15 +12893,17 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "minimum": 1000
+      "minimum": 500,
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $2,400 + $100/ton rebate for Tier 2 Air Source Heat Pumps. HSPF greater than 10 and SEER greater than 16. Up to 50% equipment cost.",
-      "es": "Hasta $2,400 dólares + un reembolso de $100 dólares/tonelada para bombas de calor de fuente de aire de nivel 2. HSPF superior a 10 y SEER superior a 16. Hasta el 50% del costo del equipo."
+      "en": "$1,500 rebate for systems larger than 1.5 tons.  $500 for less than 1.5 ton.  $100/ton additional rebate for cold-climate. Up to 50% equipment cost.",
+      "es": "Descuento de $1,500 para sistemas de más de 1.5 toneladas. $500 para sistemas de menos de 1.5 toneladas. Descuento adicional de $100 por tonelada para climas fríos. Hasta un 50% del costo del equipo."
     },
+    "start_date": "2025-01-01",
     "url": {
       "en": "https://www.ywelectric.coop/rebate-program-information"
     }
@@ -12963,9 +13034,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1000/ton bonus for low-to-moderate income residents purchasing cold climate ductless heat pumps, to be used through weatherization agency.",
-      "es": "Bonificación de $1,000 por tonelada para residentes con ingresos bajos o moderados que compren bombas de calor sin ductos para clima frío, que se usarán a través de una agencia de climatización."
+      "en": "$1000/ton bonus for low-to-moderate income residents purchasing cold climate ductless heat pumps, to be used through weatherization agency.  ",
+      "es": "Bono de $1,000 por tonelada para residentes con ingresos bajos a moderados que compren bombas de calor sin ductos para climas fríos, que se utilizarán a través de la agencia de climatización."
     },
+    "end_date": "2025-12-31",
     "low_income": "co-sangre-de-cristo",
     "url": {
       "en": "https://www.myelectric.coop/energy-efficiency/energy-efficiency-credit-programs/"
@@ -12992,6 +13064,7 @@
       "en": "$1000/ton bonus for low-to-moderate income residents purchasing cold climate ducted heat pumps, to be used through weatherization agency.",
       "es": "Bonificación de $1,000 por tonelada para residentes con ingresos bajos o moderados que adquieran bombas de calor con sistema de ductos para clima frío, a través de una agencia de climatización."
     },
+    "end_date": "2025-12-31",
     "low_income": "co-sangre-de-cristo",
     "url": {
       "en": "https://www.myelectric.coop/energy-efficiency/energy-efficiency-credit-programs/"
@@ -13021,9 +13094,10 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $3000 for labor & materials per household for weatherization measures as part of converting to heat pumps from electric or propane heat source.",
-      "es": "Hasta $3,000 por hogar por mano de obra y materiales destinados a medidas de climatización, como parte de la conversión de una fuente de calor eléctrica o a propano a bombas de calor."
+      "en": "Up to $3000 per household for weatherization for converting to heat pumps from electric or propane heat source.   Low/Moderate Income program.",
+      "es": "Hasta $3,000 por hogar para climatización al convertir de calefacción eléctrica o de propano a bombas de calor. Programa para personas de ingresos bajos o moderados."
     },
+    "low_income": "co-sangre-de-cristo",
     "url": {
       "en": "https://www.myelectric.coop/energy-efficiency/energy-efficiency-credit-programs/"
     }
@@ -13150,20 +13224,20 @@
     "program": "co_platteRiverPowerAuthority_efficiencyWorks",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 3.75,
+      "number": 5,
       "unit": "square_foot"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$3.75/sq. ft. towards replacement windows and doors. Windows and doors must meet ENERGY STAR northern climate zone performance criteria.",
-      "es": "$3.75 por pie cuadrado para ventanas y puertas de reemplazo. Las ventanas y puertas deben cumplir con los criterios de rendimiento de la zona climática norte de ENERGY STAR."
+      "en": "Up to $5/sq. ft. towards replacement doors and windows. Must meet ENERGY STAR northern climate zone performance criteria.",
+      "es": "Hasta $5 por pie cuadrado para la sustitución de puertas y ventanas. Debe cumplir con los criterios de rendimiento de la zona climática norte de ENERGY STAR."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://efficiencyworks.org/homes/rebates/#secrebates"
+      "en": "https://efficiencyworks.org/for-your-home-rebates-and-incentives/"
     }
   },
   {
@@ -13189,9 +13263,9 @@
       "es": "Hasta $350 por una estufa o encimera de inducción al reemplazar una de gas. Hasta $50 al reemplazar una eléctrica."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://efficiencyworks.org/homes/rebates/#secrebates"
+      "en": "https://efficiencyworks.org/for-your-home-rebates-and-incentives/"
     }
   },
   {
@@ -13297,6 +13371,7 @@
       "en": "Free heat pump HVAC upgrade for low-to-moderate-income Denver residents with a respiratory condition to improve air quality.",
       "es": "Mejora gratuita del sistema HVAC con bomba de calor para residentes de Denver con ingresos bajos o moderados que tengan una afección respiratoria, a fin de mejorar la calidad del aire."
     },
+    "end_date": "2025-12-31",
     "low_income": "co-city-and-county-of-denver",
     "url": {
       "en": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Cutting-Denvers-Carbon-Pollution/High-Performance-Buildings-and-Homes/Electrify-Your-Home/Healthy-Homes-Program"
@@ -13323,6 +13398,7 @@
       "en": "Free heat pump water heater upgrade for low-to-moderate-income Denver residents with a respiratory condition to improve air quality.",
       "es": "Mejora gratuita a un calentador de agua con bomba de calor para residentes de Denver con ingresos bajos o moderados que tengan una afección respiratoria, a fin de mejorar la calidad del aire."
     },
+    "end_date": "2025-12-31",
     "low_income": "co-city-and-county-of-denver",
     "url": {
       "en": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Cutting-Denvers-Carbon-Pollution/High-Performance-Buildings-and-Homes/Electrify-Your-Home/Healthy-Homes-Program"
@@ -13349,6 +13425,7 @@
       "en": "Free induction cooktop upgrade for low-to-moderate-income Denver residents with a respiratory condition to improve air quality.",
       "es": "Mejora gratuita a una placa de cocción por inducción para residentes de Denver con ingresos bajos o moderados que tengan una afección respiratoria, a fin de mejorar la calidad del aire."
     },
+    "end_date": "2025-12-31",
     "low_income": "co-city-and-county-of-denver",
     "url": {
       "en": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Cutting-Denvers-Carbon-Pollution/High-Performance-Buildings-and-Homes/Electrify-Your-Home/Healthy-Homes-Program"
@@ -13375,6 +13452,7 @@
       "en": "Free home energy assement for low-to-moderate-income Denver residents with a respiratory condition.",
       "es": "Evaluación energética del hogar gratuita para residentes de Denver con ingresos bajos o moderados que tengan una afección respiratoria."
     },
+    "end_date": "2025-12-31",
     "low_income": "co-city-and-county-of-denver",
     "url": {
       "en": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Cutting-Denvers-Carbon-Pollution/High-Performance-Buildings-and-Homes/Electrify-Your-Home/Healthy-Homes-Program"
@@ -13401,6 +13479,7 @@
       "en": "Free home weatherization upgrades for low-to-moderate-income Denver residents with a respiratory condition to improve air quality.",
       "es": "Mejoras gratuitas de climatización del hogar para residentes de Denver con ingresos bajos o moderados que tengan una afección respiratoria, a fin de mejorar la calidad del aire."
     },
+    "end_date": "2025-12-31",
     "low_income": "co-city-and-county-of-denver",
     "url": {
       "en": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Cutting-Denvers-Carbon-Pollution/High-Performance-Buildings-and-Homes/Electrify-Your-Home/Healthy-Homes-Program"
@@ -13427,6 +13506,7 @@
       "en": "Free test of your home's air quality for low-to-moderate-income Denver residents with a respiratory condition.",
       "es": "Prueba gratuita de la calidad del aire en el hogar para residentes de Denver con ingresos bajos o moderados que tengan una afección respiratoria."
     },
+    "end_date": "2025-12-31",
     "low_income": "co-city-and-county-of-denver",
     "url": {
       "en": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Cutting-Denvers-Carbon-Pollution/High-Performance-Buildings-and-Homes/Electrify-Your-Home/Healthy-Homes-Program"
@@ -13552,14 +13632,14 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 15000
+      "maximum": 10000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% the cost of a cold climate heat pump, up to $15,000.",
-      "es": "Reembolso del 50 % del costo de una bomba de calor para clima frío, hasta $15,000."
+      "en": "Rebate for 50% the cost of a cold climate heat pump, up to $10,000.",
+      "es": "Reembolso del 50% del costo de una bomba de calor para clima frío, hasta $10,000."
     },
     "low_income": "co-aspen-CORE-150ami-threshold",
     "url": {
@@ -13603,14 +13683,14 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 15000
+      "maximum": 10000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of the cost of a heat pump (hybrid) water heater, up to $15,000.",
-      "es": "Reembolso del 50 % del costo de un calentador de agua híbrido con bomba de calor, hasta $15,000."
+      "en": "Rebate for 50% of the cost of a heat pump (hybrid) water heater, up to $10,000 for Priority Community Participants.",
+      "es": "Reembolso del 50% del costo de un calentador de agua con bomba de calor (híbrido), hasta $10,000 para participantes de la comunidad prioritaria."
     },
     "low_income": "co-aspen-CORE-150ami-threshold",
     "url": {
@@ -13654,14 +13734,14 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 15000
+      "maximum": 10000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of the cost of a heat pump snowmelt, up to $15,000.",
-      "es": "Reembolso del 50 % del costo de un sistema de deshielo por bomba de calor, hasta $15,000."
+      "en": "Rebate for 50% of the cost of a heat pump snowmelt, up to $10,000.",
+      "es": "Reembolso del 50% del costo de un sistema de deshielo con bomba de calor, hasta $10,000."
     },
     "low_income": "co-aspen-CORE-150ami-threshold",
     "url": {
@@ -13706,14 +13786,14 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 15000
+      "maximum": 10000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% rebate for the cost of replacing an existing gas-heated ventilation system with a heat-recovery or heat pump ventilation system, up to $15,000.",
-      "es": "Reembolso del 50 % del costo por reemplazar un sistema de ventilación existente con calefacción a gas por un sistema de ventilación con recuperación de calor o bomba de calor, hasta $15,000."
+      "en": "50% rebate for the cost of replacing an existing gas-heated ventilation system with a heat-recovery or heat pump ventilation system, up to $10,000.",
+      "es": "Reembolso del 50% por el costo de reemplazar un sistema de ventilación a gas existente con un sistema de ventilación con recuperación de calor o bomba de calor, hasta $10,000."
     },
     "low_income": "co-aspen-CORE-150ami-threshold",
     "url": {
@@ -13738,14 +13818,14 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 7500
+      "maximum": 2500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of the cost of attic, crawlspace, wall, roof, pipe wrap, and ductwork air sealing and insulation, up to $7,500.",
-      "es": "Reembolso del 50 % del costo de la impermeabilización y el aislamiento del ático, el entrepiso, las paredes, el techo, el revestimiento de tuberías y los ductos, hasta $7,500."
+      "en": "Rebate for 50% of the cost of attic, crawlspace, wall, roof, pipe wrap, and ductwork air sealing and insulation, up to $2,500.",
+      "es": "Reembolso del 50% del costo de sellado y aislamiento de aire de áticos, espacios de acceso, paredes, techos, envolturas de tuberías y conductos, hasta $2,500."
     },
     "url": {
       "en": "https://www.aspencore.org/residential-rebates"
@@ -13769,14 +13849,14 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 15000
+      "maximum": 10000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of the cost of attic, crawlspace, wall, roof, pipe wrap, and ductwork air sealing and insulation, up to $15,000.",
-      "es": "Reembolso del 50 % del costo de la impermeabilización y el aislamiento del ático, el entrepiso, las paredes, el techo, el revestimiento de tuberías y los ductos, hasta $15,000."
+      "en": "Rebate for 50% of the cost of attic, crawlspace, wall, roof, pipe wrap, and ductwork air sealing and insulation, up to $10,000.",
+      "es": "Reembolso del 50% del costo de sellado y aislamiento de aire de áticos, espacios de acceso, paredes, techos, envolturas de tuberías y conductos, hasta $10,000."
     },
     "low_income": "co-aspen-CORE-150ami-threshold",
     "url": {
@@ -13795,14 +13875,14 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 7500
+      "maximum": 2500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of the cost of a smart thermostat, up to $7,500 in total program rebates.",
-      "es": "Reembolso del 50 % del costo de un termostato inteligente, hasta $7,500 en reembolsos totales del programa."
+      "en": "Rebate for 50% of the cost of a smart thermostat, up to $2,500 in total program rebates.",
+      "es": "Reembolso del 50% del costo de un termostato inteligente, hasta $2,500 en reembolsos totales del programa."
     },
     "url": {
       "en": "https://www.aspencore.org/residential-rebates"
@@ -13820,14 +13900,14 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 15000
+      "maximum": 5000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of the cost of a smart thermostat, up to $15,000 in total program rebates.",
-      "es": "Reembolso del 50 % del costo de un termostato inteligente, hasta $15,000 en reembolsos totales del programa."
+      "en": "Rebate for 50% of the cost of a smart thermostat, up to $5,000 in total program rebates for Priority Community participants.",
+      "es": "Reembolso del 50% del costo de un termostato inteligente, hasta $5,000 en reembolsos totales del programa para participantes de la Comunidad Prioritaria."
     },
     "low_income": "co-aspen-CORE-150ami-threshold",
     "url": {
@@ -13846,14 +13926,14 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 7500
+      "maximum": 2500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate of 50% of the cost of energy modeling and design assistance for major renovations or new construction, up to $7,500. Pre-approval required.",
-      "es": "Reembolso del 50 % del costo por modelado energético y asistencia en diseño para renovaciones mayores o construcción nueva, hasta $7,500. Se requiere aprobación previa."
+      "en": "Rebate of 50% of the cost of energy modeling and design assistance for major renovations or new construction, up to $2,500. Pre-approval required.",
+      "es": "Reembolso del 50% del costo de modelado energético y asistencia de diseño para renovaciones importantes o nuevas construcciones, hasta $2,500. Requiere aprobación previa."
     },
     "url": {
       "en": "https://www.aspencore.org/residential-rebates"
@@ -13871,14 +13951,14 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 15000
+      "maximum": 10000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate for 50% of cost for energy modeling and design assistance for major renovations or new construction, up to $15,000. Pre-approval required.",
-      "es": "Reembolso del 50 % del costo por modelado energético y asistencia en diseño para renovaciones mayores o construcción nueva, hasta $15,000. Se requiere aprobación previa."
+      "en": "Rebate for 50% of cost for energy modeling and design assistance for major renovations or new construction, up to $10,000. Pre-approval required.",
+      "es": "Reembolso del 50% del costo de modelado energético y asistencia de diseño para renovaciones importantes o nuevas construcciones, hasta $10,000. Requiere aprobación previa."
     },
     "end_date": "1991-02-14",
     "low_income": "co-aspen-CORE-150ami-threshold",
@@ -13905,13 +13985,13 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $600 off a heat pump water heater UEF 3.3. ENERGY STAR certified with CTA-2045 certified communication control.",
-      "es": "Hasta $600 de descuento en un calentador de agua con bomba de calor UEF 3.3. Certificado por ENERGY STAR con control de comunicación certificado CTA-2045."
+      "en": "Up to $600 off an ENERGY STAR certified heat pump water heater replacing electric. Up to $400 when replacing gas.",
+      "es": "Hasta $600 de descuento para un calentador de agua con bomba de calor con certificación ENERGY STAR que reemplaza a uno eléctrico. Hasta $400 al reemplazar uno de gas."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://efficiencyworks.org/homes/rebates/#secrebates"
+      "en": "https://efficiencyworks.org/for-your-home-rebates-and-incentives/"
     }
   },
   {
@@ -14346,24 +14426,24 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump",
       "ductless_heat_pump"
     ],
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 400
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate of project costs up to $400 for a cold climate ducted/ductless air source heat pump when replacing gas.",
-      "es": "Un reembolso del 70% de los costos del proyecto de hasta $400 dólares para una bomba de calor con ductos de fuente de aire para \"clima frío\"."
+      "en": "50% off, up to $2,000, for ductless heat pump installations. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para instalaciones de bombas de calor sin ductos. Los reembolsos combinados con el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
     }
@@ -14374,24 +14454,24 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
+      "ducted_heat_pump"
     ],
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 200
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate of project costs up to $200 for a non-cold climate ducted/ductless air source heat pump when replacing gas.",
-      "es": "Un reembolso del 70% de los costos del proyecto de hasta $200 dólares para una bomba de calor con/sin ductos de fuente de aire."
+      "en": "50% off, up to $2,000, for ducted heat pump installations. Your combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para instalaciones de bombas de calor con ductos. Sus reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
     }
@@ -14435,18 +14515,19 @@
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 400
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate of project costs up to $400 for a ground source heat pump when replacing gas.",
-      "es": "Un reembolso del 70% de los costos del proyecto para una bomba de calor geotérmica, hasta $400 dólares."
+      "en": "50% off, up to $2,000, for geothermal heat pump installations. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para instalaciones de bombas de calor geotérmicas. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
     }
@@ -14489,18 +14570,19 @@
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 400
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate of project costs up to $400 for an air to water heat pump when replacing gas.",
-      "es": "Reembolso del 70 % del costo del proyecto, hasta $400, por una bomba de calor aire‑agua al reemplazar un sistema a gas."
+      "en": "50% off, up to $2,000, for air to water heat pump installations. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para instalaciones de bombas de calor aire-agua. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
     }
@@ -14570,18 +14652,19 @@
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 100
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate of project costs up to $100 for ENERGY STAR heat pump water heater when replacing electric.",
-      "es": "Un reembolso del 70% de los costos del proyecto para un calentador de agua eléctrico con bomba de calor ENERGY STAR, hasta 100 dólares."
+      "en": "50% off, up to $2,000, for heat pump water heater installations. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para la instalación de calentadores de agua con bomba de calor. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
     }
@@ -14597,18 +14680,19 @@
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 200
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate up to $200 for an induction or electric cooktop when replacing gas. Portable stoves not eligible.",
-      "es": "Reembolso del 70 %, hasta $200, por una placa de cocción por inducción o eléctrica al reemplazar una a gas. No se admiten cocinas portátiles."
+      "en": "50% off, up to $2,000, for qualified electric stove installations. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para instalaciones de estufas eléctricas que cumplan con los requisitos. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
     }
@@ -14624,20 +14708,21 @@
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 100
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate up to $100 for an induction or electric cooktop when replacing electric. Portable stoves not eligible.",
-      "es": "Reembolso del 70 %, hasta $100, por una placa de cocción por inducción o eléctrica al reemplazar una eléctrica. No se admiten cocinas portátiles."
+      "en": "50% off, up to $2,000, for induction cooktop installations. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para la instalación de cocinas de inducción. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
-      "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
+      "en": "https://energysmartyes.com/rebates/income-qualified-rebates/"
     }
   },
   {
@@ -14678,18 +14763,19 @@
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 100
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate up to $100 for an ENERGY STAR certified heat pump clothes dryer, when replacing electric.",
-      "es": "Reembolso del 70 %, hasta $100, por una secadora con bomba de calor con certificación ENERGY STAR, al reemplazar una eléctrica."
+      "en": "50% off, up to $2,000, for heat pump clothes dryer installations. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para la instalación de secadoras de ropa con bomba de calor. Los reembolsos combinados en el programa EnergySmart del condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
     }
@@ -14705,18 +14791,19 @@
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 100
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate up to $100 for an electric panel upgrade. Must be done in conjunction with heat pump, induction, solar, or EV charger upgrades.",
-      "es": "Reembolso del 70 %, hasta $100, por una mejora del panel eléctrico. Debe realizarse junto con mejoras en bombas de calor, inducción, energía solar o cargadores de vehículos eléctricos."
+      "en": "50% off, up to $2,000, for a qualified electric panel upgrade. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para la actualización de panel eléctrico que cumpla con los requisitos. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
     }
@@ -14783,23 +14870,23 @@
       "rebate"
     ],
     "items": [
-      "geothermal_heating_installation"
+      "other"
     ],
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 4000
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate of project costs up to $4,000 for a ground source heat pump, for income-qualified residents.",
-      "es": "Reembolso del 70 % del costo del proyecto, hasta $4,000, por una bomba de calor geotérmica, para residentes que califiquen según sus ingresos."
+      "en": "50% off, up to $2,000, for qualified cellular shade installations. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para instalaciones de cortinas celulares que cumplan con los requisitos. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
@@ -14817,18 +14904,19 @@
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.3,
-      "maximum": 300
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "30% rebate of project costs up to $300 for attic insulation with air sealing.",
-      "es": "Un reembolso del 30% de los costos del proyecto para aislamiento térmico y sellado hermético del desván, hasta $300."
+      "en": "50% off, up to $2,000, for qualified attic insulation projects. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para proyectos de aislamiento de áticos que cumplan con los requisitos. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
     }
@@ -14839,23 +14927,23 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_water_heater"
+      "wall_insulation"
     ],
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 4000
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate of project costs up to $4,000 for ENERGY STAR electric heat pump water heater for income-qualified residents.",
-      "es": "Reembolso del 70 % del costo del proyecto, hasta $4,000, por un calentador de agua eléctrico con bomba de calor y certificación ENERGY STAR, para residentes que califiquen según sus ingresos."
+      "en": "50% off, up to $2,000, for qualified wall insulation projects. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para proyectos de aislamiento de paredes que cumplan con los requisitos. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
@@ -14867,23 +14955,25 @@
       "rebate"
     ],
     "items": [
-      "electric_stove"
+      "basement_insulation",
+      "crawlspace_insulation",
+      "air_sealing"
     ],
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 4000
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate up to $4,000 for an induction or electric cooktop for income-eligible residents. Portable stoves not eligible.",
-      "es": "Reembolso del 70 %, hasta $4,000, por una placa de cocción eléctrica o de inducción, para residentes que califiquen según sus ingresos. No son elegibles las cocinas portátiles."
+      "en": "50% off, up to $2,000, for qualified foundation insulation projects. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para proyectos de aislamiento de cimientos que cumplan con los requisitos. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
@@ -14895,23 +14985,24 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_clothes_dryer"
+      "floor_insulation",
+      "air_sealing"
     ],
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 4000
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate up to $4,000 for an ENERGY STAR certified heat pump clothes dryer, for income-qualified residents.",
-      "es": "Reembolso del 70 %, hasta $4,000, por una secadora de ropa con bomba de calor y certificación ENERGY STAR, para residentes que califiquen según sus ingresos."
+      "en": "50% off, up to $2,000, for sub-floor or framed floor insulation. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para aislamiento de contrapiso o de piso enmarcado. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
@@ -14923,23 +15014,23 @@
       "rebate"
     ],
     "items": [
-      "electric_panel"
+      "air_sealing"
     ],
     "program": "co_boulderCounty_energySmart",
     "amount": {
       "type": "percent",
-      "number": 0.7,
-      "maximum": 4000
+      "number": 0.5,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "70% rebate up to $4,000 for an electric panel upgrade, for income-qualified residents. In conjunction with other electrification upgrades.",
-      "es": "Reembolso del 70 %, hasta $4,000, por una mejora del panel eléctrico, para residentes que califiquen según sus ingresos. Aplicable junto con otras mejoras de electrificación."
+      "en": "50% off, up to $2,000, for qualified air sealing projects. Combined rebates across Boulder County EnergySmart may not exceed $2,000 in 2026.",
+      "es": "50% de descuento, hasta $2,000, para proyectos de sellado de aire que cumplan con los requisitos. Los reembolsos combinados en el programa EnergySmart del Condado de Boulder no pueden superar los $2,000 en 2026."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "low_income": "co-boulder-county-income-qualified",
     "url": {
       "en": "https://energysmartyes.com/rebates-financing/boco-rebates/"
@@ -15616,7 +15707,7 @@
     ],
     "short_description": {
       "en": "30% rebate for wall insulation, up to $350.",
-      "es": "30% de reembolso en aislamiento de paredes, hasta $350."
+      "es": "30% de reembolso para aislamiento de paredes, hasta $350."
     },
     "start_date": "2025-01-01",
     "url": {
@@ -15643,7 +15734,7 @@
     ],
     "short_description": {
       "en": "30% rebate for attic insulation, up to $400. ",
-      "es": "30% de reembolso por aislamiento de ático, hasta $400. "
+      "es": "30% de reembolso para aislamiento de ático, hasta $400."
     },
     "start_date": "2025-01-01",
     "url": {
@@ -15670,7 +15761,7 @@
     ],
     "short_description": {
       "en": "30% rebate for air sealing, up to $400.",
-      "es": "30% de reembolso por sellado de aire, hasta $400."
+      "es": "30% de reembolso para sellado de aire, hasta $400."
     },
     "end_date": "2024-12-31",
     "url": {
@@ -15709,23 +15800,24 @@
       "rebate"
     ],
     "items": [
-      "electric_wiring"
+      "electric_wiring",
+      "electric_vehicle_charger"
     ],
     "program": "co_xcelEnergy_xcelEnergyEVRebate",
     "amount": {
       "type": "dollar_amount",
       "number": 500,
-      "maximum": 2300
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $500 rebate for installing a 240-volt circuit to support a Level 2 electric vehicle charger.",
-      "es": "Reembolso de hasta $500 por instalar un circuito de 240 voltios para un cargador de vehículo eléctrico de nivel 2."
+      "en": "Up to $500 rebate for installing a 240-volt circuit to support a Level 2 electric vehicle charger.  ",
+      "es": "Reembolso de hasta $500 para la instalación de un circuito de 240 voltios para soportar un cargador de vehículo eléctrico de Nivel 2."
     },
     "url": {
-      "en": "https://ev.xcelenergy.com/ev-rebate-co"
+      "en": "https://ev.xcelenergy.com/home-wiring-rebate"
     }
   },
   {
@@ -15948,6 +16040,7 @@
       "en": "Up to $300 for a heat pump water heater.",
       "es": "Hasta $300 por un calentador de agua con bomba de calor."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "url": {
       "en": "https://www.unitedpower.com/rebates"
@@ -15976,6 +16069,7 @@
       "en": "Up to $500 for wiring and panel upgrades that support heat pump or water heater installations.",
       "es": "Hasta $500 por trabajos de cableado y mejoras en el panel eléctrico que respalden la instalación de una bomba de calor o un calentador de agua."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "url": {
       "en": "https://www.unitedpower.com/rebates"
@@ -16004,6 +16098,7 @@
       "en": "Up to $150 for an electric walk-behind lawn mower.",
       "es": "Hasta $150 por una cortadora de césped eléctrica de empuje."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "url": {
       "en": "https://www.unitedpower.com/rebates"
@@ -16450,6 +16545,7 @@
       "en": "$100 rebate for an ENERGY STAR rated central air conditioner.",
       "es": "Reembolso de $100 por un aire acondicionado central con certificación ENERGY STAR."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://pvrea.coop/for-members/residential-services/rebates/"
     }
@@ -16571,15 +16667,15 @@
     "program": "co_mountainParksElectric_rebates",
     "amount": {
       "type": "percent",
-      "number": 0.15,
-      "maximum": 250
+      "number": 0.5,
+      "maximum": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "15% rebate, up to $250, for insulating existing attics, crawlspaces, and walls.",
-      "es": "Reembolso del 15 %, hasta $250, por aislar áticos, entrepisos y paredes existentes."
+      "en": "50% rebate, up to $750, for insulating existing attics, crawlspaces, and walls.",
+      "es": "Reembolso del 50%, hasta $750, para aislar áticos, espacios de acceso y paredes existentes."
     },
     "url": {
       "en": "https://www.mpei.com/rebates"
@@ -16651,17 +16747,18 @@
     "program": "co_laPlataElectricAssociation_electrifyAndSave",
     "amount": {
       "type": "dollar_amount",
-      "number": 90
+      "number": 50
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$90 rebate for an Energy Star heat pump clothes dryer.",
-      "es": "Reembolso de $90 por una secadora con bomba de calor con certificación ENERGY STAR."
+      "en": "$50 rebate for an Energy Star heat pump clothes dryer.",
+      "es": "Reembolso de $50 para una secadora de ropa con bomba de calor Energy Star."
     },
+    "start_date": "2026-01-01",
     "url": {
-      "en": "https://lpea.coop/electrify"
+      "en": "https://lpea.coop/appliances"
     }
   },
   {
@@ -16683,11 +16780,12 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "25% rebate, up to $150, for single stage snow blowers, lawn mowers, and e-bikes.",
-      "es": "Reembolso del 25 %, hasta $150, por sopladoras de nieve de una etapa, cortadoras de césped y bicicletas eléctricas."
+      "en": "25% rebate, up to $100, for electric snow blowers, lawn mowers, riding mower, and e-bikes.",
+      "es": "Reembolso del 25 %, hasta $100, para quitanieves eléctricos, cortadoras de césped, cortadoras de césped autopropulsadas y bicicletas eléctricas."
     },
+    "start_date": "2026-01-01",
     "url": {
-      "en": "https://lpea.coop/electrify"
+      "en": "https://lpea.coop/outdoor-electric-equipment-rebates-e-bikes-rebates"
     }
   },
   {
@@ -16711,6 +16809,7 @@
       "en": "25% rebate, up to $250 for a two stage snow blower.",
       "es": "Reembolso del 25 %, hasta $250, por una sopladora de nieve de dos etapas."
     },
+    "end_date": "2026-01-01",
     "url": {
       "en": "https://lpea.coop/electrify"
     }
@@ -16736,6 +16835,7 @@
       "en": "25% rebate, up to $1,000 for a riding mower.",
       "es": "Reembolso del 25 %, hasta $1,000, por una cortadora de césped operada por conductor."
     },
+    "start_date": "2026-01-01",
     "url": {
       "en": "https://lpea.coop/electrify"
     }
@@ -16761,6 +16861,7 @@
       "en": "25% rebate, up to $100 for an electric chainsaw and battery.",
       "es": "Reembolso del 25 %, hasta $100, por una motosierra eléctrica y su batería."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://lpea.coop/electrify"
     }
@@ -16787,6 +16888,7 @@
       "en": "Up to $350 rebate for an induction cooktop.",
       "es": "Reembolso de hasta $350 por una placa de cocción por inducción."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://lpea.coop/electrify"
     }
@@ -16850,6 +16952,7 @@
       "en": "25% of the total project cost for any qualifying project, up to $3,000 per year.",
       "es": "Reembolso del 25 % del costo total del proyecto para cualquier proyecto que califique, hasta $3,000 por año."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.holycross.com/rebates/"
     }
@@ -16888,6 +16991,7 @@
       "en": "50% of the total project cost for any qualifying project, up to $7,500 per year.",
       "es": "Reembolso del 50 % del costo total del proyecto para cualquier proyecto que califique, hasta $7,500 por año."
     },
+    "end_date": "2025-12-31",
     "low_income": "co-holy-cross-150ami-threshold",
     "url": {
       "en": "https://www.holycross.com/rebates/"
@@ -17091,7 +17195,7 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 5000
+      "maximum": 6000
     },
     "owner_status": [
       "homeowner"
@@ -17142,7 +17246,7 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 5000
+      "maximum": 6000
     },
     "owner_status": [
       "homeowner"
@@ -17192,7 +17296,7 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 5000
+      "maximum": 20000
     },
     "owner_status": [
       "homeowner"
@@ -17211,7 +17315,11 @@
       "rebate"
     ],
     "items": [
-      "geothermal_heating_installation"
+      "other_weatherization",
+      "basement_insulation",
+      "attic_or_roof_insulation",
+      "air_sealing",
+      "wall_insulation"
     ],
     "program": "co_gunnisonCountyElectricAssociation_rebates",
     "amount": {
@@ -17324,19 +17432,20 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 1000,
-      "unit": "ton"
+      "unit": "ton",
+      "minimum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1000/ton rebate for ground source heat pump systems.",
-      "es": "Reembolso de hasta $1,000 por tonelada para sistemas de bomba de calor geotérmica."
+      "en": "Up to $1000/ton rebate for new ground source heat pump systems.  $500 per ton for replacement systems.  Rebate cannot exceed 50% of equipment cost.",
+      "es": "Reembolso de hasta $1,000 por tonelada para sistemas nuevos de bombas de calor geotérmicas. $500 por tonelada para sistemas de reemplazo. El reembolso no puede superar el 50% del costo del equipo."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.eea.coop/residential-energy-efficiency-program"
+      "en": "https://www.eea.coop/form/2026-heat-pump-rebate"
     }
   },
   {
@@ -17453,7 +17562,7 @@
       "es": "Un reembolso de hasta el 80% del costo total de las actualizaciones del servicio eléctrico y de hasta $1,000 dólares."
     },
     "start_date": "2025-03-15",
-    "end_date": "2026-02-28",
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Cutting-Denvers-Carbon-Pollution/High-Performance-Buildings-and-Homes/Electrify-Your-Home"
     }
@@ -17480,7 +17589,7 @@
       "es": "Un reembolso de 1 dólar por watt ($1,000 dólares/kW) para energía solar en techos de hasta $2,000 dólares. Un reembolso no puede superar el 80% del costo total."
     },
     "start_date": "2025-03-15",
-    "end_date": "2026-02-28",
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Climate-Action-Sustainability-Resiliency/Cutting-Denvers-Carbon-Pollution/High-Performance-Buildings-and-Homes/Electrify-Your-Home"
     }
@@ -17617,7 +17726,7 @@
     ],
     "short_description": {
       "en": "30% rebate, up to $400 for air sealing and weatherstripping that reduces energy use by 20%. ",
-      "es": "Reembolso del 30%, hasta $400 por sellado de aire y burletes que reducen el uso de energía en un 20%. "
+      "es": "Reembolso del 30%, hasta $400, para sellado de aire y burletes que reducen el uso de energía en un 20%."
     },
     "start_date": "2025-01-01",
     "url": {
@@ -18211,6 +18320,7 @@
       "en": "Up to $1500 for wiring and panel upgrades for an EV Charger.  Higher rebate with United EV enrollment.",
       "es": "Hasta $1500 para mejoras en el cableado y el panel de un cargador para EV. Mayor reembolso con la inscripción en United EV."
     },
+    "end_date": "2025-12-31",
     "paused": true,
     "url": {
       "en": "https://www.unitedpower.com/ev_rebates"
@@ -18659,7 +18769,7 @@
     "program": "co_coloradoEnergyOffice_coloradoHEARProgram",
     "amount": {
       "type": "percent",
-      "number": 1,
+      "number": 0.5,
       "maximum": 3000
     },
     "owner_status": [
@@ -18697,7 +18807,7 @@
     ],
     "short_description": {
       "en": "$2250/heating ton for qualifying Cold Climate Mini Split Heat Pumps.",
-      "es": "$2250/tonelada de calefacción para bombas de calor minisplit para climas fríos que califiquen."
+      "es": "$2,250/tonelada de calefacción para bombas de calor minisplit para climas fríos que califiquen."
     },
     "start_date": "2025-11-16",
     "end_date": "2026-12-31",
@@ -18808,7 +18918,7 @@
     ],
     "short_description": {
       "en": "Weatherization Quick Fix Program - free weatherization items based on energy analyst recommendations",
-      "es": "Programa de reparación rápida de climatización: artículos de climatización gratuitos basados ​​en recomendaciones de analistas energéticos"
+      "es": "Programa de reparación rápida de climatización (Weatherization Quick Fix Program): artículos de climatización gratuitos basados en recomendaciones de analistas energéticos"
     },
     "low_income": "Sustainable Grand Income Limit",
     "url": {
@@ -18840,11 +18950,900 @@
     ],
     "short_description": {
       "en": "Rebate of up to $2000 for weatherization recommended by home energy assessment",
-      "es": "Reembolso de hasta $2000 por climatización recomendada por la evaluación energética del hogar"
+      "es": "Reembolso de hasta $2000 para climatización recomendada por una evaluación energética del hogar."
     },
     "low_income": "Sustainable Grand Income Limit",
     "url": {
       "en": "https://www.sustainablegrand.org/home-energy/income-qualified-programs"
+    }
+  },
+  {
+    "id": "CO-769",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_to_water_heat_pump",
+      "air_sealing",
+      "attic_or_roof_insulation",
+      "crawlspace_insulation",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "wall_insulation",
+      "non_heat_pump_water_heater",
+      "heat_pump_clothes_dryer",
+      "heat_pump_water_heater",
+      "geothermal_heating_installation",
+      "electric_stove",
+      "electric_panel"
+    ],
+    "program": "co_cityOfBoulder_cityOfBoulderResidentialRebates2026",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of project costs up to $2000 per year in rebates for weatherization and electrification projects.  Only income-qualified residents are eligible.",
+      "es": "50% del costo del proyecto, hasta $2,000 al año en reembolsos para proyectos de climatización y electrificación. Solo los residentes con ingresos calificados pueden optar a ellos."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-02-09",
+    "low_income": "co-boulder-county-income-qualified",
+    "url": {
+      "en": "https://energysmartyes.com/rebates/income-qualified-rebates/"
+    }
+  },
+  {
+    "id": "CO-770",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "co_platteRiverPowerAuthority_efficiencyWorks",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 off eligible electric service panel upgrade when paired with qualifying electrification project.",
+      "es": "Hasta $500 de descuento para la actualización de un panel de servicio eléctrico elegible cuando se combina con un proyecto de electrificación calificado."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://efficiencyworks.org/for-your-home-rebates-and-incentives/"
+    }
+  },
+  {
+    "id": "CO-771",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_wiring"
+    ],
+    "program": "co_platteRiverPowerAuthority_efficiencyWorks",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $250 off eligible load sharing device when paired with qualifying electrification project.",
+      "es": "Hasta $250 de descuento para un dispositivo de uso compartido de carga elegible cuando se combina con un proyecto de electrificación calificado."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://efficiencyworks.org/for-your-home-rebates-and-incentives/"
+    }
+  },
+  {
+    "id": "CO-772",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "co_platteRiverPowerAuthority_efficiencyWorks",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "minimum": 50,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $100 off an ENERGY STAR Most Efficient certified heat pump clothes dryer.",
+      "es": "Hasta $100 de descuento para una secadora de ropa con bomba de calor con certificación ENERGY STAR Most Efficient."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://efficiencyworks.org/for-your-home-rebates-and-incentives/"
+    }
+  },
+  {
+    "id": "CO-773",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "co_holyCrossEnergy_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3500,
+      "maximum": 3500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3500 per project to install cold climate air source heat pump, ground source heat pump or air to water and split-hydronic system.",
+      "es": "$3,500 por proyecto para instalar una bomba de calor de fuente de aire para clima frío, una bomba de calor geotérmica o un sistema aire-agua e hidrónicos divididos. Para hogares con ingresos que califican."
+    },
+    "start_date": "2026-01-01",
+    "url": {
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026"
+    }
+  },
+  {
+    "id": "CO-774",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "co_holyCrossEnergy_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 7000,
+      "maximum": 7000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$7000/project for cold climate air source heat pump, ground source heat pump or air to water and split-hydronic system.  Income qualified household.",
+      "es": "$7,000 por proyecto para bombas de calor de aire para climas fríos, bombas de calor geotérmicas o sistemas aire-agua e hidrónicos divididos. Para hogares con ingresos que califican."
+    },
+    "start_date": "2026-01-01",
+    "low_income": "co-holy-cross-150ami-threshold",
+    "url": {
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026"
+    }
+  },
+  {
+    "id": "CO-775",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "co_holyCrossEnergy_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 per Smart or programmable thermostat. For income qualified households.",
+      "es": "$100 por termostato inteligente o programable. Para hogares con ingresos que califican."
+    },
+    "start_date": "2026-01-01",
+    "low_income": "co-holy-cross-150ami-threshold",
+    "url": {
+      "en": "https://www.holycross.com/rebates/"
+    }
+  },
+  {
+    "id": "CO-776",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "co_holyCrossEnergy_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for new Induction Cooktop.  Income qualified household",
+      "es": "Reembolso de $1,000 para una nueva placa de inducción. Para hogares con ingresos que califican."
+    },
+    "start_date": "2026-01-01",
+    "low_income": "co-holy-cross-150ami-threshold",
+    "url": {
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026"
+    }
+  },
+  {
+    "id": "CO-777",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "co_holyCrossEnergy_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 rebate for a Heat Pump Water Heater. Income qualified household.",
+      "es": "Reembolso de $2,000 para un calentador de agua con bomba de calor. Para hogares con ingresos que califican."
+    },
+    "start_date": "2026-01-01",
+    "low_income": "co-holy-cross-150ami-threshold",
+    "url": {
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026#hpwh"
+    }
+  },
+  {
+    "id": "CO-778",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "co_holyCrossEnergy_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for a heat pump clothes dryer.  Income qualified households.",
+      "es": "Reembolso de $1,000 para una secadora de ropa con bomba de calor. Hogares con ingresos que califican."
+    },
+    "start_date": "2026-01-01",
+    "low_income": "co-holy-cross-150ami-threshold",
+    "url": {
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026#hpwh"
+    }
+  },
+  {
+    "id": "CO-779",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "crawlspace_insulation",
+      "wall_insulation",
+      "floor_insulation"
+    ],
+    "program": "co_holyCrossEnergy_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000,
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3,000 rebate for for insulation in attic, crawlspace, and exterior walls in electrically heated building.",
+      "es": "Reembolso de $3,000 para aislamiento en ático, espacio de acceso y paredes exteriores en edificios con calefacción eléctrica."
+    },
+    "start_date": "2026-01-01",
+    "low_income": "co-holy-cross-150ami-threshold",
+    "url": {
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026#hpwh"
+    }
+  },
+  {
+    "id": "CO-780",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing"
+    ],
+    "program": "co_holyCrossEnergy_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000,
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$3,000 for air sealing.  For income qualified households. Rebate shall not exceed 100% of project cost.",
+      "es": "$3,000 para sellado de fugas de aire. Para hogares con ingresos que califican. El reembolso no excederá el 100% del costo del proyecto."
+    },
+    "start_date": "2026-01-01",
+    "low_income": "co-holy-cross-150ami-threshold",
+    "url": {
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026#hpwh"
+    }
+  },
+  {
+    "id": "CO-781",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "co_holyCrossEnergy_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for plug sharing device, allowing two devices to use a single 240-volt outlet.",
+      "es": "Reembolso de $250 para dispositivo de enchufe compartido, lo que permite que dos dispositivos utilicen una sola toma de corriente de 240 voltios."
+    },
+    "start_date": "2026-01-01",
+    "url": {
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026"
+    }
+  },
+  {
+    "id": "CO-782",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "co_holyCrossEnergy_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for plug sharing device, allowing two devices to use a single 240-volt outlet.  For income qualified households.",
+      "es": "Reembolso de $500 para dispositivo de enchufe compartido, que permite que dos dispositivos usen una sola toma de 240 voltios. Para hogares con ingresos que califican."
+    },
+    "start_date": "2026-01-01",
+    "low_income": "co-holy-cross-150ami-threshold",
+    "url": {
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026"
+    }
+  },
+  {
+    "id": "CO-783",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_wiring",
+      "electric_panel"
+    ],
+    "program": "co_holyCrossEnergy_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for smart panel or energy management system.  ",
+      "es": "Reembolso de $1,000 para panel inteligente o sistema de gestión de energía."
+    },
+    "start_date": "2026-01-01",
+    "url": {
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026"
+    }
+  },
+  {
+    "id": "CO-784",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_wiring",
+      "electric_panel"
+    ],
+    "program": "co_holyCrossEnergy_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2000,
+      "maximum": 2000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$2,000 rebate for smart panel or energy management system.  ",
+      "es": "Reembolso de $2,000 para panel inteligente o sistema de gestión de energía."
+    },
+    "start_date": "2026-01-01",
+    "low_income": "co-holy-cross-150ami-threshold",
+    "url": {
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026"
+    }
+  },
+  {
+    "id": "CO-785",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_wiring",
+      "electric_panel",
+      "other"
+    ],
+    "program": "co_holyCrossEnergy_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for smart breaker, smart load controller, or scheduling device.",
+      "es": "Reembolso de $250 para disyuntor inteligente, controlador de carga inteligente o dispositivo de programación."
+    },
+    "start_date": "2026-01-01",
+    "url": {
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026"
+    }
+  },
+  {
+    "id": "CO-786",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_wiring",
+      "electric_panel",
+      "other"
+    ],
+    "program": "co_holyCrossEnergy_residentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate for smart breaker, smart load controller, or scheduling device For income qualified households.",
+      "es": "Reembolso de $500 para disyuntor inteligente, controlador de carga inteligente o dispositivo de programación para hogares con ingresos calificados."
+    },
+    "start_date": "2026-01-01",
+    "low_income": "co-holy-cross-150ami-threshold",
+    "url": {
+      "en": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026"
+    }
+  },
+  {
+    "id": "CO-787",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "co_whiteRiverElectricAssociation_rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "minimum": 500,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1500 rebate for systems larger than 1.5tons, $500 for systems less than 1.5 tons.  Up to 50% of equipment cost.",
+      "es": "Reembolso de $1,500 para sistemas de más de 1.5 toneladas, $500 para sistemas de menos de 1.5 toneladas. Hasta el 50 % del costo del equipo."
+    },
+    "start_date": "2026-01-01",
+    "url": {
+      "en": "https://www.wrea.org/rebates"
+    }
+  },
+  {
+    "id": "CO-788",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "co_unitedPower_tri-StateG&T",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "minimum": 500,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for ground source heat pump over 4 tons.  $500 for less than or equal to 4 tons.",
+      "es": "Reembolso de $1,000 para bombas de calor geotérmicas de más de 4 toneladas. $500 para bombas de calor geotérmicas de menos de o igual a 4 toneladas."
+    },
+    "start_date": "2026-01-01",
+    "paused": true,
+    "url": {
+      "en": "https://www.unitedpower.com/rebates"
+    }
+  },
+  {
+    "id": "CO-789",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "co_unitedPower_tri-StateG&T",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 250,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 for cold-climate, high efficiency mini-split heat pump larger than 2 tons.  $250 if less than equal to 2 tons.",
+      "es": "$500 para bombas de calor mini-split de alta eficiencia para clima frío de más de 2 toneladas. $250 si son menores o iguales a 2 toneladas."
+    },
+    "start_date": "2026-01-01",
+    "paused": true,
+    "url": {
+      "en": "https://www.unitedpower.com/rebates"
+    }
+  },
+  {
+    "id": "CO-790",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "co_unitedPower_tri-StateG&T",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "minimum": 500,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1000 rebate for high efficiency ducted air source heat pump larger than 2 tons.  $500 if less than or equal to 2 tons.",
+      "es": "Reembolso de $1,000 para bombas de calor de fuente de aire de alta eficiencia de más de 2 toneladas con ductos. $500 si son menores o iguales a 2 toneladas."
+    },
+    "start_date": "2026-01-01",
+    "paused": true,
+    "url": {
+      "en": "https://www.unitedpower.com/rebates"
+    }
+  },
+  {
+    "id": "CO-791",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_wiring",
+      "electric_vehicle_charger"
+    ],
+    "program": "co_unitedPower_tri-StateG&T",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "minimum": 250,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate on wiring upgrade for ev charger project costing $1200 or more.  $250 rebate for projects costing less. 2x rebates for United EV members. ",
+      "es": "Reembolso de $500 en la actualización del cableado para proyectos de cargadores de vehículos eléctricos que cuesten $1200 o más. Reembolso de $250 para proyectos que cuesten menos. Reembolso doble para miembros de United EV. "
+    },
+    "start_date": "2026-01-01",
+    "paused": true,
+    "url": {
+      "en": "https://www.unitedpower.com/ev_rebates"
+    }
+  },
+  {
+    "id": "CO-792",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater",
+      "non_heat_pump_water_heater"
+    ],
+    "program": "co_mountainParksElectric_rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "minimum": 200,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$200 rebate for heat pump water heaters.  $400 rebate offered for fuel switching from gas to electric water heater.",
+      "es": "Reembolso de $200 para calentadores de agua con bomba de calor. Se ofrece un reembolso de $400 por cambiar de un calentador de agua de gas a eléctrico."
+    },
+    "start_date": "2026-01-01",
+    "url": {
+      "en": "https://www.mpei.com/rebates"
+    }
+  },
+  {
+    "id": "CO-793",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "co_sanLuisValleyREC_energyEfficiencyRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "minimum": 500,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1500 rebate for systems greater than 1.5 tons.  $500 per system equal or less than 1.5 tons.   Cannot exceed 50% of equipment cost.",
+      "es": "Reembolso de $1,500 para sistemas de más de 1.5 toneladas. $500 por sistema de 1.5 toneladas o menos. No puede superar el 50% del costo del equipo."
+    },
+    "start_date": "2025-11-16",
+    "url": {
+      "en": "https://slvrec.com/rebates"
+    }
+  },
+  {
+    "id": "CO-794",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "co_laPlataElectricAssociation_electrifyAndSave",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an induction cooktop or range.",
+      "es": "Reembolso de $100 para una cocina o estufa de inducción."
+    },
+    "start_date": "2026-01-01",
+    "url": {
+      "en": "https://lpea.coop/electrify"
+    }
+  },
+  {
+    "id": "CO-795",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "co_laPlataElectricAssociation_electrifyAndSave",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 rebate for an induction cooktop or range. Income qualified rebate.",
+      "es": "Reembolso de $150 para una cocina o estufa de inducción. Reembolso según ingresos."
+    },
+    "start_date": "2026-01-01",
+    "low_income": "co-lpea-income-qualified",
+    "url": {
+      "en": "https://lpea.coop/electrify"
+    }
+  },
+  {
+    "id": "CO-796",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "co_laPlataElectricAssociation_electrifyAndSave",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 350,
+      "maximum": 350
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$350 rebate for a Heat Pump Water Heater.  ",
+      "es": "Reembolso de $350 para un calentador de agua con bomba de calor."
+    },
+    "start_date": "2026-01-01",
+    "url": {
+      "en": "https://lpea.coop/electrify"
+    }
+  },
+  {
+    "id": "CO-797",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "co_laPlataElectricAssociation_electrifyAndSave",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "minimum": 20,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 rebate per smart thermostat. Maximum 50% of equipment costs and up to two thermostats per member account.",
+      "es": "Reembolso de $50 para un termostato inteligente. Máximo del 50% del costo del equipo y hasta dos termostatos por cuenta de miembro."
+    },
+    "start_date": "2026-01-01",
+    "url": {
+      "en": "https://lpea.coop/electrify"
+    }
+  },
+  {
+    "id": "CO-798",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "co_laPlataElectricAssociation_electrifyAndSave",
+    "amount": {
+      "type": "percent",
+      "number": 1,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "100% of Level 2 Charger cost and installation\n(pre-tax) up to $500.  For income qualified households.",
+      "es": "100% del costo e instalación de un cargador de Nivel 2 (antes de impuestos) hasta $500. Para hogares con ingresos que califican."
+    },
+    "start_date": "2025-11-15",
+    "low_income": "co-lpea-income-qualified",
+    "url": {
+      "en": "https://lpea.coop/residential-ev-charger-rebates"
+    }
+  },
+  {
+    "id": "CO-799",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "co_laPlataElectricAssociation_electrifyAndSave",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an Energy Star heat pump clothes dryer.  For income qualified households.",
+      "es": "Reembolso de $100 para una secadora de ropa con bomba de calor Energy Star. Para hogares con ingresos que califican."
+    },
+    "start_date": "2026-01-01",
+    "low_income": "co-lpea-income-qualified",
+    "url": {
+      "en": "https://lpea.coop/appliances"
+    }
+  },
+  {
+    "id": "CO-800",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_wiring",
+      "electric_vehicle_charger"
+    ],
+    "program": "co_xcelEnergy_xcelEnergyEVRebate",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2300,
+      "maximum": 2300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2300 rebate for installing a 240-volt circuit to support a Level 2 electric vehicle charger.  For Income qualified households.",
+      "es": "Reembolso de hasta $2,300 para la instalación de un circuito de 240 voltios que soporte un cargador de vehículo eléctrico de Nivel 2. Para hogares que califican según sus ingresos."
+    },
+    "start_date": "2026-01-01",
+    "low_income": "co-xcel-energy-ev",
+    "url": {
+      "en": "https://ev.xcelenergy.com/home-wiring-rebate"
     }
   }
 ]

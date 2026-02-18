@@ -55,22 +55,22 @@
       "rebate"
     ],
     "items": [
-      "central_air_conditioner"
+      "ductless_heat_pump"
     ],
     "program": "tx_AustinEnergy_RebatesAndIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 600,
-      "minimum": 400,
-      "maximum": 600
+      "number": 800,
+      "minimum": 600,
+      "maximum": 800
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $600 for installing an energy efficient central split or mini-split air conditioning system.",
-      "es": "Reembolso de hasta $600 por la instalación de un sistema de aire acondicionado central tipo split o minisplit de bajo consumo energético."
+      "en": "Up to $800 for installing an energy efficient central split or mini-split air conditioning system.",
+      "es": "Hasta $800 para instalar un sistema de aire acondicionado central split o mini-split de bajo consumo energético."
     },
     "url": {
       "en": "https://savings.austinenergy.com/residential/offerings"
@@ -82,22 +82,23 @@
       "rebate"
     ],
     "items": [
-      "other_heat_pump"
+      "other_heat_pump",
+      "ducted_heat_pump"
     ],
     "program": "tx_AustinEnergy_RebatesAndIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 750,
-      "minimum": 450,
-      "maximum": 750
+      "number": 950,
+      "minimum": 650,
+      "maximum": 950
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $750 rebate for heat pump and heat pump mini-split systems.",
-      "es": "Reembolso de hasta $750 por sistemas de bomba de calor y minisplits con bomba de calor."
+      "en": "Up to $950 rebate for heat pump and heat pump mini-split systems.",
+      "es": "Reembolso de hasta $950 para sistemas de bomba de calor y minisplit con bomba de calor."
     },
     "url": {
       "en": "https://savings.austinenergy.com/residential/offerings"
@@ -114,16 +115,16 @@
     "program": "tx_AustinEnergy_RebatesAndIncentives",
     "amount": {
       "type": "dollar_amount",
-      "number": 30,
-      "maximum": 75
+      "number": 50,
+      "maximum": 125
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$30 rebate for installing an eligible thermostat. Additional rebate and bill credit available for enrolling a thermostat in the Power Partner program.",
-      "es": "Reembolso de $30 por instalar un termostato que califique. Reembolso adicional y crédito en la factura disponibles al inscribir el termostato en el programa Power Partner."
+      "en": "$50 rebate for installing an eligible thermostat. Additional $75 bill credit available for enrolling a thermostat in the Power Partner program.",
+      "es": "Reembolso de $50 para instalar un termostato elegible. Crédito adicional de $75 en la factura disponible al inscribir un termostato en el programa Power Partner."
     },
     "url": {
       "en": "https://savings.austinenergy.com/residential/offerings"
@@ -1443,7 +1444,6 @@
       "pos_rebate"
     ],
     "items": [
-      "central_air_conditioner",
       "ducted_heat_pump",
       "ductless_heat_pump"
     ],
@@ -1485,7 +1485,7 @@
       "en": "Up to $0.36/sq ft rebate for ceiling and wall insulation, depending on current insulation and income qualification. Reserve rebate prior to project.",
       "es": "Reembolso de hasta $0.36 por pie cuadrado por aislamiento de techos y paredes, según el aislamiento actual y los requisitos de ingresos. Es necesario reservar el reembolso antes del proyecto."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.epesavings.com/upgrades-residential.html",
       "es": "https://www.epesavings.com/es/upgrades-residential.html"
@@ -1512,7 +1512,7 @@
       "en": "Up to $0.06/sq ft rebate for cool roofs, depending on roof slope and income qualification. Reserve rebate prior to project.",
       "es": "Reembolso de hasta $0.06 por pie cuadrado por techos fríos, según la pendiente del techo y los requisitos de ingresos. Es necesario reservar el descuento antes del proyecto."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.epesavings.com/upgrades-residential.html",
       "es": "https://www.epesavings.com/es/upgrades-residential.html"
@@ -1538,7 +1538,7 @@
       "en": "$400 rebate for a qualifying ENERGY STAR heat pump water heater for income-qualified customers. Reserve rebate in advance.",
       "es": "Reembolso de $400 por un calentador de agua con bomba de calor ENERGY STAR para clientes que califican según sus ingresos. Es necesario reservar el reembolso con anticipación."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "low_income": "tx-200-fpl",
     "url": {
       "en": "https://www.epesavings.com/residential-lowincome.html",
@@ -1562,10 +1562,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 rebate for a qulifying ENERGY STAR heat pump water heater. Reserve rebate in advance.",
-      "es": "Reembolso de $300 por un calentador de agua con bomba de calor con certificación ENERGY STAR. Es necesario reservar el reembolso con anticipación."
+      "en": "$300 rebate for a qualifying ENERGY STAR heat pump water heater. Reserve rebate in advance.",
+      "es": "Reembolso de $300 para un calentador de agua con bomba de calor con certificación ENERGY STAR. Reserve el reembolso con anticipación."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.epesavings.com/upgrades-residential.html",
       "es": "https://www.epesavings.com/es/upgrades-residential.html"
@@ -1591,7 +1591,7 @@
       "en": "$700 rebate for a qualifying evaporative cooler for income-qualified customers. Reserve rebate in advance.",
       "es": "Reembolso de $700 por un enfriador evaporativo que califique, para clientes que califican según sus ingresos. Es necesario reservar el descuento con anticipación."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "low_income": "tx-200-fpl",
     "url": {
       "en": "https://www.epesavings.com/residential-lowincome.html",
@@ -1618,7 +1618,7 @@
       "en": "$600 rebate for a qualifying evaporative cooler. Reserve rebate in advance.",
       "es": "Reembolso de $600 por un enfriador evaporativo que cumpla con los requisitos. Es necesario reservar el reembolso con anticipación."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.epesavings.com/upgrades-residential.html",
       "es": "https://www.epesavings.com/es/upgrades-residential.html"
@@ -1645,7 +1645,7 @@
       "en": "$449 rebate for a qualifying heat pump, mini split, or air conditioner. Reserve rebate in advance.",
       "es": "Reembolso de $449 por una bomba de calor, minisplit o aire acondicionado que cumpla con los requisitos. Es necesario reservar el reembolso con anticipación."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.epesavings.com/upgrades-residential.html",
       "es": "https://www.epesavings.com/es/upgrades-residential.html"
@@ -2091,7 +2091,7 @@
       "en": "Up to $1.35/sq ft rebate for ENERGY STAR windows or solar screens. Reserve rebate in advance.",
       "es": "Descuento de hasta $1.35 por pie cuadrado para ventanas o mosquiteras solares con certificación ENERGY STAR. Reserve el descuento con anticipación."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.epesavings.com/upgrades-residential.html",
       "es": "https://www.epesavings.com/es/upgrades-residential.html"

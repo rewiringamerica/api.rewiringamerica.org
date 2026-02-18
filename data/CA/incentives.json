@@ -433,7 +433,7 @@
     "program": "ca_losAngelesDepartmentOfWaterAndPower_lADWPResidentialRebatesAndPrograms",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000
+      "number": 1500
     },
     "owner_status": [
       "homeowner",
@@ -1076,8 +1076,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $2,500 rebate for a qualifying used battery electric (BEV) or plug-in hybrid electric vehicle (EV) for income-qualified customers. ",
-      "es": "Reembolso de hasta $2,500 para un vehículo eléctrico de batería (BEV) o un vehículo eléctrico híbrido enchufable (VE) usado que califique. Para clientes que califiquen según sus ingresos."
+      "en": "Up to $4,000 rebate for a qualifying used battery electric (BEV) or plug-in hybrid electric vehicle (EV) for income-qualified customers. ",
+      "es": "Reembolso de hasta $4,000 para un vehículo eléctrico de batería (BEV) o un vehículo eléctrico híbrido enchufable (VE) usado que cumpla los requisitos para clientes que califiquen según sus ingresos."
     },
     "low_income": "ca-riverside-public-utilities-SHARE-li-threshold",
     "url": {
@@ -1278,8 +1278,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "$800 rebate on G2E induction cooktop.",
-      "es": "Reembolso de $800 para una cocina de inducción G2E."
+      "en": "$300 rebate on an induction cooktop when replacing gas.",
+      "es": "$300 de reembolso para una cocina de inducción al reemplazar el gas."
     },
     "url": {
       "en": "https://www.tid.org/customer-service/rebates-and-savings/residential-rebates/#advgb-tabs-tab3"
@@ -1913,8 +1913,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "$360/ton rebate when you purchase qualifying heat pump or mini-split heat pump in Pasadena. Available to income-qualified customers.",
-      "es": "Reembolso de $360 por tonelada al comprar una bomba de calor o una minisplit en Pasadena. Disponible para clientes que califican según sus ingresos."
+      "en": "$190/ton rebate when you purchase qualifying heat pump or mini-split heat pump in Pasadena. Available to income-qualified customers.",
+      "es": "Descuento de $190 por tonelada al comprar una bomba de calor o una minisplit en Pasadena. Disponible para clientes con ingresos que califican."
     },
     "low_income": "ca-liheap",
     "url": {
@@ -2848,7 +2848,7 @@
     "program": "ca_libertyUtilities_libertyUtilitiesResidentialHeatPumpIncentiveProgram",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
+      "number": 400,
       "unit": "ton",
       "maximum": 4000
     },
@@ -3026,15 +3026,17 @@
     "program": "ca_anaheimPublicUtilities_anaheimEnergyRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 200
+      "number": 600,
+      "minimum": 300,
+      "maximum": 600
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Earn up to $300 for a qualifying Level 2 electric vehicle (EV) charger.",
-      "es": "Gane hasta $300 por un cargador de vehículo eléctrico (VE) de Nivel 2 calificado."
+      "en": "Up to $600 rebate for a qualifying Level 2 electric vehicle (EV) charger, if enrolled in time of use rates.",
+      "es": "Reembolso de hasta $600 para un cargador de vehículo eléctrico (VE) de Nivel 2 calificado, si está inscrito en las tarifas por horarios de uso."
     },
     "url": {
       "en": "https://www.anaheim.net/593/Private-EV-Charger-Rebate"
@@ -3052,7 +3054,7 @@
     "program": "ca_anaheimPublicUtilities_anaheimEnergyRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 400,
+      "number": 200,
       "unit": "ton"
     },
     "owner_status": [

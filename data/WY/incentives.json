@@ -64,9 +64,9 @@
     "program": "wy_rockyMountainPower_wattSmartHomes",
     "amount": {
       "type": "dollar_amount",
-      "number": 1,
-      "minimum": 1,
-      "maximum": 1
+      "number": 1700,
+      "minimum": 250,
+      "maximum": 1700
     },
     "owner_status": [
       "homeowner"
@@ -91,8 +91,9 @@
     "program": "wy_rockyMountainPower_wattSmartHomes",
     "amount": {
       "type": "dollar_amount",
-      "number": 1,
-      "maximum": 1
+      "number": 1700,
+      "minimum": 1200,
+      "maximum": 1700
     },
     "owner_status": [
       "homeowner"
@@ -116,14 +117,16 @@
     "program": "wy_rockyMountainPower_wattSmartHomes",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 2000,
+      "minimum": 500,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate on for a qualifying ductless heat pump. ",
-      "es": "Reembolso de $500 por una bomba de calor sin ductos que califique. "
+      "en": "Up to $2,000 rebate on for a qualifying ductless heat pump. ",
+      "es": "Reembolso de hasta $2,000 para una bomba de calor sin ductos calificada."
     },
     "url": {
       "en": "https://wattsmarthomes.com"
@@ -135,19 +138,22 @@
       "rebate"
     ],
     "items": [
-      "ductless_heat_pump"
+      "ductless_heat_pump",
+      "ducted_heat_pump"
     ],
     "program": "wy_rockyMountainPower_wattSmartHomes",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 2000,
+      "minimum": 1000,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate on for a qualifying ductless heat pump. ",
-      "es": "Reembolso de $500 por una bomba de calor sin ductos que califique. "
+      "en": "Up to $2,000 rebate on for a qualifying dual fuel heat pump.",
+      "es": "Reembolso de hasta $2,000 para una bomba de calor de combustible dual calificada."
     },
     "url": {
       "en": "https://wattsmarthomes.com"
@@ -201,6 +207,7 @@
       "en": "$350 per unit rebate on a qualifying air-source heat pump. ",
       "es": "Reembolso de $350 por unidad para una bomba de calor de fuente de aire que cumpla con los requisitos."
     },
+    "paused": true,
     "url": {
       "en": "https://www.blackhillsenergy.com/efficiency-and-savings/residential-rebates/cheyenne-electric-laramie-county-residential-rebates"
     }
@@ -225,6 +232,7 @@
       "en": "$200 per unit rebate on a qualifying ductless mini split (outdoor unit).",
       "es": "Reembolso de $200 por unidad por una unidad exterior de mini-split sin ductos que califique."
     },
+    "paused": true,
     "url": {
       "en": "https://www.blackhillsenergy.com/efficiency-and-savings/residential-rebates/cheyenne-electric-laramie-county-residential-rebates"
     }
@@ -249,6 +257,7 @@
       "en": "$200 per unit rebate on a qualifying ENERGY STAR heat pump water heater.",
       "es": "Reembolso de $200 por unidad por un calentador de agua con bomba de calor calificado con certificación ENERGY STAR."
     },
+    "paused": true,
     "url": {
       "en": "https://www.blackhillsenergy.com/efficiency-and-savings/residential-rebates/cheyenne-electric-laramie-county-residential-rebates"
     }
@@ -273,6 +282,7 @@
       "en": "Up to $75 per unit rebate on a qualifying ENERGY STAR smart thermostat. Limit 2 per year.",
       "es": "Reembolso de hasta $75 por unidad por un termostato inteligente calificado con certificación ENERGY STAR. Límite de 2 por año."
     },
+    "paused": true,
     "url": {
       "en": "https://www.blackhillsenergy.com/efficiency-and-savings/residential-rebates/wyoming-electric-residential-rebates-weston-county"
     }
@@ -297,6 +307,7 @@
       "en": "Up to $125 per unit rebate on a qualifying ENERGY STAR smart thermostat.",
       "es": "Reembolso de hasta $125 por unidad por un termostato inteligente calificado con certificación ENERGY STAR."
     },
+    "paused": true,
     "url": {
       "en": "https://www.blackhillsenergy.com/efficiency-and-savings/residential-rebates/wyoming-gas-llc-residential-rebates-0"
     }
@@ -323,6 +334,7 @@
       "en": "$0.50/sq.ft up to $750 rebate for ceiling insulation.",
       "es": "Reembolso de $0.50 por pie cuadrado, hasta $750, para aislamiento de cielorrasos."
     },
+    "paused": true,
     "url": {
       "en": "https://www.blackhillsenergy.com/efficiency-and-savings/residential-rebates/wyoming-gas-llc-residential-rebates-0"
     }
@@ -349,6 +361,7 @@
       "en": "$0.50/sq.ft up to $750 rebate for wall insulation.",
       "es": "Reembolso de $0.50 por pie cuadrado, hasta $750, para aislamiento de paredes."
     },
+    "paused": true,
     "url": {
       "en": "https://www.blackhillsenergy.com/efficiency-and-savings/residential-rebates/wyoming-gas-llc-residential-rebates-0"
     }
@@ -375,6 +388,7 @@
       "en": "$0.50/sq.ft up to $750 rebate for floor insulation.",
       "es": "Reembolso de $0.50 por pie cuadrado, hasta $750, por aislamiento de pisos."
     },
+    "paused": true,
     "url": {
       "en": "https://www.blackhillsenergy.com/efficiency-and-savings/residential-rebates/wyoming-gas-llc-residential-rebates-0"
     }
@@ -403,6 +417,7 @@
       "en": "$0.50/sq.ft up to $750 rebate for foundation and exterior insulation.",
       "es": "Reembolso de $0.50 por pie cuadrado, hasta $750, para aislamiento de cimientos y aislamiento exterior."
     },
+    "paused": true,
     "url": {
       "en": "https://www.blackhillsenergy.com/efficiency-and-savings/residential-rebates/wyoming-gas-llc-residential-rebates-0"
     }
@@ -427,6 +442,7 @@
       "en": "$50 per unit rebate on an ENERGY STAR certified clothes dryer.",
       "es": "Reembolso de $50 por unidad por una secadora de ropa con certificación ENERGY STAR."
     },
+    "paused": true,
     "url": {
       "en": "https://www.blackhillsenergy.com/efficiency-and-savings/residential-rebates/cheyenne-electric-laramie-county-residential-rebates"
     }
@@ -451,6 +467,7 @@
       "en": "Up to $125 per unit rebate on an ENERGY STAR certified smart thermostat. Limit 2 per customer.",
       "es": "Reembolso de hasta $125 por unidad para un termostato inteligente con certificación ENERGY STAR. Límite de 2 por cliente."
     },
+    "paused": true,
     "url": {
       "en": "https://www.blackhillsenergy.com/efficiency-and-savings/residential-rebates/cheyenne-electric-laramie-county-residential-rebates"
     }
@@ -475,6 +492,7 @@
       "en": "$250 per unit rebate on an ENERGY STAR certified heat pump water heater. ",
       "es": "Reembolso de $250 por unidad por un calentador de agua con bomba de calor con certificación ENERGY STAR. "
     },
+    "paused": true,
     "url": {
       "en": "https://www.blackhillsenergy.com/efficiency-and-savings/residential-rebates/wyoming-electric-residential-rebates-weston-county"
     }
@@ -501,6 +519,7 @@
       "en": "$250 per unit on a qualifying heat pump. ",
       "es": "Reembolso de $250 por unidad por una bomba de calor calificada."
     },
+    "paused": true,
     "url": {
       "en": "https://www.blackhillsenergy.com/efficiency-and-savings/residential-rebates/wyoming-electric-residential-rebates-weston-county"
     }
@@ -526,6 +545,7 @@
       "en": "Up to $500 rebate on a ChargePoint Home Flex electric vehicle charger.",
       "es": "Reembolso de hasta $500 por un cargador de vehículo eléctrico ChargePoint Home Flex."
     },
+    "paused": true,
     "url": {
       "en": "https://www.blackhillsenergy.com/efficiency-and-savings/residential-rebates/wyoming-electric-residential-rebates-weston-county"
     }
@@ -625,6 +645,32 @@
     "short_description": {
       "en": "$115 per unit rebate on a low voltage smart thermostat. Limit 2 per household. ",
       "es": "Reembolso de $115 por unidad para un termostato inteligente de bajo voltaje. Límite de 2 por hogar. "
+    },
+    "url": {
+      "en": "https://www.lvenergy.com/energy-efficiency/conservation-residential/"
+    }
+  },
+  {
+    "id": "WY-27",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "wy_lowerValleyEnergy_lVEConservationPrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2800,
+      "minimum": 400,
+      "maximum": 2800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,800 rebate for a ground source heat pump.",
+      "es": "Reembolso de hasta $2,800 por una bomba de calor geotérmica."
     },
     "url": {
       "en": "https://www.lvenergy.com/energy-efficiency/conservation-residential/"

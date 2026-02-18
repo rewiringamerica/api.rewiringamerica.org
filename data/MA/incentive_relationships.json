@@ -13,7 +13,8 @@
         "MA-592",
         "MA-593",
         "MA-597",
-        "MA-598"
+        "MA-598",
+        "MA-685"
       ],
       "description": "Income eligible program"
     },
@@ -69,7 +70,8 @@
         "MA-575",
         "MA-576",
         "MA-593",
-        "MA-597"
+        "MA-597",
+        "MA-685"
       ],
       "description": "Moderate income over market rate homeowner ductless"
     },
@@ -185,6 +187,31 @@
         "MA-71"
       ],
       "description": "HEA required before weatherization measures can be completed."
+    },
+    "MA-187": {
+      "allOf": [
+        "MA-184",
+        "MA-185"
+      ],
+      "description": "requires HEA first"
+    },
+    "MA-254": {
+      "allOf": [
+        "MA-249"
+      ],
+      "description": "HEA required for tier 2 rebates as well as completion of any weatherization measures recommended in HEA."
+    },
+    "MA-256": {
+      "allOf": [
+        "MA-249"
+      ],
+      "description": "HEA required for all tier 2 rebates (whole home), as well as completion of all weatherization measures listed in HEA report."
+    },
+    "MA-260": {
+      "allOf": [
+        "MA-249"
+      ],
+      "description": "requires pairing with whole home ashp or gshp installation, which both require HEA to be eligible"
     },
     "MA-368": {
       "allOf": [

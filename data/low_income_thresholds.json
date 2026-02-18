@@ -14,6 +14,36 @@
       "8": 118050
     }
   },
+  "City of Plymouth income-qualified": {
+    "type": "hhsize",
+    "source_url": "https://www.plymouthmn.gov/departments/public-works/environmental-stewardship/home-energy-rebate-program-2609",
+    "description": "income threshold for city of plymouth income qualified programs",
+    "thresholds": {
+      "1": 68500,
+      "2": 78250,
+      "3": 88050,
+      "4": 97800,
+      "5": 105650,
+      "6": 113450,
+      "7": 121300,
+      "8": 129100
+    }
+  },
+  "MA-Shrewsbury-60ami-threshold ": {
+    "type": "hhsize",
+    "source_url": "https://selco.shrewsburyma.gov/income-qualified-rate/",
+    "description": "Income qualified customers must provide proof of participation in SELCO Share the Warmth bill assistance, or any of the following government benefit programs within the previous 6 months: Fuel Assistance, WIC, TAFDC, EAEDC, SSP, SNAP, TANF, SSI or Medicaid.",
+    "thresholds": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0
+    }
+  },
   "OR-60AMI-CEC-LI": {
     "type": "hhsize",
     "source_url": "https://www.cec.coop/energy-programs/residential-efficiency/income-qualified-programs/",
@@ -368,14 +398,14 @@
     "description": "Boulder County Income Qualified Rebates 100% AMI",
     "thresholds": {
       "08013": {
-        "1": 102200,
-        "2": 116800,
-        "3": 131400,
-        "4": 146000,
-        "5": 157700,
-        "6": 169400,
-        "7": 181100,
-        "8": 192800
+        "1": 105500,
+        "2": 120500,
+        "3": 135600,
+        "4": 150600,
+        "5": 162700,
+        "6": 174700,
+        "7": 186800,
+        "8": 198800
       }
     }
   },
@@ -761,7 +791,7 @@
   },
   "co-holy-cross-150ami-threshold": {
     "type": "ami-percentage",
-    "source_url": "",
+    "source_url": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026",
     "description": "Income-qualified rebates available for households falling under 150% AMI.",
     "thresholds": {
       "percentage": 150
@@ -1810,6 +1840,21 @@
       "percentage": 80
     }
   },
+  "ma-shrewsbury-80ami-threshold": {
+    "type": "hhsize",
+    "source_url": "https://selco.shrewsburyma.gov/electric/residential/rebates-and-incentives/ev-rebate/",
+    "description": "Household income thresholds detailed are from Mass Housing Partnerships (Worcester County Area Median Income).",
+    "thresholds": {
+      "1": 72100,
+      "2": 82400,
+      "3": 92700,
+      "4": 102950,
+      "5": 111200,
+      "6": 119450,
+      "7": 127700,
+      "8": 135900
+    }
+  },
   "me-low-income": {
     "type": "hhsize",
     "source_url": "https://www.mainehousing.org/charts/HEAP-Income-Elibility",
@@ -1924,6 +1969,21 @@
       "6": 85700,
       "7": 91600,
       "8": 97500
+    }
+  },
+  "mn-hennepin-county-80-ami-2024": {
+    "type": "hhsize",
+    "source_url": "https://mn.gov/commerce-stat/energy/HUD80and150Percent_042624.pdf",
+    "description": "",
+    "thresholds": {
+      "1": 68500,
+      "2": 78250,
+      "3": 88050,
+      "4": 97800,
+      "5": 105650,
+      "6": 113450,
+      "7": 121300,
+      "8": 129100
     }
   },
   "mn-state-default-150": {
@@ -3198,14 +3258,14 @@
     "source_url": "https://www.pa.gov/agencies/dep/programs-and-services/grants-loans-rebates/alternative-fuel-vehicle-rebates-for-consumers.html",
     "description": "",
     "thresholds": {
-      "1": 45180,
-      "2": 61320,
-      "3": 77460,
-      "4": 93600,
-      "5": 109740,
-      "6": 125880,
-      "7": 142020,
-      "8": 158160
+      "1": 46950,
+      "2": 63450,
+      "3": 79950,
+      "4": 96450,
+      "5": 112950,
+      "6": 129450,
+      "7": 145950,
+      "8": 162450
     }
   },
   "pa-pennsylvania-department-of-environmental-protection-bonus": {
@@ -3213,14 +3273,14 @@
     "source_url": "https://www.pa.gov/agencies/dep/programs-and-services/grants-loans-rebates/alternative-fuel-vehicle-rebates-for-consumers.html",
     "description": "Maximum household income eligible for an extra $1,000 rebate.",
     "thresholds": {
-      "1": 22590,
-      "2": 30000,
-      "3": 38730,
-      "4": 46800,
-      "5": 54870,
-      "6": 62940,
-      "7": 71010,
-      "8": 79080
+      "1": 23475,
+      "2": 31725,
+      "3": 39375,
+      "4": 48225,
+      "5": 56475,
+      "6": 64475,
+      "7": 72975,
+      "8": 81225
     }
   },
   "ri-default": {

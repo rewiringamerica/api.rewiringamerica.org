@@ -5440,14 +5440,14 @@
     "program": "mn_mienergyCoop_miEnergyCoopEnergyEfficientRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 400
+      "number": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate for a heat pump water heater. Must meet energy specifications.",
-      "es": "Reembolso de $400 para un calentador de agua con bomba de calor. Debe cumplir con las especificaciones energéticas."
+      "en": "$500 rebate for a heat pump water heater. Must meet energy specifications.",
+      "es": "Reembolso de $500 para un calentador de agua con bomba de calor. Debe cumplir con las especificaciones energéticas."
     },
     "end_date": "2026-12-31",
     "url": {
@@ -9502,7 +9502,7 @@
     ],
     "short_description": {
       "en": "$200/ton rebate for geothermal ground source heat pump.",
-      "es": "Descuento de $200 por tonelada para bombas de calor geotérmicas."
+      "es": "Reembolso de $200 por tonelada para bombas de calor geotérmicas."
     },
     "url": {
       "en": "https://www.eastgrandforks.us/262/Apply-for-Energy-Rebates-Load-Management"
@@ -9524,7 +9524,7 @@
       "rooftop_solar_installation",
       "electric_vehicle_charger"
     ],
-    "program": "mn_cityOfPlymouth_homeEnergyRebateProgram",
+    "program": "mn_cityOfPlymouth_cityOfPlymouthHomeEnergyRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 750,
@@ -9534,8 +9534,43 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $750 rebate for income-qualified or climate vulnerable households. $500 for standard rate. One rebate per household.",
-      "es": "Reembolso de hasta $750 para hogares con ingresos calificados o vulnerables al cambio climático. $500 para la tarifa estándar. Un reembolso por hogar."
+      "en": "Up to $750 rebate for energy-efficient home upgrades.  Available to income-qualified or climate vulnerable households. ",
+      "es": "Reembolso de hasta $750 para mejoras energéticas en el hogar. Disponible para hogares con ingresos elegibles o vulnerables al cambio climático."
+    },
+    "start_date": "2026-01-01",
+    "low_income": "mn-hennepin-county-80-ami-2024",
+    "url": {
+      "en": "https://www.plymouthmn.gov/departments/public-works/environmental-stewardship/home-energy-rebate-program-2609"
+    }
+  },
+  {
+    "id": "MN-486",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "air_sealing",
+      "basement_insulation",
+      "attic_or_roof_insulation",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "heat_pump_water_heater",
+      "wall_insulation",
+      "rooftop_solar_installation",
+      "electric_vehicle_charger"
+    ],
+    "program": "mn_cityOfPlymouth_cityOfPlymouthHomeEnergyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $500 for energy-efficient home upgrades.  Check program website to see if you live in a climate vulnerable area and qualify for a larger rebate.",
+      "es": "Hasta $500 para mejoras energéticamente eficientes en el hogar. Consulte el sitio web del programa para ver si vive en una zona vulnerable al cambio climático y califica para un reembolso mayor."
     },
     "start_date": "2026-01-01",
     "url": {
