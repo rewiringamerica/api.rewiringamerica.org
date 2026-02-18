@@ -590,8 +590,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $0.20/sqft rebate for cool roof products, dependent on home cooling type.",
-      "es": "Reembolso de hasta $0.20 por pie cuadrado para productos para techos fríos, según el tipo de refrigeración de la vivienda."
+      "en": "Up to $0.20/sqft rebate for cool roof products, dependent on home cooling type. No homes with electric heat.",
+      "es": "Descuento de hasta $0.20 por pie cuadrado para productos de refrigeración para techos, según el tipo de aire acondicionado de la vivienda. No se admiten viviendas con calefacción eléctrica."
     },
     "url": {
       "en": "https://www.epesaver.com/residential-comprehensive/"
@@ -616,8 +616,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "$1.00/Sqft rebate for solar screens on West and South facing single-pane windows. Must be rated to block minimum 80% of solar heat.",
-      "es": "Descuento de $1.00 por pie cuadrado para pantallas solares en ventanas de un solo panel con orientación oeste y sur. Deben tener una clasificación que bloquee al menos el 80 % del calor solar."
+      "en": "$1.00/Sqft rebate for solar screens on West and South facing single-pane windows. Must block minimum 80% of solar heat. AC only. No electric heat.",
+      "es": "Descuento de $1.00 por pie cuadrado para pantallas solares en ventanas de un solo panel orientadas al oeste y al sur. Deben bloquear al menos el 80% del calor solar. Solo aire acondicionado. No se permite calefacción eléctrica."
     },
     "url": {
       "en": "https://www.epesaver.com/residential-comprehensive/"
@@ -635,9 +635,7 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 3,
-      "unit": "square_foot",
-      "minimum": 1,
-      "maximum": 3
+      "unit": "square_foot"
     },
     "owner_status": [
       "homeowner",
@@ -5025,7 +5023,7 @@
       "es": "Reembolso del 50 % hasta $900 por bicicletas eléctricas calificadas para cuentas residenciales calificadas. "
     },
     "url": {
-      "en": "https://www.epesaver.com/residential-comprehensive/"
+      "en": "https://www.epelectric.com/new-mexico-ev/residential/ev-incentives#electric-bike"
     }
   },
   {
@@ -5052,7 +5050,7 @@
     },
     "low_income": "nm-elpasoelectric-income-qualified",
     "url": {
-      "en": "https://www.epesaver.com/residential-comprehensive/"
+      "en": "https://www.epelectric.com/new-mexico-ev/residential/ev-incentives#electric-bike"
     }
   },
   {
@@ -6625,6 +6623,57 @@
     "start_date": "2026-01-01",
     "url": {
       "en": "https://pnm.clearesult.com/shop-products"
+    }
+  },
+  {
+    "id": "NM-268",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $50/unit rebate for qualified Energy Star room air-conditioner.",
+      "es": "Reembolso de hasta $50 por unidad para aire acondicionado de habitación calificado con certificación Energy Star."
+    },
+    "url": {
+      "en": "https://www.epesaver.com/residential-comprehensive/"
+    }
+  },
+  {
+    "id": "NM-269",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "nm-el-paso-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 retake for Solar Attic Fans",
+      "es": "$100 de reembolso por ventiladores solares para áticos"
+    },
+    "url": {
+      "en": "https://www.epesaver.com/residential-comprehensive/"
     }
   }
 ]
