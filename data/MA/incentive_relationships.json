@@ -182,6 +182,48 @@
     }
   },
   "prerequisites": {
+    "MA-86": {
+      "allOf": [
+        "MA-85"
+      ],
+      "description": "Home Energy Assessment dated within 3 years of installation date"
+    },
+    "MA-100": {
+      "allOf": [
+        "MA-99"
+      ],
+      "description": "HEA within past 3 years required. Measures must be recommended on HEA report."
+    },
+    "MA-101": {
+      "allOf": [
+        "MA-99"
+      ],
+      "description": "HEA within past 3 years required, measures must be recommended to qualify."
+    },
+    "MA-102": {
+      "allOf": [
+        "MA-99"
+      ],
+      "description": "HEA within past 3 years required, measures must be recommended to qualify."
+    },
+    "MA-103": {
+      "allOf": [
+        "MA-99"
+      ],
+      "description": "HEA within past 3 years required, measures must be recommended in report in order to qualify."
+    },
+    "MA-104": {
+      "allOf": [
+        "MA-99"
+      ],
+      "description": "If home was built before the year 2000, weatherization recommendations made in the HEA must be completed to be eligible for whole home rebate."
+    },
+    "MA-105": {
+      "allOf": [
+        "MA-99"
+      ],
+      "description": "If home was built before the year 2000, weatherization recommendations made in the HEA must be completed to be eligible for whole home rebate."
+    },
     "MA-164": {
       "allOf": [
         "MA-71"
@@ -219,6 +261,88 @@
       ],
       "description": "Each measure must be recommended by ENE Home Energy Assessment audit & have a Savings to Investment Ratio (SIR) of greater than one (1). "
     },
+    "MA-382": {
+      "allOf": [
+        "MA-381"
+      ],
+      "description": "HEA within past 5 years required."
+    },
+    "MA-383": {
+      "allOf": [
+        "MA-381"
+      ],
+      "description": "HEA within past 5 years required,"
+    },
+    "MA-396": {
+      "allOf": [
+        "MA-391"
+      ],
+      "description": "HEA required, must be within 4 years of the job date."
+    },
+    "MA-398": {
+      "allOf": [
+        "MA-391"
+      ],
+      "description": "HEA within past 4 years is required, weatherization measures must be recommended to be eligible."
+    },
+    "MA-457": {
+      "allOf": [
+        "MA-456"
+      ],
+      "description": "HEA within past 3 years required."
+    },
+    "MA-458": {
+      "allOf": [
+        "MA-456"
+      ],
+      "description": "HEA within past 3 years required."
+    },
+    "MA-459": {
+      "allOf": [
+        "MA-456"
+      ],
+      "description": "HEA within 3 years required. Only measures listed on HEA eligible."
+    },
+    "MA-461": {
+      "allOf": [
+        "MA-456"
+      ],
+      "description": "HEA within 3 years required. Qualifying measures must be in HEA."
+    },
+    "MA-560": {
+      "allOf": [
+        "MA-555"
+      ],
+      "description": "HEA within past 3 years required."
+    },
+    "MA-561": {
+      "allOf": [
+        "MA-555"
+      ],
+      "description": "HEA within past 3 years required. "
+    },
+    "MA-571": {
+      "allOf": [
+        "MA-555",
+        "MA-560",
+        "MA-561",
+        "MA-766",
+        "MA-767"
+      ],
+      "description": "HEA within past 3 years required. Measures must be recommended in report."
+    },
+    "MA-606": {
+      "allOf": [
+        "MA-99"
+      ],
+      "description": "If home was built before the year 2000, weatherization recommendations made in the HEA must be completed to be eligible for whole home rebate. "
+    },
+    "MA-607": {
+      "allOf": [
+        "MA-99"
+      ],
+      "description": "If home was built before the year 2000, weatherization recommendations made in the HEA must be completed to be eligible for whole home rebate. "
+    },
     "MA-641": {
       "allOf": [
         "MA-165"
@@ -230,6 +354,47 @@
         "MA-640"
       ],
       "description": "Bonus only available if pursuing a full home conversion or if displacing oil or propane."
+    },
+    "MA-766": {
+      "allOf": [
+        "MA-555"
+      ],
+      "description": "HEA within past 3 years required."
+    },
+    "MA-767": {
+      "allOf": [
+        "MA-555"
+      ],
+      "description": "HEA within past 3 years required. "
+    },
+    "MA-810": {
+      "allOf": [
+        "MA-370"
+      ],
+      "description": "Home energy assessment date is required to be within 3 years of job date."
+    },
+    "MA-811": {
+      "allOf": [
+        "MA-370"
+      ],
+      "description": "Home energy assessment date is required to be within 3 years of job date."
     }
-  }
+  },
+  "combinations": [
+    {
+      "ids": [
+        "MA-91",
+        "MA-786",
+        "MA-787",
+        "MA-788",
+        "MA-789",
+        "MA-790",
+        "MA-791",
+        "MA-792",
+        "MA-793"
+      ],
+      "max_value": 250,
+      "description": "Rowley Outdoor Equipment"
+    }
+  ]
 }
