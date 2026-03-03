@@ -355,7 +355,6 @@
       "es": "Reembolso de $1,300 por aislamiento del ático y sellado de aire. Reembolso de $1,500 por aislamiento de paredes. Disponible para todos los residentes de Minneapolis. Se debe recibir el reembolso de la compañía de servicios públicos."
     },
     "start_date": "2024-12-15",
-    "end_date": "2025-12-15",
     "paused": true,
     "url": {
       "en": "https://www.mncee.org/minneapolis-bonus-rebate-program"
@@ -396,18 +395,16 @@
     "program": "mn_cityOfMinneapolis_minneapolisGreenCostShareBonusRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 200
+      "number": 400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$200 bonus rebate for a heat pump water heater. Green Zone residents qualify for a $1,500 rebate. Must be ENERGY STAR certified.",
-      "es": "Bonificación adicional de $200 por un calentador de agua con bomba de calor. Los residentes de la Zona Verde califican para un reembolso de $1,500. Debe contar con certificación ENERGY STAR."
+      "en": "$400 bonus rebate for a heat pump water heater. Green Zone residents qualify for a $1,500 rebate. Must be ENERGY STAR certified.",
+      "es": "Bono de $400 para un calentador de agua con bomba de calor. Los residentes de la Zona Verde tienen derecho a un reembolso de $1,500. Debe contar con la certificación ENERGY STAR."
     },
-    "start_date": "2024-12-15",
-    "end_date": "2025-12-15",
-    "paused": true,
+    "start_date": "2025-12-15",
     "url": {
       "en": "https://www.mncee.org/minneapolis-bonus-rebate-program"
     }
@@ -3319,33 +3316,6 @@
     }
   },
   {
-    "id": "MN-182",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_water_heater"
-    ],
-    "program": "mn_bloomingPrairiePublicUtilities_southernMinnesotaMunicipalPowerAgencyResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400,
-      "minimum": 90,
-      "maximum": 400
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$400 rebate for a 20-55 gallon heat pump water heater. $90 rebate for heat pump water heater larger than 55 gallons. ",
-      "es": "Reembolso de $400 por un calentador de agua con bomba de calor de 20 a 55 galones. Reembolso de $90 por un calentador de agua con bomba de calor de más de 55 galones."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/blooming-prairie"
-    }
-  },
-  {
     "id": "MN-183",
     "payment_methods": [
       "rebate"
@@ -3491,10 +3461,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,000 bonus rebate for an air source heat pump. Green Zone residents qualify for a $4,000 rebate. Must meet utility rebate efficiency requirements. ",
-      "es": "Bonificación de $1,000 por una bomba de calor de fuente de aire. Los residentes de la Zona Verde califican para un reembolso de $4,000. Debe cumplir con los requisitos de eficiencia del reembolso de la compañía de servicios públicos."
+      "en": "$1,000 bonus rebate for an air source heat pump. Green Zone residents qualify for up to $5,000. Must meet utility rebate efficiency requirements. ",
+      "es": "Bono de $1,000 para una bomba de calor aerotérmica. Los residentes de la Zona Verde pueden optar a hasta $5,000. Deben cumplir con los requisitos de eficiencia del programa de reembolso de servicios públicos. "
     },
-    "paused": true,
+    "start_date": "2025-12-15",
     "url": {
       "en": "https://www.mncee.org/minneapolis-bonus-rebate-program"
     }
@@ -4764,6 +4734,7 @@
   },
   {
     "id": "MN-266",
+    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
     "payment_methods": [
       "rebate"
     ],
@@ -6721,6 +6692,7 @@
   },
   {
     "id": "MN-375",
+    "eligible_geo_group": "mn-southern-minnesota-municipal-power-agency",
     "payment_methods": [
       "rebate"
     ],
@@ -8231,31 +8203,6 @@
     }
   },
   {
-    "id": "MN-436",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_brownCoRuralElectricalAssn_brownCountyRuralElectricalAssociationRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1000,
-      "maximum": 1000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $1,000 rebate for a ducted air source heat pump. Rebate amount dependent upon unity efficiency. Electric backup allowed without load control.",
-      "es": "Reembolso de hasta $1,000 para una bomba de calor de aire con conductos. El monto del reembolso depende de la eficiencia de la unidad. Se permite el respaldo eléctrico sin control de carga."
-    },
-    "url": {
-      "en": "https://www.browncountyrea.coop/rebates"
-    }
-  },
-  {
     "id": "MN-437",
     "payment_methods": [
       "rebate"
@@ -8267,14 +8214,15 @@
     "amount": {
       "type": "dollar_amount",
       "number": 2000,
+      "minimum": 750,
       "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $2,000 rebate for a ducted air source heat pump. Amount depends on unit efficiency. Must have whole house non-electric backup with load control.",
-      "es": "Reembolso de hasta $2,000 para una bomba de calor de aire con ductos. El monto depende de la eficiencia de la unidad. Se requiere un sistema de respaldo sin electricidad para toda la casa con control de carga."
+      "en": "Up to $2,000 rebate for a ducted air source heat pump. Rebate amount depends on unit efficiency, backup system, and whether or not on load control.",
+      "es": "Reembolso de hasta $2,000 para una bomba de calor de aire por conducto. El monto del reembolso depende de la eficiencia de la unidad, el sistema de respaldo y si cuenta con control de carga."
     },
     "url": {
       "en": "https://www.browncountyrea.coop/rebates"
@@ -8406,7 +8354,7 @@
       "en": "Up to $600 per ton rebate for an air source heat pump. Either $300 or $600 per ton, depending upon unit efficiency.",
       "es": "Reembolso de hasta $600 por tonelada para una bomba de calor aerotérmica. Reembolso de $300 o $600 por tonelada, según la eficiencia de la unidad."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.minnkota.com/our-programs/residential-programs"
     }
@@ -8434,6 +8382,7 @@
       "en": "$150 per ton rebate for electric heating with an air source heat pump. Unit must meet CIP requirements. See rebate application form for more details.",
       "es": "Reembolso de $150 por tonelada para una calefacción eléctrica con bomba de calor aerotérmica. La unidad debe cumplir con los requisitos de CIP. Consulte el formulario de solicitud de reembolso para obtener más información."
     },
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.minnkota.com/our-programs/rebates-energy-incentives"
     }
@@ -9575,6 +9524,82 @@
     "start_date": "2026-01-01",
     "url": {
       "en": "https://www.plymouthmn.gov/departments/public-works/environmental-stewardship/home-energy-rebate-program-2609"
+    }
+  },
+  {
+    "id": "MN-487",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_southernMinnesotaMunicipalPowerAgency_southernMinnesotaMunicipalPowerAgencyMembersEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 2200,
+      "minimum": 100,
+      "maximum": 2200
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $2,200 rebate for a ductless air source heat pump. Range is between $100 and $2,200 depending on heat pump size, efficiency, and current system.",
+      "es": "Reembolso de hasta $2,200 para una bomba de calor de aire sin ductos. El rango de precio oscila entre $100 y $2,200, dependiendo del tamaño de la bomba de calor, la eficiencia y el sistema actual."
+    },
+    "url": {
+      "en": "https://smmpa.com/members"
+    }
+  },
+  {
+    "id": "MN-488",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_southernMinnesotaMunicipalPowerAgency_southernMinnesotaMunicipalPowerAgencyMembersEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,500 rebate for a ducted air source heat pump. Must meet efficiency and switch over requirements.",
+      "es": "Reembolso de $1,500 para una bomba de calor de aire por conducto. Debe cumplir con los requisitos de eficiencia y conversión."
+    },
+    "url": {
+      "en": "https://smmpa.com/members"
+    }
+  },
+  {
+    "id": "MN-489",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mn_southernMinnesotaMunicipalPowerAgency_southernMinnesotaMunicipalPowerAgencyMembersEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "minimum": 90,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $400 rebate for a heat pump water heater. Range is $90-$400 depending on unit size. Rebate not to exceed 50% of cost.",
+      "es": "Reembolso de hasta $400 por un calentador de agua con bomba de calor. El rango es de $90 a $400, dependiendo del tamaño de la unidad. El reembolso no debe superar el 50% del costo."
+    },
+    "url": {
+      "en": "https://smmpa.com/members"
     }
   }
 ]
