@@ -1794,6 +1794,21 @@
       "8": 8437
     }
   },
+  "ma-belmontmlp-low-income": {
+    "type": "hhsize",
+    "source_url": "https://www.commteam.org/program/home-energy-assistance-heap/#toggle-id-5",
+    "description": "Household income cannot exceed 60% of Massachusetts’ estimated State Median Income (for example in 2024, $64,333 for a family of 2 and $94,608 for a family of 4).",
+    "thresholds": {
+      "1": 51777,
+      "2": 67709,
+      "3": 83641,
+      "4": 99573,
+      "5": 115504,
+      "6": 131436,
+      "7": 0,
+      "8": 0
+    }
+  },
   "ma-concordmlp-120ami-threshold": {
     "type": "hhsize",
     "source_url": "https://concordma.gov/2916/Residential-Income-Based-Rebates",
@@ -1836,6 +1851,14 @@
     "type": "ami-percentage",
     "source_url": "https://www.masssave.com/en/residential/programs-and-services/income-based-offers",
     "description": "MassSave Income-Based Enhanced Incentive 60-80% AMI or SMI. Also known as Enhanced Incentives. 2024-2025 heating season.",
+    "thresholds": {
+      "percentage": 80
+    }
+  },
+  "ma-resource-ipswich-low-moderate-income": {
+    "type": "ami-percentage",
+    "source_url": "https://nextzero.org/ipswich/low-to-moderate-income-guidelines/",
+    "description": "Low to moderate income guidelines. Customers who earn up to 60% of the state median income qualify as low income. Customers who earn more than 60% of the state median income, up to 80% of the area median income qualify as moderate income.",
     "thresholds": {
       "percentage": 80
     }

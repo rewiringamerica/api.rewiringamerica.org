@@ -2216,8 +2216,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "25% rebate of material costs for qualified ENERGY STAR windows and doors. Maximum yearly rebate limits. ",
-      "es": "Reembolso del 25 % en materiales para ventanas y puertas calificadas con certificación ENERGY STAR. Límite máximo de descuento anual. "
+      "en": "25% rebate of material costs for qualified ENERGY STAR windows and doors. Maximum yearly rebate limits. Invoice must list labor cost separately.",
+      "es": "25% de descuento en materiales para ventanas y puertas con certificación ENERGY STAR. Límite máximo de descuento anual. La factura debe incluir el costo de la mano de obra por separado."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2419,8 +2419,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "25% of cost rebate for electric riding mower up to $1,000. 50% of cost for extra battery up to $25. Maximum rebate limits. ",
-      "es": "Reembolso del 25 % del costo de una cortadora de césped eléctrica de hasta $1,000. Reembolso del 50 % del costo de una batería adicional de hasta $25. Límites máximos de reembolso. "
+      "en": "25% of cost rebate for electric riding mower up to $1,000.  Maximum rebate limits. ",
+      "es": "Descuento del 25% en el costo de una cortadora de césped eléctrica de hasta $1,000. Límites máximos de descuento. "
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2468,8 +2468,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 Tri-State rebate for Energy Star heat pump water heater. There is a maximum limit for all rebates over 12 months.",
-      "es": "Reembolso de $350 en el programa Tri-State para calentadores de agua con una bomba de calor con certificación Energy Star. El límite máximo para todos los reembolsos es de 12 meses."
+      "en": "$350 Tri-state rebate for Energy Star heat pump water heater. There is a maximum limit for all rebates over 12 months.",
+      "es": "Reembolso triestatal de $350 para calentadores de agua con bomba de calor Energy Star. Hay un límite máximo para todos los reembolsos durante 12 meses."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2967,8 +2967,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$100 rebate for whole house fan. Limit 2 per member account. New or replacement.",
-      "es": "Reembolso de $100 por ventilador para toda la casa. Límite de 2 por cuenta de miembro. Nuevo o reemplazo."
+      "en": "$100 rebate for whole house fan. Limit 2 per member account. New or replacement. No attic ventilation or in-line duct fans.",
+      "es": "Reembolso de $100 por ventilador para toda la casa. Límite de 2 por cuenta de miembro. Nuevo o de reemplazo. No se permiten ventiladores de ático ni ventiladores de conducto."
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -3040,8 +3040,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$200 rebate per evaporative cooler with minimum airflow of 2,500 CFM. Limit 2 per member account. New or replacement. ",
-      "es": "Descuento de $200 por enfriador evaporativo con un flujo de aire mínimo de 2,500 CFM. Límite de 2 por cuenta de miembro. Nuevo o reemplazo. "
+      "en": "$200 rebate per evaporative cooler with minimum airflow of 2,500 CFM. Limit 2 per member account. New or replacement. No window units.",
+      "es": "Descuento de $200 por enfriador evaporativo con un flujo de aire mínimo de 2500 CFM. Límite de 2 por cuenta de miembro. Nuevo o reemplazo. No se admiten unidades de ventana."
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -3460,8 +3460,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "25% cost up to $150 for electric snowblower, walk-behind mower; $50 for trimmer, blower, power washer; $100 for chainsaw. $25 max for extra battery. ",
-      "es": "Costo del 25 % hasta $150 para un quitanieves eléctrico, una cortadora de césped manual; $50 por una recortadora, soplador, hidrolavadora; $100 por una motosierra. Máximo de $25 por una batería adicional. "
+      "en": "25% cost up to $150 for walk-behind mower; $50 for trimmer, blower, power washer; $100 for chainsaw. $25 max for extra battery. ",
+      "es": "Costo del 25% hasta $150 para cortadora de césped manual; $50 para recortadora, sopladora, hidrolavadora; $100 para motosierra. Máximo de $25 por batería adicional. "
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -6705,6 +6705,31 @@
     },
     "url": {
       "en": "https://www.morasanmiguel.coop/rebates"
+    }
+  },
+  {
+    "id": "NM-277",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% cost up to $250 for 2-stage snowblower or $150 for single-stage  snowblower  $25 max for extra battery. ",
+      "es": "Costo del 25% hasta $250 para quitanieves de 2 etapas o $150 para quitanieves de una sola etapa. Máximo de $25 por batería adicional. "
+    },
+    "url": {
+      "en": "https://www.socorroelectric.com/rebates"
     }
   }
 ]
