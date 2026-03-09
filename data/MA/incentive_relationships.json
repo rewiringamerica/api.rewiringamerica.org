@@ -122,8 +122,7 @@
     },
     "MA-587": {
       "ids": [
-        "MA-6",
-        "MA-582"
+        "MA-6"
       ],
       "description": "Mass Save moderate income program"
     },
@@ -224,6 +223,56 @@
       ],
       "description": "If home was built before the year 2000, weatherization recommendations made in the HEA must be completed to be eligible for whole home rebate."
     },
+    "MA-121": {
+      "allOf": [
+        "MA-875"
+      ],
+      "description": "Home Energy Assessment must be completed within 3 years of installation."
+    },
+    "MA-122": {
+      "allOf": [
+        "MA-875"
+      ],
+      "description": "Home Energy Assessment must be completed within 3 years of installation."
+    },
+    "MA-123": {
+      "allOf": [
+        "MA-875"
+      ],
+      "description": "Home Energy Assessment must be completed within 3 years of installation."
+    },
+    "MA-124": {
+      "allOf": [
+        "MA-875"
+      ],
+      "description": "Home Energy Assessment must be completed within 3 years of installation."
+    },
+    "MA-125": {
+      "allOf": [
+        "MA-875"
+      ],
+      "description": "Home energy assessment is required and must be dated within 3 years of job date."
+    },
+    "MA-126": {
+      "allOf": [
+        "MA-875"
+      ],
+      "description": "Home energy assessment is required and must be dated within 3 years of job date."
+    },
+    "MA-127": {
+      "allOf": [
+        "MA-125",
+        "MA-875"
+      ],
+      "description": "Must replace fossil fuel system with ashp as heating source."
+    },
+    "MA-128": {
+      "allOf": [
+        "MA-126",
+        "MA-875"
+      ],
+      "description": "HP must be sole heating system."
+    },
     "MA-164": {
       "allOf": [
         "MA-71"
@@ -255,6 +304,24 @@
       ],
       "description": "requires pairing with whole home ashp or gshp installation, which both require HEA to be eligible"
     },
+    "MA-284": {
+      "allOf": [
+        "MA-283"
+      ],
+      "description": "HEA required prior to install."
+    },
+    "MA-285": {
+      "allOf": [
+        "MA-283"
+      ],
+      "description": "Home Energy Assessment must be completed within 3 years of application date (Mass Save Home Energy Assessment not valid). "
+    },
+    "MA-286": {
+      "allOf": [
+        "MA-283"
+      ],
+      "description": "Home Energy Assessment must be completed within 3 years of application date (Mass Save Home Energy Assessment not valid). "
+    },
     "MA-368": {
       "allOf": [
         "MA-621"
@@ -284,6 +351,30 @@
         "MA-391"
       ],
       "description": "HEA within past 4 years is required, weatherization measures must be recommended to be eligible."
+    },
+    "MA-413": {
+      "allOf": [
+        "MA-399"
+      ],
+      "description": "HEA required"
+    },
+    "MA-414": {
+      "allOf": [
+        "MA-399"
+      ],
+      "description": "HEA required"
+    },
+    "MA-434": {
+      "allOf": [
+        "MA-432"
+      ],
+      "description": "Home Energy Assessment dated within 3 years of installation date."
+    },
+    "MA-435": {
+      "allOf": [
+        "MA-432"
+      ],
+      "description": "Home Energy Assessment dated within 3 years of installation date."
     },
     "MA-457": {
       "allOf": [
@@ -378,6 +469,56 @@
         "MA-370"
       ],
       "description": "Home energy assessment date is required to be within 3 years of job date."
+    },
+    "MA-838": {
+      "allOf": [
+        "MA-283"
+      ],
+      "description": "Home Energy Assessment must be completed within 3 years of application date (Mass Save Home Energy Assessment not valid). "
+    },
+    "MA-839": {
+      "allOf": [
+        "MA-283"
+      ],
+      "description": "Home Energy Assessment must be completed within 3 years of application date (Mass Save Home Energy Assessment not valid). "
+    },
+    "MA-840": {
+      "allOf": [
+        "MA-283",
+        "MA-284"
+      ],
+      "description": "HEA required prior to install."
+    },
+    "MA-841": {
+      "allOf": [
+        "MA-283",
+        "MA-284"
+      ],
+      "description": "HEA required, measures must be recommended to qualify"
+    },
+    "MA-854": {
+      "allOf": [
+        "MA-290"
+      ]
+    },
+    "MA-855": {
+      "allOf": [
+        "MA-432"
+      ],
+      "description": "Home Energy Assessment report dated within 3 years of installation date. "
+    },
+    "MA-856": {
+      "allOf": [
+        "MA-432"
+      ],
+      "description": "Home Energy Assessment dated within 3 years of installation date."
+    },
+    "MA-866": {
+      "allOf": [
+        "MA-399",
+        "MA-407"
+      ],
+      "description": "HEA required"
     }
   },
   "combinations": [

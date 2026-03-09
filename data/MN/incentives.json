@@ -258,18 +258,18 @@
     "program": "mn_dakotaElectricAssociation_dakotaElectricAssociationEnergyWiseRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000,
-      "minimum": 150,
-      "maximum": 1000
+      "number": 600,
+      "minimum": 400,
+      "maximum": 600
     },
     "owner_status": [
-      "homeowner",
-      "renter"
+      "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,000 rebate for a ductless air source heat pump. Amount varies by unit size and efficiency. Rebates under $400 credited to customer account.",
-      "es": "Reembolso de hasta $1,000 por una bomba de calor de fuente de aire sin ductos. El monto varía según el tamaño y la eficiencia de la unidad. Los reembolsos menores a $400 se acreditan en la cuenta del cliente."
+      "en": "Up to $600 rebate for a ductless air source heat pump. Amount is either $400 or $600 depending upon unit efficiency.",
+      "es": "Reembolso de hasta $600 para una bomba de calor de aire sin ductos. El monto puede ser de $400 o $600, según la eficiencia de la unidad."
     },
+    "start_date": "2026-01-01",
     "url": {
       "en": "https://www.dakotaelectric.com/member-services/programs-rebates/for-your-home/energy-wise-rebates/"
     }
@@ -280,23 +280,23 @@
       "rebate"
     ],
     "items": [
-      "other_heat_pump"
+      "ducted_heat_pump"
     ],
     "program": "mn_dakotaElectricAssociation_dakotaElectricAssociationEnergyWiseRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000,
-      "minimum": 750,
-      "maximum": 1000
+      "number": 800,
+      "minimum": 600,
+      "maximum": 800
     },
     "owner_status": [
-      "homeowner",
-      "renter"
+      "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,000 rebate for quality installation of an air source heat pump. Must use a registered contractor.",
-      "es": "Reembolso de hasta $1,000 por la instalación de calidad de una bomba de calor de fuente de aire. Se debe contratar a un instalador registrado."
+      "en": "Up to $800 rebate for a ducted air source heat pump. Either $600 or $800 depending on unit efficiency. Must be done with Quality Installation.",
+      "es": "Reembolso de hasta $800 por una bomba de calor de aire por conducto. El reembolso puede variar entre $600 y $800, según la eficiencia de la unidad. La instalación debe ser de calidad."
     },
+    "start_date": "2026-01-01",
     "url": {
       "en": "https://www.dakotaelectric.com/member-services/programs-rebates/for-your-home/energy-wise-rebates/"
     }
@@ -325,7 +325,7 @@
       "en": "$3,000 rebate for attic insulation and air sealing. $3,000 rebate for wall insulation for Green Zone residents only. Must receive utility rebate. ",
       "es": "Reembolso de $3,000 para aislamiento de ático y sellado de fugas. Reembolso de $3,000 para aislamiento de paredes, solo para residentes de la Zona Verde. Se requiere reembolso de servicios públicos."
     },
-    "paused": true,
+    "end_date": "2026-12-15",
     "url": {
       "en": "https://www.mncee.org/minneapolis-bonus-rebate-program"
     }
@@ -354,8 +354,8 @@
       "en": "$1,300 rebate for attic insulation and air sealing. $1,500 rebate for wall insulation. For all Minneapolis residents. Must receive utility rebate. ",
       "es": "Reembolso de $1,300 por aislamiento del ático y sellado de aire. Reembolso de $1,500 por aislamiento de paredes. Disponible para todos los residentes de Minneapolis. Se debe recibir el reembolso de la compañía de servicios públicos."
     },
-    "start_date": "2024-12-15",
-    "paused": true,
+    "start_date": "2025-12-15",
+    "end_date": "2026-12-15",
     "url": {
       "en": "https://www.mncee.org/minneapolis-bonus-rebate-program"
     }
@@ -405,6 +405,7 @@
       "es": "Bono de $400 para un calentador de agua con bomba de calor. Los residentes de la Zona Verde tienen derecho a un reembolso de $1,500. Debe contar con la certificación ENERGY STAR."
     },
     "start_date": "2025-12-15",
+    "end_date": "2026-12-15",
     "url": {
       "en": "https://www.mncee.org/minneapolis-bonus-rebate-program"
     }
@@ -659,44 +660,14 @@
       "number": 500
     },
     "owner_status": [
-      "homeowner",
-      "renter"
+      "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for a mini-split air source heat pump (ASHP)",
-      "es": "Reembolso de $500 por una bomba de calor de fuente de aire tipo mini-split (ASHP)."
+      "en": "$500 rebate for a ductless air source heat pump. Must meet efficiency specifications.",
+      "es": "Reembolso de $500 para una bomba de calor de aire sin ductos. Debe cumplir con las especificaciones de eficiencia."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
-    "url": {
-      "en": "https://www.connexusenergy.com/residential/save-money-and-energy/rebates-and-programs/heating-and-cooling"
-    }
-  },
-  {
-    "id": "MN-47",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_connexusEnergy_connexusEnergyRebatesAndPrograms",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 630,
-      "minimum": 630,
-      "maximum": 850
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $850 rebate for an air source heat pump (ASHP)",
-      "es": "Reembolso de hasta $850 por una bomba de calor de fuente de aire (ASHP)."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.connexusenergy.com/residential/save-money-and-energy/rebates-and-programs/heating-and-cooling"
     }
@@ -712,18 +683,18 @@
     "program": "mn_connexusEnergy_connexusEnergyRebatesAndPrograms",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000
+      "number": 1000,
+      "maximum": 1000
     },
     "owner_status": [
-      "homeowner",
-      "renter"
+      "homeowner"
     ],
     "short_description": {
-      "en": "$1000 rebate for a ducted cold climate air source heat pump (ASHP)",
-      "es": "Reembolso de $1,000 por una bomba de calor de fuente de aire para clima frío con sistema de ductos (ASHP)."
+      "en": "Up to $1000 rebate for a ducted air source heat pump. Rebate amount dependent upon unit efficiency.",
+      "es": "Reembolso de hasta $1000 para una bomba de calor de aire por conducto. El monto del reembolso depende de la eficiencia de la unidad."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.connexusenergy.com/residential/save-money-and-energy/rebates-and-programs/heating-and-cooling"
     }
@@ -1004,32 +975,6 @@
     }
   },
   {
-    "id": "MN-60",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_water_heater"
-    ],
-    "program": "mn_connexusEnergy_connexusEnergyRebatesAndPrograms",
-    "amount": {
-      "type": "percent",
-      "number": 1
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "100% Utility rebate match for a heat pump water heater",
-      "es": "Reembolso del 100 % del reembolso de la compañía de servicios públicos por un calentador de agua con bomba de calor."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
-    "url": {
-      "en": "https://www.connexusenergy.com/residential/save-money-and-energy/rebates-and-programs/heating-and-cooling"
-    }
-  },
-  {
     "id": "MN-65",
     "payment_methods": [
       "rebate"
@@ -1078,7 +1023,6 @@
       "es": "Reembolso del 50 % del reembolso de la compañía de servicios públicos por una bomba de calor de fuente de aire, para quienes califiquen según sus ingresos."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.northfieldmn.gov/1531/Energy-Efficiency-Rebate"
     }
@@ -1106,7 +1050,6 @@
       "es": "Reembolso equivalente al 50 % del reembolso de la compañía de servicios públicos para aislamiento, para quienes califiquen según sus ingresos."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.northfieldmn.gov/1531/Energy-Efficiency-Rebate"
     }
@@ -1117,21 +1060,20 @@
       "rebate"
     ],
     "items": [
-      "ductless_heat_pump"
+      "ductless_heat_pump",
+      "ducted_heat_pump"
     ],
     "program": "mn_kenyonMunicipalUtilities_kenyonMunicipalUtilitiesResidentialRebates",
     "amount": {
-      "type": "dollars_per_unit",
-      "number": 150,
-      "unit": "ton",
-      "maximum": 150
+      "type": "dollar_amount",
+      "number": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $150 per ton rebate for a ductless air source heat pump. Rebate amount is $50 to $150 per ton and dependent upon unit efficiency.",
-      "es": "Reembolso de hasta $150 por tonelada por una bomba de calor de fuente de aire sin ductos. El monto del reembolso varía entre $50 y $150 por tonelada, según la eficiencia de la unidad."
+      "en": "$500 rebate for an air source heat pump. Up to $3,000 maximum per year.",
+      "es": "Reembolso de $500 para una bomba de calor aerotérmica. Hasta un máximo de $3,000 al año."
     },
     "url": {
       "en": "https://cityofkenyon.com/utilities"
@@ -1636,7 +1578,7 @@
       "es": "Reembolso de $500 por la instalación de una bomba de calor de fuente de aire con sistema de ductos."
     },
     "url": {
-      "en": "https://shakopeeutilities.com/residential/2023-residential-rebates/"
+      "en": "https://shakopeeutilities.com/2026-residential-rebates/"
     }
   },
   {
@@ -1661,7 +1603,7 @@
       "es": " Reembolso de $500 por una bomba de calor de fuente de aire sin ductos."
     },
     "url": {
-      "en": "https://shakopeeutilities.com/residential/2023-residential-rebates/"
+      "en": "https://shakopeeutilities.com/2026-residential-rebates/"
     }
   },
   {
@@ -1670,7 +1612,8 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump"
+      "ducted_heat_pump",
+      "ductless_heat_pump"
     ],
     "program": "mn_cityOfChaskaElectricDepartment_chaskaElectricUtilityEnergyRebates",
     "amount": {
@@ -1681,35 +1624,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 rebate for a ducted air source heat pump (single package or split system). Must be ENERGY STAR qualified and installed via Q.I. procedures.",
-      "es": "Reembolso de $300 por una bomba de calor de fuente de aire con sistema de ductos (unidad compacta o sistema tipo split). Debe contar con certificación ENERGY STAR y estar instalada conforme a los procedimientos de instalación de calidad (Q.I.)."
+      "en": "$300 rebate for an air source heat pump (single package or split system). Must be ENERGY STAR qualified and installed via Q.I. procedures.",
+      "es": "Reembolso de $300 para una bomba de calor de aire (paquete individual o sistema dividido). Debe tener certificación ENERGY STAR e instalarse según los procedimientos de QI."
     },
-    "end_date": "2025-11-30",
-    "url": {
-      "en": "https://www.chaskamn.gov/280/Energy-Rebates"
-    }
-  },
-  {
-    "id": "MN-98",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_cityOfChaskaElectricDepartment_chaskaElectricUtilityEnergyRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 300
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$300 rebate for a ductless air source heat pump. Must be ENERGY STAR qualified and installed via Q.I. procedures.",
-      "es": "Reembolso de $300 por una bomba de calor de fuente de aire sin ductos. Debe contar con certificación ENERGY STAR y estar instalada conforme a los procedimientos de instalación de calidad (Q.I.)."
-    },
-    "end_date": "2025-11-30",
+    "end_date": "2026-11-30",
     "url": {
       "en": "https://www.chaskamn.gov/280/Energy-Rebates"
     }
@@ -1787,11 +1705,12 @@
     }
   },
   {
-    "id": "MN-102",
+    "id": "MN-103",
     "payment_methods": [
       "rebate"
     ],
     "items": [
+      "ductless_heat_pump",
       "ducted_heat_pump"
     ],
     "program": "mn_hibbingPublicUtilities_hibbingPublicUtilitiesRebates",
@@ -1803,32 +1722,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate for a ducted air source heat pump",
-      "es": "Reembolso de $400 por la instalación de una bomba de calor de fuente de aire con sistema de ductos."
-    },
-    "url": {
-      "en": "https://hpuc.com/hpu-rebates/"
-    }
-  },
-  {
-    "id": "MN-103",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_hibbingPublicUtilities_hibbingPublicUtilitiesRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$400 rebate for a ductless air source heat pump",
-      "es": "Reembolso de $400 por una bomba de calor de fuente de aire sin ductos."
+      "en": "$400 rebate for an air source heat pump. Must meet efficiency specifications.",
+      "es": "Reembolso de $400 para una bomba de calor aerotérmica. Debe cumplir con las especificaciones de eficiencia."
     },
     "url": {
       "en": "https://hpuc.com/hpu-rebates/"
@@ -1852,8 +1747,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,000 rebate for a cold climate heat pump.",
-      "es": "Reembolso de $1,000 por una bomba de calor para clima frío."
+      "en": "$1,000 rebate for a cold climate air source heat pump. Must meet efficiency specifications.",
+      "es": "Reembolso de $1,000 para una bomba de calor de aire para climas fríos. Debe cumplir con las especificaciones de eficiencia."
     },
     "url": {
       "en": "https://hpuc.com/hpu-rebates/"
@@ -2086,11 +1981,12 @@
     }
   },
   {
-    "id": "MN-117",
+    "id": "MN-118",
     "payment_methods": [
       "rebate"
     ],
     "items": [
+      "ductless_heat_pump",
       "ducted_heat_pump"
     ],
     "program": "mn_cityOfNorthSaintPaulElectricUtilities_northSaintPaulElectricUtilitiesEnergySavingRebates",
@@ -2102,35 +1998,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for a ducted air source heat pump. May be a single package or split system.",
-      "es": "Reembolso de $500 por una bomba de calor de fuente de aire con ductos. Puede ser una unidad compacta o un sistema tipo split."
+      "en": "$500 rebate for an air source heat pump. May be a single package or split system. Must meet efficiency specifications.",
+      "es": "Reembolso de $500 para una bomba de calor aerotérmica. Puede ser un sistema individual o dividido. Debe cumplir con las especificaciones de eficiencia."
     },
-    "end_date": "2025-11-30",
-    "url": {
-      "en": "https://www.northstpaul.org/1011/Electric-Utility-Rebates"
-    }
-  },
-  {
-    "id": "MN-118",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_cityOfNorthSaintPaulElectricUtilities_northSaintPaulElectricUtilitiesEnergySavingRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$500 rebate for a ductless air source heat pump. May be a single package or split system.",
-      "es": "Reembolso de $500 por una bomba de calor de fuente de aire sin ductos. Puede ser una unidad compacta o un sistema tipo split."
-    },
-    "end_date": "2025-11-30",
+    "end_date": "2026-11-30",
     "url": {
       "en": "https://www.northstpaul.org/1011/Electric-Utility-Rebates"
     }
@@ -2156,7 +2027,7 @@
       "en": "$25 rebate for an electric clothes dryer",
       "es": "Reembolso de $25 por una secadora de ropa eléctrica."
     },
-    "end_date": "2025-11-30",
+    "end_date": "2026-11-30",
     "url": {
       "en": "https://www.northstpaul.org/1011/Electric-Utility-Rebates"
     }
@@ -2892,9 +2763,10 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $100 on a heat pump water heater",
-      "es": "Reembolso de hasta $100 por un calentador de agua con bomba de calor."
+      "en": "$100 rebate for a heat pump water heater. Must meet efficiency specifications.",
+      "es": "Reembolso de $100 para un calentador de agua con bomba de calor. Debe cumplir con las especificaciones de eficiencia."
     },
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.connexusenergy.com/residential/save-money-and-energy/rebates-and-programs/heating-and-cooling"
     }
@@ -3234,33 +3106,6 @@
     },
     "url": {
       "en": "https://www.brightenergysolutions.com/members"
-    }
-  },
-  {
-    "id": "MN-179",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_water_heater"
-    ],
-    "program": "mn_bloomingPrairiePublicUtilities_southernMinnesotaMunicipalPowerAgencyResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400,
-      "minimum": 90,
-      "maximum": 400
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$400 rebate for a 20-55 gallon heat pump water heater. $90 rebate for heat pump water heater larger than 55 gallons. ",
-      "es": "Reembolso de $400 por un calentador de agua con bomba de calor de 20 a 55 galones. Reembolso de $90 por un calentador de agua con bomba de calor de más de 55 galones."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/blooming-prairie"
     }
   },
   {
@@ -3856,38 +3701,13 @@
     }
   },
   {
-    "id": "MN-211",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_itasca-MantrapCoopElectricAssn_itasca-MantrapElectricCooperativeRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1000,
-      "minimum": 750,
-      "maximum": 1000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $1,000 rebate for a ducted air source heat pump. Must be on load management program and installed by a participating contractor.",
-      "es": "Reembolso de hasta $1,000 por una bomba de calor de fuente de aire con ductos. Debe estar incluida en un programa de gestión de carga y estar instalada por un contratista participante."
-    },
-    "url": {
-      "en": "https://www.itasca-mantrap.com/rebates"
-    }
-  },
-  {
     "id": "MN-212",
     "payment_methods": [
       "rebate"
     ],
     "items": [
-      "ductless_heat_pump"
+      "ductless_heat_pump",
+      "ducted_heat_pump"
     ],
     "program": "mn_itasca-MantrapCoopElectricAssn_itasca-MantrapElectricCooperativeRebates",
     "amount": {
@@ -3900,8 +3720,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,000 rebate for a ductless air source heat pump. Range is $300 to $1,000 depending upon unit size and efficiency specifications.",
-      "es": "Reembolso de hasta $1,000 por una bomba de calor de fuente de aire sin ductos. El monto varía entre $300 y $1,000, según el tamaño de la unidad y las especificaciones de eficiencia."
+      "en": "Up to $1,000 rebate for an air source heat pump. Range is $300 to $1,000 depending upon unit size and efficiency specifications.",
+      "es": "Reembolso de hasta $1,000 para una bomba de calor aerotérmica. El rango oscila entre $300 y $1,000, según el tamaño de la unidad y las especificaciones de eficiencia."
     },
     "url": {
       "en": "https://www.itasca-mantrap.com/rebates"
@@ -4314,8 +4134,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$150 per ton rebate for air source heat pump.",
-      "es": "Reembolso de $150 por tonelada por una bomba de calor de fuente de aire."
+      "en": "$150 per ton rebate for a ducted air source heat pump.",
+      "es": "Descuento de $150 por tonelada para una bomba de calor de fuente de aire canalizada."
     },
     "url": {
       "en": "https://www.valueofelectricity.com/save-with-your-utility/warroad-municipal-utilities"
@@ -4339,8 +4159,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$150 per ton rebate for air source heat pump.",
-      "es": "Reembolso de $150 por tonelada por una bomba de calor de fuente de aire."
+      "en": "$150 per ton rebate for a ductless air source heat pump.",
+      "es": "Descuento de $150 por tonelada para una bomba de calor de fuente de aire sin ductos."
     },
     "url": {
       "en": "https://www.valueofelectricity.com/save-with-your-utility/warroad-municipal-utilities"
@@ -4567,8 +4387,6 @@
       "en": "Up to $1,000 rebate for an air source heat pump. Rebate amount varies by unit size and efficiency.",
       "es": "Reembolso de hasta $1,000 por una bomba de calor de fuente de aire. El monto del reembolso varía según el tamaño y la eficiencia de la unidad."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-15",
     "url": {
       "en": "https://www.lrec.coop/energy-services/air-source-heat-pumps/"
     }
@@ -4675,8 +4493,7 @@
       "en": "$500 rebate for an air source heat pump. Must be Quality Installed and meet ENERGY STAR certified efficiency specifications.",
       "es": "Reembolso de $500 por una bomba de calor de fuente de aire. Debe contar con instalación de calidad y cumplir con las especificaciones de eficiencia certificadas por ENERGY STAR."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-11-30",
+    "end_date": "2026-11-30",
     "url": {
       "en": "https://www.cityoflesueur.com/176/Rebates"
     }
@@ -4757,30 +4574,6 @@
     },
     "url": {
       "en": "https://smmpa.com/members/new-prague"
-    }
-  },
-  {
-    "id": "MN-267",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_water_heater"
-    ],
-    "program": "mn_fairmontPublicUtilities_residentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$400 rebate for a 20-55 gallon heat pump water heater. Rebate not to exceed 50% of cost.",
-      "es": "Reembolso de $400 por un calentador de agua con bomba de calor de 20 a 55 galones. El reembolso no deberá exceder el 50 % del costo."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/fairmont"
     }
   },
   {
@@ -5234,8 +5027,7 @@
       "en": "$500 rebate for a heat pump water heater. Must be at least 50 gallons and ENERGY STAR rated.",
       "es": "Reembolso de $500 por un calentador de agua con bomba de calor. Debe tener una capacidad mínima de 50 galones y contar con una certificación ENERGY STAR."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-12",
+    "end_date": "2026-12-11",
     "url": {
       "en": "https://www.mcleodcoop.com/products/rebates/"
     }
@@ -5251,19 +5043,18 @@
     "program": "mn_mcleodCoopPowerAssn_mcLeodCoopPowerResidentialRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000,
+      "number": 1500,
       "minimum": 150,
-      "maximum": 1000
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,000 rebate for a ductless air source heat pump. Range is from $150 to $1,000 depending upon unit efficiency and size.",
-      "es": "Reembolso de hasta $1,000 por una bomba de calor de fuente de aire sin ductos. El monto varía entre $150 y $1,000, según la eficiencia y el tamaño de la unidad."
+      "en": "Up to $1,500 rebate for a ductless air source heat pump. Range is from $150 to $1,500 depending upon unit efficiency and size.",
+      "es": "Reembolso de hasta $1,500 para una bomba de calor de aire sin ductos. El rango de precio varía entre $150 y $1,500, dependiendo de la eficiencia y el tamaño de la unidad."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-12",
+    "end_date": "2026-12-11",
     "url": {
       "en": "https://www.mcleodcoop.com/products/rebates/"
     }
@@ -5279,19 +5070,18 @@
     "program": "mn_mcleodCoopPowerAssn_mcLeodCoopPowerResidentialRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000,
+      "number": 1500,
       "minimum": 750,
-      "maximum": 1000
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,000 rebate for a ducted air source heat pump. $750 or $1,000 depending on efficiency. Must be installed by Quality Installation contractor.",
-      "es": "Reembolso de hasta $1,000 por una bomba de calor de fuente de aire con ductos. El monto puede ser de $750 o $1,000, según la eficiencia. Debe estar instalada por un contratista con certificación en instalaciones de calidad."
+      "en": "Up to $1,500 rebate for a ducted air source heat pump. $750 or $1,500 depending on efficiency. Must be installed by Quality Installation contractor.",
+      "es": "Reembolso de hasta $1,500 por una bomba de calor de aire por conducto. $750 o $1,500 según la eficiencia. La instalación debe ser realizada por un contratista de Quality Installation."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-12",
+    "end_date": "2026-12-11",
     "url": {
       "en": "https://www.mcleodcoop.com/products/rebates/"
     }
@@ -5317,8 +5107,7 @@
       "en": "$25 rebate for an electric clothes dryer. Must be ENERGY STAR rated.",
       "es": "Reembolso de $25 por una secadora de ropa eléctrica. Debe contar con una certificación ENERGY STAR."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-12",
+    "end_date": "2026-12-11",
     "url": {
       "en": "https://www.mcleodcoop.com/products/rebates/"
     }
@@ -5334,16 +5123,16 @@
     "program": "mn_meekerCoopLightAndPowerAssn_meekerCoopLightAndPowerAssociationEnergyManagementRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 1200,
-      "minimum": 650,
-      "maximum": 1200
+      "number": 1000,
+      "minimum": 750,
+      "maximum": 1000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,200 rebate for a ducted air source heat pump with Quality Installation. Range is from $650 to $1,200 depending on unit efficiency.",
-      "es": "Reembolso de hasta $1,200 por una bomba de calor de fuente de aire con ductos con instalación de calidad. El monto varía entre $650 y $1,200, según la eficiencia de la unidad."
+      "en": "Up to $1,000 rebate for a ducted air source heat pump with Quality Installation. Range is from $750 to $1,000 depending on unit efficiency.",
+      "es": "Reembolso de hasta $1,000 por una bomba de calor de aire por conducto con instalación de calidad. El rango de precio varía entre $750 y $1,000, dependiendo de la eficiencia de la unidad."
     },
     "url": {
       "en": "https://www.meeker.coop/programs/"
@@ -5355,19 +5144,19 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump"
+      "ductless_heat_pump"
     ],
     "program": "mn_meekerCoopLightAndPowerAssn_meekerCoopLightAndPowerAssociationEnergyManagementRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 1000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an air source heat pump. Must meet efficiency specifications.",
-      "es": "Reembolso de $500 por una bomba de calor de fuente de aire. Debe cumplir con las especificaciones de eficiencia."
+      "en": "Up to $1,000 rebate for a ductless air source heat pump. Range is $150 - $1,000 depending upon unit size and efficiency.",
+      "es": "Reembolso de hasta $1,000 por una bomba de calor de aire sin ductos. El rango es de $150 a $1,000, dependiendo del tamaño y la eficiencia de la unidad."
     },
     "url": {
       "en": "https://www.meeker.coop/programs/"
@@ -5513,18 +5302,17 @@
     "program": "mn_milleLacsElectricCoop_milleLacsElectricCoopRebatesAndIncentives",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 100,
+      "number": 200,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$100 per ton rebate rebate for an air source heat pump. Must be at least 1 ton and meet efficiency specifications.",
-      "es": "Reembolso de $100 por tonelada por una bomba de calor de fuente de aire. Debe tener al menos 1 tonelada y cumplir con las especificaciones de eficiencia."
+      "en": "$200 per ton rebate rebate for an air source heat pump. Must be at least 1 ton and meet efficiency specifications.",
+      "es": "Descuento de $200 por tonelada para una bomba de calor aerotérmica. Debe tener al menos una tonelada y cumplir con las especificaciones de eficiencia."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.mlecmn.net/rebates"
     }
@@ -5674,8 +5462,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,000 rebate for an air source heat pump. $400 for efficient and $1,000 for cold climate efficient units. Must meet efficiency specifications.",
-      "es": "Reembolso de hasta $1,000 por una bomba de calor de fuente de aire: $400 por unidades eficientes y $1,000 por unidades eficientes para climas fríos. Deben cumplir con las especificaciones de eficiencia."
+      "en": "Up to $1,000 rebate for an air source heat pump. Either $400 or $1,000 depending upon unit efficiency. Must meet efficiency specifications.",
+      "es": "Reembolso de hasta $1,000 para una bomba de calor aerotérmica. El reembolso puede variar entre $400 y $1,000, según la eficiencia de la unidad. Debe cumplir con las especificaciones de eficiencia."
     },
     "url": {
       "en": "http://www.mooselakepower.com/rebates-and-incentives.php"
@@ -6419,106 +6207,6 @@
     }
   },
   {
-    "id": "MN-364",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_fairmontPublicUtilities_residentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$1,500 rebate for a ducted air source heat pump. Must meet efficiency specifications.",
-      "es": "Reembolso de $1,500 para una bomba de calor de aire por conducto. Debe cumplir con las especificaciones de eficiencia."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/fairmont"
-    }
-  },
-  {
-    "id": "MN-365",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_fairmontPublicUtilities_residentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2200,
-      "minimum": 100,
-      "maximum": 2200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $2,200 rebate for a ductless air source heat pump. Range is between $100 and $2,200 depending on heat pump size, efficiency, and current system.",
-      "es": "Reembolso de hasta $2,200 por una bomba de calor de fuente de aire sin ductos. El monto varía entre $100 y $2,200, según el tamaño de la bomba de calor, su eficiencia y el sistema actual."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/fairmont"
-    }
-  },
-  {
-    "id": "MN-366",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_clothes_dryer"
-    ],
-    "program": "mn_fairmontPublicUtilities_residentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 25
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$25 rebate for a heat pump clothes dryer in a single-family home.",
-      "es": "Reembolso de $25 para una secadora de ropa con bomba de calor en una casa unifamiliar."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/fairmont"
-    }
-  },
-  {
-    "id": "MN-367",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_clothes_dryer"
-    ],
-    "program": "mn_fairmontPublicUtilities_residentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 65,
-      "minimum": 25,
-      "maximum": 65
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $65 rebate for a washer/dryer combo with heat pump drying. Must be ENERGY STAR certified. Rebate amount dependent upon washer efficiency.  ",
-      "es": "Reembolso de hasta $65 por una lavadora y secadora combinada con bomba de calor para el secado. Debe contar con certificación ENERGY STAR. El monto del reembolso depende de la eficiencia de la lavadora.  "
-    },
-    "url": {
-      "en": "https://smmpa.com/members/fairmont"
-    }
-  },
-  {
     "id": "MN-368",
     "payment_methods": [
       "rebate"
@@ -6590,30 +6278,6 @@
     },
     "url": {
       "en": "https://smmpa.com/members/mora"
-    }
-  },
-  {
-    "id": "MN-371",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_water_heater"
-    ],
-    "program": "mn_fairmontPublicUtilities_residentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$400 rebate for a 20-55 gallon heat pump water heater. Rebate not to exceed 50% of cost.",
-      "es": "Reembolso de $400 por un calentador de agua con bomba de calor de 20 a 55 galones. El reembolso no deberá exceder el 50 % del costo."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/fairmont"
     }
   },
   {
@@ -6909,30 +6573,6 @@
     },
     "url": {
       "en": "https://smmpa.com/members/preston"
-    }
-  },
-  {
-    "id": "MN-384",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_clothes_dryer"
-    ],
-    "program": "mn_wasecaUtility_cityOfWasecaRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 25
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$25 rebate for a heat pump clothes dryer in a single-family home.",
-      "es": "Reembolso de $25 para una secadora de ropa con bomba de calor en una casa unifamiliar."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/waseca"
     }
   },
   {
@@ -7554,252 +7194,6 @@
     }
   },
   {
-    "id": "MN-410",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_wasecaUtility_cityOfWasecaRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$1,500 rebate for a ducted air source heat pump. Must meet efficiency specifications.",
-      "es": "Reembolso de $1,500 por una bomba de calor de fuente de aire con sistema de ductos. Debe cumplir con las especificaciones de eficiencia."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/waseca"
-    }
-  },
-  {
-    "id": "MN-411",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_water_heater"
-    ],
-    "program": "mn_wasecaUtility_cityOfWasecaRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$400 rebate for a 20-55 gallon heat pump water heater. Rebate not to exceed 50% of cost.",
-      "es": "Reembolso de $90 por un calentador de agua con bomba de calor de 20 a 55 galones. El reembolso no deberá exceder el 50 % del costo."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/waseca"
-    }
-  },
-  {
-    "id": "MN-412",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_water_heater"
-    ],
-    "program": "mn_wasecaUtility_cityOfWasecaRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 90
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$90 rebate for a >55 gallon heat pump water heater. Rebate not to exceed 50% of cost.",
-      "es": "Reembolso de $90 por un calentador de agua con bomba de calor de más de 55 galones. El reembolso no deberá exceder el 50 % del costo."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/waseca"
-    }
-  },
-  {
-    "id": "MN-413",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_clothes_dryer"
-    ],
-    "program": "mn_wasecaUtility_cityOfWasecaRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 90,
-      "minimum": 25,
-      "maximum": 90
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $90 rebate for a washer/dryer combo with heat pump drying. Must be ENERGY STAR certified. Rebate amount dependent upon washer efficiency.  ",
-      "es": "Reembolso de hasta $90 por una lavadora y secadora combinada con bomba de calor para el secado. Debe contar con certificación ENERGY STAR. El monto del reembolso depende de la eficiencia de la lavadora."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/waseca"
-    }
-  },
-  {
-    "id": "MN-414",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_wellsPublicUtilities_wellsPublicUtilitiesRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$1,500 rebate for a ducted air source heat pump. Must meet efficiency specifications.",
-      "es": "Reembolso de $1,500 por una bomba de calor de fuente de aire con sistema de ductos. Debe cumplir con las especificaciones de eficiencia."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/wells"
-    }
-  },
-  {
-    "id": "MN-415",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_water_heater"
-    ],
-    "program": "mn_wellsPublicUtilities_wellsPublicUtilitiesRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$400 rebate for a 20-55 gallon heat pump water heater. Rebate not to exceed 50% of cost.",
-      "es": "Reembolso de $90 por un calentador de agua con bomba de calor de 20 a 55 galones. El reembolso no deberá exceder el 50 % del costo."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/wells"
-    }
-  },
-  {
-    "id": "MN-416",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_water_heater"
-    ],
-    "program": "mn_wellsPublicUtilities_wellsPublicUtilitiesRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 90
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$90 rebate for a >55 gallon heat pump water heater. Rebate not to exceed 50% of cost.",
-      "es": "Reembolso de $90 por un calentador de agua con bomba de calor de más de 55 galones. El reembolso no deberá exceder el 50 % del costo."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/wells"
-    }
-  },
-  {
-    "id": "MN-417",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_clothes_dryer"
-    ],
-    "program": "mn_wellsPublicUtilities_wellsPublicUtilitiesRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 25
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$25 rebate for a heat pump clothes dryer in a single-family home.",
-      "es": "Reembolso de $25 por una secadora de ropa con bomba de calor en una vivienda unifamiliar."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/wells"
-    }
-  },
-  {
-    "id": "MN-418",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_clothes_dryer"
-    ],
-    "program": "mn_wellsPublicUtilities_wellsPublicUtilitiesRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 90,
-      "minimum": 25,
-      "maximum": 90
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $90 rebate for a washer/dryer combo with heat pump drying. Must be ENERGY STAR certified. Rebate amount dependent upon washer efficiency.  ",
-      "es": "Reembolso de hasta $90 por una lavadora y secadora combinada con bomba de calor para el secado. Debe contar con certificación ENERGY STAR. El monto del reembolso depende de la eficiencia de la lavadora."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/wells"
-    }
-  },
-  {
-    "id": "MN-419",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "mn_wellsPublicUtilities_wellsPublicUtilitiesRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2200,
-      "minimum": 100,
-      "maximum": 2200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $2,200 rebate for a ductless air source heat pump. Range is between $100 and $2,200 depending on heat pump size, efficiency, and current system.",
-      "es": "Reembolso de hasta $2,200 por una bomba de calor de fuente de aire sin ductos. El monto varía entre $100 y $2,200, según el tamaño de la bomba de calor, su eficiencia y el sistema actual."
-    },
-    "url": {
-      "en": "https://smmpa.com/members/wells"
-    }
-  },
-  {
     "id": "MN-420",
     "payment_methods": [
       "rebate"
@@ -8249,7 +7643,7 @@
       "en": "$500 rebate for an air source heat pump. Must be installed following quality installation (Q.I.) procedures and ENERGY STAR certified.",
       "es": "Reembolso de $500 para una bomba de calor aerotérmica. Debe instalarse siguiendo los procedimientos de instalación de calidad (QI) y contar con la certificación ENERGY STAR."
     },
-    "end_date": "2025-11-30",
+    "end_date": "2026-11-30",
     "url": {
       "en": "https://www.mmpa.org/communities/brownton/"
     }
@@ -8664,7 +8058,7 @@
       "en": "Up to $600 per ton rebate for an air source heat pump. Either $300 or $600 per ton, depending upon unit efficiency.",
       "es": "Reembolso de hasta $600 por tonelada para una bomba de calor aerotérmica. Reembolso de $300 o $600 por tonelada, según la eficiencia de la unidad."
     },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.roseauelectric.coop/products-services/rebate-programs"
     }
@@ -8690,34 +8084,7 @@
       "en": "$150 per ton rebate for electric heating with an air source heat pump. Unit must meet CIP requirements. See rebate application form for more details.",
       "es": "Reembolso de $150 por tonelada para una calefacción eléctrica con bomba de calor aerotérmica. La unidad debe cumplir con los requisitos de CIP. Consulte el formulario de solicitud de reembolso para obtener más información."
     },
-    "url": {
-      "en": "https://www.roseauelectric.coop/products-services/rebate-programs"
-    }
-  },
-  {
-    "id": "MN-455",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "other_heat_pump",
-      "ducted_heat_pump",
-      "ductless_heat_pump"
-    ],
-    "program": "mn_roseauElectricCoop_roseauElectricCooperativePowerSaversEfficiencyRebates",
-    "amount": {
-      "type": "dollars_per_unit",
-      "number": 50,
-      "unit": "ton"
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$50 per ton rebate for air source heat pump electric heating equipment.  Unit must meet CIP requirements. See application form for more details.",
-      "es": "Reembolso de $50 por tonelada para equipos de calefacción eléctrica con bomba de calor aerotérmica. La unidad debe cumplir con los requisitos de CIP. Consulte el formulario de solicitud para obtener más información."
-    },
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.roseauelectric.coop/products-services/rebate-programs"
     }
@@ -8879,9 +8246,9 @@
       "en": "$500 rebate for an air source heat pump. Must be ENERGY STAR certified and installed following Quality Installation (Q.I.) procedures.",
       "es": "Reembolso de $500 para una bomba de calor aerotérmica. Debe contar con certificación ENERGY STAR e instalarse siguiendo los procedimientos de Instalación de Calidad (IC)."
     },
-    "end_date": "2025-11-30",
+    "end_date": "2026-11-30",
     "url": {
-      "en": "https://www.arlingtonmn.gov/rebates#:~:text=By%20participating%20in%20our%20We,for%20more%20information%20and%20forms."
+      "en": "https://www.mmpa.org/communities/arlington/"
     }
   },
   {
@@ -9053,8 +8420,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,000 rebate for an air source heat pump. Rebate amount depends upon unit size and efficiency. ",
-      "es": "Reembolso de hasta $1,000 para una bomba de calor aerotérmica. El monto del reembolso depende del tamaño y la eficiencia de la unidad."
+      "en": "Up to $1,000 rebate for an air source heat pump. Rebate amount dependent upon unit size and efficiency. ",
+      "es": "Reembolso de hasta $1,000 para una bomba de calor de aire. El monto del reembolso depende del tamaño y la eficiencia de la unidad. "
     },
     "url": {
       "en": "https://www.clpower.com/rebates"
@@ -9600,6 +8967,438 @@
     },
     "url": {
       "en": "https://smmpa.com/members"
+    }
+  },
+  {
+    "id": "MN-490",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mn_mountainLakeMunicipalUtilities_mountainLakePublicUtilitiesEnergyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750 rebate for an air source heat pump. Rebate is per condensing unit. Must meet efficiency specifications.",
+      "es": "Descuento de $750 para una bomba de calor aerotérmica. El descuento es por unidad condensadora. Debe cumplir con las especificaciones de eficiencia."
+    },
+    "url": {
+      "en": "https://mountainlakemn.com/city-mountain-lake/energy-rebates/"
+    }
+  },
+  {
+    "id": "MN-491",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "mn_southernMinnesotaMunicipalPowerAgency_southernMinnesotaMunicipalPowerAgencyMembersEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$25 rebate for a heat pump clothes dryer in a single-family home. Must be ENERGY STAR certified and have a drum capacity of 4.4 cubic feet or greater.",
+      "es": "Reembolso de $25 para una secadora de ropa con bomba de calor en una vivienda unifamiliar. Debe contar con certificación ENERGY STAR y tener un tambor con una capacidad de 4.4 pies cúbicos o más."
+    },
+    "url": {
+      "en": "https://smmpa.com/members"
+    }
+  },
+  {
+    "id": "MN-492",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "mn_southernMinnesotaMunicipalPowerAgency_southernMinnesotaMunicipalPowerAgencyMembersEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 90,
+      "maximum": 90
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $90 rebate for a washer/dryer combo with heat pump drying. Must be ENERGY STAR certified. Rebate amount dependent upon washer efficiency.  ",
+      "es": "Hasta $90 de reembolso por una lavadora/secadora con bomba de calor. Debe contar con certificación ENERGY STAR. El monto del reembolso depende de la eficiencia de la lavadora.  "
+    },
+    "url": {
+      "en": "https://smmpa.com/members"
+    }
+  },
+  {
+    "id": "MN-493",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "mn_cityOfMinneapolis_minneapolisGreenCostShareBonusRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$800 bonus rebate for an electric panel upgrade. Green Zone residents qualify for up to $3,000 bonus rebate.",
+      "es": "Bono de $800 por la actualización del panel eléctrico. Los residentes de la Zona Verde pueden obtener un bono de hasta $3,000."
+    },
+    "end_date": "2026-12-15",
+    "url": {
+      "en": "https://www.mncee.org/minneapolis-bonus-rebate-program"
+    }
+  },
+  {
+    "id": "MN-494",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_dakotaElectricAssociation_dakotaElectricAssociationEnergyWiseRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$300 rebate for ducted air source heat pumps first-time enrolled in dual fuel program. Must be compatible with utility load management requirements.",
+      "es": "Reembolso de $300 para bombas de calor de aire canalizado que se inscriban por primera vez en el programa de combustible dual. Deben ser compatibles con los requisitos de gestión de carga de los servicios públicos."
+    },
+    "start_date": "2026-01-01",
+    "url": {
+      "en": "https://www.dakotaelectric.com/member-services/programs-rebates/for-your-home/energy-wise-rebates/"
+    }
+  },
+  {
+    "id": "MN-495",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_panel"
+    ],
+    "program": "mn_cityOfEdina_edinaCommunityClimateActionFund",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "minimum": 750,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% utility rebate match for an electric panel upgrade or 100% bonus match. Edina residents only.",
+      "es": "Bonificación del 50% en servicios públicos para la actualización del panel eléctrico o bonificación del 100%. Solo para residentes de Edina."
+    },
+    "url": {
+      "en": "https://www.edinamn.gov/1929/Community-Climate-Action-Fund"
+    }
+  },
+  {
+    "id": "MN-496",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mn_marshallMunicipalUtilities_marshallMunicipalUtilitiesRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 150,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 per ton rebate for an air source heat pump. Must meet efficiency specifications.",
+      "es": "Descuento de $150 por tonelada para una bomba de calor aerotérmica. Debe cumplir con las especificaciones de eficiencia."
+    },
+    "url": {
+      "en": "https://www.marshallutilities.com/index.php/residential/rebates-conservation/heating-cooling"
+    }
+  },
+  {
+    "id": "MN-497",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mn_shellyMunicipalLightDept_cityOfShellyEnergyStarApplianceRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 rebate for an air source heat pump. Must be ENERGY STAR certified. ",
+      "es": "Reembolso de $250 para una bomba de calor de aire. Debe contar con certificación ENERGY STAR. "
+    },
+    "url": {
+      "en": "https://www.shellymn.com/copy-2-of-cost-of-living"
+    }
+  },
+  {
+    "id": "MN-498",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mn_sleepyEyePublicUtility_sleepyEyeResidentialRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "minimum": 50,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $750 rebate for an air source heat pump. Rebate amount dependent upon unit efficiency. ",
+      "es": "Reembolso de hasta $750 por una bomba de calor de aire. El monto del reembolso depende de la eficiencia de la unidad. "
+    },
+    "url": {
+      "en": "https://www.sleepyeye-mn.com/rebates.html"
+    }
+  },
+  {
+    "id": "MN-499",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_steele-WasecaCoopElectric_steele-WasecaCoopElectricRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "minimum": 500,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate for a ducted air source heat pump. Either $500 or $800 depending upon unit size and efficiency. Must have quality installation.",
+      "es": "Reembolso de hasta $800 por una bomba de calor de aire por conducto. El precio puede variar entre $500 y $800, según el tamaño y la eficiencia de la unidad. Es imprescindible una instalación de calidad."
+    },
+    "url": {
+      "en": "https://swce.coop/swce-field-services/save-money-and-energy/"
+    }
+  },
+  {
+    "id": "MN-500",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_steele-WasecaCoopElectric_steele-WasecaCoopElectricRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 800,
+      "minimum": 100,
+      "maximum": 800
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $800 rebate for a ductless air source heat pump. Rebate amount dependent upon unit size and efficiency.",
+      "es": "Hasta $800 de reembolso por una bomba de calor de aire sin ductos. El monto del reembolso depende del tamaño y la eficiencia de la unidad."
+    },
+    "url": {
+      "en": "https://swce.coop/swce-field-services/save-money-and-energy/"
+    }
+  },
+  {
+    "id": "MN-501",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mn_toddWadenaElectricCoop_todd-WadenaElectricCooperativeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "minimum": 500,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $700 rebate for a ducted air source heat pump. Either $500 or $700 depending upon unit size and efficiency. Must have qualified installation.",
+      "es": "Reembolso de hasta $700 por una bomba de calor de aire por conducto. El reembolso puede variar entre $500 y $700, según el tamaño y la eficiencia de la unidad. Se requiere instalación calificada."
+    },
+    "url": {
+      "en": "https://toddwadena.coop/services/rebates/heat-pumps/"
+    }
+  },
+  {
+    "id": "MN-502",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "mn_toddWadenaElectricCoop_todd-WadenaElectricCooperativeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "minimum": 150,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $700 rebate for a ductless air source heat pump. Rebate amount dependent upon unit size and efficiency. ",
+      "es": "Hasta $700 de reembolso por una bomba de calor de aire sin ductos. El monto del reembolso depende del tamaño y la eficiencia de la unidad. "
+    },
+    "url": {
+      "en": "https://toddwadena.coop/services/rebates/heat-pumps/"
+    }
+  },
+  {
+    "id": "MN-503",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mn_virginiaPublicUtilities_virginiaPublicUtilitiesResidentialConservationImprovementProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$400 rebate for an air source heat pump. Must meet efficiency specifications. ",
+      "es": "Reembolso de $400 para una bomba de calor aerotérmica. Debe cumplir con las especificaciones de eficiencia. "
+    },
+    "url": {
+      "en": "https://www.vpuc.com/conservation/residential-conservation/"
+    }
+  },
+  {
+    "id": "MN-504",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "mn_virginiaPublicUtilities_virginiaPublicUtilitiesResidentialConservationImprovementProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate for a cold climate air source heat pump. Must must be ENERGY STAR approved and Cold Climate Certified.",
+      "es": "Reembolso de $1,000 para una bomba de calor de aire para climas fríos. Debe contar con la certificación ENERGY STAR y certificación para climas fríos."
+    },
+    "url": {
+      "en": "https://www.vpuc.com/conservation/residential-conservation/"
+    }
+  },
+  {
+    "id": "MN-505",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "mn_lakeRegionElectricCoop_lakeRegionElectricCoopRebates,Loans,AndTaxCredits",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 40,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$40 per ton rebate for quality installation (Q.I.) of ducted or ducted air source heat pump. ",
+      "es": "Reembolso de $40 por tonelada para instalación de calidad (QI) de bomba de calor de fuente de aire conducido o canalizada. "
+    },
+    "url": {
+      "en": "https://www.lrec.coop/energy-services/air-source-heat-pumps/"
+    }
+  },
+  {
+    "id": "MN-506",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_heat_pump"
+    ],
+    "program": "mn_meekerCoopLightAndPowerAssn_meekerCoopLightAndPowerAssociationEnergyManagementRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 40,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$40 per ton rebate for quality installation (Q.I.) of ducted or ducted air source heat pump. ",
+      "es": "Reembolso de $40 por tonelada para instalación de calidad (QI) de bomba de calor de fuente de aire conducido o canalizada. "
+    },
+    "url": {
+      "en": "https://www.meeker.coop/programs/"
     }
   }
 ]
