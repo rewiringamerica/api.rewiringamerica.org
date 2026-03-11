@@ -3797,21 +3797,22 @@
     ],
     "program": "ma-reading-mlp-energy-efficiency",
     "amount": {
-      "type": "dollar_amount",
-      "number": 500
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for an electric panel upgrade to a 200-amp standard or smart panel, not to exceed 50% of total costs.",
-      "es": "Reembolso de $500 para la actualización de panel eléctrico a panel estándar o inteligente de 200 amperios, que no excederá el 50 % de los costos totales."
+      "en": "$500 rebate for an electric panel upgrade when installing a 200-amp standard, 400-amp standard or smart panel.",
+      "es": "Reembolso de $500 por actualización de panel eléctrico al instalar un panel estándar de 200 amperios, un panel estándar de 400 amperios o un panel inteligente."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.rmld.com/efficiency-electrification-programs"
+      "en": "https://www.rmld.com/187/Electric-Panel-Upgrade-Rebate"
     }
   },
   {
@@ -5875,7 +5876,9 @@
     ],
     "items": [
       "ducted_heat_pump",
-      "ductless_heat_pump"
+      "ductless_heat_pump",
+      "air_to_water_heat_pump",
+      "geothermal_heating_installation"
     ],
     "program": "ma-reading-mlp-energy-efficiency",
     "amount": {
@@ -5889,13 +5892,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate of $200/ton, up to $2,000, for the replacement of a partial-home air source heat pump. Weatherization is required.",
-      "es": "Reembolso de $200 por tonelada, hasta un máximo de $2,000, para el reemplazo de una bomba de calor de fuente de aire en una vivienda parcial. Se requiere climatización."
+      "en": "$200 per ton up to $2,000 for the replacement of a partial-home heat pump system, weatherization is required.",
+      "es": "$200 por tonelada hasta $2,000 para el reemplazo de un sistema de bomba de calor de una parte del hogar; se requiere climatización."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.rmld.com/efficiency-electrification-programs"
+      "en": "https://www.rmld.com/188/Heat-Pump-Rebate-or-0-Interest-Loan"
     }
   },
   {
@@ -5905,7 +5908,9 @@
     ],
     "items": [
       "ducted_heat_pump",
-      "ductless_heat_pump"
+      "ductless_heat_pump",
+      "air_to_water_heat_pump",
+      "geothermal_heating_installation"
     ],
     "program": "ma-reading-mlp-energy-efficiency",
     "amount": {
@@ -5919,13 +5924,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate of $1,000/ton, up to $3,000, for a new partial-home air source heat pump. Weatherization is required.",
-      "es": "Descuento de $1,000 por tonelada, hasta $3,000, para una nueva bomba de calor aerotérmica para parte de una vivienda. Se requiere climatización."
+      "en": "$1,000 per ton up to $3,000 rebate for a new partial-home heat pump system, weatherization is required.",
+      "es": "$1,000 por tonelada hasta $3,000 de reembolso para un nuevo sistema de bomba de calor para viviendas parciales; se requiere climatización."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.rmld.com/efficiency-electrification-programs"
+      "en": "https://www.rmld.com/188/Heat-Pump-Rebate-or-0-Interest-Loan"
     }
   },
   {
@@ -5968,9 +5973,9 @@
       "basement_insulation",
       "attic_or_roof_insulation",
       "crawlspace_insulation",
-      "duct_sealing",
       "floor_insulation",
-      "wall_insulation"
+      "wall_insulation",
+      "other_insulation"
     ],
     "program": "ma-reading-mlp-energy-efficiency",
     "amount": {
@@ -5983,13 +5988,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "50% rebate, up to $3,500, for the required weatherization in conjunction with installing a heat pump system.",
-      "es": "Reembolso del 50 %, hasta $3,500, para la climatización requerida junto con la instalación de un sistema de bomba de calor."
+      "en": "50% of cost up to $3,500 rebate for qualifying weatherization measures in conjunction with installing a heat pump system.",
+      "es": "Reembolso del 50 % del costo hasta $3500 para medidas de climatización calificadas junto con la instalación de un sistema de bomba de calor."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.rmld.com/efficiency-electrification-programs"
+      "en": "https://www.rmld.com/188/Heat-Pump-Rebate-or-0-Interest-Loan"
     }
   },
   {
@@ -12785,11 +12790,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "No-cost home energy assessment.",
+      "en": "No cost home energy assessment.",
       "es": "Evaluación energética del hogar sin costo."
     },
     "url": {
-      "en": "https://www.paxtonlight.com/free-home-energy-audit"
+      "en": "https://nextzero.org/paxton/energy-audits/"
     }
   },
   {
@@ -13490,7 +13495,9 @@
     ],
     "items": [
       "ducted_heat_pump",
-      "ductless_heat_pump"
+      "ductless_heat_pump",
+      "air_to_water_heat_pump",
+      "geothermal_heating_installation"
     ],
     "program": "ma-reading-mlp-energy-efficiency",
     "amount": {
@@ -13504,13 +13511,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate of $400/ton, up to $4,000, for the replacement of a whole-home air source heat pump. Weatherization is required.",
-      "es": "Descuento de $400 por tonelada, hasta un máximo de $4,000, para el reemplazo de una bomba de calor de fuente de aire para toda la vivienda. Se requiere climatización."
+      "en": "$400 per ton up to $4,000 rebate for the replacement of a whole-home heat pump system, weatherization is required.",
+      "es": "$400 por tonelada hasta $4,000 de reembolso por el reemplazo de un sistema de bomba de calor para toda la casa. Se requiere climatización."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.rmld.com/efficiency-electrification-programs"
+      "en": "https://www.rmld.com/188/Heat-Pump-Rebate-or-0-Interest-Loan"
     }
   },
   {
@@ -13520,7 +13527,9 @@
     ],
     "items": [
       "ducted_heat_pump",
-      "ductless_heat_pump"
+      "ductless_heat_pump",
+      "air_to_water_heat_pump",
+      "geothermal_heating_installation"
     ],
     "program": "ma-reading-mlp-energy-efficiency",
     "amount": {
@@ -13534,13 +13543,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate of $2,000/ton, up to $8,000, for installing a new whole-home air source heat pump. Weatherization required.",
-      "es": "Descuento de $2,000 por tonelada, hasta $8,000, para la instalación de una nueva bomba de calor aerotérmica para toda la casa. Requiere climatización."
+      "en": "$2,000 per ton up to $8,000 rebate for installing a new qualifying whole-home heat pump system, weatherization required.",
+      "es": "$2,000 por tonelada hasta $8,000 de reembolso por instalar un nuevo sistema de bomba de calor para toda la casa que califique, se requiere climatización."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.rmld.com/efficiency-electrification-programs"
+      "en": "https://www.rmld.com/188/Heat-Pump-Rebate-or-0-Interest-Loan"
     }
   },
   {
