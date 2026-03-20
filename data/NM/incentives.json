@@ -2740,8 +2740,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$16/kW for electric thermal storage units and $12/kW for thermal slabs controlled by timers or master control systems. Min. load for ETS is 1kW.\n",
-      "es": "$16 por kW por unidades de almacenamiento térmico eléctrico y $12 por kW por placas térmicas controladas por temporizadores o sistemas de control maestro. La carga mínima para ETS es de 1 kW."
+      "en": "$16/kW for electric thermal storage units and $12/kW for thermal slabs controlled by timers or master control systems. Min. load for ETS is 1kW.",
+      "es": "$16/kW para unidades de almacenamiento térmico eléctrico y $12/kW para placas térmicas controladas por temporizadores o sistemas de control maestro. La carga mínima para ETS es de 1 kW."
     },
     "url": {
       "en": "https://www.sierraelectric.org/energy-efficiency-rebates"
@@ -2765,8 +2765,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of Level 2 cost up to $125 for EV charger and $125 for labor. If managed system, the rebate is 50% of cost up to $500 for charger/$500 for labor.\n",
-      "es": "50 % del costo de nivel 2 hasta $125 por el cargador de vehículos eléctricos y $125 para la mano de obra. Si se trata de un sistema gestionado, el reembolso es el 50 % del costo hasta $500 por el cargador y $500 por la mano de obra."
+      "en": "50% of Level 2 cost up to $125 for EV charger and $125 for labor. If managed system, the rebate is 50% of cost up to $500 for charger/$500 for labor.",
+      "es": "50% del costo de Nivel 2 hasta $125 para el cargador de vehículos eléctricos y $125 para la mano de obra. Si se trata de un sistema gestionado, el reembolso es del 50% del costo hasta $500 para el cargador y $500 para la mano de obra."
     },
     "url": {
       "en": "https://www.sierraelectric.org/energy-efficiency-rebates"
@@ -2916,8 +2916,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "25% cost up to $150 for electric snowblower, walk-behind mower; $50 for trimmer, blower, power washer; $100 for chainsaw. 50% ($25 max) extra battery",
-      "es": "25 % del costo hasta $150 para quitanieves eléctrico, cortadora de césped manual; $50 para recortadora, sopladora, hidrolavadora; $100 para motosierra. 50 % ($25 máximo) de batería adicional"
+      "en": "25% cost up to $150 for walk-behind mower; $50 for trimmer, leaf blower, power washer; $100 for chainsaw. 50% ($25 max) extra battery",
+      "es": "25% de costo hasta $150 para cortadora de césped manual; $50 para recortadora, sopladora de hojas, hidrolavadora; $100 para motosierra. 50% ($25 máximo) batería adicional"
     },
     "url": {
       "en": "https://www.sierraelectric.org/energy-efficiency-rebates"
@@ -3434,8 +3434,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "25% cost up to $150 for walk-behind mower; $50 for trimmer, blower, power washer; $100 for chainsaw. $25 max for extra battery. ",
-      "es": "Costo del 25% hasta $150 para cortadora de césped manual; $50 para recortadora, sopladora, hidrolavadora; $100 para motosierra. Máximo de $25 por batería adicional. "
+      "en": "25% cost up to $150 for walk-behind mower; $50 for trimmer, leaf blower, power washer; $100 for chainsaw. $25 max for extra battery. ",
+      "es": "Costo del 25% hasta $150 para cortadora de césped manual; $50 para recortadora, sopladora de hojas, hidrolavadora; $100 para motosierra. Máximo de $25 por batería adicional. "
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -4669,12 +4669,9 @@
       "non_heat_pump_water_heater",
       "heat_pump_water_heater",
       "heat_pump_clothes_dryer",
-      "ductless_heat_pump",
-      "ducted_heat_pump",
       "duct_sealing",
       "door_replacement",
       "crawlspace_insulation",
-      "central_air_conditioner",
       "basement_insulation",
       "attic_or_roof_insulation",
       "air_sealing",
@@ -4697,7 +4694,7 @@
     },
     "low_income": "nm-pnm-income-qualified",
     "url": {
-      "en": "https://housingnm.org/programs/home-rehabilitation-and-weatherization/energymart-weatherization-assistance"
+      "en": "https://housingnm.org/programs/home-rehabilitation-and-weatherization"
     }
   },
   {
@@ -4713,10 +4710,7 @@
       "air_sealing",
       "attic_or_roof_insulation",
       "basement_insulation",
-      "central_air_conditioner",
       "crawlspace_insulation",
-      "ducted_heat_pump",
-      "ductless_heat_pump",
       "electric_panel",
       "electric_stove",
       "electric_wiring",
@@ -7206,6 +7200,375 @@
     },
     "url": {
       "en": "https://cvecoop.org/heating-cooling-rebates"
+    }
+  },
+  {
+    "id": "NM-297",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation"
+    ],
+    "program": "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for bringing existing insulation R value to at least an\nR-30.",
+      "es": "Reembolso de $500 por llevar el valor R del aislamiento existente a al menos \n R-30."
+    },
+    "url": {
+      "en": "https://www.fecnm.org/farmers-electric-cooperative-of-new-mexico"
+    }
+  },
+  {
+    "id": "NM-298",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "25% rebate of materials costs for Energy Star windows or storm windows up to $750.",
+      "es": "25% de reembolso en el costo de materiales para ventanas Energy Star o ventanas contra tormentas hasta $750."
+    },
+    "url": {
+      "en": "https://www.fecnm.org/farmers-electric-cooperative-of-new-mexico"
+    }
+  },
+  {
+    "id": "NM-299",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "ton",
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,000/ton up to $5,000 per home for geothermal heat pump.  EER of at least 14.1 for closed loop, 16.2 for open loop and 15 on direct expansion.",
+      "es": "Desde $1,000/tonelada hasta $5,000 por vivienda para bomba de calor geotérmica. EER de al menos 14.1 para circuito cerrado, 16.2 para circuito abierto y 15 para expansión directa."
+    },
+    "url": {
+      "en": "https://www.fecnm.org/farmers-electric-cooperative-of-new-mexico"
+    }
+  },
+  {
+    "id": "NM-300",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate to replace gas/propane or electric (with EF <.90 or older than 10 years) water heater with hybrid heat pump model with at least 2.0 EF. ",
+      "es": "Reembolso de $500 para reemplazar un calentador de agua a gas/propano o eléctrico (con EF <.90 o con más de 10 años de antigüedad) por un modelo de bomba de calor híbrida con al menos 2.0 EF. "
+    },
+    "url": {
+      "en": "https://www.fecnm.org/farmers-electric-cooperative-of-new-mexico"
+    }
+  },
+  {
+    "id": "NM-301",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater"
+    ],
+    "program": "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$150 rebate to replace gas/propane or electric (10+ years old or EF< .9) water heater with an electric model having an  EF of at least .95.",
+      "es": "Reembolso de $150 para reemplazar un calentador de agua a gas/propano o eléctrico (de más de 10 años de antigüedad o EF < .9) por un modelo eléctrico que tenga un EF de al menos .95."
+    },
+    "url": {
+      "en": "https://www.fecnm.org/farmers-electric-cooperative-of-new-mexico"
+    }
+  },
+  {
+    "id": "NM-302",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for qualified ducted heat pump or upgrade existing heat pump with SEER rating of 12 or lower or more than 15 years old.",
+      "es": "Reembolso de $500 para una bomba de calor canalizada calificada o actualización de una bomba de calor existente con clasificación SEER de 12 o menos o más de 15 años de antigüedad."
+    },
+    "url": {
+      "en": "https://www.fecnm.org/farmers-electric-cooperative-of-new-mexico"
+    }
+  },
+  {
+    "id": "NM-303",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 125,
+      "unit": "ton",
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$125/ton up to $500 for qualified ductless heat pump.",
+      "es": "$125/tonelada hasta $500 para bomba de calor sin ductos calificada."
+    },
+    "url": {
+      "en": "https://www.fecnm.org/farmers-electric-cooperative-of-new-mexico"
+    }
+  },
+  {
+    "id": "NM-304",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for first Energy Star smart thermostat and $25 for a second one. ",
+      "es": "Reembolso de $75 por el primer termostato inteligente Energy Star y $25 por el segundo. "
+    },
+    "url": {
+      "en": "https://www.fecnm.org/farmers-electric-cooperative-of-new-mexico"
+    }
+  },
+  {
+    "id": "NM-305",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation"
+    ],
+    "program": "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,250 rebate for new homes with qualified heat pumps and insulation values.",
+      "es": "Reembolso de $1,250 para casas nuevas con bombas de calor y valores de aislamiento calificados."
+    },
+    "url": {
+      "en": "https://www.fecnm.org/farmers-electric-cooperative-of-new-mexico"
+    }
+  },
+  {
+    "id": "NM-306",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "nm_rioRancho_indoorRebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 30
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$30 bill credit for programmable evaporative cooler thermostat.",
+      "es": "Crédito de factura de $30 para termostato de enfriador evaporativo programable."
+    },
+    "url": {
+      "en": "https://rrnm.gov/422/Indoor-Rebates"
+    }
+  },
+  {
+    "id": "NM-307",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nm_rioRancho_indoorRebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,500 bill credit for replacing evaporative cooler with refrigerated air after obtaining pre-approval.",
+      "es": "Crédito de factura de $1,500 por reemplazar el enfriador evaporativo con aire refrigerado después de obtener la aprobación previa."
+    },
+    "url": {
+      "en": "https://rrnm.gov/422/Indoor-Rebates"
+    }
+  },
+  {
+    "id": "NM-308",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm_sierraElectricCooperative_sierraElectricCoopEnergyEfficiencyRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% cost up to $250 for 2-stage snowblower and $$150 for single state. 50% ($25 max) extra battery at time of purchase.",
+      "es": "Costo del 25% hasta $250 para quitanieves de 2 etapas y $150 para una sola etapa. 50% ($25 máximo) de batería adicional al momento de la compra."
+    },
+    "url": {
+      "en": "https://www.sierraelectric.org/energy-efficiency-rebates"
+    }
+  },
+  {
+    "id": "NM-309",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "electric_wiring",
+      "energy_audit",
+      "efficiency_rebates",
+      "electric_panel",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nm_housingNewMexicoMfa_nMEnergy$MartWeatherizationProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Provides energy-saving retrofits and home modifications at no charge to eligible low-income homeowners and renters.",
+      "es": "Proporciona modificaciones y modernizaciones para ahorrar energía en el hogar sin cargo para propietarios e inquilinos de bajos ingresos que reúnan los requisitos."
+    },
+    "low_income": "nm-pnm-income-qualified",
+    "url": {
+      "en": "https://housingnm.org/programs/home-rehabilitation-and-weatherization"
+    }
+  },
+  {
+    "id": "NM-310",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "nm_housingNewMexicoMfa_veteransHousingRehabilitationAndModificationProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Provides energy-saving retrofits and home modifications at no charge to eligible low-income homeowners and renters. May include heat pumps & AC.",
+      "es": "Ofrece renovaciones y modificaciones de viviendas para ahorrar energía sin costo para propietarios e inquilinos de bajos ingresos que cumplan con los requisitos. Puede incluir bombas de calor y aire acondicionado."
+    },
+    "low_income": "nm-hear-low-income",
+    "url": {
+      "en": "https://housingnm.org/programs/home-rehabilitation-and-weatherization/home-rehabilitation/veterans-home-rehabilitation-and-modification"
     }
   }
 ]

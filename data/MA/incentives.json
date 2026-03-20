@@ -67,11 +67,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "Free energy assessment for residents with electricity or oil heating systems. Required to receive rebates from BELD.",
-      "es": "Evaluación energética gratuita para residentes con sistemas de calefacción de electricidad o petróleo. Requerido para recibir reembolsos de BELD."
+      "en": "No cost home energy assessment for residential customers with electric or oil heating systems. ",
+      "es": "Evaluación de energía del hogar sin costo para clientes residenciales con sistemas de calefacción eléctricos o de petróleo. "
     },
     "url": {
-      "en": "https://www.beld.com/energysavings/"
+      "en": "https://www.beld.com/energysavings/#assessment-anchor"
     }
   },
   {
@@ -148,11 +148,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "$750/ton rebate up to $4,500 for ducted or ductless heat pumps. Gas heating customers only.",
-      "es": "Reembolso de $750 por tonelada, hasta $4,500 para bombas de calor con o sin ductos. Solo para clientes que utilizan calefacción a gas."
+      "en": "$750 per ton up to $4,500 rebate for a qualifying air source heat pump system for natural gas heating customers only.",
+      "es": "$750 por tonelada hasta $4,500 de reembolso para un sistema de bomba de calor de fuente de aire calificado solo para clientes de calefacción a gas natural."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.beld.com/energysavings/"
+      "en": "https://abodeenergy.com/homeowners/select-your-mlp/braintree/"
     }
   },
   {
@@ -176,11 +178,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "$1,250/ton rebate up to $7,500 for ducted or ductless heat pumps. Non-gas heating customers only.",
-      "es": "Reembolso de $1250 por tonelada hasta $7,500 por bombas de calor con o sin ductos. Solo para clientes que no utilizan calefacción a gas."
+      "en": "$1,250 per ton up to $7,500 rebate for a qualifying air source heat pump system for customers without natural gas heating.",
+      "es": "$1,250 por tonelada hasta $7,500 de reembolso para un sistema de bomba de calor de fuente de aire calificado para clientes sin calefacción a gas natural."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.beld.com/energysavings/"
+      "en": "https://abodeenergy.com/homeowners/select-your-mlp/braintree/"
     }
   },
   {
@@ -1114,8 +1118,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate for an electric clothes dryer.",
-      "es": "Reembolso de $50 por una secadora de ropa eléctrica."
+      "en": "$50 rebate for an ENERGY STAR certified electric clothes dryer.",
+      "es": "Reembolso de $50 por la compra de una secadora de ropa eléctrica con certificación ENERGY STAR."
     },
     "url": {
       "en": "https://www.beld.com/energysavings/"
@@ -1140,8 +1144,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "$250 rebate for a heat pump water heater.",
-      "es": "Reembolso de $250 por un calentador de agua con bomba de calor."
+      "en": "$250 rebate for an ENERGY STAR certified heat pump water heater.",
+      "es": "Reembolso de $250 por un calentador de agua con bomba de calor con certificación ENERGY STAR."
     },
     "url": {
       "en": "https://www.beld.com/energysavings/"
@@ -1166,8 +1170,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "$100 rebate for a smart thermostat.",
-      "es": "Reembolso de $100 por un termostato inteligente."
+      "en": "$100 rebate for an ENERGY STAR certified smart thermostat for residential customers with oil heat and/or central air conditioning.",
+      "es": "Reembolso de $100 por un termostato inteligente con certificación ENERGY STAR para clientes residenciales con calefacción de gasóleo y/o aire acondicionado central."
     },
     "url": {
       "en": "https://www.beld.com/energysavings/"
@@ -1192,8 +1196,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "$250 rebate for an induction cooktop.",
-      "es": "Reembolso de $250 para una placa de cocción por inducción."
+      "en": "$250 rebate for an ENERGY STAR certified induction cooktop.",
+      "es": "Reembolso de $250 por una cocina de inducción con certificación ENERGY STAR."
     },
     "url": {
       "en": "https://www.beld.com/energysavings/"
@@ -1211,7 +1215,6 @@
     "amount": {
       "type": "dollar_amount",
       "number": 75,
-      "minimum": 30,
       "maximum": 75
     },
     "owner_status": [
@@ -1219,8 +1222,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $75 for electric lawn equipment including lawn mowers, leaf blowers, string trimmers, and chainsaws.",
-      "es": "Hasta $75 en equipos eléctricos para césped, incluidas cortadoras de césped, sopladores de hojas, cortadoras de hilo y motosierras."
+      "en": "$75 rebate for a battery powered lawn mower.",
+      "es": "Reembolso de 75 dólares por una cortadora de césped a batería."
     },
     "url": {
       "en": "https://www.beld.com/energysavings/"
@@ -1250,14 +1253,15 @@
       "maximum": 1000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Up to 50% of job cost or $1,000, for weatherization measures recommended by an energy audit.",
-      "es": "Hasta el 50% del costo del trabajo o $1,000, para medidas de climatización recomendadas por una auditoría energética."
+      "en": "50% of cost up to $1,000 rebate for weatherization measures recommended in home energy audit for customers without natural gas heating.",
+      "es": "50% del costo hasta $1,000 de reembolso para medidas de climatización recomendadas en la auditoría energética del hogar para clientes sin calefacción a gas natural."
     },
     "url": {
-      "en": "https://www.beld.com/energysavings/"
+      "en": "https://www.beld.com/energysavings/#assessment-anchor"
     }
   },
   {
@@ -1329,11 +1333,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "Free home energy audit for residential customers.",
-      "es": "Auditoría energética del hogar gratuita para clientes residenciales."
+      "en": "No cost home energy audit for residential customers without natural gas heating.",
+      "es": "Auditoría energética del hogar sin costo para clientes residenciales sin calefacción a gas natural."
     },
     "url": {
-      "en": "https://www.tmlp.com/go-green/"
+      "en": "https://ene.org/sustainability/hea/"
     }
   },
   {
@@ -1363,11 +1367,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "50% of weatherization and air sealing, up to $3,000 rebate for residential customers.",
-      "es": "Reembolso del 50 % por climatización e impermeabilización, hasta $3,000, para clientes residenciales."
+      "en": "50% off up to $3,000 rebate for air sealing and insulation measures recommended in home energy audit, for customers without natural gas heating.",
+      "es": "50% de descuento y reembolso de hasta $3,000 por medidas de sellado de aire y aislamiento recomendadas en la auditoría energética del hogar, para clientes que no cuentan con calefacción de gas natural."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.tmlp.com/go-green/"
+      "en": "https://abodeenergy.com/homeowners/select-your-mlp/tmlp/weatherization/"
     }
   },
   {
@@ -1400,6 +1406,7 @@
       "en": "100% of weatherization plus 100% of air sealing, up to $10,000 rebate for residential customers.",
       "es": "Reembolso del 100% de climatización más 100% de sellado de aire, hasta $10,000, para clientes residenciales."
     },
+    "end_date": "2025-12-31",
     "low_income": "ma-massSave-incomeEligible-enhanced",
     "url": {
       "en": "https://www.tmlp.com/go-green/"
@@ -1425,11 +1432,13 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,250/ton rebate up to $5,000 for a cold climate air source heat pump for residential customers.",
-      "es": "Reembolso de $1,250 por tonelada hasta $5,000 para una bomba de calor de fuente de aire para clima frío para clientes residenciales."
+      "en": "$1,250 per ton up to $5,000 rebate for a cold climate air source heat pump system for residential customers without natural gas heating.",
+      "es": "Reembolso de $1,250 por tonelada, hasta un máximo de $5,000, para sistemas de bombas de calor aerotérmicas para climas fríos, destinados a clientes residenciales sin calefacción de gas natural."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.tmlp.com/go-green/"
+      "en": "https://abodeenergy.com/homeowners/select-your-mlp/tmlp/heat-pumps/"
     }
   },
   {
@@ -1444,20 +1453,22 @@
     "program": "ma-taunton-go-green",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 2250,
+      "number": 1000,
       "unit": "ton",
-      "maximum": 9000
+      "maximum": 4000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,250/ton rebate up to $9,000 for a cold climate air source heat pump for income-qualified residential customers.",
-      "es": "Reembolso de $2,250 por tonelada hasta $9,000 por una bomba de calor de fuente de aire para clima frío para clientes residenciales que califican según sus ingresos."
+      "en": "$1,000 per ton up to $4,000 rebate adder for a cold climate air source heat pump systems for income-qualified customers without natural gas heating.",
+      "es": "Subvención adicional de $1,000 por tonelada, hasta un máximo de $4,000, para sistemas de bomba de calor aerotérmica para climas fríos, destinada a clientes con ingresos que no cuenten con calefacción de gas natural."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "low_income": "ma-massSave-incomeEligible-enhanced",
     "url": {
-      "en": "https://www.tmlp.com/go-green/"
+      "en": "https://abodeenergy.com/homeowners/select-your-mlp/tmlp/heat-pumps/"
     }
   },
   {
@@ -1478,11 +1489,13 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,250/ton rebate up to $5,000 for a ground source heat pump for residential customers.",
-      "es": "Reembolso de $1,250 por tonelada, hasta $5,000, para una bomba de calor geotérmica para clientes residenciales."
+      "en": "$5,000 rebate for a whole home ground source heat pump system, for residential customers without natural gas heating.",
+      "es": "Reembolso de 5.000 dólares para un sistema de bomba de calor geotérmica para toda la vivienda, para clientes residenciales que no dispongan de calefacción de gas natural."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.tmlp.com/go-green/"
+      "en": "https://abodeenergy.com/homeowners/select-your-mlp/tmlp/heat-pumps/"
     }
   },
   {
@@ -1496,51 +1509,55 @@
     "program": "ma-taunton-go-green",
     "amount": {
       "type": "dollar_amount",
-      "number": 15000,
-      "maximum": 15000
+      "number": 9000,
+      "maximum": 9000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $15,000 rebate for a ground source heat pump for income-qualified residential customers.",
-      "es": "Reembolso de hasta $15,000 por una bomba de calor geotérmica para clientes residenciales que califican según sus ingresos."
+      "en": "$9,000 rebate for a whole home ground source heat pump system, for income-qualified residential customers without natural gas heating.",
+      "es": "Reembolso de $9,000 para un sistema de bomba de calor geotérmica para toda la vivienda, para clientes residenciales que cumplan con los requisitos de ingresos y que no cuenten con calefacción de gas natural."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "low_income": "ma-massSave-incomeEligible-enhanced",
     "url": {
-      "en": "https://www.tmlp.com/go-green/"
+      "en": "https://abodeenergy.com/homeowners/select-your-mlp/tmlp/heat-pumps/"
     }
   },
   {
     "id": "MA-79",
     "payment_methods": [
-      "rebate"
+      "account_credit"
     ],
     "items": [
       "heat_pump_water_heater"
     ],
     "program": "ma-taunton-go-green",
     "amount": {
-      "type": "dollar_amount",
-      "number": 100,
-      "maximum": 100
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 300
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$100 rebate for a heat pump water heater.",
-      "es": "Reembolso de $100 para un calentador de agua con bomba de calor."
+      "en": "$300 rebate for an ENERGY STAR certified heat pump water heater, when replacing an electric water heater.",
+      "es": "Reembolso de $300 por un calentador de agua con bomba de calor certificado por ENERGY STAR, al reemplazar un calentador de agua eléctrico."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.tmlp.com/go-green/"
+      "en": "https://www.tmlp.com/179/Residential-Home-and-Outdoor-Appliance-R"
     }
   },
   {
     "id": "MA-80",
     "payment_methods": [
-      "rebate"
+      "account_credit"
     ],
     "items": [
       "heat_pump_clothes_dryer",
@@ -1548,61 +1565,8 @@
     ],
     "program": "ma-taunton-go-green",
     "amount": {
-      "type": "dollar_amount",
-      "number": 25,
-      "maximum": 25
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$25 rebate for an electric clothes dryer.",
-      "es": "Reembolso de $25 por una secadora de ropa eléctrica."
-    },
-    "url": {
-      "en": "https://www.tmlp.com/go-green/"
-    }
-  },
-  {
-    "id": "MA-81",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_outdoor_equipment"
-    ],
-    "program": "ma-taunton-go-green",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 100,
-      "minimum": 50,
-      "maximum": 100
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$100 rebate for an electric riding mower and $50 rebate for an electric push mower.",
-      "es": "Reembolso de $100 por una cortadora de césped eléctrica y $50 de reembolso por una cortadora de césped eléctrica de empuje."
-    },
-    "url": {
-      "en": "https://www.tmlp.com/go-green/"
-    }
-  },
-  {
-    "id": "MA-82",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "smart_thermostat"
-    ],
-    "program": "ma-taunton-go-green",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 50,
+      "type": "percent",
+      "number": 0.5,
       "maximum": 50
     },
     "owner_status": [
@@ -1610,23 +1574,80 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate for a smart thermostat, maximum 2.",
-      "es": "Reembolso de $50 por un termostato inteligente, máximo de 2."
+      "en": "$50 rebate for an ENERGY STAR certified electric clothes dryer.",
+      "es": "Reembolso de $50 por la compra de una secadora de ropa eléctrica con certificación ENERGY STAR."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.tmlp.com/go-green/"
+      "en": "https://www.tmlp.com/179/Residential-Home-and-Outdoor-Appliance-R"
+    }
+  },
+  {
+    "id": "MA-81",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-taunton-go-green",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for an electric battery powered push lawn mower.",
+      "es": "Reembolso de 75 dólares por una cortadora de césped eléctrica a batería."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.tmlp.com/179/Residential-Home-and-Outdoor-Appliance-R"
+    }
+  },
+  {
+    "id": "MA-82",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ma-taunton-go-green",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "minimum": 100,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for a smart WiFi enabled, learning thermostat, limit 2.",
+      "es": "Reembolso de $100 por un termostato inteligente con conexión WiFi y función de aprendizaje. Límite de 2 unidades."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.tmlp.com/179/Residential-Home-and-Outdoor-Appliance-R"
     }
   },
   {
     "id": "MA-83",
     "payment_methods": [
-      "rebate"
+      "account_credit"
     ],
     "items": [
       "new_electric_vehicle",
-      "new_plugin_hybrid_vehicle",
-      "used_electric_vehicle",
-      "used_plugin_hybrid_vehicle"
+      "new_plugin_hybrid_vehicle"
     ],
     "program": "ma-taunton-go-green",
     "amount": {
@@ -1639,17 +1660,19 @@
       "renter"
     ],
     "short_description": {
-      "en": "$450 rebate for a new or used electric vehicle, maximum 2 rebates per household.",
-      "es": "Reembolso de $450 por un vehículo eléctrico nuevo o usado, con un máximo 2 reembolsos por hogar."
+      "en": "$450 rebate for a new or used electric vehicle or plug in hybrid electric vehicle.",
+      "es": "Reembolso de $450 por la compra de un vehículo eléctrico nuevo o usado, o un vehículo híbrido enchufable."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.tmlp.com/go-green/"
+      "en": "https://www.tmlp.com/178/Residential-EV-Program"
     }
   },
   {
     "id": "MA-84",
     "payment_methods": [
-      "rebate"
+      "account_credit"
     ],
     "items": [
       "electric_vehicle_charger"
@@ -1664,11 +1687,13 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$300 rebate for a level 2 EV charger purchase and installation.",
-      "es": "Reembolso de $300 por la compra e instalación de un cargador de vehículo eléctrico de nivel 2."
+      "en": "$300 rebate for a level 2 electric vehicle charger purchase and installation.",
+      "es": "Reembolso de 300 dólares por la compra e instalación de un cargador de nivel 2 para vehículos eléctricos."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.tmlp.com/go-green/"
+      "en": "https://www.tmlp.com/178/Residential-EV-Program"
     }
   },
   {
@@ -1856,7 +1881,8 @@
   {
     "id": "MA-92",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
       "air_sealing",
@@ -1868,7 +1894,7 @@
       "floor_insulation",
       "other_weatherization",
       "wall_insulation",
-      "energy_audit"
+      "other_insulation"
     ],
     "program": "ma-naed-residential-energy-efficiency",
     "amount": {
@@ -1881,19 +1907,20 @@
       "renter"
     ],
     "short_description": {
-      "en": "50% rebate of weatherization costs up to $1,000 including insulation and air sealing for residential customers, after a free energy audit.",
-      "es": "Reembolso del 50 % en los costos de climatización hasta $1000, incluido el aislamiento y el sellado de aire para clientes residenciales, después de una auditoría energética gratuita."
+      "en": "50% off up to $1,000 rebate for insulation and air sealing measures recommended in home energy assessment.",
+      "es": "50% de descuento de hasta $1,000 en medidas de aislamiento y sellado de aire recomendadas en la evaluación energética del hogar."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.naelectric.com/196/Residential-Energy-Efficiency-Program"
+      "en": "https://www.naelectric.com/256/NAED-Weatherization-Application"
     }
   },
   {
     "id": "MA-93",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
       "ducted_heat_pump",
@@ -1903,25 +1930,28 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 300,
-      "unit": "ton"
+      "unit": "ton",
+      "maximum": 1200
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$300/ton rebate for ducted or ductless air source heat pump. Adder of $300 if replacing old system.",
-      "es": "Reembolso de $300 por tonelada por bombas de calor de aire con o sin ductos. Se agregarán $300 adicionales si se reemplaza el sistema antiguo."
+      "en": "$300 per ton up to $1,200 rebate for qualifying cold climate air source heat pump.",
+      "es": "$300 por tonelada hasta $1,200 de reembolso para bombas de calor de fuente de aire para clima frío que califiquen."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.naelectric.com/196/Residential-Energy-Efficiency-Program"
+      "en": "https://www.naelectric.com/263/NAED-Air-Source-Heat-Pump-ASHP-Rebate-Ap"
     }
   },
   {
     "id": "MA-94",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
       "heat_pump_water_heater"
@@ -1929,21 +1959,20 @@
     "program": "ma-naed-residential-energy-efficiency",
     "amount": {
       "type": "dollar_amount",
-      "number": 300,
-      "maximum": 300
+      "number": 300
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$300 rebate for a heat pump water heater.",
-      "es": "Reembolso de $300 por un calentador de agua con bomba de calor."
+      "en": "$300 rebate for a qualifying hybrid heat pump water heater.",
+      "es": "Reembolso de $300 para un calentador de agua con bomba de calor híbrido calificado."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.naelectric.com/196/Residential-Energy-Efficiency-Program"
+      "en": "https://www.naelectric.com/255/NAED-Appliance-Rebate-Application"
     }
   },
   {
@@ -1953,7 +1982,6 @@
       "account_credit"
     ],
     "items": [
-      "heat_pump_clothes_dryer",
       "non_heat_pump_clothes_dryer"
     ],
     "program": "ma-naed-residential-energy-efficiency",
@@ -1966,13 +1994,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate for an electric clothes dryer.",
-      "es": "Reembolso de $50 por una secadora de ropa eléctrica."
+      "en": "$50 rebate for an ENERGY STAR certified electric clothes dryer.",
+      "es": "Reembolso de $50 por una secadora de ropa eléctrica con certificación ENERGY STAR."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.naelectric.com/196/Residential-Energy-Efficiency-Program"
+      "en": "https://www.naelectric.com/255/NAED-Appliance-Rebate-Application"
     }
   },
   {
@@ -1987,21 +2015,20 @@
     "program": "ma-naed-residential-energy-efficiency",
     "amount": {
       "type": "dollar_amount",
-      "number": 50,
-      "maximum": 50
+      "number": 50
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate for a smart thermostat.",
-      "es": "Reembolso de $50 por un termostato inteligente."
+      "en": "$50 rebate for an ENERGY STAR certified smart WiFi thermostat.",
+      "es": "Reembolso de $50 por un termostato inteligente WiFi con certificación ENERGY STAR."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.naelectric.com/196/Residential-Energy-Efficiency-Program"
+      "en": "https://www.naelectric.com/255/NAED-Appliance-Rebate-Application"
     }
   },
   {
@@ -2016,26 +2043,26 @@
     "program": "ma-naed-residential-energy-efficiency",
     "amount": {
       "type": "dollar_amount",
-      "number": 300,
-      "maximum": 300
+      "number": 300
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$300 rebate for a level 2 EV charger.",
-      "es": "Reembolso de $300 para un cargador EV de nivel 2."
+      "en": "$300 rebate for a level 2 electric vehicle charger.",
+      "es": "Reembolso de $300 para un cargador de vehículo eléctrico de nivel 2."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.naelectric.com/196/Residential-Energy-Efficiency-Program"
+      "en": "https://www.naelectric.com/255/NAED-Appliance-Rebate-Application"
     }
   },
   {
     "id": "MA-98",
     "payment_methods": [
-      "rebate"
+      "account_credit"
     ],
     "items": [
       "electric_outdoor_equipment"
@@ -2044,6 +2071,7 @@
     "amount": {
       "type": "dollar_amount",
       "number": 100,
+      "minimum": 30,
       "maximum": 100
     },
     "owner_status": [
@@ -2051,11 +2079,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "$100 rebate for electric push mowers, $40 for hedge trimmers and chain saws, and $30 for leaf blowers.",
-      "es": "Reembolso de $100 para cortadoras de césped eléctricas, $40 para cortasetos y motosierras, y $30 para sopladores de hojas."
+      "en": "Up to $100 rebate for rechargeable battery operated electric lawn equipment, including lawn mowers, hedge trimmers, chain saws, leaf blowers, etc.",
+      "es": "Reembolso de hasta $100 para equipos eléctricos para césped que funcionan con baterías recargables, incluidas cortadoras de césped, cortasetos, motosierras, sopladores de hojas, etc."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.naelectric.com/196/Residential-Energy-Efficiency-Program"
+      "en": "https://www.naelectric.com/255/NAED-Appliance-Rebate-Application"
     }
   },
   {
@@ -4582,17 +4612,17 @@
     "program": "ma-wmgld-energy-efficiency-programs",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 1000,
+      "number": 500,
       "unit": "ton",
-      "maximum": 7500
+      "maximum": 5000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$1,000 per ton up to $5,000 for a qualifying heat pump when paired with insulation. Insulation rebate increased to 50% off up to $2,500 in bundle.",
-      "es": "$1,000 por tonelada, hasta $5,000, para una bomba de calor que cumpla los requisitos al combinarse con aislamiento. El descuento por aislamiento aumentó al 50% hasta $2,500 en el paquete."
+      "en": "$500 per ton up to $2,000 for a qualifying heat pump when paired with insulation. Insulation rebate is 50% off up to $3,000 in bundle.",
+      "es": "$500 por tonelada, hasta un máximo de $2,000, para una bomba de calor que cumpla con los requisitos, al combinarla con aislamiento. El reembolso por aislamiento es del 50%, hasta un máximo de $3,000 en paquetes."
     },
     "start_date": "2026-01-01",
     "url": {
@@ -4621,17 +4651,17 @@
     "program": "ma-wmgld-energy-efficiency-programs",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 1250,
+      "number": 1000,
       "unit": "ton",
-      "maximum": 10000
+      "maximum": 9000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$1,250 per ton up to $6,250 for a qualifying heat pump with proof of fossil fuel system removal. Insulation max increased to $3,750 when bundled.",
-      "es": "$1,250 por tonelada, hasta $6,250 para una bomba de calor que cumpla los requisitos, con comprobante de desinstalación del sistema de combustible fósil. El máximo de aislamiento aumenta a $3,750 al incluir el paquete."
+      "en": "$1,000 per ton up to $5,000 for a qualifying heat pump with proof of fossil fuel system removal. Insulation limit is $4,000 when bundled.",
+      "es": "$1,000 por tonelada hasta un máximo de $5,000 para una bomba de calor que cumpla con los requisitos y que presente comprobante de la eliminación del sistema de combustibles fósiles. El límite de aislamiento es de $4,000 cuando se contrata en paquete."
     },
     "start_date": "2026-01-01",
     "url": {
@@ -5690,46 +5720,44 @@
       "renter"
     ],
     "short_description": {
-      "en": "Free home energy audit.",
-      "es": "Auditoría energética del hogar gratuita."
+      "en": "No cost home energy assessment.",
+      "es": "Evaluación energética gratuita de su vivienda."
     },
     "url": {
-      "en": "https://www.sheld.org/pages/residents/energy-rebates/"
+      "en": "https://nextzero.org/south-hadley/energy-audits/"
     }
   },
   {
     "id": "MA-227",
     "payment_methods": [
-      "account_credit"
+      "account_credit",
+      "rebate"
     ],
     "items": [
       "air_sealing",
-      "attic_or_roof_insulation",
-      "basement_insulation",
-      "crawlspace_insulation",
       "duct_sealing",
       "efficiency_rebates",
-      "floor_insulation",
       "other_insulation",
-      "other_weatherization",
-      "wall_insulation"
+      "other_weatherization"
     ],
     "program": "ma-sheld-residential-rebates",
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 750
+      "maximum": 1000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Up to 50% of job cost or $750, for weatherization measures recommended by an energy audit.",
-      "es": "Hasta el 50% del costo del trabajo o $750, para medidas de climatización recomendadas por una auditoría energética."
+      "en": "50% off up to $1,000 rebate for a blower door test, air and duct sealing measures, recommended in home energy assessment.",
+      "es": "50% de descuento y reembolso de hasta $1,000 para una prueba de estanqueidad con puerta presurizada, medidas de sellado de conductos de aire y ventilación, recomendadas en la evaluación energética del hogar."
     },
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.sheld.org/pages/residents/energy-rebates/"
+      "en": "https://www.sheld.org/pages/forms/home-efficiency-incentive-program/"
     }
   },
   {
@@ -5745,19 +5773,22 @@
     "program": "ma-sheld-residential-rebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 750,
+      "number": 800,
       "unit": "ton",
-      "maximum": 2250
+      "maximum": 2400
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$750/ton rebate for an air source heat pump. Eversource customers are not eligible.",
-      "es": "Reembolso de $750 por tonelada por una bomba de calor de fuente de aire. No califican los clientes de Eversource."
+      "en": "$800 per ton up to $2,400 rebate for a qualifying air source heat pump system.",
+      "es": "Reembolso de $800 por tonelada, hasta un máximo de $2400, para sistemas de bomba de calor aerotérmica que cumplan con los requisitos."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.sheld.org/pages/residents/energy-rebates/"
+      "en": "https://www.sheld.org/pages/forms/cool-homes-rebate/"
     }
   },
   {
@@ -5772,25 +5803,28 @@
     "program": "ma-sheld-residential-rebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 750,
+      "number": 1000,
       "unit": "ton",
-      "maximum": 2250
+      "maximum": 2400
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$750/ton rebate for an ENERGY STAR rated ground source heat pump. Eversource customers are not eligible.",
-      "es": "Reembolso de $750 por tonelada por una bomba de calor geotérmica con certificación ENERGY STAR. No se aplica a los clientes de Eversource."
+      "en": "$1,000 per ton up to $2,400 rebate for an ENERGY STAR certified ground source heat pump system.",
+      "es": "Reembolso de $1,000 por tonelada, hasta un máximo de $2,400, para sistemas de bomba de calor geotérmica con certificación ENERGY STAR."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.sheld.org/pages/residents/energy-rebates/"
+      "en": "https://www.sheld.org/pages/forms/cool-homes-rebate/"
     }
   },
   {
     "id": "MA-230",
     "payment_methods": [
-      "rebate"
+      "account_credit"
     ],
     "items": [
       "heat_pump_water_heater"
@@ -5802,16 +5836,17 @@
       "maximum": 500
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for a heat pump water heater.",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor."
+      "en": "$500 rebate for an ENERGY STAR certified heat pump water heater with capacity of 55 gallons or less.",
+      "es": "Reembolso de $500 por la compra de un calentador de agua con bomba de calor certificado por ENERGY STAR con una capacidad de 55 galones o menos."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.sheld.org/pages/residents/energy-rebates/"
+      "en": "https://www.sheld.org/pages/forms/energy-star-appliance-rebate/"
     }
   },
   {
@@ -5825,20 +5860,21 @@
     "program": "ma-sheld-residential-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 500,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for a heat pump clothes dryer.",
-      "es": "Reembolso de $500 por una secadora de ropa con bomba de calor."
+      "en": "$500 rebate for an ENERGY STAR certified heat pump clothes dryer.",
+      "es": "Reembolso de $500 por una secadora de ropa con bomba de calor certificada ENERGY STAR."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.sheld.org/pages/residents/energy-rebates/"
+      "en": "https://www.sheld.org/pages/forms/energy-star-appliance-rebate/"
     }
   },
   {
@@ -5860,13 +5896,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "$125 rebate for a smart thermostat.",
-      "es": "Reembolso de $125 por un termostato inteligente."
+      "en": "$125 rebate for an ENERGY STAR certified WiFi thermostat.",
+      "es": "Reembolso de $125 por un termostato WiFi con certificación ENERGY STAR."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.sheld.org/pages/residents/energy-rebates/"
+      "en": "https://www.sheld.org/pages/forms/energy-star-appliance-rebate/"
     }
   },
   {
@@ -6034,8 +6070,9 @@
     ],
     "program": "ma-reading-mlp-energy-efficiency",
     "amount": {
-      "type": "dollar_amount",
-      "number": 75
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 75
     },
     "owner_status": [
       "homeowner",
@@ -6043,12 +6080,12 @@
     ],
     "short_description": {
       "en": "$75 rebate for an electric resistance stove.",
-      "es": "Reembolso de $75 por una estufa de resistencia eléctrica."
+      "es": "Reembolso de $75 para una estufa de resistencia eléctrica."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.rmld.com/efficiency-electrification-programs"
+      "en": "https://www.rmld.com/192/Residential-Energy-Star-Certified-Applia"
     }
   },
   {
@@ -6061,8 +6098,9 @@
     ],
     "program": "ma-reading-mlp-energy-efficiency",
     "amount": {
-      "type": "dollar_amount",
-      "number": 125
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 125
     },
     "owner_status": [
       "homeowner",
@@ -6070,12 +6108,12 @@
     ],
     "short_description": {
       "en": "$125 rebate for an electric induction stove.",
-      "es": "Reembolso de $125 por una estufa de inducción eléctrica."
+      "es": "Reembolso de $125 para una estufa de inducción eléctrica."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.rmld.com/efficiency-electrification-programs"
+      "en": "https://www.rmld.com/192/Residential-Energy-Star-Certified-Applia"
     }
   },
   {
@@ -6089,20 +6127,21 @@
     "program": "ma-reading-mlp-energy-efficiency",
     "amount": {
       "type": "dollar_amount",
-      "number": 50
+      "number": 50,
+      "maximum": 100
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate for a wireless, smart thermostat.",
-      "es": "Reembolso de $50 por un termostato inteligente inalámbrico."
+      "en": "$50 rebate for an ENERGY STAR certified wireless, smart thermostat.",
+      "es": "Reembolso de $50 por un termostato inteligente inalámbrico con certificación ENERGY STAR."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.rmld.com/efficiency-electrification-programs"
+      "en": "https://www.rmld.com/192/Residential-Energy-Star-Certified-Applia"
     }
   },
   {
@@ -6147,17 +6186,16 @@
       "maximum": 750
     },
     "owner_status": [
-      "homeowner",
-      "renter"
+      "homeowner"
     ],
     "short_description": {
-      "en": "Up to $750 rebate for an electric vehicle charger.",
-      "es": "Reembolso de hasta $750 por un cargador de vehículo eléctrico."
+      "en": "Up to $750 rebate for a level 2 network enabled electric vehicle charger.",
+      "es": "Reembolso de hasta $750 por un cargador de vehículo eléctrico habilitado para red de nivel 2."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.rmld.com/efficiency-electrification-programs"
+      "en": "https://www.rmld.com/191/Electric-Vehicle-Charger-Rebate"
     }
   },
   {
@@ -6180,13 +6218,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "Rebate of $600/kW for installing a grid-connected solar system at home.",
-      "es": "Reembolso de $600 por kW por instalar un sistema solar conectado a la red en casa."
+      "en": "$600 per kilowatt (DC) up to 20 kW or $12,000 rebate, for installing a grid-connected solar system at home.",
+      "es": "$600 por kilovatio (CC) hasta 20 kW o $12,000 de reembolso, para instalar un sistema solar conectado a la red en su hogar."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.rmld.com/efficiency-electrification-programs"
+      "en": "https://www.rmld.com/189/Residential-Small-Commercial-Solar-Rebat"
     }
   },
   {
@@ -6200,19 +6238,21 @@
     "program": "ma-sheld-residential-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 250,
-      "maximum": 250
+      "number": 300,
+      "maximum": 300
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$250 rebate for a 4 burner induction range.",
-      "es": "Reembolso de $250 por una cocina de inducción de 4 quemadores."
+      "en": "$300 rebate for an ENERGY STAR certified 4 burner induction range.",
+      "es": "Reembolso de $300 por una cocina de inducción de 4 quemadores con certificación ENERGY STAR."
     },
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.sheld.org/pages/residents/energy-rebates/"
+      "en": "https://www.sheld.org/pages/forms/energy-star-appliance-rebate/"
     }
   },
   {
@@ -6236,9 +6276,10 @@
       "en": "$300 rebate for a level 2 electric vehicle charger when enrolled in the Connected Homes program.",
       "es": "Reembolso de $300 para un cargador de vehículo eléctrico de nivel 2 al estar inscrito en el programa Connected Homes."
     },
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.sheld.org/pages/residents/energy-rebates/"
+      "en": "https://www.sheld.org/pages/forms/greenhouse-gas-reduction-rebates/"
     }
   },
   {
@@ -6252,7 +6293,9 @@
     "program": "ma-sheld-residential-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 200
+      "number": 200,
+      "minimum": 200,
+      "maximum": 400
     },
     "owner_status": [
       "homeowner",
@@ -6262,9 +6305,10 @@
       "en": "$200 rebate for an electric bicycle, maximum 2.",
       "es": "Reembolso de $200 por una bicicleta eléctrica, máximo de 2."
     },
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.sheld.org/pages/residents/energy-rebates/"
+      "en": "https://www.sheld.org/pages/forms/greenhouse-gas-reduction-rebates/"
     }
   },
   {
@@ -6278,19 +6322,21 @@
     "program": "ma-sheld-residential-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 200
+      "number": 100,
+      "maximum": 100
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$200 rebate for an electric riding mower, $100 for an electric push mower, and $100 for an electric snow blower.",
-      "es": "Reembolso de $200 por una cortadora de césped eléctrica autopropulsada, $100 por una cortadora de césped eléctrica a batería y $100 por una sopladora de nieve eléctrica a batería."
+      "en": "$100 rebate for an electric lawn mower.",
+      "es": "Reembolso de $100 por la compra de una cortadora de césped eléctrica."
     },
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.sheld.org/pages/residents/energy-rebates/"
+      "en": "https://www.sheld.org/pages/forms/greenhouse-gas-reduction-rebates/"
     }
   },
   {
@@ -6305,7 +6351,6 @@
     "amount": {
       "type": "dollar_amount",
       "number": 40,
-      "minimum": 25,
       "maximum": 40
     },
     "owner_status": [
@@ -6313,12 +6358,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "$40 rebate for an electric chain or pole saw, $40 for a leaf blower, and $40 for an electric snow thrower.",
-      "es": "Reembolso de $40 por una motosierra eléctrica o una sierra de pértiga, $40 por un soplador de hojas y $40 por un quitanieves eléctrico."
+      "en": "$40 rebate for an electric chain or pole saw.",
+      "es": "Reembolso de $40 por la compra de una motosierra eléctrica o una sierra de pértiga."
     },
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.sheld.org/pages/residents/energy-rebates/"
+      "en": "https://www.sheld.org/pages/forms/greenhouse-gas-reduction-rebates/"
     }
   },
   {
@@ -8197,20 +8243,22 @@
       "renter"
     ],
     "short_description": {
-      "en": "No-cost virtual or in-person Home Energy Assessment.",
-      "es": "Evaluación energética del hogar virtual o presencial sin costo."
+      "en": "No cost virtual or in person home energy assessment for customers without natural gas heating.",
+      "es": "Evaluación energética gratuita, virtual o presencial, para clientes que no disponen de calefacción a gas natural."
     },
     "url": {
-      "en": "https://ene.org/ene-sustainability/concord-municipal-light-plant/"
+      "en": "https://ene.org/sustainability/hea/"
     }
   },
   {
     "id": "MA-318",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
-      "other_heat_pump"
+      "ducted_heat_pump",
+      "ductless_heat_pump"
     ],
     "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
     "amount": {
@@ -8224,22 +8272,24 @@
       "renter"
     ],
     "short_description": {
-      "en": "$3,000/ton rebate for a whole home heat pump, up to $10,000.",
-      "es": "Reembolso de $3,000 por tonelada por una bomba de calor para toda la casa, hasta $10,000."
+      "en": "$3,000 per ton up to $10,000 rebate for a whole home air source heat pump system.",
+      "es": "Reembolso de $3,000 por tonelada, hasta un máximo de $10,000, para un sistema de bomba de calor aerotérmica para toda la vivienda."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://ene.org/ene-sustainability/concord-municipal-light-plant/"
+      "en": "https://concordma.gov/3024/Heat-Pump-Rebates-for-Your-Home"
     }
   },
   {
     "id": "MA-319",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
-      "other_heat_pump"
+      "ducted_heat_pump",
+      "ductless_heat_pump"
     ],
     "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
     "amount": {
@@ -8253,22 +8303,24 @@
       "renter"
     ],
     "short_description": {
-      "en": "$1,250/ton rebate for a partial home air source heat pump, up to $10,000.",
-      "es": "Reembolso de $1,250 por tonelada para una bomba de calor de fuente de aire parcial para el hogar, hasta $10,000."
+      "en": "$1,250 per ton up to $10,000 rebate for a partial home air source heat pump system.",
+      "es": "Reembolso de $1,250 por tonelada, hasta un máximo de $10,000, para un sistema parcial de bomba de calor aerotérmica para el hogar."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://ene.org/ene-sustainability/concord-municipal-light-plant/"
+      "en": "https://concordma.gov/3024/Heat-Pump-Rebates-for-Your-Home"
     }
   },
   {
     "id": "MA-320",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
-      "other_heat_pump"
+      "ducted_heat_pump",
+      "ductless_heat_pump"
     ],
     "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
     "amount": {
@@ -8282,49 +8334,52 @@
       "renter"
     ],
     "short_description": {
-      "en": "$1,250/ton rebate for an outbuilding air source heat pump, up to $2,500.",
-      "es": "Reembolso de $1,250 por tonelada para bombas de calor de fuente de aire para edificaciones anexas, hasta $2,500."
+      "en": "$1,250 per ton up to $2,500 rebate for an air source heat pump system installed in an outbuilding. ",
+      "es": "Reembolso de $1,250 por tonelada, hasta un máximo de $2,500, para un sistema de bomba de calor aerotérmica instalado en una edificación anexa. "
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://ene.org/ene-sustainability/concord-municipal-light-plant/"
+      "en": "https://concordma.gov/3024/Heat-Pump-Rebates-for-Your-Home"
     }
   },
   {
     "id": "MA-321",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
-      "other_heat_pump"
+      "air_to_water_heat_pump"
     ],
     "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 10000
+      "type": "dollars_per_unit",
+      "number": 3000,
+      "unit": "ton",
+      "maximum": 10000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$10,000/home rebate for a whole-home air to water heat pump.",
-      "es": "Reembolso de $10,000 por hogar para una bomba de calor aire‑agua de toda la vivienda."
+      "en": "$3,000 per ton up to $10,000 rebate for a whole home air to water heat pump system.",
+      "es": "Reembolso de $3,000 por tonelada, hasta un máximo de $10,000, para un sistema de bomba de calor aire-agua para toda la vivienda."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://ene.org/ene-sustainability/concord-municipal-light-plant/"
+      "en": "https://concordma.gov/3024/Heat-Pump-Rebates-for-Your-Home"
     }
   },
   {
     "id": "MA-322",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
-      "other_heat_pump",
       "geothermal_heating_installation"
     ],
     "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
@@ -8339,47 +8394,49 @@
       "renter"
     ],
     "short_description": {
-      "en": "$2,000/ton rebate for a partial home ground source heat pump, up to $15,000 per home per year.",
-      "es": "Reembolso de $2,000 por tonelada para una bomba de calor geotérmica parcial para el hogar, hasta $15,000 por hogar al año."
+      "en": "$2,000 per ton up to $15,000 rebate for a partial home ground source heat pump system.",
+      "es": "Reembolso de $2,000 por tonelada, hasta un máximo de $15,000, para un sistema parcial de bomba de calor geotérmica para vivienda."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://ene.org/ene-sustainability/concord-municipal-light-plant/"
+      "en": "https://concordma.gov/3024/Heat-Pump-Rebates-for-Your-Home"
     }
   },
   {
     "id": "MA-323",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
-      "other_heat_pump",
       "geothermal_heating_installation"
     ],
     "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 15000
+      "number": 15000,
+      "maximum": 15000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$15,000 rebate for a whole home ground source heat pump.",
-      "es": "Reembolso de $15,000 por una bomba de calor geotérmica para toda la vivienda."
+      "en": "Up to $15,000 rebate for a whole home ground source heat pump system.",
+      "es": "Reembolso de hasta $15,000 para un sistema de bomba de calor geotérmica para toda la vivienda."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://ene.org/ene-sustainability/concord-municipal-light-plant/"
+      "en": "https://concordma.gov/3024/Heat-Pump-Rebates-for-Your-Home"
     }
   },
   {
     "id": "MA-324",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
       "heat_pump_water_heater"
@@ -8387,26 +8444,28 @@
     "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 750
+      "number": 750,
+      "maximum": 750
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$750 rebate for a heat pump water heater replacing an oil, natural gas, or propane water heater.",
-      "es": "Reembolso de $750 por un calentador de agua con bomba de calor al reemplazar un calentador de agua de petróleo, gas natural o propano."
+      "en": "$750 rebate for an ENERGY STAR certified heat pump water heater replacing an oil, natural gas, or propane water heater, or new construction.",
+      "es": "Reembolso de $750 por la compra de un calentador de agua con bomba de calor certificado ENERGY STAR que reemplace un calentador de agua de petróleo, gas natural o propano, o para construcciones nuevas."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://ene.org/ene-sustainability/concord-municipal-light-plant/"
+      "en": "https://www.concordma.gov/2024/Heat-Pump-Water-Heaters"
     }
   },
   {
     "id": "MA-325",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
       "heat_pump_water_heater"
@@ -8414,26 +8473,28 @@
     "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 185
+      "number": 185,
+      "maximum": 185
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$185 rebate for a heat pump water heater replacing an electric resistance water heater.",
-      "es": "Reembolso de $185 por un calentador de agua con bomba de calor al reemplazar un calentador de agua de resistencia eléctrica."
+      "en": "$185 rebate for an ENERGY STAR certified heat pump water heater replacing an electric resistance water heater.",
+      "es": "Reembolso de $185 por la compra de un calentador de agua con bomba de calor certificado ENERGY STAR que reemplace un calentador de agua eléctrico por resistencia."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://ene.org/ene-sustainability/concord-municipal-light-plant/"
+      "en": "https://www.concordma.gov/2024/Heat-Pump-Water-Heaters"
     }
   },
   {
     "id": "MA-326",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
       "new_electric_vehicle",
@@ -8442,7 +8503,8 @@
     "program": "ma_concordMunicipalLightPlant_concordMLPDriveEVRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000
+      "number": 1000,
+      "maximum": 1000
     },
     "owner_status": [
       "homeowner",
@@ -8452,8 +8514,8 @@
       "en": "$1,000 rebate for a new or used battery electric vehicle.",
       "es": "Reembolso de $1,000 por un vehículo eléctrico de batería nuevo o usado."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "low_income": "ma-concordmlp-80ami-threshold",
     "url": {
       "en": "https://concordma.gov/2907/DriveEV-Rebate-Program"
@@ -8471,7 +8533,8 @@
     "program": "ma_concordMunicipalLightPlant_concordMLPDriveEVRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 550
+      "number": 550,
+      "maximum": 550
     },
     "owner_status": [
       "homeowner",
@@ -8481,8 +8544,8 @@
       "en": "$550 rebate for a new or used plug-in hybrid electric vehicle (PHEV).",
       "es": "Reembolso de $550 por un vehículo eléctrico híbrido enchufable nuevo o usado (PHEV)."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "low_income": "ma-concordmlp-80ami-threshold",
     "url": {
       "en": "https://concordma.gov/2907/DriveEV-Rebate-Program"
@@ -8491,7 +8554,8 @@
   {
     "id": "MA-328",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
       "used_electric_vehicle",
@@ -8500,7 +8564,8 @@
     "program": "ma_concordMunicipalLightPlant_concordMLPDriveEVRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 850
+      "number": 850,
+      "maximum": 850
     },
     "owner_status": [
       "homeowner",
@@ -8510,8 +8575,8 @@
       "en": "$850 rebate for a new or used battery electric vehicle (BEV).",
       "es": "Reembolso de $850 por un vehículo eléctrico de batería nuevo o usado (BEV)."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "low_income": "ma-concordmlp-120ami-threshold",
     "url": {
       "en": "https://concordma.gov/2907/DriveEV-Rebate-Program"
@@ -8529,7 +8594,8 @@
     "program": "ma_concordMunicipalLightPlant_concordMLPDriveEVRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 450
+      "number": 450,
+      "maximum": 450
     },
     "owner_status": [
       "homeowner",
@@ -8539,8 +8605,8 @@
       "en": "$450 rebate for a new or used plug-in hybrid electric vehicle (PHEV).",
       "es": "Reembolso de $450 por un vehículo eléctrico híbrido enchufable nuevo o usado (PHEV)."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "low_income": "ma-concordmlp-120ami-threshold",
     "url": {
       "en": "https://concordma.gov/2907/DriveEV-Rebate-Program"
@@ -8558,7 +8624,8 @@
     "program": "ma_concordMunicipalLightPlant_concordMLPDriveEVRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 650
+      "number": 650,
+      "maximum": 650
     },
     "owner_status": [
       "homeowner",
@@ -8568,8 +8635,8 @@
       "en": "$650 rebate for a new or used battery electric vehicle (BEV).",
       "es": "Reembolso de $650 por un vehículo eléctrico de batería nuevo o usado (BEV)."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://concordma.gov/2907/DriveEV-Rebate-Program"
     }
@@ -8586,7 +8653,8 @@
     "program": "ma_concordMunicipalLightPlant_concordMLPDriveEVRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 350
+      "number": 350,
+      "maximum": 350
     },
     "owner_status": [
       "homeowner",
@@ -8596,8 +8664,8 @@
       "en": "$350 rebate for a new or used plug-in hybrid electric vehicle (PHEV).",
       "es": "Reembolso de $350 por un vehículo eléctrico híbrido enchufable nuevo o usado (PHEV)."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://concordma.gov/2907/DriveEV-Rebate-Program"
     }
@@ -8613,7 +8681,8 @@
     "program": "ma_concordMunicipalLightPlant_concordMLPDriveEVRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 250
+      "number": 250,
+      "maximum": 250
     },
     "owner_status": [
       "homeowner",
@@ -8623,10 +8692,10 @@
       "en": "$250 rebate for electric vehicle owners to install some or all components of a Level 2 EV charging system.",
       "es": "Reembolso de $250 a propietarios de vehículos eléctricos para instalar algunos o todos los componentes de un sistema de carga de nivel 2."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://concordma.gov/2907/DriveEV-Rebate-Program"
+      "en": "https://www.concordma.gov/2233/EV-Level-2-Program"
     }
   },
   {
@@ -8648,13 +8717,13 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$625/kW(DC) rebate for installed solar PV generation capacity, capped at $3,125 per service address.",
-      "es": "Reembolso de $625 por kW (CC) por la capacidad de generación solar fotovoltaica instalada, con un límite de $3,125 por domicilio de servicio."
+      "en": "$625 per kW (DC) rebate for installed solar PV generation capacity, capped at $3,125 per service address.",
+      "es": "Subvención de 625 dólares por kW (CC) para la capacidad de generación solar fotovoltaica instalada, con un límite máximo de 3125 dólares por domicilio."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://ene.org/ene-sustainability/concord-municipal-light-plant/"
+      "en": "https://concordma.gov/2029/Solar-Panels"
     }
   },
   {
@@ -11493,17 +11562,18 @@
       "renter"
     ],
     "short_description": {
-      "en": "No-cost home energy assessment for Hingham MLP customers.",
-      "es": "Evaluación de energía del hogar sin costo para clientes de Hingham MLP."
+      "en": "No cost home energy assessment for residential customers without natural gas heating.",
+      "es": "Evaluación energética gratuita para hogares sin calefacción de gas natural."
     },
     "url": {
-      "en": "https://www.hmlp.com/rebates/"
+      "en": "https://ene.org/sustainability/hea/"
     }
   },
   {
     "id": "MA-443",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
       "basement_insulation",
@@ -11511,7 +11581,8 @@
       "crawlspace_insulation",
       "floor_insulation",
       "other_insulation",
-      "wall_insulation"
+      "wall_insulation",
+      "air_sealing"
     ],
     "program": "ma-hingham-mlp-rebates",
     "amount": {
@@ -11524,11 +11595,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "50% rebate for eligible insulation measures, up to $1,000.",
-      "es": "Reembolso del 50 % por medidas de aislamiento elegibles, hasta $1,000."
+      "en": "50% off up to $1,000 rebate for insulation and air sealing measures recommended in energy audit, for customers without natural gas heating.",
+      "es": "50% de descuento y hasta $1,000 de reembolso por medidas de aislamiento y sellado de aire recomendadas en la auditoría energética, para clientes que no cuentan con calefacción de gas natural."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.hmlp.com/rebates/"
+      "en": "https://www.hmlp.com/rebates/weatherization/"
     }
   },
   {
@@ -11553,6 +11626,7 @@
       "en": "50% coverage for eligible air sealing measures, up to $1,000.",
       "es": "Cobertura del 50 % por medidas de sellado de aire elegibles, hasta $1,000."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.hmlp.com/rebates/"
     }
@@ -11560,7 +11634,8 @@
   {
     "id": "MA-445",
     "payment_methods": [
-      "account_credit"
+      "account_credit",
+      "rebate"
     ],
     "items": [
       "other_heat_pump",
@@ -11569,94 +11644,110 @@
     ],
     "program": "ma-hingham-mlp-rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 500
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for a WIFI-enabled heat pump/solar hot water heater.",
-      "es": "Reembolso de $500 por una bomba de calor/calentador de agua solar con WI-FI habilitado."
+      "en": "$500 rebate for an ENERGY STAR certified WiFi enabled heat pump/solar hot water heater.",
+      "es": "Reembolso de $500 por una bomba de calor/calentador de agua solar con conexión WiFi y certificación ENERGY STAR."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.hmlp.com/rebates/"
+      "en": "https://www.hmlp.com/rebates/appliances/"
     }
   },
   {
     "id": "MA-446",
     "payment_methods": [
-      "account_credit"
+      "account_credit",
+      "rebate"
     ],
     "items": [
       "heat_pump_clothes_dryer"
     ],
     "program": "ma-hingham-mlp-rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 300
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 300
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$300 rebate for a heat pump dryer.",
-      "es": "Reembolso de $300 por una secadora con bomba de calor."
+      "en": "$300 rebate for an ENERGY STAR certified heat pump dryer.",
+      "es": "Reembolso de $300 por una secadora con bomba de calor con certificación ENERGY STAR."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.hmlp.com/rebates/"
+      "en": "https://www.hmlp.com/rebates/appliances/"
     }
   },
   {
     "id": "MA-447",
     "payment_methods": [
-      "account_credit"
+      "account_credit",
+      "rebate"
     ],
     "items": [
       "electric_stove"
     ],
     "program": "ma-hingham-mlp-rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 300
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 300
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$300 rebate for an induction stove.",
-      "es": "Reembolso de $300 por una estufa de inducción."
+      "en": "$300 rebate for an ENERGY STAR certified induction stove.",
+      "es": "Reembolso de $300 por una estufa de inducción con certificación ENERGY STAR."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.hmlp.com/rebates/"
+      "en": "https://www.hmlp.com/rebates/appliances/"
     }
   },
   {
     "id": "MA-448",
     "payment_methods": [
-      "account_credit"
+      "account_credit",
+      "rebate"
     ],
     "items": [
       "smart_thermostat"
     ],
     "program": "ma-hingham-mlp-rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 100
+      "type": "percent",
+      "number": 0.5,
+      "minimum": 100,
+      "maximum": 200
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$100 rebate for a WIFI-enabled smart thermostat.",
-      "es": "Reembolso de $100 por un termostato inteligente con WI-FI habilitado."
+      "en": "$100 rebate for an ENERGY STAR certified WiFi enabled smart thermostat.",
+      "es": "Reembolso de $100 por un termostato inteligente con conexión WiFi y certificación ENERGY STAR."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.hmlp.com/rebates/"
+      "en": "https://www.hmlp.com/rebates/appliances/"
     }
   },
   {
@@ -11680,6 +11771,8 @@
       "en": "$50 rebate for a central air conditioner.",
       "es": "Reembolso de $50 por un aire acondicionado central."
     },
+    "start_date": "2025-01-01",
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.hmlp.com/rebates/"
     }
@@ -11690,7 +11783,8 @@
       "rebate"
     ],
     "items": [
-      "other_heat_pump"
+      "ducted_heat_pump",
+      "ductless_heat_pump"
     ],
     "program": "ma-hingham-mlp-rebates",
     "amount": {
@@ -11704,11 +11798,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "$750/ton rebate for a qualified cold-climate heat pump system, up to $4,500. $1,000 bonus for whole-home system.",
-      "es": "Reembolso de $750 por tonelada, hasta $4,500, para un sistema de bomba de calor para clima frío que cumpla con los requisitos. Bono de $1,000 para un sistema para toda la casa."
+      "en": "$750 per ton up to $4,500 rebate for a qualifying cold climate air source heat pump system for customers without natural gas heating.",
+      "es": "Reembolso de $750 por tonelada, hasta un máximo de $4,500, para un sistema de bomba de calor aerotérmica para climas fríos que cumpla con los requisitos, para clientes que no cuentan con calefacción de gas natural."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.hmlp.com/rebates/"
+      "en": "https://abodeenergy.com/homeowners/select-your-mlp/hingham/"
     }
   },
   {
@@ -11722,20 +11818,21 @@
     "program": "ma-hingham-mlp-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 600
+      "number": 600,
+      "maximum": 600
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$600 rebate for a Level 2 electric vehicle charger servicing a fully electric vehicle, enrolled in managed charging.",
-      "es": "Reembolso de $600 por un cargador de vehículo eléctrico de nivel 2 que brinde servicio a un vehículo totalmente eléctrico, inscrito en la carga gestionada."
+      "en": "Up to $600 rebate for a level 2 electric vehicle charger servicing a fully electric vehicle, enrolled in scheduled charging program.",
+      "es": "Reembolso de hasta $600 por un cargador de nivel 2 para vehículos eléctricos que dé servicio a un vehículo totalmente eléctrico, inscrito en un programa de carga programada."
     },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.hmlp.com/rebates/"
+      "en": "https://nextzero.org/hingham/ev-charger-program/"
     }
   },
   {
@@ -11749,19 +11846,21 @@
     "program": "ma-hingham-mlp-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 200
+      "number": 200,
+      "maximum": 200
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$200 rebate for a Level 2 electric vehicle charger servicing a plug-in hybrid electric vehicle with less than 15 kWh of battery capacity.",
-      "es": "Reembolso de $200 por un cargador de vehículo eléctrico de nivel 2 que brinda servicio a un vehículo eléctrico híbrido enchufable con menos de 15 kWh de capacidad de batería."
+      "en": "$200 rebate for a level 2 electric vehicle charger servicing a plug-in hybrid electric vehicle with less than 15 kWh of battery capacity.",
+      "es": "Reembolso de 200 dólares por un cargador de nivel 2 para vehículos eléctricos que dé servicio a un vehículo híbrido enchufable con una capacidad de batería inferior a 15 kWh."
     },
-    "end_date": "2025-12-31",
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.hmlp.com/rebates/"
+      "en": "https://nextzero.org/hingham/ev-charger-program/"
     }
   },
   {
@@ -11775,33 +11874,35 @@
     "program": "ma-hingham-mlp-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 300
+      "number": 300,
+      "maximum": 300
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$300 rebate for a Level 2 electric vehicle charger servicing a plug-in hybrid electric vehicle with a battery capacity of 15 kWh or greater.",
-      "es": "Reembolso de $300 por un cargador de vehículo eléctrico de nivel 2 que brinde servicio a un vehículo eléctrico híbrido enchufable con una capacidad de batería de 15 kWh o más."
+      "en": "$300 rebate for a level 2 electric vehicle charger servicing a plug-in hybrid electric vehicle with a battery capacity of 15 kWh or greater.",
+      "es": "Reembolso de 300 dólares por un cargador de nivel 2 para vehículos eléctricos que dé servicio a un vehículo eléctrico híbrido enchufable con una capacidad de batería de 15 kWh o superior."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.hmlp.com/rebates/"
+      "en": "https://nextzero.org/hingham/ev-charger-program/"
     }
   },
   {
     "id": "MA-454",
     "payment_methods": [
-      "rebate"
+      "account_credit"
     ],
     "items": [
       "electric_outdoor_equipment"
     ],
     "program": "ma-hingham-mlp-rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 75,
-      "minimum": 30,
+      "type": "percent",
+      "number": 0.5,
       "maximum": 75
     },
     "owner_status": [
@@ -11809,11 +11910,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "$30 - $75 rebates available for cordless, electric lawn equipment.",
-      "es": "Reembolsos disponibles de $30 a $75 para equipos de césped eléctricos e inalámbricos."
+      "en": "Up to $75 rebate for a battery powered lawn mower.",
+      "es": "Reembolso de hasta $75 por la compra de una cortadora de césped a batería."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.hmlp.com/rebates/"
+      "en": "https://www.hmlp.com/rebates/lawn-equipment/"
     }
   },
   {
@@ -11836,11 +11939,13 @@
       "renter"
     ],
     "short_description": {
-      "en": "$0.60/W (AC) rebate for installing a photovoltaic solar system.",
-      "es": "Reembolso de $0.60 por vatio (CA) por instalar un sistema solar fotovoltaico."
+      "en": "$0.60 per watt (AC) rebate for installing a photovoltaic solar system, limit 10kW.",
+      "es": "Subvención de 0,60 dólares por vatio (CA) por la instalación de un sistema solar fotovoltaico, con un límite de 10 kW."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.hmlp.com/rebates/"
+      "en": "https://www.hmlp.com/rebates/solar/"
     }
   },
   {
@@ -12808,16 +12913,19 @@
     "program": "ma-paxton-mlp-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 75
+      "number": 75,
+      "maximum": 75
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$75 rebate for an all-in-one washer and dryer.",
-      "es": "Reembolso de $75 por una lavadora y secadora todo en uno."
+      "en": "$75 rebate for an ENERGY STAR certified all-in-one clothes washer and dryer.",
+      "es": "Reembolso de $75 por una lavadora y secadora todo en uno con certificación ENERGY STAR."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.paxtonlight.com/free-home-energy-audit"
     }
@@ -12833,16 +12941,19 @@
     "program": "ma-paxton-mlp-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 50
+      "number": 50,
+      "maximum": 50
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate for an electric clothes dryer.",
-      "es": "Reembolso de $50 por una secadora de ropa eléctrica."
+      "en": "$50 rebate for an ENERGY STAR certified electric clothes dryer.",
+      "es": "Reembolso de $50 por una secadora de ropa eléctrica con certificación ENERGY STAR."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.paxtonlight.com/free-home-energy-audit"
     }
@@ -12858,16 +12969,19 @@
     "program": "ma-paxton-mlp-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 500,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for a heat pump dryer.",
-      "es": "Reembolso de $500 por una secadora con bomba de calor."
+      "en": "$500 rebate for an ENERGY STAR certified heat pump clothes dryer.",
+      "es": "Reembolso de $500 por una secadora de ropa con bomba de calor con certificación ENERGY STAR."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.paxtonlight.com/free-home-energy-audit"
     }
@@ -12883,16 +12997,19 @@
     "program": "ma-paxton-mlp-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 500,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for a heat pump water heater.",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor."
+      "en": "$500 rebate for an ENERGY STAR certified heat pump water heater.",
+      "es": "Reembolso de $500 por un calentador de agua con bomba de calor con certificación ENERGY STAR."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.paxtonlight.com/free-home-energy-audit"
     }
@@ -12916,9 +13033,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "50% rebate for a Wi-Fi enabled thermostat/HVAC control, up to $125.",
-      "es": "Reembolso del 50 % por un termostato/control de HVAC con Wi-Fi habilitado, hasta $125."
+      "en": "50% off up to $125 rebate for a Wi-Fi enabled thermostat/HVAC control.",
+      "es": "50% de descuento, hasta $125 de reembolso para un termostato/control de HVAC habilitado con Wi-Fi."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.paxtonlight.com/free-home-energy-audit"
     }
@@ -12934,16 +13053,19 @@
     "program": "ma-paxton-mlp-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 100
+      "number": 100,
+      "maximum": 100
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$100 rebate for an induction range replacing an electric range.",
-      "es": "Reembolso de $100 por una cocina de inducción que reemplace una cocina eléctrica."
+      "en": "$100 rebate for an ENERGY STAR certified induction range replacing an electric range.",
+      "es": "Reembolso de $100 por una cocina de inducción con certificación ENERGY STAR que reemplace una cocina eléctrica."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.paxtonlight.com/free-home-energy-audit"
     }
@@ -12959,16 +13081,19 @@
     "program": "ma-paxton-mlp-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 500,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for an induction range replacing a gas or propane range.",
-      "es": "Reembolso de $500 para una cocina de inducción que reemplace una cocina de gas o propano."
+      "en": "$500 rebate for an ENERGY STAR certified induction range replacing a gas or propane range.",
+      "es": "Reembolso de $500 por una cocina de inducción con certificación ENERGY STAR que reemplace una cocina a gas o propano."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.paxtonlight.com/free-home-energy-audit"
     }
@@ -12984,16 +13109,19 @@
     "program": "ma-paxton-mlp-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 500,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for an all-in-one washer and heat pump dryer.",
-      "es": "Reembolso de $500 por una lavadora y secadora con bomba de calor todo en uno."
+      "en": "$500 rebate for an ENERGY STAR certified all-in-one clothes washer and heat pump dryer.",
+      "es": "Reembolso de $500 por una lavadora de ropa y secadora con bomba de calor todo en uno con certificación ENERGY STAR."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.paxtonlight.com/free-home-energy-audit"
     }
@@ -13004,7 +13132,6 @@
       "account_credit"
     ],
     "items": [
-      "other_heat_pump",
       "ducted_heat_pump",
       "ductless_heat_pump"
     ],
@@ -13020,9 +13147,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "$500/ton rebate for an air source heat pump.",
-      "es": "Reembolso de $500 por tonelada por una bomba de calor de fuente de aire."
+      "en": "$500 per ton up to $1,500 rebate for a qualifying air source heat pump.",
+      "es": "$500 por tonelada hasta $1,500 de reembolso para una bomba de calor de fuente de aire calificada."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.paxtonlight.com/free-home-energy-audit"
     }
@@ -13033,24 +13162,25 @@
       "account_credit"
     ],
     "items": [
-      "geothermal_heating_installation",
-      "other_heat_pump"
+      "geothermal_heating_installation"
     ],
     "program": "ma-paxton-mlp-rebates",
     "amount": {
       "type": "dollars_per_unit",
       "number": 750,
       "unit": "ton",
-      "maximum": 2250
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$750/ton rebate for a ground source heat pump.",
-      "es": "Reembolso de $750 por tonelada por una bomba de calor geotérmica."
+      "en": "$750 per ton up to $1,500 rebate for a qualifying ground source heat pump.",
+      "es": "$750 por tonelada hasta $1,500 de reembolso para una bomba de calor de fuente terrestre calificada."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.paxtonlight.com/free-home-energy-audit"
     }
@@ -13068,43 +13198,18 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 500
+      "maximum": 250
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "50% rebate for a blower door test and air sealing, up to $500.",
-      "es": "Reembolso del 50 % para prueba de puerta soplante y sellado de aire, hasta $500."
+      "en": "50% off up to $250 rebate for a blower door test and air sealing measures.",
+      "es": "50% de descuento hasta $250 de reembolso para una prueba de puerta sopladora y medidas de sellado de aire."
     },
-    "url": {
-      "en": "https://www.paxtonlight.com/free-home-energy-audit"
-    }
-  },
-  {
-    "id": "MA-518",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump",
-      "ducted_heat_pump"
-    ],
-    "program": "ma-paxton-mlp-rebates",
-    "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 500
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "50% rebate for an ENERGY STAR rated heating system, up to $500.",
-      "es": "Reembolso del 50 % por un sistema de calefacción con clasificación ENERGY STAR, hasta $500."
-    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.paxtonlight.com/free-home-energy-audit"
     }
@@ -13121,16 +13226,18 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 500
+      "maximum": 250
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "50% rebate for duct sealing, up to $500.",
-      "es": "Reembolso del 50% en sellado de ductos, hasta $500."
+      "en": "50% off up to $250 rebate for duct sealing measures.",
+      "es": "50% de descuento hasta $250 de reembolso para medidas de sellado de conductos."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.paxtonlight.com/free-home-energy-audit"
     }
@@ -13141,22 +13248,29 @@
       "account_credit"
     ],
     "items": [
-      "other_insulation"
+      "other_insulation",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "wall_insulation"
     ],
     "program": "ma-paxton-mlp-rebates",
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 500
+      "maximum": 250
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "50% rebate for insulation, up to $500.",
-      "es": "Reembolso del 50 % por aislamiento, hasta $500."
+      "en": "50% off up to $250 rebate for insulation measures.",
+      "es": "50% de descuento hasta $250 de reembolso para medidas de aislamiento."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.paxtonlight.com/free-home-energy-audit"
     }
@@ -13171,9 +13285,8 @@
     ],
     "program": "ma-paxton-mlp-rebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 100,
-      "minimum": 25,
+      "type": "percent",
+      "number": 0.5,
       "maximum": 100
     },
     "owner_status": [
@@ -13181,9 +13294,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "$25 - $100 rebates available for electric yard equipment.",
-      "es": "Reembolsos disponibles de $25 a $100 para equipos eléctricos de jardín."
+      "en": "$100 rebate for an electric battery operated lawn mower.",
+      "es": "Reembolso de $100 para una cortadora de césped eléctrica a batería."
     },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.paxtonlight.com/free-home-energy-audit"
     }
@@ -13316,11 +13431,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$0.60/watt rebate, up to 10kW DC for installed rooftop solar.",
-      "es": "Reembolso de $0.60 por vatio, hasta 10 kW de CC para sistemas solares instalados en azoteas."
+      "en": "$0.60 per watt rebate up to 10kW DC for installed rooftop solar system.",
+      "es": "Reembolso de 0,60 dólares por vatio, hasta 10 kW CC, para sistemas solares instalados en tejados."
     },
     "url": {
-      "en": "https://www.beld.com/energysavings/"
+      "en": "https://ene.org/sustainability/rebates/solar/"
     }
   },
   {
@@ -15209,23 +15324,31 @@
     ],
     "items": [
       "air_sealing",
-      "other_insulation"
+      "other_insulation",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "floor_insulation",
+      "other_weatherization",
+      "wall_insulation"
     ],
     "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
     "amount": {
       "type": "percent",
-      "number": 0.5
+      "number": 0.5,
+      "maximum": 1000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "50% of cost of weatherization, up to $1,000",
-      "es": "Reembolso del 50 % del costo de la climatización, hasta $1,000."
+      "en": "50% of cost up to $1,000 rebate for air sealing and insulation measures recommended in home energy audit. ",
+      "es": "Reembolso del 50% del costo, hasta un máximo de $1,000, para las medidas de sellado de aire y aislamiento recomendadas en la auditoría energética del hogar. "
     },
     "url": {
-      "en": "https://ene.org/ene-sustainability/concord-municipal-light-plant/"
+      "en": "https://concordma.gov/2330/Home-Weatherization-Rebates"
     }
   },
   {
@@ -15236,24 +15359,32 @@
     ],
     "items": [
       "air_sealing",
-      "other_insulation"
+      "other_insulation",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "floor_insulation",
+      "other_weatherization",
+      "wall_insulation"
     ],
     "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
     "amount": {
       "type": "percent",
-      "number": 0.75
+      "number": 0.75,
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "75% of cost of weatherization, up to $1,500",
-      "es": "75 % del costo de climatización, hasta $1,500"
+      "en": "75% of cost up to $1,500 rebate for air sealing and insulation measures, for income qualified customers.",
+      "es": "Reembolso del 75% del costo, hasta un máximo de $1,500, para medidas de sellado y aislamiento de aire, para clientes que cumplan con los requisitos de ingresos."
     },
     "low_income": "ma-concordmlp-120ami-threshold",
     "url": {
-      "en": "https://ene.org/ene-sustainability/concord-municipal-light-plant/"
+      "en": "https://concordma.gov/2330/Home-Weatherization-Rebates"
     }
   },
   {
@@ -15264,24 +15395,32 @@
     ],
     "items": [
       "air_sealing",
-      "other_insulation"
+      "other_insulation",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "duct_sealing",
+      "floor_insulation",
+      "other_weatherization",
+      "wall_insulation"
     ],
     "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
     "amount": {
       "type": "percent",
-      "number": 1
+      "number": 1,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "100% of cost of weatherization, up to $2,000",
-      "es": "Reembolso del 100 % del costo de la climatización, hasta $2,000."
+      "en": "100% of cost up to $2,000 for air sealing and insulation measures, for income qualified customers. ",
+      "es": "Subvención del 100% del coste, hasta un máximo de 2.000 dólares, para medidas de sellado y aislamiento de aire, para clientes que cumplan los requisitos de ingresos. "
     },
     "low_income": "ma-concordmlp-80ami-threshold",
     "url": {
-      "en": "https://ene.org/ene-sustainability/concord-municipal-light-plant/"
+      "en": "https://concordma.gov/2330/Home-Weatherization-Rebates"
     }
   },
   {
@@ -16685,15 +16824,15 @@
       "type": "dollars_per_unit",
       "number": 1500,
       "unit": "ton",
-      "maximum": 11250
+      "maximum": 11500
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$1,500 per ton up to $7,500 for a qualifying heat pump with complete disconnect from gas. Insulation rebate max increased to $3,750 when bundled.",
-      "es": "$1,500 por tonelada, hasta $7,500 para una bomba de calor que cumpla los requisitos y esté completamente desconectada del gas. El reembolso máximo por aislamiento aumenta a $3,750 al combinarse."
+      "en": "$1,500 per ton up to $7,500 for a qualifying heat pump with complete disconnect from gas. Insulation rebate capped at $4,000 when bundled.",
+      "es": "$1,500 por tonelada, hasta un máximo de $7,500 para una bomba de calor que cumpla con los requisitos y con desconexión total del gas. El reembolso por aislamiento está limitado a $4,000 cuando se contrata en paquete."
     },
     "start_date": "2026-01-01",
     "url": {
@@ -23488,6 +23627,1104 @@
     },
     "url": {
       "en": "https://www.lelwd.com/greenrewards/cordless-equipment-rebate/"
+    }
+  },
+  {
+    "id": "MA-895",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-paxton-mlp-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an electric battery operated snow blower.",
+      "es": "Reembolso de $100 para una quitanieves eléctrica a batería."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.paxtonlight.com/free-home-energy-audit"
+    }
+  },
+  {
+    "id": "MA-896",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-paxton-mlp-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for an electric battery operated hedge trimmer.",
+      "es": "Reembolso de $40 por una cortadora de setos eléctrica a batería."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.paxtonlight.com/free-home-energy-audit"
+    }
+  },
+  {
+    "id": "MA-897",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-paxton-mlp-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for an electric battery operated pressure washer.",
+      "es": "Reembolso de $40 por una hidrolavadora eléctrica a batería."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.paxtonlight.com/free-home-energy-audit"
+    }
+  },
+  {
+    "id": "MA-898",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-paxton-mlp-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for an electric battery operated rototiller.",
+      "es": "Reembolso de $40 para un motocultor eléctrico a batería."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.paxtonlight.com/free-home-energy-audit"
+    }
+  },
+  {
+    "id": "MA-899",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-paxton-mlp-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for an electric battery operated chain or pole saw.",
+      "es": "Reembolso de $40 por una motosierra o sierra de pértiga eléctrica operada a batería."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.paxtonlight.com/free-home-energy-audit"
+    }
+  },
+  {
+    "id": "MA-900",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-paxton-mlp-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for an electric battery operated snow thrower or snow shovel.",
+      "es": "Reembolso de $40 para una máquina quitanieve o pala quitanieve eléctrica a batería."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.paxtonlight.com/free-home-energy-audit"
+    }
+  },
+  {
+    "id": "MA-901",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-paxton-mlp-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$25 rebate for an electric battery operated leaf blower.",
+      "es": "Reembolso de $25 por un soplador de hojas eléctrico a batería."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.paxtonlight.com/free-home-energy-audit"
+    }
+  },
+  {
+    "id": "MA-902",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-paxton-mlp-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$25 rebate for an electric battery operated string trimmer.",
+      "es": "Reembolso de $25 por una cortadora de hilo eléctrica a batería."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.paxtonlight.com/free-home-energy-audit"
+    }
+  },
+  {
+    "id": "MA-903",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "ma-naed-residential-energy-efficiency",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "No cost home energy assessment for customers without natural gas heating",
+      "es": "Evaluación de energía del hogar sin costo para clientes sin calefacción a gas natural"
+    },
+    "url": {
+      "en": "https://ene.org/sustainability/hea/"
+    }
+  },
+  {
+    "id": "MA-904",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ma-naed-residential-energy-efficiency",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$300 rebate adder if removing old heating system when installing a qualifying cold climate air source heat pump system.",
+      "es": "Descuento adicional de $300 si se quita el sistema de calefacción antiguo al instalar un sistema de bomba de calor de fuente de aire para clima frío calificado."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.naelectric.com/263/NAED-Air-Source-Heat-Pump-ASHP-Rebate-Ap"
+    }
+  },
+  {
+    "id": "MA-905",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "ma-naed-residential-energy-efficiency",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 0.6,
+      "unit": "watt",
+      "maximum": 3000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$0.60 per watt up to $3,000 rebate for residential solar panel installations. ",
+      "es": "$0,60 por vatio hasta $3000 de reembolso para instalaciones de paneles solares residenciales. "
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.naelectric.com/240/Solar-Net-Metering-Information"
+    }
+  },
+  {
+    "id": "MA-906",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-braintree-mlp-energysaving",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 30,
+      "maximum": 30
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$30 rebate for a battery powered leaf blower.",
+      "es": "Reembolso de $30 por un soplador de hojas a batería."
+    },
+    "url": {
+      "en": "https://www.beld.com/energysavings/"
+    }
+  },
+  {
+    "id": "MA-907",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-braintree-mlp-energysaving",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 30,
+      "maximum": 30
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$30 rebate for a battery powered string trimmer.",
+      "es": "Reembolso de $30 por una desbrozadora a batería."
+    },
+    "url": {
+      "en": "https://www.beld.com/energysavings/"
+    }
+  },
+  {
+    "id": "MA-908",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-braintree-mlp-energysaving",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 30,
+      "maximum": 30
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$30 rebate for a battery powered chainsaw.",
+      "es": "Reembolso de $30 por una motosierra a batería."
+    },
+    "url": {
+      "en": "https://www.beld.com/energysavings/"
+    }
+  },
+  {
+    "id": "MA-909",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "ma-taunton-go-green",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for an ENERGY STAR certified heat pump water heater, when replacing a propane or oil water heater.",
+      "es": "Reembolso de $500 por un calentador de agua con bomba de calor certificado por ENERGY STAR, al reemplazar un calentador de agua de propano o de petróleo."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.tmlp.com/179/Residential-Home-and-Outdoor-Appliance-R"
+    }
+  },
+  {
+    "id": "MA-910",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "ma-taunton-go-green",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate for an ENERGY STAR certified heat pump clothes dryer, when replacing an existing gas dryer.",
+      "es": "Reembolso de $200 por una secadora de ropa con bomba de calor certificada ENERGY STAR, al reemplazar una secadora de gas existente."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.tmlp.com/179/Residential-Home-and-Outdoor-Appliance-R"
+    }
+  },
+  {
+    "id": "MA-911",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ma-taunton-go-green",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "minimum": 25,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$25 rebate for a programmable thermostat, limit 2.",
+      "es": "Reembolso de $25 por un termostato programable, límite de 2 unidades."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.tmlp.com/179/Residential-Home-and-Outdoor-Appliance-R"
+    }
+  },
+  {
+    "id": "MA-912",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-taunton-go-green",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate for an electric battery powered riding lawn mower.",
+      "es": "Reembolso de $200 por la compra de una cortadora de césped eléctrica con asiento a batería."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.tmlp.com/179/Residential-Home-and-Outdoor-Appliance-R"
+    }
+  },
+  {
+    "id": "MA-913",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-taunton-go-green",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an electric battery powered snow blower or thrower.",
+      "es": "Reembolso de $100 por la compra de una máquina quitanieves o sopladora de nieve eléctrica a batería."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.tmlp.com/179/Residential-Home-and-Outdoor-Appliance-R"
+    }
+  },
+  {
+    "id": "MA-914",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-taunton-go-green",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 30
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$30 rebate for an electric battery powered chain and pole saw.",
+      "es": "Reembolso de $30 por una motosierra eléctrica a batería con pértiga."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.tmlp.com/179/Residential-Home-and-Outdoor-Appliance-R"
+    }
+  },
+  {
+    "id": "MA-915",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-taunton-go-green",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 30
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$30 rebate for an electric battery powered leaf blower.",
+      "es": "Reembolso de $30 por un soplador de hojas eléctrico a batería."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.tmlp.com/179/Residential-Home-and-Outdoor-Appliance-R"
+    }
+  },
+  {
+    "id": "MA-916",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "other_weatherization"
+    ],
+    "program": "ma-hingham-mlp-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate adder when completing weatherization measures in conjunction with installing a qualifying cold climate air source heat pump system.",
+      "es": "Reembolso adicional de $500 al completar medidas de aislamiento térmico junto con la instalación de un sistema de bomba de calor aerotérmica para climas fríos que cumpla con los requisitos."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://abodeenergy.com/homeowners/select-your-mlp/hingham/"
+    }
+  },
+  {
+    "id": "MA-917",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "ma-hingham-mlp-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1000,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,000 rebate adder when installing a qualifying whole home cold climate air source heat pump system, for customers without natural gas heating.",
+      "es": "Reembolso adicional de $1,000 al instalar un sistema de bomba de calor aerotérmica para toda la vivienda en climas fríos que cumpla con los requisitos, para clientes que no cuentan con calefacción de gas natural."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://abodeenergy.com/homeowners/select-your-mlp/hingham/"
+    }
+  },
+  {
+    "id": "MA-918",
+    "payment_methods": [
+      "account_credit",
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "ma-hingham-mlp-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an ENERGY STAR certified programmable thermostat.",
+      "es": "Reembolso de $50 por la compra de un termostato programable con certificación ENERGY STAR."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.hmlp.com/rebates/appliances/"
+    }
+  },
+  {
+    "id": "MA-919",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-hingham-mlp-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 75
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $75 rebate for a battery powered snow blower.",
+      "es": "Reembolso de hasta $75 por la compra de una máquina quitanieves a batería."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.hmlp.com/rebates/lawn-equipment/"
+    }
+  },
+  {
+    "id": "MA-920",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-hingham-mlp-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 30
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $30 rebate for a battery powered leaf blower.",
+      "es": "Hasta $30 de descuento en sopladores de hojas a batería."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.hmlp.com/rebates/lawn-equipment/"
+    }
+  },
+  {
+    "id": "MA-921",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-hingham-mlp-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 30
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $30 rebate for a battery powered string trimmer.",
+      "es": "Hasta $30 de descuento en la compra de una desbrozadora a batería."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.hmlp.com/rebates/lawn-equipment/"
+    }
+  },
+  {
+    "id": "MA-922",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-hingham-mlp-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 30
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $30 rebate for a battery powered chainsaw.",
+      "es": "Hasta $30 de descuento en la compra de una motosierra a batería."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.hmlp.com/rebates/lawn-equipment/"
+    }
+  },
+  {
+    "id": "MA-923",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma_concordMunicipalLightPlant_concordMLPEnergySavingRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for a qualifying electric powered lawn mower when replacing a gas powered lawn mower.",
+      "es": "Reembolso de $100 por la compra de una cortadora de césped eléctrica que cumpla con los requisitos, al reemplazar una cortadora de césped a gasolina."
+    },
+    "url": {
+      "en": "https://www.concordma.gov/3123/Electric-Lawn-Mowers"
+    }
+  },
+  {
+    "id": "MA-924",
+    "payment_methods": [
+      "account_credit",
+      "rebate"
+    ],
+    "items": [
+      "efficiency_rebates",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "floor_insulation",
+      "other_insulation",
+      "wall_insulation"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 1000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "50% off up to $1,000 rebate for insulation measures, recommended in home energy assessment.",
+      "es": "50% de descuento y hasta $1,000 de reembolso por medidas de aislamiento, recomendadas en la evaluación energética del hogar."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.sheld.org/pages/forms/home-efficiency-incentive-program/"
+    }
+  },
+  {
+    "id": "MA-925",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "non_heat_pump_clothes_dryer"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "minimum": 50,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Up to $100 rebate for an ENERGY STAR certified electric clothes dryer.",
+      "es": "Reembolso de hasta $100 por la compra de una secadora de ropa eléctrica con certificación ENERGY STAR."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.sheld.org/pages/forms/energy-star-appliance-rebate/"
+    }
+  },
+  {
+    "id": "MA-926",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for an ENERGY STAR certified portable induction cooktop or plate.",
+      "es": "Reembolso de 40 dólares por la compra de una placa o vitrocerámica de inducción portátil con certificación ENERGY STAR."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.sheld.org/pages/forms/energy-star-appliance-rebate/"
+    }
+  },
+  {
+    "id": "MA-927",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50,
+      "maximum": 50
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$50 rebate for an ENERGY STAR certified electric stove.",
+      "es": "Reembolso de $50 por la compra de una estufa eléctrica con certificación ENERGY STAR."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.sheld.org/pages/forms/energy-star-appliance-rebate/"
+    }
+  },
+  {
+    "id": "MA-928",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for an electric snow thrower.",
+      "es": "Reembolso de $40 por la compra de una máquina quitanieves eléctrica."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.sheld.org/pages/forms/greenhouse-gas-reduction-rebates/"
+    }
+  },
+  {
+    "id": "MA-929",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$100 rebate for an electric snow blower.",
+      "es": "Reembolso de $100 por la compra de una máquina quitanieves eléctrica."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.sheld.org/pages/forms/greenhouse-gas-reduction-rebates/"
+    }
+  },
+  {
+    "id": "MA-930",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200,
+      "maximum": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$200 rebate for an electric riding lawn mower.",
+      "es": "Reembolso de $200 por la compra de una cortadora de césped eléctrica con asiento."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.sheld.org/pages/forms/greenhouse-gas-reduction-rebates/"
+    }
+  },
+  {
+    "id": "MA-931",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 40,
+      "maximum": 40
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$40 rebate for an electric leaf blower.",
+      "es": "Reembolso de $40 por la compra de un soplador de hojas eléctrico."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.sheld.org/pages/forms/greenhouse-gas-reduction-rebates/"
+    }
+  },
+  {
+    "id": "MA-932",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 25,
+      "maximum": 25
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$25 rebate for an electric trimmer or edger.",
+      "es": "Reembolso de $25 por la compra de una desbrozadora o bordeadora eléctrica."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.sheld.org/pages/forms/greenhouse-gas-reduction-rebates/"
+    }
+  },
+  {
+    "id": "MA-933",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "electric_service_upgrades"
+    ],
+    "program": "ma-sheld-residential-rebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$250 rebate for an electric service upgrade.",
+      "es": "Reembolso de $250 por una mejora en el servicio eléctrico."
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.sheld.org/pages/forms/greenhouse-gas-reduction-rebates/"
     }
   }
 ]

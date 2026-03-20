@@ -181,11 +181,58 @@
     }
   },
   "prerequisites": {
+    "MA-69": {
+      "allOf": [
+        "MA-7"
+      ],
+      "description": "HEA required to be eligible, measures must be recommended in report."
+    },
+    "MA-73": {
+      "allOf": [
+        "MA-72"
+      ],
+      "description": "HEA required, qualifying measures must be identified in HEA."
+    },
+    "MA-75": {
+      "allOf": [
+        "MA-72",
+        "MA-73"
+      ],
+      "description": "Must schedule HEA to identify weatherization measures needed"
+    },
+    "MA-76": {
+      "allOf": [
+        "MA-72",
+        "MA-73",
+        "MA-75"
+      ],
+      "description": "HEA required to identify weatherization measures needed.."
+    },
+    "MA-77": {
+      "allOf": [
+        "MA-72",
+        "MA-73"
+      ],
+      "description": "HEA required to identify weatherization measures available."
+    },
+    "MA-78": {
+      "allOf": [
+        "MA-72",
+        "MA-73"
+      ],
+      "description": "HEA required to identify weatherization measures if needed."
+    },
     "MA-86": {
       "allOf": [
         "MA-85"
       ],
       "description": "Home Energy Assessment dated within 3 years of installation date"
+    },
+    "MA-92": {
+      "allOf": [
+        "MA-903"
+      ],
+      "description": "HEA required to be eligible for weatherization rebate, measures must be recommended in report."
     },
     "MA-100": {
       "allOf": [
@@ -334,6 +381,24 @@
       ],
       "description": "Home Energy Assessment must be completed within 3 years of application date (Mass Save Home Energy Assessment not valid). "
     },
+    "MA-319": {
+      "allOf": [
+        "MA-317"
+      ],
+      "description": "Homes built after 2008 require a Home Energy Assessment within the last three years or scheduled within six months after project completion is required."
+    },
+    "MA-321": {
+      "allOf": [
+        "MA-317"
+      ],
+      "description": "Homes built after 2008 require a Home Energy Assessment within the last three years or scheduled within six months after project completion is required."
+    },
+    "MA-323": {
+      "allOf": [
+        "MA-317"
+      ],
+      "description": "Homes built after 2008 require a Home Energy Assessment within the last three years or scheduled within six months after project completion is required. "
+    },
     "MA-368": {
       "allOf": [
         "MA-621"
@@ -387,6 +452,18 @@
         "MA-432"
       ],
       "description": "Home Energy Assessment dated within 3 years of installation date."
+    },
+    "MA-443": {
+      "allOf": [
+        "MA-442"
+      ],
+      "description": "A completed energy assessment within the last 3 years is required to be eligible."
+    },
+    "MA-450": {
+      "allOf": [
+        "MA-442"
+      ],
+      "description": "A completed or scheduled energy assessment is required to be eligible for heat pump rebate"
     },
     "MA-457": {
       "allOf": [
@@ -543,6 +620,32 @@
         "MA-407"
       ],
       "description": "HEA required"
+    },
+    "MA-904": {
+      "allOf": [
+        "MA-93"
+      ],
+      "description": "Rebate adder to ASHP install when removing old heating system."
+    },
+    "MA-916": {
+      "allOf": [
+        "MA-442",
+        "MA-450"
+      ],
+      "description": "A completed or scheduled energy assessment is required to be eligible for heat pump rebate"
+    },
+    "MA-917": {
+      "allOf": [
+        "MA-442",
+        "MA-450"
+      ],
+      "description": "A completed or scheduled energy assessment is required to be eligible for heat pump rebate"
+    },
+    "MA-924": {
+      "allOf": [
+        "MA-226"
+      ],
+      "description": "qualifying measures must be recommended in HEA"
     }
   },
   "combinations": [
