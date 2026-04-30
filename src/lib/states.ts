@@ -3,7 +3,9 @@ import { LAUNCHED_STATES, STATES_AND_TERRITORIES } from '../data/types/states';
 
 export const isStateIncluded = (
   stateId: string,
-  _includeBeta: boolean, // Ignore beta flag since all states are launched
+  // Ignore beta flag since all states are launched
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  _includeBeta: boolean,
 ): boolean => LAUNCHED_STATES.includes(stateId);
 
 const getStatus = (state: string) => {
