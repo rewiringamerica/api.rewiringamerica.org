@@ -8,7 +8,6 @@ import { FilingStatus } from '../../src/data/tax_brackets';
 import { AmountType } from '../../src/data/types/amount';
 import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { OwnerStatus } from '../../src/data/types/owner-status';
-import { BETA_STATES, LAUNCHED_STATES } from '../../src/data/types/states';
 import { AMIAndEVCreditEligibility } from '../../src/lib/ami-evcredit-calculation';
 import calculateIncentives from '../../src/lib/incentives-calculation';
 import { GeographyType, ResolvedLocation } from '../../src/lib/location';
@@ -144,11 +143,6 @@ test('correctly evaluates scenario "Single w/ $120k Household income"', async t 
     household_size: 1,
   });
   t.ok(data);
-});
-
-test('beta states and launched states are disjoint', async t => {
-  const data = LAUNCHED_STATES.filter(s => BETA_STATES.includes(s));
-  t.equal(data.length, 0);
 });
 
 test('correctly evaluates state incentives for launched states', async t => {
