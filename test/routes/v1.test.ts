@@ -7,7 +7,6 @@ import { AuthorityType } from '../../src/data/authorities';
 import { ALL_ITEMS } from '../../src/data/types/items';
 import { StateStatus } from '../../src/data/types/state-status';
 import {
-  BETA_STATES,
   LAUNCHED_STATES,
   STATES_AND_TERRITORIES,
 } from '../../src/data/types/states';
@@ -1156,12 +1155,8 @@ test('/states', async t => {
     t.strictSame(statesResponse[state].status, StateStatus.Launched);
   });
 
-  BETA_STATES.forEach(state => {
-    t.strictSame(statesResponse[state].status, StateStatus.Beta);
-  });
-
   STATES_AND_TERRITORIES.filter(
-    state => !LAUNCHED_STATES.includes(state) && !BETA_STATES.includes(state),
+    state => !LAUNCHED_STATES.includes(state),
   ).forEach(state => {
     t.strictSame(statesResponse[state].status, StateStatus.None);
   });
