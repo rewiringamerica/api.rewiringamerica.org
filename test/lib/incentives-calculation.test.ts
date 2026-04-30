@@ -319,7 +319,7 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
     i => i.payment_methods[0] === PaymentMethod.PerformanceRebate,
   );
 
-  t.equal(pos_rebate_incentives.length, 0);
+  t.equal(pos_rebate_incentives.length, 1);
   t.equal(tax_credit_incentives.length, 10);
   t.equal(performance_rebate_incentives.length, 0);
 
