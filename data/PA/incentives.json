@@ -1193,7 +1193,7 @@
     "items": [
       "new_electric_vehicle"
     ],
-    "program": "pa_pECO_pECODriverRebates",
+    "program": "pa_pECO_applianceRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 50
@@ -1333,6 +1333,30 @@
     },
     "url": {
       "en": "https://www.ugi.com/rebates-for-home/electric/equipment-rebate-program/"
+    }
+  },
+  {
+    "id": "PA-59",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "pa_pECO_pECODriverRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate on solar installation. "
+    },
+    "end_date": "2026-07-26",
+    "url": {
+      "en": "https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/solar-rebates"
     }
   }
 ]
