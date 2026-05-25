@@ -421,18 +421,18 @@
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for high efficiency heat pump water heater.",
-      "es": "Reembolso de $500 para calentador de agua con bomba de calor de alta eficiencia."
+      "en": "Xcel Energy customers can save $500 on a high efficiency heat pump water heater."
     },
     "start_date": "2025-01-01",
     "url": {
-      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
+      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates/water-heaters"
     }
   },
   {
     "id": "NM-18",
     "payment_methods": [
-      "pos_rebate"
+      "pos_rebate",
+      "rebate"
     ],
     "items": [
       "smart_thermostat"
@@ -447,36 +447,10 @@
       "renter"
     ],
     "short_description": {
-      "en": "Receive an $50 instant rebate on an eligible Thermostat Rewards device at the Xcel Energy Store.",
-      "es": "Reciba un reembolso instantáneo de $50 por un dispositivo Thermostat Rewards elegible en la tienda Xcel Energy."
+      "en": "Xcel Energy customers can save $50 on an eligible smart thermostat."
     },
     "url": {
-      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
-    }
-  },
-  {
-    "id": "NM-19",
-    "payment_methods": [
-      "account_credit"
-    ],
-    "items": [
-      "smart_thermostat"
-    ],
-    "program": "nm-xcel-rebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 100
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Receive a one-time $100 enrollment bill credit for signing up for Thermostat Rewards program with an existing eligible thermostat with central AC.",
-      "es": "Reciba un crédito único en la factura de inscripción de $100 por registrarse en el programa Thermostat Rewards con un termostato elegible existente con aire acondicionado central."
-    },
-    "url": {
-      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
+      "en": "https://nm.my.xcelenergy.com/s/residential/heating-cooling/thermostat-rewards"
     }
   },
   {
@@ -927,8 +901,7 @@
       "tax_credit"
     ],
     "items": [
-      "rooftop_solar_installation",
-      "solar_water_heater"
+      "rooftop_solar_installation"
     ],
     "program": "nm_ecam_newSolarMarketDevelopmentTaxCredit",
     "amount": {
@@ -3911,32 +3884,6 @@
     }
   },
   {
-    "id": "NM-169",
-    "payment_methods": [
-      "account_credit"
-    ],
-    "items": [
-      "electric_vehicle_charger"
-    ],
-    "program": "nm-xcel-rebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 35,
-      "maximum": 35
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$35 annual bill credit for signing up for an off-peak electric vehicle charging schedule with eligible charger.",
-      "es": "Crédito de factura anual de $35 por suscribirse a un programa de carga de vehículos eléctricos fuera de horas pico con un cargador elegible."
-    },
-    "url": {
-      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
-    }
-  },
-  {
     "id": "NM-171",
     "payment_methods": [
       "rebate"
@@ -4287,56 +4234,6 @@
     }
   },
   {
-    "id": "NM-191",
-    "payment_methods": [
-      "assistance_program"
-    ],
-    "items": [
-      "electric_stove"
-    ],
-    "program": "nm_losAlamosCounty_dPUConserveAndReduce",
-    "amount": {
-      "type": "percent",
-      "number": 1
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Induction Cooktop Loaner Program - try out an induction cooktop, utensils, pan and instructions for free. Borrow from local libraries.",
-      "es": "Programa de préstamo de placas de cocción por inducción: pruebe una placa de cocción por inducción, utensilios, una sartén e instrucciones gratis. Pídalos prestados en bibliotecas locales."
-    },
-    "url": {
-      "en": "https://www.losalamosnm.us/Services/Public-Utilities/Conserve-and-Reduce"
-    }
-  },
-  {
-    "id": "NM-192",
-    "payment_methods": [
-      "assistance_program"
-    ],
-    "items": [
-      "energy_audit"
-    ],
-    "program": "nm_losAlamosCounty_dPUConserveAndReduce",
-    "amount": {
-      "type": "percent",
-      "number": 1
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Reduce Energy Costs: Guidance for DIY energy audit and borrow Kill-A-Watt meter or a thermal imaging camera from public library.",
-      "es": "Reduzca costos de energía: Guía para realizar una auditoría energética usted mismo y pedir prestado un medidor Kill-A-Watt o una cámara termográfica en una biblioteca pública."
-    },
-    "url": {
-      "en": "https://www.losalamosnm.us/Services/Public-Utilities/Conserve-and-Reduce"
-    }
-  },
-  {
     "id": "NM-193",
     "payment_methods": [
       "assistance_program"
@@ -4449,32 +4346,6 @@
     }
   },
   {
-    "id": "NM-197",
-    "payment_methods": [
-      "assistance_program"
-    ],
-    "items": [
-      "efficiency_rebates",
-      "rooftop_solar_installation"
-    ],
-    "program": "nm_santaFeCounty_homeRehabilitationAndEnergyEfficiencyHREEProgram",
-    "amount": {
-      "type": "percent",
-      "number": 1
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "One-time grant up to $50,000 for envelope, efficiency  and safety improvements to qualified homeowners in unincorporated parts of Santa Fe County. ",
-      "es": "Subvención única de hasta $50,000 para mejoras en la envolvente del edificio, la eficiencia y la seguridad, destinada a propietarios que califiquen en zonas no incorporadas del condado de Santa Fe."
-    },
-    "low_income": "nm-santafe-100AMI-HUD",
-    "url": {
-      "en": "https://www.santafecountynm.gov/news/detail/santa-fe-county-is-now-accepting-applications-for-its-home-rehabilitation-and-energy-efficiency-hree-program"
-    }
-  },
-  {
     "id": "NM-198",
     "payment_methods": [
       "assistance_program"
@@ -4526,7 +4397,7 @@
       "en": "Provides no-cost energy efficiency services to income-qualified customers in all residential home types. Multifamily and rental may qualify.",
       "es": "Ofrece servicios gratuitos de eficiencia energética a clientes con ingresos calificados en todo tipo de viviendas. Las viviendas multifamiliares y de alquiler también pueden calificar."
     },
-    "low_income": "nm-elpasoelectric-income-qualified",
+    "low_income": "nm-200fpl",
     "url": {
       "en": "https://www.epelectric.com/energy-efficiency/new-mexico-residential-energy-efficiency-programs/residential-low-income"
     }
@@ -4802,34 +4673,6 @@
     }
   },
   {
-    "id": "NM-215",
-    "payment_methods": [
-      "assistance_program"
-    ],
-    "items": [
-      "efficiency_rebates"
-    ],
-    "program": "nm_santaFeCounty_santaFeCommunityEnergyEfficiencyDevelopmentCEED",
-    "amount": {
-      "type": "percent",
-      "number": 1,
-      "maximum": 16000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $16,000 worth of energy retrofits for income qualifying homeowners in unincorporated parts of Santa Fe County.",
-      "es": "Hasta $16,000 por renovaciones energéticas para propietarios de viviendas que califiquen según sus ingresos en partes no incorporadas del condado de Santa Fe."
-    },
-    "start_date": "2025-04-15",
-    "end_date": "2027-12-31",
-    "low_income": "nm-santafe-80AMISF",
-    "url": {
-      "en": "https://www.santafecountynm.gov/housing-services/affordable-housing/home-rehabilitation-and-energy-efficiency-program"
-    }
-  },
-  {
     "id": "NM-216",
     "payment_methods": [
       "rebate"
@@ -4841,6 +4684,7 @@
     "amount": {
       "type": "dollar_amount",
       "number": 750,
+      "minimum": 400,
       "maximum": 750
     },
     "owner_status": [
@@ -4848,8 +4692,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $750 rebate on qualified heat pump using participating contractor, depending on efficiency rating. $500 bonus to replace central electric heat.",
-      "es": "Reembolso de hasta $750 por bombas de calor calificadas con un contratista participante, según la clasificación de eficiencia. Bonificación de $500 para reemplazar la calefacción eléctrica central."
+      "en": "Xcel Energy customers can save up to $750 on a qualifying air source heat pump, plus up to $500 bonus for replacing electric resistance heating."
     },
     "url": {
       "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
@@ -4867,14 +4710,14 @@
     "amount": {
       "type": "dollar_amount",
       "number": 325,
+      "minimum": 275,
       "maximum": 325
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $325 rebate on qualified air source heat pump in new construction using participating contractor.  Rebate depends on efficiency rating.",
-      "es": "Reembolso de hasta $325 por bombas de calor de aire calificadas para nuevas construcciones con un contratista participante. El reembolso depende de la calificación de eficiencia."
+      "en": "Xcel Energy customers can save up to $325 on a qualifying air source heat pump for new construction."
     },
     "url": {
       "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
@@ -4927,12 +4770,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "$700 or $200 rebate on eligible evaporative cooling unit, depending on media saturation rating. Most units with 8\" pads don't qualify for $700 rebate.",
-      "es": "Reembolso de $700 o $200 por unidades de enfriamiento evaporativo elegibles, según el índice de saturación del medio. La mayoría de las unidades con paneles de 8\" no califican para el reembolso de $700."
+      "en": "Xcel Energy customers can save up to $700 on an eligible evaporative cooling unit."
     },
     "start_date": "2025-01-01",
     "url": {
-      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
+      "en": "https://nm.my.xcelenergy.com/s/residential/heating-cooling/evaporative-cooling"
     }
   },
   {
@@ -4947,6 +4789,7 @@
     "amount": {
       "type": "dollar_amount",
       "number": 200,
+      "minimum": 100,
       "maximum": 200
     },
     "owner_status": [
@@ -4954,8 +4797,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $200 rebate on qualified central air conditioner using participating contractor. Rebate depends on efficiency rating.",
-      "es": "Hasta $200 de reembolso en aires acondicionados centrales calificados a través de un contratista participante. El reembolso depende de la calificación de eficiencia."
+      "en": "Xcel Energy customers can save up to $200 on a qualified central air conditioner."
     },
     "url": {
       "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
@@ -4982,11 +4824,10 @@
       "renter"
     ],
     "short_description": {
-      "en": "Free energy audit and energy-saving measures such as sealing leaks with approved contractors.  Additional efficiency services at reduced prices.",
-      "es": "Auditoría energética gratuita y medidas de ahorro, como el sellado de fugas a través de contratistas autorizados. Servicios de eficiencia energética adicionales a precios reducidos."
+      "en": "Xcel Energy customers can receive a free home energy assessment and energy-saving measures, such as insulation and sealing leaks."
     },
     "url": {
-      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
+      "en": "https://nm.my.xcelenergy.com/s/residential/home-services/home-energy-services"
     }
   },
   {
@@ -5001,18 +4842,18 @@
     "program": "nm-xcel-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 800,
+      "maximum": 800
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $800 rebate for Level 2 electric vehicle charger or installation cost (240 volt circuit). Renters- separate meter and written landlord consent.",
-      "es": "Reembolso de hasta $800 para un cargador de vehículo eléctrico de Nivel 2 o costo de instalación (circuito de 240 voltios). Inquilinos: medidor independiente y consentimiento por escrito del propietario."
+      "en": "Xcel Energy customers can save up to $800 on a Level 2 EV charger and/or 240-volt circuit wiring."
     },
     "url": {
-      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
+      "en": "https://nm.my.xcelenergy.com/s/residential/ev-charging/incentives/charger-wiring-rebate"
     }
   },
   {
@@ -5035,38 +4876,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $2,500 rebate for qualified Level 2 electric vehicle charger installation, income-qualified residents.  Renters-separate meter, written consent.",
-      "es": "Reembolso de hasta $2,500 por la instalación de un cargador de vehículo eléctrico de nivel 2 para residentes   calificados según sus ingresos. Inquilinos: medidor independiente y consentimiento por escrito."
+      "en": "Income-qualified Xcel Energy customers or customers in an underserved community can save up to $2,500 on a Level 2 EV charger and/or 240-volt circuit."
     },
-    "low_income": "nm-pnm-income-qualified",
+    "low_income": "nm-200fpl",
     "url": {
-      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
-    }
-  },
-  {
-    "id": "NM-224",
-    "payment_methods": [
-      "assistance_program"
-    ],
-    "items": [
-      "electric_vehicle_charger"
-    ],
-    "program": "nm-xcel-rebates",
-    "amount": {
-      "type": "percent",
-      "number": 1
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Rent a Level 2 EV charger for $12/month if you have Wi-Fi and charge off-peak through \"Optimize Your Charge\" program.",
-      "es": "Alquile un cargador de vehículo eléctrico de nivel 2 por $12 al mes si cuenta con conexión Wi-Fi y realiza la carga fuera de los períodos de alta demanda a través del programa “Optimice su carga”."
-    },
-    "paused": true,
-    "url": {
-      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
+      "en": "https://nm.my.xcelenergy.com/s/residential/ev-charging/incentives/charger-wiring-rebate"
     }
   },
   {
@@ -5178,8 +4992,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate for installation of smart thermostat, $25 rebate for programmable thermostat. ",
-      "es": "Reembolso de $50 por la instalación de un termostato inteligente, reembolso de $25 por un termostato programable. "
+      "en": "Zia Gas customers can save $50 on a smart thermostat or $25 on a programmable thermostat. "
     },
     "url": {
       "en": "https://www.zngc.com/~zngc/?page_id=249"
@@ -5191,7 +5004,10 @@
       "rebate"
     ],
     "items": [
-      "attic_or_roof_insulation"
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "wall_insulation"
     ],
     "program": "nm_ziaNaturalGasCompany_ziaNaturalGasCompanyEnergyEfficiencyProgram",
     "amount": {
@@ -5204,8 +5020,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$300 rebate to install or upgrade attic insulation from R-11 or lower to R-30 or higher.",
-      "es": "Reembolso de $300 por instalar o mejorar el aislamiento del ático de R-11 o inferior a R-30 o superior."
+      "en": "Zia Gas customers can save $300 on qualifying insulation improvements."
     },
     "url": {
       "en": "https://www.zngc.com/~zngc/?page_id=249"
@@ -5217,10 +5032,6 @@
       "assistance_program"
     ],
     "items": [
-      "smart_thermostat",
-      "duct_sealing",
-      "air_sealing",
-      "other_weatherization",
       "energy_audit"
     ],
     "program": "nm_ziaNaturalGasCompany_ziaNaturalGasCompanyEnergyEfficiencyProgram",
@@ -5233,8 +5044,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "No-cost audit and weatherization including duct sealing, air sealing, caulking, water heater jacket, thermostat for income-eligible households.",
-      "es": "Auditoría y climatización sin costo que incluye sellado de conductos, sellado de aire, calafateo, aislante de calentador de agua y termostato para hogares elegibles según sus ingresos."
+      "en": "Income-qualified Zia Gas customers can receive a free home energy assessment."
     },
     "low_income": "nm-200fpl",
     "url": {
@@ -5252,19 +5062,20 @@
     ],
     "program": "nm_newMexicoGasCompany_nMGasEnergyEfficiencyProgram",
     "amount": {
-      "type": "dollar_amount",
-      "number": 1000
+      "type": "percent",
+      "number": 0.4,
+      "maximum": 1000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Up to $1,000 rebate for installation of qualified insulation in attic, roof or crawl space by a participating contractor.  ",
-      "es": "Reembolso de hasta $1,000 por la instalación de aislamiento calificado en áticos, techos o espacios de acceso por parte de un contratista participante.  "
+      "en": "New Mexico Gas Company customers can save 40% on qualifying attic, roof or crawl space insulation, up to $1,000."
     },
-    "end_date": "2026-03-31",
+    "end_date": "2027-03-31",
     "url": {
-      "en": "https://nmgcgetrebates.com"
+      "en": "https://nmgcgetrebates.com/insulation-rebates"
     }
   },
   {
@@ -5281,15 +5092,15 @@
       "number": 200
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Up to $200 rebate for duct sealing  by a participating contractor.  ",
-      "es": "Reembolso de hasta $200 por sellado de ductos realizado por un contratista participante.  "
+      "en": "New Mexico Gas Company customers can save up to $200 on duct sealing."
     },
-    "end_date": "2026-03-31",
+    "end_date": "2027-03-31",
     "url": {
-      "en": "https://nmgcgetrebates.com"
+      "en": "https://nmgcgetrebates.com/insulation-rebates"
     }
   },
   {
@@ -5306,15 +5117,15 @@
       "number": 200
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Up to $200 rebate for sealing air leaks by a participating contractor.  ",
-      "es": "Reembolso de hasta $200 por sellado de fugas de aire realizado por un contratista participante.  "
+      "en": "New Mexico Gas Company customers can save up to $200 on sealing air leaks at home.  "
     },
-    "end_date": "2026-03-31",
+    "end_date": "2027-03-31",
     "url": {
-      "en": "https://nmgcgetrebates.com"
+      "en": "https://nmgcgetrebates.com/insulation-rebates"
     }
   },
   {
@@ -5330,18 +5141,18 @@
     "amount": {
       "type": "dollar_amount",
       "number": 50,
-      "maximum": 100
+      "maximum": 50
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$50 instant rebate for ENERGY STAR smart thermostat at Lowes or The Home Depots or via contractor. $50 rebate after purchase at other retailers. ",
-      "es": "Reembolso instantáneo de $50 por termostato inteligente con certificación ENERGY STAR en Lowes, The Home Depot o a través de un contratista. Reembolso de $50 después de la compra en otros vendedores minoristas. "
+      "en": "New Mexico Gas Company customers can save $50 on an ENERGY STAR smart thermostat. "
     },
-    "end_date": "2026-03-31",
+    "end_date": "2027-03-31",
     "url": {
-      "en": "https://nmgcgetrebates.com"
+      "en": "https://nmgcgetrebates.com/smart-thermostat-rebates"
     }
   },
   {
