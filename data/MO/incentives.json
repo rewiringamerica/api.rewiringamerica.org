@@ -93,6 +93,7 @@
       "en": "Up to $100 rebate for an ENERGY STAR certified electric water heater, depending on efficiency rating and whether a gas appliance is replaced.",
       "es": "Reembolso de hasta $100 por un calentador de agua eléctrico con certificación ENERGY STAR, según la calificación de eficiencia y si se reemplaza un equipo a gas."
     },
+    "end_date": "2026-01-01",
     "url": {
       "en": "https://www.brec.coop/rebate-programs"
     }
@@ -187,16 +188,16 @@
     "program": "mo_intercountyElectricCooperativeAssociation_intercountyRebateProgram",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
+      "number": 500,
       "unit": "ton",
-      "maximum": 1500
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton rebate for ENERGY STAR rated air source heat pumps.",
-      "es": "Reembolso de $150 por tonelada para bombas de calor de fuente de aire con clasificación ENERGY STAR."
+      "en": "Up to $500/ton rebate for ENERGY STAR rated air source heat pumps, depending on type and efficiency.",
+      "es": "Reembolso de hasta $500 por tonelada para bombas de calor de fuente de aire con clasificación ENERGY STAR, según el tipo y la eficiencia."
     },
     "url": {
       "en": "https://www.ieca.coop/rebates"
@@ -679,15 +680,15 @@
     "program": "mo_callawayElectricCooperative_callawayElectricRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
+      "number": 500,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $150/ton for an ENERGY STAR rated air source heat pump.",
-      "es": "Reembolso de hasta $150 por tonelada por una bomba de calor de fuente de aire con certificación ENERGY STAR."
+      "en": "Up to $500/ton for an ENERGY STAR rated air source heat pump.",
+      "es": "Hasta $500/tonelada para una bomba de calor de fuente de aire con clasificación ENERGY STAR."
     },
     "url": {
       "en": "https://www.callawayelectric.com/rebates"
@@ -738,7 +739,7 @@
       "es": "Reembolso de hasta $250 por un cargador de vehículo eléctrico, hasta el 50 % del costo total."
     },
     "url": {
-      "en": "https://www.callawayelectric.com/rebates"
+      "en": "https://www.callawayelectric.com/ev-info"
     }
   },
   {
@@ -753,14 +754,14 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 500
+      "maximum": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% rebate up to $500 for an ENERGY STAR certified heat pump water heater.",
-      "es": "Reembolso del 50 %, hasta $500, por un calentador de agua con bomba de calor con certificación ENERGY STAR."
+      "en": "50% rebate up to $750 for an ENERGY STAR certified heat pump water heater.",
+      "es": "Reembolso del 50 % hasta $750 para un calentador de agua con bomba de calor con certificación ENERGY STAR."
     },
     "url": {
       "en": "https://www.cmecinc.com/rebates"
@@ -778,15 +779,17 @@
     "program": "mo_centralMissouriElectricCooperative_cMECRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
-      "unit": "ton"
+      "number": 500,
+      "unit": "ton",
+      "minimum": 300,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton rebate for ducted or ductless air source heat pumps.",
-      "es": "Reembolso de $150 por tonelada para bombas de calor de fuente de aire con ductos o sin ductos."
+      "en": "$300-500/ton rebate for ducted air source heat pumps.",
+      "es": "Reembolso de $300 a $500 por tonelada para bombas de calor de fuente de aire con ductos."
     },
     "url": {
       "en": "https://www.cmecinc.com/rebates"
@@ -839,7 +842,6 @@
       "en": "$500 rebate for an air source heat pump when used with another fuel source.",
       "es": "Reembolso de $500 por una bomba de calor de fuente de aire cuando se utilice junto con otra fuente de combustible."
     },
-    "end_date": "2025-05-31",
     "url": {
       "en": "https://www.cecmo.com/residential-rebates"
     }
@@ -856,7 +858,7 @@
     "program": "mo_citizensElectricCorporation_cECMOPowerMovesRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 1800,
+      "number": 1500,
       "minimum": 250,
       "maximum": 1800
     },
@@ -864,10 +866,9 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,800 rebate for an air source heat pump depending on efficiency level, cold climate rating, and system replaced.",
-      "es": "Reembolso de hasta $1,800 por una bomba de calor de fuente de aire, según el nivel de eficiencia, la calificación para clima frío y el sistema reemplazado."
+      "en": "Up to $1,500 rebate for an air source heat pump depending on efficiency level, cold climate rating, and system replaced.",
+      "es": "Reembolso de hasta $1,500 para una bomba de calor de fuente de aire según el nivel de eficiencia, la clasificación de clima frío y el sistema reemplazado."
     },
-    "end_date": "2025-05-31",
     "url": {
       "en": "https://www.cecmo.com/residential-rebates"
     }
@@ -893,7 +894,6 @@
       "en": "$800 rebate for a heat pump water heater.",
       "es": "Reembolso de $800 por un calentador de agua con bomba de calor."
     },
-    "end_date": "2025-05-31",
     "url": {
       "en": "https://www.cecmo.com/residential-rebates"
     }
@@ -908,18 +908,18 @@
     ],
     "program": "mo_citizensElectricCorporation_cECMOPowerMovesRebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 2000,
-      "maximum": 2000
+      "type": "dollars_per_unit",
+      "number": 750,
+      "unit": "ton",
+      "maximum": 4000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,000 rebate for a ground source heat pump.",
-      "es": "Reembolso de $2,000 por una bomba de calor geotérmica."
+      "en": "$750/ton rebate for a ground source heat pump, up to $4,000 total.",
+      "es": "Reembolso de $750 por tonelada para una bomba de calor geotérmica, hasta un total de $4,000."
     },
-    "end_date": "2025-05-31",
     "url": {
       "en": "https://www.cecmo.com/residential-rebates"
     }
@@ -1156,20 +1156,19 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_water_heater",
-      "non_heat_pump_water_heater"
+      "heat_pump_water_heater"
     ],
     "program": "mo_crawfordElectricCooperative_crawfordElectricResidentialRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 50
+      "number": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$50 rebate for a high-efficiency electric water heater.",
-      "es": "Reembolso de $50 por un calentador de agua eléctrico de alta eficiencia."
+      "en": "$750 rebate for a high-efficiency heat pump water heater.",
+      "es": "Reembolso de $750 para un calentador de agua con bomba de calor de alta eficiencia."
     },
     "url": {
       "en": "https://crawfordelec.com/Rebates"
@@ -1212,7 +1211,7 @@
     "program": "mo_crawfordElectricCooperative_crawfordElectricResidentialRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 350,
+      "number": 700,
       "unit": "ton",
       "maximum": 3500
     },
@@ -1220,8 +1219,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350/ton rebate for a ducted or ductless air source heat pump.",
-      "es": "Reembolso de $350 por tonelada por una bomba de calor de fuente de aire con o sin ductos."
+      "en": "Up to $700/ton rebate for a ducted dual fuel air source heat pump.",
+      "es": "Reembolso de hasta $700 por tonelada para una bomba de calor de fuente de aire de combustible dual conducida."
     },
     "url": {
       "en": "https://crawfordelec.com/Rebates"
@@ -1248,6 +1247,7 @@
       "en": "50% of cost up to $250 for a level 2 electric vehicle charger.",
       "es": "50 % del costo, hasta $250, por un cargador de vehículo eléctrico de nivel 2."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.cuivre.com/rebates"
     }
@@ -1262,16 +1262,16 @@
     ],
     "program": "mo_cuivreRiverElectricCooperative_cuivreRiverEnergyEfficiencyAndSavings",
     "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR certified heat pump water heater. Cannot exceed 50% of total cost.",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor con certificación ENERGY STAR. No deberá exceder el 50 % del costo total."
+      "en": "50% up to $750 rebate for an ENERGY STAR certified heat pump water heater. ",
+      "es": "Reembolso del 50% hasta $750 para un calentador de agua con bomba de calor con certificación ENERGY STAR."
     },
     "url": {
       "en": "https://www.cuivre.com/rebates"
@@ -1308,21 +1308,22 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
+      "ducted_heat_pump"
     ],
     "program": "mo_cuivreRiverElectricCooperative_cuivreRiverEnergyEfficiencyAndSavings",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
-      "unit": "ton"
+      "number": 500,
+      "unit": "ton",
+      "minimum": 300,
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton rebate for a qualifying ducted or ductless air source heat pump.",
-      "es": "Reembolso de $150 por tonelada para una bomba de calor de fuente de aire con ductos o sin ductos que califique."
+      "en": "Up to $500/ton rebate for a qualifying ducted dual fuel air source heat pump.",
+      "es": "Reembolso de hasta $500 por tonelada para una bomba de calor de fuente de aire de combustible dual con conductos que califique."
     },
     "url": {
       "en": "https://www.cuivre.com/rebates"
@@ -1349,6 +1350,7 @@
       "en": "Up to $550 rebate for an air source heat pump, depending on efficiency rating.",
       "es": "Reembolso de hasta $550 por una bomba de calor de fuente de aire, según la clasificación de eficiencia."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://central.libertyutilities.com/all/residential/ways-to-save/missouri-electric-energy-efficiency-programs--residential-and-commercial-central-liberty.html"
     }
@@ -1373,6 +1375,7 @@
       "en": "Up to $350 rebate for a ductless air source mini split heat pump, depending on efficiency rating.",
       "es": "Reembolso de hasta $350 por una bomba de calor mini-split de fuente de aire sin ductos, según la calificación de eficiencia."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://central.libertyutilities.com/all/residential/ways-to-save/missouri-electric-energy-efficiency-programs--residential-and-commercial-central-liberty.html"
     }
@@ -1397,6 +1400,7 @@
       "en": "Up to $550 rebate for a ground source heat pump.",
       "es": "Reembolso de hasta $550 por una bomba de calor geotérmica."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://central.libertyutilities.com/all/residential/ways-to-save/missouri-electric-energy-efficiency-programs--residential-and-commercial-central-liberty.html"
     }
@@ -1412,14 +1416,14 @@
     "program": "mo_gascosageElectricCooperative_gascosageElectricRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR heat pump water heater.",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor ENERGY STAR."
+      "en": "$750 rebate for an ENERGY STAR heat pump water heater.",
+      "es": "Reembolso de $750 para un calentador de agua con bomba de calor ENERGY STAR."
     },
     "url": {
       "en": "https://www.gascosage.coop/rebates-2/"
@@ -1512,7 +1516,7 @@
     "program": "mo_howardElectricCooperative_howardElectricRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 750,
+      "number": 800,
       "unit": "ton",
       "maximum": 7500
     },
@@ -1520,8 +1524,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$750/ton rebate for a qualifying ground source heat pump installation.",
-      "es": "Reembolso de $750 por tonelada por la instalación de una bomba de calor geotérmica que califique."
+      "en": "$800/ton rebate for a qualifying ground source heat pump installation.",
+      "es": "Reembolso de $800 por tonelada para la instalación de una bomba de calor geotérmica que cumpla con los requisitos."
     },
     "url": {
       "en": "https://www.howardelectric.com/rebates-0"
@@ -1538,7 +1542,7 @@
     "program": "mo_howardElectricCooperative_howardElectricRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 350,
+      "number": 150,
       "unit": "ton",
       "minimum": 1050
     },
@@ -1546,8 +1550,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350/ton rebate for a qualifying mini split heat pump. Minimum 3 ton.",
-      "es": "Reembolso de $350 por tonelada por una bomba de calor mini-split que califique. Mínimo 3 toneladas."
+      "en": "$150/ton rebate for a qualifying mini split heat pump. Plus $150 rebate per outdoor condensing unit. Minimum 3 ton.",
+      "es": "Reembolso de $150 por tonelada para una bomba de calor minisplit que cumpla los requisitos. Más un reembolso de $150 por unidad condensadora exterior. Mínimo de 3 toneladas."
     },
     "url": {
       "en": "https://www.howardelectric.com/rebates-0"
@@ -1564,15 +1568,15 @@
     "program": "mo_howardElectricCooperative_howardElectricRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 200,
+      "number": 500,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$200/ton rebate for a qualifying air source heat pump installation.",
-      "es": "Reembolso de $200 por tonelada por la instalación de una bomba de calor de fuente de aire que califique."
+      "en": "Up to $500/ton rebate for a qualifying dual fuel air source heat pump installation.",
+      "es": "Reembolso de hasta $500 por tonelada para la instalación de bomba de calor de fuente de aire de combustible dual que califique."
     },
     "url": {
       "en": "https://www.howardelectric.com/rebates-0"
@@ -1588,17 +1592,16 @@
     ],
     "program": "mo_howardElectricCooperative_howardElectricRebates",
     "amount": {
-      "type": "dollar_amount",
-      "number": 650,
-      "minimum": 500,
-      "maximum": 650
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $650 rebate for a heat pump water heater, depending on previous fuel source.",
-      "es": "Reembolso de hasta $650 por un calentador de agua con bomba de calor, según la fuente de combustible anterior."
+      "en": "50% of cost up to $750 rebate for a heat pump water heater.",
+      "es": "Reembolso del 50% del costo hasta $750 para un calentador de agua con bomba de calor."
     },
     "url": {
       "en": "https://www.howardelectric.com/rebates-0"
@@ -1690,16 +1693,15 @@
     "program": "mo_howell-OregonElectricCooperative_howell-OregonRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
-      "unit": "ton",
-      "maximum": 1500
+      "number": 500,
+      "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton rebate for a qualifying air source heat pump.",
-      "es": "Reembolso de $150 por tonelada en bombas de calor de fuente de aire que califiquen."
+      "en": "Up to $500/ton rebate for a qualifying dual fuel air source heat pump system.",
+      "es": "Reembolso de hasta $500 por tonelada para un sistema de bomba de calor de fuente de aire de combustible dual calificado."
     },
     "url": {
       "en": "https://www.hoecoop.org/rebates"
@@ -1743,14 +1745,14 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 500
+      "maximum": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of cost, up to $500 rebate for a heat pump water heater.",
-      "es": "Reembolso del 50 % del costo, hasta $500, por un calentador de agua con bomba de calor."
+      "en": "50% of cost, up to $750 rebate for a heat pump water heater.",
+      "es": "50% del costo, hasta $750 de reembolso para un calentador de agua con bomba de calor."
     },
     "url": {
       "en": "https://www.hoecoop.org/rebates"
@@ -1794,16 +1796,16 @@
     "program": "mo_lacledeElectricCooperative_lacledeTakeControlAndSave",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 300,
+      "number": 500,
       "unit": "ton",
-      "maximum": 3000
+      "maximum": 5000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$300/ton rebate for a qualifying ducted or ductless air source heat pump.",
-      "es": "Reembolso de $300 por tonelada para una bomba de calor de fuente de aire con ductos o sin ductos que califique."
+      "en": "Up to $500/ton rebate for a qualifying dual fuel ducted or ductless air source heat pump.",
+      "es": "Reembolso de hasta $500 por tonelada para una bomba de calor de fuente de aire con o sin ductos de combustible dual que califique."
     },
     "url": {
       "en": "https://lacledeelectric.com/rebate/"
@@ -1920,16 +1922,16 @@
     "program": "mo_maconElectricCooperative_maconTakeControlAndSave",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 300,
+      "number": 500,
       "unit": "ton",
-      "maximum": 3000
+      "maximum": 5000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$300/ton rebate for a qualifying air source heat pump.",
-      "es": "Reembolso de $300 por tonelada en bombas de calor de fuente de aire que califiquen."
+      "en": "Up to $500/ton rebate for a qualifying air source heat pump.",
+      "es": "Reembolso de hasta $500 por tonelada para una bomba de calor de fuente de aire calificada."
     },
     "url": {
       "en": "https://www.maconelectric.com/rebates"
@@ -1946,14 +1948,14 @@
     "program": "mo_maconElectricCooperative_maconTakeControlAndSave",
     "amount": {
       "type": "dollar_amount",
-      "number": 700
+      "number": 1050
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$700 rebate for a heat pump water heater.",
-      "es": "Reembolso de $700 por un calentador de agua con bomba de calor."
+      "en": "$1050 rebate for a heat pump water heater.",
+      "es": "Reembolso de $1,050 para un calentador de agua con bomba de calor."
     },
     "url": {
       "en": "https://www.maconelectric.com/rebates"
@@ -2046,16 +2048,16 @@
     "program": "mo_new-MacElectricCooperative_new-MacElectricMemberRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
+      "number": 500,
       "unit": "ton",
-      "maximum": 1500
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton for a ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
-      "es": "Reembolso de $150 por tonelada para una bomba de calor de fuente de aire con ductos o sin ductos. La calefacción suplementaria debe estar controlada por un termostato automático."
+      "en": "Up to $500/ton for a dual fuel ducted air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
+      "es": "Hasta $500/tonelada para una bomba de calor de aire conducido de combustible dual. La calefacción adicional debe controlarse mediante un termostato automático."
     },
     "url": {
       "en": "https://newmac.com/rebates"
@@ -2072,14 +2074,14 @@
     "program": "mo_new-MacElectricCooperative_new-MacElectricMemberRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for a heat pump water heater. Cannot exceed 50% of purchase cost.",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor. No deberá exceder el 50 % del costo de compra."
+      "en": "$750 rebate for a heat pump water heater. Cannot exceed 50% of purchase cost.",
+      "es": "Reembolso de $750 para un calentador de agua con bomba de calor. No puede superar el 50% del precio de compra."
     },
     "url": {
       "en": "https://newmac.com/rebates"
@@ -2096,14 +2098,14 @@
     "program": "mo_osageValleyElectricCooperativeAssociation_osageValleyTakeControlAndSaveRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR rated heat pump water heater.",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor con certificación ENERGY STAR."
+      "en": "$750 rebate for an ENERGY STAR rated heat pump water heater.",
+      "es": "Reembolso de $750 para un calentador de agua con bomba de calor con clasificación ENERGY STAR."
     },
     "url": {
       "en": "https://www.osagevalley.com/rebates/"
@@ -2121,16 +2123,16 @@
     "program": "mo_osageValleyElectricCooperativeAssociation_osageValleyTakeControlAndSaveRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
+      "number": 500,
       "unit": "ton",
-      "maximum": 1500
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton for a ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
-      "es": "Reembolso de $150 por tonelada para una bomba de calor de fuente de aire con ductos o sin ductos. La calefacción suplementaria debe estar controlada por un termostato automático."
+      "en": "Up to $500/ton for a dual fuel ducted air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
+      "es": "Hasta $500/tonelada para una bomba de calor de aire conducido de combustible dual. La calefacción adicional debe controlarse mediante un termostato automático."
     },
     "url": {
       "en": "https://www.osagevalley.com/rebates/"
@@ -2183,6 +2185,7 @@
       "en": "50% of cost up to $250 for a level 2 electric vehicle charger.",
       "es": "50 % del costo, hasta $250, por un cargador de vehículo eléctrico de nivel 2."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.osagevalley.com/rebates/"
     }
@@ -2198,14 +2201,14 @@
     "program": "mo_ozarkBorderElectricCooperative_ozarkBorderTakeControlAndSaveRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR rated heat pump water heater up to 50% of the total cost of the unit. ",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor con certificación ENERGY STAR, hasta el 50 % del costo total de la unidad. "
+      "en": "$750 rebate for an ENERGY STAR rated heat pump water heater up to 50% of the total cost of the unit. ",
+      "es": "Reembolso de $750 para un calentador de agua con bomba de calor con clasificación ENERGY STAR de hasta el 50 % del costo total de la unidad."
     },
     "url": {
       "en": "https://www.ozarkborder.org/rebate-info.php"
@@ -2223,7 +2226,7 @@
     "program": "mo_ozarkBorderElectricCooperative_ozarkBorderTakeControlAndSaveRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
+      "number": 500,
       "unit": "ton",
       "maximum": 1500
     },
@@ -2231,8 +2234,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton for a ducted or ductless air source heat pump up to 50% of the total unit cost.",
-      "es": "Reembolso de $150 por tonelada por una bomba de calor de fuente de aire con ductos o sin ductos, hasta el 50 % del costo total de la unidad."
+      "en": "Up to $500/ton for a dual fuel ducted air source heat pump up to 50% of the total unit cost.",
+      "es": "Hasta $500/tonelada para una bomba de calor de fuente de aire con ductos de combustible dual hasta el 50% del costo total de la unidad."
     },
     "url": {
       "en": "https://www.ozarkborder.org/rebate-info.php"
@@ -2302,16 +2305,16 @@
     "program": "mo_ozarkElectricCooperative_ozarkTakeControlAndSaveRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
+      "number": 500,
       "unit": "ton",
-      "maximum": 1500
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton for a ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
-      "es": "Reembolso de $150 por tonelada para una bomba de calor de fuente de aire con ductos o sin ductos. La calefacción suplementaria debe estar controlada por un termostato automático."
+      "en": "Up to $500/ton for a dual fuel ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
+      "es": "Hasta $500/tonelada para una bomba de calor de aire de doble combustible, con o sin ductos. La calefacción adicional debe controlarse mediante un termostato automático."
     },
     "url": {
       "en": "https://www.ozarkelectric.com/rebates"
@@ -2328,14 +2331,14 @@
     "program": "mo_ozarkElectricCooperative_ozarkTakeControlAndSaveRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR rated heat pump water heater.",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor con certificación ENERGY STAR."
+      "en": "$750 rebate for an ENERGY STAR rated heat pump water heater.",
+      "es": "Reembolso de $750 para un calentador de agua con bomba de calor con clasificación ENERGY STAR."
     },
     "url": {
       "en": "https://www.ozarkelectric.com/rebates"
@@ -2361,6 +2364,7 @@
       "en": "$250 rebate for a level 2 electric vehicle charger.",
       "es": "Reembolso de $250 por un cargador de vehículo eléctrico de nivel 2."
     },
+    "end_date": "2025-12-30",
     "url": {
       "en": "https://www.ozarkelectric.com/rebates"
     }
@@ -2403,16 +2407,16 @@
     "program": "mo_platte-ClayElectricCooperative_platte-ClayTakeControlAndSaveRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
+      "number": 500,
       "unit": "ton",
-      "maximum": 1500
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton for a ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
-      "es": "Reembolso de $150 por tonelada para una bomba de calor de fuente de aire con ductos o sin ductos. La calefacción suplementaria debe estar controlada por un termostato automático."
+      "en": "Up to $500/ton for a dual fuel ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
+      "es": "Hasta $500/tonelada para una bomba de calor de aire de doble combustible, con o sin ductos. La calefacción adicional debe controlarse mediante un termostato automático."
     },
     "url": {
       "en": "https://pcec.coop/products/energy-product-rebates/"
@@ -2429,14 +2433,14 @@
     "program": "mo_platte-ClayElectricCooperative_platte-ClayTakeControlAndSaveRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR rated heat pump water heater up to 50% of the total cost of the unit.",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor con certificación ENERGY STAR, hasta el 50 % del costo total de la unidad. "
+      "en": "$750 rebate for an ENERGY STAR rated heat pump water heater up to 50% of the total cost of the unit.",
+      "es": "Reembolso de $750 para un calentador de agua con bomba de calor con clasificación ENERGY STAR hasta el 50 % del costo total de la unidad."
     },
     "url": {
       "en": "https://pcec.coop/products/energy-product-rebates/"
@@ -2463,6 +2467,7 @@
       "en": "50% of cost up to $250 for a level 2 electric vehicle charger.",
       "es": "50 % del costo, hasta $250, por un cargador de vehículo eléctrico de nivel 2."
     },
+    "end_date": "2025-12-30",
     "url": {
       "en": "https://pcec.coop/products/energy-product-rebates/"
     }
@@ -2635,7 +2640,7 @@
     "program": "mo_se-Ma-NoElectricCooperative_sE-MA-NOElectricMemberRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
+      "number": 500,
       "unit": "ton",
       "maximum": 1500
     },
@@ -2643,8 +2648,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton for a ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
-      "es": "Reembolso de $150 por tonelada para una bomba de calor de fuente de aire con ductos o sin ductos. La calefacción suplementaria debe estar controlada por un termostato automático."
+      "en": "Up to $500/ton for a ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
+      "es": "Hasta $500/tonelada para una bomba de calor de aire con o sin ductos. El calor adicional debe controlarse mediante un termostato automático."
     },
     "url": {
       "en": "https://semano.com/rebates"
@@ -2688,16 +2693,16 @@
     "program": "mo_semoElectricCooperative_sEMOElectricTakeControlAndSaveRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 250,
+      "number": 500,
       "unit": "ton",
-      "maximum": 2500
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$250/ton for a ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
-      "es": "Reembolso de $250 por tonelada para una bomba de calor de fuente de aire con ductos o sin ductos. La calefacción suplementaria debe estar controlada por un termostato automático."
+      "en": "Up to $500/ton for a dual fuel ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
+      "es": "Hasta $500/tonelada para una bomba de calor de aire de doble combustible, con o sin ductos. La calefacción adicional debe controlarse mediante un termostato automático."
     },
     "url": {
       "en": "https://www.gosemo.com/energy-efficiency/rebates/"
@@ -2724,6 +2729,7 @@
       "en": "50% of cost up to $250 for a level 2 electric vehicle charger.",
       "es": "50 % del costo, hasta $250, por un cargador de vehículo eléctrico de nivel 2."
     },
+    "end_date": "2025-12-30",
     "url": {
       "en": "https://www.gosemo.com/energy-efficiency/rebates/"
     }
@@ -2739,15 +2745,15 @@
     "program": "mo_semoElectricCooperative_sEMOElectricTakeControlAndSaveRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
+      "number": 750,
+      "maximum": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost.",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor con certificación ENERGY STAR, que no deberá exceder el 50 % del costo total."
+      "en": "$750 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost.",
+      "es": "Reembolso de $750 para un calentador de agua con bomba de calor con certificación ENERGY STAR, a no exceder el 50 % del costo total."
     },
     "url": {
       "en": "https://www.gosemo.com/energy-efficiency/rebates/"
@@ -2791,16 +2797,16 @@
     "program": "mo_southwestElectricCooperative_southwestElectricTakeControlAndSaveRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
+      "number": 500,
       "unit": "ton",
-      "maximum": 1500
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton for a ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
-      "es": "Reembolso de $150 por tonelada para una bomba de calor de fuente de aire con ductos o sin ductos. La calefacción suplementaria debe estar controlada por un termostato automático."
+      "en": "Up to $500/ton for a dual fuel ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
+      "es": "Hasta $500/tonelada para una bomba de calor de aire de doble combustible, con o sin ductos. La calefacción adicional debe controlarse mediante un termostato automático."
     },
     "url": {
       "en": "https://www.swec.org/rebates-audits"
@@ -2817,14 +2823,14 @@
     "program": "mo_southwestElectricCooperative_southwestElectricTakeControlAndSaveRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost.",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor con certificación ENERGY STAR, que no deberá exceder el 50 % del costo total."
+      "en": "$750 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost.",
+      "es": "Reembolso de $750 para un calentador de agua con bomba de calor con certificación ENERGY STAR, que no excederá el 50 % del costo total."
     },
     "url": {
       "en": "https://www.swec.org/rebates-audits"
@@ -2851,6 +2857,7 @@
       "en": "50% of cost up to $250 for a level 2 electric vehicle charger.",
       "es": "50 % del costo, hasta $250, por un cargador de vehículo eléctrico de nivel 2."
     },
+    "end_date": "2025-12-30",
     "url": {
       "en": "https://www.swec.org/rebates-audits"
     }
@@ -2867,16 +2874,16 @@
     "program": "mo_threeRiversElectricCooperative_threeRiversElectricTakeControlAndSaveRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
+      "number": 500,
       "unit": "ton",
-      "maximum": 1500
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton for a ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
-      "es": "Reembolso de $150 por tonelada para una bomba de calor de fuente de aire con ductos o sin ductos. La calefacción suplementaria debe estar controlada por un termostato automático."
+      "en": "Up to $500/ton for a dual fuel ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
+      "es": "Hasta $500/tonelada para una bomba de calor de aire de doble combustible, con o sin ductos. La calefacción adicional debe controlarse mediante un termostato automático."
     },
     "url": {
       "en": "https://threeriverselectric.com/other-rebates"
@@ -2893,14 +2900,14 @@
     "program": "mo_threeRiversElectricCooperative_threeRiversElectricTakeControlAndSaveRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR rated heat pump water heater up to 50% of the cost of the unit. ",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor con certificación ENERGY STAR, hasta el 50 % del costo de la unidad. "
+      "en": "$750 rebate for an ENERGY STAR rated heat pump water heater up to 50% of the cost of the unit. ",
+      "es": "Reembolso de $750 para un calentador de agua con bomba de calor con clasificación ENERGY STAR de hasta el 50 % del costo de la unidad."
     },
     "url": {
       "en": "https://threeriverselectric.com/other-rebates"
@@ -2927,6 +2934,7 @@
       "en": "50% of cost up to $250 for a level 2 electric vehicle charger.",
       "es": "50 % del costo, hasta $250, por un cargador de vehículo eléctrico de nivel 2."
     },
+    "end_date": "2025-12-30",
     "url": {
       "en": "https://threeriverselectric.com/other-rebates"
     }
@@ -2968,14 +2976,14 @@
     "program": "mo_tri-CountyElectricCooperativeAssociation_tri-CountyElectricTakeControlAndSaveRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost.",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor con certificación ENERGY STAR, que no deberá exceder el 50 % del costo total."
+      "en": "$750 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost.",
+      "es": "Reembolso de $750 para un calentador de agua con bomba de calor con certificación ENERGY STAR, que no excederá el 50 % del costo total."
     },
     "end_date": "2025-07-01",
     "url": {
@@ -3020,16 +3028,16 @@
     "program": "mo_tri-CountyElectricCooperativeAssociation_tri-CountyElectricTakeControlAndSaveRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
+      "number": 500,
       "unit": "ton",
-      "maximum": 1500
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton for a ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
-      "es": "Reembolso de $150 por tonelada para una bomba de calor de fuente de aire con ductos o sin ductos. La calefacción suplementaria debe estar controlada por un termostato automático."
+      "en": "Up to $500/ton for a dual fuel ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
+      "es": "Hasta $500/tonelada para una bomba de calor de aire de doble combustible, con o sin ductos. La calefacción adicional debe controlarse mediante un termostato automático."
     },
     "url": {
       "en": "https://www.tricountyelectric.org/rebates-electronic"
@@ -3056,6 +3064,7 @@
       "en": "50% of cost up to $250 for a level 2 electric vehicle charger.",
       "es": "Reembolso del 50 % del costo, hasta $250, por un cargador de vehículo eléctrico de nivel 2."
     },
+    "start_date": "2025-07-01",
     "url": {
       "en": "https://www.tricountyelectric.org/rebates-electronic"
     }
@@ -3071,14 +3080,14 @@
     "program": "mo_unitedElectricCooperative_unitedElectricTakeControlAndSaveRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost.",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor con certificación ENERGY STAR, que no deberá exceder el 50 % del costo total."
+      "en": "$750 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost.",
+      "es": "Reembolso de $750 para un calentador de agua con bomba de calor con certificación ENERGY STAR, que no excederá el 50 % del costo total."
     },
     "url": {
       "en": "https://www.ueci.coop/rebate-program"
@@ -3130,8 +3139,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton for a ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
-      "es": "Reembolso de $150 por tonelada para una bomba de calor de fuente de aire con ductos o sin ductos. La calefacción suplementaria debe estar controlada por un termostato automático."
+      "en": "Up to $500/ton for a dual fuel ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
+      "es": "Hasta $500/tonelada para una bomba de calor de aire de doble combustible, con o sin ductos. La calefacción adicional debe controlarse mediante un termostato automático."
     },
     "url": {
       "en": "https://www.ueci.coop/rebate-program"
@@ -3158,6 +3167,7 @@
       "en": "50% of cost up to $250 for a level 2 electric vehicle charger.",
       "es": "Reembolso del 50 % del costo, hasta $250, por un cargador de vehículo eléctrico de nivel 2."
     },
+    "end_date": "2025-12-30",
     "url": {
       "en": "https://www.ueci.coop/rebate-program"
     }
@@ -3173,14 +3183,14 @@
     "program": "mo_websterElectricCooperative_websterElectricTakeControlAndSaveRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost.",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor con certificación ENERGY STAR, que no deberá exceder el 50 % del costo total."
+      "en": "$750 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost.",
+      "es": "Reembolso de $750 para un calentador de agua con bomba de calor con certificación ENERGY STAR, que no excederá el 50 % del costo total."
     },
     "url": {
       "en": "https://www.websterec.com/member-services/rebates/"
@@ -3224,16 +3234,16 @@
     "program": "mo_websterElectricCooperative_websterElectricTakeControlAndSaveRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 300,
+      "number": 650,
       "unit": "ton",
-      "maximum": 3000
+      "maximum": 6000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$300/ton for a ducted or ductless air source heat pump.",
-      "es": "Reembolso de $300 por tonelada para una bomba de calor de fuente de aire con ductos o sin ductos."
+      "en": "Up to $650/ton for a dual fuel ducted or ductless air source heat pump.",
+      "es": "Hasta $650/tonelada para una bomba de calor de fuente de aire con o sin ductos, de combustible dual."
     },
     "url": {
       "en": "https://www.websterec.com/member-services/rebates/"
@@ -3285,6 +3295,7 @@
       "en": "50% of cost up to $250 for a level 2 electric vehicle charger.",
       "es": "Reembolso del 50 % del costo, hasta $250, por un cargador de vehículo eléctrico de nivel 2."
     },
+    "end_date": "2025-12-30",
     "url": {
       "en": "https://westcentralelectric.coop/energy-saving-rebates"
     }
@@ -3300,14 +3311,14 @@
     "program": "mo_westCentralElectricCooperative_westCentralElectricTakeControlAndSaveRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost.",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor con certificación ENERGY STAR, que no deberá exceder el 50 % del costo total."
+      "en": "$750 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost.",
+      "es": "Reembolso de $750 para un calentador de agua con bomba de calor con certificación ENERGY STAR, que no excederá el 50 % del costo total."
     },
     "url": {
       "en": "https://westcentralelectric.coop/energy-saving-rebates"
@@ -3351,16 +3362,16 @@
     "program": "mo_westCentralElectricCooperative_westCentralElectricTakeControlAndSaveRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
+      "number": 500,
       "unit": "ton",
-      "maximum": 1500
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton for a ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
-      "es": "Reembolso de $150 por tonelada para una bomba de calor de fuente de aire con ductos o sin ductos. La calefacción suplementaria debe estar controlada por un termostato automático."
+      "en": "Up to $500/ton for a dual fuel ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
+      "es": "Hasta $500/tonelada para una bomba de calor de aire de doble combustible, con o sin ductos. La calefacción adicional debe controlarse mediante un termostato automático."
     },
     "url": {
       "en": "https://westcentralelectric.coop/energy-saving-rebates"
@@ -3387,8 +3398,9 @@
       "en": "50% of cost up to $250 for a level 2 electric vehicle charger.",
       "es": "Reembolso del 50 % del costo, hasta $250, por un cargador de vehículo eléctrico de nivel 2."
     },
+    "end_date": "2025-12-30",
     "url": {
-      "en": "https://www.websterec.com/member-services/rebates/"
+      "en": "https://www.whiteriver.org/member-center/rebates-audits/"
     }
   },
   {
@@ -3402,18 +3414,18 @@
     "program": "mo_whiteRiverValleyElectricCooperative_whiteRiverElectricTakeControlAndSaveRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost.",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor con certificación ENERGY STAR, que no deberá exceder el 50 % del costo total."
+      "en": "$750 rebate for an ENERGY STAR certified heat pump water heater, not to exceed 50% of total cost.",
+      "es": "Reembolso de $750 para un calentador de agua con bomba de calor con certificación ENERGY STAR, que no excederá el 50 % del costo total."
     },
     "end_date": "2025-07-01",
     "url": {
-      "en": "https://www.websterec.com/member-services/rebates/"
+      "en": "https://www.whiteriver.org/member-center/rebates-audits/"
     }
   },
   {
@@ -3439,7 +3451,7 @@
       "es": "Reembolso de $750 por tonelada para una bomba de calor geotérmica que califique. Debe contar con aprobación previa."
     },
     "url": {
-      "en": "https://www.websterec.com/member-services/rebates/"
+      "en": "https://www.whiteriver.org/member-center/rebates-audits/"
     }
   },
   {
@@ -3454,19 +3466,19 @@
     "program": "mo_whiteRiverValleyElectricCooperative_whiteRiverElectricTakeControlAndSaveRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 150,
+      "number": 500,
       "unit": "ton",
-      "maximum": 1500
+      "maximum": 3000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$150/ton for a ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
-      "es": "Reembolso de $150 por tonelada para una bomba de calor de fuente de aire con ductos o sin ductos. La calefacción suplementaria debe estar controlada por un termostato automático."
+      "en": "Up to $500/ton for a dual fuel ducted or ductless air source heat pump. Supplemental heat must be controlled by an automatic thermostat.",
+      "es": "Hasta $500/tonelada para una bomba de calor de aire de doble combustible, con o sin ductos. La calefacción adicional debe controlarse mediante un termostato automático."
     },
     "url": {
-      "en": "https://www.websterec.com/member-services/rebates/"
+      "en": "https://www.whiteriver.org/member-center/rebates-audits/"
     }
   },
   {
@@ -3492,6 +3504,80 @@
     "start_date": "2025-07-01",
     "url": {
       "en": "https://www.tricountyelectric.org/rebates-electronic"
+    }
+  },
+  {
+    "id": "MO-137",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "mo_blackRiverElectricCooperative_bRECRebatePrograms",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500/ton rebate for a ducted air source heat pump with dual fuel system.",
+      "es": "Reembolso de $500 por tonelada para una bomba de calor de fuente de aire con ductos y sistema de combustible dual."
+    },
+    "url": {
+      "en": "https://www.brec.coop/rebate-programs"
+    }
+  },
+  {
+    "id": "MO-138",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mo_blackRiverElectricCooperative_bRECRebatePrograms",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$750 rebate for a heat pump water heater, must be 40 gallons or more.",
+      "es": "Reembolso de $750 para un calentador de agua con bomba de calor, debe ser de 40 galones o más."
+    },
+    "url": {
+      "en": "https://www.brec.coop/rebate-programs"
+    }
+  },
+  {
+    "id": "MO-139",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "mo_booneElectricCooperative_booneElectricTakeControlAndSaveRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 750,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of cost up to $750 rebate for a heat pump water heater.",
+      "es": "Reembolso del 50% del costo hasta $750 para un calentador de agua con bomba de calor."
+    },
+    "url": {
+      "en": "https://booneelectric.coop/energy-solutions/take-control-saver/"
     }
   }
 ]

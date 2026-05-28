@@ -202,7 +202,7 @@
     ],
     "short_description": {
       "en": "Up to $3,000 rebate for purchase or lease of a new EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served.",
-      "es": "Reembolso de hasta $3,000 por la compra o el arrendamiento de un vehículo eléctrico nuevo en un concesionario autorizado de Rhode Island o de otro estado. Se atiende por orden de llegada."
+      "es": "Reembolso de hasta $3,000 para la compra o el arrendamiento de un vehículo eléctrico nuevo en un concesionario autorizado de Rhode Island o de otro estado. Por orden de llegada."
     },
     "url": {
       "en": "https://drive.ri.gov/ev-programs/drive-ev"
@@ -228,7 +228,7 @@
     ],
     "short_description": {
       "en": "Up to $2,500 rebate for purchase or lease of a used EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served.",
-      "es": "Reembolso de hasta $2,500 por la compra o el arrendamiento de un vehículo eléctrico usado en un concesionario autorizado de Rhode Island o de otro estado. Se atiende por orden de llegada."
+      "es": "Reembolso de hasta $2,500 para la compra o el arrendamiento de un vehículo eléctrico usado en un concesionario autorizado de Rhode Island o de otro estado. Por orden de llegada."
     },
     "url": {
       "en": "https://drive.ri.gov/ev-programs/drive-ev"
@@ -391,7 +391,7 @@
     ],
     "short_description": {
       "en": "Up to $625 back on a qualifying electric heat pump water heater when replacing an existing electric water heater or installing in a new home.",
-      "es": "Hasta $625 de reembolso en un calentador de agua con bomba de calor eléctrico calificado al reemplazar un calentador de agua eléctrico existente o instalarlo en una casa nueva."
+      "es": "Hasta $625 de reembolso para un calentador de agua con bomba de calor eléctrico calificado al reemplazar un calentador de agua eléctrico existente o instalarlo en una casa nueva."
     },
     "start_date": "2024-01-01",
     "end_date": "2026-12-31",
@@ -782,15 +782,16 @@
     "program": "ri_oER_powerUpRI",
     "amount": {
       "type": "percent",
-      "number": 0.5,
-      "maximum": 700
+      "number": 0.75,
+      "minimum": 800,
+      "maximum": 1000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate of 50% of cost for a Level 2 EV charger, up to $350, or up to $700 if an electrical upgrade is needed.",
-      "es": "Reembolso del 50 % del costo de un cargador para EV de nivel 2, hasta $350, o bien hasta $700 si se necesita una actualización eléctrica."
+      "en": "Rebate for full cost for a Level 2 EV charger, up to $800, or 75% of cost up to $1,000 if an electrical upgrade is needed.",
+      "es": "Reembolso del costo total de un cargador de vehículo eléctrico de nivel 2, hasta $800, o del 75 % del costo hasta $1,000 si se necesita una actualización eléctrica."
     },
     "start_date": "2024-08-01",
     "url": {
@@ -809,14 +810,15 @@
     "amount": {
       "type": "percent",
       "number": 0.75,
-      "maximum": 1000
+      "minimum": 800,
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Rebate of 75% of cost for a Level 2 EV charger, up to $500, or up to $1,000 where an electrical upgrade is needed, for income-qualified residents.",
-      "es": "Reembolso del 75 % del costo de un cargador para EV de nivel 2, hasta $500, o bien hasta $1,000 en los casos en que se necesite una actualización eléctrica, para residentes que califiquen según sus ingresos."
+      "en": "Rebate for full cost for a Level 2 EV charger, up to $800, or 75% up to $1,500 where electrical upgrade needed for income qualified residents. ",
+      "es": "Reembolso del costo total de un cargador de vehículo eléctrico de nivel 2, hasta $800, o del 75 % hasta $1,500, cuando se necesita una actualización eléctrica para residentes que califican según sus ingresos."
     },
     "start_date": "2024-08-01",
     "low_income": "ri-default",

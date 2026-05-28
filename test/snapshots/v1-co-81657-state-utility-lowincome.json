@@ -73,6 +73,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "start_date": "2025-11-16",
       "end_date": "2026-12-31",
       "short_description": "$2,250/heating ton at 5 degrees Fahrenheit for a cold-climate heat pump."
     },
@@ -237,30 +238,6 @@
       "start_date": "2024-01-01",
       "end_date": "2025-12-31",
       "short_description": "At least $499.95 discount for customers who purchase an eligible air source heat pump from a contractor registered with the Colorado Energy Office."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "state",
-      "authority": "co-colorado-energy-office",
-      "program": "Colorado HEAR Program",
-      "program_url": "https://energyoffice.colorado.gov/home-energy-rebates",
-      "items": [
-        "ducted_heat_pump",
-        "ductless_heat_pump"
-      ],
-      "amount": {
-        "type": "percent",
-        "number": 1,
-        "maximum": 3000
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2025-11-17",
-      "short_description": "Rebate of 50% of ENERGY STAR heat pump costs.   For space heating and cooling in households between 80% and 150% AMI, up to $3,000."
     },
     {
       "payment_methods": [
@@ -687,6 +664,30 @@
       "payment_methods": [
         "rebate"
       ],
+      "authority_type": "state",
+      "authority": "co-colorado-energy-office",
+      "program": "Colorado HEAR Program",
+      "program_url": "https://energyoffice.colorado.gov/home-energy-rebates",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 0.5,
+        "maximum": 3000
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "start_date": "2025-11-17",
+      "short_description": "Rebate of 50% of ENERGY STAR heat pump costs.   For space heating and cooling in households between 80% and 150% AMI, up to $3,000."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
       "authority_type": "other",
       "authority": "co-xcel-energy-combined",
       "program": "Xcel Energy Home Rebates",
@@ -1106,19 +1107,20 @@
       "authority_type": "utility",
       "authority": "co-xcel-energy",
       "program": "Xcel Energy EV Rebate",
-      "program_url": "https://ev.xcelenergy.com/ev-rebate-co",
+      "program_url": "https://ev.xcelenergy.com/home-wiring-rebate",
       "items": [
-        "electric_wiring"
+        "electric_wiring",
+        "electric_vehicle_charger"
       ],
       "amount": {
         "type": "dollar_amount",
         "number": 500,
-        "maximum": 2300
+        "maximum": 500
       },
       "owner_status": [
         "homeowner"
       ],
-      "short_description": "Up to $500 rebate for installing a 240-volt circuit to support a Level 2 electric vehicle charger."
+      "short_description": "Up to $500 rebate for installing a 240-volt circuit to support a Level 2 electric vehicle charger.  "
     },
     {
       "payment_methods": [

@@ -11,14 +11,14 @@
     "program": "ne_lincolnElectricSystem_lincolnElectricSustainableEnergyProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 800
+      "number": 1000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$800 rebate on qualifying ducted and ductless heat pumps. ",
-      "es": "Reembolso de $800 en bombas de calor con y sin sistema de ductos que reúnan los requisitos. "
+      "en": "$1000 rebate on qualifying ducted and ductless heat pumps. ",
+      "es": "Reembolso de $1000 para bombas de calor con y sin ductos que califiquen."
     },
     "url": {
       "en": "http://les.com/sustainability/sustainable-energy-program"
@@ -35,16 +35,16 @@
     "program": "ne_lincolnElectricSystem_lincolnElectricSustainableEnergyProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 1500,
-      "minimum": 750,
-      "maximum": 1500
+      "number": 1800,
+      "minimum": 1400,
+      "maximum": 1800
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$750-$1,500 rebate on ground-source heat pump system with Desuperheater (new installation only). Rebate amount varies by system efficiency.",
-      "es": "Reembolso de $750 a $1,500 solo en la instalación nueva de un sistema de bomba de calor geotérmica con desrecalentador. El monto del reembolso varía según la eficiencia del sistema."
+      "en": "$1,400-$1,800 rebate on ground-source heat pump system with Desuperheater (new installation only). Rebate amount varies by system efficiency.",
+      "es": "Reembolso de $1,400 a $1,800 para sistemas de bomba de calor geotérmica con desrecalentador (solo para nuevas instalaciones). El monto del reembolso varía según la eficiencia del sistema."
     },
     "url": {
       "en": "http://les.com/sustainability/sustainable-energy-program"
@@ -61,16 +61,16 @@
     "program": "ne_lincolnElectricSystem_lincolnElectricSustainableEnergyProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 1100,
-      "minimum": 550,
-      "maximum": 1100
+      "number": 1400,
+      "minimum": 1000,
+      "maximum": 1400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$550-$1,100 rebate on ground-source heat pump system (new installation only). Rebate amount varies by system efficiency.",
-      "es": "Reembolso de $550 a $1,100 solo en la instalación nueva de un sistema de bomba de calor geotérmica. El monto del reembolso varía según la eficiencia del sistema."
+      "en": "$1,000-$1,400 rebate on ground-source heat pump system (new installation only). Rebate amount varies by system efficiency.",
+      "es": "Reembolso de $1,000 a $1,400 para sistemas de bomba de calor geotérmica (solo para instalaciones nuevas). El monto del reembolso varía según la eficiencia del sistema."
     },
     "url": {
       "en": "http://les.com/sustainability/sustainable-energy-program"
@@ -98,6 +98,7 @@
       "en": "$750-$1,500 rebate on ground-source heat pump system with Desuperheater (replacement). Rebate amount varies by system efficiency.",
       "es": "Reembolso de $750 a $1,500 en el reemplazo de un sistema de bomba de calor geotérmica con desrecalentador. El monto del reembolso varía según la eficiencia del sistema."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "http://les.com/sustainability/sustainable-energy-program"
     }
@@ -124,6 +125,7 @@
       "en": "$550-$1,100 rebate on ground-source heat pump system (replacement). Rebate amount varies by system efficiency.",
       "es": "Reembolso de $550 a $1,100 en el reemplazo de un sistema de bomba de calor geotérmica. El monto del reembolso varía según la eficiencia del sistema."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "http://les.com/sustainability/sustainable-energy-program"
     }
@@ -164,14 +166,14 @@
     "program": "ne_lincolnElectricSystem_lincolnElectricSustainableEnergyProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 3800
+      "number": 4000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$3,800 rebate on qualifying ducted and ductless heat pumps for income-qualifying households.",
-      "es": "Reembolso de $3,800 en bombas de calor con y sin sistema de ductos que reúnan los requisitos para hogares que cumplan con el nivel de ingresos."
+      "en": "$4,000 rebate on qualifying ducted and ductless heat pumps for income-qualifying households.",
+      "es": "Reembolso de $4,000 para bombas de calor con y sin ductos que cumplan los requisitos para hogares que califiquen según sus ingresos."
     },
     "low_income": "ks-city-of-lincoln-li-threshold",
     "url": {
@@ -306,7 +308,7 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump"
+      "geothermal_heating_installation"
     ],
     "program": "ne_nebraskaPublicPowerDistrict_nebraskaPublicPowerEnergyWise",
     "amount": {
@@ -630,7 +632,7 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump"
+      "geothermal_heating_installation"
     ],
     "program": "ne_southernPublicPowerDistrict_southernPublicPowerEnergyWise",
     "amount": {
@@ -876,7 +878,7 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump"
+      "geothermal_heating_installation"
     ],
     "program": "ne_norrisPublicPowerDistrict_norrisPublicPowerEnergyWise",
     "amount": {

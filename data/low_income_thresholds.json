@@ -14,6 +14,44 @@
       "8": 118050
     }
   },
+  "City of Plymouth income-qualified": {
+    "type": "hhsize",
+    "source_url": "https://www.plymouthmn.gov/departments/public-works/environmental-stewardship/home-energy-rebate-program-2609",
+    "description": "income threshold for city of plymouth income qualified programs",
+    "thresholds": {
+      "1": 68500,
+      "2": 78250,
+      "3": 88050,
+      "4": 97800,
+      "5": 105650,
+      "6": 113450,
+      "7": 121300,
+      "8": 129100
+    }
+  },
+  "LPEA Income Qualification ": {
+    "type": "ami-percentage",
+    "source_url": "https://lpea.coop/rebates",
+    "description": "150% of Area Median Income",
+    "thresholds": {
+      "percentage": 150
+    }
+  },
+  "MA-Shrewsbury-60ami-threshold ": {
+    "type": "hhsize",
+    "source_url": "https://selco.shrewsburyma.gov/income-qualified-rate/",
+    "description": "Income qualified customers must provide proof of participation in SELCO Share the Warmth bill assistance, or any of the following government benefit programs within the previous 6 months: Fuel Assistance, WIC, TAFDC, EAEDC, SSP, SNAP, TANF, SSI or Medicaid.",
+    "thresholds": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0
+    }
+  },
   "OR-60AMI-CEC-LI": {
     "type": "hhsize",
     "source_url": "https://www.cec.coop/energy-programs/residential-efficiency/income-qualified-programs/",
@@ -368,14 +406,14 @@
     "description": "Boulder County Income Qualified Rebates 100% AMI",
     "thresholds": {
       "08013": {
-        "1": 102200,
-        "2": 116800,
-        "3": 131400,
-        "4": 146000,
-        "5": 157700,
-        "6": 169400,
-        "7": 181100,
-        "8": 192800
+        "1": 105500,
+        "2": 120500,
+        "3": 135600,
+        "4": 150600,
+        "5": 162700,
+        "6": 174700,
+        "7": 186800,
+        "8": 198800
       }
     }
   },
@@ -761,7 +799,7 @@
   },
   "co-holy-cross-150ami-threshold": {
     "type": "ami-percentage",
-    "source_url": "",
+    "source_url": "https://www.holycross.com/member-programs/energy-efficiency-and-rebates/residential-rebates-2026",
     "description": "Income-qualified rebates available for households falling under 150% AMI.",
     "thresholds": {
       "percentage": 150
@@ -1764,6 +1802,21 @@
       "8": 8437
     }
   },
+  "ma-belmontmlp-low-income": {
+    "type": "hhsize",
+    "source_url": "https://www.commteam.org/program/home-energy-assistance-heap/#toggle-id-5",
+    "description": "Household income cannot exceed 60% of Massachusetts’ estimated State Median Income (for example in 2024, $64,333 for a family of 2 and $94,608 for a family of 4).",
+    "thresholds": {
+      "1": 51777,
+      "2": 67709,
+      "3": 83641,
+      "4": 99573,
+      "5": 115504,
+      "6": 131436,
+      "7": 0,
+      "8": 0
+    }
+  },
   "ma-concordmlp-120ami-threshold": {
     "type": "hhsize",
     "source_url": "https://concordma.gov/2916/Residential-Income-Based-Rebates",
@@ -1808,6 +1861,29 @@
     "description": "MassSave Income-Based Enhanced Incentive 60-80% AMI or SMI. Also known as Enhanced Incentives. 2024-2025 heating season.",
     "thresholds": {
       "percentage": 80
+    }
+  },
+  "ma-resource-ipswich-low-moderate-income": {
+    "type": "ami-percentage",
+    "source_url": "https://nextzero.org/ipswich/low-to-moderate-income-guidelines/",
+    "description": "Low to moderate income guidelines. Customers who earn up to 60% of the state median income qualify as low income. Customers who earn more than 60% of the state median income, up to 80% of the area median income qualify as moderate income.",
+    "thresholds": {
+      "percentage": 80
+    }
+  },
+  "ma-shrewsbury-80ami-threshold": {
+    "type": "hhsize",
+    "source_url": "https://selco.shrewsburyma.gov/electric/residential/rebates-and-incentives/ev-rebate/",
+    "description": "Household income thresholds detailed are from Mass Housing Partnerships (Worcester County Area Median Income).",
+    "thresholds": {
+      "1": 72100,
+      "2": 82400,
+      "3": 92700,
+      "4": 102950,
+      "5": 111200,
+      "6": 119450,
+      "7": 127700,
+      "8": 135900
     }
   },
   "me-low-income": {
@@ -1924,6 +2000,21 @@
       "6": 85700,
       "7": 91600,
       "8": 97500
+    }
+  },
+  "mn-hennepin-county-80-ami-2024": {
+    "type": "hhsize",
+    "source_url": "https://mn.gov/commerce-stat/energy/HUD80and150Percent_042624.pdf",
+    "description": "",
+    "thresholds": {
+      "1": 68500,
+      "2": 78250,
+      "3": 88050,
+      "4": 97800,
+      "5": 105650,
+      "6": 113450,
+      "7": 121300,
+      "8": 129100
     }
   },
   "mn-state-default-150": {
@@ -2052,19 +2143,20 @@
       "8": 211849
     }
   },
-  "nm-Sustainable Building Tax Credit Low-Income": {
-    "type": "hhsize",
-    "source_url": "https://www.emnrd.nm.gov/ecmd/wp-content/uploads/sites/3/Sustainable-Building-Tax-Credit-products-application-instructions-version-2.pdf",
-    "description": "Households with income less than 200% of Federal poverty level each year. ",
+  "nm-200fpl": {
+    "type": "fpl-percentage",
+    "source_url": "https://aspe.hhs.gov/sites/default/files/documents/b1bfa16b20ae9b89d525bc35de7c1643/detailed-guidelines-2026.pdf",
+    "description": "Household income less than or equal to 200% of the Federal Poverty Guidelines.",
     "thresholds": {
-      "1": 31300,
-      "2": 42300,
-      "3": 53300,
-      "4": 64300,
-      "5": 75300,
-      "6": 86300,
-      "7": 97300,
-      "8": 108300
+      "percentage": 200
+    }
+  },
+  "nm-80ami": {
+    "type": "ami-percentage",
+    "source_url": "https://clean.energy.nm.gov/programs/hear/",
+    "description": "Household income at or below 80% of Area Median Income",
+    "thresholds": {
+      "percentage": 80
     }
   },
   "nm-elpasoelectric-income-qualified": {
@@ -2080,14 +2172,6 @@
       "6": 86300,
       "7": 97300,
       "8": 108300
-    }
-  },
-  "nm-hear-low-income": {
-    "type": "ami-percentage",
-    "source_url": "https://clean.energy.nm.gov/landing/appliances/",
-    "description": "New Mexico's HEAR program 80% AMI",
-    "thresholds": {
-      "percentage": 80
     }
   },
   "nm-pnm-income-qualified": {
@@ -3198,14 +3282,14 @@
     "source_url": "https://www.pa.gov/agencies/dep/programs-and-services/grants-loans-rebates/alternative-fuel-vehicle-rebates-for-consumers.html",
     "description": "",
     "thresholds": {
-      "1": 45180,
-      "2": 61320,
-      "3": 77460,
-      "4": 93600,
-      "5": 109740,
-      "6": 125880,
-      "7": 142020,
-      "8": 158160
+      "1": 46950,
+      "2": 63450,
+      "3": 79950,
+      "4": 96450,
+      "5": 112950,
+      "6": 129450,
+      "7": 145950,
+      "8": 162450
     }
   },
   "pa-pennsylvania-department-of-environmental-protection-bonus": {
@@ -3213,14 +3297,14 @@
     "source_url": "https://www.pa.gov/agencies/dep/programs-and-services/grants-loans-rebates/alternative-fuel-vehicle-rebates-for-consumers.html",
     "description": "Maximum household income eligible for an extra $1,000 rebate.",
     "thresholds": {
-      "1": 22590,
-      "2": 30000,
-      "3": 38730,
-      "4": 46800,
-      "5": 54870,
-      "6": 62940,
-      "7": 71010,
-      "8": 79080
+      "1": 23475,
+      "2": 31725,
+      "3": 39375,
+      "4": 48225,
+      "5": 56475,
+      "6": 64475,
+      "7": 72975,
+      "8": 81225
     }
   },
   "ri-default": {

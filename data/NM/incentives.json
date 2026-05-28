@@ -2,13 +2,12 @@
   {
     "id": "NM-1",
     "payment_methods": [
-      "pos_rebate",
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "heat_pump_clothes_dryer"
     ],
-    "program": "nm_energyConservationAndManagement_eCAMApplianceIncentivesAndRebates",
+    "program": "nm_ecam_homeElectrificationAndApplianceRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 840,
@@ -18,25 +17,23 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $840 off a qualifying Energy Star certified heat pump clothes dryer for income-qualified residents.",
-      "es": "Descuento de hasta $840 por una secadora de ropa con bomba de calor con certificación Energy Star para residentes que califican según sus ingresos."
+      "en": "Income-qualified New Mexicans can receive up to $840 off a qualifying ENERGY STAR heat pump clothes dryer."
     },
     "start_date": "2024-12-01",
-    "low_income": "nm-hear-low-income",
+    "low_income": "nm-80ami",
     "url": {
-      "en": "https://clean.energy.nm.gov/landing/appliances/"
+      "en": "https://clean.energy.nm.gov/programs/hear/"
     }
   },
   {
     "id": "NM-2",
     "payment_methods": [
-      "pos_rebate",
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "electric_stove"
     ],
-    "program": "nm_energyConservationAndManagement_eCAMApplianceIncentivesAndRebates",
+    "program": "nm_ecam_homeElectrificationAndApplianceRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 840,
@@ -46,13 +43,12 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $840 off a qualifying Energy Star certified electric or induction cooktop, stove, range, or oven, for income-qualified residents.",
-      "es": "Hasta $840 de descuento en una placa de cocción, estufa, hornilla u horno eléctrico o de inducción con certificación Energy Star, para residentes que califiquen según sus ingresos."
+      "en": "Income-qualified New Mexicans can receive up to $840 off a qualifying ENERGY STAR electric or induction cooktop, stove, range, or oven."
     },
     "start_date": "2024-12-01",
-    "low_income": "nm-hear-low-income",
+    "low_income": "nm-80ami",
     "url": {
-      "en": "https://clean.energy.nm.gov/landing/appliances/"
+      "en": "https://clean.energy.nm.gov/programs/hear/"
     }
   },
   {
@@ -66,9 +62,12 @@
       "crawlspace_insulation",
       "floor_insulation",
       "other_insulation",
-      "wall_insulation"
+      "wall_insulation",
+      "air_sealing",
+      "duct_sealing",
+      "other_weatherization"
     ],
-    "program": "nm_energyConservationAndManagement_eCAMInsulationIncentivesAndRebates",
+    "program": "nm_ecam_homeElectrificationAndApplianceRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 1600,
@@ -78,13 +77,12 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,600 coupon off qualifying insulation products for income-qualified residents via Home Electrification and Appliance Rebates (HEAR) program.",
-      "es": "Cupón de hasta $1,600 de descuento en productos de aislamiento calificados para residentes que califican según sus ingresos a través del programa de Reembolsos para Electrodomésticos y Electrificación del Hogar (HEAR)."
+      "en": "Income-qualified New Mexicans can receive up to $1,600 off qualifying ENERGY STAR insulation products or air sealing upgrades."
     },
     "start_date": "2024-12-01",
-    "low_income": "nm-hear-low-income",
+    "low_income": "nm-80ami",
     "url": {
-      "en": "https://clean.energy.nm.gov/landing/insulation/"
+      "en": "https://clean.energy.nm.gov/programs/hear/"
     }
   },
   {
@@ -101,6 +99,7 @@
       "type": "dollars_per_unit",
       "number": 175,
       "unit": "ton",
+      "minimum": 100,
       "maximum": 945
     },
     "owner_status": [
@@ -108,9 +107,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $175/ton rebate for qualified ducted or ductless air-source heat pumps less than 5.4 tons.",
-      "es": "Descuento de hasta $175 por tonelada por bombas de calor de fuente de aire con o sin ductos calificadas de menos de 5.4 toneladas."
+      "en": "El Paso Electric customers can save up to $175/ton on a qualifying air source heat pump. "
     },
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.epesaver.com/residential-comprehensive/"
     }
@@ -134,8 +133,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$700/unit rebate for qualified ground source heat pumps.",
-      "es": "Reembolso de $700 por unidad por bombas de calor geotérmicas calificadas."
+      "en": "El Paso Electric customers can save up to $700 on a qualifying ground source heat pump."
     },
     "url": {
       "en": "https://www.epesaver.com/residential-comprehensive/"
@@ -152,17 +150,17 @@
     "program": "nm-el-paso-energy-efficiency",
     "amount": {
       "type": "dollar_amount",
-      "number": 300,
-      "maximum": 300
+      "number": 400,
+      "maximum": 400
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$300/unit rebate on ENERGY STAR certified heat pump water heaters less than 55 gallons.",
-      "es": "Reembolso de $300 por unidad en calentadores de agua con bomba de calor con certificación ENERGY STAR de menos de 55 galones."
+      "en": "El Paso Electric customers can save $400 on an ENERGY STAR heat pump water heaters less than 55 gallons."
     },
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.epesaver.com/residential-comprehensive/"
     }
@@ -186,9 +184,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate on an qualified Energy Star smart thermostat for homes with refrigerated air conditioning.",
-      "es": "Reembolso de $50 por un termostato inteligente con certificación Energy Star calificado para hogares con aire acondicionado refrigerado."
+      "en": "El Paso Electric customers can save $50 on an ENERGY STAR smart thermostat in homes with air conditioning."
     },
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.epesaver.com/residential-comprehensive/"
     }
@@ -212,8 +210,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate on an Energy Star induction cooktop.",
-      "es": "Reembolso de $50 por una placa de cocción por inducción con certificación Energy Star."
+      "en": "El Paso Electric customers can save $50 on an ENERGY STAR induction cooktop."
     },
     "url": {
       "en": "https://www.epesaver.com/residential-comprehensive/"
@@ -225,8 +222,7 @@
       "performance_rebate"
     ],
     "items": [
-      "air_sealing",
-      "other_weatherization"
+      "air_sealing"
     ],
     "program": "nm-el-paso-energy-efficiency",
     "amount": {
@@ -239,9 +235,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $0.239/CFM50 rebate on air sealing. Rebate amount dependent upon home heating and AC type\n(gas, electric resistance, heat pump).",
-      "es": "Descuento de hasta $0.239 por CFM50 en el sellado de aire. El monto del descuento depende del tipo de calefacción y aire (gas, resistencia eléctrica, bomba de calor)."
+      "en": "El Paso Electric customers can get money back for reducing air leakage at home."
     },
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.epesaver.com/residential-comprehensive/"
     }
@@ -265,8 +261,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $200/kW + $0.19/kWh rebate on duct sealing based on kW and kWh savings.",
-      "es": "Hasta $200 por kW + $0.19 por kWh de reembolso en el sellado de ductos según el ahorro en kW y kWh."
+      "en": "El Paso Electric customers can get money back for reducing duct leakage at home."
     },
     "url": {
       "en": "https://www.epesaver.com/residential-comprehensive/"
@@ -283,7 +278,7 @@
     "program": "nm-el-paso-energy-efficiency",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 1.05,
+      "number": 1.5,
       "unit": "square_foot",
       "maximum": 1
     },
@@ -292,9 +287,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1.05/sqft rebate for ceiling insulation. Amount determined by new and existing R-Value, heat type.",
-      "es": "Descuento de hasta $1.05 por pie cuadrado para el aislamiento de techo. El monto se determina según el valor R de la calefacción, tanto nueva como existente."
+      "en": "El Paso Electric customers can save up to $1.50/sq ft on ceiling insulation."
     },
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.epesaver.com/residential-comprehensive/"
     }
@@ -318,9 +313,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $0.30/sqft rebate for qualified floor insulation. Amount determined by home type and heat type.",
-      "es": "Reembolso de hasta $0.30 por pie cuadrado para aislamiento de pisos calificado. El monto depende del tipo de vivienda y del tipo de calefacción."
+      "en": "El Paso Electric customers can save up to $0.30/sq ft on floor insulation."
     },
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.epesaver.com/residential-comprehensive/"
     }
@@ -328,7 +323,8 @@
   {
     "id": "NM-13",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "pos_rebate"
     ],
     "items": [
       "electric_vehicle_charger"
@@ -344,10 +340,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to a $500 rebate on the purchase of a qualified EV charger plus up to $1,500 in installation assistance.",
-      "es": "Hasta $500 de reembolso en la compra de un cargador para vehículos eléctricos calificado más un máximo de $1,500 en asistencia para la instalación."
+      "en": "PNM customers can save up to $500 on a qualifying EV charger, plus $1,500 on installation."
     },
     "start_date": "2024-06-01",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://ev.pnm.com/residential-ev-charger-rebates/"
     }
@@ -355,7 +351,8 @@
   {
     "id": "NM-14",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "pos_rebate"
     ],
     "items": [
       "electric_vehicle_charger"
@@ -371,13 +368,13 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to a $750 rebate on the purchase of a qualified EV charger plus up to $3,500 in installation assistance, for income-qualified households.",
-      "es": "Hasta un reembolso de $750 en la compra de un cargador de vehículos eléctricos calificado y hasta $3,500 en asistencia para la instalación, para hogares que califican según sus ingresos."
+      "en": "Income-qualified PNM customers can save up to $750 on a qualifying EV charger, plus $3,500 on installation."
     },
     "start_date": "2024-06-01",
-    "low_income": "nm-pnm-income-qualified",
+    "end_date": "2026-12-31",
+    "low_income": "nm-200fpl",
     "url": {
-      "en": "https://ev.pnm.com/residential-ev-charger-rebates/"
+      "en": "https://ev.pnm.com/income-qualified/"
     }
   },
   {
@@ -388,7 +385,7 @@
     "items": [
       "energy_audit"
     ],
-    "program": "nm_pnm_pNMHomeEnergyCheckupProgram",
+    "program": "nm_pnm_pNMHomeEnergyCheckup",
     "amount": {
       "type": "percent",
       "number": 1
@@ -398,40 +395,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "Free in-home Energy Check Up or virtual video call appointment. Required first step for Check Up program equipment rebates. Not a full energy audit.",
-      "es": "Revisión energética gratuita a domicilio o cita virtual por videollamada. Es el primer paso necesario para obtener reembolsos por equipos del programa Check Up. No se trata de una auditoría energética completa."
+      "en": "PNM customers can receive a free Home Energy Checkup and qualify for increased PNM rebates."
     },
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.pnmhomecheckup.com/additional"
-    }
-  },
-  {
-    "id": "NM-16",
-    "payment_methods": [
-      "pos_rebate",
-      "rebate"
-    ],
-    "items": [
-      "evaporative_cooler"
-    ],
-    "program": "nm-pnm-rebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 200,
-      "maximum": 200
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$200 rebate on eligible advanced window evaporative coolers.",
-      "es": "Reembolso de $200 en enfriadores evaporativos de ventana avanzados elegibles."
-    },
-    "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
-    "url": {
-      "en": "https://www.pnm.com/rebates-and-discounts"
     }
   },
   {
@@ -453,17 +421,18 @@
       "renter"
     ],
     "short_description": {
-      "en": "$500 rebate on a qualifying Energy Star heat pump water heater. ",
-      "es": "Reembolso de $500 por un calentador de agua con bomba de calor calificado con certificación Energy Star. "
+      "en": "Xcel Energy customers can save $500 on a high efficiency heat pump water heater."
     },
+    "start_date": "2025-01-01",
     "url": {
-      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
+      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates/water-heaters"
     }
   },
   {
     "id": "NM-18",
     "payment_methods": [
-      "pos_rebate"
+      "pos_rebate",
+      "rebate"
     ],
     "items": [
       "smart_thermostat"
@@ -478,36 +447,10 @@
       "renter"
     ],
     "short_description": {
-      "en": "Receive an $50 instant rebate on an eligible Thermostat Rewards device at the Xcel Energy Store.",
-      "es": "Reciba un reembolso instantáneo de $50 por un dispositivo Thermostat Rewards elegible en la tienda Xcel Energy."
+      "en": "Xcel Energy customers can save $50 on an eligible smart thermostat."
     },
     "url": {
-      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
-    }
-  },
-  {
-    "id": "NM-19",
-    "payment_methods": [
-      "account_credit"
-    ],
-    "items": [
-      "smart_thermostat"
-    ],
-    "program": "nm-xcel-rebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 100
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Receive a one-time $100 enrollment bill credit for signing up for Thermostat Rewards program with an existing eligible thermostat with central AC.",
-      "es": "Reciba un crédito único en la factura de inscripción de $100 por registrarse en el programa Thermostat Rewards con un termostato elegible existente con aire acondicionado central."
-    },
-    "url": {
-      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
+      "en": "https://nm.my.xcelenergy.com/s/residential/heating-cooling/thermostat-rewards"
     }
   },
   {
@@ -519,7 +462,7 @@
       "new_plugin_hybrid_vehicle",
       "new_electric_vehicle"
     ],
-    "program": "nm_energyConservationAndManagement_newMexicoCleanCarIncentivesAndRebates",
+    "program": "nm_ecam_cleanCarAndChargingUnitTaxCredit",
     "amount": {
       "type": "dollar_amount",
       "number": 3000,
@@ -531,13 +474,12 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $3,000 refundable tax credit for new, leased or used electric vehicle. ",
-      "es": "Crédito fiscal reembolsable de hasta $3,000 para vehículos eléctricos nuevos, alquilados o usados. "
+      "en": "NM taxpayers can receive a refundable tax credit of up to $3,000 for purchase or lease of a new electric, plug-in hybrid, or fuel cell vehicle."
     },
     "start_date": "2024-05-15",
     "end_date": "2029-12-31",
     "url": {
-      "en": "https://clean.energy.nm.gov/landing/clean-car/"
+      "en": "https://clean.energy.nm.gov/clean-car-state-tax-credit/"
     }
   },
   {
@@ -548,23 +490,22 @@
     "items": [
       "electric_vehicle_charger"
     ],
-    "program": "nm_energyConservationAndManagement_newMexicoCleanCarIncentivesAndRebates",
+    "program": "nm_ecam_cleanCarAndChargingUnitTaxCredit",
     "amount": {
-      "type": "dollar_amount",
-      "number": 400,
+      "type": "percent",
+      "number": 1,
       "maximum": 400
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $400 refundable tax credit to install a level 1 or level 2 EV charger at home.",
-      "es": "Crédito fiscal reembolsable de hasta $400 para instalar un cargador de vehículos eléctricos de nivel 1 o nivel 2 en casa."
+      "en": "NM taxpayers can receive a refundable tax credit of up to $400 for installation of a Level 1 or Level 2 EV charger."
     },
     "start_date": "2024-05-15",
-    "end_date": "2030-01-01",
+    "end_date": "2029-12-31",
     "url": {
-      "en": "https://clean.energy.nm.gov/landing/clean-car/"
+      "en": "https://clean.energy.nm.gov/programs/clean-car-charging-unit-state-tax-credit/"
     }
   },
   {
@@ -586,9 +527,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $0.20/sqft rebate for cool roof products, dependent on home cooling type.",
-      "es": "Reembolso de hasta $0.20 por pie cuadrado para productos para techos fríos, según el tipo de refrigeración de la vivienda."
+      "en": "El Paso Electric customers can save up to $0.20/sq ft on a qualifying cool roof."
     },
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.epesaver.com/residential-comprehensive/"
     }
@@ -612,9 +553,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "$1.00/Sqft rebate for solar screens on West and South facing single-pane windows. Must be rated to block minimum 80% of solar heat.",
-      "es": "Descuento de $1.00 por pie cuadrado para pantallas solares en ventanas de un solo panel con orientación oeste y sur. Deben tener una clasificación que bloquee al menos el 80 % del calor solar."
+      "en": "El Paso Electric customers can save $1/sq ft on solar screens for West and South facing single-pane windows. Must block minimum 80% of solar heat. "
     },
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.epesaver.com/residential-comprehensive/"
     }
@@ -640,9 +581,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $3.00/window sqft rebate for ENERGY STAR windows, dependent on home cooling type.",
-      "es": "Reembolso de hasta $3,00 por pie cuadrado de ventana para ventanas con certificación ENERGY STAR, según el tipo de refrigeración de la vivienda."
+      "en": "El Paso Electric customers can save up to $3/sq ft on ENERGY STAR windows."
     },
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.epesaver.com/residential-comprehensive/"
     }
@@ -658,17 +599,17 @@
     "program": "nm-el-paso-energy-efficiency",
     "amount": {
       "type": "dollar_amount",
-      "number": 600,
-      "maximum": 600
+      "number": 1000,
+      "maximum": 1000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$600 rebate for an eligible permanently installed evaporative cooling unit.",
-      "es": "Reembolso de $600 por una unidad de enfriamiento por evaporación elegible e instalada de forma permanente."
+      "en": "El Paso Electric customers can save up to $1,000 on an eligible evaporative cooling unit."
     },
+    "end_date": "2025-12-15",
     "url": {
       "en": "https://www.epesaver.com/residential-comprehensive/"
     }
@@ -680,9 +621,10 @@
     ],
     "items": [
       "ducted_heat_pump",
-      "ductless_heat_pump"
+      "ductless_heat_pump",
+      "geothermal_heating_installation"
     ],
-    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "program": "nm_ecam_sustainableBuildingTaxCreditForEnergyConservingProducts",
     "amount": {
       "type": "dollar_amount",
       "number": 1000,
@@ -692,13 +634,12 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,000 tax credit for an Energy Star certified air source heat pump including installation.",
-      "es": "Crédito fiscal de $1,000 por una bomba de calor de fuente de aire con certificación Energy Star, incluida la instalación."
+      "en": "NM taxpayers can receive a $1,000 tax credit for an ENERGY STAR heat pump."
     },
     "start_date": "2021-01-01",
     "end_date": "2027-12-31",
     "url": {
-      "en": "https://www.emnrd.nm.gov/ecmd/tax-incentives/energy-conserving-products/"
+      "en": "https://clean.energy.nm.gov/sustainable-building-tax-credit-energy-conserving-products-ecp/"
     }
   },
   {
@@ -708,37 +649,10 @@
     ],
     "items": [
       "ducted_heat_pump",
-      "ductless_heat_pump"
-    ],
-    "program": "nm-emnrd-sustainable-building-tax-credit",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1000,
-      "maximum": 2000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$2,000 refundable tax credit for an Energy Star certified air source heat pump installation, for income-qualified residents.",
-      "es": "Crédito fiscal reembolsable de $2,000 para la instalación de una bomba de calor de fuente de aire con certificación Energy Star, para residentes que califican según sus ingresos."
-    },
-    "start_date": "2021-01-01",
-    "end_date": "2027-12-31",
-    "low_income": "nm-pnm-income-qualified",
-    "url": {
-      "en": "https://www.emnrd.nm.gov/ecmd/tax-incentives/energy-conserving-products/"
-    }
-  },
-  {
-    "id": "NM-28",
-    "payment_methods": [
-      "tax_credit"
-    ],
-    "items": [
+      "ductless_heat_pump",
       "geothermal_heating_installation"
     ],
-    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "program": "nm_ecam_sustainableBuildingTaxCreditForEnergyConservingProducts",
     "amount": {
       "type": "dollar_amount",
       "number": 2000,
@@ -748,41 +662,13 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,000 refundable tax credit for an Energy Star rated ground source heat pump installation, for income-qualified residents.",
-      "es": "Crédito fiscal reembolsable de $2,000 para la instalación de una bomba de calor geotérmica con clasificación Energy Star, para residentes que califican según sus ingresos."
+      "en": "Income-qualified NM taxpayers can receive a refundable $2,000 tax credit for an ENERGY STAR heat pump."
     },
     "start_date": "2021-01-01",
     "end_date": "2027-12-31",
-    "low_income": "nm-pnm-income-qualified",
+    "low_income": "nm-200fpl",
     "url": {
-      "en": "https://www.emnrd.nm.gov/ecmd/tax-incentives/energy-conserving-products/"
-    }
-  },
-  {
-    "id": "NM-29",
-    "payment_methods": [
-      "tax_credit"
-    ],
-    "items": [
-      "geothermal_heating_installation"
-    ],
-    "program": "nm-emnrd-sustainable-building-tax-credit",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1000,
-      "maximum": 1000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$1,000 tax credit for an Energy Star rated ground source heat pump.",
-      "es": "Crédito fiscal de $1,000 para una bomba de calor geotérmica con clasificación Energy Star."
-    },
-    "start_date": "2021-01-01",
-    "end_date": "2027-12-31",
-    "url": {
-      "en": "https://www.emnrd.nm.gov/ecmd/tax-incentives/energy-conserving-products/"
+      "en": "https://clean.energy.nm.gov/sustainable-building-tax-credit-energy-conserving-products-ecp/"
     }
   },
   {
@@ -794,7 +680,7 @@
       "window_replacement",
       "door_replacement"
     ],
-    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "program": "nm_ecam_sustainableBuildingTaxCreditForEnergyConservingProducts",
     "amount": {
       "type": "percent",
       "number": 1,
@@ -804,14 +690,13 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "100% of cost up to $1,000 refundable tax credit for Energy Star rated windows and doors, per product installed. For income-qualified residents.",
-      "es": "Crédito fiscal reembolsable del 100 % del costo, hasta $1,000, para ventanas y puertas con certificación Energy Star, por producto instalado. Para residentes que califican según sus ingresos."
+      "en": "Income-qualified NM taxpayers can receive a refundable tax credit for 100% of the cost of ENERGY STAR windows and doors, up to $1,000 per product."
     },
     "start_date": "2021-01-01",
     "end_date": "2027-12-31",
-    "low_income": "nm-pnm-income-qualified",
+    "low_income": "nm-200fpl",
     "url": {
-      "en": "https://www.emnrd.nm.gov/ecmd/tax-incentives/energy-conserving-products/"
+      "en": "https://clean.energy.nm.gov/sustainable-building-tax-credit-energy-conserving-products-ecp/"
     }
   },
   {
@@ -823,7 +708,7 @@
       "window_replacement",
       "door_replacement"
     ],
-    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "program": "nm_ecam_sustainableBuildingTaxCreditForEnergyConservingProducts",
     "amount": {
       "type": "percent",
       "number": 0.5,
@@ -833,13 +718,12 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of cost up to $500 tax credit for Energy Star rated windows and doors, per product installed.",
-      "es": "50 % del costo hasta $500 de crédito fiscal para ventanas y puertas con clasificación Energy Star, por producto instalado."
+      "en": "NM taxpayers can receive a tax credit for 50% of the cost of ENERGY STAR windows and doors, up to $500 per product."
     },
     "start_date": "2021-01-01",
     "end_date": "2027-12-31",
     "url": {
-      "en": "https://www.emnrd.nm.gov/ecmd/tax-incentives/energy-conserving-products/"
+      "en": "https://clean.energy.nm.gov/sustainable-building-tax-credit-energy-conserving-products-ecp/"
     }
   },
   {
@@ -855,7 +739,7 @@
       "other_insulation",
       "wall_insulation"
     ],
-    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "program": "nm_ecam_sustainableBuildingTaxCreditForEnergyConservingProducts",
     "amount": {
       "type": "percent",
       "number": 1,
@@ -865,14 +749,13 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "100% of cost up to $2,000 refundable tax credit for insulation improvements, per product installed. For income-qualified residents.",
-      "es": "Crédito fiscal reembolsable del 100 % del costo, hasta $2,000, para mejoras de aislamiento, por cada producto instalado. Para residentes que califican según sus ingresos."
+      "en": "Income-qualified NM taxpayers can receive a refundable tax credit for 100% of the cost of qualifying insulation improvements, up to $2,000."
     },
     "start_date": "2021-01-01",
     "end_date": "2027-12-31",
-    "low_income": "nm-pnm-income-qualified",
+    "low_income": "nm-200fpl",
     "url": {
-      "en": "https://www.emnrd.nm.gov/ecmd/tax-incentives/energy-conserving-products/"
+      "en": "https://clean.energy.nm.gov/sustainable-building-tax-credit-energy-conserving-products-ecp/"
     }
   },
   {
@@ -888,7 +771,7 @@
       "other_insulation",
       "wall_insulation"
     ],
-    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "program": "nm_ecam_sustainableBuildingTaxCreditForEnergyConservingProducts",
     "amount": {
       "type": "percent",
       "number": 0.5,
@@ -898,13 +781,12 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of cost up to $1,000 tax credit for insulation improvements, per product installed. ",
-      "es": "Crédito fiscal del 50 % del costo hasta $1,000 para mejoras de aislamiento, por cada producto instalado. "
+      "en": "NM taxpayers can receive a tax credit for 50% of the cost of qualifying insulation improvements, up to $1,000."
     },
     "start_date": "2021-01-01",
     "end_date": "2027-12-31",
     "url": {
-      "en": "https://www.emnrd.nm.gov/ecmd/tax-incentives/energy-conserving-products/"
+      "en": "https://clean.energy.nm.gov/sustainable-building-tax-credit-energy-conserving-products-ecp/"
     }
   },
   {
@@ -915,7 +797,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "program": "nm_ecam_sustainableBuildingTaxCreditForEnergyConservingProducts",
     "amount": {
       "type": "dollar_amount",
       "number": 700,
@@ -925,14 +807,13 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$700 refundable tax credit for an Energy Star rated heat pump water heater installs, for income-qualified residents.",
-      "es": "Crédito fiscal reembolsable de $700 para la instalación de un calentador de agua con bomba de calor con clasificación Energy Star, para residentes que califican según sus ingresos."
+      "en": "Income-qualified NM taxpayers can receive a refundable $700 tax credit for an ENERGY STAR heat pump water heater."
     },
     "start_date": "2021-01-01",
     "end_date": "2027-12-31",
-    "low_income": "nm-pnm-income-qualified",
+    "low_income": "nm-200fpl",
     "url": {
-      "en": "https://www.emnrd.nm.gov/ecmd/tax-incentives/energy-conserving-products/"
+      "en": "https://clean.energy.nm.gov/sustainable-building-tax-credit-energy-conserving-products-ecp/"
     }
   },
   {
@@ -943,7 +824,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "program": "nm_ecam_sustainableBuildingTaxCreditForEnergyConservingProducts",
     "amount": {
       "type": "dollar_amount",
       "number": 350,
@@ -953,13 +834,12 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 tax credit for an Energy Star rated heat pump water heater including installation costs.",
-      "es": "Crédito fiscal de $350 por un calentador de agua con bomba de calor con clasificación Energy Star, incluidos los costos de instalación."
+      "en": "NM taxpayers can receive a $350 tax credit for an ENERGY STAR heat pump water heater."
     },
     "start_date": "2021-01-01",
     "end_date": "2027-12-31",
     "url": {
-      "en": "https://www.emnrd.nm.gov/ecmd/tax-incentives/energy-conserving-products/"
+      "en": "https://clean.energy.nm.gov/sustainable-building-tax-credit-energy-conserving-products-ecp/"
     }
   },
   {
@@ -970,7 +850,7 @@
     "items": [
       "electric_vehicle_charger"
     ],
-    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "program": "nm_ecam_sustainableBuildingTaxCreditForEnergyConservingProducts",
     "amount": {
       "type": "dollar_amount",
       "number": 1000,
@@ -980,14 +860,13 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,000 refundable tax credit for an electric vehicle charger product and installation costs, for income-qualified residents.",
-      "es": "Crédito fiscal reembolsable de $1,000 por un producto de carga de vehículos eléctricos y costos de instalación, para residentes que califican según sus ingresos."
+      "en": "Income-qualified NM taxpayers can receive a refundable $1,000 tax credit for qualifying \"EV-ready\" electric vehicle charging upgrades."
     },
     "start_date": "2021-01-01",
     "end_date": "2027-12-31",
-    "low_income": "nm-pnm-income-qualified",
+    "low_income": "nm-200fpl",
     "url": {
-      "en": "https://www.emnrd.nm.gov/ecmd/tax-incentives/energy-conserving-products/"
+      "en": "https://clean.energy.nm.gov/sustainable-building-tax-credit-energy-conserving-products-ecp/"
     }
   },
   {
@@ -998,7 +877,7 @@
     "items": [
       "electric_vehicle_charger"
     ],
-    "program": "nm-emnrd-sustainable-building-tax-credit",
+    "program": "nm_ecam_sustainableBuildingTaxCreditForEnergyConservingProducts",
     "amount": {
       "type": "dollar_amount",
       "number": 500,
@@ -1008,13 +887,12 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500 tax credit for an electric vehicle charger product and installation costs.",
-      "es": "Crédito fiscal de $500 por un producto de cargador de vehículos eléctricos y costos de instalación."
+      "en": "NM taxpayers can receive a $500 tax credit for qualifying \"EV-ready\" electric vehicle charging upgrades."
     },
     "start_date": "2021-01-01",
     "end_date": "2027-12-31",
     "url": {
-      "en": "https://www.emnrd.nm.gov/ecmd/tax-incentives/energy-conserving-products/"
+      "en": "https://clean.energy.nm.gov/sustainable-building-tax-credit-energy-conserving-products-ecp/"
     }
   },
   {
@@ -1025,7 +903,7 @@
     "items": [
       "rooftop_solar_installation"
     ],
-    "program": "nm-emnrd-new-solar-market-development",
+    "program": "nm_ecam_newSolarMarketDevelopmentTaxCredit",
     "amount": {
       "type": "percent",
       "number": 0.1,
@@ -1035,23 +913,23 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "10% of cost of installing home solar, up to $6,000 refundable tax credit.",
-      "es": "10 % del costo de instalación de energía solar en el hogar, hasta $6,000 de crédito fiscal reembolsable."
+      "en": "NM taxpayers can receive a refundable tax credit for 10% of the cost of a solar photovoltaic or solar thermal system, up to $6,000."
     },
-    "start_date": "2020-01-01",
+    "end_date": "2031-12-31",
     "url": {
-      "en": "https://www.emnrd.nm.gov/ecmd/tax-incentives/solar-market-development-tax-credit-smdtc/"
+      "en": "https://clean.energy.nm.gov/new-solar-market-development-tax-credit-nsmdtc/"
     }
   },
   {
     "id": "NM-40",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "pos_rebate"
     ],
     "items": [
       "heat_pump_clothes_dryer"
     ],
-    "program": "nm-pnm-rebates",
+    "program": "nm_pnm_pNMHomeRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 165,
@@ -1062,52 +940,23 @@
       "renter"
     ],
     "short_description": {
-      "en": "$165 rebate for a qualifying Energy Star heat pump clothes dryer. On-line or mail-in rebate.",
-      "es": "Reembolso de $165 por una secadora de ropa con bomba de calor con certificación Energy Star. Reembolso en línea o por correo."
+      "en": "PNM customers can save $165 on a qualifying ENERGY STAR heat pump clothes dryer, as either an upfront coupon or a mail-in or online rebate."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.pnm.com/rebates-and-discounts"
-    }
-  },
-  {
-    "id": "NM-41",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "non_heat_pump_clothes_dryer"
-    ],
-    "program": "nm-pnm-rebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 110
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$110 rebate for qualifying Energy Star electric clothes dryers. Online/mail in rebates. Can be stacked with Home Energy Checkup rebates.",
-      "es": "Reembolso de $110 por secadoras de ropa eléctricas con certificación Energy Star. Reembolsos en línea o por correo. Se puede combinar con los reembolsos de Home Energy Checkup."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
-    "url": {
-      "en": "https://www.pnm.com/rebates-and-discounts"
+      "en": "https://www.checkwithpnm.com/washers-dryers"
     }
   },
   {
     "id": "NM-42",
     "payment_methods": [
-      "pos_rebate",
       "rebate"
     ],
     "items": [
       "electric_stove"
     ],
-    "program": "nm-pnm-rebates",
+    "program": "nm_pnm_pNMHomeRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 200,
@@ -1118,24 +967,24 @@
       "renter"
     ],
     "short_description": {
-      "en": "$200 rebate for eligible Energy Star induction cooktops and ranges.",
-      "es": "Reembolso de $200 para placas de occión y estufas por inducción con certificación Energy Star elegibles."
+      "en": "PNM customers can save $200 on a qualifying ENERGY STAR induction cooktops or range."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.pnm.com/rebates-and-discounts"
+      "en": "https://www.checkwithpnm.com/kitchen-appliances"
     }
   },
   {
     "id": "NM-43",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "pos_rebate"
     ],
     "items": [
       "smart_thermostat"
     ],
-    "program": "nm-pnm-rebates",
+    "program": "nm_pnm_pNMHomeRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 50,
@@ -1146,13 +995,12 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate on select Energy Star smart thermostats.",
-      "es": "Reembolso de $50 en termostatos inteligentes con certificación Energy Star seleccionados."
+      "en": "PNM customers can save $50 on select ENERGY STAR smart thermostats, as either an upfront discount or a mail-in or online rebate."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.pnm.com/rebates-and-discounts"
+      "en": "https://www.checkwithpnm.com/thermostats"
     }
   },
   {
@@ -1163,7 +1011,7 @@
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "nm_pnm_pNMHomeEnergyCheckupProgram",
+    "program": "nm_pnm_pNMHomeEnergyCheckup",
     "amount": {
       "type": "dollar_amount",
       "number": 300
@@ -1173,40 +1021,12 @@
       "renter"
     ],
     "short_description": {
-      "en": "$300 rebate for an Energy Star certified heat pump water heater that is 50 gallons or larger. Home Checkup in prior 10 years.",
-      "es": "Reembolso de $300 por un calentador de agua con bomba de calor con certificación Energy Star de 50 galones o más. Revisión del hogar realizada en los últimos 10 años."
+      "en": "PNM customers who complete a Home Energy Checkup can save $300 on an ENERGY STAR heat pump water heater."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.pnmhomecheckup.com/additional"
-    }
-  },
-  {
-    "id": "NM-45",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "nm_pnm_pNMHomeEnergyCheckupProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 550
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$550 rebate for a qualifying mini-split air source heat pump replacing refrigerated system by participating installer. Home Checkup in prior 10 yrs. ",
-      "es": "Reembolso de $550 por una bomba de calor de aire mini-split que reemplace el sistema de refrigeración con un instalador participante. Revisión del hogar realizada en los últimos 10 años. "
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
-    "url": {
-      "en": "https://www.pnmhomecheckup.com/additional"
+      "en": "https://pnmhomecheckup.com/rebates"
     }
   },
   {
@@ -1215,9 +1035,10 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump"
+      "ducted_heat_pump",
+      "ductless_heat_pump"
     ],
-    "program": "nm_pnm_pNMHomeEnergyCheckupProgram",
+    "program": "nm_pnm_pNMHomeEnergyCheckup",
     "amount": {
       "type": "dollar_amount",
       "number": 550
@@ -1227,13 +1048,12 @@
       "renter"
     ],
     "short_description": {
-      "en": "$550 rebate for qualifying ducted air source heat pump replacing refrigerated air, installed by participating installer. Home Checkup in prior 10 yrs.",
-      "es": "Reembolso de $550 por una bomba de calor de aire con sistema de ductos que reemplace el aire refrigerado, instalada por un instalador participante. Revisión del hogar realizada en los últimos 10 años."
+      "en": "PNM customers who complete a Home Energy Checkup can get $550 back when replacing an evaporative cooler or AC with a qualifying air source heat pump."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.pnmhomecheckup.com/additional"
+      "en": "https://pnmhomecheckup.com/rebates"
     }
   },
   {
@@ -1244,7 +1064,7 @@
     "items": [
       "attic_or_roof_insulation"
     ],
-    "program": "nm_pnm_pNMHomeEnergyCheckupProgram",
+    "program": "nm_pnm_pNMHomeEnergyCheckup",
     "amount": {
       "type": "percent",
       "number": 0.1,
@@ -1254,13 +1074,12 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "5%-10% for qualified attic/roof insulation improvements, by participating contractor, up to $200 depending on cooling type. Prior Home Energy Checkup.",
-      "es": "5%-10% por mejoras de aislamiento en áticos/cielorrasos calificadas, realizadas por un contratista participante de hasta $200, según el tipo de sistema de enfriamiento. Se requiere una evaluación energética del hogar previa."
+      "en": "PNM customers who complete a Home Energy Checkup can save 5-10%, up to $200, on qualifying attic or ceiling insulation improvements."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.pnmhomecheckup.com/additional"
+      "en": "https://pnmhomecheckup.com/rebates"
     }
   },
   {
@@ -1291,7 +1110,8 @@
   {
     "id": "NM-49",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "account_credit"
     ],
     "items": [
       "ductless_heat_pump",
@@ -1299,19 +1119,19 @@
     ],
     "program": "nm_centralValleyElectricCooperative_cVECHeatingAndCoolingRebates",
     "amount": {
-      "type": "dollars_per_unit",
-      "number": 175,
-      "unit": "ton"
+      "type": "percent",
+      "number": 0.45,
+      "maximum": 75000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$175/ton rebate for qualified air source heat pump systems. Minimum SEER 16 and HSPF 8.5. Includes manufactured homes on permanent foundation.",
-      "es": "Reembolso de $175 por tonelada para sistemas de bomba de calor de aire calificados. SEER mínimo de 16 y HSPF de 8.5. Incluye casas prefabricadas con cimientos permanentes."
+      "en": "Up to 45% of equipment cost of air source heat pump depending on efficiency.  Maximum rebate requires SEER 17 or greater.",
+      "es": "Hasta un 45 % del costo del equipo de una bomba de calor aerotérmica, según la eficiencia. El reembolso máximo requiere un SEER de 17 o superior."
     },
     "url": {
-      "en": "https://cvecoop.org/heating-cooling-rebates"
+      "en": "https://www.cvecoop.org/energy-efficiency-rebates-and-programs"
     }
   },
   {
@@ -1357,8 +1177,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$500/ton for new ground-source electric heat pump. $250/ton for replacement units. $100/unit for ground-source heat pump powered hot water. ",
-      "es": "$500 por tonelada por una nueva bomba de calor eléctrica geotérmica. $250 por tonelada por unidades de reemplazo. $100 por unidad para agua caliente alimentada por bomba de calor geotérmica. "
+      "en": "$500/ton for new ground-source electric heat pump. $250/ton for replacement units. ",
+      "es": "$500/tonelada para una bomba de calor eléctrica geotérmica nueva. $250/tonelada para unidades de reemplazo."
     },
     "url": {
       "en": "https://cnmec.org/cnmec-member-rebates"
@@ -1433,8 +1253,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "25% rebate of cost up to $150 for snowblower and walk-behind mowers, $50 for trimmer, leaf blower and power washer, and $100 for chainsaws.  ",
-      "es": "Reembolso del 25 % del costo hasta $150 para quitanieves y cortadoras de césped manuales, $50 para recortadoras, sopladoras de hojas y lavadoras a presión, y $100 para motosierras.  "
+      "en": "25% rebate up to $150 for snowblower ($250 for 2-stage) & walk-behind mower, $50 for trimmer, leaf blower & power washer, and $100 for chainsaw. ",
+      "es": "Reembolso del 25 %, hasta $150, para una quitanieves ($250 para las de 2 etapas) y una cortadora de césped manual, $50 para una desbrozadora, sopladora de hojas y lavadora a presión, y $100 para una motosierra. "
     },
     "url": {
       "en": "https://cnmec.org/cnmec-member-rebates"
@@ -1535,8 +1355,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $16/kW for electric thermal storage and slab units controlled by timers or master control system.   ",
-      "es": "Hasta $16 por kW por unidades de almacenamiento térmico eléctrico y de losa controladas por temporizadores o sistema de control maestro.   "
+      "en": "Up to $16/kW for electric thermal storage and slab units controlled by timers or master control system.  $12/kW fore controlled thermal slab.",
+      "es": "Hasta $16/kW para unidades de almacenamiento térmico eléctrico y losas controladas por temporizadores o sistema de control maestro. $12/kW para losas térmicas controladas."
     },
     "url": {
       "en": "https://cnmec.org/cnmec-member-rebates"
@@ -1585,8 +1405,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of equipment cost up to $500/ton rebate for air-to-water heat pump radiant systems",
-      "es": "Reembolso del 50 % del costo del equipo hasta $500 por tonelada para sistemas radiantes con bomba de calor aire-agua"
+      "en": "50% of equipment cost up to $500/ton rebate for air-to-water heat pump radiant systems.",
+      "es": "Reembolso del 50% del costo del equipo, hasta $500/tonelada, para sistemas radiantes con bomba de calor aero-geo térmica."
     },
     "url": {
       "en": "https://cnmec.org/cnmec-member-rebates"
@@ -1610,8 +1430,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 rebate for switching to induction cooktop/range from gas or propane or install in new construction.  Cooktop must be at least 30\" wide.",
-      "es": "Reembolso de $350 por cambiar de gas o propano a una placa de cocción/estufa de inducción, o por instalarla en una nueva construcción. La placa de cocción debe tener al menos 30 pulgadas de ancho."
+      "en": "$350 rebate to switch to induction cooktop/range from gas/propane or new construction.  $100 for replacing electric. Cooktop minimum 30\" wide. ",
+      "es": "Reembolso de $350 para cambiar a cocina de inducción de cocina de gas o propano, o para vivienda nueva. $100 para reemplazar cocina eléctrica. Ancho mínimo de la cocina: 30\"."
     },
     "url": {
       "en": "https://cnmec.org/cnmec-member-rebates"
@@ -1659,8 +1479,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 rebate for qualified ENERGY STAR heat pump water heater (30-55 gallon capacity)",
-      "es": "Reembolso de $350 por un calentador de agua con bomba de calor calificado con certificación ENERGY STAR (capacidad de 30 a 55 galones)"
+      "en": "$350 rebate for qualified ENERGY STAR heat pump water heater (30 gallon minimum). Check if maximum gallon capacity.",
+      "es": "Reembolso de $350 para calentador de agua con bomba de calor con certificación ENERGY STAR (mínimo 30 galones). Consulte la capacidad máxima en galones."
     },
     "url": {
       "en": "https://cnmec.org/cnmec-member-rebates"
@@ -1835,8 +1655,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "25% of cost rebate up to $150 for snowblower and walk-behind mowers, $50 for trimmer, leaf blower and power washer, and $100 for chainsaws. ",
-      "es": "Reembolso del 25 % del costo hasta $150 para quitanieves y cortadoras de césped manuales, $50 para recortadoras, sopladoras de hojas y lavadoras a presión, y $100 para motosierras. "
+      "en": "25% of cost rebate up to $150 for walk-behind mowers, $50 for trimmer, pruner, leaf blower and power washer, and $100 for chainsaws. ",
+      "es": "25% de reembolso del costo, hasta $150, para cortadoras de césped manuales, $50 para desbrozadoras, podadoras, sopladoras de hojas e hidrolavadora, y $100 para motosierras."
     },
     "url": {
       "en": "https://www.columbusco-op.org/rebates"
@@ -1886,7 +1706,7 @@
     ],
     "short_description": {
       "en": "$350 rebate for induction cooktop when replacing gas or propane. Cooktop minimum width of 30 inches.",
-      "es": "Reembolso de $350 para placa de cocción por inducción al reemplazar una a gas o propano. Ancho mínimo de la placa: 30 pulgadas."
+      "es": "Reembolso de $350 para estufa de inducción al reemplazar una de gas o propano. Ancho mínimo de la placa: 30 pulgadas."
     },
     "url": {
       "en": "https://www.columbusco-op.org/rebates"
@@ -1911,8 +1731,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$90 rebate for ENERGY STAR heat pump (ventless) clothes dryer. $100 rebate for electric clothes dryer. ",
-      "es": "Reembolso de $90 por una secadora de ropa con bomba de calor ENERGY STAR (sin ventilación). Reembolso de $100 por una secadora de ropa eléctrica. "
+      "en": "$90 rebate for ENERGY STAR heat pump (ventless) clothes dryer. $30 rebate for electric clothes dryer. ",
+      "es": "Reembolso de $90 para secadora de ropa con bomba de calor ENERGY STAR (sin ventilación). Reembolso de $30 para secadora de ropa eléctrica."
     },
     "url": {
       "en": "https://www.columbusco-op.org/rebates"
@@ -1936,8 +1756,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$25 rebate/ENERGY STAR smart thermostat, $50/thermostat in managed program. Limit 2 for standard low-voltage. Limit 5 for  line-voltage applications.",
-      "es": "Reembolso de $25 por termostato inteligente ENERGY STAR, $50 por termostato en un programa gestionado. Límite de 2 para un bajo voltaje estándar. Límite de 5 para aplicaciones de voltaje de línea."
+      "en": "$25 rebate for smart thermostat. Limit 2 for standard low-voltage. Limit 5 for  line-voltage applications.",
+      "es": "Reembolso de $25 para termostato inteligente. Límite de 2 para aplicaciones de bajo voltaje estándar. Límite de 5 para aplicaciones de voltaje de línea."
     },
     "url": {
       "en": "https://www.columbusco-op.org/rebates"
@@ -1965,7 +1785,7 @@
       "es": "$500 por tonelada por una bomba de calor aire-agua, que no deberá exceder el 50 % del costo del equipo. "
     },
     "url": {
-      "en": "https://www.cdec.coop/2025-energy-efficiency-rebates"
+      "en": "https://www.cdec.coop/energy-efficiency-rebates"
     }
   },
   {
@@ -1990,7 +1810,7 @@
       "es": "Reembolso de $350 por una nueva cocina de inducción (de mínimo 30\" de ancho) al reemplazar una de gas o propano. "
     },
     "url": {
-      "en": "https://www.cdec.coop/2025-energy-efficiency-rebates"
+      "en": "https://www.cdec.coop/energy-efficiency-rebates"
     }
   },
   {
@@ -2015,7 +1835,7 @@
       "es": "Reembolso de $500 por tonelada por bombas de calor geotérmicas y $250 por tonelada por sistemas de reemplazo. No debe exceder el 50 % del costo del equipo. $100 adicionales por desobrecalentador."
     },
     "url": {
-      "en": "https://www.cdec.coop/2025-energy-efficiency-rebates"
+      "en": "https://www.cdec.coop/energy-efficiency-rebates"
     }
   },
   {
@@ -2040,7 +1860,7 @@
       "es": "Reembolso de $200 por un enfriador evaporativo con un rendimiento mínimo de 2,500 pies cúbicos/metro. Límite de 2. No se admiten unidades de ventana ni portátiles. "
     },
     "url": {
-      "en": "https://www.cdec.coop/2025-energy-efficiency-rebates"
+      "en": "https://www.cdec.coop/energy-efficiency-rebates"
     }
   },
   {
@@ -2061,11 +1881,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$25 rebate/Energy Star smart thermostat, $50/thermostat in managed program.  Limit 2 for standard low-voltage. Limit 5 for line voltage thermostats.",
-      "es": "Reembolso de $25 por un termostato inteligente Energy Star, $50 por un termostato en un programa gestionado. Límite de 2 para termostatos de bajo voltaje estándar. Límite de 5 para termostatos de voltaje de línea."
+      "en": "$25 rebate/Energy Star smart thermostat.  Limit 2 for standard low-voltage. Limit 5 for line voltage thermostats.",
+      "es": "Reembolso de $25 para termostato inteligente Energy Star. Límite de 2 para termostatos estándar de bajo voltaje; límite de 5 para termostatos de voltaje de línea."
     },
     "url": {
-      "en": "https://www.cdec.coop/2025-energy-efficiency-rebates"
+      "en": "https://www.cdec.coop/energy-efficiency-rebates"
     }
   },
   {
@@ -2080,17 +1900,17 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 2000
+      "maximum": 1500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% equipment cost up to $1,500 for qualified ducted air source heat pump > than 1.5 tons. Up to $500 for smaller systems. $500 propane backup bonus.",
-      "es": "50 % del costo del equipo hasta $1,500 por bombas de calor de aire calificadas con sistema de ductos de más de 1.5 toneladas. Hasta $500 por sistemas más pequeños. Bonificación de $500 por respaldo de propano."
+      "en": "50% equipment cost up to $1,500 for qualified ducted air source heat pump > than 1.5 tons. Up to $500 for smaller systems.",
+      "es": "50% del costo del equipo hasta $1,500 para bombas de calor de aire por conducto calificadas de más de 1.5 toneladas. Hasta $500 para sistemas más pequeños."
     },
     "url": {
-      "en": "https://www.cdec.coop/2025-energy-efficiency-rebates"
+      "en": "https://www.cdec.coop/energy-efficiency-rebates"
     }
   },
   {
@@ -2114,6 +1934,7 @@
       "en": "$100 rebate for whole house fan. Limit 2 per member account. Attic ventilation systems do not qualify.",
       "es": "Reembolso de $100 por un ventilador para toda la casa. Límite de 2 por cuenta de miembro. Los sistemas de ventilación de ático no califican."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://cnmec.org/cnmec-member-rebates"
     }
@@ -2205,14 +2026,15 @@
     "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
     "amount": {
       "type": "percent",
-      "number": 0.25
+      "number": 0.25,
+      "maximum": 5000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "25% rebate of material costs for qualified ENERGY STAR windows and doors. Maximum yearly rebate limits. ",
-      "es": "Reembolso del 25 % en materiales para ventanas y puertas calificadas con certificación ENERGY STAR. Límite máximo de descuento anual. "
+      "en": "25% rebate of material costs for qualified ENERGY STAR windows and doors. Maximum yearly rebate limits. Invoice must list labor cost separately.",
+      "es": "25% de descuento en materiales para ventanas y puertas con certificación ENERGY STAR. Límite máximo de descuento anual. La factura debe incluir el costo de la mano de obra por separado."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2229,14 +2051,15 @@
     "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
     "amount": {
       "type": "percent",
-      "number": 0.3
+      "number": 0.3,
+      "maximum": 5000
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "30% rebate of material costs of upgraded or added insulation qualified for your climate zone. Maximum yearly rebate limits. ",
-      "es": "Reembolso del 30 % en el costo de materiales de aislamiento mejorado o adicional, según su zona climática. Límite máximo de reembolso anual. "
+      "en": "30% rebate of material costs of upgraded or added insulation. May require pre- and post-inspection,",
+      "es": "30% de descuento en el costo de materiales para mejoramiento o adición de aislamiento. Puede requerir inspección previa y posterior."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2253,7 +2076,8 @@
     "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
     "amount": {
       "type": "percent",
-      "number": 0.5
+      "number": 0.5,
+      "maximum": 5000
     },
     "owner_status": [
       "homeowner"
@@ -2277,7 +2101,8 @@
     "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 2000
+      "number": 2000,
+      "maximum": 2000
     },
     "owner_status": [
       "homeowner"
@@ -2326,9 +2151,10 @@
     ],
     "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
     "amount": {
-      "type": "dollars_per_unit",
+      "type": "dollar_amount",
       "number": 1000,
-      "unit": "ton"
+      "minimum": 500,
+      "maximum": 1000
     },
     "owner_status": [
       "homeowner"
@@ -2378,15 +2204,14 @@
     "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
     "amount": {
       "type": "percent",
-      "number": 0.25,
-      "maximum": 300
+      "number": 0.25
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "25% of cost up to $150 for snowblower, walk-behind mower; $100 for chainsaws; $50 for trimmer, leaf blower, power washer.  50% extra battery to $25.",
-      "es": "25 % del costo hasta $150 para quitanieves, cortadora de césped manual; $100 para motosierras; $50 para recortadora, soplador de hojas, hidrolavadora. 50% adicional por batería hasta $25."
+      "en": "25% of cost up to $150 for snowblower, walk-behind mower; $100 for chainsaw; $50 for trimmer, blower, pruner, power washer.  50% extra battery to $25.",
+      "es": "25% del costo, hasta $150, para quitanieves y cortadora de césped manual; $100 para motosierra; $50 para desblozadora, sopladora, podadora, hidrolavadora. 50% adicional para baterías, hasta $25."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2410,8 +2235,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "25% of cost rebate for electric riding mower up to $1,000. 50% of cost for extra battery up to $25. Maximum rebate limits. ",
-      "es": "Reembolso del 25 % del costo de una cortadora de césped eléctrica de hasta $1,000. Reembolso del 50 % del costo de una batería adicional de hasta $25. Límites máximos de reembolso. "
+      "en": "25% of cost rebate for electric riding mower up to $1,000.  Maximum rebate limits. ",
+      "es": "Descuento del 25% en el costo para una cortadora de césped eléctrica de hasta $1,000. Límites máximos de descuento."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2453,14 +2278,14 @@
     "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 350
+      "number": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 Tri-State rebate for Energy Star heat pump water heater. There is a maximum limit for all rebates over 12 months.",
-      "es": "Reembolso de $350 en el programa Tri-State para calentadores de agua con una bomba de calor con certificación Energy Star. El límite máximo para todos los reembolsos es de 12 meses."
+      "en": "$500 rebate for Energy Star heat pump water heater (HP setting only). There is a maximum limit for all rebates over 12 months.",
+      "es": "Reembolso de $500 para un calentador de agua con bomba de calor Energy Star (solo configuración HP). Hay un límite máximo para todos los reembolsos de más de 12 meses."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2484,33 +2309,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$50 Tri-state rebate for electric water heater if replacing propane/gas, 50/unit for managed, $30/unit new construction. 30 gallon minimum.",
-      "es": "Reembolso triestatal de $50 por un calentador de agua eléctrico si reemplaza uno de propano/gas, $50 por unidad por un calentador gestionado, $30 por unidad en una construcción nueva. Mínimo de 30 galones."
-    },
-    "url": {
-      "en": "https://www.ocec-inc.com/energy-efficiency-program"
-    }
-  },
-  {
-    "id": "NM-98",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_water_heater"
-    ],
-    "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "maximum": 500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$500 rebate for Energy Star heat pump water heater (HP setting only). Maximum annual limit for all rebates.",
-      "es": "Reembolso de $500 para calentador de agua con bomba de calor Energy Star (solo configuración HP). Límite máximo anual para todos los reembolsos."
+      "en": "$50 Tri-state rebate for electric water heater if replacing propane/gas, $50/unit for managed, $30/unit new construction. 30 gallon minimum.",
+      "es": "Reembolso triestatal de $50 para calentador de agua eléctrico si reemplaza uno de propano o gas. $50/unidad para uno administrado, $30/unidad para una construcción nueva. Mínimo de 30 galones."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2757,8 +2557,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$16/kW for electric thermal storage units and $12/kW for thermal slabs controlled by timers or master control systems. Min. load for ETS is 1kW.\n",
-      "es": "$16 por kW por unidades de almacenamiento térmico eléctrico y $12 por kW por placas térmicas controladas por temporizadores o sistemas de control maestro. La carga mínima para ETS es de 1 kW."
+      "en": "$16/kW for electric thermal storage units and $12/kW for thermal slabs controlled by timers or master control systems. Min. load for ETS is 1kW.",
+      "es": "$16/kW para unidades de almacenamiento térmico eléctrico y $12/kW para placas térmicas controladas por temporizadores o sistemas de control maestro. La carga mínima para ETS es de 1 kW."
     },
     "url": {
       "en": "https://www.sierraelectric.org/energy-efficiency-rebates"
@@ -2782,8 +2582,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of Level 2 cost up to $125 for EV charger and $125 for labor. If managed system, the rebate is 50% of cost up to $500 for charger/$500 for labor.\n",
-      "es": "50 % del costo de nivel 2 hasta $125 por el cargador de vehículos eléctricos y $125 para la mano de obra. Si se trata de un sistema gestionado, el reembolso es el 50 % del costo hasta $500 por el cargador y $500 por la mano de obra."
+      "en": "50% of Level 2 cost up to $125 for EV charger and $125 for labor. If managed system, the rebate is 50% of cost up to $500 for charger/$500 for labor.",
+      "es": "50% del costo de Nivel 2 hasta $125 para un cargador de vehículos eléctricos y $125 para la mano de obra. Si se trata de un sistema gestionado, el reembolso es del 50% del costo hasta $500 para el cargador y $500 para la mano de obra."
     },
     "url": {
       "en": "https://www.sierraelectric.org/energy-efficiency-rebates"
@@ -2933,8 +2733,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "25% cost up to $150 for electric snowblower, walk-behind mower; $50 for trimmer, blower, power washer; $100 for chainsaw. 50% ($25 max) extra battery",
-      "es": "25 % del costo hasta $150 para quitanieves eléctrico, cortadora de césped manual; $50 para recortadora, sopladora, hidrolavadora; $100 para motosierra. 50 % ($25 máximo) de batería adicional"
+      "en": "25% cost up to $150 for walk-behind mower; $50 for trimmer, leaf blower, power washer; $100 for chainsaw. 50% ($25 max) extra battery",
+      "es": "25% de costo hasta $150 para cortadora de césped manual; $50 para podadoras, sopladora de hojas, hidrolavadora; $100 para motosierra. 50% para  batería adicional ($25 máximo)."
     },
     "url": {
       "en": "https://www.sierraelectric.org/energy-efficiency-rebates"
@@ -2958,8 +2758,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$100 rebate for whole house fan. Limit 2 per member account. New or replacement.",
-      "es": "Reembolso de $100 por ventilador para toda la casa. Límite de 2 por cuenta de miembro. Nuevo o reemplazo."
+      "en": "$100 rebate for whole house fan. Limit 2 per member account. New or replacement. No attic ventilation or in-line duct fans.",
+      "es": "Reembolso de $100 para ventilador para toda la casa. Límite de 2 por cuenta de miembro. Nuevo o de reemplazo. No se permiten ventiladores de ático ni ventiladores de conducto."
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -3031,8 +2831,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$200 rebate per evaporative cooler with minimum airflow of 2,500 CFM. Limit 2 per member account. New or replacement. ",
-      "es": "Descuento de $200 por enfriador evaporativo con un flujo de aire mínimo de 2,500 CFM. Límite de 2 por cuenta de miembro. Nuevo o reemplazo. "
+      "en": "$200 rebate per evaporative cooler with minimum airflow of 2,500 CFM. Limit 2 per member account. New or replacement. No window units.",
+      "es": "Descuento de $200 por enfriador evaporativo con un flujo de aire mínimo de 2500 CFM. Límite de 2 por cuenta de miembro. Nuevo o reemplazo. No se admiten unidades de ventana."
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -3235,31 +3035,6 @@
     }
   },
   {
-    "id": "NM-128",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_stove"
-    ],
-    "program": "nm_centralNewMexicoElectricCooperative_cNMECMemberRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 100,
-      "maximum": 100
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$100 rebate for switching to induction cooktop/range from electric. Cooktop must be at least 30\" wide.",
-      "es": "Reembolso de $100 por cambiar una placa de cocción/estufa eléctrica por una de inducción. La cocina debe tener al menos 30 pulgadas de ancho."
-    },
-    "url": {
-      "en": "https://cnmec.org/cnmec-member-rebates"
-    }
-  },
-  {
     "id": "NM-129",
     "payment_methods": [
       "rebate"
@@ -3306,7 +3081,7 @@
       "es": "Reembolso de $100 por una nueva placa de cocción por inducción (con un mínimo 30\" de ancho) al reemplazar una estufa eléctrica."
     },
     "url": {
-      "en": "https://www.cdec.coop/2025-energy-efficiency-rebates"
+      "en": "https://www.cdec.coop/energy-efficiency-rebates"
     }
   },
   {
@@ -3321,7 +3096,7 @@
     "amount": {
       "type": "dollar_amount",
       "number": 25,
-      "maximum": 250
+      "maximum": 125
     },
     "owner_status": [
       "homeowner"
@@ -3476,8 +3251,8 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "25% cost up to $150 for electric snowblower, walk-behind mower; $50 for trimmer, blower, power washer; $100 for chainsaw. $25 max for extra battery. ",
-      "es": "Costo del 25 % hasta $150 para un quitanieves eléctrico, una cortadora de césped manual; $50 por una recortadora, soplador, hidrolavadora; $100 por una motosierra. Máximo de $25 por una batería adicional. "
+      "en": "25% cost up to $150 for walk-behind mower; $50 for trimmer, leaf blower, power washer; $100 for chainsaw. $25 max for extra battery. ",
+      "es": "25% del costo, hasta $150, para cortadora de césped manual; $50 para podadoras, sopladora de hojas e hidrolavadora; $100 para motosierra. Máximo de $25 para baterías adicionales."
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -3516,19 +3291,20 @@
     "items": [
       "electric_thermal_storage_and_slab"
     ],
-    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "program": "nm_laPlataElectricAssociation_lPEAIncome-QualifiedRebateProgram",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 50,
+      "number": 30,
       "unit": "kilowatt"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$50/kW for ETS heater controlled by timers or master control system. Separate rebates for timers.",
-      "es": "$50 por kW por calentadores ETS controlados por temporizadores o sistema de control maestro. Descuentos por separado en el caso de los temporizadores."
+      "en": "$30/kW for ETS heater controlled by timers or master control system. Separate rebates for timers.",
+      "es": "$30/kW para calentadores ETS controlados por temporizadores o sistema de control maestro. Descuentos por separado para temporizadores."
     },
+    "low_income": "LPEA Income Qualification ",
     "url": {
       "en": "https://lpea.coop/rebates"
     }
@@ -3541,7 +3317,7 @@
     "items": [
       "smart_thermostat"
     ],
-    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "program": "nm_laPlataElectricAssociation_lPEAIncome-QualifiedRebateProgram",
     "amount": {
       "type": "dollar_amount",
       "number": 75
@@ -3550,9 +3326,10 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$75 rebate per ENERGY STAR smart thermostat controlling electric load.  $25 per programmable thermostat or time.",
-      "es": "Reembolso de $75 por cada termostato inteligente ENERGY STAR que controle la carga eléctrica. $25 por termostato programable o tiempo."
+      "en": "50% cost up to $75 rebate for eligible ENERGY STAR smart thermostat controlling electric load.  $30 per programmable thermostat/timer.",
+      "es": "Reembolso del 50 % del costo, hasta $75, para termostato inteligente ENERGY STAR elegible que controle la carga eléctrica. $30 por termostato/temporizador programable."
     },
+    "low_income": "LPEA Income Qualification ",
     "url": {
       "en": "https://lpea.coop/rebates"
     }
@@ -3569,14 +3346,14 @@
     "amount": {
       "type": "dollar_amount",
       "number": 100,
-      "maximum": 350
+      "maximum": 100
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$350 rebate to switch to an induction cooktop/range (minimum 30\" width) from gas or $100 rebate replacing electric. $350/unit new construction.",
-      "es": "Reembolso de $350 para cambiar de cocina a gas a una de inducción (ancho mínimo de 30\") o $100 de reembolso para reemplazar una eléctrica. $350 por unidad en una nueva construcción."
+      "en": "$100 rebate for an induction cooktop/range (minimum 30\" width).",
+      "es": "Reembolso de $100 para una cocina/estufa de inducción (ancho mínimo de 30\")."
     },
     "url": {
       "en": "https://lpea.coop/rebates"
@@ -3593,14 +3370,15 @@
     "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
     "amount": {
       "type": "percent",
-      "number": 0.25
+      "number": 0.25,
+      "maximum": 100
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "25% of cost of ebike up to $150. ",
-      "es": "25 % del costo de una bicicleta eléctrica hasta $150. "
+      "en": "25% of cost of e-bike up to $100. Two bikes maximum per year.",
+      "es": "25% del costo de una bicicleta eléctrica, hasta $100. Máximo dos bicicletas al año."
     },
     "url": {
       "en": "https://lpea.coop/rebates"
@@ -3618,89 +3396,14 @@
     "amount": {
       "type": "percent",
       "number": 0.25,
-      "maximum": 250
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "25% rebate of cost up to $250 of electric two-stage snowblower and up to $150 for single stage snowblower.",
-      "es": "Reembolso del 25 % del costo de hasta $250 en quitanieves eléctricos de dos etapas y hasta $150 en quitanieves de una sola etapa."
-    },
-    "url": {
-      "en": "https://lpea.coop/rebates"
-    }
-  },
-  {
-    "id": "NM-145",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_outdoor_equipment"
-    ],
-    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
-    "amount": {
-      "type": "percent",
-      "number": 0.25,
-      "maximum": 1000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "25% rebate off cost of electric riding mower up to $1000.",
-      "es": "Reembolso del 25 % en el costo de una cortadora de césped eléctrica de hasta $1,000."
-    },
-    "url": {
-      "en": "https://lpea.coop/rebates"
-    }
-  },
-  {
-    "id": "NM-146",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_outdoor_equipment"
-    ],
-    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
-    "amount": {
-      "type": "percent",
-      "number": 0.25,
-      "maximum": 150
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "25% rebate off cost of walk behind electric mower up to $150.",
-      "es": "Reembolso del 25% en el costo de una cortadora de césped eléctrica manual hasta $150."
-    },
-    "url": {
-      "en": "https://lpea.coop/rebates"
-    }
-  },
-  {
-    "id": "NM-147",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_outdoor_equipment"
-    ],
-    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
-    "amount": {
-      "type": "percent",
-      "number": 0.25,
       "maximum": 100
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "25% rebate off cost of electric chainsaw + battery up to $100.",
-      "es": "Descuento del 25 % en el costo de motosierra eléctrica + batería hasta $100."
+      "en": "25% rebate of cost up to $100 for snowblower (single or 2-stage), lawn mower or riding mower. ",
+      "es": "Reembolso del 25 % del costo, hasta $100, para quitanieves (de una o dos etapas), cortadora de césped con o sin asiento."
     },
     "url": {
       "en": "https://lpea.coop/rebates"
@@ -3717,14 +3420,14 @@
     "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 90
+      "number": 50
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$90 rebate per ENERGY STAR heat pump dryer.",
-      "es": "Reembolso de $90 por cada secadora con bomba de calor con certificación ENERGY STAR."
+      "en": "$50 rebate per ENERGY STAR heat pump dryer.",
+      "es": "Reembolso de $50 para secadora con bomba de calor ENERGY STAR."
     },
     "url": {
       "en": "https://lpea.coop/rebates"
@@ -3741,14 +3444,14 @@
     "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 700
+      "number": 350
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$700 rebate for a ENERGY STAR heat pump water heater, minimum 30 gallons capacity.",
-      "es": "Reembolso de $700 por un calentador de agua con bomba de calor con certificación ENERGY STAR, con capacidad mínima de 30 galones."
+      "en": "$350 rebate for a ENERGY STAR heat pump water heater, minimum 30 gallons capacity. Income qualified rebate is $700.",
+      "es": "Reembolso de $350 para un calentador de agua con bomba de calor con certificación ENERGY STAR, con una capacidad mínima de 30 galones. El reembolso según los ingresos es de $700."
     },
     "url": {
       "en": "https://lpea.coop/rebates"
@@ -3765,14 +3468,14 @@
     "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 50
+      "number": 100
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$50 for electric-resistance water heater if switching from propane/gas or if managed through wi-fi enabled smart thermostat or timer on Time of Use.",
-      "es": "$50 por calentador de agua con resistencia eléctrica si se cambia de propano/gas o si se gestiona a través de un termostato inteligente con Wi-Fi habilitado o un temporizador en el horario de uso."
+      "en": "$100 for electric-resistance water heater if switching from propane/gas or if managed through wi-fi enabled smart thermostat or timer on Time of Use.",
+      "es": "$100 para calentador de agua con resistencia eléctrica si se cambia de propano/gas o si se administra a través de un termostato inteligente habilitado con Wi-Fi o un temporizador en el horario de uso."
     },
     "url": {
       "en": "https://lpea.coop/rebates"
@@ -3786,47 +3489,21 @@
     "items": [
       "ducted_heat_pump",
       "ductless_heat_pump",
-      "other_weatherization"
+      "other_weatherization",
+      "air_to_water_heat_pump"
     ],
     "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 500,
+      "number": 250,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500/ton rebate for ducted/ductless air source heat pump (minimum HSPF2 8.5). $250 extra for weatherization. $500 propane bonus.",
-      "es": "Descuento de $500 por tonelada por una bomba de calor de aire con o sin ductos (mínimo HSPF2 8.5). $250 adicionales por climatización. Bonificación de $500 por propano."
-    },
-    "url": {
-      "en": "https://lpea.coop/rebates"
-    }
-  },
-  {
-    "id": "NM-152",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump",
-      "other_weatherization"
-    ],
-    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
-    "amount": {
-      "type": "dollars_per_unit",
-      "number": 500,
-      "unit": "ton"
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$500/ton rebate for air-to-water heat pump (minimum HSPF2 8.5). $250 extra for weatherization. ",
-      "es": "Descuento de $500 por tonelada por una bomba de calor aire-agua (mínimo de HSPF2 8.5). $250 adicionales para climatización. "
+      "en": "50% of material costs up to $250/ton rebate for ducted/ductless air source heat pump (minimum HSPF2 8.5).  $200 extra for weatherization. ",
+      "es": "50% de descuento en los costos de material, hasta $250/tonelada, para bomba de calor aerotérmica, con o sin ductos (mínimo HSPF2 8.5). $200 adicionales para climatización."
     },
     "url": {
       "en": "https://lpea.coop/rebates"
@@ -3844,15 +3521,15 @@
     "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 500,
+      "number": 250,
       "unit": "ton"
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$500/ton rebate for new ground source heat pump (minimum 3/4 ton). $250/ton for replacement.  Extra $250 for weatherization. ",
-      "es": "Reembolso de $500 por tonelada por una bomba de calor geotérmica nueva (mínimo de 3/4 de tonelada). $250 por tonelada de reemplazo. $250 adicionales por climatización. "
+      "en": "50% of material costs up to $250/ton rebate for new ground-source heat pump (minimum 3/4 ton).  Extra $200 for weatherization. ",
+      "es": "Reembolso del 50% del costo del material, hasta $250 por tonelada, para bombas de calor geotérmicas nuevas (mínimo 3/4 de tonelada). $200 adicionales para climatización."
     },
     "url": {
       "en": "https://lpea.coop/rebates"
@@ -3869,15 +3546,15 @@
     "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
     "amount": {
       "type": "percent",
-      "number": 1,
-      "maximum": 1000
+      "number": 0.5,
+      "maximum": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,000 to install electric vehicle charger. Rebate is 100% of charger cost up to $500 and 50% of plug installation cost up to $500. ",
-      "es": "Hasta $1,000 por instalar un cargador de vehículo eléctrico. El reembolso es del 100 % del costo del cargador hasta $500 y del 50 % del costo de instalación del enchufe hasta $500. "
+      "en": "50% of Level 2 charger cost and installation (pre-tax) up to $250.",
+      "es": "50% del costo e instalación de un cargador de nivel 2 (antes de impuestos) hasta $250."
     },
     "url": {
       "en": "https://lpea.coop/rebates"
@@ -3973,7 +3650,7 @@
     ],
     "short_description": {
       "en": "25% of cost up to $150 for walk-behind mower, $100 for chainsaw, $50 for trimmer, pruner, leaf blowers, power washer.  Up to $25 for extra battery. ",
-      "es": "25 % del costo hasta $150 por cortadora de césped manual, $100 por motosierra, $50 por recortadora, podadora, soplador de hojas e hidrolavadora. Hasta $25 por batería adicional. "
+      "es": "25% del costo, hasta $150, para cortacésped manual, $100 para motosierras, $50 para desbrozadoras, podadoras, sopladoras de hojas y lavadoras a presión. Hasta $25 para baterías adicionales."
     },
     "url": {
       "en": "https://www.jemezcoop.org/rebates"
@@ -4207,60 +3884,6 @@
     }
   },
   {
-    "id": "NM-169",
-    "payment_methods": [
-      "account_credit"
-    ],
-    "items": [
-      "electric_vehicle_charger"
-    ],
-    "program": "nm-xcel-rebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 35,
-      "maximum": 35
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$35 annual bill credit for signing up for an off-peak electric vehicle charging schedule with eligible charger.",
-      "es": "Crédito de factura anual de $35 por suscribirse a un programa de carga de vehículos eléctricos fuera de horas pico con un cargador elegible."
-    },
-    "url": {
-      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
-    }
-  },
-  {
-    "id": "NM-170",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "evaporative_cooler"
-    ],
-    "program": "nm-pnm-rebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400,
-      "minimum": 400
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $400 rebate on eligible large advanced evaporative coolers.",
-      "es": "Reembolso de hasta $400 por enfriadores evaporativos avanzados grandes elegibles."
-    },
-    "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
-    "url": {
-      "en": "https://www.pnm.com/rebates-and-discounts"
-    }
-  },
-  {
     "id": "NM-171",
     "payment_methods": [
       "rebate"
@@ -4268,49 +3891,23 @@
     "items": [
       "window_replacement"
     ],
-    "program": "nm-pnm-rebates",
+    "program": "nm_pnm_pNMHomeRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 80,
       "maximum": 800
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$80 rebate per Energy Star certified windows. ",
-      "es": "Reembolso de $80 por cada ventana con certificación Energy Star. "
+      "en": "PNM customers can save $80 per window on up to 10 ENERGY STAR windows. "
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.pnm.com/rebates-and-discounts"
-    }
-  },
-  {
-    "id": "NM-172",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_outdoor_equipment"
-    ],
-    "program": "nm-pnm-rebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 300
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$300 for qualified Energy Star variable speed pool pump.",
-      "es": "$300 por una bomba de piscina de velocidad variable calificada con certificación Energy Star."
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
-    "url": {
-      "en": "https://www.pnm.com/rebates-and-discounts"
+      "en": "https://www.checkwithpnm.com/insulation"
     }
   },
   {
@@ -4334,6 +3931,8 @@
       "en": "$50 rebate for smart thermostat through the PNM Midstream Program. Incentive availability subject to change due to program funding. ",
       "es": "Reembolso de $50 por un termostato inteligente a través del Programa PNM Midstream. La disponibilidad del incentivo está sujeta a cambios según la financiación del programa. "
     },
+    "end_date": "2026-12-31",
+    "paused": true,
     "url": {
       "en": "https://www.pnm.com/midstream"
     }
@@ -4341,14 +3940,11 @@
   {
     "id": "NM-174",
     "payment_methods": [
-      "rebate",
       "pos_rebate"
     ],
     "items": [
       "new_electric_vehicle",
-      "used_electric_vehicle",
-      "used_plugin_hybrid_vehicle",
-      "new_plugin_hybrid_vehicle"
+      "used_electric_vehicle"
     ],
     "program": "nm_pnm_pNMTransportationElectrificationProgram",
     "amount": {
@@ -4360,90 +3956,12 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $4,000 rebate for purchasing or leasing an electric vehicle for income qualified customers from participating dealers.",
-      "es": "Reembolso de hasta $4,000 por la compra o el alquiler de un vehículo eléctrico para clientes con ingresos calificados de distribuidores participantes."
+      "en": "Income-qualified PNM customers can save up to $4,000 on purchasing or leasing a new or used electric vehicle."
     },
-    "low_income": "nm-pnm-income-qualified",
+    "end_date": "2026-12-31",
+    "low_income": "nm-200fpl",
     "url": {
-      "en": "https://ev.pnm.com/residential-ev-charger-rebates/"
-    }
-  },
-  {
-    "id": "NM-175",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "items": [
-      "ebike"
-    ],
-    "program": "nm_pnm_pNMTransportationElectrificationProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1000
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$1,000 rebate on electric bike for income qualified customers from participating dealers.",
-      "es": "Reembolso de $1,000 en bicicletas eléctricas para clientes con ingresos calificados de distribuidores participantes."
-    },
-    "end_date": "2025-01-13",
-    "paused": true,
-    "url": {
-      "en": "https://ev.pnm.com/residential-ev-charger-rebates/"
-    }
-  },
-  {
-    "id": "NM-176",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_outdoor_equipment"
-    ],
-    "program": "nm-el-paso-energy-efficiency",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 300
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $300 rebate/unit for new qualifying Energy Star pool pump.",
-      "es": "Reembolso de hasta $300 por unidad por una nueva bomba de piscina calificada con la certificación Energy Star."
-    },
-    "url": {
-      "en": "https://www.epesaver.com/residential-comprehensive/"
-    }
-  },
-  {
-    "id": "NM-177",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "central_air_conditioner"
-    ],
-    "program": "nm-el-paso-energy-efficiency",
-    "amount": {
-      "type": "dollars_per_unit",
-      "number": 150,
-      "unit": "ton"
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $150/unit rebate on qualified central air-conditioners less than 5.4 tons.",
-      "es": "Reembolso de hasta $150 por unidad en acondicionadores de aire centrales calificados de menos de 5.4 toneladas."
-    },
-    "url": {
-      "en": "https://www.epesaver.com/residential-comprehensive/"
+      "en": "https://www.pnmdriveelectric.com/ev-purchase-rebates"
     }
   },
   {
@@ -4563,6 +4081,7 @@
       "en": "Purchase a 40 gallon or 50 gallon electric water heater for $50 or $60 respectively.",
       "es": "Compre un calentador de agua eléctrico de 40 o 50 galones por $50 o $60, respectivamente."
     },
+    "paused": true,
     "url": {
       "en": "https://www.columbusco-op.org/rebates"
     }
@@ -4622,7 +4141,6 @@
       "assistance_program"
     ],
     "items": [
-      "electric_vehicle_charger",
       "used_electric_vehicle"
     ],
     "program": "nm_leaCountyElectricCooperative_lCECEnergyConservationPrograms",
@@ -4716,56 +4234,6 @@
     }
   },
   {
-    "id": "NM-191",
-    "payment_methods": [
-      "assistance_program"
-    ],
-    "items": [
-      "electric_stove"
-    ],
-    "program": "nm_losAlamosCounty_dPUConserveAndReduce",
-    "amount": {
-      "type": "percent",
-      "number": 1
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Induction Cooktop Loaner Program - try out an induction cooktop, utensils, pan and instructions for free. Borrow from local libraries.",
-      "es": "Programa de préstamo de placas de cocción por inducción: pruebe una placa de cocción por inducción, utensilios, una sartén e instrucciones gratis. Pídalos prestados en bibliotecas locales."
-    },
-    "url": {
-      "en": "https://www.losalamosnm.us/Services/Public-Utilities/Conserve-and-Reduce"
-    }
-  },
-  {
-    "id": "NM-192",
-    "payment_methods": [
-      "assistance_program"
-    ],
-    "items": [
-      "energy_audit"
-    ],
-    "program": "nm_losAlamosCounty_dPUConserveAndReduce",
-    "amount": {
-      "type": "percent",
-      "number": 1
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Reduce Energy Costs: Guidance for DIY energy audit and borrow Kill-A-Watt meter or a thermal imaging camera from public library.",
-      "es": "Reduzca costos de energía: Guía para realizar una auditoría energética usted mismo y pedir prestado un medidor Kill-A-Watt o una cámara termográfica en una biblioteca pública."
-    },
-    "url": {
-      "en": "https://www.losalamosnm.us/Services/Public-Utilities/Conserve-and-Reduce"
-    }
-  },
-  {
     "id": "NM-193",
     "payment_methods": [
       "assistance_program"
@@ -4782,35 +4250,11 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Free home energy audit. Repeat audits are $500.",
-      "es": "Auditoría energética del hogar gratuita. La repetición de las auditorías cuesta $500."
+      "en": "Free home energy usage inquiry. ",
+      "es": "Consulta gratuita sobre el consumo de energía del hogar."
     },
     "url": {
       "en": "https://www.tcec.coop/energy-inquiry-request/"
-    }
-  },
-  {
-    "id": "NM-194",
-    "payment_methods": [
-      "account_credit"
-    ],
-    "items": [
-      "other"
-    ],
-    "program": "nm_navopacheElectricCooperative_electricWaterHeaterTimerRebate",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 50
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$50 credit on electric bill for qualified electric heat heater timer when you participate in the Residential Time of Use Plan.",
-      "es": "Crédito de $50 en su factura de electricidad por un calentador eléctrico con temporizador calificado cuando participa en el Plan de uso residencial por horario."
-    },
-    "url": {
-      "en": "https://navopache.org/electric-water-heater-timer-rebate/"
     }
   },
   {
@@ -4831,12 +4275,9 @@
       "non_heat_pump_water_heater",
       "heat_pump_water_heater",
       "heat_pump_clothes_dryer",
-      "ductless_heat_pump",
-      "ducted_heat_pump",
       "duct_sealing",
       "door_replacement",
       "crawlspace_insulation",
-      "central_air_conditioner",
       "basement_insulation",
       "attic_or_roof_insulation",
       "air_sealing",
@@ -4859,7 +4300,7 @@
     },
     "low_income": "nm-pnm-income-qualified",
     "url": {
-      "en": "https://housingnm.org/programs/home-rehabilitation-and-weatherization/energymart-weatherization-assistance"
+      "en": "https://housingnm.org/programs/home-rehabilitation-and-weatherization"
     }
   },
   {
@@ -4875,10 +4316,7 @@
       "air_sealing",
       "attic_or_roof_insulation",
       "basement_insulation",
-      "central_air_conditioner",
       "crawlspace_insulation",
-      "ducted_heat_pump",
-      "ductless_heat_pump",
       "electric_panel",
       "electric_stove",
       "electric_wiring",
@@ -4902,35 +4340,9 @@
       "en": "Provides energy-saving retrofits and home modifications at no charge to eligible low-income homeowners and renters.",
       "es": "Proporciona modificaciones y modernizaciones para ahorrar energía en el hogar sin cargo para propietarios e inquilinos de bajos ingresos que califiquen."
     },
-    "low_income": "nm-hear-low-income",
+    "low_income": "nm-80ami",
     "url": {
       "en": "https://housingnm.org/programs/home-rehabilitation-and-weatherization/home-rehabilitation/veterans-home-rehabilitation-and-modification"
-    }
-  },
-  {
-    "id": "NM-197",
-    "payment_methods": [
-      "assistance_program"
-    ],
-    "items": [
-      "efficiency_rebates",
-      "rooftop_solar_installation"
-    ],
-    "program": "nm_santaFeCounty_homeRehabilitationAndEnergyEfficiencyHREEProgram",
-    "amount": {
-      "type": "percent",
-      "number": 1
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "One-time grant up to $50,000 for envelope, efficiency  and safety improvements to qualified homeowners in unincorporated parts of Santa Fe County. ",
-      "es": "Subvención única de hasta $50,000 para mejoras en la envolvente del edificio, la eficiencia y la seguridad, destinada a propietarios que califiquen en zonas no incorporadas del condado de Santa Fe."
-    },
-    "low_income": "nm-santafe-100AMI-HUD",
-    "url": {
-      "en": "https://www.santafecountynm.gov/news/detail/santa-fe-county-is-now-accepting-applications-for-its-home-rehabilitation-and-energy-efficiency-hree-program"
     }
   },
   {
@@ -4952,8 +4364,8 @@
       "renter"
     ],
     "short_description": {
-      "en": "Affordable electric carshare. First test drive is free. Subsequent rentals are $4-$5/hr or a $35-50/day. Specific locations. Las Cruces summer 2025.",
-      "es": "Alquiler asequible de automóviles eléctricos compartidos. La primera prueba de conducción es gratuita. Los alquileres posteriores cuestan entre $4 y $5 por hora o entre $35 y $50 por día. Ubicaciones específicas. Las Cruces, verano de 2025."
+      "en": "Affordable electric carshare. First 4-hour drive is free. Then rentals are $5/hr or a $50/day. Specific locations in 3 NM cities.",
+      "es": "Servicio de auto eléctrico compartido asequible. El primer viaje de 4 horas es gratis. Después, el alquiler cuesta $5/hora o $50/día. Ubicaciones específicas en 3 ciudades de Nuevo México."
     },
     "url": {
       "en": "https://forthmobility.org/goforth"
@@ -4985,9 +4397,9 @@
       "en": "Provides no-cost energy efficiency services to income-qualified customers in all residential home types. Multifamily and rental may qualify.",
       "es": "Ofrece servicios gratuitos de eficiencia energética a clientes con ingresos calificados en todo tipo de viviendas. Las viviendas multifamiliares y de alquiler también pueden calificar."
     },
-    "low_income": "nm-elpasoelectric-income-qualified",
+    "low_income": "nm-200fpl",
     "url": {
-      "en": "https://www.epesaver.com/service/residential-low-income/"
+      "en": "https://www.epelectric.com/energy-efficiency/new-mexico-residential-energy-efficiency-programs/residential-low-income"
     }
   },
   {
@@ -5009,11 +4421,10 @@
       "renter"
     ],
     "short_description": {
-      "en": "50% rebate up to $900 for qualifying e-bike for qualified residential accounts. ",
-      "es": "Reembolso del 50 % hasta $900 por bicicletas eléctricas calificadas para cuentas residenciales calificadas. "
+      "en": "El Paso Electric customers can save 50%, up to $900, on an electric bicycle or tricycle."
     },
     "url": {
-      "en": "https://www.epesaver.com/residential-comprehensive/"
+      "en": "https://www.epelectric.com/new-mexico-ev/residential"
     }
   },
   {
@@ -5035,12 +4446,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "70% rebate up to $1,300 for qualifying e-bike for income qualified cuistomers.",
-      "es": "Reembolso del 70 % hasta $1,300 por bicicletas eléctricas calificadas para clientes calificados según sus ingresos."
+      "en": "Income-qualified El Paso Electric customers can save 70%, up to $1,300, on an electric bicycle or tricycle."
     },
-    "low_income": "nm-elpasoelectric-income-qualified",
+    "low_income": "nm-200fpl",
     "url": {
-      "en": "https://www.epesaver.com/residential-comprehensive/"
+      "en": "https://www.epelectric.com/new-mexico-ev/residential"
     }
   },
   {
@@ -5050,7 +4460,7 @@
     ],
     "items": [
       "new_electric_vehicle",
-      "new_plugin_hybrid_vehicle"
+      "used_electric_vehicle"
     ],
     "program": "nm-el-paso-energy-efficiency",
     "amount": {
@@ -5062,13 +4472,12 @@
       "renter"
     ],
     "short_description": {
-      "en": "$4,000 rebate off qualifying electric vehicle (with an MSRP below $55,000), offered only to low-income customers.",
-      "es": "Reembolso de $4,000 por un vehículo eléctrico calificado (con un precio de venta sugerido por el fabricante por debajo de $55,000), ofrecido solo a clientes de bajos ingresos."
+      "en": "Income-qualified El Paso Electric customers can save $4,000 on a new or used electric vehicle."
     },
     "start_date": "2024-03-29",
-    "low_income": "nm-elpasoelectric-income-qualified",
+    "low_income": "nm-200fpl",
     "url": {
-      "en": "https://www.epesaver.com/residential-comprehensive/"
+      "en": "https://www.epelectric.com/new-mexico-ev/residential"
     }
   },
   {
@@ -5078,12 +4487,14 @@
     ],
     "items": [
       "electric_wiring",
-      "electric_panel"
+      "electric_panel",
+      "electric_vehicle_charger"
     ],
     "program": "nm-el-paso-energy-efficiency",
     "amount": {
       "type": "dollar_amount",
-      "number": 1300,
+      "number": 3800,
+      "minimum": 1300,
       "maximum": 3800
     },
     "owner_status": [
@@ -5091,11 +4502,10 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,300 for installation of 240V dedicated EV charging outlet. Up to $2,500 extra if panel upgrade is required. Must join EV Smart Rewards NM.",
-      "es": "Hasta $1,300 por la instalación de una toma de carga exclusiva para vehículos eléctricos de 240 V. Hasta $2,500 adicionales si se requiere una actualización del panel. Es necesario unirse a EV Smart Rewards NM."
+      "en": "El Paso Electric customers who enroll in EV Smart Rewards can save up to $3,800 on a 240-volt EV charging outlet and electric panel upgrade."
     },
     "url": {
-      "en": "https://www.epesaver.com/residential-comprehensive/"
+      "en": "https://www.epelectric.com/new-mexico-ev/residential/charging-programs"
     }
   },
   {
@@ -5105,12 +4515,14 @@
     ],
     "items": [
       "electric_wiring",
-      "electric_panel"
+      "electric_panel",
+      "electric_vehicle_charger"
     ],
     "program": "nm-el-paso-energy-efficiency",
     "amount": {
       "type": "dollar_amount",
-      "number": 1800,
+      "number": 4300,
+      "minimum": 1800,
       "maximum": 4300
     },
     "owner_status": [
@@ -5118,12 +4530,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $1,800 for installation of dedicated 240V EV charger outlet. Up to $2,500 extra available if a panel upgrade is required.",
-      "es": "Hasta $1,800 por la instalación de una toma de corriente dedicada para un cargador de vehículos eléctricos de 240 V. Hasta $2,500 adicionales disponibles si se requiere una actualización del panel."
+      "en": "Income-qualified El Paso Electric customers enrolled in EV Smart Rewards can save up to $4,300 on a 240-volt EV charger outlet and panel upgrade."
     },
-    "low_income": "nm-elpasoelectric-income-qualified",
+    "low_income": "nm-200fpl",
     "url": {
-      "en": "https://www.epesaver.com/residential-comprehensive/"
+      "en": "https://www.epelectric.com/new-mexico-ev/residential/charging-programs"
     }
   },
   {
@@ -5145,11 +4556,10 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $500 rebate for qualifying smart Level 2 charging station for eligible customers. Enroll in EV Smart Rewards NM or Whole House EV Program. ",
-      "es": "Reembolso de hasta $500 por estaciones de carga inteligentes de nivel 2 para clientes elegibles. Inscríbase en el programa EV Smart Rewards NM o en el programa de vehículos eléctricos para toda la casa. "
+      "en": "El Paso Electric customers who apply for the Smart Charging Program can save up to $500 on a qualifying Level 2 EV charging station."
     },
     "url": {
-      "en": "https://www.epesaver.com/residential-comprehensive/"
+      "en": "https://www.epelectric.com/new-mexico-ev/residential/charging-programs"
     }
   },
   {
@@ -5171,38 +4581,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $600 rebate for qualifying smart Level 2 charging station for income qualifying customers. ",
-      "es": "Reembolso de hasta $600 por estaciones de carga inteligentes de nivel 2 que califiquen para clientes que califiquen según sus ingresos. "
+      "en": "Income-qualified El Paso Electric customers who apply for the Smart Charging Program can save up to $500 on a qualifying Level 2 EV charging station. "
     },
-    "low_income": "nm-elpasoelectric-income-qualified",
+    "low_income": "nm-200fpl",
     "url": {
-      "en": "https://www.epesaver.com/residential-comprehensive/"
-    }
-  },
-  {
-    "id": "NM-207",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "smart_thermostat"
-    ],
-    "program": "nm-el-paso-energy-efficiency",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 50,
-      "maximum": 75
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $75 rebate on qualified smart thermostat plus $25/year in Energy Wise Savings program.  Get $50 + $25/yr to enroll existing thermostat.  ",
-      "es": "Hasta $75 de descuento en termostatos inteligentes calificados, más $25 al año en el programa Energy Wise Savings. Reciba $50 + $25 al año para registrar su termostato actual.  "
-    },
-    "url": {
-      "en": "https://www.epesaver.com/residential-comprehensive/"
+      "en": "https://www.epelectric.com/new-mexico-ev/residential/charging-programs"
     }
   },
   {
@@ -5228,6 +4611,8 @@
       "en": "Up to $860 off the cost of a qualified heat pump depending on efficiency rating, subject to PNM Midstream program funding availability.",
       "es": "Hasta $860 de descuento en el costo de una bomba de calor calificada según la clasificación de eficiencia, sujeto a la disponibilidad de fondos del programa PNM Midstream."
     },
+    "end_date": "2026-12-31",
+    "paused": true,
     "url": {
       "en": "https://www.pnm.com/midstream"
     }
@@ -5253,6 +4638,8 @@
       "en": "Up to $650 off the cost of a qualified heat pump water heater depending on efficiency rating and size. Subject to program funding availability.  ",
       "es": "Hasta $650 de descuento en el costo de un calentador de agua con bomba de calor calificado, según su clasificación de eficiencia y tamaño. Sujeto a la disponibilidad de fondos del programa.  "
     },
+    "end_date": "2026-12-31",
+    "paused": true,
     "url": {
       "en": "https://www.pnm.com/midstream"
     }
@@ -5279,36 +4666,10 @@
       "en": "Up to $310 off a qualified central refrigerated air conditioner depending on efficiency rating. Subject to Midstream Program funding availability.  ",
       "es": "Hasta $310 de descuento por un aire acondicionado central refrigerado calificado, según su clasificación de eficiencia. Sujeto a la disponibilidad de fondos del programa Midstream.  "
     },
+    "end_date": "2026-12-31",
+    "paused": true,
     "url": {
       "en": "https://www.pnm.com/midstream"
-    }
-  },
-  {
-    "id": "NM-215",
-    "payment_methods": [
-      "assistance_program"
-    ],
-    "items": [
-      "efficiency_rebates"
-    ],
-    "program": "nm_santaFeCounty_santaFeCommunityEnergyEfficiencyDevelopmentCEED",
-    "amount": {
-      "type": "percent",
-      "number": 1,
-      "maximum": 16000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $16,000 worth of energy retrofits for income qualifying homeowners in unincorporated parts of Santa Fe County.",
-      "es": "Hasta $16,000 por renovaciones energéticas para propietarios de viviendas que califiquen según sus ingresos en partes no incorporadas del condado de Santa Fe."
-    },
-    "start_date": "2025-04-15",
-    "end_date": "2027-12-31",
-    "low_income": "nm-santafe-80AMISF",
-    "url": {
-      "en": "https://www.santafecountynm.gov/housing-services/affordable-housing/home-rehabilitation-and-energy-efficiency-program"
     }
   },
   {
@@ -5322,7 +4683,8 @@
     "program": "nm-xcel-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 400,
+      "number": 750,
+      "minimum": 400,
       "maximum": 750
     },
     "owner_status": [
@@ -5330,8 +4692,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $750 rebate on qualified heat pump using participating contractor, depending on efficiency rating. $500 bonus to replace central electric heat.",
-      "es": "Reembolso de hasta $750 por bombas de calor calificadas con un contratista participante, según la clasificación de eficiencia. Bonificación de $500 para reemplazar la calefacción eléctrica central."
+      "en": "Xcel Energy customers can save up to $750 on a qualifying air source heat pump, plus up to $500 bonus for replacing electric resistance heating."
     },
     "url": {
       "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
@@ -5349,14 +4710,14 @@
     "amount": {
       "type": "dollar_amount",
       "number": 325,
+      "minimum": 275,
       "maximum": 325
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $325 rebate on qualified air source heat pump in new construction using participating contractor.  Rebate depends on efficiency rating.",
-      "es": "Reembolso de hasta $325 por bombas de calor de aire calificadas para nuevas construcciones con un contratista participante. El reembolso depende de la calificación de eficiencia."
+      "en": "Xcel Energy customers can save up to $325 on a qualifying air source heat pump for new construction."
     },
     "url": {
       "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
@@ -5373,17 +4734,19 @@
     "program": "nm-xcel-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 190,
-      "maximum": 190
+      "number": 300,
+      "minimum": 200,
+      "maximum": 300
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $190 rebate on qualified ductless heat pump, depending on efficiency and using participating contractor.",
-      "es": "Reembolso de hasta $190 en bombas de calor sin ductos calificadas, según la eficiencia y el uso de un contratista participante."
+      "en": "Up to $300 rebate on qualified ductless heat pump, depending on efficiency and using participating contractor.",
+      "es": "Reembolso de hasta $300 para bombas de calor sin ductos calificadas, según la eficiencia y la instalación por parte de un contratista participante."
     },
+    "start_date": "2025-01-01",
     "url": {
       "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
     }
@@ -5407,11 +4770,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "$700 or $200 rebate on eligible evaporative cooling unit, depending on media saturation rating. Most units with 8\" pads don't qualify for $700 rebate.",
-      "es": "Reembolso de $700 o $200 por unidades de enfriamiento evaporativo elegibles, según el índice de saturación del medio. La mayoría de las unidades con paneles de 8\" no califican para el reembolso de $700."
+      "en": "Xcel Energy customers can save up to $700 on an eligible evaporative cooling unit."
     },
+    "start_date": "2025-01-01",
     "url": {
-      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
+      "en": "https://nm.my.xcelenergy.com/s/residential/heating-cooling/evaporative-cooling"
     }
   },
   {
@@ -5426,6 +4789,7 @@
     "amount": {
       "type": "dollar_amount",
       "number": 200,
+      "minimum": 100,
       "maximum": 200
     },
     "owner_status": [
@@ -5433,8 +4797,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $200 rebate on qualified central air conditioner using participating contractor. Rebate depends on efficiency rating.",
-      "es": "Hasta $200 de reembolso en aires acondicionados centrales calificados a través de un contratista participante. El reembolso depende de la calificación de eficiencia."
+      "en": "Xcel Energy customers can save up to $200 on a qualified central air conditioner."
     },
     "url": {
       "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
@@ -5461,11 +4824,10 @@
       "renter"
     ],
     "short_description": {
-      "en": "Free energy audit and energy-saving measures such as sealing leaks with approved contractors.  Additional efficiency services at reduced prices.",
-      "es": "Auditoría energética gratuita y medidas de ahorro, como el sellado de fugas a través de contratistas autorizados. Servicios de eficiencia energética adicionales a precios reducidos."
+      "en": "Xcel Energy customers can receive a free home energy assessment and energy-saving measures, such as insulation and sealing leaks."
     },
     "url": {
-      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
+      "en": "https://nm.my.xcelenergy.com/s/residential/home-services/home-energy-services"
     }
   },
   {
@@ -5480,18 +4842,18 @@
     "program": "nm-xcel-rebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 500
+      "number": 800,
+      "maximum": 800
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "Up to $500 rebate for Level 2 electric vehicle charger or installation cost (240 volt circuit). Renters- separate meter and written landlord consent.",
-      "es": "Reembolso de hasta $500 por un cargador de vehículo eléctrico de nivel 2 o costo de instalación (circuito de 240 voltios). Inquilinos: medidor independiente y consentimiento por escrito del propietario."
+      "en": "Xcel Energy customers can save up to $800 on a Level 2 EV charger and/or 240-volt circuit wiring."
     },
     "url": {
-      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
+      "en": "https://nm.my.xcelenergy.com/s/residential/ev-charging/incentives/charger-wiring-rebate"
     }
   },
   {
@@ -5514,38 +4876,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $2,500 rebate for qualified Level 2 electric vehicle charger installation, income-qualified residents.  Renters-separate meter, written consent.",
-      "es": "Reembolso de hasta $2,500 por la instalación de un cargador de vehículo eléctrico de nivel 2 para residentes   calificados según sus ingresos. Inquilinos: medidor independiente y consentimiento por escrito."
+      "en": "Income-qualified Xcel Energy customers or customers in an underserved community can save up to $2,500 on a Level 2 EV charger and/or 240-volt circuit."
     },
-    "low_income": "nm-pnm-income-qualified",
+    "low_income": "nm-200fpl",
     "url": {
-      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
-    }
-  },
-  {
-    "id": "NM-224",
-    "payment_methods": [
-      "assistance_program"
-    ],
-    "items": [
-      "electric_vehicle_charger"
-    ],
-    "program": "nm-xcel-rebates",
-    "amount": {
-      "type": "percent",
-      "number": 1
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Rent a Level 2 EV charger for $12/month if you have Wi-Fi and charge off-peak through \"Optimize Your Charge\" program.",
-      "es": "Alquile un cargador de vehículo eléctrico de nivel 2 por $12 al mes si cuenta con conexión Wi-Fi y realiza la carga fuera de los períodos de alta demanda a través del programa “Optimice su carga”."
-    },
-    "paused": true,
-    "url": {
-      "en": "https://nm.my.xcelenergy.com/s/residential/home-rebates"
+      "en": "https://nm.my.xcelenergy.com/s/residential/ev-charging/incentives/charger-wiring-rebate"
     }
   },
   {
@@ -5594,6 +4929,7 @@
       "en": "$100/unit for Energy Star split-system air conditioner. Minimum size is 1 ton and 16  SEER minimum.  ",
       "es": "Reembolso de $100 por unidad para acondicionadores de aire tipo tipo split con certificación ENERGY STAR. El tamaño mínimo es de 1 tonelada y debe tener una eficiencia mínima de 16 SEER."
     },
+    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.jemezcoop.org/rebates"
     }
@@ -5632,7 +4968,7 @@
       "en": "No-cost energy audit and efficiency upgrades to income-qualified households. Upgrades depend on grant funds availability. Community solar enrollment.",
       "es": "Auditoría energética y mejoras de eficiencia sin costo para los hogares que cumplan con los requisitos de ingresos. Las mejoras dependen de la disponibilidad de fondos de subvención. Inscripción en energía solar comunitaria."
     },
-    "low_income": "nm-Sustainable Building Tax Credit Low-Income",
+    "low_income": "nm-200fpl",
     "url": {
       "en": "https://www.prosperityworks.net/community-energy-efficiency-upgrades.html"
     }
@@ -5656,8 +4992,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate for installation of smart thermostat, $25 rebate for programmable thermostat. ",
-      "es": "Reembolso de $50 por la instalación de un termostato inteligente, reembolso de $25 por un termostato programable. "
+      "en": "Zia Gas customers can save $50 on a smart thermostat or $25 on a programmable thermostat. "
     },
     "url": {
       "en": "https://www.zngc.com/~zngc/?page_id=249"
@@ -5669,7 +5004,10 @@
       "rebate"
     ],
     "items": [
-      "attic_or_roof_insulation"
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation",
+      "wall_insulation"
     ],
     "program": "nm_ziaNaturalGasCompany_ziaNaturalGasCompanyEnergyEfficiencyProgram",
     "amount": {
@@ -5682,8 +5020,7 @@
       "renter"
     ],
     "short_description": {
-      "en": "$300 rebate to install or upgrade attic insulation from R-11 or lower to R-30 or higher.",
-      "es": "Reembolso de $300 por instalar o mejorar el aislamiento del ático de R-11 o inferior a R-30 o superior."
+      "en": "Zia Gas customers can save $300 on qualifying insulation improvements."
     },
     "url": {
       "en": "https://www.zngc.com/~zngc/?page_id=249"
@@ -5695,10 +5032,7 @@
       "assistance_program"
     ],
     "items": [
-      "smart_thermostat",
-      "duct_sealing",
-      "air_sealing",
-      "other_weatherization"
+      "energy_audit"
     ],
     "program": "nm_ziaNaturalGasCompany_ziaNaturalGasCompanyEnergyEfficiencyProgram",
     "amount": {
@@ -5710,10 +5044,9 @@
       "renter"
     ],
     "short_description": {
-      "en": "No-cost weatherization including duct sealing, air sealing, caulking, water heater jacket, thermostat for income-eligible households.",
-      "es": "Climatización sin costo que incluye sellado de ductos, sellado de aire, calafateo, camisa de calentador de agua y termostato para hogares que cumplen los requisitos de ingresos."
+      "en": "Income-qualified Zia Gas customers can receive a free home energy assessment."
     },
-    "low_income": "nm-Sustainable Building Tax Credit Low-Income",
+    "low_income": "nm-200fpl",
     "url": {
       "en": "https://www.zngc.com/~zngc/?page_id=249"
     }
@@ -5729,19 +5062,20 @@
     ],
     "program": "nm_newMexicoGasCompany_nMGasEnergyEfficiencyProgram",
     "amount": {
-      "type": "dollar_amount",
-      "number": 1000
+      "type": "percent",
+      "number": 0.4,
+      "maximum": 1000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Up to $1,000 rebate for installation of qualified insulation in attic, roof or crawl space by a participating contractor.  ",
-      "es": "Reembolso de hasta $1,000 por la instalación de aislamiento calificado en áticos, techos o espacios de acceso por parte de un contratista participante.  "
+      "en": "New Mexico Gas Company customers can save 40% on qualifying attic, roof or crawl space insulation, up to $1,000."
     },
-    "end_date": "2026-03-31",
+    "end_date": "2027-03-31",
     "url": {
-      "en": "https://nmgcgetrebates.com"
+      "en": "https://nmgcgetrebates.com/insulation-rebates"
     }
   },
   {
@@ -5758,15 +5092,15 @@
       "number": 200
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Up to $200 rebate for duct sealing  by a participating contractor.  ",
-      "es": "Reembolso de hasta $200 por sellado de ductos realizado por un contratista participante.  "
+      "en": "New Mexico Gas Company customers can save up to $200 on duct sealing."
     },
-    "end_date": "2026-03-31",
+    "end_date": "2027-03-31",
     "url": {
-      "en": "https://nmgcgetrebates.com"
+      "en": "https://nmgcgetrebates.com/insulation-rebates"
     }
   },
   {
@@ -5783,15 +5117,15 @@
       "number": 200
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Up to $200 rebate for sealing air leaks by a participating contractor.  ",
-      "es": "Reembolso de hasta $200 por sellado de fugas de aire realizado por un contratista participante.  "
+      "en": "New Mexico Gas Company customers can save up to $200 on sealing air leaks at home.  "
     },
-    "end_date": "2026-03-31",
+    "end_date": "2027-03-31",
     "url": {
-      "en": "https://nmgcgetrebates.com"
+      "en": "https://nmgcgetrebates.com/insulation-rebates"
     }
   },
   {
@@ -5807,18 +5141,18 @@
     "amount": {
       "type": "dollar_amount",
       "number": 50,
-      "maximum": 100
+      "maximum": 50
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$50 instant rebate for ENERGY STAR smart thermostat at Lowes or The Home Depots or via contractor. $50 rebate after purchase at other retailers. ",
-      "es": "Reembolso instantáneo de $50 por termostato inteligente con certificación ENERGY STAR en Lowes, The Home Depot o a través de un contratista. Reembolso de $50 después de la compra en otros vendedores minoristas. "
+      "en": "New Mexico Gas Company customers can save $50 on an ENERGY STAR smart thermostat. "
     },
-    "end_date": "2026-03-31",
+    "end_date": "2027-03-31",
     "url": {
-      "en": "https://nmgcgetrebates.com"
+      "en": "https://nmgcgetrebates.com/smart-thermostat-rebates"
     }
   },
   {
@@ -5915,7 +5249,7 @@
       "es": "Reembolso de $90 por unidad por una secadora de ropa con bomba de calor con certificación Energy Star. Reembolso de $30 por una secadora de ropa eléctrica con certificación Energy Star. "
     },
     "url": {
-      "en": "https://www.cdec.coop/2025-energy-efficiency-rebates"
+      "en": "https://www.cdec.coop/energy-efficiency-rebates"
     }
   },
   {
@@ -5930,17 +5264,17 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 250
+      "maximum": 500
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "50% of the product and installation cost of a Level 2 electric vehicle charger up to $250.",
-      "es": "50% del costo del producto e instalación de un cargador de vehículo eléctrico nivel 2 hasta $250."
+      "en": "50% of the product and installation cost of a Level 2 electric vehicle charger up to $500 ",
+      "es": "50% del costo del producto e instalación de un cargador de vehículo eléctrico de Nivel 2, hasta $500."
     },
     "url": {
-      "en": "https://www.cdec.coop/2025-energy-efficiency-rebates"
+      "en": "https://www.cdec.coop/electric-vehicles"
     }
   },
   {
@@ -5965,7 +5299,7 @@
       "es": "50 % del costo del equipo hasta $1,500 por bombas de calor de aire sin ductos con certificación Energy Star de más de 1.5 toneladas. Hasta $500 para sistemas más pequeños. "
     },
     "url": {
-      "en": "https://www.cdec.coop/2025-energy-efficiency-rebates"
+      "en": "https://www.cdec.coop/energy-efficiency-rebates"
     }
   },
   {
@@ -5991,7 +5325,7 @@
       "es": "25 % del costo hasta $150 por una bicicleta eléctrica. 50 % del costo hasta $25 por una batería adicional con la compra original."
     },
     "url": {
-      "en": "https://www.cdec.coop/2025-energy-efficiency-rebates"
+      "en": "https://www.cdec.coop/energy-efficiency-rebates"
     }
   },
   {
@@ -6013,11 +5347,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "25% of the cost of an electric ride-on lawn mower up $1,000. 50% of cost up to $25 for additional battery with original purchase. ",
-      "es": "25 % del costo de una cortadora de césped eléctrica hasta $1,000. 50 % del costo hasta $25 por una batería adicional con la compra original. "
+      "en": "25% of the cost of an electric ride-on lawn mower up $1,000. ",
+      "es": "25% del costo de una cortadora de césped eléctrica hasta $1,000."
     },
     "url": {
-      "en": "https://www.cdec.coop/2025-energy-efficiency-rebates"
+      "en": "https://www.cdec.coop/energy-efficiency-rebates"
     }
   },
   {
@@ -6032,18 +5366,18 @@
     "amount": {
       "type": "percent",
       "number": 0.25,
-      "maximum": 250
+      "maximum": 150
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "25% of cost up to $250 for electric walk behind 2-stage mower. Up to $150 for 1-stage mower. Extra battery at time of purchase 50% rebate up to $25.",
-      "es": "25 % del costo hasta $250 por una cortadora de césped eléctrica de dos etapas. Hasta $150 por una cortadora de una etapa. Batería adicional al momento de la compra: reembolso del 50 % hasta $25."
+      "en": "25% of cost up to $150 for electric walk behind mower.  Extra battery at time of purchase 50% rebate up to $25.",
+      "es": "25% del costo hasta $150 para cortadora de césped eléctrica manual. Batería adicional al momento de la compra: 50% de descuento, hasta $25."
     },
     "url": {
-      "en": "https://www.cdec.coop/2025-energy-efficiency-rebates"
+      "en": "https://www.cdec.coop/energy-efficiency-rebates"
     }
   },
   {
@@ -6066,10 +5400,10 @@
     ],
     "short_description": {
       "en": "25% of cost up to $100 for chain saw; $50 for trimmer, pruner, power washer, or leaf blower. Extra battery at time of purchase - 50% rebate up to $25.",
-      "es": "25 % del precio hasta $100 por una motosierra; $50 por una recortadora, podadora, hidrolavadora o sopladora de hojas. Batería adicional al momento de la compra: descuento del 50 % hasta $25."
+      "es": "25 % del precio, hasta $100, para una motosierra; $50 para desblozadoras, podadoras, hidrolavadoras o sopladoras de hojas. Descuento del 50 %, hasta $25, para baterías adicionales al momento de la compra."
     },
     "url": {
-      "en": "https://www.cdec.coop/2025-energy-efficiency-rebates"
+      "en": "https://www.cdec.coop/energy-efficiency-rebates"
     }
   },
   {
@@ -6106,10 +5440,11 @@
       "used_electric_vehicle",
       "used_plugin_hybrid_vehicle"
     ],
-    "program": "nm_energyConservationAndManagement_newMexicoCleanCarIncentivesAndRebates",
+    "program": "nm_ecam_cleanCarAndChargingUnitTaxCredit",
     "amount": {
       "type": "dollar_amount",
       "number": 2500,
+      "minimum": 640,
       "maximum": 2500
     },
     "owner_status": [
@@ -6117,13 +5452,12 @@
       "renter"
     ],
     "short_description": {
-      "en": "Up to $2,500 refundable tax credit for used electric vehicle.  Credit amount steps down through 2029.",
-      "es": "Crédito fiscal reembolsable de hasta $2,500 para vehículos eléctricos usados. El monto del crédito se reduce gradualmente hasta 2029."
+      "en": "NM taxpayers can receive a refundable tax credit of up to $2,500 for purchase or lease of a used electric, plug-in hybrid, or fuel cell vehicle."
     },
     "start_date": "2024-05-15",
     "end_date": "2029-12-31",
     "url": {
-      "en": "https://clean.energy.nm.gov/landing/clean-car/"
+      "en": "https://clean.energy.nm.gov/clean-car-state-tax-credit/"
     }
   },
   {
@@ -6147,7 +5481,7 @@
       "es": "Análisis gratuito del uso de energía. "
     },
     "url": {
-      "en": "https://noraelectric.org"
+      "en": "https://www.noraelectric.org/energy-audit"
     }
   },
   {
@@ -6158,7 +5492,7 @@
     "items": [
       "smart_thermostat"
     ],
-    "program": "nm_pnm_pNMHomeEnergyCheckupProgram",
+    "program": "nm_pnm_pNMHomeEnergyCheckup",
     "amount": {
       "type": "dollar_amount",
       "number": 50
@@ -6168,13 +5502,12 @@
       "renter"
     ],
     "short_description": {
-      "en": "$50 rebate on select Energy Star smart thermostats installed after a PNM Home Energy Checkup.",
-      "es": "Reembolso de $50 por termostatos inteligentes con certificación Energy Star seleccionados instalados después de una revisión de energía del hogar de PNM."
+      "en": "PNM customers who complete a Home Energy Checkup can save $50 select ENERGY STAR smart thermostats."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.pnmhomecheckup.com/additional"
+      "en": "https://pnmhomecheckup.com/rebates"
     }
   },
   {
@@ -6185,7 +5518,7 @@
     "items": [
       "central_air_conditioner"
     ],
-    "program": "nm_pnm_pNMHomeEnergyCheckupProgram",
+    "program": "nm_pnm_pNMHomeEnergyCheckup",
     "amount": {
       "type": "dollar_amount",
       "number": 250
@@ -6195,11 +5528,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "$250 rebate for early retirement of central air conditioner with eligible replacement by participating contractor.  Home Checkup in prior 10 years.",
-      "es": "Reembolso de $250 por retiro anticipado de aire acondicionado central con reemplazo elegible por parte de un contratista participante. Revisión del hogar en los últimos 10 años."
+      "en": "PNM customers who complete a Home Energy Checkup can get $250 back when replacing an evaporative cooler or AC with a qualifying central AC."
     },
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.pnmhomecheckup.com/additional"
+      "en": "https://pnmhomecheckup.com/rebates"
     }
   },
   {
@@ -6208,9 +5541,10 @@
       "rebate"
     ],
     "items": [
-      "non_heat_pump_clothes_dryer"
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
     ],
-    "program": "nm_pnm_pNMHomeEnergyCheckupProgram",
+    "program": "nm_pnm_pNMHomeEnergyCheckup",
     "amount": {
       "type": "dollar_amount",
       "number": 75
@@ -6220,77 +5554,24 @@
       "renter"
     ],
     "short_description": {
-      "en": "$75 rebate for early replacement of 2014 or older clothes dryer with a new qualified Energy Star model.  Previous Home Energy Checkup required.",
-      "es": "Reembolso de $75 por el reemplazo anticipado de una secadora de ropa modelo 2014 o anterior por un modelo nuevo con certificación Energy Star. Se requiere una revisión energética del hogar previa."
+      "en": "PNM customers who complete a Home Energy Checkup can get an additional $75 rebate when replacing an old clothes dryer with an ENERGY STAR dryer."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.pnmhomecheckup.com/additional"
-    }
-  },
-  {
-    "id": "NM-253",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "central_air_conditioner"
-    ],
-    "program": "nm_pnm_pNMHomeEnergyCheckupProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 50
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$50 rebate for an A/C Tune-up by participating contractor. Prior Home Energy Checkup required.",
-      "es": "Reembolso de $50 por la puesta a punto del aire acondicionado con un contratista participante. Se requiere una revisión energética previa del hogar."
-    },
-    "url": {
-      "en": "https://www.pnmhomecheckup.com/additional"
-    }
-  },
-  {
-    "id": "NM-254",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "items": [
-      "heat_pump_clothes_dryer"
-    ],
-    "program": "nm-pnm-rebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 165,
-      "maximum": 165
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$165 rebate for a qualifying Energy Star heat pump clothes dryer. Instant coupon to use in-store or online at retailer. ",
-      "es": "Reembolso de $165 por una secadora de ropa con bomba de calor con certificación Energy Star. Cupón instantáneo para usar en la tienda o en línea. "
-    },
-    "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
-    "url": {
-      "en": "https://www.pnm.com/rebates-and-discounts"
+      "en": "https://pnmhomecheckup.com/rebates"
     }
   },
   {
     "id": "NM-255",
     "payment_methods": [
-      "pos_rebate"
+      "pos_rebate",
+      "rebate"
     ],
     "items": [
       "non_heat_pump_clothes_dryer"
     ],
-    "program": "nm-pnm-rebates",
+    "program": "nm_pnm_pNMHomeRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 110
@@ -6300,124 +5581,41 @@
       "renter"
     ],
     "short_description": {
-      "en": "$110 rebate for qualifying Energy Star electric clothes dryers. Instant coupon for online or in-store purchase at retailer.",
-      "es": "Reembolso de $110 por secadoras de ropa eléctricas con certificación Energy Star. Cupón instantáneo para compras en línea o en la tienda."
+      "en": "PNM customers can save $110 on a qualifying ENERGY STAR electric clothes dryer, as either an upfront coupon or a mail-in or online rebate."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.pnm.com/rebates-and-discounts"
+      "en": "https://www.checkwithpnm.com/washers-dryers"
     }
   },
   {
     "id": "NM-256",
     "payment_methods": [
-      "rebate"
+      "rebate",
+      "pos_rebate"
     ],
     "items": [
       "evaporative_cooler"
     ],
-    "program": "nm-pnm-rebates",
+    "program": "nm_pnm_pNMHomeRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 400,
-      "minimum": 400
+      "minimum": 200,
+      "maximum": 400
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "$400 rebate on eligible large advanced evaporative cooler. Instant coupon for on-line or in-store participating retailer.",
-      "es": "Descuento de $400 en un enfriador evaporativo avanzado grande elegible. Cupón instantáneo para compras en línea o en tiendas participantes."
+      "en": "PNM customers can save up to $400 on qualifying advanced evaporative coolers, as either an upfront discount or a mail-in or online rebate."
     },
     "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://www.pnm.com/rebates-and-discounts"
-    }
-  },
-  {
-    "id": "NM-257",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "items": [
-      "smart_thermostat"
-    ],
-    "program": "nm-pnm-rebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 50,
-      "maximum": 50
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$50 instant coupon for on-line or in-store purchase of select Energy Star smart thermostats at participating retailers.",
-      "es": "Cupón instantáneo de $50 para la compra en línea o en tienda de termostatos inteligentes con certificación Energy Star seleccionados en vendedores minoristas participantes."
-    },
-    "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
-    "url": {
-      "en": "https://www.pnm.com/rebates-and-discounts"
-    }
-  },
-  {
-    "id": "NM-258",
-    "payment_methods": [
-      "pos_rebate"
-    ],
-    "items": [
-      "heat_pump_water_heater"
-    ],
-    "program": "nm-pnm-rebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 700
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Up to $700 instant coupon for on-line or in-store purchase of eligible heat pump hot waters at participating retailers.  ",
-      "es": "Cupón instantáneo de hasta $700 para compras en línea o en la tienda de agua caliente con bomba de calor elegible en vendedores minoristas participantes.  "
-    },
-    "start_date": "2024-01-01",
-    "end_date": "2025-12-31",
-    "url": {
-      "en": "https://www.pnm.com/rebates-and-discounts"
-    }
-  },
-  {
-    "id": "NM-259",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "used_electric_vehicle",
-      "used_plugin_hybrid_vehicle"
-    ],
-    "program": "nm-el-paso-energy-efficiency",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 4000
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "$4,000 rebate off pre-owned qualifying electric vehicle, offered only to low-income customers.",
-      "es": "Reembolso de $4000 por vehículos eléctricos usados calificados, ofrecido solo a clientes de bajos ingresos."
-    },
-    "start_date": "2024-03-29",
-    "low_income": "nm-elpasoelectric-income-qualified",
-    "url": {
-      "en": "https://www.epesaver.com/residential-comprehensive/"
+      "en": "https://www.checkwithpnm.com/heating-cooling"
     }
   },
   {
@@ -6438,13 +5636,11 @@
       "renter"
     ],
     "short_description": {
-      "en": "$250 point-of-sale rebate on electric bike from participating dealers.",
-      "es": "Descuento de $250 en el punto de venta de bicicletas eléctricas en distribuidores participantes."
+      "en": "PNM customers can save $250 on an electric bicycle at participating retailers."
     },
-    "end_date": "2025-01-13",
-    "paused": true,
+    "end_date": "2026-12-31",
     "url": {
-      "en": "https://ev.pnm.com/residential-ev-charger-rebates/"
+      "en": "https://www.pnmdriveelectric.com/ev-purchase-rebates"
     }
   },
   {
@@ -6502,14 +5698,13 @@
   {
     "id": "NM-263",
     "payment_methods": [
-      "pos_rebate",
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "ducted_heat_pump",
       "ductless_heat_pump"
     ],
-    "program": "nm_energyConservationAndManagement_eCAMApplianceIncentivesAndRebates",
+    "program": "nm_ecam_homeElectrificationAndApplianceRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 8000,
@@ -6519,24 +5714,22 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $8,000 off a qualifying Energy Star certified air source heat pump for income-qualified residents using an authorized program contractor.",
-      "es": "Descuento de hasta $8,000 para una bomba de calor de fuente de aire con certificación Energy Star para residentes que califican según sus ingresos y que utilicen un contratista autorizado del programa."
+      "en": "Income-qualified New Mexicans can receive up to $8,000 off a qualifying ENERGY STAR air source heat pump."
     },
-    "low_income": "nm-hear-low-income",
+    "low_income": "nm-80ami",
     "url": {
-      "en": "https://clean.energy.nm.gov/landing/heat-pumps/"
+      "en": "https://clean.energy.nm.gov/programs/hear/"
     }
   },
   {
     "id": "NM-264",
     "payment_methods": [
-      "pos_rebate",
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "heat_pump_water_heater"
     ],
-    "program": "nm_energyConservationAndManagement_eCAMApplianceIncentivesAndRebates",
+    "program": "nm_ecam_homeElectrificationAndApplianceRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 1750,
@@ -6546,25 +5739,23 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $1,750 off a qualifying Energy Star certified heat pump water heater for income-qualified residents using an authorized program contractor.",
-      "es": "Descuento de hasta $1,750 para un calentador de agua con bomba de calor con certificación Energy Star para residentes que califican según sus ingresos y que utilicen un contratista autorizado del programa."
+      "en": "Income-qualified New Mexicans can receive up to $1,750 off a qualifying ENERGY STAR heat pump water heater."
     },
-    "low_income": "nm-hear-low-income",
+    "low_income": "nm-80ami",
     "url": {
-      "en": "https://clean.energy.nm.gov/landing/water-heater/"
+      "en": "https://clean.energy.nm.gov/programs/hear/"
     }
   },
   {
     "id": "NM-265",
     "payment_methods": [
-      "pos_rebate",
-      "rebate"
+      "pos_rebate"
     ],
     "items": [
       "electric_panel",
       "electric_wiring"
     ],
-    "program": "nm_energyConservationAndManagement_eCAMApplianceIncentivesAndRebates",
+    "program": "nm_ecam_homeElectrificationAndApplianceRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 6500,
@@ -6574,12 +5765,1136 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $4,000 off an electric panel upgrade and $2,000 off electrical wiring work conducted by an authorized program contractor.",
-      "es": "Hasta $4,000 de descuento para la actualización del panel eléctrico y $2,000 de descuento para trabajos de cableado eléctrico realizados por un contratista autorizado del programa."
+      "en": "Income-qualified New Mexicans can receive up to $4,000 off an electric panel upgrade and $2,500 off electrical wiring."
     },
-    "low_income": "nm-hear-low-income",
+    "low_income": "nm-80ami",
     "url": {
-      "en": "https://clean.energy.nm.gov/landing/electric-upgrades/"
+      "en": "https://clean.energy.nm.gov/programs/hear/"
+    }
+  },
+  {
+    "id": "NM-267",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nm_pnm_pNMHomeRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700,
+      "minimum": 160,
+      "maximum": 700
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "PNM customers can save up to $700 on an eligible heat pump water heater at participating retailers"
+    },
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://pnm.clearesult.com/shop-products"
+    }
+  },
+  {
+    "id": "NM-271",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_weatherization",
+      "air_to_water_heat_pump"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 250,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% of materials cost up to $250/ton rebate for Air-To-Water heat pump. $200 extra for weatherization. ",
+      "es": "50% del costo de los materiales, hasta $250/tonelada de reembolso, para bomba de calor aire-agua. $200 adicionales para climatización."
+    },
+    "url": {
+      "en": "https://lpea.coop/rebates"
+    }
+  },
+  {
+    "id": "NM-272",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "battery_storage_installation"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 3000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $3000 rebate for eligible battery system depending on size and interconnection zone. Must be scheduled to shave peak demand 4-9 pm.",
+      "es": "Reembolso de hasta $3,000 para sistemas de baterías elegibles, según el tamaño y la zona de interconexión. Debe programarse para reducir la demanda máxima entre las 4 p. m. y las 9 p. m."
+    },
+    "url": {
+      "en": "https://lpea.coop/rebates"
+    }
+  },
+  {
+    "id": "NM-273",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm_columbusElectricCooperative_cECRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% of cost rebate up to $150 for snow blower or $250 for 2-stage snow blower. Account limit for outdoor equipment is $300.",
+      "es": "Descuento del 25% del costo hasta $150 para quitanieves, o $250 para quitanieves de dos etapas. El límite de la cuenta para equipos de exterior es de $300."
+    },
+    "url": {
+      "en": "https://www.columbusco-op.org/rebates"
+    }
+  },
+  {
+    "id": "NM-274",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.5
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% equipment cost up to $500/ton for new ground source heat pump and $250/ton for replacements.  $100 for desuperheater for water heating.",
+      "es": "50% del costo del equipo hasta $500/tonelada para bombas de calor geotérmicas nuevas y $250/tonelada para reemplazos. $100 para desobrecalentador para calentamiento de agua."
+    },
+    "url": {
+      "en": "https://www.cdec.coop/2026-energy-efficiency-rebates"
+    }
+  },
+  {
+    "id": "NM-275",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "25% of cost up to $150 for snow blower or $250 for 2-stage snow blower. Extra battery at purchase 50% up to $25 rebate.",
+      "es": "25% del costo, hasta $150, para una quitanieves o $250 para una quitanieves de dos etapas. 50% de descuento, hasta $25, para baterías adicionales con la compra."
+    },
+    "url": {
+      "en": "https://www.cdec.coop/2026-energy-efficiency-rebates"
+    }
+  },
+  {
+    "id": "NM-276",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "nm_mora-SanMiguelElectricCooperative_mSMECEnergyStarRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 90
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$90 rebate for heat pump electric clothes dryer",
+      "es": "Reembolso de $90 para una secadora de ropa eléctrica con bomba de calor."
+    },
+    "url": {
+      "en": "https://www.morasanmiguel.coop/rebates"
+    }
+  },
+  {
+    "id": "NM-277",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% cost up to $250 for 2-stage snowblower or $150 for single-stage  snowblower  $25 max for extra battery. ",
+      "es": "25% del costo, hasta $250, para quitanieves de 2 etapas o $150 para quitanieves de una sola etapa. Máximo de $25 para baterías adicionales."
+    },
+    "url": {
+      "en": "https://www.socorroelectric.com/rebates"
+    }
+  },
+  {
+    "id": "NM-278",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_stove"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEAIncome-QualifiedRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 150,
+      "maximum": 150
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$150 rebate for an induction cooktop/range (minimum 30\" width).",
+      "es": "Reembolso de $150 para una cocina o estufa de inducción (ancho mínimo de 30\")."
+    },
+    "low_income": "LPEA Income Qualification ",
+    "url": {
+      "en": "https://lpea.coop/rebates"
+    }
+  },
+  {
+    "id": "NM-279",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% cost up to $50 rebate for eligible ENERGY STAR smart thermostat controlling electric load.  $20 per programmable thermostat/timer.",
+      "es": "Reembolso del 50 % del costo, hasta $50, para termostato inteligente ENERGY STAR elegible que controle la carga eléctrica. $20 para termostato o temporizador programable."
+    },
+    "url": {
+      "en": "https://lpea.coop/rebates"
+    }
+  },
+  {
+    "id": "NM-280",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_clothes_dryer"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEAIncome-QualifiedRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$100 rebate per ENERGY STAR heat pump dryer.",
+      "es": "Reembolso de $100 para secadora con bomba de calor ENERGY STAR."
+    },
+    "low_income": "LPEA Income Qualification ",
+    "url": {
+      "en": "https://lpea.coop/rebates"
+    }
+  },
+  {
+    "id": "NM-281",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEAIncome-QualifiedRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 700
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$700 rebate for ENERGY STAR heat pump water heater, minimum 30 gallons. $250 rebate for Electric water heater with smart control or fuel switch.",
+      "es": "Reembolso de $700 para calentadores de agua con bomba de calor ENERGY STAR, mínimo 30 galones. Reembolso de $250 para calentadores de agua eléctricos con control inteligente o interruptor de combustible."
+    },
+    "low_income": "LPEA Income Qualification ",
+    "url": {
+      "en": "https://lpea.coop/rebates"
+    }
+  },
+  {
+    "id": "NM-282",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEAIncome-QualifiedRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$250 for electric-resistance water heater if switching from propane/gas or if managed through wi-fi enabled smart thermostat or timer on Time of Use.",
+      "es": "$250 para calentador de agua con resistencia eléctrica si se cambia de propano/gas o si se administra a través de un termostato inteligente habilitado con Wi-Fi o un temporizador en Horario de uso."
+    },
+    "low_income": "LPEA Income Qualification ",
+    "url": {
+      "en": "https://lpea.coop/rebates"
+    }
+  },
+  {
+    "id": "NM-283",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "other_weatherization"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEAIncome-QualifiedRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% material costs up to $500/ton rebate for ducted/ductless air source heat pump (minimum HSPF2 8.5). $400 extra for weatherization. ",
+      "es": "Reembolso del 50 % del costo del material, hasta $500 por tonelada, para bombas de calor de fuente de aire con o sin ductos (mínimo HSPF2 8.5). $400 adicionales por climatización."
+    },
+    "low_income": "LPEA Income Qualification ",
+    "url": {
+      "en": "https://lpea.coop/rebates"
+    }
+  },
+  {
+    "id": "NM-284",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_weatherization",
+      "geothermal_heating_installation"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEAIncome-QualifiedRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% material cost up to $500/ton rebate for new ground-source heat pump (minimum 3/4 ton).  Extra $400 for weatherization. ",
+      "es": "Reembolso del 50% en el costo del material, hasta $500 por tonelada, para bombas de calor geotérmicas nuevas (mínimo 3/4 de tonelada). $400 adicionales para climatización."
+    },
+    "low_income": "LPEA Income Qualification ",
+    "url": {
+      "en": "https://lpea.coop/rebates"
+    }
+  },
+  {
+    "id": "NM-285",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "other_weatherization",
+      "air_to_water_heat_pump"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEAIncome-QualifiedRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "50% material cost up to $500/ton rebate for Air-To-Water heat pump.  Extra $400 for weatherization. ",
+      "es": "Reembolso del 50% en el costo del material, hasta $500 por tonelada, para bombas de calor aire-agua. $400 adicionales para climatización."
+    },
+    "low_income": "LPEA Income Qualification ",
+    "url": {
+      "en": "https://lpea.coop/rebates"
+    }
+  },
+  {
+    "id": "NM-286",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_thermal_storage_and_slab"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEARebatesProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 20,
+      "unit": "kilowatt"
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$20/kW for ETS heater controlled by timers or master control system. Separate rebates for timers.",
+      "es": "$20/kW para calentadores ETS controlados por temporizadores o sistema de control maestro. Descuentos aparte para temporizadores."
+    },
+    "url": {
+      "en": "https://lpea.coop/rebates"
+    }
+  },
+  {
+    "id": "NM-287",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEAIncome-QualifiedRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500,
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "100% of Level 2 charger cost and installation (pre-tax) up to $500.",
+      "es": "100% del costo e instalación de un cargador de nivel 2 hasta $500 (antes de impuestos)."
+    },
+    "low_income": "LPEA Income Qualification ",
+    "url": {
+      "en": "https://lpea.coop/rebates"
+    }
+  },
+  {
+    "id": "NM-288",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "efficiency_rebates",
+      "electric_stove",
+      "electric_vehicle_charger",
+      "electric_wiring",
+      "geothermal_heating_installation",
+      "heat_pump_clothes_dryer",
+      "heat_pump_water_heater",
+      "non_heat_pump_clothes_dryer",
+      "non_heat_pump_water_heater",
+      "other"
+    ],
+    "program": "nm_laPlataElectricAssociation_lPEAIncome-QualifiedRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 stackable bonus for income-qualified members who build a new all-electric home or complete a fully electric remodel conversion. ",
+      "es": "Bono acumulable de $500 para miembros que califican según sus ingresos y que construyen una casa nueva totalmente eléctrica o completan una remodelación y conversión totalmente eléctrica."
+    },
+    "low_income": "LPEA Income Qualification ",
+    "url": {
+      "en": "https://lpea.coop/all-electric-residential-new-construction-or-remodel-bonus"
+    }
+  },
+  {
+    "id": "NM-289",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit"
+    ],
+    "program": "nm_navopacheElectricCooperative_energyServices",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Free Home Energy Audit",
+      "es": "Auditoría energética del hogar gratuita"
+    },
+    "url": {
+      "en": "https://navopache.org/energy-services-new/"
+    }
+  },
+  {
+    "id": "NM-290",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "other",
+      "non_heat_pump_water_heater"
+    ],
+    "program": "nm_navopacheElectricCooperative_nECEnergyServices",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 50
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$50 bill credit when you participate in Time of Use program and install qualified  electric water heater timer. ",
+      "es": "Crédito en su factura de $50 cuando participa en el programa Time of Use e instala un temporizador de calentador de agua eléctrico calificado."
+    },
+    "url": {
+      "en": "https://navopache.org/energy-services-new/"
+    }
+  },
+  {
+    "id": "NM-291",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm_columbusElectricCooperative_cECRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 5000,
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Up to $5,000 for an electric forklift and $1,500 for an electric pallet jack. Project cap is $20,000. Check if residential members are eligible.",
+      "es": "Hasta $5,000 para una montacargas eléctrica y $1,500 para una transpaleta eléctrica. El límite del proyecto es de $20,000. Consulte si los miembros residenciales son elegibles."
+    },
+    "url": {
+      "en": "https://www.columbusco-op.org/rebates"
+    }
+  },
+  {
+    "id": "NM-292",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "nm_centralValleyElectricCooperative_cVECHeatingAndCoolingRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.4,
+      "maximum": 75000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "40% rebate for electric Energy Star clothes dryer.",
+      "es": "40% de descuento para secadora de ropa eléctrica Energy Star."
+    },
+    "url": {
+      "en": "https://www.cvecoop.org/energy-efficiency-rebates-and-programs"
+    }
+  },
+  {
+    "id": "NM-293",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nm_centralValleyElectricCooperative_cVECHeatingAndCoolingRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.4
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "40% rebate of Energy Star smart thermostat cost in homes cooled by refrigerated air conditioning or heated by electric resistance or heat pump.",
+      "es": "Reembolso del 40% del costo de un termostato inteligente Energy Star en viviendas enfriadas por aire acondicionado refrigerado o calentadas por resistencia eléctrica o bomba de calor."
+    },
+    "url": {
+      "en": "https://cvecoop.org/heating-cooling-rebates"
+    }
+  },
+  {
+    "id": "NM-294",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "solar_screen_films"
+    ],
+    "program": "nm_centralValleyElectricCooperative_cVECHeatingAndCoolingRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1,
+      "unit": "square_foot"
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1.00/sqft rebate up to 40% of the cost of solar screens for treated west and south-west facing window space.",
+      "es": "Reembolso de $1.00/pie cuadrado de hasta el 40 % del costo de pantallas solares para ventanas tratadas orientados al oeste y al suroeste."
+    },
+    "url": {
+      "en": "https://cvecoop.org/heating-cooling-rebates"
+    }
+  },
+  {
+    "id": "NM-295",
+    "payment_methods": [
+      "pos_rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "crawlspace_insulation"
+    ],
+    "program": "nm_centralValleyElectricCooperative_cVECHeatingAndCoolingRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.4,
+      "maximum": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "40% of the cost of attic or crawl space insulation up to $1,000  in homes cooled by refrigerated air or heated by electric or heat pump.",
+      "es": "40% del costo, hasta $1,000, para el aislamiento del ático o del espacio de acceso en viviendas enfriadas por aire refrigerado o calentadas por electricidad o bomba de calor."
+    },
+    "url": {
+      "en": "https://cvecoop.org/heating-cooling-rebates"
+    }
+  },
+  {
+    "id": "NM-296",
+    "payment_methods": [
+      "rebate",
+      "account_credit"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "nm_centralValleyElectricCooperative_cVECHeatingAndCoolingRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.4
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "40% rebate of cost of Energy Star windows (taxes and labor excluded).",
+      "es": "40% de reembolso en el costo de  ventanas Energy Star (no se incluyen los impuestos ni la mano de obra)."
+    },
+    "url": {
+      "en": "https://cvecoop.org/heating-cooling-rebates"
+    }
+  },
+  {
+    "id": "NM-297",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation"
+    ],
+    "program": "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for bringing existing insulation R value to at least an\nR-30.",
+      "es": "Reembolso de $500 para llevar el valor R de aislamiento existente a al menos \n R-30."
+    },
+    "url": {
+      "en": "https://www.fecnm.org/farmers-electric-cooperative-of-new-mexico"
+    }
+  },
+  {
+    "id": "NM-298",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "window_replacement"
+    ],
+    "program": "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 750
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "25% rebate of materials costs for Energy Star windows or storm windows up to $750.",
+      "es": "25% de reembolso, hasta $750, para el costo de materiales para ventanas Energy Star o ventanas contra tormentas."
+    },
+    "url": {
+      "en": "https://www.fecnm.org/farmers-electric-cooperative-of-new-mexico"
+    }
+  },
+  {
+    "id": "NM-299",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "geothermal_heating_installation"
+    ],
+    "program": "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1000,
+      "unit": "ton",
+      "maximum": 5000
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,000/ton up to $5,000 per home for geothermal heat pump.  EER of at least 14.1 for closed loop, 16.2 for open loop and 15 on direct expansion.",
+      "es": "Desde $1,000/tonelada hasta $5,000 por vivienda para bomba de calor geotérmica. EER de al menos 14.1 para circuito cerrado, 16.2 para circuito abierto y 15 para expansión directa."
+    },
+    "url": {
+      "en": "https://www.fecnm.org/farmers-electric-cooperative-of-new-mexico"
+    }
+  },
+  {
+    "id": "NM-300",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "heat_pump_water_heater"
+    ],
+    "program": "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate to replace gas/propane or electric (with EF <.90 or older than 10 years) water heater with hybrid heat pump model with at least 2.0 EF. ",
+      "es": "Reembolso de $500 para reemplazar un calentador de agua a gas/propano o eléctrico (con EF <.90 o con más de 10 años de antigüedad) por un modelo de bomba de calor híbrida con al menos 2.0 EF. "
+    },
+    "url": {
+      "en": "https://www.fecnm.org/farmers-electric-cooperative-of-new-mexico"
+    }
+  },
+  {
+    "id": "NM-301",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater"
+    ],
+    "program": "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$150 rebate to replace gas/propane or electric (10+ years old or EF< .9) water heater with an electric model having an  EF of at least .95.",
+      "es": "Reembolso de $150 para reemplazar un calentador de agua a gas, propano o eléctrico (de más de 10 años de antigüedad o EF < .9) por un modelo eléctrico que tenga un EF de al menos .95."
+    },
+    "url": {
+      "en": "https://www.fecnm.org/farmers-electric-cooperative-of-new-mexico"
+    }
+  },
+  {
+    "id": "NM-302",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump"
+    ],
+    "program": "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$500 rebate for qualified ducted heat pump or upgrade existing heat pump with SEER rating of 12 or lower or more than 15 years old.",
+      "es": "Reembolso de $500 para una bomba de calor con ductos calificada o actualización de una bomba de calor existente con clasificación SEER de 12 o menos o más de 15 años de antigüedad."
+    },
+    "url": {
+      "en": "https://www.fecnm.org/farmers-electric-cooperative-of-new-mexico"
+    }
+  },
+  {
+    "id": "NM-303",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 125,
+      "unit": "ton",
+      "maximum": 500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$125/ton up to $500 for qualified ductless heat pump.",
+      "es": "$125/tonelada hasta $500 para bomba de calor sin ductos calificada."
+    },
+    "url": {
+      "en": "https://www.fecnm.org/farmers-electric-cooperative-of-new-mexico"
+    }
+  },
+  {
+    "id": "NM-304",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "smart_thermostat"
+    ],
+    "program": "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 75,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$75 rebate for first Energy Star smart thermostat and $25 for a second one. ",
+      "es": "Reembolso de $75 para el primer termostato inteligente Energy Star y de $25 para el segundo."
+    },
+    "url": {
+      "en": "https://www.fecnm.org/farmers-electric-cooperative-of-new-mexico"
+    }
+  },
+  {
+    "id": "NM-305",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "attic_or_roof_insulation",
+      "basement_insulation",
+      "crawlspace_insulation"
+    ],
+    "program": "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1250
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,250 rebate for new homes with qualified heat pumps and insulation values.",
+      "es": "Reembolso de $1,250 para bombas de calor y valores de aislamiento calificados en casas nuevas."
+    },
+    "url": {
+      "en": "https://www.fecnm.org/farmers-electric-cooperative-of-new-mexico"
+    }
+  },
+  {
+    "id": "NM-306",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "other"
+    ],
+    "program": "nm_rioRancho_indoorRebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 30
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$30 bill credit for programmable evaporative cooler thermostat.",
+      "es": "Crédito de factura de $30 para termostato de enfriador evaporativo programable."
+    },
+    "url": {
+      "en": "https://rrnm.gov/422/Indoor-Rebates"
+    }
+  },
+  {
+    "id": "NM-307",
+    "payment_methods": [
+      "account_credit"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nm_rioRancho_indoorRebatesProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,500 bill credit for replacing evaporative cooler with refrigerated air after obtaining pre-approval.",
+      "es": "Crédito de factura de $1,500 para reemplazar el enfriador evaporativo con aire refrigerado después de obtener la aprobación previa."
+    },
+    "url": {
+      "en": "https://rrnm.gov/422/Indoor-Rebates"
+    }
+  },
+  {
+    "id": "NM-308",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_outdoor_equipment"
+    ],
+    "program": "nm_sierraElectricCooperative_sierraElectricCoopEnergyEfficiencyRebates",
+    "amount": {
+      "type": "percent",
+      "number": 0.25,
+      "maximum": 300
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "25% cost up to $250 for 2-stage snowblower and $$150 for single state. 50% ($25 max) extra battery at time of purchase.",
+      "es": "Costo del 25% hasta $250 para quitanieves de 2 etapas y $150 para los de una sola etapa. 50% (máximo de $25) para una batería adicional al momento de la compra."
+    },
+    "url": {
+      "en": "https://www.sierraelectric.org/energy-efficiency-rebates"
+    }
+  },
+  {
+    "id": "NM-309",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "electric_wiring",
+      "energy_audit",
+      "efficiency_rebates",
+      "electric_panel",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nm_housingNewMexicoMfa_nMEnergy$MartWeatherizationProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Provides energy-saving retrofits and home modifications at no charge to eligible low-income homeowners and renters.",
+      "es": "Ofrece modificaciones y modernizaciones para ahorrar energía en el hogar sin cargo para propietarios e inquilinos de bajos ingresos que reúnan los requisitos."
+    },
+    "low_income": "nm-pnm-income-qualified",
+    "url": {
+      "en": "https://housingnm.org/programs/home-rehabilitation-and-weatherization"
+    }
+  },
+  {
+    "id": "NM-310",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "ductless_heat_pump",
+      "ducted_heat_pump"
+    ],
+    "program": "nm_housingNewMexicoMfa_veteransHousingRehabilitationAndModificationProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Provides energy-saving retrofits and home modifications at no charge to eligible low-income homeowners and renters. May include heat pumps & AC.",
+      "es": "Ofrece renovaciones y modificaciones de viviendas para ahorrar energía sin costo para propietarios e inquilinos de bajos ingresos que cumplan con los requisitos. Puede incluir bombas de calor y aire acondicionado."
+    },
+    "low_income": "nm-80ami",
+    "url": {
+      "en": "https://housingnm.org/programs/home-rehabilitation-and-weatherization/home-rehabilitation/veterans-home-rehabilitation-and-modification"
+    }
+  },
+  {
+    "id": "NM-311",
+    "payment_methods": [
+      "assistance_program"
+    ],
+    "items": [
+      "energy_audit",
+      "air_sealing"
+    ],
+    "program": "nm_taosCounty_taosCountyCEEDAuditProgram",
+    "amount": {
+      "type": "percent",
+      "number": 1
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "Free energy audit with efficiency upgrades like weatherstripping, water heater blankets, pipe wrap, gap filler & new refrigerator if applicable.",
+      "es": "Auditoría energética gratuita con mejoras de eficiencia como burletes, mantas aislantes para calentadores de agua, aislamiento para tuberías, relleno de huecos y refrigerador nuevo, si corresponde."
+    },
+    "low_income": "hi-200-fpl",
+    "url": {
+      "en": "https://kitcarson.com/apply-now-community-energy-efficiency-development-ceed-audit-sign-up/"
+    }
+  },
+  {
+    "id": "NM-312",
+    "payment_methods": [
+      "tax_credit"
+    ],
+    "items": [
+      "geothermal_heating_installation",
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "nm_energyConservationAndManagement_geothermalGroundCoupledHeatPumpTaxCredit",
+    "amount": {
+      "type": "percent",
+      "number": 0.3,
+      "maximum": 9000
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "NM taxpayers can receive a refundable tax credit for 30% of the cost of a geothermal ground coupled heat pump system, up to $9,000."
+    },
+    "end_date": "2034-12-31",
+    "url": {
+      "en": "https://clean.energy.nm.gov/programs/geothermal-ground-coupled-heat-pump-tax-credit/"
     }
   }
 ]
