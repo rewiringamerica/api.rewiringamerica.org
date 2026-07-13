@@ -30,103 +30,6 @@
   "incentives": [
     {
       "payment_methods": [
-        "account_credit",
-        "rebate"
-      ],
-      "authority_type": "other",
-      "authority": "co-xcel-energy-combined",
-      "program": "Xcel Energy Heat Pump Rebates",
-      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
-      "items": [
-        "geothermal_heating_installation"
-      ],
-      "amount": {
-        "type": "dollars_per_unit",
-        "number": 3300,
-        "unit": "ton"
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2025-01-01",
-      "end_date": "2026-12-31",
-      "short_description": "$3,300 per heating ton rebate for ground source heat pumps with quality installation."
-    },
-    {
-      "payment_methods": [
-        "account_credit",
-        "rebate"
-      ],
-      "authority_type": "other",
-      "authority": "co-xcel-energy-combined",
-      "program": "Xcel Energy Heat Pump Rebates",
-      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
-      "items": [
-        "ductless_heat_pump",
-        "ducted_heat_pump"
-      ],
-      "amount": {
-        "type": "dollars_per_unit",
-        "number": 2250,
-        "unit": "ton"
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2025-11-16",
-      "end_date": "2026-12-31",
-      "short_description": "$2,250/heating ton at 5 degrees Fahrenheit for a cold-climate heat pump."
-    },
-    {
-      "payment_methods": [
-        "account_credit",
-        "rebate"
-      ],
-      "authority_type": "other",
-      "authority": "co-xcel-energy-combined",
-      "program": "Xcel Energy Heat Pump Rebates",
-      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
-      "items": [
-        "ductless_heat_pump"
-      ],
-      "amount": {
-        "type": "dollars_per_unit",
-        "number": 2250,
-        "unit": "ton"
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2025-11-16",
-      "end_date": "2026-12-31",
-      "short_description": "$2250/heating ton for qualifying Cold Climate Mini Split Heat Pumps."
-    },
-    {
-      "payment_methods": [
-        "account_credit",
-        "rebate"
-      ],
-      "authority_type": "other",
-      "authority": "co-xcel-energy-combined",
-      "program": "Xcel Energy Heat Pump Rebates",
-      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
-      "items": [
-        "ducted_heat_pump",
-        "ductless_heat_pump"
-      ],
-      "amount": {
-        "type": "dollars_per_unit",
-        "number": 900,
-        "unit": "ton"
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2025-01-20",
-      "short_description": "$900/cooling ton rebate for ducted, partially ducted, or non-ducted heat pumps."
-    },
-    {
-      "payment_methods": [
         "assistance_program"
       ],
       "authority_type": "other",
@@ -1007,6 +910,103 @@
       "start_date": "2025-01-01",
       "end_date": "2025-12-31",
       "short_description": "Rebates of up to 25% of project costs for induction cooktops and stoves, capped annually at $1,000."
+    },
+    {
+      "payment_methods": [
+        "rebate",
+        "pos_rebate"
+      ],
+      "authority_type": "other",
+      "authority": "co-xcel-energy-combined",
+      "program": "Xcel Energy Heat Pump Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
+      "items": [
+        "geothermal_heating_installation"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 3300,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2025-01-01",
+      "end_date": "2026-12-31",
+      "short_description": "$3,300 per heating ton rebate for ground source heat pumps with quality installation."
+    },
+    {
+      "payment_methods": [
+        "rebate",
+        "pos_rebate"
+      ],
+      "authority_type": "other",
+      "authority": "co-xcel-energy-combined",
+      "program": "Xcel Energy Heat Pump Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
+      "items": [
+        "ductless_heat_pump",
+        "ducted_heat_pump"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 2250,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2025-11-16",
+      "end_date": "2026-12-31",
+      "short_description": "$2,250/heating ton at 5 degrees Fahrenheit for a cold-climate heat pump."
+    },
+    {
+      "payment_methods": [
+        "rebate",
+        "pos_rebate"
+      ],
+      "authority_type": "other",
+      "authority": "co-xcel-energy-combined",
+      "program": "Xcel Energy Heat Pump Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
+      "items": [
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 2250,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2025-11-16",
+      "end_date": "2026-12-31",
+      "short_description": "$2250/heating ton for qualifying Cold Climate Mini Split Heat Pumps."
+    },
+    {
+      "payment_methods": [
+        "rebate",
+        "pos_rebate"
+      ],
+      "authority_type": "other",
+      "authority": "co-xcel-energy-combined",
+      "program": "Xcel Energy Heat Pump Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
+      "items": [
+        "ducted_heat_pump",
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 900,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "start_date": "2025-01-20",
+      "short_description": "$900/cooling ton rebate for ducted, partially ducted, or non-ducted heat pumps."
     },
     {
       "payment_methods": [
