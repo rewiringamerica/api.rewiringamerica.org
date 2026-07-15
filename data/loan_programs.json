@@ -1645,55 +1645,6 @@
     "updated_at": "2025-04-02T17:58:30.320Z"
   },
   {
-    "id": 70,
-    "loan_program_key": "GA-11",
-    "name": "Electric Vehicle Loans",
-    "description": "Self-Help Credit Union offers Electric Vehicle Loans to help individuals purchase new or used electric vehicles. The program supports clean transportation by providing affordable financing options with flexible terms and competitive interest rates. Loans are available for both new and used EVs, and refinancing options are also offered. All SHCU members can get a 0.25% discount on an EV or PHEV (plug-in hybrid electric vehicle).  For a limited time only, qualifying members with modest incomes (below 80% area median income) can access a deeper rate discount on EVs and PHEVs.",
-    "description_langs": {
-      "es": "Self-Help Credit Union ofrece Préstamos para Vehículos Eléctricos para ayudar a las personas a comprar vehículos eléctricos nuevos o usados. El programa apoya el transporte limpio al proporcionar opciones de financiamiento asequibles con términos flexibles y tasas de interés competitivas. Los préstamos están disponibles tanto para vehículos eléctricos nuevos como usados, y también se ofrecen opciones de refinanciamiento."
-    },
-    "status": "PUBLISHED",
-    "state": "GA",
-    "is_national": false,
-    "website_url": "https://www.self-help.org/personal/loans/green-loans/electric-vehicle-loans",
-    "financial_authority_id": 58,
-    "financial_authority": {
-      "id": 58,
-      "authority_type": "credit_union",
-      "description": "Self-Help Credit Union was chartered in 1983 to build a network of branches that partner with working families and communities often underserved by the financial marketplace. With over $1.86 billion in assets and serving more than 89,000 members in 37 branches – eight in Florida, one in Georgia, 23 in North Carolina, four in South Carolina, and one in Virginia - Self-Help Credit Union is one of the fastest-growing community development financial institutions in the country. It is part of the Self-Help family of nonprofit organizations whose collective mission is to create and protect ownership and economic opportunity for all. For over 40 years, the national Center for Community Self-Help and its affiliates have provided more than $11 billion in financing to help more than 168,000 borrowers buy homes, start and grow businesses and strengthen community resources. For more information, please visit www.self-help.org. ",
-      "name": "Self-Help Credit Union",
-      "state": "GA",
-      "city": "Atlanta",
-      "image_id": 5,
-      "Image": {
-        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
-        "height": 100,
-        "width": 100
-      },
-      "created_at": "2025-05-20T19:41:42.517Z",
-      "updated_at": "2025-05-20T19:41:42.517Z"
-    },
-    "eligible_project_types": [
-      {
-        "type": "EV_AND_CHARGER"
-      }
-    ],
-    "loan_program_terms": {
-      "id": 69,
-      "min_credit_score": null,
-      "max_debt_to_income": null,
-      "min_loan_amount": null,
-      "max_loan_amount": 75000,
-      "min_interest_rate": null,
-      "max_interest_rate": null,
-      "max_repayment_months": 84,
-      "created_at": "2025-05-20T20:08:41.861Z",
-      "updated_at": "2025-08-06T21:49:35.617Z"
-    },
-    "created_at": "2025-05-20T20:08:41.886Z",
-    "updated_at": "2025-08-06T21:49:35.631Z"
-  },
-  {
     "id": 30,
     "loan_program_key": "TN-2",
     "name": "Energy Efficiency Loan Program",
@@ -3552,6 +3503,55 @@
     "updated_at": "2025-08-07T16:41:06.499Z"
   },
   {
+    "id": 70,
+    "loan_program_key": "GA-11",
+    "name": "Self-Help Credit Union Electric Vehicle Loans",
+    "description": "Self-Help Credit Union offers Electric Vehicle Loans to help individuals purchase new or used electric vehicles. The program supports clean transportation by providing affordable financing options with flexible terms and competitive interest rates. Loans are available for both new and used EVs, and refinancing options are also offered. All SHCU members can get a 0.25% discount on an EV or PHEV (plug-in hybrid electric vehicle).  For a limited time only, qualifying members with modest incomes (below 80% area median income) can access a deeper rate discount on EVs and PHEVs.",
+    "description_langs": {
+      "es": "Self-Help Credit Union ofrece Préstamos para Vehículos Eléctricos para ayudar a las personas a comprar vehículos eléctricos nuevos o usados. El programa apoya el transporte limpio al proporcionar opciones de financiamiento asequibles con términos flexibles y tasas de interés competitivas. Los préstamos están disponibles tanto para vehículos eléctricos nuevos como usados, y también se ofrecen opciones de refinanciamiento."
+    },
+    "status": "PUBLISHED",
+    "state": "GA",
+    "is_national": false,
+    "website_url": "https://www.self-help.org/personal/loans/green-loans/electric-vehicle-loans",
+    "financial_authority_id": 58,
+    "financial_authority": {
+      "id": 58,
+      "authority_type": "credit_union",
+      "description": "Self-Help Credit Union was chartered in 1983 to build a network of branches that partner with working families and communities often underserved by the financial marketplace. With over $1.86 billion in assets and serving more than 89,000 members in 37 branches – eight in Florida, one in Georgia, 23 in North Carolina, four in South Carolina, and one in Virginia - Self-Help Credit Union is one of the fastest-growing community development financial institutions in the country. It is part of the Self-Help family of nonprofit organizations whose collective mission is to create and protect ownership and economic opportunity for all. For over 40 years, the national Center for Community Self-Help and its affiliates have provided more than $11 billion in financing to help more than 168,000 borrowers buy homes, start and grow businesses and strengthen community resources. For more information, please visit www.self-help.org. ",
+      "name": "Self-Help Credit Union",
+      "state": "GA",
+      "city": "Atlanta",
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2025-05-20T19:41:42.517Z",
+      "updated_at": "2025-05-20T19:41:42.517Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "EV_AND_CHARGER"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 69,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": null,
+      "max_loan_amount": 75000,
+      "min_interest_rate": null,
+      "max_interest_rate": null,
+      "max_repayment_months": 84,
+      "created_at": "2025-05-20T20:08:41.861Z",
+      "updated_at": "2026-03-27T16:06:25.033Z"
+    },
+    "created_at": "2025-05-20T20:08:41.886Z",
+    "updated_at": "2026-03-27T16:06:25.044Z"
+  },
+  {
     "id": 37,
     "loan_program_key": "VT-2",
     "name": "Investment Tax Credit (ITC) Loan",
@@ -4129,22 +4129,28 @@
     "eligible_project_types": [
       {
         "type": "SOLAR"
+      },
+      {
+        "type": "BATTERY_INSTALLATION"
+      },
+      {
+        "type": "ELECTRICAL_PANEL_WIRING"
       }
     ],
     "loan_program_terms": {
       "id": 68,
-      "min_credit_score": null,
-      "max_debt_to_income": null,
-      "min_loan_amount": null,
+      "min_credit_score": 550,
+      "max_debt_to_income": 50,
+      "min_loan_amount": 5000,
       "max_loan_amount": 100000,
-      "min_interest_rate": null,
-      "max_interest_rate": null,
+      "min_interest_rate": 5.5,
+      "max_interest_rate": 13.75,
       "max_repayment_months": 240,
       "created_at": "2025-05-20T19:59:33.471Z",
-      "updated_at": "2025-08-06T21:48:54.337Z"
+      "updated_at": "2026-03-27T16:12:54.420Z"
     },
     "created_at": "2025-05-20T19:59:33.486Z",
-    "updated_at": "2025-08-06T21:48:54.349Z"
+    "updated_at": "2026-03-27T16:12:54.435Z"
   },
   {
     "id": 55,

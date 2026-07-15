@@ -10,39 +10,6 @@
     "authority_type": "utility",
     "description": ""
   },
-  "nm-emnrd-new-solar-market-development": {
-    "name": {
-      "en": "New Solar Market Development Tax Credit"
-    },
-    "url": {
-      "en": "https://www.emnrd.nm.gov/ecmd/tax-incentives/solar-market-development-tax-credit-smdtc/"
-    },
-    "authority": "nm-energy-minerals-and-natural-resources-department",
-    "authority_type": "state",
-    "description": ""
-  },
-  "nm-emnrd-sustainable-building-tax-credit": {
-    "name": {
-      "en": "Sustainable Building Tax Credit (SBTC2021) Incentive"
-    },
-    "url": {
-      "en": "https://www.emnrd.nm.gov/ecmd/tax-incentives/energy-conserving-products/"
-    },
-    "authority": "nm-energy-minerals-and-natural-resources-department",
-    "authority_type": "state",
-    "description": ""
-  },
-  "nm-pnm-rebates": {
-    "name": {
-      "en": "PNM Rebates and Discounts"
-    },
-    "url": {
-      "en": "https://www.pnm.com/rebates-and-discounts"
-    },
-    "authority": "nm-pnm",
-    "authority_type": "utility",
-    "description": ""
-  },
   "nm-xcel-rebates": {
     "name": {
       "en": "Xcel Home Rebates"
@@ -109,6 +76,50 @@
     "authority_type": "utility",
     "description": ""
   },
+  "nm_ecam_cleanCarAndChargingUnitTaxCredit": {
+    "name": {
+      "en": "Clean Car and Charging Unit Tax Credit"
+    },
+    "url": {
+      "en": "https://clean.energy.nm.gov/landing/clean-car/"
+    },
+    "authority": "nm-ecam",
+    "authority_type": "state",
+    "description": ""
+  },
+  "nm_ecam_homeElectrificationAndApplianceRebates": {
+    "name": {
+      "en": "Home Electrification and Appliance Rebates"
+    },
+    "url": {
+      "en": "https://clean.energy.nm.gov/programs/hear/"
+    },
+    "authority": "nm-ecam",
+    "authority_type": "state",
+    "description": ""
+  },
+  "nm_ecam_newSolarMarketDevelopmentTaxCredit": {
+    "name": {
+      "en": "New Solar Market Development Tax Credit"
+    },
+    "url": {
+      "en": "https://clean.energy.nm.gov/new-solar-market-development-tax-credit-nsmdtc/"
+    },
+    "authority": "nm-ecam",
+    "authority_type": "state",
+    "description": ""
+  },
+  "nm_ecam_sustainableBuildingTaxCreditForEnergyConservingProducts": {
+    "name": {
+      "en": "Sustainable Building Tax Credit for Energy Conserving Products"
+    },
+    "url": {
+      "en": "https://clean.energy.nm.gov/sustainable-building-tax-credit-energy-conserving-products-ecp/"
+    },
+    "authority": "nm-ecam",
+    "authority_type": "state",
+    "description": ""
+  },
   "nm_elPasoElectric_elPasoElectricResidentialLowIncome": {
     "name": {
       "en": "El Paso Electric Residential Low Income"
@@ -127,54 +138,21 @@
       "duct_sealing"
     ]
   },
-  "nm_energy,Minerals,AndNaturalResourcesDepartment_geothermalGround-CoupledHeatPumpIncomeTaxCredit": {
+  "nm_energyConservationAndManagement_geothermalGroundCoupledHeatPumpTaxCredit": {
     "name": {
-      "en": "Geothermal Ground-Coupled Heat Pump Income Tax Credit"
+      "en": "Geothermal Ground Coupled Heat Pump Tax Credit"
     },
     "url": {
-      "en": "https://www.emnrd.nm.gov/ecmd/tax-incentives/ggchp-tax-credit/"
+      "en": "https://clean.energy.nm.gov/programs/geothermal-ground-coupled-heat-pump-tax-credit/"
     },
-    "authority": "nm-energy-minerals-and-natural-resources-department",
+    "authority": "nm-ecam",
     "authority_type": "state",
-    "description": "30% refundable tax credit up to $9,000 for materials and installation of eligible ground-source geothermal heat pump.",
+    "description": "30% refundable tax credit, up to $9,000, for purchase and installation costs of a geothermal ground coupled heat pump system",
     "items": [
       "geothermal_heating_installation",
       "ducted_heat_pump",
       "ductless_heat_pump"
     ]
-  },
-  "nm_energyConservationAndManagement_eCAMApplianceIncentivesAndRebates": {
-    "name": {
-      "en": "ECAM Appliance Incentives & Rebates"
-    },
-    "url": {
-      "en": "https://clean.energy.nm.gov/landing/appliances/"
-    },
-    "authority": "nm-ecam",
-    "authority_type": "state",
-    "description": ""
-  },
-  "nm_energyConservationAndManagement_eCAMInsulationIncentivesAndRebates": {
-    "name": {
-      "en": "ECAM Insulation Incentives & Rebates"
-    },
-    "url": {
-      "en": "https://clean.energy.nm.gov/landing/insulation/"
-    },
-    "authority": "nm-ecam",
-    "authority_type": "state",
-    "description": ""
-  },
-  "nm_energyConservationAndManagement_newMexicoCleanCarIncentivesAndRebates": {
-    "name": {
-      "en": "New Mexico Clean Car Incentives & Rebates"
-    },
-    "url": {
-      "en": "https://clean.energy.nm.gov/landing/clean-car/"
-    },
-    "authority": "nm-ecam",
-    "authority_type": "state",
-    "description": ""
   },
   "nm_farmersElectricCooperative_fECEnergyEfficiencyRebateProgram": {
     "name": {
@@ -296,37 +274,6 @@
     "authority_type": "utility",
     "description": ""
   },
-  "nm_losAlamosCountyUtility_homeRenewalProgram": {
-    "name": {
-      "en": "Home Renewal Program"
-    },
-    "url": {
-      "en": "https://www.housingtrustonline.org"
-    },
-    "authority": "nm-los-alamos-county",
-    "authority_type": "utility",
-    "description": "The Home Renewal Program (HRP) is run by The Housing Trust in conjunction with Los Alamos  County. HRP enables income-qualified  homeowners to improve their homes to increase comfort, safety, and liveability without adding to monthly expenses. ",
-    "items": [
-      "window_replacement",
-      "ducted_heat_pump",
-      "ductless_heat_pump",
-      "central_air_conditioner",
-      "attic_or_roof_insulation",
-      "crawlspace_insulation",
-      "basement_insulation"
-    ]
-  },
-  "nm_losAlamosCounty_dPUConserveAndReduce": {
-    "name": {
-      "en": "DPU Conserve and Reduce"
-    },
-    "url": {
-      "en": "https://www.losalamosnm.us/Services/Public-Utilities/Conserve-and-Reduce"
-    },
-    "authority": "nm-los-alamos-county",
-    "authority_type": "utility",
-    "description": "Utility resources for conservation and efficiency"
-  },
   "nm_mora-SanMiguelElectricCooperative_mSMECEnergyStarRebateProgram": {
     "name": {
       "en": "MSMEC Energy Star Rebate Program"
@@ -431,16 +378,27 @@
     "authority_type": "utility",
     "description": ""
   },
-  "nm_pnm_pNMHomeEnergyCheckupProgram": {
+  "nm_pnm_pNMHomeEnergyCheckup": {
     "name": {
-      "en": "PNM Home Energy Checkup Program"
+      "en": "PNM Home Energy Checkup"
     },
     "url": {
       "en": "https://www.pnmhomecheckup.com/additional"
     },
     "authority": "nm-pnm",
     "authority_type": "utility",
-    "description": "To be eligible for these rebates you must have had a Home Energy Checkup within the last 10 years."
+    "description": "PNM customers living in single-family homes or apartments with up to four units can receive a free Home Energy Checkup, including free energy efficiency products, and qualify for increased rebates."
+  },
+  "nm_pnm_pNMHomeRebates": {
+    "name": {
+      "en": "PNM Home Rebates"
+    },
+    "url": {
+      "en": "https://www.pnm.com/homerebates"
+    },
+    "authority": "nm-pnm",
+    "authority_type": "utility",
+    "description": ""
   },
   "nm_pnm_pNMResidentialMidstreamProgram": {
     "name": {
@@ -458,7 +416,7 @@
       "en": "PNM Transportation Electrification Program "
     },
     "url": {
-      "en": "https://ev.pnm.com/residential-ev-charger-rebates/"
+      "en": "https://www.pnmdriveelectric.com/ev-purchase-rebates"
     },
     "authority": "nm-pnm",
     "authority_type": "utility",
@@ -546,45 +504,6 @@
     "authority_type": "utility",
     "description": ""
   },
-  "nm_santaFeCounty_homeRehabilitationAndEnergyEfficiencyHREEProgram": {
-    "name": {
-      "en": "Home Rehabilitation and Energy Efficiency (HREE) Program"
-    },
-    "url": {
-      "en": "https://www.santafecountynm.gov/news/detail/santa-fe-county-is-now-accepting-applications-for-its-home-rehabilitation-and-energy-efficiency-hree-program"
-    },
-    "authority": "nm-santa-fe-county",
-    "authority_type": "county",
-    "description": ""
-  },
-  "nm_santaFeCounty_santaFeCommunityEnergyEfficiencyDevelopmentCEED": {
-    "name": {
-      "en": "Santa Fe Community Energy Efficiency Development (CEED) "
-    },
-    "url": {
-      "en": "https://www.santafecountynm.gov/housing-services/affordable-housing/home-rehabilitation-and-energy-efficiency-program"
-    },
-    "authority": "nm-santa-fe-county",
-    "authority_type": "county",
-    "description": "Provides energy efficiency retrofits up to $16,000 for income qualified residents in Santa Fe County. ",
-    "items": [
-      "air_sealing",
-      "attic_or_roof_insulation",
-      "basement_insulation",
-      "crawlspace_insulation",
-      "door_replacement",
-      "duct_replacement",
-      "duct_sealing",
-      "energy_audit",
-      "floor_insulation",
-      "heat_pump_clothes_dryer",
-      "non_heat_pump_water_heater",
-      "other_weatherization",
-      "smart_thermostat",
-      "wall_insulation",
-      "window_replacement"
-    ]
-  },
   "nm_sierraElectricCooperative_sierraElectricCoopEnergyEfficiencyRebates": {
     "name": {
       "en": "Sierra Electric Coop Energy Efficiency Rebates"
@@ -637,6 +556,20 @@
       "air_to_water_heat_pump"
     ]
   },
+  "nm_taosCounty_taosCountyCEEDAuditProgram": {
+    "name": {
+      "en": "Taos County CEED Audit Program"
+    },
+    "url": {
+      "en": "https://kitcarson.com/apply-now-community-energy-efficiency-development-ceed-audit-sign-up/"
+    },
+    "authority": "nm-taos-county",
+    "authority_type": "county",
+    "description": "Free comprehensive energy audit with efficiency upgrades like weatherstripping, pipe wrap, gap filler, water heater blankets and Energy Star refrigerator if replacing one older than 2013.",
+    "items": [
+      "energy_audit"
+    ]
+  },
   "nm_tri-CountyElectricCooperative_energyUseInquiry": {
     "name": {
       "en": "Energy Use Inquiry"
@@ -647,17 +580,6 @@
     "authority": "nm-tri-county-electric-cooperative",
     "authority_type": "utility",
     "description": ""
-  },
-  "nm_xcelEnergy_xcelOptimizeYourCharge": {
-    "name": {
-      "en": "Xcel Optimize Your Charge"
-    },
-    "url": {
-      "en": "https://ev.xcelenergy.com/optimize-your-charge"
-    },
-    "authority": "nm-xcel-energy",
-    "authority_type": "utility",
-    "description": "Optimize your charging by following an off-peak schedule "
   },
   "nm_ziaNaturalGasCompany_ziaNaturalGasCompanyEnergyEfficiencyProgram": {
     "name": {
