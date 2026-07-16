@@ -7127,8 +7127,8 @@
   {
     "id": "CO-311",
     "payment_methods": [
-      "account_credit",
-      "rebate"
+      "rebate",
+      "pos_rebate"
     ],
     "items": [
       "ducted_heat_pump",
@@ -7155,8 +7155,8 @@
   {
     "id": "CO-312",
     "payment_methods": [
-      "account_credit",
-      "rebate"
+      "rebate",
+      "pos_rebate"
     ],
     "items": [
       "ducted_heat_pump",
@@ -7182,8 +7182,8 @@
   {
     "id": "CO-313",
     "payment_methods": [
-      "account_credit",
-      "rebate"
+      "rebate",
+      "pos_rebate"
     ],
     "items": [
       "geothermal_heating_installation"
@@ -7210,8 +7210,8 @@
   {
     "id": "CO-314",
     "payment_methods": [
-      "account_credit",
-      "rebate"
+      "rebate",
+      "pos_rebate"
     ],
     "items": [
       "ductless_heat_pump",
@@ -7239,8 +7239,8 @@
   {
     "id": "CO-315",
     "payment_methods": [
-      "account_credit",
-      "rebate"
+      "rebate",
+      "pos_rebate"
     ],
     "items": [
       "ductless_heat_pump"
@@ -18329,6 +18329,7 @@
   },
   {
     "id": "CO-747",
+    "eligible_geo_group": "co-hear-remaining-counties-2026",
     "payment_methods": [
       "rebate"
     ],
@@ -18357,6 +18358,7 @@
   },
   {
     "id": "CO-748",
+    "eligible_geo_group": "co-hear-remaining-counties-2026",
     "payment_methods": [
       "rebate"
     ],
@@ -18385,6 +18387,7 @@
   },
   {
     "id": "CO-749",
+    "eligible_geo_group": "co-hear-remaining-counties-2026",
     "payment_methods": [
       "rebate"
     ],
@@ -18414,6 +18417,7 @@
   },
   {
     "id": "CO-750",
+    "eligible_geo_group": "co-hear-remaining-counties-2026",
     "payment_methods": [
       "rebate"
     ],
@@ -18442,6 +18446,7 @@
   },
   {
     "id": "CO-751",
+    "eligible_geo_group": "co-hear-remaining-counties-2026",
     "payment_methods": [
       "rebate"
     ],
@@ -18470,6 +18475,7 @@
   },
   {
     "id": "CO-752",
+    "eligible_geo_group": "co-hear-remaining-counties-2026",
     "payment_methods": [
       "rebate"
     ],
@@ -18497,6 +18503,7 @@
   },
   {
     "id": "CO-753",
+    "eligible_geo_group": "co-hear-remaining-counties-2026",
     "payment_methods": [
       "rebate"
     ],
@@ -18552,6 +18559,7 @@
   },
   {
     "id": "CO-755",
+    "eligible_geo_group": "co-hear-remaining-counties-2026",
     "payment_methods": [
       "rebate"
     ],
@@ -18580,6 +18588,7 @@
   },
   {
     "id": "CO-756",
+    "eligible_geo_group": "co-hear-remaining-counties-2026",
     "payment_methods": [
       "rebate"
     ],
@@ -18608,6 +18617,7 @@
   },
   {
     "id": "CO-757",
+    "eligible_geo_group": "co-hear-remaining-counties-2026",
     "payment_methods": [
       "rebate"
     ],
@@ -18636,6 +18646,7 @@
   },
   {
     "id": "CO-758",
+    "eligible_geo_group": "co-hear-remaining-counties-2026",
     "payment_methods": [
       "rebate"
     ],
@@ -18664,6 +18675,7 @@
   },
   {
     "id": "CO-759",
+    "eligible_geo_group": "co-hear-remaining-counties-2026",
     "payment_methods": [
       "rebate"
     ],
@@ -18698,6 +18710,7 @@
   },
   {
     "id": "CO-760",
+    "eligible_geo_group": "co-hear-remaining-counties-2026",
     "payment_methods": [
       "rebate"
     ],
@@ -18731,6 +18744,7 @@
   },
   {
     "id": "CO-761",
+    "eligible_geo_group": "co-hear-remaining-counties-2026",
     "payment_methods": [
       "rebate"
     ],
@@ -18760,6 +18774,7 @@
   },
   {
     "id": "CO-762",
+    "eligible_geo_group": "co-hear-remaining-counties-2026",
     "payment_methods": [
       "rebate"
     ],
@@ -18790,8 +18805,8 @@
   {
     "id": "CO-763",
     "payment_methods": [
-      "account_credit",
-      "rebate"
+      "rebate",
+      "pos_rebate"
     ],
     "items": [
       "ductless_heat_pump"
@@ -19845,6 +19860,33 @@
     "low_income": "co-xcel-energy-ev",
     "url": {
       "en": "https://ev.xcelenergy.com/home-wiring-rebate"
+    }
+  },
+  {
+    "id": "CO-801",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ducted_heat_pump",
+      "ductless_heat_pump"
+    ],
+    "program": "co_powerAheadColorado_powerAheadColoradoIncentivesAndEnergyAdvisingProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 1500,
+      "maximum": 1500
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "$1,500 off of a cold-climate air-source, ducted or ductless heat pump. Cannot be combined with HEAR program rebates."
+    },
+    "start_date": "2026-06-29",
+    "url": {
+      "en": "https://poweraheadcolorado.org/program-requirements"
     }
   }
 ]

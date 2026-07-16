@@ -815,7 +815,7 @@
       "es": "Reembolso de $15 para secadoras de ropa eléctricas con certificación ENERGY STAR®."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/appliance-rebates"
     }
@@ -841,7 +841,7 @@
       "es": "Reembolso de $75 para secadoras de ropa con bomba de calor."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/appliance-rebates"
     }
@@ -867,7 +867,7 @@
       "es": "Reembolso de $350 para calentadores de agua con bomba de calor de certificación ENERGY STAR®."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/water-heater-rebates"
     }
@@ -893,7 +893,7 @@
       "es": "Reembolso de $50 para termostatos inteligentes con certificación ENERGY STAR®."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/appliance-rebates"
     }
@@ -922,7 +922,7 @@
       "es": "Reembolso de hasta $300 para bombas de calor de fuente de aire. El monto del reembolso depende de la eficiencia del equipo."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/heating-cooling-rebates"
     }
@@ -950,7 +950,7 @@
       "es": "Reembolso de hasta $300 para bombas de calor mini-splits sin ductos. El monto del reembolso depende de la eficiencia del equipo."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/heating-cooling-rebates"
     }
@@ -1193,7 +1193,7 @@
     "items": [
       "new_electric_vehicle"
     ],
-    "program": "pa_pECO_pECODriverRebates",
+    "program": "pa_pECO_applianceRebates",
     "amount": {
       "type": "dollar_amount",
       "number": 50
@@ -1205,6 +1205,7 @@
       "en": "$50 rebate for purchasing a plug-in EV.",
       "es": "Un reembolso de $50 por la compra de un VE enchufable."
     },
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.peco.com/smart-energy/innovation-technology/electric-vehicles/residential-evs/ev-programs-and-incentives/peco-smart-driver-rebate"
     }
@@ -1256,7 +1257,7 @@
       "es": "Reembolso de hasta $200 en unidades de aire acondicionado central ENERGY STAR."
     },
     "start_date": "2025-01-01",
-    "end_date": "2025-12-31",
+    "end_date": "2026-12-31",
     "url": {
       "en": "https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/heating-cooling-rebates"
     }
@@ -1333,6 +1334,30 @@
     },
     "url": {
       "en": "https://www.ugi.com/rebates-for-home/electric/equipment-rebate-program/"
+    }
+  },
+  {
+    "id": "PA-59",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "rooftop_solar_installation"
+    ],
+    "program": "pa_pECO_pECODriverRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$500 rebate on solar installation. "
+    },
+    "end_date": "2026-12-31",
+    "url": {
+      "en": "https://www.peco.com/ways-to-save/for-your-home/rebates-discounts/solar-rebates"
     }
   }
 ]

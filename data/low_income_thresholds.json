@@ -2143,19 +2143,20 @@
       "8": 211849
     }
   },
-  "nm-Sustainable Building Tax Credit Low-Income": {
-    "type": "hhsize",
-    "source_url": "https://www.emnrd.nm.gov/ecmd/wp-content/uploads/sites/3/Sustainable-Building-Tax-Credit-products-application-instructions-version-2.pdf",
-    "description": "Households with income less than 200% of Federal poverty level each year. ",
+  "nm-200fpl": {
+    "type": "fpl-percentage",
+    "source_url": "https://aspe.hhs.gov/sites/default/files/documents/b1bfa16b20ae9b89d525bc35de7c1643/detailed-guidelines-2026.pdf",
+    "description": "Household income less than or equal to 200% of the Federal Poverty Guidelines.",
     "thresholds": {
-      "1": 31300,
-      "2": 42300,
-      "3": 53300,
-      "4": 64300,
-      "5": 75300,
-      "6": 86300,
-      "7": 97300,
-      "8": 108300
+      "percentage": 200
+    }
+  },
+  "nm-80ami": {
+    "type": "ami-percentage",
+    "source_url": "https://clean.energy.nm.gov/programs/hear/",
+    "description": "Household income at or below 80% of Area Median Income",
+    "thresholds": {
+      "percentage": 80
     }
   },
   "nm-elpasoelectric-income-qualified": {
@@ -2171,14 +2172,6 @@
       "6": 86300,
       "7": 97300,
       "8": 108300
-    }
-  },
-  "nm-hear-low-income": {
-    "type": "ami-percentage",
-    "source_url": "https://clean.energy.nm.gov/landing/appliances/",
-    "description": "New Mexico's HEAR program 80% AMI",
-    "thresholds": {
-      "percentage": 80
     }
   },
   "nm-pnm-income-qualified": {
@@ -3127,18 +3120,11 @@
     }
   },
   "or-energy-trust-of-oregon": {
-    "type": "hhsize",
+    "type": "ami-percentage",
     "source_url": "https://www.energytrust.org/incentives/savings-within-reach/#tab-two",
     "description": "",
     "thresholds": {
-      "1": 66854,
-      "2": 87424,
-      "3": 107994,
-      "4": 128564,
-      "5": 149134,
-      "6": 169704,
-      "7": 173562,
-      "8": 177418
+      "percentage": 150
     }
   },
   "or-eweb-income-based": {
