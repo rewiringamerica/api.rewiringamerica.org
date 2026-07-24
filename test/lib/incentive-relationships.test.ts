@@ -6,6 +6,7 @@ import { buildRelationshipGraph } from '../../src/lib/incentive-relationship-cal
 import { GeographyType, ResolvedLocation } from '../../src/lib/location';
 import { calculateStateIncentives } from '../../src/lib/state-incentives-calculation';
 import { incentiveRelationshipsContainCycle } from '../data/cycles';
+import { DEFAULT_CALCULATE_PARAMS } from '../mocks/calculate-params';
 import {
   TEST_INCENTIVE_RELATIONSHIPS,
   TEST_INCENTIVE_RELATIONSHIPS_2,
@@ -46,13 +47,13 @@ test('basic test for supplying test incentive data to calculation logic', async 
   const data = calculateStateIncentives(
     LOCATION,
     {
+      ...DEFAULT_CALCULATE_PARAMS,
       owner_status: OwnerStatus.Homeowner,
       household_income: 30000,
       tax_filing: FilingStatus.Single,
       household_size: 1,
       authority_types: [AuthorityType.Utility],
       utility: 'ri-pascoag-utility-district',
-      include_beta_states: false,
     },
     TEST_INCENTIVES,
     {},
@@ -69,6 +70,7 @@ test('test calculation with no incentives', async t => {
   const data = calculateStateIncentives(
     LOCATION,
     {
+      ...DEFAULT_CALCULATE_PARAMS,
       owner_status: OwnerStatus.Homeowner,
       household_income: 30000,
       tax_filing: FilingStatus.Single,
@@ -100,6 +102,7 @@ test('test incentive relationship logic', async t => {
   const data = calculateStateIncentives(
     LOCATION,
     {
+      ...DEFAULT_CALCULATE_PARAMS,
       owner_status: OwnerStatus.Renter,
       household_income: 30000,
       tax_filing: FilingStatus.Single,
@@ -134,6 +137,7 @@ test('test more complex incentive relationship logic', async t => {
   const data = calculateStateIncentives(
     LOCATION,
     {
+      ...DEFAULT_CALCULATE_PARAMS,
       owner_status: OwnerStatus.Renter,
       household_income: 30000,
       tax_filing: FilingStatus.Single,
@@ -170,6 +174,7 @@ test('test incentive relationship and combined max value logic', async t => {
   const data = calculateStateIncentives(
     LOCATION,
     {
+      ...DEFAULT_CALCULATE_PARAMS,
       owner_status: OwnerStatus.Renter,
       household_income: 30000,
       tax_filing: FilingStatus.Single,
@@ -207,6 +212,7 @@ test('test incentive relationship and permanent ineligibility criteria', async t
   const data = calculateStateIncentives(
     LOCATION,
     {
+      ...DEFAULT_CALCULATE_PARAMS,
       owner_status: OwnerStatus.Renter,
       household_income: 140000,
       tax_filing: FilingStatus.Single,
@@ -242,6 +248,7 @@ test('test nested incentive relationship logic', async t => {
   const data = calculateStateIncentives(
     LOCATION,
     {
+      ...DEFAULT_CALCULATE_PARAMS,
       owner_status: OwnerStatus.Renter,
       household_income: 30000,
       tax_filing: FilingStatus.Single,
@@ -268,6 +275,7 @@ test('test combined maximum savings logic', async t => {
   const data = calculateStateIncentives(
     LOCATION,
     {
+      ...DEFAULT_CALCULATE_PARAMS,
       owner_status: OwnerStatus.Renter,
       household_income: 30000,
       tax_filing: FilingStatus.Single,

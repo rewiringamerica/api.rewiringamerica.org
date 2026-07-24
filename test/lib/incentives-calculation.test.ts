@@ -9,9 +9,12 @@ import { AmountType } from '../../src/data/types/amount';
 import { PaymentMethod } from '../../src/data/types/incentive-types';
 import { OwnerStatus } from '../../src/data/types/owner-status';
 import { AMIAndEVCreditEligibility } from '../../src/lib/ami-evcredit-calculation';
-import calculateIncentives from '../../src/lib/incentives-calculation';
+import calculateIncentives, {
+  CalculateParams,
+} from '../../src/lib/incentives-calculation';
 import { GeographyType, ResolvedLocation } from '../../src/lib/location';
 import { calculateStateIncentives } from '../../src/lib/state-incentives-calculation';
+import { DEFAULT_CALCULATE_PARAMS } from '../mocks/calculate-params';
 
 const stateGeo = (id: number, state: string) => ({
   id,
@@ -137,6 +140,7 @@ afterEach(async t => {
 
 test('correctly evaluates scenario "Single w/ $120k Household income"', async t => {
   const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
+    ...DEFAULT_CALCULATE_PARAMS,
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
     tax_filing: FilingStatus.Single,
@@ -148,12 +152,12 @@ test('correctly evaluates scenario "Single w/ $120k Household income"', async t 
 test('correctly evaluates state incentives for launched states', async t => {
   // RI is launched so should get state incentives even if include_beta_states = false.
   const data = calculateIncentives(...LOCATION_AND_AMIS['02861'], {
+    ...DEFAULT_CALCULATE_PARAMS,
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
     tax_filing: FilingStatus.Single,
     household_size: 1,
     authority_types: [AuthorityType.State],
-    include_beta_states: false,
   });
   t.ok(data);
   t.not(data.incentives.length, 0);
@@ -162,13 +166,13 @@ test('correctly evaluates state incentives for launched states', async t => {
 test('correctly excludes state incentives for beta states', async t => {
   // CA is not launched so will not get state incentives.
   const data = calculateIncentives(...LOCATION_AND_AMIS['94117'], {
+    ...DEFAULT_CALCULATE_PARAMS,
     owner_status: OwnerStatus.Homeowner,
     household_income: 20000,
     tax_filing: FilingStatus.Single,
     household_size: 1,
     authority_types: [AuthorityType.Utility],
     utility: 'ca-pacific-gas-and-electric',
-    include_beta_states: false,
   });
   t.ok(data);
   t.equal(data.incentives.length, 0);
@@ -182,6 +186,7 @@ test('correctly evaluates state incentives for beta states', async t => {
     locationWithUtilities(baseLocation, 3536),
     amis,
     {
+      ...DEFAULT_CALCULATE_PARAMS,
       owner_status: OwnerStatus.Homeowner,
       household_income: 20000,
       tax_filing: FilingStatus.Single,
@@ -197,6 +202,7 @@ test('correctly evaluates state incentives for beta states', async t => {
 
 test('correctly evaluates scenario "Joint w/ 5 persons and $60k Household income"', async t => {
   const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
+    ...DEFAULT_CALCULATE_PARAMS,
     owner_status: OwnerStatus.Homeowner,
     household_income: 60000,
     tax_filing: FilingStatus.Joint,
@@ -207,6 +213,7 @@ test('correctly evaluates scenario "Joint w/ 5 persons and $60k Household income
 
 test('correctly evaluates scenario "Joint w/ $300k Household income"', async t => {
   const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
+    ...DEFAULT_CALCULATE_PARAMS,
     owner_status: OwnerStatus.Homeowner,
     household_income: 300000,
     tax_filing: FilingStatus.Joint,
@@ -217,6 +224,7 @@ test('correctly evaluates scenario "Joint w/ $300k Household income"', async t =
 
 test('correctly evaluates scenario "MFS w/ $100k Household income"', async t => {
   const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
+    ...DEFAULT_CALCULATE_PARAMS,
     owner_status: OwnerStatus.Homeowner,
     household_income: 100000,
     tax_filing: FilingStatus.MarriedFilingSeparately,
@@ -227,6 +235,7 @@ test('correctly evaluates scenario "MFS w/ $100k Household income"', async t => 
 
 test('correctly evaluates scenario "Single w/ $120k Household income in NJ"', async t => {
   const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
+    ...DEFAULT_CALCULATE_PARAMS,
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
     tax_filing: FilingStatus.Single,
@@ -293,6 +302,7 @@ test('correctly evaluates scenario "Single w/ $120k Household income in NJ"', as
 
 test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k Household income in San Francisco"', async t => {
   const data = calculateIncentives(...LOCATION_AND_AMIS['94117'], {
+    ...DEFAULT_CALCULATE_PARAMS,
     owner_status: OwnerStatus.Homeowner,
     household_income: 250000,
     tax_filing: FilingStatus.Joint,
@@ -359,6 +369,7 @@ test('correctly evaluates scenario "Married filing jointly w/ 2 kids and $250k H
 
 test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in Missisippi"', async t => {
   const data = calculateIncentives(...LOCATION_AND_AMIS['39503'], {
+    ...DEFAULT_CALCULATE_PARAMS,
     owner_status: OwnerStatus.Homeowner,
     household_income: 500000,
     tax_filing: FilingStatus.HoH,
@@ -424,11 +435,12 @@ test('correctly evaluates scenario "Hoh w/ 6 kids and $500k Household income in 
 
 test('filters tax credits if zero tax owed', async t => {
   const baseQuery = {
+    ...DEFAULT_CALCULATE_PARAMS,
     owner_status: OwnerStatus.Homeowner,
     tax_filing: FilingStatus.Single,
     household_size: 1,
     include_beta_states: true,
-  };
+  } satisfies Partial<CalculateParams>;
   const zeroTax = calculateIncentives(...LOCATION_AND_AMIS['02130'], {
     ...baseQuery,
     household_income: 0,
@@ -460,11 +472,12 @@ test('filters tax credits if zero tax owed', async t => {
 
 test('skips tax filing dependent items without filing status', async t => {
   const baseQuery = {
+    ...DEFAULT_CALCULATE_PARAMS,
     owner_status: OwnerStatus.Homeowner,
     household_income: 70000,
     household_size: 1,
     include_beta_states: true,
-  };
+  } satisfies Partial<CalculateParams>;
 
   // Income + single status is low enough for NJ-7, a new-EV incentive. But its
   // thresholds are filing-status-dependent.
@@ -485,6 +498,7 @@ test('skips tax filing dependent items without filing status', async t => {
 
 test('correctly sorts incentives', async t => {
   const data = calculateIncentives(...LOCATION_AND_AMIS['07083'], {
+    ...DEFAULT_CALCULATE_PARAMS,
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
     tax_filing: FilingStatus.Single,
@@ -551,13 +565,14 @@ test('correct filtering of incentives with geography', async t => {
   };
 
   const request = {
+    ...DEFAULT_CALCULATE_PARAMS,
     owner_status: OwnerStatus.Homeowner,
     household_income: 120000,
     tax_filing: FilingStatus.Single,
     household_size: 1,
     authority_types: [AuthorityType.County],
     include_beta_states: true,
-  };
+  } satisfies Partial<CalculateParams>;
   const shouldFind = calculateStateIncentives(
     {
       state: 'CO',
@@ -611,6 +626,7 @@ test('correct filtering of incentives with geography', async t => {
 
 test('correctly matches geo groups', async t => {
   const baseArgs = {
+    ...DEFAULT_CALCULATE_PARAMS,
     include_beta_states: true,
     owner_status: OwnerStatus.Homeowner,
     household_income: 0,
@@ -658,6 +674,7 @@ test('correctly matches geo groups', async t => {
 
 test('exclude federal energy audit incentive for MA', async t => {
   const args = {
+    ...DEFAULT_CALCULATE_PARAMS,
     owner_status: OwnerStatus.Homeowner,
     household_income: 40000,
     tax_filing: FilingStatus.Single,
@@ -677,6 +694,7 @@ test('exclude federal energy audit incentive for MA', async t => {
 
 test('includes RA heat pump program for Santa Clara county', async t => {
   const args = {
+    ...DEFAULT_CALCULATE_PARAMS,
     owner_status: OwnerStatus.Homeowner,
     household_income: 40000,
     tax_filing: FilingStatus.Single,
