@@ -3,7 +3,18 @@ import { AuthoritiesByType, AuthorityType } from '../../src/data/authorities';
 import { Programs } from '../../src/data/programs';
 import { GeographyType, ResolvedLocation } from '../../src/lib/location';
 import getProgramsForLocation from '../../src/lib/programs-for-location';
-import { APIProgramsResponse } from '../../src/schemas/v1/programs';
+import {
+  APIProgramsRequest,
+  APIProgramsResponse,
+} from '../../src/schemas/v1/programs';
+
+// `language` is optional to callers but has a schema `default`, so
+// json-schema-to-ts infers it as required on APIProgramsRequest. Spread this
+// into test fixtures to cover it with the same default AJV would apply at
+// runtime.
+const DEFAULT_PROGRAMS_REQUEST = {
+  language: 'en',
+} satisfies Partial<APIProgramsRequest>;
 
 const mockPrograms: Programs = {
   ny_cityProgram: {
@@ -124,6 +135,7 @@ const location: ResolvedLocation = {
 
 test('get all programs for location', async t => {
   const request = {
+    ...DEFAULT_PROGRAMS_REQUEST,
     utility: 'mock-utility-authority',
     gas_utility: 'mock-gas-utility-authority',
     zip: '12604',
@@ -149,6 +161,7 @@ test('get all program with authority types', async t => {
     AuthorityType.GasUtility,
   ];
   const request = {
+    ...DEFAULT_PROGRAMS_REQUEST,
     utility: 'mock-utility-authority',
     gas_utility: 'mock-gas-utility-authority',
     zip: '12604',
@@ -168,6 +181,7 @@ test('get all program with authority types', async t => {
 
 test('get city programs for location', async t => {
   const request = {
+    ...DEFAULT_PROGRAMS_REQUEST,
     authority_types: [AuthorityType.City],
     zip: '12604',
   };
@@ -186,6 +200,7 @@ test('get city programs for location', async t => {
 
 test('get state programs for location', async t => {
   const request = {
+    ...DEFAULT_PROGRAMS_REQUEST,
     authority_types: [AuthorityType.State],
     zip: '12604',
   };
@@ -204,6 +219,7 @@ test('get state programs for location', async t => {
 
 test('get county programs for location', async t => {
   const request = {
+    ...DEFAULT_PROGRAMS_REQUEST,
     authority_types: [AuthorityType.County],
     zip: '12604',
   };
@@ -225,6 +241,7 @@ test('get county programs for location', async t => {
 
 test('get electric utility programs for location', async t => {
   const request = {
+    ...DEFAULT_PROGRAMS_REQUEST,
     zip: '12604',
     utility: 'mock-utility-authority',
     authority_types: [AuthorityType.Utility],
@@ -248,6 +265,7 @@ test('get electric utility programs for location', async t => {
 
 test('get gas utility programs for location', async t => {
   const request = {
+    ...DEFAULT_PROGRAMS_REQUEST,
     zip: '12604',
     gas_utility: 'mock-gas-utility-authority',
     authority_types: [AuthorityType.GasUtility],
@@ -270,10 +288,11 @@ test('get gas utility programs for location', async t => {
 
 test('returns translated strings', async t => {
   const request = {
+    ...DEFAULT_PROGRAMS_REQUEST,
     authority_types: [AuthorityType.City],
     zip: '12604',
-    language: 'es' as const,
-  };
+    language: 'es',
+  } satisfies APIProgramsRequest;
   const resp: APIProgramsResponse = getProgramsForLocation(
     location,
     request,
@@ -288,6 +307,7 @@ test('returns translated strings', async t => {
 
 test('fails when utility param missing', async t => {
   const request = {
+    ...DEFAULT_PROGRAMS_REQUEST,
     zip: '12604',
     authority_types: [AuthorityType.Utility],
     utility: undefined,
@@ -299,6 +319,7 @@ test('fails when utility param missing', async t => {
 
 test('fails when gas utility param missing', async t => {
   const request = {
+    ...DEFAULT_PROGRAMS_REQUEST,
     zip: '12604',
     authority_types: [AuthorityType.GasUtility],
     gas_utility: undefined,

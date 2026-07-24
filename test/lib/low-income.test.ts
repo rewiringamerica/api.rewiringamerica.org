@@ -4,8 +4,10 @@ import { OwnerStatus } from '../../src/data/types/owner-status';
 import { AMIAndEVCreditEligibility } from '../../src/lib/ami-evcredit-calculation';
 import { GeographyType, ResolvedLocation } from '../../src/lib/location';
 import { isLowIncome } from '../../src/lib/low-income';
+import { DEFAULT_CALCULATE_PARAMS } from '../mocks/calculate-params';
 
 const BASE_PARAMS = {
+  ...DEFAULT_CALCULATE_PARAMS,
   zip: '00000',
   owner_status: OwnerStatus.Homeowner,
 } as const;
