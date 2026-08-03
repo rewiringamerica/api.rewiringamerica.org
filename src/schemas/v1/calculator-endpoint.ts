@@ -205,7 +205,8 @@ criteria in the request parameters.`,
 } as const;
 
 export type APICalculatorRequest = FromSchema<
-  typeof API_CALCULATOR_REQUEST_SCHEMA
+  typeof API_CALCULATOR_REQUEST_SCHEMA,
+  { keepDefaultedPropertiesOptional: true }
 >;
 export type APICalculatorResponse = FromSchema<
   typeof API_CALCULATOR_RESPONSE_SCHEMA,

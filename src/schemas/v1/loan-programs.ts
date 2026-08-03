@@ -146,7 +146,8 @@ export const API_LOAN_PROGRAMS_ENDPOINT_SCHEMA = {
 } as const;
 
 export type APILoanProgramsRequest = FromSchema<
-  typeof API_LOAN_PROGRAMS_REQUEST_SCHEMA
+  typeof API_LOAN_PROGRAMS_REQUEST_SCHEMA,
+  { keepDefaultedPropertiesOptional: true }
 >;
 export type APILoanProgramsResponse = FromSchema<
   typeof API_LOAN_PROGRAMS_RESPONSE_SCHEMA
