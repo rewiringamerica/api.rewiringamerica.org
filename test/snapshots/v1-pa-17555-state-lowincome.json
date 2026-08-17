@@ -11,6 +11,9 @@
     },
     "pa-pennsylvania-department-of-environmental-protection": {
       "name": "Pennsylvania Department of Environmental Protection"
+    },
+    "pa-quit-carbon-pa": {
+      "name": "QuitCarbon-PA"
     }
   },
   "coverage": {
@@ -20,14 +23,12 @@
   "location": {
     "state": "PA"
   },
-  "data_partners": {},
   "incentives": [
     {
       "payment_methods": [
         "assistance_program"
       ],
       "authority_type": "state",
-      "authority": "pa-pennsylvania-department-of-community-and-economic-development",
       "program": "Pennsylvania Weatherization Assistance Program",
       "program_url": "https://dced.pa.gov/programs/weatherization-assistance-program-wap/",
       "items": [
@@ -41,6 +42,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "pa-pennsylvania-department-of-community-and-economic-development",
       "short_description": "Free energy audit and weatherization services for income-qualified residents. Average value per household is $7,669 depending on results."
     },
     {
@@ -48,7 +50,6 @@
         "assistance_program"
       ],
       "authority_type": "other",
-      "authority": "pa-first-energy",
       "program": "First Energy WARM Program",
       "program_url": "https://www.firstenergycorp.com/save_energy/save_energy_pennsylvania/met_ed/for_your_home/warm-info.html",
       "items": [
@@ -62,6 +63,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "pa-first-energy",
       "short_description": "Free energy audit and weatherization services for income-qualified residents."
     },
     {
@@ -69,7 +71,6 @@
         "pos_rebate"
       ],
       "authority_type": "other",
-      "authority": "pa-first-energy",
       "program": "Residential Products Rebate Program",
       "program_url": "https://rebates.energysavepa.com/",
       "items": [
@@ -82,6 +83,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "pa-first-energy",
       "start_date": "2021-06-01",
       "end_date": "2026-05-31",
       "short_description": "$500 rebate for ENERGY STAR® certified heat pump water heaters."
@@ -91,7 +93,6 @@
         "pos_rebate"
       ],
       "authority_type": "other",
-      "authority": "pa-first-energy",
       "program": "Residential Products Rebate Program",
       "program_url": "https://rebates.energysavepa.com/",
       "items": [
@@ -105,6 +106,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "pa-first-energy",
       "start_date": "2021-06-01",
       "end_date": "2026-05-31",
       "short_description": "$75 rebate for ENERGY STAR® certified smart thermostats for income-qualified residents."
@@ -114,7 +116,6 @@
         "rebate"
       ],
       "authority_type": "state",
-      "authority": "pa-pennsylvania-department-of-environmental-protection",
       "program": "Alternative Fuel Vehicle Rebates",
       "program_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
       "items": [
@@ -130,6 +131,7 @@
         "homeowner",
         "renter"
       ],
+      "authority": "pa-pennsylvania-department-of-environmental-protection",
       "start_date": "2024-09-01",
       "end_date": "2026-06-30",
       "short_description": "Income-qualified rebate for purchase or lease of new electric vehicles. $4,000 for battery EVs; $2,500 for plug-in hybrid EVs."
@@ -139,7 +141,6 @@
         "rebate"
       ],
       "authority_type": "state",
-      "authority": "pa-pennsylvania-department-of-environmental-protection",
       "program": "Alternative Fuel Vehicle Rebates",
       "program_url": "https://www.dep.pa.gov/Citizens/GrantsLoansRebates/Alternative-Fuels-Incentive-Grant/pages/alternative-fuel-vehicles.aspx",
       "items": [
@@ -155,6 +156,7 @@
         "homeowner",
         "renter"
       ],
+      "authority": "pa-pennsylvania-department-of-environmental-protection",
       "start_date": "2024-09-01",
       "end_date": "2025-06-30",
       "short_description": "Income-qualified rebate for purchase of eligible used electric vehicles. $4,000 rebate for battery EVs; $2,500 rebate for plug-in hybrid EVs."
@@ -164,7 +166,6 @@
         "rebate"
       ],
       "authority_type": "other",
-      "authority": "pa-first-energy",
       "program": "Residential Products Rebate Program",
       "program_url": "https://rebates.energysavepa.com/",
       "items": [
@@ -177,6 +178,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "pa-first-energy",
       "start_date": "2021-06-01",
       "end_date": "2026-05-31",
       "short_description": "$650 rebate for ENERGY STAR® certified geothermal heat pumps."
@@ -186,7 +188,6 @@
         "rebate"
       ],
       "authority_type": "other",
-      "authority": "pa-first-energy",
       "program": "Residential Products Rebate Program",
       "program_url": "https://rebates.energysavepa.com/",
       "items": [
@@ -201,6 +202,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "pa-first-energy",
       "start_date": "2021-06-01",
       "end_date": "2026-05-31",
       "short_description": "Up to $500 rebate for ENERGY STAR® certified air source heat pumps meeting qualifications. Rebate value depends on efficiency."
@@ -210,7 +212,6 @@
         "rebate"
       ],
       "authority_type": "other",
-      "authority": "pa-first-energy",
       "program": "Residential Products Rebate Program",
       "program_url": "https://rebates.energysavepa.com/",
       "items": [
@@ -223,6 +224,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "pa-first-energy",
       "start_date": "2021-06-01",
       "end_date": "2026-05-31",
       "short_description": "$400 rebate for ENERGY STAR® certified air-to-water heat pumps."
@@ -232,7 +234,48 @@
         "rebate"
       ],
       "authority_type": "other",
-      "authority": "pa-first-energy",
+      "program": "QuitCarbon Rebate",
+      "program_url": "https://www.quitcarbon.com/blog/quitcarbonrebate",
+      "items": [
+        "air_sealing",
+        "air_to_water_heat_pump",
+        "attic_or_roof_insulation",
+        "basement_insulation",
+        "battery_storage_installation",
+        "crawlspace_insulation",
+        "duct_replacement",
+        "duct_sealing",
+        "ducted_heat_pump",
+        "ductless_heat_pump",
+        "electric_panel",
+        "electric_stove",
+        "electric_vehicle_charger",
+        "electric_wiring",
+        "floor_insulation",
+        "geothermal_heating_installation",
+        "heat_pump_water_heater",
+        "other_heat_pump",
+        "other_insulation",
+        "other_weatherization",
+        "rooftop_solar_installation",
+        "wall_insulation"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 300,
+        "maximum": 300
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "authority": "pa-quit-carbon-pa",
+      "short_description": "You can save up to $300 by working with QuitCarbon and a QuitCarbon-referred contractor or retailer on your home's clean energy upgrades."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "other",
       "program": "Residential Products Rebate Program",
       "program_url": "https://rebates.energysavepa.com/",
       "items": [
@@ -245,6 +288,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "pa-first-energy",
       "start_date": "2021-06-01",
       "end_date": "2026-05-31",
       "short_description": "$200 rebate for ENERGY STAR® certified ductless mini-split AC."
@@ -254,7 +298,6 @@
         "rebate"
       ],
       "authority_type": "other",
-      "authority": "pa-first-energy",
       "program": "Residential Products Rebate Program",
       "program_url": "https://rebates.energysavepa.com/",
       "items": [
@@ -267,6 +310,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "pa-first-energy",
       "start_date": "2021-06-01",
       "end_date": "2026-05-31",
       "short_description": "$200 rebate for ENERGY STAR® certified ductless mini-split heat pump."
@@ -276,7 +320,6 @@
         "rebate"
       ],
       "authority_type": "other",
-      "authority": "pa-first-energy",
       "program": "Residential Products Rebate Program",
       "program_url": "https://rebates.energysavepa.com/",
       "items": [
@@ -290,9 +333,11 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "pa-first-energy",
       "start_date": "2021-06-01",
       "end_date": "2026-05-31",
       "short_description": "$75 rebate for ENERGY STAR® certified clothes dryer for income-qualified residents."
     }
-  ]
+  ],
+  "data_partners": {}
 }

@@ -22,14 +22,12 @@
   "location": {
     "state": "RI"
   },
-  "data_partners": {},
   "incentives": [
     {
       "payment_methods": [
         "assistance_program"
       ],
       "authority_type": "state",
-      "authority": "ri-rewiring-america",
       "program": "Rhode Island Heat Pump Program",
       "program_url": "https://homes.rewiringamerica.org/ri",
       "items": [
@@ -42,6 +40,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "ri-rewiring-america",
       "end_date": "2025-11-30",
       "short_description": "Up to 30% discount and assistance applying for further rebates on a ductless heat pump install."
     },
@@ -50,7 +49,6 @@
         "rebate"
       ],
       "authority_type": "state",
-      "authority": "ri-oer",
       "program": "RI Office of Energy Resources Clean Heat RI",
       "program_url": "https://cleanheatri.com/resources/incentives/",
       "items": [
@@ -67,6 +65,7 @@
         "homeowner",
         "renter"
       ],
+      "authority": "ri-oer",
       "start_date": "2025-07-21",
       "short_description": "60% rebate for a heat pump system, up to $11,500, for income-qualified customers currently using natural gas, propane, or oil. "
     },
@@ -75,7 +74,6 @@
         "rebate"
       ],
       "authority_type": "state",
-      "authority": "ri-oer",
       "program": "RI Office of Energy Resources DRIVE EV",
       "program_url": "https://drive.ri.gov/ev-programs/drive-ev",
       "items": [
@@ -90,6 +88,7 @@
         "homeowner",
         "renter"
       ],
+      "authority": "ri-oer",
       "short_description": "Up to $3,000 rebate for purchase or lease of a new EV from a licensed Rhode Island or qualified out-of-state dealership. First-come, first-served."
     },
     {
@@ -97,7 +96,6 @@
         "rebate"
       ],
       "authority_type": "state",
-      "authority": "ri-oer",
       "program": "RI Office of Energy Resources DRIVE+",
       "program_url": "https://drive.ri.gov/ev-programs/drive-plus",
       "items": [
@@ -112,6 +110,7 @@
         "homeowner",
         "renter"
       ],
+      "authority": "ri-oer",
       "short_description": "Additional $1,500 back after purchase or lease of a new EV from a licensed Rhode Island or qualified out-of-state dealership for LIHEAP-qualifiers."
     },
     {
@@ -121,7 +120,6 @@
       "authority_type": "federal",
       "program": "Federal Clean Vehicle Credit (30D)",
       "program_url": "https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after",
-      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/30d-new-ev-tax-incentive",
       "items": [
         "new_electric_vehicle"
       ],
@@ -133,6 +131,7 @@
         "homeowner",
         "renter"
       ],
+      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/30d-new-ev-tax-incentive",
       "start_date": "2023",
       "end_date": "2025-09-30",
       "short_description": "Tax credit provided as an upfront rebate for new EVs with a maximum MSRP of $55,000 and vans, pickup trucks, and SUVs with a maximum MSRP of $80,000."
@@ -144,7 +143,6 @@
       "authority_type": "federal",
       "program": "Federal Energy Efficient Home Improvement Credit (25C)",
       "program_url": "https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit",
-      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25c-heat-pump-tax-credits",
       "items": [
         "air_to_water_heat_pump",
         "ducted_heat_pump",
@@ -158,9 +156,11 @@
         "homeowner",
         "renter"
       ],
+      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25c-heat-pump-tax-credits",
       "start_date": "2023",
       "end_date": "2025-12-31",
       "short_description": "30% tax credit (up to $2,000) for heat pumps and heat pump water heaters."
     }
-  ]
+  ],
+  "data_partners": {}
 }

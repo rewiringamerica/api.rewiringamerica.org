@@ -17,26 +17,14 @@
   "location": {
     "state": "VT"
   },
-  "data_partners": {
-    "vt-efficiency-vermont": {
-      "name": "Efficiency Vermont",
-      "logo": {
-        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/vt-efficiency-vermont-color.png",
-        "width": 300,
-        "height": 200
-      }
-    }
-  },
   "incentives": [
     {
       "payment_methods": [
         "pos_rebate"
       ],
       "authority_type": "state",
-      "authority": "vt-state-of-vermont",
       "program": "MileageSmart Used High Efficiency Vehicle Incentive Program",
       "program_url": "https://www.driveelectricvt.com/incentives/vermont-state-incentives#mileagesmart",
-      "paused": true,
       "items": [
         "used_electric_vehicle"
       ],
@@ -49,6 +37,8 @@
         "homeowner",
         "renter"
       ],
+      "authority": "vt-state-of-vermont",
+      "paused": true,
       "end_date": "2025-12-31",
       "short_description": "25% of the upfront cost of a used high-efficiency vehicle, up to $5,000, for low and moderate income car buyers."
     },
@@ -57,7 +47,6 @@
         "pos_rebate"
       ],
       "authority_type": "state",
-      "authority": "vt-state-of-vermont",
       "program": "Drive Electric Vermont",
       "program_url": "https://www.driveelectricvt.com/Media/Default/docs/purchase-incentives/vermont-new-pev-incentive-form.pdf?refresh",
       "items": [
@@ -73,6 +62,7 @@
         "homeowner",
         "renter"
       ],
+      "authority": "vt-state-of-vermont",
       "end_date": "2025-12-31",
       "short_description": "Incentive up to $5,000 for a new electric vehicle, or up to $3,000 for a new plug-in hybrid vehicle."
     },
@@ -81,7 +71,6 @@
         "rebate"
       ],
       "authority_type": "utility",
-      "authority": "vt-vermont-electric-cooperative",
       "program": "Vermont Electric Co-op Energy Transformation Incentives",
       "program_url": "https://vermontelectric.coop/energy-transformation-programs",
       "items": [
@@ -97,6 +86,7 @@
         "homeowner",
         "renter"
       ],
+      "authority": "vt-vermont-electric-cooperative",
       "end_date": "2025-12-31",
       "short_description": "$500 for purchasing a new all-electric vehicle, or $250 for a plug-in hybrid."
     },
@@ -105,7 +95,6 @@
         "rebate"
       ],
       "authority_type": "utility",
-      "authority": "vt-vermont-electric-cooperative",
       "program": "Vermont Electric Co-op Energy Transformation Incentives",
       "program_url": "https://vermontelectric.coop/energy-transformation-programs",
       "items": [
@@ -120,6 +109,7 @@
         "homeowner",
         "renter"
       ],
+      "authority": "vt-vermont-electric-cooperative",
       "end_date": "2025-12-31",
       "short_description": "$500 for purchasing a used all-electric vehicle, or $250 for a plug-in hybrid."
     },
@@ -128,7 +118,6 @@
         "rebate"
       ],
       "authority_type": "utility",
-      "authority": "vt-vermont-electric-cooperative",
       "program": "Vermont Electric Co-op Energy Transformation Incentives",
       "program_url": "https://vermontelectric.coop/energy-transformation-programs",
       "items": [
@@ -143,6 +132,7 @@
         "homeowner",
         "renter"
       ],
+      "authority": "vt-vermont-electric-cooperative",
       "end_date": "2025-12-31",
       "short_description": "An extra $500 for purchasing a new all-electric vehicle or plug-in hybrid, for income-qualified customers."
     },
@@ -153,7 +143,6 @@
       "authority_type": "federal",
       "program": "Federal Clean Vehicle Credit (30D)",
       "program_url": "https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after",
-      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/30d-new-ev-tax-incentive",
       "items": [
         "new_electric_vehicle"
       ],
@@ -165,6 +154,7 @@
         "homeowner",
         "renter"
       ],
+      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/30d-new-ev-tax-incentive",
       "start_date": "2023",
       "end_date": "2025-09-30",
       "short_description": "Tax credit provided as an upfront rebate for new EVs with a maximum MSRP of $55,000 and vans, pickup trucks, and SUVs with a maximum MSRP of $80,000."
@@ -176,7 +166,6 @@
       "authority_type": "federal",
       "program": "Federal Credit for Previously-Owned Clean Vehicles (25E)",
       "program_url": "https://www.irs.gov/credits-deductions/used-clean-vehicle-credit",
-      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25e-used-ev-tax-incentive",
       "items": [
         "used_electric_vehicle"
       ],
@@ -188,9 +177,20 @@
         "homeowner",
         "renter"
       ],
+      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25e-used-ev-tax-incentive",
       "start_date": "2023",
       "end_date": "2025-09-30",
       "short_description": "30% tax credit (up to $4,000) for a used EV of up to 14,000 lbs, with an MSRP of up to $25,000."
     }
-  ]
+  ],
+  "data_partners": {
+    "vt-efficiency-vermont": {
+      "name": "Efficiency Vermont",
+      "logo": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/vt-efficiency-vermont-color.png",
+        "width": 300,
+        "height": 200
+      }
+    }
+  }
 }

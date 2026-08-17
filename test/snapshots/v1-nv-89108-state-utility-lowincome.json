@@ -14,23 +14,12 @@
   "location": {
     "state": "NV"
   },
-  "data_partners": {
-    "nv-nevada-clean-energy-fund": {
-      "name": "Nevada Clean Energy Fund",
-      "logo": {
-        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/nv-nevada-clean-energy-fund.png",
-        "width": 300,
-        "height": 200
-      }
-    }
-  },
   "incentives": [
     {
       "payment_methods": [
         "assistance_program"
       ],
       "authority_type": "utility",
-      "authority": "nv-nv-energy",
       "program": "NV Energy Qualified Appliance Replacement program",
       "program_url": "https://www.nvenergy.com/save-with-powershift/qualified-appliance-replacement",
       "items": [
@@ -44,6 +33,7 @@
         "homeowner",
         "renter"
       ],
+      "authority": "nv-nv-energy",
       "short_description": "Free replacement of electric dryers (10 years or older) when you meet income eligibility requirements."
     },
     {
@@ -51,7 +41,6 @@
         "assistance_program"
       ],
       "authority_type": "utility",
-      "authority": "nv-nv-energy",
       "program": "NV Energy Residential Smart Thermostat Program",
       "program_url": "https://www.nvenergy.com/save-with-powershift/smart-thermostat",
       "items": [
@@ -64,6 +53,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "nv-nv-energy",
       "short_description": "Receive a free smart thermostat valued at $300 with free professional installation."
     },
     {
@@ -71,7 +61,6 @@
         "pos_rebate"
       ],
       "authority_type": "utility",
-      "authority": "nv-nv-energy",
       "program": "NV Energy Residential Air Conditioning",
       "program_url": "https://www.nvenergy.com/save-with-powershift/home-energy-saver/residential-ac-and-mid-stream/residential-air-conditioning",
       "items": [
@@ -85,6 +74,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "nv-nv-energy",
       "short_description": "Receive up to $2,500 instant rebate from qualifying distributors when you replace your old air conditioning system with higher efficiency equipment."
     },
     {
@@ -92,7 +82,6 @@
         "pos_rebate"
       ],
       "authority_type": "utility",
-      "authority": "nv-nv-energy",
       "program": "NV Energy Heat Pump Water Heating",
       "program_url": "https://www.nvenergy.com/save-with-powershift/home-energy-saver/residential-ac-and-mid-stream/water-heating",
       "items": [
@@ -105,6 +94,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "nv-nv-energy",
       "short_description": "$400 upfront rebate for ENERGY STAR certified heat pump water heaters. Redeemable at Lowe's. Limit 1 per customer."
     },
     {
@@ -112,7 +102,6 @@
         "pos_rebate"
       ],
       "authority_type": "utility",
-      "authority": "nv-nv-energy",
       "program": "NV Energy Residential Appliances and Products",
       "program_url": "https://www.nvenergy.com/save-with-powershift/home-energy-saver/retail-appliances-and-products",
       "items": [
@@ -126,6 +115,7 @@
         "homeowner",
         "renter"
       ],
+      "authority": "nv-nv-energy",
       "short_description": "$200 upfront rebate for ENERGY STAR certified heat pump dryers. Redeemable at Home Depot and participating retailers. Limit 1 per customer."
     },
     {
@@ -133,7 +123,6 @@
         "pos_rebate"
       ],
       "authority_type": "utility",
-      "authority": "nv-nv-energy",
       "program": "NV Energy Residential Appliances and Products",
       "program_url": "https://www.nvenergy.com/save-with-powershift/home-energy-saver/retail-appliances-and-products",
       "items": [
@@ -147,7 +136,18 @@
         "homeowner",
         "renter"
       ],
+      "authority": "nv-nv-energy",
       "short_description": "$50 upfront rebate for ENERGY STAR certified electric dryers. Redeemable at Home Depot and participating retailers. Limit 1 per customer."
     }
-  ]
+  ],
+  "data_partners": {
+    "nv-nevada-clean-energy-fund": {
+      "name": "Nevada Clean Energy Fund",
+      "logo": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/nv-nevada-clean-energy-fund.png",
+        "width": 300,
+        "height": 200
+      }
+    }
+  }
 }

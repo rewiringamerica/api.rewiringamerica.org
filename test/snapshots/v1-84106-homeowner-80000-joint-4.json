@@ -2,7 +2,11 @@
   "is_under_80_ami": true,
   "is_under_150_ami": true,
   "is_over_150_ami": false,
-  "authorities": {},
+  "authorities": {
+    "ut-quit-carbon-ut": {
+      "name": "QuitCarbon-UT"
+    }
+  },
   "coverage": {
     "state": "UT",
     "utility": null
@@ -10,17 +14,49 @@
   "location": {
     "state": "UT"
   },
-  "data_partners": {
-    "ut-bright-action": {
-      "name": "Bright Action",
-      "logo": {
-        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/bright-action.png",
-        "width": 300,
-        "height": 200
-      }
-    }
-  },
   "incentives": [
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "other",
+      "program": "QuitCarbon Rebate",
+      "program_url": "https://www.quitcarbon.com/blog/quitcarbonrebate",
+      "items": [
+        "air_sealing",
+        "air_to_water_heat_pump",
+        "attic_or_roof_insulation",
+        "basement_insulation",
+        "battery_storage_installation",
+        "crawlspace_insulation",
+        "duct_replacement",
+        "duct_sealing",
+        "ducted_heat_pump",
+        "ductless_heat_pump",
+        "electric_panel",
+        "electric_stove",
+        "electric_vehicle_charger",
+        "electric_wiring",
+        "floor_insulation",
+        "geothermal_heating_installation",
+        "heat_pump_water_heater",
+        "other_heat_pump",
+        "other_insulation",
+        "other_weatherization",
+        "rooftop_solar_installation",
+        "wall_insulation"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 300,
+        "maximum": 300
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "authority": "ut-quit-carbon-ut",
+      "short_description": "You can save up to $300 by working with QuitCarbon and a QuitCarbon-referred contractor or retailer on your home's clean energy upgrades."
+    },
     {
       "payment_methods": [
         "tax_credit"
@@ -28,7 +64,6 @@
       "authority_type": "federal",
       "program": "Federal Residential Clean Energy Credit (25D)",
       "program_url": "https://www.irs.gov/credits-deductions/residential-clean-energy-credit",
-      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25d-battery-storage-tax-credit",
       "items": [
         "battery_storage_installation"
       ],
@@ -40,6 +75,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25d-battery-storage-tax-credit",
       "start_date": "2023",
       "end_date": "2025-12-31",
       "short_description": "30% tax credit (uncapped) for battery storage systems, worth $4,800 on average."
@@ -51,7 +87,6 @@
       "authority_type": "federal",
       "program": "Federal Residential Clean Energy Credit (25D)",
       "program_url": "https://www.irs.gov/credits-deductions/residential-clean-energy-credit",
-      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25d-geothermal-heating-and-cooling-tax-credit",
       "items": [
         "geothermal_heating_installation"
       ],
@@ -63,6 +98,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25d-geothermal-heating-and-cooling-tax-credit",
       "start_date": "2022",
       "end_date": "2025-12-31",
       "short_description": "30% tax credit (uncapped) for geothermal install. Worth $12,000 on average."
@@ -74,7 +110,6 @@
       "authority_type": "federal",
       "program": "Federal Residential Clean Energy Credit (25D)",
       "program_url": "https://www.irs.gov/credits-deductions/residential-clean-energy-credit",
-      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25d-rooftop-solar-tax-credit",
       "items": [
         "rooftop_solar_installation"
       ],
@@ -85,6 +120,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25d-rooftop-solar-tax-credit",
       "start_date": "2022",
       "end_date": "2025-12-31",
       "short_description": "30% tax credit for rooftop solar (uncapped, $4,600 avg.); panel upgrade too. Community/leased solar may get 10-20% bonuses for low-income areas."
@@ -96,7 +132,6 @@
       "authority_type": "federal",
       "program": "Federal Residential Clean Energy Credit (25D)",
       "program_url": "https://www.irs.gov/credits-deductions/residential-clean-energy-credit",
-      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25d-rooftop-solar-tax-credit",
       "items": [
         "solar_water_heater"
       ],
@@ -107,6 +142,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25d-rooftop-solar-tax-credit",
       "start_date": "2022",
       "end_date": "2025-12-31",
       "short_description": "30% tax credit for solar water heater (uncapped)."
@@ -118,7 +154,6 @@
       "authority_type": "federal",
       "program": "Federal Clean Vehicle Credit (30D)",
       "program_url": "https://www.irs.gov/credits-deductions/credits-for-new-clean-vehicles-purchased-in-2023-or-after",
-      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/30d-new-ev-tax-incentive",
       "items": [
         "new_electric_vehicle"
       ],
@@ -130,6 +165,7 @@
         "homeowner",
         "renter"
       ],
+      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/30d-new-ev-tax-incentive",
       "start_date": "2023",
       "end_date": "2025-09-30",
       "short_description": "Tax credit provided as an upfront rebate for new EVs with a maximum MSRP of $55,000 and vans, pickup trucks, and SUVs with a maximum MSRP of $80,000."
@@ -141,7 +177,6 @@
       "authority_type": "federal",
       "program": "Federal Credit for Previously-Owned Clean Vehicles (25E)",
       "program_url": "https://www.irs.gov/credits-deductions/used-clean-vehicle-credit",
-      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25e-used-ev-tax-incentive",
       "items": [
         "used_electric_vehicle"
       ],
@@ -153,6 +188,7 @@
         "homeowner",
         "renter"
       ],
+      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25e-used-ev-tax-incentive",
       "start_date": "2023",
       "end_date": "2025-09-30",
       "short_description": "30% tax credit (up to $4,000) for a used EV of up to 14,000 lbs, with an MSRP of up to $25,000."
@@ -164,7 +200,6 @@
       "authority_type": "federal",
       "program": "Federal Energy Efficient Home Improvement Credit (25C)",
       "program_url": "https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit",
-      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25c-heat-pump-tax-credits",
       "items": [
         "air_to_water_heat_pump",
         "ducted_heat_pump",
@@ -178,6 +213,7 @@
         "homeowner",
         "renter"
       ],
+      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25c-heat-pump-tax-credits",
       "start_date": "2023",
       "end_date": "2025-12-31",
       "short_description": "30% tax credit (up to $2,000) for heat pumps and heat pump water heaters."
@@ -189,7 +225,6 @@
       "authority_type": "federal",
       "program": "Federal Energy Efficient Home Improvement Credit (25C)",
       "program_url": "https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit",
-      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25c-heat-pump-water-heater-tax-credits",
       "items": [
         "heat_pump_water_heater"
       ],
@@ -201,6 +236,7 @@
         "homeowner",
         "renter"
       ],
+      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25c-heat-pump-water-heater-tax-credits",
       "start_date": "2023",
       "end_date": "2025-12-31",
       "short_description": "30% tax credit (up to $2,000) for heat pumps and heat pump water heaters."
@@ -212,7 +248,6 @@
       "authority_type": "federal",
       "program": "Federal Energy Efficient Home Improvement Credit (25C)",
       "program_url": "https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit",
-      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25c-weatherization-tax-credits",
       "items": [
         "air_sealing",
         "door_replacement",
@@ -227,6 +262,7 @@
         "homeowner",
         "renter"
       ],
+      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25c-weatherization-tax-credits",
       "start_date": "2023",
       "end_date": "2025-12-31",
       "short_description": "30% tax credit (up to $1,200) for weatherization projects: insulation, air sealing, doors, windows."
@@ -238,7 +274,6 @@
       "authority_type": "federal",
       "program": "Federal Energy Efficient Home Improvement Credit (25C)",
       "program_url": "https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit",
-      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25c-electrical-panel-tax-credits",
       "items": [
         "electric_panel"
       ],
@@ -250,6 +285,7 @@
         "homeowner",
         "renter"
       ],
+      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25c-electrical-panel-tax-credits",
       "start_date": "2023",
       "end_date": "2025-12-31",
       "short_description": "30% tax credit (up to $600) for electrical panel upgrade when done with another 25C or 25D upgrade."
@@ -261,7 +297,6 @@
       "authority_type": "federal",
       "program": "Federal Energy Efficient Home Improvement Credit (25C)",
       "program_url": "https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit",
-      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25c-weatherization-tax-credits",
       "items": [
         "energy_audit"
       ],
@@ -273,9 +308,20 @@
         "homeowner",
         "renter"
       ],
+      "more_info_url": "https://homes.rewiringamerica.org/federal-incentives/25c-weatherization-tax-credits",
       "start_date": "2023",
       "end_date": "2025-12-31",
       "short_description": "Tax credit of up to $150 for an energy audit."
     }
-  ]
+  ],
+  "data_partners": {
+    "ut-bright-action": {
+      "name": "Bright Action",
+      "logo": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/bright-action.png",
+        "width": 300,
+        "height": 200
+      }
+    }
+  }
 }
