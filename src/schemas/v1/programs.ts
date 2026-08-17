@@ -147,7 +147,10 @@ export const API_PROGRAMS_REQUEST_SCHEMA = {
   },
 } as const;
 
-export type APIProgramsRequest = FromSchema<typeof API_PROGRAMS_REQUEST>;
+export type APIProgramsRequest = FromSchema<
+  typeof API_PROGRAMS_REQUEST,
+  { keepDefaultedPropertiesOptional: true }
+>;
 export type APIProgramsResponse = FromSchema<
   typeof API_PROGRAMS_RESPONSE_SCHEMA
 >;
