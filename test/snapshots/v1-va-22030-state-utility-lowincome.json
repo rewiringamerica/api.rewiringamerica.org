@@ -14,14 +14,12 @@
   "location": {
     "state": "VA"
   },
-  "data_partners": {},
   "incentives": [
     {
       "payment_methods": [
         "assistance_program"
       ],
       "authority_type": "utility",
-      "authority": "va-dominion-energy",
       "program": "Income and Age Qualifying Energy Efficiency Program",
       "program_url": "https://www.dominionenergy.com/virginia/save-energy/income-and-age-qualifying-home-improvements",
       "items": [
@@ -35,6 +33,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "va-dominion-energy",
       "short_description": "Receive no cost energy efficient weatherization upgrades for qualified income and age levels by qualified service providers."
     },
     {
@@ -42,7 +41,6 @@
         "pos_rebate"
       ],
       "authority_type": "utility",
-      "authority": "va-dominion-energy",
       "program": "Water Energy Savings Program",
       "program_url": "https://www.domsavings.com/home-program/water-energy-rebate",
       "items": [
@@ -56,6 +54,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "va-dominion-energy",
       "start_date": "2022",
       "short_description": "Up to $400 upfront rebate for installing a heat pump water heater above 40 gallons in capacity."
     },
@@ -64,7 +63,6 @@
         "rebate"
       ],
       "authority_type": "utility",
-      "authority": "va-dominion-energy",
       "program": "EV Charger Rewards",
       "program_url": "https://www.dominionenergy.com/virginia/save-energy/ev-charger-rewards",
       "items": [
@@ -77,6 +75,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "va-dominion-energy",
       "end_date": "2025-12-31",
       "short_description": "$125 rebate for a level 2 EV charger, when enrolled in the EV Charger Rewards program."
     },
@@ -85,10 +84,8 @@
         "rebate"
       ],
       "authority_type": "utility",
-      "authority": "va-dominion-energy",
       "program": "Energy Star Rebates",
       "program_url": "https://www.dominionenergy.com/virginia/save-energy/energy-star-products",
-      "paused": true,
       "items": [
         "heat_pump_clothes_dryer"
       ],
@@ -99,9 +96,12 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "va-dominion-energy",
+      "paused": true,
       "start_date": "2019",
       "end_date": "2025-01-27",
       "short_description": "Dominion Energy customers can receive a $100 rebate on a new electric clothes dryer."
     }
-  ]
+  ],
+  "data_partners": {}
 }

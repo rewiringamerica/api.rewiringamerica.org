@@ -14,6 +14,256 @@
   "location": {
     "state": "DC"
   },
+  "incentives": [
+    {
+      "payment_methods": [
+        "assistance_program"
+      ],
+      "authority_type": "city",
+      "program": "Affordable Home Electrification Program",
+      "program_url": "https://www.dcseu.com/affordable-home-electrification",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 1
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "authority": "dc-dc-sustainable-energy-utility",
+      "paused": true,
+      "start_date": "2023-10-01",
+      "short_description": "100% of costs covered for switching to heat pump water heaters. Income-qualified residents only."
+    },
+    {
+      "payment_methods": [
+        "assistance_program"
+      ],
+      "authority_type": "city",
+      "program": "Solar for All Single-Family Program",
+      "program_url": "https://www.dcseu.com/solar-for-all",
+      "items": [
+        "rooftop_solar_installation"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 1
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "authority": "dc-dc-sustainable-energy-utility",
+      "paused": true,
+      "start_date": "2024-02-23",
+      "short_description": "100% of costs covered for income-qualified homeowners to have solar photovoltaic (PV) systems installed by local contractors."
+    },
+    {
+      "payment_methods": [
+        "assistance_program"
+      ],
+      "authority_type": "city",
+      "program": "Affordable Home Electrification Program",
+      "program_url": "https://www.dcseu.com/affordable-home-electrification",
+      "items": [
+        "electric_stove"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 1
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "authority": "dc-dc-sustainable-energy-utility",
+      "start_date": "2023-10-01",
+      "end_date": "2025-09-30",
+      "short_description": "100% of costs covered for switching to induction cooktops or electric resistance stoves. Income-qualified residents only."
+    },
+    {
+      "payment_methods": [
+        "assistance_program"
+      ],
+      "authority_type": "city",
+      "program": "Affordable Home Electrification Program",
+      "program_url": "https://www.dcseu.com/affordable-home-electrification",
+      "items": [
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "percent",
+        "number": 1
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "authority": "dc-dc-sustainable-energy-utility",
+      "paused": true,
+      "start_date": "2023-10-01",
+      "short_description": "100% of costs covered for switching to qualified ducted or ductless heating systems. Income-qualified residents only."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "city",
+      "program": "DC Residential Rebates",
+      "program_url": "https://www.dcseu.com/homes/appliance-rebates",
+      "items": [
+        "ductless_heat_pump",
+        "ducted_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 5000,
+        "maximum": 5000
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "authority": "dc-dc-sustainable-energy-utility",
+      "start_date": "2024-10-28",
+      "short_description": "$4000-$5000 rebate for qualified ducted or ductless heat pump systems when fuel switching."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "city",
+      "program": "DC Residential Rebates",
+      "program_url": "https://www.dcseu.com/homes/appliance-rebates",
+      "items": [
+        "heat_pump_water_heater"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 1600,
+        "maximum": 1600
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "authority": "dc-dc-sustainable-energy-utility",
+      "start_date": "2024-10-28",
+      "short_description": "$750 to $1,600 rebate for a heat pump water heater."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "city",
+      "program": "DC Residential Rebates",
+      "program_url": "https://www.dcseu.com/homes/appliance-rebates",
+      "items": [
+        "electric_stove"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 800,
+        "maximum": 800
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "authority": "dc-dc-sustainable-energy-utility",
+      "start_date": "2024-10-28",
+      "short_description": "Up to $800 rebate for electric and induction stoves, ranges, and ovens."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "city",
+      "program": "DC Residential Rebates",
+      "program_url": "https://www.dcseu.com/homes/appliance-rebates",
+      "items": [
+        "heat_pump_clothes_dryer"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 600,
+        "maximum": 600
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "authority": "dc-dc-sustainable-energy-utility",
+      "start_date": "2024-10-28",
+      "short_description": "$400-$600 rebate for ENERGY STAR® or ENERGY STAR® Most Efficient qualified heat pump clothes dryers."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "city",
+      "program": "DC Residential Rebates",
+      "program_url": "https://www.dcseu.com/homes/appliance-rebates",
+      "items": [
+        "electric_outdoor_equipment"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 500
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "authority": "dc-dc-sustainable-energy-utility",
+      "start_date": "2023-10-01",
+      "short_description": "$500 rebate for electric riding lawn mowers."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "city",
+      "program": "DC Residential Rebates",
+      "program_url": "https://www.dcseu.com/homes/appliance-rebates",
+      "items": [
+        "electric_outdoor_equipment"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 75
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "authority": "dc-dc-sustainable-energy-utility",
+      "start_date": "2023-10-01",
+      "short_description": "$75 rebate for electric push lawn mowers."
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "city",
+      "program": "DC Residential Rebates",
+      "program_url": "https://www.dcseu.com/homes/appliance-rebates",
+      "items": [
+        "smart_thermostat"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 50
+      },
+      "owner_status": [
+        "homeowner",
+        "renter"
+      ],
+      "authority": "dc-dc-sustainable-energy-utility",
+      "start_date": "2023-10-01",
+      "end_date": "2025-09-30",
+      "short_description": "$50 rebate for ENERGY STAR® qualified smart thermostats."
+    }
+  ],
   "data_partners": {
     "dc-electrify-dc": {
       "name": "Electrify DC",
@@ -47,255 +297,5 @@
         "height": 100
       }
     }
-  },
-  "incentives": [
-    {
-      "payment_methods": [
-        "assistance_program"
-      ],
-      "authority_type": "city",
-      "authority": "dc-dc-sustainable-energy-utility",
-      "program": "Affordable Home Electrification Program",
-      "program_url": "https://www.dcseu.com/affordable-home-electrification",
-      "paused": true,
-      "items": [
-        "heat_pump_water_heater"
-      ],
-      "amount": {
-        "type": "percent",
-        "number": 1
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2023-10-01",
-      "short_description": "100% of costs covered for switching to heat pump water heaters. Income-qualified residents only."
-    },
-    {
-      "payment_methods": [
-        "assistance_program"
-      ],
-      "authority_type": "city",
-      "authority": "dc-dc-sustainable-energy-utility",
-      "program": "Solar for All Single-Family Program",
-      "program_url": "https://www.dcseu.com/solar-for-all",
-      "paused": true,
-      "items": [
-        "rooftop_solar_installation"
-      ],
-      "amount": {
-        "type": "percent",
-        "number": 1
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2024-02-23",
-      "short_description": "100% of costs covered for income-qualified homeowners to have solar photovoltaic (PV) systems installed by local contractors."
-    },
-    {
-      "payment_methods": [
-        "assistance_program"
-      ],
-      "authority_type": "city",
-      "authority": "dc-dc-sustainable-energy-utility",
-      "program": "Affordable Home Electrification Program",
-      "program_url": "https://www.dcseu.com/affordable-home-electrification",
-      "items": [
-        "electric_stove"
-      ],
-      "amount": {
-        "type": "percent",
-        "number": 1
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2023-10-01",
-      "end_date": "2025-09-30",
-      "short_description": "100% of costs covered for switching to induction cooktops or electric resistance stoves. Income-qualified residents only."
-    },
-    {
-      "payment_methods": [
-        "assistance_program"
-      ],
-      "authority_type": "city",
-      "authority": "dc-dc-sustainable-energy-utility",
-      "program": "Affordable Home Electrification Program",
-      "program_url": "https://www.dcseu.com/affordable-home-electrification",
-      "paused": true,
-      "items": [
-        "ductless_heat_pump"
-      ],
-      "amount": {
-        "type": "percent",
-        "number": 1
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2023-10-01",
-      "short_description": "100% of costs covered for switching to qualified ducted or ductless heating systems. Income-qualified residents only."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "city",
-      "authority": "dc-dc-sustainable-energy-utility",
-      "program": "DC Residential Rebates",
-      "program_url": "https://www.dcseu.com/homes/appliance-rebates",
-      "items": [
-        "ductless_heat_pump",
-        "ducted_heat_pump"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 5000,
-        "maximum": 5000
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2024-10-28",
-      "short_description": "$4000-$5000 rebate for qualified ducted or ductless heat pump systems when fuel switching."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "city",
-      "authority": "dc-dc-sustainable-energy-utility",
-      "program": "DC Residential Rebates",
-      "program_url": "https://www.dcseu.com/homes/appliance-rebates",
-      "items": [
-        "heat_pump_water_heater"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 1600,
-        "maximum": 1600
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2024-10-28",
-      "short_description": "$750 to $1,600 rebate for a heat pump water heater."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "city",
-      "authority": "dc-dc-sustainable-energy-utility",
-      "program": "DC Residential Rebates",
-      "program_url": "https://www.dcseu.com/homes/appliance-rebates",
-      "items": [
-        "electric_stove"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 800,
-        "maximum": 800
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2024-10-28",
-      "short_description": "Up to $800 rebate for electric and induction stoves, ranges, and ovens."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "city",
-      "authority": "dc-dc-sustainable-energy-utility",
-      "program": "DC Residential Rebates",
-      "program_url": "https://www.dcseu.com/homes/appliance-rebates",
-      "items": [
-        "heat_pump_clothes_dryer"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 600,
-        "maximum": 600
-      },
-      "owner_status": [
-        "homeowner"
-      ],
-      "start_date": "2024-10-28",
-      "short_description": "$400-$600 rebate for ENERGY STAR® or ENERGY STAR® Most Efficient qualified heat pump clothes dryers."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "city",
-      "authority": "dc-dc-sustainable-energy-utility",
-      "program": "DC Residential Rebates",
-      "program_url": "https://www.dcseu.com/homes/appliance-rebates",
-      "items": [
-        "electric_outdoor_equipment"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 500
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2023-10-01",
-      "short_description": "$500 rebate for electric riding lawn mowers."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "city",
-      "authority": "dc-dc-sustainable-energy-utility",
-      "program": "DC Residential Rebates",
-      "program_url": "https://www.dcseu.com/homes/appliance-rebates",
-      "items": [
-        "electric_outdoor_equipment"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 75
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2023-10-01",
-      "short_description": "$75 rebate for electric push lawn mowers."
-    },
-    {
-      "payment_methods": [
-        "rebate"
-      ],
-      "authority_type": "city",
-      "authority": "dc-dc-sustainable-energy-utility",
-      "program": "DC Residential Rebates",
-      "program_url": "https://www.dcseu.com/homes/appliance-rebates",
-      "items": [
-        "smart_thermostat"
-      ],
-      "amount": {
-        "type": "dollar_amount",
-        "number": 50
-      },
-      "owner_status": [
-        "homeowner",
-        "renter"
-      ],
-      "start_date": "2023-10-01",
-      "end_date": "2025-09-30",
-      "short_description": "$50 rebate for ENERGY STAR® qualified smart thermostats."
-    }
-  ]
+  }
 }

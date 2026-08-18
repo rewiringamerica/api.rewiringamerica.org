@@ -20,14 +20,12 @@
   "location": {
     "state": "NY"
   },
-  "data_partners": {},
   "incentives": [
     {
       "payment_methods": [
         "pos_rebate"
       ],
       "authority_type": "state",
-      "authority": "ny-nyserda",
       "program": "EmPower+",
       "program_url": "https://www.nyserda.ny.gov/All-Programs/EmPower-New-York-Program",
       "items": [
@@ -42,6 +40,7 @@
         "homeowner",
         "renter"
       ],
+      "authority": "ny-nyserda",
       "short_description": "No-cost energy audit and efficiency upgrades, up to $10,000, including weatherization, heat pumps, and electrical upgrades for qualified homes."
     },
     {
@@ -49,7 +48,6 @@
         "pos_rebate"
       ],
       "authority_type": "state",
-      "authority": "ny-nyserda",
       "program": "Appliance Upgrade Program",
       "program_url": "https://www.nyserda.ny.gov/All-Programs/Appliance-Upgrade-Program",
       "items": [
@@ -64,6 +62,7 @@
         "homeowner",
         "renter"
       ],
+      "authority": "ny-nyserda",
       "start_date": "2024-11-26",
       "short_description": "Up to $840 upfront rebate for an ENERGY STAR® certified heat pump clothes dryer through participating retailers.  For income-qualified residents only."
     },
@@ -72,7 +71,6 @@
         "pos_rebate"
       ],
       "authority_type": "state",
-      "authority": "ny-nyserda",
       "program": "Appliance Upgrade Program",
       "program_url": "https://www.nyserda.ny.gov/All-Programs/Appliance-Upgrade-Program",
       "items": [
@@ -87,6 +85,7 @@
         "homeowner",
         "renter"
       ],
+      "authority": "ny-nyserda",
       "start_date": "2024-11-26",
       "short_description": "Up to $840 upfront rebate for an ENERGY STAR® certified heat pump clothes dryer through participating retailers.  For income-qualified residents only."
     },
@@ -95,7 +94,6 @@
         "rebate"
       ],
       "authority_type": "state",
-      "authority": "ny-nyserda",
       "program": "Appliance Upgrade Program",
       "program_url": "https://www.nyserda.ny.gov/All-Programs/Appliance-Upgrade-Program",
       "items": [
@@ -109,6 +107,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "ny-nyserda",
       "start_date": "2024-11-26",
       "short_description": "100% of cost of an electric panel upgrade, up to $4,000 for income-eligible residents. Must use a participating contractor."
     },
@@ -117,7 +116,6 @@
         "rebate"
       ],
       "authority_type": "state",
-      "authority": "ny-nyserda",
       "program": "Appliance Upgrade Program",
       "program_url": "https://www.nyserda.ny.gov/All-Programs/Appliance-Upgrade-Program",
       "items": [
@@ -131,6 +129,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "ny-nyserda",
       "start_date": "2024-11-26",
       "short_description": "100% of cost of electrical wiring, up to $2,500 for income-eligible residents. Must use a participating contractor."
     },
@@ -139,7 +138,6 @@
         "rebate"
       ],
       "authority_type": "state",
-      "authority": "ny-nyserda",
       "program": "Appliance Upgrade Program",
       "program_url": "https://www.nyserda.ny.gov/All-Programs/Appliance-Upgrade-Program",
       "items": [
@@ -153,6 +151,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "ny-nyserda",
       "start_date": "2024-11-26",
       "short_description": "50% of cost of an electric panel upgrade, up to $4,000 for income-eligible residents. Must use a participating contractor."
     },
@@ -161,7 +160,6 @@
         "rebate"
       ],
       "authority_type": "state",
-      "authority": "ny-nyserda",
       "program": "Appliance Upgrade Program",
       "program_url": "https://www.nyserda.ny.gov/All-Programs/Appliance-Upgrade-Program",
       "items": [
@@ -175,6 +173,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "ny-nyserda",
       "start_date": "2024-11-26",
       "short_description": "50% of cost of electrical wiring, up to $2,500 for income-eligible residents. Must use a participating contractor."
     },
@@ -183,7 +182,6 @@
         "rebate"
       ],
       "authority_type": "utility",
-      "authority": "ny-pseg-long-island",
       "program": "PSEG Long Island Home Comfort Program",
       "program_url": "https://www.psegliny.com/saveenergyandmoney/homeefficiency",
       "items": [
@@ -199,6 +197,7 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "ny-pseg-long-island",
       "short_description": "Up to $1,000/ton for a whole home air source heat pump."
     },
     {
@@ -206,7 +205,6 @@
         "tax_credit"
       ],
       "authority_type": "state",
-      "authority": "ny-state-of-ny",
       "program": "New York State Geothermal Energy Credit",
       "program_url": "https://www.tax.ny.gov/pit/credits/geothermal-energy-system-credit.htm",
       "items": [
@@ -220,7 +218,9 @@
       "owner_status": [
         "homeowner"
       ],
+      "authority": "ny-state-of-ny",
       "short_description": "25% tax credit, up to $10,000 for installation of a geothermal heat pump system. Non-refundable but may carry forward."
     }
-  ]
+  ],
+  "data_partners": {}
 }
