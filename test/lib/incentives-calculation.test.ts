@@ -683,16 +683,19 @@ test('includes RA heat pump program for Santa Clara county', async t => {
     household_size: 1,
     authority_types: [AuthorityType.Other],
   };
+  const raHeatPumpFilter = (i: StateIncentive) =>
+    i.program ===
+    'ca_rewiringAmerica_santaClaraAndSanMateoCountyHeatPumpAccessProgram';
 
   const santaClaraResults = calculateIncentives(
     ...LOCATION_AND_AMIS['94086'],
     args,
   );
-  t.equal(santaClaraResults.incentives.length, 1);
+  t.equal(santaClaraResults.incentives.filter(raHeatPumpFilter).length, 1);
 
   const sanFranciscoResults = calculateIncentives(
     ...LOCATION_AND_AMIS['94117'],
     args,
   );
-  t.equal(sanFranciscoResults.incentives.length, 0);
+  t.equal(sanFranciscoResults.incentives.filter(raHeatPumpFilter).length, 0);
 });
