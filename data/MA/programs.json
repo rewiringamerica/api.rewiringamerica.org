@@ -21,17 +21,6 @@
     "authority_type": "utility",
     "description": ""
   },
-  "ma-mansfield-rebates": {
-    "name": {
-      "en": "Mansfield Electric Rebates"
-    },
-    "url": {
-      "en": "https://www.mansfieldelectric.com/rebates-savings"
-    },
-    "authority": "ma-town-of-mansfield",
-    "authority_type": "utility",
-    "description": ""
-  },
   "ma-massSave-eversource-evcharging": {
     "name": {
       "en": "Mass Save Eversource EV Charging Rebates"
@@ -77,17 +66,6 @@
       "en": "https://unitil.com/electric-vehicles/ev-Ready2Charge-rebate-program"
     },
     "authority": "ma-fitchburg-gas-and-electric-light",
-    "authority_type": "utility",
-    "description": ""
-  },
-  "ma-wmgld-energy-efficiency-programs": {
-    "name": {
-      "en": "WMGLD Energy Efficiency Programs"
-    },
-    "url": {
-      "en": "https://wmgld.com/energy-programs/"
-    },
-    "authority": "ma-town-of-wakefield",
     "authority_type": "utility",
     "description": ""
   },
@@ -157,6 +135,17 @@
     "authority_type": "utility",
     "description": ""
   },
+  "ma_concordMunicipalLightPlantCmlp_concordMunicipalLightPlantDriveEVProgram": {
+    "name": {
+      "en": "Concord Municipal Light Plant DriveEV Program"
+    },
+    "url": {
+      "en": "https://concordma.gov/2907/DriveEV-Rebate-Program"
+    },
+    "authority": "ma-town-of-concord",
+    "authority_type": "utility",
+    "description": "Rebates for Concord MLP residential customers to purchase a battery or plug-in hybrid electric vehicle."
+  },
   "ma_concordMunicipalLightPlantCmlp_concordMunicipalLightPlantEnergySavingRebatesAndPrograms": {
     "name": {
       "en": "Concord Municipal Light Plant Energy Saving Rebates & Programs"
@@ -167,17 +156,6 @@
     "authority": "ma-town-of-concord",
     "authority_type": "utility",
     "description": ""
-  },
-  "ma_concordMunicipalLightPlant_concordMLPDriveEVRebateProgram": {
-    "name": {
-      "en": "Concord MLP DriveEV Rebate Program"
-    },
-    "url": {
-      "en": "https://concordma.gov/2907/DriveEV-Rebate-Program"
-    },
-    "authority": "ma-town-of-concord",
-    "authority_type": "utility",
-    "description": "Rebates for Concord MLP residential customers to purchase a battery or plug-in hybrid electric vehicle."
   },
   "ma_danversElectricDivisionDed_danversElectricDivisionEnergySavingRebatesAndPrograms": {
     "name": {
@@ -245,9 +223,9 @@
     "authority_type": "utility",
     "description": ""
   },
-  "ma_holyokeGasAndElectricDepartmentElectric_hGAndERebatesAndIncentives": {
+  "ma_holyokeGasAndElectricDepartmentHgande_holyokeGasAndElectricDepartmentResidentialRebates": {
     "name": {
-      "en": "HG & E Rebates and Incentives "
+      "en": "Holyoke Gas & Electric Department Residential Rebates"
     },
     "url": {
       "en": "https://www.hged.com/residential/ee-home/default.aspx"
@@ -297,6 +275,17 @@
       "en": "https://www.lelwd.com/greenrewards/"
     },
     "authority": "ma-town-of-littleton",
+    "authority_type": "utility",
+    "description": ""
+  },
+  "ma_mansfieldMunicipalElectricDepartmentMmed_mansfieldMunicipalElectricDepartmentResidentialRebates": {
+    "name": {
+      "en": "Mansfield Municipal Electric Department Residential Rebates"
+    },
+    "url": {
+      "en": "https://www.mansfieldelectric.com/rebates-savings"
+    },
+    "authority": "ma-town-of-mansfield",
     "authority_type": "utility",
     "description": ""
   },
@@ -540,12 +529,12 @@
       "wall_insulation"
     ]
   },
-  "ma_middleboroughGasAndElectric_mGEDHomeEnergyRebates": {
+  "ma_middleboroughGasAndElectricDepartmentMged_middleboroughGasAndElectricDepartmentEnergySavingRebatesAndPrograms": {
     "name": {
-      "en": "MGED Home Energy Rebates"
+      "en": "Middleborough Gas & Electric Department Energy Saving Rebates & Programs"
     },
     "url": {
-      "en": "https://www.mged.com/256/Home-Energy-Saving-Rebates"
+      "en": "https://ene.org/sustainability/rebates/residential/middleborough/"
     },
     "authority": "ma-middleborough-gas-and-electric",
     "authority_type": "other",
@@ -694,6 +683,31 @@
     "authority_type": "utility",
     "description": ""
   },
+  "ma_tauntonMunicipalLightingPlantTmlp_multi-UnitDwellingPilotProgram": {
+    "name": {
+      "en": "Multi-Unit Dwelling Pilot Program"
+    },
+    "url": {
+      "en": "https://www.tmlp.com/331/Multi-Unit-Dwelling-Pilot-Program"
+    },
+    "authority": "ma-city-of-taunton",
+    "authority_type": "utility",
+    "description": "",
+    "items": [
+      "heat_pump_water_heater",
+      "ducted_heat_pump",
+      "ductless_heat_pump",
+      "crawlspace_insulation",
+      "basement_insulation",
+      "attic_or_roof_insulation",
+      "air_sealing",
+      "efficiency_rebates",
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer",
+      "smart_thermostat",
+      "electric_stove"
+    ]
+  },
   "ma_tauntonMunicipalLightingPlantTmlp_tMLPSaves": {
     "name": {
       "en": "TMLP Saves"
@@ -713,6 +727,17 @@
       "en": "https://nextzero.org/templeton/"
     },
     "authority": "ma-templeton-municipal-light-plant",
+    "authority_type": "utility",
+    "description": ""
+  },
+  "ma_wakefieldMunicipalGasAndLightDepartmentUtility_wakefieldMunicipalGasAndLightDepartmentResidentialRebates": {
+    "name": {
+      "en": "Wakefield Municipal Gas and Light Department Residential Rebates"
+    },
+    "url": {
+      "en": "https://wmgld.com/residential/residential-rebates/"
+    },
+    "authority": "ma-town-of-wakefield",
     "authority_type": "utility",
     "description": ""
   },
@@ -738,9 +763,9 @@
     "authority_type": "utility",
     "description": ""
   },
-  "ma_westfieldGasAndElectric_wG+Efficiency": {
+  "ma_westfieldGasAndElectricDepartmentOther_westfieldGasAndElectricDepartmentResidentialWaysToSave": {
     "name": {
-      "en": "WG+Efficiency"
+      "en": "Westfield Gas and Electric Department Residential Ways to Save"
     },
     "url": {
       "en": "https://www.wgeld.org/pages/residential/ways-to-save/"
