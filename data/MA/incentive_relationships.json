@@ -196,8 +196,7 @@
     "MA-75": {
       "allOf": [
         "MA-72",
-        "MA-73",
-        "MA-937"
+        "MA-73"
       ],
       "description": "Must schedule HEA to identify weatherization measures needed"
     },
@@ -205,24 +204,21 @@
       "allOf": [
         "MA-72",
         "MA-73",
-        "MA-75",
-        "MA-937"
+        "MA-75"
       ],
       "description": "HEA required to identify weatherization measures needed.."
     },
     "MA-77": {
       "allOf": [
         "MA-72",
-        "MA-73",
-        "MA-937"
+        "MA-73"
       ],
       "description": "HEA required to identify weatherization measures available."
     },
     "MA-78": {
       "allOf": [
         "MA-72",
-        "MA-73",
-        "MA-937"
+        "MA-73"
       ],
       "description": "HEA required to identify weatherization measures if needed."
     },
@@ -657,7 +653,7 @@
       "allOf": [
         "MA-72"
       ],
-      "description": "HEA required, qualifying measures must be identified in HEA."
+      "description": "HEA required, eligible weatherization measures must be recommended"
     },
     "MA-938": {
       "allOf": [
@@ -670,6 +666,13 @@
         "MA-283"
       ],
       "description": "HEA required prior to install."
+    },
+    "MA-940": {
+      "allOf": [
+        "MA-72",
+        "MA-937"
+      ],
+      "description": "Must schedule HEA to identify weatherization measures needed"
     }
   },
   "combinations": [
