@@ -1090,7 +1090,7 @@
     "items": [
       "geothermal_heating_installation"
     ],
-    "program": "nm_centralValleyElectricCooperative_cVECHeatingAndCoolingRebates",
+    "program": "nm_centralValleyElectricCooperative_cVECEnergyEfficiencyRebates",
     "amount": {
       "type": "dollars_per_unit",
       "number": 2500,
@@ -1100,35 +1100,32 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to $2,500/ton rebate for qualified ground source heat pump systems.",
-      "es": "Reembolso de hasta $2,500 por tonelada para sistemas de bombas de calor geotérmicos calificados."
+      "en": "CVEC customers can save up to $2,500 per ton on qualifying ground source heat pump systems."
     },
     "url": {
-      "en": "https://cvecoop.org/heating-cooling-rebates"
+      "en": "https://www.cvecoop.org/energy-efficiency-rebates-and-programs"
     }
   },
   {
     "id": "NM-49",
     "payment_methods": [
-      "rebate",
-      "account_credit"
+      "rebate"
     ],
     "items": [
       "ductless_heat_pump",
       "ducted_heat_pump"
     ],
-    "program": "nm_centralValleyElectricCooperative_cVECHeatingAndCoolingRebates",
+    "program": "nm_centralValleyElectricCooperative_cVECEnergyEfficiencyRebates",
     "amount": {
       "type": "percent",
-      "number": 0.45,
-      "maximum": 75000
+      "number": 0.45
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Up to 45% of equipment cost of air source heat pump depending on efficiency.  Maximum rebate requires SEER 17 or greater.",
-      "es": "Hasta un 45 % del costo del equipo de una bomba de calor aerotérmica, según la eficiencia. El reembolso máximo requiere un SEER de 17 o superior."
+      "en": "CVEC customers can save up to 45% on a qualifying air source heat pump (equipment only)."
     },
     "url": {
       "en": "https://www.cvecoop.org/energy-efficiency-rebates-and-programs"
@@ -1142,7 +1139,7 @@
     "items": [
       "energy_audit"
     ],
-    "program": "nm_centralValleyElectricCooperative_cVECHeatingAndCoolingRebates",
+    "program": "nm_centralValleyElectricCooperative_cVECEnergyEfficiencyRebates",
     "amount": {
       "type": "percent",
       "number": 1
@@ -1152,11 +1149,10 @@
       "renter"
     ],
     "short_description": {
-      "en": "Free home energy audit for residential customers.",
-      "es": "Auditoría energética del hogar gratuita para clientes residenciales."
+      "en": "CVEC customers can get a free home energy audit through Green Medal Energy."
     },
     "url": {
-      "en": "https://cvecoop.org/heating-cooling-rebates"
+      "en": "https://www.cvecoop.org/energy-efficiency-rebates-and-programs"
     }
   },
   {
@@ -1174,7 +1170,8 @@
       "unit": "ton"
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$500/ton for new ground-source electric heat pump. $250/ton for replacement units. ",
@@ -1197,14 +1194,15 @@
     "amount": {
       "type": "dollar_amount",
       "number": 90,
+      "minimum": 30,
       "maximum": 90
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$90 rebate for ENERGY STAR ventless hybrid heat pump clothes dryer. $30 rebate for ENERGY STAR electric dryer. ",
-      "es": "Reembolso de $90 por una secadora de ropa híbrida con bomba de calor sin ventilación con certificación ENERGY STAR. Reembolso de $30 por una secadora eléctrica con una certificación ENERGY STAR. "
+      "en": "CNMEC customers can save $90 on an ENERGY STAR heat pump (ventless) clothes dryer or $30 on an ENERGY STAR electric dryer. "
     },
     "url": {
       "en": "https://cnmec.org/cnmec-member-rebates"
@@ -1222,14 +1220,14 @@
     "amount": {
       "type": "percent",
       "number": 0.25,
-      "maximum": 175
+      "maximum": 150
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "25% rebate off cost of new e-bike up to $150. 50% off the cost of extra battery up to $25 purchased with e-bike. ",
-      "es": "Reembolso del 25 % en el costo de una nueva bicicleta eléctrica de hasta $150. Descuento del 50 % del costo de una batería adicional de hasta $25 comprada con una bicicleta eléctrica. "
+      "en": "CNMEC customers can save up to $150 on an e-bike."
     },
     "url": {
       "en": "https://cnmec.org/cnmec-member-rebates"
@@ -1250,7 +1248,8 @@
       "maximum": 150
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "25% rebate up to $150 for snowblower ($250 for 2-stage) & walk-behind mower, $50 for trimmer, leaf blower & power washer, and $100 for chainsaw. ",
@@ -1275,7 +1274,8 @@
       "maximum": 1000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "25% rebate of cost up to $1000 for electric riding mower",
@@ -1296,15 +1296,14 @@
     "program": "nm_centralNewMexicoElectricCooperative_cNMECMemberRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 200,
-      "maximum": 200
+      "number": 200
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$200 rebate for evaporative cooler. Minimum 2,500 CFM. Window and portable units are not eligible. Two rebates per account.",
-      "es": "Reembolso de $200 por un enfriador evaporativo. Mínimo de 2,500 CFM. Las unidades de ventana y portátiles no son elegibles. Dos reembolsos por cuenta."
+      "en": "CNMEC customers can save $200 on a qualifying evaporative cooler."
     },
     "url": {
       "en": "https://cnmec.org/cnmec-member-rebates"
@@ -1325,7 +1324,8 @@
       "maximum": 1000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "50% rebate up to $125 for labor and $125 for a Level 2 charger.  For managed charger, maximums are $500 for labor and $500 for charger.",
@@ -1352,7 +1352,8 @@
       "maximum": 16
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "Up to $16/kW for electric thermal storage and slab units controlled by timers or master control system.  $12/kW fore controlled thermal slab.",
@@ -1377,7 +1378,8 @@
       "maximum": 2000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "50% rebate on qualified ducted air-source heat pump larger than 1.5 tons, up to $1,500.  Up to $500 for smaller system. $500 propane back-up bonus.",
@@ -1402,7 +1404,8 @@
       "unit": "ton"
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "50% of equipment cost up to $500/ton rebate for air-to-water heat pump radiant systems.",
@@ -1424,14 +1427,15 @@
     "amount": {
       "type": "dollar_amount",
       "number": 350,
+      "minimum": 100,
       "maximum": 350
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$350 rebate to switch to induction cooktop/range from gas/propane or new construction.  $100 for replacing electric. Cooktop minimum 30\" wide. ",
-      "es": "Reembolso de $350 para cambiar a cocina de inducción de cocina de gas o propano, o para vivienda nueva. $100 para reemplazar cocina eléctrica. Ancho mínimo de la cocina: 30\"."
+      "en": "CNMEC customers can save up to $350 on an induction cooktop or range (minimum 30\")."
     },
     "url": {
       "en": "https://cnmec.org/cnmec-member-rebates"
@@ -1452,7 +1456,8 @@
       "maximum": 250
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$50 rebate per ENERGY STAR thermostat if enrolled in managed demand/response or time of use program.  $25/thermostat if not. ",
@@ -1476,11 +1481,11 @@
       "number": 350
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$350 rebate for qualified ENERGY STAR heat pump water heater (30 gallon minimum). Check if maximum gallon capacity.",
-      "es": "Reembolso de $350 para calentador de agua con bomba de calor con certificación ENERGY STAR (mínimo 30 galones). Consulte la capacidad máxima en galones."
+      "en": "CNMEC customers can save $350 on a qualifying ENERGY STAR heat pump water heater (30-55 gallons)."
     },
     "url": {
       "en": "https://cnmec.org/cnmec-member-rebates"
@@ -1497,15 +1502,14 @@
     "program": "nm_columbusElectricCooperative_cECRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 100,
-      "maximum": 200
+      "number": 100
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$100 rebate for new or replacement whole house fan.  Limit 2 per member account.",
-      "es": "Reembolso de $100 por ventilador de casa nuevo o de reemplazo. Límite de 2 por cuenta de miembro."
+      "en": "CEC members can save $100 on a whole house fan."
     },
     "url": {
       "en": "https://www.columbusco-op.org/rebates"
@@ -1523,14 +1527,16 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 500,
-      "unit": "ton"
+      "unit": "ton",
+      "minimum": 100,
+      "maximum": 500
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$500/ton off new ground source heat pump.  $250/ton for replacement unit. $100 rebate for desuperheater ground source heat pump powered hot water.",
-      "es": "Descuento de $500 por tonelada por una bomba de calor geotérmica nueva. Reembolso de $250 por tonelada por una unidad de reemplazo. Reembolso de $100 por una bomba de calor geotérmica con desobrecalentador alimentada por agua caliente."
+      "en": "CEC customers can save up to $500 per ton on ground source heat pump systems."
     },
     "url": {
       "en": "https://www.columbusco-op.org/rebates"
@@ -1547,16 +1553,17 @@
     ],
     "program": "nm_columbusElectricCooperative_cECRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 2000
+      "type": "dollar_amount",
+      "number": 1500,
+      "minimum": 500,
+      "maximum": 1500
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "50% rebate up to $1,500 for qualified air source heat pump bigger than 1.5 tons. $500 for smaller systems.  $500 propane backup bonus for ducted.",
-      "es": "Reembolso del 50 % hasta $1,500 por bombas de calor de fuente de aire calificadas de más de 1.5 toneladas. $500 por sistemas más pequeños. Bonificación de respaldo de propano de $500 en sistemas con ductos."
+      "en": "CEC members can save up to $1,500 on a qualifying air source heat pump (ducted or ductless)."
     },
     "url": {
       "en": "https://www.columbusco-op.org/rebates"
@@ -1577,11 +1584,11 @@
       "unit": "ton"
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$500/ton for air to water heat pump systems",
-      "es": "$500 por tonelada por sistemas de bombas de calor aire-agua."
+      "en": "CEC customers can save $500 per ton on an air to water heat pump system."
     },
     "url": {
       "en": "https://www.columbusco-op.org/rebates"
@@ -1598,15 +1605,14 @@
     "program": "nm_columbusElectricCooperative_cECRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 200,
-      "maximum": 400
+      "number": 200
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$200 rebate for evaporator cooler with minimum flow rate of 2,500 CFM. Limit two per member account.",
-      "es": "Reembolso de $200 por un enfriador evaporador con un caudal mínimo de 2500 CFM. Límite de dos por cuenta de miembro."
+      "en": "CEC customers can save $200 on a qualifying evaporative cooler."
     },
     "url": {
       "en": "https://www.columbusco-op.org/rebates"
@@ -1624,14 +1630,14 @@
     "amount": {
       "type": "percent",
       "number": 0.25,
-      "maximum": 175
+      "maximum": 150
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "25% rebate up to $150 for e-bike plus 50% extra battery cost up to $25 with bike purchase. $300/account limit for outdoor rebates. ",
-      "es": "Reembolso del 25 % hasta $150 por bicicletas eléctricas más 50 % de costo adicional de batería hasta $25 con la compra de la bicicleta. Límite de $300 por cuenta por reembolsos para actividades al aire libre. "
+      "en": "CEC customers can save up to $150 on an e-bike."
     },
     "url": {
       "en": "https://www.columbusco-op.org/rebates"
@@ -1652,7 +1658,8 @@
       "maximum": 300
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "25% of cost rebate up to $150 for walk-behind mowers, $50 for trimmer, pruner, leaf blower and power washer, and $100 for chainsaws. ",
@@ -1677,7 +1684,8 @@
       "maximum": 1000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "25% rebate off the cost up of riding mower to $1000 ",
@@ -1699,14 +1707,15 @@
     "amount": {
       "type": "dollar_amount",
       "number": 350,
+      "minimum": 100,
       "maximum": 350
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$350 rebate for induction cooktop when replacing gas or propane. Cooktop minimum width of 30 inches.",
-      "es": "Reembolso de $350 para estufa de inducción al reemplazar una de gas o propano. Ancho mínimo de la placa: 30 pulgadas."
+      "en": "CEC customers can save up to $350 on a qualifying induction cooktop or range at least 30\"."
     },
     "url": {
       "en": "https://www.columbusco-op.org/rebates"
@@ -1725,14 +1734,15 @@
     "amount": {
       "type": "dollar_amount",
       "number": 90,
+      "minimum": 30,
       "maximum": 90
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$90 rebate for ENERGY STAR heat pump (ventless) clothes dryer. $30 rebate for electric clothes dryer. ",
-      "es": "Reembolso de $90 para secadora de ropa con bomba de calor ENERGY STAR (sin ventilación). Reembolso de $30 para secadora de ropa eléctrica."
+      "en": "CEC customers can save $90 on a qualifying ENERGY STAR heat pump (ventless) clothes dryer, or $30 on an ENERGY STAR electric clothes dryer. "
     },
     "url": {
       "en": "https://www.columbusco-op.org/rebates"
@@ -1749,15 +1759,14 @@
     "program": "nm_columbusElectricCooperative_cECRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 25,
-      "maximum": 250
+      "number": 25
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$25 rebate for smart thermostat. Limit 2 for standard low-voltage. Limit 5 for  line-voltage applications.",
-      "es": "Reembolso de $25 para termostato inteligente. Límite de 2 para aplicaciones de bajo voltaje estándar. Límite de 5 para aplicaciones de voltaje de línea."
+      "en": "CEC customers can save $25 on a qualifying smart thermostat."
     },
     "url": {
       "en": "https://www.columbusco-op.org/rebates"
@@ -1778,11 +1787,11 @@
       "unit": "ton"
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$500/ton for air-to-water heat pump, not to exceed 50% of equipment cost. ",
-      "es": "$500 por tonelada por una bomba de calor aire-agua, que no deberá exceder el 50 % del costo del equipo. "
+      "en": "CDEC customers can save up to $500 per ton on an air-to-water heat pump."
     },
     "url": {
       "en": "https://www.cdec.coop/energy-efficiency-rebates"
@@ -1800,39 +1809,15 @@
     "amount": {
       "type": "dollar_amount",
       "number": 350,
+      "minimum": 100,
       "maximum": 350
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$350 rebate for a new induction cooktop (minimum 30\" width) when replacing gas or propane. ",
-      "es": "Reembolso de $350 por una nueva cocina de inducción (de mínimo 30\" de ancho) al reemplazar una de gas o propano. "
-    },
-    "url": {
-      "en": "https://www.cdec.coop/energy-efficiency-rebates"
-    }
-  },
-  {
-    "id": "NM-77",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "geothermal_heating_installation"
-    ],
-    "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
-    "amount": {
-      "type": "dollars_per_unit",
-      "number": 500,
-      "unit": "ton"
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$500/ton rebate for ground source heat pump and $250/ton for replacement systems. Not to exceed 50% of equipment cost. $100 extra for desuperheater.",
-      "es": "Reembolso de $500 por tonelada por bombas de calor geotérmicas y $250 por tonelada por sistemas de reemplazo. No debe exceder el 50 % del costo del equipo. $100 adicionales por desobrecalentador."
+      "en": "CDEC customers can save up to $350 on a new induction cooktop (minimum 30\"). "
     },
     "url": {
       "en": "https://www.cdec.coop/energy-efficiency-rebates"
@@ -1849,15 +1834,14 @@
     "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 200,
-      "maximum": 400
+      "number": 200
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$200 rebate per evaporative cooler with at least 2,500 cubic feet/meter output. Limit 2. No window or portable units. ",
-      "es": "Reembolso de $200 por un enfriador evaporativo con un rendimiento mínimo de 2,500 pies cúbicos/metro. Límite de 2. No se admiten unidades de ventana ni portátiles. "
+      "en": "CDEC customers can save $200 on a qualifying evaporative cooler."
     },
     "url": {
       "en": "https://www.cdec.coop/energy-efficiency-rebates"
@@ -1874,15 +1858,14 @@
     "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 25,
-      "maximum": 125
+      "number": 25
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$25 rebate/Energy Star smart thermostat.  Limit 2 for standard low-voltage. Limit 5 for line voltage thermostats.",
-      "es": "Reembolso de $25 para termostato inteligente Energy Star. Límite de 2 para termostatos estándar de bajo voltaje; límite de 5 para termostatos de voltaje de línea."
+      "en": "CDEC customers can save $25 on a qualifying ENERGY STAR smart thermostat."
     },
     "url": {
       "en": "https://www.cdec.coop/energy-efficiency-rebates"
@@ -1894,20 +1877,22 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump"
+      "ducted_heat_pump",
+      "ductless_heat_pump"
     ],
     "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
     "amount": {
       "type": "percent",
       "number": 0.5,
+      "minimum": 500,
       "maximum": 1500
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "50% equipment cost up to $1,500 for qualified ducted air source heat pump > than 1.5 tons. Up to $500 for smaller systems.",
-      "es": "50% del costo del equipo hasta $1,500 para bombas de calor de aire por conducto calificadas de más de 1.5 toneladas. Hasta $500 para sistemas más pequeños."
+      "en": "CDEC customers can save up to $1,500 on a qualifying air source heat pump (ducted or ductless)."
     },
     "url": {
       "en": "https://www.cdec.coop/energy-efficiency-rebates"
@@ -1928,7 +1913,8 @@
       "maximum": 200
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$100 rebate for whole house fan. Limit 2 per member account. Attic ventilation systems do not qualify.",
@@ -1945,20 +1931,20 @@
       "rebate"
     ],
     "items": [
-      "non_heat_pump_clothes_dryer"
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
     ],
     "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 75,
-      "maximum": 105
+      "number": 75
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$75 rebate for Energy Star electric clothes dryer. Extra $30 Tri-State rebate may be available for qualified dryer. ",
-      "es": "Reembolso de $75 por secadora eléctrica con certificación Energy Star. Reembolso adicional de $30 en el área Tri-State para secadoras calificadas."
+      "en": "OCEC customers can save $75 on an ENERGY STAR electric clothes dryer."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -1979,36 +1965,11 @@
       "maximum": 100
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "25% rebate of cost up to $100 for Learning thermostat.  Maximum limit for all rebates per year per member account.",
-      "es": "Reembolso del 25 % del costo hasta $100 para termostatos Learning. Límite máximo de reembolso por año y cuenta de miembro."
-    },
-    "url": {
-      "en": "https://www.ocec-inc.com/energy-efficiency-program"
-    }
-  },
-  {
-    "id": "NM-84",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "smart_thermostat"
-    ],
-    "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 25,
-      "maximum": 50
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$25 rebate/Energy Star smart thermostat. $50 rebate/thermostat if in a managed program. Limit 2 for low-voltage, limit 5 for line voltage application.",
-      "es": "Reembolso de $25 por un termostato inteligente con certificación Energy Star. Reembolso de $50 por un termostato si se encuentra en un programa gestionado. Límite de 2 para aplicaciones de bajo voltaje y 5 para aplicaciones de voltaje de línea."
+      "en": "OCEC customers can save 25%, up to $100, on a qualifying learning thermostat."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2030,11 +1991,11 @@
       "maximum": 5000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "25% rebate of material costs for qualified ENERGY STAR windows and doors. Maximum yearly rebate limits. Invoice must list labor cost separately.",
-      "es": "25% de descuento en materiales para ventanas y puertas con certificación ENERGY STAR. Límite máximo de descuento anual. La factura debe incluir el costo de la mano de obra por separado."
+      "en": "OCEC customers can save 25% on material costs for qualifying ENERGY STAR windows and doors."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2055,11 +2016,11 @@
       "maximum": 5000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "30% rebate of material costs of upgraded or added insulation. May require pre- and post-inspection,",
-      "es": "30% de descuento en el costo de materiales para mejoramiento o adición de aislamiento. Puede requerir inspección previa y posterior."
+      "en": "OCEC customers can save 30% on qualifying insulation materials."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2076,15 +2037,14 @@
     "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
     "amount": {
       "type": "percent",
-      "number": 0.5,
-      "maximum": 5000
+      "number": 0.5
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "50% rebate for caulking and weather-stripping materials. Maximum yearly rebate limits. ",
-      "es": "Reembolso del 50 % en materiales de sellado y burletes. Límite máximo de descuento anual. "
+      "en": "OCEC customers can save 50% on caulking and weather-stripping materials."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2101,40 +2061,14 @@
     "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 2000,
-      "maximum": 2000
+      "number": 2000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$2,000/unit rebate for closed loop geothermal heat pump.  Maximum yearly rebate limits. ",
-      "es": "Reembolso de $2,000 por unidad por una bomba de calor geotérmica de circuito cerrado. Límite máximo de descuento anual. "
-    },
-    "url": {
-      "en": "https://www.ocec-inc.com/energy-efficiency-program"
-    }
-  },
-  {
-    "id": "NM-90",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "geothermal_heating_installation"
-    ],
-    "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
-    "amount": {
-      "type": "dollars_per_unit",
-      "number": 500,
-      "unit": "ton"
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$500/ton for new ground source heat pump; $250/ton for replacement, up to 50% of equipment cost. AHRI certificate required. Tri-state rebate.",
-      "es": "$500 por tonelada por una bomba de calor geotérmica nueva; $250 por tonelada para el reemplazo, hasta el 50 % del costo del equipo. Se requiere certificado AHRI. Reembolso en el área Tri-State."
+      "en": "OCEC customers can save $2,000 on a closed loop geothermal heat pump."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2146,22 +2080,21 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump",
       "ductless_heat_pump"
     ],
     "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 1000,
+      "number": 500,
       "minimum": 500,
-      "maximum": 1000
+      "maximum": 5000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$1,000/unit for qualified ducted air source heat pump; $500/indoor mini-split unit. At least 16 SEER. Max yearly rebate limit.",
-      "es": "$1,000 por unidad por una bomba de calor de aire por ductos calificada; $500 por unidad mini-split interior. Mínimo de 16 SEER. Límite máximo de reembolso anual."
+      "en": "OCEC customers can save $500 per indoor unit for a qualified mini-split (ductless) air source heat pump (minimum 16 SEER)."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2173,21 +2106,20 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
+      "ducted_heat_pump"
     ],
     "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 1500,
-      "maximum": 2000
+      "number": 100,
+      "maximum": 1000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "50% cost up to $1,500 of air source heat pump > than 1.5 tons. Up to $500 for smaller systems. $500 extra for ducted propane backup. Tri-State rebate.",
-      "es": "50 % del costo hasta $1,500 para bombas de calor de fuente de aire de más de 1.5 toneladas. Hasta $500 para sistemas más pequeños. $500 adicionales para sistemas de respaldo de propano con sistema de ductos. Reembolso en el área Tri-State."
+      "en": "OCEC customers can save $1,000 on a qualifying ducted air source heat pump (16 SEER or higher)."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2260,8 +2192,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$125 rebate for electric water heater (UEF 93% or higher). Maximum limit for all rebates over 12 months.",
-      "es": "Reembolso de $125 por un calentador de agua eléctrico (93 % de UEF o superior). Límite máximo para todos los reembolsos en 12 meses."
+      "en": "OCEC customers can save $125 on a qualifying electric water heater (UEF 0.93 or higher)."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2281,36 +2212,11 @@
       "number": 500
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$500 rebate for Energy Star heat pump water heater (HP setting only). There is a maximum limit for all rebates over 12 months.",
-      "es": "Reembolso de $500 para un calentador de agua con bomba de calor Energy Star (solo configuración HP). Hay un límite máximo para todos los reembolsos de más de 12 meses."
-    },
-    "url": {
-      "en": "https://www.ocec-inc.com/energy-efficiency-program"
-    }
-  },
-  {
-    "id": "NM-97",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "non_heat_pump_water_heater"
-    ],
-    "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 50,
-      "maximum": 100
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$50 Tri-state rebate for electric water heater if replacing propane/gas, $50/unit for managed, $30/unit new construction. 30 gallon minimum.",
-      "es": "Reembolso triestatal de $50 para calentador de agua eléctrico si reemplaza uno de propano o gas. $50/unidad para uno administrado, $30/unidad para una construcción nueva. Mínimo de 30 galones."
+      "en": "OCEC customers can save $500 on a qualifying ENERGY STAR heat pump water heater. (Must be on heat pump setting only)."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2330,11 +2236,11 @@
       "number": 1
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Free basic home energy audit (not an extensive building professional audit)",
-      "es": "Auditoría energética básica gratuita del hogar (no una auditoría profesional exhaustiva del edificio)"
+      "en": "OCEC customers can receive a free basic home energy audit."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2354,36 +2260,11 @@
       "number": 1
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Free Level 2 electric vehicle charger from OCEC.",
-      "es": "Cargador de vehículos eléctricos de nivel 2 gratuito de OCEC."
-    },
-    "url": {
-      "en": "https://www.ocec-inc.com/energy-efficiency-program"
-    }
-  },
-  {
-    "id": "NM-101",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_vehicle_charger"
-    ],
-    "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 500,
-      "maximum": 1000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "50% of cost of Level 2 charger up to $125 labor and $125 product. Up to $500 labor and $500 product for a managed charger. Total rebate limit/year.",
-      "es": "50 % del costo del cargador de nivel 2 hasta $125 por mano de obra y $125 por producto. Hasta $500 por mano de obra y $500 por producto por un cargador administrado. Límite total de reembolso por año."
+      "en": "OCEC customers may be eligible for a free Level 2 electric vehicle charger provided by OCEC."
     },
     "url": {
       "en": "https://www.ocec-inc.com/energy-efficiency-program"
@@ -2752,38 +2633,14 @@
     "amount": {
       "type": "dollar_amount",
       "number": 100,
-      "maximum": 200
+      "maximum": 100
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$100 rebate for whole house fan. Limit 2 per member account. New or replacement. No attic ventilation or in-line duct fans.",
-      "es": "Reembolso de $100 para ventilador para toda la casa. Límite de 2 por cuenta de miembro. Nuevo o de reemplazo. No se permiten ventiladores de ático ni ventiladores de conducto."
-    },
-    "url": {
-      "en": "https://www.socorroelectric.com/rebates"
-    }
-  },
-  {
-    "id": "NM-117",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "non_heat_pump_clothes_dryer"
-    ],
-    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 30
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$30 rebate for Energy Star electric resistance clothes dryer. ",
-      "es": "Reembolso de $30 por una secadora de ropa con resistencia eléctrica con certificación Energy Star. "
+      "en": "SEC customers can save $100 on a whole house fan."
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -2800,14 +2657,16 @@
     "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 350
+      "number": 350,
+      "minimum": 100,
+      "maximum": 350
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$350 rebate to switch from gas/propane stove to induction cooktop/range at least 30\" wide. $350 for induction in new construction. ",
-      "es": "Reembolso de $350 por cambiar de una estufa a gas o propano a una placa de cocción/estufa de inducción de al menos 30\" de ancho. $350 por inducción en una construcción nueva. "
+      "en": "SEC customers can save up to $350 on an induction cooktop (at least 30\")."
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -2824,15 +2683,14 @@
     "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 200,
-      "maximum": 400
+      "number": 200
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$200 rebate per evaporative cooler with minimum airflow of 2,500 CFM. Limit 2 per member account. New or replacement. No window units.",
-      "es": "Descuento de $200 por enfriador evaporativo con un flujo de aire mínimo de 2500 CFM. Límite de 2 por cuenta de miembro. Nuevo o reemplazo. No se admiten unidades de ventana."
+      "en": "SEC customers can save $200 on a qualifying evaporative cooler."
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -2852,11 +2710,11 @@
       "number": 350
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$350 rebate per qualified Energy Star air source heat pump water heater (30 gallon or larger).",
-      "es": "Reembolso de $350 por cada calentador de agua con bomba de calor de fuente de aire calificada con certificación Energy Star (30 galones o más grande)."
+      "en": "SEC customers can save $350 on a qualifying ENERGY STAR heat pump water heater (30 gallon or larger)."
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -2873,14 +2731,16 @@
     "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 50
+      "number": 100,
+      "minimum": 50,
+      "maximum": 100
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Electric resistance water heater rebates: $50/unit to replace propane/gas, $50/unit for managed or $30/unit new construction. 30 gallon or larger.",
-      "es": "Reembolsos para calentadores de agua de resistencia eléctrica: $50 por unidad para reemplazar propano/gas, $50 por unidad para calentadores gestionados o $30 por unidad para uns construcción nueva. 30 galones o más."
+      "en": "SEC customers can save up to $100 on a qualifying electric resistance water heater when replacing a gas or propane water heater (minimum 30 gallons)."
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -2898,14 +2758,16 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 16,
-      "unit": "kilowatt"
+      "unit": "kilowatt",
+      "minimum": 12,
+      "maximum": 16
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$16/kW rebate for controlled off-peak electric thermal storage and slab and $12/kW for controlled off-peak thermal slab.  Minimum load is 1 kW.",
-      "es": "Reembolso de $16 por kW para el almacenamiento térmico eléctrico controlado en horas valle y losas de distribución, y de $12 por kW por losas de distribución térmica controladas en horas valle. La carga mínima es de 1 kW."
+      "en": "SEC customers can save up to $16 per kW rebate electric thermal storage and slab (minimum load 1 kW)."
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -2923,14 +2785,16 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 500,
-      "unit": "ton"
+      "unit": "ton",
+      "minimum": 250,
+      "maximum": 500
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$500/ton for a new ground source heat pump system and $250/ton for replacement units. $100/unit for desuperheater (hot water).",
-      "es": "$500 por tonelada por nuevo sistema de bomba de calor geotérmica y $250 por tonelada para unidades de reemplazo. $100 por unidad para el desobrecalentador (agua caliente)."
+      "en": "SEC customers can save up to $500 per ton on ground source heat pump systems."
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -2951,59 +2815,11 @@
       "unit": "ton"
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$500/ton rebate for air-to-water radiant systems up to 50% of equipment cost. ",
-      "es": "Reembolso de $500 por tonelada por sistemas radiantes aire-agua hasta el 50 % del costo del equipo. "
-    },
-    "url": {
-      "en": "https://www.socorroelectric.com/rebates"
-    }
-  },
-  {
-    "id": "NM-125",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 2000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "50% rebate up to $1,500 for qualified air source heat pump greater than 1.5 tons. $500 maximum for smaller systems. Ducted propane backup, $500 bonus.",
-      "es": "Reembolso del 50 % hasta $1,500 por bombas de calor de aire calificadas de más de 1.5 toneladas. Máximo de $500 por sistemas más pequeños. Bonificación de $500 por un sistema de respaldo de propano con sistema de ductos."
-    },
-    "url": {
-      "en": "https://www.socorroelectric.com/rebates"
-    }
-  },
-  {
-    "id": "NM-126",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_stove"
-    ],
-    "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 100
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$100 rebate to switch from electric stove to induction cooktop/range that is at least 30\" wide.",
-      "es": "Reembolso de $100 para cambiar de cocina eléctrica a placa de cocción/estufa por inducción de al menos 30\" de ancho."
+      "en": "SEC customers can save up to $500 per ton on air-to-water radiant heat pump systems. "
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -3035,56 +2851,6 @@
     }
   },
   {
-    "id": "NM-129",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_stove"
-    ],
-    "program": "nm_columbusElectricCooperative_cECRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 100,
-      "maximum": 100
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$100 rebate for induction cooktop when replacing electric stove. Cooktop must be at least 30\" wide.",
-      "es": "Reembolso de $100 por una placa de cocción por inducción al reemplazar una estufa eléctrica. La placa debe tener al menos 30 pulgadas de ancho."
-    },
-    "url": {
-      "en": "https://www.columbusco-op.org/rebates"
-    }
-  },
-  {
-    "id": "NM-130",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_stove"
-    ],
-    "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 100,
-      "maximum": 100
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$100 rebate for a new induction cooktop (minimum 30\" width) when replacing an electric stove.",
-      "es": "Reembolso de $100 por una nueva placa de cocción por inducción (con un mínimo 30\" de ancho) al reemplazar una estufa eléctrica."
-    },
-    "url": {
-      "en": "https://www.cdec.coop/energy-efficiency-rebates"
-    }
-  },
-  {
     "id": "NM-132",
     "payment_methods": [
       "rebate"
@@ -3095,15 +2861,14 @@
     "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 25,
-      "maximum": 125
+      "number": 25
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$25 rebate per Energy Star smart thermostat. Limit 2 for standard installation, limit 5 for line-voltage applications.",
-      "es": "Reembolso de $25 por un termostato inteligente con certificación Energy Star. Límite de 2 en la instalación estándar, límite de 5 en aplicaciones de voltaje de línea."
+      "en": "SEC customers can save $25 on an ENERGY STAR smart thermostat."
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -3115,20 +2880,23 @@
       "rebate"
     ],
     "items": [
-      "ductless_heat_pump"
+      "ductless_heat_pump",
+      "ducted_heat_pump"
     ],
     "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
     "amount": {
-      "type": "dollar_amount",
-      "number": 500,
+      "type": "dollars_per_unit",
+      "number": 1500,
+      "unit": "ton",
+      "minimum": 500,
       "maximum": 1500
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "50% rebate up to $1,500 for qualified air source cold climate heat pump mini-splits greater than 1.5 tons.  Up to $500 for smaller systems.",
-      "es": "Reembolso del 50 % hasta $1,500 por mini-splits con bomba de calor de aire para climas fríos de más de 1.5 toneladas. Hasta $500 por sistemas más pequeños."
+      "en": "SEC customers can save up to $1,500 per ton on qualifying air source cold climate heat pumps (ducted or ductless)."
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -3148,7 +2916,8 @@
       "number": 50
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "$50 rebate for electric water heater replacing propane/gas, $50/unit for managed/demand-response or $30/unit new construction. 30 gallons or larger.",
@@ -3168,16 +2937,16 @@
     ],
     "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
     "amount": {
-      "type": "dollar_amount",
-      "number": 250,
-      "maximum": 1000
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 250
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "50% of Level 2 charger cost up to $125 labor and $125 charger. If charger is in managed program, charger rebate is 50% up to $500 labor/$500 charger.",
-      "es": "50 % del costo del cargador de nivel 2 hasta $125 por la mano de obra y $125 por el cargador. Si el cargador se encuentra en un programa gestionado, el reembolso es del 50 % hasta $500 por la mano de obra y $500 por el cargador."
+      "en": "SEC customers can save 50%, up to $250, on Level 2 electric vehicle charger."
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -3198,7 +2967,8 @@
       "maximum": 1000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "25% of cost up to $1,000 for an electric riding mower. ",
@@ -3223,11 +2993,11 @@
       "maximum": 150
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "25% of cost up to $150 for an e-bike. Up to $25 for extra battery at time of bike purchase. $300 outdoor equipment rebate limit per year.",
-      "es": "25 % del costo hasta $150 por una bicicleta eléctrica. Hasta $25 por una batería adicional al momento de la compra de la bicicleta. Límite de reembolso de $300 por equipo para actividades al aire libre por año."
+      "en": "SEC customers can save up to $150 on an e-bike."
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -3248,7 +3018,8 @@
       "maximum": 300
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "25% cost up to $150 for walk-behind mower; $50 for trimmer, leaf blower, power washer; $100 for chainsaw. $25 max for extra battery. ",
@@ -3566,19 +3337,22 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_clothes_dryer"
+      "heat_pump_clothes_dryer",
+      "non_heat_pump_clothes_dryer"
     ],
     "program": "nm_socorroElectricCooperative_sECEnergyEfficiencyRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 90
+      "number": 90,
+      "minimum": 30,
+      "maximum": 90
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$90 rebate for Energy Star heat pump (ventless) clothes dryer.",
-      "es": "Reembolso de $90 por una secadora de ropa con bomba de calor con certificación Energy Star (sin ventilación)."
+      "en": "SEC customers can save $90 on an ENERGY STAR heat pump (ventless) clothes dryer, or $30 on an ENERGY STAR electric clothes dryer."
     },
     "url": {
       "en": "https://www.socorroelectric.com/rebates"
@@ -3595,38 +3369,16 @@
     "program": "nm_jemezMountainsElectricCooperative_jMECEnergyEfficiencyRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 350
+      "number": 350,
+      "minimum": 100,
+      "maximum": 350
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$350/unit for induction cooktop replacing propane/natural gas or new construction. 30\" width minimum. ",
-      "es": "Reembolso de $350 por unidad para placas de inducción que reemplacen equipos a gas propano o gas natural, o para construcciones nuevas. Ancho mínimo de 30 pulgadas. "
-    },
-    "url": {
-      "en": "https://www.jemezcoop.org/rebates"
-    }
-  },
-  {
-    "id": "NM-157",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_stove"
-    ],
-    "program": "nm_jemezMountainsElectricCooperative_jMECEnergyEfficiencyRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 100
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$100/unit for induction cooktop replacing electric. 30\" width minimum. ",
-      "es": "$100 por unidad por una placa de cocción por inducción que reemplace a una eléctrica. Ancho mínimo de 30\". "
+      "en": "JMEC customers can save up to $350 on an induction cooktop (30\" minimum). "
     },
     "url": {
       "en": "https://www.jemezcoop.org/rebates"
@@ -3646,7 +3398,8 @@
       "number": 0.25
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "25% of cost up to $150 for walk-behind mower, $100 for chainsaw, $50 for trimmer, pruner, leaf blowers, power washer.  Up to $25 for extra battery. ",
@@ -3671,7 +3424,8 @@
       "maximum": 1000
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "25% of cost up to $1,000 for electric riding mower.",
@@ -3695,7 +3449,8 @@
       "number": 0.25
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "25% of cost up to $250 for 2-stage snow blower and $150 for 1-stage snow blower. 50% of cost up to $25 for extra battery at time of blower purchase. ",
@@ -3717,14 +3472,14 @@
     "amount": {
       "type": "percent",
       "number": 0.25,
-      "maximum": 175
+      "maximum": 150
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "25% of cost up to $150 for ebike. 50% of cost of extra battery up to $25 at time of bike purchase.",
-      "es": "25 % del costo hasta $150 por una bicicleta eléctrica. 50 % del costo de batería adicional hasta $25 al momento de la compra de la bicicleta."
+      "en": "JMEC customers can save up to $150 on an e-bike."
     },
     "url": {
       "en": "https://www.jemezcoop.org/rebates"
@@ -3742,38 +3497,16 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 16,
-      "unit": "kilowatt"
+      "unit": "kilowatt",
+      "minimum": 12,
+      "maximum": 16
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$16/kW for controlled off-peak heating electric thermal storage; $12/kW controlled off-peak thermal slab unit. Minimum load 1 kW.",
-      "es": "$16 por kW para el almacenamiento térmico eléctrico de calefacción controlada en horas valle; $12 por kW por una unidad de losa térmica controlada en horas valle. Carga mínima: 1 kW."
-    },
-    "url": {
-      "en": "https://www.jemezcoop.org/rebates"
-    }
-  },
-  {
-    "id": "NM-163",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "nm_jemezMountainsElectricCooperative_jMECEnergyEfficiencyRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "50% rebate up to $1,500 for qualified mini-split systems greater than 1.5 tons. Up to $500 for smaller eligible  systems. ",
-      "es": "Reembolso del 50 % hasta $1,500 por sistemas mini-split calificados de más de 1.5 toneladas. Hasta $500 para sistemas calificados más pequeños. "
+      "en": "JMEC customers can save up to $16 per kW on controlled electric thermal storage (minimum load 1 kW)."
     },
     "url": {
       "en": "https://www.jemezcoop.org/rebates"
@@ -3785,20 +3518,19 @@
       "rebate"
     ],
     "items": [
-      "air_to_water_heat_pump"
+      "heat_pump_water_heater"
     ],
     "program": "nm_jemezMountainsElectricCooperative_jMECEnergyEfficiencyRebateProgram",
     "amount": {
-      "type": "dollars_per_unit",
-      "number": 500,
-      "unit": "ton"
+      "type": "dollar_amount",
+      "number": 350
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "50% of equipment cost up to $500/ton for air-to-water radiant systems.",
-      "es": "50 % del costo del equipo hasta $500 por tonelada por sistemas radiantes aire-agua."
+      "en": "JMEC customers can save $350 on an ENERGY STAR heat pump water heater (at least 30 gallons)."
     },
     "url": {
       "en": "https://www.jemezcoop.org/rebates"
@@ -3810,19 +3542,23 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump"
+      "ducted_heat_pump",
+      "ductless_heat_pump"
     ],
     "program": "nm_jemezMountainsElectricCooperative_jMECEnergyEfficiencyRebateProgram",
     "amount": {
-      "type": "dollar_amount",
-      "number": 2000
+      "type": "dollars_per_unit",
+      "number": 1500,
+      "unit": "ton",
+      "minimum": 500,
+      "maximum": 1500
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "50% rebate up to $1,500 for qualified heat pump systems greater than 1.5 tons. $500 maximum for smaller systems. $500 bonus for ducted propane backup.",
-      "es": "Reembolso del 50 % hasta $1,500 por sistemas de bomba de calor calificados de más de 1.5 toneladas. Máximo de $500 para sistemas más pequeños. Bonificación de $500 para respaldo de propano con sistema de ductos."
+      "en": "JMEC customers can save up to $1,500 per ton on qualifying air source heat pumps (ducted or ductless)."
     },
     "url": {
       "en": "https://www.jemezcoop.org/rebates"
@@ -3965,60 +3701,13 @@
     }
   },
   {
-    "id": "NM-178",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_stove"
-    ],
-    "program": "nm_mora-SanMiguelElectricCooperative_mSMECEnergyStarRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 350
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$350/unit rebate for switching from gas to induction cooktop/range or new construction. 30 inch minimum width. Energy Star required.",
-      "es": "Reembolso de $350 por unidad por cambiar de cocina de gas a cocina de inducción o por una nueva construcción. Ancho mínimo de 30 pulgadas. Requiere certificación Energy Star."
-    },
-    "url": {
-      "en": "https://www.morasanmiguel.coop/rebates"
-    }
-  },
-  {
-    "id": "NM-179",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_stove"
-    ],
-    "program": "nm_mora-SanMiguelElectricCooperative_mSMECEnergyStarRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 100
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$100/unit rebate for electric-to-induction cooktop/range switch. 30 inch minimum width. Energy Star required.",
-      "es": "Reembolso de $100 por unidad para el cambio de placa de cocción/estufa eléctrica por inducción. Ancho mínimo de 30 pulgadas. Requiere certificación Energy Star."
-    },
-    "url": {
-      "en": "https://www.morasanmiguel.coop/rebates"
-    }
-  },
-  {
     "id": "NM-181",
     "payment_methods": [
       "rebate"
     ],
     "items": [
-      "non_heat_pump_water_heater"
+      "non_heat_pump_water_heater",
+      "heat_pump_water_heater"
     ],
     "program": "nm_mora-SanMiguelElectricCooperative_mSMECEnergyStarRebateProgram",
     "amount": {
@@ -4027,11 +3716,11 @@
       "maximum": 70
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Up to $70/unit rebate for Energy Star electric water heater. $50/unit for new construction.",
-      "es": "Reembolso de hasta $70 por unidad por un calentador de agua eléctrico Energy Star. $50 por unidad para construcciones nuevas."
+      "en": "MSMEC customers can save up to $70 on an ENERGY STAR water heater (30 gallon minimum)."
     },
     "url": {
       "en": "https://www.morasanmiguel.coop/rebates"
@@ -4043,7 +3732,8 @@
       "rebate"
     ],
     "items": [
-      "non_heat_pump_clothes_dryer"
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
     ],
     "program": "nm_mora-SanMiguelElectricCooperative_mSMECEnergyStarRebateProgram",
     "amount": {
@@ -4051,11 +3741,11 @@
       "number": 60
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$60 rebate for Energy Star electric clothes dryer",
-      "es": "Reembolso de $60 para secadora de ropa eléctrica Energy Star."
+      "en": "MSMEC customers can save $60 on an ENERGY STAR electric clothes dryer."
     },
     "url": {
       "en": "https://www.morasanmiguel.coop/rebates"
@@ -4064,7 +3754,7 @@
   {
     "id": "NM-183",
     "payment_methods": [
-      "assistance_program"
+      "pos_rebate"
     ],
     "items": [
       "non_heat_pump_water_heater"
@@ -4075,39 +3765,15 @@
       "number": 60
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "Purchase a 40 gallon or 50 gallon electric water heater for $50 or $60 respectively.",
-      "es": "Compre un calentador de agua eléctrico de 40 o 50 galones por $50 o $60, respectivamente."
+      "en": "CEC members can save when purchasing an electric water heater from CEC: $50 for a 40 gallon unit, or $60 for a 50 gallon unit."
     },
     "paused": true,
     "url": {
-      "en": "https://www.columbusco-op.org/rebates"
-    }
-  },
-  {
-    "id": "NM-184",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "other_insulation"
-    ],
-    "program": "nm_oteroCountyElectricCooperative_oCECEnergyEfficiencyProgram",
-    "amount": {
-      "type": "percent",
-      "number": 0.1
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "10% rebate of material costs for insulated concrete forms used in home construction. Maximum yearly rebate limits. ",
-      "es": "Reembolso del 10 % en el costo de materiales para encofrados de concreto aislante utilizados en la construcción de viviendas. Límite máximo de reembolso anual. "
-    },
-    "url": {
-      "en": "https://www.ocec-inc.com/energy-efficiency-program"
+      "en": "https://columbusco-op.org/water-heaters-rebate-program"
     }
   },
   {
@@ -4136,49 +3802,24 @@
     }
   },
   {
-    "id": "NM-186",
-    "payment_methods": [
-      "assistance_program"
-    ],
-    "items": [
-      "used_electric_vehicle"
-    ],
-    "program": "nm_leaCountyElectricCooperative_lCECEnergyConservationPrograms",
-    "amount": {
-      "type": "percent",
-      "number": 1
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Free test drive of Chevy Bolt EV and free Level 2 EV charging at LCEC main office in Lovington, NM.",
-      "es": "Prueba de manejo gratuita del Chevy Bolt EV y carga gratuita de EV de nivel 2 en la oficina principal de LCEC en Lovington, NM."
-    },
-    "url": {
-      "en": "https://lcecnet.com"
-    }
-  },
-  {
     "id": "NM-188",
     "payment_methods": [
-      "pos_rebate"
+      "rebate"
     ],
     "items": [
       "non_heat_pump_water_heater"
     ],
     "program": "nm_leaCountyElectricCooperative_lCECEnergyConservationPrograms",
     "amount": {
-      "type": "percent",
-      "number": 0.5
+      "type": "dollar_amount",
+      "number": 5,
+      "maximum": 250
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "Up to 50% upfront discount on Marathon electric water heater. Purchase price is LCEC's cost +10% markup - $5/gallon rebate.",
-      "es": "Descuento inicial de hasta el 50 % en el calentador de agua eléctrico Marathon. El precio de compra es el costo de LCEC + un 10 % de margen - $5 de descuento por galón."
+      "en": "$5/gallon rebate on Marathon electric water heater purchased through Lea County Electric Cooperative."
     },
     "url": {
       "en": "https://lcecnet.com"
@@ -4216,7 +3857,7 @@
     "items": [
       "non_heat_pump_water_heater"
     ],
-    "program": "nm_centralValleyElectricCooperative_cVECHeatingAndCoolingRebates",
+    "program": "nm_centralValleyElectricCooperative_cVECEnergyEfficiencyRebates",
     "amount": {
       "type": "percent",
       "number": 0.6
@@ -4226,11 +3867,10 @@
       "renter"
     ],
     "short_description": {
-      "en": "60% upfront discount on Marathon electric water heater. 30, 40 or 50 gallon sizes.",
-      "es": "Descuento inicial del 60 % por un calentador de agua eléctrico Marathon. Tamaños de 30, 40 o 50 galones."
+      "en": "CVEC members can save 60% on a Marathon electric water heater purchased through CVEC."
     },
     "url": {
-      "en": "https://cvecoop.org/heating-cooling-rebates"
+      "en": "https://www.cvecoop.org/energy-efficiency-rebates-and-programs"
     }
   },
   {
@@ -4343,32 +3983,6 @@
     "low_income": "nm-80ami",
     "url": {
       "en": "https://housingnm.org/programs/home-rehabilitation-and-weatherization/home-rehabilitation/veterans-home-rehabilitation-and-modification"
-    }
-  },
-  {
-    "id": "NM-198",
-    "payment_methods": [
-      "assistance_program"
-    ],
-    "items": [
-      "new_electric_vehicle",
-      "used_electric_vehicle"
-    ],
-    "program": "nm_forth_goForthElectricCarShare",
-    "amount": {
-      "type": "percent",
-      "number": 1
-    },
-    "owner_status": [
-      "homeowner",
-      "renter"
-    ],
-    "short_description": {
-      "en": "Affordable electric carshare. First 4-hour drive is free. Then rentals are $5/hr or a $50/day. Specific locations in 3 NM cities.",
-      "es": "Servicio de auto eléctrico compartido asequible. El primer viaje de 4 horas es gratis. Después, el alquiler cuesta $5/hora o $50/día. Ubicaciones específicas en 3 ciudades de Nuevo México."
-    },
-    "url": {
-      "en": "https://forthmobility.org/goforth"
     }
   },
   {
@@ -4895,41 +4509,17 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 500,
-      "unit": "ton"
+      "unit": "ton",
+      "minimum": 250,
+      "maximum": 500
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$500/ton for new installation, $250/ton for replacement units, $100/unit for ground source heat pump powered hot water (desuperheater).",
-      "es": "Reembolso de $500 por tonelada para instalaciones nuevas, $250 por tonelada para unidades de reemplazo y $100 por unidad para sistemas de agua caliente alimentados por bomba de calor geotérmica (desobrecalentador)."
+      "en": "JMEC customers can save up to $500 per ton on qualifying ground source heat pump systems."
     },
-    "url": {
-      "en": "https://www.jemezcoop.org/rebates"
-    }
-  },
-  {
-    "id": "NM-226",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "central_air_conditioner"
-    ],
-    "program": "nm_jemezMountainsElectricCooperative_jMECEnergyEfficiencyRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 100,
-      "maximum": 100
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$100/unit for Energy Star split-system air conditioner. Minimum size is 1 ton and 16  SEER minimum.  ",
-      "es": "Reembolso de $100 por unidad para acondicionadores de aire tipo tipo split con certificación ENERGY STAR. El tamaño mínimo es de 1 tonelada y debe tener una eficiencia mínima de 16 SEER."
-    },
-    "end_date": "2025-12-31",
     "url": {
       "en": "https://www.jemezcoop.org/rebates"
     }
@@ -5172,11 +4762,11 @@
       "number": 25
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$25 rebate for qualified Energy Star smart thermostat.",
-      "es": "Reembolso de $25 por un termostato inteligente calificado con certificación Energy Star."
+      "en": "JMEC customers can save $25 on a qualifying ENERGY STAR smart thermostat."
     },
     "url": {
       "en": "https://www.jemezcoop.org/rebates"
@@ -5188,43 +4778,22 @@
       "rebate"
     ],
     "items": [
-      "heat_pump_clothes_dryer"
-    ],
-    "program": "nm_jemezMountainsElectricCooperative_jMECEnergyEfficiencyRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 90
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$90/unit rebate for heat pump clothes dryer. ",
-      "es": "Reembolso de $90 por unidad por una secadora de ropa con bomba de calor. "
-    },
-    "url": {
-      "en": "https://www.jemezcoop.org/rebates"
-    }
-  },
-  {
-    "id": "NM-239",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
+      "heat_pump_clothes_dryer",
       "non_heat_pump_clothes_dryer"
     ],
     "program": "nm_jemezMountainsElectricCooperative_jMECEnergyEfficiencyRebateProgram",
     "amount": {
       "type": "dollar_amount",
-      "number": 30
+      "number": 90,
+      "minimum": 30,
+      "maximum": 90
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$30/unit rebate for electric clothes dryer. ",
-      "es": "Reembolso de $30 por unidad por una secadora de ropa eléctrica. "
+      "en": "JMEC customers can save $90 on an ENERGY STAR heat pump (ventless) clothes dryer or $30 on an ENERGY STAR electric clothes dryer. "
     },
     "url": {
       "en": "https://www.jemezcoop.org/rebates"
@@ -5242,14 +4811,16 @@
     "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 90
+      "number": 90,
+      "minimum": 30,
+      "maximum": 90
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "$90/unit rebate for an Energy Star heat pump clothes dryer. $30 rebate for Energy Star electric clothes dryer. ",
-      "es": "Reembolso de $90 por unidad por una secadora de ropa con bomba de calor con certificación Energy Star. Reembolso de $30 por una secadora de ropa eléctrica con certificación Energy Star. "
+      "en": "CDEC customers can save $90 on an ENERGY STAR heat pump (ventless) clothes dryer or $30 on an ENERGY STAR electric clothes dryer. "
     },
     "url": {
       "en": "https://www.cdec.coop/energy-efficiency-rebates"
@@ -5267,42 +4838,17 @@
     "amount": {
       "type": "percent",
       "number": 0.5,
-      "maximum": 500
+      "maximum": 250
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "50% of the product and installation cost of a Level 2 electric vehicle charger up to $500 ",
-      "es": "50% del costo del producto e instalación de un cargador de vehículo eléctrico de Nivel 2, hasta $500."
+      "en": "CDEC customers can save up to $250 on a Level 2 EV charger."
     },
     "url": {
       "en": "https://www.cdec.coop/electric-vehicles"
-    }
-  },
-  {
-    "id": "NM-242",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ductless_heat_pump"
-    ],
-    "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
-    "amount": {
-      "type": "percent",
-      "number": 0.5,
-      "maximum": 1500
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "50% equipment cost up to $1,500 for qualified ductless Energy Star air source heat pumps greater than 1.5 tons. Up to $500 for smaller systems. ",
-      "es": "50 % del costo del equipo hasta $1,500 por bombas de calor de aire sin ductos con certificación Energy Star de más de 1.5 toneladas. Hasta $500 para sistemas más pequeños. "
-    },
-    "url": {
-      "en": "https://www.cdec.coop/energy-efficiency-rebates"
     }
   },
   {
@@ -5317,15 +4863,14 @@
     "amount": {
       "type": "percent",
       "number": 0.25,
-      "maximum": 175
+      "maximum": 150
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "25% of the cost up of an e-bike to $150. 50% of cost up to $25 for additional battery with original purchase.",
-      "es": "25 % del costo hasta $150 por una bicicleta eléctrica. 50 % del costo hasta $25 por una batería adicional con la compra original."
+      "en": "CDEC customers can save up to $150 on an e-bike."
     },
     "url": {
       "en": "https://www.cdec.coop/energy-efficiency-rebates"
@@ -5424,7 +4969,8 @@
       "maximum": 1500
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "50% rebate on qualified ducted air-source heat pump larger than 1.5 tons, up to $1,500.  Up to $500 for smaller system. ",
@@ -5868,7 +5414,8 @@
       "maximum": 250
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "25% of cost rebate up to $150 for snow blower or $250 for 2-stage snow blower. Account limit for outdoor equipment is $300.",
@@ -5884,22 +5431,25 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump"
+      "geothermal_heating_installation"
     ],
     "program": "nm_continentalDivideElectricCooperative_continentalDivideResidentialRebates",
     "amount": {
-      "type": "percent",
-      "number": 0.5
+      "type": "dollars_per_unit",
+      "number": 500,
+      "unit": "ton",
+      "minimum": 250,
+      "maximum": 500
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "50% equipment cost up to $500/ton for new ground source heat pump and $250/ton for replacements.  $100 for desuperheater for water heating.",
-      "es": "50% del costo del equipo hasta $500/tonelada para bombas de calor geotérmicas nuevas y $250/tonelada para reemplazos. $100 para desobrecalentador para calentamiento de agua."
+      "en": "CDEC customers can save up to $500 per ton on a qualifying ground source heat pump system."
     },
     "url": {
-      "en": "https://www.cdec.coop/2026-energy-efficiency-rebates"
+      "en": "https://www.cdec.coop/energy-efficiency-rebates"
     }
   },
   {
@@ -5929,30 +5479,6 @@
     }
   },
   {
-    "id": "NM-276",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "heat_pump_clothes_dryer"
-    ],
-    "program": "nm_mora-SanMiguelElectricCooperative_mSMECEnergyStarRebateProgram",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 90
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$90 rebate for heat pump electric clothes dryer",
-      "es": "Reembolso de $90 para una secadora de ropa eléctrica con bomba de calor."
-    },
-    "url": {
-      "en": "https://www.morasanmiguel.coop/rebates"
-    }
-  },
-  {
     "id": "NM-277",
     "payment_methods": [
       "rebate"
@@ -5967,7 +5493,8 @@
       "maximum": 300
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
       "en": "25% cost up to $250 for 2-stage snowblower or $150 for single-stage  snowblower  $25 max for extra battery. ",
@@ -6321,52 +5848,26 @@
     }
   },
   {
-    "id": "NM-291",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "electric_outdoor_equipment"
-    ],
-    "program": "nm_columbusElectricCooperative_cECRebates",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 5000,
-      "maximum": 5000
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "Up to $5,000 for an electric forklift and $1,500 for an electric pallet jack. Project cap is $20,000. Check if residential members are eligible.",
-      "es": "Hasta $5,000 para una montacargas eléctrica y $1,500 para una transpaleta eléctrica. El límite del proyecto es de $20,000. Consulte si los miembros residenciales son elegibles."
-    },
-    "url": {
-      "en": "https://www.columbusco-op.org/rebates"
-    }
-  },
-  {
     "id": "NM-292",
     "payment_methods": [
       "rebate",
       "account_credit"
     ],
     "items": [
-      "ductless_heat_pump",
-      "ducted_heat_pump"
+      "non_heat_pump_clothes_dryer",
+      "heat_pump_clothes_dryer"
     ],
-    "program": "nm_centralValleyElectricCooperative_cVECHeatingAndCoolingRebates",
+    "program": "nm_centralValleyElectricCooperative_cVECEnergyEfficiencyRebates",
     "amount": {
       "type": "percent",
-      "number": 0.4,
-      "maximum": 75000
+      "number": 0.4
     },
     "owner_status": [
-      "homeowner"
+      "homeowner",
+      "renter"
     ],
     "short_description": {
-      "en": "40% rebate for electric Energy Star clothes dryer.",
-      "es": "40% de descuento para secadora de ropa eléctrica Energy Star."
+      "en": "CVEC customers can save 40% on an ENERGY STAR electric clothes dryer."
     },
     "url": {
       "en": "https://www.cvecoop.org/energy-efficiency-rebates-and-programs"
@@ -6380,7 +5881,7 @@
     "items": [
       "smart_thermostat"
     ],
-    "program": "nm_centralValleyElectricCooperative_cVECHeatingAndCoolingRebates",
+    "program": "nm_centralValleyElectricCooperative_cVECEnergyEfficiencyRebates",
     "amount": {
       "type": "percent",
       "number": 0.4
@@ -6390,23 +5891,21 @@
       "renter"
     ],
     "short_description": {
-      "en": "40% rebate of Energy Star smart thermostat cost in homes cooled by refrigerated air conditioning or heated by electric resistance or heat pump.",
-      "es": "Reembolso del 40% del costo de un termostato inteligente Energy Star en viviendas enfriadas por aire acondicionado refrigerado o calentadas por resistencia eléctrica o bomba de calor."
+      "en": "CVEC customers with AC and/or electric heating can save 40% on an ENERGY STAR smart thermostat."
     },
     "url": {
-      "en": "https://cvecoop.org/heating-cooling-rebates"
+      "en": "https://www.cvecoop.org/energy-efficiency-rebates-and-programs"
     }
   },
   {
     "id": "NM-294",
     "payment_methods": [
-      "rebate",
-      "account_credit"
+      "rebate"
     ],
     "items": [
       "solar_screen_films"
     ],
-    "program": "nm_centralValleyElectricCooperative_cVECHeatingAndCoolingRebates",
+    "program": "nm_centralValleyElectricCooperative_cVECEnergyEfficiencyRebates",
     "amount": {
       "type": "dollars_per_unit",
       "number": 1,
@@ -6417,50 +5916,46 @@
       "renter"
     ],
     "short_description": {
-      "en": "$1.00/sqft rebate up to 40% of the cost of solar screens for treated west and south-west facing window space.",
-      "es": "Reembolso de $1.00/pie cuadrado de hasta el 40 % del costo de pantallas solares para ventanas tratadas orientados al oeste y al suroeste."
+      "en": "CVEC customers with AC and/or electric heating can save $1 per square foot, up to 40%, on qualifying solar screens for west and south-facing windows."
     },
     "url": {
-      "en": "https://cvecoop.org/heating-cooling-rebates"
+      "en": "https://www.cvecoop.org/energy-efficiency-rebates-and-programs"
     }
   },
   {
     "id": "NM-295",
     "payment_methods": [
-      "pos_rebate"
+      "rebate"
     ],
     "items": [
-      "attic_or_roof_insulation",
-      "crawlspace_insulation"
+      "attic_or_roof_insulation"
     ],
-    "program": "nm_centralValleyElectricCooperative_cVECHeatingAndCoolingRebates",
+    "program": "nm_centralValleyElectricCooperative_cVECEnergyEfficiencyRebates",
     "amount": {
       "type": "percent",
       "number": 0.4,
-      "maximum": 1
+      "maximum": 1000
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "40% of the cost of attic or crawl space insulation up to $1,000  in homes cooled by refrigerated air or heated by electric or heat pump.",
-      "es": "40% del costo, hasta $1,000, para el aislamiento del ático o del espacio de acceso en viviendas enfriadas por aire refrigerado o calentadas por electricidad o bomba de calor."
+      "en": "CVEC customers with AC and/or electric heating can save 40%, up to $1,000, on qualifying attic insulation."
     },
     "url": {
-      "en": "https://cvecoop.org/heating-cooling-rebates"
+      "en": "https://www.cvecoop.org/energy-efficiency-rebates-and-programs"
     }
   },
   {
     "id": "NM-296",
     "payment_methods": [
-      "rebate",
-      "account_credit"
+      "rebate"
     ],
     "items": [
       "window_replacement"
     ],
-    "program": "nm_centralValleyElectricCooperative_cVECHeatingAndCoolingRebates",
+    "program": "nm_centralValleyElectricCooperative_cVECEnergyEfficiencyRebates",
     "amount": {
       "type": "percent",
       "number": 0.4
@@ -6470,11 +5965,10 @@
       "renter"
     ],
     "short_description": {
-      "en": "40% rebate of cost of Energy Star windows (taxes and labor excluded).",
-      "es": "40% de reembolso en el costo de  ventanas Energy Star (no se incluyen los impuestos ni la mano de obra)."
+      "en": "CVEC customers with AC and/or electric heating can save 40% on ENERGY STAR windows (product only)."
     },
     "url": {
-      "en": "https://cvecoop.org/heating-cooling-rebates"
+      "en": "https://www.cvecoop.org/energy-efficiency-rebates-and-programs"
     }
   },
   {
@@ -6944,6 +6438,130 @@
     },
     "url": {
       "en": "https://www.quitcarbon.com/blog/quitcarbonrebate"
+    }
+  },
+  {
+    "id": "NM-314",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "crawlspace_insulation"
+    ],
+    "program": "nm_centralValleyElectricCooperative_cVECEnergyEfficiencyRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 400,
+      "maximum": 400
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "CVEC customers with AC and/or electric heating can save up to $400 qualifying crawl space insulation."
+    },
+    "url": {
+      "en": "https://www.cvecoop.org/energy-efficiency-rebates-and-programs"
+    }
+  },
+  {
+    "id": "NM-315",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "non_heat_pump_water_heater"
+    ],
+    "program": "nm_jemezMountainsElectricCooperative_jMECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100,
+      "minimum": 50,
+      "maximum": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "JMEC customers can save up to $100 on a qualifying electric resistance water heater (at least 30 gallons) replacing a gas or propane water heater."
+    },
+    "url": {
+      "en": "https://www.jemezcoop.org/rebates"
+    }
+  },
+  {
+    "id": "NM-316",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "whole_house_fan"
+    ],
+    "program": "nm_jemezMountainsElectricCooperative_jMECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 100
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "JMEC customers can save $100 on a whole house fan."
+    },
+    "url": {
+      "en": "https://www.jemezcoop.org/rebates"
+    }
+  },
+  {
+    "id": "NM-317",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "evaporative_cooler"
+    ],
+    "program": "nm_jemezMountainsElectricCooperative_jMECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 200
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "JMEC customers can save $200 on a qualifying evaporative cooler."
+    },
+    "url": {
+      "en": "https://www.jemezcoop.org/rebates"
+    }
+  },
+  {
+    "id": "NM-318",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "electric_vehicle_charger"
+    ],
+    "program": "nm_jemezMountainsElectricCooperative_jMECEnergyEfficiencyRebateProgram",
+    "amount": {
+      "type": "percent",
+      "number": 0.5,
+      "maximum": 250
+    },
+    "owner_status": [
+      "homeowner",
+      "renter"
+    ],
+    "short_description": {
+      "en": "JMEC customers can save 50%, up to $250 on a Level 2 electric vehicle charger."
+    },
+    "url": {
+      "en": "https://www.jemezcoop.org/rebates"
     }
   }
 ]
