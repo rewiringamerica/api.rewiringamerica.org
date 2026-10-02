@@ -76,6 +76,29 @@
     {
       "payment_methods": [
         "pos_rebate",
+        "rebate"
+      ],
+      "authority_type": "other",
+      "program": "Xcel Energy Heat Pump Rebates",
+      "program_url": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps",
+      "items": [
+        "air_to_water_heat_pump"
+      ],
+      "amount": {
+        "type": "dollars_per_unit",
+        "number": 1900,
+        "unit": "ton"
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "authority": "co-xcel-energy-combined",
+      "start_date": "2026-10-01",
+      "short_description": "$1,900/heating ton at 5 degrees Fahrenheit for air-to-water heat pumps."
+    },
+    {
+      "payment_methods": [
+        "pos_rebate",
         "tax_credit"
       ],
       "authority_type": "state",
@@ -420,7 +443,9 @@
         "renter"
       ],
       "authority": "co-colorado-energy-office",
+      "paused": true,
       "start_date": "2025-11-17",
+      "end_date": "2026-08-01",
       "short_description": "Rebate of 50% of ENERGY STAR heat pump water heater costs for households between 80% and 150% AMI, up to $1,750."
     },
     {
@@ -444,6 +469,8 @@
         "renter"
       ],
       "authority": "co-colorado-energy-office",
+      "paused": true,
+      "end_date": "2026-08-01",
       "short_description": "Rebate of 50% of ENERGY STAR cold climate heat pump costs for households between 80% and 150% AMI, up to $8,000."
     },
     {
@@ -466,6 +493,8 @@
         "renter"
       ],
       "authority": "co-colorado-energy-office",
+      "paused": true,
+      "end_date": "2026-08-01",
       "short_description": "Rebate of 50% of ENERGY STAR heat pump clothes dryer costs for households between 80% and 150% AMI, up to $840."
     },
     {
@@ -488,7 +517,9 @@
         "renter"
       ],
       "authority": "co-colorado-energy-office",
+      "paused": true,
       "start_date": "2025-11-17",
+      "end_date": "2026-08-01",
       "short_description": "Rebate of 50% of ENERGY STAR electric stove, cooktop, range, or oven costs for households between 80% and 150% AMI, up to $840."
     },
     {
@@ -512,6 +543,7 @@
       ],
       "authority": "co-colorado-energy-office",
       "start_date": "2025-11-17",
+      "end_date": "2026-08-01",
       "short_description": "Rebate of 50% of electrical wiring costs for households between 80% and 150% AMI, up to $2,500."
     },
     {
@@ -534,7 +566,9 @@
         "renter"
       ],
       "authority": "co-colorado-energy-office",
+      "paused": true,
       "start_date": "2025-11-17",
+      "end_date": "2026-08-01",
       "short_description": "Rebate of 50% of electrical load service center (electrical panel) costs for households between 80% and 150% AMI, up to $4,000."
     },
     {
@@ -563,6 +597,8 @@
         "renter"
       ],
       "authority": "co-colorado-energy-office",
+      "paused": true,
+      "end_date": "2026-08-01",
       "short_description": "Rebate of 50% of insulation, air sealing, and ventilation costs for households between 80% and 150% AMI, up to $1,600."
     },
     {
@@ -586,7 +622,9 @@
         "renter"
       ],
       "authority": "co-colorado-energy-office",
+      "paused": true,
       "start_date": "2025-11-17",
+      "end_date": "2026-08-01",
       "short_description": "Rebate of 50% of ENERGY STAR heat pump costs.   For space heating and cooling in households between 80% and 150% AMI, up to $3,000."
     },
     {
@@ -926,7 +964,7 @@
       ],
       "amount": {
         "type": "dollars_per_unit",
-        "number": 3300,
+        "number": 2200,
         "unit": "ton"
       },
       "owner_status": [
@@ -934,8 +972,7 @@
       ],
       "authority": "co-xcel-energy-combined",
       "start_date": "2025-01-01",
-      "end_date": "2026-12-31",
-      "short_description": "$3,300 per heating ton rebate for ground source heat pumps with quality installation."
+      "short_description": "$2,200 per heating ton rebate for ground source heat pumps with quality installation."
     },
     {
       "payment_methods": [
@@ -951,7 +988,7 @@
       ],
       "amount": {
         "type": "dollars_per_unit",
-        "number": 2250,
+        "number": 1500,
         "unit": "ton"
       },
       "owner_status": [
@@ -959,8 +996,7 @@
       ],
       "authority": "co-xcel-energy-combined",
       "start_date": "2025-11-16",
-      "end_date": "2026-12-31",
-      "short_description": "$2,250/heating ton at 5 degrees Fahrenheit for a cold-climate heat pump."
+      "short_description": "$1,500/heating ton at 5 degrees Fahrenheit for a cold-climate heat pump."
     },
     {
       "payment_methods": [
@@ -975,7 +1011,7 @@
       ],
       "amount": {
         "type": "dollars_per_unit",
-        "number": 2250,
+        "number": 1500,
         "unit": "ton"
       },
       "owner_status": [
@@ -983,8 +1019,7 @@
       ],
       "authority": "co-xcel-energy-combined",
       "start_date": "2025-11-16",
-      "end_date": "2026-12-31",
-      "short_description": "$2250/heating ton for qualifying Cold Climate Mini Split Heat Pumps."
+      "short_description": "$1500/heating ton for qualifying Cold Climate Mini Split Heat Pumps."
     },
     {
       "payment_methods": [
@@ -1000,7 +1035,7 @@
       ],
       "amount": {
         "type": "dollars_per_unit",
-        "number": 900,
+        "number": 600,
         "unit": "ton"
       },
       "owner_status": [
@@ -1008,7 +1043,7 @@
       ],
       "authority": "co-xcel-energy-combined",
       "start_date": "2025-01-20",
-      "short_description": "$900/cooling ton rebate for ducted, partially ducted, or non-ducted heat pumps."
+      "short_description": "$600/cooling ton rebate for ducted, partially ducted, or non-ducted heat pumps."
     },
     {
       "payment_methods": [
@@ -1070,15 +1105,14 @@
       ],
       "amount": {
         "type": "dollar_amount",
-        "number": 2250
+        "number": 1500
       },
       "owner_status": [
         "homeowner"
       ],
       "authority": "co-xcel-energy-combined",
       "start_date": "2025-01-01",
-      "end_date": "2026-12-31",
-      "short_description": "$2,250 off qualifying new heat pump water heaters for Xcel customers. Must be installed by registered contractor and may not exceed 80 gallons."
+      "short_description": "$1500 off qualifying new heat pump water heaters for Xcel customers. Must be installed by registered contractor and may not exceed 80 gallons."
     },
     {
       "payment_methods": [
@@ -1123,6 +1157,27 @@
       ],
       "authority": "co-xcel-energy",
       "short_description": "Up to $500 rebate for installing a 240-volt circuit to support a Level 2 electric vehicle charger.  "
+    },
+    {
+      "payment_methods": [
+        "rebate"
+      ],
+      "authority_type": "other",
+      "program": "Xcel Energy Heat Pump Rebates",
+      "program_url": "https://xcelnew.my.salesforce.com/sfc/p/#1U0000011ttV/a/R300000VaKHh/LOhy1LXjBUFmC3Wtx5nXUMWKdLrID1qbswR8JUCuM8Q",
+      "items": [
+        "ductless_heat_pump"
+      ],
+      "amount": {
+        "type": "dollar_amount",
+        "number": 500
+      },
+      "owner_status": [
+        "homeowner"
+      ],
+      "authority": "co-xcel-energy-combined",
+      "start_date": "2026-10-01",
+      "short_description": "Supplemental ductless rebate, $500 flat. "
     },
     {
       "payment_methods": [
