@@ -7138,7 +7138,8 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 600,
-      "unit": "ton"
+      "unit": "ton",
+      "minimum": 300
     },
     "owner_status": [
       "homeowner"
@@ -7191,7 +7192,8 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 2200,
-      "unit": "ton"
+      "unit": "ton",
+      "minimum": 1100
     },
     "owner_status": [
       "homeowner"
@@ -7218,7 +7220,8 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 1500,
-      "unit": "ton"
+      "unit": "ton",
+      "minimum": 750
     },
     "owner_status": [
       "homeowner"
@@ -15720,15 +15723,14 @@
     "amount": {
       "type": "percent",
       "number": 0.3,
-      "maximum": 600
+      "maximum": 750
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "30% rebate for attic insulation, up to $400. ",
-      "es": "30% de reembolso para aislamiento de ático, hasta $400."
+      "en": "30% rebate for attic insulation, up to $500. "
     },
     "start_date": "2025-01-01",
     "url": {
@@ -17712,15 +17714,14 @@
     "amount": {
       "type": "percent",
       "number": 0.3,
-      "maximum": 400
+      "maximum": 600
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "30% rebate, up to $400 for air sealing and weatherstripping that reduces energy use by 20%. ",
-      "es": "Reembolso del 30%, hasta $400, para sellado de aire y burletes que reducen el uso de energía en un 20%."
+      "en": "30% rebate, up to $600 for air sealing and weatherstripping that reduces energy use by 20%. "
     },
     "start_date": "2025-01-01",
     "url": {
@@ -19998,7 +19999,8 @@
     "amount": {
       "type": "dollars_per_unit",
       "number": 1900,
-      "unit": "ton"
+      "unit": "ton",
+      "minimum": 950
     },
     "owner_status": [
       "homeowner"
