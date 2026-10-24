@@ -19,7 +19,7 @@ An instance of this API is live at https://api.rewiringamerica.org. An API key i
 
    If you don't have a Geocodio key, just put nothing after the equals sign.
 
-3. Install Node 18. We recommend using [NVM](https://github.com/nvm-sh/nvm).
+3. Install the Node version in `.nvmrc`. We recommend using [NVM](https://github.com/nvm-sh/nvm) (`nvm install`).
 4. Install Yarn by running `corepack enable`.
 5. Run `yarn install` to install dependencies.
 6. Run `yarn build` to build the SQLite database of geographic and income data.

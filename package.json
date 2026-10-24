@@ -8,12 +8,12 @@
   "license": "Apache-2.0",
   "private": true,
   "engines": {
-    "node": ">=22.18.0"
+    "node": "^22.23.4 || ^24.22.1 || >=26.12.1"
   },
   "dependencies": {
     "@fastify/autoload": "^6.4.0",
     "@fastify/cors": "^10.1.0",
-    "@fastify/sensible": "^6.0.5",
+    "@fastify/sensible": "^6.0.7",
     "@fastify/swagger": "^9.8.1",
     "@js-joda/core": "^5.6.5",
     "@js-joda/timezone": "^2.22.0",
@@ -21,11 +21,11 @@
     "@turf/turf": "^7.2.0",
     "@types/cheerio": "^0.22.35",
     "ajv-formats": "^3.0.1",
-    "axios": "^1.18.0",
+    "axios": "^1.20.0",
     "axios-retry": "^4.0.0",
     "better-sqlite3": "^11.7.2",
     "cheerio": "^1.0.0-rc.12",
-    "fastify": "^5.12.1",
+    "fastify": "^5.12.7",
     "fastify-cli": "^7.4.1",
     "fastify-plugin": "^5.1.0",
     "geocodio-library-node": "^1.9.1",
@@ -37,7 +37,7 @@
     "@js-joda/locale_en-us": "^4.15.3",
     "@types/better-sqlite3": "^7.6.13",
     "@types/glob": "^8.1.0",
-    "@types/lodash": "^4.17.25",
+    "@types/lodash": "^4.17.26",
     "@types/make-fetch-happen": "^10.0.4",
     "@types/minimist": "^1.2.5",
     "@types/node": "22.19.15",
