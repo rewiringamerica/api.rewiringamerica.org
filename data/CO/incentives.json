@@ -7137,15 +7137,15 @@
     "program": "co_xcelEnergyCombined_xcelEnergyHeatPumpRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 900,
-      "unit": "ton"
+      "number": 600,
+      "unit": "ton",
+      "minimum": 300
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$900/cooling ton rebate for ducted, partially ducted, or non-ducted heat pumps.",
-      "es": "Reembolso de $900 por tonelada de refrigeración para bombas de calor con sistema de ductos, con sistema de ductos parcial o sin ductos."
+      "en": "$600/cooling ton rebate for ducted, partially ducted, or non-ducted heat pumps."
     },
     "start_date": "2025-01-20",
     "url": {
@@ -7191,18 +7191,17 @@
     "program": "co_xcelEnergyCombined_xcelEnergyHeatPumpRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 3300,
-      "unit": "ton"
+      "number": 2200,
+      "unit": "ton",
+      "minimum": 1100
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$3,300 per heating ton rebate for ground source heat pumps with quality installation.",
-      "es": "Reembolso de $3,300 por tonelada de calefacción para bombas de calor geotérmicas con instalación de calidad."
+      "en": "$2,200 per heating ton rebate for ground source heat pumps with quality installation."
     },
     "start_date": "2025-01-01",
-    "end_date": "2026-12-31",
     "url": {
       "en": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps"
     }
@@ -7220,18 +7219,17 @@
     "program": "co_xcelEnergyCombined_xcelEnergyHeatPumpRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 2250,
-      "unit": "ton"
+      "number": 1500,
+      "unit": "ton",
+      "minimum": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,250/heating ton at 5 degrees Fahrenheit for a cold-climate heat pump.",
-      "es": "$2,250 por tonelada de calefacción a 5 grados Fahrenheit para una bomba de calor para clima frío."
+      "en": "$1,500/heating ton at 5 degrees Fahrenheit for a cold-climate heat pump."
     },
     "start_date": "2025-11-16",
-    "end_date": "2026-12-31",
     "url": {
       "en": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps"
     }
@@ -13114,18 +13112,16 @@
     "program": "co_xcelEnergyCombined_xcelEnergyHeatPumpWaterHeaterRebates",
     "amount": {
       "type": "dollar_amount",
-      "number": 2250,
+      "number": 1500,
       "minimum": 750
     },
     "owner_status": [
       "homeowner"
     ],
     "short_description": {
-      "en": "$2,250 off qualifying new heat pump water heaters for Xcel customers. Must be installed by registered contractor and may not exceed 80 gallons.",
-      "es": "Descuento de $2,250 en calentadores de agua con bomba de calor que califiquen para clientes de Xcel. Debe ser instalado por un contratista registrado y no debe exceder los 80 galones."
+      "en": "$1500 off qualifying new heat pump water heaters for Xcel customers. Must be installed by registered contractor and may not exceed 80 gallons."
     },
     "start_date": "2025-01-01",
-    "end_date": "2026-12-31",
     "url": {
       "en": "https://co.my.xcelenergy.com/s/residential/home-rebates/water-heaters"
     }
@@ -15727,15 +15723,14 @@
     "amount": {
       "type": "percent",
       "number": 0.3,
-      "maximum": 600
+      "maximum": 750
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "30% rebate for attic insulation, up to $400. ",
-      "es": "30% de reembolso para aislamiento de ático, hasta $400."
+      "en": "30% rebate for attic insulation, up to $500. "
     },
     "start_date": "2025-01-01",
     "url": {
@@ -17719,15 +17714,14 @@
     "amount": {
       "type": "percent",
       "number": 0.3,
-      "maximum": 400
+      "maximum": 600
     },
     "owner_status": [
       "homeowner",
       "renter"
     ],
     "short_description": {
-      "en": "30% rebate, up to $400 for air sealing and weatherstripping that reduces energy use by 20%. ",
-      "es": "Reembolso del 30%, hasta $400, para sellado de aire y burletes que reducen el uso de energía en un 20%."
+      "en": "30% rebate, up to $600 for air sealing and weatherstripping that reduces energy use by 20%. "
     },
     "start_date": "2025-01-01",
     "url": {
@@ -18351,6 +18345,8 @@
       "es": "Reembolso del 100% del costo de los calentadores de agua con bomba de calor ENERGY STAR para hogares con ingresos inferiores al 80% del AMI, hasta $1,750."
     },
     "start_date": "2025-11-17",
+    "end_date": "2026-08-01",
+    "paused": true,
     "low_income": "co-hear-program-low",
     "url": {
       "en": "https://energyoffice.colorado.gov/home-energy-rebates"
@@ -18380,6 +18376,8 @@
       "es": "Reembolso del 50% del costo de los calentadores de agua con bomba de calor ENERGY STAR para hogares con ingresos entre el 80% y el 150% del AMI, hasta $1,750."
     },
     "start_date": "2025-11-17",
+    "end_date": "2026-08-01",
+    "paused": true,
     "low_income": "co-hear-program-moderate",
     "url": {
       "en": "https://energyoffice.colorado.gov/home-energy-rebates"
@@ -18410,6 +18408,8 @@
       "es": "Reembolso del 100% del costo de las bombas de calor ENERGY STAR para climas fríos para hogares con ingresos inferiores al 80% del AMI, hasta $8,000."
     },
     "start_date": "2025-11-17",
+    "end_date": "2026-08-01",
+    "paused": true,
     "low_income": "co-hear-program-low",
     "url": {
       "en": "https://energyoffice.colorado.gov/home-energy-rebates"
@@ -18439,6 +18439,8 @@
       "en": "Rebate of 50% of ENERGY STAR cold climate heat pump costs for households between 80% and 150% AMI, up to $8,000.",
       "es": "Reembolso del 50% del costo de las bombas de calor ENERGY STAR para climas fríos para hogares con ingresos entre el 80% y el 150% del AMI, hasta $8,000."
     },
+    "end_date": "2026-08-01",
+    "paused": true,
     "low_income": "co-hear-program-moderate",
     "url": {
       "en": "https://energyoffice.colorado.gov/home-energy-rebates"
@@ -18468,6 +18470,8 @@
       "es": "Reembolso del 100% del costo de las secadoras de ropa con bomba de calor ENERGY STAR para hogares con ingresos inferiores al 80% del AMI, hasta $840."
     },
     "start_date": "2025-11-17",
+    "end_date": "2026-08-01",
+    "paused": true,
     "low_income": "co-hear-program-low",
     "url": {
       "en": "https://energyoffice.colorado.gov/home-energy-rebates"
@@ -18496,6 +18500,8 @@
       "en": "Rebate of 50% of ENERGY STAR heat pump clothes dryer costs for households between 80% and 150% AMI, up to $840.",
       "es": "Reembolso del 50% del costo de las secadoras de ropa con bomba de calor ENERGY STAR para hogares con ingresos entre el 80% y el 150% del AMI, hasta $840."
     },
+    "end_date": "2026-08-01",
+    "paused": true,
     "low_income": "co-hear-program-moderate",
     "url": {
       "en": "https://energyoffice.colorado.gov/home-energy-rebates"
@@ -18524,6 +18530,8 @@
       "en": "Rebate of 100% of ENERGY STAR electric stove, cooktop, range, or oven costs for households under 80% AMI, up to $840.",
       "es": "Reembolso del 100% del costo de estufas, placas de cocina, hornos o cocinas eléctricas ENERGY STAR para hogares con ingresos inferiores al 80% del AMI, hasta $840."
     },
+    "end_date": "2026-08-01",
+    "paused": true,
     "low_income": "co-hear-program-low",
     "url": {
       "en": "https://energyoffice.colorado.gov/home-energy-rebates"
@@ -18552,6 +18560,8 @@
       "es": "Reembolso del 50% del costo de estufas, placas de cocina, hornos o cocinas eléctricas ENERGY STAR para hogares con ingresos entre el 80% y el 150% del AMI, hasta $840."
     },
     "start_date": "2025-11-17",
+    "end_date": "2026-08-01",
+    "paused": true,
     "low_income": "co-hear-program-moderate",
     "url": {
       "en": "https://energyoffice.colorado.gov/home-energy-rebates"
@@ -18581,6 +18591,8 @@
       "es": "Reembolso del 100% de los costos de cableado eléctrico para hogares con ingresos inferiores al 80% del AMI, hasta $2,500."
     },
     "start_date": "2025-11-17",
+    "end_date": "2026-08-01",
+    "paused": true,
     "low_income": "co-hear-program-low",
     "url": {
       "en": "https://energyoffice.colorado.gov/home-energy-rebates"
@@ -18610,6 +18622,7 @@
       "es": "Reembolso del 50% de los costos de cableado eléctrico para hogares con ingresos entre el 80% y el 150% del AMI, hasta $2,500."
     },
     "start_date": "2025-11-17",
+    "end_date": "2026-08-01",
     "low_income": "co-hear-program-moderate",
     "url": {
       "en": "https://energyoffice.colorado.gov/home-energy-rebates"
@@ -18639,6 +18652,8 @@
       "es": "Reembolso del 100% de los costos del centro de servicio de carga eléctrica (panel eléctrico) para hogares con ingresos inferiores al 80% del AMI, hasta $4,000."
     },
     "start_date": "2025-11-17",
+    "end_date": "2026-08-01",
+    "paused": true,
     "low_income": "co-hear-program-low",
     "url": {
       "en": "https://energyoffice.colorado.gov/home-energy-rebates"
@@ -18668,6 +18683,8 @@
       "es": "Reembolso del 50% de los costos del centro de servicio de carga eléctrica (panel eléctrico) para hogares entre el 80% y el 150% del AMI, hasta $4,000."
     },
     "start_date": "2025-11-17",
+    "end_date": "2026-08-01",
+    "paused": true,
     "low_income": "co-hear-program-moderate",
     "url": {
       "en": "https://energyoffice.colorado.gov/home-energy-rebates"
@@ -18703,6 +18720,8 @@
       "es": "Reembolso del 100% de los costos de aislamiento, sellado de aire y ventilación para hogares con ingresos inferiores al 80% del AMI, hasta $1,600."
     },
     "start_date": "2025-11-17",
+    "end_date": "2026-08-01",
+    "paused": true,
     "low_income": "co-hear-program-low",
     "url": {
       "en": "https://energyoffice.colorado.gov/home-energy-rebates"
@@ -18737,6 +18756,8 @@
       "en": "Rebate of 50% of insulation, air sealing, and ventilation costs for households between 80% and 150% AMI, up to $1,600.",
       "es": "Reembolso del 50% de los costos de aislamiento, sellado de aire y ventilación para hogares con ingresos entre el 80% y el 150% del AMI, hasta $1,600."
     },
+    "end_date": "2026-08-01",
+    "paused": true,
     "low_income": "co-hear-program-moderate",
     "url": {
       "en": "https://energyoffice.colorado.gov/home-energy-rebates"
@@ -18767,6 +18788,8 @@
       "es": "Reembolso del 100% del costo de la bomba de calor ENERGY STAR. Para calefacción y refrigeración de espacios en hogares con ingresos inferiores al 80% del AMI, hasta $3,000."
     },
     "start_date": "2025-11-17",
+    "end_date": "2026-08-01",
+    "paused": true,
     "low_income": "co-hear-program-low",
     "url": {
       "en": "https://energyoffice.colorado.gov/home-energy-rebates"
@@ -18797,6 +18820,8 @@
       "es": "Reembolso del 50% del costo de las bombas de calor ENERGY STAR. Para calefacción y refrigeración de espacios en hogares con ingresos entre el 80% y el 150% del AMI, hasta $3,000."
     },
     "start_date": "2025-11-17",
+    "end_date": "2026-08-01",
+    "paused": true,
     "low_income": "co-hear-program-moderate",
     "url": {
       "en": "https://energyoffice.colorado.gov/home-energy-rebates"
@@ -18814,7 +18839,7 @@
     "program": "co_xcelEnergyCombined_xcelEnergyHeatPumpRebates",
     "amount": {
       "type": "dollars_per_unit",
-      "number": 2250,
+      "number": 1500,
       "unit": "ton",
       "minimum": 750
     },
@@ -18822,11 +18847,9 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$2250/heating ton for qualifying Cold Climate Mini Split Heat Pumps.",
-      "es": "$2,250/tonelada de calefacción para bombas de calor minisplit para climas fríos que califiquen."
+      "en": "$1500/heating ton for qualifying Cold Climate Mini Split Heat Pumps."
     },
     "start_date": "2025-11-16",
-    "end_date": "2026-12-31",
     "url": {
       "en": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps"
     }
@@ -19961,6 +19984,57 @@
     "low_income": "co-colorado-energy-office",
     "url": {
       "en": "https://energyoffice.colorado.gov/ebike-rebates"
+    }
+  },
+  {
+    "id": "CO-804",
+    "payment_methods": [
+      "pos_rebate",
+      "rebate"
+    ],
+    "items": [
+      "air_to_water_heat_pump"
+    ],
+    "program": "co_xcelEnergyCombined_xcelEnergyHeatPumpRebates",
+    "amount": {
+      "type": "dollars_per_unit",
+      "number": 1900,
+      "unit": "ton",
+      "minimum": 950
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "$1,900/heating ton at 5 degrees Fahrenheit for air-to-water heat pumps."
+    },
+    "start_date": "2026-10-01",
+    "url": {
+      "en": "https://co.my.xcelenergy.com/s/residential/heating-cooling/heat-pumps"
+    }
+  },
+  {
+    "id": "CO-805",
+    "payment_methods": [
+      "rebate"
+    ],
+    "items": [
+      "ductless_heat_pump"
+    ],
+    "program": "co_xcelEnergyCombined_xcelEnergyHeatPumpRebates",
+    "amount": {
+      "type": "dollar_amount",
+      "number": 500
+    },
+    "owner_status": [
+      "homeowner"
+    ],
+    "short_description": {
+      "en": "Supplemental ductless rebate, $500 flat. "
+    },
+    "start_date": "2026-10-01",
+    "url": {
+      "en": "https://xcelnew.my.salesforce.com/sfc/p/#1U0000011ttV/a/R300000VaKHh/LOhy1LXjBUFmC3Wtx5nXUMWKdLrID1qbswR8JUCuM8Q"
     }
   }
 ]

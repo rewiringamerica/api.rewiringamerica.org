@@ -499,6 +499,7 @@
       "es": "Reembolso equivalente al 100 % del reembolso de la compañía de servicios públicos por un calentador de agua con bomba de calor, o del 150 % para quienes califiquen para bonificaciones. Solo para residentes de Edina."
     },
     "start_date": "2025-01-01",
+    "paused": true,
     "url": {
       "en": "https://www.edinamn.gov/1929/Community-Climate-Action-Fund"
     }
@@ -576,6 +577,7 @@
       "es": "Reembolso de $500 por bicicletas eléctricas y equipo de seguridad, o de $1,000 para quienes califiquen. Bonificación de $200 para bicicletas eléctricas de carga o adaptadas. Solo para residentes de Edina."
     },
     "start_date": "2025-01-01",
+    "paused": true,
     "url": {
       "en": "https://www.edinamn.gov/1929/Community-Climate-Action-Fund"
     }
@@ -603,6 +605,7 @@
       "es": "Reembolso de $500 por una cocina de inducción, o de $750 para quienes califiquen para bonificaciones. Solo para residentes de Edina."
     },
     "start_date": "2025-02-01",
+    "paused": true,
     "url": {
       "en": "https://www.edinamn.gov/1929/Community-Climate-Action-Fund"
     }
@@ -629,6 +632,7 @@
       "es": "Reembolso de $500 por una secadora de ropa con bomba de calor, o de $750 para quienes califiquen para bonificaciones. Solo para residentes de Edina."
     },
     "start_date": "2025-01-01",
+    "paused": true,
     "url": {
       "en": "https://www.edinamn.gov/1929/Community-Climate-Action-Fund"
     }
@@ -1816,7 +1820,8 @@
       "rebate"
     ],
     "items": [
-      "ductless_heat_pump"
+      "ductless_heat_pump",
+      "ducted_heat_pump"
     ],
     "program": "mn_minnesotaPower_minnesotaPowerResidentialRebatesAndServices",
     "amount": {
@@ -1827,8 +1832,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$400 rebate for a ductless air source heat pump. Must meet 2023 ENERGY STAR specifications and be installed by a participating contractor.",
-      "es": "Reembolso de $400 por una bomba de calor de fuente de aire sin sistema de ductos. Debe cumplir con las especificaciones ENERGY STAR de 2023 y ser instalada por un contratista participante."
+      "en": "$400 rebate for a ducted or ductless air source heat pump. Must meet 2023 ENERGY STAR specifications and be installed by a participating contractor."
     },
     "start_date": "2025-01-01",
     "url": {
@@ -2305,31 +2309,6 @@
     }
   },
   {
-    "id": "MN-134",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump"
-    ],
-    "program": "mn_minnesotaPower_minnesotaPowerResidentialRebatesAndServices",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 400
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$400 rebate for a ducted air source heat pump. Must meet 2023 ENERGY STAR specifications and be installed by a participating contractor.",
-      "es": "Reembolso de $400 por una bomba de calor de fuente de aire con sistema de ductos. Debe cumplir con las especificaciones ENERGY STAR de 2023 y ser instalada por un contratista participante."
-    },
-    "start_date": "2025-01-01",
-    "url": {
-      "en": "https://www.mnpower.com/ProgramsRebates/RebatesAndSavings"
-    }
-  },
-  {
     "id": "MN-135",
     "payment_methods": [
       "rebate"
@@ -2359,7 +2338,8 @@
       "rebate"
     ],
     "items": [
-      "ducted_heat_pump"
+      "ducted_heat_pump",
+      "ductless_heat_pump"
     ],
     "program": "mn_minnesotaPower_minnesotaPowerResidentialRebatesAndServices",
     "amount": {
@@ -2370,8 +2350,7 @@
       "homeowner"
     ],
     "short_description": {
-      "en": "$1,000 rebate for a ducted cold climate air source heat pump. Must meet 25C tax credit requirements and be installed by a participating contractor.",
-      "es": "Reembolso de $1,000 para una bomba de calor de aire acondicionado para clima frío con ductos. Debe cumplir con los requisitos del crédito fiscal de 25 °C y ser instalada por un contratista participante."
+      "en": "$1,000 rebate for a ducted or ductless cold climate air source heat pump. Must be installed by a participating contractor."
     },
     "start_date": "2025-01-01",
     "url": {
@@ -3074,32 +3053,6 @@
     },
     "url": {
       "en": "https://www.brightenergysolutions.com/members"
-    }
-  },
-  {
-    "id": "MN-180",
-    "payment_methods": [
-      "rebate"
-    ],
-    "items": [
-      "ducted_heat_pump",
-      "ductless_heat_pump"
-    ],
-    "program": "mn_minnesotaPower_minnesotaPowerResidentialRebatesAndServices",
-    "amount": {
-      "type": "dollar_amount",
-      "number": 1200
-    },
-    "owner_status": [
-      "homeowner"
-    ],
-    "short_description": {
-      "en": "$1,200 rebate for a cold climate air source heat pump. Must meet tax credit and installation requirements. Cannot be used with $1,000 rebate.",
-      "es": "Reembolso de $1,200 por una bomba de calor de fuente de aire para climas fríos. Debe cumplir con los requisitos de crédito fiscal e instalación. No se puede combinar con el reembolso de $1,000."
-    },
-    "start_date": "2025-04-01",
-    "url": {
-      "en": "https://www.mnpower.com/ProgramsRebates/RebatesAndSavings"
     }
   },
   {
@@ -5594,6 +5547,7 @@
       "es": "Reembolso del 50 % del reembolso de la compañía de servicios públicos por sellado de aire, aislamiento del ático y de paredes, o del 100 % para quienes califiquen para bonificaciones. Solo para residentes de Edina."
     },
     "start_date": "2025-01-01",
+    "paused": true,
     "url": {
       "en": "https://www.edinamn.gov/1929/Community-Climate-Action-Fund"
     }
@@ -5620,6 +5574,7 @@
       "en": "50% utility rebate match for a cold climate air source heat pump, or 100% bonus match. +$250 with air sealing/insulation. Edina residents only.",
       "es": "Reembolso del 50 % del reembolso de la compañía de servicios públicos por una bomba de calor de fuente de aire para climas fríos, o del 100 % con bonificación. +$250 si se combina con sellado de aire o aislamiento. Solo para residentes de Edina."
     },
+    "paused": true,
     "url": {
       "en": "https://www.edinamn.gov/1929/Community-Climate-Action-Fund"
     }
@@ -6290,6 +6245,7 @@
       "en": "$1,000 rebate for battery storage paired with a new or existing solar system. Edina residents only",
       "es": "Reembolso de $1,000 por almacenamiento con batería combinado con un sistema solar nuevo o existente. Solo para residentes de Edina."
     },
+    "paused": true,
     "url": {
       "en": "https://www.edinamn.gov/1929/Community-Climate-Action-Fund"
     }
@@ -6316,6 +6272,7 @@
       "en": "Up to $200 rebate for electric outdoor equipment.",
       "es": "Reembolso de hasta $200 por equipo eléctrico para exteriores."
     },
+    "paused": true,
     "url": {
       "en": "https://www.edinamn.gov/1929/Community-Climate-Action-Fund"
     }
@@ -6366,6 +6323,7 @@
       "en": "Either 10% or 15% of project costs are reimbursed, based on building’s insulation levels. Edina residents only.",
       "es": "Reembolso del 10% o el 15% del costo del proyecto, según el nivel de aislamiento del edificio. Solo para residentes de Edina."
     },
+    "paused": true,
     "url": {
       "en": "https://www.edinamn.gov/1929/Community-Climate-Action-Fund "
     }
@@ -8178,6 +8136,7 @@
       "en": "50% utility rebate match for an electric panel upgrade or 100% bonus match. Edina residents only.",
       "es": "Reembolso del 50 % de la factura de servicios públicos para la modernización del panel eléctrico, o bonificación del 100%. Solo para residentes de Edina."
     },
+    "paused": true,
     "url": {
       "en": "https://www.edinamn.gov/1929/Community-Climate-Action-Fund"
     }
