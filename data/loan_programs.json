@@ -964,55 +964,6 @@
     "updated_at": "2025-08-07T16:00:31.705Z"
   },
   {
-    "id": 19,
-    "loan_program_key": "AR-2",
-    "name": "Building Envelope Improvements and Air Sealing Loan",
-    "description": "RESP can finance various building envelope improvements including, but not limited to, the following applications: ENERGY STAR® windows and doors; insulation for ceiling, floor or wall; duct work; and certain roofing applications.",
-    "description_langs": {
-      "es": "RESP puede financiar diversas mejoras en la envolvente de los edificios, incluidas, entre otras, las siguientes aplicaciones: ventanas y puertas ENERGY STAR®; aislamiento para techo, suelo o pared; trabajo de conductos; y ciertas aplicaciones para techos."
-    },
-    "status": "PUBLISHED",
-    "state": "AR",
-    "is_national": false,
-    "website_url": "https://www.naeci.com/eecl",
-    "financial_authority_id": 15,
-    "financial_authority": {
-      "id": 15,
-      "authority_type": "utility",
-      "description": "North Arkansas Electric Cooperative, Inc. (NAEC) offers Rural Energy Savings Program (RESP) loans to help members finance energy efficiency improvements.",
-      "name": "North Arkansas Electric Cooperative, Inc.",
-      "state": "AR",
-      "city": null,
-      "image_id": 5,
-      "Image": {
-        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
-        "height": 100,
-        "width": 100
-      },
-      "created_at": "2024-10-31T21:00:53.317Z",
-      "updated_at": "2024-10-31T21:00:53.317Z"
-    },
-    "eligible_project_types": [
-      {
-        "type": "WEATHERIZATION"
-      }
-    ],
-    "loan_program_terms": {
-      "id": 37,
-      "min_credit_score": null,
-      "max_debt_to_income": null,
-      "min_loan_amount": 5000,
-      "max_loan_amount": 4999,
-      "min_interest_rate": null,
-      "max_interest_rate": 1,
-      "max_repayment_months": 120,
-      "created_at": "2025-02-18T22:33:28.507Z",
-      "updated_at": "2025-08-07T19:13:55.724Z"
-    },
-    "created_at": "2024-10-31T21:00:53.827Z",
-    "updated_at": "2025-08-07T19:13:55.737Z"
-  },
-  {
     "id": 25,
     "loan_program_key": "CO-1",
     "name": "RENU Loan",
@@ -4368,5 +4319,66 @@
     },
     "created_at": "2024-10-31T21:01:00.822Z",
     "updated_at": "2025-08-07T16:41:21.489Z"
+  },
+  {
+    "id": 19,
+    "loan_program_key": "AR-2",
+    "name": "Energy Efficiency & Conservation Loan (EECL) - North Arkansas Electric Cooperative",
+    "description": "The Energy Efficiency & Conservation Loan (EECL) from North Arkansas Electric Cooperative provides financing to help members make energy efficiency improvements to their homes. The program offers low-interest loans for upgrades such as insulation, windows, doors, heating and cooling systems, and water heaters. The goal is to help members reduce energy consumption and lower utility bills by making their homes more energy efficient.",
+    "description_langs": {
+      "es": "El Préstamo de Eficiencia y Conservación Energética (EECL) de North Arkansas Electric Cooperative ofrece financiamiento para que los miembros realicen mejoras de eficiencia energética en sus hogares. El programa ofrece préstamos a bajo interés para mejoras como aislamiento, ventanas, puertas, sistemas de calefacción y refrigeración, y calentadores de agua. El objetivo es ayudar a los miembros a reducir el consumo de energía y disminuir las facturas de servicios públicos haciendo que sus hogares sean más eficientes energéticamente."
+    },
+    "status": "PUBLISHED",
+    "state": "AR",
+    "is_national": false,
+    "website_url": "https://www.naeci.com/eecl",
+    "financial_authority_id": 15,
+    "financial_authority": {
+      "id": 15,
+      "authority_type": "utility",
+      "description": "North Arkansas Electric Cooperative, Inc. (NAEC) offers Rural Energy Savings Program (RESP) loans to help members finance energy efficiency improvements.",
+      "name": "North Arkansas Electric Cooperative, Inc.",
+      "state": "AR",
+      "city": null,
+      "image_id": 5,
+      "Image": {
+        "src": "https://storage.googleapis.com/rewiring-america-incentives-assets/capital/generic.png",
+        "height": 100,
+        "width": 100
+      },
+      "created_at": "2024-10-31T21:00:53.317Z",
+      "updated_at": "2024-10-31T21:00:53.317Z"
+    },
+    "eligible_project_types": [
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "WEATHERIZATION"
+      },
+      {
+        "type": "HEATING_COOLING"
+      },
+      {
+        "type": "WATER_HEATER"
+      },
+      {
+        "type": "ENERGY_STAR_APPLIANCES"
+      }
+    ],
+    "loan_program_terms": {
+      "id": 37,
+      "min_credit_score": null,
+      "max_debt_to_income": null,
+      "min_loan_amount": 1000,
+      "max_loan_amount": 20000,
+      "min_interest_rate": 1,
+      "max_interest_rate": 1,
+      "max_repayment_months": 120,
+      "created_at": "2025-02-18T22:33:28.507Z",
+      "updated_at": "2026-09-01T22:40:44.846Z"
+    },
+    "created_at": "2024-10-31T21:00:53.827Z",
+    "updated_at": "2026-09-01T22:40:44.864Z"
   }
 ]
